@@ -16,7 +16,7 @@ ht-degree: 98%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, CRM-Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Zoho CRM]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
 

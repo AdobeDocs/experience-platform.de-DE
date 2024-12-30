@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;Square;square
-title: Erstellen einer quadratischen Basisverbindung mit der Flow Service-API
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung zwischen Square und Adobe Experience Platform herstellen.
+keywords: Experience Platform;Startseite;beliebte Themen;Square;Square
+title: Erstellen einer quadratischen Basisverbindung mithilfe der Flow Service-API
+description: Erfahren Sie, wie Sie Square mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
@@ -21,24 +21,24 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] stellt virtuelle Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Square] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Square] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung mit [!DNL Square] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `host` | Die URL der [!DNL Square] -Instanz. |
+| `host` | Die URL der [!DNL Square]. |
 | `clientId` | Die mit Ihrem [!DNL Square]-Konto verknüpfte Client-ID. |
-| `clientSecret` | Das Client-Geheimnis, das Ihrem [!DNL Square]-Konto zugeordnet ist. |
-| `accessToken` | Das Zugriffstoken wird verwendet, um Ihr [!DNL Square]-Konto mit der OAuth 2.0-Authentifizierung zu authentifizieren. Das Zugriffstoken kann von [!DNL Square] abgerufen werden. |
-| `refreshToken` | Das Aktualisierungstoken wird verwendet, um neue Zugriffstoken zu generieren, sobald Ihr aktuelles Zugriffstoken abläuft. Das Aktualisierungstoken kann von [!DNL Square] abgerufen werden. |
+| `clientSecret` | Das mit Ihrem [!DNL Square]-Konto verknüpfte Client-Geheimnis. |
+| `accessToken` | Das Zugriffstoken wird verwendet, um Ihr [!DNL Square]-Konto mit OAuth 2.0-Authentifizierung zu authentifizieren. Das Zugriffstoken kann von [!DNL Square] abgerufen werden. |
+| `refreshToken` | Das Aktualisierungs-Token wird verwendet, um neue Zugriffs-Token zu generieren, sobald Ihr aktuelles Zugriffs-Token abläuft. Das Aktualisierungstoken kann von [!DNL Square] abgerufen werden. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Square] lautet: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
 
-Weitere Informationen zu diesen Anmeldedaten und dazu, wie Sie sie abrufen, finden Sie in der [[!DNL Square] Dokumentation zu OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
+Weitere Informationen zu diesen Anmeldeinformationen und deren Abruf finden Sie unter [[!DNL Square] Dokumentation zu OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
 ### Verwenden von Platform-APIs
 
@@ -46,9 +46,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Square]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Square]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -90,16 +90,16 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Die URL der [!DNL Square] -Instanz. |
+| `auth.params.host` | Die URL der [!DNL Square]. |
 | `auth.params.clientId` | Die mit Ihrem [!DNL Square]-Konto verknüpfte Client-ID. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrem [!DNL Square]-Konto zugeordnet ist. |
-| `auth.params.accessToken` | Das Zugriffstoken wird verwendet, um Ihr [!DNL Square]-Konto mit der OAuth 2.0-Authentifizierung zu authentifizieren. Das Zugriffstoken kann von [!DNL Square] abgerufen werden. |
-| `auth.params.refreshToken` | Das Aktualisierungstoken wird verwendet, um neue Zugriffstoken zu generieren, sobald Ihr aktuelles Zugriffstoken abläuft. Das Aktualisierungstoken kann von [!DNL Square] abgerufen werden. |
-| `connectionSpec.id` | Die [!DNL Square] Verbindungsspezifikations-ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
+| `auth.params.clientSecret` | Das mit Ihrem [!DNL Square]-Konto verknüpfte Client-Geheimnis. |
+| `auth.params.accessToken` | Das Zugriffstoken wird verwendet, um Ihr [!DNL Square]-Konto mit OAuth 2.0-Authentifizierung zu authentifizieren. Das Zugriffstoken kann von [!DNL Square] abgerufen werden. |
+| `auth.params.refreshToken` | Das Aktualisierungs-Token wird verwendet, um neue Zugriffs-Token zu generieren, sobald Ihr aktuelles Zugriffs-Token abläuft. Das Aktualisierungstoken kann von [!DNL Square] abgerufen werden. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Square]-Verbindung: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -110,4 +110,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Square] -Verbindung mit der [!DNL Flow Service] -API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie [die Zahlungsanwendung mit der Flow Service-API](../../explore/payments.md) untersuchen.
+In diesem Tutorial haben Sie eine [!DNL Square] mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, in dem Sie lernen, wie Sie [Zahlungsanwendung mithilfe der Flow Service-API erkunden](../../explore/payments.md).

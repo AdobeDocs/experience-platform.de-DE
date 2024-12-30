@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die Marketo Munchkin-Erweiterung
+title: Marketo Munchkin-Erweiterung - Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Marketo Munchkin“ in Adobe Experience Platform vertraut.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118

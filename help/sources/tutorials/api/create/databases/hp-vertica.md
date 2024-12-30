@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Vertica;vertica
+keywords: Experience Platform;Startseite;beliebte Themen;Vertica;Vertica
 solution: Experience Platform
-title: Erstellen einer HP Vertica-Basisverbindung mit der Flow Service-API
+title: Erstellen einer HP Vertica-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen HP Vertica und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie HP Vertica mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 56%
 
 ---
 
-# Erstellen einer [!DNL HP Vertica]-Basisverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL HP Vertica]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
+>Der [!DNL HP Vertica]-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -26,12 +26,12 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform stellt virtuelle Sandboxes bereit, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL HP Vertica] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL HP Vertica] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung mit [!DNL HP Vertica] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
@@ -40,7 +40,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL HP Vertica] herstellen kann,
 | `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL HP Vertica]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL HP Vertica] lautet: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
-Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem HP Vertica-Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+Weiterführende Informationen zum Erfassen einer Verbindungszeichenfolge finden Sie in [diesem HP Vertica-Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ### Verwenden von Platform-APIs
 
@@ -48,9 +48,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL HP Vertica]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL HP Vertica]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -89,8 +89,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL HP Vertica]-Konto zugeordnet ist. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL HP Vertica] Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | Die mit Ihrem [!DNL HP Vertica]-Konto verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL HP Vertica]-Verbindung: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwort**
 
@@ -108,4 +108,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL HP Vertica]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)

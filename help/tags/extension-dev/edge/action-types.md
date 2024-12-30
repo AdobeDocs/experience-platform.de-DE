@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Browser-Erwe
 
 Aktionstypen bestehen in der Regel aus dem Folgenden:
 
-1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
+1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Aktionseinstellungen zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 Ein Modul zum Weiterleiten einiger Daten an einen Drittanbieter-Endpunkt könnte beispielsweise wie folgt aussehen:

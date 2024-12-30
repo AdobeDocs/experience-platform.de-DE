@@ -17,50 +17,50 @@ ht-degree: 68%
 
 ## v0.20.3 (23. Januar 2024)
 
-- Aktualisiert auf Unterstützung von `at.js` 2.11.4
-- Es wurde ein Fehler behoben, durch den verhindert wurde, dass ungültige Geodaten an die Versand-API gesendet werden.
+- Aktualisierung zur Unterstützung von `at.js` 2.11.4
+- Es wurde ein Fehler behoben, durch den verhindert wurde, dass ungültige Geodaten an die Bereitstellungs-API gesendet wurden.
 
 ## v0.20.2 (29. November 2023)
 
-- Aktualisiert auf Unterstützung von `at.js` 2.11.3
-- Es wurde ein Fehler behoben, der verhinderte, dass Antwort-Token für at-content-rendering-failed -Ereignisse gesendet wurden.
+- Aktualisierung zur Unterstützung von `at.js` 2.11.3
+- Es wurde ein Fehler behoben, der verhinderte, dass Antwort-Token bei at-content-rendering-failed-Ereignissen gesendet wurden.
 
 ## v0.20.1 (3. November 2023)
 
-- Aktualisierung auf Unterstützung für `at.js` 2.11.2.
-- Es wurde ein Fehler behoben, der zu Inkonsistenzen in den Antwort-Token führte, die für benutzerspezifische Ereignisse gesendet wurden.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` 2.11.2 unterstützt wird.
+- Es wurde ein Fehler behoben, der zu Inkonsistenzen in den Antwort-Token führte, die bei benutzerdefinierten Ereignissen gesendet wurden.
 
 ## v0.20.0 (9. Oktober 2023)
 
-- Aktualisierung auf Unterstützung für `at.js` 2.11.0.
-- Unterstützung für das Festlegen von benutzerdefinierten Adobe Experience Platform sandboxId und sandboxName in targetGlobalSettings hinzugefügt, die bei getOffer/getOffers -Aufrufen an die Bereitstellungs-API übergeben werden.
-- Shadow DOM-Korrektur für Verkettung :eq() im Selektor.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` 2.11.0 unterstützt wird.
+- Es wurde Unterstützung für das Festlegen der benutzerdefinierten Adobe Experience Platform-Sandbox-ID und des Sandbox-Namens in targetGlobalSettings hinzugefügt, die bei getOffer/getOffers-Aufrufen an die Bereitstellungs-API übergeben werden.
+- Shadow-DOM-Fehlerbehebung für Verkettung :eq() im -Selektor.
 
 ## v0.19.3 (18. September 2023)
 
-- Aktualisierung auf Unterstützung von `at.js` v2.10.3.
-- Es wurde ein Problem behoben, durch das fälschlicherweise das benutzerspezifische Ereignis at-content-rendering-succeeded ausgelöst wurde, wenn keine Angebote gerendert wurden. Das richtige Ereignis, at-content-rendering-no-offer, wird jetzt ausgelöst.
-- eventToken und responseTokens wurden zum Fehlerobjekt für das benutzerdefinierte Ereignis at-content-rendering-failed hinzugefügt.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.3 unterstützt wird.
+- Es wurde ein Problem behoben, das fälschlicherweise das benutzerdefinierte Ereignis „at-content-rendering-success“ auslöste, wenn keine Angebote gerendert werden. Das richtige Ereignis „at-content-rendering-no-offers“ wird jetzt ausgelöst.
+- Dem Fehlerobjekt wurden eventToken und responseToken für das benutzerdefinierte Ereignis „at-content-rendering-failed“ hinzugefügt.
 
 ## v0.19.2 (14. Februar 2023)
 
-- Es wurde ein Problem behoben, durch das Timeout auf ein Datenelement festgelegt werden konnte.
+- Es wurde ein Problem behoben, bei dem die Zeitüberschreitung für ein Datenelement festgelegt werden konnte.
 
 ## v0.19.1 (3. Februar 2023)
 
-- Aktualisiert auf Unterstützung von `at.js` v2.10.1
-- Benutzerdefinierte Mbox-Parameter des Clients unterstützen jetzt die Punktnotation korrekt
-- In VEC nicht mehr ausgeführte Bereitstellungsaufrufe
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.1 unterstützt wird
+- Benutzerdefinierte Client-Mbox-Parameter unterstützen jetzt korrekt die Punktnotation
+- Versandaufrufe nicht mehr in VEC
 
 ## v0.19.0 (19. September 2022)
 
-- Aktualisiert auf Unterstützung von `at.js` v2.10.0
-- Unterstützung für domänenübergreifendes Tracking wurde hinzugefügt.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.0 unterstützt wird
+- Domain-übergreifende Tracking-Unterstützung hinzugefügt.
 
 ## v0.18.0 (1. Juni 2022)
 
-- Aktualisiert auf Unterstützung von `at.js` v2.9.0
-- Unterstützung für Benutzeragenten-Client-Hinweise hinzugefügt.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.9.0 unterstützt wird
+- Unterstützung für User Agent Client-Hinweise hinzugefügt.
 
 ## v0.17.1 (28. Januar 2022)
 
@@ -79,9 +79,9 @@ ht-degree: 68%
 
 ## v0.15.2 (16. August 2021)
 
-- Aktualisierung auf Unterstützung von `at.js` 2.6.1.
-- Initialisieren Sie die On-Device-Entscheidungsfindung beim Start unabhängig vom Seitenladeereignis.
-- Die On-Device-Entscheidungsfindung kann jetzt beim ersten Besuch verwendet werden, nachdem das Artefakt heruntergeladen wurde.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` 2.6.1 unterstützt wird.
+- Initialisieren der geräteinternen Entscheidungsfindung beim Start, unabhängig vom Seitenladeereignis.
+- Die geräteinterne Entscheidungsfindung kann jetzt beim ersten Besuch nach dem Herunterladen des Artefakts verwendet werden.
 
 ## v0.15.1 (20. Juli 2021)
 

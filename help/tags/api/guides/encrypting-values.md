@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # Verschlüsseln von Werten
 
-Bei der Verwendung von Tags in Adobe Experience Platform erfordern einige Workflows die Bereitstellung sensibler Werte (z. B. das Angeben eines privaten Schlüssels bei der Bereitstellung von Bibliotheken an Umgebungen über Hosts). Die Vertraulichkeit dieser Zugangsdaten erfordert
+Bei der Verwendung von Tags in Adobe Experience Platform erfordern einige Workflows die Bereitstellung sensibler Werte (z. B. das Angeben eines privaten Schlüssels bei der Bereitstellung von Bibliotheken an Umgebungen über Hosts). Die Vertraulichkeit dieser Anmeldedaten erfordert
 sichere Übertragung und Speicherung.
 
 In diesem Dokument wird beschrieben, wie vertrauliche Werte mit [GnuPG-Verschlüsselung](https://www.gnupg.org/gph/en/manual/x110.html) (auch als GPG bezeichnet) verschlüsselt werden können, sodass nur das Tag-System sie lesen kann.
@@ -86,7 +86,7 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 
 Diese Ausgabe kann nur von Systemen entschlüsselt werden, die über den privaten Schlüssel verfügen, der dem öffentlichen Schlüssel `Tags Data Encryption <launch@adobe.com>` entspricht.
 
-Diese Ausgabe ist der Wert, der bereitgestellt werden muss, wenn Daten an die Reactor-API gesendet werden. Das System speichert diese verschlüsselte Ausgabe und entschlüsselt sie vorübergehend nach Bedarf. Beispielsweise entschlüsselt das System Host-Anmeldeinformationen lange genug, um eine Verbindung zum Server herzustellen, und entfernt dann sofort alle Spuren des entschlüsselten Werts.
+Diese Ausgabe ist der Wert, der bereitgestellt werden muss, wenn Daten an die Reactor-API gesendet werden. Das System speichert diese verschlüsselte Ausgabe und entschlüsselt sie vorübergehend nach Bedarf. Beispielsweise entschlüsselt das System Host-Anmeldedaten lange genug, um eine Verbindung zum Server herzustellen, und entfernt dann sofort alle Spuren des entschlüsselten Werts.
 
 >[!NOTE]
 >

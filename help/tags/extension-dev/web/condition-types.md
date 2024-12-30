@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erwei
 
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
-1. Eine [Ansicht](./views.md), die in der Benutzeroberfläche von Experience Platform und Datenerfassung angezeigt wird und es Benutzern ermöglicht, die Bedingungseinstellungen zu ändern.
+1. Eine [Ansicht](./views.md) die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
 Ein Bibliotheksmodul vom Bedingungstyp dient einem einzigen Ziel: auswerten, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.

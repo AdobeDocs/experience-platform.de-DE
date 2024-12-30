@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Azure Blob Source-Verbindung in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Azure Blob-Quell-Connector erstellen.
+title: Erstellen einer Azure Blob Source-Verbindung über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Azure Blob-Quell-Connector erstellen.
 exl-id: 0e54569b-7305-4065-981e-951623717648
 source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 27%
 
 ---
 
-# Erstellen einer [!DNL Azure Blob]-Quellverbindung in der Benutzeroberfläche
+# Erstellen einer [!DNL Azure Blob]-Quellverbindung über die Benutzeroberfläche
 
-In diesem Tutorial werden die Schritte zum Erstellen einer Quellverbindung mit dem Code [!DNL Azure Blob] (nachfolgend als &quot;[!DNL Blob]&quot;bezeichnet) mithilfe der Benutzeroberfläche von Platform beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Azure Blob]-Quellverbindung (im Folgenden als &quot;[!DNL Blob]&quot; bezeichnet) über die Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -26,35 +26,35 @@ Wenn Sie bereits über eine gültige [!DNL Blob]-Verbindung verfügen, können S
 
 ### Unterstützte Dateiformate
 
-Experience Platform unterstützt die folgenden Dateiformate, die aus externen Speichern erfasst werden:
+Experience Platform unterstützt die folgenden Dateiformate, die aus externen Datenspeichern aufgenommen werden können:
 
-* Durch Trennzeichen getrennte Werte (DSV): Sie können ein einzelnes Spaltentrennzeichen wie Tabulatoren, Kommas, senkrechte Striche, Semikolons oder Hash verwenden, um flache Dateien in jedem beliebigen Format zu erfassen.
+* Durch Trennzeichen getrennte Werte (DSV): Sie können jedes einzelne Spaltentrennzeichen wie Tabulator, Komma, senkrechte Striche, Semikolon oder Hash verwenden, um einfache Dateien in jedem Format zu erfassen.
 * JavaScript Object Notation (JSON): JSON-formatierte Datendateien müssen XDM-kompatibel sein.
-* Apache Parquet: Parquet formatierte Datendateien müssen XDM-kompatibel sein.
+* Apache Parquet: Dateien im Parquet-Format müssen XDM-kompatibel sein.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihren [!DNL Blob]-Speicher auf dem Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldedaten angeben:
+Um auf Ihren [!DNL Blob] auf Experience Platform zugreifen zu können, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
 
 >[!BEGINTABS]
 
->[!TAB Authentifizierung der Verbindungszeichenfolge]
+>[!TAB Authentifizierung für Verbindungszeichenfolge]
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Verbindungszeichenfolge | Eine Zeichenfolge, die die für die Authentifizierung von [!DNL Blob] bei Experience Platform erforderlichen Autorisierungsinformationen enthält. Das Muster der Verbindungszeichenfolge [!DNL Blob] lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem Dokument [!DNL Blob] unter [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) . |
+| Verbindungszeichenfolge | Eine Zeichenfolge, die die Autorisierungsinformationen enthält, die zum Authentifizieren von [!DNL Blob] beim Experience Platform erforderlich sind. Das [!DNL Blob]-Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument unter [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 
 >[!TAB SAS-URI-Authentifizierung]
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| SAS-URI | Der URI für die gemeinsame Zugriffssignatur, den Sie als alternativen Authentifizierungstyp verwenden können, um Ihr [!DNL Blob]-Konto zu verbinden. Das Muster für den SAS-URI [!DNL Blob] lautet: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Weitere Informationen finden Sie in diesem Dokument für die URIs für freigegebenen Zugriff [ ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).[!DNL Blob] |
-| Container | Der Name des Containers, für den Sie Zugriff festlegen möchten. Beim Erstellen eines neuen Kontos mit der Quelle [!DNL Blob] können Sie einen Container-Namen angeben, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
-| Ordnerpfad | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
+| SAS-URI | Der URI für die Signatur mit freigegebenem Zugriff, den Sie als alternativen Authentifizierungstyp zum Verbinden Ihres [!DNL Blob]-Kontos verwenden können. Das [!DNL Blob] SAS-URI-Muster lautet: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Weitere Informationen finden Sie in diesem [!DNL Blob] Dokument zu [Shared Access Signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| Container | Der Name des Containers, auf den Sie Zugriff gewähren möchten. Beim Erstellen eines neuen Kontos mit der [!DNL Blob] können Sie einen Container-Namen angeben, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
+| Ordnerpfad | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
 
 >[!ENDTABS]
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihren [!DNL Blob]-Speicher mit Experience Platform zu verbinden
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihren [!DNL Blob] mit Experience Platform zu verbinden
 
 ## Verbinden Ihres [!DNL Blob]-Kontos
 
@@ -62,11 +62,11 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] den Eintrag **[!UICONTROL Azure Blob Storage]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie [!UICONTROL Cloud] die Option **[!UICONTROL Azure Blob Storage]** und dann **[!UICONTROL Daten hinzufügen]**.
 
 ![Der Experience Platform-Quellkatalog mit der ausgewählten Azure Blob Storage-Quelle.](../../../../images/tutorials/create/blob/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung zu Azure Blob Storage herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Mit Azure Blob Storage verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
@@ -78,34 +78,34 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Blob]-Konto, mit de
 
 >[!TIP]
 >
->Nach der Erstellung können Sie den Authentifizierungstyp einer Basis-Verbindung vom Typ [!DNL Blob] nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL Blob] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihr neues [!DNL Blob]-Konto ein.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihr neues [!DNL Blob]-Konto an.
 
-![Der neue Kontobildschirm für die Azure Blob Storage-Quelle.](../../../../images/tutorials/create/blob/new.png)
+![Der Bildschirm „Neues Konto“ für die Azure Blob Storage-Quelle.](../../../../images/tutorials/create/blob/new.png)
 
-Die Quelle [!DNL Blob] unterstützt sowohl die Authentifizierung des Kontoschlüssels als auch die Authentifizierung für die gemeinsame Zugriffssignatur (SAS). Eine schlüsselbasierte Kontoauthentifizierung erfordert eine Verbindungszeichenfolge zur Überprüfung, während eine SAS-Authentifizierung einen URI verwendet, der eine sichere delegierte Autorisierung Ihres Kontos ermöglicht.
+Die [!DNL Blob]-Quelle unterstützt sowohl die Authentifizierung mit dem Kontoschlüssel als auch die SAS-Authentifizierung (Shared Access Signature). Eine Authentifizierung über einen Kontoschlüssel erfordert eine Verbindungszeichenfolge zur Überprüfung, während eine SAS-Authentifizierung einen URI verwendet, der eine sichere delegierte Autorisierung Ihres Kontos ermöglicht.
 
-In diesem Schritt können Sie auch die Unterordner angeben, auf die Ihr Konto Zugriff haben soll, indem Sie den Namen des Containers und den Pfad zum Unterordner definieren.
+In diesem Schritt können Sie auch die Unterordner festlegen, auf die Ihr Konto Zugriff haben soll, indem Sie den Namen des Containers und den Pfad zum Unterordner definieren.
 
 >[!BEGINTABS]
 
 >[!TAB Verbindungszeichenfolge]
 
-Um sich mit einem Kontoschlüssel zu authentifizieren, wählen Sie **[!UICONTROL Authentifizierung des Kontoschlüssels]** aus und geben Sie Ihre Verbindungszeichenfolge an. Während dieses Schritts können Sie auch den Namen des Containers und den Pfad zum Unterordner angeben, auf den Sie zugreifen möchten. Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
+Um sich mit einem Kontoschlüssel zu authentifizieren, wählen Sie **[!UICONTROL Kontoschlüsselauthentifizierung]** und geben Sie Ihre Verbindungszeichenfolge an. In diesem Schritt können Sie auch den Namen des Containers und den Pfad zum Unterordner festlegen, auf den Sie Zugriff haben möchten. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]**.
 
 ![Verbindungszeichenfolge](../../../../images/tutorials/create/blob/connectionstring.png)
 
 >[!TAB SAS-URI]
 
-Sie können SAS verwenden, um Authentifizierungsberechtigungen mit unterschiedlichem Zugriffsgrad zu erstellen, da eine SAS-basierte Authentifizierung es Ihnen ermöglicht, Berechtigungen, Start- und Ablaufdaten sowie Bestimmungen für bestimmte Ressourcen festzulegen.
+Sie können SAS verwenden, um Authentifizierungsdaten mit unterschiedlichem Zugriffsgrad zu erstellen, da Sie bei einer SAS-basierten Authentifizierung Berechtigungen, Start- und Ablaufdaten sowie Bestimmungen zu bestimmten Ressourcen festlegen können.
 
-Um sich mit einer Signatur für freigegebenen Zugriff zu authentifizieren, wählen Sie **[!UICONTROL Authentifizierung für freigegebene Zugriffssignatur]** und geben Sie dann Ihren SAS-URI an. Während dieses Schritts können Sie auch den Namen des Containers und den Pfad zum Unterordner angeben, auf den Sie zugreifen möchten. Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
+Um sich mit einer freigegebenen Zugriffssignatur zu authentifizieren, wählen Sie **[!UICONTROL Authentifizierung mit freigegebener Zugriffssignatur]** und geben Sie dann Ihren SAS-URI an. In diesem Schritt können Sie auch den Namen des Containers und den Pfad zum Unterordner festlegen, auf den Sie Zugriff haben möchten. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]**.
 
-![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
+![SAS-URI](../../../../images/tutorials/create/blob/sas-uri.png)
 
 >[!ENDTABS]
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Blob]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in Platform](../../dataflow/batch/cloud-storage.md) zu übertragen.[
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Blob]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in Platform zu übertragen](../../dataflow/batch/cloud-storage.md).

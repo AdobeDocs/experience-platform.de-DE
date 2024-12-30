@@ -263,7 +263,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Callbacks zurück.
 
 ## Aktualisieren eines Callbacks
 
-Sie können einen Callback aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können einen Callback aktualisieren, indem Sie seine ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 

@@ -1,5 +1,5 @@
 ---
-title: Snowflake-Streaming-Konto mit Adobe Experience Platform verbinden
+title: Verbinden Ihres Snowflake-Streaming-Kontos mit Adobe Experience Platform
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake-Streaming verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
@@ -10,14 +10,14 @@ ht-degree: 27%
 
 ---
 
-# [!DNL Snowflake]-Daten mithilfe der [!DNL Flow Service]-API an Experience Platform streamen
+# Streamen von [!DNL Snowflake] mit der [!DNL Flow Service]-API auf Experience Platform
 
 >[!IMPORTANT]
 >
 >
-> Die Streaming-Quelle [!DNL Snowflake] steht in der API Benutzern zur Verfügung, die Real-time Customer Data Platform Ultimate erworben haben.
+> Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
-In diesem Tutorial erfahren Sie, wie Sie mithilfe der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) Daten von Ihrem [!DNL Snowflake]-Konto mit Adobe Experience Platform verbinden und streamen können.
+In diesem Tutorial erfahren Sie, wie Sie mithilfe der -API Daten aus Ihrem [!DNL Snowflake]-Konto mit Adobe Experience Platform [[!DNL Flow Service]  und ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Erste Schritte
 
@@ -26,7 +26,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Für die erforderliche Einrichtung und Informationen zur Streaming-Quelle [!DNL Snowflake]. Lesen Sie die [[!DNL Snowflake] Streaming-Quellübersicht](../../../../connectors/databases/snowflake-streaming.md).
+Für die erforderliche Einrichtung und Informationen zur [!DNL Snowflake] Streaming-Quelle. Bitte lesen Sie die [[!DNL Snowflake] Übersicht über Streaming-Quellen](../../../../connectors/databases/snowflake-streaming.md).
 
 ### Verwenden von Platform-APIs
 
@@ -36,7 +36,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Snowflake]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Snowflake] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -50,7 +50,7 @@ Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Snowflake]:
 
 >[!TIP]
 >
->Der Wert `auth.specName` muss genau wie im folgenden Beispiel eingegeben werden, einschließlich der Leerzeichen.
+>Der `auth.specName` muss genau wie im folgenden Beispiel eingegeben werden, einschließlich der Leerzeichen.
 
 ```shell
 curl -X POST \
@@ -84,18 +84,18 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auth.params.account` | Der Name Ihres [!DNL Snowflake]-Streaming-Kontos. |
-| `auth.params.database` | Der Name Ihrer [!DNL Snowflake]-Datenbank, aus der Daten abgerufen werden. |
-| `auth.params.warehouse` | Der Name Ihres [!DNL Snowflake] Warehouse. Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
-| `auth.params.username` | Der Benutzername für Ihr [!DNL Snowflake]-Streaming-Konto. |
-| `auth.params.schema` | (Optional) Das Datenbankschema, das mit Ihrem [!DNL Snowflake]-Streaming-Konto verknüpft ist. |
-| `auth.params.password` | Das Kennwort für Ihr [!DNL Snowflake]-Streaming-Konto. |
-| `auth.params.role` | (Optional) Die Rolle des Benutzers für diese [!DNL Snowflake]-Verbindung. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public` verwendet. |
-| `connectionSpec.id` | Die [!DNL Snowflake] Verbindungsspezifikations-ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `auth.params.account` | Der Name Ihres [!DNL Snowflake] Streaming-Kontos. |
+| `auth.params.database` | Der Name der [!DNL Snowflake], aus der Daten abgerufen werden. |
+| `auth.params.warehouse` | Der Name Ihres [!DNL Snowflake]. Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
+| `auth.params.username` | Der Benutzername für Ihr [!DNL Snowflake] Streaming-Konto. |
+| `auth.params.schema` | (Optional) Das mit Ihrem [!DNL Snowflake]-Streaming-Konto verknüpfte Datenbankschema. |
+| `auth.params.password` | Das Passwort für Ihr [!DNL Snowflake] Streaming-Konto. |
+| `auth.params.role` | (Optional) Die Rolle des Benutzers für diese [!DNL Snowflake]. Wenn kein Wert angegeben wird, ist dieser Standardwert `public`. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Snowflake]-Verbindung: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung und das zugehörige eTag zurück.
+Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung und das entsprechende eTag zurück.
 
 ```json
 {
@@ -104,9 +104,9 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung und das zugehö
 }
 ```
 
-## Datentabellen durchsuchen {#explore-your-data-tables}
+## Erkunden von Datentabellen {#explore-your-data-tables}
 
-Verwenden Sie als Nächstes die Basis-Verbindungs-ID, um die Datentabellen Ihrer Quelle zu untersuchen und durch sie zu navigieren, indem Sie eine GET-Anfrage an den `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` -Endpunkt senden und dabei Ihre Basis-Verbindungs-ID als Parameter angeben.
+Verwenden Sie als Nächstes die Basisverbindungs-ID, um die Datentabellen Ihrer Quelle zu durchsuchen und durch diese zu navigieren, indem Sie eine GET-Anfrage an den `/connections/{BASE_CONNECTION_ID}/explore?objectType=root`-Endpunkt stellen und dabei Ihre Basisverbindungs-ID als Parameter angeben.
 
 **API-Format**
 
@@ -116,12 +116,12 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung der Basisverbindung Ihrer [!DNL Snowflake]-Streaming-Quelle. |
+| `{BASE_CONNECTION_ID}` | Die Basisverbindungs-ID Ihrer [!DNL Snowflake]-Streaming-Quelle. |
 
 
 **Anfrage**
 
-Die folgende Anfrage ruft die Struktur und den Inhalt Ihres [!DNL Snowflake]-Streaming-Kontos ab.
+Mit der folgenden Anfrage werden die Struktur und der Inhalt Ihres [!DNL Snowflake] Streaming-Kontos abgerufen.
 
 ```shell
 curl -X GET \
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur und den Inhalt der Quelldaten auf der Stammebene zurück.
+Eine erfolgreiche Antwort gibt die Struktur und den Inhalt der Daten Ihrer Quelle auf der Stammebene zurück.
 
 ```json
 {
@@ -154,7 +154,7 @@ Eine erfolgreiche Antwort gibt die Struktur und den Inhalt der Quelldaten auf de
 
 ## Erstellen einer Quellverbindung {#create-a-source-connection}
 
-Eine Quellverbindung erstellt und verwaltet die Verbindung zur externen Quelle, von der aus Daten erfasst werden.
+Eine Quellverbindung erstellt und verwaltet die Verbindung zur externen Quelle, aus der Daten aufgenommen werden.
 
 Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API.
 
@@ -193,16 +193,16 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `baseConnectionId` | Die authentifizierte Basis-Verbindungs-ID für Ihre [!DNL Snowflake]-Streaming-Quelle. Diese ID wurde in einem früheren Schritt generiert. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID für die [!DNL Snowflake]-Streaming-Quelle. |
-| `params.tableName` | Der Name der Tabelle in Ihrer [!DNL Snowflake]-Datenbank, die Sie in Platform laden möchten. |
+| `baseConnectionId` | Die ID der authentifizierten Basisverbindung für Ihre [!DNL Snowflake] Streaming-Quelle. Diese ID wurde in einem früheren Schritt generiert. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID für die [!DNL Snowflake] Streaming-Quelle. |
+| `params.tableName` | Der Name der Tabelle in Ihrer [!DNL Snowflake]-Datenbank, die Sie an Platform übermitteln möchten. |
 | `params.timestampColumn` | Der Name der Zeitstempelspalte, die zum Abrufen inkrementeller Werte verwendet wird. |
-| `params.backfill` | Eine boolesche Kennzeichnung, die bestimmt, ob Daten vom Anfang (0 Epochenzeit) oder von dem Zeitpunkt an abgerufen werden, zu dem die Quelle initiiert wird. Weitere Informationen zu diesem Wert finden Sie in der [[!DNL Snowflake] Streaming-Quellübersicht](../../../../connectors/databases/snowflake-streaming.md). |
-| `params.timezoneValue` | Der Zeitzonenwert gibt an, welche Zeitzone bei der Abfrage der [!DNL Snowflake] -Datenbank zur aktuellen Zeit abgerufen werden soll. Dieser Parameter sollte angegeben werden, wenn die Spalte mit dem Zeitstempel in der Konfiguration auf `TIMESTAMP_NTZ` gesetzt ist. Wenn nichts angegeben ist, wird standardmäßig UTC verwendet.`timezoneValue` |
+| `params.backfill` | Ein boolesches Flag, das bestimmt, ob die Daten ab dem Anfang (Epochenzeit 0) oder ab dem Zeitpunkt abgerufen werden, zu dem die Quelle initiiert wird. Weitere Informationen zu diesem Wert finden Sie unter [[!DNL Snowflake] Übersicht über Streaming-Quellen](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | Der Wert für die Zeitzone gibt an, welche aktuelle Zeit für die Abfrage der [!DNL Snowflake]-Datenbank abgerufen werden soll. Dieser Parameter sollte bereitgestellt werden, wenn die Zeitstempelspalte in der Konfiguration auf `TIMESTAMP_NTZ` festgelegt ist. Wenn nicht angegeben, ist `timezoneValue` standardmäßig UTC. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Kennung der Quellverbindung und das zugehörige eTag zurückgegeben. Die Kennung der Quellverbindung wird in einem späteren Schritt zum Erstellen eines Datenflusses verwendet.
+Bei einer erfolgreichen Antwort werden Ihre Quellverbindungs-ID und das entsprechende eTag zurückgegeben. Die Quellverbindungs-ID wird in einem späteren Schritt zum Erstellen eines Datenflusses verwendet.
 
 ```json
 {
@@ -213,7 +213,7 @@ Bei einer erfolgreichen Antwort werden Ihre Kennung der Quellverbindung und das 
 
 ## Erstellen eines Datenflusses
 
-Um einen Datenfluss zum Streamen von Daten aus dem Tour [!DNL Snowflake] -Konto an Platform zu erstellen, müssen Sie eine POST-Anfrage an den `/flows` -Endpunkt senden und dabei die folgenden Werte angeben:
+Um einen Datenfluss zum Streamen von Daten aus Ihrem [!DNL Snowflake] an Platform zu erstellen, müssen Sie eine POST-Anfrage an den `/flows`-Endpunkt stellen und dabei die folgenden Werte angeben:
 
 >[!TIP]
 >
@@ -232,7 +232,7 @@ POST /flows
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen Streaming-Datenfluss für Ihr [!DNL Snowflake] -Konto.
+Mit der folgenden Anfrage wird ein Streaming-Datenfluss für Ihr [!DNL Snowflake]-Konto erstellt.
 
 ```shell
 curl -X POST \
@@ -268,14 +268,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `sourceConnectionIds` | Die Kennung der Quellverbindung für Ihre [!DNL Snowflake]-Streaming-Quelle. |
-| `targetConnectionIds` | Die Zielverbindungs-ID für Ihre [!DNL Snowflake]-Streaming-Quelle. |
-| `flowSpec.id` | Die Flussspezifikations-ID zum Erstellen eines Datenflusses für eine [!DNL Snowflake]-Streaming-Quelle. Mit dieser Flussspezifikations-ID können Sie einen Streaming-Datenfluss mit Zuordnungstransformationen erstellen. Diese ID ist fest und lautet: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | Die Quellverbindungs-ID für Ihre [!DNL Snowflake] Streaming-Quelle. |
+| `targetConnectionIds` | Die Zielverbindungs-ID für Ihre [!DNL Snowflake] Streaming-Quelle. |
+| `flowSpec.id` | Die Flussspezifikations-ID zum Erstellen eines Datenflusses für eine [!DNL Snowflake] Streaming-Quelle. Mit dieser Flussspezifikations-ID können Sie einen Streaming-Datenfluss mit Zuordnungstransformationen erstellen. Diese ID ist fest und lautet: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
 | `transformations.params.mappingId` | Die Zuordnungs-ID für Ihren Datenfluss. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und das zugehörige eTag zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und das entsprechende eTag zurückgegeben.
 
 ```json
 {
@@ -286,7 +286,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und das zugehörige eTag zu
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Streaming-Datenfluss für Ihre [!DNL Snowflake] -Daten mithilfe der [!DNL Flow Service] -API erstellt. Weitere Informationen zu Adobe Experience Platform-Quellen finden Sie in der folgenden Dokumentation:
+In diesem Tutorial haben Sie einen Streaming-Datenfluss für Ihre [!DNL Snowflake] mithilfe der [!DNL Flow Service]-API erstellt. In der folgenden Dokumentation finden Sie weitere Informationen zu Adobe Experience Platform-Quellen:
 
 * [Quellen – Übersicht](../../../../home.md)
 * [Überwachen Ihres Datenflusses mithilfe von APIs](../../monitor.md)

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Cloud-Speicher; Cloud-Speicher
-title: Durchsuchen von Cloud-Speicherordnern mithilfe der Flow Service-API
-description: In diesem Tutorial wird die Flow Service-API verwendet, um ein Cloud-Speichersystem von Drittanbietern zu untersuchen.
+keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicher;Cloud-Speicher
+title: Erkunden von Cloud-Speicherordnern mithilfe der Flow Service-API
+description: In diesem Tutorial wird die Flow Service-API verwendet, um ein Cloud-Speichersystem eines Drittanbieters zu erkunden.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
@@ -10,13 +10,13 @@ ht-degree: 18%
 
 ---
 
-# Durchsuchen Sie Ihre Cloud-Speicherordner mit der [!DNL Flow Service]-API.
+# Erkunden von Cloud-Speicherordnern mit der [!DNL Flow Service]-API
 
-In diesem Tutorial erfahren Sie, wie Sie die Struktur und den Inhalt Ihres Cloud-Speichers mithilfe der [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) -API untersuchen und in einer Vorschau anzeigen.
+In diesem Tutorial erfahren Sie, wie Sie die Struktur und die Inhalte Ihres Cloud-Speichers mithilfe der [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/)-API untersuchen und in der Vorschau anzeigen.
 
 >[!NOTE]
 >
->Um Ihren Cloud-Speicher untersuchen zu können, müssen Sie bereits über eine gültige Basis-Verbindungs-ID für eine Cloud-Speicherquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#cloud-storage) eine Liste der Cloud-Speicher-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>Um Ihren Cloud-Speicher zu untersuchen, müssen Sie bereits über eine gültige Basisverbindungs-ID für eine Cloud-Speicherquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellen - Übersicht](../../../home.md#cloud-storage) eine Liste der Cloud-Speicherquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 
@@ -29,15 +29,15 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
 
-## Durchsuchen Sie Ihre Cloud-Speicher-Ordner.
+## Erkunden von Cloud-Speicherordnern
 
-Sie können Informationen zur Struktur Ihrer Cloud-Speicher-Ordner abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basis-Verbindungs-ID Ihrer Quelle angeben.
+Sie können Informationen zur Struktur Ihrer Cloud-Speicherordner abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID Ihrer Quelle angeben.
 
-Bei der Durchführung von GET-Anfragen zur Erforschung Ihres Cloud-Speichers müssen Sie die Abfrageparameter einbeziehen, die in der folgenden Tabelle aufgeführt sind:
+Bei der Durchführung von GET-Anfragen zur Untersuchung Ihres Cloud-Speichers müssen Sie die in der folgenden Tabelle aufgeführten Abfrageparameter einbeziehen:
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `objectType` | Der Typ des Objekts, das Sie untersuchen möchten. Legen Sie diesen Wert wie folgt fest: <ul><li>`folder`: Bestimmtes Verzeichnis durchsuchen</li><li>`root`: Durchsuchen Sie den Stammordner.</li></ul> |
+| `objectType` | Der Typ des Objekts, das Sie untersuchen möchten. Legen Sie diesen Wert wie folgt fest: <ul><li>`folder`: Erkunden eines bestimmten Verzeichnisses</li><li>`root`: Erkunden des Stammverzeichnisses.</li></ul> |
 | `object` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
 
 
@@ -50,8 +50,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung der Basisverbindung Ihrer Cloud-Speicherquelle. |
-| `{PATH}` | Der Pfad eines Ordners. |
+| `{BASE_CONNECTION_ID}` | Die ID der Basisverbindung Ihrer Cloud-Speicherquelle. |
+| `{PATH}` | Der Pfad eines Verzeichnisses. |
 
 **Anfrage**
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im abgefragten Ordner gefunden wurden. Notieren Sie sich die Eigenschaft `path` der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im abgefragten Verzeichnis gefunden wurden. Notieren Sie sich die `path`-Eigenschaft der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
 
 ```json
 [
@@ -94,11 +94,11 @@ Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im
 ]
 ```
 
-## Dateistruktur Inspect
+## Inspect - Dateistruktur
 
-Um die Struktur der Datendatei aus Ihrem Cloud-Speicher zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad der Datei an und geben Sie als Abfrageparameter ein.
+Um die Dateistruktur aus Ihrem Cloud-Speicher zu überprüfen, führen Sie eine GET-Anfrage durch, wobei Sie den Dateipfad und -typ als Abfrageparameter angeben.
 
-Sie können die Struktur einer Datendatei aus Ihrer Cloud-Speicherquelle überprüfen, indem Sie eine GET-Anfrage ausführen und dabei Pfad und Typ der Datei angeben. Sie können auch verschiedene Dateitypen wie CSV-, TSV- oder komprimierte JSON- und getrennte Dateien überprüfen, indem Sie deren Dateitypen als Teil der Abfrageparameter angeben.
+Sie können die Struktur einer Datendatei aus Ihrer Cloud-Speicherquelle überprüfen, indem Sie eine GET-Anfrage ausführen und dabei den Pfad und den Typ der Datei angeben. Sie können auch verschiedene Dateitypen wie CSV-, TSV- oder komprimierte JSON- und durch Trennzeichen getrennte Dateien untersuchen, indem Sie deren Dateitypen als Teil der Abfrageparameter angeben.
 
 **API-Format**
 
@@ -113,8 +113,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die Verbindungs-ID Ihres Cloud-Speicher-Quell-Connectors. |
 | `{FILE_PATH}` | Der Pfad zur Datei, die Sie überprüfen möchten. |
-| `{FILE_TYPE}` | Der Dateityp. Zu den unterstützten Dateitypen gehören:<ul><li><code>DELIMITED</code>: Trennzeichen-getrennter Wert. DSV-Dateien müssen kommagetrennt sein.</li><li><code>JSON</code>: JavaScript-Objektnotation. JSON-Dateien müssen XDM-kompatibel sein</li><li><code>PARQUET</code>: Apache Parquet. Parquet-Dateien müssen XDM-konform sein.</li></ul> |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter, die zum Filtern von Ergebnissen verwendet werden können. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](#query) . |
+| `{FILE_TYPE}` | Der Typ der Datei. Zu den unterstützten Dateitypen gehören:<ul><li><code>GETRENNT</code>: Durch Trennzeichen getrennter Wert. DSV-Dateien müssen durch Kommas getrennt sein.</li><li><code>JSON</code>: JavaScript-Objektnotation. JSON-Dateien müssen XDM-kompatibel sein</li><li><code></code>In: Apache Parquet. Parquet-Dateien müssen XDM-kompatibel sein.</li></ul> |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter, mit denen Ergebnisse gefiltert werden können. Weitere Informationen finden Sie [ Abschnitt ](#query) Abfrageparameter . |
 
 **Anfrage**
 
@@ -158,14 +158,14 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück, einsc
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) unterstützt die Verwendung von Abfrageparametern zur Vorschau und Überprüfung verschiedener Dateitypen.
+Die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) unterstützt die Verwendung von Abfrageparametern zur Vorschau und Untersuchung verschiedener Dateitypen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `columnDelimiter` | Der Einzelzeichenwert, den Sie als Spaltentrennzeichen zum Überprüfen von CSV- oder TSV-Dateien angegeben haben. Wenn der Parameter nicht angegeben ist, wird als Wert standardmäßig das Komma `(,)` verwendet. |
-| `compressionType` | Ein erforderlicher Abfrageparameter für die Vorschau einer komprimierten getrennten Datei oder JSON-Datei. Folgende komprimierte Dateien werden unterstützt: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | Definiert, welcher Kodierungstyp für die Wiedergabe der Vorschau verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der Parameter `encoding` ist nur verfügbar, wenn CSV-Dateien mit Trennzeichen aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung `UTF-8` erfasst. |
+| `columnDelimiter` | Der Einzelzeichenwert, den Sie als Spaltentrennzeichen zum Prüfen von CSV- oder TSV-Dateien angegeben haben. Wenn der Parameter nicht angegeben ist, ist der Wert standardmäßig ein `(,)`. |
+| `compressionType` | Ein erforderlicher Abfrageparameter für die Vorschau einer komprimierten oder durch Trennzeichen getrennten JSON-Datei. Folgende komprimierte Dateien werden unterstützt: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | Definiert den Kodierungstyp, der beim Rendern der Vorschau verwendet werden soll. Die unterstützten Kodierungstypen sind: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der `encoding`-Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardcodierung `UTF-8` aufgenommen. |
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Cloud-Speichersystem durchsucht, den Pfad der Datei gefunden, die Sie in [!DNL Platform] einbringen möchten, und die Struktur angezeigt. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrem Cloud-Speicher zu erfassen und in Platform](../collect/cloud-storage.md) zu importieren.
+In diesem Tutorial haben Sie Ihr Cloud-Speichersystem erkundet, den Pfad der Datei gefunden, die Sie in [!DNL Platform] einbringen möchten, und ihre Struktur betrachtet. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Cloud-Speicher zu erfassen und in Platform zu ](../collect/cloud-storage.md).

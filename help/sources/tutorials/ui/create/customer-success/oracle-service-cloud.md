@@ -14,7 +14,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
 
 In diesem Tutorial werden die Schritte zum Erstellen einer Oracle Service Cloud-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche beschrieben.
 

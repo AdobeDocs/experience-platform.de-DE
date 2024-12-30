@@ -228,7 +228,7 @@ curl -X POST \
 | `attributes.path` | Der Pfad, der an die URL `server` angehängt werden soll. |
 | `attributes.port` | Eine Ganzzahl, die den zu verwendenden Serverport angibt. |
 | `attributes.server` | Die Host-URL für den Server. |
-| `attributes.skip_symlinks`<br><br>(Nur für SFTP-Hosts) | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-Builds zu verweisen, die auf dem Server gespeichert werden. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn dieses Attribut enthalten ist und auf &quot;`true`&quot;festgelegt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
+| `attributes.skip_symlinks`<br><br>(Nur für SFTP-Hosts) | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-Builds zu verweisen, die auf dem Server gespeichert werden. Nicht alle Server unterstützen jedoch die Verwendung von Symlinks. Wenn dieses Attribut enthalten und auf `true` gesetzt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
 | `attributes.username` | Ein optionaler Benutzername für die Authentifizierung. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
 
@@ -430,7 +430,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der angegebenen Hosteigenschaft zurück.
+Eine erfolgreiche Antwort gibt die Details der Eigenschaft des angegebenen Hosts zurück.
 
 ```json
 {

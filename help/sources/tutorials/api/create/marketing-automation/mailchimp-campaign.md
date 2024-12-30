@@ -21,15 +21,15 @@ Bevor Sie eine Verbindung von [!DNL Mailchimp] zu Adobe Experience Platform mit 
 
 ## Erstellen einer Basisverbindung {#base-connection}
 
-Nachdem Sie Ihre [!DNL Mailchimp]-Authentifizierungsdaten abgerufen haben, können Sie jetzt mit dem Erstellen des Datenflusses beginnen, um [!DNL Mailchimp Campaign]-Daten in Platform zu bringen. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
+Nachdem Sie Ihre [!DNL Mailchimp]-Authentifizierungs-Anmeldedaten abgerufen haben, können Sie jetzt mit dem Erstellen des Datenflusses beginnen, um [!DNL Mailchimp Campaign]-Daten in Platform zu bringen. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 [!DNL Mailchimp] unterstützt sowohl einfache Authentifizierung als auch OAuth 2-Aktualisierungs-Code. In den folgenden Beispielen finden Sie Anleitungen zum Authentifizieren mit beiden Authentifizierungstypen.
 
 ### Erstellen einer [!DNL Mailchimp]-Basisverbindung mit einfacher Authentifizierung
 
-Um eine [!DNL Mailchimp] -Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt der [!DNL Flow Service] -API und geben Sie dabei Anmeldedaten für Ihre `authorizationTestUrl`, `username` und `password` an.
+Um eine [!DNL Mailchimp] Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt [!DNL Flow Service] -API und geben dabei die Anmeldeinformationen für Ihre `authorizationTestUrl`, `username` und `password` an.
 
 **API-Format**
 
@@ -73,7 +73,7 @@ curl -X POST \
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Platform verbinden. |
-| `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldeinformationen nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
+| `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldedaten beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldedaten nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 | `auth.params.password` | Das Passwort, das Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 
@@ -90,7 +90,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ### Erstellen einer [!DNL Mailchimp]-Basisverbindung mit OAuth 2-Aktualisierungs-Code
 
-Um eine Basisverbindung mit dem OAuth 2-Aktualisierungscode zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt, während Sie Anmeldedaten für Ihre `authorizationTestUrl` und `accessToken` angeben.[!DNL Mailchimp]
+Um eine [!DNL Mailchimp] Basisverbindung mit OAuth 2-Aktualisierungs-Code zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt, während Sie Anmeldeinformationen für Ihre `authorizationTestUrl` und `accessToken` bereitstellen.
 
 **API-Format**
 
@@ -133,7 +133,7 @@ curl -X POST \
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Sie Ihre Quelle mit der [!DNL Flow Service]-API registriert haben. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldeinformationen nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
+| `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldedaten beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldedaten nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | `auth.params.accessToken` | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
 **Antwort**
@@ -543,24 +543,24 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses durchführen können.
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](../../monitor.md).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](../../monitor.md).
 
 ### Aktualisieren des Datenflusses
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows` -Endpunkt der [!DNL Flow Service] -API richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren der Datenflüsse für Quellen mithilfe der API](../../update-dataflows.md).
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows`-Endpunkt [!DNL Flow Service] -API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](../../update-dataflows.md).
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](../../update.md).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](../../update.md).
 
 ### Löschen des Datenflusses
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](../../delete-dataflows.md).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](../../delete-dataflows.md).
 
 ### Konto löschen
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](../../delete.md).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

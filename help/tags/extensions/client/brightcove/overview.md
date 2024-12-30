@@ -100,7 +100,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen:
 
 >[!TIP]
 >
->Diejenigen, die nicht mehrere eVars oder props für jedes Videoelement bereitstellen möchten, werden Datenelementwerte als alternative Methode verkettet. Anschließend werden sie mithilfe des Classification Rule Builder Tools in Klassifizierungsberichte übermittelt. Weitere Informationen finden Sie in der Dokumentation zum [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de). Schließlich werden sie als Segment in Analysis Workspace angewendet.
+>Falls Sie nicht mehrere eVars oder Props für jedes Videoelement bereitstellen möchten, werden die Werte der Datenelemente als alternative Methode verkettet. Anschließend werden sie mithilfe des Classification Rule Builder Tools in Klassifizierungsberichte übermittelt. Weitere Informationen finden Sie in der Dokumentation zum [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de). Schließlich werden sie als Segment in Analysis Workspace angewendet.
 >
 >Erstellen Sie dazu ein neues Datenelement mit einem Namen wie „Videometadaten“ und programmieren Sie es so, dass alle oben aufgelisteten Videodatenelemente abgerufen und miteinander verkettet werden.
 

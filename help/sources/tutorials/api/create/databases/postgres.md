@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
+keywords: Experience Platform;Startseite;beliebte Themen;PostgreSQL;PostgreSQL;PSQL;psql
 solution: Experience Platform
-title: Erstellen einer PostgreSQL-Basisverbindung mit der Flow Service-API
+title: Erstellen einer PostgreSQL-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und PostgreSQL herstellen.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit PostgreSQL verbinden.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -26,29 +26,29 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL PostgreSQL] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL PostgreSQL] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Damit [!DNL Flow Service] eine Verbindung zu [!DNL PostgreSQL] herstellen kann, müssen Sie die folgende Verbindungseigenschaft angeben:
+Damit [!DNL Flow Service] eine Verbindung mit [!DNL PostgreSQL] herstellen kann, müssen Sie die folgende Verbindungseigenschaft angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL PostgreSQL]-Konto zugeordnet ist. Das Muster der Verbindungszeichenfolge [!DNL PostgreSQL] lautet: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | Die mit Ihrem [!DNL PostgreSQL]-Konto verknüpfte Verbindungszeichenfolge. Das [!DNL PostgreSQL]-Verbindungszeichenfolgenmuster ist: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PostgreSQL] ist `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in diesem [[!DNL PostgreSQL] Dokument](https://www.postgresql.org/docs/9.2/app-psql.html).
+Weiterführende Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in diesem [[!DNL PostgreSQL] Dokument](https://www.postgresql.org/docs/9.2/app-psql.html).
 
-#### Aktivieren der SSL-Verschlüsselung für Ihre Verbindungszeichenfolge
+#### Aktivieren der SSL-Verschlüsselung für die Verbindungszeichenfolge
 
-Sie können die SSL-Verschlüsselung für Ihre [!DNL PostgreSQL] -Verbindungszeichenfolge aktivieren, indem Sie Ihre Verbindungszeichenfolge mit den folgenden Eigenschaften anhängen:
+Sie können die SSL-Verschlüsselung für Ihre [!DNL PostgreSQL] Verbindungszeichenfolge aktivieren, indem Sie Ihre Verbindungszeichenfolge mit den folgenden Eigenschaften anhängen:
 
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `EncryptionMethod` | Ermöglicht die SSL-Verschlüsselung Ihrer [!DNL PostgreSQL] -Daten. | <uL><li>`EncryptionMethod=0`(Deaktiviert)</li><li>`EncryptionMethod=1`(Aktiviert)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
-| `ValidateServerCertificate` | Validiert das von Ihrer [!DNL PostgreSQL] -Datenbank gesendete Zertifikat, wenn `EncryptionMethod` angewendet wird. | <uL><li>`ValidationServerCertificate=0`(Deaktiviert)</li><li>`ValidationServerCertificate=1`(Aktiviert)</li></ul> |
+| `EncryptionMethod` | Ermöglicht die Aktivierung der SSL-Verschlüsselung Ihrer [!DNL PostgreSQL]. | <uL><li>`EncryptionMethod=0`(deaktiviert)</li><li>`EncryptionMethod=1`(aktiviert)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
+| `ValidateServerCertificate` | Validiert das Zertifikat, das bei der Anwendung von `EncryptionMethod` von Ihrer [!DNL PostgreSQL]-Datenbank gesendet wird. | <uL><li>`ValidationServerCertificate=0`(deaktiviert)</li><li>`ValidationServerCertificate=1`(aktiviert)</li></ul> |
 
-Im Folgenden finden Sie ein Beispiel für eine [!DNL PostgreSQL] -Verbindungszeichenfolge, die mit der SSL-Verschlüsselung angehängt wird: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
+Im Folgenden finden Sie ein Beispiel für eine [!DNL PostgreSQL] Verbindungszeichenfolge, die mit SSL-Verschlüsselung angehängt wird: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
 ### Verwenden von Platform-APIs
 
@@ -56,9 +56,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL PostgreSQL]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL PostgreSQL]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -96,12 +96,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | ------------- | --------------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL PostgreSQL]-Konto zugeordnet ist. Das Muster der Verbindungszeichenfolge [!DNL PostgreSQL] lautet: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL PostgreSQL] Verbindungsspezifikations-IDs: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `auth.params.connectionString` | Die mit Ihrem [!DNL PostgreSQL]-Konto verknüpfte Verbindungszeichenfolge. Das [!DNL PostgreSQL]-Verbindungszeichenfolgenmuster ist: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | Die Spezifikations-IDs der [!DNL PostgreSQL]-Verbindung: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Basisverbindung zurück. Diese ID ist erforderlich, um Ihre [!DNL PostgreSQL] -Datenbank im nächsten Tutorial zu untersuchen.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erstellten Basisverbindung zurückgegeben. Diese ID ist erforderlich, um Ihre [!DNL PostgreSQL] im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -112,7 +112,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mit der [!DNL Flow Service] -API eine [!DNL PostgreSQL]-Basisverbindung für die Verbindung erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL PostgreSQL] Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)

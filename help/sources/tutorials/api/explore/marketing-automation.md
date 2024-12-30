@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Marketing-Automatisierung
+keywords: Experience Platform;Startseite;beliebte Themen;Marketing-Automatisierung
 solution: Experience Platform
-title: Erkunden eines Marketingautomatisierungssystems mithilfe der Flow Service-API
-description: In diesem Tutorial wird die Flow Service-API verwendet, um Marketing-Automatisierungssysteme zu untersuchen.
+title: Erkunden eines Marketing-Automatisierungssystems mithilfe der Flow Service-API
+description: In diesem Tutorial wird die Flow Service-API verwendet, um Marketing-Automatisierungssysteme zu erkunden.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 37%
 
 ---
 
-# Erkunden Sie ein Marketing-Automatisierungssystem mit der [!DNL Flow Service]-API.
+# Erkunden eines Marketing-Automatisierungssystems mithilfe der [!DNL Flow Service]-API
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service] -API verwendet, um Marketing-Automatisierungssysteme zu untersuchen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Marketing-Automatisierungssysteme zu erkunden.
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einem Marketing-Automatisierungssystem herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Marketing-Automatisierungssystem verbinden zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindung zur Marketing-Automatisierungsanwendung eines Drittanbieters, aus der Sie Daten erfassen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Anwendung. Weitere Informationen zum Erstellen einer Verbindung zur Marketing-Automatisierung und zum Abrufen dieser Werte finden Sie im Tutorial [Verbinden einer Quelle zur Marketing-Automatisierung mit Platform](../../api/create/marketing-automation/hubspot.md) .
+Für dieses Tutorial benötigen Sie eine gültige Verbindung mit dem Marketing-Automatisierungsprogramm eines Drittanbieters, von dem Sie Daten aufnehmen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Anwendung. Weitere Informationen zum Erstellen einer Marketing-Automatisierungsverbindung und zum Abrufen dieser Werte finden Sie im Tutorial [Verbinden einer Marketing-Automatisierungsquelle mit Platform](../../api/create/marketing-automation/hubspot.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -50,9 +50,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Datentabellen durchsuchen
+## Erkunden von Datentabellen
 
-Mithilfe der Basisverbindung für Ihr Marketing-Automatisierungssystem können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mit der -Basisverbindung für Ihr Marketing-Automatisierungssystem können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -62,7 +62,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung der Basisverbindung für Ihr Marketing-Automatisierungssystem. |
+| `{BASE_CONNECTION_ID}` | Die ID der Basisverbindung für Ihr Marketing-Automatisierungssystem. |
 
 **Anfrage**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort ist eine Reihe von Tabellen von zu Ihrem Marketing-Automatisierungssystem. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort ist ein Array von Tabellen von bis zu Ihrem Marketing-Automatisierungssystem. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -112,9 +112,9 @@ Eine erfolgreiche Antwort ist eine Reihe von Tabellen von zu Ihrem Marketing-Aut
 ]
 ```
 
-## Tabellenstruktur Inspect
+## Inspect - die Tabellenstruktur
 
-Um die Tabellenstruktur in Ihrem Marketing-Automatisierungssystem zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
+Um die Tabellenstruktur aus Ihrem Marketing-Automatisierungssystem zu überprüfen, führen Sie eine GET-Anfrage durch, während Sie den Pfad einer Tabelle als Abfrageparameter angeben.
 
 **API-Format**
 
@@ -140,7 +140,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
+Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns`-Arrays.
 
 ```json
 {
@@ -184,4 +184,4 @@ Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu de
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Marketing-Automatisierungssystem durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] einführen möchten, und Informationen über die Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrem Marketing-Automatisierungssystem zu erfassen und in Platform](../collect/marketing-automation.md) zu importieren.
+In diesem Tutorial haben Sie Ihr Marketing-Automatisierungssystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] einbringen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Marketing-Automatisierungssystem zu erfassen und in Platform zu ](../collect/marketing-automation.md).

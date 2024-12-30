@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;hubspot;Hubspot
+keywords: Experience Platform;Startseite;beliebte Themen;hubspot;hubspot
 solution: Experience Platform
-title: Erstellen einer HubSpot-Basisverbindung mit der Flow Service-API
+title: Erstellen einer HubSpot-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit HubSpot verbinden.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
@@ -25,18 +25,18 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL HubSpot] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL HubSpot] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Damit [!DNL Flow Service] eine Verbindung zu [!DNL HubSpot] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit [!DNL HubSpot] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `clientId` | Die mit Ihrer [!DNL HubSpot] -Anwendung verknüpfte Client-ID. |
-| `clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL HubSpot]-Anwendung zugeordnet ist. |
-| `accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
-| `refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
+| `clientId` | Die mit Ihrem [!DNL HubSpot] Programm verknüpfte Client-ID. |
+| `clientSecret` | Das mit Ihrer [!DNL HubSpot]-Anwendung verknüpfte Client-Geheimnis. |
+| `accessToken` | Das Zugriffstoken, das beim ersten Authentifizieren Ihrer OAuth-Integration abgerufen wurde. |
+| `refreshToken` | Das Aktualisierungstoken, das beim ersten Authentifizieren Ihrer OAuth-Integration abgerufen wurde. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL HubSpot] ist: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie in diesem [HubSpot-Dokument](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
@@ -47,9 +47,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL HubSpot]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL HubSpot]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -90,15 +90,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.clientId` | Die mit Ihrer [!DNL HubSpot] -Anwendung verknüpfte Client-ID. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL HubSpot]-Anwendung zugeordnet ist. |
-| `auth.params.accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
-| `auth.params.refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
-| `connectionSpec.id` | Die [!DNL HubSpot] Verbindungsspezifikations-ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `auth.params.clientId` | Die mit Ihrem [!DNL HubSpot] Programm verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das mit Ihrer [!DNL HubSpot]-Anwendung verknüpfte Client-Geheimnis. |
+| `auth.params.accessToken` | Das Zugriffstoken, das beim ersten Authentifizieren Ihrer OAuth-Integration abgerufen wurde. |
+| `auth.params.refreshToken` | Das Aktualisierungstoken, das beim ersten Authentifizieren Ihrer OAuth-Integration abgerufen wurde. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL HubSpot]-Verbindung: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {

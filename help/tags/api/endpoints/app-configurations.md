@@ -15,7 +15,7 @@ ht-degree: 96%
 >
 >Die Implementierung des `/app_configurations`-Endpunkts ist im Fluss, da Funktionen hinzugefügt, entfernt und überarbeitet werden.
 
-App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldeinformationen zur späteren Verwendung. Mit dem `/app_configurations`-Endpunkt in der Reactor-API können Sie App-Konfigurationen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldedaten zur späteren Verwendung. Mit dem `/app_configurations`-Endpunkt in der Reactor-API können Sie App-Konfigurationen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -215,7 +215,7 @@ curl -X POST \
 | `platform` | Die Plattform, auf der die Anwendung läuft (Web oder Mobile). Damit wird festgelegt, welche Messaging-Services verfügbar sind. |
 | `messaging_service` | Der mit der Anwendung verknüpfte Messaging-Service, z. B. [Apple Push Notification Service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) und [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Damit wird festgelegt, welche Tastentypen verwendet werden können. |
 | `key_type` | Stellt das Protokoll dar, das ein Push-Service-Anbieter unterstützt, und bestimmt das Format des Objekts `push_credential`. Bei der Weiterentwicklung der Protokolle für Messaging-Services werden neue `key_type`-Werte erstellt, die die aktualisierten Protokolle unterstützen. |
-| `push_credential` | Der eigentliche Anmeldeinformationswert, der im Ruhezustand verschlüsselt wird. Dieses Feld wird normalerweise nicht entschlüsselt oder in API-Antworten aufgenommen. Nur bestimmte Adobe-Services können eine Antwort erhalten, die eine entschlüsselte Push-Anmeldeinformation enthält. |
+| `push_credential` | Der eigentliche Anmeldedatenwert, der im Ruhezustand verschlüsselt wird. Dieses Feld wird normalerweise nicht entschlüsselt oder in API-Antworten aufgenommen. Nur bestimmte Adobe-Services können eine Antwort erhalten, die entschlüsselte Push-Anmeldedaten enthalten. |
 
 {style="table-layout:auto"}
 
@@ -258,7 +258,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten App-Konfiguration 
 
 ## Aktualisieren einer App-Konfiguration
 
-Sie können eine App-Konfiguration aktualisieren, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können eine App-Konfiguration aktualisieren, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 

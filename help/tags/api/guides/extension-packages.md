@@ -1,27 +1,27 @@
 ---
 title: Freigeben privater Erweiterungspakete in der Reactor-API
-description: Erfahren Sie, wie Sie anderen Unternehmen gestatten, private Erweiterungspakete in der Reactor-API freizugeben.
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+description: Erfahren Sie, wie Sie andere Unternehmen autorisieren, private Erweiterungspakete in der Reactor-API freizugeben.
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: eaed3a1434491bbcaed4b82b8ee78b119fb2468c
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
 
 ---
 
-
 # Freigeben privater Erweiterungspakete
 
 >[!NOTE]
 >
->Benutzer mit der Berechtigung &quot;`develop_extensions`&quot;in der Eigentümerorganisation des Erweiterungspakets können die Nutzungsberechtigungen für dieses Erweiterungspaket erstellen, auflisten und löschen. Benutzer in einer autorisierten Organisation, die über die Berechtigung `manage_properties` verfügen, dürfen die Nutzungsberechtigungen für das Erweiterungspaket für ihre Organisation nur auflisten und ihren Status auf `accepted` aktualisieren, wenn sie dieses Erweiterungspaket verwenden möchten, oder auf `rejected` , wenn sie es nicht verwenden möchten.
+>Benutzer mit der Berechtigung `develop_extensions` in der Organisation der Eigentümer von Erweiterungspaketen können Berechtigungen zur Verwendung von Erweiterungspaketen für dieses Erweiterungspaket erstellen, auflisten und löschen. Benutzer in einer autorisierten Organisation, die über die Berechtigung `manage_properties` verfügen, dürfen nur die Benutzungsberechtigungen für ihr Unternehmen für Erweiterungspakete auflisten und ihren Status auf `accepted` aktualisieren, wenn sie dieses Erweiterungspaket verwenden möchten, oder auf `rejected`, wenn sie es nicht verwenden möchten.
 
-Inhaber von Erweiterungspaketen können anderen Unternehmen die Erlaubnis erteilen, ihre privaten Versionen über die Reactor-API zu nutzen. Für jedes genehmigte Unternehmen wird eine Nutzungslizenz für ein Erweiterungspaket erteilt. Diese Autorisierung gilt für alle aktuellen und zukünftigen privaten Versionen des Pakets.
+Besitzer von Erweiterungspaketen können anderen Unternehmen über die Reactor-API die Berechtigung zur Nutzung ihrer privaten Versionen erteilen. Jedes genehmigte Unternehmen erhält eine Nutzungslizenz für ein Erweiterungspaket, und diese Autorisierung gilt für alle aktuellen und künftigen privaten Versionen des Pakets.
 
-Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Sie Nutzungsberechtigungen für Erweiterungspakete konfigurieren. Ausführlichere Anleitungen zum Verwalten von Berechtigungen in der Reactor-API, einschließlich Beispiel-JSON der Struktur einer Autorisierung, finden Sie im [Endpunkt zur Autorisierung der Package-Nutzung durch Erweiterungspakete](../endpoints/extension-package-usage-authorizations.md).
+Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Sie die Verwendungsautorisierungen von Erweiterungspaketen konfigurieren. Ausführlichere Anleitungen zum Verwalten von Berechtigungen in der Reactor-API, einschließlich einer Beispiel-JSON zur Autorisierungsstruktur, finden Sie im [Handbuch für Endpunkte zur Autorisierung der Verwendung von Erweiterungspaketen](../endpoints/extension-package-usage-authorizations.md).
 
-## Autorisierung erstellen {#create-authorization}
+## Erstellen einer Autorisierung {#create-authorization}
 
-Um eine neue Autorisierung zu erstellen, müssen Sie über die Berechtigung `develop_extensions` verfügen. Das folgende Beispiel zeigt, wie Sie eine Nutzungsautorisierung für ein Erweiterungspaket mit dem `authorized_org_id` des Unternehmens erstellen können, das Sie autorisieren möchten.
+Um eine neue Autorisierung zu erstellen, benötigen Sie das `develop_extensions`. Das folgende Beispiel zeigt, wie Sie eine Autorisierung der Verwendung von Erweiterungspaketen für ein Erweiterungspaket mit der `authorized_org_id` des Unternehmens erstellen können, das Sie autorisieren möchten.
 
 **API-Format**
 
@@ -37,7 +37,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine neue Autorisierung des Erweiterungspakets für das angegebene Unternehmen erstellt.
+Die folgende Anfrage erstellt ein neues Erweiterungspaket für die Autorisierung des angegebenen Unternehmens.
 
 ```shell
 curl -X POST \
@@ -62,11 +62,11 @@ curl -X POST \
 
 {style="table-layout:auto"}
 
-Der Anfangsstatus der Autorisierung befindet sich im Schritt `pending_approval` . Vor der Verwendung des Erweiterungspakets muss das Unternehmen die Genehmigung erteilen. Benutzer des Unternehmens können das private Erweiterungspaket durchsuchen, während die Autorisierung noch aussteht, es jedoch nicht installieren kann und nicht in ihrem Erweiterungskatalog zu finden ist.
+Der ursprüngliche Status der Autorisierung befindet sich in der `pending_approval`. Vor Verwendung des Erweiterungspakets muss die Firma die Autorisierung genehmigen. Benutzer des Unternehmens können das private Erweiterungspaket durchsuchen, während die Autorisierung noch nicht genehmigt ist, sie können es jedoch nicht installieren und nicht in ihrem Erweiterungskatalog finden.
 
-## Genehmigung {#approve-authorization}
+## Autorisierung genehmigen {#approve-authorization}
 
-Um eine Autorisierung zu genehmigen, müssen Sie über die `manage_properties` -Rechte verfügen. Als autorisiertes Unternehmen müssen Sie eine PATCH-Anfrage an die Autorisierung der Package-Nutzung der Erweiterung senden, einschließlich der `ID` der Autorisierung und den auf `approved` festgelegten Status festlegen.
+Um eine Autorisierung zu genehmigen, müssen Sie über die `manage_properties` verfügen. Als autorisiertes Unternehmen müssen Sie eine PATCH-Anfrage an die Autorisierung zur Verwendung des Erweiterungspakets senden, einschließlich der `ID` der Autorisierung, und den Status auf `approved` setzen.
 
 **API-Format**
 
@@ -82,7 +82,7 @@ PATCH //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORIZ
 
 **Anfrage**
 
-Die folgende PATCH-Anfrage setzt die `state` einer Autorisierung auf `approved`.
+Die folgende PATCH-Anfrage setzt den `state` einer Autorisierung auf `approved`.
 
 ```shell
 curl -X PATCH \
@@ -102,15 +102,15 @@ curl -X PATCH \
       }
 ```
 
-Nachdem die Autorisierung als autorisiertes Unternehmen genehmigt wurde, können Sie jetzt das Erweiterungspaket in Ihren Eigenschaften installieren.
+Sobald die Autorisierung genehmigt wurde, können Sie als autorisiertes Unternehmen das Erweiterungspaket jetzt in Ihren Eigenschaften installieren.
 
 >[!NOTE]
 >
->Wird die Genehmigung abgelehnt, kann das autorisierte Unternehmen das Erweiterungspaket nicht verwenden.
+>Wird die Autorisierung abgelehnt, kann das autorisierte Unternehmen das Erweiterungspaket nicht verwenden.
 
 ## Autorisierung löschen {#delete-authorization}
 
-Als Eigentümer eines Erweiterungspakets können Sie die Autorisierung jederzeit widerrufen, indem Sie die Autorisierung zur Verwendung des Erweiterungspakets löschen. Dadurch wird verhindert, dass das autorisierte Unternehmen private Versionen des Erweiterungspakets im Katalog anzeigt und in seinen Eigenschaften installiert. Bereits installierte private Versionen funktionieren jedoch nach dem Löschen weiterhin wie erwartet.
+Als Eigentümer eines Erweiterungspakets können Sie die Autorisierung jederzeit widerrufen, indem Sie die Autorisierung zur Verwendung des Erweiterungspakets löschen. Dadurch kann die autorisierte Firma keine privaten Versionen des Erweiterungspakets im Katalog anzeigen und in den Eigenschaften installieren. Bereits installierte private Versionen funktionieren jedoch nach dem Löschen weiterhin wie erwartet.
 
 **API-Format**
 
@@ -126,7 +126,7 @@ DELETE //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORI
 
 **Anfrage**
 
-Mit der folgenden DELETE-Anfrage werden die Autorisierungsberechtigungen für ein Unternehmen entfernt.
+Mit der folgenden DELETE-Anfrage werden Autorisierungsberechtigungen für ein Unternehmen entfernt.
 
 ```shell
 curl -X DELETE \

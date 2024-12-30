@@ -1,6 +1,6 @@
 ---
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
-description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
+description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
@@ -21,7 +21,7 @@ ht-degree: 16%
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 >* [[!DNL Marketo Engage] Standardaktivitäten](../../connectors/adobe-applications/marketo/marketo.md)
 
-In diesem Handbuch finden Sie Anweisungen zum Filtern von Daten auf Zeilenebene für eine Quelle mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch für Anweisungen zum Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -36,13 +36,13 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Filtern von Quelldaten {#filter-source-data}
 
-Im Folgenden werden die Schritte beschrieben, die zum Filtern von Daten auf Zeilenebene für Ihre Quelle durchgeführt werden müssen.
+Im Folgenden werden die Schritte beschrieben, die zum Filtern von Daten auf Zeilenebene für Ihre Quelle unternommen werden müssen.
 
-### Abrufen Ihrer Verbindungsspezifikationen {#retrieve-your-connection-specs}
+### Abrufen der Verbindungsspezifikationen {#retrieve-your-connection-specs}
 
-Der erste Schritt beim Filtern von Daten auf Zeilenebene für Ihre Quelle besteht darin, die Verbindungsspezifikationen Ihrer Quelle abzurufen und die von Ihrer Quelle unterstützten Operatoren und Sprachen zu bestimmen.
+Der erste Schritt beim Filtern von Daten auf Zeilenebene für Ihre Quelle besteht darin, die Verbindungsspezifikationen Ihrer Quelle abzurufen und die Operatoren und die Sprache zu bestimmen, die Ihre Quelle unterstützt.
 
-Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs` -Endpunkt der [!DNL Flow Service] -API und geben Sie den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
+Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs`-Endpunkt der [!DNL Flow Service]-API und geben Sie den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
 
 **API-Format**
 
@@ -52,7 +52,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMS}` | Die optionalen Abfrageparameter, nach denen Ergebnisse gefiltert werden sollen. Sie können die Verbindungsspezifikation [!DNL Google BigQuery] abrufen, indem Sie die Eigenschaft `name` anwenden und in Ihrer Suche `"google-big-query"` angeben. |
+| `{QUERY_PARAMS}` | Die optionalen Abfrageparameter zum Filtern der Ergebnisse nach . Sie können die [!DNL Google BigQuery] Verbindungsspezifikation abrufen, indem Sie die `name`-Eigenschaft anwenden und bei der Suche `"google-big-query"` angeben. |
 
 +++Anfrage
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den Status-Code 200 und die Verbindungsanforderungen für [!DNL Google BigQuery] zurück, einschließlich Informationen zur unterstützten Abfragesprache und logischen Operatoren.
+Bei einer erfolgreichen Antwort werden der Status-Code 200 und die Verbindungsspezifikationen für [!DNL Google BigQuery] zurückgegeben, einschließlich Informationen zu der unterstützten Abfragesprache und den logischen Operatoren.
 
 ```json
 "attributes": {
@@ -100,12 +100,12 @@ Eine erfolgreiche Antwort gibt den Status-Code 200 und die Verbindungsanforderun
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes.filterAtSource.enabled` | Bestimmt, ob die abgefragte Quelle das Filtern von Daten auf Zeilenebene unterstützt. |
+| `attributes.filterAtSource.enabled` | Legt fest, ob die abgefragte Quelle das Filtern nach Daten auf Zeilenebene unterstützt. |
 | `attributes.filterAtSource.queryLanguage` | Bestimmt die Abfragesprache, die die abgefragte Quelle unterstützt. |
 | `attributes.filterAtSource.logicalOperators` | Bestimmt die logischen Operatoren, mit denen Sie Daten auf Zeilenebene für Ihre Quelle filtern können. |
-| `attributes.filterAtSource.comparisonOperators` | Bestimmt Vergleichsoperatoren, mit denen Sie Daten auf Zeilenebene für Ihre Quelle filtern können. Weitere Informationen zu Vergleichsoperatoren finden Sie in der unten stehenden Tabelle. |
-| `attributes.filterAtSource.columnNameEscapeChar` | Legt das Zeichen fest, das als Escape-Zeichen für Spalten verwendet werden soll. |
-| `attributes.filterAtSource.valueEscapeChar` | Bestimmt, wie Werte beim Schreiben einer SQL-Abfrage eingebunden werden. |
+| `attributes.filterAtSource.comparisonOperators` | Bestimmt Vergleichsoperatoren, mit denen Sie Daten auf Zeilenebene für Ihre Quelle filtern können. Weitere Informationen zu Vergleichsoperatoren finden Sie in der folgenden Tabelle. |
+| `attributes.filterAtSource.columnNameEscapeChar` | Bestimmt das Zeichen, das zum Maskieren von Spalten verwendet werden soll. |
+| `attributes.filterAtSource.valueEscapeChar` | Bestimmt, wie Werte beim Schreiben einer SQL-Abfrage eingeschlossen werden. |
 
 {style="table-layout:auto"}
 
@@ -115,22 +115,22 @@ Eine erfolgreiche Antwort gibt den Status-Code 200 und die Verbindungsanforderun
 
 | Operator | Beschreibung |
 | --- | --- |
-| `==` | Filtert danach, ob die Eigenschaft dem bereitgestellten Wert entspricht. |
-| `!=` | Filtert danach, ob die Eigenschaft nicht dem bereitgestellten Wert entspricht. |
-| `<` | Filtert danach, ob die Eigenschaft kleiner als der angegebene Wert ist. |
+| `==` | Filtert, ob die Eigenschaft dem angegebenen Wert entspricht. |
+| `!=` | Filtert danach, ob die Eigenschaft dem angegebenen Wert nicht entspricht. |
+| `<` | Filtert nach dem Wert, ob die Eigenschaft kleiner als der angegebene Wert ist. |
 | `>` | Filtert danach, ob die Eigenschaft größer als der angegebene Wert ist. |
 | `<=` | Filtert danach, ob die Eigenschaft kleiner oder gleich dem angegebenen Wert ist. |
 | `>=` | Filtert danach, ob die Eigenschaft größer oder gleich dem angegebenen Wert ist. |
-| `like` | Filtert, indem in einer `WHERE` -Klausel verwendet wird, um nach einem bestimmten Muster zu suchen. |
-| `in` | Filtert nach, ob sich die Eigenschaft innerhalb eines angegebenen Bereichs befindet. |
+| `like` | Filtert, indem sie in einer `WHERE` verwendet wird, um nach einem angegebenen Muster zu suchen. |
+| `in` | Filtert nach dem Wert, ob sich die Eigenschaft innerhalb eines angegebenen Bereichs befindet. |
 
 {style="table-layout:auto"}
 
-### Filterbedingungen für die Aufnahme festlegen {#specify-filtering-conditions-for-ingestion}
+### Filterbedingungen für die Aufnahme angeben {#specify-filtering-conditions-for-ingestion}
 
-Nachdem Sie die von Ihrer Quelle unterstützten logischen Operatoren und Abfragesprachen identifiziert haben, können Sie mit Profile Query Language (PQL) die Filterbedingungen festlegen, die auf Ihre Quelldaten angewendet werden sollen.
+Nachdem Sie die logischen Operatoren und die Abfragesprache identifiziert haben, die Ihre Quelle unterstützt, können Sie mit Profile Query Language (PQL) die Filterbedingungen angeben, die Sie auf Ihre Quelldaten anwenden möchten.
 
-Im folgenden Beispiel werden Bedingungen nur auf ausgewählte Daten angewendet, die den bereitgestellten Werten für die Knotentypen entsprechen, die als Parameter aufgeführt sind.
+Im folgenden Beispiel werden Bedingungen angewendet, um nur Daten auszuwählen, die den bereitgestellten Werten für die als Parameter aufgelisteten Knotentypen entsprechen.
 
 ```json
 {
@@ -153,9 +153,9 @@ Im folgenden Beispiel werden Bedingungen nur auf ausgewählte Daten angewendet, 
 }
 ```
 
-### Datenvorschau {#preview-your-data}
+### Vorschau der Daten {#preview-your-data}
 
-Sie können eine Vorschau Ihrer Daten anzeigen, indem Sie eine GET-Anfrage an den `/explore` -Endpunkt der [!DNL Flow Service] -API richten, dabei `filters` als Teil Ihrer Abfrageparameter angeben und Ihre PQL-Eingabebedingungen in [!DNL Base64] angeben.
+Sie können eine Vorschau Ihrer Daten anzeigen, indem Sie eine GET-Anfrage an den `/explore`-Endpunkt der [!DNL Flow Service]-API stellen, während Sie `filters` als Teil Ihrer Abfrageparameter angeben und Ihre PQL-Eingabebedingungen in [!DNL Base64] angeben.
 
 **API-Format**
 
@@ -165,9 +165,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung der Basisverbindung Ihrer Quelle. |
+| `{BASE_CONNECTION_ID}` | Die ID der Basisverbindung Ihrer Quelle. |
 | `{TABLE_PATH}` | Die Pfadeigenschaft der Tabelle, die Sie überprüfen möchten. |
-| `{FILTERS}` | Ihre in [!DNL Base64] kodierten PQL-Filterbedingungen. |
+| `{FILTERS}` | Ihre in [!DNL Base64] kodierten PQL-Filterbedingungen |
 
 +++Anfrage
 
@@ -332,9 +332,9 @@ Eine erfolgreiche Antwort gibt den Inhalt und die Struktur Ihrer Daten zurück.
 
 +++
 
-### Quellverbindung für gefilterte Daten erstellen
+### Erstellen einer Quellverbindung für gefilterte Daten
 
-Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie Ihre Filterbedingungen in den Anfrageteilparametern an.
+Um eine Quellverbindung zu erstellen und gefilterte Daten aufzunehmen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt und geben Sie Ihre Filterbedingungen in den Parametern des Anfragetexts an.
 
 **API-Format**
 
@@ -344,7 +344,7 @@ POST /sourceConnections
 
 +++Anfrage
 
-Die folgende Anfrage erstellt eine Quellverbindung zum Erfassen von Daten von `test1.fasTestTable`, wobei `city` = `DDN` ist.
+Die folgende Anfrage erstellt eine Quellverbindung zum Aufnehmen von Daten aus `test1.fasTestTable`, wobei `city` = `DDN` ist.
 
 ```shell
 curl -X POST \
@@ -393,7 +393,7 @@ curl -X POST \
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurückgegeben.
 
 ```json
 {
@@ -404,63 +404,63 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 +++
 
-## Filtern von Aktivitätsentitäten nach [!DNL Marketo Engage] {#filter-for-marketo}
+## Aktivitätsentitäten für [!DNL Marketo Engage] filtern {#filter-for-marketo}
 
-Sie können die Filterung auf Zeilenebene verwenden, um bei Verwendung des [[!DNL Marketo Engage] Quell-Connectors](../../connectors/adobe-applications/marketo/marketo.md) nach Aktivitätsentitäten zu filtern. Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen](../../connectors/adobe-applications/mapping/marketo.md) verwaltet.
+Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ ](../../connectors/adobe-applications/mapping/marketo.md).
 
-### [!DNL Marketo] standardmäßige Aktivitätstypen {#marketo-standard-activity-types}
+### Standard-Aktivitätstypen [!DNL Marketo] {#marketo-standard-activity-types}
 
 In der folgenden Tabelle sind die standardmäßigen Aktivitätstypen für [!DNL Marketo] aufgeführt. Verwenden Sie diese Tabelle als Referenz für Ihre Filterkriterien.
 
-| Aktivitätstyp-ID | Aktivitätstyp name |
+| Aktivitätstyp-ID | Aktivitätstyp-Name |
 | --- | --- |
-| 1 | Besuchs-Webseite |
+| 1 | Web-Seite besuchen |
 | 2 | Formular ausfüllen |
-| 3 | Link auswählen |
+| 3 | Link anklicken |
 | 6 | E-Mail senden |
 | 7 | E-Mail zugestellt |
 | 8 | E-Mail gebounct |
 | 9 | E-Mail abmelden |
 | 10 | E-Mail öffnen |
-| 11 | Klick auf E-Mail |
+| 11 | Click Email |
 | 12 | Neuer Lead |
 | 21 | Lead konvertieren |
 | 22 | Score ändern |
-| 24 | Zu Liste hinzufügen |
+| 24 | Zur Liste hinzufügen |
 | 25 | Aus Liste entfernen |
 | 27 | E-Mail nicht zugestellt (Soft-Bounce) |
 | 32 | Leads zusammenführen |
-| 34 | Zu Chancen hinzufügen |
+| 34 | Zur Opportunity hinzufügen |
 | 35 | Aus Opportunity entfernen |
-| 36 | Aktualisierungsmöglichkeit |
+| 36 | Opportunity aktualisieren |
 | 46 | Interessanter Moment |
 | 101 | Umsatzschritt ändern |
-| 104 | Änderungsstatus in Progression |
+| 104 | Statusänderung in Bearbeitung |
 | 110 | Webhook aufrufen |
-| 113 | Zu Krankenpflege hinzufügen |
-| 114 | Wechseln der Krankenpflege |
-| 115 | Wechseln der Krankenpflege |
+| 113 | Add to Nurture |
+| 114 | Pflegespur ändern |
+| 115 | Nurture-Kadenz ändern |
 
 {style="table-layout:auto"}
 
-Gehen Sie wie folgt vor, um Ihre standardmäßigen Aktivitätsentitäten bei Verwendung des Quell-Connectors [!DNL Marketo] zu filtern.
+Gehen Sie wie folgt vor, um Ihre standardmäßigen Aktivitätsentitäten bei Verwendung des [!DNL Marketo]-Quell-Connectors zu filtern.
 
 ### Erstellen eines Entwurfsdatenflusses
 
-Erstellen Sie zunächst einen [[!DNL Marketo] Datenfluss](../ui/create/adobe-applications/marketo.md) und speichern Sie ihn als Entwurf. Eine detaillierte Anleitung zum Erstellen eines Entwurfs für einen Datenfluss finden Sie in der folgenden Dokumentation:
+Erstellen Sie zunächst einen [[!DNL Marketo] Datenfluss](../ui/create/adobe-applications/marketo.md) und speichern Sie ihn als Entwurf. Detaillierte Anweisungen zum Erstellen eines Datenflussentwurfs finden Sie in der folgenden Dokumentation:
 
 * [Speichern eines Datenflusses als Entwurf mithilfe der Benutzeroberfläche](../ui/draft.md)
 * [Speichern eines Datenflusses als Entwurf mithilfe der API](../api/draft.md)
 
-### Datenfluss-ID abrufen
+### Abrufen Ihrer Datenfluss-ID
 
-Sobald Sie über einen entworfenen Datenfluss verfügen, müssen Sie dessen entsprechende ID abrufen.
+Nachdem Sie einen Datenfluss-Entwurf erstellt haben, müssen Sie die entsprechende ID abrufen.
 
-Navigieren Sie in der Benutzeroberfläche zum Quellkatalog und wählen Sie dann **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus. Verwenden Sie die Statusspalte, um alle im Entwurfsmodus gespeicherten Datenflüsse zu identifizieren, und wählen Sie dann den Namen Ihres Datenflusses aus. Suchen Sie dann im Bereich **[!UICONTROL Eigenschaften]** rechts nach Ihrer Datenfluss-ID.
+Navigieren Sie in der Benutzeroberfläche zum Quellkatalog und wählen Sie **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile aus. Verwenden Sie die Spalte Status , um alle Datenflüsse zu identifizieren, die im Entwurfsmodus gespeichert wurden, und wählen Sie dann den Namen Ihres Datenflusses aus. Verwenden Sie anschließend das Bedienfeld **[!UICONTROL Eigenschaften]** auf der rechten Seite, um Ihre Datenfluss-ID zu finden.
 
-### Abrufen Ihrer Datenflussdetails
+### Abrufen von Datenflussdetails
 
-Als Nächstes müssen Sie Ihre Datenflug-Details abrufen, insbesondere die mit Ihrem Datenfluss verknüpfte Quell-Verbindungs-ID. Um Ihre Datenflussdetails abzurufen, stellen Sie eine GET-Anfrage an den `/flows` -Endpunkt und geben Sie Ihre Datenfluss-ID als Pfadparameter an.
+Als Nächstes müssen Sie Ihre Datenflussdetails abrufen, insbesondere die mit Ihrem Datenfluss verknüpfte Quellverbindungs-ID. Um Ihre Datenflussdetails abzurufen, stellen Sie eine GET-Anfrage an den `/flows`-Endpunkt und geben Sie Ihre Datenfluss-ID als Pfadparameter an.
 
 **API-Format**
 
@@ -489,7 +489,7 @@ curl -X GET \
 
 +++Antwort
 
-Bei einer erfolgreichen Antwort werden Ihre Datenfluss-Details zurückgegeben, einschließlich Informationen zu den entsprechenden Quell- und Zielverbindungen. Sie müssen Ihre Quell- und Zielverbindungs-IDs zur Kenntnis nehmen, da diese Werte später erforderlich sind, um Ihren Datenfluss zu veröffentlichen.
+Bei einer erfolgreichen Antwort werden Ihre Datenflussdetails zurückgegeben, einschließlich Informationen zu den entsprechenden Quell- und Zielverbindungen. Sie müssen Ihre Quell- und Zielverbindungs-IDs beachten, da diese Werte später erforderlich sind, um Ihren Datenfluss veröffentlichen zu können.
 
 ```json {line-numbers="true" start-line="1" highlight="23, 26"}
 {
@@ -589,9 +589,9 @@ Bei einer erfolgreichen Antwort werden Ihre Datenfluss-Details zurückgegeben, e
 
 +++
 
-### Abrufen der Details zur Quellverbindung
+### Abrufen von Details zur Quellverbindung
 
-Verwenden Sie als Nächstes Ihre Quell-Verbindungs-ID und stellen Sie eine GET-Anfrage an den `/sourceConnections` -Endpunkt, um Ihre Details zur Quellverbindung abzurufen.
+Verwenden Sie anschließend Ihre Quellverbindungs-ID und stellen Sie eine GET-Anfrage an den `/sourceConnections`-Endpunkt, um die Details Ihrer Quellverbindung abzurufen.
 
 **API-Format**
 
@@ -674,15 +674,15 @@ Eine erfolgreiche Antwort gibt die Details Ihrer Quellverbindung zurück. Notier
 
 +++
 
-### Quellverbindung mit Filterbedingungen aktualisieren
+### Aktualisieren der Quellverbindung mit Filterbedingungen
 
-Nachdem Sie nun über Ihre Quell-Verbindungs-ID und die zugehörige Version verfügen, können Sie jetzt eine PATCH-Anfrage mit den Filterbedingungen stellen, die Ihre standardmäßigen Aktivitätstypen angeben.
+Nachdem Sie nun über Ihre Quellverbindungs-ID und die zugehörige Version verfügen, können Sie jetzt eine PATCH-Anfrage mit den Filterbedingungen stellen, die Ihre standardmäßigen Aktivitätstypen angeben.
 
-Um Ihre Quellverbindung zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie Ihre Quellverbindungs-ID als Abfrageparameter an. Darüber hinaus müssen Sie einen `If-Match` -Header-Parameter mit der entsprechenden Version Ihrer Quellverbindung angeben.
+Um Ihre Quellverbindung zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/sourceConnections`-Endpunkt und geben Sie Ihre Quellverbindungs-ID als Abfrageparameter an. Darüber hinaus müssen Sie einen `If-Match` Kopfzeilenparameter mit der entsprechenden Version Ihrer Quellverbindung angeben.
 
 >[!TIP]
 >
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version/das Tag des Datenflusses, den Sie aktualisieren möchten. Der Versions-/Tag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version/eTag des Datenflusses, den Sie aktualisieren möchten. Der Versions-/eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert.
 
 **API-Format**
 
@@ -736,7 +736,7 @@ curl -X PATCH \
 
 +++Antwort
 
-Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (Version) zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihre Quellverbindungs-ID und das eTag (Version) zurückgegeben.
 
 ```json
 {
@@ -747,9 +747,9 @@ Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (V
 
 +++
 
-### Publish der Quellverbindung
+### Publish - Ihre Quellverbindung
 
-Nachdem Ihre Quellverbindung mit Ihren Filterbedingungen aktualisiert wurde, können Sie jetzt vom Entwurfsstatus abwechseln und Ihre Quellverbindung veröffentlichen. Senden Sie dazu eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie die ID Ihrer Quellverbindung als Entwurf sowie einen Aktionsvorgang für die Veröffentlichung an.
+Nachdem Ihre Quellverbindung mit Ihren Filterbedingungen aktualisiert wurde, können Sie jetzt mit dem Status Entwurf fortfahren und Ihre Quellverbindung veröffentlichen. Stellen Sie dazu eine POST-Anfrage an den `/sourceConnections`-Endpunkt und geben Sie die ID Ihrer Entwurfsquellverbindung sowie einen Aktionsvorgang für die Veröffentlichung an.
 
 **API-Format**
 
@@ -764,7 +764,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 +++Anfrage
 
-Die folgende Anfrage veröffentlicht eine entworfene Quellverbindung.
+Die folgende Anfrage veröffentlicht einen Entwurf einer Quellverbindung.
 
 ```shell
 curl -X POST \
@@ -780,7 +780,7 @@ curl -X POST \
 
 +++Antwort
 
-Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (Version) zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihre Quellverbindungs-ID und das eTag (Version) zurückgegeben.
 
 ```json
 {
@@ -791,9 +791,9 @@ Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (V
 
 +++
 
-### Publish Ihre Zielverbindung
+### Publish - Ihre Zielverbindung
 
-Ähnlich wie im vorherigen Schritt müssen Sie auch Ihre Zielverbindung veröffentlichen, um mit dem Entwurf des Datenflusses fortzufahren und ihn zu veröffentlichen. Stellen Sie eine POST-Anfrage an den `/targetConnections` -Endpunkt und geben Sie die ID der Entwurfs-Zielverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
+Ähnlich wie im vorherigen Schritt müssen Sie auch Ihre Zielverbindung veröffentlichen, um fortfahren und Ihren Datenflussentwurf veröffentlichen zu können. Stellen Sie eine POST-Anfrage an den `/targetConnections`-Endpunkt und geben Sie die ID der Entwurfszielverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
 
 **API-Format**
 
@@ -836,9 +836,9 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende eTag für Ih
 +++
 
 
-### Publish Ihres Datenflusses
+### Publish - Datenfluss
 
-Nachdem Ihre Quell- und Zielverbindungen veröffentlicht wurden, können Sie jetzt mit dem letzten Schritt fortfahren und Ihren Datenfluss veröffentlichen. Um Ihren Datenfluss zu veröffentlichen, stellen Sie eine POST-Anfrage an den `/flows` -Endpunkt und geben Sie Ihre Datenfluss-ID sowie einen Aktionsvorgang zur Veröffentlichung an.
+Nachdem sowohl Ihre Quell- als auch Ihre Zielverbindung veröffentlicht wurden, können Sie jetzt mit dem letzten Schritt fortfahren und Ihren Datenfluss veröffentlichen. Um Ihren Datenfluss zu veröffentlichen, stellen Sie eine POST-Anfrage an den `/flows`-Endpunkt und geben Sie Ihre Datenfluss-ID und einen Aktionsvorgang für die Veröffentlichung an.
 
 **API-Format**
 
@@ -880,24 +880,24 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende `etag` Ihres
 
 +++
 
-Sie können die Experience Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Ihr Entwurf-Datenfluss veröffentlicht wurde. Navigieren Sie zur Seite &quot;Datenflüsse&quot;im Quellkatalog und referenzieren Sie den **[!UICONTROL Status]** Ihres Datenflusses. Bei erfolgreicher Ausführung sollte der Status jetzt auf **Aktiviert** gesetzt werden.
+Sie können die Experience Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Ihr Datenflussentwurf veröffentlicht wurde. Navigieren Sie im Quellkatalog zur Seite „Datenflüsse“ und verweisen Sie auf **[!UICONTROL Status]** Ihres Datenflusses. Bei Erfolg sollte der Status jetzt auf „Aktiviert **gesetzt**.
 
 >[!TIP]
 >
->* Ein Datenfluss mit aktivierter Filterung wird nur einmal aufgestockt. Alle Änderungen in der , die Sie an den Filterkriterien vornehmen (sei es ein Zusatz oder eine Entfernung), können nur für inkrementelle Daten wirksam werden.
->* Wenn Sie historische Daten für neue Aktivitätstypen erfassen müssen, wird empfohlen, einen neuen Datenfluss zu erstellen und die Filterkriterien mit den entsprechenden Aktivitätstypen in der Filterbedingung zu definieren.
->* Sie können keine benutzerdefinierten Aktivitätstypen filtern.
->* Sie können keine Vorschau gefilterter Daten anzeigen.
+>* Ein Datenfluss mit aktivierter Filterung wird nur einmal aufgestockt. Alle Änderungen an den Filterkriterien (Hinzufügen oder Entfernen) können nur für inkrementelle Daten wirksam werden.
+>* Wenn Sie historische Daten für einen neuen Aktivitätstyp bzw. neue Aktivitätstypen aufnehmen müssen, wird empfohlen, einen neuen Datenfluss zu erstellen und die Filterkriterien mit den entsprechenden Aktivitätstypen in der Filterbedingung zu definieren.
+>* Benutzerdefinierte Aktivitäten können nicht gefiltert werden.
+>* Sie können keine Vorschau von gefilterten Daten anzeigen.
 
 ## Anhang
 
-Dieser Abschnitt enthält weitere Beispiele für verschiedene Payloads zum Filtern.
+In diesem Abschnitt finden Sie weitere Beispiele für verschiedene Payloads zum Filtern.
 
-### Besondere Bedingungen
+### Singular-Bedingungen
 
 Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur eine Bedingung erforderlich ist.
 
-+++Auswählen zum Anzeigen des Beispiels
++++Beispiel auswählen, um es anzuzeigen
 
 ```json
 {
@@ -922,11 +922,11 @@ Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur ei
 
 +++
 
-### Verwenden des `in` -Operators
+### Verwenden des `in` Operators
 
-In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `in`.
+Ein Beispiel für den `in` finden Sie unten in der Beispiel-Payload .
 
-+++Auswählen zum Anzeigen des Beispiels
++++Beispiel auswählen, um es anzuzeigen
 
 ```json
 {
@@ -960,11 +960,11 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `in`
 
 +++
 
-### Verwenden des `isNull` -Operators
+### Verwenden des `isNull` Operators
 
-+++Auswählen zum Anzeigen des Beispiels
++++Beispiel auswählen, um es anzuzeigen
 
-In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `isNull`.
+Ein Beispiel für den `isNull` finden Sie unten in der Beispiel-Payload .
 
 ```json
 {
@@ -985,12 +985,12 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `isN
 
 +++
 
-### Verwenden des `NOT` -Operators
+### Verwenden des `NOT` Operators
 
-In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `NOT`.
+Ein Beispiel für den `NOT` finden Sie unten in der Beispiel-Payload .
 
 
-+++Auswählen zum Anzeigen des Beispiels
++++Beispiel auswählen, um es anzuzeigen
 
 ```json
 {
@@ -1021,7 +1021,7 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `NOT
 
 Ein Beispiel für komplexe verschachtelte Bedingungen finden Sie unten in der Beispiel-Payload .
 
-+++Auswählen zum Anzeigen des Beispiels
++++Beispiel auswählen, um es anzuzeigen
 
 ```json
 {

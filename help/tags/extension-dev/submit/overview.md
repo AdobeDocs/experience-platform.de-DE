@@ -21,7 +21,7 @@ Die Übermittlung einer Erweiterung an den Datenerfassungskatalog in Adobe Exper
 1. [Gewähren des Benutzerzugriffs für die Entwicklung von Erweiterungen](./access.md)
 1. [Entwickeln einer Erweiterung](./develop.md)
 1. [Erstellen eines Exchange-Listeneintrags](./create-listing.md)
-1. [Erstellen der ZIP-Datei für das Erweiterungspaket](./create-extension-package-zip.md)
+1. [Erstellen des Erweiterungspakets per ZIP](./create-extension-package-zip.md)
 1. [Hochladen und Testen der Erweiterung](./upload-and-test.md)
 1. [Freigeben der Erweiterung](./release.md)
 

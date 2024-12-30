@@ -249,7 +249,7 @@ ht-degree: 96%
          * [Übersicht](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Übersicht](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] Web Events API {#tiktok}
+      * [!DNL Tiktok] Web Events API-{#tiktok}
          * [Übersicht](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Übersicht](./extensions/server/tradedesk/overview.md)
@@ -261,11 +261,11 @@ ht-degree: 96%
    * [Unterstützte Browser](./extension-dev/browsers.md)
    * Einreichungsprozess {#submit}
       * [Übersicht](./extension-dev/submit/overview.md)
-      * [Einrichtung](./extension-dev/submit/setup.md)
+      * [Einrichten der Organisation](./extension-dev/submit/setup.md)
       * [Gewähren von Benutzerzugriff](./extension-dev/submit/access.md)
       * [Entwickeln einer Erweiterung](./extension-dev/submit/develop.md)
       * [Erstellen eines Exchange-Listeneintrags](./extension-dev/submit/create-listing.md)
-      * [Erstellen einer ZIP-Datei für ein Erweiterungspaket](./extension-dev/submit/create-extension-package-zip.md)
+      * [Erstellen einer Erweiterungspaket-ZIP-Datei](./extension-dev/submit/create-extension-package-zip.md)
       * [Hochladen und Implementieren von End-to-End-Tests](./extension-dev/submit/upload-and-test.md)
       * [Freigeben einer Erweiterung](./extension-dev/submit/release.md)
    * [Erweiterungskonfiguration](./extension-dev/configuration.md)
@@ -300,7 +300,7 @@ ht-degree: 96%
       * [Regeln](./api/endpoints/rules.md)
       * [Regelkomponenten](./api/endpoints/rule-components.md)
       * [Erweiterungspakete](./api/endpoints/extension-packages.md)
-      * [Nutzungsberechtigungen für Erweiterungspakete](./api/endpoints/extension-package-usage-authorizations.md)
+      * [Berechtigungen zur Verwendung von Erweiterungspaketen](./api/endpoints/extension-package-usage-authorizations.md)
       * [Erweiterungen](./api/endpoints/extensions.md)
       * [Bibliotheken](./api/endpoints/libraries.md)
       * [Builds](./api/endpoints/builds.md)

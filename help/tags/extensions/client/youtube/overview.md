@@ -23,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Haupterweiterung
 
-Verwenden Sie das Codefragment &quot;[&quot;Einbetten eines Players mithilfe eines &quot;\&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)&quot;-Tags aus den Google-Entwicklerdokumenten in der HTML jeder Webseite, auf der ein Videoplayer wiedergegeben werden soll.
+Verwenden Sie das Code-Fragment [Embed a player using an \&lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten auf der HTML jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
 
 Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer YouTube-Videos auf einer einzelnen Website, indem ein `id`-Attribut mit einem eindeutigen Wert im iframe-Skript-Tag eingefügt und `enablejsapi=1` und `rel=0` an das Ende des `src`-Attributwerts angehängt werden, falls dies noch nicht der Fall ist. Beispiel:
 
@@ -75,18 +75,18 @@ Für jedes Videoereignis (die sieben oben aufgelisteten Ereignisse) kann eine Ta
 Die Regeln umfassen drei Aktionen:
 
 * **Variablen festlegen:** Festlegen der Adobe Analytics-Variablen (Zuordnen zu allen oder einigen enthaltenen Datenelementen).
-* **Beacon senden:** Senden Sie das Adobe Analytics-Beacon als benutzerspezifischen Linktracking-Aufruf und geben Sie den Wert &quot;Linkname&quot;an.
+* **Beacon senden:** Senden Sie das Adobe Analytics-Beacon als benutzerdefinierten Linktracking-Aufruf und geben Sie einen Wert für „Link-Name“ an.
 * **Variablen löschen:** Löschen der Adobe Analytics-Variablen.
 
 ## Beispiel für eine Tag-Regel für „Videostart“
 
 Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
-* **Ereignisse**: &quot;Videostart&quot;(Dieses Ereignis löst die Regel aus, wenn der Besucher mit der Wiedergabe eines YouTube-Videos beginnt.)
+* **Ereignisse**: „Videostart“ (Dieses Ereignis löst die Regel aus, wenn der Besucher die Wiedergabe eines YouTube-Videos beginnt.)
 
 * **Bedingung**: Keine
 
-* **Aktionen**: Verwenden Sie die Aktion **Analytics-Erweiterung** zum &quot;Festlegen von Variablen&quot;, um Folgendes zuzuordnen:
+* **Aktionen**: Verwenden Sie die **Analytics-Erweiterung** um die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
 
    * Das Ereignis für Videostart,
    * Eine prop/eVar für das Datenelement „Videodauer“
@@ -94,13 +94,13 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
    * Eine prop/eVar für das Datenelement „Videoname“
    * Ein prop/eVar für das Datenelement „Video-URL“
 
-  Schließen Sie dann die Aktion &quot;Beacon senden&quot;(`s.tl`) mit dem Link-Namen &quot;Videostart&quot;gefolgt von der Aktion &quot;Variablen löschen&quot;ein.
+  Schließen Sie dann die Aktion „Beacon senden“ (`s.tl`) mit dem Link-Namen „Videostart“ mit ein, gefolgt von der Aktion „Variablen löschen“.
 
 >[!TIP]
 > 
 >Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie unter [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erklärt, und dann als ein Segment in Analysis Workspace angewendet werden.
 
-Um Videoinformationswerte zu verketten, erstellen Sie ein neues Datenelement mit dem Namen &quot;Videometadaten&quot;und programmieren es so, dass alle Videodatenelemente (oben aufgelistet) abgerufen und zusammengeführt werden. Beispiel:
+Erstellen Sie zum Verketten von Videoinformationswerten ein neues Datenelement mit dem Namen „Videometadaten“ und programmieren Sie es so, dass alle oben aufgeführten Videodatenelemente abgerufen und zusammengestellt werden. z. B.:
 
 ```javascript
 var r = [];
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Weitere Informationen zum Erstellen und Verwenden von Datenelementen in Platform finden Sie in der Dokumentation zu [Datenelementen](../../../ui/managing-resources/data-elements.md) .
+Weitere Informationen zur effektiven Erstellung und Verwendung von Datenelementen in Platform finden Sie in der Dokumentation [Datenelemente](../../../ui/managing-resources/data-elements.md).

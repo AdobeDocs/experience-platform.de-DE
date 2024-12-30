@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Azure Azure Data Explorer; Azure Data Explorer; Azure Data Explorer
+keywords: Experience Platform;Startseite;beliebte Themen;Azure Data Explorer;Azure Data Explorer;Azure Data Explorer
 solution: Experience Platform
-title: Erstellen einer Azure Azure Data Explorer Base-Verbindung mit der Flow Service-API
+title: Erstellen einer Azure Data Explorer-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Azure Data Explorer und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie Azure Data Explorer mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 ---
 
-# Erstellen einer [!DNL Azure Azure Data Explorer]-Basisverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Azure Data Explorer]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -26,19 +26,19 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Azure Data Explorer] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Azure Data Explorer] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung mit [!DNL Azure Data Explorer] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `endpoint` | Der Endpunkt des [!DNL Azure Data Explorer]-Servers. |
-| `database` | Der Name der [!DNL Azure Data Explorer] -Datenbank. |
-| `tenant` | Die eindeutige Mandantenkennung, die für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
-| `servicePrincipalId` | Die eindeutige Dienstprinzipal-ID, die für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
-| `servicePrincipalKey` | Der eindeutige Dienstprinzipalschlüssel, der für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
+| `database` | Der Name der [!DNL Azure Data Explorer]. |
+| `tenant` | Die eindeutige Mandanten-ID, die für die Verbindung mit der [!DNL Azure Data Explorer]-Datenbank verwendet wird. |
+| `servicePrincipalId` | Die eindeutige Service-Prinzipal-ID, die für die Verbindung mit der [!DNL Azure Data Explorer]-Datenbank verwendet wird. |
+| `servicePrincipalKey` | Der eindeutige Service-Prinzipal-Schlüssel, mit dem eine Verbindung zur [!DNL Azure Data Explorer]-Datenbank hergestellt wird. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Azure Data Explorer] ist `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Azure Data Explorer] Dokument](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
@@ -49,9 +49,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Azure Data Explorer]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Azure Data Explorer]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -94,11 +94,11 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.endpoint` | Der Endpunkt des [!DNL Azure Data Explorer]-Servers. |
-| `auth.params.database` | Der Name der [!DNL Azure Data Explorer] -Datenbank. |
-| `auth.params.tenant` | Die eindeutige Mandantenkennung, die für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
-| `auth.params.servicePrincipalId` | Die eindeutige Dienstprinzipal-ID, die für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
-| `auth.params.servicePrincipalKey` | Der eindeutige Dienstprinzipalschlüssel, der für die Verbindung mit der [!DNL Azure Data Explorer] -Datenbank verwendet wird. |
-| `connectionSpec.id` | Die [!DNL Azure Data Explorer] Verbindungsspezifikations-ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `auth.params.database` | Der Name der [!DNL Azure Data Explorer]. |
+| `auth.params.tenant` | Die eindeutige Mandanten-ID, die für die Verbindung mit der [!DNL Azure Data Explorer]-Datenbank verwendet wird. |
+| `auth.params.servicePrincipalId` | Die eindeutige Service-Prinzipal-ID, die für die Verbindung mit der [!DNL Azure Data Explorer]-Datenbank verwendet wird. |
+| `auth.params.servicePrincipalKey` | Der eindeutige Service-Prinzipal-Schlüssel, mit dem eine Verbindung zur [!DNL Azure Data Explorer]-Datenbank hergestellt wird. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Azure Data Explorer]-Verbindung: `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 **Antwort**
 
@@ -116,4 +116,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL Azure Data Explorer]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)

@@ -1,6 +1,6 @@
 ---
-title: Übersicht über die Mailchimp-Erweiterung
-description: Verwenden Sie die Ereignisweiterleitung zu Trigger Mailchimp-E-Mails.
+title: MailChimp-Erweiterung - Übersicht
+description: Verwenden Sie die Ereignisweiterleitung an E-Mails von Trigger Mailchimp.
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -14,134 +14,134 @@ ht-degree: 6%
 
 ---
 
-# Übersicht über die Ereignisweiterleitungs-Erweiterung &quot;Mailchimp&quot;
+# Übersicht über die Mailchimp-Ereignisweiterleitungserweiterung
 
 >[!NOTE]
 >  
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de).
 
-Die Erweiterung &quot;Mailchimp [event forward](../../../ui/event-forwarding/overview.md)&quot;sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey oder Transaktionen Trigger.
+Die Mailchimp-Erweiterung [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey-Trigger oder Transaktionen bereitstellen kann.
 
 In diesem Dokument wird beschrieben, wie Sie die Erweiterung einrichten und Regeln mithilfe der Aktion Ereignis hinzufügen konfigurieren.
 
 ## Voraussetzungen
 
-In diesem Dokument wird davon ausgegangen, dass Sie mit den relevanten Mailchimp-Produkten vertraut sind, die von der -Erweiterung genutzt werden. Weitere Informationen finden Sie in der Hilfedokumentation zu Mailchimp für [campaigns](https://mailchimp.com/help/getting-started-with-campaigns/), [Journey](https://mailchimp.com/help/about-customer-journeys/) und [transaktionen](https://mailchimp.com/help/transactional/).
+In diesem Dokument wird davon ausgegangen, dass Sie mit den relevanten Mailchimp-Produkten, die von der Erweiterung verwendet werden, vertraut sind. Weitere Informationen finden Sie in der Hilfedokumentation zu Mailchimp für [Kampagnen](https://mailchimp.com/help/getting-started-with-campaigns/), [Journey](https://mailchimp.com/help/about-customer-journeys/) und [Transaktionen](https://mailchimp.com/help/transactional/).
 
-Für die Verwendung dieser Erweiterung ist ein Mailchimp-Konto erforderlich. Sie können sich für ein Konto [hier](https://login.mailchimp.com/signup/) anmelden. Notieren Sie sich im Dashboard des Mailchimp-Kontos die folgenden Werte, die in diesem Handbuch verwendet werden sollen:
+Für diese Erweiterung ist ein Mailchimp-Konto erforderlich. Sie können sich für ein Konto anmelden [hier](https://login.mailchimp.com/signup/). Notieren Sie sich im Dashboard des Mailchimp-Kontos die folgenden Werte für die Verwendung in diesem Handbuch:
 
-- Ihr Mailchimp-Domänenpräfix
+- Ihr Mailchimp-Domain-Präfix
 - Ihr API-Schlüssel
 - Die Zielgruppen-ID
-- Die standardmäßige E-Mail-Adresse &quot;from&quot;
+- Die standardmäßige „Von“-E-Mail-Adresse
 
-Abhängig von Ihrem Mailchimp-Account-Plan haben Sie möglicherweise nur eingeschränkten Zugriff auf Mailchimp-Journey-Tools.
+Abhängig von Ihrem Mailchimp-Account-Plan haben Sie möglicherweise eingeschränkten Zugriff auf Mailchimp Customer Journey-Tools.
 
 >[!TIP]
 >  
->Wenn Sie Mailchimp-Automatisierungen wie Transaktions-E-Mails oder Journey verwenden, unterscheiden sich die Schritte und Bildschirme möglicherweise geringfügig von denen hier. Sie benötigen jedoch weiterhin dieselben Informationen, um diese Erweiterung wie oben beschrieben zu verwenden. Weitere Informationen zu den einzelnen Werten für Ihr bestimmtes Konto und Ihren Plan finden Sie im [Mailchimp Help Center](https://mailchimp.com/help/) .
+>Wenn Sie Mailchimp-Automatisierungen wie Transaktions-E-Mails oder Kunden-Journeys verwenden, unterscheiden sich die Schritte und Bildschirme möglicherweise geringfügig von den hier aufgeführten. Sie benötigen jedoch dieselben Informationen, um diese Erweiterung wie oben beschrieben zu verwenden. Im [Mailchimp Help Center](https://mailchimp.com/help/) finden Sie Details zu den einzelnen Werten für Ihr spezifisches Konto und Ihren Plan.
 
-### Domänenpräfix
+### Domain-Präfix
 
-Nach der Anmeldung bei Mailchimp und dem Landing in der Dashboard-Ansicht sollte die Adressleiste Ihres Browsers eine URL wie `https://us11.admin.mailchimp.com` oder nur `us11.admin.mailchimp.com` anzeigen. In diesem Beispiel ist das Präfix `us11` nur ein Platzhalter und Ihr Wert unterscheidet sich. Zeichnen Sie Ihre URL mit Ihrem Präfix für einen späteren Schritt auf.
+Nach der Anmeldung bei Mailchimp und der Landung auf der Dashboard-Ansicht sollte die Adressleiste Ihres Browsers eine URL wie `https://us11.admin.mailchimp.com` oder nur `us11.admin.mailchimp.com` anzeigen. In diesem Beispiel ist das Präfix `us11` nur ein Platzhalter, und Ihr Wert unterscheidet sich. Notieren Sie sich Ihre URL mit Ihrem Präfix für einen späteren Schritt.
 
 ### API-Schlüssel
 
-Um den API-Schlüssel für Ihr Konto zu finden, wählen Sie Ihr Profilsymbol in der Benutzeroberfläche von Mailchimp und dann **Profil** aus. Sie sollten eine URL wie `https://us11.admin.mailchimp.com/account/profile/` sehen, aber mit dem Präfix **Ihr** anstelle von `us11`.
+Um den API-Schlüssel für Ihr Konto zu finden, klicken Sie auf Ihr Profilsymbol in der Mailchimp-Benutzeroberfläche und wählen Sie dann **Profil**. Es sollte eine URL wie `https://us11.admin.mailchimp.com/account/profile/` mit dem Präfix **Ihr** anstelle von `us11` angezeigt werden.
 
-Wählen Sie **Extras** und dann **API-Schlüssel** aus:
+Wählen Sie **Extras** und dann **API-Schlüssel**:
 
-![Menü &quot;Extras&quot;, Link mit API-Schlüsseln](../../../images/extensions/server/mailchimp/menu-API-keys.png)
+![Menü „Extras“, Link „API-Schlüssel“](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
-Unter **Ihre API-Schlüssel** können Sie einen vorhandenen Schlüssel auswählen oder Sie können **Einen Schlüssel erstellen** auswählen, um einen neuen zu erstellen. Sie können einen neuen Schlüssel erstellen, der speziell mit dieser Erweiterung verwendet werden soll. Kopieren Sie den API-Schlüssel und speichern Sie ihn für einen späteren Schritt. Weitere Informationen finden Sie in der Mailchimp-Dokumentation zum [Generieren Ihres API-Schlüssels](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Unter **Ihre API-Schlüssel** können Sie einen vorhandenen Schlüssel auswählen oder **Schlüssel erstellen** auswählen, um einen neuen zu erstellen. Sie können einen neuen Schlüssel erstellen, der speziell mit dieser Erweiterung verwendet werden soll. Kopieren Sie den API-Schlüssel und speichern Sie ihn für einen späteren Schritt. Weitere Informationen finden Sie in der Mailchimp-Dokumentation unter [Generieren Ihres API-Schlüssels](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 ### Zielgruppen-ID und Absenderadresse
 
-Wählen Sie im linken Navigationsbereich **Zielgruppe** und dann **Zielgruppen-Dashboard** aus. Wählen Sie anschließend die Zielgruppe aus, die Sie mit dieser Erweiterung verwenden möchten. Weitere Informationen finden Sie im Dokument Mailchimp unter [Erstellen einer Audience](https://mailchimp.com/help/create-audience/) .
+Wählen **Audience** im linken Navigationsbereich und dann **Audience-Dashboard** aus. Wählen Sie als Nächstes die Zielgruppe aus, die Sie mit dieser Erweiterung verwenden möchten. Weitere Informationen finden Sie im Mailchimp-Dokument unter [Erstellen einer Zielgruppe](https://mailchimp.com/help/create-audience/).
 
-Wählen Sie bei erstellter und ausgewählter Zielgruppe das Dropdown-Menü **Zielgruppe verwalten** und danach **Einstellungen** aus. Auf diesem Bildschirm werden verschiedene Einstellungen für Ihre Zielgruppe angezeigt.
+Nachdem Sie Ihre Audience erstellt und ausgewählt haben, wählen Sie das Dropdown-Menü **Zielgruppe verwalten** und wählen Sie **Einstellungen**. Auf diesem Bildschirm werden verschiedene Einstellungen für Ihre Zielgruppe angezeigt.
 
-Am unteren Rand des Einstellungsbildschirms sollte `Unique id for audience [audience name]` angezeigt werden, wobei `[audience name]` der Name der tatsächlichen Zielgruppe ist. Kopieren Sie die Zielgruppen-ID und speichern Sie sie für einen späteren Schritt.
+Unten im Bildschirm Einstellungen sollte `Unique id for audience [audience name]` angezeigt werden, wobei `[audience name]` der Name Ihrer tatsächlichen Audience ist. Kopieren Sie die Zielgruppen-ID und speichern Sie sie für einen späteren Schritt.
 
-Wählen Sie **Zielgruppenname und Standardeinstellung** und bestätigen Sie, dass **Standardeinstellung von E-Mail-Adresse** den richtigen Wert für Ihre Kampagnen aufweist. Beachten Sie, dass die Zielgruppen-ID auch oben auf dieser Seite aufgeführt wird und der Wert ist, den Sie im letzten Schritt nach unten kopiert haben.
+Wählen Sie **Zielgruppenname und Standardwerte** aus und bestätigen Sie, dass **Standardmäßige Absender-E-Mail** den richtigen Wert für Ihre Kampagnen hat. Beachten Sie, dass die Zielgruppen-ID ebenfalls oben auf dieser Seite aufgeführt ist und denselben Wert aufweist, den Sie im letzten Schritt nach unten kopiert haben.
 
-## Postimp-Automatisierung
+## Mailchimp-Automatisierungen
 
-Abhängig von Ihrem Mailchimp-Plan und der Verwendung von Transaktions-E-Mails, Journey oder anderen Mailchimp-Automatisierungen können Ihre spezifischen Journey-Einstellungen variieren.
+Je nach Mailchimp-Plan und ob Sie Transaktions-E-Mails, Kunden-Journey oder andere Mailchimp-Automatisierungen verwenden, können Ihre spezifischen Journey-Einstellungen variieren.
 
 >[!IMPORTANT]
 >  
->Der Ereignisname, den Sie für den Trigger Ihrer Automatisierung oder Journey in Mailchimp ausgewählt haben, ist derselbe Ereignisname, den Sie mit dieser Erweiterung senden müssen. Notieren Sie den Ereignisnamen in Ihrer Mailchimp-Automatisierung und speichern Sie ihn für einen späteren Schritt.
+>Der Ereignisname, den Sie für den Trigger Ihrer Automatisierung oder Journey in Mailchimp ausgewählt haben, ist derselbe Ereignisname, den Sie mit dieser Erweiterung senden müssen. Notieren Sie sich den Ereignisnamen in Ihrer Mailchimp-Automatisierung und speichern Sie ihn für einen späteren Schritt.
 
 ## Installation und Konfiguration
 
-In diesem Abschnitt werden die Schritte zum Installieren und Konfigurieren der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung [geheimnisse](../../../ui/event-forwarding/secrets.md) verwenden.
+In diesem Abschnitt werden die Schritte zur Installation und Konfiguration der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung ([) ](../../../ui/event-forwarding/secrets.md).
 
-### Erstellen eines geheimen und Datenelements
+### Erstellen von geheimen Daten und Datenelementen
 
-Erstellen Sie in einer Ereignisweiterleitungseigenschaft [einen [!UICONTROL Token] secret](../../../ui/event-forwarding/secrets.md#token) mit dem Namen `Mailchimp API Key`.
+Erstellen Sie in einer Ereignisweiterleitungs-Eigenschaft [ein [!UICONTROL Token]-Geheimnis](../../../ui/event-forwarding/secrets.md#token) namens `Mailchimp API Key`.
 
-Als Nächstes erstellen Sie mit der Erweiterung [!UICONTROL Core] ein Datenelement](../../../ui/managing-resources/data-elements.md#create-a-data-element) und mit dem Datenelementtyp [!UICONTROL Secret] , um auf das soeben erstellte Geheimnis `Mailchimp API Key` zu verweisen. [ Geben Sie `Mailchimp Token` als Datenelementnamen ein.
+Als Nächstes erstellen [ mithilfe ](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung [!UICONTROL Core] und eines Datenelementtyps [!UICONTROL Secret] ein Datenelement, das auf das soeben erstellte `Mailchimp API Key` verweist. Geben Sie `Mailchimp Token` als Namen des Datenelements ein.
 
 ### Installieren und Konfigurieren der Erweiterung
 
-Wählen Sie in derselben Ereignisweiterleitungseigenschaft **[!UICONTROL Erweiterungen],** und dann **[!UICONTROL Katalog]** aus, um die für die Installation verfügbaren Erweiterungen anzuzeigen. Suchen Sie von hier aus nach der Mailchimp-Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
+Wählen Sie in derselben Ereignisweiterleitungs-Eigenschaft die Option **[!UICONTROL Erweiterungen],** dann **[!UICONTROL Katalog]** aus, um die für die Installation verfügbaren Erweiterungen anzuzeigen. Suchen Sie von hier aus nach der Mailchimp-Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
 
-![Installieren der Mailchimp-Erweiterung](../../../images/extensions/server/mailchimp/install.png)
+![Mailchimp-Erweiterung installieren](../../../images/extensions/server/mailchimp/install.png)
 
-Der Konfigurationsbildschirm wird angezeigt. Geben Sie unter **[!UICONTROL Mailchimp Server Prefix Domain Name]** die Domäne ein, die Sie zuvor aus Ihrem Mailchimp-Konto kopiert haben, einschließlich des eindeutigen Domänenpräfixes.
+Der Konfigurationsbildschirm wird angezeigt. Geben **[!UICONTROL unter „Mailchimp Server Prefix Domain Name]** die Domain ein, die Sie zuvor aus Ihrem Mailchimp-Konto kopiert haben, einschließlich Ihres eindeutigen Domain-Präfixes.
 
 >[!IMPORTANT]
 >
->Schließen Sie in dieses Feld nicht `http://` oder `https://` ein.
+>`http://` oder `https://` nicht in dieses Feld einschließen.
 
 ![Erweiterungskonfiguration](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-Wählen Sie unter **[!UICONTROL Mailchimp-Token]** das Datenelementsymbol und danach das zuvor erstellte Datenelement `Mailchimp Token` aus. Wählen Sie **[!UICONTROL Speichern]** aus, um die Änderungen zu speichern.
+Wählen **[!UICONTROL unter „Mailchimp]** Token“ das Datenelementsymbol und dann das `Mailchimp Token` Datenelement aus, das Sie zuvor erstellt haben. Klicken Sie **[!UICONTROL Speichern]**, um die Änderungen zu speichern.
 
-Die Erweiterung wird jetzt installiert und für die Verwendung in Ihrer Eigenschaft konfiguriert.
+Die Erweiterung ist jetzt installiert und für die Verwendung in Ihrer Eigenschaft konfiguriert.
 
 ## Datenerfassung
 
-Bei Verwendung dieser Erweiterung in einer [Regel](../../../ui/managing-resources/rules.md) gibt es mehrere Datenwerte, die die Erweiterung mit jedem Ereignis an Mailchimp sendet. Bei einer typischen Implementierung können Sie die [Adobe Experience Platform Web SDK-Erweiterung](../../client/web-sdk/overview.md) so konfigurieren, dass diese Daten an [!DNL Platform Edge Network] gesendet werden, damit sie von der Erweiterung in der Ereignisweiterleitungseigenschaft verwendet werden können.
+Bei Verwendung dieser Erweiterung in einer [Regel](../../../ui/managing-resources/rules.md) gibt es mehrere Datenwerte, die die Erweiterung mit jedem Ereignis an Mailchimp sendet. Für eine typische Implementierung können Sie die [Adobe Experience Platform Web SDK-Erweiterung](../../client/web-sdk/overview.md) so konfigurieren, dass diese Daten zur Verwendung durch die Erweiterung in der Ereignisweiterleitungs-Eigenschaft an [!DNL Platform Edge Network] gesendet werden.
 
-Die für diese Erweiterung erforderlichen Daten können vom Web SDK entweder als XDM-Daten (mit dem [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) -Objekt) oder als Nicht-XDM-Daten (mit dem [`data`](/help/web-sdk/commands/sendevent/data.md) -Objekt) gesendet werden.
+Die für diese Erweiterung erforderlichen Daten können von Web SDK entweder als XDM-Daten (unter Verwendung des [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)-Objekts) oder als Nicht-XDM-Daten (unter Verwendung des [`data`](/help/web-sdk/commands/sendevent/data.md)-Objekts) gesendet werden.
 
-Wenn beispielsweise ein Kunde einen Kauf tätigt oder sich für ein Ereignis auf Ihrer Site registriert, können Sie eine Bestätigungs-E-Mail über Mailchimp mit dieser Erweiterung senden. Nachdem Sie die erforderlichen Informationen vom Web SDK an das Edge Network gesendet haben, wird die E-Mail von der Erweiterung mit Mailchimp Trigger.
+Wenn ein Kunde beispielsweise einen Kauf tätigt oder sich für ein Ereignis auf Ihrer Website registriert, können Sie über Mailchimp mit dieser Erweiterung eine Bestätigungs-E-Mail senden. Nachdem Sie die erforderlichen Informationen von Web SDK an das Edge Network gesendet haben, sendet die Erweiterung die E-Mail mit Mailchimp als Trigger.
 
 ![Konfiguration der Ereignisaktion hinzufügen](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Datenelemente
 
-Der Screenshot im vorherigen Abschnitt zeigt die Daten, die Sie mit jedem Ereignis von dieser Erweiterung an Mailchimp senden können. Nachdem Sie das Web SDK für das Senden dieser Daten an das Edge Network konfiguriert haben, können Sie Datenelemente in der Ereignisweiterleitungseigenschaft erstellen, damit die Erweiterung auf diese Werte zugreifen kann.
+Der Screenshot im vorherigen Abschnitt zeigt die Daten, die Sie mit jedem Ereignis von dieser Erweiterung an Mailchimp senden können. Nachdem Sie Web SDK für das Senden dieser Daten an das Edge Network konfiguriert haben, können Sie Datenelemente in der Ereignisweiterleitungseigenschaft erstellen, damit die Erweiterung auf diese Werte zugreifen kann.
 
-Die nachstehende Tabelle enthält für jeden möglichen Wert detailliertere Informationen.
+Die nachstehende Tabelle enthält weitere Details zu jedem möglichen Wert.
 
 | Name | Beispielpfad | Typ | Beschreibung | Erforderlich | Beschränkungen |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> oder <br /> `arc.event.data._tenant.emailId` | Zeichenfolge | Die E-Mail-Adresse | **Ja** | Muss in der Mailchimp-Zielgruppe vorhanden sein |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> oder <br /> `arc.event.data._tenant.listid` | Zeichenfolge | Zielgruppen-ID | **Ja** | Muss mit einer vorhandenen Zielgruppen-ID übereinstimmen |
-| `name` | `arc.event.xdm._tenant.name`<br /> oder <br /> `arc.event.data._tenant.name` | Zeichenfolge | Der Ereignisname | **Ja** | Länge von 2-30 Zeichen |
-| `properties` | `arc.event.xdm._tenant.properties`<br /> oder <br /> `arc.event.data._tenant.properties` | Objekt | Eine optionale Liste der Eigenschaften im JSON-Format mit Details zum Ereignis | Nein |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder <br /> `arc.event.data._tenant.isSyncing` | Boolescher Wert | Mit `is_syncing` erstellte Ereignisse, die auf `true` **eingestellt sind, führen nicht zu Trigger-Automatisierungen** | Nein |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | Zeichenfolge | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses | Nein |  |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> oder<br /> `arc.event.data._tenant.emailId` | String | Die Adresse, die die E-Mail erhält | **Ja** | Muss in der Mailchimp-Zielgruppe vorhanden sein |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> oder<br /> `arc.event.data._tenant.listid` | String | Zielgruppen-ID | **Ja** | Muss mit einer vorhandenen Zielgruppen-ID übereinstimmen |
+| `name` | `arc.event.xdm._tenant.name`<br /> oder<br /> `arc.event.data._tenant.name` | String | Der Ereignisname | **Ja** | 2-30 Zeichen lang |
+| `properties` | `arc.event.xdm._tenant.properties`<br /> oder<br /> `arc.event.data._tenant.properties` | Objekt | Eine optionale Liste von Eigenschaften im JSON-Format mit Details zum Ereignis | Nein |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | Boolescher Wert | Bei Ereignissen, die mit `is_syncing` festgelegt wurden`true` **werden** Trigger-Automatisierungen nicht unterstützt | Nein |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | String | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist | Nein |  |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  
->Die obigen Werte für den **Beispielpfad** sind nur Beispiele. Die in diesen Datenelementen referenzierten Feldnamen und [Pfade](../../../ui/event-forwarding/overview.md#data-element-path) können in Ihrer Eigenschaft unterschiedlich sein, je nachdem, wie Sie das Web SDK in den oben stehenden Schritten benannt und konfiguriert haben.
+>Die oben genannten **Beispielpfad**-Werte sind nur Beispiele. Die Feldnamen und [pfade](../../../ui/event-forwarding/overview.md#data-element-path) auf die in diesen Datenelementen verwiesen wird, können in Ihrer Eigenschaft unterschiedlich sein, je nachdem, wie Sie Web SDK in den obigen Schritten benannt und konfiguriert haben.
 
-In Ihrer Ereignisweiterleitungseigenschaft können Sie für jedes der oben genannten Felder ein Datenelement erstellen. Nach der Erstellung können Sie auf die Datenelemente in der Aktion [!UICONTROL Ereignis hinzufügen] dieser Erweiterung verweisen.
+In der Ereignisweiterleitungs-Eigenschaft können Sie ein Datenelement für jedes der oben beschriebenen Felder erstellen. Nach der Erstellung können Sie in der Aktion [!UICONTROL Ereignis hinzufügen] dieser Erweiterung auf die Datenelemente verweisen.
 
 ![Konfiguration der Ereignisaktion hinzufügen](../../../images/extensions/server/mailchimp/action-configurations.png)
 
-Sie können diese Erweiterung und die Aktion Ereignis hinzufügen für E-Mails von Trigger Mailchimp für Ihre Zielgruppen verwenden.
+Sie können jetzt diese Erweiterung und die Aktion Ereignis hinzufügen zu Trigger Mailchimp-E-Mails für Ihre Zielgruppen verwenden.
 
 ## Datenvalidierung
 
-Wenn Sie mit Ereignisweiterleitungs-Erweiterungen arbeiten, ist der [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) sehr nützlich. Im Abschnitt Protokolle unter Edge-Protokolle können Sie die Anfragen sehen, die von Ihren Ereignisweiterleitungsregeln gestellt wurden, nachdem sie ausgelöst wurden. Die folgenden Screenshots zeigen, wie eine Anfrage von der Erweiterung an die Mailchimp-API gesendet wird.
+Beim Arbeiten mit Erweiterungen für die Ereignisweiterleitung ist der [Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) sehr hilfreich. Im Abschnitt Protokolle unter Edge-Protokolle können Sie die Anfragen sehen, die von Ihren Ereignisweiterleitungsregeln nach deren Auslösung gestellt wurden. Die folgenden Screenshots zeigen, wie eine Anfrage an die Mailchimp-API von der Erweiterung gestellt wird.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
-Im Dashboard &quot;Mailchimp&quot;in der Ansicht &quot;Aktivitäts-Feed&quot;Ihrer Audience oder Audience-Mitglieder wird eine Liste der Ereignisse für diese Audience oder dieses Audience-Mitglied bereitgestellt. Dies sollte mit den von der Erweiterung gesendeten Ereignissen übereinstimmen und die gesendeten optionalen Daten zusammen mit der E-Mail oder Kampagne anzeigen, die sie erhalten haben. Weitere Informationen finden Sie in den Hilfshandbüchern [Mailchimp Automation](https://mailchimp.com/help/automation/) .
+Im Mailchimp-Dashboard wird in der Ansicht „Aktivitäts-Feed“ Ihrer Zielgruppe oder Ihres Zielgruppenmitglieds eine Liste der Ereignisse für diese Zielgruppe oder dieses Zielgruppenmitglied bereitgestellt. Diese sollte mit den von der Erweiterung gesendeten Ereignissen übereinstimmen und alle optionalen Daten anzeigen, die zusammen mit der E-Mail oder Kampagne gesendet wurden, die sie erhalten haben. Weitere Informationen finden Sie [Hilfeseiten zur Mailchimp](https://mailchimp.com/help/automation/)Automatisierung).

@@ -13,7 +13,7 @@ ht-degree: 77%
 
 In der Reactor-API stellt ein Profil einen Adobe Experience Platform-Benutzer dar. Die Reactor-API unterhält keine eigene Benutzer- und Berechtigungsdatenbank und verlässt sich stattdessen auf Adobe IDs, die vom [Identity Management System (IMS) von Adobe](https://helpx.adobe.com/de/enterprise/using/identity.html) verwaltet werden.
 
-Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller Organisationen, denen er angehört, der Produktprofile, zu denen er in jeder Organisation gehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
+Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller Organisationen, denen er angehört, der Produktprofile, denen er in jeder Organisation angehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
 
 ## Erste Schritte
 

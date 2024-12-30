@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;protocol
+keywords: Experience Platform;Startseite;beliebte Themen;Protokoll
 solution: Experience Platform
 title: Erkunden eines Protokollsystems mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Protokollanwendungen zu untersuchen.
@@ -11,11 +11,11 @@ ht-degree: 39%
 
 ---
 
-# Protokollsystem mit der [!DNL Flow Service]-API durchsuchen
+# Erkunden eines Protokollsystems mithilfe der [!DNL Flow Service]-API
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die API [!DNL Flow Service] verwendet, um Protokollanwendungen zu untersuchen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Protokollanwendungen zu untersuchen.
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einer Protokollanwendung herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einer Protokollanwendung verbinden zu können.
 
-### Grundverbindung abrufen
+### Beziehen einer Basisverbindung
 
-Um Ihr Protokollsystem mit [!DNL Platform] -APIs zu untersuchen, müssen Sie über eine gültige Basis-Verbindungs-ID verfügen. Wenn Sie noch keine Basisverbindung für das Protokollsystem haben, mit dem Sie arbeiten möchten, können Sie eine über das folgende Tutorial erstellen:
+Um Ihr Protokollsystem mit [!DNL Platform] APIs zu untersuchen, müssen Sie über eine gültige Basisverbindungs-ID verfügen. Wenn Sie noch keine Basisverbindung für das Protokollsystem haben, mit dem Sie arbeiten möchten, können Sie eine durch das folgende Tutorial erstellen:
 
 * [Generic OData](../create/protocols/odata.md)
 
@@ -52,9 +52,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Datentabellen durchsuchen
+## Erkunden von Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihre Protokollanwendung können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mithilfe der Verbindungs-ID für Ihr Protokollprogramm können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -64,7 +64,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die ID einer protokollbasierten Verbindung. |
+| `{BASE_CONNECTION_ID}` | Die ID einer Protokollbasisverbindung. |
 
 **Anfrage**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Protokollanwendung zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Protokollanwendung zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -114,9 +114,9 @@ Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Protokollanwend
 ]
 ```
 
-## Tabellenstruktur Inspect
+## Inspect - die Tabellenstruktur
 
-Um die Tabellenstruktur über Ihre Protokollanwendung zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
+Um die Tabellenstruktur in Ihrer Protokollanwendung zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie den Pfad einer Tabelle als Abfrageparameter an.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die Verbindungs-ID Ihrer Protokollanwendung. |
-| `{TABLE_PATH}` | Der Pfad einer Tabelle in Ihrer Protokollanwendung. |
+| `{TABLE_PATH}` | Der Pfad einer Tabelle in Ihrem Protokollprogramm. |
 
 ```shell
 curl -X GET \
@@ -140,7 +140,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns`-Arrays.
 
 ```json
 {
@@ -188,4 +188,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Protokollanwendung durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrer Protokollanwendung zu erfassen und in Platform](../collect/protocols.md) zu importieren.
+In diesem Tutorial haben Sie Ihre Protokollanwendung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrer Protokollanwendung zu erfassen und in Platform zu ](../collect/protocols.md).

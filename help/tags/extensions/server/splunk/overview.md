@@ -92,6 +92,6 @@ Der nächste Schritt besteht darin, die Eigenschaften des Splunk-Ereignisses Dat
 
 In diesem Dokument wurde beschrieben, wie die Splunk-Ereignisweiterleitungs-Erweiterung in der Benutzeroberfläche installiert und konfiguriert wird. Weitere Informationen zur Erfassung von Ereignisdaten in Splunk finden Sie in der offiziellen Dokumentation:
 
-* [Einrichten und Verwenden der HTTP-Ereigniserfassung im Splunk-Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Einrichten und Verwenden von HTTP Event Collector in Splunk Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [Einrichten der Authentifizierung mit Token](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [Fehlerbehebung im HTTP Event Collector](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) (listet auch ein Kompendium von [möglichen Fehler-Codes](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes) auf)

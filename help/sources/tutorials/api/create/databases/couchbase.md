@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;couchbase;Couchbase
+keywords: Experience Platform;Startseite;beliebte Themen;Couchbase;Couchbase
 solution: Experience Platform
-title: Erstellen einer Basisverbindung für Couchbase mit der Flow Service-API
+title: Erstellen einer Couchbase-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung zwischen Couchbase und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie Couchbase mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 64%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Couchbase] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Couchbase] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -29,13 +29,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Couchbase] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Couchbase] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Couchbase]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Couchbase] ist `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem Couchbase-Dokument](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Couchbase]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Couchbase] ist `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Weiterführende Informationen zum Erfassen von Verbindungszeichenfolgen finden Sie in [diesem Couchbase-Dokument](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Couchbase] ist `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### Verwenden von Platform-APIs
@@ -84,12 +84,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit einem [!DNL Couchbase] -Konto verwendet wird. Das Verbindungszeichenfolgenmuster lautet: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | Die [!DNL Couchbase] Verbindungsspezifikations-ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit einem [!DNL Couchbase] verwendet wird. Das Muster der Verbindungszeichenfolge ist: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Couchbase]-Verbindung: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Verbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -103,4 +103,4 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Verbindung zurück
 In diesem Tutorial haben Sie eine [!DNL Couchbase]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)

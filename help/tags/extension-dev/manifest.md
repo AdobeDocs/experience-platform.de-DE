@@ -120,7 +120,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Optional)</em></td>
-      <td>Wenn angegeben, wird der <code>displayName</code> unter dem <code>categoryName</code> in der Benutzeroberfläche aufgeführt. Alle Typen mit dem gleichen <code>categoryName</code>-Wert werden unter der gleichen Kategorie aufgeführt. Wenn Ihre Erweiterung beispielsweise den Ereignistyp <code>keyUp</code> und den Ereignistyp <code>keyDown</code> bereitstellt und beide Ereignistypen einen <code>categoryName</code>-Wert von <code>Keyboard</code> aufweisen, werden beide Ereignistypen unter der Kategorie „Keyboard“ aufgelistet, während der Benutzer beim Erstellen einer Regel einen Eintrag aus der Liste der verfügbaren Ereignistypen auswählt. Der Wert von <code>categoryName</code> sollte für Menschen lesbar sein.</td>
+      <td>Wenn angegeben, wird die <code>displayName</code> in der Benutzeroberfläche unter der <code>categoryName</code> aufgeführt. Alle Typen mit dem gleichen <code>categoryName</code>-Wert werden unter der gleichen Kategorie aufgeführt. Wenn Ihre Erweiterung beispielsweise den Ereignistyp <code>keyUp</code> und den Ereignistyp <code>keyDown</code> bereitstellt und beide Ereignistypen einen <code>categoryName</code>-Wert von <code>Keyboard</code> aufweisen, werden beide Ereignistypen unter der Kategorie „Keyboard“ aufgelistet, während der Benutzer beim Erstellen einer Regel einen Eintrag aus der Liste der verfügbaren Ereignistypen auswählt. Der Wert von <code>categoryName</code> sollte für Menschen lesbar sein.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

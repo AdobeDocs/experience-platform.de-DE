@@ -10,136 +10,136 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Google Ads] Erweiterung der erweiterten Konvertierungen
+# [!DNL Google Ads] Enhanced Conversions-Erweiterung
 
-Mithilfe der [!DNL Google Ads] -API können Sie [erweiterte Konversionen](https://support.google.com/google-ads/answer/9888656) nutzen, indem Sie Erstanbieter-Kundendaten in Form von Konversionsanpassungen senden. Google verwendet diese zusätzlichen Daten, um die Berichterstellung für Ihre Online-Konversionen zu verbessern, die durch Anzeigeninteraktionen gesteuert werden.
+Mit der [!DNL Google Ads]-API können Sie [erweiterten Konversionen](https://support.google.com/google-ads/answer/9888656) nutzen, indem Sie First-Party-Kundendaten in Form von Konversionsanpassungen senden. Google verwendet diese zusätzlichen Daten, um die Berichterstellung für Online-Konversionen aufgrund von Anzeigeninteraktionen zu verbessern.
 
-Die Erweiterung [[!DNL Google Ads] Erweiterte Konversions-Ereignisweiterleitungserweiterung](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) (zuvor als Erweiterung [!DNL Enhanced Conversions] bezeichnet) bietet eine benutzerfreundliche Vorlage, mit der Sie erweiterte Konversionen für die API [!DNL Google Ads] einfach implementieren können.
+Die [[!DNL Google Ads] Erweiterung für die Ereignisweiterleitung bei erweiterten Konvertierungen](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) (früher als [!DNL Enhanced Conversions]-Erweiterung bezeichnet) bietet eine benutzerfreundliche Vorlage zur einfachen Implementierung erweiterter Konvertierungen für die [!DNL Google Ads]-API.
 
 >[!IMPORTANT]
 >
->Verbesserte Konversionen funktionieren nur bei Konversionstypen, bei denen Kundendaten vorhanden sind, z. B. Abonnements, Anmeldungen und Käufe. Eine oder mehrere der folgenden Kundendaten müssen verfügbar sein, da sie beim [Konfigurieren einer Konversionsaktion](#conversion-action-event-forwarding) für eine Ereignisweiterleitungsregel erforderlich sind:
+>Erweiterte Konvertierungen funktionieren nur für Konversionstypen, bei denen Kundendaten vorhanden sind, z. B. Abonnements, Anmeldungen und Käufe. Mindestens einer der folgenden Kundendaten muss verfügbar sein, da sie bei der [Konfiguration einer Konversionsaktion](#conversion-action-event-forwarding) für eine Ereignisweiterleitungsregel erforderlich sind:
 >
->* E-Mail-Adresse (empfohlen)
+>* E-Mail-Adresse (bevorzugt)
 >* Name und Wohnadresse (Straße, Stadt, Bundesland/Region und Postleitzahl)
->* Telefonnummer (zusätzlich zu einem der beiden anderen oben genannten Informationen anzugeben)
+>* Telefonnummer (muss zusätzlich zu einer der beiden anderen oben genannten Informationen angegeben werden)
 
 ## Implementierungsübersicht
 
-Erweiterte Konvertierungen nutzen die [!DNL Google Ads] -API, um Erstanbieterdaten zu einer Konvertierung hinzuzufügen, die auf einem Client-Gerät, normalerweise einer Website, stattgefunden hat. Dies bedeutet, dass es zwei Schritte gibt, um erweiterte Konvertierungen zu implementieren:
+Erweiterte Konvertierungen nutzen die [!DNL Google Ads]-API, um Erstanbieterdaten zu einer Konvertierung hinzuzufügen, die auf einem Client-Gerät, normalerweise einer Website, stattgefunden hat. Dies bedeutet, dass es zwei Schritte zum Implementieren erweiterter Konvertierungen gibt:
 
-1. Senden Sie eine Konversion vom Client.
-1. Verwenden Sie die Ereignisweiterleitung, um zusätzliche Erstanbieterdaten zu senden, die die vom Client gesendeten Konversionsdaten verbessern.
+1. Senden Sie eine Konvertierung vom Client.
+1. Verwenden Sie die Ereignisweiterleitung, um zusätzliche First-Party-Daten zu senden, die die vom Client gesendeten Konversionsdaten verbessern.
 
 >[!TIP]
 >
->Um das clientseitige Konversionsereignis mit den Erstanbieterdaten zu verknüpfen, die von der Ereignisweiterleitung gesendet werden, muss &quot;`transaction_ID`&quot;in beiden Aufrufen identisch sein. Weitere Informationen dazu, wo dieser Wert für jeden Dienst angegeben werden muss, finden Sie in den Abschnitten zum Konfigurieren von Konversionsaktionen für [Tags](#conversion-action-tags) und [Ereignisweiterleitung](#conversion-action-event-forwarding).
+>Um das Client-seitige Konversionsereignis mit den Erstanbieterdaten zu verknüpfen, die von der Ereignisweiterleitung gesendet werden, muss die `transaction_ID` in beiden Aufrufen identisch sein. Weitere Informationen dazu, wo dieser Wert für jeden Service angegeben werden muss, finden Sie in den Abschnitten zum Konfigurieren von Konversionsaktionen für [Tags](#conversion-action-tags) bzw[ &quot;](#conversion-action-event-forwarding)&quot;.
 
-Da das Senden von Konversionsereignissen sowohl eine Client- als auch eine Server-seitige Implementierung umfasst, werden in diesem Dokument die erforderlichen Schritte zum Einrichten der clientseitigen [[!DNL Google Global Site Tag] (gtag)-Erweiterung](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) zusätzlich zur [!DNL Enhanced Conversions] -Erweiterung für die Ereignisweiterleitung behandelt.
+Da das Senden von Konversionsereignissen sowohl eine Client- als auch eine Server-seitige Implementierung umfasst, werden in diesem Dokument die erforderlichen Schritte zum Einrichten der Client-seitigen [[!DNL Google Global Site Tag] -Erweiterung (gtag](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) sowie die [!DNL Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung behandelt.
 
-Das folgende Video bietet eine Einführung in die Erweiterung [!DNL Enhanced Conversions] und führt die Implementierungsschritte auf hoher Ebene durch:
+Das folgende Video bietet eine Einführung in die [!DNL Enhanced Conversions]-Erweiterung und führt Sie auf einer allgemeinen Ebene durch die Implementierungsschritte:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Konvertierung mithilfe von Tags senden
 
-Um ein Konversionsereignis von auf einer Website zu senden, muss [!DNL Google Global Site Tag] (gtag) bereitgestellt werden. Sie können dies mithilfe von Tags erreichen, indem Sie die Erweiterung [!DNL Google Global Site Tag] (gtag) konfigurieren und installieren.
+Um ein Konversionsereignis von auf einer Website zu senden, muss [!DNL Google Global Site Tag] (gtag) bereitgestellt werden. Sie können dies mit Tags erreichen, indem Sie die [!DNL Google Global Site Tag]-Erweiterung (gtag) konfigurieren und installieren.
 
-### Konfigurieren und Installieren der [!DNL Google Global Site Tag] -Erweiterung
+### Konfigurieren und Installieren der [!DNL Google Global Site Tag]
 
-Navigieren Sie zur Benutzeroberfläche von [!UICONTROL Datenerfassung] oder Experience Platform und wählen Sie im linken Navigationsbereich **[!UICONTROL Tags]** aus. Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren möchten, und wählen Sie dann im linken Navigationsbereich **[!UICONTROL Erweiterungen]** aus. Suchen Sie auf der Registerkarte **[!UICONTROL Katalog]** die Erweiterung [!UICONTROL Google Global Site Tag (gtag)] und wählen Sie die Option **[!UICONTROL Installieren]** aus.
+Navigieren Sie zur Benutzeroberfläche [!UICONTROL Datenerfassung] oder Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL linken Navigationsbereich]** Tags“ aus. Wählen Sie die Tag-Eigenschaft aus, auf der Sie die Erweiterung installieren möchten, und wählen Sie dann **[!UICONTROL Erweiterungen]** in der linken Navigationsleiste. Suchen Sie auf der **[!UICONTROL Katalog]** die Erweiterung [!UICONTROL Google Global Site Tag (gtag)] und wählen Sie **[!UICONTROL Installieren]** aus.
 
-![Die Erweiterung [!UICONTROL Google Global Site Tag (gtag)], die unter der Ansicht [!UICONTROL Erweiterungen] in der Benutzeroberfläche [!UICONTROL Datenerfassung] ausgewählt wird.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
+![Die Erweiterung [!UICONTROL Google Global Site Tag (gtag] wird unter der Ansicht [!UICONTROL Erweiterungen] in der Benutzeroberfläche [!UICONTROL Datenerfassung] ausgewählt.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
-Das Installationsdialogfeld wird angezeigt. Wählen Sie hier **[!UICONTROL Konto hinzufügen]** aus und geben Sie die folgenden Werte ein, wenn Sie dazu aufgefordert werden:
+Das Installationsdialogfeld wird angezeigt. Wählen Sie von hier **[!UICONTROL Konto hinzufügen]** und geben Sie die folgenden Werte an, wenn Sie dazu aufgefordert werden:
 
 | Kontoeigenschaft | Beschreibung |
 | --- | --- |
-| Kontoname | Ein eindeutiger Name für das Konto. Dieser Name wird nur in der Tags-Benutzeroberfläche verwendet. |
-| Konto-ID | Ihre [!DNL Google Ads] -Konto-ID. Um diesen Wert zu finden, melden Sie sich bei [!DNL Google Ads] an und navigieren Sie zu: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. Die Konto-ID-Zeichenfolge finden Sie im Codeausschnitt-Fenster, das mit `AW-` oder `d` beginnt. |
-| Produkt | Wählen Sie **[!UICONTROL Google Ads (AdWords)]** aus. |
+| Kontoname | Ein eindeutiger Name für das Konto. Dieser Name wird nur innerhalb der Tags-Benutzeroberfläche verwendet. |
+| Konto-ID | Ihre [!DNL Google Ads]-Konto-ID. Melden Sie sich bei [!DNL Google Ads] an und navigieren Sie zu: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. Die Zeichenfolge der Konto-ID befindet sich im Code-Snippet-Fenster, das mit `AW-` oder `d` beginnt. |
+| Produkt | **[!UICONTROL Google Ads (AdWords)]**. |
 
 {style="table-layout:auto"}
 
-Wählen Sie abschließend **[!UICONTROL Konto hinzufügen]** und dann **[!UICONTROL Speichern]** aus.
+Klicken Sie abschließend auf **[!UICONTROL Konto hinzufügen]** und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-### Hinzufügen einer Konvertierungsaktion für einen Versand {#conversion-action-tags}
+### Hinzufügen einer Aktion zum Senden einer Konversion {#conversion-action-tags}
 
-Nach der Installation der Erweiterung können Sie damit beginnen, Konversionsaktionen in Ihre Tag-Regeln aufzunehmen. Wählen Sie beim Erstellen oder Bearbeiten einer Regel, die die Konvertierung überwacht, die Sie erweitern möchten, **[!UICONTROL Hinzufügen]** unter [!UICONTROL Aktionen] aus. Wählen Sie im nächsten Dialogfeld **[!UICONTROL Google Global Site Tag (gtag)]** aus dem Dropdown-Menü [!UICONTROL Erweiterung] und dann **[!UICONTROL Ereignis senden]** unter [!UICONTROL Aktionstyp].
+Nach der Installation der Erweiterung können Sie mit der Aufnahme von Konvertierungsaktionen in Ihre Tag-Regeln beginnen. Wählen Sie beim Erstellen oder Bearbeiten einer Regel, die auf die Konversion wartet, die Sie verbessern möchten, **[!UICONTROL Hinzufügen]** unter [!UICONTROL Aktionen]. Wählen Sie im nächsten Dialogfeld **[!UICONTROL Google Global Site Tag (gtag)]** aus der Dropdown-Liste [!UICONTROL Erweiterung] und wählen Sie dann **[!UICONTROL Ereignis senden]** unter [!UICONTROL Aktionstyp].
 
-![Der Aktionstyp [!UICONTROL Ereignis senden] , der in der Aktionskonfigurationsansicht des Regelbearbeitungs-Workflows ausgewählt wird.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
+![Der [!UICONTROL Ereignis senden] Aktionstyp, der in der Aktionskonfigurationsansicht des Regelbearbeitungs-Workflows ausgewählt wird.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
-Es werden zusätzliche Steuerelemente angezeigt, mit denen Sie das [!DNL gtag] -Ereignis konfigurieren können. Es müssen mindestens die folgenden Felder ausgefüllt werden:
+Es werden zusätzliche Steuerelemente angezeigt, mit denen Sie das [!DNL gtag] konfigurieren können. Die folgenden Felder müssen mindestens ausgefüllt werden:
 
 1. **[!UICONTROL Ereignisname (Aktion)]**: Geben Sie `conversion` als Wert ein.
-1. Fügen Sie ein neues Feld hinzu, wobei der Schlüssel `transaction_id` und der Wert ein [Datenelement](../../../ui/managing-resources/data-elements.md) ist, das den Wert [Transaktions-ID](https://support.google.com/google-ads/answer/6386790) enthält.
-1. **[!UICONTROL Konversionsbezeichnung]**: Geben Sie den entsprechenden Konversionstitel aus Ihrem [!DNL Google Ads]-Konto ein. Um diesen Wert zu finden, melden Sie sich bei Google Ads an und navigieren Sie zu **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. Die Konversionsbeschriftung finden Sie unter [!DNL Instructions].
+1. Fügen Sie ein neues Feld hinzu, in dem der Schlüssel `transaction_id` ist und der Wert ein [Datenelement](../../../ui/managing-resources/data-elements.md) ist, das den Wert [Transaktions-ID](https://support.google.com/google-ads/answer/6386790) enthält.
+1. **[!UICONTROL Konversionsbezeichnung]**: Geben Sie die entsprechende Konversionsbezeichnung aus Ihrem [!DNL Google Ads] ein. Um diesen Wert zu finden, melden Sie sich bei Google Ads an und navigieren Sie zu **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. Die Bezeichnung für die Konversion finden Sie unter [!DNL Instructions].
    >[!IMPORTANT]
    >
-   >Stellen Sie sicher, dass erweiterte Konvertierungen aktiviert sind, während Sie sich im Bereich für die Tag-Einrichtung Ihres [!DNL Google Ads]-Kontos befinden. Überprüfen und akzeptieren Sie dazu die Nutzungsbedingungen und wählen Sie dann **[!DNL Turn on enhanced conversions]** und **[!DNL API]** als Implementierungsmethode aus.
+   >Stellen Sie sicher, dass erweiterte Konvertierungen aktiviert sind, während Sie sich im Bereich Tag-Setup Ihres [!DNL Google Ads]-Kontos befinden. Überprüfen und akzeptieren Sie dazu die Nutzungsbedingungen und wählen Sie dann **[!DNL Turn on enhanced conversions]** und **[!DNL API]** als Implementierungsmethode aus.
 
 Nachdem Sie die Aktion konfiguriert haben, wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
 
-Veröffentlichen Sie abschließend einen neuen [Build](../../../ui/publishing/builds.md) , um die Änderungen an der Bibliothek zu aktivieren.
+Veröffentlichen Sie abschließend einen neuen [Build](../../../ui/publishing/builds.md), um die Änderungen an der Bibliothek zu aktivieren.
 
-## Senden von Erstanbieterdaten mit der Ereignisweiterleitung
+## Senden von First-Party-Daten mithilfe der Ereignisweiterleitung
 
-Sobald Sie Konversionsereignisse Client-seitig senden können, können Sie diese Konversionen mithilfe der Erweiterung [!DNL Enhanced Conversions] Ereignisweiterleitung verbessern.
+Sobald Sie Konversionsereignisse von der Client-Seite senden können, können Sie diese Konversionen mit der Erweiterung für die [!DNL Enhanced Conversions]-Ereignisweiterleitung verbessern.
 
-### Google OAuth 2-Geheimnis und -Datenelement erstellen {#create-secret-data-element}
+### Erstellen eines Google OAuth 2-Geheimnisses und -Datenelements {#create-secret-data-element}
 
-Bevor Sie die Erweiterung konfigurieren, müssen Sie in der Ereignisweiterleitung ein Zugriffstoken erstellen, um sich bei der [!DNL Google Ads] -API zu authentifizieren.
+Bevor Sie die Erweiterung konfigurieren, müssen Sie ein Zugriffstoken in der Ereignisweiterleitung erstellen, um sich bei [!DNL Google Ads] API zu authentifizieren.
 
-Detaillierte Schritte finden Sie im Handbuch zu [Erstellen von Geheimnissen für die Ereignisweiterleitung](../../../ui/event-forwarding/secrets.md) . Stellen Sie sicher, dass Sie **[!UICONTROL Google OAuth 2]** als geheimen Typ auswählen. Folgen Sie weiterhin den Anweisungen. Wenn Sie aufgefordert werden, ein Google-Kontoprofil auszuwählen, wählen Sie das Konto aus, das Zugriff auf die von Ihnen konfigurierte Konvertierungsaktion hat.
+Ausführliche Anweisungen finden Sie im Handbuch [Erstellen von ](../../../ui/event-forwarding/secrets.md) für die Ereignisweiterleitung“. Stellen Sie sicher, dass Sie **[!UICONTROL Google OAuth 2]** als Geheimnistyp auswählen. Folgen Sie weiterhin den Anweisungen und wählen Sie auf Anforderung zur Auswahl eines Google-Kontoprofils das Konto aus, das Zugriff auf die Konversionsaktion hat, die Sie konfigurieren.
 
-Nachdem der geheime Schlüssel erstellt wurde, erstellen [ein neues Datenelement](../../../ui/managing-resources/data-elements.md#create-a-data-element) und wählen Sie **[!UICONTROL Geheimnis]** für den Datenelementtyp aus. Wählen Sie für jede Umgebung das entsprechende Google OAuth 2-Geheimnis aus und wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
+Nachdem die geheimen Daten erstellt wurden, [ Sie „Neues Datenelement erstellen](../../../ui/managing-resources/data-elements.md#create-a-data-element) und wählen Sie **[!UICONTROL Datenelementtyp]** Geheime Daten“ aus. Wählen Sie für jede Umgebung das entsprechende Google OAuth 2-Geheimnis aus und klicken Sie auf **[!UICONTROL In Bibliothek speichern]**.
 
-### Konfigurieren und Installieren der [!DNL Enhanced Conversions] -Erweiterung {#install-enhanced-conversions}
+### Konfigurieren und Installieren der [!DNL Enhanced Conversions] {#install-enhanced-conversions}
 
-Suchen Sie die Erweiterung [!UICONTROL Google Ads Enhanced Conversions] im Ereignisweiterleitungskatalog und wählen Sie **[!UICONTROL Installieren]** aus.
+Suchen Sie die Erweiterung [!UICONTROL Google Ads Enhanced Conversions] im Ereignisweiterleitungskatalog und wählen Sie **[!UICONTROL Installieren]**.
 
-![ Die Erweiterung [!UICONTROL Google Ads Enhanced Conversions] , die unter der Ansicht [!UICONTROL Erweiterungen] in der Benutzeroberfläche [!UICONTROL Datenerfassung] ausgewählt ist.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
+![Die Erweiterung [!UICONTROL Google Ads Enhanced Conversions] wird in der Ansicht [!UICONTROL Erweiterungen] in der [!UICONTROL Datenerfassungs]-Benutzeroberfläche ausgewählt.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 Um die Erweiterung zu konfigurieren, müssen Sie die beiden erforderlichen Felder ausfüllen:
 
-1. **[!UICONTROL Kunden-ID]**: Die ID, mit der Ihr [!DNL Google Ads]-Konto eindeutig identifiziert wird. Um diesen Wert zu finden, melden Sie sich bei [!DNL Google Ads] an und navigieren Sie zu **[!DNL Help]** > **[!DNL Customer ID]**.
-2. **[!UICONTROL Auf Token-Datenelement zugreifen]**: Wählen Sie das Datenelementsymbol (![Datenelementsymbol](/help/images/icons/database.png)) und wählen Sie das geheime Datenelement Google OAuth 2 aus, das Sie im vorherigen Schritt [ konfiguriert haben.](#create-secret-data-element)
+1. **[!UICONTROL Kunden-ID]**: Die ID, die Ihr [!DNL Google Ads]-Konto eindeutig identifiziert. Um diesen Wert zu finden, melden Sie sich bei [!DNL Google Ads] an und navigieren Sie zu **[!DNL Help]** > **[!DNL Customer ID]**.
+2. **[!UICONTROL Zugriffstoken-Datenelement]**: Wählen Sie das Datenelementsymbol (![Datenelementsymbol](/help/images/icons/database.png)) und dann das geheime Datenelement Google OAuth 2 aus, das Sie [im vorherigen Schritt konfiguriert](#create-secret-data-element) aus dem Menü.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um die Erweiterung zu installieren.
+Klicken Sie abschließend auf **[!UICONTROL Speichern]**, um die Erweiterung zu installieren.
 
-### Hinzufügen einer Aktion [!UICONTROL Konvertierung senden] zu einer Regel {#conversion-action-event-forwarding}
+### Hinzufügen [!UICONTROL  Aktion „Konvertierung senden] zu einer Regel {#conversion-action-event-forwarding}
 
-Nachdem die Erweiterung installiert wurde, können Sie beginnen, [!UICONTROL Konversionsaktionen senden] in Ihre Ereignisweiterleitungsregeln aufzunehmen. Wählen Sie beim Erstellen oder Bearbeiten einer Regel, die die Konvertierung überwacht, die Sie erweitern möchten, **[!UICONTROL Hinzufügen]** unter [!UICONTROL Aktionen] aus. Wählen Sie im nächsten Dialogfeld **[!UICONTROL Google Ads Enhanced Conversions]** aus dem Dropdown-Menü [!UICONTROL Extension] und dann **[!UICONTROL Send Conversion]** unter [!UICONTROL Aktionstyp].
+Nachdem die Erweiterung installiert wurde, können Sie damit beginnen, [!UICONTROL Konversionsaktion senden] in Ihre Ereignisweiterleitungsregeln einzuschließen. Wählen Sie beim Erstellen oder Bearbeiten einer Regel, die auf die Konversion wartet, die Sie verbessern möchten, **[!UICONTROL Hinzufügen]** unter [!UICONTROL Aktionen]. Wählen Sie im nächsten Dialogfeld **[!UICONTROL Erweiterte Konvertierungen für Google Ads]** aus der Dropdown-Liste [!UICONTROL Erweiterung] und wählen Sie dann **[!UICONTROL Konversion senden]** unter [!UICONTROL Aktionstyp].
 
-![Der Aktionstyp [!UICONTROL Konversion senden] , der in der Aktionskonfigurationsansicht des Regelbearbeitungs-Workflows ausgewählt wird.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
+![Der [!UICONTROL Konvertierung senden] Aktionstyp, der in der Aktionskonfigurationsansicht des Regelbearbeitungs-Workflows ausgewählt wird.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
-Im rechten Bereich werden neue Steuerelemente angezeigt, mit denen Sie Ihre Konvertierung konfigurieren können. Es müssen mindestens die folgenden Felder ausgefüllt werden:
+Im rechten Bereich werden neue Steuerelemente angezeigt, mit denen Sie die Konvertierung konfigurieren können. Die folgenden Felder müssen mindestens ausgefüllt werden:
 
 **Konversionsinformationen**
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| Kunden-ID | Ihre [!DNL Google Ads] Kunden-ID. Die Standardeinstellung ist die Kunden-ID, die Sie beim [Installieren der Erweiterung](#install-enhanced-conversions) eingegeben haben. |
-| Konversions-ID oder Konversionsbezeichnung | Tracking-Werte, die beim Einrichten des Konversions-Trackings von [!DNL Google Ads] abgerufen wurden. Werte beginnen mit `AW-`.<br><br>Weitere Informationen zum Auffinden dieser Werte finden Sie in der [[!DNL Google Ads] Dokumentation](https://support.google.com/tagmanager/answer/6105160?hl=en). |
-| Transaction ID | Wählen Sie ein Datenelement aus, das denselben Transaktions-ID-Wert wie [aufweist, der von der Clientseite ](#conversion-action-tags) mit der Erweiterung [!DNL Google Global Site Tag] gesendet wurde. |
+| Kunden-ID | Ihre [!DNL Google Ads] Kunden-ID. Standardmäßig wird die Kunden-ID verwendet, die Sie bei der [ der Erweiterung eingegeben ](#install-enhanced-conversions). |
+| Konversions-ID oder Konversionskennzeichnung | Tracking-Werte, die bei der Einrichtung des Konversionstrackings von [!DNL Google Ads] abgerufen werden. Werte beginnen mit `AW-`.<br><br>Weitere Informationen zum Auffinden dieser Werte finden Sie in der [[!DNL Google Ads] Dokumentation](https://support.google.com/tagmanager/answer/6105160?hl=en). |
+| Transaction ID | Wählen Sie ein Datenelement mit demselben Transaktions-ID-Wert aus, der [ der Client-Seite ](#conversion-action-tags) der [!DNL Google Global Site Tag]-Erweiterung gesendet wird. |
 
 **Benutzeridentifizierung**
 
-* Mindestens eine der drei Benutzer-IDs muss enthalten sein:
+* Mindestens eine der drei Benutzerkennung muss enthalten sein:
    * E-Mail
    * Telefonnummer
    * Vollständige Adresse
 
 >[!TIP]
 >
->Benutzeridentifizierungsdaten müssen gehasht werden, bevor sie an Google gesendet werden. Wenn die Daten nicht gehasht werden, wenn die Ereignisweiterleitung sie erhält, wählen Sie den Umschalter **[!UICONTROL Normalisieren und Hash]** für ein bestimmtes Feld aus, um die Erweiterung anzuweisen, den Wert zu hash.
+>Benutzeridentifizierungsdaten müssen gehasht werden, bevor sie an Google gesendet werden. Wenn die Daten beim Empfang der Ereignisweiterleitung nicht gehasht werden, wählen Sie den Umschalter **[!UICONTROL Normalisieren und Hash]** für ein bestimmtes Feld aus, um die Erweiterung anzuweisen, den Wert zu hashen.
 >
->![ Der Umschalter [!UICONTROL Normalisieren und Hash] ist für die Eingabe [!UICONTROL E-Mail] im Konfigurationsformular für die Aktion [!UICONTROL Konversion senden] aktiviert.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![Der Umschalter [!UICONTROL Normalisieren und Hash] ist für die Eingabe [!UICONTROL E-Mail] im Konfigurationsformular [!UICONTROL Konvertierung senden] aktiviert.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
-Wählen Sie nach Abschluss **[!UICONTROL Änderungen beibehalten]** aus, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
+Wenn Sie fertig sind, wählen **[!UICONTROL Änderungen beibehalten]**, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
 
-Veröffentlichen Sie abschließend eine neue Ereignisweiterleitung [build](../../../ui/publishing/builds.md) , um die Änderungen an der Bibliothek zu aktivieren.
+Veröffentlichen Sie abschließend eine neue Ereignisweiterleitung [Build](../../../ui/publishing/builds.md), um die Änderungen an der Bibliothek zu aktivieren.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Konversionsereignisse mithilfe der Ereignisweiterleitungs-Erweiterung [!DNL Enhanced Conversions] an [!DNL Google Ads] gesendet werden. Weiterführende Informationen zu Ereignisweiterleitungsfunktionen in Experience Platform finden Sie in der [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Konversionsereignisse mithilfe der [!DNL Enhanced Conversions]-Erweiterung an [!DNL Google Ads] senden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).

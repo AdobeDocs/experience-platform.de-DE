@@ -31,13 +31,13 @@ Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Ei
 
 ### at.js-Einstellungen
 
-All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
+All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur dann Einstellungen aus der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
 
 Die folgenden Konfigurationsoptionen sind verfügbar:
 
 #### Clientcode
 
-Der Clientcode ist die Konto-ID von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
+Der Clientcode ist die Kontokennung von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
 
 Kann mithilfe von Datenelementen geändert werden.
 
@@ -141,7 +141,7 @@ Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab 
    * Wenn die globale Mbox-Antwort empfangen wurde
    * Wenn für die globale Mbox-Anfrage eine Zeitüberschreitung eintritt
    * Wenn für den Ausschnitt selbst eine Zeitüberschreitung eintritt
-* Die Aktion &quot;Globale Mbox auslösen&quot;sollte auf allen Seiten verwendet werden, die den vorab ausgeblendeten Ausschnitt verwenden, um die Dauer der Vorab-Ausblendung zu minimieren.
+* Die Aktion „Globale Mbox auslösen“ sollte auf allen Seiten verwendet werden, die das pre-hiding-Snippet verwenden, um die Dauer des pre-hiding zu minimieren.
 
 Der vorab ausgeblendete Codeausschnitt lautet wie folgt und kann minimiert werden. Die konfigurierbaren Optionen befinden sich am Ende:
 

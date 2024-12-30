@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;payment
+keywords: Experience Platform;Startseite;beliebte Themen;Zahlung
 solution: Experience Platform
-title: Ein Zahlungssystem mithilfe der Flow Service-API durchsuchen
+title: Erkunden eines Zahlungssystems mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Zahlungsanwendungen zu untersuchen.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
@@ -11,11 +11,11 @@ ht-degree: 39%
 
 ---
 
-# Zahlungssystem mit der [!DNL Flow Service]-API durchsuchen
+# Erkunden eines Zahlungssystems mit der [!DNL Flow Service]-API
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service] -API verwendet, um Zahlungsanwendungen zu untersuchen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Zahlungsanwendungen zu untersuchen.
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einer Zahlungsanwendung herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Zahlungsprogramm verbinden zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindung zur Zahlungsanwendung eines Drittanbieters, aus der Sie Daten erfassen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Anwendung. Weitere Informationen zum Erstellen einer Zahlungsverbindung und Abrufen dieser Werte finden Sie im Tutorial [Zahlungsquelle mit Platform](../../api/create/payments/paypal.md) verbinden .
+Für dieses Tutorial benötigen Sie eine gültige Verbindung mit dem Zahlungsprogramm eines Drittanbieters, aus dem Sie Daten aufnehmen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Anwendung. Weitere Informationen zum Erstellen einer Zahlungsverbindung und zum Abrufen dieser Werte finden Sie im Tutorial [Verbinden einer Zahlungsquelle mit Platform](../../api/create/payments/paypal.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -50,9 +50,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Datentabellen durchsuchen
+## Erkunden von Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihr Zahlungssystem können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mithilfe der Verbindungs-ID für Ihr Zahlungssystem können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -62,7 +62,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung einer Zahlungsbase-Verbindung. |
+| `{BASE_CONNECTION_ID}` | Die ID einer Verbindung der Zahlungsbasis. |
 
 **Anfrage**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrem Zahlungssystem zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrem Zahlungssystem zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -112,9 +112,9 @@ Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrem Zahlungssystem 
 ]
 ```
 
-## Tabellenstruktur Inspect
+## Inspect - die Tabellenstruktur
 
-Um die Tabellenstruktur in Ihrem Zahlungssystem zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
+Um die Tabellenstruktur in Ihrem Zahlungssystem zu überprüfen, führen Sie eine GET-Anfrage aus, während Sie den Pfad einer Tabelle als Abfrageparameter angeben.
 
 **API-Format**
 
@@ -125,7 +125,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die Verbindungs-ID Ihres Zahlungssystems. |
-| `{TABLE_PATH}` | Der Pfad einer Tabelle in Ihrem Zahlungssystem. |
+| `{TABLE_PATH}` | Der Pfad einer Tabelle innerhalb Ihres Zahlungssystems. |
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns`-Arrays.
 
 ```json
 {
@@ -180,4 +180,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Zahlungssystem durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen über die Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrem Zahlungssystem zu sammeln und in Platform](../collect/payments.md) zu importieren.
+In diesem Tutorial haben Sie Ihr Zahlungssystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Zahlungssystem zu erfassen und in Platform zu ](../collect/payments.md).

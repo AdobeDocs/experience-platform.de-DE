@@ -302,7 +302,7 @@ Sie können neue geheime Daten erstellen, indem Sie eine POST-Anfrage ausführen
 
 >[!NOTE]
 >
->Wenn Sie neue geheime Daten erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe für den Austausch geheimer Daten ausgelöst, um zu testen, ob der Austausch von Anmeldedaten funktioniert. Diese Aufgabe wird asynchron verarbeitet und aktualisiert je nach Ergebnis das Statusattribut des Geheimnisses auf `succeeded` oder `failed`.
+>Wenn Sie neue geheime Daten erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe für den Austausch geheimer Daten ausgelöst, um zu testen, ob der Austausch von Anmeldedaten funktioniert. Diese Aufgabe wird asynchron verarbeitet und aktualisiert das Statusattribut der geheimen Daten je nach Ergebnis auf `succeeded` oder `failed`.
 
 **API-Format**
 
@@ -352,8 +352,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Ein eindeutiger, beschreibender Name für die geheimen Daten. |
-| `type_of` | Der Typ der Authentifizierungsberechtigung, die die geheimen Daten darstellt. Hat drei akzeptierte Werte:<ul><li>`token`: Eine Token-Zeichenfolge.</li><li>`simple-http`: Ein Benutzername und ein Kennwort.</li><li>`oauth2`: Anmeldeinformationen, die dem OAuth-Standard entsprechen.</li></ul> |
-| `credentials` | Ein Objekt, das die Werte der Anmeldeinformationen für die geheimen Daten enthält. Je nach `type_of`-Attribut müssen verschiedene Eigenschaften angegeben werden. Im Abschnitt zu [Anmeldeinformationen](../guides/secrets.md#credentials) des Handbuchs zu geheimen Daten finden Sie Einzelheiten zu den Anforderungen für die einzelnen Typen. |
+| `type_of` | Der Typ der Authentifizierungs-Anmeldedaten, die die geheimen Daten darstellen. Hat drei akzeptierte Werte:<ul><li>`token`: Eine Token-Zeichenfolge.</li><li>`simple-http`: Ein Benutzername und ein Kennwort.</li><li>`oauth2`: Anmeldedaten, die dem OAuth-Standard entsprechen.</li></ul> |
+| `credentials` | Ein Objekt, das die Werte der Anmeldedaten für die geheimen Daten enthält. Je nach `type_of`-Attribut müssen verschiedene Eigenschaften angegeben werden. Im Abschnitt zu [Anmeldedaten](../guides/secrets.md#credentials) des Handbuchs zu geheimen Daten finden Sie Einzelheiten zu den Anforderungen für die einzelnen Typen. |
 | `relationships.environment` | Geheime Daten müssen bei der ersten Erstellung jeweils einer Umgebung zugeordnet werden. Das `data`-Objekt in dieser Eigenschaft muss die `id` der Umgebung, der die geheimen Daten zugewiesen werden, zusammen mit einem `type`-Wert von `environments` enthalten. |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Aufruf muss der Wert `secrets` lauten. |
 
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange` enthalten ist.
+Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange` enthalten ist.
 
 ```json
 { 
@@ -644,11 +644,11 @@ Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei der
 }
 ```
 
-## Erneutes Autorisieren eines `oauth2-google`-Geheimnisses {#reauthorize}
+## Erneutes Autorisieren `oauth2-google` geheimen Daten {#reauthorize}
 
-Jedes `oauth2-google`-Geheimnis enthält eine `meta.authorization_url_expires_at` -Eigenschaft, die angibt, wann die Autorisierungs-URL abläuft. Danach muss das Geheimnis erneut autorisiert werden, damit es den Authentifizierungsprozess verlängern kann.
+Jedes `oauth2-google` Geheimnis enthält eine `meta.authorization_url_expires_at` Eigenschaft, die angibt, wann die Autorisierungs-URL abläuft. Nach dieser Zeit muss das Geheimnis erneut autorisiert werden, damit der Authentifizierungsprozess erneuert werden kann.
 
-Um ein `oauth2-google` -Geheimnis erneut zu autorisieren, stellen Sie eine PATCH-Anfrage für das betreffende Geheimnis.
+Um geheime Daten vom Typ &quot;`oauth2-google`&quot; erneut zu autorisieren, stellen Sie eine PATCH-Anfrage für die betreffenden geheimen Daten.
 
 **API-Format**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die `id` des Geheimnisses, das Sie erneut autorisieren möchten. |
+| `{SECRET_ID}` | Die `id` der geheimen Daten, die Sie erneut autorisieren möchten. |
 
 **Anfrage**
 
-Das Objekt `data` in der Anfrage-Payload muss eine `meta.action` -Eigenschaft enthalten, die auf `reauthorize` festgelegt ist.
+Das `data`-Objekt in der Anfrage-Payload muss eine `meta.action`-Eigenschaft enthalten, die auf `reauthorize` gesetzt ist.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Geheimnisses zurück. Von hier müssen Sie die `meta.authorization_url` kopieren und in einen Browser einfügen, um den Autorisierungsprozess abzuschließen.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten geheimen Daten zurück. Von hier aus müssen Sie die `meta.authorization_url` kopieren und in einen Browser einfügen, um den Autorisierungsprozess abzuschließen.
 
 ```json
 {

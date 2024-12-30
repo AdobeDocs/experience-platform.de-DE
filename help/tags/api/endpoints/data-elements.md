@@ -1314,7 +1314,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Herkunft des angegebenen Datenelements zurück.
+Eine erfolgreiche Antwort gibt die Details des Ursprungs des angegebenen Datenelements zurück.
 
 ```json
 {

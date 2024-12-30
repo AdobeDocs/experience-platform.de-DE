@@ -17,7 +17,7 @@ ht-degree: 97%
 
 Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Ein Erweiterungspaket definiert zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können. In den meisten Fällen sind diese Funktionen in Form von [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelementen](./data-elements.md) verfügbar, können aber auch Hauptmodule und freigegebene Module enthalten.
 
-Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und der Adobe Experience Platform-Benutzeroberfläche angezeigt, damit Benutzer sie installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
+Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und der Adobe Experience Platform-Benutzeroberfläche angezeigt, sodass Benutzer sie installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
 
 Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers, der es erstellt hat.
 

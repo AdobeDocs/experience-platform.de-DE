@@ -41,9 +41,9 @@ Dieses Programm richtet sich an Beratungsfirmen, die Adobe-Kunden dabei unterst�
 >
 >Derzeit kann Ihre geschäftliche E-Mail-Adresse jeweils nur in einem Partnerprogramm verwendet werden, so dass Sie für jedes der Programme eine andere geschäftliche E-Mail-Adresse als registrierten Kontakt verwenden müssen.
 
-Sobald sich Ihr Unternehmen im Exchange Partner-Programm befindet, können Sie den Zugriff auf Adobe Solutions anfordern, indem Sie sich bei der [Exchange Partner-Site](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen.
+Sobald Ihr Unternehmen am Exchange Partner-Programm teilnimmt, können Sie den Zugriff auf Adobe Solutions anfordern, indem Sie sich bei der [Exchange Partner-Site](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen.
 
-Wenn Sie über ein Experience Cloud-Konto verfügen, das Zugriff auf die Datenerfassungs-Benutzeroberfläche und die Experience Platform-Benutzeroberfläche erfordert, lesen Sie das Handbuch [für Datenerfassungsberechtigungen](../../../collection/permissions.md).
+Wenn Sie über ein Experience Cloud-Konto verfügen, das Zugriff auf die Datenerfassungs-Benutzeroberfläche und die Experience Platform-Benutzeroberfläche erfordert, lesen Sie bitte das [Handbuch zu Datenerfassungsberechtigungen](../../../collection/permissions.md).
 
 ## Für unabhängige Entwickler
 

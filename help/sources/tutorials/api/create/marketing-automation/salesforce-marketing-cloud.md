@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie Ihr Salesforce-Marketing Cloud-Konto mithilfe der Flow Service-API gegen Experience Platform authentifizieren.
+description: Erfahren Sie, wie Sie Ihr Salesforce Marketing Cloud-Konto mit der Flow Service-API gegenüber Experience Platform authentifizieren.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 57%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Salesforce Marketing Cloud] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -30,17 +30,17 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Salesforce Marketing Cloud] herstellen zu können.
+Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL Salesforce Marketing Cloud] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Damit [!DNL Flow Service] eine Verbindung zu [!DNL Salesforce Marketing Cloud] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit [!DNL Salesforce Marketing Cloud] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Bei der Eingabe Ihres `host` -Werts müssen Sie den `{subdomain}.rest.marketingcloudapis.com` angeben. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` ist, müssen Sie `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert eingeben. |
-| `clientId` | Die mit Ihrer [!DNL Salesforce Marketing Cloud] -Anwendung verknüpfte Client-ID. |
-| `clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL Salesforce Marketing Cloud]-Anwendung zugeordnet ist. |
+| `host` | Der Hostserver der Anwendung. Dies ist häufig Ihre Subdomain. **Hinweis:** Bei der Eingabe Ihres `host` müssen Sie den `{subdomain}.rest.marketingcloudapis.com` angeben. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` ist, müssen Sie `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Host-Wert eingeben. |
+| `clientId` | Die mit Ihrem [!DNL Salesforce Marketing Cloud] Programm verknüpfte Client-ID. |
+| `clientSecret` | Das mit Ihrer [!DNL Salesforce Marketing Cloud]-Anwendung verknüpfte Client-Geheimnis. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce Marketing Cloud] ist: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Salesforce Marketing Cloud] Dokument](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
@@ -49,11 +49,11 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Salesf
 
 >[!IMPORTANT]
 >
->Die Erfassung benutzerdefinierter Objekte wird von der Quellintegration für [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
+>Die Aufnahme benutzerdefinierter Objekte wird von der [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Salesforce Marketing Cloud]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Salesforce Marketing Cloud] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -93,13 +93,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.clientId` | Die mit Ihrer [!DNL Salesforce Marketing Cloud] -Anwendung verknüpfte Client-ID. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL Salesforce Marketing Cloud]-Anwendung zugeordnet ist. |
-| `connectionSpec.id` | Die [!DNL Salesforce Marketing Cloud] Verbindungsspezifikations-ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | Die mit Ihrem [!DNL Salesforce Marketing Cloud] Programm verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das mit Ihrer [!DNL Salesforce Marketing Cloud]-Anwendung verknüpfte Client-Geheimnis. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce Marketing Cloud]-Verbindung: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {

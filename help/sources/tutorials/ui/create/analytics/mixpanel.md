@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Source-Verbindung aus dem Mixpanel in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie eine Quellverbindung für Mixpanel mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+title: Erstellen einer Mixpanel-Source-Verbindung in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Mixpanel-Quellverbindung erstellen.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 40%
 
 # Erstellen eines Quell-Connectors für [!DNL Mixpanel] in der Benutzeroberfläche
 
-In diesem Tutorial werden die Schritte zum Erstellen einer 0-Quell-Verbindung mithilfe der Benutzeroberfläche von Adobe Experience Platform Platform beschrieben.[!DNL Mixpanel]
+In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Mixpanel]-Quellverbindung mithilfe der Benutzeroberfläche von Adobe Experience Platform Platform beschrieben.
 
 ## Erste Schritte
 
@@ -22,18 +22,18 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um eine Verbindung zwischen [!DNL Mixpanel] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Benutzername | Der Benutzername des Dienstkontos, der Ihrem [!DNL Mixpanel] -Konto entspricht. Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Mixpanel] Dienstkonten](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) . | `Test8.6d4ee7.mp-service-account` |
-| Kennwort | Das Dienstkontokennwort, das Ihrem [!DNL Mixpanel] -Konto entspricht. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| Projekt-ID | Ihre [!DNL Mixpanel] Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden Sie in der Dokumentation zu den [[!DNL Mixpanel] Projekteinstellungen](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) und im [[!DNL Mixpanel] Handbuch zum Erstellen und Verwalten von Projekten](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) . | `2384945` |
-| Zeitzone | Die Zeitzone, die Ihrem [!DNL Mixpanel] -Projekt entspricht. Zum Erstellen einer Quellverbindung ist eine Zeitzone erforderlich. Weitere Informationen finden Sie in der Dokumentation zu den [Projekteinstellungen für Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) . | `Pacific Standard Time` |
+| Benutzername | Der Benutzername des Service-Kontos, der Ihrem [!DNL Mixpanel] entspricht. Weitere Informationen finden [[!DNL Mixpanel]  in der ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) zu Service-Konten . | `Test8.6d4ee7.mp-service-account` |
+| Kennwort | Das Passwort des Service-Kontos, das Ihrem [!DNL Mixpanel]-Konto entspricht. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| Projekt-ID | Ihre [!DNL Mixpanel]-Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [[!DNL Mixpanel]  in der ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) zu Projekteinstellungen und [[!DNL Mixpanel] Handbuch ](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) Erstellen und Verwalten von Projekten). | `2384945` |
+| Zeitzone | Die Zeitzone, die Ihrem [!DNL Mixpanel] Projekt entspricht. Die Zeitzone ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [ in der Dokumentation ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) Mixpanel-Projekteinstellungen . | `Pacific Standard Time` |
 
-Weitere Informationen zum Authentifizieren Ihrer [!DNL Mixpanel]-Quelle finden Sie in der [[!DNL Mixpanel] Quellübersicht](../../../../connectors/analytics/mixpanel.md).
+Weitere Informationen zum Authentifizieren Ihrer [!DNL Mixpanel] finden Sie unter [[!DNL Mixpanel] Quelle - Übersicht](../../../../connectors/analytics/mixpanel.md).
 
 ## Verbinden Ihres [!DNL Mixpanel]-Kontos
 
@@ -41,11 +41,11 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Analytics* die Option [!DNL Mixpanel] und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter *Kategorie* Analytics“ die Option [!DNL Mixpanel] und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-Die Seite **[!UICONTROL Mixpanel-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Mixpanel-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
@@ -55,7 +55,7 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Mixpanel]-Konto, mi
 
 ### Neues Konto
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![neu](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
@@ -67,39 +67,39 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 >abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Platform die angegebene Projektzeitzone verwendet, um von Mixpanel relevante Daten aufzunehmen. Mixpanel passt seine Zeitzone an Ihre Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher festgehalten wird."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=de#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
 
-Geben Sie nach der Authentifizierung Ihrer Quelle Ihre Projekt-ID und Zeitzone ein und wählen Sie dann **[!UICONTROL Auswählen]** aus.
+Geben Sie nach der Authentifizierung Ihrer Quelle Ihre Projekt-ID und Zeitzone an und wählen Sie **[!UICONTROL Auswählen]**.
 
-Die Zeitzone, die Sie vor der Aufnahme Ihrer [!DNL Mixpanel] -Daten in Platform festlegen, muss mit der Zeitzone Ihres [!DNL Mixpanel]-Profils übereinstimmen. Änderungen an der Zeitzone Ihrer Daten werden nur auf neue Ereignisse angewendet und alte Ereignisse bleiben in der zuvor festgelegten Zeitzone. [!DNL Mixpanel] berücksichtigt die Sommerzeit und passt den Zeitstempel der Aufnahme entsprechend an. Weitere Informationen dazu, wie Zeitzonen Ihre Daten beeinflussen, finden Sie im [!DNL Mixpanel]-Handbuch unter [Verwalten von Zeitzonen für Projekte](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+Die Zeitzone, die Sie vor der Aufnahme Ihrer [!DNL Mixpanel] in Platform angeben, muss mit der Zeitzoneneinstellung Ihres [!DNL Mixpanel] Profils übereinstimmen. Alle Änderungen an der Zeitzone Ihrer Daten werden nur auf neue Ereignisse angewendet, und alte Ereignisse verbleiben in der Zeitzone, die Sie zuvor festgelegt haben. [!DNL Mixpanel] berücksichtigt die Sommerzeit und passt Ihren Aufnahmezeitstempel entsprechend an. Weitere Informationen dazu, wie sich Zeitzonen auf Ihre Daten auswirken, finden Sie im [!DNL Mixpanel] Handbuch unter [Verwalten von Zeitzonen für Projekte](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
-Nach einigen Augenblicken wird die richtige Oberfläche in ein Vorschaufenster aktualisiert, sodass Sie Ihr Schema vor der Erstellung eines Datenflusses überprüfen können. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Nach einigen Augenblicken wird die rechte Benutzeroberfläche in ein Vorschaufenster aktualisiert, sodass Sie Ihr Schema überprüfen können, bevor Sie einen Datenfluss erstellen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
-![configuration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
+![Konfiguration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Mixpanel]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen Datenfluss [konfigurieren, um Analysedaten in Platform](../../dataflow/analytics.md) zu importieren.
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Mixpanel]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Analytics-Daten in Platform zu importieren](../../dataflow/analytics.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verwendung der Quelle [!DNL Mixpanel] verweisen können.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verwendung der [!DNL Mixpanel] verweisen können.
 
 ### Validierung {#validation}
 
-Im Folgenden werden die Schritte beschrieben, die Sie ausführen können, um zu überprüfen, ob Sie Ihre [!DNL Mixpanel] -Quelle erfolgreich verbunden haben und ob [!DNL Mixpanel] -Ereignisse in Platform aufgenommen werden.
+Im Folgenden werden die Schritte beschrieben, die Sie unternehmen können, um zu überprüfen, ob Sie Ihre [!DNL Mixpanel] erfolgreich verbunden haben und ob [!DNL Mixpanel] Ereignisse in Platform aufgenommen werden.
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste **[!UICONTROL Datensätze]** aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Im Bildschirm [!UICONTROL Datensatzaktivität] werden die Details der Ausführungen angezeigt.
+Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Der [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
-Wählen Sie anschließend die Datenfluss-Start-ID des Datenflusses aus, den Sie anzeigen möchten, um bestimmte Details zu diesem Datenfluss anzuzeigen.
+Wählen Sie als Nächstes die Datenflussausführungs-ID des Datenflusses aus, den Sie anzeigen möchten, um spezifische Details zu dieser Datenflussausführung anzuzeigen.
 
-![dataflow-monitoring](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
+![Datenflussüberwachung](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
-Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes anzeigen]** aus, um die erfassten Daten anzuzeigen.
+Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes]** aus, um die aufgenommenen Daten anzuzeigen.
 
 ![preview-dataset](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 
-Sie können diese Daten anhand der Daten auf der Seite [!DNL Mixpanel] > [!DNL Events] überprüfen. Weitere Informationen finden Sie im Dokument [[!DNL Mixpanel] für Ereignisse](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) .
+Sie können diese Daten mit den Daten auf der Seite [!DNL Mixpanel] > [!DNL Events] vergleichen. Weitere Informationen finden [[!DNL Mixpanel]  im ](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) zu Ereignissen .
 
 ![mixpanel-events](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
 
@@ -109,7 +109,7 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 
 >[!TIP]
 >
->Weitere Informationen zur API finden Sie unter [Ereignis-Export-API > Download](https://developer.mixpanel.com/reference/raw-event-export) .
+>Weitere [ zur API finden Sie unter ](https://developer.mixpanel.com/reference/raw-event-export)Ereignisexport-API > Herunterladen“.
 
 
 | Quelle | Typ |
@@ -128,4 +128,4 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 
 ### Beschränkungen {#limits}
 
-* Sie haben maximal 100 gleichzeitige Abfragen und 60 Abfragen pro Stunde, wie unter [API-Ratenbeschränkungen exportieren](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints) angegeben.
+* Sie haben maximal 100 gleichzeitige Abfragen und 60 Abfragen pro Stunde, wie unter [Export API Rate Limits](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints) angegeben.

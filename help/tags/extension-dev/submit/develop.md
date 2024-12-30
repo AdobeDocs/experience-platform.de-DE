@@ -27,9 +27,9 @@ Wenn ein Plan vorhanden ist, können diese Anleitungen Ihnen helfen, den Entwick
 * Das [Tutorial-Video zu Erweiterungen](https://youtu.be/rxjtC9o4rl0) ist ein guter Anfang.
 * Die YouTube-Wiedergabeliste [Einführung in Erweiterungen](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) führt durch den Prozess der Erstellung von Erweiterungspaketen.
 * Artikel [JSON-Schema verstehen](https://spacetelescope.github.io/understanding-json-schema/index.html#).
-* [JSON Lint/Validator](https://jsonlint.com/).
+* [JSON-Link/Validator](https://jsonlint.com/).
 * [JSON-Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome-Erweiterung zum Hervorheben und Drucken von JSON &amp; JSONP.
-* Der Editor [jsonschema.net](https://jsonschema.net/#/editor) hilft beim Erstellen eines JSON-Schemas aus Ihrem Objekt.
+* [jsonschema.net](https://jsonschema.net/#/editor)-Editor, mit dem Sie ein JSON-Schema aus Ihrem -Objekt erstellen können.
 * [JSON-Schema-Validator](https://www.jsonschemavalidator.net) Ein interaktiver JSON-Schema-Online-Validator.
 
 ## Werkzeuge
@@ -39,7 +39,7 @@ Es gibt auch eine Reihe von npm-Tools, die Sie bei der Entwicklung Ihres Erweite
 * Mit dem [Strukturvorlagen-Tool für Tag-Erweiterungen](https://www.npmjs.com/package/@adobe/reactor-scaffold) können Sie auf Ihrem lokalen Computer leicht ein Einstiegsprojekt erstellen.
 * Die [Tag-Erweiterungs-Sandbox](https://www.npmjs.com/package/@adobe/reactor-sandbox) unterstützt Sie bei der Überprüfung der Ansichten und Module Ihrer Erweiterungen auf Ihrem lokalen Computer.
 * [Tag Extension Packager](https://www.npmjs.com/package/@adobe/reactor-packager) ist ein Befehlszeilenprogramm zum Verpacken einer Tag-Erweiterung in eine ZIP-Datei.
-* [Tag Extension Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader) ist ein interaktives Befehlszeilen-Tool, mit dem Sie die Anmeldeinformationen für Ihr technisches Konto eingeben und Ihr Erweiterungspaket zu Tags hochladen können.
+* [Tag Extension Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader) ist ein interaktives Befehlszeilen-Tool, mit dem Sie die Anmeldedaten für Ihr technisches Konto eingeben und Ihr Erweiterungspaket zu Tags hochladen können.
 * [Tag Extension Releaser](https://www.npmjs.com/package/@adobe/reactor-releaser) ist ein interaktives Befehlszeilen-Tool, mit dem Sie Ihre Erweiterung für die private Verfügbarkeit freigeben können.
 
 ## Beispiele für Erweiterungen

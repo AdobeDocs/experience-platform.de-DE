@@ -72,7 +72,7 @@ In der folgenden Tabelle sind die verschiedenen Fehler aufgeführt, die die API 
 | `extension-package-zip-error` | Beim Entpacken des ExtensionPackage oder beim Komprimieren der Dateien für die Verteilung ist ein Fehler aufgetreten. |
 | `host-in-use` | Ein Host kann nicht gelöscht werden, wenn eine oder mehrere Umgebungen ihn verwenden. |
 | `host-required` | Die dieser Bibliothek zugewiesene Umgebung hat keinen gültigen Host. Überprüfen Sie, welche Umgebung Ihrer Bibliothek zugewiesen ist. Weisen Sie dann dieser Umgebung einen gültigen Host zu. |
-| `host-type-error` | Nur SFTP-Hosts müssen die Anmeldeinformationen überprüfen, bevor sie verwendet werden können. Daher ist der Vortest nur für diesen Host-Typ verfügbar. |
+| `host-type-error` | Nur SFTP-Hosts müssen die Anmeldedaten überprüfen, bevor sie verwendet werden können. Daher ist der Vortest nur für diesen Host-Typ verfügbar. |
 | `illegal-custom-code-transform` | Sie dürfen die Transformation „customCode“ nicht verwenden. Geben Sie eine Funktions- oder Dateitransformation an. |
 | `ims-not-authorized` | Bei der Autorisierung Ihres Kontos ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es später erneut. |
 | `ims-session-error` | Es gibt ein Problem mit der angemeldeten Sitzung. Melden Sie sich bitte ab und melden Sie sich erneut an. |

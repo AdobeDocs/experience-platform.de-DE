@@ -1,6 +1,6 @@
 ---
-title: Datenfluss-Entwurf in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie Ihre Datenflüsse bei Verwendung des Arbeitsbereichs "Quellen"als Entwurf speichern und später veröffentlichen können.
+title: Entwurf von Datenflüssen in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie Ihre Datenflüsse als Entwurf speichern und bei Verwendung des Arbeitsbereichs „Quellen“ zu einem späteren Zeitpunkt veröffentlichen können.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 7%
 
 ---
 
-# Datenfluss-Entwurf in der Benutzeroberfläche
+# Entwurf von Datenflüssen in der Benutzeroberfläche
 
-Speichern Sie den Fortschritt des nicht abgeschlossenen Datenerfassungs-Workflows, indem Sie Ihren Datenfluss auf den Entwurfsstatus setzen. Sie können Ihre entworfenen Datenflüsse zu einem späteren Zeitpunkt fortsetzen und abschließen.
+Speichern Sie den Fortschritt des nicht abgeschlossenen Datenerfassungs-Workflows, indem Sie Ihren Datenfluss auf den Status Entwurf festlegen. Sie können Ihre entworfenen Datenflüsse zu einem späteren Zeitpunkt wieder aufnehmen und abschließen.
 
-In diesem Dokument wird beschrieben, wie Sie Ihre Datenflüsse speichern, wenn Sie den Arbeitsbereich &quot;Quellen&quot;in der Benutzeroberfläche von Adobe Experience Platform verwenden.
+In diesem Dokument wird beschrieben, wie Sie Ihre Datenflüsse speichern, wenn Sie den Quellarbeitsbereich in der Adobe Experience Platform-Benutzeroberfläche verwenden.
 
 ## Erste Schritte
 
@@ -23,19 +23,19 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ## Speichern eines Datenflusses als Entwurf
 
-Sie können den Erstellungsfortschritt des Datenflusses jederzeit anhalten, nachdem Sie die Daten ausgewählt haben, die Sie in Platform einbringen werden.
+Sie können den Fortschritt der Erstellung eines Datenflusses jederzeit anhalten, nachdem Sie die Daten ausgewählt haben, die Sie in Platform importieren möchten.
 
-Wenn Sie beispielsweise den Fortschritt während des Datenfluss-Detailschritts speichern möchten, wählen Sie **[!UICONTROL Als Entwurf speichern]** aus.
+Wenn Sie beispielsweise Ihren Fortschritt während des Schritts „Datenflussdetails“ speichern möchten, wählen Sie **[!UICONTROL Als Entwurf speichern]**.
 
-![Der Schritt &quot;Datenfluss-Detail&quot;des Ursprungs-Workflows mit ausgewähltem Speicherungsentwurf.](../../images/tutorials/draft/save-as-draft.png)
+![Der Schritt „Datenflussdetails“ des Quell-Workflows mit der Option „Als Entwurf speichern“.](../../images/tutorials/draft/save-as-draft.png)
 
-Nachdem Sie Ihren Entwurf gespeichert haben, gelangen Sie zur Seite Ihres Kontos, auf der Sie eine Liste Ihrer vorhandenen Datenflüsse einschließlich Ihrer Entwürfe sehen können.
+Nachdem Sie Ihren Entwurf gespeichert haben, werden Sie zur Seite Ihres Kontos weitergeleitet, wo Sie eine Liste Ihrer vorhandenen Datenflüsse sehen können, einschließlich Ihrer Entwürfe.
 
-![Eine Liste der Datenflüsse für ein bestimmtes Konto.](../../images/tutorials/draft/draft-dataflow.png)
+![Eine Liste von Datenflüssen für ein bestimmtes Konto.](../../images/tutorials/draft/draft-dataflow.png)
 
 >[!TIP]
 >
->Entworfene Datenflüsse werden nicht aktiviert und haben ihren Status auf `draft` eingestellt.
+>Entworfene Datenflüsse werden nicht aktiviert und ihr Status wird auf `draft` gesetzt.
 
 Um mit dem Entwurf fortzufahren, wählen Sie die Auslassungszeichen (`...`) neben dem Namen Ihres Datenflusses und dann **[!UICONTROL Datenfluss aktualisieren]** aus.
 
@@ -43,44 +43,44 @@ Um mit dem Entwurf fortzufahren, wählen Sie die Auslassungszeichen (`...`) nebe
 >
 >Wenn Ihr Entwurf Planungsinformationen enthält, erhalten Sie im Dropdown-Fenster auch die Option **[!UICONTROL Zeitplan bearbeiten]**.
 
-![Ein Dropdown-Fenster mit ausgewähltem Aktualisierungs-Datenfluss.](../../images/tutorials/draft/update-dataflow.png)
+![Ein Dropdown-Fenster mit ausgewähltem Datenfluss aktualisieren.](../../images/tutorials/draft/update-dataflow.png)
 
-### Entwürfe aus dem Quellkatalog aufrufen
+### Zugreifen auf Entwürfe aus dem Quellkatalog
 
-Sie können auch über den Datenflusskatalog auf Ihre Datenflussentwürfe zugreifen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus, um auf den Datenflusses-Katalog zuzugreifen. Suchen Sie hier Ihren Entwurf aus der Liste der vorhandenen Datenflüsse in Ihrer Organisation, wählen Sie die Auslassungszeichen (`...`) neben dem Namen aus und wählen Sie dann **[!UICONTROL Datenfluss aktualisieren]** aus.
+Sie können über den Datenflusskatalog auch auf Ihre Datenflussentwürfe zugreifen. Wählen **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile aus, um auf den Datenflusskatalog zuzugreifen. Suchen Sie von hier aus Ihren Entwurf aus der Liste der vorhandenen Datenflüsse in Ihrer Organisation, wählen Sie die Auslassungspunkte (`...`) neben dem Namen aus und wählen Sie dann **[!UICONTROL Datenfluss aktualisieren]**.
 
-![Eine Liste der Datenflüsse für eine bestimmte Organisation.](../../images/tutorials/draft/catalog-access.png)
+![Eine Liste von Datenflüssen für eine bestimmte Organisation.](../../images/tutorials/draft/catalog-access.png)
 
 ## Veröffentlichen des Datenflussentwurfs
 
-Sie werden zum Schritt [!UICONTROL Daten hinzufügen] des Ursprungs-Workflows zurückgeleitet, wo Sie das Format Ihrer Daten erneut bestätigen und mit dem Datenfluss fortfahren können.
+Sie kehren zum Schritt [!UICONTROL Daten hinzufügen] des Quell-Workflows zurück, in dem Sie das Format Ihrer Daten erneut bestätigen und mit dem Fortschritt in Ihrem Datenfluss fortfahren können.
 
-Nachdem Sie den Formatierungs-, Trennzeichen- und Komprimierungstyp Ihrer Daten bestätigt haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Nachdem Sie die Formatierung, das Trennzeichen und den Komprimierungstyp Ihrer Daten bestätigt haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
-![Der Schritt zum Hinzufügen von Daten des Ursprungs-Workflows.](../../images/tutorials/draft/select-data.png)
+![Der Schritt „Daten hinzufügen“ des Quell-Workflows.](../../images/tutorials/draft/select-data.png)
 
-Bestätigen Sie als Nächstes Ihre Datenfluss-Details. Verwenden Sie die Oberfläche mit den Datenfluss-Details , um Konfigurationen zu aktualisieren, die den Namen, die Beschreibung, die partielle Erfassung, die Fehlerdiagnoseinstellungen und die Voreinstellungen für Warnhinweise umgeben.
+Bestätigen Sie anschließend Ihre Datenflussdetails. Verwenden Sie die Oberfläche Datenflussdetails , um Konfigurationen mit dem Namen, der Beschreibung, der partiellen Aufnahme, den Einstellungen für die Fehlerdiagnose und die Warnhinweiseinstellungen Ihres Datenflusses zu aktualisieren.
 
-Nachdem Sie die Konfigurationen abgeschlossen haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Nachdem Sie Ihre Konfigurationen abgeschlossen haben, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Der Schritt &quot;Datenfluss-Detail&quot;des Ursprungs-Workflows.](../../images/tutorials/draft/dataflow-detail.png)
+![Der Schritt „Datenflussdetails“ des Quell-Workflows.](../../images/tutorials/draft/dataflow-detail.png)
 
-Der Schritt [!UICONTROL Zuordnung] wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Benutzeroberflächen-Handbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md) .
+Der Schritt [!UICONTROL Zuordnung] wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../data-prep/ui/mapping.md).
 
-Nachdem Sie die Neukonfiguration der Zuordnung abgeschlossen haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Nachdem Sie die Neukonfiguration der Zuordnung abgeschlossen haben, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Der Zuordnungsschritt des Ursprungs-Workflows.](../../images/tutorials/draft/mapping.png)
+![Der Zuordnungsschritt des Quell-Workflows.](../../images/tutorials/draft/mapping.png)
 
-Verwenden Sie den Schritt [!UICONTROL Planung] , um einen Aufnahmezeitplan für Ihren Datenfluss festzulegen. Sie können die Aufnahmefrequenz auf `once`, `minute`, `hour`, `day` oder `week` festlegen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Verwenden Sie den [!UICONTROL Zeitplan], um einen Aufnahmezeitplan für Ihren Datenfluss festzulegen. Sie können Ihre Aufnahmefrequenz auf `once`, `minute`, `hour`, `day` oder `week` festlegen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
-![Der Planungsschritt des Ursprungs-Workflows.](../../images/tutorials/draft/scheduling.png)
+![Der Planungsschritt des Quell-Workflows.](../../images/tutorials/draft/scheduling.png)
 
-Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Fertigstellen]** aus, um Ihren Entwurf zu veröffentlichen.
+Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Beenden]** aus, um Ihren Entwurf zu veröffentlichen.
 
-![Der Überprüfungsschritt des Ursprungs-Workflows.](../../images/tutorials/draft/review.png)
+![Der Überprüfungsschritt des Quell-Workflows.](../../images/tutorials/draft/review.png)
 
-Nachdem Sie einen Entwurf gespeichert und veröffentlicht haben, wird der Datenfluss aktiviert und Sie können ihn nicht mehr als Entwurf zurücksetzen.
+Nachdem Sie einen Entwurf gespeichert und veröffentlicht haben, ist der Datenfluss aktiviert und Sie können ihn nicht mehr als Entwurf zurücksetzen.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie Sie Ihren Fortschritt speichern und einen Datenfluss als Entwurf festlegen können. Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../home.md).
+In diesem Tutorial haben Sie gelernt, wie Sie Ihren Fortschritt speichern und einen Datenfluss als Entwurf festlegen. Weitere Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../home.md).

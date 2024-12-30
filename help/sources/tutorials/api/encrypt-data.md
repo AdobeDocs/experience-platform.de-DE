@@ -11,7 +11,7 @@ ht-degree: 72%
 
 # Verschlüsselte Datenaufnahme
 
-Sie können verschlüsselte Datendateien mit Batch-Quellen für den Cloud-Speicher in Adobe Experience Platform erfassen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Derzeit werden die asymmetrischen Verschlüsselungsmechanismen PGP und GPG unterstützt.
+Sie können verschlüsselte Datendateien mithilfe von Cloud-Speicher-Batch-Quellen in Adobe Experience Platform aufnehmen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Derzeit werden die asymmetrischen Verschlüsselungsmechanismen PGP und GPG unterstützt.
 
 Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
@@ -41,7 +41,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ### Unterstützte Dateierweiterungen für verschlüsselte Dateien {#supported-file-extensions-for-encrypted-files}
 
-Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien ist:
+Die unterstützten Dateierweiterungen für verschlüsselte Dateien sind in der folgenden Liste aufgeführt:
 
 * .csv 
 * .tsv
@@ -66,7 +66,7 @@ Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien ist
 
 >[!IMPORTANT]
 >
->Verschlüsselungsschlüssel sind für eine bestimmte Sandbox spezifisch. Daher müssen Sie neue Verschlüsselungsschlüssel erstellen, wenn Sie verschlüsselte Daten in einer anderen Sandbox innerhalb Ihres Unternehmens erfassen möchten.
+>Verschlüsselungsschlüssel sind für eine bestimmte Sandbox spezifisch. Daher müssen Sie neue Verschlüsselungsschlüssel erstellen, wenn Sie verschlüsselte Daten in einer anderen Sandbox innerhalb Ihrer Organisation aufnehmen möchten.
 
 Der erste Schritt bei der Aufnahme verschlüsselter Daten in Experience Platform besteht darin, Ihr Verschlüsselungsschlüsselpaar durch eine POST-Anfrage an den `/encryption/keys`-Endpunkt der [!DNL Connectors]-API zu erstellen.
 
@@ -78,7 +78,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungsschlüsselpaar.
 
@@ -109,7 +109,7 @@ curl -X POST \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
 Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter Schlüssel, die ID des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
 
@@ -131,7 +131,7 @@ Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter 
 
 ### Abrufen von Verschlüsselungsschlüsseln {#retrieve-encryption-keys}
 
-Um alle Verschlüsselungsschlüssel in Ihrem Unternehmen abzurufen, stellen Sie eine GET-Anfrage an den Endpunkt `/encryption/keys` endpoint=nt.
+Um alle Verschlüsselungsschlüssel in Ihrer Organisation abzurufen, stellen Sie eine GET-Anfrage an den `/encryption/keys`-Endpunkt=nt.
 
 **API-Format**
 
@@ -141,9 +141,9 @@ GET /data/foundation/connectors/encryption/keys
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
-Die folgende Anfrage ruft alle Verschlüsselungsschlüssel in Ihrem Unternehmen ab.
+Die folgende Anfrage ruft alle Verschlüsselungsschlüssel in Ihrer Organisation ab.
 
 ```shell
 curl -X GET \
@@ -157,9 +157,9 @@ curl -X GET \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
-Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Ihr Name, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels, der Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Name, öffentlicher Schlüssel, ID des öffentlichen Schlüssels, Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
 
 ```json
 {
@@ -176,7 +176,7 @@ Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Ihr Nam
 
 ### Abrufen von Verschlüsselungsschlüsseln nach ID {#retrieve-encryption-keys-by-id}
 
-Um einen bestimmten Satz von Verschlüsselungsschlüsseln abzurufen, stellen Sie eine GET-Anfrage an den `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüsselkennung als Kopfzeilenparameter an.
+Um einen bestimmten Satz von Verschlüsselungsschlüsseln abzurufen, stellen Sie eine GET-Anfrage an den `/encryption/keys`-Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
 
 **API-Format**
 
@@ -186,7 +186,7 @@ GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X GET \
@@ -200,9 +200,9 @@ curl -X GET \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
-Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Ihr Name, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels, der Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Name, öffentlicher Schlüssel, ID des öffentlichen Schlüssels, Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
 
 ```json
 {
@@ -235,7 +235,7 @@ POST /data/foundation/connectors/encryption/customer-keys
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X POST \
@@ -264,7 +264,7 @@ curl -X POST \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
 ```json
 {    
@@ -280,7 +280,7 @@ curl -X POST \
 
 ### Vom Kunden verwaltetes Schlüsselpaar abrufen
 
-Um vom Kunden verwaltete Schlüssel abzurufen, stellen Sie eine GET-Anfrage an den `/customer-keys` -Endpunkt.
+Um die vom Kunden verwalteten Schlüssel abzurufen, stellen Sie eine GET-Anfrage an den `/customer-keys`-Endpunkt.
 
 **API-Format**
 
@@ -290,7 +290,7 @@ GET /data/foundation/connectors/encryption/customer-keys
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X GET \
@@ -304,7 +304,7 @@ curl -X GET \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
 ```json
 [
@@ -364,7 +364,7 @@ POST /flows
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 Die folgende Anfrage erstellt einen Datenfluss zum Aufnehmen verschlüsselter Daten für eine Cloud-Speicherquelle.
 
@@ -426,7 +426,7 @@ curl -X POST \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
 Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses für Ihre verschlüsselten Daten zurückgegeben.
 
@@ -443,7 +443,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X POST \
@@ -496,7 +496,7 @@ curl -X POST \
 
 **Antwort**
 
-+++ Beispielantwort anzeigen
++++Beispielantwort anzeigen
 
 Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses für Ihre verschlüsselten Daten zurückgegeben.
 
@@ -511,9 +511,9 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 >[!ENDTABS]
 
-### Schlüssel löschen {#delete-encryption-keys}
+### Verschlüsselungsschlüssel löschen {#delete-encryption-keys}
 
-Um Ihre Verschlüsselungsschlüssel zu löschen, stellen Sie eine DELETE-Anfrage an den `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüsselkennung als Kopfzeilenparameter an.
+Um Ihre Verschlüsselungsschlüssel zu löschen, stellen Sie eine DELETE-Anfrage an den `/encryption/keys`-Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
 
 **API-Format**
 
@@ -523,7 +523,7 @@ DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X DELETE \
@@ -539,9 +539,9 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-### Überprüfen von Verschlüsselungsschlüsseln {#validate-encryption-keys}
+### Verschlüsselungsschlüssel validieren {#validate-encryption-keys}
 
-Um Ihre Verschlüsselungsschlüssel zu validieren, stellen Sie eine GET-Anfrage an den `/encryption/keys/validate/` -Endpunkt und geben Sie die öffentliche Schlüssel-ID an, die Sie als Kopfzeilenparameter überprüfen möchten.
+Um Ihre Verschlüsselungsschlüssel zu validieren, stellen Sie eine GET-Anfrage an den `/encryption/keys/validate/`-Endpunkt und geben Sie die öffentliche Schlüssel-ID an, die Sie als Header-Parameter überprüfen möchten.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -549,7 +549,7 @@ GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
 
 **Anfrage**
 
-+++ Beispielanfrage anzeigen
++++Beispielanfrage anzeigen
 
 ```shell
 curl -X GET \
@@ -563,13 +563,13 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt entweder eine Bestätigung zurück, dass Ihre IDs gültig oder ungültig sind.
+Bei einer erfolgreichen Antwort wird entweder eine Bestätigung zurückgegeben, dass Ihre IDs gültig sind, oder sie wird ungültig.
 
 >[!BEGINTABS]
 
->[!TAB Gültig]
+>[!TAB Valid]
 
-Eine gültige öffentliche Schlüssel-ID gibt den Status &quot;`Active`&quot;zusammen mit Ihrer öffentlichen Schlüssel-ID zurück.
+Eine gültige öffentliche Schlüssel-ID gibt den Status `Active` zusammen mit Ihrer öffentlichen Schlüssel-ID zurück.
 
 ```json
 {
@@ -578,9 +578,9 @@ Eine gültige öffentliche Schlüssel-ID gibt den Status &quot;`Active`&quot;zus
 }
 ```
 
->[!TAB Invalid]
+>[!TAB Ungültig]
 
-Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status &quot;`Expired`&quot;zusammen mit Ihrer Kennung des öffentlichen Schlüssels zurück.
+Eine ungültige ID des öffentlichen Schlüssels gibt den Status `Expired` zusammen mit Ihrer ID des öffentlichen Schlüssels zurück.
 
 ```json
 {
@@ -592,26 +592,26 @@ Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status &quot;`Exp
 >[!ENDTABS]
 
 
-## Einschränkungen bei der wiederkehrenden Erfassung {#restrictions-on-recurring-ingestion}
+## Einschränkungen bei der wiederkehrenden Aufnahme {#restrictions-on-recurring-ingestion}
 
-Die verschlüsselte Datenerfassung unterstützt nicht die Erfassung wiederkehrender oder mehrstufiger Ordner in Quellen. Alle verschlüsselten Dateien müssen in einem einzigen Ordner enthalten sein. Platzhalter mit mehreren Ordnern in einem einzelnen Quellpfad werden ebenfalls nicht unterstützt.
+Die verschlüsselte Datenaufnahme unterstützt nicht die Aufnahme von wiederkehrenden oder mehrstufigen Ordnern in Quellen. Alle verschlüsselten Dateien müssen in einem einzigen Ordner enthalten sein. Platzhalter mit mehreren Ordnern in einem einzigen Quellpfad werden ebenfalls nicht unterstützt.
 
 Im Folgenden finden Sie ein Beispiel für eine unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*.csv.gpg` ist.
 
 In diesem Szenario werden die fett gedruckten Dateien in Experience Platform aufgenommen.
 
-* ACME-Kunden
-   * **Datei1.csv.gpg**
+* ACME-customers
+   * **File1.csv.gpg**
    * File2.json.gpg
    * **File3.csv.gpg**
    * File4.json
    * **File5.csv.gpg**
 
-Im Folgenden finden Sie ein Beispiel für eine nicht unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*` lautet.
+Im Folgenden finden Sie ein Beispiel für eine nicht unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*` ist.
 
 In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldung zurück, die angibt, dass Daten nicht aus der Quelle kopiert werden können.
 
-* ACME-Kunden
+* ACME-customers
    * File1.csv.gpg
    * File2.json.gpg
    * Unterordner1
@@ -624,4 +624,4 @@ In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldun
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch unter [Überwachung Ihres Datenflusses mit der  [!DNL Flow Service] API](./monitor.md) .
+In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch unter [Überwachen Ihres Datenflusses mithilfe der  [!DNL Flow Service] -API](./monitor.md).

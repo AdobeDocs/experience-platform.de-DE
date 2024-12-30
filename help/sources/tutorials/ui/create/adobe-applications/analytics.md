@@ -11,7 +11,7 @@ ht-degree: 41%
 
 # Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Adobe Analytics-Quellverbindung erstellen, um Adobe Analytics-Report Suite-Daten in Adobe Experience Platform zu importieren.
+In diesem Tutorial werden Schritte zum Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche beschrieben, um Adobe Analytics Report Suite-Daten in Adobe Experience Platform zu importieren.
 
 ## Erste Schritte
 
@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den [!DNL Analytics]-Quelldaten und [!DNL Analytics]-Schemafeldergruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Sie können sich bei ihrer Verwendung von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) finden Sie weitere Informationen zu eVars.
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) finden Sie weitere Informationen zu eVars.
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
 * **Anzeigenamen**: Anzeigenamen sind von Benutzern bereitgestellte Bezeichnungen für benutzerdefinierte Variablen in einer [!DNL Analytics]-Implementierung. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) finden Sie weitere Informationen zu Anzeigenamen.
 
@@ -34,10 +34,10 @@ Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dok
 
 >[!NOTE]
 >
->Wenn Sie einen Analytics-Quell-Datenfluss in einer Produktions-Sandbox erstellen, werden zwei Datenflüsse erstellt:
+>Beim Erstellen eines Analytics-Quell-Datenflusses in einer Produktions-Sandbox werden zwei Datenflüsse erstellt:
 >
->* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake ausführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
->* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss wird kontinuierlich ausgeführt.
+>* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake durchführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
+>* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss läuft kontinuierlich.
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -51,33 +51,33 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adobe-Programme]** das Programm **
 
 >[!IMPORTANT]
 >
->Die auf dem Bildschirm aufgelisteten Report Suites können aus verschiedenen Regionen stammen. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform regionsübergreifend verwenden. Bitte stellen Sie sicher, dass dies von Ihrer Firma erlaubt ist.
+>Die auf dem Bildschirm aufgelisteten Report Suites können aus verschiedenen Regionen stammen. Sie sind dafür verantwortlich, sich über die Einschränkungen und Pflichten Ihrer Daten und deren regionenübergreifende Verwendung in Adobe Experience Platform zu informieren. Bitte stellen Sie sicher, dass dies von Ihrer Firma erlaubt ist.
 
-Der Schritt **[!UICONTROL Hinzufügen der Analytics-Quelle zu Daten]** bietet eine Liste der [!DNL Analytics] Report Suite-Daten, mit denen eine Quellverbindung hergestellt werden kann.
+Der Schritt **[!UICONTROL Analytics-Quelle - Daten]**) stellt eine Liste [!DNL Analytics] Report Suite-Daten bereit, mit denen Sie eine Quellverbindung erstellen können.
 
-Eine Report Suite ist ein Datencontainer, der die Grundlage für die Berichterstellung für [!DNL Analytics] bildet. Eine Organisation kann über viele Report Suites verfügen, die jeweils unterschiedliche Datensätze enthalten.
+Eine Report Suite ist ein Container mit Daten, die die Grundlage für [!DNL Analytics] Reporting bilden. Eine Organisation kann über viele Report Suites verfügen, die jeweils unterschiedliche Datensätze enthalten.
 
-Sie können Report Suites aus einer beliebigen Region (USA, Großbritannien oder Singapur) erfassen, sofern sie derselben Organisation wie die Experience Platform-Sandbox-Instanz zugeordnet sind, in der die Quellverbindung erstellt wird. Eine Report Suite kann nur mit einem einzigen aktiven Datenfluss erfasst werden. Eine Report Suite, die nicht auswählbar ist, wurde bereits aufgenommen, entweder in der von Ihnen verwendeten Sandbox oder in einer anderen Sandbox.
+Sie können Report Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Königreich oder Singapur) aufnehmen, sofern sie derselben Organisation zugeordnet sind wie die Experience Platform-Sandbox-Instanz, in der die Quellverbindung erstellt wird. Eine Report Suite kann nur mit einem einzigen aktiven Datenfluss aufgenommen werden. Eine nicht auswählbare Report Suite wurde bereits aufgenommen, entweder in der verwendeten Sandbox oder in einer anderen Sandbox.
 
-Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites in dieselbe Sandbox zu bringen. Wenn die Report Suites unterschiedliche Schemas für Variablen haben (z. B. eVars oder Ereignisse), sollten sie bestimmten Feldern in den benutzerdefinierten Feldergruppen zugeordnet werden, um Datenkonflikte mit [Datenvorbereitung](../../../../../data-prep/ui/mapping.md) zu vermeiden. Report Suites können nur zu einer einzelnen Sandbox hinzugefügt werden.
+Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites in dieselbe Sandbox zu bringen. Wenn die Report Suites unterschiedliche Schemata für Variablen aufweisen (z. B. eVars oder Ereignisse), sollten sie bestimmten Feldern in den benutzerdefinierten Feldergruppen zugeordnet werden, um Datenkonflikte mithilfe der [Datenvorbereitung](../../../../../data-prep/ui/mapping.md) zu vermeiden. Report Suites können nur zu einer einzigen Sandbox hinzugefügt werden.
 
 ![](../../../../images/tutorials/create/analytics/report-suite.png)
 
 >[!NOTE]
 >
->Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundenprofil aktiviert werden, wenn keine Datenkonflikte bestehen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props) mit unterschiedlicher Bedeutung.
+>Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundenprofil aktiviert werden, wenn keine Datenkonflikte vorliegen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props), die eine andere Bedeutung haben.
 
-Um eine Quellverbindung mit dem Wert [!DNL Analytics] zu erstellen, wählen Sie eine Report Suite aus und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
+Um eine [!DNL Analytics] Quellverbindung zu erstellen, wählen Sie eine Report Suite aus und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-&lt;!—Analytics Report Suites können für jeweils eine Sandbox konfiguriert werden. Um dieselbe Report Suite in eine andere Sandbox zu importieren, muss der Datensatzfluss gelöscht und über die Konfiguration für eine andere Sandbox erneut instanziiert werden.—>
+&lt;!- Analytics-Report Suites können für jeweils eine Sandbox konfiguriert werden. Um dieselbe Report Suite in eine andere Sandbox zu importieren, muss der Datensatzfluss gelöscht und über die Konfiguration für eine andere Sandbox erneut instanziiert werden.—>
 
 ### Zuordnung
 
 >[!IMPORTANT]
 >
->Datenvorbereitung-Transformationen können zum Datenfluss insgesamt Latenzzeiten hinzufügen. Die zusätzliche Latenz variiert je nach Komplexität der Umwandlungslogik.
+>Umwandlungen der Datenvorbereitung können zu einer Latenz im gesamten Datenfluss führen. Die zusätzliche Latenz hängt von der Komplexität der Umwandlungslogik ab.
 
 Bevor Sie Ihre [!DNL Analytics]-Daten einem Ziel-XDM-Schema zuordnen können, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
 
@@ -125,11 +125,11 @@ Platform erkennt Ihre Zuordnungssätze automatisch für Konflikte mit benutzerfr
 
 #### Benutzerdefinierte Zuordnungen
 
-Sie können Datenvorgangsfunktionen verwenden, um neue benutzerdefinierte Mapping- oder berechnete Felder für benutzerdefinierte Attribute hinzuzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniert]** aus.
+Sie können Funktionen zur Datenvorbereitung verwenden, um neue benutzerdefinierte Zuordnungen oder berechnete Felder für benutzerdefinierte Attribute hinzuzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![custom](../../../../images/tutorials/create/analytics/custom.png)
 
-Je nach Bedarf können Sie entweder **[!UICONTROL Neue Zuordnung hinzufügen]** oder **[!UICONTROL Berechnetes Feld hinzufügen]** auswählen und mit der Erstellung benutzerdefinierter Zuordnungen für Ihre benutzerdefinierten Attribute fortfahren. Umfassende Schritte zur Verwendung der Datenvorbereitung-Funktionen finden Sie im [UI-Handbuch zur Datenvorbereitung](../../../../../data-prep/ui/mapping.md).
+Je nach Bedarf können Sie entweder **[!UICONTROL Neue Zuordnung hinzufügen]** oder **[!UICONTROL Berechnetes Feld hinzufügen]** auswählen und mit dem Erstellen benutzerdefinierter Zuordnungen für Ihre benutzerdefinierten Attribute fortfahren. Eine ausführliche Anleitung zur Verwendung von Datenvorbereitungsfunktionen finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Datenvorbereitung, berechneten Feldern und Zuordnungsfunktionen:
 
@@ -175,24 +175,24 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >title="Erstellen von Filterregeln"
 >abstract="Definieren Sie beim Senden von Daten an das Echtzeit-Kundenprofil Filterregeln auf Zeilen- und Spaltenebene. Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die **bei der Profilaufnahme** ausgeschlossen werden sollen. Die Filterregeln gelten nicht für Daten, die an den Data Lake gesendet werden."
 
-Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten abgeschlossen haben, können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Die Filterung wird nur für [!DNL Analytics] -Daten unterstützt. Daten werden erst gefiltert, bevor [!DNL Profile.] eingegeben wird. Alle Daten werden in den Daten-Pool aufgenommen.
+Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten abgeschlossen haben, können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Die Unterstützung für die Filterung ist nur für [!DNL Analytics] Daten verfügbar und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Data Lake aufgenommen.
 
 >[!BEGINSHADEBOX]
 
-**Zusätzliche Informationen zur Datenvorbereitung und Filterung von Analytics-Daten für Echtzeit-Kundenprofil**
+**Zusätzliche Informationen zur Datenvorbereitung und zum Filtern von Analytics-Daten für das Echtzeit-Kundenprofil**
 
-* Sie können die Filterfunktion für Daten verwenden, die an das Profil gesendet werden, nicht aber für Daten, die an Data Lake gesendet werden.
-* Sie können die Filterung für Live-Daten verwenden, Sie können aber keine Aufstockungsdaten filtern.
-   * Die [!DNL Analytics]-Quelle füllt Daten nicht in Profil auf.
-* Wenn Sie während der ersten Einrichtung eines &quot;[!DNL Analytics]&quot;-Flusses Datenvorbereitungskonfigurationen verwenden, werden diese Änderungen auch auf die automatische 13-monatige Aufstockung angewendet.
+* Sie können die Filterfunktion für Daten verwenden, die an das Profil gesendet werden, aber nicht für Daten, die an den Data Lake gesendet werden.
+* Sie können die Filterung nach Live-Daten verwenden, aber keine Aufstockungsdaten filtern.
+   * Die [!DNL Analytics]-Quelle füllt keine Daten in das Profil auf.
+* Wenn Sie Datenvorbereitungs-Konfigurationen während der Ersteinrichtung eines [!DNL Analytics] verwenden, werden diese Änderungen auch auf die automatische 13-monatige Aufstockung angewendet.
    * Dies ist jedoch nicht der Fall für die Filterung, da die Filterung nur für Live-Daten reserviert ist.
-* Die Datenvorbereitung wird sowohl auf Streaming- als auch auf Batch-Erfassungspfade angewendet. Wenn Sie eine vorhandene Datenvorbereitung ändern, werden diese Änderungen auf neue eingehende Daten über Streaming- und Batch-Erfassungswege hinweg angewendet.
-   * Datenvorbereitung-Konfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform erfasst wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
-* Standardattribute aus Analytics werden immer automatisch zugeordnet. Daher können Sie keine Transformationen auf Standardattribute anwenden.
-   * Sie können jedoch Standardattribute herausfiltern, solange sie in Identity Service oder Profil nicht benötigt werden.
-* Sie können die Filterung auf Spaltenebene nicht verwenden, um erforderliche Felder und Identitätsfelder zu filtern.
-* Sie können zwar sekundäre Identitäten herausfiltern, insbesondere &quot;AAID&quot;und &quot;AACustomID&quot;, aber Sie können die ECID nicht herausfiltern.
-* Wenn ein Transformationsfehler auftritt, wird in der entsprechenden Spalte NULL angezeigt.
+* Die Datenvorbereitung wird sowohl auf Streaming- als auch auf Batch-Aufnahmepfade angewendet. Wenn Sie eine vorhandene Datenvorbereitungskonfiguration ändern, werden diese Änderungen auf neue eingehende Daten über Streaming- und Batch-Erfassungswege hinweg angewendet.
+   * Datenvorbereitungskonfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform erfasst wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
+* Standardattribute von Analytics werden immer automatisch zugeordnet. Daher können Sie keine Umwandlungen auf Standardattribute anwenden.
+   * Sie können jedoch Standardattribute herausfiltern, solange sie nicht in Identity Service oder Profil erforderlich sind.
+* Zum Filtern von erforderlichen Feldern und Identitätsfeldern kann keine Filterung auf Spaltenebene verwendet werden.
+* Sie können zwar sekundäre Identitäten herausfiltern, insbesondere AAID und AACustomID, aber keine ECID herausfiltern.
+* Wenn ein Umwandlungsfehler auftritt, führt die entsprechende Spalte zu NULL.
 
 >[!ENDSHADEBOX]
 
@@ -200,81 +200,81 @@ Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten abgesc
 
 >[!IMPORTANT]
 >
->Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie **für die Profilaufnahme ausschließen möchten**.
+>Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie (für **Profilaufnahme)** möchten.
 
-Sie können Daten für die Aufnahme mit [!DNL Profile] auf Zeilen- und Spaltenebene filtern. Mit der Filterung auf Zeilenebene können Sie Kriterien definieren, z. B. Zeichenfolge enthält, gleich, beginnt oder endet mit. Sie können auch die Filterung auf Zeilenebene verwenden, um Bedingungen mit `AND` sowie `OR` zu verknüpfen und Bedingungen mit `NOT` zu umkehren.
+Sie können Daten für [!DNL Profile] Aufnahme auf Zeilen- und Spaltenebene filtern. Mit der Filterung auf Zeilenebene können Sie Kriterien wie Zeichenfolgen definieren, die enthalten, gleich, beginnt oder endet mit . Sie können auch eine Filterung auf Zeilenebene verwenden, um Bedingungen mithilfe von `AND` und `OR` zu verknüpfen und Bedingungen mithilfe von `NOT` zu negieren.
 
-Um Ihre [!DNL Analytics] -Daten auf Zeilenebene zu filtern, wählen Sie **[!UICONTROL Zeilenfilter]** aus.
+Um Ihre [!DNL Analytics] Daten auf Zeilenebene zu filtern, wählen Sie **[!UICONTROL Zeilenfilter]** aus.
 
 ![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
-Verwenden Sie die linke Leiste, um durch die Schemahierarchie zu navigieren, und wählen Sie das von Ihnen ausgewählte Schemaattribut aus, um ein bestimmtes Schema weiter aufzuschlüsseln.
+Navigieren Sie in der linken Leiste durch die Schemahierarchie und wählen Sie das Schemaattribut Ihrer Wahl aus, um ein bestimmtes Schema weiter aufzuschlüsseln.
 
-![left-rail](../../../../images/tutorials/create/analytics/left-rail.png)
+![linke Leiste](../../../../images/tutorials/create/analytics/left-rail.png)
 
-Nachdem Sie das Attribut identifiziert haben, das Sie konfigurieren möchten, wählen Sie es aus der linken Leiste aus und ziehen Sie es in das Filterfeld.
+Nachdem Sie das Attribut identifiziert haben, das Sie konfigurieren möchten, wählen Sie das Attribut aus und ziehen Sie es aus der linken Leiste in das Filterbedienfeld.
 
 ![filter-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-Um verschiedene Bedingungen zu konfigurieren, wählen Sie **[!UICONTROL gleich]** und dann eine Bedingung aus dem angezeigten Dropdown-Fenster aus.
+Um verschiedene Bedingungen zu konfigurieren, wählen Sie **[!UICONTROL Gleich]** und dann im angezeigten Dropdown-Fenster eine Bedingung aus.
 
 Die Liste der konfigurierbaren Bedingungen umfasst:
 
-* [!UICONTROL equals]
-* [!UICONTROL ist nicht gleich]
-* [!UICONTROL beginnt mit ]
-* [!UICONTROL endet mit]
-* [!UICONTROL endet nicht mit ]
-* [!UICONTROL contains]
-* [!UICONTROL enthält nicht ]
-* [!UICONTROL exists]
-* [!UICONTROL ist nicht vorhanden]
+* [!UICONTROL Gleich]
+* [!UICONTROL Ist nicht gleich]
+* [!UICONTROL Beginnt mit]
+* [!UICONTROL Endet mit]
+* [!UICONTROL Endet nicht mit]
+* [!UICONTROL Enthält]
+* [!UICONTROL Enthält nicht]
+* [!UICONTROL vorhanden]
+* [!UICONTROL Ist nicht vorhanden]
 
 ![Bedingungen](../../../../images/tutorials/create/analytics/conditions.png)
 
-Geben Sie anschließend die Werte ein, die Sie basierend auf dem von Ihnen ausgewählten Attribut aufnehmen möchten. Im folgenden Beispiel werden [!DNL Apple] und [!DNL Google] zur Aufnahme als Teil des Attributs **[!UICONTROL Hersteller]** ausgewählt.
+Geben Sie als Nächstes die Werte ein, die Sie basierend auf dem ausgewählten Attribut einbeziehen möchten. Im folgenden Beispiel werden [!DNL Apple] und [!DNL Google] als Teil des Attributs **[!UICONTROL Hersteller]** für die Aufnahme ausgewählt.
 
-![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+![include-Manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
 
-Um Ihre Filterbedingungen weiter zu spezifizieren, fügen Sie ein weiteres Attribut aus dem Schema hinzu und fügen Sie dann Werte hinzu, die auf diesem Attribut basieren. Im folgenden Beispiel wird das Attribut **[!UICONTROL Modell]** hinzugefügt und Modelle wie [!DNL iPhone 13] und [!DNL Google Pixel 6] werden zur Aufnahme gefiltert.
+Um Ihre Filterbedingungen weiter zu spezifizieren, fügen Sie ein weiteres Attribut aus dem Schema hinzu und fügen Sie dann Werte hinzu, die auf diesem Attribut basieren. Im folgenden Beispiel wird das Attribut **[!UICONTROL model]** hinzugefügt und Modelle wie die [!DNL iPhone 13] und [!DNL Google Pixel 6] werden zur Aufnahme gefiltert.
 
 ![include-model](../../../../images/tutorials/create/analytics/include-model.png)
 
-Um einen neuen Container hinzuzufügen, wählen Sie die Auslassungszeichen (`...`) oben rechts in der Filterschnittstelle aus und klicken Sie dann auf **[!UICONTROL Container hinzufügen]**.
+Um einen neuen Container hinzuzufügen, wählen Sie oben rechts in der Filterschnittstelle die Auslassungspunkte (`...`) und dann **[!UICONTROL Container hinzufügen]** aus.
 
 ![add-container](../../../../images/tutorials/create/analytics/add-container.png)
 
-Nachdem ein neuer Container hinzugefügt wurde, wählen Sie **[!UICONTROL Einschließen]** und dann **[!UICONTROL Ausschließen]** aus dem angezeigten Dropdown-Fenster.
+Nachdem ein neuer Container hinzugefügt wurde, wählen Sie **[!UICONTROL Einschließen]** und dann **[!UICONTROL Ausschließen]** aus dem angezeigten Dropdown-Fenster aus.
 
-![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+![Ausschließen](../../../../images/tutorials/create/analytics/exclude.png)
 
-Schließen Sie den gleichen Prozess ab, indem Sie Schemaattribute ziehen und die entsprechenden Werte hinzufügen, die Sie aus der Filterung ausschließen möchten. Im folgenden Beispiel werden die [!DNL iPhone 12], [!DNL iPhone 12 mini] und [!DNL Google Pixel 5] alle aus dem Ausschluss aus dem Attribut **[!UICONTROL Modell]** gefiltert, die Querformat wird aus der **[!UICONTROL Bildschirmausrichtung]** ausgeschlossen und die Modellnummer [!DNL A1633] wird aus **[!UICONTROL Modellnummer]** ausgeschlossen.
+Führen Sie anschließend denselben Prozess durch, indem Sie Schemaattribute ziehen und die entsprechenden Werte hinzufügen, die Sie von der Filterung ausschließen möchten. Im folgenden Beispiel werden [!DNL iPhone 12], [!DNL iPhone 12 mini] und [!DNL Google Pixel 5] alle vom Ausschluss aus dem Attribut **[!UICONTROL Model]** gefiltert, die Querformat-Ansicht wird von der **[!UICONTROL Bildschirmausrichtung]** ausgeschlossen und die Modellnummer [!DNL A1633] wird von **[!UICONTROL Modellnummer]**.
 
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
-![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+![exclude-samples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
 ### Filterung auf Spaltenebene
 
 Wählen Sie **[!UICONTROL Spaltenfilter]** aus der Kopfzeile aus, um die Filterung auf Spaltenebene anzuwenden.
 
-![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+![Spaltenfilter](../../../../images/tutorials/create/analytics/column-filter.png)
 
-Die Seite wird in eine interaktive Schemastruktur aktualisiert und zeigt Ihre Schemaattribute auf Spaltenebene an. Von hier aus können Sie die Datenspalten auswählen, die Sie von der Aufnahme mit [!DNL Profile] ausschließen möchten. Alternativ können Sie eine Spalte erweitern und bestimmte Attribute zum Ausschließen auswählen.
+Die Seite wird in eine interaktive Schemastruktur aktualisiert, wobei Ihre Schemaattribute auf Spaltenebene angezeigt werden. Von hier aus können Sie die Datenspalten auswählen, die Sie von [!DNL Profile] Aufnahme ausschließen möchten. Alternativ können Sie eine Spalte erweitern und bestimmte Attribute für den Ausschluss auswählen.
 
-Standardmäßig werden alle [!DNL Analytics] an [!DNL Profile] gesendet und dieser Prozess ermöglicht es, Zweige von XDM-Daten aus der [!DNL Profile] -Aufnahme auszuschließen.
+Standardmäßig gehen alle [!DNL Analytics] zu [!DNL Profile] und dieser Prozess ermöglicht es, Verzweigungen von XDM-Daten von [!DNL Profile] Aufnahme auszuschließen.
 
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
-![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+![Spalten-ausgewählt](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Sekundäre Identitäten filtern
 
-Verwenden Sie einen Spaltenfilter, um sekundäre Identitäten von der Profilaufnahme auszuschließen. Um sekundäre Identitäten zu filtern, wählen Sie **[!UICONTROL Spaltenfilter]** und dann **[!UICONTROL _identities]** aus.
+Verwenden Sie einen Spaltenfilter, um sekundäre Identitäten von der Profilaufnahme auszuschließen. Um sekundäre Identitäten zu filtern, wählen Sie **[!UICONTROL Spaltenfilter]** und dann **[!UICONTROL _identities aus]**.
 
-Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Identitäten ausgewählt sind, aber ein Ereignis mit einer der als primär markierten Identitäten eintritt, werden diese nicht herausgefiltert.
+Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Identitäten ausgewählt sind, aber ein Ereignis mit einer der als primär markierten Identitäten eintrifft, werden diese nicht herausgefiltert.
 
-![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
+![sekundäre Identitäten](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Angeben von Datenflussdetails
 
@@ -293,32 +293,32 @@ Der Schritt [!UICONTROL Überprüfen] wird angezeigt, in dem Sie Ihren neuen Ana
 
 ## Überwachen Ihres Datenflusses {#monitor-your-dataflow}
 
-Nachdem Ihr Datenfluss abgeschlossen ist, wählen Sie **[!UICONTROL Datenflüsse]** im Quellkatalog aus, um die Aktivität und den Status Ihrer Daten zu überwachen.
+Wählen Sie nach Abschluss des Datenflusses **[!UICONTROL Datenflüsse]** im Quellkatalog aus, um die Aktivität und den Status Ihrer Daten zu überwachen.
 
-![Der Quellkatalog mit der ausgewählten Registerkarte &quot;Datenflüsse&quot;.](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![Der Quellkatalog, auf dem die Registerkarte „Datenflüsse“ ausgewählt ist.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-Eine Liste der vorhandenen Analytics-Datenflüsse in Ihrer Organisation wird angezeigt. Wählen Sie von hier aus einen Zieldatensatz aus, um die entsprechende Erfassungsaktivität anzuzeigen.
+Eine Liste der vorhandenen Analytics-Datenflüsse in Ihrer Organisation wird angezeigt. Wählen Sie hier einen Zieldatensatz aus, um seine entsprechende Aufnahmeaktivität anzuzeigen.
 
-![Eine Liste der vorhandenen Adobe Analytics-Datenflüsse in Ihrem Unternehmen.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+![Eine Liste der in Ihrem Unternehmen vorhandenen Adobe Analytics-Datenflüsse.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Die Seite [!UICONTROL Datensatzaktivität] enthält Informationen zum Fortschritt der Daten, die von Analytics an Experience Platform gesendet werden. Die Oberfläche zeigt Metriken wie die Gesamtzahl der Datensätze im Vormonat, die Gesamtzahl der erfassten Datensätze in den letzten sieben Tagen und die Größe der Daten im Vormonat an.
+Die [!UICONTROL Datensatzaktivität] enthält Informationen zum Fortschritt von Daten, die von Analytics an Experience Platform gesendet werden. Die Benutzeroberfläche zeigt Metriken wie die Gesamtzahl der Datensätze im vorherigen Monat, die Gesamtzahl der in den letzten sieben Tagen aufgenommenen Datensätze und die Datengröße im vorherigen Monat an.
 
-Die Quelle instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten sind nicht für die Aufnahme in das Echtzeit-Kundenprofil konfiguriert, werden jedoch für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
+Die -Quelle instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten werden nicht für die Aufnahme in das Echtzeit-Kundenprofil konfiguriert, sondern für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
 
-Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenzen finden Sie in der [Analytics-Quellübersicht](../../../../connectors/adobe-applications/analytics.md).
+Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenzen finden Sie unter [Analytics-Quelle - Übersicht](../../../../connectors/adobe-applications/analytics.md).
 
-![Die Datensatzaktivitätsseite für einen bestimmten Zieldatensatz für Adobe Analytics-Daten.](../../../../images/tutorials/create/analytics/dataset-activity.png)
+![Die Seite „Datensatzaktivität“ für einen bestimmten Zieldatensatz für Adobe Analytics-Daten.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
 >[!NOTE]
 >
->Auf der Seite Datensatzaktivität werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Datensätze ansehen.
+>Auf der Seite „Datensatzaktivität“ werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig vom Adobe verwaltet wird. Sie können den Datenfluss überwachen, indem Sie sich die Metriken um die aufgenommenen Datensätze ansehen.
 
 ## Löschen des Datenflusses {#delete-dataflow}
 
-Um Ihren Analytics-Datenfluss zu löschen, wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile des Arbeitsbereichs &quot;Quellen&quot;aus. Verwenden Sie die Seite &quot;Datenflüsse&quot;, um den Analytics-Datenfluss zu finden, den Sie löschen möchten, und wählen Sie dann die Auslassungszeichen (`...`) daneben aus. Verwenden Sie anschließend das Dropdown-Menü und wählen Sie **[!UICONTROL Löschen]** aus.
+Um Ihren Analytics-Datenfluss zu löschen, wählen **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile des Arbeitsbereichs „Quellen“ aus. Suchen Sie auf der Seite Datenflüsse den Analytics-Datenfluss, den Sie löschen möchten, und wählen Sie dann die Auslassungspunkte (`...`) daneben aus. Verwenden Sie als Nächstes das Dropdown-Menü und wählen Sie **[!UICONTROL Löschen]**.
 
-* Durch das Löschen des Live-Analytics-Datenflusses wird auch der zugrunde liegende Datensatz gelöscht.
-* Durch das Löschen des Analytics-Datenflusses zur Aufstockung wird der zugrunde liegende Datensatz nicht gelöscht, sondern der Aufstockungsprozess für die entsprechende Report Suite wird angehalten. Wenn Sie den Datenfluss zum Aufstocken löschen, können die erfassten Daten weiterhin über den Datensatz angezeigt werden.
+* Durch das Löschen des Live Analytics-Datenflusses wird auch der zugrunde liegende Datensatz gelöscht.
+* Durch das Löschen des Analytics-Datenflusses zur Aufstockung wird nicht der zugrunde liegende Datensatz gelöscht, sondern der Aufstockungsprozess für die entsprechende Report Suite gestoppt. Wenn Sie den Aufstockungs-Datenfluss löschen, können aufgenommene Daten weiterhin über den Datensatz angezeigt werden.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

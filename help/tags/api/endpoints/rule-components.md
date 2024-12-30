@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `PROPERTY_ID` | Die `id` der Eigenschaft, unter der Sie die Regelkomponente definieren. |
+| `PROPERTY_ID` | Die `id` der Eigenschaft , unter der Sie die Regelkomponente definieren. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Regelkomponente. In der Payload ordnet die Eigenschaft `relationships` der Komponente bestimmte Regeln und eine vorhandene Erweiterung zu. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
+Die folgende Anfrage erstellt eine neue Regelkomponente. In der Payload verknüpft die `relationships` die Komponente mit bestimmten Regeln und einer vorhandenen Erweiterung. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -908,7 +908,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Herkunft der angegebenen Regelkomponente zurück.
+Eine erfolgreiche Antwort gibt die Details des Ursprungs der angegebenen Regelkomponente zurück.
 
 ```json
 {

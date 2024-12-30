@@ -17,7 +17,7 @@ In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmelde
 
 >[!TIP]
 >
->Wenn eine Aktualisierung erforderlich ist, müssen Sie keine neue Basisverbindung erstellen. Alle Änderungen, die Sie an Ihrer Basisverbindung vornehmen, werden im zugehörigen Datenfluss übernommen.
+>Sie müssen keine neue Basisverbindung erstellen, wenn eine Aktualisierung erforderlich ist. Alle Änderungen an Ihrer Basisverbindung werden im zugehörigen Datenfluss übernommen.
 
 ## Erste Schritte
 

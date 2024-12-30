@@ -1,6 +1,6 @@
 ---
-title: Übersicht über Meta-Pixel-Erweiterung
-description: Erfahren Sie mehr über die Meta-Pixel-Tag-Erweiterung in Adobe Experience Platform.
+title: Metapixelerweiterung - Übersicht
+description: Machen Sie sich mit der Tag-Erweiterung „Meta Pixel“ in Adobe Experience Platform vertraut.
 exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
 source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
@@ -9,71 +9,71 @@ ht-degree: 0%
 
 ---
 
-# Übersicht über die [!DNL Meta Pixel]-Erweiterung
+# [!DNL Meta Pixel] - Übersicht
 
-[[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ist ein JavaScript-basiertes Analysetool, mit dem Sie Besucheraktivitäten auf Ihrer Website verfolgen können. Von Ihnen verfolgte Besucheraktionen (so genannte Konversionen) werden an [[!DNL Ads Manager]](https://www.facebook.com/business/tools/ads-manager) gesendet, wo sie zur Messung der Effektivität Ihrer Anzeigen, Kampagnen, Konversionstrichter und mehr verwendet werden können.
+[[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ist ein JavaScript-basiertes Analyse-Tool, mit dem Sie Besucheraktivitäten auf Ihrer Website verfolgen können. Besucheraktionen, die Sie verfolgen (so genannte Konversionen), werden an [[!DNL Ads Manager]](https://www.facebook.com/business/tools/ads-manager) gesendet, wo sie zur Messung der Effektivität Ihrer Anzeigen, Kampagnen, Konversionstrichter und mehr verwendet werden können.
 
-Mit der Tag-Erweiterung [!DNL Meta Pixel] können Sie [!DNL Pixel] -Funktionen in Ihren clientseitigen Tag-Bibliotheken nutzen. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in einer [Regel](../../../ui/managing-resources/rules.md) verwenden.
+Mit der [!DNL Meta Pixel] Tag-Erweiterung können Sie [!DNL Pixel] Funktionen in Ihren Client-seitigen Tag-Bibliotheken nutzen. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in einer [Regel](../../../ui/managing-resources/rules.md) verwenden.
 
 ## Voraussetzungen
 
-Um die Erweiterung verwenden zu können, müssen Sie über ein gültiges [!DNL Meta]-Konto mit Zugriff auf [!DNL Ads Manager] verfügen. Insbesondere müssen Sie [einen neuen  [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) erstellen und seinen [!DNL Pixel ID] kopieren, damit die Erweiterung für Ihr Konto konfiguriert werden kann. Wenn Sie bereits über eine vorhandene [!DNL Meta Pixel] verfügen, können Sie stattdessen deren ID verwenden.
+Um die Erweiterung verwenden zu können, müssen Sie über ein gültiges [!DNL Meta] mit Zugriff auf [!DNL Ads Manager] verfügen. Insbesondere müssen Sie [einen neuen erstellen [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) und dessen [!DNL Pixel ID] kopieren, damit die Erweiterung für Ihr Konto konfiguriert werden kann. Wenn Sie bereits über eine vorhandene [!DNL Meta Pixel] verfügen, können Sie stattdessen deren ID verwenden.
 
-Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit dem [!DNL Meta Conversions API] zu verwenden, um dieselben Ereignisse vom Client- bzw. vom Server-seitigen Ereignis freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die nicht von [!DNL Meta Pixel] erfasst wurden. Anweisungen zur Integration in Ihre serverseitigen Implementierungen finden Sie im Handbuch zur [[!DNL Meta Conversions API] Erweiterung für die Ereignisweiterleitung](../../client/meta/overview.md) . Beachten Sie, dass Ihr Unternehmen Zugriff auf die [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die serverseitige Erweiterung verwenden zu können.
+Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit dem -[!DNL Meta Conversions API] zu verwenden, um dieselben Ereignisse von der Client- bzw. Server-Seite freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die von [!DNL Meta Pixel] nicht erfasst wurden. Anweisungen zur Integration in [[!DNL Meta Conversions API]  Server-seitigen Implementierungen finden ](../../client/meta/overview.md) im Handbuch zur -Erweiterung für die. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die Server-seitige Erweiterung verwenden zu können.
 
 ## Installieren der Erweiterung
 
-Um die Erweiterung [!DNL Meta Pixel] zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder Experience Platform-Benutzeroberfläche und wählen Sie im linken Navigationsbereich **[!UICONTROL Tags]** aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
+Um die [!DNL Meta Pixel]-Erweiterung zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder zur Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Tags]** in der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, wählen Sie im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Pixel] und wählen Sie dann **[!UICONTROL Install]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Pixel] und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
-![Die Schaltfläche [!UICONTROL Installieren], die für die Erweiterung [!UICONTROL Meta Pixel] in der Datenerfassungs-Benutzeroberfläche ausgewählt ist.](../../../images/extensions/client/meta/install.png)
+![Die ausgewählte Schaltfläche [!UICONTROL Installieren] für die Erweiterung [!UICONTROL Meta Pixel] in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/client/meta/install.png)
 
-In der angezeigten Konfigurationsansicht müssen Sie die zuvor kopierte [!DNL Pixel] ID angeben, um die Erweiterung mit Ihrem Konto zu verknüpfen. Sie können die ID direkt in die Eingabe einfügen oder stattdessen ein vorhandenes Datenelement auswählen.
+In der angezeigten Konfigurationsansicht müssen Sie die zuvor kopierte [!DNL Pixel]-ID angeben, um die Erweiterung mit Ihrem Konto zu verknüpfen. Sie können die ID direkt in die Eingabe einfügen oder stattdessen ein vorhandenes Datenelement auswählen.
 
 >[!TIP]
 >
->Die Verwendung eines Datenelements gibt Ihnen die Möglichkeit, die verwendete [!DNL Pixel]-ID dynamisch zu ändern, je nach anderen Faktoren wie der Build-Umgebung. Weitere Informationen finden Sie im Anhang zu [Verwendung verschiedener [!DNL Pixel] IDs für verschiedene Umgebungen](#id-data-element) .
+>Durch die Verwendung eines Datenelements haben Sie die Möglichkeit, die verwendete [!DNL Pixel]-ID in Abhängigkeit von anderen Faktoren wie der Build-Umgebung dynamisch zu ändern. Weitere Informationen finden Sie im Anhang [Verwenden  [!DNL Pixel]  IDs für ](#id-data-element) Umgebungen“.
 
-Sie können optional auch eine Ereignis-ID angeben, die mit der Erweiterung verknüpft werden soll. Damit werden identische Ereignisse zwischen [!DNL Meta Pixel] und [!DNL Meta Conversions API] dedupliziert. Weitere Informationen finden Sie im Abschnitt zur [Ereignisdeduplizierung](../../server/meta/overview.md#event-deduplication) in der Übersicht zur [!DNL Conversions API] -Erweiterung.
+Sie können optional auch eine Ereignis-ID angeben, die mit der Erweiterung verknüpft werden soll. Damit werden identische Ereignisse zwischen [!DNL Meta Pixel] und dem [!DNL Meta Conversions API] dedupliziert. Weitere Informationen finden Sie im Abschnitt [Ereignisdeduplizierung](../../server/meta/overview.md#event-deduplication) in der Übersicht zur [!DNL Conversions API].
 
-Wählen Sie abschließend **[!UICONTROL Speichern]** aus.
+Klicken Sie abschließend auf **[!UICONTROL Speichern]**
 
-![Die [!DNL Pixel] ID, die als Datenelement in der Erweiterungskonfigurationsansicht bereitgestellt wird.](../../../images/extensions/client/meta/configure.png)
+![Die [!DNL Pixel]-ID, die als Datenelement in der Erweiterungskonfigurationsansicht bereitgestellt wird.](../../../images/extensions/client/meta/configure.png)
 
-Die -Erweiterung ist installiert und Sie können jetzt die verschiedenen Aktionen in Ihren Tag-Regeln verwenden.
+Die Erweiterung ist installiert und Sie können jetzt ihre verschiedenen Aktionen in Ihren Tag-Regeln verwenden.
 
-## Tag-Regel konfigurieren {#rule}
+## Konfigurieren einer Tag-Regel {#rule}
 
-[!DNL Meta Pixel] akzeptiert einen Satz vordefinierter [Standardereignisse](https://www.facebook.com/business/help/402791146561655) mit jeweils eigenen Kontexten und akzeptierten Eigenschaften. Die von der Erweiterung [!DNL Pixel] bereitgestellten Regelaktionen korrelieren mit diesen Ereignistypen, sodass Sie das Ereignis, das an [!DNL Meta] gesendet wird, einfach entsprechend seinem Typ kategorisieren und konfigurieren können.
+[!DNL Meta Pixel] akzeptiert einen Satz vordefinierter [Standardereignisse](https://www.facebook.com/business/help/402791146561655) mit jeweils eigenen Kontexten und akzeptierten Eigenschaften. Die von der [!DNL Pixel] bereitgestellten Regelaktionen korrelieren mit diesen Ereignistypen, sodass Sie das an [!DNL Meta] gesendete Ereignis einfach entsprechend seinem Typ kategorisieren und konfigurieren können.
 
 Zu Demonstrationszwecken wird in diesem Abschnitt gezeigt, wie eine Regel erstellt wird, die ein Seitenansichtsereignis an [!DNL Meta] sendet.
 
-Beginnen Sie mit der Erstellung einer neuen Tag-Regel und konfigurieren Sie deren Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel **[!UICONTROL Meta Pixel]** für die Erweiterung und dann **[!UICONTROL Seitenansicht senden]** für den Aktionstyp aus.
+Beginnen Sie mit der Erstellung einer neuen Tag-Regel und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel **[!UICONTROL Metapixel]** für die Erweiterung aus und wählen Sie dann **[!UICONTROL Seitenansicht senden]** für den Aktionstyp aus.
 
-![Der Aktionstyp [!UICONTROL Seitenansicht senden] , der für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt ist.](../../../images/extensions/client/meta/select-action.png)
+![Der [!UICONTROL Seitenansicht senden] Aktionstyp, der für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt wird.](../../../images/extensions/client/meta/select-action.png)
 
-Für die Aktion [!UICONTROL Seitenansicht senden] ist keine weitere Konfiguration erforderlich. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
+Für die Aktion „Seitenansicht senden[!UICONTROL  ist keine weitere Konfiguration ]. Wählen **[!UICONTROL Änderungen beibehalten]**, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
 
-Veröffentlichen Sie abschließend das neue Tag [build](../../../ui/publishing/builds.md) , um die Änderungen an der Bibliothek zu aktivieren.
+Veröffentlichen Sie abschließend ein neues Tag [Build](../../../ui/publishing/builds.md), um die Änderungen an der Bibliothek zu aktivieren.
 
-## Bestätigen, dass [!DNL Meta] Daten erhält
+## Vergewissern Sie sich, dass [!DNL Meta] Daten erhält
 
-Nachdem Ihr aktualisierter Build auf Ihrer Website bereitgestellt wurde, können Sie überprüfen, ob die Daten erwartungsgemäß gesendet werden, indem Sie Konversionsereignisse in Ihrem Browser generieren und überprüfen, ob diese Ereignisse in [[!DNL Meta Events Manager]](https://www.facebook.com/business/help/898185560232180) angezeigt werden.
+Nachdem Ihr aktualisierter Build auf Ihrer Website bereitgestellt wurde, können Sie überprüfen, ob Daten wie erwartet gesendet werden, indem Sie einige Konversionsereignisse in Ihrem Browser generieren und überprüfen, ob diese Ereignisse in [[!DNL Meta Events Manager]](https://www.facebook.com/business/help/898185560232180) angezeigt werden.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Daten mit der Tag-Erweiterung [!DNL Meta Pixel] an [!DNL Meta] gesendet werden. Wenn Sie auch serverseitige Ereignisse an [!DNL Meta] senden möchten, können Sie jetzt mit der Installation und Konfiguration der [[!DNL Conversions API] Ereignisweiterleitungs-Erweiterung](../../server/meta/overview.md) fortfahren.
+In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Meta Pixel]-Tag-Erweiterung an [!DNL Meta] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Meta] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ ](../../server/meta/overview.md).
 
-Weiterführende Informationen zu Tags in Experience Platform finden Sie in der [Tag-Übersicht](../../../home.md) .
+Weiterführende Informationen zu Tags in Experience Platform finden Sie in der [Übersicht zu Tags](../../../home.md).
 
-## Anhang: Verwendung verschiedener [!DNL Pixel] IDs für verschiedene Umgebungen {#id-data-element}
+## Anhang: Verwenden verschiedener [!DNL Pixel]-IDs für verschiedene Umgebungen {#id-data-element}
 
-Wenn Sie Ihre Implementierung in Entwicklungs- oder Staging-Umgebungen testen und dabei die Produktionsanalyse [!DNL Meta Pixel] intakt halten möchten, können Sie mithilfe eines Datenelements je nach verwendeter Umgebung dynamisch eine entsprechende [!DNL Pixel] ID auswählen.
+Wenn Sie Ihre Implementierung in Entwicklungs- oder Staging-Umgebungen testen möchten, während Ihre Produktions- [!DNL Meta Pixel] Analytics intakt bleiben, können Sie ein Datenelement verwenden, um je nach verwendeter Umgebung dynamisch eine geeignete [!DNL Pixel]-ID auszuwählen.
 
-Sie können dies erreichen, indem Sie ein [!UICONTROL benutzerdefinierter Code] -Datenelement (bereitgestellt von der [[!UICONTROL Core] -Erweiterung](../core/overview.md)) in Kombination mit der [`turbine` freien Variable](../../../extension-dev/turbine.md) verwenden. Verwenden Sie im JavaScript-Code des Datenelements das Objekt `turbine` , um die aktuelle Umgebungsstufe zu finden, und geben Sie dann eine passende [!DNL Pixel] -ID basierend auf dem Ergebnis zurück.
+Sie können dies erreichen, indem Sie ein [!UICONTROL Benutzerdefinierter Code]-Datenelement (bereitgestellt von der [[!UICONTROL Core]-Erweiterung](../core/overview.md)) in Kombination mit der [`turbine` freien Variable verwenden](../../../extension-dev/turbine.md). Verwenden Sie im JavaScript-Code des Datenelements das `turbine`, um die aktuelle Umgebungsstufe zu finden, und geben Sie dann basierend auf dem Ergebnis eine entsprechende [!DNL Pixel]-ID zurück.
 
-Im folgenden Beispiel wird eine falsche Produktions-ID `exampleProductionKey` bei Verwendung in der Produktionsumgebung und eine andere ID `exampleTestKey` zurückgegeben, wenn eine andere Umgebung verwendet wird. Ersetzen Sie bei der Implementierung dieses Codes jeden Wert durch Ihre tatsächlichen Produktions- und Test-IDs [!DNL Pixel] .
+Im folgenden Beispiel wird eine falsche Produktions-ID `exampleProductionKey` zurückgegeben, wenn sie in der Produktionsumgebung verwendet wird, und eine andere ID `exampleTestKey`, wenn eine andere Umgebung verwendet wird. Ersetzen Sie bei der Implementierung dieses Codes jeden Wert durch Ihre tatsächlichen Produktions- und [!DNL Pixel].
 
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');

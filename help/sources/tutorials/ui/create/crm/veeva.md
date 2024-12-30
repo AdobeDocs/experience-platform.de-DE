@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Veeva CRM;veeva
+keywords: Experience Platform;Startseite;beliebte Themen;Veeva CRM;veeva
 solution: Experience Platform
-title: Erstellen einer VEC CRM Source-Verbindung in der Benutzeroberfläche
+title: Erstellen einer Veeva CRM-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit dem VEE CRM erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Veva CRM-Quellverbindung erstellen.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
@@ -27,16 +27,16 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Wenn Sie bereits über ein gültiges [!DNL Veeva CRM]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/crm.md) fortfahren.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `environmentUrl` | Die URL der Quellinstanz [!DNL Veeva CRM]. |
-| `username` | Der Benutzername für das [!DNL Veeva CRM] -Benutzerkonto. |
-| `password` | Das Kennwort für das [!DNL Veeva CRM] -Benutzerkonto. |
-| `securityToken` | Das Sicherheits-Token für das [!DNL Veeva CRM] -Benutzerkonto. |
+| `environmentUrl` | Die URL der [!DNL Veeva CRM] Quellinstanz. |
+| `username` | Der Benutzername für das [!DNL Veeva CRM] Benutzerkonto. |
+| `password` | Das Kennwort für das [!DNL Veeva CRM] Benutzerkonto. |
+| `securityToken` | Das Sicherheits-Token für das [!DNL Veeva CRM] Benutzerkonto. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Weiterführende Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Verbinden Ihres [!DNL Veeva CRM]-Kontos
 
@@ -46,11 +46,11 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL CRM] die Option **[!UICONTROL VEE CRM]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie [!UICONTROL CRM] die Option **[!UICONTROL Veeva CRM]** und anschließend **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/veeva/catalog.png)
 
-Die Seite **[!UICONTROL Veeva CRM-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Connect Veeva CRM-Konto]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 

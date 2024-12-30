@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
+keywords: Experience Platform;Startseite;beliebte Themen;PayPal-Connector;Paypal;Paypal
 solution: Experience Platform
-title: Erstellen einer PayPal-Basisverbindung mit der Flow Service-API
+title: Erstellen einer PayPal-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie PayPal mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
@@ -16,7 +16,7 @@ ht-degree: 60%
 
 >[!WARNING]
 >
->Die Quelle [!DNL PayPal] wird Ende Juni 2025 eingestellt.
+>Die [!DNL PayPal] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -27,9 +27,9 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] stellt virtuelle Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL PayPal] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL PayPal] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -37,9 +37,9 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL PayPal] herstellen kann, mü
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Die URL der [!DNL PayPal] -Instanz. (Standard: api.sandbox.paypal.com). |
-| `clientId` | Die mit Ihrer [!DNL PayPal] -Anwendung verknüpfte Client-ID. |
-| `clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL PayPal]-Anwendung zugeordnet ist. |
+| `host` | Die URL der [!DNL PayPal]. (Standard: api.sandbox.paypal.com). |
+| `clientId` | Die mit Ihrem [!DNL PayPal] Programm verknüpfte Client-ID. |
+| `clientSecret` | Das mit Ihrer [!DNL PayPal]-Anwendung verknüpfte Client-Geheimnis. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PayPal] lautet: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 Weitere Informationen zu den ersten Schritten finden Sie in [diesem PayPal-Dokument](https://developer.paypal.com/docs/api/overview/#get-credentials).
@@ -92,14 +92,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Die URL der [!DNL PayPal] -Instanz. |
-| `auth.params.clientId` | Die mit Ihrer [!DNL PayPal] -Instanz verknüpfte Client-ID. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL PayPal]-Instanz zugeordnet ist. |
-| `connectionSpec.id` | Die [!DNL PayPal] Verbindungsspezifikations-ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
+| `auth.params.host` | Die URL der [!DNL PayPal]. |
+| `auth.params.clientId` | Die mit Ihrer [!DNL PayPal]-Instanz verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das mit Ihrer [!DNL PayPal]-Instanz verknüpfte Client-Geheimnis. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL PayPal]-Verbindung: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -113,4 +113,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 In diesem Tutorial haben Sie eine [!DNL PayPal]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Zahlungsdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/payments.md)
+* [Erstellen eines Datenflusses, um Zahlungsdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/payments.md)

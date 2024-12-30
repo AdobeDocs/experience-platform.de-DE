@@ -17,15 +17,15 @@ ht-degree: 89%
 
 Mit der Adobe Privacy-Tag-Erweiterung können Sie Benutzer-IDs erfassen und entfernen, die Endbenutzern durch Adobe-Lösungen auf Client-seitigen Geräten zugewiesen wurden. Die erfassten IDs können dann an [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) gesendet werden, um in unterstützten Adobe Experience Cloud-Anwendungen auf die personenbezogenen Daten der betreffenden Person zuzugreifen oder sie zu löschen.
 
-In diesem Handbuch wird beschrieben, wie Sie die Adobe Privacy-Erweiterung in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche installieren und konfigurieren.
+In diesem Handbuch wird beschrieben, wie Sie die Adobe-Datenschutzerweiterung in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche installieren und konfigurieren.
 
 >[!NOTE]
 >
->Wenn Sie diese Funktionen lieber ohne Verwendung von Tags installieren möchten, finden Sie in der [Übersicht zur Privacy JavaScript Library](../../../../privacy-service/js-library.md) Anweisungen zur Implementierung mit Rohcode.
+>Wenn Sie diese Funktionen lieber ohne Tags installieren möchten, finden Sie im Abschnitt [Übersicht über die Privacy JavaScript](../../../../privacy-service/js-library.md) Anweisungen zur Implementierung mit Rohcode.
 
 ## Installieren und Konfigurieren der Erweiterung
 
-Wählen Sie im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Installieren]** aus, um fortzufahren.
+Wählen **[!UICONTROL Erweiterungen]** im linken Navigationsbereich aus, gefolgt von der Registerkarte **[!UICONTROL Katalog]**. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Installieren]** aus, um fortzufahren.
 
 ![Installieren der Erweiterung](../../../images/extensions/client/privacy/install.png)
 
@@ -71,7 +71,7 @@ Bei Verwendung der Adobe Privacy-Tag-Erweiterung müssen Sie die erforderliche C
 
 ### Definieren eines Datenelements zur Verarbeitung von Identitäten
 
-Beginnen Sie mit der Erstellung eines neuen Datenelements, indem Sie im linken Navigationsbereich die Option **[!UICONTROL Datenelemente]** und anschließend **[!UICONTROL Datenelement hinzufügen]** auswählen. Wählen Sie im Konfigurationsbildschirm die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Benutzerspezifischer Code]** für den Datenelementtyp. Wählen Sie danach im rechten Panel **[!UICONTROL Editor öffnen]**.
+Starten Sie den Prozess der Erstellung eines neuen Datenelements, indem Sie **[!UICONTROL Datenelemente]** im linken Navigationsbereich und anschließend **[!UICONTROL Datenelement hinzufügen]** auswählen. Wählen Sie im Konfigurationsbildschirm die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Benutzerspezifischer Code]** für den Datenelementtyp. Wählen Sie danach im rechten Panel **[!UICONTROL Editor öffnen]**.
 
 ![Auswählen des Datenelementtyps](../../../images/extensions/client/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Nach dem Installieren der Erweiterung können Sie sie deaktivieren oder löschen
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der Adobe Privacy Tag-Erweiterung in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.
+In diesem Handbuch wurde die Verwendung der Tag-Erweiterung &quot;Adobe Privacy“ in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.

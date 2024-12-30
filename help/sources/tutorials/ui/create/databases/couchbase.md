@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Couchbase;couchbase
+keywords: Experience Platform;Startseite;beliebte Themen;Couchbase;Couchbase
 solution: Experience Platform
-title: Erstellen einer Couchbase Source-Verbindung in der Benutzeroberfläche
+title: Erstellen einer Couchbase Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Couchbase erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Couchbase-Quellverbindung erstellen.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
@@ -16,9 +16,9 @@ ht-degree: 51%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Couchbase] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Couchbase] wird Ende Juni 2025 eingestellt.
 
-Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL Couchbase] mithilfe der Benutzeroberfläche von [!DNL Platform] beschrieben.
+Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Couchbase]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -33,38 +33,38 @@ Wenn Sie bereits über eine gültige [!DNL Couchbase]-Verbindung verfügen, kön
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um den Quell-Connector [!DNL Couchbase] zu authentifizieren, müssen Sie Werte für die folgende Verbindungseigenschaft angeben:
+Um Ihren [!DNL Couchbase]-Quell-Connector zu authentifizieren, müssen Sie Werte für die folgende Verbindungseigenschaft angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Couchbase]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Couchbase] ist `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in der Dokumentation zu [[!DNL Couchbase] connection](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Couchbase]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Couchbase] ist `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Weitere Informationen zum Erfassen einer Verbindungszeichenfolge finden Sie in der Dokumentation unter [[!DNL Couchbase] Verbindung](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
 
 ## Verbinden Ihres [!DNL Couchbase]-Kontos
 
 Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Couchbase]-Konto mit [!DNL Platform] zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Couchbase]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL Couchbase]-Connector zu erstellen.
+Wählen Sie unter **[!UICONTROL Kategorie]** die Option **[!UICONTROL Couchbase]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]** aus, um einen neuen [!DNL Couchbase]-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/couchbase/catalog.png)
 
-Die Seite **[!UICONTROL Mit Couchbase verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Mit Couchbase verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Couchbase]-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Eingabeformular einen Namen, eine optionale Beschreibung und Ihre [!DNL Couchbase] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![connect](../../../../images/tutorials/create/couchbase/new.png)
+![Verbinden](../../../../images/tutorials/create/couchbase/new.png)
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das Konto [!DNL Couchbase] aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann oben rechts auf **[!UICONTROL Weiter]** , um fortzufahren.
+Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Couchbase] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** in der oberen rechten Ecke, um fortzufahren.
 
 ![vorhanden](../../../../images/tutorials/create/couchbase/existing.png)
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Couchbase]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen Datenfluss [konfigurieren, um Daten in  [!DNL Platform]](../../dataflow/databases.md) zu übertragen.
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Couchbase]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).

@@ -50,7 +50,7 @@ Die allgemeine Analytics-Plug-in-Erweiterung beinhaltet die folgenden Aktionen:
 >
 >Diese Aktion ist zwar einfacher zu implementieren, Adobe Consulting empfiehlt jedoch nicht, diese Aktion zu verwenden, da sie die Gewichtung des Plug-ins erhöht.
 
-Bei dieser Aktion können Sie jedes Plug-in auswählen, das Sie in Ihre Implementierung aufnehmen möchten, und die Änderungen speichern. Wählen Sie so viele oder so wenige aus, wie Sie während der Implementierung verwenden möchten.
+Bei dieser Aktion können Sie jedes Plug-in auswählen, das Sie in Ihre Implementierung aufnehmen möchten, und die Änderungen speichern. Wählen Sie so viele oder so wenige Optionen aus, wie Sie während der Implementierung verwenden möchten.
 
 ### Plug-in initialisieren
 
@@ -58,7 +58,7 @@ Mit diesen Aktionen initialisieren Sie einzeln jedes Plug-in, das Sie verwenden 
 
 ## Datenelemente der allgemeinen Analytics-Plug-in-Erweiterung
 
-Die folgenden Datenelemente sind in der allgemeinen Analytics-Plug-in-Erweiterung verfügbar, die Tag-Funktionen zum Einrichten und Konfigurieren der entsprechenden Plug-ins in Analytics nutzt:
+Die folgenden Datenelemente sind in der Common Analytics Plugins-Erweiterung verfügbar, die Tag-Funktionen nutzen, um die entsprechenden Plug-ins in Analytics einzurichten und zu konfigurieren:
 
 * `getGeoCoordinates`
 * `getNewRepeat`

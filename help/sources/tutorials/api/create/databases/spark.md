@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Spark;Apache spark;Azure HDInsights
+keywords: Experience Platform;Startseite;beliebte Themen;Apache Spark;Apache Spark;Azure HDInsights
 solution: Experience Platform
-title: Erstellen eines Apache Spark auf einer Azure HDInsights-Basisverbindung mithilfe der Flow Service-API
+title: Erstellen einer Apache Spark on Azure HDInsights-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Apache Spark auf Azure HDInsights mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Apache Spark on Azure HDInsights mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -12,15 +12,15 @@ ht-degree: 59%
 
 ---
 
-# Erstellen Sie mit der [!DNL Flow Service] -API eine [!DNL Apache Spark] für die HDInsights-Basisverbindung mit [!DNL Azure]
+# Erstellen eines [!DNL Apache Spark] auf [!DNL Azure] HDInsights-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der Connector [!DNL Apache Spark] on [!DNL Azure HDInsights] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
+>Der [!DNL Apache Spark] auf [!DNL Azure HDInsights] Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Apache Spark] auf [!DNL Azure HDInsights] (nachfolgend als &quot;[!DNL Spark]&quot; bezeichnet) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Apache Spark] on [!DNL Azure HDInsights] (nachstehend &quot;[!DNL Spark]&quot; genannt) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -29,17 +29,17 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Spark] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Spark] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung mit [!DNL Spark] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Die IP-Adresse oder der Hostname des [!DNL Spark] -Servers. |
+| `host` | Die IP-Adresse oder der Hostname des [!DNL Spark]. |
 | `username` | Der Benutzername, mit dem Sie auf [!DNL Spark] Server zugreifen. |
-| `password` | Das dem Benutzer entsprechende Kennwort. |
+| `password` | Das Kennwort für den Benutzer. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Spark] lautet: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
 Weitere Informationen zu den ersten Schritten finden Sie in [diesem Spark-Dokument](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
@@ -50,9 +50,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Spark]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Spark]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -93,10 +93,10 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Der Host des [!DNL Spark]-Servers. |
+| `auth.params.host` | Der Host des [!DNL Spark]. |
 | `auth.params.username` | Der Benutzername, der Ihrer [!DNL Spark]-Verbindung zugeordnet ist. |
-| `auth.params.password` | Das Kennwort für Ihre [!DNL Spark]-Verbindung. |
-| `connectionSpec.id` | Die [!DNL Spark] Verbindungsspezifikations-ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `auth.params.password` | Das Passwort für Ihre [!DNL Spark]. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Spark]-Verbindung: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Antwort**
 
@@ -114,4 +114,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL Spark]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)

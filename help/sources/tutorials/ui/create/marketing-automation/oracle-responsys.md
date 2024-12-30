@@ -16,7 +16,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Die [!DNL Oracle Responsys]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
+>Die [!DNL Oracle Responsys]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 In diesem Tutorial werden die Schritte zum Erstellen einer [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md)-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Platform vo
 
 Wenn Sie bereits über ein authentifiziertes [!DNL Oracle Responsys]-Konto in Platform verügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Platform aufzunehmen](../../dataflow/marketing-automation.md) fortfahren.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um eine Verbindung zwischen [!DNL Oracle Responsys] und Platform herzustellen, müssen Sie Werte für die folgenden Authentifizierungseigenschaften angeben:
 
@@ -39,9 +39,9 @@ Um eine Verbindung zwischen [!DNL Oracle Responsys] und Platform herzustellen, m
 | Client-ID | Die Client-ID Ihrer [!DNL Oracle Responsys]-Instanz. |
 | Client-Geheimnis | Das Client-Geheimnis Ihrer [!DNL Oracle Responsys]-Instanz. |
 
-Weitere Informationen zu Authentifizierungsdaten für [!DNL Oracle Responsys] finden Sie im [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
+Weitere Informationen zu Authentifizierungs-Anmeldedaten für [!DNL Oracle Responsys] finden Sie im [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
-Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle Responsys]-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle Responsys]-Konto mit Platform zu verknüpfen.
 
 ## Verbinden Sie Ihr [!DNL Oracle Responsys]-Konto
 
@@ -63,7 +63,7 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Oracle Responsys]-K
 
 ### Neues Konto
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann einen Namen, eine optionale Beschreibung und die entsprechenden Werte für Ihre [!DNL Oracle Responsys]-Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann einen Namen, eine optionale Beschreibung und die entsprechenden Werte für Ihre [!DNL Oracle Responsys]-Anmeldedaten an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![Der Bildschirm für die Authentifizierung eines neuen Kontos für Oracle Responsys.](../../../../images/tutorials/create/oracle-eloqua/new.png)
 

@@ -1,6 +1,6 @@
 ---
-title: Erfassen von Zahlungsdaten von Ihrem [!DNL Stripe] Konto an Experience Platform mithilfe von APIs
-description: Erfahren Sie, wie Sie mit der Flow Service-API Zahlungsdaten von Ihrem Stripe-Konto an die Experience Platform erfassen.
+title: Aufnehmen von Zahlungsdaten von Ihrem - [!DNL Stripe]  auf das Experience Platform mithilfe von APIs
+description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto mithilfe der Flow Service-API auf Experience Platform aufnehmen
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
 source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
@@ -10,13 +10,13 @@ ht-degree: 44%
 
 ---
 
-# Erfassen von Zahlungsdaten von Ihrem [!DNL Stripe]-Konto an Experience Platform mithilfe von APIs
+# Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe]-Konto auf das Experience Platform mithilfe von APIs
 
 >[!NOTE]
 >
->Die [!DNL Stripe]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der Quellenübersicht unter [Nutzungsbedingungen](../../../../home.md#terms-and-conditions) .
+>Die [!DNL Stripe]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
-Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ihre Zahlungsdaten mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) von [!DNL Stripe] nach Adobe Experience Platform erfassen.
+Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ihre Zahlungsdaten von [!DNL Stripe] in Adobe Experience Platform mithilfe der [[!DNL Flow Service] API) ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Authentifizierung
 
-Informationen zum Abrufen Ihrer Authentifizierungsberechtigungen finden Sie in der [[!DNL Stripe] Übersicht](../../../../connectors/payments/stripe.md) .
+Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/payments/stripe.md) „Übersicht“.
 
 ### Verwenden von Platform-APIs
 
@@ -35,13 +35,13 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## [!DNL Stripe] mit Experience Platform verbinden
 
-Im folgenden Handbuch erfahren Sie, wie Sie Ihre [!DNL Stripe]-Quelle authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, über den Ihre Zahlungsdaten an Experience Platform übermittelt werden.
+Folgen Sie der unten stehenden Anleitung, um zu erfahren, wie Sie Ihre [!DNL Stripe] authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, um Ihre Zahlungsdaten auf Experience Platform zu übertragen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Sie können Dateien in Ihrer Quelle mithilfe der Basis-Verbindungs-ID untersuchen und darin navigieren. Darüber hinaus können Sie die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Details zu den Datentypen und Formaten dieser Elemente.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Basisverbindungs-ID. Mithilfe der Basisverbindungs-ID können Sie Dateien aus Ihrer Quelle heraus durchsuchen und darin navigieren. Darüber hinaus können Sie die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Details zu den Datentypen und Formaten dieser Elemente.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Stripe]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Stripe] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -82,8 +82,8 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID der Quelle. Die Verbindungsspezifikations-ID für [!DNL Stripe] ist `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` und diese ID ist fest. |
-| `auth.specName` | Der Authentifizierungstyp, den Sie zum Authentifizieren Ihrer Quelle für Experience Platform verwenden. |
-| `auth.params.accessToken` | Das Zugriffstoken Ihres [!DNL Stripe]-Kontos. Anweisungen zum Abrufen Ihres Zugriffstokens finden Sie im [[!DNL Stripe] Authentifizierungshandbuch](../../../../connectors/payments/stripe.md#prerequisites) . |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für das Experience Platform authentifizieren. |
+| `auth.params.accessToken` | Das Zugriffstoken Ihres [!DNL Stripe] Kontos. Anweisungen [[!DNL Stripe]  Abrufen Ihres Zugriffs-Tokens finden Sie ](../../../../connectors/payments/stripe.md#prerequisites) Authentifizierungshandbuch . |
 
 **Antwort**
 
@@ -98,7 +98,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ### Durchsuchen der Quelle {#explore}
 
-Sobald Sie über Ihre Basis-Verbindungs-ID verfügen, können Sie jetzt den Inhalt und die Struktur Ihrer Quelldaten untersuchen, indem Sie eine GET-Anfrage an den `/connections` -Endpunkt richten und Ihre Basis-Verbindungs-ID als Abfrageparameter angeben.
+Sobald Sie Ihre Basisverbindungs-ID haben, können Sie jetzt den Inhalt und die Struktur Ihrer Quelldaten untersuchen, indem Sie eine GET-Anfrage an den `/connections`-Endpunkt ausführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben.
 
 **API-Format**
 
@@ -113,11 +113,11 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
-| `objectType=rest` | Der Objekttyp, den Sie untersuchen möchten. Dieser Wert ist immer auf `rest` gesetzt. |
-| `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle wäre der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Dieser Wert ist immer auf `rest` festgelegt. |
+| `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Eine [!DNL Base64-]kodierte Zeichenfolge, die auf den Ressourcenpfad verweist, den Sie untersuchen möchten. Ihr Ressourcenpfad muss in [!DNL Base64] kodiert werden, um das genehmigte Format für `{SOURCE_PARAMS}` zu erhalten. Beispielsweise ist `{"resourcePath":"charges"}` als `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D` kodiert. Die Liste der verfügbaren Ressourcenpfade umfasst: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
+| `{SOURCE_PARAMS}` | Eine [!DNL Base64-] Zeichenfolge, die auf den Ressourcenpfad verweist, den Sie untersuchen möchten. Ihr Ressourcenpfad muss in [!DNL Base64] codiert sein, um das genehmigte Format für die `{SOURCE_PARAMS}` zu erhalten. Beispielsweise wird `{"resourcePath":"charges"}` als `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D` codiert. Die Liste der verfügbaren Ressourcenpfade umfasst: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
@@ -132,7 +132,7 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt eine JSON-Struktur wie die folgende zurück:
 
-+++Auswählen zum Anzeigen der JSON-Payload
++++Auswählen, um die JSON-Payload anzuzeigen
 
 ```json
 {
@@ -407,7 +407,7 @@ Eine erfolgreiche Antwort gibt eine JSON-Struktur wie die folgende zurück:
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt der [!DNL Flow Service] -API richten. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API stellen. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -449,7 +449,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Quellverbindung. Stellen Sie sicher, dass der Name Ihrer Quellverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Quellverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen über Ihre Quellverbindung bereitzustellen. |
 | `baseConnectionId` | Die Basisverbindungs-ID von [!DNL Stripe]. Diese ID wurde in einem früheren Schritt generiert. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL Stripe]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 
 Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
@@ -463,7 +463,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in der Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, um die Quelldaten nach Bedarf zu strukturieren. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten im Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -479,7 +479,7 @@ Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tuto
 
 Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
+Sie verfügen jetzt über die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -525,7 +525,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die dem Data Lake entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Das Format der [!DNL Stripe]-Daten, die Sie aufnehmen möchten. |
-| `params.dataSetId` | Die ID Ihres Zieldatensatzes. Diese ID wird durch [Erstellen eines Zieldatensatzes](#target-dataset) generiert. |
+| `params.dataSetId` | Die ID Ihres Zieldatensatzes. Diese ID wird durch &quot;[ eines Zieldatensatzes“ ](#target-dataset). |
 
 **Antwort**
 
@@ -550,7 +550,7 @@ POST /conversion/mappingSets
 
 Die folgende Anfrage erstellt eine Zuordnung für [!DNL Stripe].
 
-+++Auswählen zum Anzeigen des Anforderungsbeispiels
++++Anfragebeispiel auswählen, um es anzuzeigen
 
 ```shell
 curl -X POST \
@@ -789,10 +789,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID Ihres Ziel-XDM-Schemas. Diese ID wird durch Erstellen eines [Ziel-XDM-Schemas](#target-schema) generiert. |
+| `xdmSchema` | Die ID Ihres XDM-Zielschemas. Diese ID wird durch Erstellen eines [Ziel-XDM-Schemas](#target-schema) generiert. |
 | `destinationXdmPath` | Das XDM-Feld, dem das Quellattribut zugeordnet wird. |
 | `sourceAttribute` | Das Quelldatenfeld, das zugeordnet wird. |
-| `identity` | Ein boolean -Wert, der definiert, ob das Feld im [Identitätsdienst](../../../../../identity-service/home.md) beibehalten wird. |
+| `identity` | Ein boolescher Wert, der definiert, ob das Feld in [Identity Service) beibehalten ](../../../../../identity-service/home.md). |
 | `version` | Die verwendete Zuordnungsversion. |
 
 +++
@@ -814,7 +814,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt beim Übertragen von Daten von [!DNL Stripe] an Platform besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Stripe] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -870,18 +870,18 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
-| `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten auf Experience Platform gebracht werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
 | `scheduleParams.startTime` | Der Zeitpunkt, zu dem Ihr Datenfluss beginnt. Sie müssen den Startzeitwert im Format eines Unix-Zeitstempels angeben. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Sie können die Erfassungsfrequenz wie folgt konfigurieren:  <ul><li>**Einmal**: Setzen Sie Ihre Häufigkeit auf `once`, um eine einmalige Erfassung zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Erfassungsdataflods nicht verfügbar. Standardmäßig ist die Planung auf einmal eingestellt.</li><li>**Minute**: Setzen Sie Ihre Häufigkeit auf `minute` , um Ihren Datenfluss so zu planen, dass Daten pro Minute erfasst werden.</li><li>**Stunde**: Setzen Sie Ihre Häufigkeit auf &quot;`hour`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Stunde erfasst.</li><li>**Tag**: Setzen Sie Ihre Häufigkeit auf &quot;`day`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Tag erfasst.</li><li>**Woche**: Setzen Sie Ihre Häufigkeit auf &quot;`week`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Woche erfasst.</li></ul> |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Wenn Sie beispielsweise Ihre Häufigkeit auf &quot;Tag&quot;festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Der Intervallwert sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Frequenz lautet wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Sie können die Aufnahmefrequenz konfigurieren, um:  <ul><li>**Einmal**: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Aufnahme-Datenflusses nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>**Minute**: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>**Stunde**: Legen Sie für die Häufigkeit `hour` fest, um den Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>**Tag**: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss so zu planen, dass Daten täglich aufgenommen werden.</li><li>**Woche**: Legen Sie für Ihre Häufigkeit `week` fest, um Ihren Datenfluss zu planen und Daten pro Woche aufzunehmen.</li></ul> |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Wenn Sie beispielsweise Ihre Häufigkeit auf „Tag“ festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Der Intervallwert sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 
 **Antwort**
 
@@ -896,24 +896,24 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses unternehmen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses ausführen können.
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](../../monitor.md).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](../../monitor.md).
 
 ### Aktualisieren des Datenflusses
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den /flows-Endpunkt der API [!DNL Flow Service] richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren der Datenflüsse für Quellen mithilfe der API](../../update-dataflows.md).
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den /flows-Endpunkt der [!DNL Flow Service]-API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](../../update-dataflows.md).
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](../../update.md).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](../../update.md).
 
 ### Löschen des Datenflusses
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](../../delete-dataflows.md).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](../../delete-dataflows.md).
 
 ### Konto löschen
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](../../delete.md).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

@@ -15,11 +15,11 @@ ht-degree: 83%
 >
 > Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-In einer Tag-Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Bedingungstypen werden von Erweiterungen bereitgestellt und bewerten, ob etwas wahr oder falsch ist, wobei ein boolescher Wert zurückgegeben wird.
+In einer Tag-Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Bedingungstypen werden von Erweiterungen bereitgestellt und prüfen, ob etwas wahr oder falsch ist, wobei ein boolescher Wert zurückgegeben wird.
 
 Beispielsweise könnte eine Erweiterung einen Bedinungstyp „Viewport enthält“ bereitstellen, bei dem der Benutzer einen CSS-Selektor angeben kann. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
 
-In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Kantenerweiterung in Adobe Experience Platform definieren.
+In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Edge-Erweiterung in Adobe Experience Platform definieren.
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Kantenerw
 
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
-1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Bedingungseinstellungen zu ändern.
+1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
 Wenn Sie z. B. auswerten möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.

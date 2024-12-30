@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Oracle Eloqua-Basisverbindung mit der Flow Service-API
+title: Erstellen einer Oracle Eloqua-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Eloqua verbinden.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
@@ -9,11 +9,11 @@ ht-degree: 80%
 
 ---
 
-# Erstellen einer [!DNL Oracle Eloqua]-Basisverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Oracle Eloqua]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!WARNING]
 >
->Die Quelle [!DNL Oracle Eloqua] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Oracle Eloqua] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -34,9 +34,9 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Oracle Eloqua] herstellen ka
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `endpoint` | Der Endpunkt Ihres [!DNL Oracle Eloqua]. |
-| `username` | Der Benutzername Ihres [!DNL Oracle Eloqua]-Kontos. Der Benutzername muss als `siteName + \\ + username` formatiert sein, wobei `siteName` der Unternehmensname ist, mit dem Sie sich bei [!DNL Oracle Eloqua] angemeldet haben, und `username` Ihr Benutzername. Ihr Benutzername für die Anmeldung kann beispielsweise: `adobe\\emily` lauten. |
-| `password` | Das Kennwort, das Ihrem [!DNL Oracle Eloqua]-Benutzernamen entspricht. |
+| `endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua]. |
+| `username` | Der Benutzername Ihres [!DNL Oracle Eloqua]. Der Benutzername muss als `siteName + \\ + username` formatiert sein, wobei `siteName` der Firmenname ist, mit dem Sie sich bei [!DNL Oracle Eloqua] anmelden, und `username` Ihr Benutzername. Ihr Anmelde-Benutzername kann beispielsweise lauten: `adobe\\emily`. |
+| `password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua] Benutzernamen entspricht. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua]-Quelle ist wie folgt festgelegt: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 Weitere Informationen zu Authentifizierungs-Anmeldedaten für [!DNL Oracle Eloqua] finden Sie im [[!DNL Oracle Eloqua] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
@@ -93,8 +93,8 @@ curl -X POST \
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um ergänzende Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
 | `auth.params.endpoint` | Der Endpunkt Ihres [!DNL Oracle Eloqua]-Servers. |
-| `auth.params.username` | Die verkettete Berechtigung, die den Site-Namen und Benutzernamen enthält, der Ihrem [!DNL Oracle Eloqua] -Konto entspricht. |
-| `auth.params.password` | Das Kennwort, das Ihrem [!DNL Oracle Eloqua] -Konto entspricht. |
+| `auth.params.username` | Die verketteten Anmeldeinformationen, die den Site-Namen und den Benutzernamen enthalten, der Ihrem [!DNL Oracle Eloqua]-Konto entspricht. |
+| `auth.params.password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua]-Konto entspricht. |
 | `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua]-Quelle ist wie folgt festgelegt: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Antwort**

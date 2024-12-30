@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; E-Commerce; eCommerce
+keywords: Experience Platform;Startseite;beliebte Themen;eCommerce;eCommerce
 solution: Experience Platform
 title: Erkunden einer eCommerce-Verbindung mithilfe der Flow Service-API
-description: In diesem Tutorial wird die Flow Service-API verwendet, um E-Commerce-Verbindungen zu untersuchen.
+description: In diesem Tutorial wird die Flow Service-API verwendet, um eCommerce-Verbindungen zu untersuchen.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 35%
 
 ---
 
-# Erkunden einer eCommerce-Verbindung mit der [!DNL Flow Service]-API
+# Erkunden einer eCommerce-Verbindung mithilfe der [!DNL Flow Service]-API
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um eine Drittanbieter-Verbindung mit **[!UICONTROL eCommerce]** zu untersuchen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um eine Verbindung eines Drittanbieters **[!UICONTROL eCommerce]** zu untersuchen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] -Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung mit **[!UICONTROL eCommerce]** herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einer **[!UICONTROL eCommerce]**-Verbindung verbinden zu können.
 
-### Verbindung-ID abrufen
+### Abrufen einer Verbindungs-ID
 
-Um Ihre **[!UICONTROL eCommerce]**-Verbindung mithilfe von [!DNL Platform] -APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung für die **[!UICONTROL eCommerce]**-Verbindung haben, mit der Sie arbeiten möchten, können Sie eine über das folgende Tutorial erstellen:
+Um Ihre **[!UICONTROL eCommerce]**-Verbindung mit [!DNL Platform] APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung für die **[!UICONTROL eCommerce]**-Verbindung haben, mit der Sie arbeiten möchten, können Sie diese im Rahmen des folgenden Tutorials erstellen:
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -52,9 +52,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * `Content-Type: application/json`
 
-## Datentabellen durchsuchen
+## Erkunden von Datentabellen
 
-Mithilfe Ihrer **[!UICONTROL eCommerce]**-Verbindungs-ID können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mit Ihrer **[!UICONTROL eCommerce]**-Verbindungs-ID können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer **[!UICONTROL eCommerce]**-Verbindung zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer **[!UICONTROL eCommerce]**-Verbindung zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -114,9 +114,9 @@ Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer **[!UICONTROL eC
 ]
 ```
 
-## Tabellenstruktur Inspect
+## Inspect - die Tabellenstruktur
 
-Um die Tabellenstruktur über Ihre **[!UICONTROL eCommerce]**-Verbindung zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle innerhalb eines `object`-Abfrageparameters an.
+Um die Tabellenstruktur aus Ihrer **[!UICONTROL eCommerce]**-Verbindung zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle in einem `object` Abfrageparameter an.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | Die Verbindungs-ID Ihrer **[!UICONTROL eCommerce]**-Verbindung. |
-| `{TABLE_PATH}` | Der Pfad einer Tabelle in Ihrer **[!UICONTROL eCommerce]**-Verbindung. |
+| `{TABLE_PATH}` | Der Pfad einer Tabelle innerhalb Ihrer **[!UICONTROL eCommerce]**-Verbindung. |
 
 **Anfrage**
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns`-Arrays.
 
 ```json
 {
@@ -196,4 +196,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre **[!UICONTROL eCommerce]**-Verbindung durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen zur Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [E-Commerce-Daten zu erfassen und in Platform](../collect/ecommerce.md) zu importieren.
+In diesem Tutorial haben Sie Ihre **[!UICONTROL eCommerce]**-Verbindung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [E-Commerce-Daten zu erfassen und in Platform zu importieren](../collect/ecommerce.md).

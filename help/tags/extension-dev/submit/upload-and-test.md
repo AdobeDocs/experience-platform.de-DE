@@ -39,11 +39,11 @@ Ein konkretes Beispiel ist Ihre Logodatei: Fügen Sie die Zeile `"iconPath": "e
 
 Um die API oder die Befehlszeilen-Tools verwenden zu können, benötigen Sie ein technisches Konto bei Adobe I/O. Sie müssen das technische Konto in der I/O-Konsole erstellen und dann das Erweiterungspaket mit dem Uploader-Tool hochladen.
 
-Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Handbuch [Erste Schritte mit der Reactor-API](../../api/getting-started.md) .
+Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Handbuch [Erste Schritte mit der Reactor](../../api/getting-started.md)API).
 
 >[!IMPORTANT]
 >
->Um eine Integration in Adobe I/O zu erstellen, müssen Sie Experience Cloud-Organisationsadministrator oder Experience Cloud-Org-Entwickler sein.
+>Um eine Integration in Adobe I/O erstellen zu können, müssen Sie Experience Cloud-Organisationsadministrator oder Experience Cloud-Organisationsentwickler sein.
 
 Wenn Sie keine Integration erstellen können, verfügen Sie wahrscheinlich nicht über die richtigen Berechtigungen. Dazu muss entweder ein Administrator Ihres Unternehmens die Schritte für Sie durchführen oder Sie als Entwickler festlegen.
 
@@ -62,11 +62,11 @@ npx @adobe/reactor-uploader
 `npx` ermöglicht Ihnen, ein npm-Paket herunterzuladen und auszuführen, ohne es tatsächlich auf Ihrem Computer zu installieren. Dies ist die einfachste Möglichkeit, Uploader auszuführen.
 
 >[!NOTE]
-> Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen Server-zu-Server-OAuth-Fluss. Die veralteten `jwt-auth`-Anmeldedaten
-> kann durch Ausführen von `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 verwendet werden. Die erforderlichen Parameter
-> zum Ausführen der `jwt-auth` -Version finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
+> kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Für den Uploader müssen Sie nur einige wenige Informationen eingeben. Die `clientId` und `clientSecret` können aus der Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
+Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können von der Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
 
 - Was ist Ihr `clientId`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
 - Was ist Ihr `clientSecret`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
@@ -76,17 +76,17 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 
 >[!NOTE]
 >
->Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie die `extension_package`-ID anhand der API und in der Benutzeroberfläche nach ihrem Status abfragen. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
+>Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie in der Benutzeroberfläche mithilfe der API die `extension_package`-ID nach dem Status abfragen. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
 
 >[!NOTE]
 >
 >Wenn Sie den Uploader häufig ausführen möchten, kann es umständlich sein, diese Informationen jedes Mal eingeben zu müssen. Sie können sie auch als Argument in der Befehlszeile eingeben. Weitere Informationen finden Sie im Abschnitt [Befehlszeilenargumente](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) der NPM-Dokumentation.
 
-Wenn Sie das direkte Hochladen Ihrer Erweiterung mithilfe der API verwalten möchten, finden Sie weitere Informationen in den Beispielaufrufen zum [Erstellen eines Erweiterungspakets ](../../api/endpoints/extension-packages.md/#create) oder zum [Aktualisieren](../../api/endpoints/extension-packages.md#update) in den API-Dokumenten.
+Wenn Sie das Hochladen Ihrer Erweiterung direkt über die API verwalten möchten, finden Sie weitere Details in den Beispielaufrufen zum [Erstellen](../../api/endpoints/extension-packages.md/#create) oder [Aktualisieren](../../api/endpoints/extension-packages.md#update) eines Erweiterungspakets in den API-Dokumenten.
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
-Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben und im linken Navigationsbereich **[!UICONTROL Tags]** ausgewählt haben, wird der Bildschirm [!UICONTROL Eigenschaften] angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
+Nachdem Sie sich bei der Benutzeroberfläche angemeldet und im linken ]**&quot;**[!UICONTROL &quot; ausgewählt haben, ] der Bildschirm [!UICONTROL Eigenschaften“ angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -116,7 +116,7 @@ Um Ihre Erweiterung hinzuzufügen, wählen Sie die Registerkarte **Katalog**.
 
 Im Katalog werden Kartensymbole für alle verfügbaren Erweiterungen angezeigt. Wenn Ihre Erweiterung nicht im Katalog angezeigt wird, vergewissern Sie sich, dass Sie die zuvor unter „Einrichten der Adobe Administration Console“ und „Erstellen eines Erweiterungspakets“ beschriebenen Schritte ausgeführt haben. Ihr Erweiterungspaket wird möglicherweise als „Ausstehend“ angezeigt, wenn die ursprüngliche Verarbeitung in Platform nicht abgeschlossen wurde.
 
-Wenn Sie die vorherigen Schritte ausgeführt haben und immer noch kein Erweiterungspaket vom Typ Ausstehend oder Fehlgeschlagen im Katalog angezeigt wird, sollten Sie den Status Ihres Erweiterungspakets direkt mithilfe der API überprüfen. Informationen zum Ausführen des entsprechenden API-Aufrufs finden Sie unter [Abrufen eines Erweiterungspakets](../../api/endpoints/extension-packages.md#lookup) in der API-Dokumentation.
+Wenn Sie die vorherigen Schritte ausgeführt haben und immer noch kein Erweiterungspaket vom Typ „Ausstehend“ oder „Fehlgeschlagen“ im Katalog angezeigt wird, sollten Sie den Status Ihres Erweiterungspakets direkt mithilfe der API überprüfen. Informationen zum Ausführen des entsprechenden API-Aufrufs finden Sie unter [Abrufen eines Erweiterungspakets](../../api/endpoints/extension-packages.md#lookup) in der API-Dokumentation.
 
 Nachdem das Erweiterungspaket fertig verarbeitet wurde, wählen Sie unten auf der Karte **Installieren** aus.
 
@@ -146,7 +146,7 @@ Erweiterungen können Datenelementtypen definieren, wenn dies für die Funktion 
 
 Sobald ein Benutzer Ihre Erweiterung im Dropdown-Menü **Erweiterung** auswählt, wird die Dropdown-Liste **Datenelementtyp** mit allen Datenelementtypen gefüllt, die von Ihrer Erweiterung bereitgestellt werden. Der Benutzer kann dann jedes Datenelement seinem Quellwert zuordnen. Datenelemente können beim Erstellen von Regeln im Ereignis zur Änderung von Datenelementen (Data Element Change Event) oder im Ereignis für benutzerspezifischen Code (Custom Code Event) verwendet werden, um die Ausführung einer Regel auszulösen. Ein Datenelement kann auch in der Datenelementbedingung oder weiteren Bedingungen, Ausnahmen oder Aktionen in einer Regel verwendet werden.
 
-Nachdem das Datenelement erstellt worden ist (die Zuordnung eingerichtet wurde), können Benutzer einfach über einen Verweis auf das Datenelement auf die Quelldaten verweisen. Wenn sich die Quelle des Werts ändert (Site-Umgestaltungen usw.), -Benutzer müssen die Zuordnung nur einmal in der Benutzeroberfläche aktualisieren. Alle Datenelemente erhalten automatisch den neuen Quellwert.
+Nachdem das Datenelement erstellt worden ist (die Zuordnung eingerichtet wurde), können Benutzer einfach über einen Verweis auf das Datenelement auf die Quelldaten verweisen. Wenn sich die Quelle des Werts ändert (Site-Neugestaltungen usw.), müssen die Benutzer die Zuordnung nur einmal in der Benutzeroberfläche aktualisieren. Alle Datenelemente erhalten dann automatisch den neuen Quellwert.
 
 ### Regeln
 
@@ -230,6 +230,6 @@ Wenn Sie feststellen, dass Sie Änderungen an Ihrem Erweiterungspaket vornehmen 
    >
    >Um Zeit zu sparen, können Argumente an die Befehlszeile übergeben werden. So wird die wiederholte Eingabe von Anmeldedaten vermieden. Weitere Informationen hierzu finden Sie in der [Dokumentation zu Reactor Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. Der Installationsschritt kann beim Aktualisieren eines vorhandenen Pakets übersprungen werden.
-1. Ändern von Ressourcen: Wenn die Konfiguration für eine Ihrer Erweiterungskomponenten geändert wurde, müssen Sie diese Ressourcen in der Benutzeroberfläche aktualisieren.
+1. Ändern von Ressourcen : Wenn die Konfiguration für eine Ihrer Erweiterungskomponenten geändert wurde, müssen Sie diese Ressourcen in der Benutzeroberfläche aktualisieren.
 1. Hinzufügen der neuesten Änderungen zur Bibliothek und erneutes Erstellen.
 1. Schließen Sie eine weitere Reihe von Tests ab.

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Überwachen von Datenflüssen;Flow Service API;Flow Service
 solution: Experience Platform
-title: Überwachen von Datenflüssen zu Quellen mithilfe der Flow Service-API
+title: Überwachen von Datenflüssen aus Quellen mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Überwachen von Daten in Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d

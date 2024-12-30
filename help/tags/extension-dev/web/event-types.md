@@ -27,7 +27,7 @@ In diesem Dokument wird beschrieben, wie Sie Ereignistypen für eine Web-Erweite
 
 Ereignistypen werden durch Erweiterungen definiert und bestehen normalerweise aus folgenden Elementen:
 
-1. Eine [Ansicht](./views.md), die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Ereigniseinstellungen zu ändern.
+1. Eine [Ansicht](./views.md) die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Ereigniseinstellungen zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und um zu überwachen, ob eine bestimmte Aktivität eintritt.
 
 `module.exports` akzeptieren die Parameter `settings` und `trigger`. Dies ermöglicht die Anpassung des Ereignistyps.

@@ -23,7 +23,7 @@ ht-degree: 77%
 
 - Diese Erweiterung sollte zusammen mit AEM Asset Insights verwendet werden.
 - Genauer gesagt ersetzt es den ***pageTracker***-Prozess und den Seiten-Code.
-- Wenn diese Erweiterung konfiguriert und aktiviert ist, sendet sie AEM Metriken &quot;Asset-Impression&quot;und &quot;Klick&quot;an Adobe Analytics, die dann automatisch wieder in die Asset-Insights-Berichte in AEM importiert werden.
+- Nach der Konfiguration und Aktivierung sendet diese Erweiterung AEM-Asset-Impression- und -Klickmetriken an Adobe Analytics, die dann automatisch wieder in die Asset-Insights-Berichte in AEM importiert werden.
 
 **Fehlerkorrekturen**
 

@@ -1,6 +1,6 @@
 ---
-title: Verschlüsselte Daten in der Quellenbenutzeroberfläche von Workspace erfassen
-description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
+title: Aufnehmen verschlüsselter Daten in der Quellen-Benutzeroberfläche Workspace
+description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quell-Benutzeroberfläche aufnehmen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
@@ -10,33 +10,33 @@ ht-degree: 9%
 
 ---
 
-# Verschlüsselte Daten in der Quell-Benutzeroberfläche erfassen
+# Aufnehmen verschlüsselter Daten in der Quellen-Benutzeroberfläche
 
 >[!AVAILABILITY]
 >
->Die Unterstützung für die verschlüsselte Datenerfassung in der Quell-Benutzeroberfläche befindet sich in der Beta-Phase. Die Funktion und die Dokumentation können sich ändern.
+>Die Unterstützung für die verschlüsselte Datenaufnahme in der Quellen-Benutzeroberfläche befindet sich in der Beta-Phase. Die Funktion und die Dokumentation können sich ändern.
 
-Sie können verschlüsselte Datendateien und Ordner mit Cloud-Speicher-Batch-Quellen in Adobe Experience Platform erfassen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Die unterstützten asymmetrischen Verschlüsselungsmechanismen sind PGP und GPG.
+Sie können verschlüsselte Datendateien und Ordner mithilfe von Cloud-Speicher-Batch-Quellen in Adobe Experience Platform aufnehmen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Die unterstützten asymmetrischen Verschlüsselungsmechanismen sind PGP und GPG.
 
-In diesem Handbuch erfahren Sie, wie Sie verschlüsselte Daten mit Cloud-Speicher-Batch-Quellen über die Benutzeroberfläche erfassen können.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie verschlüsselte Daten mit Cloud-Speicher-Batch-Quellen über die Benutzeroberfläche aufnehmen können.
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, lesen Sie bitte die folgenden Dokumente, um die folgenden Experience Platform-Funktionen und -Konzepte besser zu verstehen.
+Bevor Sie mit diesem Tutorial fortfahren, lesen Sie die folgenden Dokumente, um die folgenden Experience Platform-Funktionen und -Konzepte besser zu verstehen.
 
-* [Quellen](../../home.md): Verwenden Sie Experience Platform-Quellen, um Daten aus einer Adobe-Anwendung oder einer Datenquelle von Drittanbietern zu erfassen.
-* [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind Darstellungen von Datenaufträgen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich &quot;Quellen&quot;verwenden, um Datenflüsse zu erstellen, die Daten von einer bestimmten Quelle zu Experience Platform erfassen.
-* [Sandboxes](../../../sandboxes/home.md): Verwenden Sie Sandboxes in Experience Platform, um virtuelle Partitionen zwischen Ihren Experience Platform-Instanzen zu erstellen und Umgebungen für die Entwicklung oder Produktion zu erstellen.
+* [Quellen](../../home.md): Verwenden Sie Quellen auf Experience Platform, um Daten aus einem Adobe-Programm oder einer Datenquelle eines Drittanbieters aufzunehmen.
+* [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind Darstellungen von Datenvorgängen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich „Quellen“ verwenden, um Datenflüsse zu erstellen, die Daten aus einer bestimmten Quelle auf Experience Platform aufnehmen.
+* [Sandboxes](../../../sandboxes/home.md): Verwenden Sie Sandboxes in Experience Platform, um virtuelle Partitionen zwischen Ihren Experience Platform-Instanzen zu erstellen und Umgebungen für Entwicklung oder Produktion zu erstellen.
 
 ### Allgemeine Übersicht
 
-* Erstellen Sie ein Verschlüsselungsschlüsselpaar mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Experience Platform-Benutzeroberfläche.
-   * Optional können Sie auch Ihr eigenes Schlüsselpaar für die Signierüberprüfung erstellen, um eine zusätzliche Sicherheitsschicht für Ihre verschlüsselten Daten bereitzustellen.
-* Verwenden Sie den öffentlichen Schlüssel aus Ihrem Verschlüsselungsschlüsselpaar, um Ihre Daten zu verschlüsseln.
-* Platzieren Sie Ihre verschlüsselten Daten in Ihrem Cloud-Speicher. In diesem Schritt müssen Sie außerdem sicherstellen, dass Sie über eine Beispieldatei Ihrer Daten in Ihrem Cloud-Speicher verfügen, die als Referenz für die Zuordnung Ihrer Quelldaten zu einem Experience-Datenmodell (XDM)-Schema verwendet werden kann.
-* Verwenden Sie Ihre Batch-Quelle für den Cloud-Speicher und starten Sie den Datenerfassungsprozess im Arbeitsbereich &quot;Quellen&quot;der Experience Platform-Benutzeroberfläche.
-* Geben Sie bei der Erstellung der Quellverbindung die Schlüssel-ID an, die dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
-   * Wenn Sie auch den Schlüssel-Paar-Mechanismus für die Signierüberprüfung verwendet haben, müssen Sie auch die Schlüssel-ID für die Signierüberprüfung angeben, die Ihren verschlüsselten Daten entspricht.
+* Erstellen Sie ein Verschlüsselungsschlüsselpaar mit dem Arbeitsbereich Quellen in der Experience Platform-Benutzeroberfläche.
+   * Optional können Sie auch Ihr eigenes Sign-Verifizierungs-Schlüsselpaar erstellen, um eine zusätzliche Sicherheitsebene für Ihre verschlüsselten Daten bereitzustellen.
+* Verschlüsseln Sie Ihre Daten mit dem öffentlichen Schlüssel aus Ihrem Verschlüsselungsschlüsselpaar.
+* Legen Sie Ihre verschlüsselten Daten in Ihrem Cloud-Speicher ab. In diesem Schritt müssen Sie auch sicherstellen, dass Sie über eine Beispieldatei Ihrer Daten in Ihrem Cloud-Speicher verfügen, die als Referenz verwendet werden kann, um Ihre Quelldaten einem Experience-Datenmodell (XDM)-Schema zuzuordnen.
+* Verwenden Sie Ihre Cloud-Speicher-Batch-Quelle und starten Sie den Datenaufnahmeprozess im Quellarbeitsbereich in der Experience Platform-Benutzeroberfläche.
+* Geben Sie während des Erstellungsprozesses der Quellverbindung die Schlüssel-ID an, die dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
+   * Wenn Sie außerdem den Mechanismus für das Zeichenverifizierungsschlüsselpaar verwendet haben, müssen Sie auch die ID des Zeichenverifizierungsschlüssels angeben, die Ihren verschlüsselten Daten entspricht.
 * Fahren Sie mit den Schritten zur Erstellung des Datenflusses fort.
 
 ## Erstellen eines Schlüsselpaars für Verschlüsselung {#create-an-encryption-key-pair}
@@ -50,35 +50,35 @@ Bevor Sie mit diesem Tutorial fortfahren, lesen Sie bitte die folgenden Dokument
 
 **Was ist ein Verschlüsselungsschlüsselpaar?**
 
-Ein Verschlüsselungsschlüsselpaar ist ein asymmetrischer Kryptographiemechanismus, der aus einem öffentlichen Schlüssel und einem privaten Schlüssel besteht. Der öffentliche Schlüssel wird zum Verschlüsseln von Daten verwendet und der private Schlüssel wird dann zum Entschlüsseln dieser Daten verwendet.
+Ein Verschlüsselungsschlüsselpaar ist ein asymmetrischer Verschlüsselungsmechanismus, der aus einem öffentlichen und einem privaten Schlüssel besteht. Der öffentliche Schlüssel wird zur Verschlüsselung von Daten und der private Schlüssel zur Entschlüsselung dieser Daten verwendet.
 
-Sie können Ihr Verschlüsselungsschlüsselpaar über die Experience Platform-Benutzeroberfläche erstellen. Nach der Erstellung erhalten Sie einen öffentlichen Schlüssel und eine entsprechende Schlüssel-ID. Verwenden Sie den öffentlichen Schlüssel zum Verschlüsseln Ihrer Daten und verwenden Sie dann die Schlüssel-ID, um Ihre Identität zu bestätigen, wenn Sie Ihre verschlüsselten Daten erfassen. Der private Schlüssel wird automatisch zum Experience Platform weitergeleitet, wo er in einem sicheren Vault gespeichert ist und erst verwendet wird, wenn Ihre Daten zur Entschlüsselung bereit sind.
+Sie können Ihr Verschlüsselungsschlüsselpaar über die Experience Platform-Benutzeroberfläche erstellen. Nach der Generierung erhalten Sie einen öffentlichen Schlüssel und eine entsprechende Schlüssel-ID. Verwenden Sie den öffentlichen Schlüssel zum Verschlüsseln Ihrer Daten und dann die Schlüssel-ID, um Ihre Identität zu bestätigen, wenn Sie dabei sind, Ihre verschlüsselten Daten aufzunehmen. Der private Schlüssel wird automatisch auf Experience Platform gespeichert, wo er in einem sicheren Tresor aufbewahrt wird. Er wird erst verwendet, wenn die Daten entschlüsselungsbereit sind.
 
 >[!ENDSHADEBOX]
 
-Navigieren Sie in der Platform-Benutzeroberfläche zum Arbeitsbereich &quot;Quellen&quot;und wählen Sie dann in der oberen Kopfzeile [!UICONTROL Schlüsselpaare] aus.
+Navigieren Sie in der Platform-Benutzeroberfläche zum Arbeitsbereich Quellen und wählen Sie [!UICONTROL Schlüsselpaare] aus der oberen Kopfzeile aus.
 
-![Der Quellkatalog mit der ausgewählten Kopfzeile &quot;Schlüsselpaare&quot;.](../../images/tutorials/edi/catalog.png)
+![Der Quellkatalog mit ausgewählter Kopfzeile „Schlüsselpaare“.](../../images/tutorials/edi/catalog.png)
 
-Sie gelangen zu einer Seite, auf der eine Liste der in Ihrem Unternehmen vorhandenen Verschlüsselungsschlüsselpaare angezeigt wird. Auf dieser Seite finden Sie Informationen zu Titel, Kennung, Typ, Verschlüsselungsalgorithmus, Ablauf und Status eines bestimmten Schlüssels. Um ein neues Schlüsselpaar zu erstellen, wählen Sie **[!UICONTROL Schlüssel erstellen]** aus.
+Sie gelangen zu einer Seite, auf der eine Liste der in Ihrer Organisation vorhandenen Verschlüsselungsschlüsselpaare angezeigt wird. Auf dieser Seite finden Sie Informationen zu Titel, ID, Typ, Verschlüsselungsalgorithmus, Ablauf und Status eines bestimmten Schlüssels. Um ein neues Schlüsselpaar zu erstellen, wählen Sie **[!UICONTROL Schlüssel erstellen]** aus.
 
-![Die Seite &quot;Schlüsselpaare&quot;, auf der &quot;Verschlüsselungsschlüssel&quot; als Schlüsseltyp ausgewählt und die Schaltfläche &quot;Schlüssel erstellen&quot;ausgewählt ist.](../../images/tutorials/edi/encryption_key_page.png)
+![Die Seite „Schlüsselpaare“, auf der „Verschlüsselungsschlüssel“ als Schlüsseltyp und die Schaltfläche „Schlüssel erstellen“ ausgewählt sind.](../../images/tutorials/edi/encryption_key_page.png)
 
-Wählen Sie als Nächstes den Schlüsseltyp aus, den Sie erstellen möchten. Um einen Verschlüsselungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Verschlüsselungsschlüssel]** und dann **[!UICONTROL Fortfahren]** aus.
+Wählen Sie als Nächstes den Schlüsseltyp aus, den Sie erstellen möchten. Um einen Verschlüsselungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Verschlüsselungsschlüssel]** und dann **[!UICONTROL Weiter]** aus.
 
 ![Das Fenster zur Schlüsselerstellung mit ausgewähltem Verschlüsselungsschlüssel.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
 Geben Sie einen Titel und eine Passphrase für Ihren Verschlüsselungsschlüssel an. Die Passphrase ist eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben. Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
-![Das Fenster zur Erstellung des Verschlüsselungsschlüssels, in dem ein Titel und eine Passphrase bereitgestellt werden.](../../images/tutorials/edi/create_encryption_key.png)
+![Das Fenster zur Erstellung des Verschlüsselungsschlüssels, in dem ein Titel und eine Passphrase angegeben sind.](../../images/tutorials/edi/create_encryption_key.png)
 
-Bei erfolgreichem Abschluss wird ein neues Fenster mit dem neuen Verschlüsselungsschlüssel einschließlich Titel, öffentlicher Schlüssel und Schlüssel-ID angezeigt. Verwenden Sie den Wert des öffentlichen Schlüssels, um Ihre Daten zu verschlüsseln. Sie verwenden die Schlüssel-ID in einem späteren Schritt, um Ihre Identität bei der Erfassung Ihrer verschlüsselten Daten während des Erstellungsprozesses des Datenflusses zu beweisen.
+Bei erfolgreicher Ausführung wird ein neues Fenster angezeigt, in dem Ihr neuer Verschlüsselungsschlüssel angezeigt wird, einschließlich Titel, öffentlichem Schlüssel und Schlüssel-ID. Verschlüsseln Sie Ihre Daten mit dem öffentlichen Schlüsselwert. Sie verwenden die Schlüssel-ID in einem späteren Schritt, um Ihre Identität bei der Aufnahme Ihrer verschlüsselten Daten während des Erstellungsprozesses des Datenflusses nachzuweisen.
 
-![Das Fenster, das Informationen zu Ihrem neu erstellten Verschlüsselungsschlüsselpaar anzeigt.](../../images/tutorials/edi/encryption_key_details.png)
+![Das Fenster, das Informationen zu dem neu erstellten Verschlüsselungsschlüsselpaar anzeigt.](../../images/tutorials/edi/encryption_key_details.png)
 
-Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, wählen Sie die Auslassungszeichen (`...`) neben dem Schlüsseltitel aus. Wählen Sie **[!UICONTROL Schlüsseldetails]** aus, um den öffentlichen Schlüssel und die Schlüssel-ID anzuzeigen. Wenn Sie den Verschlüsselungsschlüssel löschen möchten, wählen Sie alternativ **[!UICONTROL Löschen]**.
+Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, klicken Sie auf die Auslassungszeichen (`...`) neben dem Schlüsseltitel. Wählen Sie **[!UICONTROL Schlüsseldetails]** aus, um den öffentlichen Schlüssel und die Schlüssel-ID anzuzeigen. Wenn Sie den Verschlüsselungsschlüssel löschen möchten, wählen Sie alternativ **[!UICONTROL Löschen]** aus.
 
-![Die Schlüsselpaarseite, auf der eine Liste von Verschlüsselungsschlüsseln angezeigt wird. Die Auslassungspunkte neben &quot;acme-encryption-key&quot;sind ausgewählt und das Dropdown-Menü zeigt Optionen zum Anzeigen von Schlüsseldetails oder Löschen der Schlüssel an.](../../images/tutorials/edi/configuration_options.png)
+![Die Seite Schlüsselpaare , auf der eine Liste der Verschlüsselungsschlüssel angezeigt wird. Die Auslassungszeichen neben „acme-encryption-key“ sind ausgewählt und die Dropdown-Liste zeigt Optionen zum Anzeigen von Schlüsseldetails oder zum Löschen der Schlüssel an.](../../images/tutorials/edi/configuration_options.png)
 
 ### Erstellen eines Signaturverifizierungsschlüssels {#create-a-sign-verification-key}
 
@@ -89,21 +89,21 @@ Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, w�
 
 >[!BEGINSHADEBOX]
 
-**Was ist ein Verifizierungsschlüssel für Zeichen?**
+**Was ist ein Sign Verification Key?**
 
-Ein Signaturüberprüfungsschlüssel ist ein weiterer Verschlüsselungsmechanismus, der einen privaten Schlüssel und einen öffentlichen Schlüssel umfasst. In diesem Fall können Sie Ihr Schlüsselpaar für die Signierüberprüfung erstellen und mithilfe des privaten Schlüssels signieren und eine zusätzliche Verschlüsselungsschicht für Ihre Daten bereitstellen. Sie geben dann den entsprechenden öffentlichen Schlüssel für Experience Platform frei. Während der Erfassung verwendet Experience Platform den öffentlichen Schlüssel, um die mit Ihrem privaten Schlüssel verknüpfte Signatur zu überprüfen.
+Ein Zeichenüberprüfungsschlüssel ist ein weiterer Verschlüsselungsmechanismus, der einen privaten Schlüssel und einen öffentlichen Schlüssel umfasst. In diesem Fall können Sie Ihr Sign-Verifizierungs-Schlüsselpaar erstellen und den privaten Schlüssel zum Signieren verwenden und eine zusätzliche Verschlüsselungsschicht für Ihre Daten bereitstellen. Sie geben dann den entsprechenden öffentlichen Schlüssel für Experience Platform frei. Während der Aufnahme verwendet Experience Platform den öffentlichen Schlüssel, um die Signatur zu überprüfen, die mit Ihrem privaten Schlüssel verknüpft ist.
 
 >[!ENDSHADEBOX]
 
-Um einen Überprüfungsschlüssel für die Signaturüberprüfung zu erstellen, wählen Sie im Fenster zur Schlüsseltyp-Auswahl die Option **[!UICONTROL Überprüfungsschlüssel für Signaturen]** und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Um einen Signaturüberprüfungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Signaturüberprüfungsschlüssel]** aus dem Auswahlfenster für den Schlüsseltyp aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![Das Fenster zur Auswahl des Schlüsseltyps, in dem der Schlüssel zur Überprüfung der Signaturen ausgewählt ist.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
+![Das Auswahlfenster für den Schlüsseltyp, in dem der Bestätigungsschlüssel für das Zeichen ausgewählt ist.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-Geben Sie als Nächstes einen Titel und einen [!DNL Base64]-kodierten PGP-Schlüssel als öffentlichen Schlüssel ein und wählen Sie dann **[!UICONTROL Erstellen]** aus.
+Geben Sie als Nächstes einen Titel und einen [!DNL Base64] PGP-Schlüssel als öffentlichen Schlüssel an und wählen Sie dann **[!UICONTROL Erstellen]**.
 
-![Das Fenster des Überprüfungsschlüssels für das Erstellen von Signaturen.](../../images/tutorials/edi/create_sign_verification_key.png)
+![Das Fenster zum Erstellen eines Signaturüberprüfungsschlüssels.](../../images/tutorials/edi/create_sign_verification_key.png)
 
-Bei erfolgreichem Abschluss wird ein neues Fenster mit Ihrem neuen Signierüberprüfungsschlüssel, einschließlich Titel und Schlüssel-ID, angezeigt.
+Bei erfolgreicher Ausführung wird ein neues Fenster angezeigt, in dem der neue Schlüssel zur Zeichenüberprüfung einschließlich Titel und Schlüssel-ID angezeigt wird.
 
 ![Die Details des neu erstellten Signierüberprüfungsschlüssels.](../../images/tutorials/edi/sign_verification_key_details.png)
 
@@ -119,7 +119,7 @@ Bei erfolgreichem Abschluss wird ein neues Fenster mit Ihrem neuen Signierüberp
 >title="Auswählen einer Beispieldatei"
 >abstract="Sie müssen bei der Aufnahme verschlüsselter Daten eine Beispieldatei aufnehmen, um eine Zuordnung zu erstellen."
 
-Sie können verschlüsselte Daten mit den folgenden Cloud-Speicher-Batch-Quellen erfassen:
+Sie können verschlüsselte Daten mithilfe der folgenden Cloud-Speicher-Batch-Quellen aufnehmen:
 
 * [[!DNL Amazon S3]](../ui/create/cloud-storage/s3.md)
 * [[!DNL Azure Blob]](../ui/create/cloud-storage/blob.md)
@@ -132,37 +132,37 @@ Sie können verschlüsselte Daten mit den folgenden Cloud-Speicher-Batch-Quellen
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Authentifizieren Sie sich mit der gewünschten Cloud-Speicherquelle. Wählen Sie im Schritt zur Datenauswahl des Workflows die zu erfassende verschlüsselte Datei oder den Ordner aus und aktivieren Sie dann den Umschalter **[!UICONTROL Ist die Datei verschlüsselt]** .
+Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen Sie während des Datenauswahlschritts des Workflows die aufzunehmende verschlüsselte Datei bzw. den aufzunehmenden Ordner aus und aktivieren Sie dann den Umschalter **[!UICONTROL Ist die Datei verschlüsselt]**.
 
-![Der Schritt &quot;Daten auswählen&quot;des Ursprungs-Workflows, in dem eine verschlüsselte Datendatei für die Erfassung ausgewählt ist.](../../images/tutorials/edi/select_data.png)
+![ Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
 
-Wählen Sie anschließend eine Beispieldatei aus den Quelldaten aus. Da Ihre Daten verschlüsselt sind, benötigt Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
+Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, erfordert das Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
 
-![Der &quot;Ist diese Datei verschlüsselt?&quot; Umschalten aktiviert und die Schaltfläche &quot;Beispieldatei auswählen&quot;ausgewählt. ](../../images/tutorials/edi/select_sample_file.png)
+![Die „Ist diese Datei verschlüsselt?“ Aktivieren Sie den Umschalter und klicken Sie auf die Schaltfläche „Beispieldatei auswählen“. ](../../images/tutorials/edi/select_sample_file.png)
 
-Nachdem Sie die Beispieldatei ausgewählt haben, konfigurieren Sie die Einstellungen Ihrer Daten, z. B. das entsprechende Datenformat, Trennzeichen und den Komprimierungstyp. Warten Sie etwas, bis die Vorschaufunktion vollständig gerendert ist, und wählen Sie dann **[!UICONTROL Speichern]** aus.
+Nachdem Sie die Beispieldatei ausgewählt haben, konfigurieren Sie die Einstellungen Ihrer Daten, z. B. das entsprechende Datenformat, das Trennzeichen und den Komprimierungstyp. Warten Sie einige Zeit, bis die Vorschauoberfläche vollständig gerendert ist, und wählen Sie dann **[!UICONTROL Speichern]** aus.
 
-![Für die Aufnahme wird ein Beispiel ausgewählt und die Dateivorschau ist vollständig geladen.](../../images/tutorials/edi/file_preview.png)
+![Ein Beispiel wird für die Aufnahme ausgewählt und die Dateivorschau ist vollständig geladen.](../../images/tutorials/edi/file_preview.png)
 
-Wählen Sie hier im Dropdown-Menü den öffentlichen Schlüsseltitel der öffentlichen Schlüsselkennung aus, der dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
+Wählen Sie hier im Dropdown-Menü den Titel des öffentlichen Schlüssels der öffentlichen Schlüssel-ID aus, der dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
 
-![Der Titel des öffentlichen Schlüssels der öffentlichen Schlüssel-ID, der dem öffentlichen Schlüssel entspricht, der zum Verschlüsseln Ihrer Daten verwendet wird.](../../images/tutorials/edi/public_key_id.png)
+![Der öffentliche Schlüsseltitel der öffentlichen Schlüssel-ID, der dem öffentlichen Schlüssel entspricht, der zum Verschlüsseln Ihrer Daten verwendet wird.](../../images/tutorials/edi/public_key_id.png)
 
-Wenn Sie auch das Schlüsselpaar für die Zeichenüberprüfung verwendet haben, um eine zusätzliche Verschlüsselungsschicht bereitzustellen, aktivieren Sie den Umschalter für die Signaturüberprüfung und wählen Sie auf ähnliche Weise über das Dropdown-Menü die ID des Signaturüberprüfungsschlüssels aus, die dem Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
+Wenn Sie auch das Schlüsselpaar für die Zeichenverifizierung verwendet haben, um eine zusätzliche Verschlüsselungsschicht bereitzustellen, aktivieren Sie den Umschalter für den Zeichenverifizierungsschlüssel und wählen Sie dann in ähnlicher Weise im Dropdown-Menü die Zeichenverifizierungsschlüssel-ID aus, die dem Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
 
-![Der Titel des Signierüberprüfungsschlüssels der Schlüssel-ID, die Ihrer Verschlüsselung zur Signierüberprüfung entspricht.](../../images/tutorials/edi/custom_key_id.png)
+![Der Titel des Signaturüberprüfungsschlüssels der Schlüssel-ID, die Ihrer Signaturüberprüfungsverschlüsselung entspricht.](../../images/tutorials/edi/custom_key_id.png)
 
-Wählen Sie nach Abschluss **[!UICONTROL Weiter]** aus.
+Wenn Sie fertig sind, wählen **[!UICONTROL Weiter]**.
 
-Führen Sie die verbleibenden Schritte im Ursprungs-Workflow aus, um die Erstellung des Datenflusses abzuschließen.
+Führen Sie die verbleibenden Schritte im Quellen-Workflow aus, um die Erstellung Ihres Datenflusses abzuschließen.
 
-* [Datenfluss und Datensatzdetails angeben](../ui/dataflow/batch/cloud-storage.md#provide-dataflow-details)
-* [Quelldaten einem XDM-Schema zuordnen](../ui/dataflow/batch/cloud-storage.md#map-data-fields-to-an-xdm-schema)
+* [Angeben von Datenfluss- und Datensatzdetails](../ui/dataflow/batch/cloud-storage.md#provide-dataflow-details)
+* [Zuordnen Ihrer Quelldaten zu einem XDM-Schema](../ui/dataflow/batch/cloud-storage.md#map-data-fields-to-an-xdm-schema)
 * [Konfigurieren eines Aufnahmezeitplans für Ihren Datenfluss](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [Überprüfen des Datenflusses](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-Sie können [Aktualisierungen an Ihrem Datenfluss](../ui/update-dataflows.md) vornehmen, nachdem er erfolgreich erstellt wurde.
+Sie können [Aktualisierungen an Ihrem Datenfluss vornehmen](../ui/update-dataflows.md) nachdem er erfolgreich erstellt wurde.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments können Sie jetzt verschlüsselte Daten von Ihrer Cloud-Speicher-Batch-Quelle auf Experience Platform erfassen. Informationen zum Erfassen verschlüsselter Daten mithilfe der APIs finden Sie im Handbuch zum [ Erfassen verschlüsselter Daten mit der  [!DNL Flow Service] API](../api/encrypt-data.md) . Allgemeine Informationen zu Quellen auf dem Experience Platform finden Sie in der [Quellenübersicht](../../home.md).
+Durch Lesen dieses Dokuments können Sie jetzt verschlüsselte Daten aus Ihrer Cloud-Speicher-Batch-Quelle auf Experience Platform aufnehmen. Informationen zum Aufnehmen verschlüsselter Daten mithilfe der APIs finden Sie im Handbuch unter [Aufnehmen verschlüsselter Daten mithilfe der  [!DNL Flow Service] -API](../api/encrypt-data.md). Allgemeine Informationen zu Quellen auf Experience Platform finden Sie unter [Quellen - Übersicht](../../home.md).

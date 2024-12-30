@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;protocol connector
+keywords: Experience Platform;Startseite;beliebte Themen;Protokoll-Connector
 solution: Experience Platform
-title: Erstellen eines Datenflusses mithilfe eines Source-Protokolls in der Benutzeroberfläche
+title: Erstellen eines Datenflusses mithilfe einer ProtokollSource in der Benutzeroberfläche
 type: Tutorial
-description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Protokollquelle erstellen.
+description: Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Protokollquelle erstellen.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
 source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
 workflow-type: tm+mt
@@ -14,34 +14,34 @@ ht-degree: 42%
 
 # Erstellen eines Datenflusses mithilfe einer Protokollquelle in der Benutzeroberfläche
 
-Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Datensatz in Adobe Experience Platform aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Protokollquelle erstellen.
+Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Datensatz in Adobe Experience Platform aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Protokollquelle erstellen.
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer Protokollquelle verfügen. Eine Liste der Tutorials zum Erstellen verschiedener Protokollquellenkonten in der Benutzeroberfläche finden Sie in der [Quellenübersicht](../../../home.md#protocols).
->* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer Protokollquelle verfügen. Eine Liste von Tutorials zum Erstellen verschiedener Protokolle über Quellkonten in der Benutzeroberfläche finden Sie in der [Quellen - Übersicht](../../../home.md#protocols).
+>* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
 
 * [Quellen](../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Data Prep]](../../../../data-prep/home.md): Ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuwandeln und zu validieren.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
 
 ## Daten hinzufügen
 
-Nachdem Sie Ihr Protokollquellenkonto erstellt haben, wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt und bietet eine Oberfläche, über die Sie die Tabellenhierarchie Ihres Protokollquellenkontos durchsuchen können.
+Nachdem Sie Ihr Protokollquellenkonto erstellt haben, wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der Ihnen eine Schnittstelle bietet, um die Tabellenhierarchie Ihres Protokollquellenkontos zu untersuchen.
 
-* In der linken Hälfte der Benutzeroberfläche befindet sich ein Browser, der eine Liste der in Ihrem Konto enthaltenen Datentabellen anzeigt. Die Benutzeroberfläche enthält außerdem eine Suchoption, mit der Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren können.
-* Die rechte Hälfte der Benutzeroberfläche ist ein Vorschaufenster, mit dem Sie bis zu 100 Datenzeilen in der Vorschau anzeigen können.
+* Die linke Hälfte der Benutzeroberfläche ist ein Browser, der eine Liste der in Ihrem Konto enthaltenen Datentabellen anzeigt. Die Benutzeroberfläche umfasst auch eine Suchoption, mit der Sie die zu verwendenden Quelldaten schnell identifizieren können.
+* Die rechte Hälfte der Benutzeroberfläche ist ein Vorschaufenster, in dem Sie bis zu 100 Datenzeilen in der Vorschau anzeigen können.
 
 >[!NOTE]
 >
->Die Option &quot;Suchquellendaten&quot;ist für alle tabellenbasierten Quellen mit Ausnahme von Adobe Analytics, [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] verfügbar.
+>Die Option Quelldaten suchen steht für alle tabellenbasierten Quellen mit Ausnahme von Adobe Analytics, [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] zur Verfügung.
 
 Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -85,37 +85,37 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsoberfläche und der berechneten Felder finden Sie im Handbuch [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
 
-Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Weiter]** aus.
+Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![Zuordnung](../../../images/tutorials/dataflow/table-based/mapping.png)
 
-## Erfassungsläufe planen
+## Planen von Aufnahmedurchgängen
 
-Der Schritt [!UICONTROL Planung] wird angezeigt, in dem Sie einen Aufnahmeplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch zu erfassen. Standardmäßig ist die Planung auf `Once` eingestellt. Um die Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und dann eine Option aus dem Dropdown-Menü aus.
+Der Schritt [!UICONTROL Planung] wird angezeigt, in dem Sie einen Aufnahmezeitplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch aufzunehmen. Standardmäßig ist die Zeitplanung auf `Once` festgelegt. Um Ihre Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und dann eine Option aus dem Dropdown-Menü aus.
 
 >[!TIP]
 >
->Während einer einmaligen Erfassung sind Intervall und Aufstockung nicht sichtbar.
+>Intervall und Aufstockung sind während einer einmaligen Aufnahme nicht sichtbar.
 
-![ scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![Planung](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
-Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day` oder `Week` festlegen, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Beispielsweise bedeutet eine Erfassungsfrequenz, die auf &quot;`Day`&quot;und ein auf &quot;`15`&quot;festgelegtes Intervall, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
+Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day` oder `Week` festlegen, müssen Sie ein Intervall festlegen, um zwischen den einzelnen Aufnahmen einen bestimmten Zeitrahmen festzulegen. Wenn beispielsweise die Aufnahmefrequenz auf `Day` und das Intervall auf `15` festgelegt ist, bedeutet dies, dass der Datenfluss alle 15 Tage Daten aufnehmen soll.
 
-Während dieses Schritts können Sie auch **Aufstockung** aktivieren und eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
+In diesem Schritt können Sie auch **Aufstockung“ aktivieren** eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten aufzunehmen, während die Spalte, die Sie für die inkrementelle Aufnahme definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 
-Weitere Informationen zu Planungskonfigurationen finden Sie in der Tabelle unten.
+Weitere Informationen zur Planung von Konfigurationen finden Sie in der folgenden Tabelle.
 
-| Planungskonfiguration | Beschreibung |
+| Konfiguration planen | Beschreibung |
 | --- | --- |
-| Häufigkeit | Konfigurieren Sie die Häufigkeit, mit der der Datenfluss ausgeführt werden soll. Sie können die Häufigkeit wie folgt einstellen: <ul><li>**Einmal**: Setzen Sie Ihre Häufigkeit auf `once`, um eine einmalige Erfassung zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Erfassungsdataflods nicht verfügbar. Standardmäßig ist die Planung auf einmal eingestellt.</li><li>**Minute**: Setzen Sie Ihre Häufigkeit auf `minute` , um Ihren Datenfluss so zu planen, dass Daten pro Minute erfasst werden.</li><li>**Stunde**: Setzen Sie Ihre Häufigkeit auf &quot;`hour`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Stunde erfasst.</li><li>**Tag**: Setzen Sie Ihre Häufigkeit auf &quot;`day`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Tag erfasst.</li><li>**Woche**: Setzen Sie Ihre Häufigkeit auf &quot;`week`&quot;, um Ihren Datenfluss so zu planen, dass er Daten pro Woche erfasst.</li></ul> |
-| Intervall | Nachdem Sie eine Frequenz ausgewählt haben, können Sie die Intervalleinstellung konfigurieren, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Sie beispielsweise Ihre Häufigkeit auf &quot;Tag&quot;festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Sie können das Intervall nicht auf null festlegen. Der akzeptierte Mindestintervallwert für jede Frequenz lautet wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
+| Häufigkeit | Konfigurieren Sie die Häufigkeit , um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihre Häufigkeit auf Folgendes festlegen: <ul><li>**Einmal**: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Aufnahme-Datenflusses nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>**Minute**: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>**Stunde**: Legen Sie für die Häufigkeit `hour` fest, um den Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>**Tag**: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss so zu planen, dass Daten täglich aufgenommen werden.</li><li>**Woche**: Legen Sie für Ihre Häufigkeit `week` fest, um Ihren Datenfluss zu planen und Daten pro Woche aufzunehmen.</li></ul> |
+| Intervall | Nachdem Sie eine Häufigkeit ausgewählt haben, können Sie die Intervalleinstellung konfigurieren, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Sie beispielsweise Ihre Häufigkeit auf „Tag“ festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Das Intervall kann nicht auf null festgelegt werden. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 | Startzeit | Der Zeitstempel für die projizierte Ausführung, dargestellt in UTC-Zeitzone. |
-| Aufstockung | Die Aufstockung bestimmt, welche Daten ursprünglich erfasst werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien erfasst, die zwischen der ersten Ausführung der Aufnahme und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht erfasst. |
-| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Inkrementelle Daten von]** laden auswählen, muss über seine Datums-/Uhrzeitwerte in UTC-Zeitzone verfügen, damit inkrementelle Daten korrekt geladen werden können. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Zeitstempelwert für Delta-Spalten mit der entsprechenden UTC-Zeit des Flusslauffensters vergleichen und dann die Daten aus der Quelle kopieren, wenn im UTC-Zeitfenster neue Daten gefunden werden. |
+| Aufstockung | Die Aufstockung bestimmt, welche Daten anfänglich aufgenommen werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Aufnahme aufgenommen. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Aufnahme-Ausführung und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht aufgenommen. |
+| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Inkrementelle Daten laden nach]** auswählen, muss seine Datums-/Uhrzeitwerte in der UTC-Zeitzone haben, um die inkrementellen Daten korrekt zu laden. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Delta-Spalten-Zeitstempelwert mit der entsprechenden UTC-Zeit des Flussausführungsfensters vergleichen und dann die Daten aus der Quelle kopieren, wenn neue Daten im UTC-Zeitfenster gefunden werden. |
 
-![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
+![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Überprüfen des Datenflusses
 
@@ -131,7 +131,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen des Datenflusses finden Sie im Tutorial zum [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
+Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
 
 ## Löschen des Datenflusses
 
@@ -139,7 +139,7 @@ Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurde
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus Ihrer Protokollquelle an Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus Ihren Quellprotokollen in Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](../../../../data-science-workspace/home.md)
@@ -147,6 +147,6 @@ In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus
 
 >[!WARNING]
 >
-> Die im folgenden Video dargestellte Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+> Die im folgenden Video angezeigte Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

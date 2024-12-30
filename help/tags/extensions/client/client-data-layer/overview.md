@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche und wählen Sie Adobe Client-Datenschicht aus.
+Um die Erweiterung zu installieren, navigieren Sie in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche zum Erweiterungskatalog und wählen Sie Adobe-Client-Datenschicht aus.
 
 ![ACDL-Erweiterungsansicht im Katalog](./images/catalog.png)
 

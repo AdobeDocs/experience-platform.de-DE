@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Drittanbieterdatenbank; Datenbankflussdienst
+keywords: Experience Platform;Startseite;beliebte Themen;Datenbank von Drittanbietern;Datenbankfluss-Service
 solution: Experience Platform
-title: Datenbank mithilfe der Flow Service-API durchsuchen
-description: In diesem Tutorial wird die Flow Service-API verwendet, um die Inhalte und Dateistruktur einer Drittanbieter-Datenbank zu untersuchen.
+title: Erkunden einer Datenbank mithilfe der Flow Service-API
+description: In diesem Tutorial wird die Flow Service-API verwendet, um den Inhalt und die Dateistruktur einer Drittanbieterdatenbank zu untersuchen.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,9 +11,9 @@ ht-degree: 38%
 
 ---
 
-# Datenbank mit der [!DNL Flow Service]-API durchsuchen
+# Erkunden einer Datenbank mithilfe der [!DNL Flow Service]-API
 
-In diesem Tutorial wird die API [!DNL Flow Service] verwendet, um die Inhalte und Dateistruktur einer Datenbank von Drittanbietern zu untersuchen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um den Inhalt und die Dateistruktur einer Drittanbieterdatenbank zu untersuchen.
 
 ## Erste Schritte
 
@@ -22,11 +22,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einer Drittanbieterdatenbank herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einer Drittanbieterdatenbank verbinden zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindung mit der Datenbank eines Drittanbieters, aus der Sie Daten erfassen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und Abrufen dieser Werte finden Sie in der [Übersicht über Quell-Connectoren](./../../../home.md#database) .
+Für dieses Tutorial benötigen Sie eine gültige Verbindung mit der Drittanbieterdatenbank, aus der Sie Daten aufnehmen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und zum Abrufen dieser Werte finden Sie in der [Übersicht über Quell-Connectoren](./../../../home.md#database).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -48,9 +48,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * `Content-Type: application/json`
 
-## Datentabellen durchsuchen
+## Erkunden von Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Datenbank zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Datenbank zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -96,9 +96,9 @@ Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Datenbank zurü
 ]
 ```
 
-## Tabellenstruktur Inspect
+## Inspect - die Tabellenstruktur
 
-Um die Tabellenstruktur aus Ihrer Datenbank zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
+Um die Tabellenstruktur in Ihrer Datenbank zu überprüfen, führen Sie eine GET-Anfrage aus, während Sie den Pfad einer Tabelle als Abfrageparameter angeben.
 
 **API-Format**
 
@@ -108,7 +108,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Die Kennung einer Datenbankverbindung. |
+| `{BASE_CONNECTION_ID}` | Die ID einer Datenbankverbindung. |
 | `{TABLE_PATH}` | Der Pfad einer Tabelle. |
 
 **Anfrage**
@@ -124,7 +124,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns`-Arrays.
 
 ```json
 {
@@ -152,4 +152,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Datenbank durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrer Datenbank zu erfassen und in Platform](../collect/database-nosql.md) zu importieren.
+In diesem Tutorial haben Sie Ihre Datenbank erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrer Datenbank zu erfassen und in Platform zu ](../collect/database-nosql.md).

@@ -1,6 +1,6 @@
 ---
-title: On-Demand-Aufnahme für Datenflüsse zu Quellen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse bei Bedarf für Ihre Quellverbindungen erstellen.
+title: On-Demand-Aufnahme für Datenflüsse von Quellen in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie Datenflüsse bei Bedarf für Ihre Quellverbindungen mithilfe der Experience Platform-Benutzeroberfläche erstellen.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
 source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 10%
 
 ---
 
-# On-Demand-Erfassung für Datenflüsse zu Quellen in der Benutzeroberfläche
+# On-Demand-Aufnahme von Quellen für Datenflüsse in der Benutzeroberfläche
 
-Sie können die On-Demand-Erfassung verwenden, um mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Benutzeroberfläche von Adobe Experience Platform eine Fluss-Run-Iteration eines vorhandenen Datenflusses Trigger.
+Sie können die On-Demand-Aufnahme verwenden, um eine Flusslaufiteration eines bestehenden Datenflusses mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Adobe Experience Platform in Trigger zu setzen.
 
-In diesem Dokument erfahren Sie, wie Sie Datenflüsse bei Bedarf für Quellen erstellen und wie Sie Flüsse erneut versuchen, die verarbeitet wurden oder fehlgeschlagen sind.
+In diesem Dokument erfahren Sie, wie Sie bei Bedarf Datenflüsse für Quellen erstellen und Flussausführungen wiederholen, die verarbeitet wurden oder fehlgeschlagen sind.
 
 >[!BEGINSHADEBOX]
 
-**Was ist ein Flusslauf?**
+**Was ist eine Flussausführung?**
 
-Flussläufe stellen eine Instanz der Ausführung des Datenflusses dar. Wenn beispielsweise ein Datenfluss für 9:00 Uhr, 10:00 Uhr und 11:00 Uhr geplant ist, haben Sie drei Instanzen eines Durchlaufs. Flussläufe sind spezifisch für Ihre jeweilige Organisation.
+Flussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
 
 >[!ENDSHADEBOX]
 
@@ -27,44 +27,44 @@ Flussläufe stellen eine Instanz der Ausführung des Datenflusses dar. Wenn beis
 
 >[!NOTE]
 >
->Um einen Flusslauf zu erstellen, müssen Sie zunächst über die Fluss-ID eines Datenflusses verfügen, der für die einmalige Erfassung geplant ist.
+>Um eine Flussausführung zu erstellen, müssen Sie zunächst über die Fluss-ID eines Datenflusses verfügen, der für die einmalige Aufnahme geplant ist.
 
-Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
+Dieses Dokument setzt Grundkenntnisse der folgenden Komponenten von Experience Platform voraus:
 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Datenflüsse](../../../dataflows/home.md): Ein Datenfluss ist eine Darstellung von Datenaufträgen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und ermöglichen so das Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in den Identitätsdienst und das Echtzeit-Kundenprofil sowie in Ziele.
+* [Datenflüsse](../../../dataflows/home.md): Ein Datenfluss ist eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in Identity Service, in Echtzeit-Kundenprofile und in Ziele.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Erstellen eines Datenflusses bei Bedarf {#create-a-dataflow-on-demand}
 
-Navigieren Sie zur Registerkarte *[!UICONTROL Datenflüsse]* im Arbeitsbereich &quot;Quellen&quot;. Suchen Sie von hier aus den Datenfluss, den Sie bei Bedarf ausführen möchten, und wählen Sie dann die Auslassungszeichen (**`...`**) neben dem Namen Ihres Datenflusses aus.
+Navigieren Sie zur *[!UICONTROL Datenflüsse]* im Arbeitsbereich Quellen . Suchen Sie hier nach dem Datenfluss, den Sie bei Bedarf ausführen möchten, und wählen Sie dann die Auslassungszeichen (**`...`**) neben Ihrem Datenflussnamen aus.
 
-![Eine Liste der Datenflüsse im Arbeitsbereich &quot;Quellen&quot;.](../../images/tutorials/on-demand/select-dataflow.png)
+![Eine Liste der Datenflüsse im Quellarbeitsbereich.](../../images/tutorials/on-demand/select-dataflow.png)
 
-Wählen Sie als Nächstes **[!UICONTROL On-Demand ausführen]** aus dem Dropdown-Menü, das angezeigt wird.
+Wählen Sie als Nächstes **[!UICONTROL Auf Anforderung ausführen]** aus dem angezeigten Dropdown-Menü aus.
 
-![Ein Dropdown-Menü mit der ausgewählten Option &quot;On-Demand ausführen&quot;.](../../images/tutorials/on-demand/run-on-demand.png)
+![Ein Dropdown-Menü mit ausgewählter Option Auf Anforderung ausführen.](../../images/tutorials/on-demand/run-on-demand.png)
 
-Konfigurieren Sie den Zeitplan Ihrer On-Demand-Erfassung. Wählen Sie die **[!UICONTROL Startzeit der Aufnahme]**, die **[!UICONTROL Startzeit des Datumsbereichs]** und die **[!UICONTROL Endzeit des Datumsbereichs]** aus.
+Konfigurieren Sie den Zeitplan für die On-Demand-Aufnahme. Wählen Sie **[!UICONTROL Aufnahmestartzeit]**, die **[!UICONTROL Startzeit des Datumsbereichs]** und die **[!UICONTROL Endzeit des Datumsbereichs]**.
 
-| Planungskonfiguration | Beschreibung |
+| Konfiguration planen | Beschreibung |
 | --- | --- |
-| [!UICONTROL Startzeit der Aufnahme] | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. |
-| [!UICONTROL Anfangszeit des Datumsbereichs] | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. |
-| [!UICONTROL Endzeit des Datumsbereichs] | Datum und Uhrzeit des Abrufs der Daten. |
+| [!UICONTROL Startzeit der Aufnahme] | Der geplante Zeitpunkt, zu dem die Ausführung des On-Demand-Flusses beginnt. |
+| [!UICONTROL Startzeit des Datumsbereichs] | Das früheste Datum und die früheste Uhrzeit, von dem/der die Daten abgerufen werden. |
+| [!UICONTROL Endzeit des Datumsbereichs] | Datum und Uhrzeit, zu der die Daten abgerufen werden. |
 
-Wählen Sie **[!UICONTROL Planen]** aus und lassen Sie den Trigger Ihres On-Demand-Datenflusses ein paar Augenblicke zu.
+Wählen Sie **[!UICONTROL Zeitplan]** aus und gewähren Sie etwas Zeit für Ihren On-Demand-Datenfluss zum Trigger.
 
-![Das Planungskonfigurationsfenster für die On-Demand-Erfassung.](../../images/tutorials/on-demand/configure-schedule.png)
+![Das Zeitplankonfigurationsfenster für die On-Demand-Aufnahme.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Wählen Sie den Namen Ihres Datenflusses aus, um Ihre Datenfluss-Aktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflug-Ausführungen, die verarbeitet wurden. Wählen Sie einen Datenfluss aus und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Wiederholen]** aus, um die Aufnahme für eine ausgewählte Datenfluss-Ausführung erneut auszuführen.
+Wählen Sie Ihren Datenflussnamen aus, um Ihre Datenflussaktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflussausführungen, die verarbeitet wurden. Wählen Sie eine Datenflussausführung aus und wählen Sie dann in **[!UICONTROL rechten Leiste die Option]** Wiederholen), um die Aufnahme für eine ausgewählte Datenflussausführungsiteration erneut zu versuchen.
 
-![Eine Liste des verarbeiteten Flusses wird für einen ausgewählten Datenfluss ausgeführt.](../../images/tutorials/on-demand/processed.png)
+![Eine Liste verarbeiteter Flussausführungen für einen ausgewählten Datenfluss.](../../images/tutorials/on-demand/processed.png)
 
-Wählen Sie **[!UICONTROL Geplant]** aus, um eine Liste der Datenfluss-Ausführungen anzuzeigen, die für die zukünftige Erfassung geplant sind.
+Wählen Sie **[!UICONTROL Geplant]** aus, um eine Liste der Datenflussausführungen anzuzeigen, die für die zukünftige Aufnahme geplant sind.
 
-![Eine Liste des geplanten Flusses wird für einen ausgewählten Datenfluss ausgeführt.](../../images/tutorials/on-demand/scheduled.png)
+![Eine Liste geplanter Flussdurchgänge für einen ausgewählten Datenfluss.](../../images/tutorials/on-demand/scheduled.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Fluss-Läufe bei Bedarf für vorhandene Datenflüsse aus Quellen erstellen können. Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../home.md)
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie bei Bedarf Flussausführungen für bestehende Datenflüsse von Quellen erstellen können. Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../home.md)

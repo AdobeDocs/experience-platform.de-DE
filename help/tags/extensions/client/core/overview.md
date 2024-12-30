@@ -108,7 +108,7 @@ Wenn das Element ein Anker-Tag (`<a>`) zu verlinkten Inhalten ist, können Sie a
 
 Wenn Sie die Link-Verzögerung verwenden, verhindert Platform tatsächlich, dass der Browser von der Seite weg navigiert. Anschließend führt es nach der angegebenen Zeitüberschreitung eine JavaScript-Umleitung zum ursprünglichen Ziel durch. Dies ist besonders dann problematisch, wenn Ihr Seiten-Markup `<a>`-Tags enthält, bei denen die vorgesehene Funktion den Benutzer nicht tatsächlich weg von der Seite navigieren lässt. Wenn Sie Ihr Problem nicht anders lösen können, sollten Sie mit der Definition Ihrer Auswahl sehr genau umgehen, damit dieses Ereignis nur genau dort ausgelöst wird, wo Sie es brauchen, und sonst nirgends.
 
-Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer auf die angegebene Zeitdauer warten und in keiner Weise mit der Ausführung der Regelaktionen verbunden sind. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger zu warten, als nötig ist, und dass die Verzögerung auch nicht lang genug ist, damit alle Aktionen der Regel erfolgreich abgeschlossen werden können. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
+Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer die angegebene Zeitdauer abwarten und in keiner Weise mit der Ausführung der Regelaktionen verbunden sind. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger als erforderlich zu warten, und auch möglich, dass die Verzögerung nicht lang genug ist, um alle Aktionen der Regel erfolgreich abzuschließen. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
 
 Um die Verzögerung zu implementieren, müssen sowohl das ausgewählte Element, das das Ereignis auslöst, als auch der spezifische Zeitraum angegeben werden, bevor das Ereignis ausgelöst wird.
 
@@ -246,7 +246,7 @@ Führen Sie die Regel in einem Browser aus und überprüfen Sie das aufgezeichne
 
 *Bedingungssequenzierung*
 
-Wenn die Option &quot;Run rule components in sequence&quot;in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass nachfolgende Regelkomponenten warten, während Ihre Bedingung eine asynchrone Aufgabe ausführt.
+Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Bedingung eine asynchrone Aufgabe ausführt.
 
 Wenn die Bedingung einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) zurückgibt, wird die nächste Bedingung in der Regel erst ausgeführt, nachdem der zurückgegebene Promise eingelöst wurde. Wenn die Zusage abgelehnt wird, betrachtet Tags diese Bedingung als fehlgeschlagen und es werden keine weiteren Bedingungen oder Aktionen aus dieser Regel ausgeführt
 
@@ -588,7 +588,7 @@ Der im Tag-Editor von Launch verwendete Validator dient der Identifizierung von 
 
 #### Aktionssequenzierung
 
-Wenn die Option &quot;Run rule components in sequence&quot;in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass nachfolgende Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt.  Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
+Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt.  Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
 
 *JavaScript*
 
@@ -646,7 +646,7 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Auf jedes verfügbare Domänen-Cookie kann im Feld Cookie-Name verwiesen werden.
+Jedes verfügbare Domain-Cookie kann im Feld Cookie-Name referenziert werden.
 
 #### Beispiel:
 
@@ -722,7 +722,7 @@ Im folgenden Beispiel enthält das Markup eine JavaScript-Variable namens `Page_
 
 Wenn Sie das Datenelement erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie die Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` usw.
 
 #### Beispiel:
 
@@ -816,7 +816,7 @@ Nur der Abschnitt „Name“ ist erforderlich und spezielle Bezeichner wie „?�
 
 ### Zufällige Nummer
 
-Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Sie wird häufig zum Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die zufällige Nummer kann auch zum Verschleiern oder für Salt-Vorgänge für vertrauliche Daten verwendet. Mögliche Beispiele sind:
+Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Er wird häufig für das Sampling von Daten oder das Erstellen von IDs verwendet, wie z. B. eine Treffer-ID. Die zufällige Nummer kann auch zum Verschleiern oder für Salt-Vorgänge für vertrauliche Daten verwendet. Mögliche Beispiele sind:
 
 * Generieren einer Treffer-ID
 * Verketten der Nummer für ein Benutzer-Token oder einen Zeitstempel zur Gewährleistung der Eindeutigkeit

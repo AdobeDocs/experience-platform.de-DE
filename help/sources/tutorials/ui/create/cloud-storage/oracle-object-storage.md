@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle-Objektspeicher
+keywords: Experience Platform;Startseite;beliebte Themen;Oracle-Objektspeicher;oracle-Objektspeicher
 solution: Experience Platform
-title: Erstellen einer Oracle-Objektspeicher-Source-Verbindung in der Benutzeroberfläche
+title: Erstellen einer Oracle-Objektspeicher-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle Object Storage-Quellverbindung erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Adobe Experience Platform eine Quellverbindung für den Oracle-Objektspeicher erstellen.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 47%
 
 ---
 
-# Erstellen einer [!DNL Oracle Object Storage] Source-Verbindung in der Benutzeroberfläche
+# Erstellen einer [!DNL Oracle Object Storage] Source-Verbindung über die Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Oracle Object Storage]-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial finden Sie die Schritte zum Erstellen einer [!DNL Oracle Object Storage]-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -23,29 +23,29 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um eine Verbindung zu [!DNL Oracle Object Storage] herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `serviceUrl` | Der für die Authentifizierung erforderliche [!DNL Oracle Object Storage] -Endpunkt. Das Endpunktformat lautet: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
-| `accessKey` | Die für die Authentifizierung erforderliche Kennung des Zugriffsschlüssels [!DNL Oracle Object Storage]. |
-| `secretKey` | Das für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Kennwort. |
-| `bucketName` | Der zulässige Behältername, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein. Er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
-| `folderPath` | Der zulässige Ordnerpfad erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. |
+| `serviceUrl` | Der für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Endpunkt. Das Endpunktformat ist: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `accessKey` | Die [!DNL Oracle Object Storage] Zugriffsschlüssel-ID, die für die Authentifizierung erforderlich ist. |
+| `secretKey` | Das [!DNL Oracle Object Storage] Kennwort, das für die Authentifizierung erforderlich ist. |
+| `bucketName` | Der zulässige Behältername ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein. Er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
+| `folderPath` | Der Pfad des zulässigen Ordners ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. |
 
-Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch zur Authentifizierung für die [Oracle-Objektspeicherung](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch zur Authentifizierung beim [Oracle-Objektspeicher](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Oracle Object Storage-Konto für die Verbindung mit Platform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Oracle-Objektspeicherkonto für die Verbindung mit Platform zu erstellen.
 
-## Oracle-Objektspeicher verbinden
+## Herstellen einer Verbindung zum Oracle-Objektspeicher
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] die Option **[!UICONTROL Oracle-Objektspeicher]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie [!UICONTROL Cloud] die Option **[!UICONTROL Oracle-Objektspeicher]** und dann **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
@@ -63,4 +63,4 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle Object Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial zum Konfigurieren eines Datenflusses fortfahren, um Daten aus Ihrem Cloud-Speicher in Platform](../../dataflow/batch/cloud-storage.md) zu übertragen.[
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle Object Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial [Konfigurieren eines Datenflusses, um Daten aus Ihrem Cloud-Speicher in Platform zu übertragen](../../dataflow/batch/cloud-storage.md) fortfahren.

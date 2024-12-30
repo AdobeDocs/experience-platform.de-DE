@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren von Datenflüssen mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie einen Datenfluss, einschließlich Name, Beschreibung und Zeitplan, mithilfe der Flow Service-API erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API einen Datenfluss erstellen, einschließlich Name, Beschreibung und Zeitplan.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses mit 
 
 >[!TIP]
 >
->Ihre Quellverbindung und Ihre Zielverbindung sollten einem einzigen Datenfluss zugeordnet sein. Sie sollten Ihre Quell- und Zielverbindungen nicht separat aktualisieren, da die Änderungen nicht im entsprechenden Datenfluss übernommen werden. Wenn Ihr Anwendungsfall eine Aktualisierung Ihrer Quell- und Zielverbindungen erfordert, müssen Sie ein neues Paar aus Quell- und Zielverbindungen sowie einen neuen Datenfluss erstellen.
+>Ihre Quellverbindung und Ihre Zielverbindung sollten einem einzelnen Datenfluss zugeordnet sein. Sie sollten Ihre Quell- und Zielverbindungen nicht separat aktualisieren, da die Änderungen nicht in ihrem entsprechenden Datenfluss widergespiegelt werden. Wenn Ihr Anwendungsfall eine Aktualisierung Ihrer Quell- und Zielverbindungen erfordert, müssen Sie ein neues Paar von Quell- und Zielverbindungen sowie einen neuen Datenfluss erstellen.
 
 ## Erste Schritte
 

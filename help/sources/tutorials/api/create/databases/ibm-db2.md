@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
+keywords: Experience Platform;Startseite;beliebte Themen;IBM [!DNL IBM DB2];IBM;IBM [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Erstellen einer IBM [!DNL IBM DB2] Basisverbindung mit der Flow Service-API
+title: Erstellen einer IBM [!DNL IBM DB2] Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen IBM [!DNL IBM DB2] und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie IBM [!DNL IBM DB2]  mit Adobe Experience Platform mithilfe der Flow Service-API verbinden.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 49%
 
 ---
 
-# Erstellen einer IBM [!DNL IBM DB2]-Basisverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer IBM [!DNL IBM DB2]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der IBM [!DNL IBM DB2]-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
+>Der IBM [!DNL IBM DB2]-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -26,20 +26,20 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] stellt virtuelle Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL IBM DB2] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL IBM DB2] herstellen zu können.
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `server` | Der Name des [!DNL IBM DB2] -Servers. Sie können die Anschlussnummer angeben, die auf den Servernamen folgt, der durch einen Doppelpunkt getrennt ist. Beispiel: server:port. |
-| `database` | Der Name der [!DNL IBM DB2] -Datenbank. |
-| `username` | Der Benutzername, der für die Verbindung mit der [!DNL IBM DB2] -Datenbank verwendet wird. |
+| `server` | Der Name des [!DNL IBM DB2]. Sie können die Portnummer angeben, die dem Servernamen folgt, der durch einen Doppelpunkt getrennt ist. Beispiel: server:port. |
+| `database` | Der Name der [!DNL IBM DB2]. |
+| `username` | Der Benutzername, mit dem eine Verbindung zur [!DNL IBM DB2] Datenbank hergestellt wird. |
 | `password` | Das Kennwort für das Benutzerkonto, das Sie für den Benutzernamen angegeben haben. |
-| `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungsspezifikations-ID für [!DNL IBM DB2] ist `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | Die zum Erstellen einer Verbindung erforderliche eindeutige Kennung. Die Verbindungsspezifikations-ID für [!DNL IBM DB2] ist `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in [diesem [!DNL IBM DB2] Dokument](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL IBM DB2] Dokument](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ### Verwenden von Platform-APIs
 
@@ -47,9 +47,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL IBM DB2]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL IBM DB2]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -91,8 +91,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL IBM DB2]-Konto zugeordnet ist. |
-| `connectionSpec.id` | Die [!DNL IBM DB2] Verbindungsspezifikations-ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | Die mit Ihrem [!DNL IBM DB2]-Konto verknüpfte Verbindungszeichenfolge. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL IBM DB2]-Verbindung: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Antwort**
 
@@ -110,5 +110,5 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL IBM DB2]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)
+* [Erstellen eines Datenflusses, um Datenbankdaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/database-nosql.md)
 

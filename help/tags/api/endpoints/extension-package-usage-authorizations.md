@@ -1,6 +1,6 @@
 ---
-title: Autorisierungs-Endpunkt für Erweiterungspaketverwendung
-description: Erfahren Sie, wie Sie den Endpunkt /extension_package_usage authorizations in der Reactor-API aufrufen.
+title: Endpunkt für Autorisierungen der Verwendung von Erweiterungspaketen
+description: Erfahren Sie, wie Sie den /extension_package_usage-Autorisierungs-Endpunkt in der Reactor-API aufrufen.
 exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
 source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 16%
 
 ---
 
-# Endpunkt für Nutzungsberechtigungen für Erweiterungspakete
+# Endpunkt für Autorisierungen der Verwendung von Erweiterungspaketen
 
-Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können, werden durch ein Erweiterungspaket definiert. Diese Funktionen können Hauptmodule und freigegebene Module umfassen, obwohl sie am häufigsten als [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelemente](./data-elements.md) bereitgestellt werden.
+Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können, werden durch ein Erweiterungspaket definiert. Diese Funktionen können Hauptmodule und freigegebene Module enthalten, obwohl sie meist als [Regelkomponenten“ (](./rule-components.md), Bedingungen und Aktionen) und [Datenelemente](./data-elements.md) bereitgestellt werden.
 
-Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers. Inhaber von Erweiterungspaketen können anderen Unternehmen die Verwendung ihrer privaten Versionen der Pakete gestatten. Jedes autorisierte Unternehmen erhält eine Nutzungsgenehmigung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
+Ein Erweiterungspaket ist im Besitz des ([) ](./companies.md). Besitzer von Erweiterungspaketen können andere Unternehmen autorisieren, ihre privaten Versionen der Pakete zu verwenden. Jedes autorisierte Unternehmen erhält eine Nutzungsautorisierung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Abrufen von Nutzungsberechtigungen für Erweiterungspakete für ein Erweiterungspaket {#list}
+## Abrufen von Berechtigungen zur Verwendung von Erweiterungspaketen für ein Erweiterungspaket {#list}
 
 Um eine Liste von Nutzungsberechtigungen für ein Erweiterungspaket abzurufen, stellen Sie eine GET-Anfrage an den folgenden Endpunkt.
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die `ID` der Eigenschaft, deren Erweiterungspaketverwendungsautorisierung Sie auflisten möchten. |
+| `{PROPERTY_ID}` | Die `ID` der Eigenschaft, deren Autorisierung zur Verwendung des Erweiterungspakets Sie auflisten möchten. |
 
 {style="table-layout:auto"}
 
@@ -100,9 +100,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 }
 ```
 
-## Erstellen einer Nutzungsautorisierung für ein Erweiterungspaket {#create}
+## Erstellen einer Autorisierung für die Verwendung von Erweiterungspaketen {#create}
 
-Erstellen Sie für jedes [Erweiterungspaket](./extension-packages.md) und `{ORG_ID}` der Organisation, die Sie autorisieren möchten, eine Autorisierung zur Verwendung des Erweiterungspakets. Um eine neue Autorisierung zur Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den unten stehenden Endpunkt.
+Erstellen Sie für jedes Erweiterungspaket (Erweiterungspaket[ und `{ORG_ID}` der Organisation](./extension-packages.md) die Sie autorisieren möchten, eine Autorisierung für die Verwendung des Erweiterungspakets. Um eine neue Autorisierung für die Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den folgenden Endpunkt.
 
 **API-Format**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Die `ID` des Erweiterungspakets, für das Sie eine Autorisierung erstellen möchten.&quot; |
+| `EXTENSION_PACKAGE_ID` | Die `ID` des Erweiterungspakets, für das Sie eine Autorisierung erstellen möchten.“ |
 
 {style="table-layout:auto"}
 
@@ -183,11 +183,11 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Autorisierung zur 
 
 >[!NOTE]
 >
->In der obigen Beispielantwort befindet sich die Autorisierung derzeit in der Phase &quot;`pending_approval`&quot;. Vor Verwendung des Erweiterungspakets muss die Organisation die Autorisierung genehmigen. Benutzer der Organisation können das private Erweiterungspaket durchsuchen, während die Autorisierung aussteht, es jedoch nicht installieren kann und nicht in ihrem Erweiterungskatalog finden.
+>In der obigen Beispielantwort befindet sich die Autorisierung derzeit in der `pending_approval`. Vor Verwendung des Erweiterungspakets muss die Organisation die Autorisierung genehmigen. Benutzer der Organisation können das private Erweiterungspaket durchsuchen, während die Autorisierung noch nicht genehmigt ist, sie können es jedoch nicht installieren und nicht in ihrem Erweiterungskatalog finden.
 
-## Abrufen einer Liste der Nutzungsberechtigungen für Erweiterungspakete {#list-authorizations}
+## Abrufen einer Liste von Berechtigungen zur Verwendung von Erweiterungspaketen {#list-authorizations}
 
-Sie können eine Liste der Nutzungsberechtigungen für Erweiterungspakete abrufen, indem Sie eine GET-Anfrage stellen.
+Sie können eine Liste der Autorisierungen zur Verwendung von Erweiterungspaketen abrufen, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -262,9 +262,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 }
 ```
 
-## Nutzungsautorisierung eines Erweiterungspakets löschen {#delete}
+## Löschen einer Autorisierung zur Verwendung von Erweiterungspaketen {#delete}
 
-Um die Nutzungsberechtigung für ein Erweiterungspaket zu löschen, fügen Sie dessen `ID` in den Pfad einer DELETE-Anfrage ein. Dadurch wird verhindert, dass die autorisierte Organisation die privaten Versionen des Erweiterungspakets im Katalog anzeigt und in ihren Eigenschaften installiert.
+Um eine Autorisierung zur Nutzung eines Erweiterungspakets zu löschen, schließen Sie dessen `ID` in den Pfad einer DELETE-Anfrage ein. Dadurch wird verhindert, dass autorisierte Organisationen die privaten Versionen des Erweiterungspakets im Katalog anzeigen und in ihren Eigenschaften installieren können.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ID` | Die `ID` der Nutzungsautorisierung des Erweiterungspakets, die Sie löschen möchten. |
+| `ID` | Die `ID` der Autorisierung zur Verwendung des Erweiterungspakets, die Sie löschen möchten. |
 
 {style="table-layout:auto"}
 
@@ -294,15 +294,15 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück. Dies zeigt an, dass die Erweiterung gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück. Dies bedeutet, dass die Erweiterung gelöscht wurde.
 
-## Aktualisieren der Autorisierung zur Verwendung eines Erweiterungspakets {#update}
+## Aktualisieren der Autorisierung zur Verwendung von Erweiterungspaketen {#update}
 
 Um eine Autorisierung zur Verwendung eines Erweiterungspakets zu genehmigen oder abzulehnen, fügen Sie dessen `ID` in den Pfad einer PATCH-Anfrage ein.
 
 >[!NOTE]
 >
->Um die Genehmigung zur Verwendung eines Erweiterungspakets für Ihr Unternehmen zu genehmigen oder abzulehnen, müssen Sie über `manage_properties` -Rechte verfügen.
+>Um eine Autorisierung zur Verwendung von Erweiterungspaketen für Ihr Unternehmen zu genehmigen oder abzulehnen, müssen Sie über `manage_properties` verfügen.
 
 **API-Format**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ID` | Die `ID` der Nutzungsautorisierung des Erweiterungspakets, die Sie löschen möchten. |
+| `ID` | Die `ID` der Autorisierung zur Verwendung des Erweiterungspakets, die Sie löschen möchten. |
 
 {style="table-layout:auto"}
 
@@ -338,11 +338,11 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Die Attribute, die Sie überarbeiten möchten. Für die Nutzungsberechtigungen von Erweiterungspaketen können Sie deren `state` überarbeiten. |
+| `attributes` | Die Attribute, die Sie überarbeiten möchten. Für Berechtigungen zur Verwendung von Erweiterungspaketen können Sie deren `state` überarbeiten. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der überarbeiteten Autorisierung zur Verwendung des Erweiterungspakets zurück.
+Eine erfolgreiche Antwort gibt die Details der überarbeiteten Autorisierung zur Verwendung von Erweiterungspaketen zurück.
 
 ```json
 {
@@ -384,11 +384,11 @@ Eine erfolgreiche Antwort gibt die Details der überarbeiteten Autorisierung zur
 
 >[!NOTE]
 >
->Nachdem die Autorisierung genehmigt wurde, kann Ihr Unternehmen das Erweiterungspaket in Ihren Eigenschaften installieren.
+>Sobald die Autorisierung genehmigt wurde, kann Ihr Unternehmen das Erweiterungspaket in Ihren Eigenschaften installieren.
 
-## Abrufen von Daten für das Erweiterungspaket für die Autorisierung der Verwendung eines Erweiterungspakets {#retrieve-data}
+## Abrufen von Daten für das Erweiterungspaket für eine Autorisierung der Verwendung von Erweiterungspaketen {#retrieve-data}
 
-Sie können Daten für das Erweiterungspaket für die Autorisierung der Verwendung eines Erweiterungspakets abrufen, indem Sie eine GET-Anfrage stellen.
+Sie können Daten für das Erweiterungspaket für eine Autorisierung zur Nutzung eines Erweiterungspakets abrufen, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ID` | Die `ID` der Nutzungsautorisierung des Erweiterungspakets, die Sie abrufen möchten. |
+| `ID` | Die `ID` der Autorisierung für die Verwendung des Erweiterungspakets, die Sie abrufen möchten. |
 
 {style="table-layout:auto"}
 

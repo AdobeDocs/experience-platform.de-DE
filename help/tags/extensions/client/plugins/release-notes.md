@@ -17,7 +17,7 @@ ht-degree: 97%
 
 #### Funktionen
 
-* Plug-ins, die Cookies setzen, verwenden jetzt das sichere Flag
+* Plug-ins, die Cookies setzen, verwenden jetzt das Flag „Secure“
 
 ## 23. Juni 2021
 

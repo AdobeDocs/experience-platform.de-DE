@@ -89,7 +89,7 @@ Informationen zum Verwalten von Hosts in der API finden Sie im [Handbuch zum hos
 
 ## Programmkonfigurationen
 
-App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldeinformationen zur späteren Verwendung. Informationen zum Verwalten von App-Konfigurationen in der API finden Sie im [Handbuch zum app configurations-Endpunkt](./endpoints/app-configurations.md).
+App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldedaten zur späteren Verwendung. Informationen zum Verwalten von App-Konfigurationen in der API finden Sie im [Handbuch zum app configurations-Endpunkt](./endpoints/app-configurations.md).
 
 ## Audit-Ereignisse
 
@@ -117,7 +117,7 @@ Der `/search`-Endpunkt bietet eine Möglichkeit, Ressourcen zu finden, die den g
 
 ## Geheime Daten
 
-Geheime Daten enthalten Anmeldeinformationen, mit denen sich die Ereignisweiterleitung für einen sicheren Datenaustausch bei einem anderen System authentifizieren kann. Im [Handbuch zu geheimen Daten](./guides/secrets.md) finden Sie einen Überblick darüber, wie geheime Daten in der Ereignisweiterleitung funktionieren. Zudem erhalten Sie im [Endpunktleitfaden für geheime Daten](./endpoints/secrets.md) weitere Informationen darüber, wie Sie geheime Daten in der Reactor-API verwalten.
+Geheime Daten enthalten Anmeldedaten, mit denen sich die Ereignisweiterleitung für einen sicheren Datenaustausch bei einem anderen System authentifizieren kann. Im [Handbuch zu geheimen Daten](./guides/secrets.md) finden Sie einen Überblick darüber, wie geheime Daten in der Ereignisweiterleitung funktionieren. Zudem erhalten Sie im [Endpunktleitfaden für geheime Daten](./endpoints/secrets.md) weitere Informationen darüber, wie Sie geheime Daten in der Reactor-API verwalten.
 
 ## Nächste Schritte
 

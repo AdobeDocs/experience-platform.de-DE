@@ -15,32 +15,32 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adobe Experience Cloud Identity Service beschrieben. Versionshinweise zum Experience Cloud Identity-Dienst selbst finden Sie in der Dokumentation zum [Identity-Dienst](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de) .
+In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung &quot;Adobe Experience Cloud Identity Service“ behandelt. Versionshinweise zum Experience Cloud von Identity Service selbst finden Sie in der [Identity Service-Dokumentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de).
 
 ## 17. Oktober 2022
 
 ### Experience Cloud ID-Erweiterung 5.5.0
 
-* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Besucher-JS-Clients](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie in den [Versionshinweisen zu Besuchern](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) .
+* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie [ den ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)Besucherhinweisen“.
 
 ## 9. März 2022
 
 ### Experience Cloud ID-Erweiterung 5.4.0
 
-* Diese Version enthält die neueste Version von Visitor 5.4.0, die folgende Aktualisierungen aufweist:
+* Diese Version enthält die neueste Version Visitor 5.4.0 mit den folgenden Aktualisierungen:
 
-   * Möglichkeit, die Lebensdauer des `s_ecid` -Cookies mithilfe der cookieLifetime-Konfiguration zu konfigurieren
-   * Aktualisierung auf ein Firefox-Browserproblem, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
+   * Möglichkeit, die Lebensdauer des `s_ecid` Cookies mithilfe der cookieLifetime-Konfiguration zu konfigurieren
+   * Aktualisierung für ein Problem mit dem Firefox-Browser, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
 
 ## 10. Oktober 2021
 
 ### Experience Cloud ID-Erweiterung 5.3.1
 
-* Diese Version enthält die neueste Version von Visitor 5.3.0, die die folgenden neuen Aktualisierungen aufweist:
+* Diese Version enthält die neueste Version Visitor 5.3.0 mit den folgenden neuen Aktualisierungen:
 
-   * Aktualisierter Algorithmus zum Generieren einer lokalen ECID
-   * Letztes Opt-in mit den Flags `Secure` und `SameSite` für das Datenschutz-Cookie
-   * Korrektur eines Firefox-Browserproblems, das auftrat, wenn eine Seite in einen untergeordneten iFrame geladen wurde
+   * Algorithmus zum Generieren einer lokalen ECID aktualisiert
+   * Neuestes Opt-in mit `Secure`- und `SameSite` für das Datenschutz-Cookie
+   * Behebung eines Firefox-Browser-Problems, wenn eine Seite in einen untergeordneten iFrame geladen wird
 
 ## 12. Januar 2021
 

@@ -12,67 +12,67 @@ ht-degree: 0%
 
 # Ereignistypen
 
-Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden für [Erstellungsregeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=de) verwendet und sollten nicht mit dem Feld `eventType` im Objekt [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) verwechselt werden.
+Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden zum [Erstellen von Regeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=de) verwendet und sollten nicht mit dem Feld `eventType` im [`xdm`-Objekt verwechselt werden](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## Überwachungs-Hook ausgelöst {#monitoring-hook-triggered}
 
-Das Adobe Experience Platform Web SDK enthält Überwachungshooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich für die Entwicklung Ihrer eigenen Debugging-Tools und zum Erfassen von Web SDK-Protokollen.
+Adobe Experience Platform Web SDK enthält Überwachungs-Hooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich, um eigene Debugging-Tools zu entwickeln und Web SDK-Protokolle zu erfassen.
 
-Ausführliche Informationen zu den Parametern der einzelnen Überwachungs-Hook-Ereignisse finden Sie in der Dokumentation zu den [Web SDK-Überwachungs-Hooks](../../../../web-sdk/monitoring-hooks.md) .
+Ausführliche Informationen zu den Parametern, die die einzelnen Überwachungs-Hook-Ereignisse enthalten, finden Sie in der [Dokumentation zu den Überwachungs-Hooks für Web SDK](../../../../web-sdk/monitoring-hooks.md).
 
-![Tags-Benutzeroberflächenbild mit dem Überwachungs-Hook-Ereignistyp](assets/monitoring-hook-triggered.png)
+![Bild der Tags-Benutzeroberfläche mit dem Ereignistyp „Überwachungs-Hook“](assets/monitoring-hook-triggered.png)
 
-Die Web SDK-Tag-Erweiterung unterstützt die folgenden Überwachungshaken:
+Die Web SDK-Tag-Erweiterung unterstützt die folgenden Überwachungs-Hooks:
 
-* **[!UICONTROL onInstanceCreated]**: Dieses Monitoring-Hook-Ereignis wird ausgelöst, wenn Sie eine neue Web SDK-Instanz erfolgreich erstellt haben.
-* **[!UICONTROL onInstanceConficonfigured]**: Dieses Überwachungs-Hook-Ereignis wird vom Web SDK ausgelöst, wenn der Befehl [`configure`](../../../../web-sdk/commands/configure/overview.md) erfolgreich aufgelöst wurde
-* **[!UICONTROL onBeforeCommand]**: Dieses Überwachungs-Hook-Ereignis wird vom Web SDK ausgelöst, bevor ein anderer Befehl ausgeführt wird. Sie können diesen Überwachungs-Hook verwenden, um die Konfigurationsoptionen eines bestimmten Befehls abzurufen.
-* **[!UICONTROL onCommandResolved]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor das Befehlsversprechen aufgelöst wird. Sie können diese Funktion verwenden, um die Befehlsoptionen und das Ergebnis anzuzeigen.
-* **[!UICONTROL onCommandRejected]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn ein Befehls-Promise abgelehnt wird. Es enthält Informationen zur Fehlerursache.
-* **[!UICONTROL onBeforeNetworkRequest]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor eine Netzwerkanforderung ausgeführt wird.
+* **[!UICONTROL onInstanceCreated]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn Sie erfolgreich eine neue Web SDK-Instanz erstellt haben.
+* **[!UICONTROL onInstanceConfiged]**: Dieses Überwachungs-Hook-Ereignis wird von der Web-SDK ausgelöst, wenn der [`configure`](../../../../web-sdk/commands/configure/overview.md) erfolgreich aufgelöst wurde
+* **[!UICONTROL onBeforeCommand]**: Dieses Überwachungs-Hook-Ereignis wird von Web SDK ausgelöst, bevor ein anderer Befehl ausgeführt wird. Mit diesem Überwachungs-Hook können Sie die Konfigurationsoptionen eines bestimmten Befehls abrufen.
+* **[!UICONTROL onCommandResolved]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor die Befehlszusage aufgelöst wird. Sie können diese Funktion verwenden, um die Befehlsoptionen und das Ergebnis anzuzeigen.
+* **[!UICONTROL onCommandRejected]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn eine Befehlszusage abgelehnt wird, und enthält Informationen zur Fehlerursache.
+* **[!UICONTROL onBeforeNetworkRequest]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor eine Netzwerkanfrage ausgeführt wird.
 * **[!UICONTROL onNetworkResponse]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn der Browser eine Antwort erhält.
-* **[!UICONTROL onNetworkError]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn die Netzwerkanforderung fehlgeschlagen ist.
-* **[!UICONTROL onBeforeLog]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor das Web SDK alles in der Konsole protokolliert.
-* **[!UICONTROL onContentRendering]**: Dieses Monitoring-Hook-Ereignis wird von der `personalization` -Komponente ausgelöst und hilft Ihnen beim Debugging des Renderings des Personalisierungsinhalts. Dieses Ereignis kann unterschiedliche Status haben:
-   * `rendering-started`: Gibt an, dass das Web SDK im Begriff ist, Vorschläge zu rendern. Bevor das Web SDK beginnt, einen Entscheidungsbereich oder eine Ansicht zu rendern, können Sie im `data` -Objekt die Vorschläge sehen, die von der `personalization` -Komponente gerendert werden sollen, sowie den Bereichsnamen.
+* **[!UICONTROL onNetworkError]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn die Netzwerkanfrage fehlgeschlagen ist.
+* **[!UICONTROL onBeforeLog]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor Web SDK etwas in der Konsole protokolliert.
+* **[!UICONTROL onContentRendering]**: Dieses Überwachungs-Hook-Ereignis wird von der `personalization`-Komponente ausgelöst und hilft Ihnen beim Debuggen des Renderings des Personalisierungsinhalts. Dieses Ereignis kann unterschiedliche Status haben:
+   * `rendering-started`: Gibt an, dass Web SDK Vorschläge rendern wird. Bevor Web SDK mit dem Rendern eines Entscheidungsumfangs oder einer Ansicht beginnt, können Sie im `data` die Vorschläge sehen, die von der `personalization` gerendert werden sollen, sowie den Namen des Bereichs.
    * `no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.
-   * `rendering-failed`: Gibt an, dass das Web SDK einen Vorschlag nicht rendern konnte.
-   * `rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsbereich abgeschlossen wurde.
-   * `rendering-redirect`: Gibt an, dass das Web SDK einen Umleitungsantrag ausführt.
-* **[!UICONTROL onContentHiding]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn ein Vorab-Ausblendestil angewendet oder entfernt wird.
+   * `rendering-failed`: Gibt an, dass Web SDK einen Vorschlag nicht rendern konnte.
+   * `rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsumfang abgeschlossen ist.
+   * `rendering-redirect`: Gibt an, dass Web SDK einen Umleitungsvorschlag ausführt.
+* **[!UICONTROL onContentHiding]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn ein Stil zum Vorab-Ausblenden angewendet oder entfernt wird.
 
 
-## [!UICONTROL Ereignis-Abschluss senden]
+## [!UICONTROL Senden des Ereignisses abgeschlossen]
 
-In der Regel enthält Ihre Eigenschaft eine oder mehrere Regeln, die die Aktion [[!UICONTROL Ereignis senden] ](action-types.md#send-event) verwenden, um Ereignisse an das Adobe Experience Platform-Edge Network zu senden. Jedes Mal, wenn ein Ereignis an Edge Network gesendet wird, wird eine Antwort mit nützlichen Daten an den Browser zurückgegeben. Ohne den Ereignistyp [!UICONTROL Ereignisbeendigung senden] hätten Sie keinen Zugriff auf diese zurückgegebenen Daten.
+Normalerweise verfügt Ihre Eigenschaft über eine oder mehrere Regeln, die die Aktion [[!UICONTROL Ereignis senden] verwenden, ](action-types.md#send-event) Ereignisse an das Adobe Experience Platform-Edge Network zu senden. Jedes Mal, wenn ein Ereignis an Edge Network gesendet wird, wird eine Antwort mit nützlichen Daten an den Browser zurückgegeben. Ohne den Ereignistyp [!UICONTROL Ereignis senden abgeschlossen] hätten Sie keinen Zugriff auf diese zurückgegebenen Daten.
 
-Um auf die zurückgegebenen Daten zuzugreifen, erstellen Sie eine separate Regel und fügen Sie dann ein [!UICONTROL Ereignis zum Abschluss senden] -Ereignis zur Regel hinzu. Diese Regel wird jedes Mal ausgelöst, wenn eine erfolgreiche Antwort vom Server als Ergebnis einer [!UICONTROL Ereignis senden] -Aktion empfangen wird.
+Um auf die zurückgegebenen Daten zuzugreifen, erstellen Sie eine separate Regel und fügen Sie dann der Regel [!UICONTROL  Ereignis ]Ereignis „Ereignis senden abgeschlossen“ hinzu. Diese Regel wird jedes Mal ausgelöst, wenn als Ergebnis der Aktion „Ereignis senden[!UICONTROL  eine erfolgreiche Antwort vom Server ] wird.
 
-Wenn ein Ereignis vom Typ [!UICONTROL Ereignis zum Abschluss senden] eine Regel Trigger, werden vom Server zurückgegebene Daten bereitgestellt, die für die Ausführung bestimmter Aufgaben nützlich sein können. In der Regel fügen Sie eine Aktion vom Typ [!UICONTROL Benutzerdefinierter Code] (aus der Erweiterung [!UICONTROL Core] ) zu derselben Regel hinzu, die das Ereignis [!UICONTROL Abschluss des Sendeereignisses] enthält. In der Aktion [!UICONTROL Benutzerspezifischer Code] hat Ihr benutzerdefinierter Code Zugriff auf eine Variable namens `event`. Diese `event` -Variable enthält die vom Server zurückgegebenen Daten.
+Wenn ein [!UICONTROL Sendeereignis abgeschlossen] eine Regel erstellt, stellt sie vom Server zurückgegebene Daten bereit, die für die Ausführung bestimmter Trigger nützlich sein können. In der Regel fügen Sie derselben Regel[!UICONTROL  die ] „Benutzerdefinierter Code“ (aus der Erweiterung [!UICONTROL Core]) hinzu, die das Ereignis [!UICONTROL send event complete] enthält. In der [!UICONTROL Benutzerspezifischer Code]-Aktion hat Ihr benutzerdefinierter Code Zugriff auf eine Variable namens `event`. Diese `event` enthält die vom Server zurückgegebenen Daten.
 
-Ihre Regel für die Verarbeitung von Daten, die von Edge Network zurückgegeben werden, könnte in etwa so aussehen:
+Ihre Regel für die Verarbeitung der vom Edge Network zurückgegebenen Daten könnte in etwa wie folgt aussehen:
 
 ![](assets/send-event-complete.png)
 
-Im Folgenden finden Sie einige Beispiele für die Ausführung bestimmter Aufgaben mithilfe der Aktion [!UICONTROL Benutzerspezifischer Code] in dieser Regel.
+Im Folgenden finden Sie einige Beispiele für die Durchführung bestimmter Aufgaben mithilfe der Aktion [!UICONTROL Benutzerdefinierter Code] in dieser Regel.
 
-### Manuelles Rendern personalisierter Inhalte
+### Personalisierte Inhalte manuell rendern
 
-In der Aktion &quot;Benutzerspezifischer Code&quot;, die sich in der Regel für die Verarbeitung von Antwortdaten befindet, können Sie auf vom Server zurückgegebene Personalisierungsvorschläge zugreifen. Geben Sie dazu den folgenden benutzerdefinierten Code ein:
+In der Aktion für benutzerspezifischen Code, die in der Regel für die Verarbeitung von Antwortdaten enthalten ist, können Sie auf Personalisierungsvorschläge zugreifen, die vom Server zurückgegeben wurden. Dazu geben Sie den folgenden benutzerdefinierten Code ein:
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array, das Personalisierungspropositionsobjekte enthält. Die im Array enthaltenen Vorschläge werden größtenteils danach bestimmt, wie das Ereignis an den Server gesendet wurde.
+Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Die im Array enthaltenen Vorschläge werden größtenteils davon bestimmt, wie das Ereignis an den Server gesendet wurde.
 
-Angenommen, Sie haben für dieses erste Szenario das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert und keine [!UICONTROL Entscheidungsbereiche] innerhalb der Aktion [!UICONTROL Ereignis senden] angegeben, die für das Senden des Ereignisses zuständig ist.
+Angenommen, Sie haben bei diesem ersten Szenario das Kontrollkästchen [!UICONTROL Entscheidungen rendern] nicht aktiviert und keine [!UICONTROL Entscheidungsumfänge] innerhalb der [!UICONTROL Ereignis senden]-Aktion angegeben, die das Ereignis sendet.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
-In diesem Beispiel enthält das Array `propositions` nur Vorschläge für das Ereignis, die für die automatische Wiedergabe geeignet sind.
+In diesem Beispiel enthält das `propositions`-Array nur Vorschläge im Zusammenhang mit dem Ereignis, die für die automatische Wiedergabe geeignet sind.
 
-Das Array `propositions` könnte in etwa wie im folgenden Beispiel aussehen:
+Das `propositions`-Array könnte in etwa wie im folgenden Beispiel aussehen:
 
 ```json
 [
@@ -113,17 +113,17 @@ Das Array `propositions` könnte in etwa wie im folgenden Beispiel aussehen:
 ]
 ```
 
-Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, sofern dies gewünscht ist. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
+Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Entscheidungen rendern] nicht aktiviert, sodass die SDK nicht versucht hat, automatisch Inhalte zu rendern. Die SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für die automatische Wiedergabe infrage kommen, und hat Ihnen diese zum manuellen Rendern bereitgestellt, falls Sie dies tun möchten. Beachten Sie, dass die `renderAttempted` jedes Vorschlagsobjekts auf `false` gesetzt ist.
 
-Wenn Sie beim Senden des Ereignisses stattdessen das Kontrollkästchen [!UICONTROL Renderentscheidungen] angekreuzt hätten, hätte das SDK versucht, alle Vorschläge wiederzugeben, die für das automatische Rendering infrage kommen. Daher würde für jedes der Vorschlagsobjekte seine Eigenschaft `renderAttempted` auf `true` gesetzt. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
+Wenn Sie stattdessen beim Senden des Ereignisses das Kontrollkästchen [!UICONTROL Entscheidungen rendern] aktiviert hätten, hätte die SDK versucht, alle Vorschläge zu rendern, die für das automatische Rendering geeignet sind. Infolgedessen würde die `renderAttempted`-Eigenschaft jedes Vorschlagsobjekts auf `true` gesetzt. In diesem Fall müssten diese Vorschläge nicht manuell gerendert werden.
 
-Bisher haben Sie sich nur mit Personalisierungsinhalten befasst, die für die automatische Wiedergabe geeignet sind (z. B. mit Inhalten, die im Visual Experience Composer von Adobe Target erstellt wurden). Um Personalisierungsinhalte abzurufen, die nicht für die automatische Wiedergabe geeignet sind, fordern Sie den Inhalt an, indem Sie Entscheidungsbereiche mit dem Feld [!UICONTROL Entscheidungsbereiche] in der Aktion [!UICONTROL Ereignis senden] angeben. __ Ein Perimeter ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
+Bisher haben Sie sich nur mit Personalisierungsinhalten befasst, die für das automatische Rendering geeignet sind (z. B. alle Inhalte, die in Visual Experience Composer von Adobe Target erstellt wurden). Um Personalisierungsinhalte abzurufen _die nicht für_ automatische Rendering geeignet sind, fordern Sie den Inhalt an, indem Sie Entscheidungsumfänge mithilfe des Felds [!UICONTROL Entscheidungsumfänge] in der Aktion [!UICONTROL Ereignis senden] angeben. Ein Bereich ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
 
-Die Aktion [!UICONTROL Ereignis senden] würde wie folgt aussehen:
+Die [!UICONTROL Ereignis senden] Aktion würde wie folgt aussehen:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-In diesem Beispiel werden Vorschläge, die dem Umfang `salutation` oder `discount` entsprechen, zurückgegeben und in das Array `propositions` aufgenommen, wenn sie auf dem Server gefunden werden. Beachten Sie, dass Vorschläge, die für das automatische Rendering infrage kommen, weiterhin im Array `propositions` enthalten sind, unabhängig davon, wie Sie die Felder [!UICONTROL Renderentscheidungen] oder [!UICONTROL Entscheidungsbereiche] in der Aktion [!UICONTROL Ereignis senden] konfigurieren. Das Array `propositions` würde in diesem Fall in etwa wie im folgenden Beispiel aussehen:
+Wenn in diesem Beispiel Vorschläge auf dem Server gefunden werden, die mit dem `salutation`- oder `discount` übereinstimmen, werden sie zurückgegeben und in das `propositions`-Array aufgenommen. Beachten Sie, dass Vorschläge, die sich für das automatische Rendering qualifizieren, weiterhin im `propositions`-Array enthalten sind, unabhängig davon, wie Sie die Felder [!UICONTROL Render-] oder [!UICONTROL Entscheidungsumfänge] in der [!UICONTROL Ereignis senden]-Aktion konfigurieren. Das `propositions`-Array würde in diesem Fall in etwa wie im folgenden Beispiel aussehen:
 
 ```json
 [
@@ -197,14 +197,14 @@ In diesem Beispiel werden Vorschläge, die dem Umfang `salutation` oder `discoun
 ]
 ```
 
-An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem Beispiel handelt es sich bei dem Vorschlag, der dem `discount` -Bereich entspricht, um einen HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Angenommen, Sie haben ein Element auf Ihrer Seite mit der Kennung `daily-special` und möchten den Inhalt aus dem Vorschlag `discount` in das Element `daily-special` rendern. Gehen Sie folgendermaßen vor:
+An dieser Stelle können Sie den Vorschlagsinhalt nach Belieben rendern. In diesem Beispiel ist der Vorschlag, der mit dem `discount` übereinstimmt, ein HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Angenommen, Sie haben ein Element auf Ihrer Seite mit der ID `daily-special` und möchten den Inhalt aus dem `discount` in das `daily-special` rendern. Gehen Sie folgendermaßen vor:
 
-1. Extrahieren Sie Vorschläge aus dem Objekt `event` .
-1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit dem Umfang &quot;`discount`&quot;.
-1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag, suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
-1. Wenn Sie ein Element mit HTML-Inhalt finden, suchen Sie das Element `daily-special` auf der Seite und ersetzen Sie dessen HTML durch den personalisierten-Inhalt.
+1. Extrahieren von Vorschlägen aus dem `event`.
+1. Durchsuchen Sie jeden Vorschlag auf der Suche nach dem Vorschlag mit einem Umfang von `discount`.
+1. Wenn Sie einen Vorschlag finden, durchsuchen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das Inhalt HTML ist. (Es ist besser zu überprüfen, als anzunehmen.)
+1. Wenn Sie ein Element finden, das HTML-Inhalte enthält, suchen Sie das `daily-special` auf der Seite und ersetzen Sie die HTML durch den personalisierten Inhalt.
 
-Ihr benutzerdefinierter Code innerhalb der Aktion [!UICONTROL Benutzerspezifischer Code] wird möglicherweise wie folgt angezeigt:
+Ihr benutzerdefinierter Code innerhalb der Aktion [!UICONTROL Benutzerdefinierter Code] kann wie folgt aussehen:
 
 ```javascript
 var propositions = event.propositions;
@@ -245,25 +245,25 @@ if (discountHtml) {
 
 ### Zugriff auf Adobe Target-Antwort-Token
 
-Personalization-Inhalte, die von Adobe Target zurückgegeben werden, umfassen [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), d. h. Details zu Aktivität, Angebot, Erlebnis, Benutzerprofil, Geo-Informationen und mehr. Diese Details können für Drittanbieter-Tools freigegeben oder zum Debugging verwendet werden. Antwort-Token können in der Benutzeroberfläche von Adobe Target konfiguriert werden.
+Von Adobe Target zurückgegebene Personalization-Inhalte enthalten [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) mit Details zur Aktivität, zum Angebot, zum Erlebnis, zum Benutzerprofil, zu geografischen Informationen und mehr. Diese Details können für Drittanbieter-Tools freigegeben oder zum Debugging verwendet werden. Antwort-Token können in der Benutzeroberfläche von Adobe Target konfiguriert werden.
 
-In der Aktion &quot;Benutzerspezifischer Code&quot;, die sich in der Regel für die Verarbeitung von Antwortdaten befindet, können Sie auf vom Server zurückgegebene Personalisierungsvorschläge zugreifen. Geben Sie dazu den folgenden benutzerdefinierten Code ein:
+In der Aktion für benutzerspezifischen Code, die in der Regel für die Verarbeitung von Antwortdaten enthalten ist, können Sie auf Personalisierungsvorschläge zugreifen, die vom Server zurückgegeben wurden. Geben Sie dazu den folgenden benutzerdefinierten Code ein:
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array, das Personalisierungspropositionsobjekte enthält. Weitere Informationen zum Inhalt von `result.propositions` finden Sie unter [Manuelles Rendern personalisierter Inhalte](#manually-render-personalized-content) .
+Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Weitere Informationen [ Inhalt von `result.propositions` finden Sie ](#manually-render-personalized-content)Manuelles Rendern personalisierter Inhalte“.
 
-Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch vom Web SDK gerendert wurden, und sie in ein einzelnes Array übertragen. Sie können dann das einzelne Array an einen Drittanbieter senden. Schreiben Sie in diesem Fall benutzerdefinierten Code in die Aktion [!UICONTROL Benutzerspezifischer Code] in:
+Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch von Web SDK gerendert wurden, und sie in ein einziges Array pushen. Sie können dann das einzelne Array an einen Drittanbieter senden. Schreiben Sie in diesem Fall benutzerdefinierten Code innerhalb der Aktion [!UICONTROL Benutzerdefinierter Code] in:
 
-1. Extrahieren Sie Vorschläge aus dem Objekt `event` .
-1. Durchlaufen Sie jeden Vorschlag.
-1. Bestimmen Sie, ob das SDK den Vorschlag wiedergegeben hat.
-1. Falls ja, durchlaufen Sie jedes Element des Vorschlags.
-1. Rufen Sie den Aktivitätsnamen aus der Eigenschaft `meta` ab, bei der es sich um ein Objekt mit Antwort-Token handelt.
-1. Ziehen Sie den Namen der Aktivität in ein Array.
-1. Senden Sie die Aktivitätsnamen an einen Drittanbieter.
+1. Extrahieren von Vorschlägen aus dem `event`.
+1. Durchlaufen aller Vorschläge
+1. Stellen Sie fest, ob der SDK den Vorschlag gerendert hat.
+1. Wenn ja, durchlaufen Sie alle Elemente im Vorschlag.
+1. Rufen Sie den Aktivitätsnamen aus der `meta`-Eigenschaft ab, bei der es sich um ein Objekt mit Antwort-Token handelt.
+1. Pushen Sie den Aktivitätsnamen in ein Array.
+1. Senden Sie die Aktivitätsnamen an eine Drittpartei.
 
 ```javascript
 var propositions = event.propositions;
@@ -289,13 +289,13 @@ if (propositions) {
 }
 ```
 
-## [!UICONTROL Regelsatzelemente abonnieren] {#subscribe-ruleset-items}
+## [!UICONTROL Regelsatzelemente ] {#subscribe-ruleset-items}
 
-Mit dem Ereignistyp **[!UICONTROL Regelsatzelemente abonnieren]** können Sie Adobe Journey Optimizer-Inhaltskarten für eine Oberfläche abonnieren. Jedes Mal, wenn die Regelsätze ausgewertet werden, erhält der für diesen Befehl bereitgestellte Rückruf ein Ergebnisobjekt mit Vorschlägen, die die Inhaltskartendaten enthalten.
+Mit **[!UICONTROL Ereignistyp „Regelsatzelemente]**&quot; können Sie Adobe Journey Optimizer-Inhaltskarten für eine Oberfläche abonnieren. Bei jeder Auswertung der Regelsätze erhält der für diesen Befehl bereitgestellte Callback ein Ergebnisobjekt mit Vorschlägen, die die Inhaltskartendaten enthalten.
 
-![Bild der Experience Platform-Tags-Benutzeroberfläche mit dem Ereignistyp Regelsatzelemente abonnieren.](assets/subscribe-ruleset-items.png)
+![Abbildung der Benutzeroberfläche &quot;Experience Platform-Tags“ mit dem Ereignistyp „Regelsatzelemente abonnieren“.](assets/subscribe-ruleset-items.png)
 
 Dieser Ereignistyp unterstützt die folgenden konfigurierbaren Eigenschaften:
 
-* **[!UICONTROL Schemas]**: Ein Array von Schemas, für die Sie Inhaltskarten abonnieren möchten. Sie können die Schemata manuell oder durch Angabe eines Datenelements eingeben.
-* **[!UICONTROL Oberflächen]**: Ein Array von Oberflächen, für die Sie Inhaltskarten abonnieren möchten. Sie können die Oberflächen manuell oder durch Angabe eines Datenelements aufrufen.
+* **[!UICONTROL Schemas]**: Ein Array von Schemas, für die Sie Inhaltskarten abonnieren möchten. Sie können die Schemata manuell eingeben oder ein Datenelement bereitstellen.
+* **[!UICONTROL Oberflächen]**: Ein Array von Oberflächen, für die Sie Inhaltskarten abonnieren möchten. Sie können die Oberflächen manuell eingeben oder ein Datenelement bereitstellen.

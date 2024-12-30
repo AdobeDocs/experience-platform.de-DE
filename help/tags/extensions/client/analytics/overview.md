@@ -115,8 +115,8 @@ Wenn Sie das Kontrollkästchen „EU-Konformität“ aktivieren, wird das Feld [
 
 Wenn eine Seite geladen wird, überprüft das System, ob ein Cookie mit dem Namen „sat\_track“ festgelegt ist (oder das benutzerdefinierte Cookie mit dem Namen, der auf der Seite „Eigenschaft bearbeiten“ angegeben wurde). Die folgenden Informationen sind zu berücksichtigen:
 
-* Wenn das Cookie nicht vorhanden ist oder das Cookie vorhanden ist und auf etwas Anderes als &quot;true&quot;festgelegt ist, wird das Laden des Tools bei Aktivierung dieser Einstellung übersprungen. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
-* Wenn das Cookie vorhanden ist, aber auf &quot;true&quot;gesetzt ist, wird das Tool normal geladen.
+* Wenn das Cookie nicht vorhanden ist oder wenn das Cookie vorhanden und auf einen anderen Wert als „true“ gesetzt ist, wird das Laden des Tools übersprungen, wenn diese Einstellung aktiviert ist. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
+* Wenn das Cookie vorhanden, aber auf „true“ gesetzt ist, wird das Tool normal geladen.
 
 Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit benutzerdefiniertem Namen) auf „false“ festzulegen, wenn ein Besucher eine Abwahl trifft. Dazu können Sie den folgenden benutzerdefinierten Code verwenden:
 
@@ -124,7 +124,7 @@ Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Sie müssen außerdem über einen Mechanismus verfügen, mit dem dieses Cookie auf &quot;true&quot;gesetzt wird, wenn ein Besucher die Möglichkeit haben soll, sich später anzumelden:
+Sie müssen auch über einen Mechanismus verfügen, mit dem Sie dieses Cookie auf „true“ setzen können, wenn Sie möchten, dass ein Besucher später zum Opt-in in der Lage sein soll:
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -290,17 +290,17 @@ Die Analytics-Erweiterung umfasst folgende Aktionen:
 
 >[!IMPORTANT]
 >
->Sie können den Beacon nicht mit der Aktion &quot;Variablen festlegen&quot;senden. Um den Beacon zu senden, müssen Sie die Aktion &quot;Beacon senden&quot;auswählen.
+>Sie können den Beacon nicht mit der Aktion „Variablen festlegen“ senden. Um den Beacon zu senden, müssen Sie die Aktion „Beacon senden“ auswählen.
 
-Sie können zwischen zwei verschiedenen Ansichten in **Variablen festlegen** wählen:
+Sie können in „Variablen festlegen“ zwischen zwei verschiedenen **wählen**:
 
 >[!BEGINTABS]
 
->[!TAB Bereitstellen einzelner Attribute]
+>[!TAB Angabe individueller Attribute]
 
 In dieser Ansicht können Sie verschiedene Variablen angeben, z. B. `eVars`, `Props`, `Events`.
 
-![Die Adobe Analytics-Formularansichtsseite, auf der zusätzliche Attribute aufgelistet sind.](../../../images/adobe_analytics_extension_form_view.png)
+![Die Seite mit der Adobe Analytics-Formularansicht, auf der zusätzliche Attribute aufgeführt sind.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -333,20 +333,20 @@ Legen Sie ein oder mehrere [Ereignisse](https://experienceleague.adobe.com/docs/
 
 >[!TAB JSON-Ansicht]
 
-In dieser Ansicht können Sie eine JSON-Version der Aktion **Variablen festlegen** anzeigen und bearbeiten.
+In dieser Ansicht können Sie eine JSON-Version der Aktion „Variablen festlegen **anzeigen und**.
 
 ![Eine Ansicht, die die aktuelle Variablenkonfiguration im JSON-Format in der Adobe Analytics-Erweiterung darstellt.](../../../images/adobe_analytics_extension_json_view.png)
 
 #### JSON
 
-Verwenden Sie in der Aktion **Variablen festlegen** die JSON-Ansicht, um JSON-Daten hochzuladen, zu kopieren oder herunterzuladen und auf Ihrem Gerät zu speichern.
+Verwenden Sie in der **Variablen festlegen**-Aktion die JSON-Ansicht, um JSON-Daten hochzuladen, zu kopieren oder herunterzuladen und auf Ihrem Gerät zu speichern.
 
 Es gibt jedoch einige Einschränkungen:
 
-* **Benutzerdefinierter Code**: Wenn Sie benutzerdefinierten Code zum Ausfüllen von Variablen verwenden, wird dieser nicht in der JSON-Ansicht angezeigt. Stattdessen wird beim Anzeigen, Kopieren oder Herunterladen der JSON-Datei ein Warnhinweis angezeigt, der angibt, dass über benutzerdefinierten Code vorgenommene Änderungen nicht einbezogen werden.
-* **Aus URL-Attribut kopieren**: Das Kopieren eines Werts aus einer URL wird in der JSON-Ansicht nicht unterstützt. Diese Einschränkung wird in einem Warnhinweis angezeigt.
-* **Veraltete Variablen**: Veraltete oder veraltete Variablen werden in der JSON-Ansicht angezeigt und es wird ein Warnhinweis angezeigt, der darüber informiert, dass veraltete Variablen festgelegt wurden.
-* **Datenelemente**: Datenelemente werden in der JSON-Ansicht dargestellt. Wenn die JSON-Daten in eine andere Tags-Eigenschaft kopiert werden, werden die entsprechenden Datenelemente dort möglicherweise nicht definiert und bei ihrer Ausführung nicht korrekt aufgelöst.
+* **Benutzerdefinierter Code**: Wenn Sie benutzerdefinierten Code zum Ausfüllen von Variablen verwenden, wird er in der JSON-Ansicht nicht angezeigt. Stattdessen wird beim Anzeigen, Kopieren oder Herunterladen der JSON ein Warnhinweis angezeigt, der angibt, dass über benutzerdefinierten Code vorgenommene Änderungen nicht einbezogen werden.
+* **Kopieren aus URL-**: Das Kopieren eines Werts aus einer URL wird in der JSON-Ansicht nicht unterstützt. Ein Warnhinweis weist auf diese Einschränkung hin.
+* **Eingestellte Variablen**: Eingestellte oder veraltete Variablen werden in der JSON-Ansicht angezeigt und es wird ein Warnhinweis angezeigt, der darüber informiert, dass eingestellte Variablen festgelegt wurden.
+* **Datenelemente**: Datenelemente werden in der JSON-Ansicht dargestellt. Wenn die JSON-Daten in eine andere Tags-Eigenschaft kopiert werden, sind die entsprechenden Datenelemente dort möglicherweise nicht definiert und werden bei der Ausführung nicht korrekt aufgelöst.
 
 >[!ENDTABS]
 
@@ -360,13 +360,13 @@ Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
 #### Seitenname
 
-Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` -Variablen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics.
 
 >[!IMPORTANT]
 >
->In Adobe Experience Manager-Implementierungen teilt diese Variable AEM mit, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitenname-Zeichenfolge als durch Doppelpunkte getrennte Pfad zur Site formatiert werden.
+>In Adobe Experience Manager-Implementierungen gibt diese Variable AEM an, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitennamenzeichenfolge als Doppelpunkt-getrennter Pfad zur Website formatiert sein.
 >
->Beispielsweise sollte für eine Webseite unter `content/we-retail/language-masters/en/men.html` der Wert für den Seitennamen `content:we-retail:language-masters:en:men` angegeben werden.
+>Beispielsweise sollte eine Web-Seite unter `content/we-retail/language-masters/en/men.html` den Seitennamenwert `content:we-retail:language-masters:en:men` haben.
 
 #### Weitere Informationen
 

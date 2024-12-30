@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
 source-wordcount: '2332'
-ht-degree: 78%
+ht-degree: 77%
 
 ---
 
@@ -17,8 +17,8 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 **Neue Funktionen**
 
-- [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthält jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Diensten.
-- Sie können jetzt [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md) für Mediensitzungen erstellen.
+- [Datenstrom-Überschreibungen](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthalten jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Services.
+- Sie können jetzt [Datenstrom-Überschreibungen](../web-sdk/web-sdk-extension-configuration.md) für Mediensitzungen erstellen.
 
 Enthält Version 2.24.0 des Adobe Experience Platform Web SDK.
 
@@ -26,7 +26,7 @@ Enthält Version 2.24.0 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem Cookies beim lokalen Ausführen des Web SDK nicht richtig geschrieben wurden.
+- Es wurde ein Problem behoben, bei dem Cookies bei der lokalen Ausführung der Web-SDK nicht korrekt geschrieben wurden.
 
 Enthält Version 2.23.0 des Adobe Experience Platform Web SDK.
 
@@ -34,22 +34,22 @@ Enthält Version 2.23.0 des Adobe Experience Platform Web SDK.
 
 **Neue Funktionen**
 
-- Es wurde ein Überwachungshaken-Ereignis `triggered` hinzugefügt.
+- Überwachungs-Hook `triggered` Ereignis hinzugefügt.
 - [Geführte Ereignisse](action-types.md#instance), [Standardpersonalisierung anfordern](action-types.md#personalization), [Regelsatzelemente abonnieren](event-types.md#subscribe-ruleset-items) und [Regelsätze auswerten](action-types.md#evaluate-rulesets) sind jetzt allgemein verfügbar.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem sich duplizierte Variablendaten überschreiben konnten.
-- Bei Verwendung des geführten Ereignisses [Standardpersonalisierung anfordern](action-types.md#personalization) werden visuelle Personalisierungsentscheidungen jetzt automatisch aktiviert.
+- Es wurde ein Problem behoben, bei dem duplizierte Variablendatenelemente einander überschreiben konnten.
+- Bei Verwendung des [Standardpersonalisierung anfordern](action-types.md#personalization) geführten Ereignisses sind visuelle Personalisierungsentscheidungen jetzt automatisch aktiviert.
 
-Enthält Version 2.2.0 des Adobe Experience Platform Web SDK.
+Enthält Version 2.22.0 des Adobe Experience Platform Web SDK.
 
 ## Version 2.25.0 – Freitag, 18. Juli 2024
 
 **Neue Funktionen**
 
-- Die Personalisierung des automatischen Trackings in Adobe Journey Optimizer wird nun unterstützt.
-- Es wurden neue Einstellungen zur Verwaltung der verbesserten Klicksammlung eingeführt.
+- Unterstützung für das automatische Tracking der Personalisierung in Adobe Journey Optimizer wurde hinzugefügt.
+- Es wurden neue Einstellungen zur Verwaltung der verbesserten Klick-Sammlung eingeführt.
 
 Enthält Version 2.21.1 des Adobe Experience Platform Web SDK.
 
@@ -57,10 +57,10 @@ Enthält Version 2.21.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Fehlerkorrektur - bei der Definition von Konfigurationsüberschreibungen tritt kein Fehler mehr auf, wenn die Erweiterungskonfiguration geändert wird.
-- Setzen leerer Werte für Ping-Intervalle für die Medienerfassung zulassen.
-- Fehlerkorrektur - bei der Änderung einer Update-Variablenaktion tritt kein Fehler mehr auf.
-- Zurücksetzen des ID-Synchronisierungs-Containers in Konfigurationsüberschreibungen zulassen.
+- Fehlerkorrektur - Beim Ändern der Erweiterungskonfiguration tritt jetzt kein Fehler mehr auf, wenn Konfigurationsüberschreibungen definiert sind.
+- Zulassen, dass leere Werte für Ping-Intervalle der Mediensammlung festgelegt werden.
+- Fehlerkorrektur - Beim Ändern einer Aktion vom Typ Variable aktualisieren tritt jetzt kein Fehler mehr auf.
+- Zurücksetzen des ID-Synchronisierungs-Containers in Überschreibungen der Konfiguration zulassen.
 
 Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
@@ -68,23 +68,23 @@ Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Neue Funktionen**
 
-- Unterstützung für die Komponente [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in der Erweiterungskonfiguration hinzugefügt.
-- Die Aktion [`Send Media Event`](action-types.md#send-media-event) für die Funktion [!DNL Streaming Media Collection] wurde hinzugefügt.
-- Das Datenelement [`Media: Quality of Experience`](data-element-types.md#quality-experience) für die Funktion [!DNL Streaming Media Collection] wurde hinzugefügt.
+- Es wurde Unterstützung für die [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in der Erweiterungskonfiguration hinzugefügt.
+- Die [`Send Media Event`](action-types.md#send-media-event) Aktion für die [!DNL Streaming Media Collection] wurde hinzugefügt.
+- Das [`Media: Quality of Experience`](data-element-types.md#quality-experience) Datenelement für die [!DNL Streaming Media Collection] wurde hinzugefügt.
 
 Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Fehlerkorrektur - bei der Suche nach Datenelementen in der Aktion [Variable aktualisieren](action-types.md#update-variable) tritt kein Fehler mehr auf.
-- Die Ereignistypen [!UICONTROL Medien] wurden aus den Ereignistypen entfernt, die in der Aktion `sendEvent` verwendet werden sollen.
+- Fehlerkorrektur - Bei der Suche nach Datenelementen in der Aktion [Variable aktualisieren](action-types.md#update-variable) tritt jetzt kein Fehler mehr auf.
+- Ereignistypen [!UICONTROL Media] aus den Ereignistypen entfernt, die zur Verwendung in der `sendEvent`-Aktion vorgeschlagen wurden.
 
 ## Version 2.22.0 – Samstag, 3. Mai 2024
 
 **Neue Funktionen**
 
-- Erweitern Sie das variable Datenelement, um Datenobjekte zu unterstützen.
-- Die Aktion &quot;Variable aktualisieren&quot;unterstützt jetzt die Änderung der Übergabe-Through-Adobe Analytics-, Adobe Audience Manager- und Adobe Target-Daten.
+- Erweitern eines variablen Datenelements zur Unterstützung von Datenobjekten.
+- Die Aktion „Variable aktualisieren“ unterstützt jetzt das Ändern von Passthrough-Adobe Analytics-, Adobe Audience Manager- und Adobe Target-Daten.
 
 Enthält Version 2.19.2 des Adobe Experience Platform Web SDK.
 
@@ -92,8 +92,8 @@ Enthält Version 2.19.2 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, durch das beim Speichern von Konfigurationsüberschreibungen ohne alle 3 Umgebungen die Erweiterungs-Benutzeroberfläche abstürzte.
-- Es wurde ein Problem behoben, bei dem das Kontrollkästchen &quot;Vorhandenen Wert löschen&quot;beim Bearbeiten einer Update-Variablenaktion nicht aufgefüllt wurde.
+- Es wurde ein Problem behoben, bei dem das Speichern von Konfigurations-Überschreibungen ohne alle 3 Umgebungen die Erweiterungs-Benutzeroberfläche abstürzen ließ.
+- Es wurde ein Problem behoben, bei dem das Kontrollkästchen Vorhandenen Wert löschen beim Bearbeiten einer Aktion vom Typ Variable aktualisieren nicht angezeigt wurde.
 
 Enthält Version 2.19.2 des Adobe Experience Platform Web SDK.
 
@@ -103,17 +103,17 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem das in `Send event complete` -Ereignissen verfügbare Vorschlagsarray immer leer war.
+- Es wurde ein Problem behoben, bei dem das in `Send event complete` Ereignissen verfügbare Vorschläge-Array immer leer war.
 
 ## Version 2.21.2 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
-- Die Option `Request default personalization` wurde hinzugefügt, um die Ereignisaktion zu senden.
-- Zusätzliche Unterstützung für Seitenereignisse am oberen und unteren Rand in der Sendeereignisaktion.
-- Die Aktion `Apply propositions` wurde hinzugefügt.
-- Die Aktionen `Evaluate rulesets` und `Subscribe ruleset items` wurden für In-App-Nachrichten hinzugefügt.
-- `Decision context` wurde hinzugefügt, um die Ereignisaktion zu senden.
+- `Request default personalization` Option zum Senden einer Ereignisaktion hinzugefügt.
+- Unterstützung für die Ereignisse des oberen und unteren Ende der Seite in der Aktion „Ereignis senden“ wurde hinzugefügt.
+- `Apply propositions` Aktion hinzugefügt.
+- `Evaluate rulesets` Aktion und `Subscribe ruleset items` Ereignis für In-App-Nachrichten hinzugefügt.
+- `Decision context` zur Aktion „Ereignis senden“ hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -129,7 +129,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Die Validierung gespeicherter Einstellungen zur Außerkraftsetzung von Datensätzen wurde verbessert.
+- Die Validierung gespeicherter Einstellungen zum Überschreiben des Datenstroms wurde verbessert.
 
 ## Version 2.20.0 – Dienstag, 31. Juli 2023
 
@@ -139,8 +139,8 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Veraltet `edgeConfigId` zugunsten von `datastreamId` in der SDK-Konfiguration.
-- Die Benutzeroberfläche wird durch mehrere Verbesserungen des Benutzererlebnisses für die Datastream-Konfiguration außer Kraft gesetzt.
+- Veraltete `edgeConfigId` zugunsten von `datastreamId` in der SDK-Konfiguration.
+- Mehrere Verbesserungen des Benutzererlebnisses für die Datenstromkonfiguration heben die Benutzeroberfläche auf.
 
 ## Version 2.19.0 – 21. Juni 2023
 
@@ -247,7 +247,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Weitere Informationen aus dem Edge Network sind im Ereignis &quot;Event Complete senden&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
+- Weitere Informationen aus dem Edge Network sind im Ereignis „Versandereignis abgeschlossen“ verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
 
 ## Version 2.7.3 – 7. September 2021
 
@@ -294,10 +294,10 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Das Kontrollkästchen [&quot;Dokumentenentladung&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) wurde zur Benutzeroberfläche der Aktion &quot;Ereignis senden&quot;hinzugefügt.
+- Ein Kontrollkästchen [ „Dokument wird ](/help/web-sdk/commands/sendevent/documentunloading.md)&quot; wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
-- Zusätzliche Unterstützung für den Standard Adobe Consent 2.0 bei Verwendung des Befehls [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+- Bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehls wurde Unterstützung für Adobe-Einverständnis 2.0-Standard hinzugefügt.
 - In der Benutzeroberfläche für das XDM-Objekt-Datenelement wird jetzt eine passendere Fehlermeldung angezeigt, wenn das Zugriffstoken der Benutzenden ungültig ist oder nicht ordnungsgemäß bereitgestellt wurde.
 - Es wurde ein ursprungsübergreifender Fehler behoben (was sich nicht auf die Nutzung der Erweiterung auswirkt), der beim Anzeigen eines XDM-Objekt-Datenelements in der Developer Console für den Browser eingeblendet wurde.
 
@@ -340,8 +340,8 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 - Änderungen im Zusammenhang mit `Get Decisions`:
    - Der Befehl `getDecisions` wurde entfernt.
    - Dem `sendEvent`-Befehl wurde die Option `scopes` hinzugefügt. Entscheidungen werden in der aufgelösten Zusage `sendEvent` zurückgegeben.
-   - Es wurde ein integrierter `__view__`-Bereich hinzugefügt, der dafür sorgt, dass ganzseitige Angebote zurückgegeben werden. (z. B. VEC-Angebote in Target).
-Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn `renderDecisions` mit „false“ festgelegt ist.
+   - Es wurde ein integrierter `__view__`-Bereich hinzugefügt, der dafür sorgt, dass ganzseitige Angebote zurückgegeben werden. (VEC-Angebote in Target zum Beispiel.)
+Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn `renderDecisions` auf „false“ gesetzt ist.
    - Es wurde ein `Decisions Received`-Ereignis hinzugefügt, das ausgelöst wird, wenn Entscheidungen verfügbar werden.
 - Mehrere Personalisierungsbenachrichtigungen wurden unter einem einzigen Server-Aufruf kombiniert.
 - Es wurde ein Problem mit der Ereignis-Merge-ID behoben, das jedes Mal zurückgesetzt wurde, wenn das Datenelement referenziert wurde.
