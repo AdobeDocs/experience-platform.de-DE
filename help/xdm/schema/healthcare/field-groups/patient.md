@@ -1,6 +1,6 @@
 ---
-title: Patientenschema-Feldergruppe
-description: Erfahren Sie mehr über die Feldgruppe Patientenschema .
+title: Feldgruppe des Patientenschemas
+description: Erfahren Sie mehr über die Feldergruppe des Patientenschemas.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,30 +12,30 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Patienten] Schemafeldgruppe
+# [!UICONTROL Patient] Schemafeldgruppe
 
-[!UICONTROL Patient] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../../classes/individual-profile.md). Es bietet ein einzelnes Objektfeld `healthcarePatient` , das die demografischen Daten und andere Verwaltungsdetails über eine Person oder ein Tier erfasst, die bzw. das Pflege oder andere gesundheitsbezogene Dienstleistungen erhält.
+[!UICONTROL Patient] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../../classes/individual-profile.md). Es bietet ein einzelnes Objektfeldmodell, `healthcarePatient` demografische und andere administrative Details über eine Person oder ein Tier erfasst, die bzw. das Pflege- oder andere gesundheitsbezogene Dienstleistungen erhält.
 
-![Feldgruppenstruktur](../../../images/healthcare/field-groups/patient/patient.png)
+![Feldergruppenstruktur](../../../images/healthcare/field-groups/patient/patient.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | Array von [[!UICONTROL Adresse]](../data-types/address.md) | Die Adressinformationen für den Patienten. |
-| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die zur Kommunikation mit dem Patienten über seine Gesundheit verwendet werden kann. Weitere Informationen finden Sie im Abschnitt [unter ](#communication) . |
-| [!UICONTROL Patientenkontakte] | `contact` | Array von Objekten | eine Kontaktperson des Patienten, z. B. einen Vormund, Partner oder Freund. Weitere Informationen finden Sie im Abschnitt [unter ](#contact) . |
-| [!UICONTROL General Practitioner] | `generalPractioner` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Der primäre Pflegedienst des Patienten. |
-| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Bezeichner]](../data-types/identifier.md) | Eine Kennung für den Patienten. |
-| [!UICONTROL Details zum Patientenlink] | `link` | Array von Objekten | Ein Link zur Ressource eines Patienten oder einer verwandten Person, der bzw. die dieselbe Person betrifft. Weitere Informationen finden Sie im Abschnitt [unter ](#link) . |
-| [!UICONTROL Verwalten der Organisation] | `managingOrganization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die freiheitsentziehende Organisation der Patientenakte. |
+| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die verwendet werden kann, um mit dem Patienten über dessen Gesundheit zu kommunizieren. Weitere Informationen finden [ im ](#communication) Abschnitt unten. |
+| [!UICONTROL Patientenkontakte] | `contact` | Array von Objekten | Die Kontaktperson eines Patienten, z. B. ein Vormund, Partner oder Freund. Weitere Informationen finden [ im ](#contact) Abschnitt unten. |
+| [!UICONTROL Allgemeinmediziner] | `generalPractioner` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Der Primärversorger des Patienten. |
+| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Kennung für den Patienten. |
+| [!UICONTROL Details zur Patientenverbindung] | `link` | Array von Objekten | Eine Relation zu einer Ressource eines Patienten oder einer mit ihm verbundenen Person, die dieselbe Person betrifft. Weitere Informationen finden [ im ](#link) Abschnitt unten. |
+| [!UICONTROL Organisation verwalten] | `managingOrganization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Aufbewahrungsorganisation der Patientenakte. |
 | [!UICONTROL Familienstand] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Familienstand des Patienten. |
-| [!UICONTROL Name] | `name` | Array von [[!UICONTROL Human name]](../data-types/human-name.md) | Der mit dem Patienten verbundene Name. |
-| [!UICONTROL Kontaktdetails] | `telecom` | Array von [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Angabe des Kontakts, z. B. Telefonnummer oder E-Mail-Adresse, über die der Patient kontaktiert werden kann. |
-| [!UICONTROL ist aktiv] | `active` | Boolesch | Gibt an, ob der Datensatz des Patienten aktiv verwendet wird. |
+| [!UICONTROL Name] | `name` | Array von [[!UICONTROL Menschlicher Name]](../data-types/human-name.md) | Der Name, der dem Patienten zugeordnet ist. |
+| [!UICONTROL Kontaktdaten] | `telecom` | Array von [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Ein Kontaktdetail, wie eine Telefonnummer oder E-Mail-Adresse, über das der Patient kontaktiert werden kann. |
+| [!UICONTROL Ist aktiv] | `active` | Boolesch | Zeigt an, ob die Patientenakte aktiv verwendet wird. |
 | [!UICONTROL Geburtsdatum] | `birthDate` | Datum | Das Geburtsdatum des Patienten. |
-| [!UICONTROL  veralteter Indikator] | `deceasedBoolean` | Boolesch | Gibt an, ob der Patient verstorben ist oder nicht. |
-| [!UICONTROL Verfallsdatum/Uhrzeit] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Patienten. |
-| [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
-| [!UICONTROL ist Teil einer mehrfachen Geburt] | `multipleBirthBoolean` | Boolesch | Gibt an, ob der Patient Teil einer Mehrfachgeburt ist. |
+| [!UICONTROL Indikator für Verstorben] | `deceasedBoolean` | Boolesch | Zeigt an, ob der Patient verstorben ist oder nicht. |
+| [!UICONTROL Datum/Uhrzeit des ] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Patienten. |
+| [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
+| [!UICONTROL Ist Teil einer Mehrfachgeburt] | `multipleBirthBoolean` | Boolesch | Zeigt an, ob der Patient Teil einer Mehrfachgeburt ist. |
 | [!UICONTROL Geburtsnummer] | `multipleBirthInteger` | Ganzzahl | Die Geburtsnummer in der Sequenz. |
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
@@ -45,48 +45,48 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `communication` {#communication}
 
-`communication` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`communication` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
 ![Kommunikationsstruktur](../../../images/healthcare/field-groups/patient/communication.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Sprache] | `language` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Sprache, die zur Kommunikation mit der Person über ihre Gesundheit verwendet werden kann. |
-| [!UICONTROL Ist bevorzugte Sprache] | `preferred` | Boolesch | Gibt an, ob die Sprache ihre bevorzugte Sprache ist oder nicht. |
+| [!UICONTROL Sprache] | `language` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Sprache, die verwendet werden kann, um mit der Person über ihre Gesundheit zu kommunizieren. |
+| [!UICONTROL Ist bevorzugte Sprache] | `preferred` | Boolesch | Gibt an, ob die Sprache die bevorzugte Sprache ist. |
 
 ## `contact` {#contact}
 
-`contact` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`contact` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
 ![Kontaktstruktur](../../../images/healthcare/field-groups/patient/contact.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Kontaktadresse] | `address` | [[!UICONTROL Adresse]](../data-types/address.md) | Die Adresse der Kontaktperson. |
-| [!UICONTROL Kontaktname] | `name` | [[!UICONTROL Menschenname]](../data-types/human-name.md) | Der Name der Kontaktperson. |
-| [!UICONTROL Kontaktorganisation] | `organization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die mit der Kontaktperson verbundene Organisation. |
-| [!UICONTROL Kontaktzeitraum] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem der Kontakt verwendet wurde oder wird. |
-| [!UICONTROL Beziehung&#39;] | `relationship` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beziehung zwischen Patient und Kontaktperson. |
-| [!UICONTROL Kontaktdetails] | `telecom` | Array von Objekten | Die Kontaktdaten für die Kontaktperson. Weitere Informationen finden Sie im Abschnitt [unter ](#telecom) . |
-| [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
+| [!UICONTROL Kontaktname] | `name` | [[!UICONTROL Menschlicher Name]](../data-types/human-name.md) | Der Name der Kontaktperson. |
+| [!UICONTROL Kontaktorganisation] | `organization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die mit der Kontaktperson verknüpft ist. |
+| [!UICONTROL Kontaktzeit] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem der Kontakt verwendet wurde oder wird. |
+| [!UICONTROL Beziehung“] | `relationship` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Beziehung zwischen dem Patienten und der Kontaktperson. |
+| [!UICONTROL Kontaktdaten] | `telecom` | Array von Objekten | Die Kontaktdaten für die Kontaktperson. Weitere Informationen finden [ im ](#telecom) Abschnitt unten. |
+| [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 ### `telecom` {#telecom}
 
-`telecom` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`telecom` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![Telekommunikationsstruktur](../../../images/healthcare/field-groups/patient/telecom.png)
+![Telekom-Struktur](../../../images/healthcare/field-groups/patient/telecom.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Kontaktpunkt] | `contactPoint` | [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Die Kontaktdaten für die Person. |
+| [!UICONTROL Kontaktstelle] | `contactPoint` | [[!UICONTROL Kontaktstelle]](../data-types/contact-point.md) | Die Kontaktdaten für die Person. |
 
 ## `link` {#link}
 
-`link` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`link` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![Linkstruktur](../../../images/healthcare/field-groups/patient/link.png)
+![Relationsstruktur](../../../images/healthcare/field-groups/patient/link.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Sonstige] | `other` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Link zur Ressource eines Patienten oder einer verwandten Person, der bzw. die dieselbe Person betrifft. |
-| [!UICONTROL Typ] | `type` | String | Die Art des Zusammenhangs zwischen den beiden Patientenressourcen. |
+| [!UICONTROL Sonstige] | `other` | [[!UICONTROL Referenz]](../data-types/reference.md) | Eine Relation zu einer Ressource eines Patienten oder einer mit ihm verbundenen Person, die dieselbe Person betrifft. |
+| [!UICONTROL Typ] | `type` | String | Die Art der Verbindung zwischen den beiden Patientenressourcen. |

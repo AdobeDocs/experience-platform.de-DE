@@ -1,6 +1,6 @@
 ---
-title: Sensible und persönliche Informationen in XDM
-description: Erfahren Sie mehr über die wichtigsten Aspekte bezüglich sensibler personenbezogener Daten (SPI) und persönlich identifizierbarer Informationen (PII) im Experience-Datenmodell (XDM).
+title: Vertrauliche und persönliche Informationen in XDM
+description: Erfahren Sie mehr über wichtige Aspekte zu sensiblen personenbezogenen Daten (SPI) und persönlich identifizierbaren Informationen (PII) im Experience-Datenmodell (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
 source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
@@ -11,31 +11,31 @@ ht-degree: 2%
 
 # Sensible und persönliche Informationen in XDM
 
-Das Experience-Datenmodell (XDM) bietet standardmäßige Datenstrukturen zur Verwendung in Adobe Experience Platform, mit denen Sie Daten zu Kundenerlebnissen erfassen können. Diese Daten können vertrauliche persönliche Daten (SPI) und persönlich identifizierbare Informationen (PII) wie die E-Mail-Adresse, den Namen, die Konto-ID und andere Datenfelder eines Kunden umfassen.
+Das Experience-Datenmodell (XDM) stellt Standarddatenstrukturen für die Verwendung in Adobe Experience Platform bereit, mit denen Sie Daten zu Kundenerlebnissen erfassen können. Zu diesen Daten können sensible personenbezogene Daten (SPI) und persönlich identifizierbare Informationen (PII) wie die E-Mail-Adresse, der Name, die Konto-ID und andere Datenfelder eines Kunden gehören.
 
-Organisationsregeln und rechtliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) erzwingen Einschränkungen hinsichtlich der Art und Weise, wie SPI und personenbezogene Daten erfasst, gespeichert, verwendet und freigegeben werden können. Daher ist es wichtig zu berücksichtigen, welche Felder in Ihrem Datenmodell sensible oder personenbezogene Daten darstellen, und sicherzustellen, dass Ihre Vorgänge unter die organisatorischen und rechtlichen Richtlinien fallen.
+Organisatorische Regeln und rechtliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) erzwingen Einschränkungen hinsichtlich der Art und Weise, wie SPI und PII erfasst, gespeichert, verwendet und freigegeben werden können. Daher ist es wichtig, zu überlegen, welche Felder sensible oder persönliche Informationen in Ihrem Datenmodell darstellen, und sicherzustellen, dass Ihre Vorgänge den organisatorischen und rechtlichen Richtlinien entsprechen.
 
-In diesem Dokument werden wichtige Aspekte bezüglich sensibler und personenbezogener Daten in XDM behandelt.
+In diesem Dokument werden wichtige Überlegungen zu vertraulichen und personenbezogenen Daten in XDM behandelt.
 
-## Bestimmen, welche Felder sensible oder personenbezogene Daten enthalten
+## Festlegen, welche Felder sensible oder personenbezogene Daten enthalten
 
-Was SPI und PII ausmacht, ist sehr kontextspezifisch. Daher liegt es an Ihnen, Ihr Datenmodell, Ihre Geschäftsabläufe und die anwendbaren Vorschriften zu verstehen, um zu bestimmen, welche Schemafelder sensible oder personenbezogene Daten darstellen.
+Was SPI und PII ausmacht, ist sehr kontextspezifisch. Daher müssen Sie Ihr Datenmodell, Ihre Geschäftsvorgänge und die geltenden Vorschriften verstehen, um zu bestimmen, welche Schemafelder sensible oder persönliche Daten darstellen.
 
-Beispielsweise hat die rechtliche Zuständigkeit Ihrer Kunden direkte Auswirkungen darauf, welche Informationen als vertraulich betrachtet werden. Die DSGVO enthält solide Definitionen für SPI und PII, doch können Kunden außerhalb des Europäischen Wirtschaftsraums (EWR) unterschiedlichen Definitionen und Beschränkungen unterliegen.
+Beispielsweise hat die rechtliche Zuständigkeit Ihrer Kunden eine direkte Auswirkung darauf, welche Informationen als sensibel betrachtet werden. Die DSGVO enthält robuste Definitionen für SPI und PII, aber für Kunden außerhalb des Europäischen Wirtschaftsraums (EWR) können andere Definitionen und Einschränkungen gelten.
 
 ## Umgang mit sensiblen und personenbezogenen Daten
 
-Ähnlich wie die Definitionen für vertrauliche und personenbezogene Daten selbst sind auch die Einschränkungen für die Verarbeitung dieser Daten kontextspezifisch.
+Ähnlich wie bei den Definitionen für vertrauliche und personenbezogene Daten selbst sind auch die Einschränkungen für den Umgang mit diesen Daten kontextspezifisch.
 
-Die Einwilligung des Kunden ist häufig ein entscheidender Faktor dafür, welche Daten erfasst und verarbeitet werden können und für welche Zwecke. Abhängig von der gesetzlichen Gerichtsbarkeit, der Ihre Kunden unterliegen, kann eine ausdrückliche Einwilligung erforderlich sein, damit ihre sensiblen und personenbezogenen Daten erfasst werden können. Selbst in Fällen, in denen keine ausdrückliche Einwilligung erforderlich ist, gelten je nach dem, was der Datenschutzhinweis dem Kunden sagt, weiterhin Einschränkungen hinsichtlich der Datenverarbeitung.
+Die Einwilligung des Kunden ist oft ein entscheidender Faktor dafür, welche Daten zu welchen Zwecken erfasst und verarbeitet werden können. Abhängig von der Rechtszuständigkeit, der Ihre Kunden unterliegen, kann eine ausdrückliche Einwilligung erforderlich sein, damit ihre sensiblen und personenbezogenen Daten erfasst werden. Selbst in Fällen, in denen keine ausdrückliche Einwilligung erforderlich ist, gelten Datenverarbeitungsbeschränkungen weiterhin, je nachdem, was die Datenschutzerklärung dem Kunden sagt.
 
-Wenden Sie sich an Ihr Rechtsteam, um zu bestimmen, wie vertrauliche und personenbezogene Daten für Ihre geschäftlichen Anwendungsfälle verarbeitet werden sollen.
+Wenden Sie sich an Ihre Rechtsabteilung, um zu bestimmen, wie sensible und personenbezogene Daten für Ihre geschäftlichen Anwendungsfälle verarbeitet werden sollten.
 
-## Beschränkung der Verwendung sensibler und personenbezogener Daten
+## Einschränkung der Verwendung sensibler und personenbezogener Daten
 
-XDM bietet eine Vielzahl von Standardfeldgruppen und Datentypen, um relevante, häufig verwendete Datenstrukturen zu beschreiben, mit denen Kundenerlebnisse optimiert werden können. Wenn eine empfohlene Standardressource eingeschränkte Felder enthält, die Sie nicht in Ihre Schemas aufnehmen möchten, müssen Sie diese Ressource nicht verwenden.
+XDM bietet eine Vielzahl von Standardfeldgruppen und -datentypen, um relevante, häufig verwendete Datenstrukturen zu beschreiben, die Kundenerlebnisse verbessern. Wenn eine empfohlene Standardressource eingeschränkte Felder enthält, die Sie nicht in Ihre Schemata aufnehmen möchten, müssen Sie diese Ressource jedoch nicht verwenden.
 
-Mit Platform können Sie eigene benutzerdefinierte Feldergruppen und Datentypen definieren, sodass Sie die Struktur Ihrer Daten vollständig steuern können, wenn verfügbare Standardressourcen Ihren Anforderungen nicht entsprechen. Weitere Informationen zum Definieren dieser benutzerdefinierten Ressourcen finden Sie in der folgenden Dokumentation:
+Platform ermöglicht es Ihnen, eigene benutzerdefinierte Feldergruppen und Datentypen zu definieren, sodass Sie umfassend steuern können, wie Ihre Daten strukturiert sind, wenn verfügbare Standardressourcen Ihre Anforderungen nicht erfüllen. Weitere Informationen dazu, wie Sie diese benutzerdefinierten Ressourcen definieren, finden Sie in der folgenden Dokumentation:
 
 * [Erstellen einer benutzerdefinierten Feldgruppe](../ui/resources/field-groups.md#create)
 * [Erstellen eines benutzerdefinierten Datentyps](../ui/resources/data-types.md#create)
@@ -48,10 +48,10 @@ Mit Platform können Sie eigene benutzerdefinierte Feldergruppen und Datentypen 
 
 >[!IMPORTANT]
 >
->SPI und PII sollten nur in den Klassen [XDM Individual Profile](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) gespeichert werden. Als Best Practice für das Löschen von Daten sowie Datenschutz und Governance sollten Sie SPI und PII nicht in anderen benutzerdefinierten oder standardmäßigen XDM-Klassen speichern.
+>SPI und PII sollten nur in den Klassen [XDM Individual Profile](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) gespeichert werden. Speichern Sie SPI und PII nicht in anderen benutzerdefinierten oder standardmäßigen XDM-Klassen, da dies die Best Practice für die Datenlöschung sowie für Datenschutz- und Governance-Zwecke ist.
 
 ## Nächste Schritte
 
-In diesem Dokument wurden wichtige Aspekte bezüglich sensibler und personenbezogener Daten in XDM behandelt. Weitere Informationen dazu, wie Sie Ihre Schemas modellieren, um Ihre geschäftlichen Anwendungsfälle am besten zu erfüllen, finden Sie im Handbuch zu [Best Practices für die Datenmodellierung](./best-practices.md).
+In diesem Dokument wurden wichtige Überlegungen zu vertraulichen und personenbezogenen Daten in XDM behandelt. Weitere Informationen zur Modellierung Ihrer Schemata für Ihre geschäftlichen Anwendungsfälle finden Sie im Handbuch zu [Best Practices für die Datenmodellierung](./best-practices.md).
 
-Weitere Informationen zu Data Governance- und Datenschutzfunktionen in Experience Platform finden Sie in der Übersicht zu [Governance, Datenschutz und Sicherheit](../../landing/governance-privacy-security/overview.md).
+Weitere Informationen zu den Data Governance- und Datenschutzfunktionen in Experience Platform finden Sie in der Übersicht zu [Governance, Datenschutz und Sicherheit](../../landing/governance-privacy-security/overview.md).

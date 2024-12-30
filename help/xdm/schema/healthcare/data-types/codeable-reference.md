@@ -1,6 +1,6 @@
 ---
-title: Codeable-Reference-Datentyp
-description: Erfahren Sie mehr über den Datentyp "Codeable Reference Experience Data Model (XDM)".
+title: Codierbarer Referenzdatentyp
+description: Erfahren Sie mehr über den Datentyp Codeable Reference Experience Data Model (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,15 +12,15 @@ ht-degree: 7%
 
 ---
 
-# Datentyp [!UICONTROL Codeable Reference]
+# [!UICONTROL Codeable Reference] Datentyp
 
-[!UICONTROL Codeable Reference] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Verweis auf eine Ressource oder ein Konzept beschreibt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Codeable Reference] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Verweis auf eine Ressource oder ein Konzept beschreibt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Codeable Reference data type structure](../../../images/healthcare/data-types/codeable-reference.png)
+![Codeable Reference-Datentypstruktur](../../../images/healthcare/data-types/codeable-reference.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Concept] | `concept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Ein Verweis auf ein Konzept (nach Klasse). |
+| [!UICONTROL Konzept] | `concept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Ein Verweis auf ein Konzept (nach Klasse). |
 | [!UICONTROL Referenz] | `reference` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Verweis auf eine Ressource. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

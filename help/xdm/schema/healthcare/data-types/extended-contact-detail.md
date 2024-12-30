@@ -1,6 +1,6 @@
 ---
-title: Erweiterter Kontaktdetaildatentyp
-description: Erfahren Sie mehr über den Datentyp "Extended Contact Detail Experience Data Model (XDM)".
+title: Erweiterter Datentyp „Kontaktdetails“
+description: Erfahren Sie mehr über den Datentyp „Erweitertes Kontaktdetails-Experience-Datenmodell (XDM)“.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,20 +12,20 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Erweiterter Datentyp &quot;Kontaktdetails&quot;]
+# [!UICONTROL Erweiterte Kontaktdetails] Datentyp
 
-[!UICONTROL Erweiterte Kontaktdetails] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der die Informationen eines erweiterten Kontakts beschreibt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Erweiterte Kontaktdetails] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Informationen eines erweiterten Kontakts beschreibt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![ Erweiterte Struktur der Kontaktinformationen-Datentypen](../../../images/healthcare/data-types/extended-contact-detail.png)
+![Datentypstruktur für erweiterte Kontaktdetails](../../../images/healthcare/data-types/extended-contact-detail.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | [[!UICONTROL Adresse]](../data-types/address.md) | Die Adresse des Kontakts. |
-| [!UICONTROL Name] | `name` | Array von [[!UICONTROL Human Name]](../data-types/human-name.md) | Name(n) der Kontakt(en). |
-| [!UICONTROL Organisation] | `organization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die die Kontaktdaten verarbeitet/überwacht. |
+| [!UICONTROL Name] | `name` | Array von [[!UICONTROL Human Name]](../data-types/human-name.md) | Die Namen der Kontaktperson(en). |
+| [!UICONTROL Organisation] | `organization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die die Kontaktdetails verarbeitet/überwacht. |
 | [!UICONTROL Zeitraum] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem der Kontakt für die Nutzung gültig ist oder war. |
-| [!UICONTROL Zweck] | `purpose` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Art des Kontakts. |
-| [!UICONTROL Telecom] | `telecom` | Array von [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Die Kontaktdaten. |
+| [!UICONTROL Zweck] | `purpose` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Typ des Kontakts. |
+| [!UICONTROL Telekom] | `telecom` | Array von [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Die Kontaktdetails. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

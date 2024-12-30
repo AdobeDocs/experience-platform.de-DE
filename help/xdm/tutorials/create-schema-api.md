@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schema;Schema;Schema;Schemas;erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Schema;Schema;Schemas;Schemas;erstellen
 solution: Experience Platform
-title: Erstellen eines Schemas mit der Schema Registry-API
+title: Erstellen eines Schemas mithilfe der Schema Registry-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse mithilfe der Schema Registry-API erläutert.
+description: In diesem Tutorial wird die Schema Registry-API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 36%
 
 ---
 
-# Erstellen eines Schemas mit der [!DNL Schema Registry]-API
+# Erstellen eines Schemas mithilfe der [!DNL Schema Registry]-API
 
-Der [!DNL Schema Registry] wird verwendet, um auf den [!DNL Schema Library] in Adobe Experience Platform zuzugreifen. Der [!DNL Schema Library] enthält Ressourcen, die Ihnen von Adobe, [!DNL Experience Platform] Partnern und Anbietern zur Verfügung gestellt werden, deren Anwendungen Sie verwenden. Die Registry bietet eine Benutzeroberfläche und RESTful-API, über die auf alle in der Bibliothek verfügbaren Ressourcen zugegriffen werden kann.
+Die [!DNL Schema Registry] wird verwendet, um in Adobe Experience Platform auf die [!DNL Schema Library] zuzugreifen. Die [!DNL Schema Library] enthält Ressourcen, die Ihnen von Adobe, [!DNL Experience Platform] und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden. Die Registry bietet eine Benutzeroberfläche und RESTful-API, über die auf alle in der Bibliothek verfügbaren Ressourcen zugegriffen werden kann.
 
-In diesem Tutorial wird die [!DNL Schema Registry] -API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen. Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform] lieber verwenden möchten, enthält das [Tutorial zum Schema-Editor](create-schema-ui.md) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
+In diesem Tutorial wird die [!DNL Schema Registry]-API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen. Wenn Sie die Benutzeroberfläche lieber in [!DNL Experience Platform] verwenden möchten, finden Sie im [Tutorial zum Schema](create-schema-ui.md)Editor) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
 
 >[!NOTE]
 >
@@ -31,19 +31,19 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die [!DNL Schema Registry] -API erfolgreich aufrufen zu können. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den `Accept`-Header und seine möglichen Werte).
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Schema Registry]-API benötigen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den `Accept`-Header und seine möglichen Werte).
 
 In diesem Tutorial werden die Schritte zur Erstellung eines „Loyalty Members“-Schemas, also eines Schemas zur Beschreibung von Daten zu Mitgliedern eines Treueprogramms im Einzelhandel, erläutert. Falls gewünscht, können Sie zum Einstieg einen Blick auf das [vollständige „Loyalty Members“-Schema](#complete-schema) im Anhang werfen.
 
 ## Erstellen eines Schemas mit einer Standardklasse
 
-Ein Schema kann als Entwurf für die Daten betrachtet werden, die Sie in [!DNL Experience Platform] aufnehmen möchten. Jedes Schema besteht aus einer Klasse und keiner oder mehr Schemafeldgruppen. Das heißt, Sie müssen keine Feldergruppe hinzufügen, um ein Schema zu definieren, aber in den meisten Fällen wird mindestens eine Feldergruppe verwendet.
+Ein Schema kann als Blueprint für die Daten betrachtet werden, die Sie in [!DNL Experience Platform] aufnehmen möchten. Jedes Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Mit anderen Worten: Sie müssen keine Feldergruppe hinzufügen, um ein Schema zu definieren. In den meisten Fällen wird jedoch mindestens eine Feldergruppe verwendet.
 
 ### Zuweisen einer Klasse
 
 Der erste Schritt für die Erstellung eines Schemas besteht in der Auswahl einer Klasse. Die Klasse definiert zentrale Aspekte bezüglich des Verhaltens der Daten (Datensatzdaten gegenüber Zeitreihendaten) sowie die zur Beschreibung der aufzunehmenden Daten mindestens erforderlichen Felder.
 
-Das Schema, das Sie in diesem Tutorial erstellen, verwendet die [!DNL XDM Individual Profile] -Klasse. [!DNL XDM Individual Profile] ist eine Standardklasse, die von Adobe zur Definition des Datensatzverhaltens bereitgestellt wird. Weitere Informationen zum Verhalten finden Sie unter [Grundlagen zum Aufbau von Schemas](../schema/composition.md).
+Das Schema, das Sie in diesem Tutorial erstellen, verwendet die [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] ist eine von Adobe bereitgestellte Standardklasse zum Definieren des Datensatzverhaltens. Weitere Informationen zum Verhalten finden Sie unter [Grundlagen zum Aufbau von Schemas](../schema/composition.md).
 
 Um eine Klasse zuzuweisen, wird ein API-Aufruf ausgeführt, über den ein neues Schema im Mandanten-Container (mittels POST-Anfrage) erstellt wird. Dieser Aufruf enthält die vom Schema zu implementierende Klasse. Ein Schema kann immer nur eine Klasse implementieren.
 
@@ -55,7 +55,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die Anfrage muss ein `allOf`-Attribut enthalten, das auf die `$id` einer Klasse verweist. Dieses Attribut definiert die „Basisklasse“, die das Schema implementiert. In diesem Beispiel ist die Basisklasse die Klasse [!DNL XDM Individual Profile] . Die `$id` der [!DNL XDM Individual Profile]-Klasse wird als Wert des Felds `$ref` im Array `allOf` unten verwendet.
+Die Anfrage muss ein `allOf`-Attribut enthalten, das auf die `$id` einer Klasse verweist. Dieses Attribut definiert die „Basisklasse“, die das Schema implementiert. In diesem Beispiel ist die Basisklasse die [!DNL XDM Individual Profile]. Der `$id` der [!DNL XDM Individual Profile]-Klasse wird als Wert des `$ref` Felds im `allOf` unten verwendet.
 
 ```SHELL
 curl -X POST \
@@ -79,7 +79,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Schema einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden durch die [!DNL Schema Registry] zugewiesen.
+Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Schema einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden vom [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -139,7 +139,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie nachschlagen möchten. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie suchen möchten. |
 
 **Anfrage**
 
@@ -155,7 +155,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortformat hängt von der mit der Anfrage gesendeten `Accept` -Kopfzeile ab. Experimentieren Sie mit verschiedenen `Accept`-Headern, um zu sehen, welcher Header Ihren Anforderungen am besten entspricht.
+Das Antwortformat hängt von der `Accept` ab, die mit der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um zu sehen, welche Ihren Anforderungen am besten entspricht.
 
 ```JSON
 {
@@ -203,11 +203,11 @@ Das Antwortformat hängt von der mit der Anfrage gesendeten `Accept` -Kopfzeile 
 
 ### Hinzufügen einer Feldergruppe {#add-a-field-group}
 
-Nachdem das &quot;Loyalty Members&quot;-Schema erstellt und bestätigt wurde, können Feldergruppen hinzugefügt werden.
+Nachdem das Schema Mitglieder des Treueprogramms erstellt und bestätigt wurde, können Feldergruppen hinzugefügt werden.
 
-Je nach ausgewählter Schemaklasse stehen verschiedene Standardfeldgruppen zur Verfügung. Jede Feldergruppe enthält ein `intendedToExtend` -Feld, das die Klassen definiert, mit denen diese Feldergruppe kompatibel ist.
+Je nach ausgewählter Schemaklasse stehen verschiedene Standardfeldgruppen zur Verfügung. Jede Feldergruppe enthält ein `intendedToExtend` Feld, das die Klassen definiert, mit denen diese Feldergruppe kompatibel ist.
 
-Feldergruppen definieren Konzepte wie &quot;Name&quot;oder &quot;Adresse&quot;, die in jedem Schema wiederverwendet werden können, in dem dieselben Informationen erfasst werden sollen.
+Feldergruppen definieren Konzepte wie „Name“ oder „Adresse“, die in jedem Schema wiederverwendet werden können, das dieselben Informationen erfassen muss.
 
 **API-Format**
 
@@ -217,13 +217,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, dem Sie die Feldergruppe hinzufügen. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, dem Sie die Feldergruppe hinzufügen. |
 
 **Anfrage**
 
-Mit dieser Anfrage wird das &quot;Loyalty Members&quot;-Schema dahingehend aktualisiert, dass es die Felder der Feldergruppe [[!UICONTROL Demografische Details]](../field-groups/profile/demographic-details.md) (`profile-person-details`) enthält.
+Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty-Mitglieder), um die Felder in der Feldergruppe [[!UICONTROL Demografische Details] einzuschließen](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
-Durch Hinzufügen der Feldergruppe `profile-person-details` erfasst das Schema &quot;Loyalty Members&quot;jetzt demografische Informationen für Mitglieder des Treueprogramms, z. B. ihren Vornamen, Nachnamen und Geburtstag.
+Durch Hinzufügen der Feldergruppe `profile-person-details` erfasst das Schema Mitglieder des Treueprogramms jetzt demografische Informationen für Mitglieder des Treueprogramms wie Vorname, Nachname und Geburtstag.
 
 ```SHELL
 curl -X PATCH \
@@ -240,7 +240,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Die Antwort zeigt die neu hinzugefügte Feldergruppe im Array `meta:extends` an und enthält eine `$ref` für die Feldergruppe im Attribut `allOf` .
+Die Antwort zeigt die neu hinzugefügte Feldergruppe im `meta:extends`-Array und enthält eine `$ref` zur Feldergruppe im `allOf`.
 
 ```JSON
 {
@@ -300,11 +300,11 @@ Die Antwort zeigt die neu hinzugefügte Feldergruppe im Array `meta:extends` an 
 
 ### Hinzufügen weiterer Feldergruppen
 
-Für die Schemas &quot;Mitglieder des Treueprogramms&quot;sind zwei weitere Standardfeldgruppen erforderlich, die Sie hinzufügen können, indem Sie die Schritte mit einer anderen Feldergruppe wiederholen.
+Für die Schemata des Mitglieds des Treueprogramms sind zwei weitere Standardfeldgruppen erforderlich, die Sie hinzufügen können, indem Sie die Schritte mit einer anderen Feldgruppe wiederholen.
 
 >[!TIP]
 >
->Es empfiehlt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können alle für eine bestimmte Klasse verfügbaren Feldergruppen auflisten (GET), indem Sie eine Anfrage für jeden der Container &quot;global&quot;und &quot;tenant&quot;ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld &quot;meta:scheduledToExtend&quot;mit der von Ihnen verwendeten Klasse übereinstimmt. In diesem Fall handelt es sich um die Klasse [!DNL XDM Individual Profile] , sodass der Wert [!DNL XDM Individual Profile] `$id` verwendet wird:
+>Es lohnt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können (GET) alle für eine bestimmte Klasse verfügbaren Feldergruppen auflisten, indem Sie eine -Anfrage für jeden der Container „global“ und „tenant“ ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld „meta:intendedToExtend“ mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die [!DNL XDM Individual Profile]-Klasse, daher wird die [!DNL XDM Individual Profile]-`$id` verwendet:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -319,14 +319,14 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie aktualisieren. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie aktualisieren. |
 
 **Anfrage**
 
-Mit dieser Anfrage wird das &quot;Loyalty Members&quot;-Schema dahingehend aktualisiert, dass es die Felder der folgenden Standardfeldgruppen enthält:
+Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty Members), um die Felder in den folgenden Standardfeldgruppen einzuschließen:
 
-* [[!UICONTROL Persönliche Kontaktdetails]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Privatanwender hinzu.
-* [[!UICONTROL Details zum Treueprogramm]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Privatanwender hinzu.
+* [[!UICONTROL Persönliche Kontaktdaten]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
+* [[!UICONTROL Treuedetails]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
 
 ```SHELL
 curl -X PATCH \
@@ -344,9 +344,9 @@ curl -X PATCH \
 
 **Antwort**
 
-Die Antwort zeigt die neu hinzugefügten Feldergruppen im Array `meta:extends` an und enthält eine `$ref` für die Feldergruppe im Attribut `allOf` .
+Die Antwort zeigt die neu hinzugefügten Feldergruppen im `meta:extends`-Array und enthält eine `$ref` zur Feldergruppe im `allOf`.
 
-Das &quot;Loyalty Members&quot;-Schema sollte nun vier `$ref` -Werte im Array `allOf` enthalten: `profile`, `profile-person-details`, `profile-personal-details` und `profile-loyalty-details`, wie unten dargestellt.
+Das Schema Mitglieder des Treueprogramms sollte jetzt wie unten dargestellt vier `$ref` Werte im `allOf`-Array enthalten: `profile`, `profile-person-details`, `profile-personal-details` und `profile-loyalty-details`.
 
 ```JSON
 {
@@ -418,13 +418,13 @@ Das &quot;Loyalty Members&quot;-Schema sollte nun vier `$ref` -Werte im Array `a
 }
 ```
 
-### Neue Feldergruppe definieren
+### Definieren einer neuen Feldergruppe
 
-Während die standardmäßige Feldergruppe [!UICONTROL Loyalitätsdetails] nützliche loyalitätsbezogene Felder für das Schema bereitstellt, gibt es zusätzliche Treuefelder, die nicht in Standardfeldgruppen enthalten sind.
+Während die Standardfeldgruppe [!UICONTROL Treuedetails] nützliche Felder für das Schema bereitstellt, gibt es zusätzliche Treuefelder, die in keiner Standardfeldgruppe enthalten sind.
 
-Um diese Felder hinzuzufügen, können Sie Ihre eigenen benutzerdefinierten Feldergruppen im Container `tenant` definieren. Diese Feldergruppen sind für Ihre Organisation eindeutig und können von niemandem außerhalb Ihrer Organisation eingesehen oder bearbeitet werden.
+Um diese Felder hinzuzufügen, können Sie Ihre eigenen benutzerdefinierten Feldergruppen im `tenant`-Container definieren. Diese Feldergruppen sind für Ihre Organisation eindeutig und können von niemandem außerhalb Ihrer Organisation angezeigt oder bearbeitet werden.
 
-Um eine neue Feldergruppe zu erstellen (POST), muss Ihre Anforderung ein `meta:intendedToExtend` -Feld mit dem `$id` für die Basisklassen enthalten, mit denen die Feldergruppe kompatibel ist, sowie die Eigenschaften, die die Feldergruppe enthalten soll.
+Um eine neue Feldergruppe (POST) zu erstellen, muss Ihre Anfrage ein `meta:intendedToExtend` enthalten, das die `$id` für die Basisklasse(n) enthält, mit der die Feldergruppe kompatibel ist, sowie die Eigenschaften, die die Feldergruppe enthalten wird.
 
 Alle benutzerdefinierten Eigenschaften müssen unter Ihrem `TENANT_ID` verschachtelt sein, um Konflikte mit anderen Feldergruppen oder Feldern zu vermeiden.
 
@@ -436,7 +436,7 @@ POST /tenant/fieldgroups
 
 **Anfrage**
 
-Diese Anfrage erstellt eine neue Feldergruppe mit einem `loyaltyTier` -Objekt, das vier für das Treueprogramm eines Unternehmens spezifische Felder enthält: `id`, `effectiveDate`, `currentThreshold` und `nextThreshold`.
+Diese Anfrage erstellt eine neue Feldergruppe mit einem `loyaltyTier`-Objekt, das vier Felder enthält, die für das bestimmte Treueprogramm eines Unternehmens spezifisch sind: `id`, `effectiveDate`, `currentThreshold` und `nextThreshold`.
 
 ```SHELL
 curl -X POST\
@@ -500,7 +500,7 @@ curl -X POST\
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Antworttext zurückgegeben, der die Details der neu erstellten Feldergruppe einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden durch die [!DNL Schema Registry] zugewiesen.
+Bei einer erfolgreichen Anfrage wird der HTTP-Antwortstatus 201 (Erstellt) mit einem Antworttext zurückgegeben, der die Details der neu erstellten Feldergruppe enthält, einschließlich `$id`, `meta:altIt` und `version`. Diese Werte sind schreibgeschützt und werden vom [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -588,7 +588,7 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Ant
 
 ### Hinzufügen der benutzerdefinierten Feldergruppe zum Schema
 
-Sie können nun dieselben Schritte für [Hinzufügen einer Standardfeldgruppe](#add-a-field-group) ausführen, um diese neu erstellte Feldergruppe Ihrem Schema hinzuzufügen.
+Sie können jetzt die gleichen Schritte für [Hinzufügen einer Standardfeldgruppe](#add-a-field-group) ausführen, um diese neu erstellte Feldgruppe zu Ihrem Schema hinzuzufügen.
 
 **API-Format**
 
@@ -598,11 +598,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-codierte `$id` des Schemas. |
 
 **Anfrage**
 
-Mit dieser Anfrage wird das &quot;Loyalty Members&quot;-Schema aktualisiert (PATCH), um die Felder in die neue Feldergruppe &quot;Loyalitätsstufe&quot;aufzunehmen.
+Diese Anfrage aktualisiert (PATCH) das Schema der Mitglieder des Treueprogramms, um die Felder in die neue Feldergruppe „Treuestufe“ aufzunehmen.
 
 ```SHELL
 curl -X PATCH \
@@ -619,7 +619,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Sie können sehen, dass die Feldergruppe erfolgreich hinzugefügt wurde, da die Antwort jetzt die neu hinzugefügte Feldergruppe im Array `meta:extends` anzeigt und im Attribut `allOf` eine `$ref` zur Feldergruppe enthält.
+Sie können sehen, dass die Feldergruppe erfolgreich hinzugefügt wurde, da die Antwort jetzt die neu hinzugefügte Feldergruppe im `meta:extends`-Array anzeigt und eine `$ref` zur Feldergruppe im `allOf` enthält.
 
 ```JSON
 {
@@ -700,7 +700,7 @@ Sie können sehen, dass die Feldergruppe erfolgreich hinzugefügt wurde, da die 
 
 ### Anzeigen des aktuellen Schemas
 
-Sie können jetzt eine GET-Anfrage ausführen, um das aktuelle Schema anzuzeigen und zu sehen, wie die hinzugefügten Feldgruppen zur Gesamtstruktur des Schemas beigetragen haben.
+Sie können jetzt eine GET-Anfrage ausführen, um das aktuelle Schema anzuzeigen und zu sehen, wie die hinzugefügten Feldergruppen zur Gesamtstruktur des Schemas beigetragen haben.
 
 **API-Format**
 
@@ -710,7 +710,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-codierte `$id` des Schemas. |
 
 **Anfrage**
 
@@ -726,9 +726,9 @@ curl -X GET \
 
 **Antwort**
 
-Mit der Kopfzeile `application/vnd.adobe.xed-full+json; version=1` `Accept` können Sie das vollständige Schema sehen, das alle Eigenschaften anzeigt. Diese Eigenschaften sind die von der Klasse und den Feldergruppen hinzugefügten Felder, die zum Erstellen des Schemas verwendet wurden. In der folgenden Beispielantwort werden nur die kürzlich hinzugefügten Felder für Leerzeichen angezeigt. Das vollständige Schema einschließlich aller Eigenschaften und ihren Attributen finden Sie im [Anhang](#appendix) am Ende dieses Dokuments.
+Wenn Sie die Kopfzeile `application/vnd.adobe.xed-full+json; version=1` `Accept` verwenden, können Sie das vollständige Schema mit allen Eigenschaften sehen. Diese Eigenschaften sind die Felder, die von den Klassen- und Feldergruppen bereitgestellt werden, die zum Erstellen des Schemas verwendet wurden. In der folgenden Beispielantwort werden nur die kürzlich hinzugefügten Felder als Platzierung angezeigt. Das vollständige Schema einschließlich aller Eigenschaften und ihren Attributen finden Sie im [Anhang](#appendix) am Ende dieses Dokuments.
 
-Unter &quot;`"properties"`&quot; sehen Sie den Namespace &quot;`_{TENANT_ID}`&quot;, der beim Hinzufügen der benutzerspezifischen Feldergruppe erstellt wurde. Innerhalb dieses Namespace befinden sich das Objekt `loyaltyTier` und die Felder, die bei der Erstellung der Feldergruppe definiert wurden.
+Unter `"properties"` sehen Sie den `_{TENANT_ID}`-Namespace, der beim Hinzufügen der benutzerdefinierten Feldergruppe erstellt wurde. In diesem Namespace befinden sich das `loyaltyTier` und die Felder, die beim Erstellen der Feldergruppe definiert wurden.
 
 ```JSON
 {
@@ -816,11 +816,11 @@ Unter &quot;`"properties"`&quot; sehen Sie den Namespace &quot;`_{TENANT_ID}`&qu
 
 ### Erstellen eines Datentyps
 
-Die von Ihnen erstellte Feldergruppe &quot;Loyalitätsstufe&quot;enthält spezifische Eigenschaften, die in anderen Schemas nützlich sein können. So können diese Daten etwa als Teil eines Erlebnisereignisses aufgenommen oder von einem Schema verwendet werden, das eine andere Klasse implementiert. Im vorliegenden Fall empfiehlt es sich, die Objekthierarchie als Datentyp zu speichern, da dieser die Wiederverwendung der Definition an anderer Stelle erleichtert.
+Die von Ihnen erstellte Feldergruppe der Treuestufe enthält bestimmte Eigenschaften, die in anderen Schemata nützlich sein können. So können diese Daten etwa als Teil eines Erlebnisereignisses aufgenommen oder von einem Schema verwendet werden, das eine andere Klasse implementiert. Im vorliegenden Fall empfiehlt es sich, die Objekthierarchie als Datentyp zu speichern, da dieser die Wiederverwendung der Definition an anderer Stelle erleichtert.
 
 Bei Datentypen muss eine Objekthierarchie nur einmal definiert werden. Anschließend kann sie, ganz ähnlich wie bei jedem anderen Typ von Skalar, in einem Feld darauf verweisen.
 
-Mit anderen Worten: Datentypen ermöglichen die konsistente Verwendung von Strukturen mit mehreren Feldern mit mehr Flexibilität als Feldgruppen, da sie an einer beliebigen Stelle in ein Schema eingefügt werden können, indem sie als &quot;Typ&quot;eines Felds hinzugefügt werden.
+Mit anderen Worten: Datentypen ermöglichen die konsistente Verwendung von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als Feldgruppen, da sie überall in ein Schema aufgenommen werden können, indem sie als „Typ“ eines Felds hinzugefügt werden.
 
 **API-Format**
 
@@ -830,7 +830,7 @@ POST /tenant/datatypes
 
 **Anfrage**
 
-Für die Definition eines Datentyps sind keine Felder `meta:extends` oder `meta:intendedToExtend` erforderlich, und Felder müssen nicht unter Ihrer Mandanten-ID verschachtelt sein, um Kollisionen zu vermeiden.
+Beim Definieren eines Datentyps sind keine `meta:extends` oder `meta:intendedToExtend` Felder erforderlich. Außerdem müssen Felder nicht unter Ihrer Mandanten-ID verschachtelt werden, um Kollisionen zu vermeiden.
 
 ```SHELL
 curl -X POST \
@@ -882,7 +882,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden durch die [!DNL Schema Registry] zugewiesen.
+Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden vom [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -955,11 +955,11 @@ Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) 
 }
 ```
 
-Mittels Anfrage zum Nachschlagen (GET) unter Angabe der URL-codierten `$id`-URI des Schemas können Sie den neuen Datentyp direkt anzeigen. Stellen Sie sicher, dass Sie die `version` in Ihre `Accept` -Kopfzeile für eine Suchanfrage aufnehmen.
+Mittels Anfrage zum Nachschlagen (GET) unter Angabe der URL-codierten `$id`-URI des Schemas können Sie den neuen Datentyp direkt anzeigen. Stellen Sie sicher, dass Sie für eine Suchanfrage die `version` in Ihren `Accept`-Header aufnehmen.
 
 ### Verwenden des Datentyps im Schema
 
-Nachdem der Datentyp Loyalitätsstufe erstellt wurde, können Sie das Feld `loyaltyTier` in der von Ihnen erstellten Feldergruppe aktualisieren (PATCH), um anstelle der zuvor vorhandenen Felder auf den Datentyp zu verweisen.
+Nachdem der Datentyp Treuestufe erstellt wurde, können Sie das `loyaltyTier` Feld in der von Ihnen erstellten Feldergruppe aktualisieren (PATCH), um auf den Datentyp anstelle der Felder zu verweisen, die zuvor vorhanden waren.
 
 **API-Format**
 
@@ -998,7 +998,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Die Antwort enthält jetzt einen Verweis (`$ref`) auf den Datentyp im Objekt `loyaltyTier` anstelle der zuvor definierten Felder.
+Die Antwort enthält jetzt einen Verweis (`$ref`) auf den Datentyp im `loyaltyTier`-Objekt anstelle der zuvor definierten Felder.
 
 ```JSON
 {
@@ -1065,7 +1065,7 @@ Die Antwort enthält jetzt einen Verweis (`$ref`) auf den Datentyp im Objekt `lo
 }
 ```
 
-Wenn Sie jetzt eine GET-Anfrage zum Nachschlagen des Schemas ausführen, zeigt die Eigenschaft `loyaltyTier` den Verweis auf den Datentyp unter `meta:referencedFrom` an:
+Wenn Sie eine GET-Anfrage ausführen, um das Schema jetzt zu suchen, zeigt die `loyaltyTier`-Eigenschaft den Verweis auf den Datentyp unter `meta:referencedFrom` an:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1112,11 +1112,11 @@ Wenn Sie jetzt eine GET-Anfrage zum Nachschlagen des Schemas ausführen, zeigt d
 
 ### Definieren eines Identitätsdeskriptors
 
-Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform] verwendet. Genutzt werden diese Daten schließlich von einer Vielzahl von Services, um eine umfassende, zentrale Sicht auf einzelne Personen zu schaffen. Für diesen Prozess wichtige Felder können als Identität klassifiziert und die in diesen Feldern aufgenommenen Daten in das Identitätsdiagramm der jeweiligen Person integriert werden. Auf die Diagrammdaten kann dann von [[!DNL Real-Time Customer Profile]](../../profile/home.md) und anderen [!DNL Experience Platform] -Diensten zugegriffen werden, um eine zusammengesetzte Ansicht jedes einzelnen Kunden zu erhalten.
+Schemata werden für die Aufnahme von Daten in [!DNL Experience Platform] verwendet. Genutzt werden diese Daten schließlich von einer Vielzahl von Services, um eine umfassende, zentrale Sicht auf einzelne Personen zu schaffen. Für diesen Prozess wichtige Felder können als Identität klassifiziert und die in diesen Feldern aufgenommenen Daten in das Identitätsdiagramm der jeweiligen Person integriert werden. Auf die Diagrammdaten können dann [[!DNL Real-Time Customer Profile]](../../profile/home.md) und andere [!DNL Experience Platform]-Services zugreifen, um eine zusammengefügte Ansicht jedes einzelnen Kunden zu erhalten.
 
-Zu den Feldern, die üblicherweise als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Für eine Klassifizierung als Identitätsfeld eignen sich alle eindeutigen Kennungen, die für Ihr Unternehmen spezifisch sind.
+Zu den Feldern, die häufig als „Identität“ markiert werden, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Für eine Klassifizierung als Identitätsfeld eignen sich alle eindeutigen Kennungen, die für Ihr Unternehmen spezifisch sind.
 
-Identitätsdeskriptoren signalisieren, dass die `sourceProperty` der `sourceSchema` eine eindeutige Kennung ist, die als Identität betrachtet werden sollte.
+Identitätsdeskriptoren signalisieren, dass der `sourceProperty` der `sourceSchema` eine eindeutige Kennung ist, die als Identität betrachtet werden sollte.
 
 Weitere Informationen zur Arbeit mit Deskriptoren finden Sie im [Schema Registry-Entwicklerhandbuch](../api/getting-started.md).
 
@@ -1128,7 +1128,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage definiert einen Identitätsdeskriptor für das Feld `personalEmail.address` für das Schema &quot;Loyalty Members&quot;. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Treuemitglieds als Kennung zu verwenden, um Informationen über die Person zusammenzufügen. Durch diesen Aufruf wird dieses Feld auch als primäre Identität für das Schema festgelegt, indem `xdm:isPrimary` auf `true` gesetzt wird. Dies ist eine Voraussetzung für die Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).[
+Die folgende Anfrage definiert einen Identitätsdeskriptor im Feld &quot;`personalEmail.address`&quot; für das Schema „Mitglieder des Treueprogramms“. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Mitglieds des Treueprogramms als Kennung zu verwenden, um Informationen über den Kontakt zusammenzufügen. Dieser Aufruf legt dieses Feld auch als primäre Identität für das Schema fest, indem `xdm:isPrimary` auf `true` festgelegt wird. Dies ist eine Voraussetzung für [ Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).
 
 ```SHELL
 curl -X POST \
@@ -1151,11 +1151,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Sie können verfügbare &quot;xdm:namespace&quot;-Werte auflisten oder neue mit den [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) erstellen. Je nachdem, welcher „xdm:namespace“ verwendet wird, kann der Wert für „xdm:property“ entweder „xdm:code“ oder „xdm:id“ lauten.
+>Sie können verfügbare „xdm:namespace“-Werte auflisten oder neue erstellen, indem Sie die [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) verwenden. Je nachdem, welcher „xdm:namespace“ verwendet wird, kann der Wert für „xdm:property“ entweder „xdm:code“ oder „xdm:id“ lauten.
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Deskriptor und der ihm zugehörigen `@id` enthält. Der `@id` ist ein schreibgeschütztes Feld, das vom [!DNL Schema Registry] zugewiesen wird und zum Referenzieren des Deskriptors in der API verwendet wird.
+Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Deskriptor und der ihm zugehörigen `@id` enthält. Der `@id` ist ein schreibgeschütztes Feld, das vom [!DNL Schema Registry] zugewiesen wird und für die Referenzierung des Deskriptors in der API verwendet wird.
 
 ```JSON
 {
@@ -1175,17 +1175,17 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-## Schema zur Verwendung in [!DNL Real-Time Customer Profile] aktivieren {#profile}
+## Aktivieren eines Schemas zur Verwendung in [!DNL Real-Time Customer Profile] {#profile}
 
-Nachdem auf das Schema ein primärer Identitätsdeskriptor angewendet wurde, können Sie das &quot;Loyalty Members&quot;-Schema für die Verwendung durch [!DNL Real-Time Customer Profile] aktivieren, indem Sie dem Attribut `meta:immutableTags` ein `union` -Tag hinzufügen.
+Sobald auf das Schema ein primärer Identitätsdeskriptor angewendet wurde, können Sie das Schema Mitglieder des Treueprogramms zur Verwendung aktivieren, indem Sie dem `meta:immutableTags`-Attribut ein `union`-Tag hinzufügen[!DNL Real-Time Customer Profile]
 
 >[!NOTE]
 >
->Weitere Informationen zum Arbeiten mit Vereinigungsansichten finden Sie im Abschnitt zu [Vereinigungen](../api/unions.md) im Entwicklerhandbuch zu [!DNL Schema Registry] .
+>Weiterführende Informationen zum Arbeiten mit Vereinigungsansichten finden Sie im Abschnitt [Vereinigungen](../api/unions.md) im [!DNL Schema Registry] Entwicklerhandbuch.
 
-### Tag `union` hinzufügen
+### Hinzufügen eines `union` Tags
 
-Damit ein Schema in die Vereinigungsansicht aufgenommen werden kann, muss das Tag `union` dem Attribut `meta:immutableTags` des Schemas hinzugefügt werden. Dies geschieht durch eine PATCH-Anfrage, um das Schema zu aktualisieren und ein `meta:immutableTags` -Array mit dem Wert `union` hinzuzufügen.
+Damit ein Schema in die Ansicht der zusammengeführten Vereinigung aufgenommen werden kann, muss das `union`-Tag zum `meta:immutableTags` des Schemas hinzugefügt werden. Dies geschieht über eine PATCH-Anfrage zum Aktualisieren des Schemas und Hinzufügen eines `meta:immutableTags`-Arrays mit dem Wert `union`.
 
 **API-Format**
 
@@ -1195,7 +1195,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie für Profil aktivieren. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie für das Profil aktivieren. |
 
 **Anfrage**
 
@@ -1298,9 +1298,9 @@ Die Antwort bestätigt den erfolgreiche Durchführung der Operation und gibt fü
 
 ### Auflisten von Schemata in einer Vereinigung
 
-Sie haben Ihr Schema jetzt erfolgreich zur Vereinigung [!DNL XDM Individual Profile] hinzugefügt. Eine Liste aller dieser Vereinigung zugehörigen Schemata erhalten Sie mittels GET-Anfrage, in der Sie zum Filtern der Antwort entsprechende Abfrageparameter angeben.
+Sie haben Ihr Schema jetzt erfolgreich zur [!DNL XDM Individual Profile] hinzugefügt. Eine Liste aller dieser Vereinigung zugehörigen Schemata erhalten Sie mittels GET-Anfrage, in der Sie zum Filtern der Antwort entsprechende Abfrageparameter angeben.
 
-Mithilfe des Abfrageparameters `property` können Sie festlegen, dass nur Schemas zurückgegeben werden, die ein Feld `meta:immutableTags` enthalten, dessen Wert `meta:class` dem Wert `$id` der Klasse [!DNL XDM Individual Profile] entspricht.
+Mit dem `property` Abfrageparameter können Sie angeben, dass nur Schemata zurückgegeben werden, die ein `meta:immutableTags` enthalten, dessen `meta:class` der `$id` der [!DNL XDM Individual Profile]-Klasse entspricht.
 
 **API-Format**
 
@@ -1310,7 +1310,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Anfrage**
 
-Die folgende Beispielanfrage gibt alle Schemas zurück, die Teil der [!DNL XDM Individual Profile] -Vereinigung sind.
+Die folgende Beispielanfrage gibt alle Schemata zurück, die Teil der [!DNL XDM Individual Profile] sind.
 
 ```SHELL
 curl -X GET \
@@ -1324,7 +1324,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort liefert eine gefilterte Liste all jener Schemata, die beide Bedingungen erfüllen. Beachten Sie, dass bei Abfragen mit mehreren Parametern eine UND-Beziehung impliziert wird. Das Format der Listenantwort hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile ab.
+Die Antwort liefert eine gefilterte Liste all jener Schemata, die beide Bedingungen erfüllen. Beachten Sie, dass bei Abfragen mit mehreren Parametern eine UND-Beziehung impliziert wird. Das Format der Listenantwort hängt von der in der Anfrage gesendeten `Accept`-Kopfzeile ab.
 
 ```JSON
 {
@@ -1370,9 +1370,9 @@ Die Antwort liefert eine gefilterte Liste all jener Schemata, die beide Bedingun
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich ein Schema erstellt, das sowohl Standardfeldgruppen als auch eine von Ihnen definierte Feldergruppe enthält. Dieses Schema können Sie verwenden, um einen Datensatz zu erstellen und Datensatzdaten in Adobe Experience Platform aufzunehmen.
+In diesem Tutorial haben Sie erfolgreich ein Schema erstellt, das sowohl Standardfeldgruppen als auch eine von Ihnen definierte Feldgruppe verwendet. Dieses Schema können Sie verwenden, um einen Datensatz zu erstellen und Datensatzdaten in Adobe Experience Platform aufzunehmen.
 
-Das im Rahmen dieses Tutorials erstellte „Loyalty Members“-Schema steht in seiner vollständigen Form im nachfolgenden Anhang zur Verfügung. Beim Betrachten des Schemas können Sie sehen, wie die Feldergruppen zur Gesamtstruktur beitragen und welche Felder für die Datenerfassung verfügbar sind.
+Das im Rahmen dieses Tutorials erstellte „Loyalty Members“-Schema steht in seiner vollständigen Form im nachfolgenden Anhang zur Verfügung. Wenn Sie sich das Schema ansehen, können Sie sehen, wie die Feldergruppen zur Gesamtstruktur beitragen und welche Felder für die Datenaufnahme verfügbar sind.
 
 Wenn Sie weitere Schemas erstellen, können Sie mithilfe von Beziehungsdeskriptoren Beziehungen zwischen ihnen definieren. Weitere Informationen hierzu finden Sie im Tutorial zum Thema [Definieren einer Beziehung zwischen zwei Schemata](relationship-api.md). Ausführliche Beispiele dazu, wie Sie alle weiteren für die Arbeit mit der Schema Registry-API verfügbaren Operationen (GET, POST, PUT, PATCH und DELETE) ausführen, finden Sie im [Schema Registry-Entwicklerhandbuch](../api/getting-started.md).
 
@@ -1380,15 +1380,15 @@ Wenn Sie weitere Schemas erstellen, können Sie mithilfe von Beziehungsdeskripto
 
 Die nachfolgenden Informationen dienen als Ergänzung zum API-Tutorial.
 
-## Vollständiges &quot;Loyalty Members&quot;-Schema {#complete-schema}
+## Abschließen des Schemas für Mitglieder des Treueprogramms {#complete-schema}
 
 Im Rahmen dieses Tutorials wird ein Schema zur Beschreibung der Mitglieder eines Treueprogramms im Einzelhandel erstellt.
 
-Das Schema implementiert die [!DNL XDM Individual Profile] -Klasse und kombiniert mehrere Feldergruppen. Es erfasst Informationen über die Mitglieder des Treueprogramms mithilfe der Standardfeldgruppen [!DNL Demographic Details], [!UICONTROL Persönliche Kontaktdetails] und [!UICONTROL Loyalitätsdetails] sowie über eine benutzerdefinierte Feldergruppe &quot;Treuestufe&quot;, die während des Tutorials definiert wird.
+Das Schema implementiert die [!DNL XDM Individual Profile]-Klasse und kombiniert mehrere Feldergruppen. Es erfasst Informationen über die Mitglieder des Treueprogramms mithilfe der Standardfeldgruppen [!DNL Demographic Details], [!UICONTROL Persönliche Kontaktdaten] und [!UICONTROL Treuedetails] sowie über eine benutzerdefinierte Feldergruppe auf Treuestufe, die während des Tutorials definiert wird.
 
 Nachfolgend ist das „Loyalty Members“-Schema in seiner abschließenden Form im JSON-Format dargestellt:
 
-+++ Gesamtes Schema anzeigen
++++Vollständiges Schema anzeigen
 
 ```JSON
 {

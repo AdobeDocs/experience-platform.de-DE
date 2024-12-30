@@ -36,31 +36,31 @@ Dieses Tutorial erfordert ein Grundverständnis der verschiedenen Aspekte von Ad
 
 Der Arbeitsbereich [!UICONTROL Schemata] in der [!DNL Platform]-Benutzeroberfläche bietet eine Visualisierung der [!DNL Schema Library], mit der Sie die für Ihr Unternehmen verfügbaren Schemata anzeigen und verwalten können. Der Arbeitsbereich umfasst auch den [!DNL Schema Editor], die Arbeitsfläche, in der Sie während dieses Tutorials ein Schema erstellen.
 
-Wählen Sie nach der Anmeldung bei [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste von Schemas (eine Darstellung von [!DNL Schema Library]) angezeigt, die Sie anzeigen und anpassen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf denen das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
+Wählen Sie nach der Anmeldung bei [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf **[!UICONTROL Registerkarte]** Durchsuchen“ wird eine Liste von Schemata (eine Darstellung der [!DNL Schema Library]) angezeigt, die Sie anzeigen und anpassen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf denen das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
 
 Weitere Informationen finden Sie im Handbuch zu [Erkunden vorhandener XDM-Ressourcen in der Benutzeroberfläche](../ui/explore.md).
 
 ## Erstellen und Benennen eines Schemas {#create}
 
-Um mit der Erstellung eines Schemas zu beginnen, wählen Sie oben rechts im Arbeitsbereich **[!UICONTROL Schemas]** die Option **[!UICONTROL Schema erstellen]** aus.
+Um mit dem Erstellen eines Schemas zu beginnen **[!UICONTROL wählen Sie]** Schema erstellen) in der oberen rechten Ecke des Arbeitsbereichs **[!UICONTROL Schemas]** aus.
 
-![Die Registerkarte [!UICONTROL Schemas] Arbeitsbereich [!UICONTROL Durchsuchen] mit der Markierung [!UICONTROL Schema erstellen].](../images/tutorials/create-schema/create-schema-button.png)
+![Die Registerkarte [!UICONTROL Schemata] im Arbeitsbereich [!UICONTROL Durchsuchen] mit [!UICONTROL Schema erstellen] hervorgehoben.](../images/tutorials/create-schema/create-schema-button.png)
 
-Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema durch Hinzufügen von Feldern und Feldergruppen erstellen oder eine CSV-Datei hochladen und mithilfe von ML-Algorithmen ein Schema generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
+Das [!UICONTROL Erstellen eines Schemas] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema erstellen, indem Sie Felder und Feldergruppen hinzufügen, oder Sie können eine CSV-Datei hochladen und ML-Algorithmen verwenden, um ein Schema zu generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
 
-![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+![Das Dialogfeld „Schema erstellen“ mit den Workflow-Optionen und hervorgehobener Auswahl.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta]{type=Informative} Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative} Manuelle oder ML-unterstützte Schemaerstellung {#manual-or-assisted}
 
-Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer hochgeladenen Datei zu empfehlen, finden Sie im Leitfaden zur Erstellung von Schemas, die durch maschinelles Lernen unterstützt werden](../ui/ml-assisted-schema-creation.md). [ Dieses UI-Handbuch konzentriert sich auf den Workflow für die manuelle Erstellung.
+Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer hochgeladenen Datei zu empfehlen, finden Sie im [Handbuch zur Erstellung von Schemata durch maschinelles Lernen](../ui/ml-assisted-schema-creation.md). Dieses Handbuch für die Benutzeroberfläche konzentriert sich auf den Workflow zur manuellen Erstellung.
 
-### Basisklasse auswählen {#choose-a-class}
+### Basisklasse wählen {#choose-a-class}
 
-Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie anschließend eine Basisklasse für das Schema aus. Sie können zwischen den Core-Klassen [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] oder [!UICONTROL Other] wählen, wenn diese Klassen Ihren Zwecken nicht entsprechen. Mit der Option [!UICONTROL Sonstige] Klassen können Sie entweder [ eine neue Klasse erstellen](#create-new-class) oder aus anderen bereits vorhandenen Klassen auswählen.
+Der [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie als Nächstes eine Basisklasse für das Schema. Sie können zwischen den Kernklassen von [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] oder [!UICONTROL Other] wählen, wenn diese Klassen nicht für Ihre Zwecke geeignet sind. Die Option [!UICONTROL Sonstige]-Klassen ermöglicht es Ihnen, entweder [eine neue Klasse zu erstellen](#create-new-class) oder aus anderen bereits vorhandenen Klassen auszuwählen.
 
-Weitere Informationen zu diesen Klassen finden Sie in der Dokumentation zu [[!UICONTROL XDM-individuellen Profilen]](../classes/individual-profile.md) und [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) . Wählen Sie für dieses Tutorial **[!UICONTROL XDM Individual Profile]** gefolgt von **[!UICONTROL Next]**.
+Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL  Dokumentation ]](../classes/individual-profile.md)XDM Individual Profile]](../classes/experienceevent.md) und [[!UICONTROL XDM ExperienceEvent . Wählen Sie für die Zwecke dieses Tutorials die Option **[!UICONTROL Individuelles XDM-Profil]** gefolgt von **[!UICONTROL Weiter]** aus.
 
-![Der Workflow [!UICONTROL Schema erstellen] mit den Optionen [!UICONTROL XDM individuelles Profil] und [!UICONTROL Weiter], hervorgehoben.](../images/tutorials/create-schema/individual-profile-base-class.png)
+![Der Workflow [!UICONTROL Schema erstellen] mit den [!UICONTROL XDM Individual Profile]-Optionen und [!UICONTROL Weiter] hervorgehoben.](../images/tutorials/create-schema/individual-profile-base-class.png)
 
 ### Benennen und überprüfen {#name-and-review}
 
@@ -72,21 +72,21 @@ Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name u
 
 In diesem Tutorial wird ein Schema zur Aufnahme von Daten über die Mitglieder eines Treueprogramms zusammengestellt. Daher heißt das Schema „[!DNL Loyalty Members]“.
 
-&#x200B; Die (von der Klasse bereitgestellte) Basisstruktur des Schemas wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klasse und Schemastruktur überprüfen und überprüfen können.
+&#x200B;Die Basisstruktur des Schemas (bereitgestellt von der Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klasse und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie einen benutzerfreundlichen [!UICONTROL Anzeigenamen des Schemas] in das Textfeld ein. Geben Sie anschließend eine Beschreibung ein, die die Identifizierung Ihres Schemas erleichtert. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
-![Der Abschnitt [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] , in dem der [!UICONTROL Anzeigename des Schemas], die [!UICONTROL Beschreibung] und der Abschnitt [!UICONTROL Beenden] hervorgehoben sind.](../images/ui/resources/schemas/name-and-review.png)
+![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../images/ui/resources/schemas/name-and-review.png)
 
-### Erstellen Ihres Schemas {#compose-your-schema}
+### Erstellen eines Schemas {#compose-your-schema}
 
-Der [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Das selbstbenannte Schema wird automatisch im Abschnitt **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie in den Editor gelangen, zusammen mit den Standardfeldern, die in der von Ihnen ausgewählten Basisklasse enthalten sind. Die zugewiesene Klasse für das Schema wird auch im Abschnitt **[!UICONTROL Komposition]** unter **[!UICONTROL Klasse]** aufgelistet.
+Der [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Das selbstbetitelte Schema wird automatisch im Abschnitt **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie den Editor aufrufen, zusammen mit den Standardfeldern, die in der von Ihnen ausgewählten Basisklasse enthalten sind. Die zugewiesene Klasse für das Schema wird auch im Abschnitt **[!UICONTROL Komposition]** unter **[!UICONTROL Klasse]** aufgelistet.
 
 >[!NOTE]
 >
-Sie können den Anzeigenamen und die optionale Beschreibung für das Schema in der Seitenleiste **[!UICONTROL Schemaeigenschaften]** aktualisieren. Sobald ein neuer Name eingegeben wurde, wird die Arbeitsfläche automatisch aktualisiert, um den neuen Namen des Schemas widerzuspiegeln.
+Sie können den Anzeigenamen und die optionale Beschreibung für das Schema über die Seitenleiste **[!UICONTROL Schemaeigenschaften]** aktualisieren. Sobald ein neuer Name eingegeben wurde, wird die Arbeitsfläche automatisch aktualisiert, um den neuen Namen des Schemas widerzuspiegeln.
 
-![Der Schema-Editor mit hervorgehobener Basisklasse und Schemadiagramm.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
+![Der Schema-Editor mit hervorgehobener Basisklasse und hervorgehobenem Schemadiagramm.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
@@ -98,45 +98,45 @@ Sie können nun beginnen, Ihrem Schema Felder hinzuzufügen, indem Sie Feldergru
 
 Um eine Feldergruppe hinzuzufügen, wählen Sie im Unterabschnitt **[!UICONTROL Feldergruppen]** die Option **[!UICONTROL Hinzufügen]** aus.
 
-![Der Schema-Editor mit hervorgehobener Schaltfläche &quot;Feldergruppen hinzufügen&quot;.](../images/tutorials/create-schema/add-field-group-button.png)
+![Der Schema-Editor mit der hervorgehobenen Schaltfläche „Feldergruppen hinzufügen“.](../images/tutorials/create-schema/add-field-group-button.png)
 
 Es wird ein neues Dialogfeld mit einer Liste der verfügbaren Feldergruppen angezeigt. Jede Feldergruppe ist nur für die Verwendung mit einer bestimmten Klasse vorgesehen. Daher listet das Dialogfeld nur Feldergruppen auf, die mit der ausgewählten Klasse kompatibel sind (in diesem Fall die Klasse [!DNL XDM Individual Profile]). Wenn Sie eine XDM-Standardklasse verwenden, wird die Liste der Feldergruppen basierend auf der Nutzungshäufigkeit intelligent sortiert.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen].](../images/tutorials/create-schema/field-group-popularity.png)
+![Dialogfeld [!UICONTROL Feldergruppen hinzufügen].](../images/tutorials/create-schema/field-group-popularity.png)
 
 Sie können in der linken Leiste einen der Filter auswählen, um die Liste der Standardfeldgruppen auf bestimmte [Branchen](../schema/industries/overview.md) wie Einzelhandel, Finanzdienstleistungen und Gesundheitswesen einzugrenzen.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit hervorgehobenen Branchenfeldgruppen.](../images/tutorials/create-schema/industry-field-groups.png)
+![Der [!UICONTROL Feldergruppen hinzufügen] Dialog mit den hervorgehobenen Feldergruppen der Branche.](../images/tutorials/create-schema/industry-field-groups.png)
 
 Wenn Sie eine Feldergruppe aus der Liste auswählen, wird sie in der rechten Leiste angezeigt. Sie können bei Bedarf mehrere Feldergruppen auswählen und jede Feldergruppe zur Liste in der rechten Leiste hinzufügen, bevor Sie den Vorgang bestätigen. Darüber hinaus wird rechts neben der aktuell ausgewählten Feldgruppe ein Symbol angezeigt, über das Sie die Struktur der darin enthaltenen Felder in einer Vorschau anzeigen können.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit hervorgehobenem Symbol für die Vorschau der ausgewählten Feldergruppe.](../images/tutorials/create-schema/preview-field-group-button.png)
+![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit dem hervorgehobenen Vorschausymbol für die ausgewählte Feldergruppe.](../images/tutorials/create-schema/preview-field-group-button.png)
 
 Bei der Vorschau einer Feldergruppe wird in der rechten Leiste eine detaillierte Beschreibung des Schemas der Feldergruppe bereitgestellt. Sie können auch durch die Felder der Feldergruppe in der bereitgestellten Arbeitsfläche navigieren. Wenn Sie verschiedene Felder auswählen, wird die rechte Leiste aktualisiert, um Details zum betreffenden Feld anzuzeigen. Wählen Sie **[!UICONTROL Zurück]** aus, wenn Sie mit der Vorschau fertig sind, um zum Dialogfeld für die Feldergruppenauswahl zurückzukehren.
 
-![Das Dialogfeld [!UICONTROL Feldergruppe &quot;Vorschau&quot;] mit der Vorschau der Feldergruppe &quot;demografische Details&quot;.](../images/tutorials/create-schema/preview-field-group.png)
+![Der [!UICONTROL Vorschau-Feldergruppe] Dialog mit der Feldergruppe „Demografische Details“ in der Vorschau.](../images/tutorials/create-schema/preview-field-group.png)
 
 Wählen Sie für dieses Tutorial die Feldergruppe **[!UICONTROL Demografische Details]** und dann **[!UICONTROL Feldergruppe hinzufügen]** aus.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit der ausgewählten Feldergruppe &quot;Demografische Details&quot;und [!UICONTROL Feldergruppen hinzufügen] wurde hervorgehoben.](../images/tutorials/create-schema/demographic-details.png)
+![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit der ausgewählten Feldergruppe „Demografische Details“ und der hervorgehobenen [!UICONTROL Feldergruppen hinzufügen].](../images/tutorials/create-schema/demographic-details.png)
 
 Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Abschnitt **[!UICONTROL Feldergruppen]** wird jetzt „[!UICONTROL Demografische Details]“ aufgeführt, und der Abschnitt **[!UICONTROL Struktur]** enthält die von der Feldergruppe bereitgestellten Felder. Sie können den Namen der Feldergruppe unter dem Abschnitt **[!UICONTROL Feldergruppen]** auswählen, um die spezifischen Felder hervorzuheben, die auf der Arbeitsfläche bereitgestellt werden.
 
-![Der Schema-Editor mit dem Feld &quot;Demografische Details&quot;wurde hervorgehoben.](../images/tutorials/create-schema/demographic-details-structure.png)
+![Der Schema-Editor mit den hervorgehobenen Feldergruppen „Demografische Details“.](../images/tutorials/create-schema/demographic-details-structure.png)
 
 >[!NOTE]
 >
-Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
-![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../images/ui/explore/padlock-icon-highlight.png)
+![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/padlock-icon-highlight.png)
 
-Diese Feldergruppe trägt mehrere Felder unter dem Namen der obersten Ebene `person` mit dem Datentyp ein. "[!UICONTROL Person]&quot;. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
+Diese Feldergruppe stellt mehrere Felder unter dem Namen der obersten Ebene `person` mit dem Datentyp bereit "[!UICONTROL Person]&quot;. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
 
 >[!NOTE]
 >
-Beachten Sie, dass Felder möglicherweise skalare Typen verwenden (such als Zeichenfolge, Ganzzahl, Array oder Datum) sowie beliebige Datentypen (a Gruppe von Feldern, die ein gemeinsames Konzept darstellen), definiert in der [!DNL Schema Registry].
+Denken Sie daran, dass Felder Skalartypen verwenden können (such als Zeichenfolge, Ganzzahl, Array oder Datum) sowie jeden Datentyp enthalten (a Gruppe von Feldern, die ein gemeinsames Konzept darstellen), die in der [!DNL Schema Registry] definiert sind.
 
-Beachten Sie, dass das Feld `name` einen Datentyp aufweist. of &quot;[!UICONTROL Vollständiger Name]&quot;, d. h., er beschreibt auch ein gemeinsames Konzept und enthält namensbezogene Unterfelder wie Vorname, Nachname, Höflichkeitstitel und Suffix.
+Beachten Sie, dass das `name` einen Datentyp aufweist of &quot;[!UICONTROL Vollständiger Name]&quot;, d. h., er beschreibt auch ein gemeinsames Konzept und enthält namensbezogene Unterfelder wie Vorname, Nachname, Höflichkeits- oder Ehrentitel und Suffix.
 
 Wählen Sie verschiedene Felder auf der Arbeitsfläche aus, um weitere Felder anzuzeigen, die sie für die Schemastruktur bereitstellen.
 
@@ -146,15 +146,15 @@ Sie können jetzt dieselben Schritte wiederholen, um eine weitere Feldergruppe h
 
 Wählen Sie für dieses Tutorial die Standardfeldgruppen **[!UICONTROL Persönliche Kontaktdaten]** und **[!UICONTROL Treuedetails]** aus der Liste und dann **[!UICONTROL Feldergruppen hinzufügen]** aus, um sie dem Schema hinzuzufügen.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit zwei neuen Feldergruppen ausgewählt und [!UICONTROL Feldergruppen hinzufügen] hervorgehoben.](../images/tutorials/create-schema/more-field-groups.png)
+![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit zwei ausgewählten neuen Feldergruppen und [!UICONTROL Feldergruppen hinzufügen] hervorgehoben.](../images/tutorials/create-schema/more-field-groups.png)
 
 Die Arbeitsfläche wird erneut mit den hinzugefügten Feldergruppen, die im Abschnitt **[!UICONTROL Komposition]** unter **[!UICONTROL Feldergruppen]** aufgelistet sind, und deren verbundenen Feldern, die der Schemastruktur hinzugefügt wurden, angezeigt.
 
-![Der Schema-Editor mit hervorgehobener Struktur des neuen zusammengesetzten Schemas.](../images/tutorials/create-schema/updated-structure.png)
+![Der Schema-Editor mit der hervorgehobenen neuen zusammengesetzten Schemastruktur.](../images/tutorials/create-schema/updated-structure.png)
 
 ## Definieren einer benutzerdefinierten Feldergruppe {#define-field-group}
 
-Das Schema [!UICONTROL Mitglieder des Treueprogramms] soll Daten zu den Mitgliedern eines Treueprogramms erfassen. Die standardmäßige Feldergruppe [!UICONTROL Details des Treueprogramms], die Sie zum Schema hinzugefügt haben, enthält die meisten davon, einschließlich des Programmtyps, points, Join-Datum und mehr.
+Das Schema [!UICONTROL Mitglieder des Treueprogramms] soll Daten erfassen, die sich auf die Mitglieder eines Treueprogramms beziehen, und die Standardfeldgruppe [!UICONTROL Treuedetails], die Sie zum Schema hinzugefügt haben, enthält die meisten davon, darunter den Programmtyp, points, Beitrittsdatum und mehr.
 
 Es kann jedoch vorkommen, dass Sie für Anwendungsfälle zusätzliche benutzerdefinierte Felder hinzufügen möchten, die nicht von Standardfeldgruppen abgedeckt werden. Beim Hinzufügen benutzerdefinierter Treuefelder haben Sie zwei Möglichkeiten:
 
@@ -163,7 +163,7 @@ Es kann jedoch vorkommen, dass Sie für Anwendungsfälle zusätzliche benutzerde
 
 Um eine neue Feldergruppe zu erstellen, wählen Sie wie zuvor im Unterabschnitt **[!UICONTROL Feldergruppen]** die Option **[!UICONTROL Hinzufügen]** aus. Aber dieses Mal wählen Sie am oberen Rand des angezeigten Dialogfelds die Option **[!UICONTROL Neue Feldergruppe erstellen]** aus. Anschließend werden Sie aufgefordert, einen Anzeigenamen und eine Beschreibung für die neue Feldergruppe anzugeben. Nennen Sie für dieses Tutorial die neue Feldergruppe „[!DNL Custom Loyalty Details]“ und wählen Sie dann **[!UICONTROL Feldergruppen hinzufügen]** aus.
 
-![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit der Markierung [!UICONTROL Neue Feldergruppe erstellen], [!UICONTROL Anzeigename] und [!UICONTROL Beschreibung].](../images/tutorials/create-schema/create-new-field-group.png)
+![Das Dialogfeld [!UICONTROL Feldergruppen hinzufügen] mit [!UICONTROL Neue Feldergruppe erstellen], [!UICONTROL Anzeigename] und [!UICONTROL Beschreibung] hervorgehoben.](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >
@@ -177,33 +177,33 @@ Nachdem Sie jetzt die Feldergruppe „[!DNL Custom Loyalty Details]“ erstellt 
 
 Wählen Sie zunächst das Symbol **Plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche.
 
-![Der Schema-Editor mit dem Pluszeichen hervorgehoben.](../images/tutorials/create-schema/add-field.png)
+![Der Schema-Editor mit dem hervorgehobenen Pluszeichen.](../images/tutorials/create-schema/add-field.png)
 
 Der Platzhalter „[!UICONTROL Nicht benanntes Feld]“ wird auf der Arbeitsfläche angezeigt, und die rechte Leiste wird aktualisiert, um Konfigurationsoptionen für das Feld anzuzeigen.
 
-![Der Schema-Editor mit einem [!UICONTROL unbenannten Feld] und dem Schema [!UICONTROL Feldeigenschaften] hervorgehoben.](../images/tutorials/create-schema/untitled-field.png)
+![Der Schema-Editor mit einem [!UICONTROL Nicht benanntes Feld] und dem hervorgehobenen Schema [!UICONTROL Feldeigenschaften].](../images/tutorials/create-schema/untitled-field.png)
 
-In diesem Szenario muss das Schema einen Objekttyp aufweisen field beschreibt die aktuelle Treuestufe der Person detailliert. Erstellen Sie mithilfe der Steuerelemente in der rechten Leiste ein `loyaltyTier` -Feld mit dem Typ "[!UICONTROL Objekt]&quot;, das zum Speichern der zugehörigen Felder verwendet wird.
+In diesem Szenario muss das Schema über einen Objekttyp verfügen field Dies beschreibt detailliert die aktuelle Treuestufe der Person. Beginnen Sie mit der Erstellung eines `loyaltyTier` Felds vom Typ mithilfe der Steuerelemente in der rechten Leiste "[!UICONTROL Object], das zum Speichern Ihrer verwandten Felder verwendet wird.
 
 Unter **[!UICONTROL Zuweisen zu]** müssen Sie eine Feldergruppe auswählen, der das Feld zugewiesen werden soll. Denken Sie daran, dass alle Schemafelder entweder zu einer Klasse oder zu einer Feldergruppe gehören. Da dieses Schema eine Standardklasse verwendet, besteht die einzige Option darin, eine Feldergruppe auszuwählen. Geben Sie zunächst den Namen „[!DNL Custom Loyalty Details]“ ein und wählen Sie dann die Feldergruppe aus der Liste aus.
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
-![Der Schema-Editor mit dem dem Schema hinzugefügten Objekt &quot;Loyalitätsebene&quot;[!UICONTROL Feldeigenschaften] hervorgehoben.](../images/tutorials/create-schema/loyalty-tier-object.png)
+![Der Schema-Editor mit dem hervorgehobenen Objekt „Treuestufe“ zum Schema hinzugefügt [!UICONTROL Feldeigenschaften].](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 Die Änderungen werden angewandt, und das neu erstellte `loyaltyTier`-Objekt wird angezeigt. Da es sich hierbei um ein benutzerdefiniertes Feld handelt, wird es automatisch in einem Objekt mit einem Namespace entsprechend der Mandanten-ID Ihrer Organisation und vorangestelltem Unterstrich verschachtelt (`_tenantId` in diesem Beispiel).
 
-![Der Schema-Editor mit der Mandanten-ID und der Treuestufe, die im Schemadiagramm hervorgehoben sind.](../images/tutorials/create-schema/tenant-id.png)
+![Der Schema-Editor mit der im Schemadiagramm hervorgehobenen Mandanten-ID und Treuestufe.](../images/tutorials/create-schema/tenant-id.png)
 
 >[!NOTE]
 >
 Das Vorhandensein des Mandanten-ID-Objekts bedeutet, dass die Felder, die Sie hinzufügen, im Namespace Ihres Unternehmens enthalten sind.
 >
-Anders ausgedrückt: Die Felder, die Sie hinzufügen, sind für Ihre Organisation einzigartig und werden in der [!DNL Schema Registry] in einem bestimmten Bereich, der nur für Ihre Organisation zugänglich ist, gespeichert. Von Ihnen definierte Felder müssen Ihrem Mandanten-Namespace immer hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Feldgruppen, Datentypen, and -Felder.
+Anders ausgedrückt: Die Felder, die Sie hinzufügen, sind für Ihre Organisation einzigartig und werden in der [!DNL Schema Registry] in einem bestimmten Bereich, der nur für Ihre Organisation zugänglich ist, gespeichert. Felder, die Sie definieren, müssen Ihrem Mandanten-Namespace immer hinzugefügt werden, um Konflikte mit Namen anderer Standardklassen, Feldergruppen, Datentypen, and Felder.
 
 Wählen Sie das Symbol **Plus (+)** neben dem `loyaltyTier`-Objekt aus, um mit dem Hinzufügen von Unterfeldern zu beginnen. Ein Platzhalter für ein neues Feld wird angezeigt, und rechts auf der Arbeitsfläche ist der Abschnitt **[!UICONTROL Feldeigenschaften]** sichtbar.
 
-![Der Schema-Editor mit der Mandanten-ID und dem neuen Unterfeld, das der Treuestufe im Schemadiagramm hinzugefügt wurde.](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
+![Der Schema-Editor mit der Mandanten-ID und dem neuen Unterfeld wurde zur Treuestufe im Schemadiagramm hinzugefügt.](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 Für jedes Feld sind die folgenden Informationen erforderlich:
 
@@ -211,16 +211,16 @@ Für jedes Feld sind die folgenden Informationen erforderlich:
    * Beispiel: LoyalitätsStufe
 * **[!UICONTROL Anzeigename]:** Der Name des Felds, mit Großschreibung des ersten Buchstaben jedes Worts. Dies ist der Name, der auf der Arbeitsfläche erscheint, wenn das Schema angezeigt oder bearbeitet wird.
    * Beispiel: Loyalitäts-Stufe
-* **[!UICONTROL Typ]:** Der Datentyp of das Feld. Dazu gehören grundlegende Skalartypen and beliebige Datentypen defined in der [!DNL Schema Registry]. Beispiele: [!UICONTROL Zeichenfolge], [!UICONTROL Ganzzahl], [!UICONTROL Boolescher Wert], [!UICONTROL Person], [!UICONTROL Adresse], [!UICONTROL Telefonnummer] usw.
+* **[!UICONTROL Type]:** Der Datentyp of Das Feld. Dazu gehören grundlegende Skalartypen and Beliebige Datentypen defined Im [!DNL Schema Registry]. Beispiele: [!UICONTROL Zeichenfolge], [!UICONTROL Ganzzahl], [!UICONTROL Boolescher Wert], [!UICONTROL Person], [!UICONTROL Adresse], [!UICONTROL Telefonnummer] usw.
 * **[!UICONTROL Beschreibung]:** Eine optionale Beschreibung des Felds mit maximal 200 Zeichen sollte enthalten sein.
 
-Das erste Feld für das `loyaltyTier`-Objekt ist eine Zeichenfolge mit der Bezeichnung `id`, die die ID der aktuellen Stufe des Mitglieds des Treueprogramms darstellt. Die Stufen-ID ist für jedes Mitglied des Treueprogramms eindeutig, da dieses Unternehmen für jede Kundin und jeden Kunden basierend auf verschiedenen Faktoren unterschiedliche Punkteschwellenwerte für die Treuestufe festlegt. Typ des neuen Felds festlegen to &quot;[!UICONTROL String]&quot;und der Abschnitt **[!UICONTROL Feldeigenschaften]** enthält mehrere Optionen zum Anwenden von Einschränkungen, darunter Standardwert, Format und maximale Länge. Weitere Informationen finden Sie in der Dokumentation zu [Best Practices für Datenvalidierungsfelder](../schema/best-practices.md#data-validation-fields) .
+Das erste Feld für das `loyaltyTier`-Objekt ist eine Zeichenfolge mit der Bezeichnung `id`, die die ID der aktuellen Stufe des Mitglieds des Treueprogramms darstellt. Die Stufen-ID ist für jedes Mitglied des Treueprogramms eindeutig, da dieses Unternehmen für jede Kundin und jeden Kunden basierend auf verschiedenen Faktoren unterschiedliche Punkteschwellenwerte für die Treuestufe festlegt. Festlegen des Typs des neuen Felds to &quot;[!UICONTROL String]&quot; und der Abschnitt **[!UICONTROL Feldeigenschaften]** werden mit mehreren Optionen zum Anwenden von Einschränkungen ausgefüllt, darunter „Standardwert“, „Format“ und „Maximale Länge“. Weitere Informationen finden Sie in der Dokumentation [Best Practices für Datenvalidierungsfelder](../schema/best-practices.md#data-validation-fields) .
 
-![Der Schema-Editor mit den Feldeigenschaftswerten für das neue ID-Feld hervorgehoben.](../images/tutorials/create-schema/string-constraints.png)
+![Der Schema-Editor mit den hervorgehobenen Feldeigenschaftswerten für das neue ID-Feld.](../images/tutorials/create-schema/string-constraints.png)
 
 Da `id` eine zufällig generierte Freiformzeichenfolge ist, sind keine weiteren Einschränkungen erforderlich. Wählen Sie **[!UICONTROL Übernehmen]**, um Ihre Änderungen anzuwenden.
 
-![Der Schema-Editor mit dem ID-Feld wurde hinzugefügt und hervorgehoben.](../images/tutorials/create-schema/id-field-added.png)
+![Der Schema-Editor mit hinzugefügtem und hervorgehobenem ID-Feld.](../images/tutorials/create-schema/id-field-added.png)
 
 ## Hinzufügen weiterer Felder zur Feldergruppe {#field-group-fields-2}
 
@@ -234,16 +234,16 @@ Um jedes Feld zum Schema hinzuzufügen, wählen Sie das Symbol **Plus (+)** nebe
 
 Nach Fertigstellung enthält das `loyaltyTier`-Objekt Felder für `id`, `currentThreshold`, `nextThreshold` und `effectiveDate`.
 
-![Der Schema-Editor mit dem Objekt &quot;Treueebene&quot;.](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
+![Der Schema-Editor mit dem hervorgehobenen Objekt „Treuestufe“.](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## Hinzufügen eines Aufzählungsfelds zur Feldergruppe {#enum}
 
-Beim Definieren von Feldern im [!DNL Schema Editor] gibt es einige zusätzliche Optionen, die Sie auf grundlegende Feldtypen anwenden können in um weitere Einschränkungen für die Daten bereitzustellen, die das Feld enthalten kann. Die Anwendungsfälle für diese Einschränkungen werden in der folgenden Tabelle erläutert:
+Beim Definieren von Feldern im [!DNL Schema Editor] gibt es einige zusätzliche Optionen, die Sie auf einfache Feldtypen anwenden können in Um weitere Einschränkungen für die Daten bereitzustellen, die das Feld enthalten kann. Die Anwendungsfälle für diese Einschränkungen werden in der folgenden Tabelle erläutert:
 
 | Beschränkung | Beschreibung |
 | --- | --- |
 | [!UICONTROL Erforderlich] | Gibt an, dass das Feld für die Datenaufnahme erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden und dieses Feld nicht enthalten, schlagen bei der Aufnahme fehl. |
-| [!UICONTROL Array] | Gibt an, dass das Feld ein Array von Werten mit jeweils dem Datentyp enthält specified. Verwenden Sie diese Einschränkung beispielsweise für ein Feld mit einem Datentyp of &quot;[!UICONTROL String]&quot; gibt an, dass das Feld ein Zeichenfolgen-Array enthält. |
+| [!UICONTROL Array] | Gibt an, dass das Feld ein Array von Werten jeweils mit dem Datentyp enthält specified. Verwenden Sie diese Einschränkung beispielsweise für ein Feld mit einem Datentyp of &quot;[!UICONTROL String]&quot; gibt an, dass das Feld ein Zeichenfolgen-Array enthält. |
 | [!UICONTROL Aufzählung und vorgeschlagene Werte] | Eine Aufzählung gibt an, dass dieses Feld einen der Werte aus einer Aufzählungsliste möglicher Werte enthalten muss. Als Alternative können Sie diese Option auch verwenden, um nur eine Liste der empfohlenen Werte für ein Zeichenfolgenfeld bereitzustellen, ohne das Feld auf diese Werte zu beschränken. |
 | [!UICONTROL Identität] | Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in diesem Tutorial](#identity-field). |
 | [!UICONTROL Beziehung] | Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile] abgeleitet werden können, gilt dies nur für Schemata einer gemeinsamen Klasse. Die Einschränkung [!UICONTROL Beziehung] gibt an, dass dieses Feld auf die primäre Identität eines Schemas verweist, das auf einer anderen Klasse basiert, was eine Beziehung zwischen den beiden Schemata impliziert. Weiterführende Informationen finden Sie im Tutorial zum [Definieren von Beziehungen](./relationship-ui.md). |
@@ -256,7 +256,7 @@ Beim Definieren von Feldern im [!DNL Schema Editor] gibt es einige zusätzliche 
 
 In diesem Tutorial erfordert das `loyaltyTier`-Objekt im Schema ein neues Aufzählungsfeld, das die Stufenklasse beschreibt, wobei der Wert nur eine von vier möglichen Optionen sein kann. Um dieses Feld zum Schema hinzuzufügen, wählen Sie das Symbol **Plus (+)** neben dem `loyaltyTier`-Objekt aus und füllen Sie die erforderlichen Felder für **[!UICONTROL Feldname]** und **[!UICONTROL Anzeigename]** aus. Wählen Sie für **[!UICONTROL Typ]** die Option „[!UICONTROL Zeichenfolge]“ aus.
 
-![Der Schema-Editor mit dem Tier Class-Objekt, das in den [!UICONTROL Feldeigenschaften] hinzugefügt und hervorgehoben wurde.](../images/tutorials/create-schema/tier-class-type.png)
+![Der Schema-Editor mit dem hinzugefügten Klassenobjekt „Ebene“ und hervorgehobener Option in den [!UICONTROL Feldeigenschaften].](../images/tutorials/create-schema/tier-class-type.png)
 
 Zusätzliche Kontrollkästchen werden für das Feld angezeigt, nachdem der Typ ausgewählt wurde, einschließlich der Kontrollkästchen für **[!UICONTROL Array]**, **[!UICONTROL Aufzählung und vorgeschlagene Werte]**, **[!UICONTROL Identität]** und **[!UICONTROL Beziehung]**.
 
@@ -264,7 +264,7 @@ Aktivieren Sie das Kontrollkästchen **[!UICONTROL Aufzählung und empfohlene We
 
 Wählen Sie nach Festlegung aller Feldeigenschaften **[!UICONTROL Anwenden]** aus, um das Feld `tierClass` zum `loyaltyTier`-Objekt hinzuzufügen.
 
-![Die Eigenschaften des Felds &quot;Aufzählung&quot;und &quot;Wertvorschau&quot;, ausgefüllt mit [!UICONTROL Anwenden] hervorgehoben.](../images/tutorials/create-schema/tier-class-enum.png)
+![Die Feldeigenschaften „Aufzählung“ und „Werte vorschlagen“, die mit &quot;[!UICONTROL &quot; ] wurden.](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 
@@ -274,11 +274,11 @@ Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Fel
 
 Um das `loyaltyTier`-Objekt in einen Datentyp zu konvertieren, wählen Sie auf der Arbeitsfläche das Feld `loyaltyTier` und dann rechts im Editor unter **[!UICONTROL Feldeigenschaften]** die Option **[!UICONTROL In neuen Datentyp konvertieren]** aus.
 
-![Der Schema-Editor mit dem Objekt &quot;loyaltyTier&quot;und [!UICONTROL In neuen Datentyp konvertieren] hervorgehoben.](../images/tutorials/create-schema/convert-data-type.png)
+![Der Schema-Editor mit dem Objekt „LoyaltyTier“ und [!UICONTROL In neuen Datentyp konvertieren] hervorgehoben.](../images/tutorials/create-schema/convert-data-type.png)
 
 Es wird eine Benachrichtigung angezeigt, die bestätigt, dass das Objekt erfolgreich konvertiert wurde. Auf der Arbeitsfläche können Sie jetzt sehen, dass das Feld `loyaltyTier` nun ein Verknüpfungssymbol enthält, und in der rechten Leiste wird angegeben, dass es den Datentyp „[!DNL Loyalty Tier]“ hat.
 
-![Der Schema-Editor mit dem Objekt loyaltyTier und dem neuen Anzeigenamen hervorgehoben.](../images/tutorials/create-schema/loyalty-tier-data-type.png)
+![Der Schema-Editor mit dem hervorgehobenen Objekt „LoyaltyTier“ und dem neuen Anzeigenamen.](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
 In einem zukünftigen Schema können Sie nun ein Feld als Typ „[!DNL Loyalty Tier]“ zuweisen. Dies enthält dann automatisch Felder für ID, Stufenklasse, Punkteschwellenwerte und das Datum des Wirksamwerdens.
 
@@ -290,11 +290,11 @@ Sie können benutzerdefinierte Datentypen auch unabhängig von der Schemabearbei
 
 Ihr Schema enthält jetzt zusätzlich zu den von der Basisklasse bereitgestellten Feldern mehrere Feldergruppen. Wenn Sie mit größeren Schemata arbeiten, können Sie in der linken Leiste die Kontrollkästchen neben den Namen der Feldergruppen aktivieren, um die angezeigten Felder nur nach den von den Feldergruppen bereitgestellten Feldern zu filtern, die für Sie interessant sind.
 
-![Einige Kontrollkästchen, die im Abschnitt &quot;Feldergruppen&quot;des Schema-Editors ausgewählt wurden, um die Größe des Schemadiagramms zu reduzieren.](../images/tutorials/create-schema/filter-by-field-group.png)
+![Einige Kontrollkästchen wurden im Abschnitt Feldergruppen des Schema-Editors aktiviert, um die Größe des Schemadiagramms zu reduzieren.](../images/tutorials/create-schema/filter-by-field-group.png)
 
 Wenn Sie nach einem bestimmten Feld in Ihrem Schema suchen, können Sie auch die Suchleiste verwenden, um die angezeigten Felder nach Namen zu filtern, unabhängig davon, unter welcher Feldergruppe sie bereitgestellt werden.
 
-![Das Suchfeld des Schema-Editors mit den relevanten Ergebnissen, die auf der Arbeitsfläche hervorgehoben sind.](../images/tutorials/create-schema/search.png)
+![Das Suchfeld des Schema-Editors mit Hervorhebung der relevanten Ergebnisse auf der Arbeitsfläche.](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
@@ -322,7 +322,7 @@ Jedes Schema darf nur ein primäres Identitätsfeld enthalten. Nachdem ein Schem
 
 Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü angeben. Da dieses Feld die Kunden-E-Mail-Adresse ist, wählen Sie aus dem Dropdown-Menü die Option „[!UICONTROL E-Mail]“ aus. Wählen Sie **[!UICONTROL Anwenden]** zur Bestätigung der Aktualisierungen des Felds `personalEmail.address` aus.
 
-![Der Schema-Editor mit hervorgehobener E-Mail-Adresse und aktiviertem Primären Identitäts-Kontrollkästchen](../images/tutorials/create-schema/primary-identity.png).
+![Der Schema-Editor mit der hervorgehobenen E-Mail-Adresse und aktiviertem Kontrollkästchen für die Primäre Identität.](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ Eine Liste der Standard-Namespaces und ihrer Definitionen finden Sie in der [[!D
 
 Nach Anwendung der Änderung zeigt das Symbol für `personalEmail.address` ein Fingerabdrucksymbol. Dies bedeutet, dass es sich jetzt um ein Identitätsfeld handelt. Das Feld wird auch in der linken Leiste unter **[!UICONTROL Identitäten]** aufgeführt.
 
-![Der Schema-Editor mit hervorgehobener E-Mail-Adresse und hervorgehobenem Identitätsfeld in der Seitenleiste der Schemakomposition.](../images/tutorials/create-schema/identity-applied.png)
+![Der Schema-Editor mit der hervorgehobenen E-Mail-Adresse und dem hervorgehobenen Identitätsfeld in der Seitenleiste zur Schemakomposition.](../images/tutorials/create-schema/identity-applied.png)
 
 Nun werden alle Daten, die in das Feld `personalEmail.address` aufgenommen werden, verwendet, um diese Person zu identifizieren und eine individuelle Sicht auf diese Kundin oder diesen Kunden zu erstellen. Weitere Informationen zum Arbeiten mit Identitäten in [!DNL Experience Platform] finden Sie in der Dokumentation zu [[!DNL Identity Service]](../../identity-service/home.md).
 
@@ -340,17 +340,17 @@ Das [[!DNL Real-Time Customer Profile]](../../profile/home.md) nutzt Identitäts
 
 Damit ein Schema für das [!DNL Real-Time Customer Profile] aktiviert werden kann, muss eine primäre Identität dafür definiert sein. Sie erhalten eine Fehlermeldung, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
 
-![Das Dialogfeld &quot;Fehlende primäre Identität&quot;.](../images/tutorials/create-schema/missing-primary-identity.png)
+![Das Dialogfeld „Fehlende primäre Identität“.](../images/tutorials/create-schema/missing-primary-identity.png)
 
 Um das Schema „Mitglieder des Treueprogramms“ für das [!DNL Profile] zu aktivieren, wählen Sie zunächst den Schemanamen auf der Arbeitsfläche aus.
 
 Rechts im Editor werden Informationen zum Schema angezeigt, einschließlich dessen Anzeigenamen, Beschreibung und Typ. Zusätzlich zu diesen Informationen gibt es eine Umschaltfläche **[!UICONTROL Profil]**.
 
-![Der Schema-Editor mit dem Schemastamm und dem Umschalter Aktivieren für Profil markiert](../images/tutorials/create-schema/profile-toggle.png).
+![Der Schema-Editor mit dem Schemastamm und dem hervorgehobenen Umschalter „Für Profil aktivieren“.](../images/tutorials/create-schema/profile-toggle.png)
 
 Wählen Sie **[!UICONTROL Profil]** aus. Daraufhin wird ein Pop-up angezeigt, in dem Sie bestätigen müssen, dass Sie das Schema für das [!DNL Profile] aktivieren möchten.
 
-![Das Dialogfeld &quot;Aktivieren für Profilbestätigung&quot;.](../images/tutorials/create-schema/enable-profile.png)
+![Der Bestätigungsdialog „Für Profil aktivieren“](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
@@ -360,9 +360,9 @@ Wählen Sie **[!UICONTROL Aktivieren]** aus, um Ihre Wahl zu bestätigen. Sie k�
 
 ## Mehr Aktionen {#more}
 
-Im Schema Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen. Wählen Sie oben in der Ansicht [!UICONTROL Mehr] aus, um eine Dropdown-Liste mit Schnellaktionen anzuzeigen.
+Im Schema-Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen. Wählen Sie [!UICONTROL Mehr] oben in der Ansicht aus, um eine Dropdown-Liste mit Schnellaktionen anzuzeigen.
 
-![Der Schema-Editor mit der hervorgehobenen Schaltfläche Mehr und den angezeigten Dropdown-Optionen.](../images/tutorials/create-schema/more-actions.png)
+![Der Schema-Editor mit der hervorgehobenen Schaltfläche „Mehr“ und den angezeigten Dropdown-Optionen.](../images/tutorials/create-schema/more-actions.png)
 
 ### Löschen eines Schemas {#delete-a-schema}
 
@@ -381,15 +381,15 @@ id="platform_schemas_delete_withdatasetsnotprofileenabled"
 title="Schema kann nicht gelöscht werden"
 abstract="Das Schema kann nicht gelöscht werden, da ihm Datensätze zugeordnet sind."
 
-Ein Schema kann in der Benutzeroberfläche mit den Aktionen [!UICONTROL Mehr] und auch mit den Schemadetails auf der Registerkarte [!UICONTROL Durchsuchen] aus dem Schema-Editor gelöscht werden. Es gibt bestimmte Bedingungen, die das Löschen eines Schemas verhindern. Ein Schema kann nicht gelöscht werden, wenn:
+Ein Schema kann über die Benutzeroberfläche mithilfe von [!UICONTROL Mehr]-Aktionen sowie über die Schemadetails auf der Registerkarte [!UICONTROL Durchsuchen] gelöscht werden. Es gibt bestimmte Bedingungen, die verhindern, dass ein Schema gelöscht wird. Ein Schema kann nicht gelöscht werden, wenn:
 
-* Das Schema ist für Profil aktiviert.
+* Das Schema ist für das Profil aktiviert.
 * Das Schema ist für Profil aktiviert und verfügt über verknüpfte Datensätze.
-* Das Schema hat verknüpfte Datensätze, ist aber nicht für Profil aktiviert.
+* Das Schema verfügt über verknüpfte Datensätze, ist jedoch nicht für das Profil aktiviert.
 
 ### Kopieren von JSON-Strukturen {#copy-json-structure}
 
-Wählen Sie **[!UICONTROL JSON-Struktur kopieren]** aus, um eine Export-Payload für ein Schema in der Schema Library zu generieren. Mit dieser Aktion wird die JSON-Struktur in die Zwischenablage kopiert. Ihre exportierte JSON-Datei kann dann zum Importieren des Schemas und der zugehörigen Ressourcen in eine andere Sandbox oder Organisation verwendet werden. Dadurch wird die Freigabe und Wiederverwendung von Schemata zwischen verschiedenen Umgebungen einfach und effizient.
+Wählen Sie **[!UICONTROL JSON-Struktur kopieren]** aus, um eine Export-Payload für ein beliebiges Schema in der Schemabibliothek zu generieren. Diese Aktion kopiert die JSON-Struktur in die Zwischenablage. Ihre exportierte JSON-Datei kann dann zum Importieren des Schemas und aller zugehörigen Ressourcen in eine andere Sandbox oder Organisation verwendet werden. Dadurch wird die Freigabe und Wiederverwendung von Schemata zwischen verschiedenen Umgebungen einfach und effizient.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

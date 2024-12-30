@@ -1,6 +1,6 @@
 ---
-title: Datentyp des kodierbaren Konzepts
-description: Erfahren Sie mehr über den Datentyp "Codeable Concept Experience Data Model (XDM)".
+title: Datentyp des codierbaren Konzepts
+description: Erfahren Sie mehr über den Datentyp Codeable Concept Experience Data Model (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,15 +12,15 @@ ht-degree: 9%
 
 ---
 
-# Datentyp [!UICONTROL Codeable Concept]
+# [!UICONTROL Codeable Concept] Datentyp
 
-[!UICONTROL Codeable Concept] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Verweis von einer Ressource zu einer anderen beschreibt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Codeable Concept] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Verweis von einer Ressource zur anderen beschreibt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Datenstruktur des kodierbaren Konzepts](../../../images/healthcare/data-types/codeable-concept.png)
+![Codeable Concept-Datentypstruktur](../../../images/healthcare/data-types/codeable-concept.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Kodierung] | `coding` | Array von [[!UICONTROL Coding]](../data-types/coding.md) | Von einem Terminologiesystem definierter Code. |
+| [!UICONTROL Kodierung] | `coding` | Array von [[!UICONTROL Codierung]](../data-types/coding.md) | Durch ein Terminologiesystem definierter Code |
 | [!UICONTROL Text] | `text` | String | Die Textdarstellung des Konzepts. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

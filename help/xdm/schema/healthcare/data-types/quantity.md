@@ -1,6 +1,6 @@
 ---
-title: Datentyp "Quantität"
-description: Erfahren Sie mehr über den Datentyp "Quantity Experience Data Model (XDM)".
+title: Datentyp der Menge
+description: Erfahren Sie mehr über den Datentyp „Quantity Experience-Datenmodell (XDM)“.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,18 +12,18 @@ ht-degree: 11%
 
 ---
 
-# Datentyp [!UICONTROL Quantity]
+# [!UICONTROL Menge] Datentyp
 
-[!UICONTROL Quantity] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen gemessenen oder messbaren Betrag liefert. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Quantity] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen gemessenen oder messbaren Betrag bereitstellt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Datentyps Quantität](../../../images/healthcare/data-types/quantity.png)
+![Struktur des Datentyps „Menge](../../../images/healthcare/data-types/quantity.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | String | Die codierte Form der Einheit. |
-| [!UICONTROL Comparator] | `comparator` | String | Der Vergleichsoperator. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `<` </li> <li> `<=` </li> <li> `>=` </li> <li> `>`</li> <li> `ad`</li> |
-| [!UICONTROL System] | `system` | String | Das System, das das kodierte Einheitenformular definiert, das als URI dargestellt wird. |
-| [!UICONTROL Unit] | `unit` | String | Die Einheitendarstellung. |
+| [!UICONTROL Vergleicher] | `comparator` | String | Der Vergleichsoperator. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `<` </li> <li> `<=` </li> <li> `>=` </li> <li> `>`</li> <li> `ad`</li> |
+| [!UICONTROL System] | `system` | String | Das System, das die codierte Formulareinheit definiert, dargestellt als URI. |
+| [!UICONTROL Einheit] | `unit` | String | Die Einheitendarstellung. |
 | [!UICONTROL Wert] | `value` | Double | Der numerische Wert. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

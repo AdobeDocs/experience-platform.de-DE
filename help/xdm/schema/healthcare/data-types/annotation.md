@@ -1,6 +1,6 @@
 ---
-title: Anmerkungsdatentyp
-description: Erfahren Sie mehr über den Datentyp des Experience-Datenmodells für Anmerkungen (XDM).
+title: Datentyp der Anmerkung
+description: Erfahren Sie mehr über den Datentyp Experience-Datenmodell (XDM) für Anmerkungen.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,18 +12,18 @@ ht-degree: 11%
 
 ---
 
-# Datentyp [!UICONTROL Anmerkung]
+# [!UICONTROL Anmerkung] Datentyp
 
-[!UICONTROL Anmerkung] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Textknoten mit Attribution zum Autor enthält. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Annotation] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Textknoten mit einer Attribution zum Autor enthält. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Anmerkungstyps](../../../images/healthcare/data-types/annotation.png)
+![Struktur des Datentyps für Anmerkungen](../../../images/healthcare/data-types/annotation.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Autorenreferenz] | `authorReference` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Verweis auf den Autor. |
-| [!UICONTROL Autor] | `authorString` | String | Der für die Anmerkung verantwortliche Benutzer. |
+| [!UICONTROL author] | `authorString` | String | Die für die Anmerkung verantwortliche Person. |
 | [!UICONTROL Text] | `text` | String | Der Inhalt der Anmerkung. |
-| [!UICONTROL Zeit] | `time` | DateTime | Wann die Anmerkung gemacht wurde |
+| [!UICONTROL Zeit] | `time` | DateTime | Zeitpunkt, zu dem die Anmerkung erstellt wurde. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

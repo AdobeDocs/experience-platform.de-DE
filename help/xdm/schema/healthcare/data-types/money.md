@@ -1,6 +1,6 @@
 ---
 title: Gelddatentyp
-description: Erfahren Sie mehr über den XDM-Datentyp (Money Experience Data Model).
+description: Erfahren Sie mehr über den Datentyp Geld-Experience-Datenmodell (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,11 +12,11 @@ ht-degree: 18%
 
 ---
 
-# Datentyp [!UICONTROL Money]
+# [!UICONTROL Geld] Datentyp
 
-[!UICONTROL Money] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der in einer anerkannten Währung einen wirtschaftlichen Nutzen bietet. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Money] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der in einer anerkannten Währung einen wirtschaftlichen Nutzen bietet. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Geldtyps](../../../images/healthcare/data-types/money.png)
+![Datentypstruktur „Geld](../../../images/healthcare/data-types/money.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |

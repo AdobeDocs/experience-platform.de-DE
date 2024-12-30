@@ -1,6 +1,6 @@
 ---
-title: Identifier-Datentyp
-description: Erfahren Sie mehr über den Datentyp Identifier Experience-Datenmodell (XDM) .
+title: Datentyp der Kennung
+description: Erfahren Sie mehr über den Datentyp Kennung des Experience-Datenmodells (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,19 +12,19 @@ ht-degree: 9%
 
 ---
 
-# Datentyp [!UICONTROL Identifier]
+# [!UICONTROL Kennung] Datentyp
 
-[!UICONTROL Bezeichner] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der eine für die Berechnung vorgesehene Kennung bereitstellt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Identifier] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine für die Berechnung bestimmte Kennung bereitstellt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Bezeichnerdatentyps](../../../images/healthcare/data-types/identifier.png)
+![Struktur des Datentyps „Kennung](../../../images/healthcare/data-types/identifier.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Zeitraum] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem die ID zur Verwendung gültig ist oder war. |
+| [!UICONTROL Zeitraum] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem die ID gültig ist oder war. |
 | [!UICONTROL Typ] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Beschreibung der Kennung. |
-| [!UICONTROL Assigner] | `assigner` | String | Die Organisation, die die ID ausgestellt hat. |
+| [!UICONTROL Verantwortlicher] | `assigner` | String | Die Organisation, die die ID ausgestellt hat. |
 | [!UICONTROL System] | `system` | String | Der Namespace für den Kennungswert, dargestellt als URI. |
-| [!UICONTROL Use] | `use` | String | Die Verwendung der Kennung. Die Werte dieser Eigenschaft müssen mit einem oder mehreren der folgenden bekannten Enum-Werte übereinstimmen. <li> `usual` </li> <li> `offical` </li> <li> `temp` </li> <li> `secondary` </li> <li> `old` </li> |
+| [!UICONTROL Verwenden] | `use` | String | Die Verwendung der Kennung. Die Werte dieser Eigenschaft müssen mindestens einem der folgenden bekannten Enum-Werte entsprechen. <li> `usual` </li> <li> `offical` </li> <li> `temp` </li> <li> `secondary` </li> <li> `old` </li> |
 | [!UICONTROL Wert] | `value` | String | Der eindeutige Wert der ID. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

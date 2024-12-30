@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; ui; UI; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; erkunden; Klasse; Feldergruppe; Datentyp; Schema
+keywords: Experience Platform;Startseite;beliebte Themen;UI;Benutzeroberfläche;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;erkunden;Klasse;Feldergruppe;Datentyp;Schema;
 solution: Experience Platform
-title: Schema-Ressourcen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
+title: Erkunden von Schema-Ressourcen in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie vorhandene Schemata, Klassen, Schemafeldgruppen und Datentypen in der Benutzeroberfläche zum Experience Platform untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -12,115 +12,115 @@ ht-degree: 0%
 
 ---
 
-# Schema-Ressourcen in der Benutzeroberfläche
+# Erkunden von Schema-Ressourcen in der Benutzeroberfläche
 
-In Adobe Experience Platform werden alle Schemaressourcen des Experience-Datenmodells (XDM) im Ordner &quot;[!DNL Schema Library]&quot;gespeichert, einschließlich der von der Adobe bereitgestellten Standardressourcen und der von Ihrem Unternehmen definierten benutzerdefinierten Ressourcen. Auf der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer Feldgruppe oder eines vorhandenen Datentyps im [!DNL Schema Library] anzeigen. Dies ist besonders nützlich bei der Planung und Vorbereitung der Datenerfassung, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
+In Adobe Experience Platform werden alle Schema-Ressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library] gespeichert, einschließlich der vom Adobe bereitgestellten Standardressourcen und der von Ihrem Unternehmen definierten benutzerdefinierten Ressourcen. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer vorhandenen Feldergruppe oder eines vorhandenen Datentyps in der [!DNL Schema Library] anzeigen. Dies ist besonders bei der Planung und Vorbereitung der Datenaufnahme nützlich, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen jedes Felds bereitstellt, das von diesen XDM-Ressourcen bereitgestellt wird.
 
-In diesem Tutorial werden die Schritte zum Erkunden vorhandener Schemas, Klassen, Feldergruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden die Schritte zum Untersuchen vorhandener Schemata, Klassen, Feldergruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
 
-## Nach einer Schemaressource suchen {#lookup}
+## Suchen einer Schema-Ressource {#lookup}
 
-Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Der Arbeitsbereich [!UICONTROL Schemas] enthält eine Registerkarte **[!UICONTROL Durchsuchen]** , auf der alle Schemas in Ihrer Organisation durchsucht werden können. Außerdem stehen zusätzliche spezielle Registerkarten zum Erkunden der **[!UICONTROL Klassen]**, **[!UICONTROL Feldgruppen]**, **[!UICONTROL Datentypen]** und **[!UICONTROL Beziehungen]** zur Verfügung.
+Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Schemas]** im linken Navigationsbereich aus. Der Arbeitsbereich [!UICONTROL Schemata] bietet eine Registerkarte **[!UICONTROL Durchsuchen]**, auf der alle Schemata in Ihrer Organisation untersucht werden können, sowie zusätzliche dedizierte Registerkarten zum Durchsuchen von **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]**, **[!UICONTROL Datentypen]** und **[!UICONTROL Beziehungen]**.
 
-![Der Arbeitsbereich &quot;Schemas&quot;mit mehreren Registerkarten ist hervorgehoben.](../images/ui/explore/tabs.png)
+![Der Arbeitsbereich „Schemata“ mit mehreren hervorgehobenen Registerkarten.](../images/ui/explore/tabs.png)
 
-Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzuschränken. Ressourcenfilter sind für Schemas und Beziehungen auf den Registerkarten **[!UICONTROL Durchsuchen]** und **[!UICONTROL Beziehungen]** verfügbar.
+Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzugrenzen. Ressourcenfilter sind für Schemata und Beziehungen auf den Registerkarten **[!UICONTROL Durchsuchen]** und **[!UICONTROL Beziehungen]** verfügbar.
 
-Auf der Registerkarte [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemas] können Sie Ihren Schemabestand filtern. Verwenden Sie den Umschalter **[!UICONTROL Im Profil enthalten]** , um nur Schemas anzuzeigen, die für die Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md) aktiviert wurden. Verwenden Sie den Umschalter **[!UICONTROL Ad-hoc-Schemata anzeigen]** , um die Liste der Schemas zu filtern, die mit Feldern erstellt wurden, deren Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen ist.
+Auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Schemata] können Sie Ihren Schemabestand filtern. Verwenden Sie den Umschalter **[!UICONTROL Im Profil enthalten]**, um nur Schemata anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert ](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Ad-hoc-]** anzeigen“, um die Liste der Schemata zu filtern, die mit Feldern mit Namespace erstellt wurden und nur von einem einzigen Datensatz verwendet werden können.
 
-![Die Registerkarte [!UICONTROL Schemas] Arbeitsbereich [!UICONTROL Durchsuchen] mit hervorgehobenem Filterbereich.](../images/ui/explore/filters.png)
+![Die Registerkarte [!UICONTROL Schemata] im Arbeitsbereich [!UICONTROL Durchsuchen] mit hervorgehobenem Filterbedienfeld.](../images/ui/explore/filters.png)
 
-Auf der Registerkarte [!UICONTROL Beziehung] im Arbeitsbereich [!UICONTROL Schemas] können Sie die Liste der Beziehungen nach vier Kriterien filtern. Zu den Filtern gehören [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] und die [!UICONTROL Destination class]. Die nachstehende Tabelle enthält eine Beschreibung der Filter.
+Auf der Registerkarte [!UICONTROL Beziehung] des Arbeitsbereichs [!UICONTROL Schemata] können Sie die Liste der Beziehungen nach vier Kriterien filtern. Die Filter umfassen [!UICONTROL Source], [!UICONTROL Zielschema], [!UICONTROL Source-] und die [!UICONTROL Zielklasse]. Die nachstehende Tabelle enthält eine Beschreibung der Filter.
 
 | Filter | Beschreibung |
 |-----------------------------------|------------|
-| [!UICONTROL Source-Schema] | Um alle Beziehungen anzuzeigen, bei denen das ausgewählte Schema der Ausgangspunkt oder die &quot;Quelle&quot;ist, wählen Sie ein Schema aus dem Dropdown-Menü [!UICONTROL Source-Schema] aus. |
-| [!UICONTROL Zielschema] | Um alle Beziehungen anzuzeigen, bei denen das ausgewählte Schema das Ziel oder das Ziel ist, wählen Sie ein Schema aus dem Dropdown-Menü [!UICONTROL Zielschema] aus. |
-| [!UICONTROL Source-Klasse] | Um Beziehungen basierend auf der Klasse des Initiierungsschemas zu filtern, wählen Sie eine Klasse aus dem Dropdown-Menü [!UICONTROL Source-Klasse] aus. |
-| [!UICONTROL Zielklasse] | Um Beziehungen anzuzeigen, die mit Schemas einer bestimmten Klasse enden, wählen Sie eine Klasse aus dem Dropdown-Menü [!UICONTROL Zielklasse] aus. |
+| [!UICONTROL Source-Schema] | Um alle Beziehungen anzuzeigen, bei denen das ausgewählte Schema der Startpunkt oder „Quellpfad“ ist, wählen Sie ein Schema aus dem Dropdown-Menü [!UICONTROL Source] aus. |
+| [!UICONTROL Zielschema] | Um alle Beziehungen anzuzeigen, bei denen das ausgewählte Schema das Ziel oder „Ziel“ ist, wählen Sie ein Schema aus dem Dropdown-Menü [!UICONTROL Zielschema] aus. |
+| [!UICONTROL Source-Klasse] | Um Beziehungen nach der Klasse des initiierenden Schemas zu filtern, wählen Sie eine Klasse aus dem Dropdown-Menü [!UICONTROL Source-Klasse] aus. |
+| [!UICONTROL Zielklasse] | Um Beziehungen anzuzeigen, die auf Schemata einer bestimmten Klasse enden, wählen Sie eine Klasse aus dem Dropdown[!UICONTROL Menü &quot;]&quot;. |
 
 {style="table-layout:auto"}
 
-![Die Registerkarte &quot;Beziehungen&quot;mit hervorgehobenem Filterabschnitt.](../images/ui/explore/relationships-filter.png)
+![Die Registerkarte „Beziehungen“ mit hervorgehobenem Filterabschnitt.](../images/ui/explore/relationships-filter.png)
 
 Sie können die Suchleiste auch verwenden, um die Ergebnisse weiter einzugrenzen.
 
-![Die Registerkarte &quot;Durchsuchen&quot;im Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenem Suchfeld.](../images/ui/explore/search.png)
+![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Schemata“ mit hervorgehobenem Suchfeld.](../images/ui/explore/search.png)
 
-Die in den Suchergebnissen angezeigten Ressourcen werden zuerst nach Titel und dann nach Beschreibung geordnet. Je mehr Wörter in einer dieser Kategorien übereinstimmen, desto höher wird die Ressource in der Liste angezeigt.
+Die in den Suchergebnissen angezeigten Ressourcen werden zuerst nach Übereinstimmungen mit dem Titel und dann nach der Beschreibung sortiert. Je mehr Wörter in einer dieser Kategorien übereinstimmen, desto höher wird die Ressource in der Liste angezeigt.
 
-Wenn Sie die Ressource gefunden haben, die Sie untersuchen möchten, wählen Sie deren Namen aus der Liste aus, um ihre Struktur auf der Arbeitsfläche anzuzeigen.
+Wenn Sie die Ressource gefunden haben, die Sie untersuchen möchten, wählen Sie ihren Namen aus der Liste aus, um ihre Struktur auf der Arbeitsfläche anzuzeigen.
 
-## XDM-Ressource auf der Arbeitsfläche durchsuchen {#explore}
+## Erkunden einer XDM-Ressource auf der Arbeitsfläche {#explore}
 
-Nachdem Sie eine Ressource ausgewählt haben, wird ihre Struktur auf der Arbeitsfläche geöffnet.
+Wenn Sie eine Ressource auswählen, wird ihre Struktur auf der Arbeitsfläche geöffnet.
 
-![Die Arbeitsfläche &quot;Datentyp&quot;mit dem Commerce-Datentyp.](../images/ui/explore/canvas.png)
+![Die Arbeitsfläche des Datentyp-Arbeitsbereichs mit dem Commerce-Datentyp.](../images/ui/explore/canvas.png)
 
-Alle Objekttypen, die Untereigenschaften enthalten, werden standardmäßig ausgeblendet, wenn sie zum ersten Mal auf der Arbeitsfläche angezeigt werden. Um die Untereigenschaften eines beliebigen Felds anzuzeigen, wählen Sie das Symbol neben seinem Namen aus.
+Alle Felder vom Typ „Objekt“, die Untereigenschaften enthalten, werden standardmäßig reduziert, wenn sie zum ersten Mal auf der Arbeitsfläche erscheinen. Um die Untereigenschaften eines Felds anzuzeigen, klicken Sie auf das Symbol neben dem Namen des Felds.
 
-![Die Arbeitsfläche des Datentyps mit hervorgehobenen erweiterten Feldern und Untereigenschaften.](../images/ui/explore/field-expand.png)
+![Die Arbeitsfläche des Datentyp-Arbeitsbereichs mit erweiterten Feldern und hervorgehobenen Untereigenschaften.](../images/ui/explore/field-expand.png)
 
-### Standardklasse- und Feldergruppenanzeige {#standard-class-and-field-group-indicator}
+### Indikator für Standardklasse und Feldergruppe {#standard-class-and-field-group-indicator}
 
-Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 
-![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../images/ui/explore/schema-editor-padlock-icon.png)
+![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Eine Anleitung finden Sie in der Dokumentation [Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen](./resources/schemas.md) . Eine Standardklasse kann nicht bearbeitet werden.
+Eine Anleitung [ Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder ](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
 
 ### Systemgenerierte Felder {#system-fields}
 
-Einige Feldnamen erhalten einen Unterstrich, z. B. `_repo` und `_id`. Diese stellen Platzhalter für Felder dar, die das System automatisch generiert und zuweist, wenn Daten erfasst werden.
+Einigen Feldnamen wird ein Unterstrich vorangestellt, z. B. `_repo` und `_id`. Diese stellen Platzhalter für Felder dar, die das System bei der Datenaufnahme automatisch generiert und zuweist.
 
-Daher sollten die meisten dieser Felder bei der Aufnahme in Platform aus der Datenstruktur ausgeschlossen werden. Die Hauptausnahme dieser Regel ist das [`_{TENANT_ID}` -Feld](../api/getting-started.md#know-your-tenant_id), in dem alle unter Ihrem Unternehmen erstellten XDM-Felder im Namespace angegeben werden müssen.
+Daher sollten die meisten dieser Felder bei der Aufnahme in Platform aus der Struktur Ihrer Daten ausgeschlossen werden. Die wichtigste Ausnahme von dieser Regel ist das [`_{TENANT_ID}` Feld](../api/getting-started.md#know-your-tenant_id) unter dem alle XDM-Felder, die unter Ihrer Organisation erstellt wurden, einen Namespace erhalten müssen.
 
 ### Datentypen {#data-types}
 
-Für jedes auf der Arbeitsfläche angezeigte Feld wird der zugehörige Datentyp neben dem Namen angezeigt, der auf einen Blick den Datentyp angibt, den das Feld für die Aufnahme erwartet.
+Für jedes auf der Arbeitsfläche angezeigte Feld wird der entsprechende Datentyp neben dem Namen angezeigt, was auf einen Blick den Datentyp angibt, den das Feld für die Aufnahme erwartet.
 
-![Der auf der Arbeitsfläche angezeigte Datentyp &quot;Postanschrift&quot;mit den zugehörigen Datentypen ist hervorgehoben.](../images/ui/explore/data-types.png)
+![Der auf der Arbeitsfläche angezeigte Datentyp „Postanschrift“ mit hervorgehobenen zugehörigen Datentypen.](../images/ui/explore/data-types.png)
 
-Jeder Datentyp, der mit eckigen Klammern (`[]`) angehängt wird, stellt ein Array dieses bestimmten Datentyps dar. Beispielsweise zeigt der Datentyp **[!UICONTROL String]\[]** an, dass das Feld ein Array von Zeichenfolgenwerten erwartet. Der Datentyp **[!UICONTROL Zahlungselement]\[]** gibt ein Array von Objekten an, die dem Datentyp [!UICONTROL Zahlungselement] entsprechen.
+Jeder Datentyp, der mit eckigen Klammern (`[]`) angehängt wird, stellt ein Array dieses bestimmten Datentyps dar. Beispielsweise gibt ein Datentyp von **[!UICONTROL String]\[]** an, dass das Feld ein Array von Zeichenfolgenwerten erwartet. Ein Datentyp von **[!UICONTROL Zahlungsposten]\[]** gibt ein Array von Objekten an, die dem Datentyp [!UICONTROL Zahlungsposten] entsprechen.
 
-Wenn ein Array-Feld auf einem Objekttyp basiert, können Sie das zugehörige Symbol auf der Arbeitsfläche auswählen, um die erwarteten Attribute für jedes Array-Element anzuzeigen.
+Wenn ein Array-Feld auf einem Objekttyp basiert, können Sie auf der Arbeitsfläche auf sein Symbol klicken, um die erwarteten Attribute für jedes Array-Element anzuzeigen.
 
-![Ein Objekt auf der Arbeitsfläche, bei dem ein Array-Feld hervorgehoben ist und die erwarteten Attribute für jedes Array-Element angezeigt werden.](../images/ui/explore/array-type.png)
+![Ein Objekt auf der Arbeitsfläche mit einem hervorgehobenen Array-Feld und den für jedes Array-Element erwarteten Attributen.](../images/ui/explore/array-type.png)
 
 ### [!UICONTROL Feldeigenschaften] {#field-properties}
 
-Wenn Sie den Namen eines Felds auf der Arbeitsfläche auswählen, wird die rechte Leiste aktualisiert, um Details zu diesem Feld unter **[!UICONTROL Feldeigenschaften]** anzuzeigen. Dies kann eine Beschreibung des Verwendungsfalls des Felds, Standardwerte, Muster, Formate, unabhängig davon, ob das Feld erforderlich ist oder nicht, und mehr enthalten.
+Wenn Sie den Namen eines Felds auf der Arbeitsfläche auswählen, wird die rechte Leiste aktualisiert, um Details zu diesem Feld unter „Feldeigenschaften **[!UICONTROL anzuzeigen]**. Dies kann eine Beschreibung des vorgesehenen Anwendungsfalls des Felds, Standardwerte, Muster, Formate, unabhängig davon, ob das Feld erforderlich ist oder nicht, und mehr umfassen.
 
 ![Ein aus dem Commerce-Datentyp ausgewähltes Feld mit hervorgehobenen Feldeigenschaften.](../images/ui/explore/field-properties.png)
 
-Wenn es sich bei dem zu prüfenden Feld um ein Enum-Feld handelt, zeigt die rechte Leiste auch die akzeptablen Werte an, die das Feld erwartet.
+Wenn es sich bei dem überprüften Feld um ein Aufzählungsfeld handelt, zeigt die rechte Leiste auch die akzeptablen Werte an, die das Feld erwartet.
 
-![Der Schema-Editor mit einem ausgewählten Feld und in der Leiste &quot;Feldeigenschaften&quot;hervorgehobenen Werten und Anzeigenamen.](../images/ui/explore/enum-field.png)
+![Der Schema-Editor mit einem ausgewählten Feld und den hervorgehobenen Aufzählungswerten und Anzeigenamen in der Leiste „Feldeigenschaften“.](../images/ui/explore/enum-field.png)
 
 ### Identitätsfelder {#identity}
 
-Beim Prüfen von Schemas, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgelistet, die sie für das Schema bereitstellt. Wählen Sie in der linken Leiste den Namen des Identitätsfelds aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
+Beim Überprüfen von Schemata, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgeführt, die sie für das Schema bereitstellt. Wählen Sie den Namen des Identitätsfelds in der linken Leiste aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdruck-Symbol Bild](/help/images/icons/identity-service.png)) hervorgehoben. Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen wie den [Identitäts-Namespace](../../identity-service/features/namespaces.md) anzeigen und feststellen, ob das Feld die primäre Identität für das Schema ist.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) ](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
 
-![Der Schema-Editor mit der in der linken Leiste hervorgehobenen Identität des Schemas, dem im Schemadiagramm hervorgehobenen Feld und dem in den Feldeigenschaften hervorgehobenen Identitäts-Namespace.](../images/ui/explore/identity-field.png)
+![Der Schema-Editor mit der hervorgehobenen Identität des Schemas in der linken Leiste, dem hervorgehobenen Feld im Schemadiagramm und dem hervorgehobenen Identity-Namespace in den Feldeigenschaften.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Weiterführende Informationen zu Identitätsfeldern und deren Beziehung zu nachgelagerten Platform-Diensten finden Sie im Handbuch zu [Identitätsfeldern definieren](./fields/identity.md) .
+>Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
 
 ### Beziehungsfelder {#relationship}
 
-Wenn Sie ein Schema überprüfen, das ein Beziehungsfeld enthält, wird das Feld in der linken Leiste unter **[!UICONTROL Beziehungen]** aufgelistet. Wählen Sie in der linken Leiste den Namen des Beziehungsfelds aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist. Die Beziehungsfelder werden auch auf der Arbeitsfläche eindeutig hervorgehoben und zeigen den Namen des Referenzschemas an, mit dem das Feld verknüpft ist. Für Unternehmen mit B2B-Funktionen können benutzerspezifische Beziehungsnamen geschrieben werden, die dann auf der Arbeitsfläche angezeigt werden.
+Wenn Sie ein Schema überprüfen, das ein Beziehungsfeld enthält, wird das Feld in der linken Leiste unter &quot;**[!UICONTROL &quot;]**. Wählen Sie den Namen des Beziehungsfelds in der linken Leiste aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist. Beziehungsfelder werden auch auf der Arbeitsfläche eindeutig hervorgehoben, sodass der Name des Referenzschemas angezeigt wird, auf das das Feld verweist. Für Organisationen mit B2B-Funktionen können benutzerdefinierte Beziehungsnamen geschrieben werden, die in diesen Fällen auf der Arbeitsfläche angezeigt werden.
 
-![Der Schema-Editor mit dem Feld &quot;Beziehung&quot;und &quot;Beziehung bearbeiten&quot;hervorgehoben ](../images/ui/explore/relationship-field.png).
+![Der Schema-Editor mit dem hervorgehobenen Beziehungsfeld und der hervorgehobenen Option „Beziehung bearbeiten“](../images/ui/explore/relationship-field.png)
 
-Um den Identitäts-Namespace der primären Identität des Referenzschemas anzuzeigen, wählen Sie das Beziehungsfeld und dann **[!UICONTROL Beziehung bearbeiten]** in der Seitenleiste [!UICONTROL Feldeigenschaften] aus. Die Parameter für die Beziehung werden im daraufhin angezeigten Dialogfeld [!UICONTROL Beziehung bearbeiten] angezeigt.
+Um den Identity-Namespace der primären Identität des Referenzschemas anzuzeigen, wählen Sie das Beziehungsfeld und dann **[!UICONTROL Beziehung bearbeiten]** in der Seitenleiste [!UICONTROL Feldeigenschaften] aus. Die Parameter für die Beziehung werden im Dialogfeld [!UICONTROL Beziehung bearbeiten] angezeigt.
 
-![Das Dialogfeld &quot;Beziehung bearbeiten&quot;mit den angezeigten Beziehungsparametern.](../images/ui/explore/edit-relationship-dialog.png)
+![Das Dialogfeld „Beziehung bearbeiten“ mit den angezeigten Beziehungsparametern.](../images/ui/explore/edit-relationship-dialog.png)
 
-Weitere Informationen zur Verwendung von Beziehungen in XDM-Schemas finden Sie im Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche [.](../tutorials/relationship-ui.md)
+Weitere Informationen zur Verwendung von [ in XDM-Schemata finden Sie ](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie vorhandene XDM-Ressourcen in der Experience Platform-Benutzeroberfläche untersuchen. Weitere Informationen zu den verschiedenen Funktionen des Arbeitsbereichs [!UICONTROL Schemas] und des Arbeitsbereichs [!DNL Schema Editor] finden Sie in der Arbeitsbereichsübersicht [[!UICONTROL Schemas]](./overview.md).
+In diesem Dokument wurde beschrieben, wie Sie vorhandene XDM-Ressourcen in der Experience Platform-Benutzeroberfläche erkunden. Weitere Informationen zu den verschiedenen Funktionen des Arbeitsbereichs [!UICONTROL Schemata] und der [!DNL Schema Editor] finden Sie in der Übersicht über den Arbeitsbereich [[!UICONTROL Schemata]Übersicht](./overview.md).

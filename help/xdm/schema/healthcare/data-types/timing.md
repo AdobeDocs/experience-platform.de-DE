@@ -1,6 +1,6 @@
 ---
-title: Timing-Datentyp
-description: Erfahren Sie mehr über den XDM-Datentyp (Timing Experience Data Model).
+title: Zeitdatentyp
+description: Erfahren Sie mehr über den Datentyp Timing Experience-Datenmodell (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,17 +12,17 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Timing]-Datentyp
+# [!UICONTROL Timing] Datentyp
 
-[!UICONTROL Timing] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Zeitplan beschreibt, der Informationen zu einem Ereignis bereitstellt, das mehrere Male auftreten kann. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Timing] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Zeitplan beschreibt, der Informationen zu einem Ereignis bereitstellt, das mehrmals auftreten kann. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Datentyps für die Zeitplanung](../../../images/healthcare/data-types/timing.png)
+![Struktur des Datentyps für Zeitplanung](../../../images/healthcare/data-types/timing.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Ereignis] | `event` | Array of DateTime | Wenn das Ereignis eintritt. |
-| [!UICONTROL Wiederholen] | `repeat` | [[!UICONTROL Wiederholen]](../data-types/repeat.md) | Informationen darüber, wann das Ereignis eintritt. |
-| [!UICONTROL Code] | `code` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Code für das Ereignis. |
+| [!UICONTROL Ereignis] | `event` | Array von DateTime | Wenn das Ereignis eintritt. |
+| [!UICONTROL Wiederholen] | `repeat` | [[!UICONTROL Wiederholen]](../data-types/repeat.md) | Informationen über den Zeitpunkt des Ereignisses. |
+| [!UICONTROL Code] | `code` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Code zum Ereignis. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

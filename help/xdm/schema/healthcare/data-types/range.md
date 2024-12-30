@@ -1,6 +1,6 @@
 ---
 title: Datentyp des Bereichs
-description: Erfahren Sie mehr über den Datentyp "Range Experience Data Model (XDM)".
+description: Erfahren Sie mehr über den Datentyp Experience-Datenmodell (XDM) .
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,15 +12,15 @@ ht-degree: 8%
 
 ---
 
-# Datentyp [!UICONTROL Bereich]
+# [!UICONTROL Bereich] Datentyp
 
-[!UICONTROL Bereich] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Reihe von Werten bereitstellt, die durch niedrige und hohe Werte gebunden sind. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Range] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Satz von Werten bereitstellt, die an niedrige und hohe Werte gebunden sind. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Datentyps für den Bereich](../../../images/healthcare/data-types/range.png)
+![Struktur des Datentyps „Range](../../../images/healthcare/data-types/range.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Hoch] | `high` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die höchste Begrenzung. |
+| [!UICONTROL Hoch] | `high` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die höchste Grenze. |
 | [!UICONTROL Niedrig] | `low` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die niedrigste Grenze. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

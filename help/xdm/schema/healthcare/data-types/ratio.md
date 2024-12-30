@@ -1,6 +1,6 @@
 ---
-title: Verhältnis-Datentyp
-description: Erfahren Sie mehr über den XDM-Datentyp (Ratio Experience Data Model).
+title: Datentyp „Verhältnis“
+description: Erfahren Sie mehr über den Datentyp Ratio Experience-Datenmodell (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,20 +12,20 @@ ht-degree: 6%
 
 ---
 
-# Datentyp [!UICONTROL Verhältnis]
+# [!UICONTROL Verhältnis] Datentyp
 
-[!UICONTROL Verhältnis] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der über einen Zähler und einen Nenner ein Verhältnis von zwei [[!UICONTROL Quantity]](../data-types/quantity.md) -Werten liefert. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Ratio] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der ein Verhältnis von zwei [[!UICONTROL Quantity]](../data-types/quantity.md)-Werten über einen Zähler und einen Nenner bereitstellt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Ratio-Datentyps](../../../images/healthcare/data-types/ratio.png)
+![Struktur des Datentyps „Verhältnis“](../../../images/healthcare/data-types/ratio.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Denominator] | `denominator` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Der Wert des Nenners. |
-| [!UICONTROL Zähler] | `numerator` | [[!UICONTROL Quantity]](../data-types/quantity.md) | Der Wert des Zählers. |
+| [!UICONTROL Nenner] | `denominator` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Der Wert des Nenners. |
+| [!UICONTROL Zähler] | `numerator` | [[!UICONTROL Menge]](../data-types/quantity.md) | Der Wert des Zählers. |
 
 >[!NOTE]
 >
-> Die `denominator` und `numerator` weisen aufgrund der gemäß HL7 FHIR Release 5 erstellten Spezifikation unterschiedliche Datentypen auf.
+> `denominator` und `numerator` haben aufgrund der Spezifikation, die gemäß HL7 FHIR Release 5 erstellt wurde, unterschiedliche Datentypen.
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

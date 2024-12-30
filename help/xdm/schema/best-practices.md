@@ -15,13 +15,13 @@ ht-degree: 68%
 
 [!DNL Experience Data Model] (XDM) ist das zentrale Framework, das Kundenerlebnisdaten standardisiert, indem gemeinsame Strukturen und Definitionen für nachgelagerte Adobe Experience Platform-Services bereitgestellt werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert und verwendet werden, um wertvolle Einblicke aus Kundenaktionen zu gewinnen, Kundenzielgruppen zu definieren und Kundenattribute für Personalisierungszwecke auszudrücken.
 
-Da XDM sehr vielseitig und designanpassbar ist, ist es wichtig, bei der Erstellung Ihrer Schemas Best Practices für die Datenmodellierung zu befolgen. In diesem Dokument werden die wichtigsten Entscheidungen und Überlegungen behandelt, die Sie beim Zuordnen Ihrer Kundenerlebnisdaten zu XDM treffen müssen.
+Da XDM vom Design her äußerst vielseitig und anpassbar ist, ist es wichtig, beim Entwerfen Ihrer Schemata Best Practices für die Datenmodellierung einzuhalten. In diesem Dokument werden die wichtigsten Entscheidungen und Überlegungen behandelt, die Sie beim Zuordnen Ihrer Kundenerlebnisdaten zu XDM treffen müssen.
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie die [XDM-Systemübersicht](../home.md) , um eine allgemeine Einführung in XDM und dessen Rolle innerhalb von Experience Platform zu erhalten.
+Bevor Sie dieses Handbuch lesen, sollten Sie sich mit der [Übersicht zum XDM-System](../home.md) beschäftigen, um eine allgemeine Einführung in XDM und seine Rolle beim Experience Platform zu erhalten.
 
-Da sich dieses Handbuch ausschließlich auf wichtige Aspekte bezüglich des Schemadesigns konzentriert, wird dringend empfohlen, die [Grundlagen der Schemakomposition](./composition.md) zu lesen, um detaillierte Erklärungen zu den einzelnen Schemaelementen zu erhalten, die in diesem Handbuch erwähnt werden.
+Da sich dieses Handbuch ausschließlich auf wichtige Überlegungen zum Schema-Design konzentriert, wird dringend empfohlen, die [Grundlagen der Schemakomposition](./composition.md) zu lesen, um detaillierte Erläuterungen zu den einzelnen Schemaelementen, die in diesem Handbuch erwähnt werden, zu erhalten.
 
 ## Zusammenfassung der Best Practices {#summary}
 
@@ -37,11 +37,11 @@ Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle 
 
 ## Erstellen eines allgemeinen ERD {#create-an-erd}
 
-Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform] integrieren möchten, erstellen Sie eine allgemeine ERD, die Ihnen hilft, den Prozess der Zuordnung Ihrer Daten zu XDM-Schemas zu steuern.
+Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform] integrieren möchten, erstellen Sie ein allgemeines ERD, das Ihnen dabei hilft, Ihre Daten XDM-Schemata zuzuordnen.
 
 Das folgende Beispiel stellt ein vereinfachtes ERD für eine Firma dar, die Daten in [!DNL Platform] integrieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, darunter Kundenkonten, Hotels, Adressen und mehrere häufige E-Commerce-Ereignisse.
 
-![Ein relationales Entitätsdiagramm, das die wesentlichen Entitäten hervorhebt, die für die Datenerfassung in XDM-Klassen sortiert werden sollen.](../images/best-practices/erd.png)
+![Ein relationales Entitätsdiagramm, das die wesentlichen Entitäten hervorhebt, die bei der Datenaufnahme in XDM-Klassen sortiert werden sollten.](../images/best-practices/erd.png)
 
 ## Sortieren von Entitäten in Profil-, Lookup- und Ereigniskategorien {#sort-entities}
 
@@ -51,7 +51,7 @@ Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizi
 | --- | --- |
 | Profilentitäten | Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise eine Kundin oder einen Kunden. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der **[!DNL XDM Individual Profile]-Klasse** dargestellt werden. |
 | Lookup-Entitäten | Lookup-Entitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata dargestellt werden, die auf **benutzerdefinierten Klassen** basieren, und sind durch [Schemabeziehungen](../tutorials/relationship-ui.md) mit Profilen und Ereignissen verknüpft. |
-| Ereignisentitäten | Ereignisentitäten stellen Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Laufe der Zeit verfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der **[!DNL XDM ExperienceEvent]-Klasse** dargestellt werden. |
+| Ereignisentitäten | Ereignisentitäten stellen Konzepte dar, die sich auf Aktionen beziehen, die eine Kundin oder ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Laufe der Zeit verfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der **[!DNL XDM ExperienceEvent]-Klasse** dargestellt werden. |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Ein Unternehmen möchte beispielsweise alle „Gold“- oder „Platin“-Mitgli
 
 #### Anwendungsfälle für die Aktivierung {#activation-use-cases}
 
-Zusätzlich zu Überlegungen zu Segmentierungsanwendungsfällen sollten Sie auch die Aktivierungsanwendungsfälle für diese Zielgruppen überprüfen, um zusätzliche relevante Attribute zu identifizieren.
+Zusätzlich zu Überlegungen zu Anwendungsfällen für die Segmentierung sollten Sie auch die Anwendungsfälle für die Aktivierung für diese Zielgruppen überprüfen, um zusätzliche relevante Attribute zu identifizieren.
 
 Zum Beispiel hat ein Unternehmen eine Zielgruppe basierend auf der Regel `country = US` erstellt. Wenn diese Zielgruppe dann für bestimmte nachgelagerte Ziele aktiviert wird, möchte das Unternehmen alle exportierten Profile nach dem Heimat-Bundesstaat filtern. Daher sollte ein `state`-Attribut auch in der entsprechenden Profilentität erfasst werden.
 
@@ -109,7 +109,7 @@ Zum Beispiel hat ein Unternehmen eine Zielgruppe basierend auf der Regel `countr
 
 Basierend auf dem Anwendungsfall und der Granularität Ihrer Daten sollten Sie entscheiden, ob bestimmte Werte vorab aggregiert werden müssen, bevor sie in eine Profil- oder Ereignisentität aufgenommen werden.
 
-Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der erfassten Ereignisse zu reduzieren, können Sie einen aggregierten Wert `numberOfPurchases` über einen langen oder monatlichen Zeitraum erstellen. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
+Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der aufgenommenen Ereignisse zu reduzieren, können Sie einen Aggregatwert `numberOfPurchases` über einen langen Wochen- oder Monatszeitraum erstellen. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
 
 >[!CAUTION]
 >
@@ -117,7 +117,7 @@ Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl 
 
 #### Kardinalität {#cardinality}
 
-Die in Ihrem ERD festgelegten Kardinalitäten können auch einige Hinweise zur Kategorisierung Ihrer Entitäten liefern. Wenn eine Eins-zu-viele-Beziehung zwischen zwei Entitäten besteht, ist die Entität, die die &quot;viele&quot;darstellt, wahrscheinlich eine Ereignisentität. Es gibt jedoch auch Fälle, in denen es sich bei „viele“ um eine Gruppe von Lookup-Entitäten handelt, die als Array innerhalb einer Profilentität bereitgestellt werden.
+Die in Ihrem ERD festgelegten Kardinalitäten können auch einige Hinweise zur Kategorisierung Ihrer Entitäten liefern. Wenn eine Eins-zu-viele-Beziehung zwischen zwei Entitäten besteht, ist die Entität, die für „viele“ steht, wahrscheinlich eine Ereignisentität. Es gibt jedoch auch Fälle, in denen es sich bei „viele“ um eine Gruppe von Lookup-Entitäten handelt, die als Array innerhalb einer Profilentität bereitgestellt werden.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ In der folgenden Tabelle sind einige allgemeine Entitätsbeziehungen und die dar
 | Beziehung | Kardinalität | Entitätskategorien |
 | --- | --- | --- |
 | Kunden und Warenkorb-Kassengänge | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Warenkorb-Kassengänge verfügen, bei denen es sich um Ereignisse handelt, die im Laufe der Zeit verfolgt werden können. Kundinnen und Kunden wären daher eine Profilentität, Warenkorb-Kassengänge hingegen eine Ereignisentität. |
-| Kunden und Treuekonten | Eins zu eins | Ein einzelner Kunde kann nur über ein Treuekonto verfügen und ein Treuekonto kann nur zu einem Kunden gehören. Da es sich um eine Eins-zu-eins-Beziehung handelt, stellen sowohl Kunden als auch Treuekonten Profilentitäten dar. |
+| Kunden und Treuekonten | Eins zu eins | Eine Kundin oder ein Kunde kann nur über ein Treuekonto verfügen und ein Treuekonto kann nur zu einer Kundin oder einem Kunden gehören. Da es sich um eine Eins-zu-eins-Beziehung handelt, stellen sowohl Kunden als auch Treuekonten Profilentitäten dar. |
 | Kunden und Abonnements | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Abonnements verfügen. Da es dem Unternehmen nur um die aktuellen Abonnements einer Kundin oder eines Kunden geht, handelt es sich bei den Kunden um eine Profilentität, bei den Abonnements hingegen um eine Lookup-Entität. |
 
 {style="table-layout:auto"}
@@ -148,12 +148,12 @@ In diesem Szenario hat das Unternehmen zwei Möglichkeiten, die Abonnements eine
 
 Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Profilentität für Kundinnen und Kunden aufzunehmen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate` und `endDate`.
 
-![Das Schema Customers im Schema-Editor mit der Klasse und der Struktur hervorgehoben](../images/best-practices/profile-schema.png)
+![Das Kundenschema im Schema-Editor mit hervorgehobener Klasse und Struktur](../images/best-practices/profile-schema.png)
 
 **Vorteile**
 
 * Eine Segmentierung ist für den vorgesehenen Anwendungsfall möglich.
-* Das Schema behält nur die neuesten Abonnementdatensätze für einen Kunden bei.
+* Das Schema behält nur die neuesten Abonnementdatensätze für eine Kundin oder einen Kunden bei.
 
 **Nachteile**
 
@@ -164,7 +164,7 @@ Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die P
 
 Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnements zu verwenden. Dazu müssen dieselben Abonnementfelder wie beim ersten Ansatz aufgenommen werden, wobei eine Abonnement-ID, eine Kunden-ID und ein Zeitstempel hinzugefügt werden, aus denen hervorgeht, wann das Abonnementereignis eingetreten ist.
 
-![Ein Diagramm des Schemas für Abonnementereignisse mit hervorgehobener XDM-Erlebnisereignisklasse und Abonnementstruktur.](../images/best-practices/event-schema.png)
+![Ein Diagramm des Schemas für Abonnementereignisse mit hervorgehobener XDM-Erlebnisereignisklasse und hervorgehobener Abonnementstruktur.](../images/best-practices/event-schema.png)
 
 **Vorteile**
 
@@ -173,14 +173,14 @@ Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnement
 
 **Nachteile**
 
-* Die Segmentierung wird für den ursprünglich vorgesehenen Anwendungsfall komplexer (Identifizierung des Status der neuesten Abonnements von Kundinnen und Kunden). Die Zielgruppe benötigt jetzt zusätzliche Logik, um das letzte Abonnementereignis zu kennzeichnen, damit ein Kunde seinen Status überprüfen kann.
+* Die Segmentierung wird für den ursprünglich vorgesehenen Anwendungsfall komplexer (Identifizierung des Status der neuesten Abonnements von Kundinnen und Kunden). Die Zielgruppe benötigt jetzt zusätzliche Logik, um das letzte Abonnementereignis zu kennzeichnen, damit eine Kundin oder ein Kunde seinen Status überprüfen kann.
 * Bei Ereignissen besteht ein höheres Risiko, dass sie automatisch ablaufen und aus dem Profilspeicher gelöscht werden. Weitere Informationen finden Sie im Handbuch zum [Ablaufen von Erlebnisereignissen](../../profile/event-expirations.md).
 
 ## Erstellen von Schemata basierend auf kategorisierten Entitäten {#schemas-for-categorized-entities}
 
 Nachdem Sie Ihre Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert haben, können Sie mit der Konvertierung Ihres Datenmodells in XDM-Schemata beginnen. Zu Demonstrationszwecken wurde das zuvor dargestellte Datenmodell im folgenden Diagramm in geeignete Kategorien unterteilt:
 
-![Ein Diagramm der Schemas, die in den Profil-, Lookup- und Ereignisentitäten enthalten sind](../images/best-practices/erd-sorted.png)
+![Ein Diagramm der in den Profil-, Lookup- und Ereignisentitäten enthaltenen Schemata](../images/best-practices/erd-sorted.png)
 
 Die Kategorie, in der eine Entität eingeordnet wurde, sollte die XDM-Klasse bestimmen, auf der Sie deren Schema basieren. Zur Wiederholung:
 
@@ -190,7 +190,7 @@ Die Kategorie, in der eine Entität eingeordnet wurde, sollte die XDM-Klasse bes
 
 >[!NOTE]
 >
->Während Ereignisentitäten fast immer durch separate Schemas dargestellt werden, können Entitäten in Profil- oder Lookup-Kategorien je nach Kardinalität in einem einzelnen XDM-Schema kombiniert werden.
+>Während Ereignisentitäten fast immer durch separate Schemata dargestellt werden, können Entitäten in Profil- oder Lookup-Kategorien je nach Kardinalität in einem einzelnen XDM-Schema kombiniert werden.
 >
 >Da beispielsweise die Entität „Kunden“ eine Eins-zu-eins-Beziehung zur Entität „Treuekonten“ hat, könnte das Schema für die Entität „Kunden“ auch ein `LoyaltyAccount`-Objekt mit den entsprechenden Treuefeldern für jede Kundin oder jeden Kunden enthalten. Bei einer Eins-zu-viele-Beziehung kann die Entität, die für „viele“ steht, je nach ihrer Komplexität durch ein separates Schema oder ein Array von Profilattributen dargestellt werden.
 
@@ -204,9 +204,9 @@ Wenn Sie nicht sicher sind, ob ein bestimmtes Feld für die Aufnahme in ein Sche
 
 ### Identitätsfelder {#identity-fields}
 
-In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kundinnen und Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder enthalten kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert werden kann. Ausführlichere Informationen zum Anwendungsfall für diese Felder finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der Schemakomposition.
+In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kundinnen und Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere als Identitäten markierte Felder enthalten kann, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in [!DNL Real-Time Customer Profile] aktiviert wird. Ausführlichere Informationen zum Anwendungsfall für diese Felder finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der Schemakomposition.
 
-Beim Entwerfen Ihrer Schemas sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/features/ecid.md) der Kundschaft.
+Beim Entwerfen Ihrer Schemata sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen mögliche Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/features/ecid.md) der Kundschaft.
 
 ### Schemafeldgruppen für Adobe-Anwendungen {#adobe-application-schema-field-groups}
 
@@ -217,13 +217,13 @@ Experience Platform bietet mehrere vordefinierte XDM-Schemafeldgruppen zur Erfas
 * Adobe Campaign
 * Adobe Target
 
-Beispielsweise können Sie die Feldergruppe [[!UICONTROL Adobe Analytics ExperienceEvent Template] ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) verwenden, um Ihren XDM-Schemas [!DNL Analytics] spezifische Felder zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
+Beispielsweise können Sie die [[!UICONTROL Adobe Analytics ExperienceEvent-Vorlage] Feldergruppe](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) verwenden, um [!DNL Analytics] Felder Ihren XDM-Schemata zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
 
-![Ein Schemadiagramm der [!UICONTROL Adobe Analytics ExperienceEvent-Vorlage].](../images/best-practices/analytics-field-group.png)
+![Schemadiagramm der [!UICONTROL Adobe Analytics ExperienceEvent-Vorlage].](../images/best-practices/analytics-field-group.png)
 
 Feldergruppen der Adobe-Anwendungen weisen automatisch eine standardmäßige primäre Identität über das Feld `identityMap` zu, ein systemgeneriertes, schreibgeschütztes Objekt, das standardmäßige Identitätswerte für einzelne Kundinnen und Kunden zuordnet.
 
-Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein ECID-Wert nicht von einem Kunden bereitgestellt wird, wird als primäre Identität stattdessen &quot;AAID&quot;verwendet.
+Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein ECID-Wert nicht von einem Kunden bereitgestellt wird, ist für die primäre Identität stattdessen „AAID“ festgelegt.
 
 >[!IMPORTANT]
 >
@@ -231,27 +231,27 @@ Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein 
 
 ## Datenvalidierungsfelder {#data-validation-fields}
 
-Wenn Sie Daten in den Daten-Pool erfassen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während einer Batch-Erfassung zu validieren, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Platform aufgenommen werden, sollten Sie beim Erstellen Ihrer Schemas die Kriterien für die Validierung auf Feldebene definieren.
+Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während einer Batch-Aufnahme zu überprüfen, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Platform aufgenommen werden, wird empfohlen, beim Erstellen der Schemata die Kriterien für die Validierung auf Feldebene zu definieren.
 
 >[!IMPORTANT]
 >
 >Die Validierung gilt nicht für verschachtelte Spalten. Wenn sich das Feldformat in einer Array-Spalte befindet, werden die Daten nicht validiert.
 
-Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der verfügbaren Felder finden Sie in der Dokumentation zu [typspezifischen Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) .
+Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld aus dem Schema-Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der [ Felder finden Sie in der Dokumentation ](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
 
 ![Der Schema-Editor mit den Einschränkungsfeldern, die in der Seitenleiste [!UICONTROL Feldeigenschaften] hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
 
-### Tipps zur Gewährleistung der Datenintegrität {#data-integrity-tips}
+### Tipps zur Wahrung der Datenintegrität {#data-integrity-tips}
 
-Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Gewährleistung der Datenintegrität bei der Erstellung eines Schemas.
+Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Wahrung der Datenintegrität beim Erstellen eines Schemas.
 
-* **Primäre Identitäten betrachten**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie die Benennung zusätzlicher Felder als primäre Identitäten für dieses Schema.
-* **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld `_id` in Experience Event-Schemas kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
-* **Längenbegrenzungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Ein Warnhinweis-Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Mindest- und Höchstlängenbeschränkungen zu erfüllen. Diese Einschränkungen helfen bei der Gewährleistung von Konsistenz und Datenqualität.
-* **Muster für konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster entsprechen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
-* **eVars in Analytics-Schemata begrenzen**: In der Regel sollte für ein Analytics-Schema nur ein eVar als Identität gekennzeichnet sein. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
-* **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu unerwünschten Profilzusammenbrüchen führen.
-* **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Nullwerte für nicht erforderliche Felder sind jedoch zulässig.
+* **Primäridentitäten berücksichtigen**: Beim Adobe von Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie es, zusätzliche Felder als primäre Identitäten für dieses Schema festzulegen.
+* **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld &quot;`_id`&quot; in Erlebnisereignis-Schemata kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
+* **Längenbeschränkungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Eine Warnung Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Begrenzungen der minimalen und maximalen Länge zu erfüllen. Diese Einschränkungen helfen bei der Aufrechterhaltung der Konsistenz und der Datenqualität.
+* **Muster auf konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster folgen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
+* **eVars in Analytics-Schemata begrenzen**: Normalerweise sollte ein Analytics-Schema nur eine eVar als Identität aufweisen. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
+* **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Das ausgewählte Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie sie nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identity-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu einem unerwünschten Profilausfall führen.
+* **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Null-Werte für nicht erforderliche Felder sind jedoch zulässig.
 
 ## Nächste Schritte
 

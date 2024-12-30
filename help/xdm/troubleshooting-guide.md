@@ -23,7 +23,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ## Grundlagen zum Schema
 
-In diesem Abschnitt finden Sie Antworten auf grundlegende Fragen zur Schemastruktur, Feldverwendung und Identifizierung im XDM-System.
+In diesem Abschnitt finden Sie Antworten auf grundlegende Fragen zur Schemastruktur, Feldnutzung und Identifizierung im XDM-System.
 
 ### Wie füge ich einem Schema Felder hinzu?
 
@@ -49,9 +49,9 @@ Bei einem Feld vom Typ „long“ handelt es sich um eine Ganzzahl mit einer max
 
 Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzungen für XDM-Feldtypen](./schema/field-constraints.md).
 
-### Was ist meta:AltId?
+### Was ist meta:altId?
 
-`meta:altId` ist eine eindeutige Kennung für ein Schema. Der `meta:altId` bietet eine einfach zu referenzierende ID für die Verwendung in API-Aufrufen. Diese ID vermeidet, dass jedes Mal, wenn sie wie im JSON-URI-Format verwendet wird, kodiert/dekodiert werden muss.
+`meta:altId` ist eine eindeutige Kennung für ein Schema. Die `meta:altId` bietet eine einfach zu verweisende ID zur Verwendung in API-Aufrufen. Diese ID vermeidet die Notwendigkeit, jedes Mal codiert/decodiert zu werden, wenn sie wie mit dem JSON-URI-Format verwendet wird.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
 
 <!-- ### How can I generate a sample payload for a schema? -->
@@ -61,19 +61,19 @@ Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzung
 
 ### Welche Nutzungsbeschränkungen gelten für einen Zuordnungs-Datentyp?
 
-XDM legt die folgenden Einschränkungen für die Verwendung dieses Datentyps fest:
+XDM setzt die folgenden Einschränkungen für die Verwendung dieses Datentyps:
 
-- Zuordnungstypen MÜSSEN vom Typ &quot;Objekt&quot;sein.
-- Für Zuordnungstypen dürfen KEINE Eigenschaften definiert sein (d. h. sie definieren &quot;leere&quot;Objekte).
-- Zuordnungstypen MÜSSEN ein Feld additionalProperties.type enthalten, das die Werte beschreibt, die in der Zuordnung platziert werden können (Zeichenfolge oder Ganzzahl).
-- Die Segmentierung mit mehreren Entitäten kann nur anhand der Zuordnungsschlüssel und nicht anhand der Werte definiert werden.
-- Karten werden für Kontozielgruppen nicht unterstützt.
+- Zuordnungstypen MÜSSEN vom Typ „Objekt“ sein.
+- Für Zuordnungstypen DÜRFEN KEINE Eigenschaften definiert sein (d. h. sie definieren „leere“ Objekte).
+- Zuordnungstypen MÜSSEN ein additionalProperties.type-Feld enthalten, das die Werte beschreibt, die innerhalb der Zuordnung platziert werden können, entweder Zeichenfolge oder Ganzzahl.
+- Die Segmentierung mehrerer Entitäten kann nur anhand der Zuordnungsschlüssel und nicht anhand der Werte definiert werden.
+- Zuordnungen werden für Konto-Zielgruppen nicht unterstützt.
 
-Weitere Informationen finden Sie unter [Nutzungsbeschränkungen für Zuordnungsobjekte](./ui/fields/map.md#restrictions) .
+Weitere Einzelheiten finden [ unter „Nutzungsbeschränkungen für ](./ui/fields/map.md#restrictions)&quot;.
 
 >[!NOTE]
 >
->Mehrstufige Maps oder Maps von Maps werden nicht unterstützt.
+>Mehrstufige Karten oder Karten von Karten werden nicht unterstützt.
 
 <!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
 
@@ -86,9 +86,9 @@ Weitere Informationen finden Sie unter [Nutzungsbeschränkungen für Zuordnungso
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
 
-## Schema Identity Management
+## Schema-Identity Management
 
-Dieser Abschnitt enthält Antworten auf häufig gestellte Fragen zum Definieren und Verwalten von Identitäten in Ihren Schemas.
+Dieser Abschnitt enthält Antworten auf häufige Fragen zum Definieren und Verwalten von Identitäten in Ihren Schemata.
 
 ### Wie kann ich Identitäten für mein Schema definieren?
 
@@ -134,25 +134,25 @@ Wählen Sie in [!DNL Experience Platform] im linken Navigationsbereich die Optio
 
 Weiterführende Informationen finden Sie im Abschnitt zur [Verwendung im Echtzeit-Kundenprofil](./tutorials/create-schema-ui.md#profile) im Tutorial [!UICONTROL Schema-Editor].
 
-### Wird das automatisch erstellte Schema für das Profil aktiviert, wenn Adobe Analytics-Daten als Quelle importiert werden?
+### Ist das automatisch erstellte Schema für das Profil aktiviert, wenn Adobe Analytics-Daten als Quelle importiert werden?
 
-Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz für Profil explizit aktivieren, basierend darauf, welches Schema für Profil aktiviert ist. Informationen zu den Schritten und Anforderungen, die zum Aktivieren eines Datensatzes für die Verwendung im Echtzeit-Kundenprofil erforderlich sind, finden Sie in der Dokumentation ](../catalog/datasets/user-guide.md#enable-profile) .[
+Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz explizit für das Profil aktivieren, je nachdem, welches Schema für das Profil aktiviert ist. In der Dokumentation erfahren Sie mehr über [Schritte und Anforderungen, die erforderlich sind, um einen Datensatz für die Verwendung im Echtzeit-Kundenprofil zu ](../catalog/datasets/user-guide.md#enable-profile).
 
 ### Kann ich profilaktivierte Schemata löschen?
 
-Sie können ein Schema nicht löschen, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und Felder können nicht mehr aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für Profile aktiviert wird. Sie können jedoch einen Datensatz mit aktiviertem Profil löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 >[!IMPORTANT]
 >
->Um ein Profil-aktiviertes Schema zu entfernen, benötigen Sie die Hilfe des XDM Platform Support-Teams und müssen die folgenden Schritte ausführen:
+>Um ein profilaktiviertes Schema zu entfernen, benötigen Sie die Hilfe des XDM-Plattform-Supportteams und müssen die folgenden Schritte ausführen:
 >
 > 1. Löschen Sie alle Datensätze, die mit dem Schema verknüpft sind (das für Profil aktiviert ist).
-> 2. Löschen Sie den Profil-Export-Snapshot aus der Sandbox (dazu ist die Hilfe des XDM Platform-Supportteams erforderlich).
-> 3. Erzwingen des Löschens des Schemas aus der Sandbox (dies kann nur vom XDM Platform-Supportteam durchgeführt werden)
+> 2. Löschen des Schnappschusses zum Profilexport aus der Sandbox (hierfür ist die Hilfe des XDM-Plattform-Supportteams erforderlich)
+> 3. Löschen eines Schemas aus der Sandbox erzwingen (dies kann nur vom XDM-Plattform-Supportteam durchgeführt werden)
 
-## Schemamodifizierung und -beschränkungen
+## Schemaänderung und Einschränkungen
 
-Dieser Abschnitt enthält Erläuterungen zu Schemaänderungsregeln und zur Vermeidung von Änderungen.
+In diesem Abschnitt werden Schemaänderungsregeln und die Verhinderung grundlegender Änderungen erläutert.
 
 ### Wann verhindert ein Schema umfassende Änderungen?
 
@@ -170,7 +170,7 @@ Weiterführende Informationen zu Vereinigungen in XDM finden Sie im Abschnitt [V
 
 ### Wie kann ich ein Schema in ein schreibgeschütztes Schema konvertieren?
 
-Sie können ein Schema derzeit nicht in schreibgeschützt konvertieren.
+Ein Schema kann derzeit nicht in ein schreibgeschütztes konvertiert werden.
 
 ## Fehler und Fehlerbehebung
 

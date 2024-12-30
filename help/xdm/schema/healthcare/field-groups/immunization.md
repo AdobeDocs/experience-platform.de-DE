@@ -1,6 +1,6 @@
 ---
-title: Feldergruppe "Immunisierungsschema"
-description: Erfahren Sie mehr über die Feldergruppe Immunisierungs-Schema .
+title: Feldgruppe des Immunisierungsschemas
+description: Erfahren Sie mehr über die Feldergruppe „Immunisierungsschema“.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -14,41 +14,41 @@ ht-degree: 8%
 
 # [!UICONTROL Immunisierung] Schemafeldgruppe
 
-[!UICONTROL Immunisierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM Experience Event] Klasse](../../../classes/experienceevent.md). Es stellt ein einzelnes Objektfeld `healthcareImmunization` bereit, das Informationen zu Impfereignissen erfasst.
+[!UICONTROL Immunisierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Experience Event] ](../../../classes/experienceevent.md). Es bietet ein einzelnes Feld vom Typ „Objekt“, `healthcareImmunization` Informationen zu Immunisierungsereignissen erfasst.
 
-![Feldgruppenstruktur](../../../images/healthcare/field-groups/immunization/immunization.png)
+![Feldergruppenstruktur](../../../images/healthcare/field-groups/immunization/immunization.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Verwaltetes Produkt] | `administeredProduct` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Das verabreichte Produkt. |
-| [!UICONTROL basierend auf ] | `basedOn` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Die Autorität, auf der das Immunisierungsereignis basiert. |
-| [!UICONTROL Dosismenge] | `doseQuantity` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die verabreichte Impfstoffmenge. |
-| [!UICONTROL Encounter] | `encounter` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Begegnung mit der Immunisierung war Teil des Projekts. |
-| [!UICONTROL Source finanzieren] | `fundingSource` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Finanzierungsquelle für den Impfstoff. |
-| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Bezeichner]](../data-types/identifier.md) | Die Geschäftskennung. |
-| [!UICONTROL Information Source] | `informationSource` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Gibt die Quelle des gemeldeten Datensatzes an. |
-| [!UICONTROL Ort] | `location` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der Ort, an dem die Immunisierung erfolgte. |
+| [!UICONTROL Verabreichtes Produkt] | `administeredProduct` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Das verabreichte Produkt. |
+| [!UICONTROL basierend auf] | `basedOn` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Die Autorität, auf der das Immunisierungsereignis basiert. |
+| [!UICONTROL Dosismenge] | `doseQuantity` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Menge des verabreichten Impfstoffs. |
+| [!UICONTROL Begegnung] | `encounter` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Begegnung mit der Impfung war ein Teil davon. |
+| [!UICONTROL Finanzierung von Source] | `fundingSource` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Finanzierungsquelle für den Impfstoff. |
+| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Die Geschäftskennung. |
+| [!UICONTROL Informationen Source] | `informationSource` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Gibt die Quelle des gemeldeten Datensatzes an. |
+| [!UICONTROL Ort] | `location` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der Ort, an dem die Impfung stattfand. |
 | [!UICONTROL Hersteller] | `manufacturer` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Impfstoffhersteller. |
-| [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Hinweise zur Immunisierung. |
-| [!UICONTROL Patient] | `patient` | [[!UICONTROL Referenz]](../data-types/reference.md) | Wer war immun. |
-| [!UICONTROL Batch] | `performer` | Array von Objekten | Personen, die die Immunisierung durchgeführt haben. Weitere Informationen finden Sie im Abschnitt [unter ](#performer) . |
-| [!UICONTROL Programmteilnahmeberechtigung] | `programEligibility` | Array von Objekten | Der Patient ist für ein spezifisches Impfprogramm qualifiziert. Weitere Informationen finden Sie im Abschnitt [unter ](#program-eligibility) . |
-| [!UICONTROL Angewandtes Protokoll] | `protocolApplied` | Array von Objekten | Das vom Provider bereitgestellte Protokoll. Weitere Informationen finden Sie im Abschnitt [unter ](#protocol-applied) . |
-| [!UICONTROL Reaction] | `reaction` | Array von Objekten | Die Details einer Reaktion nach der Immunisierung. Weitere Informationen finden Sie im Abschnitt [unter ](#reaction) . |
-| [!UICONTROL Grund] | `reason` | Array von [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund für die Immunisierung. |
+| [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Impfhinweise. |
+| [!UICONTROL Patient] | `patient` | [[!UICONTROL Referenz]](../data-types/reference.md) | Wer wurde immunisiert. |
+| [!UICONTROL Batch] | `performer` | Array von Objekten | Wer hat das Immunisierungs-Ereignis durchgeführt. Weitere Informationen finden [ im ](#performer) Abschnitt unten. |
+| [!UICONTROL Programmeignung] | `programEligibility` | Array von Objekten | Die Eignung des Patienten für ein spezifisches Impfprogramm. Weitere Informationen finden [ im ](#program-eligibility) Abschnitt unten. |
+| [!UICONTROL Protokoll angewendet] | `protocolApplied` | Array von Objekten | Das vom Anbieter bereitgestellte Protokoll. Weitere Informationen finden [ im ](#protocol-applied) Abschnitt unten. |
+| [!UICONTROL Reaktion] | `reaction` | Array von Objekten | Die Details einer Reaktion nach der Impfung. Weitere Informationen finden [ im ](#reaction) Abschnitt unten. |
+| [!UICONTROL Grund] | `reason` | Array von [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund für die Impfung. |
 | [!UICONTROL Route] | `route` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Wie der Impfstoff in den Körper gelangt ist. |
-| [!UICONTROL Site] | `site` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Körperstelle, an der der Impfstoff verabreicht wurde |
+| [!UICONTROL Site] | `site` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Stelle im Körper, an der der Impfstoff verabreicht wurde |
 | [!UICONTROL Statusgrund] | `statusReason` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Grund für den aktuellen Status. |
-| [!UICONTROL Subpotenzgrund] | `subpotentReason` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Grund dafür, dass der Impfstoff subaktiv ist. |
-| [!UICONTROL Unterstützende Informationen] | `supportingInformation` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Zusätzliche Informationen zur Unterstützung der Immunisierung. |
+| [!UICONTROL subpotenter Grund] | `subpotentReason` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Grund für die Subpotenz des Impfstoffs. |
+| [!UICONTROL unterstützende Informationen] | `supportingInformation` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Zusätzliche Informationen zur Unterstützung der Immunisierung. |
 | [!UICONTROL Impfcode] | `vaccineCode` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Code für den verabreichten Impfstoff. |
-| [!UICONTROL Ablaufdatum] | `expirationDate` | Datum | Das Ablaufdatum des Impfstoffes. |
-| [!UICONTROL Is Subpotent] | `isSubpotent` | Boolesch | Der Indikator dafür, ob der Impfstoff subaktiv ist. |
-| [!UICONTROL Nummer des Lots] | `lotNumber` | String | Die Chargennummer des Impfstoffs. |
-| [!UICONTROL Datum/Uhrzeit des Vorkommens] | `occurenceDateTime` | DateTime | Datum der Verabreichung des Impfstoffes. |
-| [!UICONTROL Vorkommenszeichenfolge] | `occurenceString` | String | Datum der Verabreichung des Impfstoffes. |
-| [!UICONTROL Primärer Source] | `primarySource` | Boolesch | Gibt an, ob die Daten aus einer Primärquelle erfasst wurden. |
-| [!UICONTROL Status] | `status` | String | Der Status der Immunisierung. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `completed` </li> <li> `entered-in-error` </li> <li> `not-done` </li> |
+| [!UICONTROL Ablaufdatum] | `expirationDate` | Datum | Das Verfallsdatum des Impfstoffs. |
+| [!UICONTROL Ist subpotent] | `isSubpotent` | Boolesch | Der Indikator dafür, ob der Impfstoff subpotent ist. |
+| [!UICONTROL Losnummer] | `lotNumber` | String | Die Losnummer des Impfstoffs. |
+| [!UICONTROL Auftritt DatumUhrzeit] | `occurenceDateTime` | DateTime | Datum der Impfstoffverabreichung. |
+| [!UICONTROL Vorkommnis-String] | `occurenceString` | String | Datum der Impfstoffverabreichung. |
+| [!UICONTROL Primäres Source] | `primarySource` | Boolesch | Gibt an, ob die Daten aus einer primären Quelle erfasst wurden. |
+| [!UICONTROL Status] | `status` | String | Der Status der Impfung. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `completed` </li> <li> `entered-in-error` </li> <li> `not-done` </li> |
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
@@ -57,48 +57,48 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `performer` {#performer}
 
-`performer` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`performer` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![performer structure](../../../images/healthcare/field-groups/immunization/performer.png)
+![Leistungsstruktur](../../../images/healthcare/field-groups/immunization/performer.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Akteur] | `actor` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Person oder Organisation, die die Aktion durchgeführt hat. |
-| [!UICONTROL Funktion] | `function` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Welche Art von Leistung wurde erzielt? |
+| [!UICONTROL Schauspieler] | `actor` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Person oder Organisation, die die Performance ausgeführt hat. |
+| [!UICONTROL Funktion] | `function` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Welche Art von Leistung wurde ausgeführt. |
 
 ## `programEligibility` {#program-eligibility}
 
-`programEligibility` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`programEligibility` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![Struktur der Programmteilnahmeberechtigung](../../../images/healthcare/field-groups/immunization/program-eligibility.png)
+![programEligibility-Struktur](../../../images/healthcare/field-groups/immunization/program-eligibility.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Programm] | `program` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Das Programm, für das die Zuschussfähigkeit erklärt wurde. |
-| [!UICONTROL Programmstatus] | `programStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Berechtigungsstatus des Patienten für das Programm. |
+| [!UICONTROL Programm] | `program` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Das Programm, für das die Berechtigung erklärt wurde. |
+| [!UICONTROL Programmstatus] | `programStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Status des Patienten für das Programm. |
 
 ## `protocolApplied` {#protocol-applied}
 
-`protocolApplied` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`protocolApplied` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![protocolApplied structure](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
+![protocolApplied-Struktur](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Authority] | `authority` | [[!UICONTROL Referenz]](../data-types/reference.md) | Wer ist für die Veröffentlichung der Empfehlungen verantwortlich. |
-| [!UICONTROL Target-Krankheit] | `targetDisease` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die vermeidbare Krankheit, auf die sich der Impfstoff bezieht. |
-| [!UICONTROL Dosiernummer] | `doseNumber` | String | Die Dosisnummer innerhalb der Dosisreihe. |
-| [!UICONTROL Series] | `series` | String | Der Name der Impfserie. |
-| [!UICONTROL Seriendosen] | `seriesDoses` | String | Empfohlene Anzahl von Dosen zur Immunität. |
+| [!UICONTROL AUTORITÄT] | `authority` | [[!UICONTROL Referenz]](../data-types/reference.md) | Wer ist für die Veröffentlichung der Empfehlungen verantwortlich? |
+| [!UICONTROL Target-Krankheit] | `targetDisease` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die vermeidbare Krankheit, gegen die der Impfstoff gerichtet ist. |
+| [!UICONTROL Dosisnummer] | `doseNumber` | String | Die Dosisnummer innerhalb der Serie. |
+| [!UICONTROL Serie] | `series` | String | Der Name der Impfstoffserie. |
+| [!UICONTROL Serie Dosen] | `seriesDoses` | String | Empfohlene Anzahl von Dosen für die Immunität. |
 
 ## `reaction` {#reaction}
 
-`reaction` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`reaction` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
 ![Reaktionsstruktur](../../../images/healthcare/field-groups/immunization/reaction.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Manifestation] | `manifestation` | [[!UICONTROL Codeable Reference]](../data-types/codeable-concept.md) | Zusätzliche Informationen über die Reaktion. |
+| [!UICONTROL Manifestation] | `manifestation` | [[!UICONTROL Codeable Reference]](../data-types/codeable-concept.md) | Zusätzliche Informationen zur Reaktion. |
 | [!UICONTROL Datum] | `date` | DateTime | Wann die Reaktion begann. |
-| [!UICONTROL Gemeldet] | `reported` | String | Gibt an, ob die Reaktion selbst gemeldet wurde. |
+| [!UICONTROL Gemeldet] | `reported` | String | Gibt an, ob die Reaktion selbst berichtet wurde. |

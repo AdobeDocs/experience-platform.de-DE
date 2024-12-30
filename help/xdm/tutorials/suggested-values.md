@@ -1,6 +1,6 @@
 ---
-title: Verwalten von vorgeschlagenen Werten in der API
-description: Erfahren Sie, wie Sie einem Zeichenfolgenfeld in der Schema Registry-API empfohlene Werte hinzufügen.
+title: Vorgeschlagene Werte in der API verwalten
+description: Erfahren Sie, wie Sie in der Schema Registry-API vorgeschlagene Werte zu einem Zeichenfolgenfeld hinzufügen.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 1%
 
 ---
 
-# Verwalten von vorgeschlagenen Werten in der API
+# Vorgeschlagene Werte in der API verwalten
 
-Für jedes Zeichenfolgenfeld im Experience-Datenmodell (XDM) können Sie einen **enum** definieren, der die Werte, die das Feld erfassen kann, auf einen vordefinierten Satz beschränkt. Wenn Sie versuchen, Daten in ein Enum-Feld zu erfassen und der Wert mit keinem der in der Konfiguration definierten Werte übereinstimmt, wird die Aufnahme verweigert.
+Für jedes Zeichenfolgenfeld im Experience-Datenmodell (XDM) können Sie eine **Aufzählung** definieren, die die Werte, die das Feld aufnehmen kann, auf einen vordefinierten Satz einschränkt. Wenn Sie versuchen, Daten in ein Aufzählungsfeld aufzunehmen, und der Wert mit keinem der in der Konfiguration definierten übereinstimmt, wird die Aufnahme verweigert.
 
-Im Gegensatz zu Auflistungen schränkt das Hinzufügen von **empfohlenen Werten** zu einem Zeichenfolgenfeld nicht die Werte ein, die aufgenommen werden können. Stattdessen wirken sich die vorgeschlagenen Werte darauf aus, welche vordefinierten Werte in der [Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md) verfügbar sind, wenn das Zeichenfolgenfeld als Attribut eingefügt wird.
+Im Gegensatz zu Auflistungen schränkt das Hinzufügen **empfohlenen Werte** zu einem Zeichenfolgenfeld nicht die Werte ein, die es aufnehmen kann. Stattdessen beeinflussen vorgeschlagene Werte, welche vordefinierten Werte in der [Segmentierungsbenutzeroberfläche) verfügbar sind](../../segmentation/ui/overview.md) wenn das Zeichenfolgenfeld als Attribut einbezogen wird.
 
 >[!NOTE]
 >
->Es gibt eine ungefähre Verzögerung von fünf Minuten, bis die aktualisierten vorgeschlagenen Werte eines Felds in der Segmentierungsbenutzeroberfläche angezeigt werden.
+>Die aktualisierten empfohlenen Werte eines Felds, die in der Segmentierungs-Benutzeroberfläche angezeigt werden sollen, vergehen ungefähr fünf Minuten.
 
-In diesem Handbuch wird beschrieben, wie Sie vorgeschlagene Werte mit der [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) verwalten. Anweisungen dazu finden Sie in der Benutzeroberfläche von Adobe Experience Platform im [UI-Handbuch zu Auflistungen und empfohlenen Werten](../ui/fields/enum.md).
+In diesem Handbuch wird beschrieben, wie Sie vorgeschlagene Werte mithilfe der [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) verwalten. Anweisungen dazu, wie Sie dies in der Adobe Experience Platform-Benutzeroberfläche tun, finden Sie im [UI-Handbuch zu Auflistungen und empfohlenen Werten](../ui/fields/enum.md).
 
 ## Voraussetzungen
 
-In diesem Handbuch wird davon ausgegangen, dass Sie mit den Elementen der Schemakomposition in XDM und der Verwendung der Schema Registry-API zum Erstellen und Bearbeiten von XDM-Ressourcen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die folgende Dokumentation:
+In diesem Handbuch wird davon ausgegangen, dass Sie mit den Elementen der Schemakomposition in XDM und der Verwendung der Schema Registry-API zum Erstellen und Bearbeiten von XDM-Ressourcen vertraut sind. Bitte lesen Sie die folgende Dokumentation, wenn Sie eine Einführung benötigen:
 
 * [Grundlagen der Schema-Komposition](../schema/composition.md)
 * [Handbuch zur Schema Registry-API](../api/overview.md)
 
-Es wird außerdem dringend empfohlen, die [Evolutionsregeln für Auflistungen und empfohlene Werte](../ui/fields/enum.md#evolution) zu überprüfen, wenn Sie vorhandene Felder aktualisieren. Wenn Sie empfohlene Werte für Schemas verwalten, die an einer Vereinigung teilnehmen, lesen Sie die [Regeln für das Zusammenführen von Auflistungen und vorgeschlagenen Werten](../ui/fields/enum.md#merging).
+Es wird außerdem dringend empfohlen, die [Entwicklungsregeln für Aufzählungen und empfohlene Werte“ zu überprüfen](../ui/fields/enum.md#evolution) wenn Sie vorhandene Felder aktualisieren. Wenn Sie vorgeschlagene Werte für Schemata verwalten, die Teil einer Vereinigung sind, finden Sie weitere Informationen unter [Regeln für das Zusammenführen von Auflistungen und vorgeschlagenen Werten](../ui/fields/enum.md#merging).
 
 ## Komposition
 
-In der API werden die eingeschränkten Werte für ein Feld **enum** durch ein Array `enum` dargestellt, während ein Objekt `meta:enum` Anzeigenamen für diese Werte bereitstellt:
+In der API werden die eingeschränkten Werte für ein **enum**-Feld durch ein `enum`-Array dargestellt, während ein `meta:enum`-Objekt Anzeigenamen für diese Werte bereitstellt:
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ In der API werden die eingeschränkten Werte für ein Feld **enum** durch ein Ar
 }
 ```
 
-Bei Enum-Feldern erlaubt die Schema Registry nicht, `meta:enum` über die unter `enum` angegebenen Werte hinaus zu erweitern, da der Versuch, Zeichenfolgenwerte außerhalb dieser Begrenzungen zu erfassen, die Validierung nicht bestehen würde.
+Bei Aufzählungsfeldern ermöglicht die Schemaregistrierung keine Erweiterung von `meta:enum` über die unter `enum` angegebenen Werte hinaus, da der Versuch, Zeichenfolgenwerte außerhalb dieser Einschränkungen aufzunehmen, die Validierung nicht bestehen würde.
 
-Alternativ können Sie ein Zeichenfolgenfeld definieren, das kein &quot;`enum`&quot;-Array enthält und nur das &quot;`meta:enum`&quot;-Objekt verwendet, um **empfohlene Werte** zu kennzeichnen:
+Alternativ können Sie ein Zeichenfolgenfeld definieren, das kein `enum`-Array enthält und das `meta:enum`-Objekt nur zur Kennzeichnung von (vorgeschlagenen **Werten**:
 
 ```json
 "exampleStringField": {
@@ -67,7 +67,7 @@ Alternativ können Sie ein Zeichenfolgenfeld definieren, das kein &quot;`enum`&q
 }
 ```
 
-Da die Zeichenfolge nicht über ein `enum` -Array verfügt, um Begrenzungen zu definieren, kann ihre `meta:enum` -Eigenschaft um neue Werte erweitert werden.
+Da die Zeichenfolge über kein `enum`-Array zum Definieren von Einschränkungen verfügt, kann ihre `meta:enum`-Eigenschaft erweitert werden, um neue Werte einzuschließen.
 
 <!-- ## Manage suggested values for standard fields
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## Hinzufügen empfohlener Werte zu einem Standardfeld {#add-suggested-standard}
 
-Um den `meta:enum` eines Standard-Zeichenfolgenfelds zu erweitern, können Sie einen [Anzeigenamendeskriptor](../api/descriptors.md#friendly-name) für das betreffende Feld in einem bestimmten Schema erstellen.
+Um die `meta:enum` eines standardmäßigen Zeichenfolgenfelds zu erweitern, können Sie für das [ Feld in einem bestimmten Schema einen ](../api/descriptors.md#friendly-name)Deskriptor für benutzerfreundliche Namen“ erstellen.
 
 >[!NOTE]
 >
->Empfohlene Werte für Zeichenfolgenfelder können nur auf Schemaebene hinzugefügt werden. Das heißt, die Erweiterung von `meta:enum` eines Standardfelds in einem Schema wirkt sich nicht auf andere Schemas aus, die dasselbe Standardfeld verwenden.
+>Die vorgeschlagenen Werte für Zeichenfolgenfelder können nur auf Schemaebene hinzugefügt werden. Mit anderen Worten: Die Erweiterung der `meta:enum` eines Standardfelds in einem Schema wirkt sich nicht auf andere Schemata aus, die dasselbe Standardfeld verwenden.
 
-Mit der folgenden Anfrage werden dem Standardfeld `eventType` (bereitgestellt von der [XDM ExperienceEvent-Klasse](../classes/experienceevent.md)) empfohlene Werte für das unter `sourceSchema` identifizierte Schema hinzugefügt:
+Die folgende Anfrage fügt dem `eventType`-Standardfeld (bereitgestellt von der [XDM ExperienceEvent-Klasse](../classes/experienceevent.md)) vorgeschlagene Werte für das unter `sourceSchema` identifizierte Schema hinzu:
 
 ```curl
 curl -X POST \
@@ -112,7 +112,7 @@ curl -X POST \
       }'
 ```
 
-Nach Anwendung des Deskriptors antwortet die Schema Registry beim Abrufen des Schemas mit Folgendem (Antwort aus Platzgründen abgeschnitten):
+Nach Anwendung des Deskriptors antwortet die Schemaregistrierung beim Abrufen des Schemas mit dem folgenden Code (Antwort aus Platzgründen abgeschnitten):
 
 ```json
 {
@@ -134,7 +134,7 @@ Nach Anwendung des Deskriptors antwortet die Schema Registry beim Abrufen des Sc
 
 >[!NOTE]
 >
->Wenn das Standardfeld bereits Werte unter `meta:enum` enthält, überschreiben die neuen Werte des Deskriptors nicht die vorhandenen Felder und werden stattdessen hinzugefügt:
+>Wenn das Standardfeld bereits Werte unter `meta:enum` enthält, überschreiben die neuen Werte aus dem Deskriptor nicht die vorhandenen Felder und werden stattdessen zu hinzugefügt:
 >
 >```json
 >"standardField": {
@@ -212,19 +212,19 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 }
 ``` -->
 
-## Verwalten von vorgeschlagenen Werten für ein benutzerdefiniertes Feld {#suggested-custom}
+## Vorgeschlagene Werte für ein benutzerdefiniertes Feld verwalten {#suggested-custom}
 
 Um die `meta:enum` eines benutzerdefinierten Felds zu verwalten, können Sie die übergeordnete Klasse, Feldergruppe oder den Datentyp des Felds über eine PATCH-Anfrage aktualisieren.
 
 >[!WARNING]
 >
->Im Gegensatz zu Standardfeldern wirkt sich die Aktualisierung von `meta:enum` eines benutzerdefinierten Felds auf alle anderen Schemas aus, die dieses Feld verwenden. Wenn Änderungen nicht über Schemata hinweg propagiert werden sollen, sollten Sie stattdessen eine neue benutzerdefinierte Ressource erstellen:
+>Im Gegensatz zu Standardfeldern wirkt sich die Aktualisierung der `meta:enum` eines benutzerdefinierten Felds auf alle anderen Schemata aus, die dieses Feld verwenden. Wenn Sie nicht möchten, dass Änderungen sich über Schemata hinweg ausbreiten, sollten Sie stattdessen eine neue benutzerdefinierte Ressource erstellen:
 >
 >* [Erstellen einer benutzerdefinierten Klasse](../api/classes.md#create)
 >* [Erstellen einer benutzerdefinierten Feldergruppe](../api/field-groups.md#create)
 >* [Erstellen eines benutzerdefinierten Datentyps](../api/data-types.md#create)
 
-Mit der folgenden Anfrage wird der `meta:enum` eines von einem benutzerdefinierten Datentyp bereitgestellten Felds &quot;Treuestufe&quot;aktualisiert:
+Die folgende Anfrage aktualisiert die `meta:enum` eines Felds der Treuestufe, das von einem benutzerdefinierten Datentyp bereitgestellt wird:
 
 ```curl
 curl -X PATCH \
@@ -249,7 +249,7 @@ curl -X PATCH \
       ]'
 ```
 
-Nach der Anwendung der Änderung antwortet die Schema Registry beim Abrufen des Schemas mit Folgendem (Antwort aus Platzgründen abgeschnitten):
+Nach Anwendung der Änderung antwortet die Schemaregistrierung beim Abrufen des Schemas wie folgt (Antwort aus Platzgründen gekürzt):
 
 ```json
 {
@@ -274,4 +274,4 @@ Nach der Anwendung der Änderung antwortet die Schema Registry beim Abrufen des 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie empfohlene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weiterführende Informationen zum Erstellen verschiedener Feldtypen finden Sie im Handbuch zum [Definieren benutzerdefinierter Felder in der API](./custom-fields-api.md) .
+In diesem Handbuch wurde beschrieben, wie Sie vorgeschlagene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weitere Informationen zum Erstellen [ verschiedenen Feldtypen finden Sie ](./custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter Felder in der API“.

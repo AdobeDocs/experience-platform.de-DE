@@ -1,6 +1,6 @@
 ---
-title: Kodierungs-Datentyp
-description: Erfahren Sie mehr über den Datentyp "Coding Experience Data Model (XDM)".
+title: Codierungsdatentyp
+description: Erfahren Sie mehr über den Datentyp Coding Experience Data Model (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,18 +12,18 @@ ht-degree: 11%
 
 ---
 
-# Datentyp [!UICONTROL Coding]
+# [!UICONTROL Codierung] Datentyp
 
-[!UICONTROL Coding] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Verweis auf einen von einem Terminologiesystem definierten Code beschreibt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Coding] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Verweis auf einen von einem Terminologiesystem definierten Code beschreibt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Datentyps kodieren](../../../images/healthcare/data-types/coding.png)
+![Codieren der Datentypstruktur](../../../images/healthcare/data-types/coding.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | String | Das Symbol in der vom System definierten Syntax. |
 | [!UICONTROL Anzeige] | `display` | String | Die vom System definierte Darstellung. |
-| [!UICONTROL System] | `system` | String | Der Namespace für den Bezeichnerwert, angezeigt als URI. |
-| [!UICONTROL wird vom Benutzer] ausgewählt | `userSelected` | Boolesch | Ein Indikator dafür, ob der Benutzer diese Kodierung ausgewählt hat. Der Standardwert ist false. |
+| [!UICONTROL System] | `system` | String | Der Namespace für den Kennungswert, dargestellt als URI. |
+| [!UICONTROL wird vom Benutzer ausgewählt] | `userSelected` | Boolesch | Ein Indikator dafür, ob diese Kodierung vom Benutzer ausgewählt wurde. Der Standardwert ist „false“. |
 | [!UICONTROL Version] | `version` | String | Die Version des Systems. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

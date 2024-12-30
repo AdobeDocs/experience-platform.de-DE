@@ -19,7 +19,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 XDM ist das zugrunde liegende System, auf Basis dessen Adobe Experience Cloud als Teil von Experience Platform die richtige Botschaft der richtigen Person zur richtigen Zeit auf dem passenden Kanal präsentieren kann. Das XDM-System ist die Methode, auf der Experience Platform basiert. Es stellt Experience-Datenmodell-Schemata zur Verwendung durch Platform-Dienste bereit.
 
-Erfahren Sie mehr über die Rolle des XDM-Systems innerhalb von Experience Platform.
+Erfahren Sie mehr über die Rolle des XDM-Systems in Experience Platform.
 
 ## XDM-Schemata {#xdm-schemas}
 
@@ -27,7 +27,7 @@ Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren B
 
 Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemata bestehen aus einer Basisklasse und keiner oder mehreren Schema-Feldergruppen.
 
-Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Designgrundsätzen, und Best Practices finden Sie in den [Grundlagen der Schemakomposition](schema/composition.md) .
+Weitere Informationen zum Schemakompositionsmodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen der Schemakomposition](schema/composition.md).
 
 ### Standardmäßige XDM-Komponenten {#Standard-xdm-components}
 
@@ -35,13 +35,13 @@ XDM bietet eine Sammlung von standardmäßigen Feldergruppen und Datentypen, mit
 
 Beim Erstellen von Schemata in der Experience Platform-Benutzeroberfläche werden die aufgelistete Feldergruppen mit einer Beliebtheitsmetrik angezeigt. Diese Metrik wird durch die Häufigkeit bestimmt, mit der andere Platform-Benutzer die jeweilige Feldergruppe in ihren Schemata verwenden. Je höher die Zahl ist, desto beliebter ist die Feldergruppe. Standardmäßig werden die Ergebnisse von den beliebtesten zu den am wenigsten beliebten Ergebnissen gereiht, sodass Sie über die Datenmodellierungstrends in Ihrer Branche auf dem Laufenden bleiben.
 
-![Die Popularitätsspalte des Dialogfelds [!UICONTROL Feldergruppe hinzufügen].](./images/overview/popularity.png)
+![Die Spalte Popularität des [!UICONTROL Feldergruppe hinzufügen]dialogfelds.](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
 Experience Platform stellt eine Benutzeroberfläche und RESTful-API bereit, über die Sie alle mit einem Schema in Zusammenhang stehenden Ressourcen in der **[!DNL Schema Library]** von Experience Platform anzeigen und verwalten können. Die [!DNL Schema Library] enthält standardmäßige XDM-Komponenten, die Ihnen von Adobe zur Verfügung gestellt werden, sowie Ressourcen von Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden.
 
-Sie können auch neue Schemata und Ressourcen erstellen und verwalten, die für Ihr Unternehmen eindeutig sind, indem Sie den Arbeitsbereich [!DNL Schema Registry API] oder den Arbeitsbereich [!UICONTROL Schemas] in der Platform-Benutzeroberfläche verwenden.
+Sie können auch neue, unternehmensspezifische Schemata und Ressourcen mithilfe der [!DNL Schema Registry API] oder des Arbeitsbereichs [!UICONTROL Schemata] in der Platform-Benutzeroberfläche erstellen und verwalten.
 
 Weitere Informationen zur Verwaltung und Interaktion mit Schemata in Platform finden Sie in der folgenden Dokumentation:
 
@@ -58,20 +58,20 @@ Weitere Informationen zur Verwaltung und Interaktion mit Schemata in Platform fi
 Daten, die in Experience Platform verwendet werden können, sind in drei Verhaltenstypen unterteilt:
 
 * **Datensatz**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
-* **Zeitreihen**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt ausgeführt wurde.
+* **Zeitreihe**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 * **Ad-hoc**: Erfasst Felder, die sich in einem Namespace befinden und nur von einem einzigen Datensatz verwendet werden. Ad-hoc-Schemata werden in verschiedenen Datenaufnahme-Workflows für Experience Platform verwendet, einschließlich der Aufnahme von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
 
 Alle XDM-Schemata beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben.
 
-Obwohl Sie in der Lage sind, Ihre eigenen Klassen im [!DNL Schema Registry] zu definieren, sollten Sie die Standardklassen **[!UICONTROL XDM Individual Profile]** und **[!UICONTROL XDM ExperienceEvent]** für Datensatz- bzw. Zeitreihendaten verwenden. Diese Klassen werden weiter unten detaillierter beschrieben.
+Obwohl Sie in der [!DNL Schema Registry] Ihre eigenen Klassen definieren können, wird empfohlen, die Standardklassen **[!UICONTROL XDM Individual Profile]** und **[!UICONTROL XDM ExperienceEvent]** für Datensatz- bzw. Zeitreihendaten zu verwenden. Diese Klassen werden weiter unten detaillierter beschrieben.
 
 >[!NOTE]
 >
->Es gibt keine Standardklassen, die auf dem Ad-hoc-Verhalten basieren. Ad-hoc-Schemata werden automatisch von den Platform-Prozessen generiert, die sie verwenden. Sie können jedoch auch [manuell mithilfe der Schema Registry-API](./tutorials/ad-hoc.md) erstellt werden.
+>Es gibt keine Standardklassen, die auf dem Ad-hoc-Verhalten basieren. Ad-hoc-Schemata werden automatisch von den Platform-Prozessen generiert, die sie verwenden. Sie können aber auch [manuell mithilfe der Schema Registry-API erstellt werden](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL Individuelles XDM-Profil] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] ist eine datensatzbasierte Klasse, die eine eindeutige Darstellung der Attribute sowohl identifizierter als auch teilweise identifizierter Subjekte bildet. Hoch identifizierte Profile können für persönliche Kommunikation oder zielgerichtete Interaktionen verwendet werden. Sehr identifizierte Profile können detaillierte persönliche Informationen wie Name, Geschlecht, Geburtsdatum, Standort und Kontaktinformationen enthalten, einschließlich Telefonnummern und E-Mail-Adressen.
+[!UICONTROL XDM Individual Profile] ist eine auf einem Datensatz basierende Klasse, die eine einzige Repräsentation der Attribute sowohl identifizierter als auch teilweise identifizierter Subjekte darstellt. Hochgradig identifizierte Profile können für persönliche Kommunikation oder zielgerichtete Interaktionen verwendet werden. Hochgradig identifizierte Profile können detaillierte persönliche Informationen wie Name, Geschlecht, Geburtsdatum, Standort und Kontaktinformationen, einschließlich Telefonnummern und E-Mail-Adressen, enthalten.
 
 Weniger identifizierte Profile bestehen möglicherweise nur aus anonymen Verhaltenssignalen wie Browser-Cookies. In diesem Fall wird mithilfe der wenigen Profildaten eine Informationsbasis geschaffen, in der die Interessen und Präferenzen des anonymen Profils erfasst und gespeichert werden. Die Anzahl dieser Daten kann im Laufe der Zeit anwachsen, wenn sich das Subjekt für Benachrichtigungen, Abonnements, Käufe usw. entscheidet. Dieses Anwachsen von Profilattributen kann als Ergebnis schließlich ein identifiziertes Subjekt haben und ein höheres Maß an zielgerichteter Interaktion ermöglichen.
 
@@ -87,7 +87,7 @@ Erlebnisereignisse können entweder explizit oder implizit sein. Explizite Ereig
 
 Es ist zwar nicht einfach, alle Ereignisse in allen Datenquellen zu kategorisieren, doch ist es äußerst nützlich, ähnliche Ereignisse zu ähnlichen Typen zusammenzufassen, um sie verarbeiten zu können.
 
-![Eine Infografik der Kunden-Journey, die mit Erlebnisereignissen im Zeitverlauf visualisiert wurde.](images/overview/experience-event-journey.png)
+![Eine Infografik der Kunden-Journey, die mit Erlebnisereignissen im Laufe der Zeit visualisiert wurde.](images/overview/experience-event-journey.png)
 
 Weitere Informationen zur Struktur und zum Anwendungsfall der Felder einer Klasse erhalten Sie im Referenzhandbuch [[!UICONTROL XDM ExperienceEvent]](./classes/experienceevent.md).
 
@@ -95,33 +95,33 @@ Weitere Informationen zur Struktur und zum Anwendungsfall der Felder einer Klass
 
 Experience Platform ist schemaunabhängig, d. h. jedes Schema, das dem XDM-Standard entspricht, wird Platform-Services zur Verfügung gestellt. Die Verwendung von Schemata durch verschiedene Platform-Services wird weiter unten ausführlicher beschrieben.
 
-### Catalog Service, Data Ingestion und Data Lake {#ingestion-catalog-and-storage}
+### Katalog-Service, Datenaufnahme und Data Lake {#ingestion-catalog-and-storage}
 
 Catalog Service ist das „System of Record“ für Experience Platform-Medienelemente und deren zugehörige Schemata. Catalog Service enthält nicht die eigentlichen Datendateien oder Ordner, sondern die Metadaten und Beschreibungen dieser Dateien und Ordner.
 
-Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datenspeicher, der alle von Platform verwalteten Daten enthält, unabhängig von Herkunft oder Dateiformat.
+Die Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datenspeicher, der unabhängig von Herkunft oder Dateiformat alle von Platform verwalteten Daten enthält.
 
-Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalogdienst nachverfolgt und im Data Lake neben den Schemas und beobachteten Schemas, auf denen sie basieren, gespeichert.
+Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalog-Service verfolgt und im Data Lake zusammen mit den Schemas und festgestellten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen finden Sie in der [Übersicht über den Katalogdienst](../catalog/home.md) . Weitere Informationen zur Datenerfassung in Adobe Experience Platform finden Sie unter [Datenerfassung - Übersicht](../ingestion/home.md) .
+Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
 ### Abfrage-Service {#query-service}
 
-Sie können SQL-Standarddaten verwenden, um Experience Platform-Daten abzufragen und so viele verschiedene Anwendungsfälle mit Adobe Experience Platform Query Service zu unterstützen.
+Sie können Standard-SQL verwenden, um Experience Platform-Daten abzufragen und so viele verschiedene Anwendungsfälle mit dem Abfrage-Service von Adobe Experience Platform zu unterstützen.
 
-Nachdem ein Schema erstellt und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden die Daten erfasst und im Data Lake gespeichert. Anschließend können Sie Query Service verwenden, um beliebige Datensätze im Data Lake zu verbinden und die Abfrageergebnisse als neuen Datensatz zu erfassen, der für Berichte, maschinelles Lernen oder die Erfassung in das Echtzeit-Kundenprofil verwendet werden kann.
+Nachdem ein Schema erstellt und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden die Daten aufgenommen und im Data Lake gespeichert. Anschließend können Sie den Abfrage-Service verwenden, um beliebige Datensätze im Data Lake zu verbinden und die Abfrageergebnisse als neuen Datensatz zu erfassen, der bei Reporting, maschinellem Lernen oder der Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
 
 Weitere Informationen zu diesem Service finden Sie unter [Query Service – Übersicht](../query-service/home.md).
 
 ### Echtzeit-Kundenprofil {#real-time-customer-profile}
 
-Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die über alle Systeme hinweg aggregiert werden und verwertbare Zeitstempelkonten für Ereignisse enthalten, die den Profilsubjekt betreffen. Diese Ereignisse können in allen Systemen, die Sie mit Experience Platform verwenden, stattgefunden haben.
+Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, und enthält aussagekräftige Konten mit Zeitstempel von Ereignissen, die das Profilsubjekt betreffen. Diese Vorfälle können in allen Systemen stattgefunden haben, die Sie mit Experience Platform verwenden.
 
 Das Echtzeit-Kundenprofil nutzt schemaformatierte Daten basierend auf den Klassen [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] und reagiert auf Abfragen, die auf diesen Daten basieren.
 
-Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in einem Schema. Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung mit einem Tag versehen. Das mit einem Tag versehene Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
+Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in ein einziges Schema. Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung mit einem Tag versehen. Das mit einem Tag versehene Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
 
-Da [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] Daten im Data Lake erfasst werden, erfasst das Echtzeit-Kundenprofil alle Daten, die für seine Verwendung aktiviert wurden. Je mehr Interaktionen und Details aufgenommen werden, desto zuverlässiger werden die einzelnen Profile.
+Wenn [!UICONTROL XDM Individual Profile]- und [!UICONTROL XDM ExperienceEvent]-Daten in den Data Lake aufgenommen werden, nimmt das Echtzeit-Kundenprofil alle Daten auf, die für dessen Verwendung aktiviert wurden. Je mehr Interaktionen und Details aufgenommen werden, desto zuverlässiger werden die einzelnen Profile.
 
 Die Daten von [!UICONTROL XDM Individual Profile] helfen bei der Kommunikation und der Aktivierung von Aktionen auf allen Kanälen und allen Adobe-Produkten. In Kombination mit umfangreichen Verhaltens- und Interaktionsdaten können diese Daten für maschinelles Lernen verwendet werden. Darüber hinaus kann die Echtzeit-Kundenprofil-API genutzt werden, um die Funktionalität von Drittanbieterlösungen, CRM-Systemen und proprietären Lösungen zu erweitern.
 
@@ -133,7 +133,7 @@ Weitere Informationen dazu finden Sie in der [Übersicht zum Echtzeit-Kundenprof
 >
 >Data Science Workspace ist nicht mehr erhältlich. Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Data Science Workspace in Adobe Experience Platform nutzt maschinelles Lernen und künstliche Intelligenz, um Einblicke aus den in Experience Platform gespeicherten Daten zu gewinnen. Data Science Workspace ermöglicht es Datenwissenschaftlern, Rezepte zu erstellen, die auf [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] Daten über Kunden und ihre Aktivitäten basieren. Diese Rezepte erleichtern Vorhersagen wie Kaufneigung und empfohlene Angebote, die der Kontakt schätzen und nutzen kann.
+Data Science Workspace in Adobe Experience Platform nutzt maschinelles Lernen und künstliche Intelligenz, um Einblicke aus den in Experience Platform gespeicherten Daten zu gewinnen. Mit Data Science Workspace können Datenwissenschaftler Rezepte erstellen, die auf Daten von [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] über Kunden und ihre Aktivitäten basieren. Diese Rezepte erleichtern Prognosen wie Kaufneigung und empfohlene Angebote, die von Einzelpersonen geschätzt und verwendet werden.
 
 Mit Data Science Workspace können Datenwissenschaftler einfach intelligente, auf maschinellem Lernen basierende Service-APIs erstellen. Diese Services sind mit anderen Adobe-Lösungen kompatibel, einschließlich Adobe Target und Adobe Analytics Cloud, und helfen Ihnen bei der Automatisierung personalisierter, zielgerichteter digitaler Erlebnisse.
 

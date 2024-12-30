@@ -1,127 +1,128 @@
 ---
-title: Erstellung von maschinell lernunterstützten Schemata
-description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Schemas erstellen.
+title: Unterstützte Schemaerstellung durch maschinelles Lernen
+description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Schemata erstellen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 2%
 
 ---
 
-# Erstellung von Schemata, die durch maschinelles Lernen unterstützt werden
+# Durch maschinelles Lernen unterstützte Schemaerstellung
 
 >[!AVAILABILITY]
 >
->* Die Erstellung von Schemas, die durch maschinelles Lernen unterstützt werden, befindet sich derzeit in der Betaphase. Dokumentation und Funktionalitäten können sich ändern.
+>* Die durch maschinelles Lernen unterstützte Schemaerstellung befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
 
-Verwenden Sie ML-Algorithmen, um ein Schema aus Beispieldaten zu generieren. Dieser Prozess spart Zeit und erhöht die Genauigkeit beim Definieren der Struktur, Felder und Datentypen für große komplexe Datensätze.
+Verwenden Sie ML-Algorithmen, um ein Schema aus Beispieldaten zu generieren. Dieser Prozess spart Zeit und erhöht die Genauigkeit bei der Definition der Struktur, Felder und Datentypen für große komplexe Datensätze.
 
-Mit der ML-Schemaerstellung können Sie neue Datenquellen schnell integrieren und die Fehler durch manuelle Erstellung reduzieren. Nicht-technische Benutzer können sie verwenden, um Schemas zu generieren oder große und komplexe Datensätze ohne zusätzlichen Aufwand zu verwalten. Diese Unterstützung beschleunigt den Prozess vom Abrufen von Daten bis hin zum Erlangen von Einblicken, da sie die Kombination neuer Datenquellen und die Durchführung von Datenanalysen erleichtert.
+Mit der ML-Schemagenerierung können Sie schnell neue Datenquellen integrieren und die Fehler bei der manuellen Erstellung reduzieren. Nicht-technische Benutzende können es ohne zusätzlichen Aufwand verwenden, um Schemata zu generieren oder große und komplexe Datensätze zu verwalten. Diese Unterstützung beschleunigt den Prozess vom Abrufen von Daten zum Erhalten von Einblicken, da so neue Datenquellen einfacher kombiniert und Datenanalysen durchgeführt werden können.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der Anforderungen für die Schemaerstellung voraus. Bevor Sie mit diesem Handbuch fortfahren, sollten Sie das [UI-Handbuch zum Erstellen und Bearbeiten von Schemas](./resources/schemas.md) lesen.
+Dieses Tutorial setzt ein Grundverständnis der Anforderungen für die Schemaerstellung voraus. Bevor Sie mit diesem Handbuch fortfahren, sollten Sie das [Handbuch zur Benutzeroberfläche zum Erstellen und Bearbeiten von Schemata“ ](./resources/schemas.md).
 
-In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von ML-Algorithmen (Machine Learning) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen zum Erstellen von Schemas oder zum Dokument zu felderbasierten Workflows im Schema-Editor ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) finden Sie im [Handbuch zum Workflow für die manuelle Schemaerstellung](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) , um das Verständnis für den Erstellungsprozess von Schemas zu verbessern.[
+In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learning-Algorithmen (ML) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen [ Erstellen von Schemata finden Sie im Handbuch zum ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) des Schemas oder im Dokument zu [feldbasierten Workflows im Schema-Editor](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) um Ihr Verständnis des Prozesses zur Schemaerstellung zu verbessern.
 
 >[!NOTE]
 >
->Sie können ein Schema auch mithilfe der [!DNL Schema Registry] -API erstellen. Um ein Schema manuell mithilfe der API zu erstellen, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) , bevor Sie das Tutorial zum Erstellen eines Schemas mit der API](../tutorials/create-schema-api.md) ausführen.[
+>Sie können ein Schema auch mithilfe der [!DNL Schema Registry]-API erstellen. Um ein Schema manuell mit der API zu erstellen, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) bevor Sie das Tutorial zum [Erstellen eines Schemas mithilfe der API“ ](../tutorials/create-schema-api.md).
 
 ## Navigieren Sie zum Workflow Schema erstellen . {#navigate-to-schema-creation-workflow}
 
-Wählen Sie im linken Navigationsbereich der Platform-Benutzeroberfläche den Arbeitsbereich **[!UICONTROL Schemas]** aus. Der Arbeitsbereich **[!UICONTROL Schemas]** wird angezeigt. Wählen Sie **[!UICONTROL Schema erstellen]** aus, um ein neues Schema hinzuzufügen und damit einen Workflow zur Schemaerstellung zu starten.
+Wählen Sie in der linken Navigation der Platform-Benutzeroberfläche den Arbeitsbereich **[!UICONTROL Schemata]** aus. Der Arbeitsbereich **[!UICONTROL Schemata]** wird angezeigt. Wählen Sie **[!UICONTROL Schema erstellen]** aus, um ein neues Schema hinzuzufügen und einen Workflow zur Schemaerstellung zu starten.
 
-![Der Arbeitsbereich &quot;Schemas&quot;mit Schema im linken Navigationsbereich und Schema erstellen hervorgehoben.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
+![Der Arbeitsbereich „Schemata“ mit hervorgehobener Option „Schema“ im linken Navigationsbereich und „Schema erstellen“.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 
 ## Erstellen eines Schemas {#create-a-schema}
 
-Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie die Schemaerstellungsoption **[ML-Assisted]** und danach **[!UICONTROL Select]** aus, um Ihre Auswahl zu bestätigen.
+Das [!UICONTROL Erstellen eines Schemas] wird angezeigt. Wählen Sie die Option **[ML-Assisted]** Schemaerstellung und dann **[!UICONTROL Select]** aus, um Ihre Auswahl zu bestätigen.
 
-![Das Dialogfeld [!UICONTROL Schema erstellen] mit der Markierung [!UICONTROL ML- Assisted]](../images/ui/ml-schema-creation/use-sample-csv.png).
+![Das Dialogfeld [!UICONTROL Schema erstellen] mit [!UICONTROL ML- Unterstützt] hervorgehoben.](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### Basisklasse auswählen {#select-base-class}
 
-Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie eine Basisklasse für Ihr Schema aus, gefolgt von **[!UICONTROL Weiter]**.
+Der [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie eine Basisklasse für Ihr Schema und dann **[!UICONTROL Weiter]** aus.
 
-![Der Arbeitsbereich &quot;Schemadetails&quot;mit einer Klasse und der nächsten hervorgehoben.](../images/ui/ml-schema-creation/select-base-class.png)
+![Der Arbeitsbereich mit den Schemadetails mit einer hervorgehobenen Klasse und der nächsten hervorgehobenen Klasse.](../images/ui/ml-schema-creation/select-base-class.png)
 
 ### CSV-Datei hochladen {#upload-csv}
 
-Die Phase **[!UICONTROL Daten auswählen]** des Erstellungs-Workflows wird angezeigt. Wählen Sie im Abschnitt **[!UICONTROL Dateien hochladen]** die Option **[!UICONTROL Dateien auswählen]** oder den Abschnitt **[!UICONTROL Dateien ziehen und ablegen]** aus. Wählen Sie eine .csv -Datei von Ihrem Computer aus, um ein Schema zu generieren.
+Der **[!UICONTROL Daten auswählen]** des Erstellungs-Workflows wird angezeigt. Wählen Sie im Abschnitt **[!UICONTROL Dateien hochladen]** die Option **[!UICONTROL Dateien auswählen]** oder den Abschnitt **[!UICONTROL Dateien ziehen und ablegen]** aus. CSV-Datei vom Computer auswählen, um ein Schema zu generieren.
 
-![Der Schritt Datenauswahl im Workflow Schema erstellen , wobei der Abschnitt Dateien hochladen hervorgehoben ist.](../images/ui/ml-schema-creation/upload-files.png)
+![Die Phase „Daten auswählen“ im Workflow „Schema erstellen“ mit hervorgehobenem Abschnitt „Dateien hochladen“.](../images/ui/ml-schema-creation/upload-files.png)
 
 ### Vorschau der Daten {#preview-data}
 
-Im Abschnitt [!UICONTROL Datei hochladen] wird der Name der von Ihnen importierten CSV-Datei und im Abschnitt **[!UICONTROL Vorschau]** werden Zeilen mit Beispieldaten aus der hochgeladenen Datei angezeigt. Wählen Sie **[!UICONTROL Weiter]** aus, um den Workflow fortzusetzen.
+Im Abschnitt [!UICONTROL Datei hochladen] wird der Name der von Ihnen importierten CSV-Datei und im Abschnitt **[!UICONTROL Vorschau]** werden Beispieldatenzeilen aus der hochgeladenen Datei angezeigt. Wählen Sie **[!UICONTROL Weiter]**, um den Workflow fortzusetzen.
 
-![Zeilen mit Beispieldaten, die im Vorschaubereich hervorgehoben und als Nächstes hervorgehoben wurden.](../images/ui/ml-schema-creation/preview-data.png)
+![Zeilen mit Beispieldaten werden im Vorschauabschnitt hervorgehoben und als Nächstes hervorgehoben.](../images/ui/ml-schema-creation/preview-data.png)
 
-### Schema überprüfen und bearbeiten {#review-schema}
+### Prüfen und Bearbeiten eines Schemas {#review-schema}
 
-Die Phase **[!UICONTROL Überprüfen und Bearbeiten]** des Erstellungs-Workflows wird jetzt angezeigt und zeigt die durch maschinelles Lernen unterstützte **[!UICONTROL Schema-Empfehlung]** in einer tabellarischen Ansicht an. In dieser Phase können Sie Felder bearbeiten, hinzufügen oder aus dem vom maschinellen Lernmodell generierten empfohlenen Schema entfernen. Die Tabelle enthält die folgenden Felder:
+Der **[!UICONTROL „Überprüfen und Bearbeiten]** des Erstellungs-Workflows wird jetzt angezeigt, wobei die durch maschinelles Lernen unterstützte **[!UICONTROL Schemaempfehlung]** in einer tabellarischen Ansicht angezeigt wird. In dieser Phase können Sie Felder aus dem empfohlenen Schema, das vom Modell für maschinelles Lernen generiert wurde, bearbeiten, hinzufügen oder entfernen. Die Tabelle enthält die folgenden Felder:
 
 | Feldname | Beschreibung |
 |------------------|---------------------------------------------------------|
 | [!UICONTROL Datentabelle] | Der Datensatz oder die Datenbank, aus dem/der das Feld stammt. |
 | [!UICONTROL Source-Feld] | Der ursprüngliche Feldname aus dem Quellsystem. |
-| [!UICONTROL Zielfeld] | Der Feldname im Zielsystem, dem die Daten zugeordnet werden. |
-| [!UICONTROL Anzeigename] | Der Name, mit dem das Feld in der Benutzeroberfläche angezeigt wird. Dieser Name sollte benutzerfreundlicher oder beschreibender sein. |
+| [!UICONTROL Zielfeld] | Der Feldname im Zielsystem, auf dem die Daten zugeordnet werden. |
+| [!UICONTROL Anzeigename] | Der Name, der zum Anzeigen des Felds in der Benutzeroberfläche verwendet wird. Dieser Name sollte benutzerfreundlicher oder beschreibender sein. |
 | [!UICONTROL Datentyp] | Der Typ der im Feld gespeicherten Daten (z. B. `String`, `Date`). |
-| [!UICONTROL Feldergruppe] | Eine Kategorisierung des Felds basierend auf seiner Verwendung oder seinem Kontext (z. B. [!UICONTROL Demografische Details], [!UICONTROL Commerce-Details]). |
+| [!UICONTROL Feldergruppe] | Eine Kategorisierung des Felds basierend auf seiner Verwendung oder seinem Kontext (z. B. [!UICONTROL Demografische Details], [!UICONTROL Commerce-]). |
 
-![Die Phase &quot;Überprüfen und Bearbeiten&quot;des Workflows zur Schemaerstellung.](../images/ui/ml-schema-creation/schema-recommendation.png)
+![Die Phase „Überprüfen und Bearbeiten“ des Workflows zur Schemaerstellung.](../images/ui/ml-schema-creation/schema-recommendation.png)
 
 #### Feld hinzufügen {#add-field}
 
-Um dem Schema ein Feld hinzuzufügen, wählen Sie **[!UICONTROL Neues Feld hinzufügen]** aus.
+Um ein Feld zum Schema hinzuzufügen, wählen Sie **[!UICONTROL Neues Feld hinzufügen]** aus.
 
-![Die Phase &quot;Überprüfen und Bearbeiten&quot;des Workflows zur Schemaerstellung mit hervorgehobenem Feld &quot;Neues Feld hinzufügen&quot;](../images/ui/ml-schema-creation/add-new-field.png).
+![Die Phase „Überprüfen und Bearbeiten“ des Arbeitsablaufs zur Schemaerstellung mit hervorgehobener Option „Neues Feld hinzufügen“.](../images/ui/ml-schema-creation/add-new-field.png)
 
-Das Dialogfeld [!UICONTROL Feld auswählen] wird angezeigt. Das Dialogfeld enthält ein Diagramm des Schemas, wie es derzeit existiert. Wählen Sie das gewünschte Feld aus und wählen Sie **[Auswählen]** aus, um dem Schema ein neues Feld hinzuzufügen. Wählen Sie **[Abbrechen]** aus, um das Dialogfeld bei Bedarf zu schließen.
+Das [!UICONTROL Feld auswählen] wird angezeigt. Das Dialogfeld enthält ein Diagramm des Schemas in seiner aktuellen Form. Wählen Sie das gewünschte Feld aus und klicken **[auf]** , um dem Schema ein neues Feld hinzuzufügen. Klicken Sie **[Abbrechen]**, um das Dialogfeld bei Bedarf zu schließen.
 
-![Das Dialogfeld &quot;Feld auswählen&quot;mit einem ausgewählten Feld und hervorgehobener Auswahl.](../images/ui/ml-schema-creation/select-field-dialog.png)
+![Das Dialogfeld „Feld auswählen“ mit einem ausgewählten Feld und hervorgehobener Option „Auswählen“.](../images/ui/ml-schema-creation/select-field-dialog.png)
 
-Eine neue Zeile wird auf Ihrem empfohlenen Schema angezeigt. Sie können das Feld jetzt bearbeiten.
+Im empfohlenen Schema wird eine neue Zeile angezeigt. Sie können das Feld jetzt bearbeiten.
 
-#### Feld bearbeiten {#edit-field}
+#### Bearbeiten eines Felds {#edit-field}
 
-Um ein Feld zu bearbeiten, wählen Sie das Stiftsymbol der Zeile aus, die Sie bearbeiten möchten. Rechts wird ein Detailbereich angezeigt, in dem Sie das benutzerdefinierte Feld-Mapping bearbeiten können. Das Detailbedienfeld enthält das Feld [!UICONTROL Ziel ], den Anzeigenamen ], den Datentyp ] und die Feldergruppe [!UICONTROL 7}. [!UICONTROL  Nehmen Sie die erforderlichen Änderungen vor und wählen Sie zur Bestätigung **[!UICONTROL Anwenden]** aus. Wählen Sie das Stiftsymbol erneut aus, um das Detailbedienfeld zu schließen.
+Um ein Feld zu bearbeiten, klicken Sie auf das Stiftsymbol der Zeile, die Sie bearbeiten möchten. Rechts wird ein Detailbereich angezeigt, in dem Sie die Zuordnung benutzerdefinierter Felder bearbeiten können. Das Detailbedienfeld enthält die [!UICONTROL Zielfeld], [!UICONTROL Anzeigename], [!UICONTROL Datentyp] und [!UICONTROL Feldergruppe]. Nehmen Sie die erforderlichen Änderungen vor und wählen Sie **[!UICONTROL Übernehmen]** zur Bestätigung aus. Klicken Sie erneut auf das Stiftsymbol, um das Detailbedienfeld zu schließen.
 
-![Die Phase &quot;Überprüfen und Bearbeiten&quot;des Workflows zur Schemaerstellung mit dem Stiftsymbol und dem Detailbereich wurde hervorgehoben.](../images/ui/ml-schema-creation/edit-field.png)
+![Die Phase „Überprüfen und Bearbeiten“ des Workflows zur Schemaerstellung mit dem hervorgehobenen Stiftsymbol und hervorgehobenem Bedienfeld „Details“.](../images/ui/ml-schema-creation/edit-field.png)
 
-#### Entfernen von Feldern {#remove-field}
+#### Entfernen eines Felds {#remove-field}
 
-Um ein Feld zu entfernen, wählen Sie das Minussymbol in einer Zeile aus, die Sie löschen möchten.
+Um ein Feld zu entfernen, klicken Sie auf das Minussymbol in einer Zeile, die Sie löschen möchten.
 
 >[!CAUTION]
 >
 >Beim Entfernen dieses Elements wird kein Bestätigungsdialogfeld angezeigt.
 
-![Die Phase &quot;Überprüfen und Bearbeiten&quot;des Workflows zur Schemaerstellung mit hervorgehobenem Minussymbol.](../images/ui/ml-schema-creation/remove-field.png)
+![Die Phase „Überprüfen und Bearbeiten“ des Arbeitsablaufs für die Schemaerstellung mit hervorgehobenem Minussymbol.](../images/ui/ml-schema-creation/remove-field.png)
 
 #### Genehmigen des empfohlenen Schemas {#approve}
 
-Um das empfohlene Schema zu genehmigen und den Workflow **[!UICONTROL Schema erstellen]** fortzusetzen, wählen Sie **[Weiter]** aus.
+Um Ihr empfohlenes Schema zu genehmigen und den Workflow **[!UICONTROL Schema erstellen]** fortzusetzen, wählen Sie **[Weiter]** aus.
 
-![Die Phase &quot;Überprüfen und Bearbeiten&quot;des Workflows zur Schemaerstellung mit der Markierung &quot;Weiter&quot;.](../images/ui/ml-schema-creation/next.png)
+![Die Phase „Überprüfen und Bearbeiten“ des Arbeitsablaufs zur Schemaerstellung mit hervorgehobener Option „Weiter“.](../images/ui/ml-schema-creation/next.png)
 
-### Schema benennen und speichern {#name-and-save}
+### Benennen und speichern des Schemas {#name-and-save}
 
-Die Phase **[!UICONTROL Name und Speichern]** des Erstellungs-Workflows wird angezeigt. Geben Sie einen **[Anzeigenamen des Schemas]** und eine optionale Beschreibung ein. Der Abschnitt **[Schema generated]** enthält ein Diagramm des ML-generierten Schemas. Wählen Sie **[Beenden]** aus, um den Workflow für die Schemaerstellung abzuschließen.
+Der **[!UICONTROL Name und Speichern]** des Erstellungs-Workflows wird angezeigt. Geben Sie einen **[Anzeigenamen des Schemas]** und eine optionale Beschreibung ein. Der Abschnitt **[Schema generiert]** enthält ein Diagramm zum ML-generierten Schema. Wählen Sie **[Beenden]** aus, um den Workflow zur Schemaerstellung abzuschließen.
 
-![Die Phase &quot;Name&quot;und &quot;Schema speichern&quot;des Workflows zur Schemaerstellung mit hervorgehobenem Abschluss.](../images/ui/ml-schema-creation/name-and-save.png)
+![Die Phase „Name“ und „Schema speichern“ des Arbeitsablaufs für die Schemaerstellung mit hervorgehobener Option „Beenden“.](../images/ui/ml-schema-creation/name-and-save.png)
 
-### Anzeigen im Schema-Editor {#view-in-editor}
+### Im Schema-Editor anzeigen {#view-in-editor}
 
-Der Schema Editor wird angezeigt, wobei Ihr neu erstelltes Schema auf der Arbeitsfläche angezeigt wird. Wählen Sie **[!UICONTROL Speichern]** aus, um zum Arbeitsbereich [!UICONTROL Schemas] zurückzukehren.
+Der Schema-Editor wird mit dem neu erstellten Schema auf der Arbeitsfläche angezeigt. Wählen Sie **[!UICONTROL Speichern]** aus, um zum Arbeitsbereich [!UICONTROL Schemata] zurückzukehren.
 
 ![Der Schema-Editor, der Ihr benanntes ML-generiertes Schema anzeigt.](../images/ui/ml-schema-creation/schema-editor.png)
 
 ## Nächste Schritte
 
-Nach der Erstellung Ihres Schemas können Sie den Schema Editor verwenden, um bei Bedarf weitere Änderungen vorzunehmen. Ihr neues Schema kann jetzt in Ihre Datenquellen integriert und für die Datenanalyse verwendet werden.
+Nachdem Sie Ihr Schema erstellt haben, können Sie den Schema-Editor verwenden, um bei Bedarf weitere Änderungen vorzunehmen. Ihr neues Schema kann jetzt in Ihre Datenquellen integriert und für die Datenanalyse verwendet werden.
 
-Weitere Informationen zur Verwendung des Schema-Editors finden Sie im Leitfaden [Vorhandenes Schema bearbeiten](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) .
+Weitere Informationen zur Verwendung [ Schema-Editors finden ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) im Handbuch zum Bearbeiten eines vorhandenen Schemas .

@@ -1,6 +1,6 @@
 ---
-title: Zeitraum-Datentyp
-description: Erfahren Sie mehr über den Datentyp "Period Experience Data Model"(XDM).
+title: Periodendatentyp
+description: Erfahren Sie mehr über den Datentyp „Experience-Datenmodell“ (XDM) für Zeiträume.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,16 +12,16 @@ ht-degree: 12%
 
 ---
 
-# Datentyp [!UICONTROL Zeitraum]
+# [!UICONTROL Zeitraum] Datentyp
 
-[!UICONTROL Zeitraum] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Zeitraum bereitstellt, der durch ein Start- und Enddatum/-zeit definiert wird. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Zeitraum] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Zeitraum bereitstellt, der durch ein Start- und Enddatum/-zeit definiert ist. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Datentyps &quot;Zeitraum&quot;](../../../images/healthcare/data-types/period.png)
+![Period-Datentypstruktur](../../../images/healthcare/data-types/period.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Ende] | `end` | DateTime | Enddatum und -zeit. |
-| [!UICONTROL Starten] | `start` | DateTime | Startdatum und -zeit. |
+| [!UICONTROL Ende] | `end` | DateTime | Enddatum und -zeit |
+| [!UICONTROL Starten] | `start` | DateTime | Startdatum und -zeit |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

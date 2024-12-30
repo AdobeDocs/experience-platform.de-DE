@@ -1,6 +1,6 @@
 ---
-title: Adressdatentyp
-description: Erfahren Sie mehr über den Datentyp "Address Experience Data Model (XDM)".
+title: Adresstyp
+description: Erfahren Sie mehr über den Datentyp „Experience-Adressdatenmodell“ (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,24 +12,24 @@ ht-degree: 10%
 
 ---
 
-# Datentyp [!UICONTROL Adresse]
+# [!UICONTROL Adresse] Datentyp
 
-[!UICONTROL Adresse] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der eine Adresse beschreibt, die mithilfe von Postkonventionen (im Gegensatz zu GPS oder anderen Standortdefinitionsformaten) ausgedrückt wird. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Adresse] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Adresse beschreibt, die mithilfe von Postkonventionen (im Gegensatz zu GPS oder anderen Standortdefinitionsformaten) ausgedrückt wird. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des Adressdatentyps](../../../images/healthcare/data-types/address.png)
+![Struktur des Datentyps „Adresse“](../../../images/healthcare/data-types/address.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Zeitraum] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Zeitraum, in dem die Adresse verwendet wurde/wird. |
-| [!UICONTROL Ort] | `city` | String | Name der Stadt. |
-| [!UICONTROL Country] | `country` | String | Der Ländercode, der in der internationalen ISO-Norm 3166 beschrieben ist. Der Code kann entweder Alpha-2 oder Alpha-3 sein. |
-| [!UICONTROL District] | `district` | String | Der Bezirksname. |
-| [!UICONTROL Zeile] | `line` | String | Straßenname, Nummer, Richtung, Postfach oder Ähnliches. |
-| [!UICONTROL Postleitzahl] | `postalCode` | String | Postleitzahl. |
-| [!UICONTROL state] | `state` | String | Die Untereinheit eines Landes. Abkürzungen sind akzeptabel. |
+| [!UICONTROL Stadt] | `city` | String | Name der Stadt. |
+| [!UICONTROL Country] | `country` | String | Der Ländercode, der in der internationalen ISO-Norm 3166 beschrieben ist. Der Code kann entweder alpha-2 oder alpha-3 sein. |
+| [!UICONTROL Bezirk] | `district` | String | Der Bezirksname. |
+| [!UICONTROL Zeile] | `line` | String | Der Straßenname, die Nummer, die Richtung, das Postfach oder Ähnliches. |
+| [!UICONTROL Postleitzahl] | `postalCode` | String | Die Postleitzahl. |
+| [!UICONTROL state] | `state` | String | Die Untereinheit eines Landes. Abkürzungen sind zulässig. |
 | [!UICONTROL Text] | `text` | String | Die Textdarstellung der Adresse. |
-| [!UICONTROL Typ] | `type` | String | Der Adresstyp. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `postal` </li> <li> `physical` </li> <li> `both` </li> |
-| [!UICONTROL Use] | `use` | String | Der Zweck der Adresse. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `home` </li> <li> `work` </li> <li> `temp` </li> <li> `old`</li> <li> `billing`</li> |
+| [!UICONTROL Typ] | `type` | String | Der Adresstyp. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `postal` </li> <li> `physical` </li> <li> `both` </li> |
+| [!UICONTROL Verwenden] | `use` | String | Der Zweck der Adresse. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `home` </li> <li> `work` </li> <li> `temp` </li> <li> `old`</li> <li> `billing`</li> |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

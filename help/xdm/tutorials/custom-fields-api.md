@@ -1,29 +1,29 @@
 ---
 title: Definieren von XDM-Feldern in der Schema Registry-API
-description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren.
+description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren können.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Definieren von XDM-Feldern in der Schema Registry-API
 
-Alle Experience-Datenmodell (XDM)-Felder werden mit den standardmäßigen [JSON-Schema](https://json-schema.org/) -Einschränkungen definiert, die für ihren Feldtyp gelten, mit zusätzlichen Einschränkungen für Feldnamen, die von Adobe Experience Platform erzwungen werden. Mit der Schema Registry-API können Sie benutzerdefinierte Felder in Ihren Schemas definieren, indem Sie Formate und optionale Einschränkungen verwenden. XDM-Feldtypen werden durch das Attribut auf Feldebene, `meta:xdmType`, verfügbar gemacht.
+Alle Experience-Datenmodell (XDM)-Felder werden mithilfe der standardmäßigen [JSON-Schema](https://json-schema.org/)-Einschränkungen definiert, die für ihren Feldtyp gelten, mit zusätzlichen Einschränkungen für Feldnamen, die von Adobe Experience Platform erzwungen werden. Mit der Schema Registry-API können Sie benutzerdefinierte Felder in Ihren Schemata mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene `meta:xdmType` verfügbar gemacht.
 
 >[!NOTE]
 >
->`meta:xdmType` ist ein vom System generierter Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen, wenn Sie die API verwenden (außer beim Erstellen benutzerdefinierter Zuordnungstypen [). ](#custom-maps) Es empfiehlt sich, JSON-Schematypen (z. B. `string` und `integer`) mit den entsprechenden Min-/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
+>`meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft bei Verwendung der API nicht der JSON für Ihr Feld hinzufügen (außer beim [Erstellen benutzerdefinierter Zuordnungstypen](#custom-maps)). Best Practice ist die Verwendung von JSON-Schematypen (z. B. `string` und `integer`) mit den entsprechenden Min.-/Max.-Beschränkungen, wie in der folgenden Tabelle definiert.
 
-In diesem Handbuch wird die geeignete Formatierung zum Definieren verschiedener Feldtypen beschrieben, einschließlich derjenigen mit optionalen Eigenschaften. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
+In diesem Handbuch wird die entsprechende Formatierung zum Definieren verschiedener Feldtypen beschrieben, einschließlich derjenigen mit optionalen Eigenschaften. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anfrage für das [Erstellen einer Feldergruppe](../api/field-groups.md#create) oder [Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
+Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den bereitgestellten Beispiel-Code, um Ihre API-Anfrage zum [Erstellen einer Feldergruppe](../api/field-groups.md#create) oder [Erstellen eines Datentyps](../api/data-types.md#create) zu erstellen.
 
 ## [!UICONTROL String] {#string}
 
-[!UICONTROL String] -Felder sind durch `type: string` gekennzeichnet.
+[!UICONTROL Zeichenfolge] Felder werden durch `type: string` gekennzeichnet.
 
 ```json
 "sampleField": {
@@ -33,9 +33,9 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
 }
 ```
 
-Sie können optional mithilfe der folgenden zusätzlichen Eigenschaften einschränken, welche Arten von Werten für die Zeichenfolge eingegeben werden können:
+Sie können optional durch die folgenden zusätzlichen Eigenschaften einschränken, welche Arten von Werten für die Zeichenfolge eingegeben werden können:
 
-* `pattern`: Ein Regex-Muster, durch das eingeschränkt werden soll.
+* `pattern`: Ein Regex-Muster zur Einschränkung.
 * `minLength`: Eine Mindestlänge für die Zeichenfolge.
 * `maxLength`: Eine maximale Länge für die Zeichenfolge.
 
@@ -51,7 +51,7 @@ Sie können optional mithilfe der folgenden zusätzlichen Eigenschaften einschr�
 
 ## [!UICONTROL URI] {#uri}
 
-[!UICONTROL URI] -Felder werden durch `type: string` gekennzeichnet, wobei die Eigenschaft `format` auf `uri` gesetzt ist. Es werden keine anderen Eigenschaften akzeptiert.
+[!UICONTROL URI]-Felder werden durch `type: string` gekennzeichnet, wobei die `format`-Eigenschaft auf `uri` gesetzt ist. Es werden keine anderen Eigenschaften akzeptiert.
 
 ```json
 "sampleField": {
@@ -62,9 +62,9 @@ Sie können optional mithilfe der folgenden zusätzlichen Eigenschaften einschr�
 }
 ```
 
-## [!UICONTROL Enum] {#enum}
+## [!UICONTROL enum] {#enum}
 
-[!UICONTROL Enum] -Felder müssen `type: string` verwenden, wobei die Enum-Werte selbst unter einem `enum` -Array bereitgestellt werden:
+[!UICONTROL Enum]-Felder müssen `type: string` verwenden, wobei die Enum-Werte selbst unter einem `enum`-Array bereitgestellt werden:
 
 ```json
 "sampleField": {
@@ -79,7 +79,7 @@ Sie können optional mithilfe der folgenden zusätzlichen Eigenschaften einschr�
 }
 ```
 
-Sie können optional für jeden Wert unter einer `meta:enum` -Eigenschaft kundenorientierte Beschriftungen angeben, wobei jede Beschriftung einem entsprechenden Wert unter `enum` zugeordnet wird.
+Optional können Sie für jeden Wert unter einer `meta:enum`-Eigenschaft kundenseitige Beschriftungen angeben, wobei jede Beschriftung unter `enum` mit einem entsprechenden Wert versehen wird.
 
 ```json
 "sampleField": {
@@ -101,9 +101,9 @@ Sie können optional für jeden Wert unter einer `meta:enum` -Eigenschaft kunden
 
 >[!NOTE]
 >
->Der `meta:enum` -Wert deklariert **nicht** eine Auflistung oder führt eine Datenvalidierung allein durch. In den meisten Fällen werden unter `meta:enum` bereitgestellte Zeichenfolgen auch unter `enum` bereitgestellt, um sicherzustellen, dass die Daten eingeschränkt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne ein entsprechendes `enum` -Array bereitgestellt wird. Weitere Informationen finden Sie im Tutorial zum Definieren der vorgeschlagenen Werte [](../tutorials/suggested-values.md) .
+>Der `meta:enum`-Wert deklariert **keine**-Auflistung und steuert auch keine eigenständige Datenvalidierung. In den meisten Fällen werden die unter `meta:enum` bereitgestellten Zeichenfolgen auch unter `enum` bereitgestellt, um sicherzustellen, dass die Daten eingeschränkt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne ein entsprechendes `enum`-Array bereitgestellt wird. Weitere Informationen finden Sie im Tutorial [Definieren ](../tutorials/suggested-values.md) empfohlenen Werten“.
 
-Sie können optional eine `default` -Eigenschaft angeben, um den standardmäßigen `enum` -Wert anzugeben, den das Feld verwendet, wenn kein Wert angegeben ist.
+Sie können optional eine `default`-Eigenschaft bereitstellen, um den standardmäßigen `enum` anzugeben, den das Feld verwenden wird, wenn kein Wert angegeben wird.
 
 ```json
 "sampleField": {
@@ -126,11 +126,11 @@ Sie können optional eine `default` -Eigenschaft angeben, um den standardmäßig
 
 >[!IMPORTANT]
 >
->Wenn kein `default` -Wert angegeben wird und das Enum-Feld auf `required` gesetzt ist, schlägt die Überprüfung bei der Aufnahme eines Datensatzes fehl, wenn für dieses Feld ein anerkannter Wert fehlt.
+>Wenn kein `default` angegeben ist und das Aufzählungsfeld auf `required` festgelegt ist, schlägt die Validierung bei der Aufnahme jedes Datensatzes fehl, dem ein akzeptierter Wert für dieses Feld fehlt.
 
-## [!UICONTROL Nummer] {#number}
+## [!UICONTROL Zahl] {#number}
 
-Zahlenfelder werden durch `type: number` angegeben und haben keine anderen erforderlichen Eigenschaften.
+Zahlenfelder werden durch `type: number` gekennzeichnet und haben keine anderen erforderlichen Eigenschaften.
 
 ```json
 "sampleField": {
@@ -142,11 +142,11 @@ Zahlenfelder werden durch `type: number` angegeben und haben keine anderen erfor
 
 >[!NOTE]
 >
->`number`-Typen werden für jeden numerischen Typ verwendet, entweder Ganzzahlen oder Gleitkommazahlen, während [`integer` Typen](#integer) speziell für ganzzahlige Zahlen verwendet werden. Weitere Informationen zu den Anwendungsfällen für jeden Typ finden Sie in der Dokumentation zum [JSON-Schema für numerische Typen](https://json-schema.org/understanding-json-schema/reference/numeric.html) .
+>`number` Typen werden für beliebige numerische Typen verwendet, entweder Ganzzahlen oder Gleitkommazahlen, während [`integer` Typen ](#integer) ganzzahlige Zahlen spezifiziert sind. Weitere Informationen zu den Anwendungsfällen für [ einzelnen Typ finden ](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
 
 ## [!UICONTROL Integer] {#integer}
 
-[!UICONTROL Integer] -Felder sind durch `type: integer` gekennzeichnet und haben keine anderen erforderlichen Felder.
+[!UICONTROL Ganzzahl]-Felder werden durch `type: integer` gekennzeichnet und haben keine anderen erforderlichen Felder.
 
 ```json
 "sampleField": {
@@ -158,9 +158,9 @@ Zahlenfelder werden durch `type: number` angegeben und haben keine anderen erfor
 
 >[!NOTE]
 >
->Während `integer`-Typen sich speziell auf ganzzahlige Zahlen beziehen, werden [`number` Typen](#number) für alle numerischen Typen verwendet, entweder Ganzzahlen oder Gleitkommazahlen. Weitere Informationen zu den Anwendungsfällen für jeden Typ finden Sie in der Dokumentation zum [JSON-Schema für numerische Typen](https://json-schema.org/understanding-json-schema/reference/numeric.html) .
+>Während sich `integer` Typen auf ganzzahlige Zahlen beziehen, werden [`number` Typen ](#number) jedem numerischen Typ verwendet, entweder Ganzzahlen oder Gleitkommazahlen. Weitere Informationen zu den Anwendungsfällen für [ einzelnen Typ finden ](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
 
-Optional können Sie den Bereich der Ganzzahl einschränken, indem Sie der Definition die Eigenschaften `minimum` und `maximum` hinzufügen. Mehrere andere numerische Typen, die von der Schema Builder-Benutzeroberfläche unterstützt werden, sind nur `integer`-Typen mit bestimmten `minimum`- und `maximum`-Einschränkungen, z. B. [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) und [[!UICONTROL Byte]](#byte).
+Optional können Sie den Bereich der Ganzzahl einschränken, indem Sie der Definition `minimum`- und `maximum` hinzufügen. Einige andere numerische Typen, die von der Schema Builder-Benutzeroberfläche unterstützt werden, sind nur `integer` mit bestimmten `minimum` und `maximum` Einschränkungen, wie [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) und [[!UICONTROL Byte]](#byte).
 
 ```json
 "sampleField": {
@@ -172,9 +172,9 @@ Optional können Sie den Bereich der Ganzzahl einschränken, indem Sie der Defin
 }
 ```
 
-## [!UICONTROL Long] {#long}
+## [!UICONTROL Lang] {#long}
 
-Das Äquivalent eines [!UICONTROL Long] -Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein Feld vom Typ [`integer` mit bestimmten `minimum` - und `maximum` -Werten (`-9007199254740992` bzw. `9007199254740992` ).](#integer)
+Das Äquivalent eines [!UICONTROL Long]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-9007199254740992` bzw. `9007199254740992`).
 
 ```json
 "sampleField": {
@@ -186,9 +186,9 @@ Das Äquivalent eines [!UICONTROL Long] -Felds, das über die Schema Builder-Ben
 }
 ```
 
-## [!UICONTROL short] {#short}
+## [!UICONTROL kurz] {#short}
 
-Das Äquivalent eines [!UICONTROL Short] -Felds, das über die Schema Builder-Benutzeroberfläche erstellt wird, ist ein Feld vom Typ [`integer` mit bestimmten `minimum` - und `maximum` -Werten (`-32768` bzw. `32768` ).](#integer)
+Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-32768` bzw. `32768`).
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ Das Äquivalent eines [!UICONTROL Short] -Felds, das über die Schema Builder-Be
 
 ## [!UICONTROL Byte] {#byte}
 
-Das Äquivalent eines [!UICONTROL Byte] -Felds, das über die Schema Builder-Benutzeroberfläche erstellt wird, ist ein Feld vom Typ [`integer` mit bestimmten `minimum` - und `maximum` -Werten (`-128` bzw. `128`).](#integer)
+Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-128` bzw. `128`).
 
 ```json
 "sampleField": {
@@ -214,9 +214,9 @@ Das Äquivalent eines [!UICONTROL Byte] -Felds, das über die Schema Builder-Ben
 }
 ```
 
-## [!UICONTROL Boolean] {#boolean}
+## [!UICONTROL Boolesch] {#boolean}
 
-Die Felder [!UICONTROL Boolesch] sind durch `type: boolean` gekennzeichnet.
+[!UICONTROL Boolesch] Felder werden durch `type: boolean` gekennzeichnet.
 
 ```json
 "sampleField": {
@@ -226,7 +226,7 @@ Die Felder [!UICONTROL Boolesch] sind durch `type: boolean` gekennzeichnet.
 }
 ```
 
-Sie können optional einen `default` -Wert angeben, den das Feld verwendet, wenn während der Aufnahme kein expliziter Wert angegeben wird.
+Sie können optional einen `default` Wert angeben, den das Feld verwendet, wenn bei der Aufnahme kein expliziter Wert angegeben wird.
 
 ```json
 "sampleField": {
@@ -239,11 +239,11 @@ Sie können optional einen `default` -Wert angeben, den das Feld verwendet, wenn
 
 >[!IMPORTANT]
 >
->Wenn kein `default` -Wert angegeben wird und das boolesche Feld auf `required` gesetzt ist, schlägt die Überprüfung bei der Aufnahme für jeden Datensatz fehl, für den ein anerkannter Wert für dieses Feld fehlt.
+>Wenn kein `default` angegeben ist und das boolesche Feld auf `required` gesetzt ist, schlägt die Validierung bei der Aufnahme jedes Datensatzes fehl, dem ein akzeptierter Wert für dieses Feld fehlt.
 
 ## [!UICONTROL Datum] {#date}
 
-Die Felder [!UICONTROL Datum] sind durch `type: string` und `format: date` gekennzeichnet. Sie können optional auch ein Array von `examples` angeben, das verwendet werden soll, wenn Sie eine Beispieldatumszeichenfolge für Benutzer anzeigen möchten, die die Daten manuell eingeben.
+[!UICONTROL Datum]-Felder werden durch `type: string` und `format: date` gekennzeichnet. Sie können optional auch ein Array von `examples` bereitstellen, die in Fällen genutzt werden können, in denen Sie eine Beispiel-Datumszeichenfolge für Benutzer anzeigen möchten, die die Daten manuell eingeben.
 
 ```json
 "sampleField": {
@@ -257,7 +257,7 @@ Die Felder [!UICONTROL Datum] sind durch `type: string` und `format: date` geken
 
 ## [!UICONTROL DateTime] {#date-time}
 
-Die Felder [!UICONTROL DateTime] sind durch `type: string` und `format: date-time` gekennzeichnet. Sie können optional auch ein Array von &quot;`examples`&quot;bereitstellen, das verwendet werden kann, wenn Sie eine Beispiel-Datum-Uhrzeit-Zeichenfolge für Benutzer anzeigen möchten, die die Daten manuell eingeben.
+[!UICONTROL DateTime]-Felder werden durch `type: string` und `format: date-time` gekennzeichnet. Sie können optional auch ein Array von `examples` bereitstellen, die in Fällen genutzt werden können, in denen Sie eine Beispiel-Datums-/Uhrzeitzeichenfolge für Benutzer anzeigen möchten, die die Daten manuell eingeben.
 
 ```json
 "sampleField": {
@@ -271,9 +271,9 @@ Die Felder [!UICONTROL DateTime] sind durch `type: string` und `format: date-tim
 
 ## [!UICONTROL Array] {#array}
 
-[!UICONTROL Array] -Felder werden durch `type: array` und ein `items` -Objekt angegeben, das das Schema der Elemente definiert, die das Array akzeptiert.
+[!UICONTROL Array]-Felder werden durch `type: array` und ein `items`-Objekt angegeben, das das Schema der Elemente definiert, die das Array akzeptiert.
 
-Sie können Array-Elemente mithilfe von Primitive-Typen definieren, z. B. ein Array von Zeichenfolgen:
+Sie können Array-Elemente mithilfe von primitiven Typen definieren, z. B. ein Array von Zeichenfolgen:
 
 ```json
 "sampleField": {
@@ -286,7 +286,7 @@ Sie können Array-Elemente mithilfe von Primitive-Typen definieren, z. B. ein Ar
 }
 ```
 
-Sie können die Array-Elemente auch auf Grundlage eines vorhandenen Datentyps definieren, indem Sie über eine `$ref` -Eigenschaft auf das `$id` des Datentyps verweisen. Im Folgenden finden Sie ein Array von [!UICONTROL Zahlungselement] -Objekten:
+Sie können die Array-Elemente auch auf der Grundlage eines vorhandenen Datentyps definieren, indem Sie über eine `$ref`-Eigenschaft auf die `$id` des Datentyps verweisen. Im Folgenden finden Sie ein Array von [!UICONTROL Zahlungsartikel]-Objekten:
 
 ```json
 "sampleField": {
@@ -301,9 +301,9 @@ Sie können die Array-Elemente auch auf Grundlage eines vorhandenen Datentyps de
 
 ## [!UICONTROL Objekt] {#object}
 
-[!UICONTROL Objekt] -Felder werden durch `type: object` und ein `properties` -Objekt angegeben, das Untereigenschaften für das Schemafeld definiert.
+[!UICONTROL Objekt]-Felder werden durch `type: object` und ein `properties`-Objekt angegeben, das Untereigenschaften für das Schemafeld definiert.
 
-Das unter `properties` definierte Unterfeld kann mit einem beliebigen Primitive `type` oder durch Referenzierung eines vorhandenen Datentyps über eine `$ref` -Eigenschaft definiert werden, die auf das `$id` des betreffenden Datentyps verweist:
+Jedes unter `properties` definierte Unterfeld kann mit einem beliebigen primitiven `type` oder durch Verweis auf einen vorhandenen Datentyp über eine `$ref`-Eigenschaft definiert werden, die auf den `$id` des betreffenden Datentyps verweist:
 
 ```json
 "sampleField": {
@@ -321,7 +321,7 @@ Das unter `properties` definierte Unterfeld kann mit einem beliebigen Primitive 
 }
 ```
 
-Sie können auch das gesamte Objekt definieren, indem Sie auf einen Datentyp verweisen, vorausgesetzt, der betreffende Datentyp ist selbst als `type: object` definiert:
+Sie können auch das gesamte Objekt über definieren, indem Sie auf einen Datentyp verweisen, vorausgesetzt, der betreffende Datentyp selbst ist wie `type: object` definiert:
 
 ```json
 "sampleField": {
@@ -333,11 +333,11 @@ Sie können auch das gesamte Objekt definieren, indem Sie auf einen Datentyp ver
 
 ## [!UICONTROL Landkarte] {#map}
 
-Ein Zuordnungsfeld ist im Wesentlichen ein Feld vom Typ [`object` ](#object) mit einem nicht beschränkten Satz von Schlüsseln. Wie Objekte haben Karten den Wert `type` von `object`, ihre `meta:xdmType` sind jedoch explizit auf `map` eingestellt.
+Ein Zuordnungsfeld ist im Wesentlichen ein Feld vom Typ [`object` mit ](#object) nicht eingeschränkten Schlüsselsatz. Wie Objekte haben auch Karten einen `type` Wert von `object`, aber ihre `meta:xdmType` ist explizit auf `map` festgelegt.
 
-Eine Zuordnung **darf keine** Eigenschaften definieren. **muss** ein einzelnes `additionalProperties`-Schema definieren, um den in der Zuordnung enthaltenen Datentyp zu beschreiben (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Der `type` -Wert muss entweder `string` oder `integer` sein.
+Eine Zuordnung **darf** keine Eigenschaften definieren. Sie **muss** ein einzelnes `additionalProperties` definieren, um den Typ der in der Zuordnung enthaltenen Werte zu beschreiben (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Der `type` muss entweder `string` oder `integer` sein.
 
-Ein Zuordnungsfeld mit Zeichenfolgenwerten würde beispielsweise wie folgt definiert:
+Ein Zuordnungsfeld mit Werten vom Typ Zeichenfolge würde beispielsweise wie folgt definiert werden:
 
 ```json
 "sampleField": {
@@ -351,25 +351,25 @@ Ein Zuordnungsfeld mit Zeichenfolgenwerten würde beispielsweise wie folgt defin
 }
 ```
 
-Weitere Informationen zum Erstellen von benutzerdefinierten Zuordnungsfeldern finden Sie im folgenden Abschnitt.
+Im folgenden Abschnitt finden Sie weitere Details zum Erstellen benutzerdefinierter Zuordnungsfelder.
 
 ### Erstellen benutzerdefinierter Zuordnungstypen {#custom-maps}
 
-Um &quot;map-like&quot;-Daten in XDM effizient zu unterstützen, können Objekte mit einer &quot;`meta:xdmType`&quot;-Einstellung auf &quot;`map`&quot;kommentiert werden, um deutlich zu machen, dass ein Objekt so verwaltet werden soll, als wäre der Schlüsselsatz nicht beschränkt. Daten, die in Zuordnungsfelder aufgenommen werden, müssen Zeichenfolgenschlüssel und nur String- oder Ganzzahlwerte verwenden (wie durch `additionalProperties.type` bestimmt).
+Um „mapähnliche“ Daten in XDM effizient zu unterstützen, können -Objekte mit einem `meta:xdmType` versehen werden, der auf `map` gesetzt ist, um klarzustellen, dass ein -Objekt so verwaltet werden soll, als wäre der Schlüsselsatz nicht beschränkt. Daten, die in Zuordnungsfelder aufgenommen werden, müssen Zeichenfolgenschlüssel verwenden und nur Zeichenfolgen- oder Ganzzahlwerte (wie durch `additionalProperties.type` bestimmt).
 
-XDM legt die folgenden Einschränkungen für die Verwendung dieses Speicherhinweises fest:
+XDM setzt die folgenden Einschränkungen für die Verwendung dieses Speicherhinweises:
 
 * Zuordnungstypen MÜSSEN vom Typ `object` sein.
-* Für Zuordnungstypen dürfen KEINE Eigenschaften definiert sein (d. h. sie definieren &quot;leere&quot;Objekte).
-* Zuordnungstypen MÜSSEN ein `additionalProperties.type` -Feld enthalten, das die Werte beschreibt, die auf der Zuordnung platziert werden können, entweder `string` oder `integer`.
+* Für Zuordnungstypen DÜRFEN KEINE Eigenschaften definiert sein (d. h. sie definieren „leere“ Objekte).
+* Zuordnungstypen MÜSSEN ein `additionalProperties.type` enthalten, das die Werte beschreibt, die innerhalb der Zuordnung platziert werden können, entweder `string` oder `integer`.
 
-Stellen Sie sicher, dass Sie nur Felder vom Typ Zuordnung verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungsbeeinträchtigungen aufweisen:
+Stellen Sie sicher, dass Sie Felder vom Typ Zuordnung nur verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungseinbußen aufweisen:
 
-* Die Antwortzeit von [Adobe Experience Platform Query Service](../../query-service/home.md) wird für 100 Millionen Datensätze von drei Sekunden auf zehn Sekunden reduziert.
-* Karten mit weniger als 16 Schlüsseln müssen vorhanden sein. Andernfalls besteht die Gefahr einer weiteren Verschlechterung.
+* Die Reaktionszeit von [Adobe Experience Platform Query Service](../../query-service/home.md) wird für 100 Millionen Datensätze von drei auf zehn Sekunden reduziert.
+* Die Karten müssen weniger als 16 Schlüssel haben, da sonst eine weitere Beeinträchtigung droht.
 
-Die Benutzeroberfläche von Platform weist außerdem Einschränkungen hinsichtlich der Art und Weise auf, wie die Schlüssel von Feldern vom Typ Zuordnung extrahiert werden können. Während Objekttypen erweitert werden können, werden Zuordnungen stattdessen als ein einzelnes Feld angezeigt.
+Die Platform-Benutzeroberfläche verfügt auch über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Definition verschiedener Feldtypen in der API beschrieben. Weitere Informationen zur Formatierung von XDM-Feldtypen finden Sie im Handbuch zu [XDM-Feldtypbegrenzungen](../schema/field-constraints.md).
+In diesem Handbuch wurde beschrieben, wie Sie verschiedene Feldtypen in der API definieren. Weitere Informationen zur Formatierung von XDM-Feldtypen finden Sie im Handbuch zu [Begrenzungen für XDM-Feldtypen](../schema/field-constraints.md).

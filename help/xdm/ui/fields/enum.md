@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; workspace; enum; field;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;ui;Workspace;Aufzählung;Feld;
 solution: Experience Platform
-title: Definieren von Enum-Feldern und vorgeschlagenen Werten in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Auflistungen und empfohlene Werte für Zeichenfolgenfelder definieren.
+title: Definieren von Aufzählungsfeldern und empfohlenen Werten in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie Auflistungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche zum Experience Platform definieren.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -18,59 +18,59 @@ ht-degree: 8%
 >title="Aufzählungen und empfohlene Werte"
 >abstract="Eine **Aufzählung** beschränkt ein Zeichenfolgen-Feld so, dass nur Daten aufgenommen werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Jeder Aufzählungs-Beschränkung kann ein **Anzeigename** zugewiesen werden, mit dem in der Segmentierungs-Benutzeroberfläche Attribut-Dropdown-Listen befüllt werden. **Vorgeschlagene Werte** für ein Feld schränken die Aufnahme nicht ein, sondern bestimmen nur die in der Segmentierung dargestellten Anzeigenamen. Wenn Sie mehrere Schemata haben, die ein Feld gemeinsam nutzen, das zu einer gemeinsamen Klasse oder Feldergruppe gehört, und Sie zwischen den einzelnen Schemata unterschiedliche Aufzählungen oder vorgeschlagene Werte für dieses Feld definieren, werden diese Werte zusammengeführt und im Vereinigungsschema angefügt."
 
-Im Experience-Datenmodell (XDM) kann einem Zeichenfolgenfeld ein vordefinierter Satz von akzeptierten oder vorgeschlagenen Werten zugewiesen werden, um besser steuern zu können, welche Werte in dieses Feld aufgenommen werden oder wie es sich bei der Segmentierung verhalten wird.
+Im Experience-Datenmodell (XDM) kann einem Zeichenfolgenfeld ein vordefinierter Satz von akzeptierten oder empfohlenen Werten zugewiesen werden, um besser steuern zu können, welche Werte in dieses Feld aufgenommen werden oder wie es sich bei der Segmentierung verhält.
 
-**[!UICONTROL Enums]** begrenzt die Werte, die für ein Zeichenfolgenfeld erfasst werden können, auf einen vordefinierten Satz. Wenn Sie versuchen, Daten in ein Enum-Feld zu erfassen und der Wert mit keinem der in der Konfiguration definierten Werte übereinstimmt, wird die Aufnahme verweigert.
+**[!UICONTROL Auflistungen]** beschränken die Werte, die für ein Zeichenfolgenfeld aufgenommen werden können, auf einen vordefinierten Satz. Wenn Sie versuchen, Daten in ein Aufzählungsfeld aufzunehmen, und der Wert mit keinem der in der Konfiguration definierten übereinstimmt, wird die Aufnahme verweigert.
 
-Im Gegensatz zu Auflistungen ermöglicht die Option **[!UICONTROL Vorgeschlagene Werte]** die Angabe eines Satzes empfohlener Werte für ein Zeichenfolgenfeld, das die Werte, die aufgenommen werden können, nicht einschränkt. Stattdessen wirken sich die vorgeschlagenen Werte darauf aus, welche vordefinierten Werte in der [Segmentierungsbenutzeroberfläche](../../../segmentation/ui/overview.md) verfügbar sind, wenn das Zeichenfolgenfeld als Attribut eingefügt wird.
+Im Gegensatz zu Auflistungen ermöglicht die Option **[!UICONTROL Vorgeschlagene Werte]**, einen Satz empfohlener Werte für ein Zeichenfolgenfeld zu kennzeichnen, die die Werte, die es aufnehmen kann, nicht einschränken. Stattdessen beeinflussen vorgeschlagene Werte, welche vordefinierten Werte in der [Segmentierungsbenutzeroberfläche) verfügbar sind](../../../segmentation/ui/overview.md) wenn das Zeichenfolgenfeld als Attribut einbezogen wird.
 
-Wenn [ein neues Feld ](./overview.md#define) in der Adobe Experience Platform-Benutzeroberfläche definiert und der Typ auf [!UICONTROL String] gesetzt wird, erhalten Sie die Möglichkeit, für dieses Feld die Werte [enum](#enum) oder [empfohlen](#suggested-values) zu definieren.
+Beim [Definieren eines neuen Felds](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform und Festlegen des Typs auf [!UICONTROL Zeichenfolge] haben Sie die Möglichkeit, für dieses Feld [Aufzählung](#enum) oder [empfohlene Werte](#suggested-values) zu definieren.
 
-![Bild, das die Option &quot;Aufzählung und empfohlene Werte&quot;für ein Zeichenfolgenfeld in der Benutzeroberfläche aktiviert hat](../../images/ui/fields/enum/enum-options-selected.png)
+![Bild, das die Option Aufzählung und empfohlene Werte zeigt, die für ein Zeichenfolgenfeld in der Benutzeroberfläche aktiviert ist](../../images/ui/fields/enum/enum-options-selected.png)
 
-In diesem Dokument wird beschrieben, wie Sie Auflistungen und vorgeschlagene Werte im Arbeitsbereich der Benutzeroberfläche von [!UICONTROL Schemas] definieren. Ein kurzer Überblick über Auflistungen und empfohlene Werte, einschließlich ihrer Konfiguration in der Benutzeroberfläche und deren nachgelagerten Effekten, erhalten Sie im folgenden Video:
+In diesem Dokument wird beschrieben, wie Sie Aufzählungen und empfohlene Werte im Arbeitsbereich [!UICONTROL Schemata] der Benutzeroberfläche definieren. Sehen Sie sich das folgende Video an, um einen schnellen Überblick über Auflistungen und empfohlene Werte zu erhalten, einschließlich ihrer Konfiguration in der Benutzeroberfläche und ihrer Auswirkungen auf nachgelagerte Bereiche:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
-## Definieren einer Enumeration {#enum}
+## Aufzählung definieren {#enum}
 
-Wählen Sie **[!UICONTROL Auflistungen und Vorgeschlagene Werte]** und dann **[!UICONTROL Auflistungen]** aus. Es werden zusätzliche Steuerelemente angezeigt, mit denen Sie die Wertbegrenzungen für die Enumeration angeben können. Um eine Einschränkung hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus.
+Wählen Sie **[!UICONTROL Auflistungen und empfohlene Werte]** und dann **[!UICONTROL Auflistungen]** aus. Es werden zusätzliche Steuerelemente angezeigt, mit denen Sie die Werteeinschränkungen für die Aufzählung angeben können. Um eine Einschränkung hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus.
 
-![Bild mit der in der Benutzeroberfläche ausgewählten Option &quot;Auflistungen&quot;](../../images/ui/fields/enum/enum-add-row.png)
+![Bild mit der in der Benutzeroberfläche ausgewählten Option „Aufzählungen“](../../images/ui/fields/enum/enum-add-row.png)
 
-Unter der Spalte **[!UICONTROL Wert]** müssen Sie den genauen Wert angeben, auf den Sie das Feld beschränken möchten. Sie können optional auch einen benutzerfreundlichen **[!UICONTROL Anzeigenamen]** für die Begrenzung angeben, der sich auf die Darstellung des Werts in der Segmentierung auswirkt.
+Unter der Spalte **[!UICONTROL Wert]** müssen Sie den genauen Wert angeben, auf den Sie das Feld beschränken möchten. Optional können Sie auch einen benutzerfreundlichen **[!UICONTROL Anzeigenamen]** für die Einschränkung angeben, der sich darauf auswirkt, wie der Wert in der Segmentierung dargestellt wird.
 
-Verwenden Sie weiterhin &quot;**[!UICONTROL Zeile hinzufügen]**&quot;, um die gewünschten Einschränkungen und optionalen Beschriftungen zur Aufzählung hinzuzufügen, oder wählen Sie das Löschsymbol (![Bild des Löschsymbols](/help/images/icons/remove-circle.png)) neben einer zuvor hinzugefügten Zeile aus, um sie zu entfernen. Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
+Verwenden Sie weiterhin **[!UICONTROL Zeile hinzufügen]**, um der Aufzählung die gewünschten Einschränkungen und optionalen Beschriftungen hinzuzufügen, oder wählen Sie das Löschsymbol (![Bild des Löschsymbols](/help/images/icons/remove-circle.png)) neben einer zuvor hinzugefügten Zeile aus, um sie zu entfernen. Wenn Sie fertig sind, wählen **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
 
-![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/enum-confirm.png)
+![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/enum-confirm.png)
 
-Die Arbeitsfläche wird entsprechend den Änderungen aktualisiert. Wenn Sie dieses Schema zukünftig untersuchen, können Sie die Begrenzungen für das Enum-Feld in der rechten Leiste anzeigen und bearbeiten.
+Die Arbeitsfläche wird mit den Änderungen aktualisiert. Wenn Sie dieses Schema in Zukunft untersuchen, können Sie die Einschränkungen für das Aufzählungsfeld in der rechten Leiste anzeigen und bearbeiten.
 
-## Definieren empfohlener Werte {#suggested-values}
+## Vorgeschlagene Werte definieren {#suggested-values}
 
-Wählen Sie **[!UICONTROL Auflistungen und Vorgeschlagene Werte]** und dann **[!UICONTROL Vorgeschlagene Werte]** aus, um zusätzliche Steuerelemente anzuzeigen. Wählen Sie hier **[!UICONTROL Zeile hinzufügen]** aus, um die vorgeschlagenen Werte hinzuzufügen.
+Wählen Sie **[!UICONTROL Aufzählungen und vorgeschlagene Werte]** und dann **[!UICONTROL Vorgeschlagene Werte]** aus, um zusätzliche Steuerelemente anzuzeigen. Wählen Sie hier **[!UICONTROL Zeile hinzufügen]**, um vorgeschlagene Werte hinzuzufügen.
 
-![Bild, das die in der Benutzeroberfläche ausgewählte Option &quot;Vorgeschlagene Werte&quot;anzeigt](../../images/ui/fields/enum/suggested-add-row.png)
+![Bild mit der in der Benutzeroberfläche ausgewählten Option „Vorgeschlagene Werte“](../../images/ui/fields/enum/suggested-add-row.png)
 
-Geben Sie unter der Spalte **[!UICONTROL Anzeigename]** einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungsbenutzeroberfläche angezeigt werden soll. Um weitere empfohlene Werte hinzuzufügen, wählen Sie erneut **[!UICONTROL Zeile hinzufügen]** und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, wählen Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile aus.
+Geben **[!UICONTROL in der]** „Anzeigename“ einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungs-Benutzeroberfläche angezeigt werden soll. Um weitere vorgeschlagene Werte hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** erneut aus und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, klicken Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile.
 
-Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
+Wenn Sie fertig sind, wählen **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
 
-![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-confirm.png)
+![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
->Es gibt eine ungefähre Verzögerung von fünf Minuten, bis die aktualisierten vorgeschlagenen Werte eines Felds in der Segmentierungsbenutzeroberfläche angezeigt werden.
+>Die aktualisierten empfohlenen Werte eines Felds, die in der Segmentierungs-Benutzeroberfläche angezeigt werden sollen, vergehen ungefähr fünf Minuten.
 
-### Verwalten von vorgeschlagenen Werten für Standardfelder
+### Vorgeschlagene Werte für Standardfelder verwalten
 
-Einige Felder aus Standard-XDM-Komponenten enthalten ihre eigenen empfohlenen Werte, z. B. `eventType` aus der [[!UICONTROL XDM ExperienceEvent]-Klasse](../../classes/experienceevent.md). Sie können zwar zusätzliche empfohlene Werte für ein Standardfeld erstellen, jedoch keine von Ihrem Unternehmen nicht definierten vorgeschlagenen Werte ändern oder entfernen. Bei der Anzeige eines Standardfelds in der Benutzeroberfläche werden die vorgeschlagenen Werte angezeigt, sind jedoch schreibgeschützt.
+Einige Felder aus standardmäßigen XDM-Komponenten enthalten eigene vorgeschlagene Werte, z. B. `eventType` aus der Klasse [[!UICONTROL XDM ExperienceEvent] ](../../classes/experienceevent.md). Sie können zwar zusätzliche vorgeschlagene Werte für ein Standardfeld erstellen, Sie können jedoch keine vorgeschlagenen Werte, die nicht von Ihrem Unternehmen definiert wurden, ändern oder entfernen. Beim Anzeigen eines Standardfelds in der Benutzeroberfläche werden die vorgeschlagenen Werte angezeigt, sind aber schreibgeschützt.
 
-![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard.png)
+![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/suggested-standard.png)
 
-Um neue empfohlene Werte für ein Standardfeld hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus. Um einen vorgeschlagenen Wert zu entfernen, der zuvor von Ihrer Organisation hinzugefügt wurde, wählen Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile aus.
+Um neue vorgeschlagene Werte für ein Standardfeld hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus. Um einen vorgeschlagenen Wert zu entfernen, der zuvor von Ihrer Organisation hinzugefügt wurde, wählen Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile aus.
 
-![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard-add.png)
+![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/suggested-standard-add.png)
 
 <!-- ### Removing suggested values for standard fields
 
@@ -84,44 +84,44 @@ In this example, the display name "[!UICONTROL Non-specific]" is now disabled fr
 
 See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
-## Evolutionsregeln für Auflistungen und empfohlene Werte {#evolution}
+## Evolutionsregeln für Aufzählungen und empfohlene Werte {#evolution}
 
-Nachdem ein Schema mit einem Enum-Feld verwendet wurde, um Daten in Platform aufzunehmen, müssen alle weiteren Änderungen an der Schemadefinition den bereits im System vorhandenen Daten entsprechen. Im Allgemeinen können Änderungen an einem vorhandenen Feld nur das Feld **less** einschränken. Ein Feld kann nicht restriktiver gestaltet werden als es bereits ist.
+Nachdem ein Schema mit einem Aufzählungsfeld verwendet wurde, um Daten in Platform aufzunehmen, müssen alle weiteren Änderungen an der Schemadefinition den bereits im System vorhandenen Daten entsprechen. Im Allgemeinen können Änderungen, die an einem vorhandenen Feld vorgenommen werden, dieses Feld nur **weniger** einschränkend machen. Ein Feld kann nicht restriktiver gestaltet werden, als es bereits ist.
 
-Bei Auflistungen und vorgeschlagenen Werten gelten die folgenden Regeln für die Nachaufnahme:
+Bei Auflistungen und empfohlenen Werten gelten nach der Aufnahme die folgenden Regeln:
 
-* Sie **CAN** können vorgeschlagene Werte für Standard- und benutzerdefinierte Felder mit vorhandenen vorgeschlagenen Werten hinzufügen.
-* Sie **CAN** entfernen vorgeschlagene Werte aus benutzerdefinierten Feldern mit vorhandenen vorgeschlagenen Werten.
-* Sie **CAN** können neue Enum-Werte für ein vorhandenes benutzerdefiniertes Enum-Feld hinzufügen.
-* Sie können **CAN** die Enum-Werte eines benutzerdefinierten Felds in empfohlene Werte umschalten oder sie in eine Zeichenfolge ohne Enum oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nicht rückgängig gemacht werden, sobald er angewendet wurde.**
-* Sie **KÖNNEN NICHT** Auflistungen oder vorgeschlagene Werte aus Standardfeldern entfernen.
-* Sie **KÖNNEN NICHT** Enum-Werte zu einem Feld ohne vorhandene Enumeration hinzufügen.
-* Sie **KÖNNEN NICHT** weniger als alle vorhandenen Enum-Werte für ein benutzerdefiniertes Feld entfernen.
-* Sie **KÖNNEN NICHT** von vorgeschlagenen Werten zu einer Enumeration wechseln.
+* Sie **vorgeschlagene** für standardmäßige und benutzerdefinierte Felder mit vorhandenen vorgeschlagenen Werten hinzufügen (KÖNNEN).
+* Sie **vorgeschlagene** aus benutzerdefinierten Feldern mit vorhandenen vorgeschlagenen Werten entfernen (KANN).
+* Sie **KÖNNEN** neue Aufzählungswerte für ein vorhandenes benutzerdefiniertes Aufzählungsfeld hinzufügen.
+* Sie **** die Aufzählungswerte eines benutzerdefinierten Felds nur auf vorgeschlagene Werte umschalten oder es in eine Zeichenfolge ohne Aufzählung oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nach der Anwendung nicht mehr rückgängig gemacht werden.**
+* Aufzählungen **empfohlene Werte können** aus Standardfeldern entfernt werden.
+* Sie **AUFZÄHLUNGSWERTE NICHT** einem Feld ohne vorhandene AUFZÄHLUNG hinzufügen.
+* Sie **KÖNNEN** weniger als alle vorhandenen Aufzählungswerte für ein benutzerdefiniertes Feld entfernen.
+* Sie **NICHT** von vorgeschlagenen Werten zu einer Aufzählung wechseln.
 
-## Zusammenführen von Regeln für Auflistungen und empfohlene Werte {#merging}
+## Zusammenführungsregeln für Auflistungen und empfohlene Werte {#merging}
 
-Wenn mehrere Schemas dasselbe Enum-Feld mit unterschiedlichen Konfigurationen verwenden und diese Schemas in einer Vereinigung enthalten sind, gelten bestimmte Regeln für die Abstimmung von Enum-Unterschieden. Die genauen Regeln hängen davon ab, ob die Schemas, die auf dasselbe Standardfeld verweisen (z. B. `eventType`) oder ob sie in verschiedenen Feldgruppen auf denselben benutzerdefinierten Feldpfad verweisen.
+Wenn mehrere Schemata dasselbe Aufzählungsfeld mit unterschiedlichen Konfigurationen verwenden und diese Schemata in einer Vereinigung enthalten sind, gelten bestimmte Regeln für die Abstimmung der Aufzählungsunterschiede. Die genauen Regeln hängen davon ab, ob die Schemas dasselbe Standardfeld referenzieren (z. B. `eventType`) oder ob sie in verschiedenen Feldergruppen auf denselben benutzerdefinierten Feldpfad verweisen.
 
 Wenn auf dasselbe Standardfeld verwiesen wird:
 
 * Alle weiteren vorgeschlagenen Werte sind **ANGEHÄNGT** in der Vereinigung.
-* Aktualisierungen, die an den vorgeschlagenen Werten für denselben Enum-Schlüssel vorgenommen werden, sind **UPDATED** in der Vereinigung.
+* Aktualisierungen der vorgeschlagenen Werte für denselben Aufzählungsschlüssel werden in **Vereinigung** AKTUALISIERT).
 
-Wenn Sie in verschiedenen Feldgruppen auf denselben benutzerdefinierten Feldpfad verweisen:
+Wenn in verschiedenen Feldergruppen auf denselben benutzerdefinierten Feldpfad verwiesen wird:
 
 * Alle weiteren vorgeschlagenen Werte sind **ANGEHÄNGT** in der Vereinigung.
-* Wenn derselbe zusätzliche empfohlene Wert in mehr als einem Schema definiert ist, sind diese Werte **ZUSAMMENGED** in der Vereinigung. Mit anderen Worten, derselbe empfohlene Wert wird nach dem Zusammenführen nicht zweimal angezeigt.
+* Wenn derselbe zusätzliche vorgeschlagene Wert in mehr als einem Schema definiert ist, werden diese Werte **ZUSAMMENGEFÜHRT** in der Vereinigung gespeichert. Mit anderen Worten, derselbe vorgeschlagene Wert wird nach der Zusammenführung nicht zweimal angezeigt.
 
 ## Validierungsbeschränkungen
 
-Aufgrund der aktuellen Systembeschränkungen gibt es zwei Fälle, in denen eine Enumeration vom System während der Erfassung nicht validiert wird:
+Aufgrund der aktuellen Systembeschränkungen gibt es zwei Fälle, in denen eine Aufzählung vom System während der Aufnahme nicht validiert wird:
 
-1. Der Enum wird in einem [Array-Feld](./array.md) definiert.
-1. Der Enum ist in der Schemahierarchie auf mehr als einer Ebene definiert.
+1. Die Aufzählung wird in einem „Array[Feld“ ](./array.md).
+1. Die Aufzählung ist mehr als eine Ebene tief in der Schemahierarchie definiert.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Auflistungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche definieren. Informationen zum Verwalten von Auflistungen und vorgeschlagenen Werten mithilfe der Schema Registry-API finden Sie im folgenden [Tutorial](../../tutorials/suggested-values.md).
+In diesem Handbuch wurde beschrieben, wie Sie Aufzählungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche definieren. Informationen zum Verwalten von Auflistungen und empfohlenen Werten mithilfe der Schema Registry-API finden Sie im folgenden [Tutorial](../../tutorials/suggested-values.md).
 
-Informationen zum Definieren anderer XDM-Feldtypen in der [!DNL Schema Editor] finden Sie in der Übersicht zum Definieren von Feldern in der Benutzeroberfläche [2}.](./overview.md#special)
+Informationen zum Definieren anderer XDM-Feldtypen in der [!DNL Schema Editor] finden Sie in der Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special).

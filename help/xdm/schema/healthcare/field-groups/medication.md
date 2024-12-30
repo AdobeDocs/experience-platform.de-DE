@@ -1,6 +1,6 @@
 ---
-title: Mediationsschema-Feldergruppe
-description: Erfahren Sie mehr über die Feldergruppe Mediationsschema .
+title: Feldergruppe „Medikationsschema“
+description: Erfahren Sie mehr über die Feldergruppe des Medikationsschemas.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,23 +12,23 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Meditation] Schemafeldgruppe
+# [!UICONTROL Medizin] Schemafeldgruppe
 
-[!UICONTROL Meditation] ist eine Standardschemafeldgruppe für die [[!DNL Medication] Klasse](../../../classes/medication.md). Es stellt ein einzelnes Objekt-Feld `healthcareMedication` bereit, das die Informationen eines Medikaments erfasst.
+[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die Klasse [[!DNL Medication] ](../../../classes/medication.md). Es bietet ein einzelnes Objekttyp-Feld, `healthcareMedication` die Informationen einer Medikation erfasst.
 
-![Feldgruppenstruktur](../../../images/healthcare/field-groups/medication/medication.png)
+![Feldergruppenstruktur](../../../images/healthcare/field-groups/medication/medication.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | ---|  --- | --- | --- |
-| [!UICONTROL Batch] | `batch` | Objekt | Details zu einem verpackten Arzneimittel. Enthält zwei Eigenschaften: <li>`lotNumber`: Ein string -Wert für die Kennung, die dem Batch zugewiesen ist.</li> <li>`expirationDate`: Ein DateTime -Wert für den Zeitpunkt, zu dem der Batch abläuft.</li> |
+| [!UICONTROL Batch] | `batch` | Objekt | Details zu einem verpackten Medikament. Enthält zwei Eigenschaften: <li>`lotNumber`: Ein Zeichenfolgenwert für die Kennung, die dem Batch zugewiesen wurde.</li> <li>`expirationDate`: Ein DateTime-Wert für den Zeitpunkt, zu dem der Batch abläuft.</li> |
 | [!UICONTROL Code] | `code` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Code, der dieses Medikament identifiziert. |
-| [!UICONTROL Definition] | `definition` | [[!UICONTROL Referenz]](../data-types/reference.md) | Definition des Arzneimittels. |
-| [!UICONTROL Dosierungsformular] | `doseForm` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt die Dosierungsform des Arzneimittels, wie Tabletten oder Kapseln. |
-| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Bezeichner]](../data-types/identifier.md) | Ein Identifikator für die Medikation. |
-| [!UICONTROL Ingredient] | `ingredient` | Array von Objekten | Beschreibt Informationen über Inhaltsstoffe für das Arzneimittel. Weitere Informationen finden Sie im Abschnitt [unter ](#ingredient) . |
-| [!UICONTROL Inhaber der Genehmigung für das Inverkehrbringen] | `marketingAuthorizationHolder` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die die Genehmigung zum Inverkehrbringen des Arzneimittels besitzt. |
-| [!UICONTROL Gesamtvolumen] | `totalVolume` | [[!UICONTROL Quantity]](../data-types/quantity.md) | Die Menge des Arzneimittels, wenn der Produktcode keine Packungsgröße ergibt. |
-| [!UICONTROL Status] | `status` | String | Der Status des Arzneimittels. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |
+| [!UICONTROL Definition] | `definition` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Definition der Medikation. |
+| [!UICONTROL Dosierungsform] | `doseForm` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt die Darreichungsform des Arzneimittels, z. B. Tabletten oder Kapseln. |
+| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Kennung für das Medikament. |
+| [!UICONTROL Zutat] | `ingredient` | Array von Objekten | Beschreibt die Inhaltsstoffinformationen für das Medikament. Weitere Informationen finden [ im ](#ingredient) Abschnitt unten. |
+| [!UICONTROL PHARMAZEUTISCHER UNTERNEHMER] | `marketingAuthorizationHolder` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die über die Genehmigung für das Inverkehrbringen des Arzneimittels verfügt. |
+| [!UICONTROL Gesamtvolumen] | `totalVolume` | [[!UICONTROL Menge]](../data-types/quantity.md) | Die Produktmenge, die in dem Medikament bereitgestellt wird, wenn der Produktcode keine Paketgröße ableitet. |
+| [!UICONTROL Status] | `status` | String | Der Status des Medikaments. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
@@ -37,14 +37,14 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `ingredient` {#ingredient}
 
-`ingredient` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`ingredient` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![Inhaltsstruktur](../../../images/healthcare/field-groups/medication/ingredient.png)
+![Struktur der Inhaltsstoffe](../../../images/healthcare/field-groups/medication/ingredient.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Item] | `item` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der zu beschreibende Bestandteil. |
-| [!UICONTROL Stärke Codeable Concept] | `strengthCodeableConcept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Menge des vorhandenen Bestandteils, ausgedrückt in einer systemdefinierten Terminologie. |
-| [!UICONTROL Strength Quantity] | `strengthQuantity` | [[!UICONTROL Quantity]](../data-types/quantity.md) | Die Menge der vorhandenen Zutat. |
-| [!UICONTROL Strength Ratio] | `strengthRatio` | [[!UICONTROL Verhältnis]](../data-types/ratio.md) | Das Verhältnis des vorhandenen Bestandteils. |
-| [!UICONTROL ist aktiv] | `isActive` | Boolesch | Gibt an, ob der Inhaltsstoff aktiv ist. |
+| [!UICONTROL Element] | `item` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Die Zutat, die beschrieben wird. |
+| [!UICONTROL Strength codierbares Konzept] | `strengthCodeableConcept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Menge des Inhaltsstoffs, ausgedrückt in einer systemdefinierten Terminologie. |
+| [!UICONTROL Festigkeitsmenge] | `strengthQuantity` | [[!UICONTROL Menge]](../data-types/quantity.md) | Die Menge der vorhandenen Zutat. |
+| [!UICONTROL Festigkeitsverhältnis] | `strengthRatio` | [[!UICONTROL Verhältnis]](../data-types/ratio.md) | Das Verhältnis der vorhandenen Zutat. |
+| [!UICONTROL Ist aktiv] | `isActive` | Boolesch | Zeigt an, ob der Inhaltsstoff aktiv ist. |

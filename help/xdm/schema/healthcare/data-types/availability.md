@@ -1,6 +1,6 @@
 ---
 title: Verfügbarkeitsdatentyp
-description: Erfahren Sie mehr über den Datentyp des Experience-Datenmodells für Verfügbarkeit (XDM).
+description: Erfahren Sie mehr über den Datentyp Verfügbarkeit des Experience-Datenmodells (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,16 +12,16 @@ ht-degree: 9%
 
 ---
 
-# Datentyp [!UICONTROL Verfügbarkeit]
+# [!UICONTROL Verfügbarkeit] Datentyp
 
-[!UICONTROL Verfügbarkeit] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Verfügbarkeitsdaten für ein Element beschreibt. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Availability] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Verfügbarkeitsdaten für ein Element beschreibt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur der Verfügbarkeitsdaten](../../../images/healthcare/data-types/availability/availability.png)
+![Struktur des Verfügbarkeits-Datentyps](../../../images/healthcare/data-types/availability/availability.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Verfügbare Zeit] | `availableTime` | Array von Objekten | Die Zeit, zu der das Element verfügbar ist. Weitere Informationen finden Sie im Abschnitt [unter ](#available-time) . |
-| [!UICONTROL Nicht verfügbare Zeit] | `notAvailableTime` | String | Die Zeit, zu der das Element nicht verfügbar ist, mit einem angegebenen Grund. Weitere Informationen finden Sie im Abschnitt [unter ](#not-available-time) . |
+| [!UICONTROL Verfügbare Zeit] | `availableTime` | Array von Objekten | Die Zeitpunkte, zu denen das Element verfügbar ist. Weitere Informationen finden [ im ](#available-time) Abschnitt unten. |
+| [!UICONTROL Zeit nicht verfügbar] | `notAvailableTime` | String | Die Zeit, in der das Element aus einem angegebenen Grund nicht verfügbar ist. Weitere Informationen finden [ im ](#not-available-time) Abschnitt unten. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
@@ -30,24 +30,24 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 ## `availableTime` {#available-time}
 
-`availableTime` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`availableTime` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
 ![Verfügbare Zeitstruktur](../../../images/healthcare/data-types/availability/available-time.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Ganztägig] | `allDay` | Boolesch | Ein boolescher Wert, der angibt, ob das Element immer verfügbar ist. |
-| [!UICONTROL  Verfügbare Endzeit] | `availableEndTime` | String | Die Tageszeit, zu der das Element nicht mehr verfügbar ist. Dies wird ignoriert, wenn `allDay` `true` ist. |
+| [!UICONTROL Den ganzen Tag] | `allDay` | Boolesch | Ein boolescher Wert, der angibt, ob das Element immer verfügbar ist. |
+| [!UICONTROL Verfügbare Endzeit] | `availableEndTime` | String | Die Tageszeit, zu der das Element nicht mehr verfügbar ist. Dies wird ignoriert, wenn `allDay` `true` ist. |
 | [!UICONTROL Verfügbare Startzeit] | `availableStartTime` | String | Die Tageszeit, zu der das Element verfügbar ist. Dies wird ignoriert, wenn `allDay` `true` ist. |
-| [!UICONTROL Wochentage] | `daysOfWeek` | Zeichenfolgen-Array | Ein Array von Zeichenfolgen, die angeben, welche Tage verfügbar sind. Die Werte dieser Eigenschaft müssen mit einem oder mehreren der folgenden bekannten Enum-Werte übereinstimmen. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
+| [!UICONTROL Wochentage] | `daysOfWeek` | Zeichenfolgen-Array | Ein Array von Zeichenfolgen, die angeben, welche Tage verfügbar sind. Die Werte dieser Eigenschaft müssen mindestens einem der folgenden bekannten Enum-Werte entsprechen. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
 
 ## `notAvailableTime` {#not-available-time}
 
-`notAvailableTime` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`notAvailableTime` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
 ![Nicht verfügbare Zeitstruktur](../../../images/healthcare/data-types/availability/not-available-time.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Während] | `during` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem das Element nicht mehr verfügbar ist. |
-| [!UICONTROL Beschreibung] | `description` | String | Der Grund dafür, dass das Element nicht verfügbar ist. |
+| [!UICONTROL während] | `during` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem das Element nicht mehr verfügbar ist. |
+| [!UICONTROL Beschreibung] | `description` | String | Der Grund, warum der Artikel nicht verfügbar ist. |

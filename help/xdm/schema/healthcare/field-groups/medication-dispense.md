@@ -1,6 +1,6 @@
 ---
-title: Mediation Dispensionschema Field Group
-description: Erfahren Sie mehr über die Feldergruppe Mediationsspesen .
+title: Feldergruppe „Medikamentenabgabe-Schema“
+description: Erfahren Sie mehr über die Schemafeldgruppe „Medikamentenabgabe“.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,41 +12,41 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL Medikationskosten] Schemafeldgruppe
+# [!UICONTROL Medikamentenabgabe] Schemafeldgruppe
 
-[!UICONTROL Medikationskosten] ist eine Standardschemafeldgruppe für die [[!DNL Medication] Klasse](../../../classes/medication.md), die [[!DNL XDM Individual Profile] Klasse](../../../classes/individual-profile.md) und die [[!DNL Provider class]](../../../classes/provider.md). Es stellt ein einzelnes Objektfeld `healthcareMedicationDispense` bereit, das Informationen über ein Medikament erfasst, das für eine benannte Person/einen benannten Patienten ausgegeben werden soll oder wurde.
+[!UICONTROL Medikamentenabgabe] ist eine Standardschemafeldgruppe für die [[!DNL Medication] Klasse](../../../classes/medication.md), die [[!DNL XDM Individual Profile] Klasse](../../../classes/individual-profile.md) und die [[!DNL Provider class]](../../../classes/provider.md). Es wird ein einzelnes Objekttyp-Feld bereitgestellt, `healthcareMedicationDispense` Informationen über ein Medikament erfasst, das für eine bestimmte Person/Patient abgegeben werden soll oder wurde.
 
-![Feldgruppenstruktur](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
+![Feldergruppenstruktur](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Autorisierung der Verschreibung] | `authorizingPrescription` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Der Befehl, der die Abgabe des Rezepts erlaubt. |
-| [!UICONTROL basierend auf ] | `basedOn` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Der Plan für die Abgabe der Medikation basiert auf dem . |
-| [!UICONTROL Kategorie] | `category` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Kategorie, in der das Arzneimittel abgegeben wird, fällt in die Liste, wie beispielsweise die rechtliche Kategorie des Arzneimittels oder die Einstufung des Arzneimittels. |
-| [!UICONTROL Tagesangebot] | `daysSupply` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Anzahl der Tage, für die das Medikament den Patienten versorgen wird. |
-| [!UICONTROL Ziel] | `destination` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Einrichtung oder der Ort, an die die Medikation im Rahmen des Auslieferungsereignisses versandt wurde oder werden wird. |
-| [!UICONTROL Dosierungsanleitung] | `dosageInstruction` | Array von [[!UICONTROL Dosierung]](../data-types/dosage.md) | Beschreibt, wie die Medikation vom Patienten angewendet werden soll. |
-| [!UICONTROL Encounter] | `encounter` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Begegnung, die den Kontext für dieses Ereignis festlegt. |
-| [!UICONTROL Ereignisverlauf] | `eventHistory` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Eine Zusammenfassung der Ereignisse im Zusammenhang mit der Abgabe. |
-| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Bezeichner]](../data-types/identifier.md) | Kennungen im Zusammenhang mit der Abgabe. Die Kennungen sollten durch Geschäftsprozesse definiert und/oder verwendet werden, um darauf zu verweisen, wenn ein direkter URL-Verweis nicht geeignet ist. |
-| [!UICONTROL Ort] | `location` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der wichtigste physische Ort, an dem das Arzneimittel abgegeben wurde. |
-| [!UICONTROL Meditation] | `medication` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Identifiziert das angeforderte Arzneimittel. Dies sollte ein Link zu einer Ressource sein, die Details des Arzneimittels darstellt, oder ein Code, der das Arzneimittel identifiziert. |
-| [!UICONTROL Nicht durchgeführter Grund] | `notPerformedReason` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund, warum das Medikament nicht verabreicht wurde. |
-| [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Informationen über die Abgabe. |
-| [!UICONTROL Teil von ] | `partOf` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Das Verfahren oder die Arzneimittelanforderung, das/die die Abgabe ausgelöst hat. |
-| [!UICONTROL Performer] | `performer` | Array von Objekten | Gibt an, wer oder was das Spendenereignis ausgeführt hat. Weitere Informationen finden Sie im Abschnitt [unter ](#performer) . |
-| [!UICONTROL Quantity] | `quantity` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Menge der verabreichten Medikamente, einschließlich der Maßeinheit. |
-| [!UICONTROL Receiver] | `receiver` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Identifiziert die Person, die das Arzneimittel abgeholt hat, oder den Ort, an dem das Arzneimittel verabreicht wurde. |
-| [!UICONTROL Betreff] | `subject` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Link zu einer Ressource, die die Person oder Gruppe darstellt, der das Arzneimittel verabreicht wird. |
-| [!UICONTROL Substitution] | `substitution` | Objekt | Gibt an, ob im Rahmen der Abgabe eine Substitution vorgenommen wurde. Enthält vier Eigenschaften: <li>`wasSubstituted`: Ein boolean -Wert, der &quot;true&quot;ist, wenn der Dispatcher eine Ersetzung angefordert hat.</li> <li>`type`: Ein Wert vom Typ [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) , der einen Code bereitstellt, der angibt, ob eine Ersetzung vorgenommen wurde.</li> <li>`reason`: Ein Array von Werten vom Typ [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) , die den Grund bzw. die Gründe für die Ersetzung enthalten.</li> <li>`responsibleParty`: Ein [[!UICONTROL Referenz]](../data-types/reference.md) -Wert, der die für die Ersetzung verantwortliche Person oder Partei angibt. </li> |
-| [!UICONTROL Unterstützende Informationen] | `supportingInformation` | Array von [[!UICONTROL Verweis]](../data-types/reference.md) | Zusätzliche Informationen, die die Abgabe des Arzneimittels unterstützen. |
-| [!UICONTROL Typ] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt die Art des ausgelösten Ereignisses, z. B. eine Notausfüllung oder eine Teilfüllung. |
-| [!UICONTROL Aufnahme] | `recorded` | DateTime | Datum und Uhrzeit des Beginns der Ausgabefaktivität, wenn `whenPrepared` oder `whenHandedOver` nicht aufgefüllt ist. |
-| [!UICONTROL Rendered Dose Instruction] | `renderedDosageInstruction` | String | Die vollständige Darstellung der Dosis ist in allen Dosierungsanweisungen enthalten. Bei Mehrfachdosierungsanweisungen zur Darstellung einer komplexen Dosierung wie Erhöhung oder Verschlankung der Dosen zu verwenden. |
-| [!UICONTROL Status] | `status` | String | Der Status der Ausgabe. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `preperation` </li> <li> `in-progress` </li> <li> `cancelled` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `stopped` </li> <li> `declined` </li> <li> `unknown` </li> |
+| [!UICONTROL Zulassung von Verschreibungen] | `authorizingPrescription` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Die Reihenfolge, die die Abgabe der Verschreibung erlaubt. |
+| [!UICONTROL basierend auf] | `basedOn` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Der Plan für die Abgabe des Medikaments basiert auf. |
+| [!UICONTROL Kategorie] | `category` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Kategorie, unter die das Medikament abgegeben wird, fällt, wie die rechtliche Kategorie des Medikaments oder die Arzneimittelklassifizierung. |
+| [!UICONTROL Tage Vorrat] | `daysSupply` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Anzahl der Tage, die das Medikament dem Patienten zur Verfügung stellt. |
+| [!UICONTROL Ziel] | `destination` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Einrichtung oder der Ort, an die bzw. den das Medikament im Rahmen des Ausgabevorgangs versendet wurde oder werden wird. |
+| [!UICONTROL Dosierungsanleitung] | `dosageInstruction` | Array von [[!UICONTROL Dosierung]](../data-types/dosage.md) | Beschreibt, wie das Medikament vom Patienten angewendet werden soll. |
+| [!UICONTROL Begegnung] | `encounter` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Begegnung, die den Kontext für dieses Ereignis festlegt. |
+| [!UICONTROL Ereignisverlauf] | `eventHistory` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Eine Zusammenfassung der Ereignisse, die bei der Abgabe aufgetreten sind. |
+| [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Kennungen, die mit der Abgabe verbunden sind. Die Kennungen sollten durch Geschäftsprozesse definiert und/oder verwendet werden, um darauf zu verweisen, wenn ein direkter URL-Verweis nicht geeignet ist. |
+| [!UICONTROL Ort] | `location` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der physische Hauptort, an dem das Medikament abgegeben wurde. |
+| [!UICONTROL Medizin] | `medication` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Identifiziert das angeforderte Medikament. Dies sollte ein Link zu einer Ressource sein, die Details des Medikaments darstellt, oder ein Code, der das Medikament identifiziert. |
+| [!UICONTROL Grund nicht ausgeführt] | `notPerformedReason` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund, warum das Medikament nicht abgegeben wurde. |
+| [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Informationen zur Abgabe. |
+| [!UICONTROL Teil von] | `partOf` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Das Verfahren oder die Medikamentenanfrage, die die Abgabe ausgelöst hat. |
+| [!UICONTROL Ausführende] | `performer` | Array von Objekten | Gibt an, wer oder was den Abgabefall durchgeführt hat. Weitere Informationen finden [ im ](#performer) Abschnitt unten. |
+| [!UICONTROL Menge] | `quantity` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Menge des abgegebenen Arzneimittels, einschließlich der Maßeinheit. |
+| [!UICONTROL Receiver] | `receiver` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Identifiziert die Person, die das Medikament aufgenommen hat, oder den Ort, an dem das Medikament abgegeben wurde. |
+| [!UICONTROL Betreff] | `subject` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Link zu einer Ressource, die die Person oder Gruppe repräsentiert, der das Medikament gegeben wird. |
+| [!UICONTROL Substitution] | `substitution` | Objekt | Gibt an, ob im Rahmen der Abgabe eine Substitution vorgenommen wurde. Enthält vier Eigenschaften: <li>`wasSubstituted`: Ein boolescher Wert, der „true“ ist, wenn der Dispenser eine Ersetzung angefordert hat.</li> <li>`type`: Ein [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md)-Wert, der einen Code bereitstellt, der angibt, ob eine Ersetzung vorgenommen wurde.</li> <li>`reason`: Ein Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md)-Werten, das den Grund (die Gründe) für die Ersetzung enthält.</li> <li>`responsibleParty`: Ein [[!UICONTROL Referenz]](../data-types/reference.md)-Wert, der die für die Ersetzung verantwortliche Person oder Partei angibt. </li> |
+| [!UICONTROL unterstützende Informationen] | `supportingInformation` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Zusätzliche Informationen, die die Abgabe des Medikaments unterstützen. |
+| [!UICONTROL Typ] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt die Art des durchgeführten Spendeereignisses, z. B. eine Notfüllung oder eine Teilfüllung. |
+| [!UICONTROL aufgezeichnet] | `recorded` | DateTime | Das Datum und die Uhrzeit, zu der die Ausgabetätigkeit gestartet wurde, wenn `whenPrepared` oder `whenHandedOver` nicht ausgefüllt ist. |
+| [!UICONTROL gerenderte Dosierungsanweisung] | `renderedDosageInstruction` | String | Die vollständige Darstellung der Dosis, die in allen Dosierungsanweisungen enthalten ist. Wird verwendet, wenn mehrere Dosierungsanweisungen enthalten sind, um komplexe Dosierungen wie die Erhöhung oder das Ausschleichen darzustellen. |
+| [!UICONTROL Status] | `status` | String | Der Status der Ausgabe. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `preperation` </li> <li> `in-progress` </li> <li> `cancelled` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `stopped` </li> <li> `declined` </li> <li> `unknown` </li> |
 | [!UICONTROL Status geändert] | `statusChanged` | DateTime | Datum und Uhrzeit der Änderung des Status des Ausgabedatensatzes. |
-| [!UICONTROL  bei Übergabe über] | `whenHandedOver` | DateTime | Datum und Uhrzeit der Abgabe der verabreichten Medikation an den Patienten. |
-| [!UICONTROL  Bei Vorbereitung] | `whenPrepared` | DateTime | Datum und Uhrzeit der Verpackung und Überprüfung der verabreichten Arzneimittel. |
+| [!UICONTROL Bei Übergabe] | `whenHandedOver` | DateTime | Datum und Uhrzeit der Abgabe des Medikaments an den Patienten. |
+| [!UICONTROL Wenn vorbereitet] | `whenPrepared` | DateTime | Datum und Uhrzeit der Verpackung und Überprüfung des abgegebenen Arzneimittels. |
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
@@ -55,11 +55,11 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `performer` {#performer}
 
-`performer` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`performer` wird als Array von -Objekten bereitgestellt. Im Folgenden wird die Struktur der einzelnen Objekte beschrieben.
 
-![performer structure](../../../images/healthcare/field-groups/medication-dispense/performer.png)
+![Leistungsstruktur](../../../images/healthcare/field-groups/medication-dispense/performer.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Akteur] | `actor` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der (oder ähnliche) Praktiker, der die Aktion ausgeführt hat. Es sollte davon ausgegangen werden, dass der Schauspieler der Spender der Medikation ist. |
-| [!UICONTROL Funktion] | `function` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Art des Leisters in der Ausgabe, wie z. B. das Datum in der Einfahrt, der Verpackung oder der Endprüfung. |
+| [!UICONTROL Schauspieler] | `actor` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der Praktizierende (oder eine ähnliche Person), der die Aktion ausgeführt hat. Es sollte angenommen werden, dass der Akteur der Spender des Medikaments ist. |
+| [!UICONTROL Funktion] | `function` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Typ des Ausführenden bei der Ausgabe, z. B. die Datumsangabe, der Verpacker oder die Endkontrolle. |

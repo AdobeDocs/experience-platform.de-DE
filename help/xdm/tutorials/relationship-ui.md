@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; ui; UI; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schema Editor; Schema; Schema; Schemas; erstellen; Beziehung; Beziehung; Referenz; Referenz;
+keywords: Experience Platform;Startseite;beliebte Themen;UI;Benutzeroberfläche;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema-Editor;Schema-Editor;Schema;Schema;Schemas;Schemas;erstellen;Beziehung;Beziehung;Referenz;Referenz;
 solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
-description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche.
+description: Dieses Dokument enthält eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemata mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -29,69 +29,69 @@ ht-degree: 21%
 >title="Referenz-Identity-Namespace"
 >abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgelegtes primäres Identitätsfeld verfügen, um Teil einer Beziehung sein zu können. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation."
 
-Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Durch die Definition dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas können Sie komplexe Einblicke in Ihre Kundendaten gewinnen.
+Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Durch die Definition dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemata können Sie komplexe Einblicke in Ihre Kundendaten gewinnen.
 
-Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile] abgeleitet werden können, gilt dies nur für Schemata einer gemeinsamen Klasse. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität des anderen verwandten Schemas verweist.
-
->[!NOTE]
->
->Wenn sowohl das Quell- als auch das Zielschema zur gleichen Klasse gehören, sollte ein dediziertes Beziehungsfeld **nicht** verwendet werden. Verwenden Sie in diesem Fall die Benutzeroberfläche des Vereinigungsschemas , um die Beziehung anzuzeigen. Anweisungen dazu finden Sie im Abschnitt [Beziehungen anzeigen](../../profile/ui/union-schema.md#view-relationships) des UI-Handbuchs für Vereinigungsschemas.
-
-Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Benutzeroberfläche von [!DNL Experience Platform]. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile] abgeleitet werden können, gilt dies nur für Schemata einer gemeinsamen Klasse. Um eine Beziehung zwischen zwei Schemata herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität des anderen verwandten Schemas verweist.
 
 >[!NOTE]
 >
->Anweisungen zum Erstellen einer n:n-Beziehung in Adobe Real-time Customer Data Platform B2B Edition finden Sie im Handbuch zum Erstellen von B2B-Beziehungen [.](./relationship-b2b.md)
+>Wenn sowohl das Quell- als auch das Zielschema derselben Klasse angehören, sollte ein dediziertes Beziehungsfeld **nicht** verwendet werden. In diesem Fall verwenden Sie die Benutzeroberfläche des Vereinigungsschemas , um die Beziehung anzuzeigen. Anweisungen dazu finden Sie im Abschnitt [Beziehungen anzeigen](../../profile/ui/union-schema.md#view-relationships) des Handbuchs zur Benutzeroberfläche des Vereinigungsschemas.
+
+Dieses Dokument enthält ein Tutorial zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der [!DNL Experience Platform]-Benutzeroberfläche. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+
+>[!NOTE]
+>
+>Anweisungen zum Erstellen einer Viele-zu-eins-Beziehung in Adobe Real-time Customer Data Platform B2B edition finden Sie im Handbuch zum [ von B2B-Beziehungen](./relationship-b2b.md).
 
 ## Erste Schritte
 
-Für dieses Tutorial sind ein grundlegendes Verständnis von [!DNL XDM System] und des Schema-Editors in der Benutzeroberfläche von [!DNL Experience Platform] erforderlich. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
+Dieses Tutorial setzt Grundkenntnisse der [!DNL XDM System] und des Schema-Editors in der [!DNL Experience Platform]-Benutzeroberfläche voraus. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
-* [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und dessen Implementierung in [!DNL Experience Platform].
+* [XDM-System in Experience Platform](../home.md): Ein Überblick über XDM und seine Implementierung in [!DNL Experience Platform].
 * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemata.
-* [Erstellen Sie ein Schema mit dem  [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial, das die Grundlagen der Arbeit mit dem [!DNL Schema Editor] behandelt.
+* [Erstellen eines Schemas mithilfe des [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial, das die Grundlagen der Arbeit mit dem [!DNL Schema Editor] behandelt.
 
-## Quell- und Referenzschema definieren
+## Definieren eines Quell- und Referenzschemas
 
-Wir gehen davon aus, dass Sie die beiden Schemata, die in der Beziehung definiert werden sollen, bereits erstellt haben. Zu Demonstrationszwecken erstellt dieses Tutorial eine Beziehung zwischen Mitgliedern des Treueprogramms einer Organisation (definiert in einem &quot;[!DNL Loyalty Members]&quot;-Schema) und ihrem Lieblingshotel (definiert in einem &quot;[!DNL Hotels]&quot;-Schema).
+Wir gehen davon aus, dass Sie die beiden Schemata, die in der Beziehung definiert werden sollen, bereits erstellt haben. Zu Demonstrationszwecken wird in diesem Tutorial eine Beziehung zwischen den Mitgliedern des Treueprogramms einer Organisation (definiert in einem &quot;[!DNL Loyalty Members]&quot;-Schema) und ihrem Lieblingshotel (definiert in einem &quot;[!DNL Hotels]&quot;-Schema) erstellt.
 
 >[!IMPORTANT]
 >
->Um eine Beziehung herzustellen, müssen beide Schemas definierte primäre Identitäten aufweisen und für [!DNL Real-Time Customer Profile] aktiviert sein. Lesen Sie den Abschnitt zum Aktivieren eines Schemas für die Verwendung in Profil](./create-schema-ui.md#profile) im Tutorial zur Schemaerstellung , wenn Sie Anleitungen zum Konfigurieren Ihrer Schemas benötigen.[
+>Um eine Beziehung herzustellen, müssen beide Schemata über definierte primäre Identitäten verfügen und für die [!DNL Real-Time Customer Profile] aktiviert sein. Wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemata benötigen[ lesen Sie im Tutorial zur Schemaerstellung den Abschnitt ](./create-schema-ui.md#profile)Aktivieren eines Schemas zur Verwendung im Profil“.
 
-Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschemas** dargestellt, das auf ein anderes Feld innerhalb eines **Referenzschemas** verweist. In den folgenden Schritten ist &quot;[!DNL Loyalty Members]&quot; das Quellschema, während &quot;[!DNL Hotels]&quot; als Referenzschema fungiert.
+Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschemas** dargestellt, das auf ein anderes Feld innerhalb eines **Referenzschemas** verweist. In den folgenden Schritten ist &quot;[!DNL Loyalty Members]&quot; das Quellschema, während &quot;[!DNL Hotels]&quot; als Referenzschema dient.
 
 In den folgenden Abschnitten wird die Struktur der einzelnen Schemas beschrieben, die in diesem Tutorial verwendet werden, bevor eine Beziehung definiert wurde.
 
-### [!DNL Loyalty Members] schema
+### Schema [!DNL Loyalty Members]
 
-Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der Klasse [!DNL XDM Individual Profile] und enthält ein Feld, das Mitglieder eines Treueprogramms beschreibt. Eines dieser Felder, `personalEmail.addess`, dient als primäre Identität für das Schema unter dem Namespace [!UICONTROL E-Mail] . Wie unter **[!UICONTROL Schemaeigenschaften]** zu sehen ist, wurde dieses Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert.
+Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der [!DNL XDM Individual Profile]-Klasse und enthält Felder, die die Mitglieder eines Treueprogramms beschreiben. Eines dieser Felder, `personalEmail.addess`, dient als primäre Identität für das Schema unter dem Namespace [!UICONTROL E-Mail]. Wie unter **[!UICONTROL Schemaeigenschaften]** zu sehen, wurde dieses Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert.
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### [!DNL Hotels] schema
+### Schema [!DNL Hotels]
 
-Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einer benutzerdefinierten Klasse &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilnehmen zu können, muss das Referenzschema auch über eine primäre Identität verfügen, die für [!UICONTROL Profil] definiert und aktiviert ist. In diesem Fall fungiert `_tenantId.hotelId`als primäre Identität für das Schema und verwendet einen benutzerdefinierten Identitäts-Namespace &quot;[!DNL Hotel ID]&quot;.
+Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einer benutzerdefinierten Klasse &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilzunehmen, muss für das Referenzschema auch eine primäre Identität definiert und für „Profil[!UICONTROL  aktiviert ]. In diesem Fall fungiert `_tenantId.hotelId`als primäre Identität für das Schema, wobei ein benutzerdefinierter Identity-Namespace &quot;[!DNL Hotel ID]&quot; verwendet wird.
 
-![Aktivieren für Profil](../images/tutorials/relationship/hotels.png)
-
->[!NOTE]
->
->Informationen zum Erstellen benutzerdefinierter Identitäts-Namespaces finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/features/namespaces.md#manage-namespaces) .
-
-## Erstellen einer Beziehungsfeldgruppe
+![Für Profil aktivieren](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Dieser Schritt ist nur erforderlich, wenn Ihr Quellschema über kein dediziertes Zeichenfolgenfeld verfügt, das als Zeiger auf die primäre Identität des Referenzschemas verwendet werden kann. Wenn das Feld in Ihrem Quellschema bereits definiert ist, fahren Sie mit dem nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field) fort.
+>Informationen zum Erstellen benutzerdefinierter Identity-Namespaces finden Sie in der [Identity Service-Dokumentation](../../identity-service/features/namespaces.md#manage-namespaces).
 
-Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das die primäre Identität des Referenzschemas angibt. Sie können dieses Feld zum Quellschema hinzufügen, indem Sie eine neue Schemafeldergruppe erstellen oder eine bestehende erweitern.
+## Erstellen einer Feldergruppe für Beziehungen
 
-Im Fall des Schemas [!DNL Loyalty Members] wird ein neues Feld `preferredHotel` hinzugefügt, das das bevorzugte Hotel des Treuemitglieds für Unternehmensbesuche angibt. Wählen Sie zunächst das Pluszeichen (**+**) neben dem Namen des Quellschemas aus.
+>[!NOTE]
+>
+>Dieser Schritt ist nur erforderlich, wenn Ihr Quellschema kein dediziertes Feld vom Typ Zeichenfolge hat, das als Zeiger auf die primäre Identität des Referenzschemas verwendet werden kann. Wenn das Feld in Ihrem Quellschema bereits definiert ist, fahren Sie mit dem nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field) fort.
+
+Um eine Beziehung zwischen zwei Schemata zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das die primäre Identität des Referenzschemas angibt. Sie können dieses Feld zum Quellschema hinzufügen, indem Sie eine neue Schemafeldgruppe erstellen oder eine vorhandene erweitern.
+
+Im Falle des [!DNL Loyalty Members] Schemas wird ein neues `preferredHotel` hinzugefügt, das das bevorzugte Hotel des Mitglieds des Treueprogramms für Firmenbesuche angibt. Wählen Sie zunächst das Pluszeichen (**+**) neben dem Namen des Quellschemas aus.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Auf der Arbeitsfläche wird ein neuer Feld-Platzhalter angezeigt. Geben Sie unter &quot;**[!UICONTROL Feldeigenschaften]**&quot;einen Feldnamen und einen Anzeigenamen für das Feld ein und setzen Sie dessen Typ auf &quot;[!UICONTROL String]&quot;. Wählen Sie unter **[!UICONTROL Zuweisen zu]** eine vorhandene Feldergruppe aus, die erweitert werden soll, oder geben Sie einen eindeutigen Namen ein, um eine neue Feldergruppe zu erstellen. In diesem Fall wird eine neue Feldergruppe &quot;[!DNL Preferred Hotel]&quot; erstellt.
+Ein Platzhalter für ein neues Feld wird auf der Arbeitsfläche angezeigt. Geben **[!UICONTROL unter „Feldeigenschaften]** einen Feldnamen und einen Anzeigenamen für das Feld an und legen Sie seinen Typ auf &quot;[!UICONTROL &quot; ]. Wählen **[!UICONTROL unter „Zuweisen zu]** eine vorhandene Feldergruppe aus, die erweitert werden soll, oder geben Sie einen eindeutigen Namen ein, um eine neue Feldergruppe zu erstellen. In diesem Fall wird eine neue Feldergruppe &quot;[!DNL Preferred Hotel]&quot; erstellt.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -99,7 +99,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Das aktualisierte `preferredHotel` -Feld wird auf der Arbeitsfläche unter einem `_tenantId` -Objekt angezeigt, da es sich um ein benutzerdefiniertes Feld handelt. Wählen Sie **[!UICONTROL Speichern]** aus, um die Änderungen am Schema abzuschließen.
+Das aktualisierte `preferredHotel`-Feld wird auf der Arbeitsfläche unter einem `_tenantId`-Objekt angezeigt, da es ein benutzerdefiniertes Feld ist. Klicken Sie **[!UICONTROL Speichern]**, um Ihre Änderungen am Schema abzuschließen.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -109,50 +109,50 @@ Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können 
 
 >[!NOTE]
 >
->Beziehungen können nur für Zeichenfolgen- oder Zeichenfolgen-Array-Felder unterstützt werden.
+>Beziehungen können nur für String- oder String-Array-Felder unterstützt werden.
 
-Wählen Sie das Feld `preferredHotel` auf der Arbeitsfläche aus und wählen Sie dann **[!UICONTROL Beziehung hinzufügen]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
+Wählen Sie das Feld `preferredHotel` auf der Arbeitsfläche und dann **[!UICONTROL Beziehung hinzufügen]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
 
-![Der Schema-Editor mit der Option Beziehung hinzufügen , die in der Seitenleiste für Feldeigenschaften hervorgehoben ist.](../images/tutorials/relationship/add-relationship.png)
+![Der Schema-Editor mit hervorgehobener Option „Beziehung hinzufügen“ in der Seitenleiste „Feldeigenschaften“.](../images/tutorials/relationship/add-relationship.png)
 
-Das Dialogfeld [!UICONTROL Beziehung hinzufügen] wird angezeigt. In diesem Dialogfeld können Sie die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds festlegen. Für Real-Time CDP-B2C-Benutzer können Sie **nur** eine Eins-zu-Eins-Beziehung zwischen dem Quell- und dem Referenzschema festlegen.
-
->[!NOTE]
->
->Wenn Sie Zugriff auf Real-Time CDP B2B Edition haben, können Sie die Steuerelemente in der rechten Leiste der Arbeitsfläche verwenden, um ein Beziehungsfeld zu definieren und mithilfe des [gleichen Dialogfelds](./relationship-b2b.md#relationship-field) eine n:n-Beziehung zu erstellen.
-
-![Das Dialogfeld &quot;Beziehung hinzufügen&quot;.](../images/tutorials/relationship/add-relationship-dialog.png)
-
-Verwenden Sie das Dropdown-Menü für **[!UICONTROL Referenzschema]** und wählen Sie das Referenzschema für die Beziehung aus (&quot;[!DNL Hotels]&quot; in diesem Beispiel).
+Das [!UICONTROL Beziehung hinzufügen] wird angezeigt. In diesem Dialogfeld können Sie die erforderlichen Parameter zum Konfigurieren eines Beziehungsfelds festlegen. Für Real-Time CDP B2C-Benutzer können **nur** eine Eins-zu-eins-Beziehung zwischen dem Quell- und Referenzschema festlegen.
 
 >[!NOTE]
 >
->Nur Schemas, die eine primäre Identität enthalten, werden im Dropdown-Menü des Referenzschemas eingeschlossen. Dieser Schutz verhindert, dass Sie versehentlich eine Beziehung mit einem Schema erstellen, das noch nicht ordnungsgemäß konfiguriert ist.
+>Wenn Sie Zugriff auf Real-Time CDP B2B edition haben, können Sie die Steuerelemente der rechten Leiste der Arbeitsfläche verwenden, um ein Beziehungsfeld zu definieren und mithilfe [ Dialogfelds eine Viele-zu-eins-Beziehung ](./relationship-b2b.md#relationship-field).
 
-Der Identitäts-Namespace des Referenzschemas (in diesem Fall &quot;[!DNL Hotel ID]&quot;) wird automatisch unter **[!UICONTROL Referenz-Identitäts-Namespace]** ausgefüllt. Wählen Sie **[!UICONTROL Anwenden]** aus, wenn Sie fertig sind.
+![Der Dialog Beziehung hinzufügen.](../images/tutorials/relationship/add-relationship-dialog.png)
 
-![Das Dialogfeld &quot;Beziehung hinzufügen&quot;mit den konfigurierten Beziehungsparametern und &quot;Anwenden&quot;wurde hervorgehoben.](../images/tutorials/relationship/apply-relationship.png)
+Verwenden Sie das Dropdown-Menü für **[!UICONTROL Referenzschema]** und wählen Sie das Referenzschema für die Beziehung aus (in diesem Beispiel &quot;[!DNL Hotels]„).
 
-Das Feld `preferredHotel` wird jetzt auf der Arbeitsfläche als Beziehung hervorgehoben und zeigt den Namen des Referenzschemas an. Wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu speichern und den Workflow abzuschließen.
+>[!NOTE]
+>
+>Nur Schemas, die eine primäre Identität enthalten, werden in das Dropdown-Menü Referenzschema aufgenommen. Diese Sicherung verhindert, dass Sie versehentlich eine Beziehung zu einem Schema erstellen, das noch nicht richtig konfiguriert ist.
 
-![Der Schema-Editor mit den Verweisen auf die Beziehung und &quot;Speichern hervorgehoben&quot;](../images/tutorials/relationship/relationship-save.png).
+Der Identity-Namespace des Referenzschemas (in diesem Fall &quot;[!DNL Hotel ID]„) wird automatisch unter „Referenz **[!UICONTROL Identity-Namespace“]**. Klicken Sie **[!UICONTROL Anwenden]** wenn Sie fertig sind.
 
-### Vorhandenes Beziehungsfeld bearbeiten {#edit-relationship}
+![Das Dialogfeld „Beziehung hinzufügen“ mit den konfigurierten Beziehungsparametern und der hervorgehobenen Option „Anwenden“.](../images/tutorials/relationship/apply-relationship.png)
 
-Um das Referenzschema zu ändern, wählen Sie ein Feld mit einer vorhandenen Beziehung aus und wählen Sie dann **[!UICONTROL Beziehung bearbeiten]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
+Das `preferredHotel` Feld wird jetzt als Beziehung auf der Arbeitsfläche hervorgehoben und zeigt den Namen des Referenzschemas an. Klicken Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu speichern und den Workflow abzuschließen.
 
-![Der Schema-Editor mit hervorgehobener Bearbeitungsbeziehung.](../images/tutorials/relationship/edit-relationship.png)
+![Der Schema-Editor mit den hervorgehobenen Beziehungsreferenzen und „Speichern“.](../images/tutorials/relationship/relationship-save.png)
 
-Das Dialogfeld [!UICONTROL Beziehung bearbeiten] wird angezeigt. Von hier aus können Sie den unter [Definieren eines Beziehungsfelds](#relationship-field) beschriebenen Prozess ausführen oder die Beziehung löschen. Wählen Sie **[!UICONTROL Beziehung löschen]** aus, um die Beziehung zum Referenzschema zu entfernen.
+### Bearbeiten eines vorhandenen Beziehungsfelds {#edit-relationship}
 
-![Das Dialogfeld &quot;Beziehung bearbeiten&quot;.](../images/tutorials/relationship/edit-relationship-dialog.png)
+Um das Referenzschema zu ändern, wählen Sie ein Feld mit einer vorhandenen Beziehung und dann **[!UICONTROL Beziehung bearbeiten]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
+
+![Der Schema-Editor mit hervorgehobener Option „Beziehung bearbeiten“](../images/tutorials/relationship/edit-relationship.png)
+
+Das [!UICONTROL Beziehung bearbeiten] wird angezeigt. Von hier aus können Sie dem unter „Definieren eines Beziehungsfelds[ beschriebenen Prozess folgen ](#relationship-field) die Beziehung löschen. Wählen Sie **[!UICONTROL Beziehung löschen]**, um die Beziehung zum Referenzschema zu entfernen.
+
+![Der Dialog Beziehung bearbeiten.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können bestimmte Beziehungen innerhalb Ihrer Schemas über die Registerkarte [!UICONTROL Beziehungen] im Arbeitsbereich [!UICONTROL Schemas] filtern und nach ihnen suchen. Sie können diese Ansicht verwenden, um Ihre Beziehungen schnell zu finden und zu verwalten. Lesen Sie das Dokument unter [Erkunden von Schemaressourcen](../ui/explore.md#lookup) , um detaillierte Anweisungen zu den Filteroptionen zu erhalten.
+Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL  innerhalb Ihrer Schemata ] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
 
-![Die Registerkarte Beziehungen im Arbeitsbereich &quot;Schemas&quot;.](../images/tutorials/relationship-b2b/relationship-tab.png)
+![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe von [!DNL Schema Editor] erfolgreich eine Eins-zu-Eins-Beziehung zwischen zwei Schemas erstellt. Anweisungen zum Definieren von Beziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Eins-zu-eins-Beziehung zwischen zwei Schemas erstellt. Anweisungen zum Definieren von Beziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).

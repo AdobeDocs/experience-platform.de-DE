@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;xdm;experience data model;namespace;Namespaces;Kompatibilitätsmodus;xed
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;xdm;Experience-Datenmodell;namespace;Namespaces;Kompatibilitätsmodus;xed;
 solution: Experience Platform
 title: Namespace im Experience-Datenmodell (XDM)
-description: Erfahren Sie, wie Sie mit Namespacing im Experience-Datenmodell (XDM) Ihre Schemas erweitern und Feldkollisionen verhindern können, da verschiedene Schemakomponenten zusammengeführt werden.
+description: Erfahren Sie, wie Sie mit dem Namespace im Experience-Datenmodell (XDM) Ihre Schemata erweitern und Feldkollisionen verhindern können, wenn verschiedene Schemakomponenten zusammengeführt werden.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->In XDM wird der Namespace (das Thema dieser Seite) verwendet, um Felder in einem Schema zu unterscheiden. Dies unterscheidet sich vom Konzept des Identitäts-Namespace im Identity Service, bei dem Namespace zur Unterscheidung von Identitätswerten verwendet wird. Weitere Informationen finden Sie in der Dokumentation zu [namespace in Identity Service](../../identity-service/features/namespaces.md) .
+>In XDM wird der Namespace (das Thema dieser Seite) verwendet, um Felder in einem Schema zu unterscheiden. Dies unterscheidet sich vom Konzept des Identity-Namespace in Identity Service, bei dem der Namespace zur Unterscheidung von Identitätswerten verwendet wird. Weitere Informationen finden Sie in der Dokumentation [Namespace im Identity ](../../identity-service/features/namespaces.md)).
 
-Alle Felder in Experience-Datenmodell (XDM)-Schemas haben einen zugehörigen Namespace. Mit diesen Namespaces können Sie Ihre Schemas erweitern und Feldkollisionen verhindern, da verschiedene Schemakomponenten zusammengeführt werden. Dieses Dokument bietet einen Überblick über Namespaces in XDM und deren Darstellung in der [Schema Registry-API](../api/overview.md).
+Alle Felder in Experience-Datenmodell (XDM)-Schemata haben einen zugehörigen Namespace. Mit diesen Namespaces können Sie Ihre Schemata erweitern und Feldkollisionen verhindern, wenn verschiedene Schemakomponenten zusammengeführt werden. Dieses Dokument bietet einen Überblick über Namespaces in XDM und darüber, wie sie in der [Schema Registry-API) dargestellt ](../api/overview.md).
 
-Mithilfe von Namespacing können Sie ein Feld in einem Namespace definieren, das etwas Anderes als dasselbe Feld in einem anderen Namespace bedeutet. In der Praxis zeigt der Namespace eines Felds an, wer das Feld erstellt hat (z. B. Standard-XDM (Adobe), Anbieter oder Unternehmen).
+Mit dem Namespace können Sie ein Feld in einem Namespace so definieren, dass es etwas Anderes bedeutet als dasselbe Feld in einem anderen Namespace. In der Praxis zeigt der Namespace eines Felds an, wer das Feld erstellt hat (z. B. Standard-XDM (Adobe), ein Anbieter oder Ihr Unternehmen).
 
-Betrachten Sie beispielsweise ein XDM-Schema, das die Feldergruppe [[!UICONTROL Persönliche Kontaktdetails] ](../field-groups/profile/demographic-details.md) verwendet, die über ein standardmäßiges Feld `mobilePhone` verfügt, das im Namespace `xdm` vorhanden ist. Im selben Schema können Sie auch ein separates `mobilePhone` -Feld unter einem anderen Namespace erstellen (Ihre [Mandanten-ID](../api/getting-started.md#know-your-tenant_id)). Beide Felder können zusammen vorhanden sein und gleichzeitig unterschiedliche zugrunde liegende Bedeutungen oder Begrenzungen haben.
+Nehmen wir zum Beispiel ein XDM-Schema, das die Feldergruppe [[!UICONTROL Persönliche Kontaktdaten] verwendet](../field-groups/profile/demographic-details.md) die über ein `mobilePhone` verfügt, das im `xdm`-Namespace vorhanden ist. Im selben Schema können Sie auch ein separates `mobilePhone` unter einem anderen Namespace (Ihrer [-ID) ](../api/getting-started.md#know-your-tenant_id). Beide Felder können nebeneinander existieren, während sie unterschiedliche zugrunde liegende Bedeutungen oder Einschränkungen haben.
 
 ## Namespace-Syntax
 
@@ -29,11 +29,11 @@ Die folgenden Abschnitte zeigen, wie Namespaces in der XDM-Syntax zugewiesen wer
 
 ### Standard-XDM {#standard}
 
-Die standardmäßige XDM-Syntax bietet Einblicke in die Darstellung von Namespaces in Schemas (einschließlich [deren Übersetzung in Adobe Experience Platform](#compatibility)).
+Die standardmäßige XDM-Syntax bietet Einblicke in die Darstellung von Namespaces in Schemata (einschließlich [wie sie in Adobe Experience Platform übersetzt werden](#compatibility)).
 
-Standard-XDM verwendet die Syntax [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) , um Feldern Namespaces zuzuweisen. Dieser Namespace wird in Form eines URI (z. B. `https://ns.adobe.com/xdm` für den Namespace `xdm`) oder als Kurzpräfix bereitgestellt, das im Attribut `@context` eines Schemas konfiguriert ist.
+Standard-XDM verwendet [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts)-Syntax, um Feldern Namespaces zuzuweisen. Dieser Namespace wird in Form eines URI (z. B. `https://ns.adobe.com/xdm` für den `xdm`-Namespace) oder als Präfix bereitgestellt, das im `@context` eines Schemas konfiguriert ist.
 
-Im Folgenden finden Sie ein Beispielschema für ein Produkt mit standardmäßiger XDM-Syntax. Mit Ausnahme von `@id` (der eindeutigen Kennung, wie sie durch die JSON-LD-Spezifikation definiert ist) beginnt jedes Feld unter `properties` mit einem Namespace und endet mit dem Feldnamen. Wenn Sie ein Shorthand-Präfix verwenden, das unter `@context` definiert ist, werden der Namespace und der Feldname durch einen Doppelpunkt (`:`) getrennt. Wenn Sie kein Präfix verwenden, werden der Namespace und der Feldname durch einen Schrägstrich (`/`) getrennt.
+Im Folgenden finden Sie ein Beispielschema für ein Produkt in der standardmäßigen XDM-Syntax. Mit Ausnahme von `@id` (der eindeutigen Kennung wie in der JSON-LD-Spezifikation definiert) beginnt jedes Feld unter `properties` mit einem Namespace und endet mit dem Feldnamen. Bei Verwendung eines unter `@context` definierten kurzen Präfixes werden der Namespace und der Feldname durch einen Doppelpunkt (`:`) getrennt. Wenn kein Präfix verwendet wird, werden der Namespace und der Feldname durch einen Schrägstrich (`/`) getrennt.
 
 ```json
 {
@@ -78,20 +78,20 @@ Im Folgenden finden Sie ein Beispielschema für ein Produkt mit standardmäßige
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@context` | Ein Objekt, das die Kurzschreibpräfixe definiert, die anstelle eines vollständigen Namespace-URI unter `properties` verwendet werden können. |
-| `@id` | Eine eindeutige Kennung für den Datensatz, wie durch den [JSON-LD spec](https://www.w3.org/TR/json-ld11/#node-identifiers) definiert. |
-| `xdm:sku` | Ein Beispiel für ein Feld, in dem ein Namespace mit einem Shorthand-Präfix gekennzeichnet wird. In diesem Fall ist `xdm` der Namespace (`https://ns.adobe.com/xdm`) und `sku` der Feldname. |
-| `https://ns.adobe.com/xdm/channels/application` | Ein Beispiel für ein Feld, das den vollständigen Namespace-URI verwendet. In diesem Fall ist `https://ns.adobe.com/xdm/channels` der Namespace und `application` der Feldname. |
-| `https://ns.adobe.com/vendorA/product/stockNumber` | Felder, die von Ressourcen des Anbieters bereitgestellt werden, verwenden ihre eigenen eindeutigen Namespaces. In diesem Beispiel ist `https://ns.adobe.com/vendorA/product` der Namespace des Anbieters und `stockNumber` der Feldname. |
-| `tenantId:internalSku` | Von Ihrem Unternehmen definierte Felder verwenden Ihre eindeutige Mandantenkennung als Namespace. In diesem Beispiel ist `tenantId` der Mandanten-Namespace (`https://ns.adobe.com/tenantId`) und `internalSku` der Feldname. |
+| `@context` | Ein -Objekt, das die Kurzpräfixe definiert, die anstelle eines vollständigen Namespace-URI unter `properties` verwendet werden können. |
+| `@id` | Eine eindeutige Kennung für den Datensatz, wie in der [JSON-LD-Spezifikation](https://www.w3.org/TR/json-ld11/#node-identifiers) definiert. |
+| `xdm:sku` | Ein Beispiel für ein Feld, das ein kurzes Präfix zur Bezeichnung eines Namespace verwendet. In diesem Fall ist `xdm` der Namespace (`https://ns.adobe.com/xdm`) und `sku` der Feldname. |
+| `https://ns.adobe.com/xdm/channels/application` | Beispiel für ein Feld, das den vollständigen Namespace-URI verwendet. In diesem Fall ist `https://ns.adobe.com/xdm/channels` der Namespace und `application` der Feldname. |
+| `https://ns.adobe.com/vendorA/product/stockNumber` | Felder, die von Anbieterressourcen bereitgestellt werden, verwenden ihre eigenen eindeutigen Namespaces. In diesem Beispiel ist `https://ns.adobe.com/vendorA/product` der Namespace des Anbieters und `stockNumber` der Feldname. |
+| `tenantId:internalSku` | Felder, die von Ihrer Organisation definiert werden, verwenden Ihre eindeutige Mandanten-ID als Namespace. In diesem Beispiel ist `tenantId` der Mandanten-Namespace (`https://ns.adobe.com/tenantId`) und `internalSku` der Feldname. |
 
 {style="table-layout:auto"}
 
 ### Kompatibilitätsmodus {#compatibility}
 
-In Adobe Experience Platform werden XDM-Schemas in der Syntax [Kompatibilitätsmodus](../api/appendix.md#compatibility) dargestellt, die die JSON-LD-Syntax nicht zur Darstellung von Namespaces verwendet. Stattdessen konvertiert Platform den Namespace in ein übergeordnetes Feld (beginnend mit einem Unterstrich) und verschachtelt die Felder darunter.
+In Adobe Experience Platform werden XDM-Schemata in der Syntax [Kompatibilitätsmodus](../api/appendix.md#compatibility) dargestellt, wobei die JSON-LD-Syntax zur Darstellung von Namespaces nicht verwendet wird. Stattdessen konvertiert Platform den Namespace in ein übergeordnetes Feld (beginnend mit einem Unterstrich) und verschachtelt die Felder darunter.
 
-Beispielsweise wird das Standard-XDM `repo:createdDate` in `_repo.createdDate` konvertiert und würde unter der folgenden Struktur im Kompatibilitätsmodus angezeigt:
+Beispielsweise wird das standardmäßige XDM-`repo:createdDate` in `_repo.createdDate` konvertiert und würde im Kompatibilitätsmodus unter der folgenden Struktur angezeigt:
 
 ```json
 "_repo": {
@@ -105,9 +105,9 @@ Beispielsweise wird das Standard-XDM `repo:createdDate` in `_repo.createdDate` k
 }
 ```
 
-Felder, die den Namespace `xdm` verwenden, werden als Stammfelder unter `properties` angezeigt und legen Sie das Präfix `xdm:` ab, das in [Standard-XDM-Syntax](#standard) angezeigt wird. Beispielsweise wird `xdm:sku` einfach als `sku` aufgeführt.
+Felder, die den `xdm`-Namespace verwenden, werden als Stammfelder unter `properties` angezeigt und legen das `xdm:` Präfix ab, das in der ([ XDM-Syntax) ](#standard) würde. Beispielsweise wird `xdm:sku` stattdessen einfach als `sku` aufgeführt.
 
-Die folgende JSON-Datei stellt dar, wie das oben gezeigte Beispiel der standardmäßigen XDM-Syntax in den Kompatibilitätsmodus übersetzt wird.
+Die folgende JSON-Datei zeigt, wie das Beispiel der Standard-XDM-Syntax oben in den Kompatibilitätsmodus übersetzt wird.
 
 ```json
 {
@@ -176,4 +176,4 @@ Die folgende JSON-Datei stellt dar, wie das oben gezeigte Beispiel der standardm
 
 ## Nächste Schritte
 
-Dieses Handbuch bietet einen Überblick über XDM-Namespaces und deren Darstellung in JSON. Weitere Informationen zum Konfigurieren von XDM-Schemas mithilfe der API finden Sie im [Handbuch zur Schema Registry-API](../api/overview.md).
+Dieses Handbuch bietet einen Überblick über XDM-Namespaces und deren Darstellung in JSON. Weitere Informationen zum Konfigurieren von XDM-Schemata mithilfe der API finden Sie im [Handbuch zur Schema Registry-API](../api/overview.md).

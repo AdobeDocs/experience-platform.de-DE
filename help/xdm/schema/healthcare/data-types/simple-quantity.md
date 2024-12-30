@@ -1,6 +1,6 @@
 ---
-title: Einfacher Datentyp "Menge"
-description: Erfahren Sie mehr über den Datentyp "Simple Quantity Experience Data Model (XDM)".
+title: Datentyp „Einfache Menge“
+description: Erfahren Sie mehr über den Datentyp „Einfaches Quantitäts-Experience-Datenmodell (XDM)“.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
@@ -12,17 +12,17 @@ ht-degree: 12%
 
 ---
 
-# Datentyp [!UICONTROL Einfache Menge]
+# [!UICONTROL Einfache ]) Datentyp
 
-[!UICONTROL Einfache Menge] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen gemessenen oder messbaren Betrag liefert. Dieser Datentyp wird gemäß den Spezifikationen von HL7 FHIR Release 5 erstellt.
+[!UICONTROL Einfache Menge] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen gemessenen oder messbaren Betrag bereitstellt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 
-![Struktur des einfachen Datentyps &quot;Menge&quot;](../../../images/healthcare/data-types/simple-quantity.png)
+![Einfache Struktur des Datentyps „Menge“](../../../images/healthcare/data-types/simple-quantity.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | String | Die codierte Form der Einheit. |
-| [!UICONTROL System] | `system` | String | Das System, das das kodierte Einheitenformular definiert, das als URI dargestellt wird. |
-| [!UICONTROL Unit] | `unit` | String | Die Darstellung der Einheit. |
+| [!UICONTROL System] | `system` | String | Das System, das die codierte Einheitenform definiert, dargestellt als URI. |
+| [!UICONTROL Einheit] | `unit` | String | Die Darstellung der Einheit. |
 | [!UICONTROL Wert] | `value` | Double | Der numerische Wert. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
