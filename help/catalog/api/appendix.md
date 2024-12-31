@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Catalog Service; Katalog-API; Anhang
+keywords: Experience Platform;Startseite;beliebte Themen;Katalog-Service;Katalog-API;Anhang
 solution: Experience Platform
-title: Anhang zum Catalog Service API-Handbuch
-description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.
+title: Handbuch zur Catalog Service-API - Anhang
+description: Dieses Dokument enthält zusätzliche Informationen zur Arbeit mit der Katalog-API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 76%
 
 ---
 
-# Anhang zum API-Handbuch [!DNL Catalog Service]
+# [!DNL Catalog Service]-API-Handbuch - Anhang
 
-Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der [!DNL Catalog] -API unterstützen.
+Dieses Dokument enthält zusätzliche Informationen zur Arbeit mit der [!DNL Catalog]-API.
 
-## Verwandte Objekte anzeigen {#view-interrelated-objects}
+## Zusammenhängende Objekte anzeigen {#view-interrelated-objects}
 
-Einige [!DNL Catalog] -Objekte können mit anderen [!DNL Catalog] -Objekten verknüpft werden. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
+Einige [!DNL Catalog] können mit anderen [!DNL Catalog]-Objekten interagiert werden. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
 
 Der Beispieldatensatz, der im Dokument zum [Nachschlagen eines bestimmten Datensatzes](look-up-object.md) zurückgegeben wird, enthält ein `files`-Feld mit dem folgenden URI-Wert: `"@/datasetFiles?datasetId={DATASET_ID}"`. Der Inhalt des `files`-Felds kann durch Verwendung des URI als Pfad für eine neue GET-Anfrage angezeigt werden.
 
@@ -91,7 +91,7 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
 
 ## Zusätzliche Anfragekopfzeilen
 
-[!DNL Catalog] bietet mehrere Kopfzeilenkonventionen, die Ihnen helfen, die Integrität Ihrer Daten bei Aktualisierungen zu wahren.
+[!DNL Catalog] bietet verschiedene Konventionen für Kopfzeilen, mit denen Sie die Integrität Ihrer Daten bei Aktualisierungen wahren können.
 
 ### If-Match
 
@@ -107,6 +107,6 @@ Es kann vorkommen, dass Sie ein Objekt prüfen möchten, ohne die Informationen 
 
 ## Datenkomprimierung
 
-Komprimierung ist ein [!DNL Experience Platform] -Dienst, der Daten aus kleinen Dateien in größeren Dateien zusammenführt, ohne Daten zu ändern. Aus Performance-Gründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
+Bei der Komprimierung handelt es sich um einen [!DNL Experience Platform]-Service, bei dem Daten aus kleinen Dateien in größeren Dateien zusammengeführt werden, ohne dass die Daten geändert werden. Aus Performance-Gründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
 
-Wenn die Dateien in einem erfassten Batch komprimiert wurden, wird das zugehörige [!DNL Catalog] -Objekt zu Überwachungszwecken aktualisiert.
+Wenn die Dateien in einem erfassten Batch komprimiert wurden, wird das zugehörige [!DNL Catalog] zu Überwachungszwecken aktualisiert.

@@ -95,9 +95,9 @@ Auf alle Tabellen in der Experience Platform-Benutzeroberfläche kann über die 
 * Wenn eine Zeile ausgewählt oder im Fokus ist, können Sie über die **Eingabetaste** in der Zeile Details in der rechten Leiste aufrufen.
 * Wenn eine Zeile ausgewählt oder im Fokus ist, verwenden Sie die **Pfeiltasten**, um durch sämtliche Elemente in der Zeile zu navigieren.
 * Verwenden Sie die **Eingabetaste**, um ein Element in der Zeile auszuwählen. Benutzer mit Bildschirmlesehilfen werden benachrichtigt, wenn ein neues Fenster geöffnet werden muss.
-* Wenn Sie auf 200 % oder mehr zoomen, wird das Symbol **Schieneninspektor** angezeigt, da die rechte Leiste ausgeblendet wird, um mehr Anzeigeraum für die Tabelle bereitzustellen.
+* Wenn Sie auf 200 % oder mehr zoomen, sehen Sie das Symbol **Leisten-Inspektor**, wenn die rechte Leiste reduziert wird, um mehr Platz für die Tabelle zu schaffen.
 
-![Das im Fokus befindliche Symbol für den Schieneninspektor, wenn ein Benutzer auf 200 % zoomt.](images/rail-inspector.png)
+![Das Symbol „Schieneninspektor“ im Fokus, wenn ein Benutzer einen Zoom auf 200 % durchführt.](images/rail-inspector.png)
 
 ### Barrierefreiheit beim Durchsuchen von Tabellen
 
@@ -132,9 +132,9 @@ Wenn Sie die Benutzeroberfläche von Segment Builder zum Erstellen und Bearbeite
 * Bildschirmlesehilfen sollten Markup-Tags für Überschriften erkennen und die Überschrift zusammen mit ihrer Ebene ankündigen.
 * Andere Hilfstechnologien können die visuelle Anzeige einer Seite ändern, indem sie ordnungsgemäß codierte Überschriften verwenden, um eine Konturschrift oder eine alternative Ansicht anzuzeigen.
 
-Sie können jetzt die linken und rechten Leisten der Arbeitsfläche des Segmentaufbaus reduzieren oder erweitern, um mehr Platz auf dem Bildschirm zu erhalten. Diese Funktion ist besonders hilfreich, da sie bei 200 % Zoom volle Funktionen bietet.
+Sie können jetzt die linke und rechte Leiste der Segment Builder-Arbeitsfläche reduzieren oder erweitern, um mehr Platz auf dem Bildschirm zu erhalten. Diese Funktion ist besonders hilfreich, da sie volle Funktionalität bei 200 % Zoom bietet.
 
-![Die Arbeitsfläche des Segmentaufbaus mit hervorgehobenen Veröffentlichungs-Widgets für die linke und rechte Leiste.](images/left-right-rail-expandables.png)
+![Die Arbeitsfläche von Segment Builder mit den hervorgehobenen Widgets für die Offenlegung in der linken und rechten Leiste.](images/left-right-rail-expandables.png)
 
 ## Abfrage-Service-Editor
 
@@ -145,7 +145,7 @@ Die folgenden Barrierefreiheitsfunktionen sind im Abfrage-Service-Editor verfüg
 
 >[!NOTE]
 >
->Der Abfrageeditor verarbeitet den Schlüssel **Tab** nicht standardmäßig. Um die Funktion **Tab** im Editor aufzurufen, müssen Sie die Taste **Escape** drücken und anschließend direkt danach die Taste **Tab** drücken. Drücken Sie erneut **Tab** , um den Fokus über den Editor hinaus zu verschieben.
+>Der Abfrage-Editor verarbeitet die **Tabulatortaste** nicht standardmäßig. Um die Funktion **Tab** während des Editors aufzurufen, müssen Sie die **Esc**-Taste drücken und dann **Tab** direkt danach drücken. Drücken Sie **Tabulatortaste** erneut, um den Fokus über den Editor hinaus zu verschieben.
 
 ## Registerkarte „Systemansicht“ in „Quellen und Ziele“
 

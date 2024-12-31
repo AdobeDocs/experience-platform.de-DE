@@ -9,19 +9,19 @@ ht-degree: 5%
 
 ---
 
-# On-Device-Ansichten
+# Geräteinterne Ansichten
 
 ## Verbunden
 
-(durch rote Adobe &quot;A&quot; gekennzeichnet)
+(durch Red Adobe „A“ gekennzeichnet)
 
 ![](./images/on-device-views/connected.png)
 
-## Protokollbereich öffnen
+## Öffnen des Protokollbedienfelds
 
 ![](./images/on-device-views/logs-panel.png)
 
-## Bereich &quot;Protokolle löschen&quot;
+## Protokollbedienfeld löschen
 
 ![](./images/on-device-views/clear-logs-panel.png)
 

@@ -1,6 +1,6 @@
 ---
-title: Zugriff auf den KI-Assistenten im Experience Platform
-description: Erfahren Sie, wie Sie auf den AI-Assistenten in der Experience Cloud-Benutzeroberfläche zugreifen können.
+title: Zugriff auf KI-Assistenten in Experience Platform
+description: Erfahren Sie, wie Sie in der Experience Cloud-Benutzeroberfläche auf den KI-Assistenten zugreifen können.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
 source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
@@ -9,36 +9,36 @@ ht-degree: 0%
 
 ---
 
-# Zugriff auf den KI-Assistenten im Experience Platform
+# Zugriff auf KI-Assistenten in Experience Platform
 
-Sie können in Adobe Experience Cloud über mehrere Anwendungen auf den KI-Assistenten zugreifen.
+In Adobe Experience Cloud können Sie über mehrere Anwendungen hinweg auf den KI-Assistenten zugreifen.
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Popup-Meldung in der Berechtigungs-Benutzeroberfläche erhalten, die Sie darüber informiert, dass Ihr Unternehmen zunächst zusätzlichen rechtlichen Bedingungen zustimmen muss, um Zugriff auf den AI-Assistenten zu erhalten, wenden Sie sich an Ihr Adobe-Account-Team, um Anleitungen zu diesen Bedingungen zu erhalten.
+>Wenn Sie eine Popup-Meldung in der Benutzeroberfläche „Berechtigungen“ erhalten, die Sie darüber informiert, dass Ihr Unternehmen zunächst zusätzlichen rechtlichen Bedingungen zustimmen muss, um Zugriff auf den KI-Assistenten zu erhalten, wenden Sie sich an Ihr Adobe-Account-Team, um Anleitungen zu diesen Bedingungen zu erhalten.
 
-Der Zugriff auf den AI-Assistenten wird durch die folgenden Parameter gesteuert:
+Der Zugriff auf den KI-Assistenten wird durch die folgenden Parameter geregelt:
 
-* **Zugriff auf die Anwendung:** Sie können auf den AI-Assistenten in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer und [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant) zugreifen.
+* **Zugriff auf die Anwendung:** Sie können auf den KI-Assistenten in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer und [Customer Journey Analytics zugreifen](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
-* **Berechtigungen:** Verwenden Sie die [Berechtigungs-Benutzeroberfläche](../access-control/abac/ui/permissions.md), um Zugriff auf den KI-Assistenten in Ihrer Organisation zu gewähren oder zu widerrufen. Um den AI-Assistenten verwenden zu können, muss ein bestimmter Benutzer zu einer Rolle gehören, die über die Berechtigungen **AI-Assistenten aktivieren** und **Operative Einblicke anzeigen** verfügt.
-   * Als Administrator können Sie den Assistenten **Enable AI Assistant** zu einer bestimmten Rolle hinzufügen und dieser Rolle einen Benutzer hinzufügen, damit er in Ihrer Organisation auf den AI-Assistenten zugreifen kann.
-   * Als Administrator können Sie die Rolle **Operative Einblicke anzeigen** zu einer bestimmten Rolle hinzufügen und dieser Rolle einen Benutzer hinzufügen, damit er die operativen Einblicke des AI-Assistenten nutzen kann. Betriebliche Einblicke befinden sich derzeit in der Beta-Phase.
+* **Berechtigungen:** Verwenden Sie die [Benutzeroberfläche „Berechtigungen](../access-control/abac/ui/permissions.md), um den Zugriff auf den KI-Assistenten in Ihrer Organisation zu gewähren oder zu widerrufen. Um den KI-Assistenten verwenden zu können, muss eine bestimmte Person zu einer Rolle gehören, die mit den Berechtigungen **KI-Assistenten aktivieren** und **operative Insights anzeigen** ausgestattet ist.
+   * Als Administrator können Sie einer bestimmten Rolle den **KI-Assistenten aktivieren** hinzufügen und dieser Rolle einen Benutzer hinzufügen, um ihm den Zugriff auf den KI-Assistenten in Ihrer Organisation zu ermöglichen.
+   * Als Administrator können Sie einer bestimmten Rolle die **Operative Insights anzeigen** hinzufügen und dieser Rolle einen Benutzer hinzufügen, damit er die operativen Insights-Funktionen des KI-Assistenten nutzen kann. Operational Insights befindet sich derzeit in der Beta-Phase.
 
-![Die Berechtigungs-UI-Seite mit den Berechtigungen &quot;Aktiviert AI Assistant&quot;und &quot;View Operations Insights&quot;, die in einer bestimmten Rolle enthalten sind.](./images/permissions.png)
+![Die Seite mit der Benutzeroberfläche „Berechtigungen“ mit dem Assistenten „KI aktivieren“ und den Berechtigungen „Betriebserkenntnisse anzeigen“, die in einer bestimmten Rolle enthalten sind.](./images/permissions.png)
 
-Verwenden Sie die Berechtigungs-Benutzeroberfläche, um Berechtigungen für die Verwendung des AI-Assistenten in Experience Platform und Journey Optimizer zu erteilen. Informationen zum Zugriff auf den KI-Assistenten unter Customer Journey Analytics. Lesen Sie die Dokumentation unter [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+Verwenden Sie die Benutzeroberfläche „Berechtigungen“, um Berechtigungen für die Verwendung des KI-Assistenten in Experience Platform und Journey Optimizer zu gewähren. Informationen zum Zugriff auf den KI-Assistenten in Customer Journey Analytics. Lesen Sie die Dokumentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
-Sobald Sie über die erforderlichen Berechtigungen verfügen, können Sie auf den AI-Assistenten zugreifen, indem Sie das Symbol AI Assistant in der oberen Kopfzeile der von Ihnen verwendeten Anwendung auswählen.
+Sobald Sie über die erforderlichen Berechtigungen verfügen, können Sie auf den KI-Assistenten zugreifen, indem Sie das Symbol KI-Assistent in der oberen Kopfzeile der von Ihnen verwendeten Anwendung auswählen.
 
-![KI-Assistent mit erstmaliger Benutzererfahrung.](./images/ai-assistant.png)
+![KI-Assistent mit erstmaligem Benutzererlebnis.](./images/ai-assistant.png)
 
-## Zugriff auf den AI-Assistenten erhalten
+## Zugriff auf den KI-Assistenten
 
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf AI Assistant für Ihre Organisationen und Benutzer konfigurieren.
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf den KI-Assistenten für Ihre Organisationen und Benutzer konfigurieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Nächste Schritte
 
-Sobald Sie vollständigen Zugriff auf den AI-Assistenten haben, können Sie die Funktion während Ihrer Workflows verwenden. Weitere Informationen finden Sie im Handbuch [AI Assistant UI Guide](./ui-guide.md) .
+Sobald Sie vollständigen Zugriff auf den KI-Assistenten haben, können Sie mit der Verwendung der Funktion während Ihrer Workflows fortfahren. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche des KI](./ui-guide.md)Assistenten.

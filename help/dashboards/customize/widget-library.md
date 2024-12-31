@@ -18,35 +18,35 @@ Dieses Handbuch enthält schrittweise Anweisungen für den Zugriff auf die [!UIC
 
 >[!NOTE]
 >
->An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+>Alle Aktualisierungen an den Dashboards erfolgen pro Organisation und nach Sandbox.
 
 Informationen zum Ändern der Position und Größe der bereits in Ihren Dashboards angezeigten Widgets finden Sie im Handbuch [Dashboards ändern](modify.md).
 
 ## Zugriff auf die Widget-Bibliothek {#access}
 
-Wählen Sie in jedem Dashboard (z. B. im Dashboard &quot;Profile&quot;) die Option **[!UICONTROL Widget hinzufügen]** aus, um direkt zur Widget-Bibliothek zu navigieren, wo Sie [Widgets hinzufügen](#add-widgets) zu Ihrem Dashboard hinzufügen können.
+Wählen Sie in einem beliebigen Dashboard (z. B. im Dashboard Profile ) die Option **[!UICONTROL Widget hinzufügen]** aus, um direkt zur Widget-Bibliothek zu navigieren, in der Sie [Widgets hinzufügen](#add-widgets) zu Ihrem Dashboard hinzufügen können.
 
-![Die Registerkarte Übersicht über das Profil-Dashboard mit der Schaltfläche Widget hinzufügen , hervorgehoben.](../images/customization/profiles-overview-add-widget.png)
+![Die Registerkarte „Profile-Dashboard - Übersicht“ mit hervorgehobener Schaltfläche „Widget hinzufügen“.](../images/customization/profiles-overview-add-widget.png)
 
-Wählen Sie **[!UICONTROL Dashboard ändern]** aus, um Widgets aus Ihrem Dashboard zu verschieben, in der Größe zu ändern oder zu entfernen. In dieser Anzeige können Sie auch **[!UICONTROL Widget-Bibliothek]** auswählen, um Widgets zu durchsuchen und [hinzuzufügen](#add-widgets). Informationen zum Bearbeiten von Widget-Größen und -Layouts finden Sie in der Dokumentation zum [Ändern von Dashboards](./modify.md) .
+Wählen Sie **[!UICONTROL Dashboard ändern]** aus, um Widgets zu verschieben, zu skalieren oder aus Ihrem Dashboard zu entfernen. In dieser Anzeige können Sie auch **[!UICONTROL Widget-Bibliothek]** auswählen, um Widgets zu durchsuchen und [hinzuzufügen](#add-widgets). Informationen zum Bearbeiten der Widget-Größen und des Layouts finden Sie unter [Dokumentation zu Dashboards ändern](./modify.md).
 
-![Die Übersicht über das Dashboard &quot;Profile&quot;mit dem Dashboard &quot;Ändern&quot;wurde hervorgehoben.](../images/customization/modify-dashboard.png)
+![Die Übersicht über das Profile-Dashboard mit hervorgehobenem Dashboard „Ändern“.](../images/customization/modify-dashboard.png)
 
 Wählen Sie **[!UICONTROL Widget-Bibliothek]** aus, um die Widget-Bibliothek zu öffnen und alle verfügbaren Standardmetriken anzuzeigen oder mit der Erstellung benutzerdefinierter Widgets zu beginnen.
 
-![Die modifizierte Dashboard-Ansicht mit hervorgehobener Widget-Bibliothek.](../images/customization/widget-library-button.png)
+![Die Ansicht „Dashboard ändern“ mit hervorgehobener Widget-Bibliothek.](../images/customization/widget-library-button.png)
 
 ## Hinzufügen von Widgets {#add-widgets}
 
-Wählen Sie aus der [!UICONTROL Widget-Bibliothek] ein beliebiges Widget aus der Liste der verfügbaren standardmäßigen oder benutzerdefinierten Widgets aus. Ein Häkchen in der Ecke des Widgets zeigt Ihre Auswahl an.
+Wählen Sie in [!UICONTROL Widget-]) ein beliebiges Widget aus der Liste der verfügbaren standardmäßigen oder benutzerdefinierten Widgets aus. Ein Häkchen in der Ecke des Widgets zeigt Ihre Auswahl an.
 
 ![Die Widget-Bibliothek mit einem ausgewählten Widget und hervorgehobenem Häkchen.](../images/customization/confirm-selected-widget-to-add.png)
 
 ### Kennzeichnung „In Verwendung“ {#in-use-label}
 
-Widgets, die bereits zu einem Dashboard hinzugefügt wurden, haben eine [!UICONTROL Beschriftung &quot;Verwendet&quot;], die an sie angehängt ist, wenn sie in der Widget-Bibliothek angezeigt werden. In dieser Bezeichnung werden Widgets hervorgehoben, die bereits zu Ihrem Dashboard hinzugefügt wurden, um Dopplungen zu vermeiden. Sie können jedoch immer noch dasselbe Widget mehrmals hinzufügen, falls Sie es wünschen.
+Widgets, die bereits zu einem Dashboard hinzugefügt wurden[!UICONTROL  verfügen über eine Beschriftung ]In Verwendung“, wenn sie in der Widget-Bibliothek angezeigt werden. Mit dieser Beschriftung werden Widgets hervorgehoben, die Ihrem Dashboard bereits hinzugefügt wurden, um Duplizierungen zu vermeiden. Sie können dasselbe Widget jedoch auch mehrmals hinzufügen, wenn Sie möchten.
 
-![Die Widget-Bibliothek mit der in Gebrauch befindlichen Beschriftung hervorgehoben.](../images/customization/in-use-label.png)
+![Die Widget-Bibliothek mit der hervorgehobenen Bezeichnung „In Verwendung“.](../images/customization/in-use-label.png)
 
 Nachdem Sie alle erforderlichen Widgets ausgewählt haben, wählen Sie **[!UICONTROL Widgets hinzufügen]** aus, um Ihre Auswahl zu bestätigen und die Widgets zu Ihrem Dashboard hinzuzufügen.
 
@@ -57,7 +57,7 @@ Die [!UICONTROL Widget-Bibliothek] enthält zwei Registerkarten:
 * **[!UICONTROL Standard]:** Die Standardregisterkarte enthält Widgets, die von Adobe bereitgestellt werden. Sie können Ihre Dashboards mit einer dieser Standardmetriken aktualisieren. Weiterführende Informationen zum Hinzufügen von Standard-Widgets zu Dashboards finden Sie im Handbuch zur [Verwendung von Standard-Widgets in Dashboards](standard-widgets.md).
 * **[!UICONTROL Benutzerdefiniert]:** Mit dieser Registerkarte können Sie Widgets in Ihrem Unternehmen erstellen und freigeben. Die vollständigen Schritte zum Erstellen Ihrer eigenen Widgets finden Sie im [Handbuch zu benutzerdefinierten Widgets für Dashboards](custom-widgets.md).
 
-![Die Widget-Bibliothek mit den standardmäßigen und benutzerdefinierten Registerkarten hervorgehoben.](../images/customization/widget-library.png)
+![Die Widget-Bibliothek mit den hervorgehobenen standardmäßigen und benutzerdefinierten Registerkarten.](../images/customization/widget-library.png)
 
 ## Nächste Schritte
 

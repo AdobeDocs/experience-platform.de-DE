@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Schulung und Auswertung; Data Science Workspace; beliebte Themen; Sensei Machine Learning API
+keywords: Experience Platform;Trainieren und Auswerten;Data Science Workspace;beliebte Themen;Sensei Machine Learning-API
 solution: Experience Platform
-title: Modell mithilfe der Sensei Machine Learning API trainieren und bewerten
+title: Trainieren und Bewerten eines Modells mit der Sensei-API für maschinelles Lernen
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mit Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
+description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 ---
 
-# Modell mithilfe der [!DNL Sensei Machine Learning]-API trainieren und bewerten
+# Trainieren und Auswerten eines Modells mithilfe der [!DNL Sensei Machine Learning]-API
 
 >[!NOTE]
 >
@@ -26,25 +26,25 @@ In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen er
 
 Folgen Sie dem [Importieren eines verpackten Rezepts mit der API](./import-packaged-recipe-api.md) zum Erstellen einer Engine, die zur Schulung und Auswertung für ein Modell mit der API erforderlich ist.
 
-Folgen Sie dem Tutorial [Experience Platform API authentication tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) , um API-Aufrufe durchzuführen.
+Befolgen Sie das Tutorial zur [Experience Platform-API](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de)Authentifizierung, um mit API-Aufrufen zu beginnen.
 
 Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.
-- `{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+- `{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 - `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 - Link zu einem Docker-Bild eines intelligenten Dienstes
 
 ## API-Workflow
 
-Wir verbrauchen die APIs, um einen Experimentablauf zu Schulungszwecken zu erstellen. Für dieses Tutorial konzentrieren wir uns auf die Endpunkte Engines, MLInstances und Experiments . Das folgende Diagramm zeigt die Beziehung zwischen diesen drei Punkten und stellt auch die Idee eines Ablaufs und eines Modells vor.
+Wir verbrauchen die APIs, um einen Experimentablauf zu Schulungszwecken zu erstellen. In diesem Tutorial konzentrieren wir uns auf die Endpunkte Engines, MLInstances und Experiments . Das folgende Diagramm zeigt die Beziehung zwischen diesen drei Punkten und stellt auch die Idee eines Ablaufs und eines Modells vor.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->Die Begriffe &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot;und &quot;Modell&quot;werden in der Benutzeroberfläche als unterschiedliche Begriffe bezeichnet. Wenn Sie von der Benutzeroberfläche kommen, werden die Unterschiede in der folgenden Tabelle zugeordnet.
+>Die Begriffe „Engine“, „MLInstance“, „MLService“, „Experiment“ und „Modell“ werden in der Benutzeroberfläche als unterschiedliche Begriffe bezeichnet. Wenn Sie von der -Benutzeroberfläche kommen, werden in der folgenden Tabelle die Unterschiede zugeordnet.
 
 | UI-Begriff | API-Begriff |
 | --- | --- |
@@ -70,7 +70,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Die Konfiguration unserer MLInstance. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
@@ -127,9 +127,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Im `{JSON_PAYLOAD}` definieren wir Parameter, die für Training und Scoring im `tasks` -Array verwendet werden. Die `{ENGINE_ID}` ist die ID der Engine, die Sie verwenden möchten, und das `tag`-Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
+>In der `{JSON_PAYLOAD}` definieren wir Parameter, die für das Training und die Bewertung im `tasks`-Array verwendet werden. Die `{ENGINE_ID}` ist die ID der Engine, die Sie verwenden möchten, und das `tag`-Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
 
-Die Antwort enthält den `{INSTANCE_ID}` -Wert, der die erstellte MLInstance darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
+Die Antwort enthält die `{INSTANCE_ID}`, die die erstellte MLInstance darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
 
 **Antwort**
 
@@ -181,7 +181,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Erstelltes Experimentobjekt. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
@@ -237,7 +237,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Zu veröffentlichender Datensatz. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
@@ -325,7 +325,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: Die dem Zielexperiment entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen Ihres Experiments.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Um einen Schulungsablauf zu erstellen, müssen Sie Folgendes in den Text einschließen:
@@ -396,7 +396,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`: Die ID, die das Experiment darstellt.\
 `{EXPERIMENT_RUN_ID}`: Die ID, die den Experimentablauf darstellt.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 **Antwort**
@@ -459,7 +459,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: Die dem Zielexperimentablauf entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen des Experimentablaufs.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 
 Die Antwort stellt das Schulungsmodell dar, das erstellt wurde.
 
@@ -506,11 +506,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 
 >[!NOTE]
 >
->Der API-Aufruf deaktiviert die Erstellung neuer Experimentabläufe. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 

@@ -1,7 +1,7 @@
 ---
-title: Netzwerkregisterkarte
-description: Erfahren Sie, wie Sie die Registerkarte "Netzwerk"in Adobe Experience Platform Debugger verwenden.
-keywords: debugger;experience Platform Debugger extension;chrome;extension;network;information
+title: Registerkarte „Netzwerk“
+description: Erfahren Sie, wie Sie die Registerkarte „Netzwerk“ in Adobe Experience Platform Debugger verwenden.
+keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Netzwerk;Informationen
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
@@ -15,7 +15,7 @@ ht-degree: 59%
 
 # Registerkarte „Netzwerk“
 
-Die Registerkarte **Netzwerk** fasst alle Adobe Experience Cloud-Lösungsaufrufe zusammen, die auf der Seite durchgeführt wurden, und zeigt sie von links nach rechts an. Standardparameter werden automatisch mit benutzerfreundlichen Namen versehen und so angeordnet, dass gemeinsame Parameter derselben Rolle zusammenstehen.
+Die Registerkarte **Netzwerk** fasst alle Aufrufe der Adobe Experience Cloud-Lösung auf der Seite zusammen und zeigt sie in der Reihenfolge von links nach rechts an. Standardparameter werden automatisch mit benutzerfreundlichen Namen versehen und so angeordnet, dass gemeinsame Parameter derselben Rolle zusammenstehen.
 
 ![](images/network.jpg)
 
@@ -29,9 +29,9 @@ Um die entsprechenden Informationen einer Lösung anzuzeigen, wählen Sie die ge
 
 ![](images/network-analytics.jpg)
 
-Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Netzwerk]** aus
+Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Netzwerk]**
 
-Wählen Sie in der Netzwerkansicht ein Element aus, um eine erweiterte Ansicht anzuzeigen. In der erweiterten Ansicht können Sie die angezeigten Informationen in die Zwischenablage kopieren.
+Wählen Sie ein Element in der Netzwerkansicht aus, um eine erweiterte Ansicht anzuzeigen. In der erweiterten Ansicht können Sie die angezeigten Informationen in die Zwischenablage kopieren.
 
 ![](images/network-expand.jpg)
 
@@ -41,4 +41,4 @@ Wählen Sie in der Netzwerkansicht ein Element aus, um eine erweiterte Ansicht a
 
 Um die Liste zu löschen, wählen Sie **[!UICONTROL Ereignisse entfernen]** aus.
 
-Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Download]** aus.
+Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]**.

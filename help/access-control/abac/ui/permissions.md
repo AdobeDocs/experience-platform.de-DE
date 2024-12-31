@@ -101,7 +101,7 @@ Um einen Benutzer aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X**
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-Das folgende Video soll Ihnen dabei helfen, eine neue Rolle zu erstellen und Benutzer für diese Rolle zu verwalten.
+Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
@@ -155,15 +155,15 @@ Der Dialog **[!UICONTROL Benutzergruppe entfernen]** wird angezeigt, in dem Sie 
 
 Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
-## Hinzufügen von Benutzern zum Experience Platform über eine Rolle
+## Hinzufügen von Benutzenden zum Experience Platform über eine Rolle
 
-Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
+Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
 Der Dialog **[!UICONTROL Benutzer zu Ihrem Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse des Benutzers, den Vornamen (optional) und den Nachnamen (optional) ein.
 
-Wählen Sie das Stiftsymbol aus, um Produkte und Benutzergruppen auszuwählen, wählen Sie **[!UICONTROL Adobe Experience Platform]**, dann **[!UICONTROL AEP-Default-All-Users]** und dann **[!UICONTROL Save]**.
+Klicken Sie auf das Stiftsymbol, um Produkte und Benutzergruppen auszuwählen. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, dann **[!UICONTROL AEP-Default-All-Users]** aus und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 

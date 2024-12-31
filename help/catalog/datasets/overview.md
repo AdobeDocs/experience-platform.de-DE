@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenspeicherort;Datens
 solution: Experience Platform
 title: Übersicht zu Datensätzen
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
-user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen Überblick über Datensätze auf hoher Ebene im Experience Platform. Hier erfahren Sie, wie Sie sie erstellen, Datenbeschränkungen erzwingen und Daten in Datensätze aufnehmen.
+user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen umfassenden Überblick über Datensätze im Experience Platform. Hier erfahren Sie, wie Sie sie erstellen, Dateneinschränkungen durchsetzen und Daten in Datensätze aufnehmen können.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
@@ -38,9 +38,9 @@ Die Adobe Experience Platform-Datenaufnahme steht für die verschiedenen Methode
 
 Weitere Informationen finden Sie in der [Übersicht zur Datenaufnahme](../../ingestion/home.md).
 
-## Auf Datensätze aus Schemata angewendete Beschriftungen
+## Kennzeichnungen, die auf Datensätze aus Schemata angewendet werden
 
-Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten, um sicherzustellen, dass die für die Verwendung von Daten geltenden Vorschriften, Einschränkungen und Richtlinien eingehalten werden. Mit dem Data Governance-Framework können Sie Nutzungsbezeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können auf einzelne Schemata, Felder innerhalb dieser Schemas und ganze einzelne Datensätze angewendet werden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten, um sicherzustellen, dass die für die Verwendung von Daten geltenden Vorschriften, Einschränkungen und Richtlinien eingehalten werden. Mit dem Data Governance-Framework können Sie Nutzungskennzeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Kennzeichnungen können auf einzelne Schemata, Felder innerhalb dieser Schemata und ganze einzelne Datensätze angewendet werden. Wenn Kennzeichnungen direkt auf ein Schema angewendet werden, werden diese Kennzeichnungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
 
 >[!IMPORTANT]
 >

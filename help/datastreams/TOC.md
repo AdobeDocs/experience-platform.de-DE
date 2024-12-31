@@ -18,8 +18,8 @@ ht-degree: 83%
 
 * [Übersicht über Datenströme](overview.md)
 * [Konfigurieren eines Datenstroms](configure.md)
-* [Erstellen dynamischer Datenspeicherkonfigurationen](configure-dynamic-datastream.md)
-* [Konfigurieren der Bot-Erkennung für Datenspeicher](bot-detection.md)
+* [Erstellen dynamischer Datenstromkonfigurationen](configure-dynamic-datastream.md)
+* [Konfigurieren der Bot-Erkennung für Datenströme](bot-detection.md)
 * [Konfigurieren von Überschreibungen für Datenströme](overrides.md)
 * [Datenvorbereitung für die Datenerfassung](data-prep.md)
 * Datenanreicherung {#data-enrichment}

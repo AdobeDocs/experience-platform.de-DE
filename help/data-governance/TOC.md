@@ -30,10 +30,10 @@ ht-degree: 93%
    * [Übersicht](enforcement/overview.md)
    * [Automatische Durchsetzung](enforcement/auto-enforcement.md)
    * [API-basierte Durchsetzung](enforcement/api-enforcement.md)
-* MTLS Service API {#mtls-api}
+* MTLS Service-API-{#mtls-api}
    * [Übersicht](mtls-api/overview.md)
    * [Erste Schritte](mtls-api/getting-started.md)
-   * [Endpunkt &quot;Öffentliches Zertifikat&quot;](mtls-api/public-certificate-endpoint.md)
+   * [Endpunkt des öffentlichen Zertifikats](mtls-api/public-certificate-endpoint.md)
 * Policy Service-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)

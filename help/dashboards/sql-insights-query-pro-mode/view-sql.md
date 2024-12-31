@@ -1,6 +1,6 @@
 ---
 title: SQL anzeigen
-description: Erfahren Sie, wie Sie die SQL hinter Ihren benutzerdefinierten Einblicken anzeigen können.
+description: Erfahren Sie, wie Sie den SQL-Code hinter Ihren benutzerdefinierten Einblicken anzeigen.
 exl-id: 663f64aa-34a9-4b3a-bd00-7ad6e4f3b64a
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
@@ -11,22 +11,22 @@ ht-degree: 2%
 
 # SQL anzeigen {#view-sql}
 
-Nachdem Sie einen [benutzerdefinierten Insight](./overview.md) mit [query pro mode](./overview.md#query-pro-mode) erstellt haben, können Sie die SQL-Datei anzeigen, die Ihre Diagramme mit der Funktion &quot;SQL anzeigen&quot;füllt.
+Nachdem Sie mit dem [pro-Modus](./overview.md#query-pro-mode) eine [benutzerdefinierte Einsicht](./overview.md) erstellt haben, können Sie den SQL-Code anzeigen, der Ihre Diagramme mit der Funktion „SQL anzeigen“ füllt.
 
-Wählen Sie in Ihrem benutzerdefinierten Dashboard die Auslassungszeichen (`...`) in einem beliebigen Widget aus, um auf die Optionen [!UICONTROL Mehr anzeigen] und [!UICONTROL SQL anzeigen] zuzugreifen.
+Wählen Sie im benutzerdefinierten Dashboard die Auslassungszeichen (`...`) eines beliebigen Widgets aus, um auf die Optionen [!UICONTROL Mehr anzeigen] und [!UICONTROL SQL anzeigen] zuzugreifen.
 
-![Ein benutzerdefiniertes Dashboard mit dem Dropdown-Menü mit den Auslassungspunkten eines Einblicks und hervorgehobenen Optionen &quot;Mehr anzeigen&quot;und &quot;SQL anzeigen&quot;.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
+![Ein benutzerdefiniertes Dashboard mit einem Insight-Dropdown-Menü mit Auslassungspunkten und den hervorgehobenen Optionen „Mehr anzeigen“ und „SQL anzeigen“.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 
-Um die SQL hinter Ihren benutzerdefinierten Einblicken anzuzeigen, wählen Sie die Option **[!UICONTROL SQL anzeigen]** aus. Das Dialogfeld trägt den Namen des Einblicks. Von dieser Ansicht aus können Sie die SQL in die Zwischenablage kopieren, um sie als Grundlage für die zukünftige Erstellung von Diagrammen im Abfragepro-Modus zu verwenden, oder die SQL direkt im Abfrage-Editor öffnen. Wählen Sie **[!UICONTROL SQL ausführen]** aus, um die Abfrage im Abfrage-Editor zu öffnen.
+Um die SQL hinter Ihren benutzerdefinierten Einblicken anzuzeigen, wählen Sie die Option **[!UICONTROL SQL anzeigen]** aus. Das Dialogfeld wird mit dem Namen der Einsicht benannt. In dieser Ansicht können Sie die SQL in Ihre Zwischenablage kopieren, um sie als Grundlage für die zukünftige Diagrammerstellung im Abfragemodus zu verwenden, oder die SQL direkt im Abfrage-Editor öffnen. Wählen Sie **[!UICONTROL SQL ausführen]**, um die Abfrage im Abfrage-Editor zu öffnen.
 
-![Ein Dialogfeld, das die SQL eines Insight anzeigt, wobei die Option SQL und SQL ausführen hervorgehoben ist.](../images/sql-insights-query-pro-mode/view-sql.png)
+![Ein Dialogfeld, das die SQL eines Insights anzeigt, mit hervorgehobener Option „SQL“ und „SQL ausführen“.](../images/sql-insights-query-pro-mode/view-sql.png)
 
 Wählen Sie **[!UICONTROL Schließen]** aus, um das Dialogfeld zu schließen.
 
-![Ein Dialogfeld, das die SQL eines Insight anzeigt, wobei die Option Schließen hervorgehoben ist.](../images/sql-insights-query-pro-mode/close-sql-dialog.png)
+![Ein Dialogfeld, das den SQL-Code einer Insight anzeigt, mit hervorgehobener Option „Schließen“.](../images/sql-insights-query-pro-mode/close-sql-dialog.png)
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie die SQL hinter Ihren benutzerdefinierten Einblicken anzeigen können. Sehen Sie sich das Dokument Weitere Informationen an, um zu erfahren, wie Sie Ihr benutzerdefiniertes Diagramm mit den tabellarischen Ergebnissen Ihrer SQL-Analyse vergleichen](./view-more.md).[
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie die SQL hinter Ihren benutzerdefinierten Einblicken anzeigen können. Im Dokument Weitere Informationen erfahren Sie, wie Sie [Ihr benutzerdefiniertes Diagramm mit den tabellarischen Ergebnissen Ihrer SQL-Analyse vergleichen](./view-more.md).
 
-Sie können auch erfahren, wie Sie mit dem Leitfaden für den Designmodus [ Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche erstellen.](../standard-dashboards.md)
+Außerdem erfahren Sie mit dem Handbuch [ Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche ](../standard-dashboards.md).

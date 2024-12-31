@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Datensatz; Datensatz; Datensatz; Datensatz erstellen; Datensatz erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen
 solution: Experience Platform
-title: Datensatz mit APIs erstellen
+title: Erstellen eines Datensatzes mithilfe von APIs
 description: In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines Datensatzes mithilfe der Adobe Experience Platform-APIs erläutert und aufgezeigt, wie der Datensatz anhand einer Datei befüllt wird.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
@@ -19,11 +19,11 @@ In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines D
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten als Batch-Dateien.
+* [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten in Form von Batch-Dateien.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] -APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -45,7 +45,7 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 >
 >Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
-Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type: application/json`-Kopfzeile erforderlich. Bei JSON+PATCH-Anfragen sollte der `Content-Type` `application/json-patch+json` sein.
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type: application/json`-Kopfzeile erforderlich. Bei JSON+PATCH-Anfragen sollte die `Content-Type` `application/json-patch+json` werden.
 
 ## Tutorial
 
@@ -57,9 +57,9 @@ Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Date
 
 Dieses Tutorial setzt das im [Tutorial zur Schema Registry-API](../../xdm/tutorials/create-schema-api.md) Gelernte fort und greift dazu das darin erstellte „Loyalty Members“-Schema auf.
 
-Wenn Sie das Tutorial [!DNL Schema Registry] nicht abgeschlossen haben, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, nachdem Sie das erforderliche Schema erstellt haben.
+Wenn Sie das [!DNL Schema Registry] Tutorial nicht abgeschlossen haben, beginnen Sie bitte dort und fahren Sie mit diesem Datensatz-Tutorial fort, nachdem Sie das erforderliche Schema erstellt haben.
 
-Mit dem folgenden Aufruf können Sie das &quot;Loyalty Members&quot;-Schema anzeigen, das Sie im Tutorial zur [!DNL Schema Registry] -API erstellt haben:
+Der folgende Aufruf kann verwendet werden, um das Schema „Mitglieder des Treueprogramms“ anzuzeigen, das Sie während des [!DNL Schema Registry]-API-Tutorials erstellt haben:
 
 **API-Format**
 
@@ -207,11 +207,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
+| `schemaRef.contentType` | Gibt Format und Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 >[!NOTE]
 >
->In diesem Tutorial wird für alle Beispiele das Dateiformat [Apache Parquet](https://parquet.apache.org/docs/) verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Tutorial wird das [Apache Parquet](https://parquet.apache.org/docs/)-Dateiformat für alle Beispiele verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
@@ -252,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück. Das Antwortobjekt besteht aus einem Array, das die Kennung des neu erstellten Batches im Format `"@/batches/{BATCH_ID}"` enthält. Die Batch-Kennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Batch verwendet wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück. Das Antwortobjekt besteht aus einem Array, das die ID des neu erstellten Batches im `"@/batches/{BATCH_ID}"` enthält. Die Batch-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die verwendet wird, um in API-Aufrufen auf den Batch zu verweisen.
 
 ```JSON
 {
@@ -291,11 +291,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobj
 
 ## Hochladen von Dateien in einen Batch
 
-Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateien in den jeweiligen Datensatz hochladen. Beachten Sie dabei, dass Sie bei der Definition des Datensatzes das Dateiformat als Parquet angegeben haben. Demensprechend können sie nur Dateien hochladen, die in diesem Format vorliegen.
+Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateien in den jeweiligen Datensatz hochladen. Beachten Sie, dass Sie beim Definieren des Datensatzes das Dateiformat als Parquet angegeben haben. Demensprechend können sie nur Dateien hochladen, die in diesem Format vorliegen.
 
 >[!NOTE]
 >
->Die maximal unterstützte Datenupload-Datei ist 512 MB. Wenn Ihre Datendatei diese Größe übersteigt, muss sie in Blöcke von maximal 512 MB unterteilt werden, die nacheinander hochgeladen werden. Um die einzelnen Dateien in den Batch hochzuladen, wiederholen Sie diesen Schritt für jede Datei unter Verwendung derselben Batch-ID. Für die Anzahl der für den Upload in einem Batch enthaltenen Dateien bestehen keine Beschränkungen.
+>Die größte unterstützte Daten-Upload-Datei ist 512 MB. Wenn Ihre Datendatei diese Größe übersteigt, muss sie in Blöcke von maximal 512 MB unterteilt werden, die nacheinander hochgeladen werden. Um die einzelnen Dateien in den Batch hochzuladen, wiederholen Sie diesen Schritt für jede Datei unter Verwendung derselben Batch-ID. Für die Anzahl der für den Upload in einem Batch enthaltenen Dateien bestehen keine Beschränkungen.
 
 **API-Format**
 
@@ -326,7 +326,7 @@ Bei erfolgreichem Upload einer Datei wird für diese ein leerer Antworttext und 
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Die Kennzeichnung der Fertigstellung bewirkt, dass der Dienst [!DNL Catalog] `DataSetFile` Einträge für die hochgeladenen Dateien erstellt und sie mit dem zuvor generierten Batch verknüpft. Der Batch [!DNL Catalog] wird als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
+Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Nach Abschluss der Signalisierung erstellt der Service [!DNL Catalog] `DataSetFile` für die hochgeladenen Dateien und verknüpft sie mit dem zuvor generierten Batch. Der [!DNL Catalog] Batch ist als erfolgreich gekennzeichnet, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten funktionieren können.
 
 **API-Format**
 
@@ -353,7 +353,7 @@ Bei erfolgreicher Fertigstellung eines Batches wird für diesen ein leerer Antwo
 
 ## Überwachen der Datenaufnahme
 
-Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie die Kennung eines Batches an eine `GET /batches` -Anfrage anhängen.
+Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie die ID eines Batches an eine `GET /batches`-Anfrage anhängen.
 
 **API-Format**
 
@@ -454,7 +454,7 @@ Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` im Attribut `"stat
 
 >[!NOTE]
 >
->Ein empfohlenes Abrufintervall beträgt zwei Minuten.
+>Ein empfohlenes Abrufintervall ist zwei Minuten.
 
 ## Einlesen von Daten aus dem Datensatz
 

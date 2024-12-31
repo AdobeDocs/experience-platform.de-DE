@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Einblicke; Sensei Machine Learning API
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Einblicke; Sensei Machine Learning-API
 solution: Experience Platform
 title: Insights-API-Endpunkt
 description: Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Auswertungsmetriken optimale ML-Modelle ermitteln und auswählen können.

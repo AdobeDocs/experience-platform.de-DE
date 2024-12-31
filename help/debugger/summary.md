@@ -1,7 +1,7 @@
 ---
-title: Registerkarte "Zusammenfassung"
-description: Erfahren Sie, wie Sie die Registerkarte "Zusammenfassung"in Adobe Experience Platform Debugger verwenden.
-keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Zusammenfassung;clear;Anfragen;Zusammenfassungsbildschirm;Lösung;Informationen;Analytics;Target;DTM;Audience Manager;Launch;ID-Dienst
+title: Registerkarte „Zusammenfassung“
+description: Erfahren Sie, wie Sie die Registerkarte „Zusammenfassung“ in Adobe Experience Platform Debugger verwenden.
+keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Zusammenfassung;Löschen;Anfragen;Zusammenfassungsbildschirm;Lösung;Informationen;Analytics;Target;DTM;Audience Manager;Launch;ID-Service
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
@@ -15,7 +15,7 @@ ht-degree: 83%
 
 # Registerkarte „Zusammenfassung“
 
-Um Adobe Experience Platform Debugger auszuführen, öffnen Sie die Seite, die Sie im Browser untersuchen möchten, und wählen Sie dann das Symbol (![](images/start-icon.jpg)) in Ihrer Browserleiste aus. Die Erweiterung wird auf der Registerkarte **Zusammenfassung** geöffnet.
+Um den Adobe Experience Platform Debugger auszuführen, öffnen Sie die Seite, die Sie im Browser überprüfen möchten, und wählen Sie dann das Symbol (![](images/start-icon.jpg)) in Ihrer Browser-Leiste aus. Die Erweiterung wird auf der Registerkarte **Zusammenfassung** geöffnet.
 
 ![](images/summary.jpg)
 
@@ -77,19 +77,19 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Name </p> </td> 
-   <td colname="col2"> <p>Der Name des Tags <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=de" format="https" scope="external"> property</a> </p> </td> 
+   <td colname="col2"> <p>Der Name der Tag-<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=de" format="https" scope="external">-Eigenschaft</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Die Turbine</a> -Version </p> </td> 
+   <td colname="col2"> <p>Die Version von Turbine</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Build-Datum </p> </td> 
-   <td colname="col2"> <p>Das Tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=de" format="https" scope="external"> Bibliothek</a> Build-Datum </p> </td> 
+   <td colname="col2"> <p>Die Tag-<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=de" format="https" scope="external">-Bibliothek</a> Erstellungsdatum </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Umgebung </p> </td> 
-   <td colname="col2"> <p>Die von der Tag-Bibliothek verwendete <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" format="https" scope="external">-Umgebung</a> </p> </td> 
+   <td colname="col2"> <p>Die von </a> Tag-Bibliothek verwendete <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" format="https" scope="external"> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Erweiterungen </p> </td> 
@@ -112,7 +112,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Property-ID </p> </td> 
-   <td colname="col2"> <p>Der Name der in der Erweiterung angegebenen Tag-Eigenschaft. </p> </td> 
+   <td colname="col2"> <p>Der Name der in der Erweiterung angegebenen Tag-Eigenschaft </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Edge-Domäne </p> </td> 

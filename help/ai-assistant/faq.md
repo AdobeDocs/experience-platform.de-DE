@@ -1,6 +1,6 @@
 ---
 title: Häufig gestellte Fragen zum KI-Assistenten
-description: Erfahren Sie mehr über die Antworten auf häufig gestellte Fragen zu AI Assistant
+description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zum KI-Assistenten
 exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
 source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 0%
 
 # Häufig gestellte Fragen
 
-Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu AI Assistant.
+Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zum KI-Assistenten.
 
-## Werden die Informationen der KI-Assistenzkraft in Echtzeit bereitgestellt?
+## Werden die Informationen des KI-Assistenten in Echtzeit bereitgestellt?
 
-Die in den KI-Assistenten-Antworten dargestellten Daten werden täglich aktualisiert. Das bedeutet, dass Daten in Antworten bis zu 24 Stunden älter sein können als die Daten, die zum Zeitpunkt der Antwort auf der Experience Platform-Benutzeroberfläche angezeigt werden.
+Die in den Antworten des KI-Assistenten dargestellten Daten werden täglich aktualisiert. Das bedeutet, dass die Antwortdaten bis zu 24 Stunden älter sein können als die Daten, die zum Zeitpunkt der Antwort auf der Experience Platform-Benutzeroberfläche angezeigt werden.
 
-Die gleichen Grundsätze gelten für die Zugangssteuerung. Es kann bis zu 24 Stunden dauern, bis der AI-Assistent alle Änderungen an den Konfigurationen der Zugriffskontrolle und Berechtigungen widerspiegelt. Weitere Informationen finden Sie im Handbuch zum [Datenschutz im AI-Assistenten](./privacy.md).
+Die gleichen Prinzipien gelten für die Zugangssteuerung. Es kann bis zu 24 Stunden dauern, bis der KI-Assistent alle Änderungen an der Zugriffssteuerung und den Berechtigungskonfigurationen widerspiegelt. Weitere Informationen finden Sie im Handbuch zu [Datenschutz im KI-Assistenten](./privacy.md).
 
-## Welche Adobe-Applikationen unterstützt der AI Assistant?
+## Welche Adobe-Anwendungen unterstützt AI Assistant?
 
-Derzeit ist der Umfang des AI-Assistenten wie folgt:
+Derzeit umfasst der KI-Assistent Folgendes:
 
-* [Produktwissen](./home.md#product-knowledge): Der KI-Assistent kann Fragen zu Produktwissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer beantworten. Sie können sich auch über die Customer Journey Analytics-Benutzeroberfläche mit Produktwissensthemen für Customer Journey Analytics befassen.
-* [Operative Einblicke](./home.md#operational-insights): Sie können den KI-Assistenten mit Fragen zu betrieblichen Einblicken in die folgenden Datenobjekte befassen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
+* [Produktkenntnisse](./home.md#product-knowledge): Der KI-Assistent beantwortet Fragen zu Produktkenntnissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer. Sie können auch Produktwissensthemen für das Customer Journey Analytics durchgehen, jedoch nur über die Customer Journey Analytics-Benutzeroberfläche.
+* [Operative Einblicke](./home.md#operational-insights): Sie können dem KI-Assistenten Fragen zu operativen Einblicken in die folgenden Datenobjekte stellen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
 
-## Welche Funktionen hat die KI-Assistenzkraft?
+## Welche Funktionen hat der KI-Assistent?
 
-Der AI-Assistent kann Fragen zu Adobe-Produktwissen beantworten und Fragen im Zusammenhang mit betrieblichen Einblicken Ihrer Datenobjekte beantworten. (Zum Beispiel &quot;Wie viele Zielgruppen sind aktiviert?&quot;).
+Der KI-Assistent kann Fragen zum Adobe von Produktkenntnissen beantworten und Fragen zu operativen Einblicken in Datenobjekte beantworten. (Beispiel: „Wie viele Zielgruppen werden aktiviert?„).
 
 ## Kann der KI-Assistent Informationen zu Profildaten bereitstellen?
 
-Nein. Der AI-Assistent hat keinen Zugriff auf Daten auf Profilebene. Daher wird er von AI Assistant weder geprüft noch verwendet.
+Nein. Der KI-Assistent hat keinen Zugriff auf Daten auf Profilebene und wird daher nicht vom KI-Assistenten angesehen oder verwendet.
 
-## Werden meine personenbezogenen Daten in den Ausbildungsdaten der KI-Assistenzkraft verwendet?
+## Werden meine personenbezogenen Daten in den Schulungsdaten des KI-Assistenten verwendet?
 
-Die KI-Assistenzkraft verwendet personenbezogene Daten nicht für Schulungszwecke. Bitte geben Sie keine persönlichen Informationen über Sie selbst (einschließlich Ihres Namens oder Ihrer Kontaktdaten) oder andere Parteien des KI-Assistenten an.
+AI Assistant verwendet keine personenbezogenen Daten für Trainingszwecke. Geben Sie keine persönlichen Informationen über sich selbst (einschließlich Ihres Namens oder Ihrer Kontaktinformationen) oder andere Parteien von AI Assistant an.

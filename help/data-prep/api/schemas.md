@@ -22,7 +22,7 @@ Schemata können mit Mapper verwendet werden, um dafür zu sorgen, dass die von 
 
 ## Abrufen aller Schemata
 
-Sie können eine Liste aller für Ihr Unternehmen verfügbaren Mapper-Schemas abrufen, indem Sie eine GET-Anfrage an den `/schemas` -Endpunkt senden.
+Sie können eine Liste aller für Ihr Unternehmen verfügbaren Mapper-Schemas abrufen, indem Sie eine GET-Anfrage an den `/schemas`-Endpunkt senden.
 
 **API-Format**
 
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden erstellten Schemas für Ihre Organisation abgerufen.
+Die folgende Anfrage ruft die letzten beiden erstellten Schemata für Ihre Organisation ab.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

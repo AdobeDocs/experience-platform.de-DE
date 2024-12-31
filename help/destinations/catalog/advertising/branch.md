@@ -1,5 +1,5 @@
 ---
-keywords: Verzweigung;Zweigerweiterung;Zweigziel
+keywords: Verzweigung;Verzweigungserweiterung;Verzweigungsziel
 title: Branch-Erweiterung
 description: Die Branch-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7

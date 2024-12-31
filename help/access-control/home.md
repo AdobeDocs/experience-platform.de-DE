@@ -27,7 +27,7 @@ Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen
 
 - Nach der Lizenzierung von Adobe Experience Platform oder einem Programm-Service, der Experience Platform verwendet, wird eine E-Mail an den Administrator gesendet, der während der Lizenzierung angegeben wurde.
 - Administrierende melden sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählen **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
-- Um Zugriff auf Experience Platform zu gewähren, wird empfohlen, dass der Administrator Benutzer zum standardmäßigen Produktprofil hinzufügt: `AEP-Default-All-Users`.
+- Um Zugriff auf Experience Platform zu gewähren, wird empfohlen, dass der Administrator Benutzende zum Standardproduktprofil hinzufügt: `AEP-Default-All-Users`.
 - Über Experience Platform-Berechtigungen können Administrierende neue Rollen erstellen oder die Berechtigungen und Benutzenden für vorhandene Rollen bearbeiten.
 - Beim Erstellen oder Bearbeiten einer Rolle fügen Administrierende der Rolle über die Registerkarte **[!UICONTROL Benutzende]** Benutzende hinzu und gewähren durch Bearbeiten der Rollenberechtigungen diesen Benutzenden Berechtigungen (z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemata verwalten]). Ebenso können Administrierende mithilfe derselben Bearbeitungsoption Zugriff auf Sandboxes zuweisen.
 - Wenn sich Benutzende bei der Benutzeroberfläche von Experience Platform anmelden, wird ihr Zugriff auf Experience Platform-Funktionen durch die Berechtigungen gesteuert, die ihnen im vorherigen Schritt erteilt wurden. Wenn eine Benutzerin oder ein Benutzer beispielsweise nicht über die Berechtigung [!UICONTROL Datensätze anzeigen] verfügt, ist im Seitenmenü die Registerkarte **[!UICONTROL Datensätze]** für diese Benutzerin oder diesen Benutzer nicht sichtbar.
@@ -79,17 +79,17 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
-| [!DNL AI Assistant] | [!UICONTROL KI-Assistenten aktivieren] | Möglichkeit, Fragen an den [KI-Assistenten](../ai-assistant/access.md) zu stellen. |
-| [!DNL AI Assistant] | [!UICONTROL Anzeigen operativer Einblicke] | Zugriff auf Antworten auf [operative Einblicke](../ai-assistant/home.md##operational-insights)-Abfragen. |
+| [!DNL AI Assistant] | [!UICONTROL KI-Assistenten aktivieren] | Möglichkeit, dem [KI-Assistenten](../ai-assistant/access.md) Fragen zu stellen. |
+| [!DNL AI Assistant] | [!UICONTROL Anzeigen operativer Einblicke] | Zugriff auf den Abruf von Antworten [ Abfragen ](../ai-assistant/home.md##operational-insights)operative Insights). |
 | [!DNL Alerts] | [!UICONTROL Warnhinweisverlauf anzeigen] | Schreibgeschützter Zugriff auf den Warnhinweisverlauf. |
 | [!DNL Alerts] | [!UICONTROL Auflösen von Warnhinweisen] | Zugriff zum Lesen, Bearbeiten und Löschen von Warnhinweisen. |
 | [!DNL Alerts] | [!UICONTROL Anzeigen von Warnhinweisen] | Schreibgeschützter Zugriff auf Warnhinweise |
 | [!DNL Alerts] | [!UICONTROL Verwalten von Warnhinweisen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen des Warnhinweisverlaufs. |
-| [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute anzeigen] | Schreibgeschützter Zugriff für die Registerkarte, den Bestand und Details berechneter Attribute. |
-| [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute verwalten] | Zugriff auf das Lesen, Erstellen, Löschen und Deaktivieren berechneter Attribute. |
+| [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute anzeigen] | Schreibgeschützter Zugriff für die Registerkarte „Berechnete Attribute“, den Bestand und Details. |
+| [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute verwalten] | Zugriff auf das Lesen, Erstellen, Löschen von Entwürfen und Deaktivieren berechneter Attribute. |
 | [!DNL Dashboards] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
 | [!DNL Dashboards] | [!UICONTROL Standard-Dashboards verwalten] | Fügen Sie benutzerdefinierte Attribute hinzu, die sich noch nicht im Data Warehouse befinden. |
-| [!DNL Data Governance] | [!UICONTROL Nutzungsbezeichnungen verwalten] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
+| [!DNL Data Governance] | [!UICONTROL Verwalten von Nutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
 | [!DNL Data Governance] | [!UICONTROL Verwalten von Datennutzungsrichtlinien] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datennutzungsrichtlinien. |
 | [!DNL Data Governance] | [!UICONTROL Anzeigen von Datennutzungsrichtlinien] | Schreibgeschützter Zugriff auf Datennutzungsrichtlinien Ihres Unternehmens. |
 | [!DNL Data Governance] | [!UICONTROL Anzeigen des Benutzer-Aktivitätspotokolls] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Administratorprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Platform-Aktivitäten. |
@@ -97,8 +97,8 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff zum Erstellen, Akzeptieren und Ablehnen von Partner-Handshakes, um zwei Organisationen miteinander zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Veröffentlichen von [!DNL Segment Match]-Feeds mit aktiven Partnern. |
-| [!DNL Data Lifecycle] | [!UICONTROL Datenlebenszyklus anzeigen] | Schreibgeschützter Zugriff für den Datenlebenszyklus. |
-| [!DNL Data Lifecycle] | [!UICONTROL Data Lifecycle verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Datenlebenszyklus. |
+| [!DNL Data Lifecycle] | [!UICONTROL Anzeigen des Datenlebenszyklus] | Schreibgeschützter Zugriff für den Datenlebenszyklus. |
+| [!DNL Data Lifecycle] | [!UICONTROL Verwalten des Datenlebenszyklus] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Datenlebenszyklus. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemata] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemata und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemata] | Schreibgeschützter Zugriff auf Schemata und zugehörige Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Beziehungen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
@@ -107,20 +107,20 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Management] | [!UICONTROL Anzeigen von Datensätzen] | Schreibgeschützter Zugriff auf Datensätze und Schemata. |
 | [!DNL Data Management] | [!UICONTROL Datenüberwachung] | Schreibgeschützter Zugriff auf das Monitoring von Datensätzen und Streams. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen in [!DNL Data Science Workspace]. |
-| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff zur Anzeige der verfügbaren Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierter Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]** . |
+| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff zum Anzeigen verfügbarer Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierter Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen und Löschen von Zielverbindungen und Zielkonten. |
-| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Ermöglicht Benutzerinnen und Benutzern das Aktivieren von Segmenten für vorhandene Ziele. Aktiviert den Zuordnungsschritt im Aktivierungs-Workflow. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
-| [!DNL Destinations] | [!UICONTROL Segment ohne Zuordnung aktivieren] | Ermöglicht das Aktivieren von Segmenten für vorhandene Ziele, ohne den [Zuordnungsschritt](../destinations/ui/activate-batch-profile-destinations.md#mapping) anzuzeigen. Benutzerinnen  und Bbenutzer können in Aktivierungs-Workflows Segmente, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
-| [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Fähigkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Möglichkeit, auch Daten für aktive Datensätze zu aktivieren, die erstellt wurden. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Ermöglicht Benutzerinnen und Benutzern das Aktivieren von Segmenten für vorhandene Ziele. Aktiviert den Zuordnungsschritt im Aktivierungs-Workflow. Diese Berechtigung erfordert auch, dass [!UICONTROL Ziele anzeigen] der Person gewährt wird, die Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Segment ohne Zuordnung aktivieren] | Ermöglicht das Aktivieren von Segmenten für vorhandene Ziele, ohne den [Zuordnungsschritt](../destinations/ui/activate-batch-profile-destinations.md#mapping) anzuzeigen. Benutzerinnen  und Bbenutzer können in Aktivierungs-Workflows Segmente, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. Diese Berechtigung erfordert auch, dass [!UICONTROL Ziele anzeigen] der Person gewährt wird, die Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Fähigkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Außerdem die Möglichkeit, Daten für aktive Datensätze zu aktivieren, die erstellt wurden. Diese Berechtigung erfordert auch, dass [!UICONTROL Ziele anzeigen] der Person gewährt wird, die Daten für Ziele aktiviert. |
 | [!DNL Destinations] | [!UICONTROL Ziel-Authoring] | Möglichkeit, Ziele mithilfe des [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
 | [!DNL Identity Management] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
 | [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |
 | [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitätsdiagrammen] | Schreibgeschützter Zugriff für Identitätsdiagramme. |
 | [!DNL Intelligent Services] | [!UICONTROL Attribution AI anzeigen] | Schreibgeschützter Zugriff für Attribution AI-Einstellungen und -Einblicke. |
 | [!DNL Intelligent Services] | [!UICONTROL Attribution AI verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Attribution AI-Modellen. |
-| [!DNL Intelligent Services] | [!UICONTROL Anzeigen von Customer AI] | Zugriff auf das Lesen oder Anzeigen von Customer AI-Modellen. |
-| [!DNL Intelligent Services] | [!UICONTROL Verwalten von Customer AI] | Zugriff auf das Erstellen, Aktualisieren, Löschen, Aktivieren oder Deaktivieren von Customer AI-Modellen. |
-| [!DNL Profile Management] | [!UICONTROL Verwalten von Profilen] | Erfassen Sie Daten aus mehreren Quellen, erstellen Sie zuverlässige Profile für einzelne Kunden und speichern Sie profilaktivierte Daten im Data Lake und im Datenspeicher &quot;Echtzeit-Kundenprofil&quot;. |
+| [!DNL Intelligent Services] | [!UICONTROL Anzeigen von Kunden-KI] | Zugriff auf das Lesen oder Anzeigen von Kunden-KI-Modellen. |
+| [!DNL Intelligent Services] | [!UICONTROL Verwalten von Kunden-KI] | Zugriff zum Erstellen, Aktualisieren, Löschen, Aktivieren oder Deaktivieren von Kunden-KI-Modellen. |
+| [!DNL Profile Management] | [!UICONTROL Verwalten von Profilen] | Nehmen Sie Daten aus verschiedenen Quellen auf, erstellen Sie robuste Profile für einzelne Kunden und speichern Sie profilaktivierte Daten im Data Lake und im Echtzeit-Kundenprofil-Datenspeicher. |
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Profilen] | Schreibgeschützter Zugriff auf verfügbare Profile. |
 | [!DNL Profile Management] | [!UICONTROL Segmente verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Segmenten. |
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Segmenten] | Schreibgeschützter Zugriff auf verfügbare Segmente. |
@@ -128,11 +128,11 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Zusammenführungsrichtlinien] | Schreibgeschützter Zugriff auf verfügbare Zusammenführungsrichtlinien. |
 | [!DNL Profile Management] | [!UICONTROL Zielgruppen importieren] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen importierter Zielgruppen. |
 | [!DNL Profile Management] | [!UICONTROL Exportieren der Zielgruppe für das Segment] | Fähigkeit, eine ausgewertetes Zielgruppensegment in einen Datensatz zu exportieren. |
-| [!DNL Profile Management] | [!UICONTROL Auswerten von Segmenten für eine Zielgruppe] | Möglichkeit, Profile für eine Zielgruppe zu generieren, indem eine Segmentdefinition ausgewertet wird. |
-| [!DNL Profile Management] | [!UICONTROL B2B AI anzeigen] | Schreibgeschützter Zugriff auf Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste. |
-| [!DNL Profile Management] | [!UICONTROL B2B AI verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste. |
-| [!DNL Profile Management] | [!UICONTROL B2B-Profil anzeigen] | Schreibgeschützter Zugriff auf B2B-Entitätsprofile (z. B. Konto, Chancen usw.), Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste und B2B-Dashboard-Widgets. |
-| [!DNL Profile Management] | [!UICONTROL B2B-Profil verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von B2B-Entitätsprofilen (z. B. Konto, Chancen usw.). Schreibgeschützter Zugriff für Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste und B2B-Dashboard-Widgets. |
+| [!DNL Profile Management] | [!UICONTROL Auswerten von Segmenten für eine Zielgruppe] | Möglichkeit zum Generieren von Profilen für eine Zielgruppe durch Auswertung einer Segmentdefinition. |
+| [!DNL Profile Management] | [!UICONTROL B2B-KI anzeigen] | Schreibgeschützter Zugriff auf Einstellungen und Konfigurationen für alle B2B-KI-/ML-Services. |
+| [!DNL Profile Management] | [!UICONTROL Verwalten von B2B-KI] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Einstellungen und Konfigurationen für alle B2B-KI-/ML-Services. |
+| [!DNL Profile Management] | [!UICONTROL B2B-Profil anzeigen] | Schreibgeschützter Zugriff auf B2B-Entitätsprofile (z. B. Konto, Opportunity usw.), Einstellungen und Konfigurationen für alle B2B-KI-/ML-Services und B2B-Dashboard-Widgets. |
+| [!DNL Profile Management] | [!UICONTROL Verwalten des B2B-Profils] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von B2B-Entitätsprofilen (z. B. Konto, Opportunity usw.). Schreibgeschützter Zugriff für Einstellungen und Konfigurationen für alle B2B-KI-/ML-Services und B2B-Dashboard-Widgets. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
 | [!DNL Query Service] | [!UICONTROL Verwalten der Integration des Abfrage-Service] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldedaten für den Zugriff auf den Abfrage-Service. |
 | [!DNL Sandbox Administration] | [!UICONTROL Verwalten von Sandboxes] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Sandboxes. |

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;Daten filtern;Daten filtern;Datumsbereich filtern
+keywords: Experience Platform;Startseite;beliebte Themen;filter;filter;filter;daten filtern;datumsbereich
 solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamt-Performance verbessern.
@@ -11,15 +11,15 @@ ht-degree: 82%
 
 ---
 
-# [!DNL Catalog] Daten mithilfe von Abfrageparametern filtern
+# Filtern [!DNL Catalog] Daten mithilfe von Abfrageparametern
 
-Mit der API [!DNL Catalog Service] können Antwortdaten mithilfe von Abfrageparametern gefiltert werden. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Belastung der API reduzieren und die Gesamtleistung verbessern.
+Mit der [!DNL Catalog Service]-API können Antwortdaten mithilfe von Abfrageparametern gefiltert werden. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die API entlasten und zur Verbesserung der Gesamtleistung beitragen.
 
-In diesem Dokument werden die häufigsten Methoden zum Filtern von [!DNL Catalog] -Objekten in der API beschrieben. Es wird empfohlen, dieses Dokument beim Lesen des [Katalog-Entwicklerhandbuchs](getting-started.md) zu referenzieren, um mehr über die Interaktion mit der [!DNL Catalog] -API zu erfahren. Allgemeine Informationen zu [!DNL Catalog Service] finden Sie in der [[!DNL Catalog] Übersicht](../home.md).
+In diesem Dokument werden die gängigsten Methoden zum Filtern von [!DNL Catalog] in der API beschrieben. Es wird empfohlen, dieses Dokument beim Lesen des [Catalog-Entwicklerhandbuch](getting-started.md) zu lesen, um mehr darüber zu erfahren, wie Sie mit der [!DNL Catalog]-API interagieren. Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] Übersicht](../home.md).
 
 ## Zurückgegebene Objekte begrenzen
 
-Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] -Antworten werden automatisch entsprechend den konfigurierten Beschränkungen gemessen:
+Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] werden automatisch entsprechend den konfigurierten Grenzwerten gemessen:
 
 * Wenn kein `limit`-Parameter angegeben ist, beträgt die maximale Zahl von Objekten pro Antwort-Payload 20.
 * Bei Datensatzabfragen beträgt die maximale Zahl der zurückgegebenen Datensätze 20, wenn `observableSchema` mit dem `properties`-Abfrageparameter angefragt wird.
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
 
 **Anfrage**
@@ -79,7 +79,7 @@ Trotz Filterns der Zahl der zurückgegebenen Objekte mithilfe des `limit`-Parame
 
 Der `properties`-Parameter filtert Antwortobjekte so, dass nur bestimmte angegebene Eigenschaften zurückgeben werden. Der Parameter kann so eingerichtet werden, dass eine oder mehrere Eigenschaften zurückgegeben werden.
 
-Der Parameter `properties` kann beliebige Eigenschaften von Ebenen-Objekten akzeptieren. `sampleKey` kann mit `?properties=subItem.sampleKey` extrahiert werden.
+Der `properties`-Parameter akzeptiert Eigenschaften von Objekten beliebiger Ebenen. `sampleKey` können mit `?properties=subItem.sampleKey` extrahiert werden.
 
 ```json
 {
@@ -103,9 +103,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
-| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten [!DNL Catalog] -Objekts, das abgerufen wird. |
+| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten abgerufenen [!DNL Catalog]. |
 
 **Anfrage**
 
@@ -122,7 +122,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog]-Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
 
 ```json
 {
@@ -156,7 +156,7 @@ Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 
 >[!NOTE]
 >
->In der Eigenschaft `schemaRef` für jeden Datensatz gibt die Versionsnummer die neueste Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
+>In der `schemaRef`-Eigenschaft für jeden Datensatz gibt die Versionsnummer die neueste Nebenversion des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
 
 ## Startindex von Antwortliste versetzen
 
@@ -206,11 +206,11 @@ Einige Catalog-Objekte unterstützen die Verwendung eines `tags`-Attributs. Tags
 Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 
 * Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
-* Tag-Namen sind für Ihre Organisation eindeutig.
+* Tag-Namen sind für Ihr Unternehmen eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
-* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihre Organisation deklariert werden:
-   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfasst werden sollen.
-   * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
+* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihr Unternehmen deklariert werden:
+   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-Time Customer Profile]](../../profile/home.md) aufgenommen werden sollen.
+   * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) aufgenommen werden sollen.
 
 Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigenschaft enthält. Die Tags in dieser Eigenschaft haben die Form von Schlüssel-Wert-Paaren, wobei jeder Tag-Wert als Array mit einer einzelnen Zeichenfolge angezeigt wird:
 
@@ -253,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Der Name des Tags, nach dem gefiltert werden soll. |
 | `{TAG_VALUE}` | Der Wert des Tags, nach dem gefiltert werden soll. Unterstützt Platzhalterzeichen (`*`). |
 
@@ -320,7 +320,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
 
 ## Nach Datumsbereich filtern
 
-Einige Endpunkte in der API [!DNL Catalog] verfügen über Abfrageparameter, die Abfragen in einem bestimmten Bereich ermöglichen, meist bei Datumsangaben.
+Einige Endpunkte in der [!DNL Catalog]-API verfügen über Abfrageparameter, die - meist im Falle von Datumsangaben - bereichsbezogene Abfragen ermöglichen.
 
 **API-Format**
 
@@ -347,7 +347,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog], die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -411,7 +411,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die nach dem Parameter `orderBy` sortiert sind. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog], die nach dem `orderBy`-Parameter sortiert sind. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name der Eigenschaft, nach deren Wert Sie filtern möchten. |
 | `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse ein- oder ausgeschlossen werden (je nach Abfrage). |
 
@@ -520,11 +520,11 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
 }
 ```
 
-### Verwenden des Parameters `property` {#using-the-property-parameter}
+### Verwenden des `property` {#using-the-property-parameter}
 
 Der Abfrageparameter `property` bietet bei eigenschaftsbasierter Filterung mehr Flexibilität als einfache Filter. Neben einer Filterung danach, ob eine Eigenschaft einen bestimmten Wert aufweist oder nicht, kann der `property`-Parameter auch andere Vergleichsoperatoren wie „größer als“ (`>`) und „kleiner als“ (`<`) sowie reguläre Ausdrücke verwenden, um anhand von Eigenschaftswerten zu filtern. Es kann auch nach dem Vorhandensein oder Nichtvorhandensein einer Eigenschaft gefiltert werden, unabhängig von ihrem Wert.
 
-Der Parameter `property` kann beliebige Eigenschaften von Ebenen-Objekten akzeptieren. `sampleKey` kann zum Filtern mit `?properties=subItem.sampleKey` verwendet werden.
+Der `property`-Parameter akzeptiert Eigenschaften von Objekten beliebiger Ebenen. `sampleKey` können zum Filtern mithilfe von `?properties=subItem.sampleKey` verwendet werden.
 
 ```json
 {
@@ -546,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | Ein bedingter Ausdruck, der angibt, welche Eigenschaft abgefragt und wie ihr Wert ausgewertet werden soll. Nachfolgend finden Sie verschiedene Beispiele. |
 
 Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedingten Ausdrücken. Folgende Tabelle enthält die grundlegende Syntax für unterstützte Ausdrücke:
@@ -565,7 +565,7 @@ Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedin
 
 >[!NOTE]
 >
->Die Eigenschaft `name` unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge `te*st` mit dem Wert „test“ übereinstimmt. Bei Sternchen muss durch Verdopplung (`**`) ein Escape durchgeführt werden. Ein doppeltes Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als literale Zeichenfolge dar.
+>Die `name`-Eigenschaft unterstützt die Verwendung eines `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge `te*st` mit dem Wert „test“ übereinstimmt. Bei Sternchen muss durch Verdopplung (`**`) ein Escape durchgeführt werden. Ein doppeltes Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als literale Zeichenfolge dar.
 
 **Anfrage**
 

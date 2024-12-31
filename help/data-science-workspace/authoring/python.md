@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform;Startseite;beliebte Themen;Datenzugriff;Python-SDK;Datenzugriffs-API;Python lesen;Python schreiben
 solution: Experience Platform
-title: Zugriff auf Daten mithilfe von Python in Data Science Workspace
+title: Zugreifen auf Daten mithilfe von Python in Data Science Workspace
 type: Tutorial
 description: Das folgende Dokument enthält Beispiele für den Zugriff auf Daten in Python zur Verwendung in Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# Zugriff auf Daten mit Python in Data Science Workspace
+# Zugreifen auf Daten mithilfe von Python in Data Science Workspace
 
 >[!NOTE]
 >
@@ -20,11 +20,11 @@ ht-degree: 0%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Python zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation zum Datenzugriff auf JupyterLab-Notebooks ](../jupyterlab/access-notebook-data.md).[
+Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mithilfe von Python zur Verwendung in Data Science Workspace. Informationen zum Datenzugriff mithilfe von JupyterLab-Notebooks finden Sie in der Dokumentation [Datenzugriff über JupyterLab-Notebooks](../jupyterlab/access-notebook-data.md).
 
-## Datensatz lesen
+## Lesen eines Datensatzes
 
-Nachdem Sie die Umgebungsvariablen festgelegt und die Installation abgeschlossen haben, kann Ihr Datensatz jetzt in den pandas-Dataframe gelesen werden.
+Nachdem Sie die Umgebungsvariablen festgelegt und die Installation abgeschlossen haben, kann Ihr Datensatz jetzt in den Pandas-Datenrahmen gelesen werden.
 
 ```python
 import pandas as pd
@@ -40,7 +40,7 @@ dataset_reader = DatasetReader(client_context, config_properties['DATASET_ID'])
 df = dataset_reader.read()
 ```
 
-### Spalten aus Datensatz auswählen
+### Spalten aus dem Datensatz auswählen
 
 ```python
 df = dataset_reader.select(['column-a','column-b']).read()
@@ -71,7 +71,7 @@ Sie können bestimmte Operatoren in Python verwenden, um Ihren Datensatz zu filt
 
 >[!NOTE]
 >
->Bei den Filterfunktionen wird zwischen Groß- und Kleinschreibung unterschieden.
+>Bei den zum Filtern verwendeten Funktionen wird zwischen Groß- und Kleinschreibung unterschieden.
 
 ```python
 eq() = '='
@@ -91,7 +91,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-Klausel
 
-Die &quot;ORDER BY&quot;-Klausel ermöglicht die Sortierung der empfangenen Ergebnisse nach einer bestimmten Spalte in einer bestimmten Reihenfolge (aufsteigend oder absteigend). Dies geschieht mithilfe der Funktion `sort()` .
+Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse nach einer angegebenen Spalte in einer bestimmten Reihenfolge (aufsteigend oder absteigend) zu sortieren. Dies geschieht mithilfe der `sort()`-Funktion.
 
 Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `sort()` :
 
@@ -101,7 +101,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 ### LIMIT-Klausel
 
-Die LIMIT-Klausel ermöglicht es Ihnen, die Anzahl der vom Datensatz empfangenen Datensätze zu begrenzen.
+Mit der LIMIT-Klausel können Sie die Anzahl der vom Datensatz empfangenen Datensätze begrenzen.
 
 Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `limit()` :
 
@@ -111,7 +111,7 @@ df = dataset_reader.limit(100).read()
 
 ### OFFSET-Klausel
 
-Mit der OFFSET-Klausel können Sie Zeilen von Anfang an überspringen, um Zeilen von einem späteren Zeitpunkt an zurückzugeben. In Kombination mit LIMIT kann dies zum Iterieren von Zeilen in Blöcken verwendet werden.
+Mit der OFFSET-Klausel können Sie Zeilen von Anfang an überspringen, um ab einem späteren Punkt Zeilen zurückzugeben. In Kombination mit LIMIT kann dies verwendet werden, um Zeilen in Blöcken zu iterieren.
 
 Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `offset()` :
 
@@ -121,9 +121,9 @@ df = dataset_reader.offset(100).read()
 
 ## Schreiben eines Datensatzes
 
-Um in einen Datensatz zu schreiben, müssen Sie den pandas-Dataframe in Ihren Datensatz einfügen.
+Um in einen Datensatz zu schreiben, müssen Sie den Pandas-Datenrahmen für Ihren Datensatz bereitstellen.
 
-### Schreiben des pandas-Dataframes
+### Schreiben des Pandas-Datenrahmens
 
 ```python
 client_context = get_client_context(config_properties)
@@ -136,15 +136,15 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## Benutzeroberflächenverzeichnis (Checkpoint)
+## Verzeichnis „Arbeitsbereich“ (Checkpoint)
 
-Für Aufträge, die länger ausgeführt werden, müssen Sie möglicherweise Zwischenschritte speichern. In solchen Fällen können Sie in einen Benutzerbereich lesen und schreiben.
+Bei Aufträgen mit längerer Laufzeit müssen Sie möglicherweise Zwischenschritte speichern. In Instanzen wie diesen können Sie in einen Benutzerbereich lesen und schreiben.
 
 >[!NOTE]
 >
->Pfade zu den Daten werden **nicht** gespeichert. Sie müssen den entsprechenden Pfad zu den entsprechenden Daten speichern.
+>Pfade zu den Daten werden **nicht** gespeichert. Sie müssen den entsprechenden Pfad zu den jeweiligen Daten speichern.
 
-### Schreiben in den Benutzerbereich
+### In Benutzerbereich schreiben
 
 ```python
 client_context = get_client_context(config_properties)
@@ -153,7 +153,7 @@ user_helper = UserSpaceHelper(client_context)
 user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
 ```
 
-### Aus dem Benutzerbereich lesen
+### Aus Benutzerbereich lesen
 
 ```python
 client_context = get_client_context(config_properties)
@@ -164,4 +164,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Nächste Schritte
 
-Adobe Experience Platform Data Science Workspace bietet ein Rezept-Beispiel, in dem die oben genannten Codebeispiele zum Lesen und Schreiben von Daten verwendet werden. Wenn Sie mehr darüber erfahren möchten, wie Sie mit Python auf Ihre Daten zugreifen können, lesen Sie bitte das [Data Science Workspace Python GitHub-Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace bietet ein Rezeptbeispiel, das die obigen Codebeispiele zum Lesen und Schreiben von Daten verwendet. Weitere Informationen zur Verwendung von Python für den Zugriff auf Ihre Daten finden Sie im [Data Science Workspace Python GitHub-Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

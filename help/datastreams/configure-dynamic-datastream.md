@@ -1,74 +1,74 @@
 ---
-title: Erstellen dynamischer Datenspeicherkonfigurationen
-description: Erfahren Sie, wie Sie dynamische Datastream-Konfigurationen erstellen, um Ihre Daten basierend auf Regeln an verschiedene Experience Cloud-Dienste weiterzuleiten.
+title: Erstellen dynamischer Datenstromkonfigurationen
+description: Erfahren Sie, wie Sie dynamische Datenstromkonfigurationen erstellen, um Ihre Daten auf der Grundlage von Regeln an verschiedene Experience Cloud-Services weiterzuleiten.
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 1%
 
 ---
 
-
-# Erstellen dynamischer Datenspeicherkonfigurationen
+# Erstellen dynamischer Datenstromkonfigurationen
 
 >[!AVAILABILITY]
 >
->* Die Option zum Definieren dynamischer Datenspeicherkonfigurationen befindet sich derzeit in Beta und steht nur einer begrenzten Anzahl von Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten. Dokumentation und Funktionalitäten können sich ändern.
+>* Die Option zum Definieren dynamischer Datenstromkonfigurationen ist derzeit in Beta verfügbar und steht einer begrenzten Anzahl von Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten. Dokumentation und Funktionalitäten können sich ändern.
 
-Standardmäßig sendet das Experience Platform-Edge Network alle Ereignisse, die einen Datastream erreichen, an alle Experience Cloud [services](configure.md#add-services), die Sie für Ihre Datenspeicher aktiviert haben. Dieser Workflow ist je nach Anwendungsfall möglicherweise nicht immer der ideale Arbeitsablauf für Sie.
+Standardmäßig sendet das Experience Platform-Edge Network alle Ereignisse, die einen Datenstrom erreichen, an alle Experience Cloud-[Services](configure.md#add-services) die Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow für Sie.
 
-Dynamische Datastream-Konfigurationen lösen diese Bedenken durch benutzerkonfigurierbare Regelsätze aus, die Sie für jeden für Ihren Datastream aktivierten Dienst definieren, die bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen empfangen soll.
+Dynamische Datenstromkonfigurationen decken dieses Problem durch benutzerkonfigurierbare Regelsätze ab, die Sie für jeden für Ihren Datenstrom aktivierten Service definieren. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll.
 
 ## Voraussetzungen {#prerequisites}
 
-Um eine dynamische Konfiguration für Ihren Datastream zu erstellen, müssen Sie zwei Bedingungen erfüllen:
+Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Sie müssen *mindestens* einen Datenspeicher erstellt haben, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation zum Erstellen eines Datastreams ](configure.md) .[
-* Sie müssen über *mindestens* einen Experience Cloud-Dienst verfügen, der Ihrem Datastream hinzugefügt wird. Detaillierte Informationen finden Sie in der Dokumentation zum Hinzufügen von [Diensten](configure.md#add-services) zu einem Datenspeicher.
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](configure.md) Datenstroms .
+* Es muss *mindestens* Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](configure.md#add-services) zu einem Datenstrom .
 
-Nachdem Sie einen Datastream erstellt und ihm einen Experience Cloud-Dienst hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
+Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 
-## Dynamische Datenspeicherkonfiguration erstellen {#create-dynamic-configuration}
+## Erstellen einer dynamischen Datenstromkonfiguration {#create-dynamic-configuration}
 
-Nachdem Sie [einen Datastream](configure.md) erstellt und [einen Dienst](configure.md#add-services) hinzugefügt haben, führen Sie die folgenden Schritte aus, um dem Dienst eine dynamische Konfiguration hinzuzufügen.
+Nachdem Sie [einen Datenstrom erstellt](configure.md) und [einen Service hinzugefügt](configure.md#add-services) haben, führen Sie die folgenden Schritte aus, um eine dynamische Konfiguration zum Service hinzuzufügen.
 
-1. Gehen Sie zur Seite **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenspeicher]** und wählen Sie den von Ihnen erstellten Datastream aus.
+1. Gehen Sie zur **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenströme]** und wählen Sie den von Ihnen erstellten Datenstrom aus.
 
-   ![Bild der Benutzeroberfläche von Datastreams, das die Liste der Datenspeicher anzeigt.](assets/configure-dynamic-datastream/select-datastream.png)
+   ![Bild der Benutzeroberfläche für Datenströme mit der Liste der Datenströme.](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. Wählen Sie die Option **[!UICONTROL Bearbeiten]** für den Dienst aus, für den Sie eine dynamische Konfiguration definieren möchten.
+1. Wählen Sie die **[!UICONTROL Bearbeiten]** für den Service aus, für den Sie eine dynamische Konfiguration definieren möchten.
 
-   ![Bild der Benutzeroberfläche von Datastreams, das die zu einem Datastream hinzugefügten Dienste anzeigt.](assets/configure-dynamic-datastream/select-service.png)
+   ![Abbildung der Benutzeroberfläche für Datenströme mit den zu einem Datenstrom hinzugefügten Services.](assets/configure-dynamic-datastream/select-service.png)
 
-1. Wählen Sie auf der Seite **[!UICONTROL Konfigurieren]** die Option **[!UICONTROL Dynamische Konfiguration speichern und bearbeiten]** aus.
+1. Wählen Sie auf der **[!UICONTROL Konfigurieren]** die Option **[!UICONTROL Dynamische Konfiguration speichern und bearbeiten]** aus.
 
-   ![Bild der Benutzeroberfläche von datastreams, das die Seite zur Konfiguration des Datastreams anzeigt.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![Abbildung der Benutzeroberfläche für Datenströme mit der Seite zur Datenstromkonfiguration.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Wählen Sie **[!UICONTROL Dynamische Konfiguration hinzufügen]** aus.
+1. Wählen **[!UICONTROL Dynamische Konfiguration hinzufügen]** aus.
 
-   ![Bild der Benutzeroberfläche von Datastraams, das die dynamische Konfiguration der Meldung &quot;Keine Regel hinzugefügt&quot; anzeigt.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![Abbildung der Benutzeroberfläche für Datenströme mit der dynamischen Konfiguration ohne Meldung „Regel hinzugefügt“.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. Ziehen Sie die Elemente, mit denen Sie Ihre Regel erstellen möchten, aus dem Bedienfeld **[!UICONTROL Ressourcen]** in den rechten Bereich des Fensters. Sie können mehrere Ressourcen kombinieren, um komplexe Regeln zu erstellen.
+1. Ziehen Sie die Elemente **[!UICONTROL mit denen Sie Ihre Regel erstellen möchten, aus dem Bedienfeld]** Ressourcen“ auf die rechte Seite des Fensters. Sie können mehrere Ressourcen kombinieren, um komplexe Regeln zu erstellen.
 
-   Verwenden Sie die Optionen der einzelnen Ressourcen, z. B. **[!UICONTROL gleich]**, **[!UICONTROL nicht gleich]**, **[!UICONTROL vorhanden]** und mehr, um Ihre Regeln anzupassen.
+   Verwenden Sie die Optionen jeder Ressource, z **[!UICONTROL B. „gleich]**, **[!UICONTROL nicht gleich]**, **[!UICONTROL vorhanden]** und mehr, um Ihre Regeln zu optimieren.
 
-   ![Bild der Benutzeroberfläche von Datastraams mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/drag-resources.png)
+   ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schalten Sie im Abschnitt **[!UICONTROL Konfiguration]** die Dienste, die Sie für jede Regel aktivieren oder deaktivieren möchten, je nachdem, ob die Daten an jeden Dienst gesendet werden sollen. Wenn Sie den Umschalter deaktivieren, ist das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Dienst gesendet.
+1. Schalten **[!UICONTROL im Abschnitt]** die Services ein, die Sie für jede Regel aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, wird das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Service gesendet.
 
-   ![Bild der Benutzeroberfläche von Datastraams mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/enable-service.png)
+   ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Wenn Sie die Konfiguration der Regeln abgeschlossen haben, wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wenn Sie die Konfiguration Ihrer Regeln abgeschlossen haben, klicken Sie auf **[!UICONTROL Speichern]**.
 
 ## Überlegungen zur Regelpriorität {#considerations}
 
-Sie können für jede dynamische Datastream-Konfiguration mehrere Regeln definieren. Wenn Ihre Daten jedoch mit den Bedingungen mehrerer Regeln übereinstimmen, wird nur die erste übereinstimmende Regel in der Liste berücksichtigt und alle anderen Übereinstimmungsregeln werden ignoriert.
+Für jede Konfiguration eines dynamischen Datenstroms können Sie mehrere Regeln definieren. Wenn Ihre Daten jedoch den Bedingungen mehrerer Regeln entsprechen, wird nur die erste übereinstimmende Regel in der Liste berücksichtigt und alle anderen übereinstimmenden Regeln werden ignoriert.
 
-Beachten Sie zum Erzielen des gewünschten Daten-Routing-Verhaltens die Reihenfolge, in der Sie die Regeln anordnen.
+Achten Sie zum Erzielen des gewünschten Daten-Routing-Verhaltens auf die Reihenfolge, in der Sie die Regeln anordnen.
 
 Um die Regelreihenfolge zu konfigurieren, können Sie die Regelfenster in die gewünschte Reihenfolge ziehen.
 
-![GIF, die zeigt, wie die Reihenfolge der Regeln durch Ziehen und Ablegen geändert werden kann.](assets/configure-dynamic-datastream/move-rules.gif)
+![GIF mit Informationen zur Änderung der Regelreihenfolge durch Ziehen und Ablegen.](assets/configure-dynamic-datastream/move-rules.gif)

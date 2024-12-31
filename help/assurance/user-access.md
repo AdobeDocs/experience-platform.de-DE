@@ -11,30 +11,30 @@ ht-degree: 12%
 
 # Benutzerzugriff
 
-Gewähren Sie Benutzern Zugriff auf [!UICONTROL Assurance], indem Sie sie zu einem beliebigen Produktprofil in Adobe Experience Platform hinzufügen, indem Sie die folgenden Schritte in [Adobe Admin Console](https://adminconsole.adobe.com/) ausführen:
+Gewähren Sie Benutzern Zugriff auf [!UICONTROL Assurance], indem Sie sie einem beliebigen Produktprofil in Adobe Experience Platform hinzufügen. Gehen Sie dazu in der [Adobe Admin Console wie folgt vor](https://adminconsole.adobe.com/):
 
 ## Hinzufügen von Benutzern zu Adobe Experience Platform über ein Produktprofil {#adding-product-profile}
 
-Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei [Adobe Admin Console](https://adminconsole.adobe.com/) an. Wählen Sie auf der Registerkarte **[!UICONTROL Übersicht]** der Benutzeroberfläche der Admin Console die Option **[!UICONTROL Benutzer hinzufügen]** aus.
+Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der [Adobe Admin Console](https://adminconsole.adobe.com/) an. Wählen Sie auf **[!UICONTROL Registerkarte]**&#x200B;Übersicht“ der Admin Console-Benutzeroberfläche die Option **[!UICONTROL Benutzer hinzufügen]** aus.
 
-![Die Admin Console mit hervorgehobenem Symbol &quot;Benutzer hinzufügen&quot;.](./images/user-access/admin-console.png)
+![Die Seite &quot;Admin Console&quot; mit hervorgehobener Option „Benutzer hinzufügen“.](./images/user-access/admin-console.png)
 
-Das Dialogfeld **[!UICONTROL Benutzer zum Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse oder den Benutzernamen der Person ein, die Sie hinzufügen möchten, und wählen Sie dann **[!UICONTROL Als neuen Benutzer hinzufügen]** aus.
+Das Dialogfeld **[!UICONTROL Benutzer zum Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse oder den Benutzernamen der Person ein, die Sie hinzufügen möchten, und wählen Sie dann **[!UICONTROL Als neuen Benutzer hinzufügen]**.
 
-![Das Textfeld für die E-Mail-Adresse oder den Benutzernamen wird im Dialogfeld &quot;Benutzer hinzufügen&quot;hervorgehoben.](./images/user-access/add-users.png)
+![Das Textfeld „E-Mail“ oder „Benutzername“ ist im Dialogfeld „Benutzer hinzufügen“ hervorgehoben.](./images/user-access/add-users.png)
 
-Zwei Textfelder scheinen einen optionalen Vornamen **[!UICONTROL 1} und einen optionalen Nachnamen**[!UICONTROL  3} einzugeben. ]**]** Der Benutzername **[!UICONTROL SSO]** wird zusammen mit dem Eintrag **[!UICONTROL Land]** im Dropdown-Menü automatisch ausgefüllt. Stellen Sie sicher, dass beide Optionen korrekt sind, und nehmen Sie die erforderlichen Anpassungen vor. Sobald alles korrekt ist, wählen Sie **[!UICONTROL Produkte]** aus.
+Es werden zwei Textfelder angezeigt, in die Sie einen optionalen **[!UICONTROL (Vorname]** und einen optionalen **[!UICONTROL Nachname)]**. Der **[!UICONTROL SSO]** Benutzername wird automatisch zusammen mit dem **[!UICONTROL Land]** in der Dropdown-Liste ausgefüllt. Stellen Sie sicher, dass diese beiden Optionen korrekt sind, und nehmen Sie die erforderlichen Anpassungen vor. Wenn alles korrekt ist, wählen Sie **[!UICONTROL Produkte]** aus.
 
-![Die drei Felder Name und Land werden im Dialogfeld Benutzer hinzufügen hervorgehoben.](./images/user-access/name-and-products.png)
+![Die drei Felder „Name“ und „Land“ sind im Dialogfeld „Benutzer hinzufügen“ hervorgehoben.](./images/user-access/name-and-products.png)
 
-Das Dialogfeld **[!UICONTROL Produkt auswählen]** wird angezeigt. Wählen Sie die Adobe Experience Platform aus.
+Das **[!UICONTROL Produkt auswählen]** wird angezeigt. Wählen Sie die Adobe Experience Platform aus.
 
-![Wählen Sie das Dialogfeld &quot;Produkte&quot;mit einer Liste mit drei Produkten aus und markieren Sie die Option &quot;Adobe Experience Platform&quot;.](./images/user-access/select-products.png)
+![Dialogfeld „Produkte auswählen“ mit einer Liste von drei Produkten und der hervorgehobenen Adobe Experience Platform-Option.](./images/user-access/select-products.png)
 
-Das Dialogfeld **[!UICONTROL Produktprofile auswählen]** wird mit einer Liste von Produktprofilen angezeigt. Wählen Sie ein beliebiges Produktprofil und dann **[!UICONTROL Anwenden]** aus. Sie können weitere Produkte und Produktprofile hinzufügen, indem Sie diese Schritte wiederholen.
+Das **[!UICONTROL Produktprofile auswählen]** wird mit einer Liste von Produktprofilen angezeigt. Wählen Sie ein beliebiges Produktprofil und dann **[!UICONTROL Anwenden]** aus. Sie können zusätzliche Produkte und Produktprofile hinzufügen, indem Sie diese Schritte wiederholen.
 
-![Eine im Dialogfeld &quot;Produktprofile auswählen&quot;ausgewählte und hervorgehobene Option.](./images/user-access/select-product-profiles.png)
+![Eine im Dialogfeld „Produktprofile auswählen“ ausgewählte und hervorgehobene Option.](./images/user-access/select-product-profiles.png)
 
-Überprüfen Sie, ob alles für den Benutzer korrekt ist. Hier können Sie weitere Benutzer hinzufügen oder Ihre Änderungen speichern, indem Sie **[!UICONTROL Speichern]** auswählen.
+Vergewissern Sie sich, dass für den Benutzer alles richtig ist. Von hier aus können Sie zusätzliche Benutzer hinzufügen oder Ihre Änderungen speichern, indem Sie **[!UICONTROL Speichern]** auswählen.
 
-![Fügen Sie Benutzer zum Dialogfeld Ihres Teams hinzu, indem Sie alle ausgefüllten Informationen eingeben und &quot;Speichern&quot;ausgewählt haben.](./images/user-access/save-selections.png)
+![Im Dialogfeld „Benutzer zum Team hinzufügen“ sind alle Informationen eingetragen und „Speichern“ ausgewählt.](./images/user-access/save-selections.png)

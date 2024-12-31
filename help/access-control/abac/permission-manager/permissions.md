@@ -1,6 +1,6 @@
 ---
-title: Berechtigungsmanager für attributbasierte Zugriffssteuerung
-description: Erfahren Sie, wie Sie mit dem Berechtigungs-Manager in Adobe Experience Platform Berichte erstellen und Zugriffsberechtigungen überprüfen können.
+title: Berechtigungs-Manager für die attributbasierte Zugriffssteuerung
+description: Erfahren Sie, wie Sie den Berechtigungs-Manager in Adobe Experience Platform zum Generieren von Berichten und Überprüfen von Zugriffsberechtigungen verwenden.
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Um auf den [!UICONTROL Berechtigungs-Manager] zugreifen zu können, müssen Sie Produktadministrator sein. Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
+>Um auf [!UICONTROL Berechtigungs-Manager] zugreifen zu können, müssen Sie ein Produktadministrator sein. Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
-Verwenden Sie einfache Abfragen im [!UICONTROL Berechtigungs-Manager], um knappe Berichte zu erstellen, die Ihnen helfen, die Zugriffsverwaltung zu verstehen und Zeit zu sparen, indem Sie Zugriffsberechtigungen für viele Workflows und Granularitätsstufen überprüfen. Sie können [!UICONTROL Berechtigungs-Manager] verwenden, um Benutzer zu finden, die zu einer Benutzergruppe gehören und über bestimmte Zugriffsberechtigungen verfügen, sowie Rollen mit bestimmten Bezeichnungen.
+Verwenden Sie einfache Abfragen im [!UICONTROL Berechtigungs-Manager], um präzise Berichte zu erstellen, die Ihnen das Verständnis der Zugriffsverwaltung erleichtern und Zeit bei der Überprüfung von Zugriffsberechtigungen für viele Workflows und Granularitätsstufen sparen. Sie können [!UICONTROL Berechtigungs-Manager] verwenden, um Benutzer zu finden, die zu einer Benutzergruppe gehören und bestimmte Zugriffsberechtigungen sowie Rollen mit bestimmten Beschriftungen haben.
 
 ## Suchen nach Benutzerinnen und Benutzern innerhalb einer angegebenen Benutzergruppe {#search-users}
 
@@ -27,65 +27,65 @@ Verwenden Sie einfache Abfragen im [!UICONTROL Berechtigungs-Manager], um knappe
 
 Wählen Sie über die Dropdown-Liste das Attribut **[!UICONTROL Benutzer]** aus.
 
-![Das Dropdown-Menü &quot;Attribut&quot;zur Hervorhebung von Benutzern.](../../images/permission-manager/users-select.png)
+![Die Dropdown-Liste mit hervorgehobenen Benutzern.](../../images/permission-manager/users-select.png)
 
-Wählen Sie als Nächstes die **[!UICONTROL Benutzergruppe]** aus, nach der Sie über die Dropdown-Liste suchen möchten.
-
->[!INFO]
->
->[!UICONTROL Benutzergruppe] ist kein Pflichtfeld. Sie können für jeden Bericht nur eine Benutzergruppe auswählen.
-
-![Die Dropdown-Liste Benutzergruppe wurde hervorgehoben.](../../images/permission-manager/user-group-select.png)
-
-Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in einer bestimmten Sandbox angeben. Wählen Sie mithilfe der Dropdown-Liste die Optionen **[!UICONTROL Ressource]**, **[!UICONTROL Aktionen]** und **[!UICONTROL Sandboxes]** aus und wählen Sie dann **[!UICONTROL Ergebnisse anzeigen]** aus.
+Wählen Sie als Nächstes die **[!UICONTROL Benutzergruppe]**, nach der Sie über die Dropdown-Liste suchen möchten.
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Eine Aktion oder Sandbox kann nach dem Hinzufügen entfernt werden, indem Sie die **&#39;x&#39;** neben der Auswahl auswählen, die Sie entfernen möchten.
+>[!UICONTROL Benutzergruppe] ist kein Pflichtfeld. Für jeden Bericht kann nur eine Benutzergruppe ausgewählt werden.
 
-![Die Dropdown-Listen Ressource, Aktionen, Sandboxes und Ergebnisse anzeigen hervorgehoben](../../images/permission-manager/users-additional-attributes-select.png)
+![Das Dropdown-Menü „Benutzergruppe“ ist hervorgehoben.](../../images/permission-manager/user-group-select.png)
 
-Eine Liste der Benutzer und ihre E-Mail-Adresse werden anhand der ausgewählten Kriterien gemeldet. Verwenden Sie das Filtermenü links, um die Attribute und Ergebnisse zu aktualisieren. Wählen Sie für weitere Informationen zu einem bestimmten Benutzer den Benutzernamen aus der Liste aus.
-
-![Der generierte Bericht basierend auf den ausgewählten Attributen hervorgehoben](../../images/permission-manager/users-report.png)
-
-## Suchen nach Rollen mit bestimmten Beschriftungen {#search-roles}
-
-Wählen Sie über die Dropdown-Liste das Attribut **[!UICONTROL Roles]** aus.
+Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in einer bestimmten Sandbox angeben. Wählen Sie die **[!UICONTROL Ressource]**, **[!UICONTROL Aktionen]** und **[!UICONTROL Sandboxes]** über die Dropdown-Liste aus und klicken Sie dann auf **[!UICONTROL Ergebnisse anzeigen]**.
 
 >[!INFO]
 >
->[!UICONTROL Beschriftungen] ist kein Pflichtfeld. Sie können mehrere Beschriftungen auswählen, die nach Auswahl unter dieser Dropdown-Liste aufgeführt werden. Eine Beschriftung kann nach dem Hinzufügen entfernt werden, indem Sie die **&#39;x&#39;** neben der Aktion auswählen.
+>[!UICONTROL Ressource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Eine Aktion oder Sandbox kann entfernt werden, sobald sie hinzugefügt wurde, indem **neben der Auswahl, die Sie entfernen möchten,** x ausgewählt wird.
 
-![ Das Dropdown-Menü zur Hervorhebung von Rollen.](../../images/permission-manager/roles-select.png)
+![Die Dropdown-Listen „Ressource“, „Aktionen“, „Sandboxes“ und „Ergebnisse anzeigen“ sind hervorgehoben](../../images/permission-manager/users-additional-attributes-select.png)
 
-Wählen Sie als Nächstes die **[!UICONTROL Beschriftungen]** aus, nach denen Sie über die Dropdown-Liste suchen möchten.
+Eine Liste der Benutzer und ihre E-Mail-Adresse werden anhand der ausgewählten Kriterien gemeldet. Verwenden Sie das Filtermenü auf der linken Seite, um die Attribute und Ergebnisse zu aktualisieren. Um weitere Informationen zu einem bestimmten Benutzer zu erhalten, wählen Sie den Benutzernamen aus der Liste aus.
 
-![Das Dropdown-Menü &quot;Bezeichnungen&quot;wurde hervorgehoben.](../../images/permission-manager/roles-labels-select.png)
+![Der generierte Bericht basierend auf den ausgewählten Attributen](../../images/permission-manager/users-report.png)
 
-Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in einer bestimmten Sandbox angeben. Wählen Sie mithilfe der Dropdown-Liste die Optionen **[!UICONTROL Ressource]**, **[!UICONTROL Aktionen]** und **[!UICONTROL Sandboxes]** aus und wählen Sie dann **[!UICONTROL Ergebnisse anzeigen]** aus.
+## Nach Rollen mit bestimmten Kennzeichnungen suchen {#search-roles}
+
+Wählen Sie über die Dropdown-Liste das Attribut **[!UICONTROL Rollen]** aus.
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Für jeden Bericht kann nur eine [!UICONTROL Ressource] ausgewählt werden. Eine Aktion oder Sandbox kann nach dem Hinzufügen entfernt werden, indem Sie die **&#39;x&#39;** neben der Auswahl auswählen, die Sie entfernen möchten.
+>[!UICONTROL Kennzeichnungen] ist kein Pflichtfeld. Sie können mehrere Bezeichnungen auswählen, die unterhalb dieser Dropdown-Liste angezeigt werden, sobald Sie sie auswählen. Ein Label kann entfernt werden, sobald es hinzugefügt wurde, indem **&#39;x&#39; neben** Aktion ausgewählt wird.
 
-![Die Dropdown-Listen Ressource, Aktionen, Sandboxes und Ergebnisse anzeigen hervorgehoben](../../images/permission-manager/roles-additional-attributes-select.png)
+![Die Dropdown-Liste mit hervorgehobenen Rollen.](../../images/permission-manager/roles-select.png)
 
-Basierend auf den ausgewählten Kriterien wird eine Liste der Rollen angezeigt. Verwenden Sie das Filtermenü links, um die Attribute und Ergebnisse zu aktualisieren. Um weitere Informationen zu einer bestimmten Rolle zu erhalten, wählen Sie die Rolle aus der Liste aus.
+Wählen Sie anschließend die **[!UICONTROL Kennzeichnungen]**, nach denen Sie mithilfe der Dropdown-Liste suchen möchten.
+
+![Das Dropdown-Menü „Kennzeichnungen“ ist hervorgehoben.](../../images/permission-manager/roles-labels-select.png)
+
+Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in einer bestimmten Sandbox angeben. Wählen Sie die **[!UICONTROL Ressource]**, **[!UICONTROL Aktionen]** und **[!UICONTROL Sandboxes]** über die Dropdown-Liste aus und klicken Sie dann auf **[!UICONTROL Ergebnisse anzeigen]**.
+
+>[!INFO]
+>
+>[!UICONTROL Ressource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Für [!UICONTROL  Bericht kann nur ] Ressource ausgewählt werden. Eine Aktion oder Sandbox kann entfernt werden, sobald sie hinzugefügt wurde, indem **neben der Auswahl, die Sie entfernen möchten,** x ausgewählt wird.
+
+![Die Dropdown-Listen „Ressource“, „Aktionen“, „Sandboxes“ und „Ergebnisse anzeigen“ sind hervorgehoben](../../images/permission-manager/roles-additional-attributes-select.png)
+
+Basierend auf den ausgewählten Kriterien wird eine Liste der Rollen angezeigt. Verwenden Sie das Filtermenü auf der linken Seite, um die Attribute und Ergebnisse zu aktualisieren. Um weitere Informationen zu einer bestimmten Rolle zu erhalten, wählen Sie die Rolle in der Liste aus.
 
 Die folgenden Informationen werden für jede Rolle angezeigt, die Ihren Kriterien entspricht:
 
 | Attribut | Beschreibung |
 | --- | --- |
 | Beschreibung | Eine kurze Beschreibung der Rolle. |
-| Beschriftungen | Eine Liste der mit der Rolle verknüpften Bezeichnungen. |
-| Sandboxes | Eine Liste der Sanboxes, die diese Rolle enthalten. |
-| Geändert am | Datum und Zeitstempel der letzten Aktualisierung der Rolle. |
+| Beschriftungen | Eine Liste von Beschriftungen, die mit der Rolle verknüpft sind. |
+| Sandboxes | Eine Liste von Sandboxes, die diese Rolle enthalten. |
+| Geändert um | Datum und Zeitstempel der letzten Aktualisierung der Rolle. |
 | Erstellung: | Datum und Zeitstempel der Erstellung der Rolle. |
-| Erstellt von | Details zum Ersteller der Rolle. |
+| Erstellt von | Details des Erstellers der Rolle. |
 
-![Der generierte Bericht basierend auf den ausgewählten Attributen hervorgehoben](../../images/permission-manager/roles-report.png)
+![Der generierte Bericht basierend auf den ausgewählten Attributen](../../images/permission-manager/roles-report.png)
 
 ## Nächste Schritte
 
-Jetzt haben Sie gelernt, wie Sie Berichte für Benutzer und Rollen erstellen. Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../overview.md).
+Sie haben jetzt gelernt, wie Sie Berichte für Benutzer und Rollen erstellen. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[ Zugriffssteuerung - Übersicht](../overview.md).

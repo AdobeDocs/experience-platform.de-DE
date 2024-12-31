@@ -13,13 +13,13 @@ ht-degree: 80%
 
 # Automatische Richtliniendurchsetzung
 
-Datennutzungsbezeichnungen und -richtlinien sind für alle Adobe Experience Platform-Benutzer verfügbar. Definieren Sie Datennutzungsrichtlinien und wenden Sie Datennutzungsbezeichnungen an, um sicherzustellen, dass vertrauliche, identifizierbare oder vertragliche Daten genau verarbeitet werden. Diese Maßnahmen helfen Ihnen dabei, die Data Governance-Regeln Ihres Unternehmens hinsichtlich des Zugriffs, der Verarbeitung, der Speicherung und der Freigabe von Daten durchzusetzen.
+Datennutzungsbeschriftungen und -richtlinien stehen allen Adobe Experience Platform-Benutzern zur Verfügung. Definieren Sie Datennutzungsrichtlinien und wenden Sie Datennutzungskennzeichnungen an, um sicherzustellen, dass vertrauliche, identifizierbare oder vertragliche Daten korrekt verarbeitet werden. Diese Maßnahmen helfen bei der Durchsetzung der Data-Governance-Regeln Ihres Unternehmens darüber, wie Daten aufgerufen, verarbeitet, gespeichert und freigegeben werden können.
 
-Um Ihre Organisation vor potenziellen Risiken und Verbindlichkeiten zu schützen, erzwingt Platform automatisch Nutzungsrichtlinien, falls beim Aktivieren von Zielgruppen für Ziele Verstöße auftreten.
+Um Ihr Unternehmen vor potenziellen Risiken und Verbindlichkeiten zu schützen, erzwingt Platform automatisch Nutzungsrichtlinien, falls beim Aktivieren von Zielgruppen für Ziele Verstöße auftreten.
 
 >[!IMPORTANT]
 >
->Einverständnisrichtlinien und die automatische Durchsetzung von Einwilligungsrichtlinien sind nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
+>Einverständnisrichtlinien und die automatische Durchsetzung von Einverständnisrichtlinien sind nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
 Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data Governance und Einverständnis. Informationen zu Richtlinien für die Zugriffssteuerung finden Sie in der Dokumentation zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
@@ -70,8 +70,8 @@ Jeder Schritt in der oben genannten Timeline stellt eine Entität dar, die wie i
 | --- | --- |
 | Datensatz | Datensätze enthalten Datennutzungskennzeichnungen (angewendet auf Schemafeld- oder Datensatzebene), mit denen festgelegt wird, für welche Anwendungsfälle der komplette Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Einverständnisrichtlinien haben, werden alle Profile, die nicht den Einverständnisattributanforderungen Ihrer Richtlinien entsprechen, aus Zielgruppen ausgeschlossen, die für ein Ziel aktiviert sind. |
 | Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
-| Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthalten, übernimmt die Zielgruppe alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren vererbte Bezeichnungen anhand der für das Ziel geltenden Richtlinien je nach Marketing-Anwendungsfall eingeschränkt sind. |
-| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren Nutzungsbezeichnungen für die Marketing-Aktion des Zielziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
+| Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthalten, übernimmt die Zielgruppe alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren übernommene Kennzeichnungen durch die geltenden Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
+| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren Nutzungskennzeichnungen für die Marketing-Aktion des Ziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
 
 >[!IMPORTANT]
 >
@@ -94,35 +94,35 @@ Wenn ein Richtlinienverstoß beim Versuch auftritt, eine Zielgruppe zu aktiviere
 
 Wählen Sie einen Richtliniennamen aus, um Details zu diesem Verstoß anzuzeigen.
 
-![Ein Dialogfeld, das anzeigt, dass eine Richtlinienverletzung aufgetreten ist, wobei der Richtlinienname hervorgehoben ist.](../images/enforcement/violation-policy-select.png)
+![Ein Dialogfeld, das einen Richtlinienverstoß anzeigt, wobei der Richtlinienname hervorgehoben ist.](../images/enforcement/violation-policy-select.png)
 
 Die Meldung zum Verstoß enthält eine Zusammenfassung der verletzten Richtlinie. Hierzu gehören die Bedingungen, die die Richtlinie gemäß Konfiguration überprüft, die spezifische Aktion, durch die der Verstoß ausgelöst wurde, sowie eine Liste möglicher Lösungen für das Problem.
 
-![Ein Dialogfeld für einen Richtlinienverstoß, in dem die Zusammenfassung der Verstöße hervorgehoben ist.](../images/enforcement/violation-summary.png)
+![Dialogfeld mit Richtlinienverletzung und hervorgehobener Zusammenfassung der Verletzung.](../images/enforcement/violation-summary.png)
 
 Unter der Zusammenfassung der Verletzung wird ein Datenherkunftsdiagramm angezeigt, das Ihnen veranschaulicht, welche Datensätze, Zusammenführungsrichtlinien, Zielgruppen und Ziele an der Richtlinienverletzung beteiligt waren. Die Entität, die Sie aktuell ändern, wird im Diagramm hervorgehoben, sodass klar ist, welcher Punkt im Fluss die Verletzung verursacht. Sie können einen Entitätsnamen im Diagramm auswählen, um die Detailseite für die jeweilige Entität zu öffnen.
 
-![Ein Dialogfeld für einen Richtlinienverstoß mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
+![Dialogfeld „Richtlinienverletzung“ mit hervorgehobenem Datenherkunftsdiagramm.](../images/enforcement/data-lineage.png)
 
-Sie können auch das Symbol **[!UICONTROL Filter]** (![Filtersymbol) verwenden.](/help/images/icons/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
+Sie können auch das Symbol **[!UICONTROL Filter]** verwenden (![Filtersymbol.](/help/images/icons/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
 
-![Ein Dialogfeld mit einem Richtlinienverstoß, in dem der Filter für die Datenherkunft und das Dropdown-Menü hervorgehoben sind.](../images/enforcement/lineage-filter.png)
+![Dialogfeld „Richtlinienverletzung“ mit hervorgehobenem Filter „Datenherkunft“ und Dropdown-Menü.](../images/enforcement/lineage-filter.png)
 
 Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie **[!UICONTROL Pfadansicht]**.
 
-![Ein Dialogfeld für einen Richtlinienverstoß mit hervorgehobener Ansicht des Datenherstellungspfads.](../images/enforcement/list-view.png)
+![Das Dialogfeld „Richtlinienverletzung“ mit hervorgehobener Ansicht „Datenherkunftspfad“.](../images/enforcement/list-view.png)
 
 #### Labels erfolgreich angewendet {#labels-successfully-applied}
 
-Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschriften, wird möglicherweise ein Dialogfeld zur Verletzung von Governance-Richtlinien angezeigt, sobald Sie Beschriftungen auf Ihr Schema anwenden. In diesem Fall können Sie einen Teil Ihres Schemas erfolgreich beschriften. Die Registerkarte [!UICONTROL Bezeichnungen, die erfolgreich angewendet wurden] gibt an, welche Bezeichnungen erfolgreich angewendet wurden, da für dieses Feld keine Richtlinienbeschränkungen gelten.
+Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschriften, kann ein Dialogfeld für einen Verstoß gegen Governance-Richtlinien angezeigt werden, sobald Sie Kennzeichnungen auf Ihr Schema anwenden. In diesem Fall können Sie einen Teil Ihres Schemas erfolgreich beschriften. Die [!UICONTROL Kennzeichnungen erfolgreich angewendet] gibt an, welche Kennzeichnungen erfolgreich angewendet wurden, da es für dieses Feld keine Richtlinienbeschränkungen gibt.
 
-Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
+Verwenden Sie das Datenherkunftsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie den Titel zu Ihrem Schemafeld hinzufügen können.
 
-![Ein Dialogfeld für einen Richtlinienverstoß mit der Registerkarte [!UICONTROL Bezeichnungen erfolgreich angewendet] wurde hervorgehoben.](../images/enforcement/labels-successfully-applied.png)
+![Dialogfeld „Richtlinienverletzung“ mit hervorgehobener [!UICONTROL  „Kennzeichnungen erfolgreich angewendet]&quot;](../images/enforcement/labels-successfully-applied.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie Ihre [Zustimmungsrichtlinien](../policies/user-guide.md) die Reichweite Ihrer Zielgruppe während der [Überprüfungsphase des Workflows [!UICONTROL Ziele aktivieren]](#pre-activation-evaluation) beeinflussen.
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie während der Überprüfungsphase [ Workflows ](../policies/user-guide.md)Ziele aktivieren] sehen, wie sich Ihre [Einverständnisrichtlinien[!UICONTROL  auf die Reichweite Ihrer Zielgruppe auswirken](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Str
 
 #### Auswertung vor der Aktivierung {#pre-activation-evaluation}
 
-Sobald Sie beim Aktivieren eines Ziels ](../../destinations/ui/activation-overview.md) den Schritt **[!UICONTROL Überprüfen]** erreicht haben, wählen Sie **[!UICONTROL Angewandte Richtlinien anzeigen]** aus.[
+Wenn Sie beim Aktivieren **[!UICONTROL Ziels den Schritt]**&#x200B;Überprüfen[ erreicht haben](../../destinations/ui/activation-overview.md) wählen Sie **[!UICONTROL Angewendete Richtlinien anzeigen]**.
 
 ![Schaltfläche „Angewendete Richtlinien anzeigen“ im Workflow „Ziel aktivieren“](../images/enforcement/view-applied-policies.png)
 
-Es wird ein Dialogfeld mit einer Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Zustimmungsrichtlinien auf die zu aktivierende Zielgruppe anzeigen können.
+Es wird ein Dialogfeld für die Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Einverständnisrichtlinien auf die einverstandene Zielgruppe der zu aktivierenden Zielgruppen anzeigen können.
 
 ![Dialogfeld für die Überprüfung von Einverständnisrichtlinien in der Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
 

@@ -1,6 +1,6 @@
 ---
-title: SQL Insights for Extended App Reporting
-description: Erfahren Sie, wie Sie mit SQL-Abfragen Einblicke in Ihre benutzerdefinierten Dashboards generieren können.
+title: SQL Insights für erweiterte App-Berichte
+description: Erfahren Sie, wie Sie mit SQL-Abfragen Einblicke für Ihre benutzerdefinierten Dashboards generieren können.
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
@@ -11,146 +11,146 @@ ht-degree: 0%
 
 # SQL Insights für erweiterte App-Berichte
 
-Verwenden Sie benutzerdefinierte SQL-Abfragen, um Einblicke aus verschiedenen strukturierten Datensätzen effektiv zu extrahieren. Technische Mitarbeiter können den Abfragepro-Modus verwenden, um komplexe Analysen mit SQL durchzuführen und diese Analyse dann über Diagramme in Ihrem benutzerdefinierten Dashboard für nicht technische Benutzer freizugeben oder in CSV-Dateien zu exportieren. Diese Methode der Insight-Erstellung eignet sich gut für Tabellen mit klaren Beziehungen und ermöglicht eine stärkere Anpassung innerhalb Ihrer Einblicke und Filter, die für Nischenanwendungsfälle geeignet sind.
+Verwenden Sie benutzerdefinierte SQL-Abfragen, um effektiv Einblicke aus verschiedenen strukturierten Datensätzen zu extrahieren. Technische Mitarbeiter können den Abfragemodus verwenden, um komplexe Analysen mit SQL durchzuführen und diese Analyse dann über Diagramme in Ihrem benutzerdefinierten Dashboard oder CSV-Dateien für nicht-technische Benutzer freizugeben. Diese Methode der Erstellung von Einblicken ist gut für Tabellen mit klaren Beziehungen geeignet und ermöglicht einen größeren Grad der Anpassung in Ihren Einblicken und Filtern, die für Nischenanwendungsfälle geeignet sind.
 
 >[!IMPORTANT]
 >
->Der Pro-Modus für Abfragen steht nur Benutzern zur Verfügung, die die [Data Distiller SKU](../../query-service/data-distiller/overview.md) erworben haben.
+>Der Query Pro-Modus ist nur für Benutzer verfügbar, die die [Data Distiller SKU) ](../../query-service/data-distiller/overview.md) haben.
 
-Um Einblicke aus SQL zu generieren, müssen Sie zunächst ein Dashboard erstellen.
+Um Insights aus SQL zu generieren, müssen Sie zunächst ein Dashboard erstellen.
 
-## Benutzerdefiniertes Dashboard erstellen {#create-custom-dashboard}
+## Erstellen eines benutzerdefinierten Dashboards {#create-custom-dashboard}
 
-Um ein benutzerdefiniertes Dashboard zu erstellen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Dashboards]** aus, um den Arbeitsbereich &quot;Dashboards&quot;zu öffnen. Wählen Sie dann **[!UICONTROL Dashboard erstellen]** aus.
+Um ein benutzerdefiniertes Dashboard zu erstellen, wählen Sie **[!UICONTROL Dashboards]** aus dem linken Navigationsbereich aus, um den Dashboard-Arbeitsbereich zu öffnen. Wählen Sie anschließend **[!UICONTROL Dashboard erstellen]** aus.
 
-![Der Dashboard-Bestand mit Dashboard erstellen-Markierung.](../images/sql-insights-query-pro-mode/create-dashboard.png)
+![Das Dashboard-Inventar mit hervorgehobener Option „Dashboard erstellen“.](../images/sql-insights-query-pro-mode/create-dashboard.png)
 
-Das Dialogfeld **[!UICONTROL Dashboard erstellen]** wird angezeigt. Es gibt zwei Optionen, aus denen Sie Ihre Dashboard-Erstellungsmethode auswählen können. Um Ihre Einblicke zu erstellen, können Sie entweder ein vorhandenes Datenmodell mit dem Designmodus [[!UICONTROL Geführter Entwurf]](../standard-dashboards.md) oder Ihre eigene SQL mit dem Pro-Modus [!UICONTROL Abfrage] verwenden.
+Das **[!UICONTROL Dashboard erstellen]** wird angezeigt. Es gibt zwei Optionen, aus denen Sie Ihre Methode zur Dashboard-Erstellung auswählen können. Um Ihre Einblicke zu erstellen, können Sie entweder ein vorhandenes Datenmodell mit dem [[!UICONTROL Geführte Design-Modus]](../standard-dashboards.md) oder Ihre eigene SQL mit dem [!UICONTROL Query pro-Modus] verwenden.
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
-Die Verwendung eines vorhandenen Datenmodells bietet die Vorteile eines strukturierten, effizienten und skalierbaren Frameworks, das auf Ihre spezifischen Geschäftsanforderungen zugeschnitten ist. Informationen zum [Erstellen von Einblicken aus einem vorhandenen Datenmodell](../standard-dashboards.md#create-widget) finden Sie im Handbuch zum benutzerdefinierten Dashboard.
+Die Verwendung eines vorhandenen Datenmodells bietet die Vorteile eines strukturierten, effizienten und skalierbaren Frameworks, das auf Ihre spezifischen Geschäftsanforderungen zugeschnitten ist. Informationen zum [ (Erstellen von Einblicken aus einem vorhandenen Datenmodell](../standard-dashboards.md#create-widget) finden Sie im Handbuch zum benutzerdefinierten Dashboard .
 
-Insights, die aus SQL-Abfragen generiert werden, bieten deutlich mehr Flexibilität und Anpassung. Technische Mitarbeiter können den Abfragepro-Modus verwenden, um eine komplexe Analyse von SQL durchzuführen und diese Analyse dann über diese Dashboard-Funktion für nicht technische Benutzer freizugeben. Wählen Sie **[!UICONTROL promode abfragen]** gefolgt von **[!UICONTROL save]**.
+Erkenntnisse, die aus SQL-Abfragen generiert werden, bieten eine viel größere Flexibilität und Anpassung. Technische Mitarbeiter können den Abfragemodus verwenden, um komplexe Analysen zu SQL durchzuführen und diese Analyse dann über diese Dashboard-Funktion für nicht-technische Benutzer freizugeben. Wählen **[!UICONTROL Query pro-Modus]** gefolgt von **[!UICONTROL Speichern]** aus.
 
 >[!NOTE]
 >
->Nachdem Sie eine Auswahl getroffen haben, können Sie diese Auswahl in diesem Dashboard nicht mehr ändern. Stattdessen müssen Sie ein neues Dashboard mit einer anderen Dashboard-Erstellungsmethode erstellen.
+>Nachdem Sie eine Auswahl getroffen haben, können Sie diese Auswahl in diesem Dashboard nicht mehr ändern. Stattdessen müssen Sie ein neues Dashboard mit einer anderen Methode zur Dashboard-Erstellung erstellen.
 
-![ Das Dialogfeld [!UICONTROL Dashboard erstellen] mit Abfrage pro -Modus und Speichern hervorgehoben.](../images/sql-insights-query-pro-mode/query-pro-mode.png)
+![Das Dialogfeld [!UICONTROL Dashboard erstellen] mit Hervorhebung von Query Pro-Modus und Speichern.](../images/sql-insights-query-pro-mode/query-pro-mode.png)
 
-## Übersicht über den Pro-Modus in Abfragen {#query-pro-mode}
+## Query Pro-Modus - Übersicht {#query-pro-mode}
 
-Query pro mode ist ein auf SQL Editor basierender Workflow, der Sie durch den Prozess der Generierung von Einblicken mit benutzerdefinierten SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche führt. Bevor Sie mit benutzerdefinierten SQL-Abfragen Einblicke generieren können, müssen Sie zunächst ein Dashboard erstellen.
+Query Pro-Modus ist ein SQL-Editor-basierter Workflow, der Sie durch den Prozess der Generierung von Insights mit benutzerdefinierten SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche führt. Bevor Sie Insights mit benutzerdefinierten SQL-Abfragen generieren können, müssen Sie zunächst ein Dashboard erstellen.
 
 ## SQL erstellen {#compose-sql}
 
-Nachdem Sie sich dafür entschieden haben, ein Dashboard mit Query Pro-Modus zu erstellen, wird das Dialogfeld **[!UICONTROL SQL eingeben]** angezeigt. Wählen Sie eine Datenbank (Insight-Datenmodell) aus, die aus dem Dropdown-Menü abgefragt werden soll, und geben Sie eine geeignete Abfrage für Ihren Datensatz im Abfragepro-Editor ein.
+Nachdem Sie sich entschieden haben, ein Dashboard mit Query Pro-Modus zu erstellen, wird das **[!UICONTROL SQL eingeben]**-Dialogfeld angezeigt. Wählen Sie aus dem Dropdown-Menü eine Datenbank (Insights-Datenmodell) aus, die Sie abfragen möchten, und geben Sie im Abfrage-Editor eine geeignete Abfrage für Ihren Datensatz ein.
 
 >[!NOTE]
 >
->Der Pro-Modus &quot;Abfrage&quot;steht nur Benutzern zur Verfügung, die die Data Distiller-SKU erworben haben. Der Designmodus [[!UICONTROL Geführter Entwurf]](../standard-dashboards.md) steht allen Benutzern zur Verfügung, um Einblicke aus einem vorhandenen Datenmodell zu erstellen.
+>Der Pro-Modus „Abfrage“ ist nur für Benutzende verfügbar, die die Data Distiller SKU erworben haben. Der [[!UICONTROL Geführte Design-Modus]](../standard-dashboards.md) steht allen Benutzern zur Verfügung, um Einblicke aus einem vorhandenen Datenmodell zu erstellen.
 
-Informationen zu den Benutzeroberflächen-Elementen finden Sie im [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md#query-authoring) .
+Weitere Informationen [ Benutzeroberflächenelemente finden Sie ](../../query-service/ui/user-guide.md#query-authoring) Benutzerhandbuch zum Abfrage-Editor .
 
-![Das Dialogfeld [!UICONTROL SQL eingeben] mit dem Dropdown-Menü &quot;Datensatz&quot;und dem Ausführungssymbol wird hervorgehoben. Das Dialogfeld enthält eine ausgefüllte SQL-Abfrage und die Registerkarte &quot;Abfrageparameter&quot;wird angezeigt.](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
+![Das Dialogfeld [!UICONTROL SQL eingeben] mit hervorgehobenem Dropdown-Menü „Datensatz“ und dem Symbol „Ausführen“. Das Dialogfeld enthält eine ausgefüllte SQL-Abfrage und die Registerkarte „Abfrageparameter“ wird angezeigt.](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
 
 ### Abfrageparameter {#query-parameters}
 
-Um [global](./filters/global-filter.md) oder [Datumsfilter](./filters/date-filter.md) einzubeziehen, muss Ihre Abfrage **** Abfrageparameter verwenden. Beim Erstellen Ihrer Anweisung im Abfragepro-Modus müssen Sie Beispielwerte angeben, wenn Ihre Abfrage Abfrageparameter verwendet. Mit den Beispielwerten können Sie die SQL-Anweisung ausführen und das Diagramm erstellen. Beachten Sie, dass die Beispielwerte, die Sie beim Erstellen Ihrer Anweisung angeben, durch die tatsächlichen Werte ersetzt werden, die Sie für den Datums- oder globalen Filter zur Laufzeit auswählen.
+Um [globale](./filters/global-filter.md) oder [Datumsfilter einzuschließen](./filters/date-filter.md) muss **Abfrage**. Wenn Sie Ihre Anweisung im Abfragemodus erstellen, müssen Sie Beispielwerte angeben, wenn Ihre Abfrage Abfrageparameter verwendet. Anhand der Beispielwerte können Sie die SQL-Anweisung ausführen und das Diagramm erstellen. Beachten Sie, dass die Beispielwerte, die Sie beim Erstellen Ihrer Anweisung angeben, durch die tatsächlichen Werte ersetzt werden, die Sie zur Laufzeit für den Datums- oder globalen Filter auswählen.
 
 >[!IMPORTANT]
 >
->Wenn Sie einen globalen Filter verwenden möchten, müssen Sie einen Abfrageparameter in Ihrer SQL platzieren und diesen Abfrageparameter dann mit dem globalen Filter im Widget Composer verknüpfen. Im folgenden Screenshot wird `CONSENT_VALUE_FILTER` in der SQL als Abfrageparameter für einen globalen Filter verwendet. Weitere Informationen dazu finden Sie in der Dokumentation zu [globalen Filtern](./filters/global-filter.md#enable-global-filter) .
+>Wenn Sie einen globalen Filter verwenden möchten, müssen Sie einen Abfrageparameter in Ihrer SQL platzieren und diesen Abfrageparameter dann mit dem globalen Filter im Widget-Composer verknüpfen. Im folgenden Screenshot wird `CONSENT_VALUE_FILTER` in SQL als Abfrageparameter für einen globalen Filter verwendet. Weitere Informationen dazu finden [ in ](./filters/global-filter.md#enable-global-filter) Dokumentation zum globalen Filter .
 
-Um Ihre Abfrage auszuführen, wählen Sie das Ausführungssymbol (![Ausführungssymbol) aus.](/help/images/icons/play.png)). Der Abfrage-Editor zeigt die Registerkarte Ergebnisse an. Wählen Sie als Nächstes **[!UICONTROL Auswählen]** aus, um die Konfiguration zu bestätigen und den Widget Composer zu öffnen.
+Um Ihre Abfrage auszuführen, wählen Sie das Symbol „Ausführen“ (![das Symbol „Ausführen„).](/help/images/icons/play.png)). Der Abfrage-Editor zeigt die Registerkarte Ergebnisse an. Bestätigen Sie als Nächstes Ihre Konfiguration und öffnen Sie den Widget-Composer, indem Sie **[!UICONTROL Auswählen]** auswählen.
 
 >[!TIP]
 >
->Wenn Ihre Abfrage Abfrageparameter verwendet, führen Sie die Abfrage einmal aus, um alle verwendeten Abfrageparameterschlüssel vorab auszufüllen. Die Abfrage schlägt fehl, aber die Benutzeroberfläche zeigt automatisch die Registerkarte Abfrageparameter an und listet alle enthaltenen Schlüssel auf. Fügen Sie die entsprechenden Werte für Ihre Schlüssel hinzu.
+>Wenn Ihre Abfrage Abfrageparameter verwendet, führen Sie die Abfrage einmal aus, um alle verwendeten Abfrageparameterschlüssel vorauszufüllen. Die Abfrage schlägt fehl, aber die Benutzeroberfläche zeigt automatisch die Registerkarte Abfrageparameter an und listet alle enthaltenen Schlüssel auf. Fügen Sie die entsprechenden Werte für Ihre Schlüssel hinzu.
 
-![Das Dialogfeld [!UICONTROL SQL eingeben] mit SQL-Eingabe, die Registerkarte &quot;Ergebnisse&quot;wird angezeigt und die Option &quot;Auswählen&quot;wurde hervorgehoben.](../images/sql-insights-query-pro-mode/enter-sql-select.png)
+![Das Dialogfeld [!UICONTROL SQL eingeben] mit SQL-Eingabe, die Registerkarte „Ergebnisse“ wird angezeigt, und „Auswählen“ ist hervorgehoben.](../images/sql-insights-query-pro-mode/enter-sql-select.png)
 
 ## Widget befüllen {#populate-widget}
 
-Der Widget Composer wird jetzt mit den Spalten aus der ausgeführten SQL gefüllt. Der Typ des Dashboards wird oben links angezeigt, in diesem Fall ist er [!UICONTROL Manueller SQL-Eintrag]. Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](/help/images/icons/edit.png)), um die SQL an jedem Punkt zu bearbeiten.
+Der Widget-Composer wird jetzt mit den Spalten aus der ausgeführten SQL gefüllt. Der Typ des Dashboards wird oben links angezeigt, in diesem Fall ist es [!UICONTROL Manuelle SQL-Eingabe]. Wählen Sie das Stiftsymbol (![Bleistiftsymbol) aus.](/help/images/icons/edit.png)), um die SQL jederzeit zu bearbeiten.
 
 >[!TIP]
 >
->Die verfügbaren Attribute sind Spalten, die aus der ausgeführten SQL entnommen werden.
+>Die verfügbaren Attribute sind Spalten, die aus der ausgeführten SQL übernommen werden.
 
-Verwenden Sie zum Erstellen Ihres Widgets die in der Spalte [!UICONTROL Attribute] aufgelisteten Attribute. Sie können die Suchleiste verwenden, um nach Attributen zu suchen oder in der Liste einen Bildlauf durchzuführen.
+Um Ihr Widget zu erstellen, verwenden Sie die in der Spalte [!UICONTROL Attribute] aufgelisteten Attribute. Sie können die Suchleiste verwenden, um nach Attributen zu suchen oder durch die Liste zu scrollen.
 
-![Der Widget Composer mit der Erstellungsmethode und der Attributspalte hervorgehoben.](../images/sql-insights-query-pro-mode/creation-method-and-attribute-column.png)
+![Der Widget-Composer mit der hervorgehobenen Erstellungsmethode und Attributspalte.](../images/sql-insights-query-pro-mode/creation-method-and-attribute-column.png)
 
 ### Attribute hinzufügen {#add-attributes}
 
-Um Ihrem Widget ein Attribut hinzuzufügen, wählen Sie das Pluszeichen (![A Pluszeichen) aus.](/help/images/icons/add-circle.png)) neben einem Attributnamen. Im angezeigten Dropdown-Menü können Sie der Grafik aus den von Ihrer SQL bestimmten Optionen ein Attribut hinzufügen. Verschiedene Diagrammtypen haben unterschiedliche Optionen, z. B. ein Dropdown-Menü für die X- und Y-Achse.
+Um ein Attribut zu Ihrem Widget hinzuzufügen, wählen Sie das Pluszeichen (![A Pluszeichen) aus.](/help/images/icons/add-circle.png)) neben einem Attributnamen. Im angezeigten Dropdown-Menü können Sie dem Diagramm aus den von Ihrer SQL bestimmten Optionen ein Attribut hinzufügen. Verschiedene Diagrammtypen haben unterschiedliche Optionen, z. B. eine Dropdown-Liste für die X- und Y-Achse.
 
-In diesem Ringdiagramm-Beispiel sind die Optionen Größe und Farbe. Farbe unterteilt die Ringdiagrammergebnisse und die Größe ist die tatsächlich verwendete Metrik. Fügen Sie dem Feld [!UICONTROL Farbe] ein Attribut hinzu, um die Ergebnisse basierend auf ihrer Zusammensetzung in verschiedene Farben zu unterteilen.
+In diesem Beispiel für ein Ringdiagramm sind die Optionen Größe und Farbe. Farbe schlüsselt die Ergebnisse des Ringdiagramms auf und die Größe ist die tatsächlich verwendete Metrik. Fügen Sie dem Feld [!UICONTROL Farbe] ein Attribut hinzu, um die Ergebnisse basierend auf ihrer Komposition dieses Attributs in verschiedene Farben aufzuteilen.
 
 >[!TIP]
 >
->Wählen Sie das Pfeilsymbol nach oben und unten (![Das Pfeilsymbol nach oben und unten) aus.](/help/images/icons/switch.png)), um die Anordnung der X- und Y-Achse in Balken- oder Liniendiagrammen zu ändern.
+>Wählen Sie die Pfeile nach oben und unten aus ![Das Pfeilsymbol nach oben und unten.](/help/images/icons/switch.png)), um die Anordnung der X- und Y-Achse auf Balken- oder Liniendiagrammen zu ändern.
 
-![Der Widget Composer mit dem Dropdown-Menü &quot;Add-Symbol&quot;und hervorgehobenen Umschalt-Pfeilen.](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
+![Der Widget-Composer mit hervorgehobener Dropdown-Liste mit dem Add-Symbol und hervorgehobenen Umschalt-Pfeilen.](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
 
-Um den Diagrammtyp oder das Diagramm Ihres Widgets zu ändern, wählen Sie aus den verfügbaren Optionen der Dropdown-Liste [!UICONTROL Markierungen] aus. Zu den Optionen gehören [!UICONTROL Linie], [!UICONTROL Donut], [!UICONTROL Big number] und [!UICONTROL Balken]. Nach der Auswahl wird eine Vorschau-Visualisierung der aktuellen Einstellungen Ihres Widgets generiert.
+Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie aus den verfügbaren Optionen der Dropdown-Liste [!UICONTROL Markierungen] aus. Die Optionen umfassen [!UICONTROL Linie], [!UICONTROL Ringdiagramm], [!UICONTROL Große ] und [!UICONTROL Balken]. Nach der Auswahl wird eine Vorschauvisualisierung der aktuellen Einstellungen Ihres Widgets generiert.
 
-![Der Widget Composer mit hervorgehobener Widget-Vorschau.](../images/sql-insights-query-pro-mode/widget-preview.png)
+![Der Widget-Composer mit der hervorgehobenen Widget-Vorschau.](../images/sql-insights-query-pro-mode/widget-preview.png)
 
 ## Erweiterte Tabellenattribute {#advanced-attributes}
 
-Um eine automatische Sortierungsfunktion für alle oder alle Spalten in Ihren Tabellen anzuwenden, wählen Sie **[!UICONTROL Bearbeiten]** aus, um das gesamte Dashboard zu bearbeiten.
+Um automatische Sortierfunktionen auf eine oder alle Spalten in Ihren Tabellen anzuwenden, wählen Sie **[!UICONTROL Bearbeiten]** aus, um das gesamte Dashboard zu bearbeiten.
 
-![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../images/sql-insights-query-pro-mode/advanced-edit-dashboard.png)
+![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/advanced-edit-dashboard.png)
 
-Wählen Sie die Auslassungszeichen (`...`) im Tabellendiagramm aus, dem Sie eine Spaltensortierung hinzufügen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
+Klicken Sie auf die Auslassungszeichen (`...`) im Tabellendiagramm, dem Sie eine Spaltensortierung hinzufügen möchten, und klicken Sie dann auf **[!UICONTROL Bearbeiten]**.
 
-![Eine Tabelle, die das Ellipsenmenü mit hervorgehobener Option &quot;Bearbeiten&quot;anzeigt.](../images/sql-insights-query-pro-mode/advanced-table-edit.png)
+![Eine Tabelle mit dem Auslassungsmenü und hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/advanced-table-edit.png)
 
-Um die Sortierung für eine Spalte zu aktivieren, aktivieren Sie die Kontrollkästchen **[!UICONTROL Sortable]** .
+Um die Sortierung für eine beliebige Spalte zu aktivieren, aktivieren Sie die Kontrollkästchen **[!UICONTROL sortierbar]**.
 
-![Seite zur Tabellenbearbeitung mit markierten sortierbaren Kontrollkästchen.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
+![Seite „Tabelle bearbeiten“ mit hervorgehobenen, sortierbaren Kontrollkästchen.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
-Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) in der rechten Leiste, um den Bereich [!UICONTROL Eigenschaften] zu öffnen. Wählen Sie im Bereich **[!UICONTROL Eigenschaften]** die Spalte **[!UICONTROL Standardsortierung]** aus der Dropdown-Liste aus und wählen Sie dann mithilfe der Dropdown-Liste die Sortierrichtung **[!UICONTROL 5} aus.]** Wählen Sie abschließend **[!UICONTROL Speichern und schließen]**.
+Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um das Bedienfeld [!UICONTROL Eigenschaften] zu öffnen. Wählen Sie im Bedienfeld **[!UICONTROL Eigenschaften]** mithilfe der Dropdown-Liste die Spalte **[!UICONTROL Standardsortierung]** und wählen Sie dann mithilfe der Dropdown-Liste die **[!UICONTROL Sortierrichtung]** aus. Wählen Sie abschließend **[!UICONTROL Speichern und schließen]** aus.
 
-![Der Widget Composer mit dem Eigenschaftensymbol, der Standardsortierung, der Sortierrichtung sowie dem hervorgehobenen Speichern und Schließen.](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
+![Der Widget-Composer mit dem Symbol „Eigenschaften“, hervorgehobener Standardsortierung, Sortierrichtung und hervorgehobener Schaltfäche „Speichern und schließen“.](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
 
-Weitere Informationen zur Verwendung der Sortierungs-, Größenänderungs- und Paginierungsfunktionen finden Sie unter [Mehr anzeigen](./view-more.md).
+Weitere Informationen zur Verwendung der Funktionen zum Sortieren, Ändern der Spaltengröße und zur Paginierung finden Sie unter [Weitere Informationen](./view-more.md).
 
 ## Widget-Eigenschaften {#properties}
 
-Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Geben Sie im Bereich [!UICONTROL Eigenschaften] im Textfeld **[!UICONTROL Widget-Titel]** einen Namen für das Widget ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
+Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL  Bedienfeld ]Eigenschaften“ einen Namen für das Widget in das Textfeld **[!UICONTROL Widget-Titel]** ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
 
 >[!NOTE]
 >
->Die in der Seitenleiste der Eigenschaften verfügbaren spezifischen Felder hängen vom bearbeiteten Diagrammtyp ab.
+>Die in der Seitenleiste „Eigenschaften“ verfügbaren spezifischen Felder variieren je nach dem Diagrammtyp, den Sie bearbeiten.
 
-![Der Widget Composer mit dem Eigenschaftensymbol und dem Widget-Titelfeld hervorgehoben.](../images/sql-insights-query-pro-mode/widget-properties-title-text.png)
+![Der Widget-Composer mit dem Eigenschaftensymbol und dem hervorgehobenen Feld „Widget-Titel“.](../images/sql-insights-query-pro-mode/widget-properties-title-text.png)
 
 ## Widget speichern {#save-widget}
 
-Durch das Speichern im Widget Composer wird das Widget lokal in Ihrem Dashboard gespeichert. Wenn Sie Ihre Arbeit speichern und später fortsetzen möchten, wählen Sie **[!UICONTROL Speichern]**. Ein Häkchen-Symbol unter dem Widget-Namen zeigt an, dass das Widget gespeichert wurde. Wenn Sie mit Ihrem Widget zufrieden sind, wählen Sie alternativ **[!UICONTROL Speichern und schließen]** , um das Widget allen anderen Benutzern mit Zugriff auf Ihr Dashboard zur Verfügung zu stellen. Wählen Sie Abbrechen aus, um Ihre Arbeit abzubrechen und zu Ihrem benutzerdefinierten Dashboard zurückzukehren.
+Beim Speichern im Widget Composer wird das Widget lokal im Dashboard gespeichert. Wenn Sie Ihre Arbeit speichern und später fortsetzen möchten, wählen Sie **[!UICONTROL Speichern]**. Ein Häkchen unter dem Widget-Namen zeigt an, dass das Widget gespeichert wurde. Wenn Sie mit Ihrem Widget zufrieden sind, können Sie alternativ auf **[!UICONTROL Speichern und schließen]** klicken, um das Widget für alle anderen Benutzer mit Zugriff auf Ihr Dashboard verfügbar zu machen. Wählen Sie Abbrechen aus, um Ihre Arbeit abzubrechen und zu Ihrem benutzerdefinierten Dashboard zurückzukehren.
 
-![Der Widget Composer mit hervorgehobenem Speichern, Speichern und Schließen, Speichern und Widget.](../images/sql-insights-query-pro-mode/insight-saved.png)
+![Der Widget-Composer mit den hervorgehobenen Optionen „Speichern“, „Widget gespeichert“ und „Speichern und schließen“.](../images/sql-insights-query-pro-mode/insight-saved.png)
 
 ## Dashboard und Diagramme bearbeiten {#edit}
 
-Wählen Sie **[!UICONTROL Bearbeiten]** aus, um Ihr gesamtes Dashboard oder Ihre Einblicke zu bearbeiten. Im Bearbeitungsmodus können Sie die Größe von Widgets ändern, SQL bearbeiten oder globale und zeitliche Filter erstellen und anwenden. Diese Filter beschränken die in Ihren Dashboard-Widgets angezeigten Daten. Auf diese Weise können Sie Ihre Einblicke schnell für verschiedene Anwendungsfälle aktualisieren und anpassen.
+Wählen Sie **[!UICONTROL Bearbeiten]** aus, um Ihr gesamtes Dashboard oder eines Ihrer Insights zu bearbeiten. Im Bearbeitungsmodus können Sie die Größe von Widgets ändern, Ihre SQL bearbeiten oder globale und zeitliche Filter erstellen und anwenden. Diese Filter schränken die Daten ein, die in Ihren Dashboard-Widgets angezeigt werden. Dies ist eine praktische Methode, um Ihre Insights schnell zu aktualisieren und für verschiedene Anwendungsfälle zu optimieren.
 
-![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../images/sql-insights-query-pro-mode/edit-dashboard.png)
+![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/edit-dashboard.png)
 
-Wählen Sie **[!UICONTROL Filter hinzufügen]** aus, um einen [[!UICONTROL Datumsfilter]](#create-date-filter) oder einen [[!UICONTROL globalen Filter]](#create-global-filter) zu erstellen. Nach der Erstellung sind alle globalen Filter und Datumsfilter in [dem Filtersymbol](#select-global-filter) (![Ein Filtersymbol) verfügbar.](/help/images/icons/filter.png)) Ihres Dashboards.
+Wählen Sie **[!UICONTROL Filter hinzufügen]** aus, um entweder einen [[!UICONTROL Datumsfilter]](#create-date-filter) oder einen [[!UICONTROL globalen Filter]](#create-global-filter) zu erstellen. Nach der Erstellung sind alle globalen Filter und Datumsfilter über das [Filtersymbol](#select-global-filter) verfügbar (![Filtersymbol.](/help/images/icons/filter.png)) Ihres Dashboards aus.
 
-![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Dropdown-Menü Filter hinzufügen.](../images/sql-insights-query-pro-mode/add-filter.png)
+![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Dropdown-Menü „Filter hinzufügen“.](../images/sql-insights-query-pro-mode/add-filter.png)
 
-## Insight bearbeiten, duplizieren oder löschen
+## Bearbeiten, Duplizieren oder Löschen eines Insights
 
-Anweisungen zum [Bearbeiten, Duplizieren oder Löschen eines vorhandenen Widgets](../standard-dashboards.md#duplicate) finden Sie im Handbuch zu benutzerdefiniertem Dashboard .
+Anweisungen zum Bearbeiten, Duplizieren oder Löschen eines vorhandenen Widgets [ Sie im Handbuch zum benutzerdefinierten Dashboard ](../standard-dashboards.md#duplicate).
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie SQL-Abfragen in die Adobe Experience Platform-Benutzeroberfläche schreiben, um Diagramme für Ihre benutzerdefinierten Dashboards zu generieren. Als Nächstes sollten Sie lernen, wie Sie Journey-Daten weiter anreichern können, indem Sie [einen Datumsfilter erstellen](./filters/date-filter.md) oder [ einen globalen Filter erstellen](./filters/global-filter.md).
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche schreiben, um Diagramme für Ihre benutzerdefinierten Dashboards zu generieren. Als Nächstes sollten Sie lernen, wie Sie Ihre Daten durch [Erstellen eines Datumsfilters](./filters/date-filter.md) oder [Erstellen eines globalen Filters](./filters/global-filter.md) weiter anreichern können.
 
-Sie können auch mehr über andere benutzerdefinierte Insights-Funktionen erfahren, darunter [die verschiedenen Anzeigeoptionen für SQL-analysierte Daten](./view-more.md) oder [die Anzeige der SQL hinter Ihren benutzerdefinierten Einblicken](./view-sql.md).
+Sie können auch mehr über andere Custom Insights-Funktionen erfahren, darunter [die verschiedenen Anzeigeoptionen für Ihre SQL-analysierten Daten](./view-more.md) oder wie Sie [ SQL hinter Ihren benutzerdefinierten Insights ](./view-sql.md).

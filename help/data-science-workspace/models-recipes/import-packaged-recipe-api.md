@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; verpacktes Rezept importieren; Data Science Workspace; beliebte Themen; Rezepte; API; Sensei Machine Learning; Engine erstellen
+keywords: Experience Platform;Gepacktes Rezept importieren;Data Science Workspace;beliebte Themen;Rezepte;API;Sensei Machine Learning;Engine erstellen
 solution: Experience Platform
-title: Importieren eines gepackten Rezepts mit der Sensei Machine Learning API
+title: Importieren eines gepackten Rezepts mithilfe der Sensei-API für maschinelles Lernen
 type: Tutorial
-description: In diesem Tutorial wird die Sensei Machine Learning-API verwendet, um eine Engine zu erstellen, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
+description: In diesem Tutorial wird die Sensei-API für maschinelles Lernen verwendet, um in der Benutzeroberfläche eine Engine zu erstellen, die auch als Rezept bezeichnet wird.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 26%
 
 ---
 
-# Importieren eines gepackten Rezepts mit der Sensei Machine Learning API
+# Importieren eines gepackten Rezepts mithilfe der Sensei-API für maschinelles Lernen
 
 >[!NOTE]
 >
@@ -20,44 +20,44 @@ ht-degree: 26%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-In diesem Tutorial wird [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) verwendet, um eine [Engine](../api/engines.md) zu erstellen, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
+In diesem Tutorial wird die [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) zum Erstellen einer [Engine](../api/engines.md) verwendet, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
 
-Bevor Sie beginnen, sollten Sie beachten, dass Adobe Experience Platform [!DNL Data Science Workspace] unterschiedliche Begriffe verwendet, um auf ähnliche Elemente in der API und Benutzeroberfläche zu verweisen. Die API-Begriffe werden in diesem Tutorial verwendet. In der folgenden Tabelle sind die entsprechenden Begriffe aufgeführt:
+Bevor Sie beginnen, sollten Sie beachten, dass Adobe Experience Platform [!DNL Data Science Workspace] verschiedene Begriffe verwendet, um auf ähnliche Elemente in der API und Benutzeroberfläche zu verweisen. Die API-Begriffe werden im Verlauf dieses Tutorials verwendet und in der folgenden Tabelle sind die entsprechenden Begriffe aufgeführt:
 
 | UI-Begriff | API-Begriff |
 | ---- | ---- |
 | Rezept | [Engine](../api/engines.md) |
 | Modell | [MLInstance](../api/mlinstances.md) |
-| Ausbildung und Evaluierung | [Experiment](../api/experiments.md) |
+| Schulung und Evaluierung | [Experiment](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Eine Engine enthält Algorithmen und Logik für maschinelles Lernen, um bestimmte Probleme zu lösen. Das folgende Diagramm zeigt eine Visualisierung des API-Workflows in [!DNL Data Science Workspace]. Dieses Tutorial konzentriert sich auf die Erstellung einer Engine, des Gehirns eines Modells für maschinelles Lernen.
+Eine Engine enthält Algorithmen und Logik für maschinelles Lernen, um spezifische Probleme zu lösen. Das folgende Diagramm zeigt eine Visualisierung des API-Workflows in [!DNL Data Science Workspace]. Dieses Tutorial konzentriert sich auf die Erstellung einer Engine, das Gehirn eines Modells für maschinelles Lernen.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
 ## Erste Schritte
 
-Für dieses Tutorial ist eine gepackte Rezeptdatei in Form einer Docker-URL erforderlich. Folgen Sie dem Tutorial [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md) , um eine gepackte Rezeptdatei zu erstellen oder eine eigene anzugeben.
+Für dieses Tutorial ist eine gepackte Recipe File in Form einer Docker-URL erforderlich. Befolgen Sie das Tutorial [Quelldateien in ein Rezept packen](./package-source-files-recipe.md) zum Erstellen einer gepackten Rezeptdatei oder zum Bereitstellen einer eigenen.
 
-- `{DOCKER_URL}`: Eine URL-Adresse für ein Docker-Bild eines intelligenten Dienstes.
+- `{DOCKER_URL}`: Eine URL-Adresse zu einem Docker-Image eines Intelligent Service.
 
-Für dieses Tutorial müssen Sie das Tutorial [Authentifizierung für Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, damit Sie erfolgreich Aufrufe an [!DNL Platform] -APIs durchführen können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für dieses Tutorial müssen Sie das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um [!DNL Platform] APIs erfolgreich aufrufen zu können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.
-- `{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+- `{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 - `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 ## Engine erstellen
 
-Engines können erstellt werden, indem eine POST-Anfrage an den Endpunkt /engine gesendet wird. Die erstellte Engine wird basierend auf dem Formular der verpackten Rezeptdatei konfiguriert, die als Teil der API-Anfrage enthalten sein muss.
+Engines können erstellt werden, indem eine POST-Anfrage an den /engines-Endpunkt gesendet wird. Die erstellte Engine wird basierend auf dem Formular der gepackten Recipe File konfiguriert, die als Teil der API-Anfrage enthalten sein muss.
 
 ### Erstellen einer Engine mit einer Docker-URL {#create-an-engine-with-a-docker-url}
 
-Um eine Engine mit einer gepackten Rezeptdatei zu erstellen, die in einem Docker-Container gespeichert ist, müssen Sie die Docker-URL für die gepackte Rezeptdatei angeben.
+Um ein Modul mit einer gepackten Recipe File zu erstellen, die in einem Docker-Container gespeichert ist, müssen Sie die Docker-URL für die gepackte Recipe File angeben.
 
 >[!CAUTION]
 >
-> Wenn Sie [!DNL Python] oder R verwenden, verwenden Sie die unten stehende Anfrage. Wenn Sie PySpark oder Scala verwenden, verwenden Sie das PySpark-/Scala-Anforderungsbeispiel, das sich unter dem Python/R-Beispiel befindet.
+> Wenn Sie [!DNL Python] oder R verwenden, verwenden Sie die nachstehende Anfrage. Wenn Sie PySpark oder Scala verwenden, verwenden Sie das PySpark-/Scala-Anfragebeispiel unter dem Python/R-Beispiel.
 
 **API-Format**
 
@@ -65,7 +65,7 @@ Um eine Engine mit einer gepackten Rezeptdatei zu erstellen, die in einem Docker
 POST /engines
 ```
 
-**Python anfordern/R**
+**Python/R anfordern**
 
 ```shell
 curl -X POST \
@@ -93,12 +93,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------  | ----------- |
-| `engine.name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche von [!DNL Data Science Workspace] angezeigt werden soll, als Rezeptnamen. |
-| `engine.description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche von [!DNL Data Science Workspace] angezeigt werden soll, als Beschreibung des Rezepts. Entfernen Sie diese Eigenschaft nicht. Lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keine Beschreibung angeben möchten. |
-| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL bereitgestellt wird, um eine Engine zu erstellen, ist `type` entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
-| `artifacts.default.image.location` | Ihr `{DOCKER_URL}` geht hierhin. Eine vollständige Docker-URL weist die folgende Struktur auf: `your_docker_host.azurecr.io/docker_image_file:version` |
-| `artifacts.default.image.name` | Ein zusätzlicher Name für die Docker-Bilddatei. Entfernen Sie diese Eigenschaft nicht. Lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keinen zusätzlichen Docker-Bilddateinamen angeben möchten. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL bereitgestellt wird, um eine Engine zu erstellen, ist `executionType` entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
+| `engine.name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in [!DNL Data Science Workspace] Benutzeroberfläche als Name des Rezepts angezeigt wird. |
+| `engine.description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in [!DNL Data Science Workspace] Benutzeroberfläche als Beschreibung des Rezepts angezeigt wird. Entfernen Sie diese Eigenschaft nicht. Wenn Sie keine Beschreibung angeben möchten, darf dieser Wert eine leere Zeichenfolge sein. |
+| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
+| `artifacts.default.image.location` | Ihr `{DOCKER_URL}` geht hierher. Eine vollständige Docker-URL weist die folgende Struktur auf: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `artifacts.default.image.name` | Ein zusätzlicher Name für die Docker-Grafikdatei. Entfernen Sie diese Eigenschaft nicht. Wenn Sie keinen zusätzlichen Docker-Bilddateinamen angeben möchten, darf dieser Wert eine leere Zeichenfolge sein. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
 
 **PySpark anfordern**
 
@@ -132,12 +132,12 @@ curl -X POST \
 | --- | --- |
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild auf &quot;PySpark&quot;basiert. |
+| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image auf „PySpark“ erstellt wird. |
 | `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Images, mit dem eine Docker-URL verknüpft ist. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild auf &quot;Spark&quot;basiert. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image auf „Spark“ erstellt wird. |
 
-**Anforderungsskala**
+**Scala anfordern**
 
 ```shell
 curl -X POST \
@@ -169,14 +169,14 @@ curl -X POST \
 | --- | --- |
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild auf &quot;Spark&quot;basiert. |
+| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image auf „Spark“ erstellt wird. |
 | `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Images, mit dem eine Docker-URL verknüpft ist. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild auf &quot;Spark&quot;basiert. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Image auf „Spark“ erstellt wird. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine [!DNL Python] -Engine. Die Tasten `executionType` und `type` ändern sich je nach bereitgestellter POST.
+Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine [!DNL Python]. Die `executionType`- und `type` ändern sich je nach der angegebenen POST.
 
 ```json
 {
@@ -203,8 +203,8 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu ers
 }
 ```
 
-Eine erfolgreiche Antwort zeigt eine JSON-Payload mit Informationen zur neu erstellten Engine an. Der Schlüssel `id` stellt die eindeutige Engine-Kennung dar und ist im nächsten Tutorial zum Erstellen einer MLInstance erforderlich. Stellen Sie sicher, dass die Engine-ID gespeichert wird, bevor Sie mit den nächsten Schritten fortfahren.
+Eine erfolgreiche Antwort zeigt eine JSON-Payload mit Informationen zur neu erstellten Engine. Der `id` stellt die eindeutige Engine-Kennung dar und ist im nächsten Tutorial zum Erstellen einer MLInstance erforderlich. Stellen Sie sicher, dass die Engine-Kennung gespeichert ist, bevor Sie mit den nächsten Schritten fortfahren.
 
 ## Nächste Schritte {#next-steps}
 
-Sie haben eine Engine mit der API erstellt und eine eindeutige Engine-Kennung wurde als Teil des Antworttextes abgerufen. Sie können diese Engine-Kennung im nächsten Tutorial verwenden, während Sie erfahren, wie Sie mit der API](./train-evaluate-model-api.md) ein Modell erstellen, trainieren und bewerten.[
+Sie haben eine Engine mithilfe der API erstellt und eine eindeutige Engine-Kennung wurde als Teil der Antwort abgerufen. Sie können diese Engine-Kennung im nächsten Tutorial verwenden, in dem Sie lernen[ wie Sie ein Modell mithilfe der API erstellen, trainieren und bewerten](./train-evaluate-model-api.md).

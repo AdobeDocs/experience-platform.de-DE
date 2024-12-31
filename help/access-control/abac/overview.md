@@ -19,15 +19,15 @@ ht-degree: 82%
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
-Verwenden Sie diese Funktion, um Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen zu beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
+Verwenden Sie diese Funktion, um Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen zu versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit Data Governance-Funktionen von Experience Platform. Mit diesen Funktionen können Sie mithilfe von Bezeichnungen und Richtlinien steuern, wie Daten in Platform verwendet werden, anstatt zu steuern, auf welche Benutzer in Ihrem Unternehmen Zugriff besteht. Weitere Informationen finden Sie in der [Übersicht zur Data Governance](../../data-governance/home.md) .
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen der Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie [ „Übersicht ](../../data-governance/home.md) Data Governance“.
 
 Mit der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
-Im folgenden Video wird beschrieben, wie Sie die attributbasierte Zugriffskontrolle verstehen und Rollen, Ressourcen und Richtlinien konfigurieren.
+Das folgende Video soll Ihnen dabei helfen, die attributbasierte Zugriffssteuerung zu verstehen, und beschreibt, wie Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
@@ -51,7 +51,7 @@ Die attributbasierte Zugriffssteuerung umfasst die folgenden Komponenten:
 
 >[!IMPORTANT]
 >
->Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+>Sobald für Ihr Unternehmen die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrem Unternehmen zu verwalten.
 
 Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten.
 
@@ -67,19 +67,19 @@ Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte 
 
 ### Zugangssteuerung
 
-Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com) -Rollen, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Rollen, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald für Ihr Unternehmen die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrem Unternehmen zu verwalten.
 
 Es gibt nur eine begrenzte Verfügbarkeit der attributbasierten Zugriffssteuerung für Kunden, die Healthcare und/oder Privacy Shields erwerben. Zu den Features dieser Funktion gehören:
 
 * Benutzeroberfläche „Berechtigungen“: Bietet eine Oberfläche für Sie, um Benutzerrollen, Berechtigungen und Richtlinien für die attributbasierte Zugriffssteuerung festzulegen.
 
-* Beschriftung: Fügen Sie Benutzerrollen, Schemafeldern, Segmenten und anderen unterstützten Objekten Beschriftungen hinzu, bearbeiten und entfernen Sie diese, um Zugriffssteuerungsrichtlinien zu nutzen. **Hinweis:** Jedes Segment, das ein beschriftetes Attribut verwendet, muss ebenfalls beschriftet werden, wenn Sie möchten, dass dieselben Zugriffsbeschränkungen auf es angewendet werden.
+* Beschriftungen: Fügen Sie Benutzerrollen, Schemafeldern, Segmenten und anderen unterstützten Objekten Beschriftungen hinzu, um Zugriffssteuerungsrichtlinien zu nutzen oder bearbeiten oder entfernen Sie diese. **Hinweis:** Jedes Segment, das ein gekennzeichnetes Attribut verwendet, muss ebenfalls gekennzeichnet werden, wenn dieselben Zugriffsbeschränkungen für es gelten sollen.
 
 Die Verwaltungs-Workflows für alle Experience Platform-gestützten Anwendungen, von der Admin Console bis zur neuen Benutzeroberfläche „Berechtigungen“, werden derzeit umgestellt.
 
 >[!IMPORTANT]
 >
->Ihre Rollen werden automatisch in die Benutzeroberfläche &quot;Berechtigungen&quot;migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis jetzt unverändert. Ändern Sie Ihre Rollen **nicht**, nachdem Ihre Organisation aktiviert wurde.
+>Ihre Rollen werden automatisch in die Benutzeroberfläche „Berechtigungen“ migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis auf Weiteres unverändert. Bitte **nicht** ändern Sie Ihre Rollen, nachdem dies für Ihre Organisation aktiviert wurde.
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../home.md).
 
@@ -98,7 +98,7 @@ Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgend
 >
 >Beachten Sie daher bei der Arbeit mit Zielen und attributbasierter Zugriffssteuerung die folgenden Auswirkungen:
 >
->* Sie können nur Zielgruppen aktivieren, die Sie über die Berechtigung zum Zugriff auf und zur Anzeige in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows verfügen.
+>* Sie können nur Zielgruppen aktivieren, für die Sie über die Berechtigung zum Zugriff und zur Anzeige im [Zielgruppenportal](/help/segmentation/ui/audience-portal.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows verfügen.
 >* Im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) können Sie nur die Felder anzeigen und zur Aktivierung auswählen, für die Sie über Zugriffsberechtigungen verfügen.
 >* Wenn Sie zusätzliche Segmente für ein vorhandenes Ziel aktivieren möchten, bei dem Sie nicht auf alle Felder zugreifen können, die für den Export zugeordnet sind, wird der Aktivierungs-Workflow für Sie blockiert.
 
@@ -142,7 +142,7 @@ Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu di
 
 Mit der attributbasierten Zugriffssteuerung können Sie Folgendes durchführen:
 
-* [Wenden Sie Datennutzungskennzeichnungen auf Feldergruppen und -klassen an](../../xdm/tutorials/labels.md). Dies ermöglicht es mehreren Schemas mit denselben Feldergruppen oder -klassen, Felder mit denselben Attributen zu versehen, je nach den Konfigurationen auf Feldergruppen- oder Klassenebene.
+* [Wenden Sie Datennutzungskennzeichnungen auf Feldergruppen und -klassen an](../../xdm/tutorials/labels.md). Dadurch wird es ermöglicht, dass mehrere Schemata mit denselben Feldergruppen oder -klassen Felder aufweisen können, die mit denselben Attributen versehen sind, je nach den Konfigurationen auf Feldergruppen- oder Klassenebene.
 * Konfigurieren Sie den Benutzerzugriff auf bestimmte XDM-Schemafelder abhängig von den Berechtigungssätzen, die auf die Rollen der Benutzenden angewendet werden.
 
 Weitere Informationen zu XDM finden Sie in der [XDM-Übersicht](../../xdm/home.md).

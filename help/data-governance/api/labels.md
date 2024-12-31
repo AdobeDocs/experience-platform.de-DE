@@ -18,7 +18,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 >[!NOTE]
 >
->Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Titel können nicht gelöscht werden. Sie können Datensätze und Feldern jedoch mithilfe von API-Aufrufen Beschriftungen hinzufügen oder entfernen. Anweisungen finden Sie im Dokument [Verwalten von Datensatzbezeichnungen](../labels/dataset-api.md) .
+>Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Kennzeichnungen können nicht gelöscht werden. Sie können jedoch mithilfe von API-Aufrufen Kennzeichnungen zu Datensätzen und Feldern hinzufügen oder entfernen. Anweisungen finden Sie im Handbuch unter [Verwalten ](../labels/dataset-api.md) Datensatzkennzeichnungen .
 
 ## Erste Schritte
 
@@ -166,7 +166,7 @@ Um eine benutzerdefinierte Kennzeichnung zu erstellen oder zu aktualisieren, mü
 
 >[!NOTE]
 >
->Wenn Sie Bezeichnungen aus einem Datensatz entfernen möchten, können Sie eine [PUT-Anfrage für die Datensatzdienst-API](../labels/dataset-api.md#remove) oder die [Datensatz-Benutzeroberfläche](../labels/user-guide.md#remove-labels-from-a-dataset) verwenden.
+>Wenn Sie Kennzeichnungen aus einem Datensatz entfernen möchten, können Sie eine [PUT-Anfrage über die Dataset Service-API](../labels/dataset-api.md#remove) oder die [Datasets-Benutzeroberfläche](../labels/user-guide.md#remove-labels-from-a-dataset) ausführen.
 
 **API-Format**
 

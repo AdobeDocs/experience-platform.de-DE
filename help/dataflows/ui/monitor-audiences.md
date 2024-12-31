@@ -12,20 +12,20 @@ ht-degree: 7%
 
 # Überwachen von Datenflüssen für Zielgruppen in der Benutzeroberfläche
 
-Mit dem Segmentation Service können Sie Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] -Daten erstellen. Platform bietet Datenflüsse zur transparenten Verfolgung dieses Datenflusses von Quellen zu Zielen.
+Mit dem Segmentierungs-Service können Sie über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen erstellen. Platform bietet Datenflüsse, mit denen dieser Datenfluss von Quellen zu Zielen transparent verfolgt werden kann.
 
-Verwenden Sie das Monitoring-Dashboard, um eine visuelle Darstellung der Datenaktivität in einer Zielgruppe anzuzeigen, einschließlich des Status der Segmentierung Ihrer Daten. In diesem Tutorial erfahren Sie, wie Sie mit dem Monitoring-Dashboard die Segmentierung Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können. So können Sie den Status von Zielgruppenaktivierungs-, Bewertungs- und Exportvorgängen verfolgen.
+Verwenden Sie das Monitoring-Dashboard, um eine visuelle Darstellung der Datenaktivität in einer Audience zu erhalten, einschließlich des Status der Segmentierung Ihrer Daten. Lesen Sie das Tutorial für Anweisungen dazu, wie Sie mit dem Monitoring-Dashboard die Segmentierung Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können, sodass Sie den Status von Zielgruppenaktivierungs-, Auswertungs- und Exportvorgängen verfolgen können.
 
 ## Erste Schritte {#getting-started}
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   - [Datenfluss-Ausführungen](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 - [Segmentierung](../../segmentation/home.md): Mit der Segmentierung können Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten erstellen.
-   - [Aktivierungsaufträge](../../destinations/ui/activation-overview.md): Mit einem Aktivierungsauftrag wird Ihre Zielgruppe für ein bestimmtes Ziel aktiviert.
+   - [Aktivierungsaufträge](../../destinations/ui/activation-overview.md): Ein Aktivierungsauftrag wird verwendet, um Ihre Audience für ein bestimmtes Ziel zu aktivieren.
    - [Auswertungsaufträge](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Ein Auswertungsauftrag ist ein asynchroner Prozess, der die Zielgruppe auswertet.
-   - [Exportaufträge](../../segmentation/api/export-jobs.md): Ein Exportauftrag ist ein asynchroner Vorgang, der verwendet wird, um Zielgruppenmitglieder in Datensätzen zu erhalten.
+   - [Exportvorgänge](../../segmentation/api/export-jobs.md): Ein Exportvorgang ist ein asynchroner Prozess, der zum Beibehalten von Zielgruppenmitgliedern in Datensätzen verwendet wird.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Dashboard zur Überwachung von Zielgruppen {#monitoring-audiences-dashboard}
@@ -35,124 +35,124 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >title="Zielgruppen"
 >abstract="Die Zielgruppenansicht enthält Informationen zu allen Zielgruppen Ihrer Organisation sowie zu ihren Aktivierungs- und Evaluierungsvorgängen."
 
-Um auf das Dashboard **[!UICONTROL Zielgruppen]** zuzugreifen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Überwachung]** aus. Wählen Sie auf der Seite **[!UICONTROL Überwachung]** die Karte **[!UICONTROL Zielgruppen]** aus.
+Um auf das Dashboard **[!UICONTROL Zielgruppen]** zuzugreifen, wählen Sie **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus. Wählen Sie auf der **[!UICONTROL Überwachung]** die Karte **[!UICONTROL Zielgruppen]** aus.
 
-![Die Karte Zielgruppen . Informationen zum letzten Bewertungsauftrag und zum letzten Exportauftrag werden angezeigt.](../assets/ui/monitor-audiences/audience-card.png)
+![Die Karte Zielgruppen . Es werden Informationen zum letzten Auswertungsauftrag und zum letzten Exportauftrag angezeigt.](../assets/ui/monitor-audiences/audience-card.png)
 
-Im Haupt-Dashboard **[!UICONTROL Zielgruppen]** zeigt die Karte **[!UICONTROL Zielgruppen]** den Status und das Datum des letzten Auswertungsauftrags sowie den letzten Exportauftrag an.
+Im Haupt-Dashboard **[!UICONTROL Zielgruppen]** zeigt die Karte **[!UICONTROL Zielgruppen]** den Status und das Datum des letzten Auswertungsauftrags und des letzten Exportauftrags an.
 
-Das Dashboard selbst enthält Metriken für Zielgruppen und Segmentierungsaufträge. Standardmäßig zeigt das Dashboard die Zielgruppenmetriken für die letzten 24 Stunden an. Weitere Informationen zur Ansicht der Segmentierungsaufträge finden Sie im Abschnitt [Überwachungssegmentierungsaufträge](#monitoring-segmentation-jobs-dashboard) .
+Das Dashboard selbst enthält Metriken für Zielgruppen und Segmentierungsaufträge. Standardmäßig zeigt das Dashboard die Zielgruppenmetriken der letzten 24 Stunden an. Weitere Informationen zur Ansicht Segmentierungsaufträge finden Sie im Abschnitt [Überwachen von ](#monitoring-segmentation-jobs-dashboard)&quot;.
 
 >[!IMPORTANT]
 >
->Derzeit werden für das Dashboard der Überwachungszielgruppen nur Zielgruppen unterstützt, die für [Batch-(dateibasierte) Ziele](../../destinations/destination-types.md#file-based) aktiviert sind.
+>Derzeit werden nur Zielgruppen, die für [Batch-Ziele (dateibasiert) aktiviert ](../../destinations/destination-types.md#file-based), für das Dashboard „Zielgruppen-Überwachung“ unterstützt.
 
-![Das Zielgruppen-Dashboard. Informationen zu den verschiedenen Zielgruppen in Ihrer Organisation und Sandbox werden angezeigt.](../assets/ui/monitor-audiences/audience-dashboard.png)
+![Das Zielgruppen-Dashboard. Es werden Informationen zu den verschiedenen Zielgruppen in Ihrer Organisation und Sandbox angezeigt.](../assets/ui/monitor-audiences/audience-dashboard.png)
 
-Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
+Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
 | **[!UICONTROL Zielgruppenname]** | Der Name der Zielgruppe. |
-| **[!UICONTROL Datentyp]** | Der Datentyp der Audience. Mögliche Werte sind **[!UICONTROL Kunde]**, **[!UICONTROL Konto]** und **[!UICONTROL Interessent]**. Mithilfe des Filters [!UICONTROL Datentyp] über dem Kartenband können Sie Audiences eines bestimmten Datentyps anzeigen. |
-| **[!UICONTROL Letzter Bewertungszeitstempel]** | Datum und Uhrzeit der letzten Ausführung des Audience-Auswertungsauftrags. |
-| **[!UICONTROL Letzter Bewertungsstatus]** | Der Status des letzten Auswertungsauftrags der Zielgruppe. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]** und **[!UICONTROL Fehlgeschlagen]**. |
-| **[!UICONTROL Letzte Auswertungsmethode]** | Die Auswertungsmethode der Audience. Da nur die Batch-Segmentierung unterstützt wird, ist der einzig mögliche Wert **[!UICONTROL Batch]**. |
-| **[!UICONTROL Letzte Testprofile]** | Die Anzahl der Profile, die im letzten Auswertungsauftrag der Zielgruppe ausgewertet wurden. |
-| **[!UICONTROL Letzter Aktivierungszeitstempel]** | Datum und Uhrzeit der letzten Ausführung des Aktivierungsauftrags der Zielgruppe. |
-| **[!UICONTROL Letzter Aktivierungsstatus]** | Der Status des letzten Aktivierungsauftrags der Zielgruppe. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]** und **[!UICONTROL Fehlgeschlagen]**. |
-| **[!UICONTROL Letzte Aktivierungsidentitäten]** | Die Anzahl der Identitäten, die im letzten Aktivierungsauftrag der Zielgruppe aktiviert wurden. |
-| **[!UICONTROL Letztes Aktivierungsziel]** | Der Name des Ziels, für das der letzte Aktivierungsauftrag der Zielgruppe aktiviert wurde. |
+| **[!UICONTROL Datentyp]** | Der Datentyp der Zielgruppe. Mögliche Werte sind **[!UICONTROL Kunde]**, **[!UICONTROL Konto]** und **[!UICONTROL Interessent]**. Sie können mit dem Filter [!UICONTROL Datentyp“ über dem Kartenband Zielgruppen eines bestimmten ] anzeigen. |
+| **[!UICONTROL Zeitstempel der letzten Auswertung]** | Datum und Uhrzeit der letzten Ausführung des Auswertungsauftrags für die Zielgruppe. |
+| **[!UICONTROL Letzter Auswertungsstatus]** | Der Status des letzten Auswertungsauftrags der Zielgruppe. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Letzte Auswertungsmethode]** | Die Auswertungsmethode der Zielgruppe. Da nur die Batch-Segmentierung unterstützt wird, ist der einzige mögliche Wert **[!UICONTROL Batch]**. |
+| **[!UICONTROL Letzte Auswertungsprofile]** | Die Anzahl der Profile, die im letzten Auswertungsauftrag der Zielgruppe ausgewertet wurden. |
+| **[!UICONTROL Zeitstempel der letzten Aktivierung]** | Datum und Uhrzeit der letzten Ausführung des Aktivierungsauftrags der Zielgruppe. |
+| **[!UICONTROL Status der letzten Aktivierung]** | Der Status des letzten Aktivierungsauftrags der Zielgruppe. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Identitäten der letzten Aktivierung]** | Die Anzahl der Identitäten, die im letzten Aktivierungsauftrag der Zielgruppe aktiviert wurden. |
+| **[!UICONTROL Ziel der letzten Aktivierung]** | Der Name des Ziels, für das der letzte Aktivierungsauftrag der Zielgruppe aktiviert wurde. |
 
-Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](/help/images/icons/filter-add.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
+Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![ Filtersymbol) auswählen.](/help/images/icons/filter-add.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
 
-![Das Filtersymbol wird hervorgehoben. Wenn Sie diese Option auswählen, können Sie die Segmentierungsaufträge für die angegebene Zielgruppe anzeigen.](../assets/ui/monitor-audiences/filter-audience.png)
+![Das Filtersymbol ist hervorgehoben. Wenn Sie diese Option auswählen, können Sie die Segmentierungsaufträge für die angegebene Zielgruppe anzeigen.](../assets/ui/monitor-audiences/filter-audience.png)
 
-Das Dashboard der gefilterten Zielgruppe wird angezeigt. Auf der Karte **[!UICONTROL Zielgruppen]** werden der Status und das Datum des letzten Bewertungsauftrags sowie der letzte Aktivierungsauftrag angezeigt.
+Das Dashboard für gefilterte Zielgruppen wird angezeigt. Die Karte **[!UICONTROL Zielgruppen]** zeigt den Status und das Datum des letzten Auswertungsauftrags und des letzten Aktivierungsauftrags an.
 
-![Die Karte Zielgruppen . Informationen zum letzten Bewertungsauftrag und zum letzten Aktivierungsauftrag werden angezeigt.](../assets/ui/monitor-audiences/specified-audience-card.png)
+![Die Karte Zielgruppen . Es werden Informationen zum letzten Auswertungsauftrag und zum letzten Aktivierungsauftrag angezeigt.](../assets/ui/monitor-audiences/specified-audience-card.png)
 
-Das Dashboard selbst zeigt die Zeit und den Status der letzten Evaluierungs- und Aktivierungsaufträge, ein Diagramm mit der Profilanzahl der Zielgruppenbewertung und Metriken für die ausgeführten Segmentierungsaufträge an. Standardmäßig zeigt das Dashboard Metriken für Segmentierungsaufträge für die letzten 24 Stunden an.
+Das Dashboard selbst zeigt die Zeit und den Status der letzten Evaluierungs- und Aktivierungsaufträge an, ein Diagramm, das die Profilanzahl der Zielgruppenevaluierung und Metriken für die ausgeführten Segmentierungsaufträge anzeigt. Standardmäßig zeigt das Dashboard Segmentierungsauftragsmetriken für die letzten 24 Stunden an.
 
-![Das gefilterte Zielgruppen-Dashboard. Informationen zu den verschiedenen Segmentierungsaufträgen, die für diese Zielgruppe ausgeführt wurden, werden angezeigt.](../assets/ui/monitor-audiences/filter-audience.png)
+![Das gefilterte Zielgruppen-Dashboard. Es werden Informationen zu den verschiedenen Segmentierungsaufträgen angezeigt, die für diese Zielgruppe ausgeführt wurden.](../assets/ui/monitor-audiences/filter-audience.png)
 
-Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
+Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
 | **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Starts des Segmentierungsauftrags. |
-| **[!UICONTROL Typ]** | Gibt den Typ des Segmentierungsauftrags an. Die beiden unterstützten Auftragstypen sind **Aktivierung** und **Auswertung**. |
-| **[!UICONTROL Auftrag abgeschlossen]** | Datum und Uhrzeit des Abschlusses des Segmentierungsauftrags. |
-| **[!UICONTROL Verarbeitungszeit]** | Die Zeit, die der Abschluss des Segmentierungsauftrags gedauert hat. |
-| **[!UICONTROL Auftragsstatus]** | Der Status des Segmentierungsauftrags. Zu den unterstützten Werten gehören **[!UICONTROL Erfolg]**, **[!UICONTROL Wird ausgeführt]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Typ]** | Gibt den Typ des Segmentierungsauftrags an. Die beiden unterstützten Vorgangstypen sind **Aktivierungs** und **Evaluierungs** Vorgänge. |
+| **[!UICONTROL Vorgang abgeschlossen]** | Datum und Uhrzeit des Abschlusses des Segmentierungsauftrags. |
+| **[!UICONTROL Verarbeitungszeit]** | Die Zeit, die für den Abschluss des Segmentierungsauftrags benötigt wurde. |
+| **[!UICONTROL Auftragsstatus]** | Der Status des Segmentierungsauftrags. Unterstützte Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL In]** und **[!UICONTROL Fehlgeschlagen]**. |
 | **[!UICONTROL Anzahl der Profile]** | Die Anzahl der Profile, die der Segmentierungsauftrag auswertet. Jeder Benutzer sollte über ein eindeutiges Profil verfügen. |
-| **[!UICONTROL Identität aktiviert]** | Die Anzahl der Identitäten, die der Segmentierungsauftrag aktiviert. Jedes Profil kann mehrere Identitäten aufweisen. Beispielsweise könnte ein Profil eine E-Mail-, Telefonnummer- und Treuenummer als Identitäten haben. |
+| **[!UICONTROL Identität aktiviert]** | Die Anzahl der Identitäten, die der Segmentierungsauftrag aktiviert. Jedes Profil kann mehrere Identitäten haben. Ein Profil könnte beispielsweise eine E-Mail-Adresse, eine Telefonnummer und eine Treuenummer als Identitäten haben. |
 | **[!UICONTROL Zielname]** | Der Name des Ziels, für das der Segmentierungsauftrag aktiviert wird. |
 
-Sie können einen bestimmten Segmentierungsauftrag weiter filtern und dessen Details anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](/help/images/icons/filter.png)). Es gibt zwei verschiedene Arten von Segmentierungsaufträgen, die gefiltert werden können: Aktivierungsaufträge und Auswertungsaufträge.
+Sie können weiter nach einem bestimmten Segmentierungsauftrag filtern und dessen Details anzeigen, indem Sie das Filtersymbol (das ![) auswählen.](/help/images/icons/filter.png)). Es gibt zwei verschiedene Arten von Segmentierungsaufträgen, die gefiltert werden können: Aktivierungsaufträge und Auswertungsaufträge.
 
-### Details zum Aktivierungsauftrag {#activation-job-details}
+### Details zum Aktivierungsvorgang {#activation-job-details}
 
-Auf der Seite mit den Ausführungsdetails des Aktivierungsauftrags werden Informationen zu den Metriken der Ausführung, den Ausführungsfehlern des Datenflusses und den Zielgruppen angezeigt, die mit dem Segmentierungsauftrag zusammenhängen. Ein Aktivierungsauftrag wird verwendet, um Ihre Zielgruppe für ein bestimmtes Ziel zu aktivieren.
+Die Seite mit den Details der Datenflussausführung für den Aktivierungsauftrag enthält Informationen zu den Metriken des Durchgangs, zu Datenflussausführungsfehlern und zu Zielgruppen, die mit dem Segmentierungsauftrag in Verbindung stehen. Ein Aktivierungsauftrag wird verwendet, um Ihre Zielgruppe für ein bestimmtes Ziel zu aktivieren.
 
-![Das Dashboard des Aktivierungsauftrags. Informationen zu den verschiedenen Segmentierungsaufträgen, die für diese Zielgruppe ausgeführt wurden, werden angezeigt.](../assets/ui/monitor-audiences/activation-job-dashboard.png)
+![Das Dashboard des Aktivierungsvorgangs. Es werden Informationen zu den verschiedenen Segmentierungsaufträgen angezeigt, die für diese Zielgruppe ausgeführt wurden.](../assets/ui/monitor-audiences/activation-job-dashboard.png)
 
-Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
+Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| **[!UICONTROL empfangenen Profile]** | Die Gesamtzahl der im Aktivierungsfluss empfangenen Profile. |
-| **[!UICONTROL Identitäten aktiviert]** | Die Gesamtzahl der Identitäten, die erfolgreich für das Ziel aktiviert wurden, basierend auf den empfangenen Profilen. |
-| **[!UICONTROL Ausgeschlossene Identitäten]** | Die Gesamtzahl der Identitäten, die von der Aktivierung für das Ziel ausgeschlossen wurden, basierend auf den empfangenen Profilen. Diese Identitäten können aufgrund fehlender Attribute oder Zustimmungsverletzungen ausgeschlossen werden. |
-| **[!UICONTROL Datengröße]** | Die Größe des zu aktivierenden Datenflusses. |
-| **[!UICONTROL Dateien insgesamt]** | Die Gesamtzahl der im Datenfluss aktivierten Dateien. |
-| **[!UICONTROL Status]** | Der aktuelle Status des Aktivierungsauftrags. |
-| **[!UICONTROL Start des Datenflusses]** | Datum und Uhrzeit des Beginns des Aktivierungsauftrags. |
-| **[!UICONTROL Dataflow run end]** | Datum und Uhrzeit des Endes des Aktivierungsauftrags. |
-| **[!UICONTROL Dataflow run ID]** | Die ID des aktuellen Aktivierungsauftrags. |
+| **[!UICONTROL Empfangene Profile]** | Die Gesamtzahl der im Aktivierungsfluss empfangenen Profile. |
+| **[!UICONTROL Identitäten aktiviert]** | Die Gesamtzahl der Identitäten, die basierend auf den empfangenen Profilen erfolgreich für das Ziel aktiviert wurden. |
+| **[!UICONTROL Identitäten ausgeschlossen]** | Die Gesamtzahl der Identitäten, die von der Aktivierung für das Ziel ausgeschlossen wurden, basierend auf den empfangenen Profilen. Diese Identitäten konnten aufgrund fehlender Attribute oder Einverständnisverletzungen ausgeschlossen werden. |
+| **[!UICONTROL Größe der Daten]** | Die Größe des aktivierten Datenflusses. |
+| **[!UICONTROL Dateien insgesamt]** | Die Gesamtzahl der Dateien, die im Datenfluss aktiviert werden. |
+| **[!UICONTROL Status]** | Der aktuelle Status des Aktivierungsvorgangs. |
+| **[!UICONTROL Start der Datenflussausführung]** | Datum und Uhrzeit des Starts des Aktivierungsauftrags. |
+| **[!UICONTROL Ende der Datenflussausführung]** | Das Datum und die Uhrzeit, zu der der Aktivierungsvorgang beendet wurde. |
+| **[!UICONTROL Datenflussausführungs-ID]** | Die ID des aktuellen Aktivierungsauftrags. |
 | **[!UICONTROL IMS-Organisations-ID]** | Die ID der Organisation, zu der der Aktivierungsauftrag gehört. |
 | **[!UICONTROL Zielname]** | Der Name des Ziels, für das die Daten aktiviert werden. |
 
-Im Bereich Zielgruppen wird eine Liste der Zielgruppen angezeigt, die im Rahmen des Aktivierungsauftrags aktiviert wurden.
+Im Abschnitt Zielgruppen wird eine Liste von Zielgruppen angezeigt, die im Rahmen des Aktivierungsauftrags aktiviert wurden.
 
-![Das Dashboard des Aktivierungsauftrags. Informationen zu den Identitäten, die fehlgeschlagen sind oder ausgeschlossen wurden, werden hervorgehoben.](../assets/ui/monitor-audiences/activation-job-audiences.png)
+![Das Dashboard des Aktivierungsvorgangs. Informationen zu den fehlgeschlagenen oder ausgeschlossenen Identitäten werden hervorgehoben.](../assets/ui/monitor-audiences/activation-job-audiences.png)
 
-Für den Abschnitt &quot;Zielgruppen&quot;stehen die folgenden Metriken zur Verfügung:
+Für den Abschnitt Zielgruppen sind die folgenden Metriken verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| **[!UICONTROL Name]** | Der Name der aktivierten Audience. |
-| **[!UICONTROL Identitäten aktiviert]** | Die Gesamtzahl der Identitäten, die erfolgreich für das Ziel aktiviert wurden, basierend auf den empfangenen Profilen. |
-| **[!UICONTROL Ausgeschlossene Identitäten]** | Die Gesamtzahl der Identitäten, die von der Aktivierung für das Ziel ausgeschlossen wurden, basierend auf den empfangenen Profilen. Diese Identitäten können aufgrund fehlender Attribute oder Zustimmungsverletzungen ausgeschlossen werden. |
-| **[!UICONTROL Letzter Ausführungsstatus des Datenflusses]** | Der Status des letzten Aktivierungsauftrags, der für diese Zielgruppe ausgeführt wurde. |
-| **[!UICONTROL Letztes Datum für die Ausführung des Datenflusses]** | Datum und Uhrzeit des letzten Aktivierungsauftrags, der für diese Zielgruppe ausgeführt wurde. |
+| **[!UICONTROL Name]** | Der Name der aktivierten Zielgruppe. |
+| **[!UICONTROL Identitäten aktiviert]** | Die Gesamtzahl der Identitäten, die basierend auf den empfangenen Profilen erfolgreich für das Ziel aktiviert wurden. |
+| **[!UICONTROL Identitäten ausgeschlossen]** | Die Gesamtzahl der Identitäten, die von der Aktivierung für das Ziel ausgeschlossen wurden, basierend auf den empfangenen Profilen. Diese Identitäten konnten aufgrund fehlender Attribute oder Einverständnisverletzungen ausgeschlossen werden. |
+| **[!UICONTROL Letzter Ausführungsstatus für Datenfluss]** | Der Status des letzten Aktivierungsvorgangs, der für diese Zielgruppe ausgeführt wurde. |
+| **[!UICONTROL Letztes Ausführungsdatum für Datenfluss]** | Datum und Uhrzeit des letzten Aktivierungsvorgangs, der für diese Zielgruppe ausgeführt wurde. |
 
-Darüber hinaus können Sie Details zu den Fehlern beim Ausführen des Datenflusses anzeigen. Im Abschnitt &quot;Fehler beim Ausführen des Datenflusses&quot;können Sie sowohl die fehlgeschlagenen Identitäten als auch die ausgeschlossenen Identitäten anzeigen. Der Abschnitt &quot;Fehler&quot;enthält Details zum Fehlercode und zur Anzahl der fehlgeschlagenen oder ausgeschlossenen Identitäten.
+Darüber hinaus können Sie Details zu den Datenflussausführungsfehlern anzeigen. Im Abschnitt Fehler bei der Ausführung des Datenflusses können Sie sowohl die fehlgeschlagenen Identitäten als auch die ausgeschlossenen Identitäten anzeigen. Der Abschnitt Fehler enthält Details zum Fehler-Code und zur Anzahl der fehlgeschlagenen oder ausgeschlossenen Identitäten.
 
-![Das Dashboard des Aktivierungsauftrags. Informationen zu den Identitäten, die fehlgeschlagen sind oder ausgeschlossen wurden, werden hervorgehoben.](../assets/ui/monitor-audiences/activation-job-errors.png)
+![Das Dashboard des Aktivierungsvorgangs. Informationen zu den fehlgeschlagenen oder ausgeschlossenen Identitäten werden hervorgehoben.](../assets/ui/monitor-audiences/activation-job-errors.png)
 
-### Details zum Testauftrag {#evaluation-job-details}
+### Details zum Auswertungsauftrag {#evaluation-job-details}
 
-Auf der Seite mit den Ausführungsdetails des Testauftrags werden Informationen zu den Metriken und Zielgruppen der Ausführung angezeigt, die mit dem Segmentierungsauftrag zusammenhängen.
+Die Seite mit den Ausführungsdetails für den Datenfluss des Auswertungsauftrags zeigt Informationen über die Metriken und Zielgruppen des Durchgangs an, die mit dem Segmentierungsauftrag in Verbindung stehen.
 
 ![Das Dashboard des Auswertungsauftrags. Es werden Informationen zum Auswertungsauftrag der Zielgruppe angezeigt.](../assets/ui/monitor-audiences/evaluation-job-details.png)
 
-Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
+Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
 | **[!UICONTROL Profile insgesamt]** | Die Gesamtzahl der Profile, die ausgewertet werden. |
-| **[!UICONTROL Status]** | Der Status des Bewertungsauftrags. Mögliche Status für den Auswertungsauftrag sind **[!UICONTROL Erfolg]** und **[!UICONTROL Fehlgeschlagen]**. |
-| **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Beginns des Auswertungsauftrags. |
-| **[!UICONTROL Auftragsende]** | Datum und Uhrzeit des Endes des Auswertungsauftrags. |
-| **[!UICONTROL Auftragstyp]** | Der Typ des Segmentierungsauftrags. In diesem Fall handelt es sich immer um einen **[!UICONTROL Segmentauswertungsauftrag]**. |
-| **[!UICONTROL Testtyp]** | Die Art der durchgeführten Bewertung. Dies kann entweder **[!UICONTROL Batch]** oder **[!UICONTROL Streaming]** sein. |
-| **[!UICONTROL Auftrags-ID]** | Die ID des Auswertungsauftrags. |
+| **[!UICONTROL Status]** | Der Status des Auswertungsauftrags. Mögliche Status für den Auswertungsauftrag sind **[!UICONTROL Erfolg]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Starts des Auswertungsauftrags. |
+| **[!UICONTROL Ende des Vorgangs]** | Das Datum und die Uhrzeit, zu der der Auswertungsauftrag beendet wurde. |
+| **[!UICONTROL Vorgangstyp]** | Der Typ des Segmentierungsauftrags. In diesem Fall handelt es sich immer um einen Vorgang **[!UICONTROL Segmentauswertung]**. |
+| **[!UICONTROL Auswertungstyp]** | Die Art der durchgeführten Auswertung. Dies kann entweder &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. |
+| **[!UICONTROL Vorgangs-ID]** | Die ID des Auswertungsauftrags. |
 | **[!UICONTROL IMS-Organisations-ID]** | Die ID der Organisation, zu der der Auswertungsauftrag gehört. |
-| **[!UICONTROL Zielgruppenname]** | Der Name der auszuwertenden Zielgruppe. |
+| **[!UICONTROL Zielgruppenname]** | Der Name der Zielgruppe, die ausgewertet wird. |
 | **[!UICONTROL Zielgruppen-ID]** | Die ID der Zielgruppe, die ausgewertet wird. |
 
-Unter dem Abschnitt [!UICONTROL Zielgruppen] können Sie eine Liste der Zielgruppen anzeigen, die im Rahmen des Auswertungsauftrags ausgewertet werden. Mithilfe der Suchleiste können Sie die Liste der Zielgruppen nach Namen filtern.
+Im Abschnitt [!UICONTROL Audiences] wird eine Liste von Audiences angezeigt, die im Rahmen des Auswertungsauftrags ausgewertet werden. Sie können die Liste der Zielgruppen mithilfe der Suchleiste nach Namen filtern.
 
 >[!IMPORTANT]
 >
@@ -162,7 +162,7 @@ Für den Abschnitt [!UICONTROL Zielgruppen] sind die folgenden Metriken verfügb
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| **[!UICONTROL Name]** | Der Name der auszuwertenden Zielgruppe. |
+| **[!UICONTROL Name]** | Der Name der Zielgruppe, die ausgewertet wird. |
 | **[!UICONTROL Anzahl der Profile]** | Die Anzahl der Profile, die ausgewertet werden. |
 
 ## Dashboard zur Überwachung von Segmentierungsaufträgen {#monitoring-segmentation-jobs-dashboard}
@@ -172,22 +172,22 @@ Für den Abschnitt [!UICONTROL Zielgruppen] sind die folgenden Metriken verfügb
 >title="Segmentierungsaufträge"
 >abstract="Die Ansicht „Segmentierungsaufträge“ enthält Informationen zu den Auswertungs- und Exportaufträgen für alle Ihre Zielgruppen."
 
-Um auf das Dashboard **[!UICONTROL Segmentierungsaufträge]** zuzugreifen, wählen Sie **[!UICONTROL Segmentierungsaufträge]** im Dashboard [!UICONTROL Zielgruppen] aus. Das Dashboard [!UICONTROL Überwachung] enthält Metriken und Informationen zu den Evaluierungs- und Exportvorgängen.
+Um auf das Dashboard **[!UICONTROL Segmentierungsaufträge]** zuzugreifen, wählen Sie **[!UICONTROL Segmentierungsaufträge]** im Dashboard [!UICONTROL Zielgruppen] aus. Das [!UICONTROL Monitoring]-Dashboard enthält Metriken und Informationen zu Evaluierungs- und Exportvorgängen.
 
 >[!NOTE]
 >
->Für die Überwachung pro Zielgruppe werden nur **Auswertungsaufträge für die Segmentierung** unterstützt. Exportaufträge für Segmentierung unterstützen nur die Überwachung auf Unternehmensebene.
+>Nur **Segmentierungsbewertungsaufträge** werden für die Überwachung pro Zielgruppe unterstützt. Segmentierungs-Exportvorgänge unterstützen nur die Überwachung auf Organisationsebene.
 
-![Das Monitoring-Dashboard für Segmentierungsaufträge wird angezeigt. Der Umschalter zwischen Zielgruppen und Segmentierungsaufträgen wird hervorgehoben.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
+![Das Dashboard zur Überwachung von Segmentierungsaufträgen wird angezeigt. Der Umschalter zum Wechseln zwischen Audiences und Segmentierungsaufträgen ist hervorgehoben.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
-Verwenden Sie das Dashboard [!UICONTROL Segmentierungsaufträge] , um zu verstehen, ob die Profilauswertung und der Export rechtzeitig und ohne Ausnahmen erfolgen. Auf diese Weise können die nachgelagerten Dienste für die Zielaktivierung über die neuesten ausgewerteten Profildaten verfügen.
+Verwenden Sie das Dashboard [!UICONTROL Segmentierungsvorgänge] um zu verstehen, ob die Profilauswertung und der Export pünktlich und ohne Ausnahmen erfolgt, sodass die nachgelagerten Services für die Zielaktivierung über die neuesten ausgewerteten Profildaten verfügen können.
 
 Die folgenden Metriken sind für Segmentierungsaufträge verfügbar:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| **[!UICONTROL Segmentierungsauftrag]** | Gibt den Namen des Segmentierungsauftrags an. |
-| **[!UICONTROL Typ]** | Gibt den Typ des Segmentierungsauftrags - Export oder Auswertung an. Beachten Sie, dass der Segmentierungsauftrag in beiden Fällen **alle** Zielgruppen auswertet oder exportiert, die zu einer Organisation gehören. Weiterführende Informationen zu Exportvorgängen finden Sie im Handbuch zum Endpunkt [Exportaufträge](../../segmentation/api/export-jobs.md). Weiterführende Informationen zu Auswertungsaufträgen finden Sie im Tutorial zum [Auswerten einer Segmentdefinition](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Segmentierungsvorgang]** | Gibt den Namen des Segmentierungsauftrags an. |
+| **[!UICONTROL Typ]** | Gibt den Typ des Segmentierungsauftrags an - Export oder Auswertung. Beachten Sie, dass der Segmentierungsauftrag in beiden Fällen **alle** Zielgruppen einer Organisation auswertet oder exportiert. Weitere Informationen zu Exportvorgängen finden Sie im Handbuch zum Endpunkt [Exportvorgänge](../../segmentation/api/export-jobs.md). Weitere Informationen zu Auswertungsaufträgen finden Sie im Tutorial [Evaluieren einer Segmentdefinition](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
 | **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Starts des Segmentierungsauftrags. |
-| **[!UICONTROL Auftragsende]** | Datum und Uhrzeit des Abschlusses des Segmentierungsauftrags. |
-| **[!UICONTROL Status]** | Der Status des abgeschlossenen Auftrags. Mögliche Status für den Segmentierungsauftrag umfassen Erfolg oder Fehlgeschlagen. |
+| **[!UICONTROL Ende des Vorgangs]** | Datum und Uhrzeit des Abschlusses des Segmentierungsauftrags. |
+| **[!UICONTROL Status]** | Der Status des abgeschlossenen Auftrags. Mögliche Status für den Segmentierungsauftrag sind Erfolg oder Fehlgeschlagen. |

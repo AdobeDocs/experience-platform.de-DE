@@ -1,131 +1,132 @@
 ---
-title: Kostenlose Sprachschätzung mit AI Assistant
-description: Erfahren Sie, wie Sie die Funktionen zur Schätzung der natürlichen Sprache von AI Assistant verwenden.
+title: Schätzung der natürlichen Sprache mit KI-Assistent
+description: Erfahren Sie, wie Sie die Funktionen zum Schätzen der natürlichen Sprache des KI-Assistenten verwenden.
 badge: Alpha
-source-git-commit: aef3be05ca23abe9ed8275aa562fdd3313a7e2d0
+exl-id: 7997c84f-288b-4b48-9f88-8de4addbae36
+source-git-commit: e2cb6dee0c255c8eaa3729cc7a09ae07a1f33dbc
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
-# Natürliche Sprachschätzung mit AI Assistant
+# Schätzung der natürlichen Sprache mit KI-Assistent
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist in Alpha verfügbar und steht Ihrem Unternehmen möglicherweise nicht zur Verfügung. Wenden Sie sich an Ihr Adobe-Account-Team, um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen.
+>Diese Funktion befindet sich im Alpha und steht Ihrer Organisation möglicherweise nicht zur Verfügung. Um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen, wenden Sie sich an Ihr Adobe-Account-Team.
 
-Sie können die Funktionen zur Schätzung natürlicher Sprachen des AI-Assistenten für Adobe Experience Platform verwenden, um die Größe von Zielgruppen zu schätzen und die Neigung von Zielgruppen auf der Grundlage einfacher, kommunikativer Fragen vorherzusagen. Mit dieser Funktion können Sie Einblicke aus Zielgruppen leichter zugänglich und intuitiver machen. Dies kann besonders für Ihre geschäftlichen und Marketing-Vorgänge nützlich sein, insbesondere wenn Sie Ihre Zielgruppen täglich verwalten und sich bei der Gestaltung effektiver Marketing-Strategien auf diese Einblicke verlassen.
+Sie können die Funktionen zur Schätzung natürlicher Sprachen des KI-Assistenten für Adobe Experience Platform verwenden, um Zielgruppengrößen zu schätzen und Zielgruppenneigungen auf der Grundlage einfacher, dialogorientierter Fragen vorherzusagen. Mit dieser Funktion können Sie Zielgruppeneinblicke zugänglicher und intuitiver gestalten. Dies kann besonders für Anwendungsfälle Ihres Unternehmens und Ihrer Marketing-Abläufe nützlich sein, insbesondere wenn Sie Ihre Zielgruppen täglich verwalten und sich bei der Gestaltung effektiver Marketing-Strategien auf diese Einblicke verlassen.
 
-Mit den Funktionen der automatischen Sprachverarbeitung des KI-Assistenten können Sie Fragen stellen wie: &quot;Wie viele Profile habe ich in Kalifornien zwischen 25 und 35 Jahren&quot;oder &quot;Wie viele hochwertige Kunden haben wir?&quot; oder sogar &quot;Welcher Prozentsatz meiner Zielgruppe wird wahrscheinlich innerhalb des nächsten Monats kaufen?&quot; Der AI-Assistent interpretiert diese Fragen und gibt Schätzungen oder Tendenzwerte zurück, die Sie für datenbasierte Entscheidungen verwenden können.
+Mit den natürlichen Sprachverarbeitungsfunktionen von AI Assistant können Sie Fragen stellen wie: „Wie viele Profile habe ich in Kalifornien zwischen 25 und 35 Jahren“ oder „Wie viele hochwertige Kunden haben wir?“ oder sogar „Welcher Prozentsatz meiner Zuschauer wird wahrscheinlich innerhalb des nächsten Monats einkaufen?“ Der KI-Assistent interpretiert diese Fragen und gibt Schätzungen oder Tendenz-Scores zurück, die Sie verwenden können, um dateninformierte Entscheidungen zu treffen.
 
-In diesem Dokument erfahren Sie, wie Sie die Funktionen zur Schätzung der natürlichen Sprache von AI Assistant verwenden können.
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie die Funktionen des KI-Assistenten zur Schätzung natürlicher Sprachen verwenden können.
 
-## Wichtige Begriffe und Definitionen {#key-terminology-and-definitions}
+## Wichtige Terminologie und Definitionen {#key-terminology-and-definitions}
 
 In der folgenden Tabelle finden Sie eine Liste wichtiger Begriffe und der zugehörigen Definitionen.
 
 | Terminologie | Definition |
 | --- | --- |
-| Schätzung der Zielgruppengröße | Der Prozess der Berechnung der Anzahl der Mitglieder innerhalb einer bestimmten Zielgruppe anhand eines definierten Kriteriums. Sie können Ihre Größenschätzungen auf Profildaten basieren, einschließlich Profilen, die nicht in einer Zielgruppe enthalten sind. Darüber hinaus können Sie Schätzungen der Zielgruppengröße abrufen, ohne zuvor eine Zielgruppe erstellen zu müssen. Verwenden Sie diese Einblicke, um den Umfang Ihrer Reichweite für zielgerichtete Kampagnen zu verstehen. |
-| Tendenzschätzung | Eine Vorhersage der Wahrscheinlichkeit, dass Mitglieder in einer Zielgruppe innerhalb eines bestimmten Zeitraums bestimmte Verhaltensweisen zeigen (z. B. Einkäufe tätigen, kursieren). Die Tendenzschätzung ist für Zielgruppen in Real-time Customer Data Platform spezifisch, kann aber Profildaten enthalten, einschließlich Profilen in allen Zielgruppen. Sie können diese Einblicke bei der Optimierung Ihrer Kampagnen und der Verwaltung von Strategien zur Zielgruppenbeibehaltung referenzieren. |
-| Natürliche Sprachverarbeitung | Die Fähigkeit der KI-Assistenzkraft, alltägliche Fragen zu interpretieren und zu beantworten, sodass Sie ohne technische Abfragen kommunikativ interagieren und relevante Einblicke erhalten können. |
-| Vordefinierte Zeitrahmen | Standardzeitbereiche ( &quot;Letzter Monat&quot;, &quot;Nächste 30 Tage&quot;), die vom AI-Assistenten zur Schätzung der Zielgruppengröße und -neigung unterstützt werden. **Hinweis**: Benutzerdefinierte Zeitrahmen werden während der Alpha-Phase möglicherweise nicht vollständig unterstützt. |
-| Momentaufnahmen-Daten | Der Datensatz, der von AI Assistant zur Bereitstellung von Schätzungen verwendet wird. Diese Daten werden alle 24-48 Stunden von Real-time Customer Data Platform aktualisiert. Daher spiegeln Einblicke möglicherweise keine Änderungen der Zielgruppe in Echtzeit wider. |
+| Schätzung der Zielgruppengröße | Der Prozess der Berechnung der Anzahl der Mitglieder in einer bestimmten Zielgruppe basierend auf definierten Kriterien. Sie können Ihre Größenschätzungen auf Profildaten basieren, einschließlich Profilen, die nicht in einer Zielgruppe enthalten sind. Darüber hinaus können Sie Schätzungen der Zielgruppengröße abrufen, ohne zunächst eine Zielgruppe erstellen zu müssen. Nutzen Sie diesen Einblick, um die Größenordnung Ihrer Reichweite für zielgerichtete Kampagnen zu verstehen. |
+| Tendenzschätzung | Eine Prognose der Wahrscheinlichkeit, dass Mitglieder einer Zielgruppe innerhalb eines bestimmten Zeitraums bestimmte Verhaltensweisen zeigen (wie z. B.: einen Kauf tätigen, abwandern). Die Neigungsschätzung ist spezifisch für Audiences in Real-time Customer Data Platform, kann jedoch Profildaten, einschließlich Profile, in beliebigen Audiences enthalten. Sie können diese Einblicke bei der Optimierung Ihrer Kampagnen und der Verwaltung von Strategien zur Zielgruppentreue heranziehen. |
+| Natürliche Sprachverarbeitung | Die Fähigkeit des KI-Assistenten, Fragen in alltäglicher Sprache zu interpretieren und zu beantworten, sodass Sie ohne Verwendung technischer Abfragen interagieren und relevante Erkenntnisse erhalten können. |
+| Vordefinierte Zeitrahmen | Von AI Assistant unterstützte Standardzeitbereiche ( „letzter Monat“, „nächste 30 Tage„) zur Schätzung von Zielgruppengröße und -neigung. **Hinweis**: Benutzerdefinierte Zeitrahmen werden während des Alphas möglicherweise nicht vollständig unterstützt. |
+| Momentaufnahmen-Daten | Der von KI-Assistent verwendete Datensatz, um Schätzungen bereitzustellen. Diese Daten werden von Real-time Customer Data Platform alle 24 bis 48 Stunden aktualisiert, sodass die Einblicke möglicherweise keine Echtzeit-Zielgruppenänderungen widerspiegeln. |
 
 {style="table-layout:auto"}
 
 ## Anwendungsbeispiele {#use-case-examples}
 
-Die Funktionen zur Schätzung der natürlichen Sprache des KI-Assistenten können in den folgenden Anwendungsfällen besonders hilfreich sein:
+Die Funktionen zur Schätzung der natürlichen Sprache des KI-Assistenten können besonders für die folgenden Anwendungsfälle hilfreich sein:
 
 ### Marketing-Vorgänge
 
-Als professioneller Marketing-Experte können Sie Zielgruppendaten verwalten und überwachen, um sicherzustellen, dass sie mit Ihren Geschäftszielen in Einklang stehen. Mit der Funktion zur Schätzung der natürlichen Sprache des KI-Assistenten können Sie schnell Einblicke in die Größe und Neigung von Zielgruppen gewinnen, ohne dass Sie zuerst eine Audience erstellen müssen oder umfangreiche Kenntnisse zur Datenanalyse benötigen.
+Als Marketing-Experte können Sie unter anderem für die Verwaltung und Überwachung von Zielgruppendaten verantwortlich sein, um sicherzustellen, dass diese mit Ihren Geschäftszielen übereinstimmen. Mit der Funktion zur Schätzung der natürlichen Sprache des KI-Assistenten können Sie schnell Einblicke in die Größe und Neigung von Zielgruppen gewinnen, ohne zuerst eine Zielgruppe oder umfangreiches Wissen zur Datenanalyse erstellen zu müssen.
 
 Unterstützung bei der Aufrechterhaltung eines konsistenten, datengesteuerten Ansatzes in ihren Workflows.
 
-### Geschäftsbenutzer und Marketing-Experten
+### Business-Anwender und Marketing-Experten
 
-Als Business-Anwender und Marketing-Experte kann der schnelle Zugriff auf Zielgruppendaten entscheidend für den Erfolg Ihrer Kampagnenplanung, -zielgruppenbestimmung und -bewertung sein. Mit der Funktion zur Schätzung der natürlichen Sprache des KI-Assistenten können Sie Ihren Zugriff auf Zielgruppendaten vereinfachen, unkomplizierte Fragen stellen und praktische Einblicke erhalten, die Sie bei der Erstellung und Optimierung von Zielgruppen unterstützen.
+Als Business-Anwenderin bzw. -Anwender und Marketing-Expertin kann der schnelle Zugriff auf Zielgruppendaten entscheidend für den Erfolg Ihrer Kampagnenplanung, Zielgruppenbestimmung und Auswertung sein. Mit der Funktion zur Schätzung der natürlichen Sprache des KI-Assistenten können Sie den Zugriff auf Zielgruppeninformationen vereinfachen, einfache Fragen stellen und umsetzbare Einblicke erhalten, die bei der Erstellung und Optimierung von Zielgruppen helfen.
 
 ## Wichtigste Funktionen
 
 >[!IMPORTANT]
 >
->Die folgenden Funktionen sind in Alpha verfügbar und konzentrieren sich auf grundlegende Fähigkeiten der Schätzung natürlicher Sprachen. Da sich diese Funktion im Alpha befindet, müssen Sie sicherstellen, dass Sie die Antworten, die Sie von AI Assistant erhalten, auf ihre Richtigkeit doppelprüfen.
+>Die folgenden Funktionen befinden sich im Alpha und konzentrieren sich auf die grundlegenden Funktionen der Schätzung natürlicher Sprachen. Da sich diese Funktion im Alpha befindet, müssen Sie sicherstellen, dass Sie die Antworten, die Sie vom KI-Assistenten erhalten, auf Korrektheit überprüfen.
 
 ### Schätzung der Zielgruppengröße
 
-Sie können kostenlose Sprachabfragen verwenden, um AI Assistant zu bitten, die Größe bestimmter Zielgruppen zu schätzen. Diese Funktion kann besonders für die Messung der Reichweite und Auswirkung von Zielgruppen nützlich sein. Als Marketingstratege können Sie beispielsweise Fragen stellen wie:
+Mit Abfragen in natürlicher Sprache können Sie den KI-Assistenten bitten, die Größe bestimmter Zielgruppen zu schätzen. Diese Funktion kann besonders nützlich sein, um die Reichweite und Wirkung von Zielgruppen zu messen. Als Marketing-Stratege können Sie zum Beispiel Fragen stellen wie:
 
-* &quot;Wie viele Profile leben in New York?&quot;
-* &quot;Wie viele Profile habe ich mit einer E-Mail und habe zugestimmt?&quot;
+* „Wie viele Profile leben in New York?“
+* „Wie viele Profile habe ich mit einer E-Mail und habe zugestimmt?“
 
-Verwenden Sie diese Funktion, um die Schätzung der Zielgruppengrößen zu vereinfachen und sofort Antworten zu erhalten, ohne komplexe Datenfilter oder Segmentdefinitionen durchsuchen zu müssen.
+Verwenden Sie diese Funktion, um das Schätzen der Zielgruppengrößen zu vereinfachen und sofortige Antworten zu erhalten, ohne durch komplexe Datenfilter oder Segmentdefinitionen navigieren zu müssen.
 
-### Schätzung der Audience-Neigung
+### Schätzung der Zielgruppenneigung
 
 >[!TIP]
 >
->Ihr Experience Platform-Konto muss über [Customer AI](../../intelligent-services/customer-ai/overview.md) verfügen, um die Tendenzschätzungsfunktionen des KI-Assistenten nutzen zu können.
+>Ihr Experience Platform-Konto muss mit [Kunden-KI](../../intelligent-services/customer-ai/overview.md) bereitgestellt werden, damit die Funktionen zum Schätzen der Tendenz des KI-Assistenten verwendet werden können.
 
-Sie können die Tendenzschätzung der Zielgruppe verwenden, um die Wahrscheinlichkeit bestimmter Verhaltensweisen oder Aktionen innerhalb einer Zielgruppe zu ermitteln. Sie können beispielsweise Fragen stellen wie:
+Mit einer Schätzung der Zielgruppen-Neigung können Sie die Wahrscheinlichkeit bestimmter Verhaltensweisen oder Aktionen in einer Zielgruppe identifizieren. Sie können zum Beispiel Fragen stellen wie:
 
-* &quot;Welcher Prozentsatz meiner aktuellen Zielgruppe wird voraussichtlich im nächsten Monat gekauft?&quot;
-* &quot;Wie viele Profile habe ich mit einer hohen Konversionsneigung?&quot;
+* „Welcher Prozentsatz meiner aktuellen Audience wird im nächsten Monat wahrscheinlich einkaufen?“
+* „Wie viele Profile habe ich mit einer hohen Konversionsneigung?“
 
-Indem Sie Fragen zur natürlichen Sprache stellen, können Sie Tendenzwerte abrufen, die den Prozentsatz oder die Wahrscheinlichkeit von Zielgruppenmitgliedern angeben, die bestimmte Verhaltensweisen zeigen, und Sie dabei unterstützen, proaktive Anpassungen an Ihren Kampagnen oder Aufbewahrungsstrategien vorzunehmen.
+Indem Sie Fragen zur natürlichen Sprache stellen, können Sie Tendenzwerte abrufen, die den Prozentsatz oder die Wahrscheinlichkeit angeben, mit der Zielgruppenmitglieder bestimmte Verhaltensweisen zeigen. So können Sie proaktive Anpassungen an Ihren Kampagnen oder Kundenbindungsstrategien vornehmen.
 
-## Beispielfragen zur Zielgruppengröße und Tendenzschätzung
+## Beispielfragen für die Schätzung der Zielgruppengröße und -neigung
 
-Im Folgenden finden Sie Beispielfragen, die Sie an den KI-Assistenten richten können, um Ihr Verständnis der Zielgruppengröße und Verhaltensanfälligkeit zu erhalten:
+Im Folgenden finden Sie Beispielfragen, die Sie dem KI-Assistenten stellen können, um die Zielgruppengrößen und Verhaltensneigungen besser zu verstehen:
 
 ### Schätzung der Zielgruppengröße
 
-* &quot;Wie viele Profile habe ich mit einer E-Mail- oder Mobiltelefonnummer?&quot;
-* &quot;Wie viele Profile habe ich in New York?&quot;
-* &quot;Was sind die fünf wichtigsten Staaten, in denen meine Kunden leben?&quot;
+* „Wie viele Profile habe ich mit einer E-Mail- oder Mobiltelefonnummer?“
+* „Wie viele Profile habe ich in New York?“
+* „Was sind die fünf wichtigsten Bundesstaaten, in denen meine Kunden leben?“
 
-### Schätzung der Zielgruppen-Propensity
+### Schätzung der Zielgruppenneigung
 
-* &quot;Welcher Prozentsatz meiner Zielgruppe wird wahrscheinlich innerhalb des nächsten Monats kaufen?&quot;
-* &quot;Wie viele Kunden werden voraussichtlich im nächsten Quartal konvertieren?&quot;
+* „Welcher Prozentsatz meiner Zielgruppe wird innerhalb des nächsten Monats wahrscheinlich einkaufen?“
+* „Von wie vielen Kunden wird im nächsten Quartal eine Konversion erwartet?“
 
-Sie können die Flexibilität natürlicher Sprachabfragen nutzen, um schnelle Einblicke in die Zielgruppendynamik zu erhalten, ohne technische Kenntnisse zu benötigen.
+Sie können die Flexibilität nutzen, die Abfragen in natürlicher Sprache bieten, um schnelle Einblicke in die Dynamik Ihrer Zielgruppe zu erhalten, ohne dass Sie technisches Fachwissen benötigen.
 
 ## Häufig gestellte Fragen
 
-In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Schätzung natürlicher Sprachen mit dem KI-Assistenten.
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Schätzung der natürlichen Sprache mit dem KI-Assistenten.
 
 ### Wie oft aktualisiert der KI-Assistent Zielgruppendaten?
 
-Die Daten der KI-Assistenzkraft werden alle 24-48 Stunden aktualisiert. Daher können Schätzungen geringfügige Verzögerungen widerspiegeln. Wenn Sie nach &quot;aktuellen&quot;Daten fragen, spiegelt die Antwort die neueste Momentaufnahme wider, die bis zu 48 Stunden alt sein kann.
+Die Daten des KI-Assistenten werden alle 24-48 Stunden aktualisiert. Daher können Schätzungen geringfügige Verzögerungen widerspiegeln. Wenn Sie also nach „aktuellen“ Daten fragen, spiegelt die Antwort den letzten Schnappschuss wider, der bis zu 48 Stunden alt sein kann.
 
-### Kann ich nach Zielgruppengrößen oder Eigenschaften mit benutzerdefinierten Datumsbereichen fragen?
+### Kann ich nach Zielgruppengrößen oder -neigungen mit benutzerdefinierten Datumsbereichen fragen?
 
-Derzeit unterstützt der AI-Assistent vordefinierte Datumsbereiche, z. B. &quot;Letzter Monat&quot;oder &quot;Nächste 30 Tage&quot;. Benutzerdefinierte Datumsbereiche, die über diese vordefinierten Optionen hinausgehen, werden in der Phase &quot;Alpha&quot;nicht vollständig unterstützt. Wenn ein benutzerdefinierter Zeitrahmen angefordert wird, bietet der KI-Assistent Einblicke basierend auf dem nächstverfügbaren Zeitrahmen.
+Derzeit unterstützt der KI-Assistent vordefinierte Datumsbereiche wie „Letzter Monat“ oder „Nächste 30 Tage“. Benutzerdefinierte Datumsbereiche, die über diese vordefinierten Optionen hinausgehen, werden im Alpha-Schritt nicht vollständig unterstützt. Wenn ein benutzerdefinierter Zeitrahmen angefordert wird, liefert der KI-Assistent Einblicke basierend auf dem nächstmöglichen verfügbaren Zeitrahmen.
 
-### Wie berechnet der KI-Assistent Tendenzwerte?
+### Wie berechnet der KI-Assistent Tendenz-Scores?
 
-Tendenzwerte werden mit [Customer AI](../../intelligent-services/customer-ai/overview.md) berechnet. Der KI-Assistent verwendet Modelle für maschinelles Lernen, um die Wahrscheinlichkeit bestimmter Verhaltensweisen von Zielgruppen wie Käufen und Abwanderungen innerhalb des angeforderten Zeitraums vorherzusagen. Während des Alphas verwendet die Tendenzwertberechnung im AI-Assistenten keine Erlebnisereignisse oder Verhaltensdaten.
+Neigungs-Scores werden mithilfe von [Kunden-KI](../../intelligent-services/customer-ai/overview.md) berechnet. Der KI-Assistent verwendet Modelle für maschinelles Lernen, um die Wahrscheinlichkeit bestimmter Zielgruppenverhaltensweisen wie Käufe und Abwanderung innerhalb des angeforderten Zeitrahmens vorherzusagen. Während des Alphas verwendet die Berechnung des Tendenz-Scores im KI-Assistenten keine Erlebnisereignisse oder Verhaltensdaten.
 
-### Wird der AI-Assistent Zielgruppengrößen oder -neigungen auf der Grundlage von Echtzeitdaten schätzen?
+### Wird der KI-Assistent Zielgruppengrößen oder -neigungen basierend auf Echtzeitdaten schätzen?
 
-Nein, Echtzeitdaten sind derzeit nicht verfügbar. Die Schätzungen basieren auf aktuellen Datenmomentaufnahmen, die alle 24-48 Stunden aktualisiert werden. Echtzeit-Updates werden während des Alphas nicht berücksichtigt.
+Nein, Echtzeitdaten sind derzeit nicht verfügbar. Die Schätzungen basieren auf aktuellen Daten-Snapshots, die alle 24-48 Stunden aktualisiert werden. Echtzeit-Updates liegen während des Alphas außerhalb des Geltungsbereichs.
 
-### Wie werden Eigenschaften berechnet?
+### Wie werden Tendenzen berechnet?
 
-Der KI-Assistent nutzt Customer AI-Modelle zur Beantwortung aller Wahrscheinlichkeits- oder Tendenzwerte.
+Der KI-Assistent nutzt Kunden-KI-Modelle zur Beantwortung von Wahrscheinlichkeits- oder Tendenzwerten.
 
-## Out-of-Scope-Funktionen
+## Nicht im Umfang enthaltene Funktionen
 
 Die folgenden Funktionen werden derzeit nicht unterstützt:
 
-### Zielgruppengrößenschätzungen basierend auf dem Ereignis von Verhaltensdaten
+### Schätzungen der Zielgruppengröße basierend auf Ereignissen von Verhaltensdaten
 
-Der KI-Assistent kann derzeit keine Fragen beantworten, die auf Verhaltensdaten wie &quot;**&quot;Wie viele Benutzer in den letzten 30 Tagen ein Produkt zum Warenkorb hinzugefügt haben&quot;**. Sie können jedoch ein berechnetes Attribut in Real-Time CDP erstellen, das diese Werte vorab berechnen kann. Diese berechneten Attribute sind dann im AI-Assistenten verfügbar. Weitere Informationen finden Sie in der Dokumentation zu [berechneten Attributen](../../profile/computed-attributes/overview.md).
+Der KI-Assistent kann derzeit keine Fragen beantworten, die auf Verhaltensdaten wie **basieren: „Wie viele Benutzende haben in den letzten 30 Tagen ein Produkt zum Warenkorb hinzugefügt?**. Sie können jedoch ein berechnetes Attribut in Real-Time CDP erstellen, das solche Werte vorberechnen kann. Diese berechneten Attribute sind dann im KI-Assistenten verfügbar. Weitere Informationen finden Sie in der Dokumentation zu [berechneten Attributen](../../profile/computed-attributes/overview.md).
 
 ### Echtzeit-Datenaktualisierungen
 
-Die von AI Assistant bereitgestellten Schätzungen basieren auf aktuellen, aber nicht Echtzeit-Datenmomentaufnahmen. Die Daten werden alle 24 bis 48 Stunden aktualisiert, sodass Einblicke diese Verzögerung widerspiegeln. Diese Einschränkung bedeutet, dass Benutzer keine sofortigen Aktualisierungen erhalten können, wenn sich ein Segment oder ein Datensatz innerhalb kurzer Zeit signifikant ändert.
+Die vom KI-Assistenten bereitgestellten Schätzungen basieren auf aktuellen, jedoch nicht auf Echtzeit-Daten-Momentaufnahmen. Die Daten werden alle 24-48 Stunden aktualisiert, sodass die Einblicke diese Verzögerung widerspiegeln. Diese Einschränkung bedeutet, dass Benutzende keine sofortigen Aktualisierungen erhalten können, wenn ein Segment oder Datensatz innerhalb eines kurzen Zeitraums erheblich geändert wird.

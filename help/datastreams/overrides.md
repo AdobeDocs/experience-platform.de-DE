@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von Datenstromüberschreibungen
-description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK oder Mobile SDK aktivieren.
+description: Erfahren Sie, wie Sie Datenstrom-Überschreibungen in der Datenstrom-Benutzeroberfläche konfigurieren und über die Web-SDK oder mobile SDK aktivieren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
 source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 57%
 
 # Konfigurieren von Datenstromüberschreibungen
 
-Mit Datastream-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenspeicher definieren, die über das Web SDK oder Mobile SDK an das Edge Network übergeben werden.
+Mit Datenstrom-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über die Web-SDK oder mobile SDK an das Edge Network übergeben werden.
 
-Auf diese Weise können Sie andere Verhaltensweisen von Datastreams als die Standardeinstellungen Trigger haben, ohne einen Datastream zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
+Auf diese Weise können Sie andere Datenstromverhaltensweisen als die standardmäßigen Trigger vornehmen, ohne einen Datenstrom zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
 
-Die Außerkraftsetzung der Datastream-Konfiguration erfolgt in zwei Schritten:
+Die Überschreibung der Datenstromkonfiguration ist ein zweistufiger Prozess:
 
-1. Zunächst müssen Sie die Außerkraftsetzung der Datastream-Konfiguration auf der [Datastream-Konfigurationsseite](configure.md) definieren.
-2. Anschließend müssen Sie die Außerkraftsetzungen auf eine der folgenden Arten an das Edge Network senden:
-   * Über die Befehle `sendEvent` oder `configure` [Web SDK](#send-overrides).
-   * Über die Web SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * über die Mobile SDK-API [sendEvent](#send-overrides) oder die Verwendung von [Regeln](#send-overrides).
+1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ ](configure.md).
+2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an das Edge Network senden:
+   * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides)-Befehle.
+   * Über die Web-SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Über die Mobile SDK [sendEvent](#send-overrides)-API oder mithilfe von [Rules](#send-overrides).
 
 In diesem Artikel wird der Prozess zur Überschreibung der End-to-End-Datenstromkonfiguration für jeden unterstützten Überschreibungstyp erläutert.
 
 >[!IMPORTANT]
 >
->Datastream-Überschreibungen werden nur für [Web SDK](../web-sdk/home.md) - und [Mobile SDK](https://developer.adobe.com/client-sdks/home/) -Integrationen unterstützt. [Server-API](../server-api/overview.md) -Integrationen unterstützen derzeit keine Überschreibungen von Datastreams.
+>Datenstromüberschreibungen werden nur für Integrationen mit [Web SDK](../web-sdk/home.md) und [Mobile SDK](https://developer.adobe.com/client-sdks/home/) unterstützt. [Server-API](../server-api/overview.md)-Integrationen unterstützen derzeit keine Datenstrom-Überschreibungen.
 ><br>
->Datenstromüberschreibungen sollten verwendet werden, wenn Sie verschiedene Daten an verschiedene Datenströme senden müssen. Verwenden Sie keine Datastream-Überschreibungen für Anwendungsfälle zur Personalisierung oder Einverständnisdaten.
+>Datenstromüberschreibungen sollten verwendet werden, wenn Sie verschiedene Daten an verschiedene Datenströme senden müssen. Verwenden Sie keine Datenstrom-Überschreibungen für Personalisierungs-Anwendungsfälle oder Einverständnisdaten.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -41,7 +41,7 @@ Ein Unternehmen hat verschiedene Websites oder Subdomains für verschiedene Län
 
 Durch die Verwendung von Datenstromüberschreibungen kann das Unternehmen den Datenfluss dynamisch in verschiedene Datenströme umstellen, anstatt das Standardverhalten zu ändern, Daten an einen Datenstrom zu senden.
 
-Ein gängiger Anwendungsfall könnte das Senden von Daten an einen länderspezifischen Datastream und auch an einen globalen Datastream sein, wo Kunden wichtige Aktionen ausführen, wie z. B. eine Bestellung aufgeben oder ihr Benutzerprofil aktualisieren.
+Ein gängiges Anwendungsbeispiel könnte das Senden von Daten an einen länderspezifischen Datenstrom und auch an einen globalen Datenstrom sein, bei dem Kundinnen und Kunden eine wichtige Aktion ausführen, z. B. eine Bestellung aufgeben oder ihr Benutzerprofil aktualisieren.
 
 **Unterscheiden von Profilen und Identitäten für verschiedene Geschäftseinheiten**
 
@@ -62,19 +62,19 @@ Anstatt Daten an einen standardmäßigen Datenstrom zu senden, kann das Unterneh
 
 Um Datenstromüberschreibungen für einen Adobe Target-Datenstrom zu konfigurieren, müssen Sie zunächst einen Adobe Target-Datenstrom erstellen lassen. Befolgen Sie die Anweisungen, mit dem [Adobe Target](configure.md#target)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datastream erstellt haben, bearbeiten Sie den von Ihnen hinzugefügten [Adobe Target](configure.md#target)-Dienst und verwenden Sie den Abschnitt **[!UICONTROL Eigenschafts-Token-Überschreibung]** , um die gewünschten Datastream-Überschreibungen hinzuzufügen, wie in der folgenden Abbildung dargestellt. Fügen Sie pro Zeile ein Eigenschafts-Token hinzu.
+Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Target](configure.md#target)-Service, den Sie hinzugefügt haben, und verwenden Sie den Abschnitt **[!UICONTROL Eigenschafts-Token-Überschreibungen]**, um die gewünschten Datenstrom-Überschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt. Fügen Sie pro Zeile ein Eigenschafts-Token hinzu.
 
 ![Screenshot der Datenstrom-Benutzeroberfläche mit den Einstellungen des Adobe Target-Dienstes, wobei die Eigenschafts-Token-Überschreibungen hervorgehoben sind.](assets/overrides/override-target.png)
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über das Web SDK oder Mobile SDK](#send-overrides) an das Edge Network senden.
+Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über die Web-SDK oder mobile SDK an das Edge Network senden](#send-overrides).
 
 ### Datenstromüberschreibungen für Adobe Analytics {#analytics-overrides}
 
 Um Datenstromüberschreibungen für einen Adobe Analytics-Datenstrom zu konfigurieren, müssen Sie zunächst einen [Adobe Analytics](configure.md#analytics)-Datenstrom erstellen lassen. Befolgen Sie die Anweisungen, mit dem [Adobe Analytics](configure.md#analytics)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datastream erstellt haben, bearbeiten Sie den von Ihnen hinzugefügten [Adobe Analytics](configure.md#target)-Dienst und verwenden Sie den Abschnitt **[!UICONTROL Report Suite-Überschreibung]** , um die gewünschten Datastream-Überschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt.
+Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den hinzugefügten [Adobe Analytics](configure.md#target)-Service und verwenden Sie den Abschnitt **[!UICONTROL Report Suite-Überschreibungen]**, um die gewünschten Datenstrom-Überschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt.
 
 Wählen Sie **[!UICONTROL Batch-Modus anzeigen]** aus, um die Stapelbearbeitung der Report Suite-Überschreibungen zu aktivieren. Sie können eine Liste mit Report Suite-Überschreibungen kopieren und einfügen und dabei pro Zeile eine Report Suite eingeben.
 
@@ -82,19 +82,19 @@ Wählen Sie **[!UICONTROL Batch-Modus anzeigen]** aus, um die Stapelbearbeitung 
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Ihre Adobe Analytics-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über das Web SDK oder Mobile SDK](#send-overrides) an das Edge Network senden.
+Ihre Adobe Analytics-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über die Web-SDK oder mobile SDK an das Edge Network senden](#send-overrides).
 
 ### Datenstromüberschreibungen für Experience Platform-Ereignisdatensätze {#event-dataset-overrides}
 
 Um Datenstromüberschreibungen für Experience Platform-Ereignisdatensätze zu konfigurieren, müssen Sie zunächst einen [Adobe Experience Platform](configure.md#aep)-Datenstrom erstellt haben. Befolgen Sie die Anweisungen, mit dem [Adobe Experience Platform](configure.md#aep)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datastream erstellt haben, bearbeiten Sie den von Ihnen hinzugefügten [Adobe Experience Platform](configure.md#aep)-Dienst und wählen Sie die Option **[!UICONTROL Ereignisdatensatz hinzufügen]** aus, um einen oder mehrere Ereignis-Datensätze hinzuzufügen, wie in der folgenden Abbildung dargestellt.
+Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Experience Platform](configure.md#aep)-Service, den Sie hinzugefügt haben, und wählen Sie die Option **[!UICONTROL Ereignis-Datensatz hinzufügen]** aus, um einen oder mehrere Ereignis-Datensätze zu überschreiben, wie in der Abbildung unten dargestellt.
 
 ![Screenshot der Datenstrom-Benutzeroberfläche mit den Einstellungen des Adobe Experience Platform-Dienstes, wobei die Überschreibungen des Ereignisdatensatzes hervorgehoben sind.](assets/overrides/override-aep.png)
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Sie sollten jetzt die Adobe Experience Platform-Datenstromüberschreibungen konfiguriert haben. Jetzt können Sie [die Überschreibungen über das Web SDK oder Mobile SDK](#send-overrides) an das Edge Network senden.
+Sie sollten jetzt die Adobe Experience Platform-Datenstromüberschreibungen konfiguriert haben. Jetzt können Sie [die Überschreibungen über die Web-SDK oder mobile SDK an das Edge Network senden](#send-overrides).
 
 ### Datenstromüberschreibungen für ID-Synchronisierungs-Container von Drittanbietern {#container-overrides}
 
@@ -112,18 +112,18 @@ Verwenden Sie dann den Abschnitt **[!UICONTROL Container-ID-Überschreibungen]**
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Sie sollten jetzt die Überschreibungen des ID-Synchronisierungs-Containers konfiguriert haben. Jetzt können Sie [die Überschreibungen über das Web SDK oder Mobile SDK](#send-overrides) an das Edge Network senden.
+Sie sollten jetzt die Überschreibungen des ID-Synchronisierungs-Containers konfiguriert haben. Jetzt können Sie [die Überschreibungen über die Web-SDK oder mobile SDK an das Edge Network senden](#send-overrides).
 
 ## Überschreibungen an das Edge Network senden {#send-overrides}
 
-Nachdem Sie in der Datenerfassungs-Benutzeroberfläche Datastream-Überschreibungen konfiguriert haben, können Sie die Überschreibungen über das Web SDK oder das Mobile SDK an das Edge Network senden.
+Nach dem Konfigurieren von Datenstrom-Überschreibungen in der Datenerfassungs-Benutzeroberfläche können Sie die Überschreibungen über die Web-SDK oder die mobile SDK an das Edge Network senden.
 
-* **Web SDK**: Anweisungen zur Tag-Erweiterung und Beispiele für JavaScript-Bibliothekscode finden Sie unter [Überschreibungen der Datastream-Konfiguration](../web-sdk/commands/datastream-overrides.md#library) .
-* **Mobile SDK**: Sie können Überschreibungen der Datastraam-ID entweder mit der [sendEvent-API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) oder mit [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/) senden.
+* **Web SDK**: Unter [Überschreibungen der Datenstromkonfiguration](../web-sdk/commands/datastream-overrides.md#library) finden Sie Anweisungen für Tag-Erweiterungen und Code-Beispiele für die JavaScript-Bibliothek.
+* **Mobile SDK**: Überschreibungen der Datenstrom-ID können entweder über die [sendEvent-API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) oder mithilfe von [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/) gesendet werden.
 
 ## Payload-Beispiel {#payload-example}
 
-Die obigen Beispiele generieren eine [!DNL Edge Network] -Payload, die der unten stehenden ähnelt.
+Die obigen Beispiele generieren eine [!DNL Edge Network] Payload, die der folgenden ähnelt.
 
 ```json
 {

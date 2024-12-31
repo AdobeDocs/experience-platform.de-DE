@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;ersetzen Sie ein Objekt
+keywords: Experience Platform;Startseite;beliebte Themen;Katalog;API;Objekt ersetzen
 solution: Experience Platform
-title: Katalogobjekt ersetzen
+title: Ersetzen eines Katalogobjekts
 description: Sie können den Inhalt eines Catalog-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 source-git-commit: 2d6167ee7aaa0b79514be6e532e61602ae5cc640
@@ -11,13 +11,13 @@ ht-degree: 10%
 
 ---
 
-# Catalog-Objekt ersetzen
+# Ersetzen eines Catalog-Objekts
 
-Sie können den Inhalt eines [!DNL Catalog] -Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
+Sie können den Inhalt eines [!DNL Catalog]-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 
 >[!NOTE]
 >
->Wenn Sie nur einige bestimmte Felder innerhalb eines [!DNL Catalog] -Objekts aktualisieren müssen, kann die Verwendung einer PATCH-Anfrage effizienter sein.
+>Wenn Sie nur einige bestimmte Felder innerhalb eines [!DNL Catalog] aktualisieren müssen, ist die Verwendung einer PATCH-Anfrage möglicherweise effizienter.
 
 **API-Format**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] zu ersetzenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -56,7 +56,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anfrage gesendeten ID übereinstimmen. Die Ausführung einer GET-Anfrage für dieses Objekt zeigt jetzt, dass seine Details durch die in der Payload der vorherigen PUT-Anfrage angegebenen ersetzt wurden.
+Eine erfolgreiche Antwort gibt ein -Array zurück, das die ID des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anfrage gesendeten ID übereinstimmen. Wenn Sie eine GET-Anfrage für dieses Objekt ausführen, wird jetzt angezeigt, dass seine Details durch die in der Payload der vorherigen PUT-Anfrage angegebenen ersetzt werden müssen.
 
 ```json
 [

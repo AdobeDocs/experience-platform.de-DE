@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Übersicht über Dashboards
+title: Dashboards - Übersicht
 type: Documentation
 description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, mit denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863

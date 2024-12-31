@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Flussdienst; API; API; API; Löschen; Löschen von Ziel-Datenflüssen
+keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;API;api;Löschen;Löschen von Ziel-Datenflüssen
 solution: Experience Platform
 title: Löschen eines Ziel-Datenflusses mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Datenflüsse an Batch- und Streaming-Ziele löschen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Datenflüsse zu Batch- und Streaming-Zielen löschen.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
 source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
@@ -14,20 +14,20 @@ ht-degree: 49%
 
 # Löschen eines Ziel-Datenflusses mithilfe der Flow Service-API
 
-Sie können Datenflüsse löschen, die Fehler enthalten oder mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) veraltet sind.
+Datenflüsse, die Fehler enthalten oder veraltet sind, können Sie mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) löschen.
 
-In diesem Tutorial werden die Schritte zum Löschen von Datenflüssen an Batch- und Streaming-Ziele mit [!DNL Flow Service] beschrieben.
+In diesem Tutorial werden die Schritte zum Löschen von Datenflüssen zu Batch- und Streaming-Zielen mithilfe von [!DNL Flow Service] beschrieben.
 
 ## Erste Schritte {#get-started}
 
-Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) aus und führen Sie die Schritte unter [Verbindung zum Ziel herstellen](../ui/connect-destination.md) und [Daten aktivieren](../ui/activation-overview.md) aus, bevor Sie dieses Tutorial ausführen.
+Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) und befolgen Sie die beschriebenen Schritte zum [Herstellen einer Verbindung mit dem Ziel](../ui/connect-destination.md) und [Aktivieren von Daten](../ui/activation-overview.md), bevor Sie dieses Tutorial ausführen.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Ziele](../home.md): [!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um einen Datenfluss mithilfe der [!DNL Flow Service] -API erfolgreich zu löschen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um einen Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich löschen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -47,15 +47,15 @@ Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, d
 
 >[!NOTE]
 >
->Wenn die Kopfzeile `x-sandbox-name` nicht angegeben ist, werden Anforderungen unter der Sandbox `prod` aufgelöst.
+>Wenn die `x-sandbox-name`-Kopfzeile nicht angegeben ist, werden Anfragen unter der `prod`-Sandbox aufgelöst.
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
 * `Content-Type: application/json`
 
-## Ziel-Datenfluss löschen {#delete-destination-dataflow}
+## Löschen eines Ziel-Datenflusses {#delete-destination-dataflow}
 
-Mit einer vorhandenen Fluss-ID können Sie einen Ziel-Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten.
+Mit einer vorhandenen Fluss-ID können Sie einen Ziel-Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -65,7 +65,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Ziel-Datenfluss, den Sie löschen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id` für den Ziel-Datenfluss, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -84,12 +84,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Kein Inhalt) und leeren Text
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Weitere Informationen zur Interpretation von Fehlerantworten finden Sie unter [API-Status-Codes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anforderungsheader](/help/landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich die [!DNL Flow Service] -API verwendet, um einen vorhandenen Datenfluss zu einem Ziel zu löschen.
+In diesem Tutorial haben Sie die [!DNL Flow Service]-API erfolgreich zum Löschen eines vorhandenen Datenflusses zu einem Ziel verwendet.
 
-Anweisungen zum Ausführen dieser Vorgänge mithilfe der Benutzeroberfläche finden Sie im Tutorial zum [Löschen von Datenflüssen in der Benutzeroberfläche](../ui/delete-destinations.md).
+Wie Sie diese Vorgänge mithilfe der Benutzeroberfläche durchführen können, erfahren Sie im Tutorial zum [Löschen von Datenflüssen in der Benutzeroberfläche](../ui/delete-destinations.md).
 
-Sie können jetzt mit der [!DNL Flow Service] -API fortfahren und [Zielkonten löschen](/help/destinations/api/delete-destination-account.md).
+Sie können jetzt mit der [!DNL Flow Service]-API [Zielkonten löschen](/help/destinations/api/delete-destination-account.md).

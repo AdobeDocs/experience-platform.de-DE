@@ -16,7 +16,7 @@ Die in Adobe Experience Platform verfügbaren Dashboards für Profile, Segmente 
 
 >[!NOTE]
 >
->An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+>Alle Aktualisierungen an den Dashboards erfolgen pro Organisation und nach Sandbox.
 
 ## Dashboard ändern
 
@@ -26,11 +26,11 @@ Durch die Auswahl von **[!UICONTROL Dashboard ändern]** im Profil-, Segment- od
 
 In der Widget-Bibliothek in Experience Platform können Sie alle [standardmäßigen](#standard-widgets) und [benutzerdefinierten](#custom-widgets) Widgets anzeigen, die für Ihr Unternehmen verfügbar sind. In Ihren Dashboards (z. B. im Profil-Dashboard) können Sie **[!UICONTROL Dashboard ändern]** auswählen, um die Schaltfläche **[!UICONTROL Widget-Bibliothek]** anzuzeigen.
 
-![Das Dashboard &quot;Profile&quot;mit hervorgehobenem Dashboard &quot;Ändern&quot;.](../images/customization/modify-dashboard.png)
+![Das Profile-Dashboard mit hervorgehobenem Dashboard „Ändern“.](../images/customization/modify-dashboard.png)
 
 Wählen Sie **[!UICONTROL Widget-Bibliothek]** aus, um die Widget-Bibliothek zu öffnen und alle verfügbaren Standardmetriken anzuzeigen oder mit der Erstellung benutzerdefinierter Widgets zu beginnen.
 
-![Das Profil-Dashboard mit hervorgehobener Widget-Bibliothek.](../images/customization/widget-library-button.png)
+![Das Profile-Dashboard mit hervorgehobener Widget-Bibliothek.](../images/customization/widget-library-button.png)
 
 ### Standard-Widgets {#standard-widgets}
 
@@ -44,11 +44,11 @@ Benutzerdefinierte Widgets beziehen sich auf Widgets, die von Mitgliedern Ihres 
 
 Die vollständigen Schritte zum Erstellen Ihrer eigenen Widgets finden Sie im [Handbuch zu benutzerdefinierten Widgets für Dashboards](custom-widgets.md).
 
-![Der Widget-Bibliotheksarbeitsbereich mit hervorgehobenen Standardeinstellungen und benutzerdefinierten Elementen.](../images/customization/widget-library.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit hervorgehobenen Optionen „Standard“ und „Benutzerdefiniert“.](../images/customization/widget-library.png)
 
 #### Schema-Bearbeitung {#edit-schema}
 
-Um ein [benutzerdefiniertes Widget](#custom-widgets) für Ihre Dashboards zu erstellen, müssen Sie zunächst das Echtzeit-Kundenprofil-Attribut identifizieren, auf dem das Widget basieren wird.
+Um ein [benutzerdefiniertes Widget](#custom-widgets) für Ihre Dashboards zu erstellen, müssen Sie zunächst das Echtzeit-Kundenprofilattribut identifizieren, auf dem das Widget basieren wird.
 
 Schritt-für-Schritt-Anweisungen zum Bearbeiten des Schemas Ihres Unternehmens zum Erstellen benutzerdefinierter Dashboard-Widgets finden Sie im Handbuch zum [Bearbeiten Ihres Dashboard-Schemas](edit-schema.md).
 

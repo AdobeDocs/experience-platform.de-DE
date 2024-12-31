@@ -31,7 +31,7 @@ Die Handbücher für maschinelles Lernen in Echtzeit erfordern ein grundlegendes
 
 - **DSL:** Domain-spezifische Sprache (Domain Specific Language).
 - **Edge:** Der Service zur Bewertung für maschinelles Lernen in Echtzeit kann auf Edge-Clustern ausgeführt werden, die näher zu Ihren Aktivierungen und Anwendungen sind.
-- **Hub:** Das aktuelle Alpha führt den Scoring-Dienst für maschinelles Lernen in Echtzeit auf dem Adobe Experience Platform Hub aus, während das Edge Network in Entwicklung ist.
+- **Hub:** Auf der aktuellen Alpha-Version wird der Service zur Bewertung für maschinelles Lernen in Echtzeit auf dem Adobe Experience Platform Hub ausgeführt. Das Edge Network befindet sich in der Entwicklung.
 - **Knoten:** Ein Knoten ist die Grundeinheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Verknüpfungen mit anderen Knoten verkettet werden, um ein Diagramm zu bilden, das für eine ML-Pipeline steht. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang an Eingabedaten dar, beispielsweise eine Umwandlung von Daten oder Schemata oder eine Schlussfolgerung durch maschinelles Lernen. Der Knoten gibt den transformierten oder abgeleiteten Wert an den oder die nächsten Knoten aus.
 
 ## Datensätze in Adobe Experience Platform

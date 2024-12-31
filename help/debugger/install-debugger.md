@@ -1,7 +1,7 @@
 ---
 title: Installieren von Platform Debugger
 description: Erfahren Sie, wie Sie Adobe Experience Platform Debugger installieren.
-keywords: debugger;experience Platform Debugger extension;chrome;extension;install
+keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Installieren
 seo-description: How to Install Experience Platform Debugger
 seo-title: Install Experience Platform Debugger
 uuid: 16d77c6d-11e7-4dfd-a846-3dace9f4070f

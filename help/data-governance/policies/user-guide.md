@@ -151,7 +151,7 @@ Wählen Sie beim Auswählen des Einverständnisattributs die Attributwerte aus, 
 
 ![](../images/policies/select-schema-field.png)
 
-Nachdem Sie mindestens ein Zustimmungsattribut ausgewählt haben, wird das Bedienfeld **[!UICONTROL Richtlinieneigenschaften]** aktualisiert, um die geschätzte Anzahl der Profile anzuzeigen, die unter dieser Richtlinie zulässig wären, einschließlich des Prozentsatzes des gesamten Profilspeichers. Diese Schätzung wird automatisch aktualisiert, wenn Sie die Richtlinienkonfiguration anpassen.
+Nachdem Sie mindestens ein Einverständnisattribut ausgewählt haben, wird der Bereich **[!UICONTROL Richtlinieneigenschaften]** aktualisiert, um die geschätzte Anzahl von Profilen anzuzeigen, die im Rahmen dieser Richtlinie zulässig wären, einschließlich des Prozentsatzes am gesamten Profilspeicher. Diese Schätzung wird automatisch aktualisiert, wenn Sie die Richtlinienkonfiguration anpassen.
 
 ![](../images/policies/audience-preview.png)
 

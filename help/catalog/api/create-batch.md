@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;Startseite;beliebte Themen;Batch erstellen;Katalog-Service;API
 solution: Experience Platform
 title: Erstellen eines Batches in der API
-description: Sie können einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt /batches in der Catalog Service API richten.
+description: Sie können einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt /batches in der Katalog-API stellen.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 51%
 
 # Erstellen eines Batches
 
-Damit in einem Datensatz Daten aufgenommen werden können, muss ihm ein Batch zugeordnet werden. Mit dem Wert &quot;`id`&quot; eines vorhandenen Datensatzes können Sie einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt &quot;`/batches`&quot;in der API &quot;[!DNL Catalog]&quot;senden.
+Damit in einem Datensatz Daten aufgenommen werden können, muss ihm ein Batch zugeordnet werden. Mit dem `id` eines vorhandenen Datensatzes können Sie einen Batch erstellen, indem Sie eine POST-Anfrage an den `/batches`-Endpunkt in der [!DNL Catalog]-API stellen.
 
 **API-Format**
 

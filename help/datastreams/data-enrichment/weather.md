@@ -1,6 +1,6 @@
 ---
-title: Erweitern der Datenerfassung mit Wetterdaten aus DNL The Weather Channel
-description: Verbessern Sie die Daten, die Sie über Datastreams erfassen, mit Wetterdaten aus DNL The Weather Channel.
+title: Verbessern der Datenerfassung mit Wetterdaten von DNL The Weather Channel
+description: Erweitern Sie die Daten, die Sie über Datenströme erfassen, mit Wetterdaten von DNL The Weather Channel.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
 source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 68%
 
 ---
 
-# Datenerfassung mit Wetterdaten aus [!DNL The Weather Channel] verbessern
+# Verbessern der Datenerfassung mit Wetterdaten aus [!DNL The Weather Channel]
 
 Adobe ist eine Partnerschaft mit [!DNL [The Weather Company]](https://www.ibm.com/weather) eingegangen, um die über Datenströme gesammelten Daten um den zusätzlichen Kontext des Wetters in den Vereinigten Staaten zu ergänzen. Sie können diese Daten für Analysen, Targeting und die Erstellung von Zielgruppen in Experience Platform verwenden.
 
-Es gibt drei Datentypen, die von [!DNL The Weather Channel] verfügbar sind:
+Es gibt drei Arten von Daten, die von [!DNL The Weather Channel] verfügbar sind:
 
-* **[!UICONTROL Aktuelles Wetter]**: Die aktuellen Wetterbedingungen der Benutzenden basierend auf ihrem Standort. Dazu gehören aktuelle Temperatur, Niederschlag, Wolkenabdeckung und mehr.
-* **[!UICONTROL Prognostiziertes Wetter]**: Die Prognose enthält die Vorhersage für den Benutzerstandort von 1, 2, 3, 5, 7 und 10 Tagen.
+* **[!UICONTROL Aktuelles Wetter]**: Die aktuellen Wetterbedingungen der Benutzenden basierend auf ihrem Standort. Dazu gehören aktuelle Temperatur, Niederschlag, Wolkenbedeckung und mehr.
+* **[!UICONTROL Prognostiziertes Wetter]**: Die Vorhersage enthält die Vorhersagen für den 1-, 2-, 3-, 5-, 7- und 10-Tage-Wetter-Standort des Benutzers.
 * **[!UICONTROL Trigger]**: Trigger sind spezifische Kombinationen, die verschiedenen semantischen Wetterbedingungen entsprechen. Es gibt drei verschiedene Arten von Wetter-Triggern:
 
    * **[!UICONTROL Wetter-Trigger]**: Semantisch aussagekräftige Bedingungen, wie z. B. kaltes oder regnerisches Wetter. Diese können sich in ihren Definitionen nach verschiedenen Klimazonen unterscheiden.
-   * **[!UICONTROL Produkt-Trigger]**: Bedingungen, die zum Kauf verschiedener Arten von Produkten führen würden. Zum Beispiel: Die Prognosen für das kalte Wetter könnten dazu führen, dass der Kauf von Regenmänteln wahrscheinlicher ist.
+   * **[!UICONTROL Produkt-Trigger]**: Bedingungen, die zum Kauf verschiedener Arten von Produkten führen würden. Zum Beispiel: Kaltwettervorhersagen könnten bedeuten, dass der Kauf von Regenmänteln wahrscheinlicher wird.
    * **[!UICONTROL Unwetter-Trigger]**: Unwetterwarnungen wie Schneesturm- oder Hurrikan-Warnungen.
 
 ## Voraussetzungen {#prerequisites}
 
 Bevor Sie Wetterdaten verwenden, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
-* Sie müssen die von [!DNL The Weather Channel] verwendeten Wetterdaten lizenzieren. Von dort werden sie dann für Ihr Konto aktiviert.
+* Sie müssen die Wetterdaten lizenzieren, die Sie von [!DNL The Weather Channel] verwenden werden. Von dort werden sie dann für Ihr Konto aktiviert.
 * Wetterdaten sind nur über Datenströme verfügbar. Um Wetterdaten zu verwenden, müssen Sie [!DNL Web SDK], [!DNL Mobile Edge Extension] oder die [Server-API](../../server-api/overview.md) verwenden, um diese Daten einzuschließen.
 * Für Ihren Datenstrom muss die [[!UICONTROL Geo-Position]](../configure.md#advanced-options) aktiviert sein.
-* Fügen Sie dem verwendeten Schema die [Wetterfeldgruppe](#schema-configuration) hinzu.
+* Fügen Sie die [Wetterfeldgruppe](#schema-configuration) zum verwendeten Schema hinzu.
 
 ## Bereitstellung {#provisioning}
 
@@ -50,7 +50,7 @@ Sie müssen zu Ihrem Experience Platform-Schema die Wetterfeldgruppen hinzufüge
 
 ## Zugriff auf die Wetterdaten {#access-weather-data}
 
-Sobald Ihre Daten lizenziert und verfügbar sind, können Sie in den Adobe-Services auf verschiedene Arten darauf zugreifen.
+Sobald Ihre Daten lizenziert und verfügbar sind, können Sie in den gesamten Adobe-Services auf verschiedene Arten darauf zugreifen.
 
 ### Adobe Analytics {#analytics}
 
@@ -62,15 +62,15 @@ Die Liste der Felder, die Sie zuordnen können, finden Sie auf der Seite [Wetter
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [Ihrem Schema hinzugefügt werden](#prerequisites-prerequisites), sind sie für [zum Hinzufügen zu einer Datenansicht](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de) in [!DNL Customer Journey Analytics] verfügbar.
+In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [zu Ihrem Schema hinzugefügt) ](#prerequisites-prerequisites), können sie in [!DNL Customer Journey Analytics] [zu einer Datenansicht ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de).
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Wetterdaten sind in der [Real-time Customer Data Platform](../../rtcdp/overview.md) zur Verwendung in Zielgruppen verfügbar. Wetterdaten werden an Ereignisse angehängt.
+Wetterdaten stehen in der [Real-time Customer Data Platform](../../rtcdp/overview.md) zur Verwendung in Zielgruppen zur Verfügung. Wetterdaten werden an Ereignisse angehängt.
 
 ![Segment Builder, der Wetterereignisse anzeigt](../assets/data-enrichment/weather/schema-builder.png)
 
-Da sich die Wetterbedingungen häufig ändern, empfiehlt Adobe, die Zielgruppen mit Zeitbeschränkungen zu versehen, wie im Beispiel oben gezeigt. Einen kalten Tag in den letzten ein oder zwei Tagen zu haben ist viel wirkungsvoller als einen kalten Tag vor 6 Monaten.
+Da sich die Wetterbedingungen häufig ändern, empfiehlt Adobe, Zeitbeschränkungen für die Zielgruppen festzulegen, wie im obigen Beispiel gezeigt. Einen kalten Tag in den letzten ein oder zwei Tagen zu haben ist viel wirkungsvoller als einen kalten Tag vor 6 Monaten.
 
 Informationen über die verfügbaren Felder finden Sie in der [Wetterreferenz](weather-reference.md).
 

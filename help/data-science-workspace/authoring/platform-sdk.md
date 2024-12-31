@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; SDK; Data Access SDK; Data Science Workspace; beliebte Themen
+keywords: Experience Platform;Entwicklerhandbuch;SDK;Datenzugriff SDK;Data Science Workspace;beliebte Themen
 solution: Experience Platform
-title: Modell-Authoring mit dem Adobe Experience Platform Platform SDK
-description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in sowohl Python als auch R.
+title: Modellerstellung mit der Adobe Experience Platform Platform SDK
+description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk sowohl in Python als auch in R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 57%
 
 ---
 
-# Modellerstellung mit dem Adobe Experience Platform [!DNL Platform] SDK
+# Modellerstellung mit Adobe Experience Platform [!DNL Platform] SDK
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Authentifizierung ist erforderlich, um [!DNL Adobe Experience Platform] aufzurufen. Sie umfasst API-Schlüssel, Organisations-ID, ein Benutzer-Token und ein Service-Token.
+Für Aufrufe an [!DNL Adobe Experience Platform] ist eine Authentifizierung erforderlich, die aus einem API-Schlüssel, einer Organisations-ID, einem Benutzer-Token und einem Service-Token besteht.
 
 ### Python
 
@@ -37,7 +37,7 @@ Wenn Sie Jupyter Notebook verwenden, nutzen Sie den folgenden Code, um den `clie
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter Notebook verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
+Wenn Sie Jupyter Notebook nicht verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -60,7 +60,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter Notebook verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
+Wenn Sie Jupyter Notebook nicht verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
 
 ```r
 library(reticulate)
@@ -74,18 +74,18 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Grundlegendes Datenlesen {#basic-reading-of-data}
 
-Mit dem neuen SDK [!DNL Platform] beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
+Mit dem neuen [!DNL Platform] SDK beträgt die maximale Lesegröße 32 GB bei einer maximalen Lesezeit von 10 Minuten.
 
 Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen verwenden:
 
 - [Filtern von Daten nach Offset und Limit](#filter-by-offset-and-limit)
-- [Filtern von Daten nach Datum](#filter-by-date)
-- [Filtern von Daten nach Spalte](#filter-by-selected-columns)
-- [Abrufen von sortierten Ergebnissen](#get-sorted-results)
+- [Daten nach Datum filtern](#filter-by-date)
+- [Daten nach Spalte filtern](#filter-by-selected-columns)
+- [Sortierergebnisse werden abgerufen](#get-sorted-results)
 
 >[!NOTE]
 >
->Die Organisation wird innerhalb von `client_context` festgelegt.
+>Die Organisation wird innerhalb der `client_context` festgelegt.
 
 ### Python
 
@@ -151,7 +151,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Das neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
+Die neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
 
 | Vorgang | Funktion |
 | --------- | -------- |
@@ -201,7 +201,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->Die Organisation wird innerhalb von `client_context` festgelegt.
+>Die Organisation wird innerhalb der `client_context` festgelegt.
 
 Um Daten in Python und R zu schreiben, verwenden Sie eines der folgenden Beispiele:
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Nächste Schritte
 
-Nachdem Sie den `platform_sdk`-Data-Loader konfiguriert haben, werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Informationen zur Datenvorbereitung und Funktionsentwicklung finden Sie im Abschnitt zur [Datenvorbereitung und Funktionsentwicklung](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) im Tutorial zum Erstellen eines Rezepts mit [!DNL JupyterLab] Notebooks.
+Nachdem Sie den `platform_sdk`-Data-Loader konfiguriert haben, werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Informationen zur Datenvorbereitung und zum Feature Engineering finden Sie im Abschnitt [Datenvorbereitung und Feature Engineering](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) im Tutorial zum Erstellen eines Rezepts mithilfe [!DNL JupyterLab] Notebooks.

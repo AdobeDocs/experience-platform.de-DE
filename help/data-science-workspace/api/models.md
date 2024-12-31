@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Modelle; Sensei Machine Learning API
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Modelle; Sensei Machine Learning-API
 solution: Experience Platform
-title: API-Endpunkt der Modelle
+title: Models-API-Endpunkt
 description: Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
@@ -12,7 +12,7 @@ ht-degree: 61%
 
 ---
 
-# Modelle-Endpunkt
+# Models-Endpunkt
 
 >[!NOTE]
 >
@@ -168,9 +168,9 @@ Bei erfolgreicher Antwort wird eine Payload mit Details zu Ihrem Modell einschli
 | `experimentId` | Eine gültige Experiment-ID. |
 | `experimentRunId` | Eine gültige Experimentablauf-ID. |
 
-## Vorgeneriertes Modell registrieren {#register-a-model}
+## Registrieren eines vorgenerierten Modells {#register-a-model}
 
-Sie können ein vorgeneriertes Modell registrieren, indem Sie eine POST-Anfrage an den `/models` -Endpunkt senden. Um Ihr Modell zu registrieren, müssen die Eigenschaftswerte `modelArtifact` und `model` im Hauptteil der Anfrage enthalten sein.
+Sie können ein vorgeneriertes Modell registrieren, indem Sie eine POST-Anfrage an den `/models`-Endpunkt senden. Um Ihr Modell zu registrieren, müssen die `modelArtifact`-Datei und `model` Eigenschaftswerte in den Hauptteil der Anfrage aufgenommen werden.
 
 **API-Format**
 
@@ -180,7 +180,7 @@ POST /models
 
 **Anfrage**
 
-Die folgende POST enthält die erforderlichen Eigenschaftswerte für `modelArtifact` und `model`. Weitere Informationen zu diesen Werten finden Sie in der Tabelle unten.
+Die folgende POST enthält die `modelArtifact` und `model` erforderlichen Eigenschaftswerte. Weitere Informationen zu diesen Werten finden Sie in der folgenden Tabelle.
 
 ```shell
 curl -X POST \
@@ -198,7 +198,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `modelArtifact` | Der Speicherort des vollständigen Modellartefakts, das Sie einbeziehen möchten. |
+| `modelArtifact` | Der Speicherort des vollständigen Modell-Artefakts, das Sie einbeziehen möchten. |
 | `model` | Die Formulardaten des Modellobjekts, das erstellt werden muss. |
 
 **Antwort**
@@ -220,7 +220,7 @@ Bei erfolgreicher Antwort wird eine Payload mit Details zu Ihrem Modell einschli
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Die dem Modell zugehörige ID. |
-| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem `id` -Wert für Ihr Modell. |
+| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem `id` für Ihr Modell. |
 
 ## Aktualisieren des Modells nach ID
 
@@ -228,7 +228,7 @@ Sie können ein vorhandenes Modell aktualisieren, indem Sie seine Eigenschaften 
 
 >[!TIP]
 >
->Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zunächst eine GET-Anfrage zum Abrufen des Modells anhand der Kennung auszuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um das Modell nach ID abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 
@@ -322,9 +322,9 @@ Bei erfolgreicher Antwort wird eine Payload mit Status-Code 200 zurückgegeben,
 }
 ```
 
-## Neue Transkodierung für ein Modell erstellen {#create-transcoded-model}
+## Erstellen einer neuen Transkodierung für ein Modell {#create-transcoded-model}
 
-Transcodierung ist die direkte digitale Konvertierung einer Kodierung in eine andere. Sie erstellen eine neue Transkodierung für ein Modell, indem Sie die `{MODEL_ID}` und die `targetFormat` angeben, in denen die neue Ausgabe enthalten sein soll.
+Transcoding ist die direkte Digital-zu-Digital-Konvertierung einer Kodierung in eine andere. Sie erstellen eine neue Transkodierung für ein Modell, indem Sie die `{MODEL_ID}` und einen `targetFormat` angeben, in denen die neue Ausgabe enthalten sein soll.
 
 **API-Format**
 
@@ -361,7 +361,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Informationen Ihrer Transkodierung enthält. Dazu gehört die eindeutige Kennung (`id`) der Transkodierungen, die beim Abrufen eines bestimmten transkodierten Modells verwendet wird ](#retrieve-transcoded-model).[
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Informationen Ihrer Transkodierung enthält. Dazu gehört die eindeutige Kennung (`id`) für die Transkodierung, die beim [Abrufen eines bestimmten transkodierten Modells“ verwendet ](#retrieve-transcoded-model).
 
 ```json
 {
@@ -377,9 +377,9 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den
 }
 ```
 
-## Liste von Transkodierungen für ein Modell abrufen {#retrieve-transcoded-model-list}
+## Abrufen einer Liste von Transkodierungen für ein Modell {#retrieve-transcoded-model-list}
 
-Sie können eine Liste von Transkodierungen abrufen, die für ein Modell durchgeführt wurden, indem Sie eine GET-Anfrage mit Ihrem `{MODEL_ID}` ausführen.
+Sie können eine Liste der Transkodierungen abrufen, die an einem Modell durchgeführt wurden, indem Sie eine GET-Anfrage mit Ihrem `{MODEL_ID}` durchführen.
 
 **API-Format**
 
@@ -404,7 +404,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit einer Liste jeder auf dem Modell durchgeführten Transkodierung enthält. Jedes transkodierte Modell erhält eine eindeutige Kennung (`id`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit einer Liste jeder im Modell durchgeführten Transkodierung enthält. Jedes transcodierte Modell erhält eine eindeutige Kennung (`id`).
 
 ```json
 {
@@ -437,9 +437,9 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit ein
 }
 ```
 
-## Abrufen eines bestimmten transkodierten Modells {#retrieve-transcoded-model}
+## Abrufen eines bestimmten transcodierten Modells {#retrieve-transcoded-model}
 
-Sie können ein bestimmtes transkodiertes Modell abrufen, indem Sie eine GET-Anfrage mit Ihrem `{MODEL_ID}` und der ID eines transkodierten Modells ausführen.
+Sie können ein bestimmtes transkodiertes Modell abrufen, indem Sie eine GET-Anfrage mit Ihrem `{MODEL_ID}` und der ID eines transkodierten Modells durchführen.
 
 **API-Format**
 
@@ -465,7 +465,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Daten des transkodierten Modells enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Daten des transcodierten Modells enthält.
 
 ```json
 {

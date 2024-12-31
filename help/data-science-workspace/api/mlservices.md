@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Multi-Services; Sensei Machine Learning API
+keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;mlservices;Sensei Machine Learning-API
 solution: Experience Platform
-title: MLServices API Endpoint
-description: Ein MLService ist ein veröffentlichtes Schulungsmodell, das Ihrem Unternehmen die Möglichkeit gibt, auf zuvor entwickelte Modelle zuzugreifen und diese wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Auswertungen planmäßig zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
+title: MLServices-API-Endpunkt
+description: Ein MLService ist ein veröffentlichtes trainiertes Modell, das Ihrem Unternehmen die Möglichkeit bietet, auf zuvor entwickelte Modelle zuzugreifen und sie wiederzuverwenden. Ein wesentliches Merkmal von MLServices ist die Möglichkeit, Trainings- und Scoring-Vorgänge auf geplanter Basis zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells aufrechtzuerhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
@@ -20,13 +20,13 @@ ht-degree: 9%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Ein MLService ist ein veröffentlichtes Schulungsmodell, das Ihrem Unternehmen die Möglichkeit gibt, auf zuvor entwickelte Modelle zuzugreifen und diese wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Auswertungen planmäßig zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
+Ein MLService ist ein veröffentlichtes trainiertes Modell, das Ihrem Unternehmen die Möglichkeit bietet, auf zuvor entwickelte Modelle zuzugreifen und sie wiederzuverwenden. Ein wesentliches Merkmal von MLServices ist die Möglichkeit, Trainings- und Scoring-Vorgänge auf geplanter Basis zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells aufrechtzuerhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
 
-Automatisierte Trainings- und Scoring-Zeitpläne werden mit einem Startzeitstempel, einem Endzeitstempel und einer Häufigkeit definiert, die als [Cron-Ausdruck](https://en.wikipedia.org/wiki/Cron) dargestellt wird. Zeitpläne können beim [ Erstellen eines MLService](#create-an-mlservice) definiert oder durch [Aktualisieren eines vorhandenen MLService](#update-an-mlservice) angewendet werden.
+Automatische Trainings- und Scoring-Zeitpläne sind mit einem Start- und Endzeitstempel sowie einer Häufigkeit definiert, die als „Cron[Ausdruck“ dargestellt ](https://en.wikipedia.org/wiki/Cron). Zeitpläne können beim Erstellen [ MLService definiert ](#create-an-mlservice) durch [Aktualisieren eines vorhandenen MLService) ](#update-an-mlservice).
 
 ## Erstellen eines MLService {#create-an-mlservice}
 
-Sie können einen MLService erstellen, indem Sie eine POST-Anfrage und eine Payload ausführen, die einen Dienstnamen und eine gültige MLInstance-ID bereitstellt. Die MLInstance, die zum Erstellen eines MLService verwendet wird, muss keine vorhandenen Schulungsexperimente haben. Sie können jedoch den MLService mit einem vorhandenen trainierten Modell erstellen, indem Sie die entsprechende Experiment-ID und Trainings-Lauf-ID angeben.
+Sie können einen MLService erstellen, indem Sie eine POST-Anfrage und eine Payload ausführen, die einen Namen für den Service und eine gültige MLInstance-ID angeben. Die MLInstance, die zum Erstellen eines MLService verwendet wird, muss nicht über vorhandene Trainings-Experimente verfügen. Sie können jedoch den MLService mit einem vorhandenen trainierten Modell erstellen, indem Sie die entsprechende Experiment-ID und Trainings-Durchgangs-ID angeben.
 
 **API-Format**
 
@@ -66,24 +66,24 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der gewünschte Name für den MLService. Der diesem MLService entsprechende Dienst erbt diesen Wert, der in der Benutzeroberfläche der Dienstgalerie als Dienstname angezeigt wird. |
-| `description` | Eine optionale Beschreibung für den MLService. Der diesem MLService entsprechende Dienst erbt diesen Wert, der in der Benutzeroberfläche der Dienstgalerie als Dienstbeschreibung angezeigt wird. |
+| `name` | Der gewünschte Name für den MLService. Der Service, der diesem MLService entspricht, übernimmt diesen Wert, der in der Service Gallery-Benutzeroberfläche als Name des Services angezeigt wird. |
+| `description` | Eine optionale Beschreibung für den MLService. Der Service, der diesem MLService entspricht, übernimmt diesen Wert, der in der Service Gallery-Benutzeroberfläche als Beschreibung des Services angezeigt wird. |
 | `mlInstanceId` | Eine gültige MLInstance-ID. |
-| `trainingDataSetId` | Eine Trainings-Datensatz-ID, die bei Bereitstellung die standardmäßige Datensatz-ID der MLInstance außer Kraft setzt. Wenn die zum Erstellen des MLService verwendete MLInstance keinen Trainings-Datensatz definiert, müssen Sie eine entsprechende Trainings-Datensatz-ID angeben. |
-| `trainingExperimentId` | Eine Experiment-ID, die Sie optional bereitstellen können. Wenn dieser Wert nicht angegeben wird, erstellt das Erstellen des MLService auch ein neues Experiment mithilfe der Standardkonfigurationen der MLInstance. |
-| `trainingExperimentRunId` | Eine Trainings-Lauf-ID, die Sie optional bereitstellen können. Wenn dieser Wert nicht angegeben wird, erstellt und führt das Erstellen des MLService auch einen Trainings-Lauf mithilfe der standardmäßigen Trainings-Parameter der MLInstance durch. |
-| `trainingSchedule` | Ein Zeitplan für automatisierte Trainings-Läufe. Wenn diese Eigenschaft definiert ist, führt der MLService automatisch Schulungsabläufe auf geplanter Basis durch. |
-| `trainingSchedule.startTime` | Ein Zeitstempel, für den geplante Schulungsabläufe beginnen. |
-| `trainingSchedule.endTime` | Ein Zeitstempel, für den geplante Trainings-Läufe enden. |
+| `trainingDataSetId` | Eine Trainings-Datensatz-ID, die, falls angegeben, die standardmäßige Datensatz-ID der MLInstance überschreibt. Wenn die MLInstance, die zum Erstellen des MLService verwendet wird, keinen Trainings-Datensatz definiert, müssen Sie eine entsprechende Trainings-Datensatz-ID angeben. |
+| `trainingExperimentId` | Eine Experiment-ID, die Sie optional angeben können. Wenn dieser Wert nicht angegeben wird, wird beim Erstellen des MLService auch ein neues Experiment unter Verwendung der Standardkonfigurationen der MLInstance erstellt. |
+| `trainingExperimentRunId` | Eine ID für den Trainings-Durchgang, die Sie optional angeben können. Wenn dieser Wert nicht angegeben wird, wird beim Erstellen des MLService auch ein Trainings-Durchgang unter Verwendung der standardmäßigen Trainings-Parameter der MLInstance erstellt und ausgeführt. |
+| `trainingSchedule` | Ein Zeitplan für automatisierte Trainings-Läufe. Wenn diese Eigenschaft definiert ist, führt der MLService automatisch geplante Schulungsdurchgänge durch. |
+| `trainingSchedule.startTime` | Ein Zeitstempel, für den geplante Trainings-Läufe beginnen. |
+| `trainingSchedule.endTime` | Ein Zeitstempel, für den geplante Schulungsdurchgänge beendet werden. |
 | `trainingSchedule.cron` | Ein Cron-Ausdruck, der die Häufigkeit automatisierter Trainings-Läufe definiert. |
-| `scoringSchedule` | Ein Zeitplan für automatisierte Scoring-Ausführungen. Wenn diese Eigenschaft definiert ist, führt der MLService automatisch planmäßige Scoring-Läufe durch. |
-| `scoringSchedule.startTime` | Ein Zeitstempel, für den geplante Scoring-Läufe beginnen. |
-| `scoringSchedule.endTime` | Ein Zeitstempel, für den geplante Scoring-Läufe beendet werden. |
-| `scoringSchedule.cron` | Ein Cron-Ausdruck, der die Häufigkeit automatisierter Scoring-Ausführungen definiert. |
+| `scoringSchedule` | Ein Zeitplan für automatische Scoring-Durchgänge. Wenn diese Eigenschaft definiert ist, führt MLService automatisch geplante Bewertungsdurchgänge durch. |
+| `scoringSchedule.startTime` | Ein Zeitstempel, für den geplante Scoring-Durchgänge beginnen. |
+| `scoringSchedule.endTime` | Ein Zeitstempel, für den geplante Scoring-Durchgänge enden. |
+| `scoringSchedule.cron` | Ein Cron-Ausdruck, der die Häufigkeit automatisierter Scoring-Durchgänge definiert. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten MLService einschließlich der eindeutigen Kennung (`id`), der Experiment-ID für die Schulung (`trainingExperimentId`), der Experiment-ID für die Auswertung (`scoringExperimentId`) und der Eingabe-Trainings-Datensatz-ID (`trainingDataSetId`) enthält.
+Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details des neu erstellten MLService enthält, einschließlich der eindeutigen Kennung (`id`), der Experiment-ID für das Training (`trainingExperimentId`), der Experiment-ID für die Bewertung (`scoringExperimentId`) und der Eingabe-Datensatz-ID für das Training (`trainingDataSetId`).
 
 ```json
 {
@@ -112,9 +112,9 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu ers
 }
 ```
 
-## Liste der MLServices abrufen {#retrieve-a-list-of-mlservices}
+## Abrufen einer Liste von MLServices {#retrieve-a-list-of-mlservices}
 
-Sie können eine Liste von MLServices abrufen, indem Sie eine einzige GET-Anfrage ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von MLServices abrufen, indem Sie eine einzelne GET-Anfrage ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -126,12 +126,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query) zum Filtern von Ergebnissen. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
 
-Die folgende Anfrage enthält eine Abfrage und ruft eine Liste von MLServices ab, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`) aufweisen.
+Die folgende Anfrage enthält eine Abfrage und ruft eine Liste von MLServices ab, die dieselbe MLInstance-ID haben (`{MLINSTANCE_ID}`).
 
 ```shell
 curl -X GET \
@@ -144,7 +144,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurück, einschließlich ihrer MLService ID (`{MLSERVICE_ID}`), Experiment-ID für Schulung (`{TRAINING_ID}`), Experiment-ID für Scoring (`{SCORING_ID}`) und der Eingabe-Trainings-Datensatz-ID (`{DATASET_ID}`).
+Bei einer erfolgreichen Antwort wird eine Liste von MLServices und deren Details zurückgegeben, einschließlich der MLService-ID (`{MLSERVICE_ID}`), der Experiment-ID für das Training (`{TRAINING_ID}`), der Experiment-ID für die Bewertung (`{SCORING_ID}`) und der Eingabe-Trainings-Datensatz-ID (`{DATASET_ID}`).
 
 ```json
 {
@@ -173,7 +173,7 @@ Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurü
 
 ## Abrufen eines bestimmten MLService {#retrieve-a-specific-mlservice}
 
-Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET-Anfrage ausführen, die die gewünschte MLService-ID im Anfragepfad enthält.
+Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET-Anfrage ausführen, die die ID des gewünschten MLService im Anfragepfad enthält.
 
 **API-Format**
 
@@ -196,7 +196,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload mit den Details des angeforderten MLService zurück.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des angeforderten MLService enthält.
 
 ```json
 {
@@ -217,11 +217,11 @@ Eine erfolgreiche Antwort gibt eine Payload mit den Details des angeforderten ML
 
 ## Aktualisieren eines MLService {#update-an-mlservice}
 
-Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenschaften über eine PUT-Anfrage überschreiben, die die Ziel-MLService-ID im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften bereitstellen.
+Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anfrage überschreiben, die die ID des Ziel-MLService im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften angeben.
 
 >[!TIP]
 >
->Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zunächst eine GET-Anfrage an [den MLService mit ID](#retrieve-a-specific-mlservice) abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um (den MLService nach ID [) ](#retrieve-a-specific-mlservice). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 
@@ -263,7 +263,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload mit den aktualisierten Details des MLService zurück.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die aktualisierten Details des MLService enthält.
 
 ```json
 {
@@ -294,7 +294,7 @@ Eine erfolgreiche Antwort gibt eine Payload mit den aktualisierten Details des M
 
 ## Löschen eines MLService
 
-Sie können einen einzelnen MLService löschen, indem Sie eine DELETE-Anfrage ausführen, die die Kennung des Ziel-MLService im Anfragepfad enthält.
+Sie können einen einzelnen MLService löschen, indem Sie eine DELETE-Anfrage ausführen, die die ID des Ziel-MLService im Anfragepfad enthält.
 
 **API-Format**
 

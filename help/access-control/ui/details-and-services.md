@@ -27,7 +27,7 @@ Im Menü **[!UICONTROL Services aktivieren]** kann der Zugriff eines Profils auf
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- Benutzeroberfläche von [!DNL Adobe Real-Time Customer Data Platform] (nur für Real-Time CDP)
+- [!DNL Adobe Real-Time Customer Data Platform] Benutzeroberfläche (nur für Real-Time CDP)
 - B2B-Benutzeroberfläche
 
 Klicken Sie auf der rechten Seite eines bestimmten Diensts auf den Umschalter, um ihn zu aktivieren oder zu deaktivieren. Sie können auch das Kontrollkästchen **[!UICONTROL Alle ein]** aktivieren, um alle aufgelisteten Services zu aktivieren oder zu deaktivieren.

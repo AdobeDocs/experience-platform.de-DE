@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Instanzen; Sensei Machine Learning API
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; MLInstances; Sensei Machine Learning-API
 solution: Experience Platform
-title: MLInstances API Endpoint
-description: Eine MLInstance ist eine Kopplung einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
+title: MLInstances-API-Endpunkt
+description: Eine MLInstance ist eine Kombination aus einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die alle Trainings-, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definiert.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
@@ -20,13 +20,13 @@ ht-degree: 18%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Eine MLInstance ist eine Kopplung einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
+Eine MLInstance ist eine Kombination aus einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die alle Trainings-, Scoring- oder Hardware-Ressourcenkonfigurationen definiert.
 
 ## Erstellen einer MLInstance {#create-an-mlinstance}
 
 Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
 
-Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Anzahl der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn auf eine Python-Engine verwiesen wird, können Sie entweder eine CPU oder eine GPU zu Trainings- und Scoring-Zwecken verwenden. Weitere Informationen finden Sie in den Anhang-Abschnitten unter [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config) .
+Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Menge der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn eine Python-Engine referenziert wird, können Sie entweder eine CPU oder eine GPU für Trainings- und Scoring-Zwecke verwenden. Weitere Informationen finden Sie in den Anhang[Abschnitten zu PySpark- und Spark](./appendix.md#resource-config)Ressourcenkonfigurationen sowie [Python CPU- und ](./appendix.md#cpu-gpu-config)-Konfigurationen.
 
 **API-Format**
 
@@ -82,14 +82,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der gewünschte Name für die MLInstance. Das Modell, das dieser MLInstance entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Modellname angezeigt werden soll. |
-| `description` | Eine optionale Beschreibung für die MLInstance. Das Modell, das dieser MLInstance entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Beschreibung des Modells angezeigt werden soll. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
+| `name` | Der gewünschte Name für die MLInstance. Das Modell, das dieser MLInstance entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Modellname angezeigt wird. |
+| `description` | Eine optionale Beschreibung für die MLInstance. Das Modell, das dieser MLInstance entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Modellbeschreibung angezeigt wird. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `engineId` | Die Kennung einer vorhandenen Engine. |
-| `tasks` | Ein Satz von Konfigurationen für Trainings-, Scoring- oder Feature-Pipelines. |
+| `tasks` | Eine Reihe von Konfigurationen für Trainings-, Scoring- oder Feature-Pipelines. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`) enthält.
+Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten MLInstance einschließlich der eindeutigen Kennung (`id`) enthält.
 
 ```json
 {
@@ -136,7 +136,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu ers
 
 ## Abrufen einer Liste von MLInstances
 
-Sie können eine Liste von MLInstances abrufen, indem Sie eine einzige GET-Anfrage ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von MLInstances abrufen, indem Sie eine einzelne GET-Anfrage ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -148,7 +148,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query) zum Filtern von Ergebnissen. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
@@ -275,15 +275,15 @@ Eine erfolgreiche Antwort gibt die Details der MLInstance zurück.
 }
 ```
 
-## Aktualisieren einer MLInstance
+## MLInstance aktualisieren
 
-Sie können eine vorhandene MLInstance aktualisieren, indem Sie ihre Eigenschaften über eine PUT-Anfrage überschreiben, die die ID der Ziel-MLInstance im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften bereitstellen.
+Sie können eine bestehende MLInstance aktualisieren, indem Sie ihre Eigenschaften über eine PUT-Anfrage überschreiben, die die ID der Ziel-MLInstance im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften angeben.
 
 >[!TIP]
 >
->Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zuerst eine GET-Anfrage zum Abrufen der MLInstance anhand von ID](#retrieve-specific) durchzuführen. [ Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um die MLInstance [nach ID) ](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
-Mit dem folgenden Beispiel-API-Aufruf werden die Trainings- und Scoring-Parameter einer MLInstance aktualisiert, während sie zunächst über diese Eigenschaften verfügen:
+Der folgende Beispiel-API-Aufruf aktualisiert die Trainings- und Bewertungsparameter einer MLInstance, während sie anfänglich diese Eigenschaften aufweisen:
 
 ```json
 {
@@ -409,9 +409,9 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die aktualisierten Deta
 }
 ```
 
-## Löschen von MLInstances nach Engine ID
+## MLInstances nach Engine-ID löschen
 
-Sie können alle MLInstances, die dieselbe Engine verwenden, löschen, indem Sie eine DELETE-Anfrage ausführen, die die Engine-ID als Abfrageparameter enthält.
+Sie können alle MLInstances löschen, die dieselbe Engine verwenden, indem Sie eine DELETE-Anfrage ausführen, die die Engine-ID als Abfrageparameter enthält.
 
 **API-Format**
 
@@ -444,7 +444,7 @@ curl -X DELETE \
 }
 ```
 
-## Löschen einer MLInstance
+## MLInstance löschen
 
 Sie können eine einzelne MLInstance löschen, indem Sie eine DELETE-Anfrage ausführen, die die ID der Ziel-MLInstance im Anfragepfad enthält.
 

@@ -19,12 +19,12 @@ ht-degree: 65%
    - [Überwachen von Datenflüssen](./api/monitor.md)
    - [Sortieren und Filtern von API-Antworten](./api/sort-and-filter.md)
 - UI-Handbücher {#ui}
-   - [Übersicht über das Monitoring-Dashboard](./ui/monitor.md)
+   - [Monitoring-Dashboard - Übersicht](./ui/monitor.md)
    - [Überwachen von Datenflüssen in Quellen](./ui/monitor-sources.md)
    - [Überwachen von Datenflüssen in Identitäten](./ui/monitor-identities.md)
    - [Überwachen von Datenflüssen in Profilen](./ui/monitor-profiles.md)
    - [Überwachen von Datenflüssen in Zielgruppen](./ui/monitor-audiences.md)
    - [Überwachen von Datenflüssen in Zielen](./ui/monitor-destinations.md)
-   - B2B-Überwachung {#b2b}
+   - B2B-{#b2b}
       - [Überwachen von Profilanreicherungsaufträgen](./ui/b2b/monitor-profile-enrichment.md)
 - [Fluss-Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

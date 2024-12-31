@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
+keywords: Experience Platform;Startseite;beliebte Themen;api;attributbasierte Zugriffssteuerung;attributbasierte Zugriffssteuerung
 solution: Experience Platform
-title: Rollen-API-Endpunkt
-description: Mit dem Endpunkt /roles in der API für die attributbasierte Zugriffssteuerung können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
+title: Roles API-Endpunkt
+description: Mit dem /roles-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,23 +12,23 @@ ht-degree: 27%
 
 ---
 
-# Benutzerendpunkt
+# Roles-Endpunkt
 
 >[!NOTE]
 >
->Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
+>Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über eine „org admin“-Rolle für die angeforderte Organisation verfügen.
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
+Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
-Mit dem Endpunkt `/roles` in der API für die attributbasierte Zugriffskontrolle können Sie Rollen in Ihrer Organisation programmgesteuert verwalten.
+Mit dem `/roles`-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Rollen in Ihrer Organisation programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der API für die attributbasierte Zugriffskontrolle. Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der attributbasierten Zugriffssteuerungs-API. Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Liste von Rollen abrufen {#list}
+## Abrufen einer Liste von Rollen {#list}
 
-Sie können alle vorhandenen Rollen, die zu Ihrem Unternehmen gehören, auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/roles` stellen.
+Sie können alle vorhandenen Rollen, die zu Ihrer Organisation gehören, auflisten, indem Sie eine GET-Anfrage an den `/roles`-Endpunkt stellen.
 
 **API-Format**
 
@@ -38,7 +38,7 @@ GET /roles/
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Liste der Rollen abgerufen, die zu Ihrem Unternehmen gehören.
+Mit der folgenden Anfrage wird eine Liste der Rollen abgerufen, die zu Ihrer Organisation gehören.
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation zurückgegeben, einschließlich Informationen zu ihrem jeweiligen Rollentyp, Berechtigungssätzen und Themenattributen.
+Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation zurückgegeben, einschließlich Informationen zum jeweiligen Rollentyp, zu Berechtigungssätzen und Betreffattributen.
 
 ```json
 {
@@ -102,18 +102,18 @@ Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die der Rolle entspricht. Diese ID wird automatisch generiert. |
+| `id` | Die ID, die der Rolle entspricht. Diese ID wird automatisch generiert. |
 | `name` | Der Name Ihrer Rolle. |
-| `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | Die Eigenschaft „description“ enthält zusätzliche Informationen über Ihre Rolle. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
-| `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
+| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
-## Rolle nachschlagen {#lookup}
+## Suchen einer Rolle {#lookup}
 
-Sie können eine einzelne Rolle nachschlagen, indem Sie eine GET-Anfrage ausführen, die im Anfragepfad die entsprechende `roleId` enthält.
+Sie können eine einzelne Rolle suchen, indem Sie eine GET-Anfrage stellen, die die entsprechende `roleId` im Anfragepfad enthält.
 
 **API-Format**
 
@@ -123,11 +123,11 @@ GET /roles/{ROLE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {ROLE_ID} | Die ID der Rolle, die Sie nachschlagen möchten. |
+| {ROLE_ID} | Die ID der Rolle, die Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für `{ROLE_ID}` ab.
+Mit der folgenden Anfrage werden Informationen zu `{ROLE_ID}` abgerufen.
 
 ```shell
 curl -X GET \
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details zur abgefragten Rollen-ID zurückgegeben, einschließlich Informationen zum Rollentyp, zu Berechtigungssätzen und zu den Themenattributen.
+Eine erfolgreiche Antwort gibt Details für die abgefragte Rollen-ID zurück, einschließlich Informationen zu Rollentyp, Berechtigungssätzen und Betreffattributen.
 
 ```json
 {
@@ -169,18 +169,18 @@ Bei einer erfolgreichen Antwort werden Details zur abgefragten Rollen-ID zurück
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die der Rolle entspricht. Diese ID wird automatisch generiert. |
+| `id` | Die ID, die der Rolle entspricht. Diese ID wird automatisch generiert. |
 | `name` | Der Name Ihrer Rolle. |
-| `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | Die Eigenschaft „description“ enthält zusätzliche Informationen über Ihre Rolle. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
-| `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
+| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
-## Suchen von Benutzern nach Rollen-ID
+## Objekte nach Rollen-ID nachschlagen
 
-Sie können auch Subjekte abrufen, indem Sie eine GET-Anfrage an den `/roles` -Endpunkt senden und dabei eine {ROLE_ID} angeben.
+Sie können auch Betreffe abrufen, indem Sie eine GET-Anfrage an den `/roles`-Endpunkt stellen und dabei eine {ROLE_ID} angeben.
 
 **API-Format**
 
@@ -190,11 +190,11 @@ GET /roles/{ROLE_ID}/subjects
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {ROLE_ID} | Die ID der Rolle, die den Themen zugeordnet ist, die Sie nachschlagen möchten. |
+| {ROLE_ID} | Die ID der Rolle, die den Betreffen zugeordnet ist, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die mit `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809` verknüpften Objekte abgerufen.
+Mit der folgenden Anfrage werden Subjekte abgerufen, die mit `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809` verknüpft sind.
 
 ```shell
 curl -X GET \
@@ -206,7 +206,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die mit der abgefragten Rollen-ID verknüpften Betreffs zurückgegeben, einschließlich der entsprechenden Betreff-ID und des Betrefftyps.
+Bei einer erfolgreichen Antwort werden die mit der abgefragten Rollen-ID verknüpften Subjekte zurückgegeben, einschließlich der entsprechenden Subjekt-ID und des Subjekttyps.
 
 ```json
 {
@@ -250,13 +250,13 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Rollen-ID verknü
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `roleId` | Die mit dem abgefragten Betreff verknüpfte Rollen-ID. |
+| `roleId` | Die mit dem abgefragten Betreff verknüpfte Rollenkennung. |
 | `subjectType` | Der Typ des abgefragten Betreffs. |
-| `subjectId` | Die Kennung, die dem abgefragten Betreff entspricht. |
+| `subjectId` | Die ID, die dem abgefragten Betreff entspricht. |
 
-## Rollen erstellen {#create}
+## Erstellen einer Rolle {#create}
 
-Um eine neue POST zu erstellen, stellen Sie eine Rollenanfrage an den `/roles` -Endpunkt und geben Sie dabei Werte für den Namen, die Beschreibung und den Rollentyp Ihrer Rolle an.
+Um eine neue Rolle zu erstellen, stellen Sie eine POST-Anfrage an den `/roles`-Endpunkt und geben Sie dabei Werte für den Namen, die Beschreibung und den Rollentyp Ihrer Rolle an.
 
 **API-Format**
 
@@ -282,12 +282,12 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihrer Rolle. Stellen Sie sicher, dass der Name Ihrer Rolle beschreibend ist, da Sie damit Informationen zu Ihrer Rolle nachschlagen können. |
-| `description` | (Optional) Ein beschreibender Wert, den Sie angeben können, um weitere Informationen zu Ihrer Rolle bereitzustellen. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | (Optional) Ein beschreibender Wert, den Sie einbeziehen können, um weitere Informationen zu Ihrer Rolle bereitzustellen. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der zugehörigen Rollen-ID sowie Informationen zum Rollentyp, zu den Berechtigungssätzen und zu den Themenattributen zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der entsprechenden Rollen-ID sowie Informationen zum Rollentyp, zu den Berechtigungssätzen und zu den Betreffattributen zurückgegeben.
 
 ```json
 {
@@ -317,18 +317,18 @@ Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der zugehör
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die der Rolle entspricht. Diese ID wird automatisch generiert. |
+| `id` | Die ID, die der Rolle entspricht. Diese ID wird automatisch generiert. |
 | `name` | Der Name Ihrer Rolle. |
-| `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | Die Eigenschaft „description“ enthält zusätzliche Informationen über Ihre Rolle. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
-| `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
+| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
-## Rolle aktualisieren {#patch}
+## Aktualisieren einer Rolle {#patch}
 
-Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an den `/roles` -Endpunkt richten und dabei die entsprechende Rollen-ID und die entsprechenden Werte für die Vorgänge angeben, die Sie anwenden möchten.
+Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an den `/roles`-Endpunkt senden und dabei die entsprechende Rollen-ID und die Werte für die Vorgänge angeben, die Sie anwenden möchten.
 
 **API-Format**
 
@@ -361,13 +361,13 @@ curl -X PATCH \
 
 | Funktionsweise | Beschreibung |
 | --- | --- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren der Rolle erforderliche Aktion definiert wird. Die Operationen umfassen `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zum Aktualisieren der Rolle erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich neuer Werte für die Eigenschaften, die Sie aktualisieren möchten.
+Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich neuer Werte für die Eigenschaften, die Sie aktualisiert haben.
 
 ```json
 {
@@ -397,18 +397,18 @@ Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die der Rolle entspricht. Diese ID wird automatisch generiert. |
+| `id` | Die ID, die der Rolle entspricht. Diese ID wird automatisch generiert. |
 | `name` | Der Name Ihrer Rolle. |
-| `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | Die Eigenschaft „description“ enthält zusätzliche Informationen über Ihre Rolle. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
-| `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
+| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
-## Aktualisieren einer Rolle nach Rollen-ID {#put}
+## Aktualisieren einer Rolle anhand der Rollen-ID {#put}
 
-Sie können eine Rolle aktualisieren, indem Sie eine PUT-Anfrage an den `/roles` -Endpunkt senden und die Rollen-ID angeben, die der zu aktualisierenden Rolle entspricht.
+Sie können eine Rolle aktualisieren, indem Sie eine PUT-Anfrage an den `/roles`-Endpunkt stellen und die Rollen-ID angeben, die der zu aktualisierenden Rolle entspricht.
 
 **API-Format**
 
@@ -437,11 +437,11 @@ curl -X PUT \
 | --- | --- |
 | `name` | Der aktualisierte Name einer Rolle. |
 | `description` | Die aktualisierte Beschreibung einer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für Name, Beschreibung und Rollentyp.
+Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für ihren Namen, ihre Beschreibung und ihren Rollentyp.
 
 ```json
 {
@@ -471,18 +471,18 @@ Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, ei
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die der Rolle entspricht. Diese ID wird automatisch generiert. |
+| `id` | Die ID, die der Rolle entspricht. Diese ID wird automatisch generiert. |
 | `name` | Der Name Ihrer Rolle. |
-| `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
-| `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
+| `description` | Die Eigenschaft „description“ enthält zusätzliche Informationen über Ihre Rolle. |
+| `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
-| `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
+| `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
-## Betreff nach Rollen-ID aktualisieren
+## Betreff nach Funktions-ID aktualisieren
 
-Um die mit einer Rolle verknüpften Personen zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/roles` -Endpunkt und geben Sie dabei die Rollen-ID der Personen an, die Sie aktualisieren möchten.
+Um die mit einer Rolle verknüpften Betreffe zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/roles`-Endpunkt, wobei Sie die Rollen-ID der Betreffe angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -492,11 +492,11 @@ PATCH /roles/{ROLE_ID}/subjects
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {ROLE_ID} | Die Kennung der Rolle, die den zu aktualisierenden Betreffen zugeordnet ist. |
+| {ROLE_ID} | Die ID der Rolle, die den zu aktualisierenden Betreffen zugeordnet ist. |
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die mit `{ROLE_ID}` verknüpften Betreffs.
+Die folgende Anfrage aktualisiert die mit `{ROLE_ID}` verknüpften Betreffe.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -515,13 +515,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Funktionsweise | Beschreibung |
 | --- | --- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren der Rolle erforderliche Aktion definiert wird. Die Operationen umfassen `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zum Aktualisieren der Rolle erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für die Betreffs.
+Eine erfolgreiche Antwort gibt Ihre aktualisierte Rolle zurück, einschließlich neuer Werte für die Subjekte.
 
 ```json
 {
@@ -550,9 +550,9 @@ Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, ei
 }
 ```
 
-## Rollen löschen {#delete}
+## Löschen einer Rolle {#delete}
 
-Um eine Rolle zu löschen, senden Sie eine DELETE-Anfrage an den Endpunkt `/roles` , während Sie die Kennung der Rolle angeben, die Sie löschen möchten.
+Um eine Rolle zu löschen, stellen Sie eine DELETE-Anfrage an den `/roles`-Endpunkt und geben Sie dabei die ID der Rolle an, die Sie löschen möchten.
 
 **API-Format**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Rolle mit der ID `{ROLE_ID}` gelöscht.
+Die folgende Anfrage löscht die Rolle mit der ID `{ROLE_ID}`.
 
 ```shell
 curl -X DELETE \
@@ -580,11 +580,11 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Rolle ausführen. Sie erhalten den HTTP-Status 404 (Nicht gefunden), da die Rolle aus der Verwaltung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Rolle stellen. Sie erhalten den HTTP-Status 404 (Nicht gefunden), da die Rolle aus der Administration entfernt wurde.
 
-## API-Berechtigung hinzufügen {#apicredential}
+## API-Anmeldedaten hinzufügen {#apicredential}
 
-Um eine API-Berechtigung hinzuzufügen, stellen Sie eine PATCH-Anfrage an den `/roles` -Endpunkt und geben Sie dabei die Rollen-ID der Betreffs an.
+Um API-Anmeldeinformationen hinzuzufügen, stellen Sie eine PATCH-Anfrage an `/roles` Endpunkt und geben Sie dabei die Rollen-ID der Subjekte an.
 
 **API-Format**
 
@@ -605,9 +605,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Funktionsweise | Beschreibung |
 | --- | --- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren der Rolle erforderliche Aktion definiert wird. Die Operationen umfassen `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zum Aktualisieren der Rolle erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des hinzuzufügenden Parameters. |
-| `value` | Der Wert, mit dem Sie Ihren Parameter hinzufügen möchten. |
+| `value` | Der Wert, dem Sie Ihren Parameter hinzufügen möchten. |
 
 **Antwort**
 

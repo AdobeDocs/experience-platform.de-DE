@@ -13,26 +13,26 @@ ht-degree: 60%
 
 Datenvorbereitung ist ein Adobe Experience Platform-Service, mit dem Sie Daten zuordnen, umwandeln und validieren können, die an das [Experience-Datenmodell (XDM)](../xdm/home.md) gesendet oder von ihm empfangen werden. Beim Konfigurieren eines Platform-aktivierten [Datenstroms](./overview.md) können Sie Datenvorbereitungs-Funktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an das Platform Edge Network senden.
 
-Alle Daten, die von einer Webseite gesendet werden, müssen als XDM in Experience Platform landen. Es gibt drei Möglichkeiten, Daten von einer On-Page-Datenschicht in das von Experience Platform akzeptierte XDM zu übersetzen:
+Alle von einer Web-Seite gesendeten Daten müssen als XDM auf Experience Platform landen. Es gibt 3 Möglichkeiten, Daten von einer On-Page-Datenschicht in das vom Experience Platform akzeptierte XDM zu übersetzen:
 
-1. Formatieren Sie die Datenschicht in XDM auf der Webseite selbst.
+1. Formatieren Sie die Datenschicht auf der Webseite selbst in XDM neu.
 2. Verwenden Sie die Funktion Native Datenelemente von Tags , um das vorhandene Datenschichtformat einer Web-Seite in XDM umzuformatieren.
-3. Formatieren Sie das vorhandene Datenschichtformat einer Webseite über das Edge Network in XDM um, indem Sie die Datenvorbereitung für die Datenerfassung verwenden.
+3. Formatieren Sie das vorhandene Datenschichtformat einer Web-Seite über das Edge Network in XDM um, indem Sie die Datenvorbereitung für die Datenerfassung verwenden.
 
-Dieser Leitfaden konzentriert sich auf die dritte Option.
+Dieses Handbuch konzentriert sich auf die dritte Option.
 
 ## Verwendung der Datenvorbereitung für die Datenerfassung {#when-to-use-data-prep}
 
 Es gibt zwei Anwendungsfälle, in denen die Datenvorbereitung für die Datenerfassung nützlich ist:
 
-1. Die Website verfügt über eine gut strukturierte, verwaltete und gepflegte Datenschicht. Daher ist es empfehlenswert, sie direkt an das Edge Network zu senden, anstatt sie mithilfe der JavaScript-Manipulation in XDM auf der Seite zu konvertieren (entweder über Tags-Datenelemente oder durch manuelle JavaScript-Manipulation).
-2. Auf der Site wird ein anderes Tagging-System als Tags bereitgestellt.
+1. Die Website verfügt über eine gut geformte, verwaltete und gepflegte Datenschicht und es wird empfohlen, sie direkt an das Edge Network zu senden, anstatt die JavaScript-Manipulation zu verwenden, um sie auf der Seite in XDM zu konvertieren (entweder über Tags-Datenelemente oder über die manuelle JavaScript-Manipulation).
+2. Ein anderes Tagging-System als Tags wird auf der Site bereitgestellt.
 
-## Existierende Datenschicht über WebSDK an das Edge Network senden {#send-datalayer-via-websdk}
+## Senden einer vorhandenen Datenschicht an das Edge Network über WebSDK {#send-datalayer-via-websdk}
 
-Die vorhandene Datenschicht muss mithilfe des Objekts [`data`](/help/web-sdk/commands/sendevent/data.md) innerhalb des Befehls `sendEvent` gesendet werden.
+Die vorhandene Datenschicht muss mithilfe des [`data`](/help/web-sdk/commands/sendevent/data.md)-Objekts innerhalb des `sendEvent`-Befehls gesendet werden.
 
-Wenn Sie Tags verwenden, müssen Sie das Feld **[!UICONTROL Daten]** des Aktionstyps **[!UICONTROL Ereignis senden]** verwenden, wie in der Dokumentation zur [Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/action-types.md) beschrieben.
+Wenn Sie Tags verwenden, müssen Sie das Feld **[!UICONTROL Daten]** des Aktionstyps **[!UICONTROL Ereignis senden]** verwenden, wie in der Dokumentation [Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/action-types.md) beschrieben.
 
 Der Rest dieses Handbuchs konzentriert sich auf die Zuordnung der Datenschicht zu XDM-Standards, nachdem sie vom WebSDK gesendet wurde.
 
@@ -54,7 +54,7 @@ Eine kurze Erklärung des Prozesses „Datenvorbereitung für die Datenerfassung
 
 Wählen Sie nach der allgemeinen Konfiguration eines Datenstroms die Option **[!UICONTROL Speichern und Zuordnung hinzufügen]** aus. Daraufhin wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt. Hier müssen Sie ein JSON-Beispielobjekt bereitstellen, das der Struktur der Daten entspricht, die Sie an Platform senden möchten.
 
-Um Eigenschaften direkt aus Ihrer Datenschicht zu erfassen, muss das JSON-Objekt über eine einzige Stammeigenschaft verfügen: `data`. Die Untereigenschaften des `data` -Objekts sollten dann so konstruiert werden, dass sie den Datenschichteigenschaften zugeordnet werden, die Sie erfassen möchten. Wählen Sie den folgenden Abschnitt aus, um ein Beispiel für ein ordnungsgemäß formatiertes JSON-Objekt mit einem `data`-Stamm zu sehen.
+Um Eigenschaften direkt aus Ihrer Datenschicht zu erfassen, muss das JSON-Objekt über eine einzige Stammeigenschaft verfügen: `data`. Die Untereigenschaften des `data`-Objekts sollten dann so konstruiert werden, dass es den Datenschicht-Eigenschaften zugeordnet werden kann, die Sie erfassen möchten. Wählen Sie den folgenden Abschnitt aus, um ein Beispiel für ein ordnungsgemäß formatiertes JSON-Objekt mit einem `data`-Stamm zu sehen.
 
 +++JSON-Beispieldatei mit `data`-Stamm
 
@@ -154,24 +154,24 @@ Bei der Erfassung von Eigenschaften aus einem XDM-Objekt-Datenelement gelten die
 
 Sie können die Option zum Hochladen des Objekts als Datei auswählen oder stattdessen das Raw-Objekt in das bereitgestellte Textfeld einfügen. Wenn die JSON gültig ist, wird im rechten Bereich ein Vorschauschema angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![JSON-Beispiel der erwarteten eingehenden Daten.](assets/data-prep/select-data.png)
+![JSON-Beispiel für erwartete eingehende Daten.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
-> Verwenden Sie ein JSON-Beispielobjekt, das jedes Datenschichtelement darstellt, das auf einer beliebigen Seite verwendet werden kann. Beispielsweise verwenden nicht alle Seiten Datenschichtelemente des Warenkorbs. Die Datenschichtelemente des Warenkorbs sollten jedoch in dieses JSON-Beispielobjekt aufgenommen werden.
+> Verwenden Sie ein JSON-Beispielobjekt, das jedes Datenschichtelement darstellt, das auf einer beliebigen Seite verwendet werden kann. Beispielsweise verwenden nicht alle Seiten Datenschichtelemente des Warenkorbs. Die Datenschichtelemente des Warenkorbs sollten jedoch in diesem JSON-Beispielobjekt enthalten sein.
 
 ## [!UICONTROL Zuordnung]
 
 Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt, sodass Sie die Felder in Ihren Quelldaten dem Zielereignisschema in Platform zuordnen können. Sie haben die Möglichkeit, die Zuordnung auf zwei Arten zu konfigurieren:
 
-* [Erstellen Sie Zuordnungsregeln](#create-mapping) für diesen Datenspeicher durch einen manuellen Prozess.
+* [Erstellen Sie ](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
 * [Importieren Sie Zuordnungsregeln](#import-mapping) aus einem vorhandenen Datenstrom.
 
 ### Erstellen von Zuordnungsregeln {#create-mapping}
 
-Um eine Zuordnungsregel zu erstellen, wählen Sie **[!UICONTROL Neue Zuordnung hinzufügen]**.
+Um eine Zuordnungsregel zu erstellen, wählen Sie **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
 
-![Hinzufügen einer neuen Zuordnung.](assets/data-prep/add-new-mapping.png)
+![Neue Zuordnung hinzufügen.](assets/data-prep/add-new-mapping.png)
 
 Wählen Sie das Quellensymbol (![Quellensymbol](/help/images/icons/source.png)) und danach im sich öffnenden Dialogfeld das Quellfeld aus, das Sie auf der bereitgestellten Arbeitsfläche zuordnen möchten. Nachdem Sie ein Feld ausgewählt haben, verwenden Sie die Schaltfläche **[!UICONTROL Auswählen]**, um fortzufahren.
 
@@ -179,11 +179,11 @@ Wählen Sie das Quellensymbol (![Quellensymbol](/help/images/icons/source.png)) 
 
 Wählen Sie anschließend das Schemasymbol (![Schemasymbol](/help/images/icons/schema.png)) aus, um ein ähnliches Dialogfeld für das Zielereignisschema zu öffnen. Wählen Sie das Feld aus, dem Sie die Daten zuordnen möchten, und bestätigen Sie dann mit **[!UICONTROL Auswählen]**.
 
-![Auswahl des Felds, das im Zielschema zugeordnet werden soll.](assets/data-prep/target-mapping.png)
+![Auswählen des Felds, das im Zielschema zugeordnet werden soll.](assets/data-prep/target-mapping.png)
 
 Die Zuordnungsseite wird erneut mit der abgeschlossenen Feld-Zuordnung angezeigt. Der Abschnitt **[!UICONTROL Zuordnungsfortschritt]** wird aktualisiert und zeigt die Gesamtzahl der Felder an, die bereits erfolgreich zugeordnet wurden.
 
-![Feld wurde erfolgreich mit dem erkannten Fortschritt zugeordnet.](assets/data-prep/field-mapped.png)
+![Feld, das erfolgreich zugeordnet wurde und dessen Fortschritt widergespiegelt wird.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
@@ -193,19 +193,19 @@ Die Zuordnungsseite wird erneut mit der abgeschlossenen Feld-Zuordnung angezeigt
 
 ### Importieren vorhandener Zuordnungsregeln {#import-mapping}
 
-Wenn Sie zuvor einen Datastream erstellt haben, können Sie die konfigurierten Zuordnungsregeln für einen neuen Datastream wiederverwenden.
+Wenn Sie zuvor einen Datenstrom erstellt haben, können Sie seine konfigurierten Zuordnungsregeln für einen neuen Datenstrom wiederverwenden.
 
 >[!WARNING]
 >
->Beim Importieren von Zuordnungsregeln aus einem anderen Datenspeicher werden alle vor dem Import hinzugefügten Feldzuordnungen überschrieben.
+>Durch das Importieren von Zuordnungsregeln aus einem anderen Datenstrom werden alle Feldzuordnungen überschrieben, die Sie möglicherweise vor dem Import hinzugefügt haben.
 
 Wählen Sie zunächst **[!UICONTROL Zuordnung importieren]** aus.
 
-![Die Schaltfläche &quot;Importzuordnung&quot; wurde ausgewählt.](assets/data-prep/import-mapping-button.png)
+![Auswahl der Schaltfläche Zuordnung importieren.](assets/data-prep/import-mapping-button.png)
 
 Wählen Sie im sich öffnenden Dialogfeld den Datenstrom aus, dessen Zuordnungsregeln Sie importieren möchten. Wählen Sie danach **[!UICONTROL Vorschau]** aus.
 
-![Vorhandenen Datastream auswählen.](assets/data-prep/select-mapping-rules.png)
+![Auswählen eines vorhandenen Datenstroms.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Wählen Sie im sich öffnenden Dialogfeld den Datenstrom aus, dessen Zuordnungsr
 
 Im nächsten Bildschirm wird eine Vorschau der gespeicherten Zuordnungsregeln für den ausgewählten Datenstrom gezeigt. Prüfen Sie, ob die angezeigten Zuordnungen korrekt sind und wählen Sie dann **[!UICONTROL Importieren]** aus, um die Zuordnungen zu bestätigen und zum neuen Datenstrom hinzuzufügen.
 
-![Zuordnungsregeln für den Import.](assets/data-prep/import-mapping-rules.png)
+![Zuordnungsregeln zum Importieren.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -221,9 +221,9 @@ Im nächsten Bildschirm wird eine Vorschau der gespeicherten Zuordnungsregeln f�
 
 ### Abschließen der Zuordnung
 
-Führen Sie die oben genannten Schritte erneut aus, um den Rest der Felder dem Zielschema zuzuordnen. Sie müssen zwar nicht alle verfügbaren Quellfelder zuordnen, jedoch müssen alle Felder im Zielschema, die wie erforderlich festgelegt sind, für diesen Schritt zugeordnet werden. Der Zähler **[!UICONTROL Erforderliche Felder]** gibt an, wie viele erforderlichen Felder in der aktuellen Konfiguration noch nicht zugeordnet sind.
+Führen Sie die oben genannten Schritte erneut aus, um den Rest der Felder dem Zielschema zuzuordnen. Sie müssen zwar nicht alle verfügbaren Quellfelder zuordnen, jedoch müssen alle Felder im Zielschema, die als erforderlich festgelegt sind, zugeordnet werden, um diesen Schritt abzuschließen. Der Zähler **[!UICONTROL Erforderliche Felder]** gibt an, wie viele erforderlichen Felder in der aktuellen Konfiguration noch nicht zugeordnet sind.
 
-Sobald die erforderliche Feldanzahl null erreicht hat und Sie mit Ihrer Zuordnung zufrieden sind, wählen Sie **[!UICONTROL Speichern]** aus, um die Änderungen abzuschließen.
+Nachdem die erforderliche Feldanzahl null erreicht hat und Sie Ihre Zuordnung überprüft haben, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen abzuschließen.
 
 ![Zuordnungen abgeschlossen](assets/data-prep/mapping-complete.png)
 

@@ -1,70 +1,71 @@
 ---
-title: Überwachen bedeutender Änderungen und Prognosen für Zielgruppen mit dem AI-Assistenten
-description: Erfahren Sie, wie Sie mit AI Assistant signifikante Änderungen überwachen und Zielgruppen in Adobe Experience Platform vorhersagen können.
+title: Überwachen signifikanter Änderungen und Zielgruppenvorhersagen mit dem KI-Assistenten
+description: Erfahren Sie, wie Sie mit dem KI-Assistenten signifikante Änderungen überwachen und Zielgruppen in Adobe Experience Platform prognostizieren können.
 badge: Alpha
-source-git-commit: 37d2886cc5d7b3a019d23f76973d79547865298b
+exl-id: 8f34d378-a8a0-420d-8e45-39a5aafdd7b7
+source-git-commit: 4dc07313127e62e15a5090ab71ad62b8957df977
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
 
 ---
 
-# Überwachen bedeutender Änderungen und Vorhersagen des Zielgruppenwachstums mit dem AI-Assistenten
+# Überwachen Sie signifikante Änderungen und prognostizieren Sie das Zielgruppenwachstum mit AI Assistant
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist in Alpha verfügbar und steht Ihrem Unternehmen möglicherweise nicht zur Verfügung. Wenden Sie sich an Ihr Adobe-Account-Team, um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen.
+>Diese Funktion befindet sich im Alpha und steht Ihrer Organisation möglicherweise nicht zur Verfügung. Um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen, wenden Sie sich an Ihr Adobe-Account-Team.
 
-In der heutigen datengesteuerten Marketing-Landschaft sind zeitnahe und genaue Einblicke unerlässlich. Egal ob Sie ein Business-Anwender oder Marketing-Benutzer sind, Sie benötigen die Möglichkeit, konsistent mit Ihren Zielgruppen zu interagieren und auf der Grundlage klarer Einblicke schnelle und wirkungsvolle Anpassungen vorzunehmen. Um die Ausrichtung Ihrer Geschäftsziele zu gewährleisten oder Ihre Geschäftsziele zu erreichen, benötigen Sie die umsetzbaren Informationen, die Sie benötigen, um effektive Kampagnen zu fördern und Ressourcen zu optimieren.
+In der heutigen datengesteuerten Marketing-Landschaft sind rechtzeitige und genaue Einblicke unerlässlich. Egal, ob Sie ein Business-Anwender oder im Marketing-Bereich sind, Sie benötigen die Fähigkeit, konsistent mit Ihren Audiences zu interagieren und schnelle und wirkungsvolle Anpassungen auf der Grundlage klarer Einblicke vorzunehmen. Um die Ausrichtung beizubehalten oder Ihre Geschäftsziele zu erreichen, müssen Sie über die verwertbaren Informationen verfügen, die für effektive Kampagnen und die Optimierung von Ressourcen erforderlich sind.
 
-Sie können den AI-Assistenten für Adobe Experience Platform verwenden, um wichtige Änderungen zu überwachen und Wachstumsprognosen für Ihre Zielgruppe und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsorientierte Projektionen zur Unterstützung datenbasierter Entscheidungen anzubieten.
+Sie können den KI-Assistenten für Adobe Experience Platform verwenden, um signifikante Änderungen zu überwachen und Wachstumsprognosen für Ihre Audience und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsgerichtete Prognosen anzubieten, um dateninformierte Entscheidungsfindungen zu unterstützen.
 
-In diesem Dokument erfahren Sie, wie Sie mit dem AI-Assistenten signifikante Änderungen überwachen und das Zielgruppenwachstum und die Fluktuationen vorhersagen können.
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem KI-Assistenten signifikante Änderungen überwachen und das Zielgruppenwachstum und Schwankungen vorhersagen können.
 
-## Wichtige Begriffe und Definitionen {#key-terminology-and-definitions}
+## Wichtige Terminologie und Definitionen {#key-terminology-and-definitions}
 
 In der folgenden Tabelle finden Sie eine Liste wichtiger Begriffe und der zugehörigen Definitionen.
 
 | Terminologie | Definition |
 | --- | --- |
-| Wesentliche Änderung | Eine wesentliche Änderung ist eine große prozentuale Änderung der Zielgruppe oder Datensatzgröße, die durch bestimmte Schwellenwerte definiert wird (z. B. 10 % für große Zielgruppen). Erhebliche Änderungen helfen bei der Identifizierung von Anomalien, die sich auf die Datenstabilität auswirken. |
-| Anomalien | Anomalien sind unerwartete Datenabweichungen, wie ein plötzliches Wachstum von 20 % in einer **hochwertigen Käufer** -Zielgruppe. Eine Anomalie kann durch ein Problem mit der potenziellen Datenerfassung oder eine Änderung der Zielgruppendefinition verursacht werden. |
-| Historische Daten | Historische Daten beziehen sich auf langfristige Daten, in der Regel ein bis drei Jahre. Sie können historische Daten verwenden, um Muster zu verfolgen. **Hinweis**: Während des Alphas stellt der KI-Assistent historische Daten von bis zu 13 Monaten bereit. |
-| Neu/Letzte Daten | Neu oder neu auftretende Daten beziehen sich auf Datenpunkte, die über einen kurzen Zeitraum (in der Regel eine Woche oder bis zu 30 Tage) beobachtet wurden. Sie können neue oder aktuelle Daten verwenden, um unmittelbare Trends hervorzuheben und schnelle Anpassungen vorzunehmen. |
-| Prognose | Eine Prognose ist eine Vorhersage künftiger Zielgruppen- oder Datensatzgrößen, die auf vergangenen Trends basieren. Sie können Prognosedaten verwenden, um eine langfristige Planung zu unterstützen. |
-| Zielgruppengröße | Die Zielgruppengröße bezieht sich auf die Gesamtzahl der Profile in einer Zielgruppe. Die Zielgruppengröße wird bei jeder Iteration der Datenerfassung aktualisiert. |
-| Zeitrahmen für Vergleich | Der AI-Assistent verwendet vordefinierte Zeitrahmen für den Vergleich. Jüngste Anomalien haben standardmäßig einen 7-tägigen Rückblick, während vergangene Anomalien 30 Tage umfassen. Historische Trends reichen bis zu 13 Monate. |
+| wesentliche Änderung | Eine signifikante Änderung ist eine große prozentuale Änderung der Zielgruppen- oder Datensatzgröße, die durch bestimmte Schwellenwerte definiert wird (z. B. 10 % für große Zielgruppen). Signifikante Änderungen können zur Identifizierung von Anomalien beitragen, die die Datenstabilität beeinträchtigen. |
+| Anomalien | Anomalien sind unerwartete Variationen in den Daten, z. B. ein plötzliches Wachstum von 20 % bei einer Zielgruppe **High-Value-**). Eine Anomalie kann durch ein potenzielles Problem bei der Datenaufnahme oder eine Änderung der Zielgruppendefinition verursacht werden. |
+| Historische Daten | Historische Daten beziehen sich auf langfristige Daten, die in der Regel ein bis drei Jahre umfassen. Sie können historische Daten verwenden, um Muster zu verfolgen. **Hinweis**: Während des Alphas liefert der KI-Assistent historische Daten von bis zu 13 Monaten. |
+| Neue/aktuelle Daten | Neue oder aktuelle Daten beziehen sich auf Datenpunkte, die über einen kurzen Zeitraum, in der Regel eine Woche oder bis zu 30 Tage, beobachtet wurden. Sie können neue oder aktuelle Daten verwenden, um unmittelbare Trends hervorzuheben und schnelle Anpassungen vorzunehmen. |
+| Prognose | A-Prognosen sind Vorhersagen der zukünftigen Zielgruppen- oder Datensatzgröße, die auf früheren Trends basieren. Prognosedaten können zur Unterstützung der langfristigen Planung verwendet werden. |
+| Zielgruppengröße | Audience-Größe bezieht sich auf die Gesamtzahl der Profile innerhalb einer Audience. Die Zielgruppengröße wird mit jeder Iteration der Datenaufnahme aktualisiert. |
+| Zeitrahmen für den Vergleich | Der KI-Assistent verwendet vordefinierte Vergleichszeitrahmen. Letzte Anomalien werden standardmäßig nach sieben Tagen zurückgeschaut, während vergangene Anomalien 30 Tage umfassen. Historische Trends erstrecken sich über bis zu 13 Monate. |
 
 {style="table-layout:auto"}
 
 ## Anwendungsbeispiele {#use-case-examples}
 
-Die Fähigkeit des KI-Assistenten, wesentliche Änderungen zu überwachen und Zielgruppen vorherzusagen, kann in den folgenden Anwendungsfällen besonders hilfreich sein:
+Die Funktion des KI-Assistenten zur Überwachung signifikanter Änderungen und zur Prognose von Zielgruppen kann besonders für die folgenden Anwendungsfälle hilfreich sein:
 
 ### Marketing-Vorgänge
 
-Für die Integrität und Konsistenz von Zielgruppendaten sind die Fachkräfte für Marketing-Vorgänge (Marketing-ops) verantwortlich. Als Mitglied eines Marketing-Teams können Sie unter anderem die Überwachung der Datenqualität, die Reaktion auf unerwartete Veränderungen und die Aufrechterhaltung einer stabilen Grundlage für alle Marketing-Maßnahmen übernehmen. Sie können die Anomalieerkennung des AI-Assistenten verwenden, um signifikante Zielgruppen- oder Datensatzänderungen zu erkennen und zu beheben und so Unterbrechungen zu verhindern, die sich auf die Kampagnenleistung auswirken könnten.
+Experten für Marketing-Vorgänge (Marketing-Vorgänge) sind dafür verantwortlich, die Integrität und Konsistenz der Zielgruppendaten sicherzustellen. Als Mitglied eines Marketing-Opportunities-Teams können Sie die Datenqualität überwachen, auf unerwartete Verschiebungen reagieren und eine stabile Grundlage für alle Marketing-Maßnahmen erhalten. Sie können die Anomalieerkennung des KI-Assistenten verwenden, um signifikante Änderungen an Zielgruppen oder Datensätzen zu erkennen und anzusprechen und so Unterbrechungen zu verhindern, die sich auf die Kampagnenleistung auswirken könnten.
 
-### Geschäftsbenutzer und Marketing-Experten
+### Business-Anwender und Marketing-Experten
 
-Als Business-Anwender und Marketing-Experte können Sie sich auf genaue Zielgruppeneinblicke verlassen, um datengesteuerte Entscheidungen zu treffen und sicherzustellen, dass Ihre Kampagnen ihre gewünschten Zielgruppen effektiv erreichen. Mit den Prognosefunktionen des AI-Assistenten können Sie das Wachstum oder die Reduzierung von Zielgruppen vorhersagen und strategische Anpassungen der Ressourcen und Zielgruppen im Laufe der Zeit ermöglichen.
+Als Business-Anwenderin bzw. -Anwender und Marketing-Expertin können Sie sich auf präzise Zielgruppeneinblicke verlassen, um datengestützte Entscheidungen zu treffen und sicherzustellen, dass Ihre Kampagnen die gewünschten Zielgruppen effektiv erreichen. Mit den Prognosefunktionen des KI-Assistenten können Sie das Wachstum oder die Reduzierung der Zielgruppe antizipieren und strategische Anpassungen der Ressourcen und des Targeting im Laufe der Zeit ermöglichen.
 
 ## Wichtigste Funktionen
 
 >[!IMPORTANT]
 >
->Die folgenden Funktionen sind in Alpha verfügbar und konzentrieren sich auf grundlegende Funktionen zur Überwachung und Vorhersage. Da sich diese Funktion im Alpha befindet, müssen Sie sicherstellen, dass Sie die Antworten, die Sie von AI Assistant erhalten, auf ihre Richtigkeit doppelprüfen.
+>Die folgenden Funktionen befinden sich im Alpha und konzentrieren sich auf grundlegende Funktionen für die Überwachung und Prognose. Da sich diese Funktion im Alpha befindet, müssen Sie sicherstellen, dass Sie die Antworten, die Sie vom KI-Assistenten erhalten, auf Korrektheit überprüfen.
 
-### Überwachen bedeutender Änderungen an Zielgruppe und Daten
+### Überwachung signifikanter Änderungen bei Zielgruppe und Daten
 
-Sie können den AI-Assistenten verwenden, um signifikante Änderungen an Zielgruppen und Datensatzgrößen zu identifizieren, indem Sie Abweichungen von typischen Mustern verfolgen. Jede signifikante Änderung basiert auf vordefinierten Schwellenwerten, die auf die Größe der Zielgruppe zugeschnitten sind.
+Sie können den KI-Assistenten verwenden, um signifikante Änderungen der Zielgruppen- und Datensatzgrößen zu identifizieren, indem Sie Abweichungen von typischen Mustern verfolgen. Jede signifikante Änderung basiert auf vordefinierten Schwellenwerten, die auf die Größe der Zielgruppe zugeschnitten sind.
 
-| Zielgruppengröße | Anzahl Profile | Beschreibung |
+| Zielgruppengröße | Anzahl der Profile | Beschreibung |
 | --- | --- | --- |
-| Kleine Zielgruppen | 1 bis 100.000 Profile | Kennzeichnet eine Änderung von 30 % oder mehr, es sei denn, es wird ein bestimmter Prozentsatz angegeben. |
-| Medium-Zielgruppen | 100.000 bis 500.000 Profile | Kennzeichnet eine Veränderung von 25 % oder mehr, es sei denn, es wird ein bestimmter Prozentsatz angegeben. |
-| Große Zielgruppen | 500.000 bis 1 Million Profile | Kennzeichnet eine Veränderung von 20 % oder mehr, es sei denn, ein bestimmter Prozentsatz ist angegeben. |
-| Sehr große Zielgruppen | Über 1 Million Profile | Kennzeichnet eine Änderung von 10 % oder mehr, es sei denn, es wird ein bestimmter Prozentsatz angegeben. |
+| Kleine Zielgruppen | 1 bis 100.000 Profile | Markiert eine Änderung von 30 % oder mehr, es sei denn, ein bestimmter Prozentsatz ist angegeben. |
+| Medium-Zielgruppen | 100.000 bis 500.000 Profile | Markiert eine Änderung von 25 % oder mehr, es sei denn, ein bestimmter Prozentsatz ist angegeben. |
+| Große Zielgruppen | 500.000 bis 1 Million Profile | Markiert eine Änderung von 20 % oder mehr, es sei denn, ein bestimmter Prozentsatz ist angegeben. |
+| Sehr große Zielgruppen | Über 1 Million Profile | Markiert eine Änderung von 10 % oder mehr, es sei denn, ein bestimmter Prozentsatz ist angegeben. |
 
 {style="table-layout:auto"}
 
@@ -72,116 +73,116 @@ Sie können den AI-Assistenten verwenden, um signifikante Änderungen an Zielgru
 
 #### Beispielszenario
 
-Erhebliche Änderungen weisen auf Anomalien hin, die sich auf die Stabilität oder Zuverlässigkeit der Zielgruppe auswirken können. Wenn beispielsweise eine Audience mit dem Namen **High-Value Shoppers** eine plötzliche Reduzierung der Größe um 15 % erfährt, markiert der AI-Assistent diese als wesentliche Änderung. Mithilfe dieser Informationen können Sie dann mögliche Probleme untersuchen und beheben, bevor sie sich auf Ihre Kampagnen auswirken.
+Signifikante Änderungen weisen auf Anomalien hin, die sich auf die Zielgruppenstabilität oder die Datenzuverlässigkeit auswirken können. Wenn beispielsweise eine Zielgruppe **hochwertige Käufer** einen plötzlichen Größenrückgang von 15 % erlebt, kennzeichnet der KI-Assistent dies als eine wesentliche Änderung. Anschließend können Sie diese Informationen verwenden, um potenzielle Probleme zu untersuchen und zu beheben, bevor sie sich auf Ihre Kampagnen auswirken.
 
 >[!ENDSHADEBOX]
 
 >[!TIP]
 >
->Der KI-Assistent benachrichtigt Sie nicht automatisch über bedeutende Änderungen der Zielgruppengröße. Sie müssen innerhalb eines bestimmten Zeitraums eine Konversation mit AI Assistant starten und fragen, welche Zielgruppen sich signifikant oder innerhalb eines bestimmten Zeitraums geändert haben.
+>Der KI-Assistent benachrichtigt Sie nicht automatisch über signifikante Änderungen der Zielgruppengrößen. Sie müssen ein Gespräch mit dem KI-Assistenten beginnen und fragen, welche Zielgruppen sich innerhalb eines bestimmten Zeitraums signifikant oder um einen bestimmten Rand verändert haben.
 
-### Prognostizieren der Zielgruppe und des Datensatzwachstums
+### Prognostiziertes Zielgruppen- und Datensatzwachstum
 
-Mit dem AI-Assistenten können Sie auf historische Datentrends und zukünftige Zielgruppen- und Datensatzgrößen des Projekts verweisen. Anschließend können Sie diese Einblicke verwenden, um Ihre Ressourcenplanung und Strategieanpassungen zu unterstützen. Derzeit können Sie den AI-Assistenten verwenden, um das Zielgruppen- und Datensatzwachstum für 30 Tage vorherzusagen. Durch Verständnis des erwarteten Wachstums oder Rückgangs der Zielgruppe können Sie Zielgruppenstrategien anpassen und Ihre Ressourcen entsprechend zuweisen.
+Sie können den KI-Assistenten verwenden, um historische Datentrends und zukünftige Projektzielgruppen- und Datensatzgrößen zu referenzieren. Sie können diese Einblicke dann verwenden, um Ihre Ressourcenplanung und Strategieanpassungen zu unterstützen. Derzeit können Sie den KI-Assistenten verwenden, um das Zielgruppen- und Datensatzwachstum für 30 Tage zu prognostizieren. Indem Sie das erwartete Zielgruppenwachstum oder den erwarteten Zielgruppenrückgang verstehen, können Sie Zielgruppenbestimmungsstrategien anpassen und Ihre Ressourcen entsprechend zuweisen.
 
 ### Einblicke in historische Zielgruppengrößen
 
-Zusätzlich zur Erkennung bedeutender Änderungen können Sie den AI-Assistenten verwenden, um historische Einblicke abzurufen und aktuelle Zielgruppen- oder Datensatzgrößen mit früheren Daten zu vergleichen. Diese Funktion unterstützt das Tracking langfristiger Trends und die Bewertung der Auswirkungen vorheriger Marketingaktivitäten.
+Zusätzlich zur Erkennung signifikanter Änderungen können Sie den KI-Assistenten verwenden, um historische Einblicke abzurufen und aktuelle Zielgruppen- oder Datensatzgrößen mit früheren Daten zu vergleichen. Diese Funktion unterstützt die Verfolgung langfristiger Trends und die Bewertung der Auswirkungen früherer Marketing-Aktivitäten.
 
-Sie können Fragen an den KI-Assistenten stellen, z. B. &quot;Wie groß war meine Zielgruppe &quot;Loyalitätskunden&quot;im letzten Monat? um historische Daten zum Wachstum oder Rückgang dieser spezifischen Zielgruppe anzuzeigen.
+Sie können Fragen an den KI-Assistenten stellen, z. B.: „Wie groß war im letzten Monat meine Zielgruppe „Treuekunden“? um historische Daten zum Wachstum oder Rückgang dieser spezifischen Zielgruppe anzuzeigen.
 
-## Beispielfragen zur Überwachung wesentlicher Änderungen
+## Beispielfragen zur Überwachung signifikanter Änderungen
 
-Sie können Fragen zu Ihrer KI-Assistenzkraft auf verschiedene Arten stellen.
+Sie können Ihre Fragen zum KI-Assistenten auf verschiedene Weise umrahmen.
 
-* Wenn Ihre Frage einen Prozentsatz enthält, z. B. **&quot;Welche Zielgruppen haben sich über 30 % oder mehr verändert?&quot;**, verwendet der AI-Assistent den Prozentsatz als Referenzpunkt.
-* Wenn in Ihrer Frage kein Prozentsatz angegeben ist, interpretiert der AI-Assistent wichtige Änderungen basierend auf den Standardeinstellungen.
+* Wenn Ihre Frage einen Prozentsatz umfasst, z. B. **„Welche Zielgruppen haben sich über 30 % oder mehr geändert?“,** verwendet der KI-Assistent den Prozentsatz als Referenzpunkt.
+* Wenn in der Frage kein Prozentsatz angegeben ist, interpretiert der KI-Assistent signifikante Änderungen basierend auf den Standardeinstellungen.
 
-In den folgenden Tabellen finden Sie beispielsweise Abfragen, die veranschaulichen, wie der AI-Assistent wichtige Änderungen basierend auf der Zielgruppengröße interpretiert:
+Die folgenden Tabellen enthalten Beispielabfragen, die veranschaulichen, wie der KI-Assistent signifikante Änderungen basierend auf der Zielgruppengröße interpretiert:
 
 | Zielgruppeninformationen oder Zielgruppenänderung | Beispiel |
 | --- | --- |
-| <ul><li>Wie groß ist derzeit {AUDIENCE_NAME}?</li><li>Zeigen Sie die Zielgruppen an, für die eine Änderung von {PERCENT} gegenüber {DATE_DURATION} angezeigt wurde.</li></ul> | <ul><li>Wie groß ist die aktuelle Zielgruppe der hochwertigen Käufer?</li><li>Zeigen Sie die Zielgruppen an, für die in der letzten Woche eine Veränderung von 20 % festgestellt wurde.</li></ul> |
+| <ul><li>Wie groß ist {AUDIENCE_NAME} derzeit?</li><li>Zeigen Sie die Zielgruppen, bei denen sich die {PERCENT} im Laufe der {DATE_DURATION} geändert hat.</li></ul> | <ul><li>Wie groß ist die Zielgruppe der High-Value-Shopper derzeit?</li><li>Zeigt die Zielgruppen an, die in der letzten Woche eine Änderung von 20 % gezeigt haben.</li></ul> |
 
 {style="table-layout:auto"}
 
 | Zielgruppenspezifische Abfragen | Beispiel |
 | --- | --- |
-| <ul><li>Welche Zielgruppen haben sich in {DATE_OR_DURATION} mehr als {PERCENT} geändert?</li><li>Zeigen Sie mir Zielgruppen mit einer signifikanten Änderung im Vergleich zu {DATE_OR_DURATION}.</li><li>Zeigen Sie mir die Verteilung der Zielgruppen mit den größten Änderungen über {DATE_OR_DURATION}.</li><li>Zeigen Sie mir Zielgruppen, die bei {DATE_OR_DURATION} mehr als {PERCENT} reduziert wurden.</li></ul> | <ul><li>Welche Zielgruppen haben sich in der letzten Woche um mehr als 20 % verändert?</li><li>Zeigen Sie mir Zielgruppen mit einer signifikanten Veränderung in den letzten sechs Monaten.</li><li>Zeigen Sie mir die Verteilung der Zielgruppen mit den größten Änderungen vom 1. Oktober bis 31. Oktober.</li><li> Zeigen Sie mir Zielgruppen, die seit dem 31. August um mehr als 20 % gesunken sind. |
+| <ul><li>Welche Zielgruppen haben sich in {DATE_OR_DURATION} mehr als {PERCENT} geändert?</li><li>Zeigen Sie mir Zielgruppen mit einer signifikanten Änderung im Laufe der {DATE_OR_DURATION}.</li><li>Verteilung der Zielgruppen mit den größten Änderungen im {DATE_OR_DURATION} anzeigen.</li><li>Zielgruppen anzeigen, deren Anzahl auf {DATE_OR_DURATION} um mehr als {PERCENT} verringert wurde.</li></ul> | <ul><li>Welche Zielgruppen haben sich in der letzten Woche um mehr als 20 % verändert?</li><li>Zeigen Sie mir Zielgruppen mit einer signifikanten Änderung in den letzten sechs Monaten.</li><li>Verteilung der Zielgruppen mit den größten Änderungen vom 1. Oktober bis zum 31. Oktober anzeigen.</li><li> Zielgruppen anzeigen, die seit dem 31. August um mehr als 20 % gesunken sind. |
 
 {style="table-layout:auto"}
 
 ## Weitere Informationen
 
-### Grundlegendes zur Schwellenwertänderung
+### Erläuterung des Schwellenwerts für „signifikante Änderung“
 
-Sie können einen bestimmten Prozentsatz angeben, wenn Sie AI Assistant nach Informationen zu wesentlichen Änderungen fragen. Wenn Sie keinen bestimmten Prozentsatz angeben, verweist der KI-Assistent auf einen vordefinierten Satz von Schwellenwerten, um zu bestimmen, welche Kriterien als wesentliche Änderung gelten. Die Standardschwellen basieren auf der Größe einer bestimmten Zielgruppe. In der folgenden Tabelle finden Sie Informationen dazu, was eine wesentliche Änderung basierend auf der Zielgruppengröße darstellt:
+Sie können einen bestimmten Prozentsatz angeben, wenn Sie den KI-Assistenten nach Informationen zu wichtigen Änderungen fragen. Wenn Sie keinen bestimmten Prozentsatz angeben, verweist der KI-Assistent auf einen vordefinierten Satz von Schwellenwerten, um zu bestimmen, was als signifikante Änderung gilt. Die Standardschwellenwerte basieren auf der Größe einer bestimmten Zielgruppe. In der folgenden Tabelle finden Sie Informationen darüber, was eine signifikante Änderung basierend auf der Zielgruppengröße darstellt:
 
-| Zielgruppengröße | Was ist von Bedeutung? |
+| Zielgruppengröße | Was ist signifikant? |
 | --- | --- |
 | 1 Million oder mehr | 10 % oder mehr |
-| 500 bis 1 Million | 20 % oder mehr |
-| 100 bis 500 k | 25 % oder mehr |
-| Weniger als 100 k | 30 % oder mehr |
+| 500.000 bis 1 Million | 20 % oder mehr |
+| 100 K bis 500 K | 25 % oder mehr |
+| Weniger als 100 KB | 30 % oder mehr |
 
-### Allgemeine Zeitleisten und spezifische Daten
+### Allgemeine Zeitleisten und bestimmte Daten
 
-Der AI-Assistent unterstützt sowohl spezifische als auch generische zeitbasierte Vergleiche für Zielgruppengrößen und interpretiert sie basierend auf dem in der Abfrage angegebenen Kontext.
+Der KI-Assistent unterstützt sowohl spezifische als auch generische zeitbasierte Vergleiche für Zielgruppengrößen und interpretiert sie basierend auf dem in der Abfrage bereitgestellten Kontext.
 
 >[!BEGINTABS]
 
->[!TAB Allgemeine Zeitleisten]
+>[!TAB Allgemeine Timelines]
 
-Generische Zeitleisten beziehen sich auf Abfragen, die eine Sprache wie &quot;diese Woche&quot;oder &quot;letzte Woche&quot;verwenden. Wenn Sie den KI-Assistenten z. B. fragen: &quot;Welche Zielgruppen haben sich in der letzten Woche um mehr als 20 % verändert?&quot;, berechnet und vergleicht der KI-Assistent die Größe der **durchschnittlichen Zielgruppe** über den angegebenen Zeitraum.
+Generische Zeitleisten beziehen sich auf Abfragen, die eine Sprache wie „diese Woche“ oder „letzte Woche“ verwenden. Wenn Sie dem KI-Assistenten eine Frage stellen, z. B.: „Welche Zielgruppen haben sich in der letzten Woche um mehr als 20 % geändert?“, berechnet der KI-Assistent die Größe **durchschnittliche Zielgruppe** über den angegebenen Zeitraum und vergleicht sie.
 
-Verwenden Sie diesen Ansatz für eine umfassendere Ansicht der Zielgruppenänderungen im Zeitverlauf, sodass Sie Trends in Wochen- oder Monatsintervallen besser verstehen können.
+Verwenden Sie diesen Ansatz für eine breitere Ansicht der Zielgruppenänderungen im Laufe der Zeit, sodass Sie Trends innerhalb von wöchentlichen oder monatlichen Intervallen besser verstehen können.
 
->[!TAB Bestimmte Datumswerte]
+>[!TAB Bestimmte Daten]
 
-Wenn Ihre Frage auf ein bestimmtes Datum verweist, vergleicht der KI-Assistent die **genauen Zielgruppengrößen** an jedem von Ihnen angegebenen Datum.
+Wenn sich Ihre Frage auf ein bestimmtes Datum bezieht, vergleicht der KI **Assistent die (exakten Zielgruppengrößen** zu jedem Ihrer angegebenen Daten.
 
 Verwenden Sie diesen präzisen Vergleich, um Änderungen zwischen bestimmten Zeitpunkten zu analysieren und Klarheit darüber zu erhalten, wie sich die Zielgruppengröße an bestimmten Tagen entwickeln kann.
 
 >[!ENDTABS]
 
-Sie können diese Flexibilität nutzen, um die Dynamik von Zielgruppen sowohl über einen breiten als auch über einen präzisen Zeitraum hinweg besser zu verstehen. Unabhängig davon, ob Sie allgemeine Trends verfolgen oder exakte Verschiebungen zwischen bestimmten Daten untersuchen, können Sie den adaptiven Mechanismus des AI-Assistenten verwenden, um den relativen Vergleich für Ihre Abfrage abzurufen.
+Sie können diese Flexibilität nutzen, um die Zielgruppendynamik über einen breiten und präzisen Zeitraum hinweg besser zu verstehen. Unabhängig davon, ob Sie allgemeine Trends verfolgen oder exakte Verschiebungen zwischen bestimmten Daten untersuchen, können Sie den adaptiven Mechanismus des KI-Assistenten verwenden, um den relativsten Vergleich für Ihre Abfrage abzurufen.
 
 ## Häufig gestellte Fragen {#faq}
 
-In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Überwachung wesentlicher Änderungen und zur Vorhersage von Zielgruppen mit dem AI-Assistenten.
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Überwachung signifikanter Änderungen und zur Prognose von Zielgruppen mit dem KI-Assistenten.
 
-### Wie viele historische Daten kann ich betrachten, um Vergrößerungen oder Verkleinerungen von Zielgruppen anzuzeigen?
+### Wie viele historische Daten kann ich betrachten, um zu sehen, wie die Zielgruppengröße zunimmt oder abnimmt?
 
-Der AI-Assistent behält Daten zur historischen Zielgruppengröße von 12 Monaten bei. Sie können innerhalb dieses Zeitrahmens Fragen zu Zielgruppenänderungen stellen, um die Wachstums- oder Abwärtsmuster des vergangenen Jahres zu verstehen.
+Der KI-Assistent speichert Daten zu historischen Zielgruppengrößen für 12 Monate. Sie können Fragen zu Zielgruppenänderungen innerhalb dieses Zeitraums stellen, um Wachstums- oder Rückgangsmuster im Laufe des letzten Jahres zu verstehen.
 
-### Wie weit in der Geschichte kann ich noch gehen, um Zielgruppenänderungen zu sehen?
+### Wie weit kann ich zurückgehen, um Zielgruppenänderungen zu sehen?
 
-Der KI-Assistent verfolgt Zielgruppenänderungen ab dem Tag, an dem sie in Ihrer Organisation aktiviert werden, und geht bis zur letzten Änderung der Zielgruppendefinition zurück. Nach der Aktivierung überwacht und zeichnet AI Assistant Definitionsänderungen bis zu 12 Monate lang kontinuierlich auf, sodass Daten künftig verfolgt und verglichen werden können.
+Der KI-Assistent verfolgt Zielgruppenänderungen ab dem Tag, an dem er in Ihrer Organisation aktiviert wird, und geht bis zur letzten Änderung der Zielgruppendefinition zurück. Nach der Aktivierung überwacht und zeichnet der KI-Assistent Definitionsänderungen bis zu 12 Monate lang kontinuierlich auf, sodass zukünftige Daten verfolgt und verglichen werden können.
 
-### Wie viele historische Daten sind für eine Prognose erforderlich?
+### Wie viele historische Daten werden für eine Prognose benötigt?
 
-Daten aus mindestens 30 Tagen sind erforderlich, um eine zuverlässige Prognose aus der letzten Änderung der Zielgruppendefinition zu erhalten. In bestimmten Fällen, z. B. beim Planen von [!DNL Black Friday], benötigt der KI-Assistent möglicherweise bis zu 12 Monate historischer Daten.
+Für zuverlässige Prognosen ab der letzten Änderung der Zielgruppendefinition sind Daten von mindestens 30 Tagen erforderlich. In bestimmten Fällen, z. B. bei der Prognose für [!DNL Black Friday], kann der KI-Assistent bis zu 12 Monate historischer Daten benötigen.
 
-### Wie interpretiert der KI-Assistent &quot;vor Kurzem&quot;?
+### Wie interpretiert der KI-Assistent „kürzlich“?
 
-Die KI-Assistenzkraft interpretiert &quot;kürzlich&quot;als die letzten sieben Tage. Bei Fragen, die auf aktuelle Änderungen verweisen, berücksichtigt der AI-Assistent Daten aus diesem Zeitraum, um Trends oder Verschiebungen zu identifizieren.
+Der KI-Assistent interpretiert „kürzlich“ als die letzten sieben Tage. Bei Fragen zu den letzten Änderungen berücksichtigt der KI-Assistent Daten aus diesem Zeitraum, um Trends oder Verschiebungen zu identifizieren.
 
-### Wie vergleicht der KI-Assistent Zielgruppengrößen?
+### Wie vergleicht der KI-Assistent die Zielgruppengrößen?
 
-Wenn bestimmte Daten erwähnt werden, vergleicht der AI-Assistent die Zielgruppengrößen an diesen spezifischen Tagen. Bei allgemeineren Fragen, z. B. bezüglich der &quot;letzten drei Monate&quot;oder der &quot;letzten Woche&quot;, vergleicht die Assistenzkraft die durchschnittliche Größe dieses Zeitraums mit dem Durchschnitt des letzten Tages.
+Wenn bestimmte Daten erwähnt werden, vergleicht der KI-Assistent die Zielgruppengrößen an diesen bestimmten Tagen. Bei allgemeineren Fragen, wie z. B. „Letzte drei Monate“ oder „Letzte Woche“, vergleicht der KI-Assistent die durchschnittliche Größe dieses Zeitraums mit dem Durchschnitt des letzten Tages.
 
 ### Wie aktuell sind die Zielgruppendaten des KI-Assistenten?
 
-Es kann 24 bis 48 Stunden dauern, bis der AI-Assistent Daten aus Real-time Customer Data Platform aktualisiert. Daher interpretiert AI Assistant bei Fragen, die auf &quot;gestern&quot;verweisen, dies als einen Tag, bevor die aktuellsten Daten verfügbar sind.
+Es kann 24 bis 48 Stunden dauern, bis der KI-Assistent Daten aus Real-time Customer Data Platform aktualisiert. Daher interpretiert der KI-Assistent bei Fragen, die auf „gestern“ verweisen, dies als einen Tag vor den neuesten verfügbaren Daten.
 
-## Out-of-Scope-Funktionen
+## Nicht im Umfang enthaltene Funktionen
 
 Die folgenden Funktionen werden derzeit nicht unterstützt:
 
-### Erweiterte Wurzellenanalyse
+### Erweiterte Ursachenanalyse
 
-Der KI-Assistent kann zwar wichtige Änderungen identifizieren, kann aber derzeit keine detaillierte Analyse der Ursachen für diese Veränderungen bereitstellen. Zukünftige Iterationen des AI Assistant zielen darauf ab, festzulegen, welche Datensätze oder Attribute zu signifikanten Änderungen in Ihren Zielgruppen beitragen.
+Der KI-Assistent kann zwar signifikante Änderungen identifizieren, aber derzeit keine detaillierte Ursachenanalyse für diese Verschiebungen bereitstellen. Künftige Iterationen des KI-Assistenten dienen dazu, anzugeben, welche Datensätze oder Attribute zu signifikanten Änderungen in Ihren Zielgruppen beitragen.
 
 ### Umfassende historische Datensatzgrößen
 
-Das vollständige historische Tracking von Datengrößen wird derzeit nicht unterstützt. Der AI-Assistent bietet Zielgruppe und Datensatzverlauf derzeit für bis zu 13 Monate an.
+Das vollständige historische Tracking der Datengrößen wird derzeit nicht unterstützt. Derzeit stellt der KI-Assistent Zielgruppen- und Datensatzverlauf für bis zu 13 Monate bereit.

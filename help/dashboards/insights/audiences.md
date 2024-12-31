@@ -1,6 +1,6 @@
 ---
-title: Audiences Insights
-description: Entdecken Sie die SQL, die Ihre Zielgruppeneinblicke ermöglicht und nutzen Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren und Zielgruppendaten aus Adobe Experience Platform weiter zu untersuchen.
+title: Zielgruppen-Insights
+description: Entdecken Sie den SQL-Code, der Ihren Zielgruppenerkenntnissen zugrunde liegt, und verwenden Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren, damit Sie Zielgruppendaten aus Adobe Experience Platform weiter untersuchen können.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 3%
 
 ---
 
-# Einblicke in Zielgruppen
+# Zielgruppen-Insights
 
-Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-Time CDP-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
+Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-Time CDP-Daten zugänglicher, verständlicher und wirkungsvoller für die Entscheidungsfindung.
 
-Machen Sie sich mit den Einblicken Ihrer Zielgruppe vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um die Identitäten und Profile Ihrer Zielgruppen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
+Verstehen Sie Ihre Zielgruppeneinblicke, indem Sie auf die SQL zugreifen, die sie unterstützt, und dann Ihre eigenen Einblicke generieren, um die Identitäten und Profile, aus denen Ihre Zielgruppen bestehen, weiter zu untersuchen. Wandeln Sie Ihre Rohdaten in neue umsetzbare Einblicke um, indem Sie das vorhandene Real-Time CDP-Datenmodell als SQL-Inspiration verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
+In der [SQL-Dokumentation anzeigen](../view-sql.md) finden Sie weitere Informationen darüber, wie Sie die SQL Ihrer Insights direkt über die Platform-Benutzeroberfläche anpassen können.
 
-Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../standard-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
+Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
-Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten Dashboards zur Verfügung.
+Die folgenden Einblicke stehen Ihnen alle als Teil des (Zielgruppen[Dashboards ](../guides/audiences.md) benutzerdefinierten Dashboards zur Verfügung.
 
 ## Bericht zur Zielgruppenüberschneidung {#audience-overlap-report}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Was sind die 50 am häufigsten überlappenden Zielgruppen einer bestimmten gefilterten Zielgruppe?
-- Was sind die 50 am wenigsten überlappenden Zielgruppen einer bestimmten gefilterten Zielgruppe?
-- Wie ändert sich das überlappende Muster für eine andere gefilterte Zielgruppe?
+- Welche sind die 50 sich überschneidenden Zielgruppen einer bestimmten gefilterten Zielgruppe?
+- Welche sind die 50 Zielgruppen mit der geringsten Überschneidung einer bestimmten gefilterten Zielgruppe?
+- Wie ändert sich das Überschneidungsmuster für eine andere gefilterte Zielgruppe?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT source_segment_name,
@@ -86,17 +86,17 @@ SELECT source_segment_name,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Bericht &quot;Zielgruppenüberschneidung&quot;](../guides/audiences.md#audience-overlap-report) .[
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-overlap-report) Widget-Dokumentation zum Bericht zur Zielgruppenüberschneidung .
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Welche Profile sind für beide Zielgruppen gemeinsam?
-- Wie wirkt sich die Überschneidung auf Interaktion oder Konversionsraten aus?
-- Wie können Marketingstrategien auf das sich überschneidende Segment zugeschnitten werden?
+- Welche Profile sind für beide Zielgruppen gleich?
+- Wie wirkt sich die Überschneidung auf Interaktions- oder Konversionsraten aus?
+- Wie können Marketing-Strategien auf das sich überschneidende Segment zugeschnitten werden?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -133,17 +133,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppenüberschneidung](../guides/audiences.md#audience-overlap) .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-overlap) Dokumentation zu Zielgruppenüberschneidungen .
 
 ## Entwicklung der Zielgruppengröße {#audience-size-change-trend}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Gibt es innerhalb der letzten 30 Tage, 90 Tage oder 12 Monate signifikante Spitzen oder Tiefpunkte in der Zielgruppengröße?
+- Gibt es signifikante Spitzen oder Rückgänge in der Zielgruppengröße innerhalb der letzten 30 Tage, 90 Tage oder 12 Monate?
 - Wie ändert sich die Zielgruppengröße an bestimmten Tagen?
-- Gab es in den letzten 12 Monaten Anomalien oder sich wiederholende Anomalien bei Spitzen oder Tiefgängen?
+- Gab es in den letzten 12 Monaten Anomalien oder sich wiederholende Muster von Spitzen oder Tiefpunkten?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT date_key,
@@ -174,17 +174,17 @@ SELECT date_key,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zur Trendänderung der Zielgruppengröße ](../guides/audiences.md#audience-size-change-trend) .[
+Weitere Informationen [ Aussehen und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-change-trend) Dokumentation zum Widget „Entwicklung der“.
 
 ## Entwicklung der Zielgruppengröße nach Identität {#audience-size-trend-by-identity}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Steigt, stabilisiert oder erfährt meine Zielgruppe ständig Schwankungen?
-- Gibt es eine bestimmte Identität, die im Laufe der Zeit zu Spitzen oder Verwerfungen beim Zielgruppenwachstum führt?
-- Gibt es Abweichungen in meinem Identitätswachstum im Zeitverlauf?
+- Wachst, stabilisiert oder erlebt meine Zielgruppe ständig Schwankungen?
+- Gibt es eine bestimmte Identität, die im Laufe der Zeit Spitzen oder Rückgänge beim Zielgruppenwachstum aufweist?
+- Gibt es Anomalien in meinem Identitätswachstum im Laufe der Zeit?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT sum(count_of_profiles) AS identities,
@@ -207,17 +207,17 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Identitäts-Widget ](../guides/audiences.md#audience-size-trend-by-identity) im Abschnitt zum Trend der Zielgruppengröße nach .[
+Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-trend-by-identity) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße nach Identität.
 
 ## Trend der Zielgruppen-Größe {#audience-size-trend}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Wie hat sich die Zielgruppengröße im Laufe der Zeit verändert, einschließlich etwaiger Anomalien?
-- Wie finde ich den Gesamttrend der Zielgruppengröße über die Zeiträume: 30 Tage, 90 Tage und 12 Monate?
-- Welche Hauptmerkmale haben die Zielgruppe, die zu ihrer Größe beitragen? Beispielsweise Spitzen aufgrund von E-Mail-Marketing-Kampagnen.
+- Wie hat sich die Zielgruppengröße im Laufe der Zeit verändert, einschließlich aller Anomalien?
+- Wie finde ich den allgemeinen Trend der Zielgruppengröße über die Zeiträume: 30 Tage, 90 Tage und 12 Monate?
+- Was sind die wichtigsten Merkmale der Zielgruppe, die zu ihrer Größe beitragen? Beispielsweise Spitzen aufgrund von E-Mail-Marketing-Kampagnen.
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT date_key,
@@ -238,17 +238,17 @@ SELECT date_key,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zum Trend der Zielgruppengröße [ .](../guides/audiences.md#audience-size-trend)
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-trend) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße .
 
 ## Zielgruppengröße {#audience-size}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Wie groß ist die aktuelle Gesamtzielgruppe?
-- Wie unterscheidet sich die Größe der aktuellen Zielgruppe von früheren Zeiträumen oder bestimmten Zielgruppen?
-- Welche Auswirkungen haben aktuelle Marketing-Kampagnen auf die Zielgruppengröße?
+- Wie groß ist die aktuelle Zielgruppe insgesamt?
+- Wie sieht die aktuelle Zielgruppengröße im Vergleich zu früheren Zeiträumen oder bestimmten Zielgruppen aus?
+- Wie wirken sich die letzten Marketing-Kampagnen auf die Zielgruppengröße aus?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT
@@ -266,17 +266,17 @@ WHERE
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppengröße](../guides/audiences.md#audience-size) .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size) Dokumentation zu Widgets für Zielgruppengrößen .
 
 ## Kunden-KI – Verteilung der Scores {#customer-ai-distribution-of-scores}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Was ist die Scoring-Verteilung für jeden Behälter meines Customer AI-Modells, der von einer ausgewählten Zielgruppe gefiltert wurde?
-- Was ist die Scoring-Verteilung von &quot;Hoch&quot;, &quot;Mittel&quot;und &quot;Niedrig&quot;für eine bestimmte Zielgruppe?
-- Wie schlüsselt sich die Verteilung der Scoring-Daten nach verschiedenen Zielgruppen auf?
+- Wie sieht die Scoring-Verteilung für jeden Bereich meines Kunden-KI-Modells aus, gefiltert nach einer ausgewählten Zielgruppe?
+- Was ist die Scoring-Verteilung von hoch, mittel und niedrig für eine bestimmte Zielgruppe?
+- Wie ist die Verteilung der Punktzahl nach Zielgruppen aufgeschlüsselt?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT b.model_name,
@@ -409,17 +409,17 @@ SELECT b.model_name,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zur [Verteilung von Bewertungen-Widgets durch Kunden-KI](../guides/audiences.md#customer-ai-distribution-of-scores) .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der Widget](../guides/audiences.md#customer-ai-distribution-of-scores)Dokumentation zur Kunden-KI-Verteilung der Bewertungen ).
 
 ## Zusammenfassung der KI-Kundenbewertung {#customer-ai-scoring-summary}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Wie lautet die Bewertungszusammenfassung für jedes meiner Customer AI-Modelle für eine bestimmte Zielgruppe?
-- Wie ändern sich die Tendenzwerte meiner Customer AI für verschiedene Zielgruppen?
-- Wie unterscheidet sich meine Bewertungszusammenfassung von den anderen KPIs in der Zielgruppenübersicht?
+- Wie lautet die Scoring-Zusammenfassung für jedes meiner Kunden-KI-Modelle für eine bestimmte Zielgruppe?
+- Wie ändern sich die Tendenzwerte meiner Kunden-KI für verschiedene Zielgruppen?
+- Wie lässt sich meine Scoring-Zusammenfassung mit den anderen KPIs in der Zielgruppenübersicht vergleichen?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT model_name,
@@ -454,18 +454,18 @@ SELECT model_name,
 
 +++
 
-Weitere Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Customer AI Scoring summary](../guides/audiences.md#customer-ai-scoring-summary) .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#customer-ai-scoring-summary) Dokumentation zum Kunden-KI-Scoring-.
 
 ## Identitätsüberschneidung {#identity-overlap}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Was ist die übliche Schnittmenge zwischen [!UICONTROL Identitätstyp A] und [!UICONTROL Identitätstyp B] für eine gefilterte Zielgruppe?
-- Wie kann ich Kundenzielgruppen auf der Grundlage der Überschneidung bestimmter Identitätstypen einschränken, um die zielgerichteten Marketing-Strategien zu verbessern?
-- Welche Erkenntnisse lassen sich aus der Bewertung der Kampagnenleistung in den sich überschneidenden Bereichen gewinnen?
-- Wie können zukünftige Marketing-Maßnahmen anhand dieser Einblicke optimiert werden?
+- Wie überschneiden sich [!UICONTROL Identitätstyp A] und [!UICONTROL Identitätstyp B] bei einer gefilterten Zielgruppe?
+- Wie verfeinere ich Zielgruppen basierend auf der Überschneidung bestimmter Identitätstypen, um die zielgerichteten Marketing-Strategien zu verbessern?
+- Welche Einblicke kann man aus der Evaluierung der Kampagnenleistung in den sich überschneidenden Bereichen gewinnen?
+- Wie lassen sich zukünftige Marketing-Maßnahmen auf der Grundlage dieser Erkenntnisse optimieren?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -514,18 +514,18 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Identitätsüberschneidung](../guides/audiences.md#identity-overlap) .
+Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#identity-overlap) Dokumentation zum Widget „Identitätsüberschneidung“ .
 
 ## Profile nach Identität {#profiles-by-identity}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Welcher Identitätstyp hat den höchsten Anteil innerhalb der Gesamtzahl der Profile für eine ausgewählte Zielgruppe?
-- Gibt es erhebliche Unterschiede zwischen den Identitätstypen für eine ausgewählte Zielgruppe?
-- Wie verteilt sich die Gesamtheit der Identitätstypen nach Zielgruppe?
-- Gibt es signifikante Unterschiede oder Anomalien bei den Identitätszahlen für verschiedene Zielgruppen?
+- Welcher Identitätstyp hat den höchsten Anteil in der Gesamtzahl der Profile für eine ausgewählte Zielgruppe?
+- Gibt es bei den Identitätstypen für eine ausgewählte Zielgruppe signifikante Unterschiede?
+- Wie ist die Gesamtverteilung der Identitätstypen nach Zielgruppe?
+- Gibt es signifikante Unterschiede oder Anomalien bei der Anzahl von Identitäten für verschiedene Zielgruppen?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -542,17 +542,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum [Profile nach Identitäts-Widget](../guides/audiences.md#profiles-by-identity) .
+Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#profiles-by-identity) Dokumentation zum Widget „Profile nach Identität .
 
 ## Geplante Aktivierungen {#scheduled-activations}
 
-Fragen, die durch diesen Einblick beantwortet werden:
+Diese Einsicht beantwortet Fragen:
 
-- Wie lauten die Start- und Enddaten der leistungsstärksten Aktivierungen für eine bestimmte Zielgruppe auf einer bestimmten Plattform?
+- Welches Start- und Enddatum haben die leistungsstärksten Aktivierungen für eine bestimmte Zielgruppe auf einer bestimmten Plattform?
 - Welche Plattformen wurden am häufigsten für geplante Aktivierungen einer bestimmten Zielgruppe verwendet?
-- Gibt es irgendwelche Muster bei der Plattformnutzung, die Entscheidungen über die Priorisierung oder Diversifizierung von Aktivierungsstrategien für eine bestimmte Zielgruppe leiten könnten?
+- Gibt es Muster in der Platform-Nutzung, die bei Entscheidungen über die Priorisierung oder Diversifizierung von Aktivierungsstrategien für eine bestimmte Zielgruppe hilfreich sein könnten?
 
-+++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
++++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
 
 ```sql
 SELECT p.destination_platform ,
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Geplante Aktivierungen](../guides/audiences.md#scheduled-activations) .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einblicke finden ](../guides/audiences.md#scheduled-activations) in der Dokumentation zum Widget „Geplante Aktivierungen“.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
+Durch das Lesen dieses Dokuments wissen Sie jetzt, welche SQL-Daten Dashboard-Einblicke generieren und welche häufigen Fragen diese Analyse löst. Sie können jetzt SQL bearbeiten und iterieren, um eigene Einblicke zu generieren.
 
-Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
+In der [SQL-Dokumentation anzeigen](../view-sql.md) finden Sie weitere Informationen darüber, wie Sie die SQL Ihrer Insights direkt über die Platform-Benutzeroberfläche anpassen können.
 
-Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) generiert.
+Sie können auch den SQL-Code lesen und verstehen, der Einblicke für die Dashboards [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) generiert.

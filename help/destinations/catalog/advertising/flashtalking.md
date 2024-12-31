@@ -1,7 +1,7 @@
 ---
-keywords: Flashspeak OneTag-Erweiterungen;Flashspeak OneTag-Erweiterung;Flashspeak OneTag-Ziele;Flashspeak OneTag;flashspeak onetag
+keywords: Flashtalking OneTag-Erweiterungen;Flashtalking OneTag-Erweiterung;Flashtalking OneTag-Ziele;Flashtalking OneTag;Flashtalking OneTag
 title: Flashspeak OneTag-Erweiterung
-description: Die Flashspeak OneTag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Flashtalking OneTag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 82%
 
 ## Übersicht {#overview}
 
-Die Tag-Erweiterung [!DNL Flashtalking OneTag] erleichtert die Zuordnung von Site-Aktionen zu Anzeige-, Video- und mobilen Anzeigenaktivitäten. Stellen Sie die [!DNL Flashtalking OneTag] mithilfe von Tags in Ihren Web-Eigenschaften bereit.
+Die Tag-Erweiterung &quot;[!DNL Flashtalking OneTag]&quot; erleichtert das Zuordnen von Site-Aktionen zu Anzeige-, Video- und mobilen Anzeigenaktivitäten. Stellen Sie die [!DNL Flashtalking OneTag] mithilfe von Tags für Ihre Web-Eigenschaften bereit.
 
-[!DNL Flashtalking OneTag] ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
+[!DNL Flashtalking OneTag] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
-![Flashspeak-Erweiterung](../../assets/catalog/advertising/flashtalking/catalog.png)
+![Flashtalking-Erweiterung](../../assets/catalog/advertising/flashtalking/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Flashspeak OneTag auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite [Flashtalking OneTag auf der Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

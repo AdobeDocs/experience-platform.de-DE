@@ -18,7 +18,7 @@ Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen und Hinz
 
 >[!NOTE]
 >
->An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+>Alle Aktualisierungen an den Dashboards erfolgen pro Organisation und nach Sandbox.
 
 Weiterführende Informationen zu Standard-Widgets finden Sie im Handbuch zum [Hinzufügen von Standard-Widgets zu Ihren Dashboards](standard-widgets.md).
 
@@ -36,13 +36,13 @@ Innerhalb der Widget-Bibliothek können Sie mithilfe der Registerkarte **[!UICON
 
 Wählen Sie die Registerkarte **[!UICONTROL Benutzerdefiniert]** aus, um mit der Erstellung benutzerdefinierter Widgets zu beginnen oder benutzerdefinierte Widgets anzuzeigen, die bereits von Ihrem Unternehmen erstellt wurden.
 
-![Der Arbeitsbereich für die Widget-Bibliothek, in dem die Registerkarte &quot;Benutzerdefiniert&quot;hervorgehoben ist.](../images/customization/custom-widgets.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit der hervorgehobenen Registerkarte „Benutzerdefiniert“.](../images/customization/custom-widgets.png)
 
 ## Erstellen eines benutzerdefinierten Widgets
 
 Um ein benutzerdefiniertes Widget zu erstellen, wählen Sie **[!UICONTROL Widget erstellen]** in der oberen rechten Ecke der Widget-Bibliothek oder, falls dies das erste benutzerdefinierte Widget Ihres Unternehmens ist, wählen Sie **[!UICONTROL Erstellen]** in der Mitte der Widget-Bibliothek.
 
-![Die Registerkarte &quot;Benutzerdefiniert&quot;des Arbeitsbereichs für die Widget-Bibliothek mit hervorgehobener Option &quot;Erstellen&quot;.](../images/customization/create-widget.png)
+![Die Registerkarte „Benutzerdefiniert“ des Arbeitsbereichs „Widget-Bibliothek“ mit hervorgehobener Option „Erstellen“.](../images/customization/create-widget.png)
 
 Geben Sie im Dialogfeld **[!UICONTROL Widget erstellen]** einen Titel und eine Beschreibung für Ihr neues Widget ein und wählen Sie das Attribut aus, das das Widget anzeigen soll.
 
@@ -56,7 +56,7 @@ Um ein Attribut auszuwählen, wählen Sie das Optionsfeld neben dem Attribut aus
 >
 >Pro Widget kann nur ein Attribut ausgewählt und pro Attribut kann nur ein Widget erstellt werden. Wenn bereits ein Widget für ein Attribut erstellt wurde, wird das Attribut ausgegraut angezeigt.
 
-![ Das Dialogfeld &quot;Widget erstellen&quot;.](../images/customization/create-widget-dialog.png)
+![Der Dialog Widget erstellen.](../images/customization/create-widget-dialog.png)
 
 ## Auswählen einer Visualisierung
 
@@ -80,11 +80,11 @@ Je nach Attribut empfiehlt die KI verschiedene Visualisierungsoptionen. Die voll
 
 Um Ihr neues Widget zu speichern und zur Registerkarte [!UICONTROL Benutzerdefiniert] zurückzukehren, wählen Sie **[!UICONTROL Erstellen]** aus.
 
-![Das Dialogfeld &quot;Widget erstellen&quot;mit den Visualisierungsoptionen und hervorgehobenes Erstellen.](../images/customization/create-widget-select-attribute.png)
+![Das Dialogfeld „Widget erstellen“ mit den Visualisierungsoptionen und der hervorgehobenen Option „Erstellen“.](../images/customization/create-widget-select-attribute.png)
 
 Ihr neues Widget kann jetzt zu einem Dashboard hinzugefügt werden, indem Sie das Widget aus der Bibliothek auswählen und auf **[!UICONTROL Widget hinzufügen]** klicken.
 
-![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich für die Widget-Bibliothek, wobei das neue Widget und das Widget hinzufügen hervorgehoben sind.](../images/customization/custom-widgets-new.png)
+![Die Registerkarte „Benutzerdefiniert“ des Arbeitsbereichs „Widget-Bibliothek“ mit dem hervorgehobenen neuen Widget und dem hervorgehobenen Widget „Hinzufügen“.](../images/customization/custom-widgets-new.png)
 
 ## Ausblenden eines benutzerdefinierten Widgets
 
@@ -96,13 +96,13 @@ Um ausgeblendete Widgets anzuzeigen, wählen Sie **[!UICONTROL Ausgeblendete Wid
 >
 >Durch das Ausblenden eines Widgets in der Bibliothek wird das Widget nicht aus den Dashboards einzelner Benutzer entfernt. Sollte ein Widget nicht mehr in Ihrer Organisation verwendet werden, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da sie das Widget aus ihren Dashboards entfernen müssen.
 
-![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich für die Widget-Bibliothek mit den Dropdown-Menüoptionen für Widgets und hervorgehobene ausgeblendete Widgets anzeigen](../images/customization/hide-widget.png)
+![Die Registerkarte Benutzerdefiniert des Arbeitsbereichs Widget-Bibliothek mit den Widget-Dropdown-Menüoptionen und der hervorgehobenen Option „Ausgeblendete Widgets anzeigen“.](../images/customization/hide-widget.png)
 
 ## Bearbeiten eines benutzerdefinierten Widgets
 
 Sie können benutzerdefinierte Widgets in der Widget-Bibliothek bearbeiten, indem Sie die Auslassungszeichen (`...`) auf der Widget-Karte auswählen und dann **[!UICONTROL Bearbeiten]** aus dem Dropdown-Menü auswählen.
 
-![Die Widget-Dropdown-Menüoptionen mit hervorgehobenen Auslassungspunkten und hervorgehobenen Bearbeitungen.](../images/customization/custom-widget-edit.png)
+![Die Menüoptionen im Widget-Dropdown-Menü mit den Auslassungszeichen und der hervorgehobenen Option „Bearbeiten“.](../images/customization/custom-widget-edit.png)
 
 Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die Beschreibung des Widgets bearbeiten sowie eine Vorschau anzeigen und verschiedene Visualisierungen auswählen. Nachdem Sie Ihre Änderungen vorgenommen haben, klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Änderungen zu speichern und zur Registerkarte „Benutzerdefinierte Widgets“ zurückzukehren.
 
@@ -110,7 +110,7 @@ Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die B
 >
 >Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget aus der Widget-Bibliothek auswählen und hinzufügen müssen.
 
-![ Das Dialogfeld &quot;Widget bearbeiten&quot;.](../images/customization/edit-widget.png)
+![Das Dialogfeld Widget bearbeiten.](../images/customization/edit-widget.png)
 
 ## Nächste Schritte
 

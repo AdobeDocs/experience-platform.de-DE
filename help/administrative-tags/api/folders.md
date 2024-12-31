@@ -1,6 +1,6 @@
 ---
-title: Ordner-Endpunkt
-description: Erfahren Sie, wie Sie Ordner mit den Adobe Experience Platform-APIs erstellen, aktualisieren, verwalten und löschen.
+title: Folders-Endpunkt
+description: Erfahren Sie, wie Sie mit den Adobe Experience Platform-APIs Ordner erstellen, aktualisieren, verwalten und löschen können.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
 source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
@@ -10,23 +10,23 @@ ht-degree: 5%
 
 ---
 
-# Ordner-Endpunkt
+# Folders-Endpunkt
 
 >[!IMPORTANT]
 >
 >Die Endpunkt-URL für diesen Satz von Endpunkten ist `https://experience.adobe.io`.
 
-Ordner sind eine Funktion, mit der Sie Ihre Geschäftsobjekte besser organisieren können, um die Navigation und Kategorisierung zu erleichtern.
+Mit der Funktion „Ordner“ können Sie Ihre Geschäftsobjekte besser organisieren, um die Navigation und Kategorisierung zu vereinfachen.
 
-Dieses Handbuch enthält Informationen zum besseren Verständnis von Ordnern und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
+Dieses Handbuch enthält Informationen, die Ihnen dabei helfen, Ordner besser zu verstehen, und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der -API.
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
 
 ## Abrufen einer Ordnerliste {#list}
 
-Sie können eine Liste von Ordnern abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die ID des übergeordneten Ordners angeben.
+Sie können eine Liste von Ordnern abrufen, die zu Ihrer Organisation gehören, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des übergeordneten Ordners angeben.
 
 **API-Format**
 
@@ -37,11 +37,11 @@ GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | Der Typ der Objekte, die im Ordner enthalten sind. Zu den unterstützten Werten gehören `segment` und `dataset`. |
-| `{PARENT_FOLDER_ID}` | Die Kennung des übergeordneten Ordners, aus dem Sie die Ordnerliste abrufen. Um eine Liste aller übergeordneten Ordner anzuzeigen, verwenden Sie die Ordner-ID `root`. |
+| `{PARENT_FOLDER_ID}` | Die ID des übergeordneten Ordners, aus dem Sie die Ordnerliste abrufen. Um eine Liste aller übergeordneten Ordner anzuzeigen, verwenden Sie den Ordner-ID-`root`. |
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Auflisten aller Datensatzordner der obersten Ebene
++++Eine Beispielanfrage zum Auflisten aller Datensatzordner der obersten Ebene
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
@@ -56,9 +56,9 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subf
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Ordner der obersten Ebene für den Datensatz in Ihrem Unternehmen zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste aller Ordner der obersten Ebene für den Datensatz in Ihrer Organisation zurückgegeben.
 
-++ + Eine Beispielantwort mit einer Liste aller Ordner der obersten Ebene für den Datensatz in Ihrem Unternehmen.
++++Eine Beispielantwort, die eine Liste aller Ordner der obersten Ebene für den Datensatz in Ihrer Organisation enthält.
 
 ```json
 {
@@ -113,7 +113,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Ordner 
 
 ## Erstellen eines neuen Ordners {#create}
 
-Sie können einen neuen Ordner erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp angeben.
+Sie können einen neuen Ordner erstellen, indem Sie eine POST-Anfrage an den `/folder`-Endpunkt senden und den Ordnertyp angeben.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ POST /folders/{FOLDER_TYPE}
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Erstellen eines neuen Ordners.
++++Beispielanfrage zum Erstellen eines neuen Ordners.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
@@ -151,9 +151,9 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erstellten Ordner zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum neu erstellten Ordner zurückgegeben.
 
-++ + Eine Beispielantwort mit Details zum neu erstellten Ordner.
++++Eine Beispielantwort mit Details zum neu erstellten Ordner.
 
 ```json
 {
@@ -175,17 +175,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Die Kennung des neu erstellten Ordners. |
+| `id` | Die ID des neu erstellten Ordners. |
 | `createdBy` | Die ID des Benutzers, der den Ordner erstellt hat. |
-| `createdAt` | Der Zeitstempel der Erstellung des Ordners. |
+| `createdAt` | Der Zeitstempel, der angibt, wann der Ordner erstellt wurde. |
 | `modifiedBy` | Die ID des Benutzers, der den Ordner zuletzt geändert hat. |
-| `modifiedAt` | Der Zeitstempel der letzten Ordneraktualisierung. |
+| `modifiedAt` | Der Zeitstempel der letzten Aktualisierung des Ordners. |
 
 +++
 
-## Bestimmten Ordner abrufen {#get}
+## Abrufen eines bestimmten Ordners {#get}
 
-Sie können einen bestimmten Ordner abrufen, der zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die Kennung des Ordners angeben.
+Sie können einen bestimmten Ordner abrufen, der zu Ihrer Organisation gehört, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des Ordners angeben.
 
 **API-Format**
 
@@ -196,11 +196,11 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | Der Typ der Objekte, die im Ordner enthalten sind. Zu den unterstützten Werten gehören `segment` und `dataset`. |
-| `{FOLDER_ID}` | Die Kennung des Ordners, den Sie abrufen. |
+| `{FOLDER_ID}` | Die ID des Ordners, den Sie abrufen. |
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Abrufen eines bestimmten Ordners
++++Eine Beispielanfrage zum Abrufen eines bestimmten Ordners
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -215,9 +215,9 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum angeforderten Ordner zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum angeforderten Ordner zurückgegeben.
 
-++ + Eine Beispielantwort mit Details zum angeforderten Ordner.
++++Eine Beispielantwort mit Details zum angeforderten Ordner.
 
 ```json
 {
@@ -243,20 +243,20 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum angeforderten
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Die Kennung des angeforderten Ordners. |
+| `id` | Die ID des angeforderten Ordners. |
 | `name` | Der Name des angeforderten Ordners. |
 | `parentId` | Die ID des übergeordneten Ordners. |
 | `createdBy` | Die ID des Benutzers, der den Ordner erstellt hat. |
-| `createdAt` | Der Zeitstempel der Erstellung des Ordners. |
+| `createdAt` | Der Zeitstempel, der angibt, wann der Ordner erstellt wurde. |
 | `modifiedBy` | Die ID des Benutzers, der den Ordner zuletzt aktualisiert hat. |
-| `modifiedAt` | Der Zeitstempel der letzten Ordneraktualisierung. |
+| `modifiedAt` | Der Zeitstempel der letzten Aktualisierung des Ordners. |
 | `status` | Der Status des angeforderten Ordners. Zu den unterstützten Werten gehören `IN_USE` und `ARCHIVED`. |
 
 +++
 
 ## Validieren eines angegebenen Ordners {#validate}
 
-Sie können überprüfen, ob ein Ordner Objekte enthalten darf, indem Sie eine GET-Anfrage an den Endpunkt `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` senden und sowohl den Ordnertyp als auch die -ID angeben.
+Sie können überprüfen, ob ein Ordner berechtigt ist, Objekte darin zu enthalten, indem Sie eine GET-Anfrage an den `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`-Endpunkt senden und sowohl den Ordnertyp als auch die ID angeben.
 
 **API-Format**
 
@@ -267,11 +267,11 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | Der Typ der Objekte, die im Ordner enthalten sind. Zu den unterstützten Werten gehören `segment` und `dataset`. |
-| `{FOLDER_ID}` | Die Kennung des Ordners, den Sie überprüfen. |
+| `{FOLDER_ID}` | Die ID des Ordners, den Sie validieren. |
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Validieren eines bestimmten Ordners
++++Beispielanfrage zum Überprüfen eines bestimmten Ordners
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -286,9 +286,9 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 **Antwort**
 
-Ein erfolgreicher Status gibt den HTTP-Status 200 mit Details zum Ordner zurück, den Sie validieren.
+Bei einem erfolgreichen Status wird der HTTP-Status 200 mit Details zum Ordner zurückgegeben, den Sie validieren.
 
-++ + Eine Beispielantwort enthält Details zum validierten Ordner
++++Eine Beispielantwort enthält Details zum validierten Ordner
 
 ```json
 {
@@ -316,7 +316,7 @@ Ein erfolgreicher Status gibt den HTTP-Status 200 mit Details zum Ordner zurück
 
 ## Aktualisieren eines bestimmten Ordners {#update}
 
-Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die Kennung des Ordners angeben.
+Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den `/folder`-Endpunkt senden und den Ordnertyp und die ID des Ordners angeben.
 
 **API-Format**
 
@@ -331,7 +331,7 @@ PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Aktualisieren eines bestimmten Ordners
++++Eine Beispielanfrage zum Aktualisieren eines bestimmten Ordners
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -351,7 +351,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem neu aktualisierten Ordner zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Informationen zu Ihrem neu aktualisierten Ordner zurückgegeben.
 
 ```json
 {
@@ -378,7 +378,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Löschen eines bestimmten Ordners {#delete}
 
-Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den Ordner &quot;`/folder`&quot;senden und den Ordnertyp und die Kennung des Ordners angeben.
+Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den `/folder` stellen und den Ordnertyp und die Ordnerkennung angeben.
 
 ***API-Format**
 
@@ -389,11 +389,11 @@ DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | Der Typ der Objekte, die im Ordner enthalten sind. Zu den unterstützten Werten gehören `segment` und `dataset`. |
-| `{FOLDER_ID}` | Die Kennung des Ordners, den Sie löschen. |
+| `{FOLDER_ID}` | Die ID des Ordners, den Sie löschen. |
 
 **Anfrage**
 
-++ + Eine Beispielanfrage zum Löschen eines bestimmten Ordners
++++Eine Beispielanfrage zum Löschen eines bestimmten Ordners
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -408,7 +408,7 @@ curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f828
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einem Nachrichtentext zurück, der Sie über das Löschen des Ordners informiert.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Meldung zurückgegeben, die Sie über das Löschen des Ordners informiert.
 
 ```json
 {
@@ -418,4 +418,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einem Nachrichtentext zur
 
 ## Nächste Schritte
 
-Nach Lesen dieses Handbuchs erfahren Sie jetzt, wie Sie Ordner mit der Adobe Experience Platform-API erstellen, verwalten und löschen.
+Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon, wie Sie Ordner mithilfe der Adobe Experience Platform-API erstellen, verwalten und löschen können.

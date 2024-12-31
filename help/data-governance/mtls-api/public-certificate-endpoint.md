@@ -1,6 +1,6 @@
 ---
-title: Öffentlicher Zertifikatsendpunkt
-description: Erfahren Sie, wie Sie Ihre öffentlichen Zertifikate mithilfe des Endpunkts /public-certificate der MTLS Service-API abrufen.
+title: Endpunkt des öffentlichen Zertifikats
+description: Erfahren Sie, wie Sie Ihre öffentlichen Zertifikate mit dem Endpunkt /public-certificate der MTLS-Service-API abrufen.
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
 source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
@@ -10,25 +10,25 @@ ht-degree: 3%
 
 ---
 
-# Endpunkt für öffentliches Zertifikat
+# Endpunkt des öffentlichen Zertifikats
 
-In diesem Handbuch wird erläutert, wie Sie mit dem öffentlichen Zertifikatendpunkt öffentliche Zertifikate für die Adobe-Anwendungen Ihres Unternehmens sicher abrufen können. Es enthält einen Beispiel-API-Aufruf und detaillierte Anweisungen, die Entwickler bei der Authentifizierung und Überprüfung des Datenaustauschs unterstützen.
+In diesem Handbuch wird erläutert, wie Sie mit dem öffentlichen Zertifikatendpunkt öffentliche Zertifikate für die Adobe-Programme Ihres Unternehmens sicher abrufen können. Er enthält einen Beispiel-API-Aufruf und detaillierte Anweisungen, die Entwicklern bei der Authentifizierung und Überprüfung des Datenaustauschs helfen.
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
 
 ## API-Pfade {#paths}
 
-Die folgenden Informationen sind die wichtigsten API-Pfade, die Sie für die Verwendung der mTLS-Dienst-API benötigen. Dazu gehören die Plattform-Gateway-URL, der Basispfad für die API und ein Beispiel für einen vollständigen Pfad zum Abrufen eines öffentlichen Zertifikats.
+Im Folgenden finden Sie die wesentlichen API-Pfade, die Sie für die Verwendung der mTLS-Service-API benötigen. Dazu gehören die Platform-Gateway-URL, der Basispfad für die API und ein Beispiel für einen vollständigen Pfad zum Abrufen eines öffentlichen Zertifikats.
 
-- PLATFORM Gateway URL: `https://platform.adobe.io/`
+- PLATFORM-Gateway-URL: `https://platform.adobe.io/`
 - Basispfad für diese API: `/data/core/mtls`
-- Beispiel eines vollständigen Pfads: `https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate`
+- Beispiel für einen vollständigen Pfad: `https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate`
 
-## Abrufen öffentlicher Zertifikate {#list}
+## Abrufen Ihrer öffentlichen Zertifikate {#list}
 
-Sie können die öffentlichen Zertifikate für alle Adobe-Anwendungen Ihres Unternehmens abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/v1/certificate/public-certificate` senden.
+Sie können die öffentlichen Zertifikate für alle Adobe-Programme Ihres Unternehmens abrufen, indem Sie eine GET-Anfrage an den `/v1/certificate/public-certificate`-Endpunkt stellen.
 
 **API-Format**
 
@@ -36,18 +36,18 @@ Sie können die öffentlichen Zertifikate für alle Adobe-Anwendungen Ihres Unte
 GET /v1/certificate/public-certificate
 ```
 
-Beim Abrufen Ihrer öffentlichen Zertifikate können die folgenden optionalen Abfrageparameter verwendet werden.
+Die folgenden optionalen Abfrageparameter können beim Abrufen Ihrer öffentlichen Zertifikate verwendet werden.
 
 | Abfrageparameter | Beschreibung | Beispiel |
 | --------------- | ----------- | ------- |
-| `page` | Gibt an, von welcher Seite die Ergebnisse Ihrer Anfrage beginnen. | `page=5` |
+| `page` | Gibt an, auf welcher Seite die Ergebnisse Ihrer Anfrage beginnen sollen. | `page=5` |
 | `limit` | Die maximale Anzahl öffentlicher Zertifikate, die pro Seite abgerufen werden sollen. | `limit=20` |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Eine Beispielanfrage zum Zurückgeben der öffentlichen Zertifikate, die mit Ihrer Organisation verknüpft sind, finden Sie im unten stehenden ausblendbaren Abschnitt.
+Eine Beispielanfrage zum Zurückgeben der mit Ihrer Organisation verknüpften öffentlichen Zertifikate finden Sie unten im ausblendbaren Abschnitt.
 
 +++Beispielanfrage
 
@@ -63,9 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certi
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück und listet die öffentlichen Zertifikate für Ihr Unternehmen auf.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zurückgegeben und die öffentlichen Zertifikate für Ihre Organisation aufgelistet.
 
-++ + Eine erfolgreiche Beispielantwort
++++Beispiel für eine erfolgreiche Antwort
 
 ```json
 {
@@ -97,8 +97,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück und listet die öffen
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `certCommonName` | Der gebräuchliche Name (CN) des Zertifikats, der normalerweise den Namen oder die Identität des Servers oder der Entität darstellt, für den bzw. die das Zertifikat ausgestellt wird. |
-| `publicCertificate` | Das tatsächliche öffentliche Zertifikat in einem Zeichenfolgenformat, das zum Authentifizieren und Verschlüsseln von Kommunikation verwendet wird. |
+| `certCommonName` | Der allgemeine Name (CN) des Zertifikats, der normalerweise den Namen oder die Identität des Servers oder der Entität darstellt, für die das Zertifikat ausgestellt wird. |
+| `publicCertificate` | Das eigentliche öffentliche Zertifikat in einem Zeichenfolgenformat, das zum Authentifizieren und Verschlüsseln der Kommunikation verwendet wird. |
 | `expiryDate` | Datum und Uhrzeit des Ablaufs des öffentlichen Zertifikats, formatiert in ISO 8601 (UTC). |
 
 {style="table-layout:auto"}
@@ -107,7 +107,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück und listet die öffen
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs erfahren Sie jetzt, wie Sie Ihre öffentlichen Zertifikate mithilfe der Adobe Experience Platform-API abrufen können. Weitere Informationen zum Verwalten von Kundendaten zur Einhaltung von Vorschriften und Unternehmensrichtlinien finden Sie in der [Übersicht über Data Governance](../home.md).
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Ihre öffentlichen Zertifikate mit der Adobe Experience Platform-API abrufen können. Weitere Informationen zur Verwaltung von Kundendaten, um die Einhaltung von Vorschriften und organisatorischen Richtlinien sicherzustellen, finden Sie unter [Data Governance - Übersicht](../home.md).
 
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 

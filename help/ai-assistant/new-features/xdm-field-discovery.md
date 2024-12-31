@@ -1,35 +1,36 @@
 ---
-title: XDM-Feldsuche mit dem AI-Assistenten
-description: Lesen Sie dieses Dokument, um zu erfahren, wie Sie die AI Assistant for Experience Data Model (XDM)-Felderkennung verwenden können.
+title: XDM-Felderkennung mit KI-Assistent
+description: In diesem Dokument erfahren Sie, wie Sie den KI-Assistenten zur Erkennung von Feldern im Experience-Datenmodell (XDM) verwenden können.
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 2348001facd7ae3a95254130ae377b4ef3f2a749
+exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
+source-git-commit: e2cb6dee0c255c8eaa3729cc7a09ae07a1f33dbc
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 1%
 
 ---
 
-# XDM-Feldsuche für mit dem AI-Assistenten
+# XDM-Felderkennung für mit KI-Assistent
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist in Alpha verfügbar und steht Ihrem Unternehmen möglicherweise nicht zur Verfügung. Wenden Sie sich an Ihr Adobe-Account-Team, um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen.
+>Diese Funktion befindet sich im Alpha und steht Ihrer Organisation möglicherweise nicht zur Verfügung. Um am Alpha-Programm teilzunehmen und auf diese Funktion zuzugreifen, wenden Sie sich an Ihr Adobe-Account-Team.
 
-Sie können den AI-Assistenten verwenden, um nach Experience-Datenmodell (XDM)-Feldern zu suchen und diese zu entdecken, mit denen Sie dann innerhalb von Experience Platform Zielgruppen erstellen können.
+Sie können den KI-Assistenten verwenden, um nach Experience-Datenmodell (XDM)-Feldern zu suchen und diese Felder zu entdecken, die Sie dann verwenden können, um Zielgruppen in Experience Platform zu erstellen.
 
-In der folgenden Tabelle finden Sie unterstützte Abfrage- und Eingabemuster für die XDM-Felderkennung im AI-Assistenten.
+In der folgenden Tabelle finden Sie unterstützte Abfrage- und Eingabeaufforderungsmuster für die XDM-Felderkennung im KI-Assistenten.
 
 >[!TIP]
 >
->Während Abfrage- und Eingabeaufforderungsmuster in verschiedenen Anwendungsfällen identisch sein können, variiert die genaue Formulierung einer Frage je nach den XDM-Feldern und Schemas, die für eine bestimmte Sandbox verwendet werden.
+>Während die Abfrage- und Eingabeaufforderungsmuster in verschiedenen Anwendungsfällen identisch sein können, variiert die genaue Formulierung einer Frage je nach den XDM-Feldern und Schemata, die für eine bestimmte Sandbox verwendet werden.
 
-| Abfragetyp | Abfrage-/Eingabemuster | Beispiele |
+| Abfragetyp | Abfrage-/Eingabeaufforderungsmuster | Beispiele |
 | --- | --- | --- |
-| XDM-Feldsuche nach Datendomäne oder -bereich | Zeigen Sie mir die XDM-Felder an, die für die Darstellung von {DATA_DOMAIN/AREA} verwendet werden. | <ul><li>Zeigen Sie mir die XDM-Felder an, die zur Darstellung von Einwilligungsdaten verwendet werden.</li><li>Zeigen Sie mir die XDM-Felder an, die zur Darstellung von Informationen über E-Mail-Abonnements verwendet werden.</li></ul> |
-| XDM-Feldsuche nach allgemeinen Feldnamen | <ul><li>Zeigen Sie mir die XDM-Felder, die mit {DATA_DOMAIN/AREA} in Verbindung stehen.</li><li>Welche XDM-Felder enthalten {GENERAL_FIELD_NAME}.</li></ul> | <ul><li>Zeigen Sie mir die XDM-Felder, die sich auf Bestellungen beziehen.</li><li>Zeigen Sie mir die XDM-Felder im Zusammenhang mit Interaktionsdetails an.</li><li>Welches XDM-Feld enthält Besucher-IDs?</li><li>Welches XDM-Feld enthält Produktkategorien?</li></ul> |
-| XDM-Feldsuche nach Datenmodellherkunft | <ul><li>Zeigen Sie mir alle Felder von {FIELD_GROUP/CLASS_NAME} an, die {GENERAL_FIELD_NAME} enthalten.</li><li>Was ist der {FIELD_GROUP/CLASS_NAME} des XDM-Felds {GENERAL_FIELD_NAME}?</li></ul> | <ul><li>Zeigen Sie mir alle Felder der Feldergruppe an, die Produktdaten enthalten.</li><li>Zeigen Sie mir alle Felder der Feldergruppe an, die Analysedaten enthält.</li><li>Was ist die Klasse des Vornamens des XDM-Felds?</li><li>Welche Klasse haben die E-Mail-Abonnements für das XDM-Feld?</li></ul> |
-| Aufforderung zum Abrufen verbesserter Beschreibungen zusammen mit Feldnamen | {FIELD_DISCOVERY_QUERY}. Schließen Sie außerdem erweiterte Beschreibungen ein. | <ul><li>Zeigen Sie mir die XDM-Felder an, die zur Darstellung von Einwilligungsdaten verwendet werden. Schließen Sie außerdem die erweiterte Beschreibung für das Feld ein.</li><li>Zeigen Sie mir die XDM-Felder im Zusammenhang mit Interaktionsdetails an. Schließen Sie außerdem die erweiterte Beschreibung für das Feld ein.</li></ul> |
+| XDM-Felderkennung nach Data Domain oder Bereich | XDM-Felder anzeigen, die {DATA_DOMAIN/AREA} repräsentieren. | <ul><li>XDM-Felder anzeigen, die Einverständnisdaten darstellen.</li><li>XDM-Felder anzeigen, die Informationen zu E-Mail-Abonnements darstellen.</li></ul> |
+| XDM-Felderkennung nach allgemeinem Feldnamen | <ul><li>XDM-Felder zu {DATA_DOMAIN/AREA} anzeigen.</li><li>Welche XDM-Felder {GENERAL_FIELD_NAME} enthalten.</li></ul> | <ul><li>XDM-Felder für Bestellungen anzeigen.</li><li>XDM-Felder zu Interaktionsdetails anzeigen.</li><li>Welches XDM-Feld enthält Besucher-IDs?</li><li>Welches XDM-Feld enthält Produktkategorien?</li></ul> |
+| XDM-Felderkennung nach Datenmodellherkunft | <ul><li>Alle Felder von {FIELD_GROUP/CLASS_NAME} anzeigen, die {GENERAL_FIELD_NAME} enthalten.</li><li>Was ist die {FIELD_GROUP/CLASS_NAME} der XDM-{GENERAL_FIELD_NAME}?</li></ul> | <ul><li>Alle Felder der Feldergruppe anzeigen, die Produktdaten enthalten.</li><li>Anzeigen aller Felder der Feldergruppe, die Analysedaten enthält.</li><li>Was ist die Klasse des Vornamens des XDM-Felds?</li><li>Welche Klasse haben E-Mail-Abonnements im XDM-Feld?</li></ul> |
+| Aufforderung zum Abrufen erweiterter Beschreibungen zusammen mit Feldnamen | {FIELD_DISCOVERY_QUERY}. Beinhaltet auch erweiterte Beschreibungen. | <ul><li>XDM-Felder anzeigen, die Einverständnisdaten darstellen. Fügen Sie auch die erweiterte Beschreibung für das Feld hinzu.</li><li>XDM-Felder zu Interaktionsdetails anzeigen. Fügen Sie auch die erweiterte Beschreibung für das Feld hinzu.</li></ul> |
 
 {style="table-layout:auto"}

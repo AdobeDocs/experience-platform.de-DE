@@ -1,95 +1,95 @@
 ---
-title: Überblick über die Adobe Experience Platform-Assetbildung
+title: Überblick über Adobe Experience Platform Assurance
 description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Mobile Apps untersuchen, testen, simulieren und überprüfen.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '808'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance ist ein Produkt aus [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html), mit dem Sie die Erfassung, den Testversand, die Simulation und die Validierung von Daten und die Bereitstellung von Erlebnissen in Ihrer App überprüfen und testen können.
+Adobe Experience Platform Assurance ist ein Produkt von [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) mit dem Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihrer Mobile App untersuchen, testen, simulieren und validieren können.
 
 >[!IMPORTANT]
 >
-> Project Griffon wird jetzt als **Assurance** bezeichnet.
+> Projekt Griffon heißt jetzt **Assurance**!
 >
-> Project Griffon ist jetzt allgemein für **alle** Adobe Experience Cloud-Kunden als &quot;Assurance&quot;verfügbar. Weitere Informationen zu dieser Transition finden Sie im [Benutzerhandbuch für den Benutzerzugriff](./user-access.md).
+> Project Griffon ist jetzt allgemein für **alle** Adobe Experience Cloud-Kunden als Assurance verfügbar. Weitere Informationen zu dieser Umstellung finden Sie im [Handbuch für den Benutzerzugriff](./user-access.md).
 
 >[!INFO]
 >
->Sicherstellen Öffentliche APIs sind verfügbar!
+>Öffentliche Assurance-APIs sind verfügbar!
 >
->[Die Assurance-APIs](https://developer.adobe.com/adobe-assurance-public-apis/) sind eine Sammlung von APIs, mit denen Benutzer ihre Web- und mobilen Apps testen und debuggen können, wenn sie mit dem Adobe Assurance Mobile-SDK ausgestattet sind.
+>[Die Assurance-APIs](https://developer.adobe.com/adobe-assurance-public-apis/) sind eine Sammlung von APIs, mit denen Benutzende ihre Web- und Mobile Apps testen und debuggen können, wenn sie mit der Adobe Assurance Mobile SDK ausgestattet sind.
 
 ## Allgemeine Verfügbarkeit
 
-Ab dem 15. Oktober 2022 ist &quot;Assurance&quot;allgemein für alle Adobe Experience Cloud verfügbar.
+Ab dem 15. Oktober 2022 ist Assurance allgemein für alle Adobe Experience Cloud verfügbar.
 
 ### Was ändert sich?
 
-Am 15. Oktober wird der Zugriff auf die Zuverlässigkeitserklärung über die Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch für den Zugriff](./user-access.md), um sicherzustellen, dass Sie weiterhin ununterbrochen Zugriff haben.
+Am 15. Oktober wird der Zugriff auf Assurance über die Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch“, ](./user-access.md) sicherzustellen, dass Sie weiterhin unterbrechungsfreien Zugriff haben.
 
-Es werden keine anderen Änderungen oder Störungen bei bestehenden Assurance-Integrationen, -Sitzungen und -Ereignissen erwartet. Der Zugriff auf die Versicherung kann über [https://griffon.adobe.com](https://griffon.adobe.com) **oder** fortgesetzt werden, die Sie verwenden können (und Lesezeichen) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
+Für bestehende Assurance-Integrationen, -Sitzungen und -Ereignisse werden keine weiteren Änderungen oder Unterbrechungen erwartet. Der Zugriff auf Assurance kann über [https://griffon.adobe.com](https://griffon.adobe.com) fortgesetzt werden **oder** Sie können (und ein Lesezeichen) [https://experience.adobe.com/assurance verwenden](https://experience.adobe.com/assurance).
 
 ## Was kann Assurance für Sie tun?
 
-### Schnelleinstellungen
+### Schnelleinrichtung
 
-Beginnen Sie mit einigen Codezeilen in kurzer Zeit. Bei mobilen Apps unterstützt Assurance das Adobe Experience Platform Mobile SDK bei der Überprüfung, Simulation und Validierung von App-Ereignissen, Standortsignalen, Konfigurationsparametern, SDK-Protokollen, Geräteinformationen und mehr.
+Beginnen Sie in Eile mit wenigen Codezeilen. Bei mobilen Apps unterstützt Assurance Sie mit dem Adobe Experience Platform Mobile SDK dabei, App-Ereignisse, Standortsignale, Konfigurationsparameter, SDK-Protokolle, Geräteinformationen und mehr zu untersuchen, zu simulieren und zu validieren.
 
-### Keine problemlose Verbindung
+### Unkomplizierte Verbindung
 
-Mit Assurance ist es einfach und zuverlässig, Ihre App mit Platform zu verbinden. Sie müssen keine Netzwerk-Proxys, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) und andere Netzwerkgymnastik verwenden. Die Verbindung Ihrer App mit Assurance ist so einfach wie das Scannen eines QR-Codes oder das Tippen auf eine Schaltfläche.
+Mit Assurance ist die Verbindung Ihrer App mit Platform einfach und zuverlässig. Sie müssen keine Netzwerk-Proxys ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) und andere Netzwerkgymnastiken verwenden - die Verbindung Ihrer App mit Assurance ist so einfach wie das Scannen eines QR-Codes oder das Tippen auf eine Schaltfläche.
 
 ![](./images/index/no-hassle-connection.png)
 
-### Echtzeitüberprüfung, Simulation und Validierung
+### Echtzeitinspektion, -simulation und -validierung
 
-Nach der Verbindung mit Assurance können Sie Live-Streaming-App-Ereignisse und -Aktivitäten untersuchen und filtern und suchen, um Rauschen zu vermeiden. Ereignisse enthalten Details zur Validierung, zum Debugging und zur Fehlerbehebung bei der Implementierung Ihrer Mobile App. Mit &quot;Assurance&quot;können Sie außerdem Screenshots erstellen, Standortsignale simulieren und vieles mehr in Echtzeit.
+Nachdem Sie eine Verbindung zu Assurance hergestellt haben, können Sie Live-Streaming-App-Ereignisse und -Aktivitäten untersuchen sowie filtern und suchen, um Rauschen zu beseitigen. Ereignisse enthalten Details zur Validierung, zum Debugging und zur Fehlerbehebung bei der Implementierung Ihrer Mobile App. Mit Assurance können Sie auch Screenshots erstellen, Standortsignale simulieren und vieles mehr in Echtzeit.
 
 ![](./images/index/real-time-insepction.png)
 
 ### Integration mit Adobe Experience Cloud
 
-Client-seitige Daten und Erlebnisse werden durch die Einrichtung von Berichterstellungsregeln, Aktivitäten und Kampagnen durch Benutzer auf unseren marketerorientierten Benutzeroberflächen kontextgebunden. Um Ihnen zu helfen, die Punkte zwischen den beiden zu verbinden, integrieren wir in Adobe Experience Cloud-Lösungen wie Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service und mehr.
+Client-seitige Daten und Erlebnisse werden durch die Art und Weise kontextualisiert, wie Benutzer Berichtsregeln, Aktivitäten und Kampagnen auf unseren Marketing-orientierten Benutzeroberflächen einrichten. Um Ihnen die Verbindung zwischen den beiden zu erleichtern, integrieren wir mit Adobe Experience Cloud-Lösungen wie Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service und mehr.
 
 ![](./images/index/integration.png)
 
 ## Funktionen
 
-### Adobe Experience Platform Mobile SDK-Ereignisse, -Protokolle und mehr
+### Ereignisse, Protokolle und mehr zu Adobe Experience Platform Mobile SDK
 
-Mithilfe von &quot;Assurance&quot;können Sie unformatierte SDK-Ereignisse überprüfen, die vom Adobe Experience Platform Mobile SDK generiert wurden. Alle vom SDK erfassten Ereignisse stehen zur Überprüfung zur Verfügung. SDK-Ereignisse werden in einer Listenansicht geladen, sortiert nach Zeit. Jedes Ereignis verfügt über eine detaillierte Ansicht, die weitere Details enthält. Zusätzliche Ansichten zum Durchsuchen von SDK-Konfigurationen, Datenelementen, freigegebenen Status und SDK-Erweiterungsversionen werden ebenfalls bereitgestellt.
+Mit Assurance können Sie unformatierte SDK-Ereignisse untersuchen, die von Adobe Experience Platform Mobile SDK generiert wurden. Alle von der SDK erfassten Ereignisse stehen zur Einsicht bereit. SDK-Ereignisse werden in einer Listenansicht geladen, sortiert nach Zeit. Jedes Ereignis verfügt über eine Detailansicht, die weitere Details enthält. Zusätzliche Ansichten zum Durchsuchen der SDK-Konfiguration, Datenelemente, freigegebenen Status und SDK-Erweiterungsversionen sind ebenfalls verfügbar.
 
 ### Adobe Analytics
 
-Die Ansicht Adobe Analytics > Analytics-Ereignisse ist eine fokussierte Ansicht, die Ereignisse im Zusammenhang mit Ihrer mobilen Adobe Analytics-Implementierung anzeigt. Die Listenansicht zeigt den Lebenszyklus- oder Aktions-/Statusereignis, den &quot;Status&quot;Post-verarbeitet sowie die erforderlichen Ereignisdetails in einer speziell formatierten Ansicht an. Der Status Post-Verarbeitet zeigt an, wie das Ereignis von Adobe Analytics verarbeitet wurde, nachdem die Verarbeitungsregeln auf das Ereignis angewendet wurden.
+Die Ansicht Adobe Analytics > Analytics-Ereignisse ist eine fokussierte Ansicht, die Ereignisse im Zusammenhang mit Ihrer Adobe Analytics Mobile-Implementierung anzeigt. Die Listenansicht zeigt den Lebenszyklus- oder Aktions-/Statusereignis-Status nach der Verarbeitung zusammen mit den erforderlichen Ereignisdetails in einer speziell formatierten Ansicht an. Der Status Nachbearbeitet zeigt an, wie das Ereignis von Adobe Analytics verarbeitet wurde, nachdem Verarbeitungsregeln auf das Ereignis angewendet wurden.
 
 ### Adobe Analytics für Streaming Media
 
-Die Ansicht &quot;Adobe Analytics&quot;> &quot;Media Analytics-Ereignisse&quot;zeigt Ereignisse für Ihre Audio- und Videoanalyseimplementierung an. Die Detailansicht der Ereignisse zeigt standardmäßige und benutzerdefinierte Metadaten an, die für jede Wiedergabesitzung verfolgt werden. Darüber hinaus können Sie nach der Verarbeitung verarbeitete Status- und Medienanalysedaten wie die Medienbesuchszeit oder die Gesamtpufferdauer anzeigen.
+Die Ansicht Adobe Analytics > Media Analytics-Ereignisse zeigt Ereignisse für Ihre Audio- und Videoanalyseimplementierung an. Die Ereignisdetailansicht zeigt Standard- und benutzerdefinierte Metadaten an, die für jede Wiedergabesitzung verfolgt werden. Darüber hinaus können Sie den Status „Nachbearbeitet“ und nachbearbeitete Media Analytics-Daten anzeigen, z. B. Besuchszeit für Medien oder Gesamtdauer des Puffers.
 
-### Places (Location Services)
+### Places (Standortdienste)
 
-Die Ansicht &quot;Location Services&quot;ist eine geräteübergreifende Ansicht, die die Einstiegs- und Ausstiegsereignisse des Benutzerstandorts zur einfachen Validierung anzeigt. Diese praktische Ansicht bietet eine bequeme Schnittstelle, um standortspezifische Datenpunkte zur Überprüfung auf dem Client für das kontextbezogene Debugging anzuzeigen.
+Die Ansicht Standort-Services ist eine Ansicht auf dem Gerät, die die Ein- und Ausstiegsereignisse des Benutzerstandorts anzeigt, um eine einfache Validierung zu ermöglichen. Diese praktische Ansicht bietet eine praktische Schnittstelle zum Anzeigen standortspezifischer Datenpunkte zur Überprüfung auf dem Client für kontextbezogenes Debugging.
 
-## Ist die Sicherheit gewährleistet?
+## Ist Assurance sicher?
 
-Die Zuverlässigkeitserklärung umfasst die folgenden Sicherheitsmaßnahmen:
+Assurance verfügt über die folgenden Sicherheitsmaßnahmen:
 
-* Sowohl die Assurance- als auch die Assurance-Web-Benutzeroberfläche verfügen über einen sicheren, PIN-basierten Handshake für eine Verbindung. Der Benutzer muss explizit einen Handshake erstellen, der verhindert, dass &quot;versehentliche&quot;Zuverlässigkeitsverbindungen von einem Endbenutzer erstellt werden.
-* Es werden nur Verbindungen zwischen Assurance und der Assurance-Web-Benutzeroberfläche unterstützt, die zur gleichen Adobe Experience Cloud-Organisations-ID gehören.
+* Sowohl Assurance als auch die Assurance-Web-Benutzeroberfläche verfügen über einen sicheren, PIN-basierten Handshake für eine Verbindung. Der Benutzer muss explizit einen Handshake erstellen, um zu verhindern, dass „versehentliche“ Assurance-Verbindungen von einem Endbenutzer erstellt werden.
+* Es werden nur Verbindungen zwischen Assurance und der Assurance-Web-Benutzeroberfläche unterstützt, die zur selben Adobe Experience Cloud-Organisations-ID gehören.
 * Adobe Experience Platform Mobile SDKs-Ereignisse werden über HTTPS übertragen.
-* Assurance- und Adobe Experience Platform Mobile-SDKs verwenden TLS 1.2
-* Zuverlässigkeitssitzungen werden nach 30 Tagen gelöscht.
-* Die Sitzungsdaten der Versicherung werden im Ruhezustand gemäß Best Practices für die Speicherung verschlüsselt.
+* Assurance und Adobe Experience Platform Mobile SDKs verwenden TLS 1.2
+* Assurance-Sitzungen werden nach 30 Tagen gelöscht.
+* Assurance-Sitzungsdaten werden im Ruhezustand gemäß den Best Practices für die Speicherung verschlüsselt.
 
 ## Erste Schritte
 
-Um Assurance einzurichten, müssen Sie zunächst die Assurance-Erweiterung in Ihrer Anwendung installieren. Weiterführende Informationen dazu finden Sie im Tutorial zum [Implementieren der Assurance-Erweiterung](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+Um Assurance einzurichten, müssen Sie zunächst die Assurance-Erweiterung in Ihrer Anwendung installieren. Um zu erfahren, wie Sie dies tun können, lesen Sie das Tutorial [Implementieren der Assurance-Erweiterung](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Nachdem Sie Ihrer App die Option &quot;Assurance&quot;hinzugefügt haben, können Sie eine Zuverlässigkeitssitzung erstellen, die mit Ihrem Gerät verbunden werden kann. Informationen zur Verwendung von Assurance finden Sie im [Handbuch zur Verwendung von Assurance](./tutorials/using-assurance.md).
+Nachdem Sie Assurance zu Ihrer App hinzugefügt haben, können Sie eine Assurance-Sitzung erstellen, die mit Ihrem Gerät verbunden werden kann. Um zu erfahren, wie Sie Assurance verwenden, lesen Sie bitte das [Handbuch zur Verwendung von Assurance](./tutorials/using-assurance.md).

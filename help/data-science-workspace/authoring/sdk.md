@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; SDK; Modell-Authoring; Data Science Workspace; beliebte Themen; Tests
+keywords: Experience Platform; Entwicklerhandbuch; SDK; Modellerstellung; Data Science Workspace; beliebte Themen; Tests
 solution: Experience Platform
 title: Modellerstellungs-SDK
-description: Mit dem Model Authoring SDK können Sie benutzerdefinierte Rezepte für maschinelles Lernen und Funktions-Pipelines entwickeln, die in Adobe Experience Platform Data Science Workspace verwendet werden können und implementierbare Vorlagen in PySpark und Spark (Scala) bereitstellen.
+description: Mit der Modellerstellungs-SDK können Sie benutzerdefinierte Rezepte für maschinelles Lernen und Funktions-Pipelines entwickeln, die in Adobe Experience Platform Data Science Workspace verwendet werden können und implementierbare Vorlagen in PySpark und Scala bereitstellen.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -19,9 +19,9 @@ ht-degree: 67%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Mit dem Model Authoring SDK können Sie benutzerdefinierte Rezepte für maschinelles Lernen und Funktions-Pipelines entwickeln, die in [!DNL Adobe Experience Platform] Data Science Workspace verwendet werden können, und implementierbare Vorlagen in [!DNL PySpark] und [!DNL Spark (Scala)] bereitstellen.
+Mit der Modellerstellungs-SDK können Sie benutzerdefinierte Rezepte für maschinelles Lernen und Feature Pipelines entwickeln, die in [!DNL Adobe Experience Platform] Data Science Workspace verwendet werden können und implementierbare Vorlagen in [!DNL PySpark] und [!DNL Spark (Scala)] bereitstellen.
 
-Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring SDK.
+Dieses Dokument enthält Informationen zu den verschiedenen Klassen, die in der Modellerstellungs-SDK zu finden sind.
 
 ## DataLoader {#dataloader}
 
@@ -82,9 +82,9 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data 
     </tbody>
 </table>
 
-### Daten aus einem [!DNL Platform] -Datensatz laden {#load-data-from-a-platform-dataset}
+### Daten aus einem [!DNL Platform] Datensatz laden {#load-data-from-a-platform-dataset}
 
-Im folgenden Beispiel werden [!DNL Platform] -Daten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die Datensatz-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
+Im folgenden Beispiel werden [!DNL Platform] Daten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die Datensatz-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
 
 **PySpark**
 
@@ -256,14 +256,14 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data 
     </tbody>
 </table>
 
-### Daten in einem [!DNL Platform] -Datensatz speichern {#save-data-to-a-platform-dataset}
+### Speichern von Daten in einem [!DNL Platform] {#save-data-to-a-platform-dataset}
 
-Um Daten in einem [!DNL Platform] -Datensatz zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
+Um Daten in einem [!DNL Platform] Datensatz zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
 
-- Eine gültige [!DNL Platform] Datensatz-ID, in der Daten gespeichert werden
+- Eine gültige [!DNL Platform]-Datensatz-ID, unter der Daten gespeichert werden
 - Die Mandanten-ID in Ihrer Organisation
 
-Die folgenden Beispiele speichern Daten (`prediction`) in einem [!DNL Platform] -Datensatz, wobei die Datensatz-ID (`datasetId`) und die Mandanten-ID (`tenantId`) definierte Eigenschaften in der Konfigurationsdatei sind.
+In den folgenden Beispielen werden Daten (`prediction`) in einem [!DNL Platform]-Datensatz gespeichert, wobei die Datensatz-ID (`datasetId`) und die Mandanten-ID (`tenantId`) Eigenschaften in der Konfigurationsdatei sind.
 
 
 **PySpark**
@@ -399,7 +399,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Die [!DNL Sensei Machine Learning Runtime] erfordert nicht, dass diese Komponente definiert ist, und wird entsprechend Ihren Anforderungen implementiert.
+Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Für die [!DNL Sensei Machine Learning Runtime] muss diese Komponente nicht definiert sein. Sie wird entsprechend Ihren Anforderungen implementiert.
 
 Im Hinblick auf eine Funktions-Pipeline können DataSet Transformer gemeinsam mit einer Feature-Pipeline-Factory zur Vorbereitung von Daten für die Funktionsentwicklung genutzt werden.
 
@@ -433,7 +433,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet Transf
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] -Datensatz-Transformatorklasse beschrieben:
+In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] DataSet-Transformatorklasse beschrieben:
 
 <table>
     <thead>
@@ -542,7 +542,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] FeaturePi
 
 ## PipelineFactory {#pipelinefactory}
 
-Die PipelineFactory-Klasse enthält Methoden und Definitionen für Trainings- und Scoring-Modelle, wobei Trainings-Logik und -Algorithmen in Form einer [!DNL Spark]-Pipeline definiert werden.
+Die PipelineFactory-Klasse kapselt Methoden und Definitionen für Modelltraining und -bewertung, bei denen Trainingslogik und Algorithmen in Form einer [!DNL Spark] Pipeline definiert sind.
 
 **PySpark**
 

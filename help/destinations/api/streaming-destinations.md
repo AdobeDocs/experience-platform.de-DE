@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; API-Tutorials; Streaming-Ziel-API; Platform
+keywords: Experience Platform;Startseite;beliebte Themen;API-Tutorials;Streaming-Ziele-API;Plattform
 solution: Experience Platform
-title: Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API in Adobe Experience Platform aktivieren
-description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform-API beschrieben.
+title: Verbinden mit Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service-API in Adobe Experience Platform
+description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform-API behandelt
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
@@ -16,33 +16,33 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zu einem Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [.](/help/access-control/home.md#permissions)
+>Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >
->Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [.](/help/access-control/home.md#permissions)
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions).
 >
 >Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-In diesem Tutorial erfahren Sie, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, eine Verbindung zu einem Streaming-Cloud-Speicher-Ziel herstellen ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) oder [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten für Ihr neu erstelltes Ziel aktivieren können.
+In diesem Tutorial erfahren Sie, wie Sie API-Aufrufe verwenden, um eine Verbindung zu Ihren Adobe Experience Platform-Daten herzustellen, eine Verbindung zu einem Streaming-Cloud-Speicher-Ziel ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) oder [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)) herzustellen, einen Datenfluss zu Ihrem neu erstellten Ziel zu erstellen und Daten für Ihr neu erstelltes Ziel zu aktivieren.
 
-In diesem Tutorial wird in allen Beispielen das Ziel [!DNL Amazon Kinesis] verwendet, die Schritte sind jedoch für [!DNL Azure Event Hubs] identisch.
+In diesem Tutorial wird für alle Beispiele das [!DNL Amazon Kinesis] verwendet, die Schritte sind jedoch für [!DNL Azure Event Hubs] identisch.
 
-![Überblick - die Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Zielgruppen](../assets/api/streaming-destination/overview.png)
+![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Zielgruppen](../assets/api/streaming-destination/overview.png)
 
-Wenn Sie es vorziehen, die Benutzeroberfläche in Platform zu verwenden, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, lesen Sie die Tutorials [Ziel verbinden](../ui/connect-destination.md) und [Zielgruppendaten für Streaming-Zielgruppenexport-Ziele aktivieren](../ui/activate-segment-streaming-destinations.md) .
+Wenn Sie die Benutzeroberfläche von Platform bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexportziele](../ui/activate-segment-streaming-destinations.md) .
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das Aufzeichnungssystem für Speicherort und Herkunft von Daten innerhalb von Experience Platform.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das „System of Record“ für den Speicherort und die Herkunft von Daten auf Experience Platform.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Streaming-Ziele in Platform aktivieren zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Um die Schritte in diesem Tutorial abzuschließen, sollten Sie je nach dem Typ der Ziele, mit denen Sie Zielgruppen verbinden und aktivieren, über die folgenden Anmeldeinformationen verfügen.
+Um die Schritte in diesem Tutorial abzuschließen, sollten Sie über die folgenden Anmeldeinformationen verfügen, je nachdem, mit welchem Zieltyp Sie Zielgruppen verbinden und aktivieren.
 
 * Für [!DNL Amazon Kinesis] Verbindungen: `accessKeyId`, `secretKey`, `region` oder `connectionUrl`
 * Für [!DNL Azure Event Hubs] Verbindungen: `sasKeyName`, `sasKey`, `namespace`
@@ -73,9 +73,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ### Swagger-Dokumentation {#swagger-docs}
 
-Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der Dokumentation zur [Flow Service-API auf Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Siehe die [Flow Service-API-Dokumentation auf Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
 
-## Liste der verfügbaren Streaming-Ziele abrufen {#get-the-list-of-available-streaming-destinations}
+## Abrufen der Liste der verfügbaren Streaming-Ziele {#get-the-list-of-available-streaming-destinations}
 
 ![Übersicht über die Zielschritte – Schritt 1](../assets/api/streaming-destination/step1.png)
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise Zielgruppen mit [!DNL Amazon Kinesis] oder [!DNL Azure Event Hubs] verbinden und bereitstellen möchten, suchen Sie in der Antwort nach dem folgenden Snippet:
+Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise Zielgruppen mit [!DNL Amazon Kinesis] oder [!DNL Azure Event Hubs] verbinden und bereitstellen möchten, suchen Sie in der Antwort nach folgendem Code-Ausschnitt:
 
 ```json
 {
@@ -157,7 +157,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für den Profildienst - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwort**
 
@@ -202,11 +202,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Verwenden Sie die Kennung, die Sie im vorherigen Schritt erhalten haben.
-* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für den Profildienst - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zu Profil Service zurück. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren Experience Platform-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zum Profil-Service zurückgegeben. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren Experience Platform-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
 
 ```json
 {
@@ -215,16 +215,16 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstel
 ```
 
 
-## Verbindung zum Streaming-Ziel herstellen {#connect-to-streaming-destination}
+## Mit Streaming-Ziel verbinden {#connect-to-streaming-destination}
 
 ![Übersicht über die Zielschritte – Schritt 3](../assets/api/streaming-destination/step3.png)
 
 In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten Streaming-Ziel ein. Dies umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
-1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf das Streaming-Ziel zu autorisieren, indem Sie eine Basisverbindung einrichten.
+1. Sie müssen zunächst einen Aufruf ausführen, um den Zugriff auf das Streaming-Ziel zu autorisieren, indem Sie eine Basisverbindung einrichten.
 2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf aus, mit dem Sie eine Zielverbindung erstellen. In dem Aufruf sind der Ort in Ihrem Speicherkonto, an dem die exportierten Daten bereitgestellt werden, sowie das Format der zu exportierenden Daten angegeben.
 
-### Zugriff auf das Streaming-Ziel zulassen
+### Autorisieren des Zugriffs auf das Streaming-Ziel
 
 **API-Format**
 
@@ -236,7 +236,7 @@ POST /connections
 
 >[!IMPORTANT]
 >
->Das folgende Beispiel enthält Code-Kommentare mit dem Präfix `//`. Diese Kommentare zeigen, wo verschiedene Werte für verschiedene Streaming-Ziele verwendet werden müssen. Entfernen Sie die Kommentare, bevor Sie das Snippet verwenden.
+>Das folgende Beispiel enthält Code-Kommentare mit dem Präfix `//`. Diese Kommentare zeigen, wo für verschiedene Streaming-Ziele unterschiedliche Werte verwendet werden müssen. Bitte entfernen Sie die Kommentare, bevor Sie das Snippet verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -270,12 +270,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID, die Sie im Schritt [Liste der verfügbaren Ziele anfordern](#get-the-list-of-available-destinations) erhalten haben.
 * `{AUTHENTICATION_CREDENTIALS}`: Geben Sie den Namen Ihres Streaming-Ziels ein: `Aws Kinesis authentication credentials` oder `Azure EventHub authentication credentials`.
-* `{ACCESS_ID}`: *Für [!DNL Amazon Kinesis] Verbindungen.* Ihre Zugriffskennung für Ihren Amazon Kinesis-Speicherort.
-* `{SECRET_KEY}`: *Für [!DNL Amazon Kinesis] Verbindungen.* Ihr geheimer Schlüssel für Ihren Speicherort in Amazon Kinesis.
-* `{REGION}`: *Für [!DNL Amazon Kinesis] Verbindungen.* Die Region in Ihrem [!DNL Amazon Kinesis]-Konto, an die Platform Ihre Daten streamt.
-* `{SAS_KEY_NAME}`: *Für [!DNL Azure Event Hubs] Verbindungen.* Geben Sie Ihren SAS-Schlüsselnamen ein. Informationen zur Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{SAS_KEY}`: *Für [!DNL Azure Event Hubs] Verbindungen.* Füllen Sie Ihren SAS-Schlüssel aus. Informationen zur Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Für [!DNL Azure Event Hubs] Verbindungen.* Füllen Sie den Namespace [!DNL Azure Event Hubs] aus, über den Platform Ihre Daten streamt. Weitere Informationen finden Sie unter [Erstellen eines Ereignis-Hubs-Namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in der Dokumentation zu [!DNL Microsoft].
+* `{ACCESS_ID}`: *Für [!DNL Amazon Kinesis].* Ihre Zugriffs-ID für Ihren Speicherort in Amazon Kinesis.
+* `{SECRET_KEY}`: *Für [!DNL Amazon Kinesis].* Sie Ihren geheimen Schlüssel für Ihren Speicherort in Amazon Kinesis.
+* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem [!DNL Amazon Kinesis]-Konto, in der Platform Ihre Daten streamt.
+* `{SAS_KEY_NAME}`: *Für [!DNL Azure Event Hubs].* Geben Sie den Namen Ihres SAS-Schlüssels ein. Erfahren Sie mehr über die Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Dokumentation zu Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* `{SAS_KEY}`: *Für [!DNL Azure Event Hubs].* Geben Sie Ihren SAS-Schlüssel ein. Erfahren Sie mehr über die Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Dokumentation zu Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* `{EVENT_HUB_NAMESPACE}`: *Für [!DNL Azure Event Hubs].* Füllen Sie den [!DNL Azure Event Hubs]-Namespace aus, in den Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Event Hubs-Namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in der [!DNL Microsoft].
 
 **Antwort**
 
@@ -299,7 +299,7 @@ POST /targetConnections
 
 >[!IMPORTANT]
 >
->Das folgende Beispiel enthält Code-Kommentare mit dem Präfix `//`. Diese Kommentare zeigen, wo verschiedene Werte für verschiedene Streaming-Ziele verwendet werden müssen. Entfernen Sie die Kommentare, bevor Sie das Snippet verwenden.
+>Das folgende Beispiel enthält Code-Kommentare mit dem Präfix `//`. Diese Kommentare zeigen, wo für verschiedene Streaming-Ziele unterschiedliche Werte verwendet werden müssen. Bitte entfernen Sie die Kommentare, bevor Sie das Snippet verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -330,13 +330,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Nutzen Sie die Kennung der Basisverbindung, die Sie im obigen Schritt erhalten haben.
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikation, die Sie im Schritt [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations) erhalten haben.
-* `{NAME_OF_DATA_STREAM}`: *Für [!DNL Amazon Kinesis] Verbindungen.* Geben Sie den Namen Ihres vorhandenen Datenstreams in Ihrem [!DNL Amazon Kinesis]-Konto an. Platform exportiert Daten in diesen Stream.
-* `{REGION}`: *Für [!DNL Amazon Kinesis] Verbindungen.* Die Region in Ihrem Amazon Kinesis-Konto, an die Platform Ihre Daten streamt.
-* `{EVENT_HUB_NAME}`: *Für [!DNL Azure Event Hubs] Verbindungen.* Geben Sie den Namen [!DNL Azure Event Hub] ein, an den Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Ereignis-Hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in der Dokumentation zu [!DNL Microsoft].
+* `{NAME_OF_DATA_STREAM}`: *Für [!DNL Amazon Kinesis].* Geben Sie den Namen Ihres vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis]-Konto an. Platform exportiert Daten in diesen Stream.
+* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem Amazon Kinesis-Konto, in die Platform Ihre Daten streamt.
+* `{EVENT_HUB_NAME}`: *Für [!DNL Azure Event Hubs].* Geben Sie den [!DNL Azure Event Hub] ein, in den Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Ereignis-Hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in der [!DNL Microsoft].
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Zielverbindung zu Ihrem Streaming-Ziel zurück. Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) für die neu erstellte Zielverbindung zu Ihrem Streaming-Ziel zurückgegeben. Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
 
 ```json
 {
@@ -405,11 +405,11 @@ curl -X POST \
 
 * `{FLOW_SPEC_ID}`: Die Flussspezifikations-ID für profilbasierte Ziele ist `71471eba-b620-49e4-90fd-23f1fa0174d8`. Verwenden Sie diesen Wert im -Aufruf.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbindung zu Ihren Experience Platform-Daten herstellen](#connect-to-your-experience-platform-data) erhalten haben.
-* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Ziel-Verbindungs-ID, die Sie im Schritt [Verbindung zum Streaming-Ziel herstellen](#connect-to-streaming-destination) erhalten haben.
+* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt &quot;[ mit Streaming-Ziel herstellen“ erhalten ](#connect-to-streaming-destination).
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte. wie im nächsten Schritt beschrieben, um Zielgruppen zu aktivieren.
+Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte. So wie Sie es im nächsten Schritt tun, um Zielgruppen zu aktivieren.
 
 ```json
 {
@@ -423,9 +423,9 @@ Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Dat
 
 ![Übersicht über die Zielschritte – Schritt 5](../assets/api/streaming-destination/step5.png)
 
-Nachdem Sie alle Verbindungen und den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Streaming-Plattform aktivieren. In diesem Schritt wählen Sie aus, welche Zielgruppen und Profilattribute Sie an das Ziel senden, und Sie können Daten planen und an das Ziel senden.
+Nachdem Sie alle Verbindungen und den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Streaming-Plattform aktivieren. In diesem Schritt legen Sie fest, welche Zielgruppen und Profilattribute Sie an das Ziel senden, und Sie können Daten planen und an das Ziel senden.
 
-Um Zielgruppen für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, der dem unten stehenden Beispiel ähnelt. Sie können mehrere Zielgruppen und Profilattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
+Um Zielgruppen für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, ähnlich dem folgenden Beispiel. Sie können mehrere Zielgruppen und Profilattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
 
 **API-Format**
 
@@ -473,14 +473,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Verwenden Sie in der URL die ID des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
-| `{ETAG}` | Rufen Sie die `{ETAG}` aus der Antwort im vorherigen Schritt ab, [Erstellen Sie einen Datenfluss](#create-dataflow). Das Antwortformat im vorherigen Schritt hat Escape-Anführungszeichen. Sie müssen die nicht maskierten Werte in der Kopfzeile der Anfrage verwenden. Siehe Beispiel unten: <br> <ul><li>Antwortbeispiel: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Wert, der in Ihrer Anfrage verwendet werden soll: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert. |
-| `{SEGMENT_ID}` | Geben Sie die Zielgruppen-ID an, die Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen der Zielgruppen-IDs für die Zielgruppen, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Zielgruppendefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
+| `{ETAG}` | Rufen Sie die `{ETAG}` aus der Antwort im vorherigen Schritt ab [Erstellen eines Datenflusses](#create-dataflow). Das Antwortformat im vorherigen Schritt wurde in Anführungszeichen gesetzt. Sie müssen die Werte ohne Escape-Zeichen im Header der Anfrage verwenden. Siehe folgendes Beispiel: <br> <ul><li>Anwendungsbeispiel für eine Antwort: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>In Ihrer Anfrage zu verwendender Wert: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert. |
+| `{SEGMENT_ID}` | Geben Sie die Zielgruppen-ID an, die Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Zielgruppen-IDs für die Zielgruppen, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Zielgruppendefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
 | `{PROFILE_ATTRIBUTE}` | Beispiel: `"person.lastName"` |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Verwenden Sie den Vorgang `add` , um einem Datenfluss eine Zielgruppe hinzuzufügen. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um eine Zielgruppe zu einem Datenfluss hinzuzufügen, verwenden Sie den Vorgang `add` . |
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen einer Zielgruppe zu einem Datenfluss den im Beispiel angegebenen Pfad. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-| `id` | Geben Sie die ID der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. |
-| `name` | *Optional*. Geben Sie den Namen der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht erforderlich ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne dessen Namen anzugeben. |
+| `id` | Geben Sie die ID der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. |
+| `name` | *Optional*. Geben Sie den Namen der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne ihren Namen anzugeben. |
 
 **Antwort**
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwort**
 
-Die zurückgegebene Antwort sollte im Parameter `transformations` die Zielgruppen und Profilattribute enthalten, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
+Die zurückgegebene Antwort sollte im `transformations` die Zielgruppen und Profilattribute enthalten, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ Die zurückgegebene Antwort sollte im Parameter `transformations` die Zielgruppe
 
 >[!IMPORTANT]
 >
-> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Daten für Ihr neues Ziel aktivieren](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe ein Beispiel unten.
+> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Aktivieren von Daten für Ihr neues Ziel](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe Beispiel unten.
 
 ```json
 {
@@ -603,38 +603,38 @@ Die zurückgegebene Antwort sollte im Parameter `transformations` die Zielgruppe
 }
 ```
 
-## Verwenden von [!DNL Postman] -Sammlungen zum Herstellen einer Verbindung zu Streaming-Zielen  {#collections}
+## Verwenden [!DNL Postman] Sammlungen zum Herstellen einer Verbindung zu Streaming-Zielen  {#collections}
 
-Um eine rationellere Verbindung zu den in diesem Tutorial beschriebenen Streaming-Zielen herzustellen, können Sie [[!DNL Postman]](https://www.postman.com/) verwenden.
+Um eine schnellere Verbindung zu den in diesem Tutorial beschriebenen Streaming-Zielen herzustellen, können Sie [[!DNL Postman]](https://www.postman.com/) verwenden.
 
 [!DNL Postman] ist ein Tool, mit dem Sie API-Aufrufe durchführen und Bibliotheken vordefinierter Aufrufe und Umgebungen verwalten können.
 
-Für dieses spezifische Tutorial wurden die folgenden [!DNL Postman] Sammlungen angehängt:
+Für dieses spezifische Tutorial wurden die folgenden [!DNL Postman] angehängt:
 
-* [!DNL AWS Kinesis] [!DNL Postman] Sammlung
-* [!DNL Azure Event Hubs] [!DNL Postman] Sammlung
+* [!DNL AWS Kinesis] [!DNL Postman]
+* [!DNL Azure Event Hubs] [!DNL Postman]
 
-Klicken Sie auf [hier](../assets/api/streaming-destination/DestinationPostmanCollection.zip) , um das Sammlungsarchiv herunterzuladen.
+Klicken Sie [hier](../assets/api/streaming-destination/DestinationPostmanCollection.zip), um das Sammlungsarchiv herunterzuladen.
 
 Jede Sammlung enthält die erforderlichen Anforderungen und Umgebungsvariablen für [!DNL AWS Kinesis] bzw. [!DNL Azure Event Hub].
 
-### Verwendung der [!DNL Postman]-Sammlungen {#how-to-use-postman-collections}
+### Verwendung der [!DNL Postman] Sammlungen {#how-to-use-postman-collections}
 
-Gehen Sie wie folgt vor, um mithilfe der angehängten [!DNL Postman]-Sammlungen eine erfolgreiche Verbindung zu den Zielen herzustellen:
+Gehen Sie wie folgt vor, um mithilfe der angehängten [!DNL Postman] eine Verbindung zu den Zielen herzustellen:
 
-* Herunterladen und Installieren von [!DNL Postman];
+* Herunterladen und Installieren von [!DNL Postman]
 * [Herunterladen](../assets/api/streaming-destination/DestinationPostmanCollection.zip) und Entpacken der angehängten Sammlungen
 * Importieren Sie die Sammlungen aus den entsprechenden Ordnern in [!DNL Postman].
 * Füllen Sie die Umgebungsvariablen gemäß den Anweisungen in diesem Artikel aus.
-* Führen Sie die [!DNL API] -Anfragen von [!DNL Postman] aus, basierend auf den Anweisungen in diesem Artikel.
+* Führen Sie die [!DNL API] Anfragen von [!DNL Postman] aus, basierend auf den Anweisungen in diesem Artikel.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Weitere Informationen zur Interpretation von Fehlerantworten finden Sie unter [API-Status-Codes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anforderungsheader](/help/landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenvorgänge verwendet werden, die Sie ausführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
+In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum jeweiligen Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenvorgänge verwendet werden, die Sie möglicherweise durchführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

@@ -2,7 +2,7 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Datensatz aktivieren
 title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen.
+description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit „upsert“-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 90%
 
 # Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 
-In diesem Tutorial wird die Aktivierung eines Datensatzes mit &quot;upsert&quot;-Funktionen beschrieben, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen. Dazu gehören die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
+In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes mit „upsert“-Funktionen beschrieben, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen. Dazu gehören die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
 
 >[!NOTE]
 >
->Der in diesem Tutorial beschriebene Workflow funktioniert nur bei der Batch-Erfassung. Informationen zur Aktualisierung der Streaming-Erfassung finden Sie im Handbuch zum [Senden von Teilzeilenaktualisierungen an das Echtzeit-Kundenprofil mithilfe der Datenvorbereitung](../../data-prep/upserts.md).
+>Der in diesem Tutorial beschriebene Workflow funktioniert nur für die Batch-Aufnahme. Informationen zu Streaming-Aufnahme-Upserts finden Sie im Handbuch unter [Senden von partiellen Zeilenaktualisierungen an das Echtzeit-Kundenprofil mithilfe der Datenvorbereitung](../../data-prep/upserts.md).
 
 ## Erste Schritte
 
@@ -183,7 +183,7 @@ Um einen Profil-aktivierten Datensatz für Aktualisierungen zu konfigurieren, m�
 
 >[!WARNING]
 >
->Daten, die während der Deaktivierung in den Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er erneut für Profil aktiviert wurde.
+>Daten, die in einen deaktivierten Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er erneut für Profil aktiviert wurde.
 
 **API-Format**
 

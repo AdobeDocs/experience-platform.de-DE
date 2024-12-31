@@ -29,4 +29,4 @@ Für weitere Informationen zu [!DNL Data Science Workspace] lesen Sie zunächst 
 
 ## Abonnieren von Datenerfassungsereignissen
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignisse über [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) zum Abonnieren bereit. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum Anmelden von Adobe-Ereignisbenachrichtigungen ](../observability/alerts/subscribe.md).[
+[!DNL Platform] stellt bestimmte hochwertige Ereignisse über [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) zum Abonnieren bereit. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial [Abonnieren von Adobe](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.

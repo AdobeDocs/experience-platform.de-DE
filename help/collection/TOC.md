@@ -18,7 +18,7 @@ ht-degree: 89%
 
 - [Datenerfassung – Übersicht](home.md)
 - [End-to-End-Übersicht](e2e.md)
-- [Behandlung von Ereignisduplizierungen](event-duplication.md)
+- [Handhabung von Ereignisduplikaten](event-duplication.md)
 - [Berechtigungsverwaltung](permissions.md)
 - [Client-Zustandsverwaltung](client-state.md)
 - Besucheridentifizierung {#visitor-identification}

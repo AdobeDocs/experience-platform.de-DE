@@ -1,5 +1,5 @@
 ---
-description: Verwenden Sie das Dashboard [!UICONTROL Profilanreicherung] , um zu verstehen, ob die Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken zur Messung der Effektivität der Anreicherungen anzuzeigen.
+description: Verwenden Sie das Dashboard [!UICONTROL Profilanreicherung] um zu verstehen, ob Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken anzuzeigen, um die Effektivität der Anreicherungen zu messen.
 solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
@@ -11,89 +11,89 @@ ht-degree: 4%
 
 ---
 
-# Überwachen von Profilanreicherungsaufträgen in der Benutzeroberfläche {#monitor-profile-enrichment}
+# Überwachen von Aufträgen zur Profilanreicherung in der Benutzeroberfläche {#monitor-profile-enrichment}
 
-Verwenden Sie das Dashboard [!UICONTROL Profilanreicherung] , um zu verstehen, ob die Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken zur Messung der Effektivität der Anreicherungen anzuzeigen.
+Verwenden Sie das Dashboard [!UICONTROL Profilanreicherung] um zu verstehen, ob Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken anzuzeigen, um die Effektivität der Anreicherungen zu messen.
 
-Wählen Sie in der [Platform-Benutzeroberfläche](https://platform.adobe.com) im linken Navigationsbereich die Option **[!UICONTROL Überwachung]** aus, um auf das Dashboard [!UICONTROL Überwachung] zuzugreifen. Wählen Sie in der Ansichtsauswahl **B2B Flow** aus, um die für [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) spezifischen Dashboard-Elemente anzuzeigen.  Das Dashboard [!UICONTROL Überwachung] enthält die grundlegenden Metriken aus der letzten erfolgreichen Ausführung sowie den täglichen Auftragsstatus von bis zu 90 Tagen in der Vergangenheit.
+Wählen Sie in der [Platform](https://platform.adobe.com)Benutzeroberfläche die Option **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus, um auf das [!UICONTROL Monitoring]-Dashboard zuzugreifen. Wählen Sie in der Ansichtsauswahl die Option **B2B-Fluss** aus, um die für [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) spezifischen Dashboard-Elemente anzuzeigen.  Das [!UICONTROL Monitoring]-Dashboard enthält die grundlegenden Metriken der letzten erfolgreichen Ausführung und den täglichen Auftragsstatus, der bis zu 90 Tage in der Vergangenheit lag.
 
 ## Profilanreicherung für verwandte Konten {#related-accounts}
 
-Das Dashboard [!UICONTROL Zugehörige Konten] enthält grundlegende Metriken und den Status des täglichen Auftrags, der spezifisch für die Profilanreicherung [Zugehörige Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) ist.
+Das Dashboard [!UICONTROL Verknüpfte Konten] zeigt die grundlegenden Metriken und den Status des täglichen Auftrags an, der spezifisch für die Profilanreicherung [Verknüpfte Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) ist.
 
-![ Visuelle Angabe, wie Sie in der Experience Platform-Benutzeroberfläche zum Überwachungsbildschirm für Profilanreicherungsaufträge gelangen.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Visueller Hinweis darauf, wie Sie in der Experience Platform-Benutzeroberfläche zum Bildschirm „Überwachung von Vorgängen zur Profilanreicherung“ gelangen.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
-Die Daten auf der Karte **[!UICONTROL Metriken]** enthalten die grundlegenden Metriken aus der letzten erfolgreichen Ausführung des Auftrags &quot;Zugehörige Konten&quot;.
+Die Daten in der Karte **[!UICONTROL Metriken]** enthalten die grundlegenden Metriken aus der letzten erfolgreichen Ausführung des Vorgangs für verwandte Konten.
 
-Die folgenden Metriken stehen für verwandte Profilanreicherungsaufträge zur Verfügung:
+Die folgenden Metriken sind für Vorgänge zur Profilanreicherung bei verwandten Konten verfügbar:
 
 | Metrik | Beschreibung |
 | --------- | ---------- |
-| **[!UICONTROL Kontoprofile insgesamt]** | Gibt die Gesamtzahl der Kontoprofile an, auf die Ihr Unternehmen Zugriff hat. |
-| **[!UICONTROL Kontogruppen]** | Gibt die Anzahl der Kontogruppen an, die durch den entsprechenden maschinellen Lernauftrag für Konten gruppiert wurden. |
-| **[!UICONTROL Gruppen mit einzelnen Konten]** | Gibt die Anzahl der Konten an, die nicht mit anderen Konten gruppiert sind. |
-| **[!UICONTROL Größte Gruppengröße]** | Gibt die Größe der größten verbundenen Kontogruppe an. Die maximal zulässige Gruppengröße beträgt 30. |
-| **[!UICONTROL mittlere Gruppengröße]** | Gibt die mittlere Größe verwandter Kontogruppen in Ihrer Organisation an. |
-| **[!UICONTROL Letzter erfolgreicher Lauf]** | Gibt Datum und Uhrzeit der letzten erfolgreichen Ausführung des verbundenen Kontoauftrags an. |
+| **[!UICONTROL Kontoprofile insgesamt]** | Gibt die Gesamtzahl der Kontoprofile an, auf die Ihre Organisation Zugriff hat. |
+| **[!UICONTROL Kontogruppen]** | Gibt die Anzahl der Kontogruppen an, die durch den zugehörigen Auftrag für maschinelles Lernen für Konten in einem Cluster zusammengefasst wurden. |
+| **[!UICONTROL Einzelkontengruppen]** | Gibt die Anzahl der Konten an, die nicht mit anderen Konten gruppiert sind. |
+| **[!UICONTROL Größte Gruppengröße]** | Gibt die Größe der größten verwandten Kontogruppe an. Die maximal zulässige Gruppengröße ist 30. |
+| **[!UICONTROL Mediane Gruppengröße]** | Gibt die durchschnittliche Größe verwandter Kontogruppen in Ihrer Organisation an. |
+| **[!UICONTROL Letzter erfolgreicher Durchgang]** | Gibt das Datum und die Uhrzeit der letzten erfolgreichen Ausführung des Vorgangs für verwandte Konten an. |
 | **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des zugehörigen Kontoauftrags an. |
-| **[!UICONTROL Message]** | Gibt eine Fehler- oder Warnmeldung für eine bestimmte Auftragsausführung an. |
+| **[!UICONTROL Nachricht]** | Gibt eine Fehler- oder Warnmeldung für einen bestimmten Auftragsdurchgang an. |
 
-## Möglichkeit zur Profilanreicherung {#lead-to-account-matching}
+## Lead-Konto-Zuordnung Profilanreicherung {#lead-to-account-matching}
 
-Das Dashboard [!UICONTROL Lead zum Abgleich von Konten] zeigt die grundlegenden Metriken und den täglichen Auftragslaufstatus an, die für die [Lead zum Abgleichen der Profilanreicherung](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) spezifisch sind.
+Das Dashboard [!UICONTROL Lead-Konto] zeigt die grundlegenden Metriken und den täglichen Auftragsausführungsstatus an, die für die Profilanreicherung [Lead-Konto-Zuordnung](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) spezifisch sind.
 
-![Lead zur Berücksichtigung der Profilanreicherung](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![Lead-Konto-Matching-Profilanreicherung](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
-Die folgenden Metriken sind für Lead-Vorgänge verfügbar, bei denen Profile zugeordnet werden:
+Die folgenden Metriken sind für Vorgänge zur Lead-Konto-Zuordnung von Profilanreicherungen verfügbar:
 
 | Metrik | Beschreibung |
 | --------- | ---------- |
 | **[!UICONTROL Personen mit Konten insgesamt]** | Gibt die Gesamtzahl der Personen an, die mit einem Konto verknüpft sind. |
-| **[!UICONTROL Konten insgesamt]** | Gibt die Gesamtanzahl der Konten an. |
-| **[!UICONTROL Vorhandene Personen mit Konten]** | Gibt die Anzahl der Personen an, die bereits mit einem Konto aus den Datenquellen verknüpft sind. |
-| **[!UICONTROL Entsprechende Personen]** | Gibt die Anzahl der Personen an, die mit einem Konto abgeglichen wurden. |
-| **[!UICONTROL Nicht übereinstimmende Personen]** | Gibt die Anzahl der Personen an, die keinem Konto zugeordnet wurden. |
-| **[!UICONTROL Letzter erfolgreicher Lauf]** | Gibt das Datum und die Uhrzeit des letzten erfolgreichen Leads an, zu dem der übereinstimmende Auftrag ausgeführt wurde. |
-| **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des Leads an, der zu einem übereinstimmenden Konto führt. |
+| **[!UICONTROL Konten insgesamt]** | Gibt die Gesamtzahl der Konten an. |
+| **[!UICONTROL Vorhandene Personen mit Konten]** | Gibt die Anzahl der Personen an, die bereits über die Datenquellen mit einem Konto verknüpft sind. |
+| **[!UICONTROL Zugeordnete Personen]** | Gibt die Anzahl der Personen an, die einem Konto zugeordnet wurden. |
+| **[!UICONTROL Personen ohne Zuordnung]** | Gibt die Anzahl der Personen an, die keinem Konto zugeordnet wurden. |
+| **[!UICONTROL Letzter erfolgreicher Durchgang]** | Gibt das Datum und die Uhrzeit des letzten erfolgreichen Lead-Konto-Matching-Vorgangs an. |
+| **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des Lead-Konto-Abgleichauftrags an. |
 
-## Prädiktive Profilanreicherung für Lead- und Kontobewertung {#predictive-lead-to-account-scoring}
+## Anreicherung des prädiktiven Lead- und Konto-Scoring-Profils {#predictive-lead-to-account-scoring}
 
-Das Dashboard [!UICONTROL Prädiktive Lead- und Kontobewertung] zeigt die grundlegenden Metriken und den täglichen Auftragslaufstatus an, die für die Profilanreicherung [Prädiktiver Lead und Kontoauswertung](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) spezifisch sind.
+Das Dashboard [!UICONTROL Prädiktives Lead- und Konto] zeigt die grundlegenden Metriken und den täglichen Auftragsausführungsstatus an, die für die Profilanreicherung [Prädiktives Lead- und Konto](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) spezifisch sind.
 
-![Anreicherung des prädiktiven Lead- und Kontoauswertungsprofils](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+![Prädiktive Lead- und Konto-Scoring-Profilanreicherung](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
-Die folgenden Metriken sind für prädiktive Anreicherungsaufträge für Lead- und Kontobewertungsprofile verfügbar:
+Die folgenden Metriken sind für prädiktive Lead- und Konto-Scoring-Profilanreicherungsaufträge verfügbar:
 
 | Metrik | Beschreibung |
 | --------- | ---------- |
-| **[!UICONTROL Auftragsstart]** | Gibt das Startdatum und die Startzeit des prädiktiven Lead- und Kontoauswertungsauftrags an. |
-| **[!UICONTROL Verarbeitungszeit]** | Die Gesamtdauer, die zum Abschluss des Auftrags benötigt wurde. |
-| **[!UICONTROL Score name]** | Der Bewertungsname des Auftrags. |
-| **[!UICONTROL Profiltyp]** | Der Typ der Punktzahl: <ul><li>Person</li><li>Konto</li></ul>. |
-| **[!UICONTROL Auftragstyp]** | Der Auftragstyp:<ul><li>Bewertung</li><li>Training</li>. |
-| **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des prädiktiven Lead- und Kontobewertungsauftrags an. |
+| **[!UICONTROL Auftragsstart]** | Gibt das Startdatum und die Startzeit des prädiktiven Lead- und Konto-Scoring-Vorgangs an. |
+| **[!UICONTROL Verarbeitungszeit]** | Die Gesamtzeit, die für den Abschluss des Auftrags benötigt wurde. |
+| **[!UICONTROL Score-Name]** | Der Bewertungsname des Vorgangs. |
+| **[!UICONTROL Profiltyp]** | Der Typ der Bewertung: <ul><li>Person</li><li>Konto</li></ul>. |
+| **[!UICONTROL Vorgangstyp]** | Der Typ des Auftrags:<ul><li>Bewertung</li><li>Training</li>. |
+| **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des prädiktiven Lead- und Konto-Scoring-Auftrags an. |
 
-## UI-Steuerelemente {#ui-controls}
+## Benutzeroberflächen-Steuerelemente {#ui-controls}
 
-In diesem Abschnitt werden verschiedene Optionen der Benutzeroberfläche in der Monitoring-Oberfläche beschrieben, mit denen Sie die auf der Seite angezeigten Metriken filtern können.
+In diesem Abschnitt werden verschiedene Benutzeroberflächenoptionen (UI) in der Monitoring-Benutzeroberfläche beschrieben, mit denen Sie die auf der Seite angezeigten Metriken filtern können.
 
-Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/images/icons/chevron-up.png)), um die Karte oben im Bildschirm zu erweitern oder zu schließen, die einen Überblick über die Profilanreicherungsvorgänge bietet.
+Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/images/icons/chevron-up.png)), um die Karte am oberen Bildschirmrand zu erweitern oder zu schließen, die Informationen zu den Aufträgen zur Profilanreicherung auf einen Blick anzeigt.
 
-![Bildschirmaufzeichnung, die das Benutzeroberflächensteuerelement mit dem Pfeilsymbol anzeigt.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![Bildschirmaufzeichnung, die das Pfeilsymbol „UI-Steuerelement“ anzeigt.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
-Mit dem Umschalter **[!UICONTROL Metriken und Diagramme]** können Sie die Ansicht schließen, die die neuesten Metriken anzeigt.
+Verwenden Sie den Umschalter **[!UICONTROL Metriken und Diagramme]** um die Ansicht zu schließen, die die neuesten Metriken anzeigt.
 
-![Bildschirmaufzeichnung, die die Umschaltung der Metriken und Diagramme anzeigt.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
+![Bildschirmaufzeichnung, die den Umschalter für Metriken und Diagramme anzeigt.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
-Verwenden Sie den Umschalter **[!UICONTROL Nur Fehler anzeigen]** , um nur die fehlgeschlagenen Profilanreicherungsaufträge anzuzeigen.
+Verwenden Sie den Umschalter **[!UICONTROL Nur Fehler anzeigen]**, um nur die fehlgeschlagenen Profilanreicherungsaufträge anzuzeigen.
 
-![Bildschirmaufzeichnung, die nur den Umschalter Fehler anzeigen anzeigt.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
+![Bildschirmaufzeichnung, die den Umschalter Nur Fehler anzeigen anzeigt.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial können Sie jetzt Metriken für Profilanreicherungsaufträge erfolgreich überwachen und verstehen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Mithilfe dieses Tutorials können Sie jetzt erfolgreich Metriken für Aufträge zur Profilanreicherung überwachen und verstehen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Verwandte Konten in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Registerkarte „Verwandte Konten“ im Handbuch zur Benutzeroberfläche für Kontoprofile](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Lead zur Kontoübereinstimmung in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Lead-Konto-Zuordnung in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Prädiktives Lead- und Konto-Scoring in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

@@ -103,7 +103,7 @@ Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines
 
 >[!NOTE]
 >
->Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem einem Datensatz Bezeichnungen hinzugefügt wurden, ist der neueste `etag` -Wert erforderlich, um die Bezeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzbezeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die für Änderungen in der Anfrage vorgesehen sind, wobei der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass beim PUT-Aufruf dieselben übergeordneten Entitäten wie beim GET-Aufruf beibehalten werden. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
+>Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, ist der neueste `etag` erforderlich, um die Kennzeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzkennzeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die in der Anfrage geändert werden sollen, sodass der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass der PUT-Aufruf dieselben übergeordneten Entitäten beibehält wie der GET-Aufruf. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
 
 Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 
@@ -169,7 +169,7 @@ Sie können alle zuvor angewendeten Feldkennzeichnungen vollständig entfernen, 
 
 >[!NOTE]
 >
->Sie können die Bezeichnungen eines Datensatzes vollständig entfernen, indem Sie eine leere Liste für den Parameter `labels` angeben. Es ist nicht erforderlich, dass ein Datensatz Bezeichnungen enthält.
+>Sie können die Kennzeichnungen eines Datensatzes vollständig entfernen, indem Sie eine leere Liste für den `labels` Parameter bereitstellen. Es ist nicht erforderlich, dass ein Datensatz Beschriftungen beibehält.
 
 **API-Format**
 

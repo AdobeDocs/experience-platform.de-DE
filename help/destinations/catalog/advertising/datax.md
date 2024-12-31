@@ -1,5 +1,5 @@
 ---
-title: Verbindung mit Verizon MediaYahoo DataX
+title: Verizon MediaYahoo DataX-Verbindung
 description: DataX ist eine aggregierte Infrastruktur von Verizon Media/Yahoo, die verschiedene Komponenten hostet, mit denen Verizon Media/Yahoo Daten mit externen Partnern auf sichere, automatisierte und skalierbare Weise austauschen kann.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
@@ -13,21 +13,21 @@ ht-degree: 43%
 
 ## Übersicht {#overview}
 
-[!DNL DataX] ist eine aggregierte [!DNL Verizon Media/Yahoo] Infrastruktur, die verschiedene Komponenten hostet, die es [!DNL Verizon Media/Yahoo] ermöglichen, Daten mit externen Partnern auf sichere, automatisierte und skalierbare Weise auszutauschen.
+[!DNL DataX] ist eine aggregierte [!DNL Verizon Media/Yahoo], die verschiedene Komponenten hostet, mit denen [!DNL Verizon Media/Yahoo] Daten sicher, automatisiert und skalierbar mit externen Partnern austauschen können.
 
 >[!IMPORTANT]
 >
->Diese Ziel-Connector- und Dokumentationsseite werden vom [!DNL DataX]-Team von [!DNL Verizon Media/Yahoo] erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Dieser Ziel-Connector und diese Dokumentationsseite werden vom [!DNL DataX]-Team von [!DNL Verizon Media/Yahoo] erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Voraussetzungen {#prerequisites}
 
-**MDM ID**
+**MDM-ID**
 
-Dies ist eine eindeutige Kennung in [!DNL Yahoo DataX] und ein Pflichtfeld zum Einrichten von Datenexporten an dieses Ziel. Wenn Sie diese ID nicht kennen, wenden Sie sich an Ihren [!DNL Yahoo DataX] -Kundenbetreuer.
+Dies ist eine eindeutige Kennung in [!DNL Yahoo DataX] und ein obligatorisches Feld zum Einrichten von Datenexporten an dieses Ziel. Wenn Sie diese ID nicht kennen, wenden Sie sich an Ihren [!DNL Yahoo DataX] Account Manager.
 
-**Taxonomy metadata**
+**Taxonomie-Metadaten**
 
-Die Taxonomieressource definiert eine Erweiterung über die Basis-Metadatenstruktur [!DNL DataX]
+Die Taxonomie-Ressource definiert eine Erweiterung über die [!DNL DataX]-Metadatenstruktur
 
 ```
 {
@@ -48,20 +48,20 @@ Die Taxonomieressource definiert eine Erweiterung über die Basis-Metadatenstruk
 }
 ```
 
-Weitere Informationen zu [Taxonomy-Metadaten](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) finden Sie in der Entwicklerdokumentation von [!DNL DataX] .
+Weitere Informationen zu [Taxonomie-Metadaten](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) finden Sie in der [!DNL DataX]-Entwicklerdokumentation.
 
-## Ratenbeschränkungen und Limits {#rate-limits-guardrails}
+## Ratenbeschränkungen und Leitplanken {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->Wenn Sie mehr als 100 Zielgruppen auf [!DNL Verizon Media/Yahoo DataX] aktivieren, erhalten Sie möglicherweise Fehler mit Ratenbegrenzung vom Ziel. Versuchen Sie beim Aktivieren von Zielgruppen für dieses Ziel, weniger als 100 Zielgruppen in einem Aktivierungsdatenfluss zu aktivieren. Wenn Sie weitere Segmente aktivieren müssen, erstellen Sie ein neues Ziel für dasselbe Konto.
+>Beim Aktivieren von mehr als 100 Zielgruppen für die [!DNL Verizon Media/Yahoo DataX] erhalten Sie möglicherweise Ratenbegrenzungsfehler vom Ziel. Versuchen Sie beim Aktivieren von Zielgruppen für dieses Ziel, in einem Aktivierungsdatenfluss weniger als 100 Zielgruppen zu aktivieren. Wenn Sie mehr Segmente aktivieren müssen, erstellen Sie ein neues Ziel im selben Konto.
 
-[!DNL DataX] ist durch die Quotenbegrenzungen für Taxonomie- und Zielgruppenbeiträge begrenzt, die in der [DataX-Dokumentation](https://developer.verizonmedia.com/datax/guide/rate-limits/) beschrieben sind.
+[!DNL DataX] ist gemäß den Quotenbegrenzungen für Taxonomie- und Zielgruppen-Posts, die in der (DataX[Dokumentation) beschrieben ](https://developer.verizonmedia.com/datax/guide/rate-limits/), ratenbegrenzt.
 
 
 | Fehler-Code | Fehlermeldung | Beschreibung |
 |---------|----------|---------|
-| 429 Zu viele Anfragen | Ratenlimit überschritten pro Stunde **(Limit: 100)** | Anzahl der zulässigen Anforderungen in einer Stunde pro Provider. |
+| 429 Zu viele Anfragen | Ratenlimit pro Stunde überschritten **(Limit: 100)** | Anzahl der zulässigen Anfragen in einer Stunde pro Anbieter. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Weitere Informationen zu [Taxonomy-Metadaten](https://developer.verizonmedia.com
 |---|---|---|
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Anwendungsfälle {#use-cases}
 
-[!DNL DataX] APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppen-Gruppe ansprechen möchten, die von E-Mail-Adressen in [!DNL Verizon Media] (VMG) abgeleitet wurde, und die schnell eine neue Zielgruppe erstellen und die gewünschte Zielgruppe mithilfe der nahezu Echtzeit-API von VMG übertragen können.
+[!DNL DataX] APIs sind für Werbetreibende verfügbar, die eine bestimmte Zielgruppe ansprechen möchten, die von E-Mail-Adressen in [!DNL Verizon Media] (VMG) abgeleitet wurde. Sie können schnell eine neue Zielgruppe erstellen und mithilfe der Fast-Echtzeit-API von VMG an die gewünschte Zielgruppe senden.
 
 ## Mit Ziel verbinden {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 ![Yahoo DataX-Zielkarte in der Platform-Benutzeroberfläche](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
@@ -108,7 +108,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL MDM-ID]**: Dies ist eine eindeutige Kennung in [!DNL Yahoo DataX] und ein Pflichtfeld zum Einrichten von Datenexporten an dieses Ziel. Wenn Sie diese ID nicht kennen, wenden Sie sich an Ihren [!DNL Yahoo DataX] -Kundenbetreuer.  Mit MDM-IDs können Daten nur mit bestimmten exklusiven Benutzern (z. B. Erstanbieterdaten für Advertiser) für die Verwendung eingeschränkt werden.
+* **[!UICONTROL MDM-ID]**: Dies ist eine eindeutige Kennung in [!DNL Yahoo DataX] und ein obligatorisches Feld zum Einrichten von Datenexporten an dieses Ziel. Wenn Sie diese ID nicht kennen, wenden Sie sich an Ihren [!DNL Yahoo DataX] Account Manager.  Mit MDM-IDs können Daten auf die Verwendung bei einer bestimmten Gruppe exklusiver Benutzer beschränkt werden (z. B. First-Party-Daten für Werbetreibende).
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -120,10 +120,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen zum Aktivieren von Zielgruppen für Ziele finden Sie unter [Profile und Zielgruppen für ein Ziel aktivieren](../../ui/activate-segment-streaming-destinations.md) .
+Anweisungen [ Aktivieren von Zielgruppen für Ziele finden Sie ](../../ui/activate-segment-streaming-destinations.md)Aktivieren von Profilen und Zielgruppen für ein Ziel“.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -131,4 +131,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen finden Sie in der Dokumentation zu [!DNL Yahoo/Verizon Media] [auf  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
+Weitere Informationen finden Sie in der [!DNL Yahoo/Verizon Media] [Dokumentation unter [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).

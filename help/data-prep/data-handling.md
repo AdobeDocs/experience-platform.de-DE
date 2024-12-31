@@ -78,7 +78,7 @@ Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmode
 
 >[!TIP]
 >
->Derzeit entfernt die Datumsfunktion in der Batch-Erfassung Millisekunden, wenn die Datumswerte folgendes Format aufweisen: `2024-05-05 20:39:00.005` PST. Verwenden Sie folgendes Format, um Millisekunden beizubehalten: `2024-05-05 20:39:00.005-0800`
+>Derzeit entfernt die Datumsfunktion bei der Batch-Aufnahme Millisekunden, wenn die Datumswerte in folgendem Format vorliegen: `2024-05-05 20:39:00.005` PST. Verwenden Sie dieses Format, um Millisekunden beizubehalten: `2024-05-05 20:39:00.005-0800`
 
 Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen definiert sind. Beachten Sie, dass bei den Buchstaben die Groß- und Kleinschreibung beachtet wird.
 
@@ -112,4 +112,4 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 
 ## Karten {#maps}
 
-Karten werden in [!DNL Data Prep] derzeit nicht unterstützt.
+Zuordnungen werden derzeit in [!DNL Data Prep] nicht unterstützt.

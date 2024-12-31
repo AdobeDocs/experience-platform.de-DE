@@ -12,7 +12,7 @@ ht-degree: 74%
 
 # Bearbeiten eines Schemas zum Erstellen benutzerdefinierter Widgets
 
-Um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen, müssen Sie zunächst die Echtzeit-Kundenprofilattribute identifizieren, auf denen die Widgets basieren.
+Um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen, müssen Sie zunächst die Echtzeit-Kundenprofilattribute identifizieren, auf denen die Widgets basieren werden.
 
 Dieses Handbuch enthält schrittweise Anweisungen zum Bearbeiten des Schemas Ihres Unternehmens, indem Sie Attribute auswählen, um benutzerdefinierte Dashboard-Widgets zu erstellen.
 
@@ -36,13 +36,13 @@ Bevor Sie benutzerdefinierte Widgets erstellen können, müssen Echtzeit-Kundenp
 >
 >Ihr Unternehmen kann maximal 20 Attribute auswählen.
 
-Wenn Ihr Unternehmen keine Profilattribute ausgewählt hat, wählen Sie zunächst **[!UICONTROL Konfigurieren]** in der Mitte des Bildschirms.
+Wenn Ihr Unternehmen keine Profilattribute ausgewählt hat, wählen Sie zunächst **[!UICONTROL Konfigurieren]** in der Mitte des Bildschirms aus.
 
-![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich der Widget-Bibliothek mit hervorgehobener Option &quot;Konfigurieren&quot;.](../images/customization/configure-schema.png)
+![Die Registerkarte „Benutzerdefiniert“ des Arbeitsbereichs „Widget-Bibliothek“ mit hervorgehobener Option „Konfigurieren“.](../images/customization/configure-schema.png)
 
 Wenn mindestens ein benutzerdefiniertes Attribut erstellt wurde, wählen Sie **[!UICONTROL Schema bearbeiten]** aus, um die ausgewählten Attribute anzuzeigen und weitere hinzuzufügen.
 
-![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich der Widget-Bibliothek mit hervorgehobenem Bearbeitungsschema.](../images/customization/edit-schema.png)
+![Die Registerkarte „Benutzerdefiniert“ des Arbeitsbereichs „Widget-Bibliothek“ mit hervorgehobener Option „Schema bearbeiten“.](../images/customization/edit-schema.png)
 
 ## Auswählen eines Attributs
 
@@ -57,7 +57,7 @@ Nachdem Sie die Attribute ausgewählt haben, die Sie hinzufügen möchten, wähl
 >[!WARNING]
 >Neu ausgewählte Attribute werden nach dem nächsten täglichen Schnappschuss verfügbar, wenn die Daten aktualisiert werden.
 
-![Das Dialogfeld zur Auswahl von Schemaattributen mit hervorgehobenen Attributen und Speichern](../images/customization/select-attribute.png).
+![Das Dialogfeld zur Auswahl von Schemaattributen mit hervorgehobenen Optionen „Attribute“ und „Speichern“.](../images/customization/select-attribute.png)
 
 ## Nächste Schritte
 

@@ -1,6 +1,6 @@
 ---
-title: Insight SQL anzeigen
-description: Zeigen Sie die SQL hinter Ihrem Profil, Ihrer Zielgruppe, Ihrem Ziel und Ihren benutzerdefinierten Einblicken an und führen Sie die Abfrage bei Bedarf über den Abfrage-Editor aus.
+title: SQL-Einblick anzeigen
+description: Sehen Sie sich den SQL-Code hinter Ihrem Profil, Ihrer Audience, Ihrem Ziel und Ihren benutzerdefinierten Einblicken an und führen Sie die Abfrage bei Bedarf über den Abfrage-Editor aus.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -9,54 +9,54 @@ ht-degree: 0%
 
 ---
 
-# Insight SQL anzeigen
+# SQL-Einblick anzeigen
 
-Verwenden Sie die Funktion &quot;[!UICONTROL SQL anzeigen]&quot;, um die SQL hinter Ihrem Profil, Ihrer Zielgruppe, Ihrem Ziel und Ihren benutzerdefinierten Einblicken anzuzeigen und die Abfrage auf Anfrage über den Abfrage-Editor auszuführen. Lassen Sie sich von der SQL von über 40 vorhandenen Einblicken inspirieren, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen einzigartige Einblicke aus Platform-Daten gewinnen.
+Verwenden Sie die Funktion [!UICONTROL SQL anzeigen], um die SQL hinter Ihrem Profil, Ihrer Audience, Ihrem Ziel und Ihren benutzerdefinierten Einblicken anzuzeigen und die Abfrage bei Bedarf über den Abfrage-Editor auszuführen. Nutzen Sie die Inspiration aus dem SQL-Code von über 40 vorhandenen Einblicken, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten gewinnen.
 
-## Navigieren Sie zur Dashboard-Übersicht . {#navigate-to-overview}
+## Navigieren zur Dashboard-Übersicht {#navigate-to-overview}
 
-Um Ihr ausgewähltes Dashboard zu öffnen, wählen Sie entweder **[!UICONTROL Profile]**, **[!UICONTROL Zielgruppen]** oder **[!UICONTROL Ziele]** aus der linken Navigation aus. Wählen Sie als Nächstes **[!UICONTROL Überblick]** aus den Registerkartenoptionen aus, wenn der Arbeitsbereich nicht automatisch angezeigt wird.
+Um das ausgewählte Dashboard zu öffnen, wählen Sie entweder **[!UICONTROL Profile]**, **[!UICONTROL Zielgruppen]** oder **[!UICONTROL Ziele]** aus der linken Navigationsleiste aus. Wählen Sie als Nächstes **[!UICONTROL Überblick]** auf den Registerkartenoptionen aus, wenn der Arbeitsbereich nicht automatisch angezeigt wird.
 
-Alternativ können Sie im linken Navigationsbereich die Option **[!UICONTROL Dashboards]** auswählen, gefolgt vom Namen Ihres benutzerdefinierten Dashboards. Die Übersicht über Ihr benutzerdefiniertes Dashboard wird angezeigt.
+Wählen Sie alternativ **[!UICONTROL Dashboards]** im linken Navigationsbereich aus, gefolgt vom Namen des benutzerdefinierten Dashboards. Die Übersicht über Ihr benutzerdefiniertes Dashboard wird angezeigt.
 
-![Die Experience Platform-Benutzeroberfläche mit den Markierungen [!UICONTROL Profile], [!UICONTROL Zielgruppen], [!UICONTROL Ziele] und [!UICONTROL Dashboards].](./images/view-sql/dashboard-navigation.png)
+![Die Experience Platform-Benutzeroberfläche mit [!UICONTROL Profilen], [!UICONTROL Zielgruppen], [!UICONTROL Ziele] und [!UICONTROL Dashboards] hervorgehoben.](./images/view-sql/dashboard-navigation.png)
 
 ## SQL-Umschalter anzeigen {#toggle}
 
-Ein Umschalter ist in der Übersicht der Profil-, Zielgruppen-, Ziel- und benutzerdefinierten Dashboards verfügbar, um die Funktion zu aktivieren oder zu deaktivieren.
+In der Übersicht der Profil-, Zielgruppen-, Ziel- und benutzerdefinierten Dashboards ist ein Umschalter verfügbar, um die Funktion zu aktivieren oder zu deaktivieren.
 
 >[!NOTE]
 >
 >Wenn Sie den Umschalter [!UICONTROL SQL anzeigen] aktivieren, können Sie globale Filter und Filter auf Widget-Ebene erst ändern, wenn Sie die Funktion deaktivieren.
 
-![ Der Umschalter [!UICONTROL SQL anzeigen] wurde hervorgehoben.](./images/view-sql/view-sql-toggle.png)
+![Der Umschalter [!UICONTROL SQL anzeigen] ist hervorgehoben.](./images/view-sql/view-sql-toggle.png)
 
-Aktivieren Sie den Umschalter, um den Text [!UICONTROL SQL anzeigen] für jeden einzelnen Insight anzuzeigen.
+Aktivieren Sie den Umschalter, um [!UICONTROL SQL anzeigen] bei jeder einzelnen Einsicht anzuzeigen.
 
-![Ein Einblick mit hervorgehobenem [!UICONTROL Anzeigen von SQL] ](./images/view-sql/insight-view-sql.png).
+![Ein Einblick mit hervorgehobener [!UICONTROL SQL anzeigen].](./images/view-sql/insight-view-sql.png)
 
-Wählen Sie **[!UICONTROL SQL anzeigen]** aus, um ein Dialogfeld zu öffnen, das die SQL des Widgets enthält.
+Wählen Sie **[!UICONTROL SQL anzeigen]**, um ein Dialogfeld zu öffnen, das die SQL des Widgets enthält.
 
-## SQL-Dialogfeld {#sql-dialog}
+## SQL-Dialog {#sql-dialog}
 
-Es wird ein Dialogfeld angezeigt, das den Titel des Insight und die SQL, die ihn generiert, enthält.
+Es wird ein Dialogfeld angezeigt, das den Titel der Insight und die SQL enthält, die sie generiert.
 
 >[!TIP]
 >
->Sie können die gesamte SQL-Anweisung in die Zwischenablage kopieren, indem Sie das Kopiersymbol (![Kopiersymbol) auswählen.](/help/images/icons/copy.png)) oben rechts im Dialogfeld.
+>Sie können die gesamte SQL-Anweisung in die Zwischenablage kopieren, indem Sie das Kopiersymbol (![das Kopiersymbol) auswählen.](/help/images/icons/copy.png)) oben rechts im Dialogfeld.
 
 ![Ein Insight-Dialogfeld mit hervorgehobener SQL-Anweisung.](./images/view-sql/sql-dialog.png)
 
-Wählen Sie **[!UICONTROL SQL ausführen]** aus, um den Abfrage-Editor zu öffnen, wenn die Abfrage vorausgefüllt ist.
+Wählen Sie **[!UICONTROL SQL ausführen]**, um den Abfrage-Editor zu öffnen, in dem die Abfrage vorausgefüllt ist.
 
-![Ein Insight-Dialogfeld mit hervorgehobenem [!UICONTROL Run SQL]-Symbol.](./images/view-sql/run-sql.png)
+![Ein Insight-Dialogfeld mit hervorgehobenem [!UICONTROL SQL ausführen].](./images/view-sql/run-sql.png)
 
 ## Vorhandene SQL bearbeiten {#edit-sql}
 
-Der Abfrage-Editor wird angezeigt. Sie können jetzt die Anweisung bearbeiten und Ihre Plattformdaten so abfragen, dass sie Ihren Berichterstellungsanforderungen besser entsprechen. Speichern Sie Ihre neue Abfragevorlage mit einem geeigneten Namen.
+Der Abfrage-Editor wird angezeigt. Sie können jetzt die Anweisung bearbeiten und Ihre Platform-Daten auf eine Weise abfragen, die Ihren Reporting-Anforderungen besser entspricht. Speichern Sie die neue Abfragevorlage unter einem geeigneten Namen.
 
-![Der Abfrage-Editor mit Ihrem ausgewählten Insight-SQL-Eintrag.](./images/view-sql/edit-sql.png)
+![Der Abfrage-Editor mit der ausgewählten Insight SQL vorausgefüllt.](./images/view-sql/edit-sql.png)
 
 ## Nächste Schritte
 
-Nach der Lektüre dieses Dokuments wissen Sie jetzt, wie Sie auf die SQL-Datenbank zugreifen können, um Einblicke in die Standard-Dashboards oder in ein benutzerdefiniertes Dashboard zu erhalten. Wenn Sie dies noch nicht getan haben, sollten Sie das Dokument [Real-time Customer Data Platform Insights Data Model](./data-models/cdp-insights-data-model-b2c.md) lesen. Dieses Dokument enthält Einblicke in die Anpassung von SQL-Vorlagen für Real-Time CDP-Berichte, die auf Ihre Marketing- und KPI-Anforderungen zugeschnitten sind.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie in den Standard-Dashboards oder einem benutzerdefinierten Dashboard auf SQL zugreifen können, um Erkenntnisse zu erhalten. Wenn Sie dies noch nicht getan haben, sollten Sie das [Real-time Customer Data Platform Insights-Datenmodell-Dokument lesen](./data-models/cdp-insights-data-model-b2c.md). Dieses Dokument enthält Einblicke in die Anpassung von SQL-Vorlagen für Real-Time CDP-Berichte, die auf Ihre Marketing- und KPI-Anforderungen zugeschnitten sind.

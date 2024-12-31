@@ -17,7 +17,7 @@ Beispieldaten können beim Erstellen eines Schemas für Ihren Zuordnungssatz ver
 
 ## Auflisten von Beispieldaten
 
-Sie können eine Liste aller Beispieldaten für die Zuordnung für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/samples` senden.
+Sie können eine Liste aller Beispieldaten einer Zuordnung für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/samples`-Endpunkt senden.
 
 **API-Format**
 
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Zuordnungs-Beispieldaten innerhalb Ihres Unternehmens abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden Beispieldaten einer Zuordnung in Ihrer Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

@@ -20,7 +20,7 @@ ht-degree: 65%
 * [Dashboards-Inventar](inventory.md)
 * [Standard-Dashboards](standard-dashboards.md)
 * [Herunterladen von Dashboards als PDF](download.md)
-* SQL Insights: query pro mode {#sql-insights-query-pro-mode}
+* SQL Insights: Abfrage pro Modus {#sql-insights-query-pro-mode}
    * [Übersicht](sql-insights-query-pro-mode/overview.md)
    * Data Distiller-Vorlagen {#templates}
       * [Übersicht](sql-insights-query-pro-mode/templates/overview.md)
@@ -31,7 +31,7 @@ ht-degree: 65%
    * Filter {#filters}
       * [Datumsfilter](sql-insights-query-pro-mode/filters/date-filter.md)
       * [Globaler Filter](sql-insights-query-pro-mode/filters/global-filter.md)
-   * [Durchfahren](sql-insights-query-pro-mode/drill-through.md)
+   * [Drill-Through](sql-insights-query-pro-mode/drill-through.md)
    * [Mehr anzeigen](sql-insights-query-pro-mode/view-more.md)
    * [SQL anzeigen](sql-insights-query-pro-mode/view-sql.md)
    * [Als CSV herunterladen](sql-insights-query-pro-mode/download-csv.md)
@@ -58,9 +58,9 @@ ht-degree: 65%
    * [Einverständnisanalyse](insights-use-cases/consent-analysis.md)
 * Verfügbare Datenmodelle {#data-models}
    * [Real-time Customer Data Platform Insights-Datenmodell B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Real-time Customer Data Platform Insights-Datenmodell B2C-Bearbeitung](data-models/cdp-insights-data-model-b2c.md)
+   * [Real-time Customer Data Platform Insights-Datenmodell B2C-Edition](data-models/cdp-insights-data-model-b2c.md)
 * Anwendungsintegrationen {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Abfrage-Dashboard-Datensätze](query.md)
-* [Insight SQL anzeigen](view-sql.md)
+* [SQL-Einblick anzeigen](view-sql.md)
 * [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

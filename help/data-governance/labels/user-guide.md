@@ -22,7 +22,7 @@ Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungske
 
 ## Verwalten von Kennzeichnungen {#manage-labels}
 
-Um Kennzeichnungen auf Ihre Daten anzuwenden, benötigen Sie die Berechtigung **[!UICONTROL Nutzungskennzeichnungen verwalten]** für die Verwendung in der standardmäßigen Produktions-Sandbox „prod“. Um eine benutzerdefinierte Kennzeichnung zu erstellen, müssen Sie ebenfalls über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der zutreffenden Beschriftungen. Sie können **keine** Beschriftungen löschen. Stattdessen können Sie sie aus den Datensätzen oder Feldern entfernen, auf die sie angewendet werden.
+Um Kennzeichnungen auf Ihre Daten anzuwenden, benötigen Sie die Berechtigung **[!UICONTROL Nutzungskennzeichnungen verwalten]** für die Verwendung in der standardmäßigen Produktions-Sandbox „prod“. Um eine benutzerdefinierte Kennzeichnung zu erstellen, müssen Sie ebenfalls über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste von anwendbaren Kennzeichnungen. Kennzeichnungen **nicht** werden. Stattdessen können Sie sie aus den Datensätzen oder Feldern entfernen, auf die sie angewendet werden.
 
 Weitere Informationen zum Zuweisen einer Berechtigung finden Sie im Handbuch zum [Konfigurieren von Berechtigungen](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de) oder im Abschnitt [Zugriffssteuerung – Übersicht](../../access-control/home.md). Wenn Sie keinen Zugriff auf Admin Console für Ihr Unternehmen haben, wenden Sie sich an das Admin-Team Ihres Unternehmens.
 
@@ -32,11 +32,11 @@ Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb die
 
 >[!NOTE]
 >
->Wenn Ihre Datennutzungsrichtlinien vor der Kennzeichnung Ihres Felds erstellt wurden, wird möglicherweise ein Dialogfeld für die Verletzung von Governance-Richtlinien angezeigt, wenn Sie Beschriftungen auf Ihr neues Schema anwenden. Dieses Dialogfeld zeigt an, dass die Anwendung dieser Beschriftung gegen eine vorhandene Nutzungsrichtlinie verstößt. Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
+>Wenn Ihre Datennutzungsrichtlinien erstellt wurden, bevor Sie Ihr Feld beschriftet haben, kann ein Dialogfeld für einen Verstoß gegen Governance-Richtlinien angezeigt werden, wenn Sie Kennzeichnungen auf Ihr neues Schema anwenden. Dieses Dialogfeld zeigt an, dass die Anwendung dieser Kennzeichnung gegen eine bestehende Nutzungsrichtlinie verstößt. Verwenden Sie das Datenherkunftsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie den Titel zu Ihrem Schemafeld hinzufügen können.
 >
->![Der Verstoß gegen die Data Governance-Richtlinie hat ein Dialogfeld mit einer Zusammenfassung der Verstöße und einem hervorgehobenen Datenherstellungsdiagramm erkannt.](../images/labels/policy-violation-dialog.png)
+>![Das Dialogfeld „Verletzung der Data Governance-Richtlinie erkannt“ mit Hervorhebung der Zusammenfassung der Verletzung und des Diagramms der Datenherkunft.](../images/labels/policy-violation-dialog.png)
 >
->Weitere Informationen zu Richtlinienverletzungen finden Sie in der Dokumentation zu [Verstößen gegen Datennutzungsrichtlinien](../enforcement/auto-enforcement.md#data-usage-violation) .
+>Weitere [ zu Richtlinienverletzungen finden Sie in der Dokumentation ](../enforcement/auto-enforcement.md#data-usage-violation)Verletzung von Datennutzungsrichtlinien“.
 
 Zum Verwalten der Datennutzungskennzeichnungen auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Rezept für Einzelhandelsumsätze; Data Science Workspace; beliebte Themen; Rezepte
+keywords: Experience Platform;Einzelhandelsrezept;Data Science Workspace;beliebte Themen;Rezepte
 solution: Experience Platform
-title: Schema und Datensatz für Einzelhandelsumsätze erstellen
+title: Erstellen eines Einzelhandels-Schemas und -Datensatzes
 type: Tutorial
-description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Nach Abschluss sind das Schema und die Datensätze für Einzelhandelsumsätze für Sie und Mitglieder Ihres Unternehmens auf der Experience Platform verfügbar.
+description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Nach Abschluss des Vorgangs stehen Ihnen und den Mitgliedern Ihres Unternehmens das Einzelhandelsschema und die Datensätze auf Experience Platform zur Verfügung.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -21,20 +21,20 @@ ht-degree: 41%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen Tutorials [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] erforderlich sind. Nach Abschluss sind das Schema und die Datensätze für Einzelhandelsumsätze für Sie und Mitglieder Ihres Unternehmens unter [!DNL Experience Platform] verfügbar.
+In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen [!DNL Adobe Experience Platform]-[!DNL Data Science Workspace]-Tutorials erforderlich sind. Nach Abschluss des Vorgangs stehen Ihnen und den Mitgliedern Ihres Unternehmens das Einzelhandels-Schema und die Datensätze [!DNL Experience Platform] zur Verfügung.
 
 ## Erste Schritte
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform] haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
-- Autorisierung zum Ausführen von [!DNL Experience Platform] -API-Aufrufen. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie in [!DNL Experience Platform] keinen Zugriff auf eine Organisation haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+- Autorisierung zum Ausführen [!DNL Experience Platform] API-Aufrufen. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`
    - Client-Geheimnis: `{CLIENT_SECRET}`
    - Client-Zertifikat: `{PRIVATE_KEY}`
-- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Laden Sie die für dieses und andere [!DNL Data Science Workspace]-Tutorials erforderlichen Assets aus dem öffentlichen [Adobe-Git-Repository](https://github.com/adobe/experience-platform-dsw-reference/) herunter.
-- [Python >= 2.7](https://www.python.org/downloads/) und die folgenden [!DNL Python] Pakete:
+- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Laden Sie die für dieses und andere [!DNL Data Science Workspace] Tutorials erforderlichen Assets aus dem [öffentlichen Git-Repository von Adobe herunter](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2.7](https://www.python.org/downloads/) und die folgenden [!DNL Python]:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
@@ -49,7 +49,7 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
 ### Dateien konfigurieren
 
-1. Navigieren Sie im Ressourcenpaket des Tutorials [!DNL Experience Platform] zum Verzeichnis `bootstrap` und öffnen Sie `config.yaml` mit einem entsprechenden Texteditor.
+1. Navigieren Sie innerhalb des [!DNL Experience Platform]-Ressourcenpakets des Tutorials zum `bootstrap` und öffnen Sie `config.yaml` mit einem entsprechenden Texteditor.
 2. Geben Sie unter dem Abschnitt `Enterprise` die folgenden Werte ein:
 
    ```yaml
@@ -73,9 +73,9 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
    ```
 
    - `platform_gateway`: Der Basispfad für API-Aufrufe. Ändern Sie diesen Wert nicht.
-   - `ims_token`: Ihr `{ACCESS_TOKEN}` geht hierhin.
-   - `ingest_data`: Setzen Sie für diese Anleitung den Wert auf `"True"` , um die Schemas und Datensätze für Einzelhandelsumsätze zu erstellen. Beim Wert `"False"` werden nur die Schemata erstellt.
-   - `build_recipe_artifacts`: Setzen Sie für diese Anleitung den Wert auf `"False"` , um zu verhindern, dass das Skript ein Rezeptartefakt generiert.
+   - `ims_token`: Ihr `{ACCESS_TOKEN}` geht hierher.
+   - `ingest_data`: Legen Sie für die Zwecke dieses Tutorials diesen Wert auf `"True"` fest, um die Schemata und Datensätze für den Einzelhandel zu erstellen. Beim Wert `"False"` werden nur die Schemata erstellt.
+   - `build_recipe_artifacts`: Legen Sie für die Zwecke dieses Tutorials diesen Wert auf `"False"` fest, um zu verhindern, dass das Skript ein Rezept-Artefakt generiert.
    - `kernel_type`: Der Ausführungstyp des Rezeptartefakts. Lassen Sie diesen Wert unverändert bei `Python`, wenn `build_recipe_artifacts` auf `"False"` gesetzt ist; geben Sie andernfalls den entspechenden Ausführungstyp an.
 
 4. Geben Sie unter dem Abschnitt `Titles` die folgenden Informationen für die Beispieldaten der Einzelhandelsumsätze ein; speichern und schließen Sie die Datei, nachdem Sie die Änderungen vorgenommen haben. Beispiel:
@@ -98,8 +98,8 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
 ### Bootstrap-Skript ausführen
 
-1. Öffnen Sie die Terminal-Anwendung und navigieren Sie zum Ressourcenverzeichnis des Tutorials &quot;[!DNL Experience Platform]&quot;.
-2. Legen Sie das Verzeichnis `bootstrap` als aktuellen Arbeitspfad fest und führen Sie das Skript `bootstrap.py` [!DNL Python] aus, indem Sie den folgenden Befehl eingeben:
+1. Öffnen Sie Ihre Terminal-Anwendung und navigieren Sie zum Ressourcenverzeichnis des [!DNL Experience Platform]-Tutorials.
+2. Legen Sie das `bootstrap` als aktuellen Arbeitspfad fest und führen Sie das Skript `bootstrap.py` [!DNL Python] aus, indem Sie den folgenden Befehl eingeben:
 
    ```bash
    python bootstrap.py
@@ -107,16 +107,16 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
    >[!NOTE]
    >
-   >Das Skript kann mehrere Minuten in Anspruch nehmen.
+   >Es kann mehrere Minuten dauern, bis das Skript abgeschlossen ist.
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Bootstrap-Skripts können die Ein- und Ausgabeschemas und -datensätze für Einzelhandelsumsätze auf [!DNL Experience Platform] angezeigt werden. Weiterführende Informationen finden Sie in der Anleitung zum [Anzeigen einer Vorschau von Schemadaten](./preview-schema-data.md).
+Nach erfolgreichem Abschluss des Bootstrap-Skripts können die Ein- und Ausgabeschemata und Datensätze für den Einzelhandel auf [!DNL Experience Platform] angezeigt werden. Weiterführende Informationen finden Sie in der Anleitung zum [Anzeigen einer Vorschau von Schemadaten](./preview-schema-data.md).
 
-Sie haben auch mit dem bereitgestellten Bootstrap-Skript erfolgreich Beispieldaten für Einzelhandelsumsätze in [!DNL Experience Platform] erfasst.
+Sie haben auch Beispieldaten zu Einzelhandelsumsätzen mithilfe des bereitgestellten Bootstrap-Skripts erfolgreich in [!DNL Experience Platform] aufgenommen.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
 - [Daten mit Jupyter Notebooks analysieren](../jupyterlab/analyze-your-data.md)
-   - Verwenden Sie Jupyter Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
-- [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
-   - In diesem Tutorial erfahren Sie, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] bringen, indem Sie Quelldateien in einer wichtigen Rezeptdatei verpacken.
+   - Verwenden Sie Jupyter-Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu erkunden, zu visualisieren und zu verstehen.
+- [Packen von Quelldateien in ein Rezept](./package-source-files-recipe.md)
+   - In diesem Tutorial erfahren Sie, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] importieren, indem Sie Quelldateien in eine importierbare Rezeptdatei packen.

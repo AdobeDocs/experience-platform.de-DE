@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;object lookup;api
+keywords: Experience Platform;Startseite;beliebte Themen;Katalog;Objektsuche;API
 solution: Experience Platform
 title: Nachschlagen eines Katalogobjekts
 description: Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts kennen, können Sie eine GET-Anfrage ausführen, um Details zu diesem Objekt anzuzeigen.
@@ -11,13 +11,13 @@ ht-degree: 44%
 
 ---
 
-# Nachschlagen eines Katalogobjekts
+# Suchen eines Catalog-Objekts
 
-Wenn Sie die eindeutige Kennung für ein bestimmtes [!DNL Catalog] -Objekt kennen, können Sie eine GET-Anfrage ausführen, um die Details dieses Objekts anzuzeigen.
+Wenn Sie die eindeutige Kennung für ein bestimmtes [!DNL Catalog] kennen, können Sie eine GET-Anfrage ausführen, um die Details dieses Objekts anzuzeigen.
 
 >[!NOTE]
 >
->Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, [nach Eigenschaften](filter-data.md) zu filtern und nur die Eigenschaften zurückzugeben, die Sie interessieren.
+>Beim Anzeigen bestimmter Objekte ist es dennoch Best Practice[ nach Eigenschaften zu filtern ](filter-data.md) nur die Eigenschaften zurückzugeben, die Sie interessieren.
 
 **API-Format**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie abrufen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft einen Datensatz anhand seiner Kennung ab und gibt die zugehörigen Eigenschaften `name`, `description`, `tags` und `files` zurück.
+Mit der folgenden Anfrage wird ein Datensatz anhand seiner ID abgerufen und seine `name`-, `description`-, `tags`- und `files` zurückgegeben.
 
 ```shell
 curl -X GET \
@@ -65,4 +65,4 @@ Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit den angefo
 
 >[!NOTE]
 >
->Eigenschaften, deren Werte mit dem Präfix `@` versehen sind, stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).
+>Eigenschaften, deren Werte das Präfix `@` aufweisen, stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).

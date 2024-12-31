@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Datensatz; Datensatz; Datensatz; Datensatz erstellen; Datensatz erstellen; Datensatz erstellen; Datensatz aktivieren
+keywords: Experience Platform;Startseite;beliebte Themen;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz aktivieren
 solution: Experience Platform
 title: Erstellen eines Datensatzes in der API
 description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Catalog Service-API erstellen.
@@ -11,13 +11,13 @@ ht-degree: 53%
 
 ---
 
-# Datensatz in der API erstellen
+# Erstellen eines Datensatzes in der API
 
-Um einen Datensatz mit der API [!DNL Catalog] zu erstellen, müssen Sie den Wert `$id` des Schemas [!DNL Experience Data Model] (XDM) kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anfrage an den `/datasets` -Endpunkt in der [!DNL Catalog] -API richten.
+Um einen Datensatz mit der [!DNL Catalog]-API zu erstellen, müssen Sie den `$id` des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anfrage an den `/datasets`-Endpunkt in der [!DNL Catalog]-API stellen.
 
 >[!NOTE]
 >
->In diesem Dokument wird nur die Erstellung eines Datensatzobjekts in [!DNL Catalog] behandelt. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
+>In diesem Dokument wird nur beschrieben, wie Sie ein Datensatzobjekt in [!DNL Catalog] erstellen. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
 
 **API-Format**
 
@@ -50,11 +50,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
 | `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
+| `schemaRef.contentType` | Gibt Format und Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 >[!NOTE]
 >
->In diesem Beispiel wird das Dateiformat [Apache Parquet](https://parquet.apache.org/docs/) für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Beispiel wird das [Apache Parquet](https://parquet.apache.org/docs/)-Dateiformat für die `containerFormat` -Eigenschaft verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 

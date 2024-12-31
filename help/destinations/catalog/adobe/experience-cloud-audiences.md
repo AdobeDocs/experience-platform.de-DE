@@ -1,6 +1,6 @@
 ---
 title: Experience Cloud-Zielgruppen
-description: Erfahren Sie, wie Sie Audiences von Real-time Customer Data Platform für verschiedene Experience Cloud-Apps freigeben können.
+description: Erfahren Sie, wie Sie Audiences aus Real-time Customer Data Platform für verschiedene Experience Cloud-Apps freigeben.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
@@ -11,57 +11,57 @@ ht-degree: 16%
 ---
 
 
-# Verbindung mit [!UICONTROL Experience Cloud Audiences]
+# [!UICONTROL Experience Cloud-Zielgruppen] Verbindung
 
 >[!AVAILABILITY]
 >
 > Dieses Ziel ist für Kunden von [Adobe Real-time Customer Data Platform Prime und Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
 
-Verwenden Sie dieses Ziel, um Zielgruppen von Real-Time CDP zu Audience Manager und Adobe Analytics zu aktivieren.
+Verwenden Sie dieses Ziel, um Zielgruppen von Real-Time CDP für Audience Manager und Adobe Analytics zu aktivieren.
 
-Zum Senden von Zielgruppen an Adobe Analytics benötigen Sie eine Audience Manager-Lizenz. Weitere Informationen finden Sie in der [Audience Analytics - Übersicht](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en) .
+Zum Senden von Zielgruppen an Adobe Analytics benötigen Sie eine Audience Manager-Lizenz. Weitere Informationen finden Sie in der [Audience Analytics - Übersicht](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 Um Zielgruppen an andere Adobe-Lösungen zu senden, verwenden Sie die Direktverbindungen von Real-Time CDP zu [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) und [Marketo Engage](../adobe/marketo-engage.md).
 
 >[!IMPORTANT]
 >
->Dieses Ziel ersetzt die [alte Audience-Sharing-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) von Real-time Customer Data Platform in verschiedene Experience Cloud-Lösungen.
+>Dieses Ziel ersetzt die [veraltete Audience-Sharing-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) von Real-time Customer Data Platform zu verschiedenen Experience Cloud-Lösungen.
 > 
->Wenn Sie bereits Audiences von Real-Time CDP für Audience Manager und andere Experience Cloud-Lösungen über die [alte Audience-Sharing-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) freigegeben haben, müssen Sie sich an die Kundenunterstützung wenden, um die veraltete Integration zu deaktivieren, bevor Sie dieses Ziel verwenden.
+>Wenn Sie Zielgruppen bereits von Real-Time CDP für Audience Manager und andere Experience Cloud-Lösungen über die [veraltete Integration zur Freigabe von Zielgruppen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) freigeben, müssen Sie sich an die Kundenunterstützung wenden, um die veraltete Integration zu deaktivieren, bevor Sie dieses Ziel verwenden.
 
-![Das Ziel &quot;Experience Cloud-Zielgruppen&quot;, im Zielkatalog hervorgehoben.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
+![Das Experience Cloud-Zielgruppen-Ziel, das im Zielkatalog hervorgehoben ist.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
-## Anwendungsfälle und Vorteile {#use-cases}
+## Anwendungsbeispiele und Vorteile {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Ziel [!UICONTROL Experience Cloud-Zielgruppen] verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Real-Time CDP-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das Ziel [!UICONTROL Experience Cloud-Zielgruppen] verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Real-Time CDP mit diesem Ziel bewältigen können.
 
-### Anwendungsfälle für Data Management Platform aktivieren {#dmp-use-cases}
+### Anwendungsfälle der Data Management-Plattform aktivieren {#dmp-use-cases}
 
-In Audience Manager können Sie Real-Time CDP-Zielgruppen für Anwendungsfälle der Data Management Platform verwenden, z. B.:
+Im Audience Manager können Sie Real-Time CDP-Zielgruppen für Anwendungsfälle der Data Management-Plattform verwenden, z. B.:
 
-* Hinzufügen von [Drittanbieterdaten](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) zu Ihren Segmenten;
+* Hinzufügen [Drittanbieterdaten](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) zu Ihren Segmenten
 * [Algorithmische Modellierung](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
-* Aktivieren Ihrer Zielgruppen für Cookie-basierte Ziele, die im Real-Time CDP-Zielkatalog noch nicht unterstützt werden.
+* Aktivieren Ihrer Zielgruppen für Cookie-basierte Ziele, die noch nicht im Real-Time CDP-Zielkatalog unterstützt werden.
 
 ### Granulare Steuerung exportierter Zielgruppen {#segments-control}
 
-Verwenden Sie die neue Self-Service-Zielgruppenfreigabe-Integration über das Experience Cloud-Zielgruppen-Ziel, um festzulegen, welche Zielgruppen in Audience Manager und darüber hinaus exportiert werden sollen.  Auf diese Weise können Sie bestimmen, welche Zielgruppen Sie für andere Experience Cloud-Lösungen freigeben möchten und welche Zielgruppen Sie ausschließlich in Real-Time CDP beibehalten möchten.
+Um auszuwählen, welche Zielgruppen in den Audience Manager und darüber hinaus exportiert werden sollen, verwenden Sie die neue Self-Service-Integration zur Freigabe von Zielgruppen über das Experience Cloud-Zielgruppen-Ziel.  Auf diese Weise können Sie festlegen, welche Zielgruppen Sie für andere Experience Cloud-Lösungen freigeben möchten und welche Zielgruppen Sie ausschließlich in Real-Time CDP behalten möchten.
 
-Die veraltete Zielgruppenfreigabe-Integration ermöglichte keine präzise Steuerung, welche Zielgruppen in Audience Manager und darüber hinaus exportiert werden sollten.
+Die veraltete Integration zur Freigabe von Audiences ermöglichte keine granulare Kontrolle darüber, welche Audiences in den Audience Manager und darüber hinaus exportiert werden sollten.
 
-### Freigeben von Real-Time CDP-Zielgruppen für Adobe Analytics {#share-audiences-with-analytics}
+### Freigeben von Real-Time CDP-Zielgruppen mit Adobe Analytics {#share-audiences-with-analytics}
 
-Zielgruppen, die Sie an das Experience Cloud Audiences-Ziel senden, werden nicht automatisch in Adobe Analytics angezeigt.
+Zielgruppen, die Sie an das Experience Cloud-Zielgruppen-Ziel senden, werden in Adobe Analytics nicht automatisch angezeigt.
 
-Bevor Sie Zielgruppen an Adobe Analytics senden können, müssen Sie [den Experience Cloud Identity-Dienst für Analytics und Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en) implementieren.
+Bevor Sie Zielgruppen an Adobe Analytics senden können, müssen Sie [den Experience Cloud Identity Service für Analytics und Audience Manager implementieren](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
 
 >[!IMPORTANT]
 >
->Um Zielgruppen von Real-Time CDP an Adobe Analytics über das Experience Cloud Audiences-Ziel zu senden, benötigen Sie eine Audience Manager-Lizenz.
+>Um Zielgruppen von Real-Time CDP über das Experience Cloud-Zielgruppen-Ziel an Adobe Analytics zu senden, müssen Sie über eine Audience Manager-Lizenz verfügen.
 
-### Real-Time CDP-Zielgruppen mit anderen Experience Cloud-Lösungen teilen {#share-segments-with-other-solutions}
+### Real-Time CDP-Zielgruppen für andere Experience Cloud-Lösungen freigeben {#share-segments-with-other-solutions}
 
-Sie können die Zielkarte Real-Time CDP-Zielgruppen verwenden, um Zielgruppen mit anderen Experience Cloud-Lösungen zu teilen.
+Sie können die Zielkarte Real-Time CDP-Zielgruppen verwenden, um Zielgruppen für andere Experience Cloud-Lösungen freizugeben.
 
 Adobe empfiehlt jedoch dringend die Verwendung der folgenden dedizierten Zielkarten, wenn Sie Zielgruppen für diese Lösungen freigeben möchten:
 
@@ -74,57 +74,57 @@ Adobe empfiehlt jedoch dringend die Verwendung der folgenden dedizierten Zielkar
 
 >[!IMPORTANT]
 >
-> * Sie benötigen eine Audience Manager-Lizenz, um die oben erwähnten [Anwendungsfälle der Data Management Platform](#dmp-use-cases) zu aktivieren.
-> * Sie *do* benötigen eine Audience Manager-Lizenz, um Real-Time CDP-Zielgruppen für Adobe Analytics freizugeben.
-> * Sie benötigen *keine Audience Manager-Lizenz, um Real-Time CDP-Zielgruppen für Adobe Advertising Cloud, Adobe Target, Marketo und andere Experience Cloud-Lösungen freizugeben, wie im obigen Abschnitt [ erläutert.*](#share-segments-with-other-solutions)
+> * Sie benötigen eine Audience Manager-Lizenz, um die oben genannten Anwendungsfälle [Datenverwaltungsplattform](#dmp-use-cases) zu aktivieren.
+> * Sie ** eine Audience Manager-Lizenz, um Real-Time CDP-Zielgruppen für Adobe Analytics freizugeben.
+> * Sie *keine Audience Manager* Lizenz benötigen, um Real-Time CDP-Zielgruppen für Adobe Advertising Cloud, Adobe Target, Marketo und andere Experience Cloud-Lösungen freizugeben, die im [ Abschnitt oben ](#share-segments-with-other-solutions).
 
-### Für Kunden, die die veraltete Lösung zur Freigabe von Zielgruppen verwenden
+### Für Kunden, die die alte Lösung zur Freigabe von Zielgruppen verwenden
 
-Wenn Sie bereits Audiences von Real-Time CDP für Audience Manager- und andere Experience Cloud-Lösungen über die [alte Audience-Sharing-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) freigegeben haben, müssen Sie sich an die Kundenunterstützung wenden, um die veraltete Integration zu deaktivieren.
+Wenn Sie Zielgruppen bereits von Real-Time CDP für Audience Manager und andere Experience Cloud-Lösungen über die [Legacy-Integration für die Freigabe von Zielgruppen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) freigeben, müssen Sie sich an die Kundenunterstützung wenden, um die Legacy-Integration zu deaktivieren.
 
-Die Bearbeitungszeit für die Lösung des Deprovisioning-Tickets beträgt sechs Geschäftstage oder weniger. Nachdem die vorhandene alte Integration deaktiviert wurde, können Sie mit [Erstellen einer Verbindung](#connect) über die Self-Service-Zielkarte fortfahren.
+Die Durchlaufzeit zur Lösung des Deprovisioning-Tickets beträgt maximal sechs Werktage. Nachdem die vorhandene Legacy-Integration deaktiviert wurde, können Sie über [ Selbstbedienungs-Zielkarte mit dem ](#connect) „Verbindung erstellen“ fortfahren.
 
 >[!IMPORTANT]
 >
->Der Zielgruppenexport aus Real-Time CDP in Ihre anderen Lösungen wird in der Zeit zwischen der Ticketauflösung und dem Zeitpunkt gestoppt, zu dem über die Zielkarte eine neue Verbindung hergestellt wird. Sie können diese Ausfallzeit minimieren, indem Sie die Verbindung über die Zielkarte erstellen, nachdem das Ticket geschlossen wurde.
+>Der Zielgruppenexport aus Real-Time CDP in Ihre anderen Lösungen wird in der Zeit zwischen der Ticketauflösung und dem Zeitpunkt angehalten, zu dem über die Zielkarte eine neue Verbindung hergestellt wird. Sie können diese Ausfallzeit minimieren, indem Sie die Verbindung über die Zielkarte erstellen, nachdem das Ticket geschlossen wurde.
 
-## Bekannte Einschränkungen und Hinweisen {#known-limitations}
+## Bekannte Einschränkungen und Hinweise {#known-limitations}
 
-Beachten Sie die folgenden bekannten Einschränkungen und wichtigen Hinweisen bei der Verwendung der Experience Cloud Audiences -Karte:
+Beachten Sie die folgenden bekannten Einschränkungen und wichtigen Hinweise bei der Verwendung der Experience Cloud-Zielgruppenkarte:
 
 * Derzeit wird ein einzelnes Experience Cloud-Zielgruppen-Ziel unterstützt. Der Versuch, eine zweite Zielverbindung zu konfigurieren, führt zu einem Fehler.
-* Beim Herstellen einer Verbindung mit dem Ziel sehen Sie eine Option zum [Aktivieren von Datenfluss-Warnhinweisen](../../ui/alerts.md). Die Option **Warnhinweise aktivieren ist zwar in der Benutzeroberfläche sichtbar, wird jedoch derzeit nicht unterstützt**.
-* **Unterstützung der Zielgruppen-Aufstockung**: Der erste Export in Audience Manager- oder andere Experience Cloud-Lösungen umfasst eine historische Population der Zielgruppen. Benutzer der [alten Audience-Sharing-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), die dieses Ziel konfigurieren, sollten mit einer Aufstockungsdifferenz von etwa sechs Stunden rechnen.
-* Zielgruppen aus [Zielgruppenkomposition](../../../segmentation/ui/audience-composition.md) werden nicht direkt unterstützt. Um gemischte Zielgruppen für dieses Ziel zu aktivieren, müssen Sie eine Zielgruppendefinition mithilfe von [Segment Builder](../../../segmentation/ui/segment-builder.md) erstellen, die auf Ihrer gemischten Zielgruppe basiert, und die neu erstellte Zielgruppe aktivieren.
+* Beim Herstellen einer Verbindung zum Ziel wird die Option &quot;[ aktivieren“ ](../../ui/alerts.md). Die Option **Warnhinweise aktivieren“ ist zwar in der Benutzeroberfläche sichtbar, wird aber derzeit nicht**.
+* **Unterstützung der Zielgruppen-Aufstockung**: Der erste Export in einen Audience Manager oder andere Experience Cloud-Lösungen umfasst eine Verlaufspopulation der Zielgruppen. Benutzende der [Legacy-Zielgruppenfreigabeintegration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die dieses Ziel konfigurieren, sollten mit einer Aufstockungsdifferenz von etwa sechs Stunden rechnen.
+* Audiences, die aus [Audience-Komposition](../../../segmentation/ui/audience-composition.md) stammen, werden nicht direkt unterstützt. Um zusammengesetzte Zielgruppen für dieses Ziel zu aktivieren, müssen Sie über [Segment Builder](../../../segmentation/ui/segment-builder.md) eine Zielgruppendefinition basierend auf Ihrer zusammengesetzten Zielgruppe erstellen und die neu erstellte Zielgruppe aktivieren.
 
 ### Latenz beim Aktivieren von Zielgruppen {#audience-activation-latency}
 
-Es gibt eine vierstündige Latenz zwischen dem Zeitpunkt, zu dem Zielgruppen in Real-Time CDP erstmals aktiviert werden, und dem Zeitpunkt, zu dem sie für die Verwendung in Audience Manager- und anderen Experience Cloud-Lösungen bereit sind.
+Zwischen dem Zeitpunkt, zu dem Zielgruppen in Real-Time CDP zum ersten Mal aktiviert werden, und dem Zeitpunkt, zu dem sie für die Verwendung in Audience Manager- und anderen Experience Cloud-Lösungen bereit sind, liegt eine Latenz von vier Stunden.
 
-Es kann bis zu 24 Stunden dauern, bis Zielgruppen im Audience Manager für alle Anwendungsfälle vollständig verfügbar sind. Es kann bis zu 48 Stunden dauern, bis Zielgruppen aus Experience Cloud-Zielgruppen in Audience Manager-Berichten angezeigt werden.
+Es kann bis zu 24 Stunden dauern, bis Zielgruppen in Audience Manager für alle Anwendungsfälle vollständig verfügbar sind. Es kann bis zu 48 Stunden dauern, bis Zielgruppen aus Experience Cloud-Zielgruppen in Audience Manager-Berichten angezeigt werden.
 
-Metadaten wie Zielgruppennamen sind innerhalb von Minuten nach der Einrichtung des Exports für das Experience Cloud-Zielgruppen-Ziel im Audience Manager verfügbar.
+Metadaten wie Zielgruppennamen sind im Audience Manager innerhalb von Minuten nach der Einrichtung des Exports für das Experience Cloud-Zielgruppen-Ziel verfügbar.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die Profile, die in das Ziel [!UICONTROL Experience Cloud Audiences] exportiert werden, werden den in der folgenden Tabelle beschriebenen Identitäten zugeordnet. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+Die Profile, die an das Ziel [!UICONTROL Experience Cloud-Zielgruppen] exportiert werden, werden den in der folgenden Tabelle beschriebenen Identitäten zugeordnet. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument zu [ECID](/help/identity-service/features/ecid.md) . |
-| GAID | GOOGLE ADVERTISING ID | In Real-Time CDP erfasste Profile mit der primären Kennung Google Advertising ID (GAID) können an dieses Ziel exportiert werden. |
-| IDFA | Apple ID für Advertiser | In Real-Time CDP erfasste Profile mit der Hauptidentität Apple ID for Advertisers (IDFA) können an dieses Ziel exportiert werden. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | In Real-Time CDP erfasste Profile mit einer primären Identität von Hash-E-Mail-Adressen können an dieses Ziel exportiert werden. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
+| GAID | GOOGLE ADVERTISING ID | Profile, die in Real-Time CDP mit der Hauptidentität Google Advertising ID (GAID) aufgenommen werden, können an dieses Ziel exportiert werden. |
+| IDFA | Apple-ID für Werbetreibende | Profile, die in Real-Time CDP mit der Hauptidentität Apple ID for Advertisers (IDFA) aufgenommen werden, können an dieses Ziel exportiert werden. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Profile, die in Real-Time CDP mit der primären Identität einer gehashten E-Mail-Adresse aufgenommen werden, können an dieses Ziel exportiert werden. |
 
 {style="table-layout:auto"}
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welcher Audience-Typ Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Art von Zielgruppe Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -135,8 +135,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe, die von den im obigen Abschnitt aufgelisteten Identitäten abgeleitet sind. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Real-Time CDP basierend auf einer Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe, die aus den im obigen Abschnitt aufgelisteten Identitäten abgeleitet wurden. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Real-Time CDP auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -144,21 +144,21 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Einrichten]** in der Zielkartenansicht im Katalog und dann **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Einrichten]** in der Ansicht der Zielkarte im Katalog und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 
-![Ansicht der Option Mit Ziel verbinden für das Experience Cloud Audiences-Ziel.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
+![Ansicht der Option Mit Ziel verbinden für das Experience Cloud-Zielgruppen-Ziel.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Konfigurieren Sie den neuen Zielbildschirm mit den erforderlichen und optionalen Einstellungen für die Verbindung mit dem Experience Cloud-Zielgruppen-Ziel.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
+![Bildschirm Neues Ziel konfigurieren mit den erforderlichen und optionalen Einstellungen für die Verbindung mit dem Experience Cloud-Zielgruppen-Ziel.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -167,37 +167,37 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für das Streaming von Zielgruppenexport-Zielen](/help/destinations/ui/activate-segment-streaming-destinations.md) . Für dieses Ziel ist kein [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) erforderlich und es ist kein [Planungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) verfügbar.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie unter „Aktivieren von Profilen ](/help/destinations/ui/activate-segment-streaming-destinations.md) Zielgruppen für Streaming-Zielgruppenexportziele“. Für [ Ziel ist ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)Zuordnungsschritt) erforderlich und kein [Planungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) verfügbar.
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Um einen erfolgreichen Datenexport zu validieren, können Sie überprüfen, ob Ihre Zielgruppen diese erfolgreich zu Ihrer gewünschten Experience Cloud-Lösung geführt haben.
+Um einen erfolgreichen Datenexport zu validieren, können Sie überprüfen, ob Ihre Zielgruppen erfolgreich zu Ihrer gewünschten Experience Cloud-Lösung gelangt sind.
 
-### Daten in Audience Manager überprüfen
+### Validieren von Daten im Audience Manager
 
-Ihre Real-Time CDP-Zielgruppen werden in Audience Manager als [Signale](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits) und [Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments) angezeigt. Sie können in Audience Manager überprüfen, ob die Daten wie in den Dokumentationslinks oben beschrieben angezeigt wurden.
+Ihre Real-Time CDP-Zielgruppen werden im Audience Manager [Signale](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits) und [Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). Sie können im Audience Manager überprüfen, ob die Daten wie unter den obigen Dokumentations-Links beschrieben angezeigt wurden.
 
-Segmentnamen beginnen in Audience Manager 15 Minuten nach dem Versand der Zielgruppen aus Real-Time CDP mit dem Ausfüllen.
+Segmentnamen werden 15 Minuten, nachdem die Zielgruppen aus Real-Time CDP gesendet wurden, im Audience Manager angezeigt.
 
-Die Segmentpopulation fließt innerhalb von 6 Stunden nach dem Versand aus Real-Time CDP in den Audience Manager und wird alle 24 Stunden im Audience Manager aktualisiert.
+Die Segmentpopulation beginnt innerhalb von 6 Stunden nach dem Versand aus Real-Time CDP in den Audience Manager zu fließen und wird im Audience Manager alle 24 Stunden aktualisiert.
 
-Die gesamte Population wird nach 72 Stunden im Audience Manager sichtbar sein und die Populationen fließen weiter in den Audience Manager, es sei denn, die Zielgruppe wird aus dem Ziel in Real-Time CDP entfernt.
+Die gesamte Population ist nach 72 Stunden im Audience Manager sichtbar und die Populationen fließen weiterhin in den Audience Manager, es sei denn, die Zielgruppe wurde aus dem Ziel in Real-Time CDP entfernt.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Real-Time CDP]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-Data Governance in Real-Time CDP wird sowohl durch [Datennutzungsbezeichnungen](/help/data-governance/labels/reference.md) als auch durch Marketing-Aktionen durchgesetzt.
-Datennutzungsbezeichnungen werden an Anwendungen übertragen, Marketing-Aktionen jedoch nicht. Das bedeutet, dass Zielgruppen aus Real-Time CDP nach dem landen im Audience Manager an alle verfügbaren Ziele exportiert werden können. In Audience Manager können Sie [Datenexport-Steuerelemente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) verwenden, um den Export von Zielgruppen an bestimmte Ziele zu verhindern.
+Data Governance in Real-Time CDP wird sowohl durch [Datennutzungskennzeichnungen“ als auch durch ](/help/data-governance/labels/reference.md) erzwungen.
+Datennutzungskennzeichnungen werden an Programme übertragen, Marketing-Aktionen jedoch nicht. Dies bedeutet, dass Zielgruppen aus Real-Time CDP nach ihrer Landung in der Audience Manager an alle verfügbaren Ziele exportiert werden können. Im Audience Manager können Sie [Datenexportsteuerelemente) verwenden, ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) Zielgruppen vom Export an bestimmte Ziele auszuschließen.
 
-Mit der Marketing-Aktion [!DNL HIPAA] markierte Zielgruppen werden nicht von Real-Time CDP an Audience Manager gesendet.
+Zielgruppen, die mit der [!DNL HIPAA] Marketing-Aktion markiert sind, werden nicht von Real-Time CDP an den Audience Manager gesendet.
 
-### Berechtigungsverwaltung in Audience Manager
+### Berechtigungsverwaltung im Audience Manager
 
-Zielgruppen und Eigenschaften in Audience Manager unterliegen [rollenbasierten Zugriffskontrollen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC).
+Zielgruppen und Eigenschaften im Audience Manager unterliegen [rollenbasierten Zugriffssteuerung](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC).
 
-Aus Real-Time CDP exportierte Zielgruppen werden einer bestimmten Datenquelle im Audience Manager **[!UICONTROL Experience Platform-Segmente]** zugewiesen.
+Aus Real-Time CDP exportierte Zielgruppen werden einer bestimmten Datenquelle im Audience Manager **[!UICONTROL Experience Platform-Segmente zugewiesen]**.
 
-Um nur bestimmten Benutzern Zugriff auf die Zielgruppen zu gewähren, verwenden Sie [rollenbasierte Zugriffskontrollen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) , um den Benutzerzugriff auf die in Real-Time CDP-Zielgruppen erstellten Zielgruppen und Eigenschaften zu konfigurieren.
+Um nur bestimmten Benutzenden den Zugriff auf die Zielgruppen zu gewähren, konfigurieren Sie mit [Rollenbasierten Zugriffssteuerungen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) den Benutzerzugriff auf die Zielgruppen und Eigenschaften, die aus Real-Time CDP-Zielgruppen erstellt wurden.

@@ -13,8 +13,8 @@ ht-degree: 82%
 
 # Einheitliche Tags{#administrative-tags}
 
-* [Übersicht über Unified Tags](overview.md)
-* Unified Tags API {#api}
+* [Übersicht über einheitliche Tags](overview.md)
+* API-{#api} für einheitliche Tags
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Ordner](api/folders.md)

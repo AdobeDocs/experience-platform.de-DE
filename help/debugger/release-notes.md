@@ -17,7 +17,7 @@ ht-degree: 98%
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Es wurde ein Problem behoben, bei dem der Debugger zu empfindlich gegenüber allen CSP-Fehlern war
+* Es wurde ein Problem behoben, bei dem der Debugger zu empfindlich auf alle CSP-Fehler reagierte
 
 ## Version 1.6.1 – 25. Juli 2024
 

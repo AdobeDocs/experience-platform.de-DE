@@ -9,87 +9,87 @@ ht-degree: 0%
 
 ---
 
-# Ansicht &quot;Adobe Analytics Events&quot;in &quot;Assurance
+# Adobe Analytics-Ereignisansicht in Assurance
 
-Analytics-Ereignisse bieten Benutzern, die ihre Adobe Analytics-Implementierung debuggen und validieren, eine umfassendere Ansicht der SDK-Ereignisse. Die Ansicht zeigt Ereignisse, die vom [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) an Adobe Analytics gesendet werden, sowie das [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). Die Ansicht verfügt auch über ein Detailbedienfeld, das Kontext zur Verarbeitung des Ereignisses durch das Client-SDK und die Upstream-Dienste bietet, nachdem es das Gerät verlassen hat.
+Analytics Events bietet eine umfassendere Ansicht von SDK Events für Anwender, die ihre Adobe Analytics-Implementierung debuggen und validieren. In der Ansicht werden Ereignisse angezeigt, die von der [Adobe Experience Platform Edge Network SDK ](https://developer.adobe.com/client-sdks/edge/edge-network/) der [Adobe Experience Platform Mobile SDK an Adobe Analytics gesendet ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). Die Ansicht enthält auch ein Bedienfeld Details , das Kontext dazu bietet, wie das Ereignis von der Client-SDK und den Upstream-Services verarbeitet wurde, nachdem es das Gerät verlassen hat.
 
 ## Erste Schritte
 
-Führen Sie die folgenden Schritte aus, um diese Ansicht zu verwenden:
+Um diese Ansicht zu verwenden, führen Sie die folgenden Schritte aus:
 
 1. [Einrichten von Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
-2. [Erstellen und Verbinden mit einer Zuverlässigkeitssitzung](../tutorials/using-assurance.md).
-3. Wählen Sie in der Assurance-Benutzeroberfläche im linken Navigationsmenü **Startseite** die Option **Analytics-Ereignisse** aus. Wenn diese Option nicht angezeigt wird, wählen Sie unten links im Fenster die Option **Konfigurieren**, fügen Sie die **Analytics-Ereignisse** hinzu und wählen Sie **Speichern** aus.
+2. [Erstellen einer Assurance-Sitzung und Herstellen einer Verbindung zu ihr](../tutorials/using-assurance.md).
+3. Wählen Sie in der Assurance-Benutzeroberfläche im linken **(**) die Option **Analytics-Ereignisse**. Wenn diese Option nicht angezeigt wird, wählen Sie **Konfigurieren** unten links im Fenster aus, fügen Sie die **Analytics-Ereignisse** hinzu und klicken Sie auf **Speichern**.
 
 ## Analytics Edge-Ansicht
 
-Verwenden Sie die Analytics Edge-Ansicht, wenn Sie die mobilen Erweiterungen **Edge Network** oder **Edge Bridge** verwenden. Diese Ansicht wird aktiviert, wenn der Umschalter &quot;Analytics-Edge-Ansicht&quot;oben rechts aktiviert ist und die über das Edge-Netzwerk gesendeten Analytics-Ereignisse in Ihrer aktuellen Sitzung anzeigt. Dies umfasst alle Ereignisse, die von der Lifecycle-Erweiterung, der Edge-Erweiterung und/oder der Edge Bridge-Erweiterung ausgelöst wurden.
+Verwenden Sie die Ansicht „Analytics Edge&quot;, wenn Sie die Erweiterungen **Edge Network** oder **Edge Bridge** Mobile verwenden. Diese Ansicht wird aktiviert, wenn oben rechts der Umschalter „Analytics Edge View“ aktiviert wird, der die über das Edge-Netzwerk gesendeten Analytics-Ereignisse in Ihrer aktuellen Sitzung anzeigt. Dazu gehören alle Ereignisse, die von der Lebenszykluserweiterung, der Edge-Erweiterung und/oder der Edge Bridge-Erweiterung ausgelöst wurden.
 
-![Ein Bild, das einen Umschalter anzeigt, der zur Analytics-Edge-Ansicht wechselte.](./images/adobe-analytics/edge-analytics-view-toggle.png)
+![Ein Bild, das einen Umschalter anzeigt, der zur Edge-Ansicht von Analytics gewechselt ist.](./images/adobe-analytics/edge-analytics-view-toggle.png)
 
-Die Analytics Edge-Ansicht enthält Informationen zu Analytics-bezogenen Edge-Ereignissen und Lebenszyklusereignissen, die vom Client gesendet werden. Durch die Auswahl eines Ereignisses in der Liste zeigt das Bedienfeld mit der Detailansicht des Ereignisses auf der rechten Seite die Ereignisse an, die vom Client SDK und vom Upstream-Dienst verarbeitet wurden, nachdem sie das Gerät verlassen haben. Auf diese Weise können Sie die Ereigniskette, die sich aus einem -Aufruf ergab, einfach anzeigen.
+Die Ansicht Analytics-Edge enthält Informationen zu Analytics-bezogenen Edge-Ereignissen und Lebenszyklus-Ereignissen, die vom Client gesendet werden. Wenn Sie ein Ereignis in der Liste auswählen, werden im Bereich für die Ereignisdetailansicht auf der rechten Seite die Ereignisse angezeigt, die von der Client-SDK und vom Upstream-Service verarbeitet wurden, nachdem sie das Gerät verlassen haben. Auf diese Weise können Sie die Kette von Ereignissen, die aus einem Aufruf resultierten, einfach anzeigen.
 
-![Ein Bild, das verschiedene Komponenten in der Analytics Edge-Ansicht für Edge Bridge zeigt.](./images/adobe-analytics/edgebridge-analytics-events.png)
+![Abbildung mit verschiedenen Komponenten in der Analytics-Edge-Ansicht für das Edge Bridge-Szenario.](./images/adobe-analytics/edgebridge-analytics-events.png)
 
-Das Ereignis **Nachbearbeitete Daten** in der Liste bestätigt, dass die Daten erfolgreich verarbeitet und an die Adobe Analytics gesendet wurden. Wenn dieses Ereignis oder verarbeitete Daten fehlen, können Benutzer jedes Ereignis in der Liste erweitern, um detaillierte Debugging-Informationen anzuzeigen.
+Das **Nachbearbeitungs-Daten**-Ereignis in der Liste bestätigt, dass die Daten erfolgreich verarbeitet und an Adobe Analytics gesendet wurden. Wenn dieses Ereignis oder verarbeitete Daten fehlen, können Benutzer jedes Ereignis in der Liste erweitern, um detaillierte Debugging-Informationen anzuzeigen.
 
 ### Analytics Edge-Ereignisdetailansicht
 
-Für ein Edge-Anfrageereignis oder ein Analytics-Verfolgungsereignis enthält die Detailansicht die folgenden Informationen:
+Für ein Edge-Anfrageereignis oder ein Analytics-Tracking-Ereignis enthält die Detailansicht die folgenden Informationen:
 
-* Ereignisdetails: Ein Ursprungs-SDK-Edge-Anforderungsereignis.
-* Edge Bridge-Anfrage: Ein Ereignis, das ausschließlich für den Edge Bridge Extension-Workflow vorgesehen ist.
-* Datastream: Ein Ereignis, das für den Datastream für diese Sitzung dargestellt wird.
-* Edge-Treffer erhalten: Stellt den von Edge erhaltenen Treffer dar.
-* Edge-Trefferverarbeitung: Stellt den in Edge verarbeiteten Treffer dar.
-* Analytics-Treffer: Stellt den von Analytics erhaltenen Treffer dar.
-* Analytics-Zuordnung: Stellt den Status der Datenzuordnung in Analytics dar.
+* Ereignisdetails: Ein SDK-Edge-Anforderungsereignis, das ausgelöst wird.
+* Edge Bridge-Anfrage: Ein Ereignis, das ausschließlich für den Workflow der Edge Bridge-Erweiterung bestimmt ist.
+* Datenstrom: Ein Ereignis, das für den Datenstrom für diese Sitzung dargestellt wird.
+* Edge-Treffer erhalten: Stellt den von Edge empfangenen Treffer dar.
+* Edge-Treffer verarbeitet: Stellt den in Edge verarbeiteten Treffer dar.
+* Analytics-Treffer: Stellt den von Analytics empfangenen Treffer dar.
+* Analytics-Zuordnung: Stellt den Datenzuordnungsstatus in Analytics dar.
 * Analytics Responsed: Der Antwortstatus von Analytics.
-* Nachbearbeitungs-Daten: Informationen zu dem Ereignis, das die Zuordnung von Vars, eVars und Props enthält.
+* Nachverarbeitungsdaten: Informationen zum Ereignis, das die Zuordnung von eVars, eVars und Props enthält.
 
-### Analytics Edge-Validierung
+### Validierung von Analytics Edge
 
-Die Analytics Edge-Validierungsansicht ermöglicht es Ihnen, die Ergebnisse von Überprüfungsskripten im Zusammenhang mit der Analytics Edge-Sitzung einfach anzuzeigen. Fehler, die von Validatoren angezeigt werden, können Links zu den Stellen enthalten, an denen sie korrigiert werden sollen, oder Ereignisse anzeigen, die einen Fehlerstatus aufweisen.
+Mit der Validierungsansicht von Analytics Edge können Sie die Ergebnisse von Validierungsskripten im Zusammenhang mit einer Analytics Edge-Sitzung einfach anzeigen. Fehler, die von Validatoren angezeigt werden, können Links zu enthalten, in denen sie behoben werden sollten, oder Ereignisse mit Fehlerstatus anzeigen.
 
-![Ein Bild, das die Registerkarte &quot;Validatoren&quot;in der Analytics Edge-Ansicht anzeigt.](./images/adobe-analytics/edge-analytics-validation-view.png)
+![Ein Bild, das die Registerkarte „Validatoren“ in der Ansicht „Analytics Edge&quot; anzeigt.](./images/adobe-analytics/edge-analytics-validation-view.png)
 
 ## Analytics-Ereignisansicht
 
-Verwenden Sie die Analytics-Ereignisansicht , wenn Sie die mobile Erweiterung **Adobe Analytics** verwenden. In dieser Ansicht können Sie mühelos Analytics-Ereignisse sehen, die von Ihrem verbundenen Client gesendet wurden, einschließlich Verfolgungsaktion, Status verfolgen und Lebenszyklusereignissen. Diese Ansicht ist aktiv, wenn der Umschalter &quot;Analytics Edge-Ansicht&quot;oben rechts deaktiviert ist.
+Verwenden Sie die Analytics-Ereignisansicht, wenn Sie die Erweiterung **Adobe Analytics** Mobile verwenden. In dieser Ansicht können Sie ganz einfach Analytics-Ereignisse anzeigen, die von Ihrem verbundenen Client gesendet wurden, einschließlich „Aktion verfolgen“, „Status verfolgen“ und „Lebenszyklus-Ereignisse“. Diese Ansicht ist aktiv, wenn der Umschalter „Analytics Edge-Ansicht“ oben rechts deaktiviert ist.
 
-![Ein Bild, das einen Umschalter anzeigt, der zur Analytics-Ansicht wechselte.](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
+![Ein Bild, das einen Umschalter anzeigt, der zur Analytics-Ansicht gewechselt ist.](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
 
-Durch Auswahl eines der Analytics-Ereignisse in der Ereignistabelle können Details zur Verarbeitung des Ereignisses im rechten Bereich angezeigt werden.
+Durch Auswahl eines der Analytics-Ereignisse in der Ereignistabelle können Details zur Verarbeitung des Ereignisses im rechten Bedienfeld angezeigt werden.
 
-![Ein Bild, das verschiedene Komponenten in der Analytics-Ereignisansicht darstellt.](./images/adobe-analytics/analytics-events.png)
+![Ein Bild, das verschiedene Komponenten in der Ansicht „Analytics-Ereignisse“ zeigt.](./images/adobe-analytics/analytics-events.png)
 
-### Status &quot;Nachbearbeitet&quot;
+### Status „Nachbearbeitet“
 
-Nachdem das SDK eine Netzwerkanforderung mit Adobe Analytics gestellt hat, wird Ihnen der Status angezeigt, ob Assurance die Nachbearbeitungsinformationen für die Adobe Analytics-Anfrage abrufen konnte. Die Ansicht &quot;Analytics-Ereignisse&quot;muss aktiv bleiben, während der Status der Nachbearbeitung aktiv ist, nachdem die Anfrage ausgelöst wurde.
+Nachdem der SDK eine Netzwerkanfrage mit Adobe Analytics gestellt hat, werden Sie über den Status informiert, ob Assurance die Nachbearbeitungsinformationen für die Adobe Analytics-Anfrage abrufen konnte. Die Ansicht „Analytics-Ereignisse“ muss aktiv bleiben, während der Nachbearbeitungsstatus nach dem Auslösen der Anfrage aktiv ist.
 
-Beachten Sie, dass der angemeldete Benutzer zum Abrufen von Nachbearbeitungs-Informationen Zugriff auf die entsprechende Report Suite haben muss.
+Beachten Sie, dass der angemeldete Benutzer Zugriff auf die entsprechende Report Suite haben muss, um Nachbearbeitungs-Informationen abzurufen.
 
 | Status | Beschreibung |
 | :----- | :---------- |
-| `Queued` | Die Netzwerkanforderung ruft die Nachbearbeitungsinformationen ab. |
-| `Processed` | Die Netzwerkanforderung war erfolgreich, und die Nachbearbeitungsinformationen werden empfangen. |
-| `Delayed` | Die maximale Anzahl von Anfragen, die erneut versucht haben, die Nachbearbeitungs-Informationen abzurufen, wurde überschritten. |
-| `Error` | Ein Fehler führte dazu, dass die Netzwerkanforderung fehlschlug. Weitere Informationen zum Fehler werden in der Ansicht &quot;Ereignisdetails&quot;angezeigt. |
-| `Unauthorized` | Der Benutzer hat keinen Zugriff auf die Adobe Analytics Report Suite. |
-| `Unavailable` | Die Adobe Analytics-Anfrage weist kein entsprechendes `AnalyticsResponse` -Ereignis auf. |
-| `No Debug Flag` | Die aktuelle Adobe Analytics- oder Assurance-SDK-Version unterstützt die Analytics-Debugging-Funktion möglicherweise nicht. Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting.md). |
-| `Expired` | Das Ereignis `AnalyticsTrack` oder `LifecycleStart` ist älter als 24 Stunden. |
+| `Queued` | Die Netzwerkanfrage ruft die Nachverarbeitungsinformationen ab. |
+| `Processed` | Die Netzwerkanfrage war erfolgreich, und die Nachverarbeitungsinformationen werden empfangen. |
+| `Delayed` | Die maximale Anzahl der erneuten Anfragen zum Abrufen der Nachbearbeitungs-Informationen wurde überschritten. |
+| `Error` | Ein Fehler führte dazu, dass die Netzwerkanfrage fehlschlug. Weitere Informationen zum Fehler finden Sie in der Ansicht Ereignisdetails . |
+| `Unauthorized` | Die Benutzenden haben keinen Zugriff auf die Adobe Analytics Report Suite. |
+| `Unavailable` | Die Adobe Analytics-Anfrage hat kein entsprechendes `AnalyticsResponse`. |
+| `No Debug Flag` | Die aktuelle Adobe Analytics- oder Assurance SDK-Version unterstützt die Analytics-Debugging-Funktion möglicherweise nicht. Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting.md). |
+| `Expired` | Das `AnalyticsTrack` oder `LifecycleStart` Ereignis ist älter als 24 Stunden. |
 
-### Ansicht mit Ereignisdetails
+### Ansicht „Ereignisdetails“
 
-Für ein Analytics-Verfolgungsereignis enthält die Detailansicht die folgenden Teile:
+Für ein Analytics-Tracking-Ereignis enthält die Detailansicht die folgenden Teile:
 
-* Ein Analytics-Anfrageereignis vom Typ &quot;SDK&quot;.
+* Ein von SDK Analytics stammendes Anfrageereignis.
 * Meta- und Kontextdaten aus der Anfrage, z. B. Report Suite-ID, SDK-Erweiterungsversionen und Kontextdaten.
-* Nachbearbeitete Informationen zum Analytics-Ereignis, das die Zuordnung von Vars, eVars und Props enthält.
+* Nachverarbeitete Informationen zum Analytics-Ereignis, das die Zuordnung von eVars, eVars und Props enthält.
 
 ### Validierung der Analytics-Ansicht
 
-Die Überprüfungsansicht ermöglicht es Ihnen, die Ergebnisse von Überprüfungsskripten im Zusammenhang mit Analytics einfach anzuzeigen. Fehler, die von Validatoren angezeigt werden, können Links zu den Stellen enthalten, an denen sie korrigiert werden sollen, oder Ereignisse anzeigen, die einen Fehlerstatus aufweisen.
+Die Validierungsansicht ermöglicht es Ihnen, die Ergebnisse der Validierungsskripte im Zusammenhang mit Analytics einfach anzuzeigen. Fehler, die von Validatoren angezeigt werden, können Links zu enthalten, in denen sie behoben werden sollten, oder Ereignisse mit Fehlerstatus anzeigen.
 
-![Ein Bild, das die Registerkarte &quot;Validatoren&quot;in der Analytics-Ansicht anzeigt.](./images/adobe-analytics/analytics-validation-view.png)
+![Ein Bild, das die Registerkarte „Validatoren“ in der Analytics-Ansicht anzeigt.](./images/adobe-analytics/analytics-validation-view.png)

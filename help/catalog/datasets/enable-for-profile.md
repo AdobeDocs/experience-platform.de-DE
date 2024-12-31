@@ -2,7 +2,7 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Datensatz aktivieren
 title: Aktivieren eines Datensatzes für Profil und Identity Service mithilfe von APIs
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
+description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit dem Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
 source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
@@ -19,7 +19,7 @@ In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes für die Ve
    - [Erstellen eines neuen Datensatzes](#create-a-dataset-enabled-for-profile-and-identity)
    - [Konfigurieren eines vorhandenen Datensatzes](#configure-an-existing-dataset)
 1. [Aufnehmen von Daten in den Datensatz](#ingest-data-into-the-dataset)
-1. [Datenaufnahme nach Echtzeit-Kundenprofil bestätigen](#confirm-data-ingest-by-real-time-customer-profile)
+1. [Bestätigen der Datenaufnahme durch das Echtzeit-Kundenprofil](#confirm-data-ingest-by-real-time-customer-profile)
 1. [Bestätigen der Datenaufnahme durch Identity Service](#confirm-data-ingest-by-identity-service)
 
 ## Erste Schritte
@@ -51,7 +51,7 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 
 ## Konfigurieren eines für Profil und Identität aktivierten Datensatzes {#create-a-dataset-enabled-for-profile-and-identity}
 
-Sie können einen Datensatz für Echtzeit-Kundenprofil und Identity Service sofort nach der Erstellung oder zu einem beliebigen Zeitpunkt nach der Erstellung des Datensatzes aktivieren. Wenn Sie einen bereits erstellten Datensatz aktivieren möchten, folgen Sie den weiter unten in diesem Dokument beschriebenen Schritten zum [Konfigurieren eines vorhandenen Datensatzes](#configure-an-existing-dataset).
+Sie können einen Datensatz für das Echtzeit-Kundenprofil und Identity Service sofort nach der Erstellung oder zu einem beliebigen Zeitpunkt nach der Erstellung des Datensatzes aktivieren. Wenn Sie einen bereits erstellten Datensatz aktivieren möchten, folgen Sie den weiter unten in diesem Dokument beschriebenen Schritten zum [Konfigurieren eines vorhandenen Datensatzes](#configure-an-existing-dataset).
 
 >[!NOTE]
 >

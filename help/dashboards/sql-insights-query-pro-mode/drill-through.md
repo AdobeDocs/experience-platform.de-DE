@@ -1,65 +1,66 @@
 ---
-title: Query Pro Mode-Drilldown
-description: Erfahren Sie, wie Sie von einem beliebigen Diagramm zu einem neuen Dashboard navigieren, um Ihre Daten mithilfe des Drillthrough-Verfahrens zu untersuchen.
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+title: Query Pro-Modus - Drill-Through
+description: Erfahren Sie, wie Sie von einem beliebigen Diagramm zu einem neuen Dashboard navigieren, um Ihre Daten mithilfe von Drill-Through zu untersuchen.
+exl-id: d38550ba-1c56-4b6b-bf96-f21da232ba34
+source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
 
-# Durchfahren {#drill-through}
+# Drill-Through {#drill-through}
 
-Mithilfe von Drillthroughs können Sie mehrschichtige Datenanalysen durchführen, indem Sie einfach von einem beliebigen Diagramm zu einem neuen Dashboard navigieren. Diese Funktion erleichtert den Übergang von allgemeinen Übersichten zu ausführlichen Berichten bei der Untersuchung von Trends, Kundenverhalten, Betriebsindikatoren und mehr und stellt sicher, dass Sie stets über den benötigten Kontext verfügen.
+Drill-Throughs erleichtern die mehrschichtige Datenanalyse, indem sie die Navigation von einem beliebigen Diagramm zu einem neuen Dashboard erleichtern. Diese Funktion erleichtert den Übergang von allgemeinen Übersichten zu detaillierten Berichten bei der Untersuchung von Trends, Kundenverhalten, operativen Indikatoren und mehr. So wird sichergestellt, dass Sie immer über den benötigten Kontext verfügen.
 
-Das System stellt sicher, dass die Analyse, mit der Sie beginnen, nahtlos während des gesamten Drilldown-Erlebnisses fortgesetzt wird, indem globale Filter und Datumsbereichsfilter automatisch von den Quell-Dashboards an die Ziel-Dashboards übergeben werden. Um die Navigation zwischen verschiedenen Ebenen der Studie zu vereinfachen, ermöglicht das System mehrstufige Drillthroughs.
+Das System stellt sicher, dass die von Ihnen begonnene Analyse nahtlos über das gesamte Erlebnis hinweg fortgesetzt wird, indem globale Filter und Datumsbereichsfilter automatisch von den Quell-Dashboards an die Ziel-Dashboards übergeben werden. Um die Navigation zwischen verschiedenen Ebenen der Studie zu erleichtern, ermöglicht das System mehrstufige Drill-Throughs.
 
-## Erstellen eines Drilldown-Verfahrens {#create-drill-through}
+## Erstellen eines Drill-Throughs {#create-drill-through}
 
-Um einen Drilldown zu erstellen, wählen Sie zunächst **[!UICONTROL Bearbeiten]** aus Ihrer Dashboard-Ansicht aus.
+Um einen Drill-Through zu erstellen, wählen Sie zunächst **[!UICONTROL Bearbeiten]** in Ihrer Dashboard-Ansicht aus.
 
-![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../images/sql-insights-query-pro-mode/drill-through.png)
+![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/drill-through.png)
 
-Wählen Sie die Auslassungspunkte im Diagramm aus, die Sie durchsuchen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
+Klicken Sie auf die Auslassungszeichen in dem Diagramm, durch das Sie einen Drilldown durchführen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
 
-![Ein Diagramm, das das Ellipsenmenü mit hervorgehobener Option &quot;Bearbeiten&quot;anzeigt.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![Ein Diagramm mit dem Auslassungsmenü und hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-Verwenden Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter, um **[!UICONTROL Drillthrough aktivieren]** zu aktivieren, und wählen Sie dann mithilfe der Dropdown-Liste das **[!UICONTROL Ziel-Dashboard]** aus. Stellen Sie sicher, dass der Umschalter für **[!UICONTROL Durchgang des Filters]** aktiviert ist, und wählen Sie dann **[!UICONTROL Speichern und schließen]**.
+Verwenden Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter, um **[!UICONTROL Drill-Through aktivieren]** zu aktivieren, und wählen Sie dann über die Dropdown-Liste das **[!UICONTROL Target-Dashboard]** aus. Stellen Sie sicher, dass der Umschalter **[!UICONTROL Filter-Pass-Through]** aktiviert ist, und wählen Sie dann **[!UICONTROL Speichern und schließen]**.
 
-![Bedienfeld &quot;Diagrammeigenschaften&quot;mit hervorgehobener Option &quot;Drillthrough aktivieren&quot;, &quot;Ziel-Dashboard&quot;und &quot;Filter-Pass-Through&quot;.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
+![Bedienfeld „Diagrammeigenschaften“ mit hervorgehobener Option „Drill-Through aktivieren“, „Ziel-Dashboard“ und „Filter-Pass-Through“](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
 >[!INFO]
 >
->Wiederholen Sie die oben hervorgehobenen Schritte für das Ziel-Dashboard, um einen mehrstufigen Drilldown einzurichten.
+>Wiederholen Sie die oben hervorgehobenen Schritte für das Ziel-Dashboard, um einen mehrstufigen Drill-Through einzurichten.
 
-## Anzeigen eines Drilldown {#view-drill-through}
+## Anzeigen eines Drill-Throughs {#view-drill-through}
 
-Um einen Drilldown anzuzeigen, wählen Sie in der Dashboard-Ansicht die Auslassungszeichen im Diagramm aus und wählen Sie dann **[!UICONTROL Durchsuchen]**.
+Um einen Drill-Through anzuzeigen, wählen Sie in Ihrer Dashboard-Ansicht Auslassungspunkte im Diagramm aus und klicken Sie dann auf **[!UICONTROL Drill-Through]**.
 
-![Ein Diagramm, das das Ellipsenmenü mit hervorgehobenem Durchlauf anzeigt.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
+![Ein Diagramm mit dem Menü mit den Auslassungspunkten und hervorgehobenem Drill-Through.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
 
-Der Drilldown im Ziel-Dashboard wird angezeigt. Sie können diesen Schritt wiederholen, wenn Sie mehrstufige Drillthroughs haben.
+Das Drill-Through-Ziel-Dashboard wird angezeigt. Sie können diesen Schritt wiederholen, wenn Sie mehrstufige Drill-Throughs haben.
 
-![Das Ziel-Dashboard, das angezeigt wird, während der Durchlauf hervorgehoben ist.](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
+![Das Ziel-Dashboard, das mit hervorgehobenem Drill-Through angezeigt wird.](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
 
 >[!NOTE]
 >
->Alle im Quell-Dashboard angewendeten Filter werden an das Ziel-Dashboard weitergeleitet. Datumsfilter und globale Filter sind jedoch in untergeordneten Dashboards deaktiviert.
+>Alle im Quell-Dashboard angewendeten Filter werden an das Ziel-Dashboard übergeben. Datumsfilter und globale Filter sind jedoch in untergeordneten Dashboards deaktiviert.
 
-## Einen Drilldown entfernen {#remove-drill-through}
+## Entfernen eines Drill-Throughs {#remove-drill-through}
 
-Um einen Drilldown zu entfernen, wählen Sie zunächst **[!UICONTROL Bearbeiten]** aus Ihrer Dashboard-Ansicht aus.
+Um einen Drill-Through zu entfernen, wählen Sie zunächst **[!UICONTROL Bearbeiten]** in Ihrer Dashboard-Ansicht aus.
 
-![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../images/sql-insights-query-pro-mode/drill-through.png)
+![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/drill-through.png)
 
-Wählen Sie die Auslassungspunkte im Diagramm aus, durch die Sie einen Drilldown entfernen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
+Klicken Sie auf die Auslassungszeichen im Diagramm, durch die Sie einen Drill-down entfernen möchten, und klicken Sie dann auf **[!UICONTROL Bearbeiten]**.
 
-![Ein Diagramm, das das Ellipsenmenü mit hervorgehobener Option &quot;Bearbeiten&quot;anzeigt.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![Ein Diagramm mit dem Auslassungsmenü und hervorgehobener Option „Bearbeiten“.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-Wählen Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter zum Deaktivieren von **[!UICONTROL Drillthrough aktivieren]** und dann **[!UICONTROL Speichern und schließen]**.
+Wählen Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter zum Deaktivieren von **[!UICONTROL Drill-Through aktivieren]** aus und klicken Sie dann auf **[!UICONTROL Speichern und schließen]**.
 
-![Bereich für Diagrammeigenschaften mit deaktiviertem Umschalter für [!UICONTROL Drillthrough aktivieren] hervorgehoben.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![Bedienfeld „Diagrammeigenschaften“ mit deaktiviertem Umschalter für &quot;[!UICONTROL  aktivieren] hervorgehoben.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen Drilldown für Ihr Dashboard erstellen können. Sie können auch erfahren, wie Sie mit dem Leitfaden für den Designmodus [ Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche erstellen.](../standard-dashboards.md)
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen Drill-Through für Ihr Dashboard erstellen. Außerdem erfahren Sie mit dem Handbuch [ Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche ](../standard-dashboards.md).

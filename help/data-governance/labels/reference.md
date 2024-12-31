@@ -37,7 +37,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | [C6](#c6) | Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden. |
 | [C7](#c7) | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. |
 | [C8](#c8) | Daten können nicht zur Messung der Websites oder Apps Ihrer Organisation verwendet werden. |
-| [C9](#c9) | Daten können nicht in Datenwissenschaft-Workflows verwendet werden. |
+| [C9](#c9) | Daten können nicht in datenwissenschaftlichen Workflows verwendet werden. |
 | [C10](#c10) | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. |
 | [C11](#c11) | Daten können nicht mit Segment Match-Partnern freigegeben werden. |
 | [C12](#c12) | Daten können in keiner Weise exportiert werden. |
@@ -64,7 +64,7 @@ Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten v
 | **PSPD** | Zulässige sensible und personenbezogene Daten (Permitted Sensitive Personal Data, PSPD) sind Daten, die von Adobe vertraglich zum Hochladen zugelassen werden und die vom geltenden Recht als „sensibel“, „besondere Datenkategorie“ oder Ähnliches erachtet werden. Hiervon ausgenommen sind insbesondere geschützte Gesundheitsinformationen (PHI) und andere regulierte Gesundheitsdaten. |
 | **RHD** | Daten, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen, oder Patienteninformationen, die von Adobe vertraglich zum Hochladen zugelassen sind. |
 
-## Kennzeichnungen für Partner-Ökosysteme {#partner}
+## Partner-Ökosystem-Kennzeichnungen {#partner}
 
 Mit Partner-Ökosystem-Kennzeichnungen werden Daten kategorisiert, die aus externen Quellen in Bezug auf Ihr Unternehmen stammen.
 
@@ -73,8 +73,8 @@ Diese Kennzeichnung wird verwendet, um die Verwendung von Interessentendaten zu 
 | Kennzeichnung | Definition |
 | --- | --- |
 | **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter für Daten ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung geschlossen hat, die Ihnen den Zugriff auf, die Verwendung, die Anzeige und die Übermittlung der Daten von Drittanbietern in Verbindung mit Platform gestattet. |
-| **Anreicherung durch Dritte** | Daten, die von einer Drittorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Beschriftung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
-| **Drittanbietervermittlung** | Daten, die von einer Drittorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Beschriftung sollte auf Daten von Drittanbietern angewendet werden, die für den oberen Bereich der Trichterprospektion für neue Kunden verwendet werden. |
+| **Anreicherung durch Dritte** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
+| **Drittanbieter-Prospektion** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zusätzlich zum Trichter für die Kundenakquise an neue Kunden verwendet werden. |
 
 ## Anhang
 

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;einheitliche Tags;Tags
-title: Übersicht über Unified Tags
+title: Übersicht über einheitliche Tags
 description: Dieses Dokument enthält Informationen zu einheitlichen Tags in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
 source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
@@ -10,7 +10,7 @@ ht-degree: 98%
 
 ---
 
-# Übersicht über Unified Tags
+# Übersicht über einheitliche Tags
 
 Tags sind eine Funktion von Adobe Experience Platform, mit der Administrierende Metadaten-Taxonomien verwalten können, um Geschäftsobjekte zu klassifizieren und so die Erkennung und Kategorisierung zu erleichtern. Tags sind Metadaten, die als Suchbegriffe betrachtet werden können, die an ein Segment, einen Datensatz, eine Journey oder andere Objekte angehängt werden können, um Suchen nach diesem Objekt und verwandten Objekten zu ermöglichen. Tags werden in zwei Typen klassifiziert: kategorisiert und nicht kategorisiert.
 

@@ -11,13 +11,13 @@ ht-degree: 91%
 
 # Power BI-Berichtsvorlagen für Dashboards
 
-Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihre gesamte Organisation freigegeben werden, ohne dass die Empfänger Anmeldeinformationen für Ihre Organisation in Platform benötigen.
+Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Anmeldeinformationen für Ihr Unternehmen in Platform benötigen.
 
 In diesem Dokument erfahren Sie, wie Sie Adobe Experience Platform mit der Power BI-Anwendung verbinden und mithilfe von Berichtsvorlagen wichtige, aus Platform-Daten gewonnene Einblicke mit externen Benutzern teilen können.
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie über ein gutes Verständnis der [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform verfügen und wissen, wie Attribute über das [Vereinigungsschema](../../xdm/schema/composition.md#union) im Echtzeit-Kundenprofil enthalten sind.
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über [Schemakomposition](../../xdm/schema/composition.md) beim Experience Platform haben und darüber, wie Attribute über das „Vereinigungsschema[ in das Echtzeit-Kundenprofil ](../../xdm/schema/composition.md#union) werden.
 
 Um die Power BI-Anwendungsintegration installieren zu können, müssen die Benutzer zunächst die folgenden Platform-Berechtigungen erhalten haben:
 
@@ -32,7 +32,7 @@ Außerdem benötigen Sie ein Power BI-Konto, um diesem Tutorial zu folgen. Um ei
 
 >[!NOTE]
 >
->Damit die Registerkarte Dashboards im linken Navigationsbereich der Platform-Benutzeroberfläche angezeigt wird und die Dashboard-Lagerbestandsansicht sichtbar ist, müssen Sie als Teil Ihrer Platform-Lizenz Zugriff auf eines der Profil-, Segment- oder Ziel-Dashboards haben.
+>Damit die Registerkarte „Dashboards“ im linken Navigationsbereich der Platform-Benutzeroberfläche angezeigt wird und die Dashboard-Inventaransicht sichtbar ist, müssen Sie als Teil Ihrer Platform-Lizenz Zugriff auf eines der Profil-, Segmentierungs- oder Ziel-Dashboards haben.
 
 ## Installieren der Power BI-Anwendungsintegration
 
@@ -144,7 +144,7 @@ Sobald Ihr Dashboard über die in den benutzerdefinierten Widgets enthaltenen Me
 
 ## Löschen der Power BI-Anwendungsintegration
 
-Um das Dashboard zu löschen, navigieren Sie zum Dashboard-Inventar und wählen Sie das Löschsymbol (![Löschsymbol](/help/images/icons/delete.png)) neben dem Dashboard-Namen aus.
+Um das Dashboard zu löschen, gehen Sie zum Dashboard-Inventar und wählen Sie das Löschsymbol (![Löschsymbol](/help/images/icons/delete.png)) neben dem Dashboard-Namen aus.
 
 >[!NOTE]
 >

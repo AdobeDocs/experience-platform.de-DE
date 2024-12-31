@@ -1,5 +1,5 @@
 ---
-keywords: LinkedIn;LinkedIn;LinkedIn;LinkedIn Insight-Tag;Insight-Tag;Insight-Tag
+keywords: LinkedIn;LinkedIn;LinkedIn;LinkedIn Insight Tag;Insight Tag;Insight Tag
 title: LinkedIn Insight Tag-Erweiterung
 description: Die LinkedIn Insight Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
@@ -14,9 +14,9 @@ ht-degree: 90%
 
 ## Übersicht {#overview}
 
-Installieren Sie die &quot;[!DNL LinkedIn Insight Tag]&quot;, um die Funktionen Konversions-Tracking, Retargeting und Website-Demografie zu verwenden.
+Installieren Sie die [!DNL LinkedIn Insight Tag], um Funktionen für Konversionsverfolgung, Retargeting und Website-Demografie zu verwenden.
 
-[!DNL LinkedIn Insight Tag] ist eine Werbeerweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [LinkedIn Insight-Tag](https://business.linkedin.com/de-de/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [LinkedIn Insight-Tag](https://business.linkedin.com/de-de/marketing-solutions/insight-tag).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

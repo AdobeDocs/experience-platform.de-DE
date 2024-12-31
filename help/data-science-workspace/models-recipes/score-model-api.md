@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;Modell bewerten;Data Science Workspace;beliebte Themen;Sensei Machine Learning API
+keywords: Experience Platform; Bewerten eines Modells; Data Science Workspace; beliebte Themen; Sensei Machine Learning-API
 solution: Experience Platform
-title: Modellbewertung mit der Sensei Machine Learning API
+title: Bewerten eines Modells mithilfe der Sensei-API für maschinelles Lernen
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie die Sensei Machine Learning-APIs nutzen können, um ein Experiment und einen Experimentablauf zu erstellen.
+description: In diesem Tutorial erfahren Sie, wie Sie die APIs für maschinelles Lernen von Sensei nutzen können, um ein Experiment und eine Experimentausführung zu erstellen.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 ---
 
-# Score a model using [!DNL Sensei Machine Learning API]
+# Bewerten eines Modells mithilfe der [!DNL Sensei Machine Learning API]
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 74%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte der Sensei Machine Learning-API finden Sie in [diesem Dokument](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte in der Sensei-API für maschinelles Lernen finden Sie in [diesem Dokument](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Geplantes Experiment für Scoring erstellen
 
@@ -40,7 +40,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Das Objekt für den Experimentlauf, das gesendet werden soll. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
@@ -128,7 +128,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{EXPERIMENT_ID}`: Die dem Zielexperiment entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen Ihres Experiments.\
@@ -193,7 +193,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem der Lauf ausgeführt wird.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 
 Da es mehrere Experimentläufe für ein spezifisches Experiment gibt, verfügt die zurückgegebene Antwort über verschiedene Ausführungskennungen.
 
@@ -236,11 +236,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
 
 >[!NOTE]
 >
->Der API-Aufruf deaktiviert die Erstellung neuer Experimentabläufe. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 

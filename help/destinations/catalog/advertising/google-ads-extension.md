@@ -1,5 +1,5 @@
 ---
-keywords: Google-Anzeigen;Google-Anzeigen;Google-Anzeigen-Erweiterung;Google Ads-Erweiterung
+keywords: Google Ads;Google Ads;Google Ads-Erweiterung;Google Ads-Erweiterung
 title: Google Ads-Erweiterung
 description: Die Google Ads-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
@@ -14,9 +14,9 @@ ht-degree: 84%
 
 ## Übersicht {#overview}
 
-Diese Erweiterung verfolgt Konversionen von Benutzern, die auf Ihr [!DNL Google Ads] klicken. Sie müssen auch die gtag.js-Erweiterung installieren und sie Ihrer Bibliothek hinzufügen, da [!DNL Google Ads] davon abhängig ist.
+Diese Erweiterung verfolgt Konversionen von Benutzern, die auf Ihre [!DNL Google Ads] klicken. Sie müssen auch die Erweiterung gtag.js installieren und sie Ihrer Bibliothek hinzufügen, da [!DNL Google Ads] davon abhängt.
 
-[!DNL Google Ads] ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+[!DNL Google Ads] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -24,7 +24,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 

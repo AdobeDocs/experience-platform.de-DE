@@ -34,94 +34,94 @@ Sie können Sonderzeichen in einem Feld durch die Verwendung von `${...}` mit Es
 
 Berechnete Felder haben eine maximale Länge von 4096 Zeichen.
 
-### Meine Aufnahme schlug aufgrund der Validierung eines Attributs fehl, aber dieses Attribut ist in meiner Datei korrekt. Was genau ist falsch?
+### Meine Aufnahme ist aufgrund der Validierung eines Attributs fehlgeschlagen, aber dieses Attribut ist korrekt in meiner Datei enthalten. Was genau stimmt nicht?
 
-Stellen Sie sicher, dass der Datentyp für jedes Feld mit dem im Schema definierten Typ übereinstimmt. Darüber hinaus müssen Einschränkungen wie &quot;Erforderlich&quot;, &quot;Enum&quot;und &quot;Format&quot;beachtet werden.
+Stellen Sie sicher, dass der Datentyp für jedes Feld mit dem im Schema definierten Typ übereinstimmt. Darüber hinaus müssen Einschränkungen wie „erforderlich“, „Aufzählung“ und „Format“ eingehalten werden.
 
-Die aufgenommenen Daten müssen dem im Experience Platform definierten Experience-Datenmodell (XDM)-Schema entsprechen. Wenn das Attribut nicht dem im Schema angegebenen erwarteten Typ oder Format entspricht, schlägt die Aufnahme fehl.
+Die aufgenommenen Daten müssen dem in Experience Platform definierten Experience-Datenmodell-Schema (XDM) entsprechen. Wenn das Attribut nicht mit dem erwarteten Typ oder Format übereinstimmt, der im Schema angegeben ist, schlägt die Aufnahme fehl.
 
-Wenn die Data Prep-Funktionen verwendet werden, stellen Sie sicher, dass die Transformation zu den richtigen Attributen führt. Sie können die Attribute während des Einrichtungsprozesses des Ursprungs-Workflows überprüfen. Wählen Sie im Zuordnungsschritt **[!UICONTROL Neuer Feldtyp]** und dann **[!UICONTROL Berechnetes Feld hinzufügen]** aus. Verwenden Sie anschließend die berechnete Feldoberfläche, um eine Vorschau der einzelnen Funktionen anzuzeigen.
+Wenn die Funktionen zur Datenvorbereitung verwendet werden, stellen Sie sicher, dass die Umwandlung zu den richtigen Attributen führt. Sie können die Attribute während des Einrichtungsprozesses des Quell-Workflows überprüfen. Wählen Sie während des Zuordnungsschritts die Option **[!UICONTROL Neuer Feldtyp]** und dann **[!UICONTROL Berechnetes Feld hinzufügen]** aus. Verwenden Sie als Nächstes die Schnittstelle für berechnete Felder, um jede Funktion in der Vorschau anzuzeigen.
 
-### Wie kann ich fehlerhafte Datenwerte aus Streaming- oder Batch-Erfassungsdatensätzen entfernen?
+### Wie kann ich fehlerhafte Datenwerte aus Streaming- oder Batch-Aufnahme-Datensätzen entfernen?
 
-Sie können die Zuordnungsschnittstelle &quot;Datenvorbereitung&quot;verwenden, um auf Spaltenebene Filtern durchzuführen, indem nur Spalten zugeordnet werden, die über erforderliche Daten verfügen. Sie können auch berechnete Felder verwenden, um die Daten mithilfe der Funktionen zur Unterstützung umzuwandeln.
+Sie können die Datenvorbereitungs-Zuordnungsschnittstelle verwenden, um eine Filterung auf Spaltenebene durchzuführen, indem Sie nur Spalten zuordnen, die die erforderlichen Daten aufweisen. Sie können auch berechnete Felder verwenden, um die Daten mithilfe der Support-Funktionen umzuwandeln.
 
-Die Filterung auf Zeilenebene ist derzeit nur für den [Adobe Analytics-Quell-Connector](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering) verfügbar.
+Die Filterung auf Zeilenebene ist derzeit nur für den [Adobe Analytics-Quell-Connector verfügbar](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
 
-Nach der Erfassung können Sie mithilfe von Data Destiller die Daten mit SQL bereinigen, gestalten und bearbeiten. Dieser Prozess erfordert jedoch das Löschen des Batches mit den fehlerhaften Datensätzen und das erneute Erfassen eines neuen Batches, der aus dem SQL-Ergebnis erstellt wurde.
+Nach der Aufnahme können Sie Data Distiller verwenden, um die Daten mithilfe von SQL zu bereinigen, zu formen und zu bearbeiten. Dieser Prozess erfordert jedoch das Löschen des Batches mit den fehlerhaften Datensätzen und die erneute Aufnahme eines neuen Batches, der aus dem Ergebnis der SQL erstellt wurde.
 
 >[!IMPORTANT]
 >
->* Data Lake: Sie können Datensätze, die bereits erfasst wurden, nur entfernen, indem Sie den Batch löschen und erneut erfassen, in dem sich der Datensatz befindet.
+>* Data Lake: Sie können nur Datensätze entfernen, die bereits aufgenommen wurden, indem Sie den Batch löschen und erneut aufnehmen, in dem sich der Datensatz befindet.
 >
->* Echtzeit-Kundenprofil: Sie können attributbasierte Datensätze überschreiben, indem Sie neue Datensätze erfassen. Erlebnisereignisdatensätze können jedoch nicht entfernt werden.
+>* Echtzeit-Kundenprofil: Attributbasierte Datensätze können durch die Aufnahme neuer Datensätze überschrieben werden, Erlebnisereignis-Datensätze können jedoch nicht entfernt werden.
 >
->* Identity Service: Im Identity Service können keine Datensätze vollständig entfernt werden. Sie müssen das gesamte Profil löschen und das Profil mit den richtigen Datensätzen mithilfe der API zum Löschen des Profils erneut hochladen.
+>* Identity Service: Datensätze können nicht direkt aus Identity Service entfernt werden. Sie müssen das gesamte Profil löschen und dann das Profil mit den richtigen Datensätzen erneut hochladen, indem Sie die API zum Löschen von Profilen verwenden.
 
-### Was sind die Best Practices für die Verwendung berechneter Felder in GIF-Daten?
+### Was sind die Best Practices für die Verwendung von berechneten Feldern beim GIF von Daten?
 
-Sie können die Zuordnungsfunktionen der Datenvorbereitung während des Zuordnungsschritts von Quelldaten zum XDM-Schema verwenden, um ein neues berechnetes Feld zu erstellen.
+Sie können die Funktionen zur Datenvorbereitung während des Zuordnungsschritts von Quelldaten zum XDM-Schema verwenden, um ein neues berechnetes Feld zu erstellen.
 
-### Wird das erstellte Schema automatisch für das Profil aktiviert, wenn Sie Adobe Analytics-Daten als Quelle importieren?
+### Wenn Sie Adobe Analytics-Daten als Quelle einbringen, wird das automatisch erstellte Schema für das Profil aktiviert?
 
-Analytics-Daten werden nicht automatisch für Profil konfiguriert. Nachdem Sie den Quell-Connector konfiguriert haben, müssen Sie in den Datensatz und das Schema wechseln und sie für die Profilaufnahme aktivieren.
+Analytics-Daten werden nicht automatisch für Profil konfiguriert. Nachdem Sie den Quell-Connector konfiguriert haben, müssen Sie den Datensatz und das Schema aufrufen und für die Profilaufnahme aktivieren.
 
-Wenn Sie einen Analytics-Quell-Datenfluss in einer Produktions-Sandbox erstellen, werden zwei Datenflüsse erstellt:
+Beim Erstellen eines Analytics-Quell-Datenflusses in einer Produktions-Sandbox werden zwei Datenflüsse erstellt:
 
-* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake ausführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
-* Ein Datenfluss, der Live-Daten an den Data Lake und an Profil sendet. Dieser Datenfluss wird kontinuierlich ausgeführt.
+* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake durchführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
+* Ein Datenfluss, der Live-Daten an den Data Lake und an das Profil sendet. Dieser Datenfluss läuft kontinuierlich.
 
-### Wie kann ich mithilfe von Datenvorbereitungsfunktionen einen Wert innerhalb eines Zuordnungsobjekts in Kleinbuchstaben schreiben?
+### Wie kann ich einen Wert innerhalb eines Zuordnungsobjekts mithilfe von Datenvorbereitungsfunktionen in Kleinbuchstaben schreiben?
 
-Sie können den Wert mit der Funktion `map_get_values` abrufen und ihn dann mithilfe der Funktion lower in Kleinbuchstaben umwandeln:
+Sie können den Wert mit der Funktion `map_get_values` abrufen und ihn dann mit der Funktion Kleinbuchstaben festlegen:
 
 ```shell
 lower(map_get_values(mapObject, 'keyName'))
 ```
 
-Sie können dieselbe Funktion verwenden, um ein map -Objekt in Kleinbuchstaben zu schreiben. Es ist jedoch nicht möglich, eine ganze Karte zu durchlaufen und jedes Element in Kleinbuchstaben zu schreiben.
+Sie können dieselbe Funktion verwenden, um ein Zuordnungsobjekt in Kleinbuchstaben zu schreiben. Sie können jedoch nicht eine gesamte Zuordnung durchlaufen und jedes Element klein schreiben.
 
-### Kann ich Data Prep-Funktionen verschachtelt verwenden?
+### Kann ich Datenvorbereitungsfunktionen verschachtelt verwenden?
 
-Ja, Sie können eine Datenvorbereitung-Funktion innerhalb einer anderen Funktion verwenden, um komplexe Datenvorvorbereitungsfunktionen während der Datenerfassung zu lösen.
+Ja, Sie können eine Datenvorbereitungsfunktion innerhalb einer anderen Funktion verwenden, um komplexe Datenvorbereitungsfunktionen während der Datenaufnahme zu lösen.
 
-Wenn Sie beispielsweise ein Feld basierend auf einer bestimmten Bedingung als null definieren möchten, können Sie die Funktion &quot;if&quot;verwenden, um nach diesem Feld zu suchen. Wenn die Funktion den Wert `true` zurückgibt, können Sie &quot;nullify()&quot; verwenden und wenn sie den Wert `false` zurückgibt, können Sie das entsprechende Feld verwenden.
+Wenn Sie beispielsweise ein Feld basierend auf einer bestimmten Bedingung als null definieren möchten, können Sie die Funktion „if“ verwenden, um nach diesem Feld zu suchen. Wenn die Funktion &quot;`true`&quot; zurückgibt, können Sie „nullify()“ verwenden. Wenn sie &quot;`false`&quot; zurückgibt, können Sie das entsprechende Feld verwenden.
 
-Wenn marketing_type das Feld war, können Sie &quot;.equals&quot;verwenden, um den Wert im Feld marketing_type zu überprüfen. Dieser Wert kann in einer &quot;if&quot;-Funktion verschachtelt sein. Wenn es `true` zurückgibt, können Sie die Funktion &quot;nullify()&quot; wie unten gezeigt verwenden:
+Wenn „marketing_type“ das Feld war, können Sie &quot;.equals“ verwenden, um den Wert im Feld „marketing_type“ zu überprüfen. Dieser kann in einer „if“-Funktion verschachtelt werden. Wenn er `true` zurückgibt, können Sie die Funktion „nullify()“ verwenden, wie unten dargestellt:
 
 ```shell
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 ```
 
-Die folgenden Beispiele zeigen, wie Sie Datenvorlagenfunktionen mit if, equals und nullify verschachteln können:
+Im Folgenden finden Sie Beispiele für die Verschachtelung von Datenvorbereitungsfunktionen mithilfe von if, equals und NULLIFY:
 
 | Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
 | --- | --- | --- | --- | --- | --- |
-| iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>AUSDRUCK: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;true&quot;ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;false&quot;ergibt.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| ist gleich | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Diese Funktion unterscheidet zwischen Groß- und Kleinschreibung. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten. | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;equals &#x200B;(&quot;STRING1&quot;) | false |
-| nullify | Legt den Wert des Attributs auf null fest. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Zielschema kopieren möchten. | | nullify() | nullify() | null |
+| IIF | Wertet einen gegebenen booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>AUSDRUCK: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck „true“ ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck als „false“ ausgewertet wird.</li></ul> | IF(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(„s“.equalsIgnoreCase(„S„), „True“, „False„) | „TRUE“ |
+| ist gleich | Vergleicht zwei Zeichenfolgen, um zu bestätigen, ob sie gleich sind. Bei dieser Funktion wird zwischen Groß- und Kleinschreibung unterschieden. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten. | STRING1..&#x200B;Equals(&#x200B;STRING2) | „string1“..&#x200B;Equals&#x200B;(„STRING1„) | false |
+| für nichtig erklären | Setzt den Wert des Attributs auf null. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Zielschema kopieren möchten. | | nullify() | nullify() | null |
 
 {style="table-layout:auto"}
 
-Im Folgenden finden Sie ein Beispiel dafür, wie die Funktionen verschachtelt werden können, vorausgesetzt, das ausgewertete Feld lautet &quot;marketing_type&quot;.
+Im Folgenden finden Sie ein Beispiel dafür, wie die Funktionen verschachtelt werden können, unter der Annahme, dass das auszuwertende Feld „marketing_type“ ist.
 
 ```shell
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 ```
 
-Als Nächstes haben Sie die folgenden drei Felder:
+Als Nächstes, da Sie die folgenden drei Felder haben:
 
-* marketing_type: (email, phyMail, push, sms, phone)
-* total_approval: Zahlenbereich von 4000 bis 5500
+* marketing_type: (E-Mail, PhyMail, Push, SMS, Telefon)
+* total_consents: Zahlenbereich von 4000 bis 5500
 * Datum: von Februar bis März 2024
 
 Sie können die drei oben aufgeführten Funktionen verwenden und verschachteln, um die drei Felder zu bearbeiten:
 
-* iif(marketing_type.equals(&quot;email&quot;), nullify(), if(marketing_type.equals(&quot;push&quot;), &quot;push-notification&quot;, marketing_type))
-* if(marketing_type.equals(&quot;phyMail&quot;), nullify(), if(marketing_type.equals(&quot;sms&quot;), &quot;text-message&quot;, marketing_type)
-* iif(total_consent > 5000, if(marketing_type.equals(&quot;phone&quot;), nullify(), marketing_type), &quot;unzureichende Zustimmung&quot;)
-* iif(date.equals(&quot;3/21/24&quot;), if(marketing_type.equals(&quot;push&quot;), nullify(), marketing_type), &quot;not-March&quot;)
-* iif(total_consent &lt; 4500, iif(marketing_type.equals(&quot;sms&quot;), &quot;low-consent-sms&quot;, marketing_type), &quot;high-consent&quot;)
-* iif(marketing_type.equals(&quot;email&quot;), iif(total_consent > 5000, nullify(), &quot;email-low-consent&quot;), marketing_type)
-* iif(marketing_type.equals(&quot;push&quot;), iif(total_consent &lt; 4500, &quot;low-consent-push&quot;, nullify()), marketing_type)
-* iif(total_consent >= 5500, if(marketing_type.equals(&quot;phyMail&quot;), nullify(), &quot;high-consent&quot;), marketing_type)
+* iif(marketing_type.equals(„email„), ungültig(), iif(marketing_type.equals(„Push„), „Push-Benachrichtigung“, marketing_type))
+* iif(marketing_type.equals(„phyMail„), nullify(), iif(marketing_type.equals(„sms„), „text-message“, marketing_type))
+* iif(total_consents > 5000, iif(marketing_type.equals(„phone„), nullify(), marketing_type), „unzureichende Einverständnisse„)
+* iif(date.equals(„3/21/24„), iif(marketing_type.equals(„Push„), nullify(), marketing_type), „not-March„)
+* iif(total_consents &lt; 4500, iif(marketing_type.equals(„sms„), „low-consent-sms“, marketing_type), „high-consent„)
+* iif(marketing_type.equals(„email„), iif(total_consents > 5000, nullify(), „email-low-consent„), marketing_type)
+* iif(marketing_type.equals(„Push„), iif(total_consents &lt; 4500, „low-consent-push“, nullify()), marketing_type)
+* iif(total_consents >= 5500, iif(marketing_type.equals(„phyMail„), nullify(), „High-Consents„), marketing_type)

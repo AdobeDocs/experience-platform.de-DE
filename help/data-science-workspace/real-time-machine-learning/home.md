@@ -2,7 +2,7 @@
 keywords: Experience Platform;Entwicklerhandbuch;Datenwissenschafts-Arbeitsbereich;beliebte Themen;maschinelles Lernen in Echtzeit;
 solution: Experience Platform
 title: Übersicht zu maschinellem Lernen in Echtzeit
-description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Echtzeit-Unterscheidungen und kontinuierlichem Lernen am Experience Platform-Edge Network ermöglicht.
+description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen auf dem Experience Platform-Edge Network ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
@@ -49,7 +49,7 @@ Erstellen Sie ein Modell für maschinelles Lernen in Echtzeit, indem Sie es von 
 
 ### Bereitstellung
 
-Stellen Sie Ihr Modell auf dem [!DNL Edge Network] bereit, um einen Dienst für maschinelles Lernen in Echtzeit in der [!UICONTROL Service Gallery] zu erstellen, der den Prognosen-API-Endpunkt verwendet.
+Stellen Sie Ihr Modell für die [!DNL Edge Network] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service-Galerie“ ] dem Prognose-API-Endpunkt zu erstellen.
 
 ### Folgerung   
 

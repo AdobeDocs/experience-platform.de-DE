@@ -25,6 +25,6 @@ ht-degree: 96%
    - [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](./ui/mapping.md)
 - [Verarbeiten von Datenformaten](./data-handling.md)
 - [Zuordnungssätze](mapping-set.md)
-- [Stream-Uploads](upserts.md)
+- [Upserts streamen](upserts.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard die aus Quellen erfassten Daten überwachen können.
+description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard Daten überwachen können, die aus Quellen aufgenommen werden.
 title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
@@ -13,16 +13,16 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->Streaming-Quellen wie die [HTTP-API-Quelle](../../sources/connectors/streaming/http.md) werden derzeit nicht vom Monitoring-Dashboard unterstützt. Derzeit können Sie das Dashboard nur zur Überwachung der Batch-Quellen verwenden.
+>Streaming-Quellen wie die [HTTP-API-Quelle](../../sources/connectors/streaming/http.md) werden derzeit nicht vom Überwachungs-Dashboard unterstützt. Derzeit können Sie das Dashboard nur zur Überwachung von Batch-Quellen verwenden.
 
-In diesem Dokument erfahren Sie, wie Sie mit dem Monitoring-Dashboard die Datenflüsse Ihrer Quellen in der Experience Platform-Benutzeroberfläche überwachen können.
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Überwachungs-Dashboard Ihre Quelldatenflüsse in der Experience Platform-Benutzeroberfläche überwachen können.
 
 ## Erste Schritte {#get-started}
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   * [Datenfluss-Ausführungen](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   * [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 * [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
@@ -46,97 +46,97 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-Wählen Sie im Monitoring-Dashboard [!UICONTROL Quellen] aus der Kopfzeile aus, um Ihr Dashboard mit einer Anzeige der Datenflussrate Ihrer Quellen zu aktualisieren.
+Wählen Sie im Monitoring-Dashboard [!UICONTROL Quellen] aus der Hauptkopfzeile aus, um Ihr Dashboard mit einer Anzeige der Datenfluss-Aufnahmerate Ihrer Quellen zu aktualisieren.
 
-![Das Monitoring-Dashboard mit der ausgewählten Quellkarte.](../assets/ui/monitor-sources/sources.png)
+![Das Überwachungs-Dashboard mit der ausgewählten Quellenkarte.](../assets/ui/monitor-sources/sources.png)
 
-Das Diagramm [!UICONTROL Aufnahmerate] zeigt Ihre Datenerfassungsrate basierend auf Ihrem konfigurierten Zeitraum an. Standardmäßig zeigt das Monitoring-Dashboard die Aufnahmerate der letzten 24 Stunden an. Anweisungen zum Konfigurieren des Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Überwachungszeitrahmens](monitor.md#configure-monitoring-time-frame).
+Das Diagramm [!UICONTROL Aufnahmerate] zeigt Ihre Datenaufnahmerate basierend auf Ihrem konfigurierten Zeitrahmen an. Standardmäßig zeigt das Überwachungs-Dashboard die Aufnahmerate der letzten 24 Stunden an. Anweisungen zum Konfigurieren Ihres Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Zeitrahmens für die Überwachung](monitor.md#configure-monitoring-time-frame).
 
 Das Diagramm ist standardmäßig für die Anzeige aktiviert. Um das Diagramm auszublenden, wählen Sie **[!UICONTROL Metriken und Diagramme]** aus, um den Umschalter zu deaktivieren und das Diagramm auszublenden.
 
-![ Das Diagramm zur Erfassungsrate.](../assets/ui/monitor-sources/metrics-graph.png)
+![Das Diagramm mit den Metriken zur Aufnahmerate.](../assets/ui/monitor-sources/metrics-graph.png)
 
-Im unteren Teil des Dashboards wird eine Tabelle mit dem aktuellen Metrikbericht für alle vorhandenen Datenflüsse aus Quellen angezeigt.
+Im unteren Teil des Dashboards wird eine Tabelle angezeigt, die den aktuellen Metrikbericht für alle vorhandenen Datenflüsse der Quellen umreißt.
 
-![Die Tabelle der Monitoring-Dashboard-Metriken.](../assets/ui/monitor-sources/metrics-table.png)
+![Die Tabelle mit den Metriken des Monitoring-Dashboards.](../assets/ui/monitor-sources/metrics-table.png)
 
 | Metriken | Beschreibung |
 | --- | --- |
-| Empfangene Einträge | Die Gesamtzahl der Datensätze, die von einer bestimmten Quelle empfangen wurden. |
-| Aufgenommene Einträge | Die Gesamtzahl der Datensätze, die in den Data Lake aufgenommen wurden. |
-| Einträge übersprungen | Die Gesamtzahl der übersprungenen Datensätze. Ein übersprungener Datensatz bezieht sich auf Felder, die übersprungen wurden, da sie für die Aufnahme nicht erforderlich waren. Wenn Sie beispielsweise einen Datenfluss für Quellen mit aktivierter partieller Erfassung erstellen, können Sie einen Schwellenwert für eine akzeptable Fehlerrate konfigurieren. Während des Aufnahmevorgangs werden Datensätze von nicht erforderlichen Feldern, wie z. B. Identitätsfeldern, bei der Erfassung übersprungen, sofern sie sich innerhalb der Fehlerschwelle befinden. |
-| Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht erfasst werden konnten. |
-| Aufgenommene Rate | Der Prozentsatz der erfassten Datensätze basierend auf der Gesamtzahl der empfangenen Datensätze. |
+| Empfangene Einträge | Die Gesamtzahl der von einer bestimmten Quelle empfangenen Datensätze. |
+| Aufgenommene Einträge | Die Gesamtzahl der in den Data Lake aufgenommenen Datensätze. |
+| Übersprungene Einträge | Die Gesamtzahl der übersprungenen Datensätze. Ein übersprungener Datensatz bezieht sich auf Felder, die übersprungen wurden, weil sie für die Aufnahme nicht erforderlich waren. Wenn Sie beispielsweise einen Quelldatenfluss mit aktivierter partieller Aufnahme erstellen, können Sie einen akzeptablen Schwellenwert für die Fehlerrate konfigurieren. Während des Aufnahmevorgangs überspringt die Aufnahme Datensätze von Feldern, die nicht erforderlich sind, z. B. Identitätsfelder, solange sie sich innerhalb des Fehlerschwellenwerts befinden. |
+| Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht aufgenommen werden konnten. |
+| Aufgenommene Rate | Der Prozentsatz der aufgenommenen Datensätze auf der Basis der Gesamtzahl der empfangenen Datensätze. |
 | Insgesamt fehlgeschlagene Datenflüsse | Die Gesamtzahl der fehlgeschlagenen Datenflüsse. |
 
 {style="table-layout:auto"}
 
-Sie können Ihre Daten mithilfe der oben in der Metriktabelle bereitgestellten Optionen weiter filtern:
+Sie können Ihre Daten mithilfe der Optionen weiter filtern, die oben in der Tabelle Metriken bereitgestellt werden:
 
 | Filteroptionen | Beschreibung |
 | --- | --- |
-| Durchsuchen | Verwenden Sie die Suchleiste, um Ihre Ansicht nach einem Quelltyp zu filtern. |
-| Quellen | Wählen Sie **[!UICONTROL Quellen]** aus, um Ihre Ansicht zu filtern und Metrikdaten nach Quelltyp anzuzeigen. Dies ist die Standardanzeige, die das Monitoring-Dashboard verwendet. |
-| Datenflüsse | Wählen Sie **[!UICONTROL Datenflüsse]** aus, um Ihre Ansicht und die Anzeige der Metrikdaten pro Datenfluss zu filtern. |
-| Nur Fehlschläge zeigen | Wählen Sie **[!UICONTROL Nur Fehler anzeigen]** aus, um Ihre Ansicht zu filtern und nur Datenflüsse anzuzeigen, die zu Erfassungsfehlern geführt haben. |
-| Meine Quellen | Sie können Ihre Ansicht weiter filtern, indem Sie das Dropdown-Menü [!UICONTROL Meine Quellen] verwenden. Filtern Sie Ihre Ansicht mithilfe des Dropdown-Menüs nach Kategorie. Alternativ können Sie **[!UICONTROL Alle Quellen]** auswählen, um Metriken für alle Quellen oder Quellen anzuzeigen, oder Sie können **[!UICONTROL Meine Quellen]** auswählen, um nur die Quellen anzuzeigen, für die Sie ein entsprechendes Konto haben. |
+| Durchsuchen | Verwenden Sie die Suchleiste, um Ihre Ansicht nach einem einzelnen Quelltyp zu filtern. |
+| Quellen | Wählen Sie **[!UICONTROL Quellen]** aus, um Ihre Ansicht zu filtern und Metrikdaten nach Quelltyp anzuzeigen. Dies ist die Standardanzeige, die vom Monitoring-Dashboard verwendet wird. |
+| Datenflüsse | Wählen Sie **[!UICONTROL Datenflüsse]** aus, um Ihre Ansicht zu filtern und Metrikdaten pro Datenfluss anzuzeigen. |
+| Nur Fehlschläge zeigen | Wählen Sie **[!UICONTROL Nur Fehler anzeigen]** aus, um Ihre Ansicht zu filtern und nur Datenflüsse anzuzeigen, die Aufnahmefehler gemeldet haben. |
+| Meine Quellen | Sie können Ihre Ansicht mithilfe des Dropdown-Menüs [!UICONTROL Meine Quellen] weiter filtern. Verwenden Sie das Dropdown-Menü, um Ihre Ansicht nach Kategorie zu filtern. Alternativ können Sie auf **[!UICONTROL Alle Quellen]** klicken, um Metriken zu allen - oder -Quellen anzuzeigen, oder auf **[!UICONTROL Meine Quellen]** klicken, um nur die Quellen anzuzeigen, für die Sie über ein entsprechendes -Konto verfügen. |
 
 {style="table-layout:auto"}
 
-Um die Daten zu überwachen, die in einem bestimmten Datenfluss erfasst werden, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben einer Quelle aus.
+Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einer Quelle aus.
 
 ![Überwachen Sie einen bestimmten Datenfluss, indem Sie das Filtersymbol neben einer bestimmten Quelle auswählen.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-Die Tabelle &quot;Metriken&quot;wird auf eine Tabelle aktiver Datenflüsse aktualisiert, die der von Ihnen ausgewählten Quelle entsprechen. Während dieses Schritts können Sie zusätzliche Informationen zu Ihren Datenflüssen anzeigen, einschließlich des zugehörigen Datensatzes und Datentyps, sowie einen Zeitstempel, der angibt, wann sie zuletzt aktiv waren.
+Die Tabelle Metriken wird in eine Tabelle mit aktiven Datenflüssen aktualisiert, die der ausgewählten Quelle entsprechen. In diesem Schritt können Sie zusätzliche Informationen zu Ihren Datenflüssen anzeigen, einschließlich des entsprechenden Datensatzes und Datentyps sowie eines Zeitstempels, der angibt, wann sie zuletzt aktiv waren.
 
-Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben einem Datenfluss aus.
+Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einem Datenfluss aus.
 
-![Die Datentafeltabelle im Monitoring-Dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
+![Die Datenfluss-Tabelle im Monitoring-Dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
-Als Nächstes gelangen Sie zu einer Schnittstelle, die alle Datenfluss-Ausführungsiterationen des ausgewählten Datenflusses auflistet.
+Als Nächstes gelangen Sie zu einer Schnittstelle, die alle Iterationen der Datenflussausführung des ausgewählten Datenflusses auflistet.
 
-Datenfluss-Ausführungen stellen eine Instanz der Ausführung des Datenflusses dar. Wenn beispielsweise ein Datenfluss für 9:00 Uhr, 10:00 Uhr und 11:00 Uhr geplant ist, haben Sie drei Instanzen eines Durchlaufs. Flussläufe sind spezifisch für Ihre jeweilige Organisation.
+Datenflussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
 
-Um die Metriken einer bestimmten Datenfluss-Ausführungswiederholung zu überprüfen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben Ihrem Datenfluss aus.
+Um Metriken einer bestimmten Iteration der Datenflussausführung zu überprüfen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben Ihrem Datenfluss aus.
 
-![Die Seite mit der Ausführungsmetrik des Datenflusses.](../assets/ui/monitor-sources/dataflow-page.png)
+![Die Metrikseite „Datenflussausführung“.](../assets/ui/monitor-sources/dataflow-page.png)
 
-Verwenden Sie die Seite mit Details zur Ausführung des Datenflusses , um Metriken und Informationen zur ausgewählten Ausführungswiederholt anzuzeigen.
+Auf der Seite mit den Datenflussausführungs-Details können Sie Metriken und Informationen der ausgewählten Iteration anzeigen.
 
-![ Die Detailseite für die Datenflug-Ausführung.](../assets/ui/monitor-sources/dataflow-run-details.png)
+![Die Seite mit den Datenflussausführungs-Details.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | Details zur Datenflussausführung | Beschreibung |
 | --- | --- |
-| Aufgenommene Einträge | Die Gesamtzahl der Datensätze, die aus der Ausführung des Datenflusses erfasst wurden. |
-| Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in der Ausführung des Datenflusses nicht erfasst wurden. |
-| Gesamtzahl der Dateien | Die Gesamtzahl der Dateien im Datenfluss-Lauf. |
-| Datengröße | Die Gesamtgröße der Daten, die im Datenfluss enthalten sind. |
-| ID der Datenflussausführung | Die ID der Dataflow-Run-Iteration |
+| Aufgenommene Einträge | Die Gesamtzahl der Datensätze, die aus der Datenflussausführung aufgenommen wurden. |
+| Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in der Datenflussausführung nicht aufgenommen wurden. |
+| Gesamtzahl der Dateien | Die Gesamtzahl der Dateien in der Datenflussausführung. |
+| Datengröße | Die Gesamtgröße der in der Datenflussausführung enthaltenen Daten. |
+| ID der Datenflussausführung | Die ID der Iteration der Datenflussausführung. |
 | Organisations-ID | Die ID der Organisation, in der der Datenfluss erstellt wurde. |
-| Status | Der Status des Datenflusses. |
-| Anfang der Datenflussausführung | Ein Zeitstempel, der angibt, wann der Datenfluss gestartet wurde. |
-| Ende der Datenflussausführung | Ein Zeitstempel, der angibt, wann die Ausführung des Datenflusses beendet wurde. |
-| Datensatz | Der Datensatz, der zum Erstellen des Datenflusses verwendet wird. |
+| Status | Der Status der Datenflussausführung. |
+| Anfang der Datenflussausführung | Ein Zeitstempel, der angibt, wann die Datenflussausführung gestartet wurde. |
+| Ende der Datenflussausführung | Ein Zeitstempel, der angibt, wann die Datenflussausführung beendet wurde. |
+| Datensatz | Der zum Erstellen des Datenflusses verwendete Datensatz. |
 | Datentyp | Der Typ der Daten, die sich im Datenfluss befanden. |
-| Teilweise Aufnahme | Partielle Batch-Erfassung ist die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert zu erfassen. Mit dieser Funktion können Sie alle Ihre präzisen Daten erfolgreich in Experience Platform erfassen, während all Ihre falschen Daten separat mit Informationen darüber gestapelt werden, warum sie ungültig sind. Sie können die partielle Erfassung während des Erstellungsprozesses des Datenflusses aktivieren. |
-| Fehlerdiagnose | Die Fehlerdiagnose weist die Quelle an, eine Fehlerdiagnose zu erstellen, die Sie später bei der Überwachung der Datensatzaktivität und des Datenflussstatus referenzieren können. Sie können die Fehlerdiagnose während des Erstellungsprozesses des Datenflusses aktivieren. |
-| Fehlerzusammenfassung | Bei einer fehlgeschlagenen Ausführung des Datenflusses zeigt die Fehlerzusammenfassung einen Fehlercode und eine Beschreibung an, um zusammenzufassen, warum die Ausführung fehlgeschlagen ist. |
+| Teilweise Aufnahme | Die partielle Batch-Aufnahme bietet die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert aufzunehmen. Mit dieser Funktion können Sie alle Ihre korrekten Daten erfolgreich in Experience Platform aufnehmen, während alle Ihre falschen Daten separat mit Informationen darüber, warum sie ungültig sind, in Batches erfasst werden. Sie können die partielle Aufnahme während des Erstellungsprozesses eines Datenflusses aktivieren. |
+| Fehlerdiagnose | Fehlerdiagnose weist die Quelle an, Fehlerdiagnosen zu erstellen, auf die Sie später bei der Überwachung Ihrer Datensatzaktivität und des Datenflussstatus verweisen können. Sie können die Fehlerdiagnose während des Erstellungsprozesses eines Datenflusses aktivieren. |
+| Fehlerzusammenfassung | Bei einer fehlgeschlagenen Datenflussausführung zeigt die Fehlerzusammenfassung einen Fehlercode und eine Beschreibung an, um zusammenzufassen, warum die Iteration der Ausführung fehlgeschlagen ist. |
 
 {style="table-layout:auto"}
 
-Wenn Ihr Datenfluss Fehler meldet, können Sie mit der Oberfläche [!UICONTROL Datenfluss-Ausführungsfehler] nach unten scrollen und nach unten scrollen.
+Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL  einen Bildlauf nach unten ].
 
-Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] , um Metriken zu Datensätzen anzuzeigen, die nicht aufgrund von Fehlern erfasst wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Vorschau der Fehlerdiagnose anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und des Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Download]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access] -API verwendet werden soll.
+Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
 
 >[!NOTE]
 >
->Sie können die Fehlerdiagnose nur verwenden, wenn die Funktion während der Erstellung der Quellverbindung aktiviert wurde.
+>Sie können die Fehlerdiagnose nur verwenden, wenn die Funktion während des Erstellungsprozesses der Quellverbindung aktiviert wurde.
 
-![ Der Bereich für Fehler beim Ausführen des Datenflusses.](../assets/ui/monitor-sources/errors.png)
+![Das Bedienfeld „Fehler bei der Datenflussausführung“.](../assets/ui/monitor-sources/errors.png)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie den Datenfluss der Aufnahme von der Quellebene mithilfe des Dashboards **[!UICONTROL Überwachung]** erfolgreich überwacht. Sie haben auch erfolgreich Fehler identifiziert, die zum Fehlschlagen von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie mithilfe des Dashboards **[!UICONTROL Überwachung“ den Datenfluss der Aufnahme von der]** aus überwacht. Sie haben auch erfolgreich Fehler identifiziert, die zum Scheitern von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Identitätsdaten überwachen](./monitor-identities.md).
-* [Profildaten überwachen](./monitor-profiles.md).
+* [Überwachen von ](./monitor-profiles.md).

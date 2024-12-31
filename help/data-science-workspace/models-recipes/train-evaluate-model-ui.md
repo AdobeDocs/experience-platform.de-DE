@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; Training und Evaluieren; Data Science Workspace; beliebte Themen; Modell erstellen; Trainings-Lauf erstellen
+keywords: Experience Platform;Trainieren und Auswerten;Datenwissenschafts-Workspace;beliebte Themen;Erstellen eines Modells;Erstellen eines Trainings-Durchgangs
 solution: Experience Platform
-title: Modell in der Data Science Workspace-Benutzeroberfläche trainieren und bewerten
+title: Trainieren und Bewerten eines Modells in der Data Science Workspace-Benutzeroberfläche
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace können Sie ein Modell für maschinelles Lernen einrichten, indem Sie ein vorhandenes Rezept einbinden, das für den Zweck des Modells geeignet ist. Anschließend wird das Modell trainiert und ausgewertet, um seine Effizienz und Wirksamkeit zu erhöhen; dazu werden die entsprechenden Hyperparameter fein abgestimmt. Rezepte sind wiederverwendbar; mit einem Rezept können also verschiedene Modelle erstellt und auf individuelle Zwecke zugeschnitten werden.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
@@ -12,7 +12,7 @@ ht-degree: 53%
 
 ---
 
-# Modell in der Data Science Workspace-Benutzeroberfläche trainieren und bewerten
+# Trainieren und Bewerten eines Modells in der Data Science Workspace-Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -26,76 +26,76 @@ Dieses Tutorial leitet Sie durch die Schritte zum Erstellen, Trainieren und Ausw
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, müssen Sie Zugriff auf [!DNL Experience Platform] haben. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform] haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie in [!DNL Experience Platform] keinen Zugriff auf eine Organisation haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, befolgen Sie die Anweisungen im Tutorial zum [Importieren eines gepackten Rezepts in der UI](./import-packaged-recipe-ui.md), bevor Sie fortfahren.
 
 ## Modell erstellen
 
-Wählen Sie unter Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und dann die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Wählen Sie oben rechts auf der Seite die Option **[!UICONTROL Modell erstellen]** aus, um mit der Modellerstellung zu beginnen.
+Wählen Sie in Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und anschließend die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Wählen Sie **[!UICONTROL Modell erstellen]** oben rechts auf der Seite aus, um mit der Modellerstellung zu beginnen.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-Durchsuchen Sie die Liste der vorhandenen Rezepte, wählen Sie das Rezept aus, das zum Erstellen des Modells verwendet werden soll, und wählen Sie **[!UICONTROL Weiter]** aus.
+Durchsuchen Sie die Liste der vorhandenen Rezepte, suchen Sie das Rezept, das zum Erstellen des Modells verwendet werden soll, und wählen Sie &quot;**[!UICONTROL &quot;]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Wählen Sie einen entsprechenden Eingabedatensatz und dann **[!UICONTROL Weiter]** aus. Dadurch wird der standardmäßige Eingabe-Trainings-Datensatz für das Modell festgelegt.
+Wählen Sie einen entsprechenden Eingabedatensatz aus und klicken Sie auf **[!UICONTROL Weiter]**. Dadurch wird der standardmäßige Eingabetraining-Datensatz für das Modell festgelegt.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-Geben Sie einen Namen für das Modell ein und überprüfen Sie die standardmäßigen Modellkonfigurationen. Bei der Rezepterstellung wurden Standardkonfigurationen angewendet, um die Konfigurationswerte zu überprüfen und zu ändern, indem auf die Werte doppelgeklickt wird.
+Geben Sie einen Namen für das Modell ein und überprüfen Sie die standardmäßigen Modellkonfigurationen. Die Standardkonfigurationen wurden bei der Rezepterstellung angewendet. Überprüfen und ändern Sie die Konfigurationswerte durch Doppelklicken auf die Werte.
 
-Um einen neuen Konfigurationssatz bereitzustellen, wählen Sie **[!UICONTROL Neue Konfiguration hochladen]** und ziehen Sie eine JSON-Datei mit Modellkonfigurationen in das Browserfenster. Wählen Sie **[!UICONTROL Beenden]** aus, um das Modell zu erstellen.
+Um einen neuen Satz von Konfigurationen bereitzustellen, wählen Sie **[!UICONTROL Neue Konfiguration hochladen]** und ziehen Sie eine JSON-Datei mit Modellkonfigurationen in das Browser-Fenster. Wählen Sie **[!UICONTROL Beenden]**, um das Modell zu erstellen.
 
 >[!NOTE]
 >
->Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das bedeutet, dass Konfigurationen für das Rezept &quot;Einzelhandelsumsätze&quot;für das Recommendations-Rezept &quot;Produkt&quot;nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
+>Konfigurationen sind eindeutig und spezifisch für ihr beabsichtigtes Rezept. Dies bedeutet, dass Konfigurationen für das Rezept für Einzelhandelsumsätze für das Produkt &quot;Recommendations&quot; nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Trainings-Lauf erstellen
 
-Wählen Sie unter Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und dann die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Suchen und wählen Sie den Hyperlink aus, der an den Namen des Modells angehängt ist, das Sie trainieren möchten.
+Wählen Sie in Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und anschließend die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Suchen Sie den Hyperlink, der mit dem Namen des Modells verbunden ist, das Sie trainieren möchten, und wählen Sie ihn aus.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. Bei Modellen, die mit der Benutzeroberfläche [!DNL Data Science Workspace] erstellt wurden, wird automatisch ein Trainings-Lauf generiert und mit den Standardkonfigurationen und dem Eingabedatensatz für das Trainieren ausgeführt.
+Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. Für Modelle, die mit der [!DNL Data Science Workspace]-Benutzeroberfläche erstellt wurden, wird automatisch ein Trainings-Durchgang generiert und mit den Standardkonfigurationen und dem eingegebenen Trainings-Datensatz ausgeführt.
 
-Erstellen Sie einen neuen Trainings-Lauf, indem Sie oben rechts auf der Modellübersichtsseite die Option **[!UICONTROL Trainieren]** auswählen.
+Erstellen Sie einen neuen Trainings-Lauf, indem **[!UICONTROL Trainieren]** oben rechts auf der Seite Modellübersicht auswählen.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-Wählen Sie den Eingabedatensatz für die Schulung für den Trainings-Lauf und dann **[!UICONTROL Weiter]** aus.
+Wählen Sie den Trainings-Eingabedatensatz für den Trainings-Lauf und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-Bei der Modellerstellung angegebene Standardkonfigurationen werden angezeigt; ändern Sie sie nach Bedarf, indem Sie auf die Werte doppelklicken. Wählen Sie **[!UICONTROL Beenden]** aus, um den Trainings-Lauf zu erstellen und auszuführen.
+Bei der Modellerstellung angegebene Standardkonfigurationen werden angezeigt; ändern Sie sie nach Bedarf, indem Sie auf die Werte doppelklicken. Wählen **[!UICONTROL Beenden]**, um den Trainings-Lauf zu erstellen und auszuführen.
 
 >[!NOTE]
 >
->Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das bedeutet, dass Konfigurationen für das Rezept &quot;Einzelhandelsumsätze&quot;für das Recommendations-Rezept &quot;Produkt&quot;nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
+>Konfigurationen sind eindeutig und spezifisch für ihr beabsichtigtes Rezept. Dies bedeutet, dass Konfigurationen für das Rezept für Einzelhandelsumsätze für das Produkt &quot;Recommendations&quot; nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
 
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 
 ## Modell auswerten
 
-Wählen Sie unter Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und dann die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Suchen und wählen Sie den Hyperlink aus, der an den Namen des Modells angehängt ist, das Sie auswerten möchten.
+Wählen Sie in Experience Platform die Registerkarte **[!UICONTROL Modelle]** im linken Navigationsbereich und anschließend die Registerkarte Durchsuchen aus, um Ihre vorhandenen Modelle anzuzeigen. Suchen Sie den Hyperlink, der mit dem Namen des Modells verbunden ist, das Sie auswerten möchten, und wählen Sie ihn aus.
 
 ![Modell auswählen](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. Bei mehreren abgeschlossenen Trainings-Läufen können Bewertungsmetriken über verschiedene Trainings-Läufe im Modellbewertungsdiagramm hinweg verglichen werden. Wählen Sie mithilfe der Dropdown-Liste über dem Diagramm eine Auswertungsmetrik aus.
+Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. Bei mehreren abgeschlossenen Trainings-Durchgängen können Bewertungsmetriken über verschiedene Trainings-Durchgänge hinweg im Modellevaluierungsdiagramm verglichen werden. Wählen Sie mithilfe der Dropdown-Liste über dem Diagramm eine Auswertungsmetrik aus.
 
 Die Metrik „Mean Absolute Percent Error (MAPE)“ drückt die Genauigkeit als Fehlerprozentwert aus. So lässt sich das am besten geeignete Experiment ermitteln. Dabei gilt: Je niedriger der MAPE-Wert, desto besser.
 
-![Überblick über die Trainings-Läufe](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+![Überblick über Trainings-Läufe](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
 Die Metrik „Präzision“ beschreibt den Prozentwert relevanter Instanzen im Vergleich zu den insgesamt *abgerufenen* Instanzen. Präzision kann als Wahrscheinlichkeit verstanden werden, mit der ein zufällig ausgewähltes Ergebnis richtig ist.
 
-![ Ausführen mehrerer Ausführungen](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![Ausführen mehrerer Ausführungen](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
-Wenn Sie einen bestimmten Trainings-Lauf auswählen, erhalten Sie die Details zu diesem Lauf, indem Sie die Auswertungsseite öffnen. Das können Sie bereits vor Abschluss des Laufs tun. Auf der Auswertungsseite können Sie weitere Auswertungsmetriken, Konfigurationsparameter und Visualisierungen sehen, die spezifisch für den Trainings-Lauf sind.
+Die Auswahl eines bestimmten Trainings-Durchgangs liefert die Details dieses Durchgangs, indem die Auswertungsseite geöffnet wird. Das können Sie bereits vor Abschluss des Laufs tun. Auf der Seite „Evaluierung“ können Sie andere Auswertungsmetriken, Konfigurationsparameter und Visualisierungen sehen, die für den Trainings-Lauf spezifisch sind.
 
-![Vorschaulogs](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+![Vorschau der Protokolle](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
 
 Außerdem können Sie Aktivitätsprotokolle herunterladen, um die Details zum Lauf anzuzeigen. Protokolle sind besonders bei fehlgeschlagenen Läufen nützlich: Mit ihrer Hilfe können Sie herausfinden, was falsch gelaufen ist.
 
@@ -105,7 +105,7 @@ Hyperparameter können nicht trainiert werden und ein Modell muss durch Testen v
 
 ## Nächste Schritte
 
-Dieses Tutorial hat Sie durch das Erstellen, Trainieren und Bewerten eines Modells in [!DNL Data Science Workspace] geführt. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das trainierte Modell nutzen, um Einblicke zu generieren; folgen Sie dazu dem Tutorial [Modell in der UI bewerten](./score-model-ui.md).
+Dieses Tutorial führte Sie durch die Erstellung, Schulung und Bewertung eines Modells in [!DNL Data Science Workspace]. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das trainierte Modell nutzen, um Einblicke zu generieren; folgen Sie dazu dem Tutorial [Modell in der UI bewerten](./score-model-ui.md).
 
 ## Referenz {#reference}
 
@@ -126,7 +126,7 @@ Zusätzliche Parameter bestimmen die technischen Eigenschaften des Modells:
 | `ACP_DSW_INPUT_FEATURES` | Zeichenfolge | Liste mit kommagetrennten Eingabeschemaattributen. |
 | `ACP_DSW_TARGET_FEATURES` | Zeichenfolge | Liste mit kommagetrennten Ausgabeschemaattributen. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolesch | Legt fest, ob Eingabe- und Ausgabefunktionen geändert werden können. |
-| `tenantId` | Zeichenfolge | Diese ID stellt sicher, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrem Unternehmen enthalten sind. [Gehen Sie wie folgt vor](../../xdm/api/getting-started.md#know-your-tenant_id), um Ihre Mandantenkennung zu suchen. |
+| `tenantId` | Zeichenfolge | Diese ID stellt sicher, dass die von Ihnen erstellten Ressourcen über einen ordnungsgemäßen Namespace verfügen und in Ihrer Organisation enthalten sind. [Gehen Sie wie folgt vor](../../xdm/api/getting-started.md#know-your-tenant_id), um Ihre Mandantenkennung zu suchen. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Zeichenfolge | Das zum Trainieren eines Modells verwendete Eingabeschema. |
 | `evaluation.labelColumn` | Zeichenfolge | Spaltenbezeichnung für Auswertungsvisualisierungen. |
 | `evaluation.metrics` | Zeichenfolge | Kommagetrennte Liste mit Auswertungsmetriken, die zur Auswertung eines Modells verwendet werden. |

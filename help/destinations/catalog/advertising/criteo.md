@@ -1,7 +1,7 @@
 ---
-keywords: Werbung; Kriterien;
-title: Crito-Verbindung
-description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
+keywords: Werbung; Kriterium;
+title: Criteo-Verbindung
+description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher über das offene Internet ein reichhaltigeres Erlebnis zu bieten. Mit dem weltweit größten Commerce-Datensatz und der erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint auf der Shopping-Journey personalisiert ist, um Kunden mit der richtigen Anzeige zum richtigen Zeitpunkt zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
@@ -16,31 +16,31 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Diese Ziel-Connector- und Dokumentationsseite werden von Criteo erstellt und gepflegt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [hier](mailto:criteoTechnicalPartnerships@criteo.com).
+>Dieser Ziel-Connector und diese Dokumentationsseite werden von Criteo erstellt und gepflegt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [hier](mailto:criteoTechnicalPartnerships@criteo.com).
 
-Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
+Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher über das offene Internet ein reichhaltigeres Erlebnis zu bieten. Mit dem weltweit größten Commerce-Datensatz und der erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint auf der Shopping-Journey personalisiert ist, um Kunden mit der richtigen Anzeige zum richtigen Zeitpunkt zu erreichen.
 
 ## Voraussetzungen {#prerequisites}
 
-* Sie benötigen ein Administratorbenutzerkonto im [Kriterienverwaltungszentrum](https://marketing.criteo.com).
-* Sie benötigen Ihre Criteo Advertiser ID (fragen Sie Ihren Criteo-Kontakt, wenn Sie diese ID nicht haben).
+* Sie benötigen ein Administratorkonto im [Criteo Management Center](https://marketing.criteo.com).
+* Sie benötigen Ihre Criteo Advertiser-ID (fragen Sie Ihren Criteo-Kontakt, wenn Sie diese ID nicht haben).
 * Sie müssen [!DNL GUM caller ID] angeben, falls Sie [!DNL GUM ID] als Kennung verwenden möchten.
 
 ## Einschränkungen {#limitations}
 
-* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Nur-Text-E-Mails (die vor dem Senden in [!DNL SHA-256] umgewandelt werden sollen). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen von Einzelpersonen oder Telefonnummern).
-* Criteo benötigt mindestens eine Kennung, die vom Client bereitgestellt werden muss. [!DNL GUM ID] wird als Kennung priorisiert gegenüber Hash-E-Mail, da dies zu einer besseren Übereinstimmungsrate beiträgt.
+* Criteo akzeptiert nur E-Mails mit [!DNL SHA-256]-Hash und Nur-Text-E-Mails (die vor dem Versand in [!DNL SHA-256] umgewandelt werden). Bitte senden Sie keine personenbezogenen Daten (persönliche identifizierbare Informationen wie Namen oder Telefonnummern von Einzelpersonen).
+* Criteo benötigt mindestens eine vom Client bereitzustellende Kennung. Er priorisiert [!DNL GUM ID] als Kennung vor gehashten E-Mails, da er zu einer besseren Abgleichrate beiträgt.
 
 ![Voraussetzungen](../../assets/catalog/advertising/criteo/prerequisites.png)
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Criteo unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+Criteo unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 | --- | --- | --- |
-| `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl einfache als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option [!UICONTROL Transformation anwenden] , damit Platform die Daten bei Aktivierung automatisch hasst. |
-| `gum_id` | Cookie-Kennung von Criteo [!DNL GUM] | Mit [!DNL GUM IDs] können Kunden eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzerkennung von Criteo ([!DNL UID]) pflegen. Wenn der Kennungstyp `gum_id` ist, muss auch ein zusätzlicher Parameter, der [!DNL GUM Caller ID], einbezogen werden. Wenden Sie sich an Ihr Criteo-Account-Team, um den entsprechenden [!DNL GUM Caller ID] zu erhalten oder bei Bedarf weitere Informationen zu dieser [!DNL GUM ID]-Synchronisation zu erhalten. |
+| `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl Nur-Text- als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option [!UICONTROL Umwandlung anwenden], damit Platform die Daten bei Aktivierung automatisch hasht. |
+| `gum_id` | Cookie-Kennung für Criteo [!DNL GUM] | [!DNL GUM IDs] ermöglichen es Kunden, eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzeridentifizierung ([!DNL UID]) von Criteo zu pflegen. Wenn der Kennungstyp `gum_id` ist, muss auch ein zusätzlicher Parameter, der [!DNL GUM Caller ID], enthalten sein. Wenden Sie sich an Ihr Criteo-Account-Team, um die entsprechenden [!DNL GUM Caller ID] zu erhalten oder um bei Bedarf weitere Informationen zu dieser [!DNL GUM ID]-Synchronisierung zu erhalten. |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -53,39 +53,39 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen ein besseres Verständnis der Verwendung des [!DNL Criteo]-Ziels zu vermitteln, finden Sie hier einige Ziele, die Adobe Experience Platform-Kunden mit [!DNL Criteo] erreichen können:
+Damit Sie besser verstehen können, wie Sie das [!DNL Criteo]-Ziel verwenden, können Adobe Experience Platform-Kundinnen und -Kunden [!DNL Criteo] folgende Ziele erreichen:
 
 ### Anwendungsfall 1: Traffic abrufen
 
-Präsentieren Sie Ihr Unternehmen mit relevanten Produktangeboten und flexiblen Kreativen. Mit intelligenten Produktempfehlungen stellen Ihre Anzeigen automatisch die Produkte dar, die am ehesten Trigger zu Besuchen und Interaktionen sind. Flexibles Targeting ermöglicht Ihnen das Erstellen von Zielgruppen aus dem Commerce-Datensatz von Criteo oder aus Ihren eigenen Interessenslisten und Adobe-CDP-Segmenten.
+Präsentieren Sie Ihr Unternehmen mit relevanten Produktangeboten und flexiblen Kreativen. Mit intelligenten Produktempfehlungen werden Ihre Anzeigen automatisch die Produkte enthalten, die am wahrscheinlichsten zu Besuchen und Interaktionen von Triggern führen. Mit dem flexiblen Targeting können Sie Zielgruppen aus dem Commerce-Datensatz von Criteo oder aus Ihren eigenen Interessentenlisten und Adobe-CDP-Segmenten erstellen.
 
-### Anwendungsfall 2: Website-Konversionen erhöhen
+### Anwendungsfall 2 : Steigerung der Website-Konversionen
 
-Wenn Besucher Ihre Website verlassen, erinnern Sie sie daran, was ihnen bei Retargeting-Anzeigen fehlt, die Konversionen steigern, indem sie spezielle Angebote und hyperrelevante Angebote anzeigen, egal wohin sie als Nächstes gehen. Verbinden Sie Ihre Adobe-CDP-Zielgruppe, um Bestandskunden oder Kunden ähnlich Ihren treuesten Käufern erneut anzusprechen.
+Wenn Besucherinnen und Besucher Ihre Website verlassen, erinnern Sie sie mit Retargeting-Anzeigen, die Konversionen erhöhen, daran, dass sie Sonderangebote und hyperrelevante Angebote anzeigen, unabhängig davon, wo sie als Nächstes hingehen. Verbinden Sie Ihre Adobe-CDP-Zielgruppe, um bestehende Kundinnen und Kunden erneut anzusprechen oder Verbraucher anzusprechen, die Ihren treuesten Kundinnen und Kunden ähneln.
 
-## Verbinden mit Criteo {#connect}
+## Mit Criteo verbinden {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 ### Bei Criteo authentifizieren
 
-Die Schritte zum Verbinden lauten wie folgt:
+Die Schritte zum Verbinden sind wie folgt:
 
-1. Melden Sie sich bei Adobe Experience Platform an und verbinden Sie sich mit dem Criteo-Ziel.
+1. Melden Sie sich bei Adobe Experience Platform an und stellen Sie eine Verbindung zum Criteo-Ziel her.
 
-   ![Anmelden](../../assets/catalog/advertising/criteo/connect-destination.png)
+   ![Anmeldung](../../assets/catalog/advertising/criteo/connect-destination.png)
 
-1. Sie werden zu Criteo umgeleitet, um die Verbindung zu autorisieren. Möglicherweise müssen Sie sich zunächst mit Ihren Criteo-Anmeldedaten anmelden:
+1. Sie werden zu Criteo weitergeleitet, um die Verbindung zu autorisieren. Möglicherweise müssen Sie sich zuerst mit Ihren Criteo-Anmeldedaten anmelden:
 
-   ![Bedingte Anmeldung](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![Criteo-Anmeldung](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![Bedingte Anmeldung](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![Criteo-Anmeldung](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![Bedingte Anmeldung](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![Criteo-Anmeldung](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Verbindungsparameter {#connection-parameters}
@@ -96,10 +96,10 @@ Geben Sie nach der Authentifizierung beim Ziel die folgenden Verbindungsparamete
 
 | Feld | Beschreibung | Erforderlich |
 | --- | --- | --- |
-| Name | Ein Name, der Ihnen dabei hilft, dieses Ziel in der Zukunft zu erkennen. Der Name, den Sie hier wählen, ist der Name &quot;[!DNL Audience]&quot;im Criteo Management Center und kann später nicht mehr geändert werden. | Ja |
-| Beschreibung | Eine Beschreibung, mit der Sie dieses Ziel in der Zukunft identifizieren können. | Nein |
-| Advertiser-ID | Criteo Advertiser ID Ihres Unternehmens. Wenden Sie sich an Ihren Criteo-Kundenbetreuer, um diese Informationen zu erhalten. | Ja |
-| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] Ihres Unternehmens. Wenden Sie sich an Ihr Criteo-Account-Team, um den entsprechenden [!DNL GUM Caller ID] zu erhalten oder bei Bedarf weitere Informationen zu dieser [!DNL GUM]-Synchronisation zu erhalten. | Ja, wann immer [!DNL GUM ID] als Bezeichner bereitgestellt wird |
+| Name | Ein Name, der Ihnen hilft, dieses Ziel in Zukunft zu erkennen. Der hier ausgewählte Name ist der [!DNL Audience] im Criteo Management Center und kann zu einem späteren Zeitpunkt nicht mehr geändert werden. | Ja |
+| Beschreibung | Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren. | Nein |
+| Advertiser-ID | Criteo Advertiser-ID Ihrer Organisation. Wenden Sie sich an Ihren Criteo Account Manager, um diese Informationen zu erhalten. | Ja |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] Ihres Unternehmens. Wenden Sie sich an Ihr Criteo-Account-Team, um die entsprechenden [!DNL GUM Caller ID] zu erhalten oder um bei Bedarf weitere Informationen zu dieser [!DNL GUM]-Synchronisierung zu erhalten. | Ja, wenn [!DNL GUM ID] als Kennung angegeben wird |
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -111,16 +111,16 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
 ## Exportierte Daten {#exported-data}
 
-Sie können die exportierten Zielgruppen im [Kriterienverwaltungszentrum](https://marketing.criteo.com/audience-manager/dashboard) sehen.
+Sie können die exportierten Zielgruppen im [Criteo-Management-Center](https://marketing.criteo.com/audience-manager/dashboard) anzeigen.
 
-Der Anforderungstext zum Hinzufügen eines Benutzerprofils, das von der [!DNL Criteo] -Verbindung empfangen wird, sieht in etwa so aus:
+Der Anfragetext zum Hinzufügen eines Benutzerprofils, das von der [!DNL Criteo]-Verbindung empfangen wurde, sieht in etwa wie folgt aus:
 
 ```json
 {
@@ -148,7 +148,7 @@ Der Anforderungstext zum Hinzufügen eines Benutzerprofils, das von der [!DNL Cr
 }
 ```
 
-Der Anforderungstext zum Entfernen des Benutzerprofils, das von der [!DNL Criteo]-Verbindung empfangen wurde, sieht in etwa so aus:
+Der Anfragetext zum Entfernen eines Benutzerprofils, das von der [!DNL Criteo]-Verbindung empfangen wurde, sieht in etwa wie folgt aus:
 
 ```json
 {
@@ -178,9 +178,9 @@ Der Anforderungstext zum Entfernen des Benutzerprofils, das von der [!DNL Criteo
 
 ## Datennutzung und -Governance {#data-usage}
 
-Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie Adobe Experience Platform Data Governance durchsetzt, finden Sie in der [Übersicht zu Data Governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de).
+Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie Adobe Experience Platform Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de).
 
 ## Zusätzliche Ressourcen
 
-* [Criteo Help Center](https://help.criteo.com/kb/en)
-* [Criteo Developer Portal](https://developers.criteo.com)
+* [Criteo-Hilfezentrum](https://help.criteo.com/kb/en)
+* [Criteo-Entwicklerportal](https://developers.criteo.com)

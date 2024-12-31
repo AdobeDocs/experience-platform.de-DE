@@ -16,9 +16,9 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Daten Science Arbeitsbereich ist nicht mehr erhältlich.
+>Data Science Workspace ist nicht mehr erhältlich.
 >
->Diese Dokumentation richtet sich an Bestandskunden mit früheren Berechtigungen für Daten Science Arbeitsbereich.
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Das Notebook zur explorativen Datenanalyse (EDA) hilft Ihnen beim Erkennen von Datenmustern, Überprüfen der Datenplausibilität und Zusammenfassen der relevanten Daten für Prognosemodelle.
 

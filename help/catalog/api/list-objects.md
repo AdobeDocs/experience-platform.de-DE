@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Filter; Filtern; Filtern von Daten; Filtern von Daten
+keywords: Experience Platform;Startseite;beliebte Themen;filter;filter;filter;daten filtern;daten filtern
 solution: Experience Platform
 title: Katalogobjekte auflisten
 description: Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des aufzulistenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] aufzulistenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md). |
 
 **Anfrage**
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anfrage angegebenen Abfrageparametern. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für das betreffende [!DNL Catalog] -Objekt dar, die dann in einem anderen Aufruf von [Anzeigen dieses bestimmten Objekts](look-up-object.md) für weitere Details verwendet werden kann.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog]-Objekten in Form von Schlüssel-Wert-Paaren zurück, die nach den in der Anfrage angegebenen Abfrageparametern gefiltert werden. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für das betreffende [!DNL Catalog]-Objekt dar, die dann in einem anderen Aufruf verwendet werden kann, um [dieses spezifische Objekt anzuzeigen](look-up-object.md) um weitere Details zu erhalten.
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt eine oder mehrere der angeforderten Eigenschaften, die durch die `properties` -Abfrage angegeben sind, nicht enthält, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
+>Wenn ein zurückgegebenes Objekt keine oder mehrere der angeforderten Eigenschaften enthält, die in der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
 
 ```json
 {
