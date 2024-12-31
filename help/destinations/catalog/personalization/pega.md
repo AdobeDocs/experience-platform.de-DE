@@ -1,6 +1,6 @@
 ---
 title: Pega Customer Decision Hub-Verbindung
-description: Verwenden Sie das Pega Customer Decisioning Hub-Ziel in Adobe Experience Platform, um Profilattribute und Zielgruppenmitgliedsdaten an Pega Customer Decisioning Hub zu senden, um die Entscheidungsfindung für nächstbeste Maßnahmen zu treffen.
+description: Verwenden Sie das Pega Customer Decision Hub -Ziel in Adobe Experience Platform, um Profilattribute und Daten zur Zielgruppenzugehörigkeit zur Entscheidungsfindung für die nächste beste Aktion an Pega Customer Decision Hub zu senden.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
@@ -13,41 +13,41 @@ ht-degree: 20%
 
 ## Übersicht {#overview}
 
-Verwenden Sie das Ziel &quot;[!DNL Pega Customer Decision Hub]&quot;in Adobe Experience Platform, um Profilattribute und Zielgruppenmitgliedsdaten an [!DNL Pega Customer Decision Hub] zu senden, damit eine Entscheidung für die nächste beste Aktion getroffen werden kann.
+Verwenden Sie das [!DNL Pega Customer Decision Hub] Ziel in Adobe Experience Platform, um Profilattribute und Zielgruppenzugehörigkeitsdaten zur Entscheidungsfindung für die nächste beste Aktion an [!DNL Pega Customer Decision Hub] zu senden.
 
-Die Profil-Zielgruppenmitgliedschaft aus Adobe Experience Platform kann beim Laden in [!DNL Pega Customer Decision Hub] als Prädikator in adaptiven Modellen verwendet werden und dazu beitragen, die richtigen kontextbezogenen und verhaltensbezogenen Daten für Entscheidungszwecke mit der nächsten besten Aktion bereitzustellen.
+Wenn die Profilzielgruppenzugehörigkeit aus Adobe Experience Platform in [!DNL Pega Customer Decision Hub] geladen wird, kann sie als Prädiktor in adaptiven Modellen verwendet werden und dazu beitragen, die richtigen kontextuellen Daten und Verhaltensdaten für Entscheidungszwecke für die nächste beste Aktion bereitzustellen.
 
 >[!IMPORTANT]
 >
->Diese Ziel-Connector- und Dokumentationsseite werden von Pegasystemen erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [hier](mailto:support@pega.com).
+>Dieser Ziel-Connector und diese Dokumentationsseite werden von Pegasystems erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [hier](mailto:support@pega.com).
 
 ## Anwendungsfälle
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Customer Decision Hub]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Customer Decision Hub]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
 ### Telekommunikation
 
-Ein Marketing-Experte möchte Einblicke aus der auf dem Datenwissenschaftsmodell basierenden nächsten Best Action nutzen, die von [!DNL Pega Customer Decision Hub] für die Kundeninteraktion bereitgestellt wird. [!DNL Pega Customer Decision Hub] ist stark von der Kundenabsicht abhängig, z. B. &quot;Interessant_In_5G&quot;, &quot;Interessant_in_Unlimited_Dataplan&quot;oder &quot;Interest_in_iPhone_Zubehör&quot;.
+Ein Marketing-Experte möchte die Erkenntnisse aus der auf einem Datenwissenschaftsmodell basierenden nächsten besten Aktion nutzen, die von [!DNL Pega Customer Decision Hub] für die Kundeninteraktion bereitgestellt wird. [!DNL Pega Customer Decision Hub] ist in hohem Maße von der Kundenabsicht abhängig - z. B. „Interested_In_5G“, „Interested_In_Unlimited_Dataplan“ oder „Interest_In_iPhone_Accessories“.
 
 ### Finanz-Services
 
-Ein Marketing-Experte möchte die Angebote für Kunden optimieren, die Newsletter im Pensionsplan oder Pensionsplan abonniert oder abbestellt haben. Finanzdienstleistungsunternehmen können mehrere Kunden-IDs aus ihren eigenen CRMs in Adobe Experience Platform erfassen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und Profile, die die Zielgruppen aufrufen und verlassen, an [!DNL Pega Customer Decision Hub] senden, um die Entscheidung über die nächste beste Aktion (NBA) in ausgehenden Kanälen zu treffen.
+Ein Marketing-Experte möchte die Angebote für Kunden optimieren, die sich für Newsletter zu Pensionsplänen oder Altersvorsorgeplänen angemeldet oder abgemeldet haben. Finanzdienstleister können mehrere Kunden-IDs aus ihren eigenen CRMs in Adobe Experience Platform aufnehmen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und Profile, die in die Zielgruppen eintreten und diese verlassen, senden, um in ausgehenden Kanälen für die nächstbeste Aktion (NBA) zu [!DNL Pega Customer Decision Hub].
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie dieses Ziel zum Exportieren von Daten aus Adobe Experience Platform verwenden können, stellen Sie sicher, dass Sie die folgenden Voraussetzungen in [!DNL Pega Customer Decision Hub] erfüllen:
+Bevor Sie dieses Ziel zum Exportieren von Daten aus Adobe Experience Platform verwenden können, müssen Sie die folgenden Voraussetzungen in [!DNL Pega Customer Decision Hub] erfüllen:
 
-* Konfigurieren Sie die Integrationskomponente [Adobe Experience Platform-Profil und Zielgruppenmitgliedschaft](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
-* Konfigurieren Sie die OAuth 2.0 [Client-Registrierung mit dem Grant-Typ Client-Anmeldedaten](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
-* Konfigurieren Sie den Datenfluss [ der Echtzeit-Ausführung](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) für den Datenfluss der Adobe-Zielgruppenmitgliedschaft in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
+* Konfigurieren Sie die Komponente für die Integration von Adobe Experience Platform-Profil und Zielgruppenmitgliedschaft ](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) Ihrer [!DNL Pega Customer Decision Hub].[
+* Konfigurieren Sie OAuth 2[0 (Client-Registrierung mit Client](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration)Anmeldeinformationen) und gewähren Sie den Typ in Ihrer [!DNL Pega Customer Decision Hub].
+* Konfigurieren Sie [Datenfluss in Echtzeit](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) für das Adobe des Datenflusses für die Zielgruppenzugehörigkeit in Ihrer [!DNL Pega Customer Decision Hub].
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] unterstützt die Aktivierung benutzerdefinierter Benutzer-IDs, die in der folgenden Tabelle beschrieben sind. Weitere Informationen finden Sie unter [identities](/help/identity-service/features/namespaces.md).
+[!DNL Pega Customer Decision Hub] unterstützt die Aktivierung benutzerdefinierter Benutzer-IDs, die in der folgenden Tabelle beschrieben werden. Weitere Informationen finden Sie unter [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung |
 |---|---|
-| *CustomerID* | Allgemeine Benutzer-ID, die ein Profil in [!DNL Pega Customer Decision Hub] und Adobe Experience Platform eindeutig identifiziert |
+| *CustomerID* | Allgemeine Benutzerkennung, die ein Profil in [!DNL Pega Customer Decision Hub] und Adobe Experience Platform eindeutig identifiziert |
 
 {style="table-layout:auto"}
 
@@ -57,8 +57,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Exportieren Sie alle Mitglieder einer Zielgruppe mit Kennung (*CustomerID*), Attributen (Nachname, Vorname, Ort usw.) und Daten zur Zielgruppenzugehörigkeit. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind immer auf API-basierten Verbindungen basiert. Sobald ein Profil auf der Experience Platform aktualisiert wird, sendet der Connector basierend auf der Zielgruppenbewertung die Aktualisierung an die Zielplattform. Weitere Informationen finden Sie unter [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Exportieren Sie alle Mitglieder einer Zielgruppe mit Identifikatoren (*CustomerID*), Attributen (Nachname, Vorname, Standort usw.) und Daten zur Zielgruppenzugehörigkeit. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind immer aktive API-basierte Verbindungen. Sobald ein Profil auf der Grundlage einer Zielgruppenbewertung in Experience Platform aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Weitere Informationen finden Sie unter [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,36 +68,36 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-#### Authenifizierung mit Client-Anmeldeinformationen für OAuth 2 {#oauth-2-client-credentials-authentication}
+#### Authentifizierung mit Client-Anmeldedaten für OAuth 2 {#oauth-2-client-credentials-authentication}
 
-![Bild des UI-Bildschirms, auf dem Sie eine Verbindung zum Pega CDH-Ziel herstellen können, indem Sie OAuth 2 mit Client Credentials authentication verwenden](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Authentifizierung über Client-Anmeldeinformationen eine Verbindung zum Pega-CDH-Ziel herstellen können](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-Füllen Sie die folgenden Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus:
+Füllen Sie die folgenden Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
-* **[!UICONTROL Zugriffstoken-URL]**: Die OAuth 2-Zugriffstoken-URL auf Ihrer [!DNL Pega Customer Decision Hub]-Instanz.
-* **[!UICONTROL Client-ID]**: Die OAuth 2 [!DNL client ID], die Sie in Ihrer [!DNL Pega Customer Decision Hub] -Instanz generiert haben.
-* **[!UICONTROL Client-Geheimnis]**: Das OAuth 2 [!DNL client secret], das Sie in Ihrer [!DNL Pega Customer Decision Hub]-Instanz generiert haben.
+* **[!UICONTROL Zugriffstoken-URL]**: Die OAuth 2-Zugriffstoken-URL auf Ihrer [!DNL Pega Customer Decision Hub].
+* **[!UICONTROL Client-ID]**: Die OAuth 2-[!DNL client ID], die Sie in Ihrer [!DNL Pega Customer Decision Hub]-Instanz generiert haben.
+* **[!UICONTROL Client-Geheimnis]**: Das OAuth 2-[!DNL client secret], das Sie in Ihrer [!DNL Pega Customer Decision Hub]-Instanz generiert haben.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
-Geben Sie nach Einrichtung der Authentifizierungsverbindung zum [!DNL Pega Customer Decision Hub] die folgenden Informationen für das Ziel ein:
+Geben Sie nach Herstellung der Authentifizierungsverbindung zum [!DNL Pega Customer Decision Hub] die folgenden Informationen für das Ziel an:
 
-![Bild des UI-Bildschirms mit ausgefüllten Feldern für die Pega CDH-Zieldetails](../../assets/catalog/personalization/pega/pega-connect-destination.png)
+![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Pega-CDH-Zieldetails](../../assets/catalog/personalization/pega/pega-connect-destination.png)
 
-Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Weiter]** aus.
+Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Hostname]**: Der Hostname des Pega Customer Decisioning Hub, in den das Profil als JSON-Daten exportiert wird.
+* **[!UICONTROL Hostname]**: Der Hostname des Pega Customer Decision Hub, in den das Profil als JSON-Daten exportiert wird.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Profilexport-Ziele](../../ui/activate-streaming-profile-destinations.md) .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 
@@ -105,38 +105,38 @@ Im Schritt [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profi
 
 ### Zuordnungsbeispiel: Aktivieren von Profilaktualisierungen in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
-Im Folgenden finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Export von Profilen in [!DNL Pega Customer Decision Hub].
+Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Exportieren von Profilen in [!DNL Pega Customer Decision Hub].
 
-Quellfelder auswählen:
+Auswahl der Quellfelder:
 
-* Wählen Sie eine Kennung (z. B. CustomerID) als Quellidentität aus, die ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL Pega Customer Decision Hub].
-* Wählen Sie XDM-Quellprofilattributänderungen aus, die in [!DNL Pega Customer Decision Hub] exportiert und aktualisiert werden müssen.
+* Wählen Sie eine Kennung (z. B.: Kunden-ID) als Quellidentität aus, die ein Profil in Adobe Experience Platform und [!DNL Pega Customer Decision Hub] eindeutig identifiziert.
+* Wählen Sie Änderungen am XDM-Quellprofilattribut aus, die in [!DNL Pega Customer Decision Hub] exportiert und aktualisiert werden müssen.
 
-Zielgruppenfelder auswählen:
+Auswählen der Zielfelder:
 
-* Wählen Sie den Namespace `CustomerID` als Zielidentität aus.
+* Wählen Sie den `CustomerID` Namespace als Zielidentität aus.
 * Wählen Sie Zielprofilattributnamen aus, die den entsprechenden XDM-Quellprofilattributen zugeordnet werden müssen.
 
 ![Identitätszuordnung](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Bei einer erfolgreichen Aktualisierung der Zielgruppenzugehörigkeit für ein Profil werden die Zielgruppenkennung, der Name und der Status in den Mitgliederdatenspeicher der Pega-Marketing-Zielgruppe eingefügt. Die Mitgliedschaftsdaten werden mit einem Kunden verknüpft, der das Kundenprofil Designer in [!DNL Pega Customer Decision Hub] verwendet, wie unten dargestellt.
-![Bild des UI-Bildschirms, auf dem Sie Adobe Audience Membership-Daten mithilfe des Kundenprofils Designer mit dem Kunden verknüpfen können](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+Bei einer erfolgreichen Aktualisierung der Zielgruppenzugehörigkeit für ein Profil würden die Zielgruppenkennung, der Name und die Status in den Datenspeicher für die Pega-Marketing-Zielgruppenzugehörigkeit eingefügt. Die Mitgliedschaftsdaten werden mit einem Kunden verknüpft, der in [!DNL Pega Customer Decision Hub] das Kundenprofil Designer verwendet, wie unten dargestellt.
+![Abbildung des Bildschirms der Benutzeroberfläche, mit dem Sie mithilfe des Kundenprofils Designer Adobe-Zielgruppenzugehörigkeitsdaten mit dem Kunden verknüpfen können](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-Die Daten zur Zielgruppenzugehörigkeit werden in den Interaktionsrichtlinien von Pega Next-Best-Action für die nächste beste Aktion verwendet, wie unten dargestellt.
-![Bild des UI-Bildschirms, auf dem Sie Zielgruppenmitgliedsfelder als Bedingungen in den Interaktionsrichtlinien von Pega Next-Best-Action Designer hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+Die Daten zur Zielgruppenzugehörigkeit werden in den Pega-Designer-Interaktionsrichtlinien mit der nächsten besten Aktion für die Entscheidungsfindung mit der nächsten besten Aktion verwendet, wie unten dargestellt.
+![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie Felder für die Zielgruppenzugehörigkeit als Bedingungen in den Interaktionsrichtlinien von Pega Next-Best-Action Designer hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-Die Datenfelder für die Mitgliedschaft in einer Zielgruppe für Kunden werden wie unten dargestellt als Prädikatoren in adaptiven Modellen hinzugefügt.
-![Bild des UI-Bildschirms, auf dem Sie Zielgruppenmitgliedsfelder als Prädikatoren in adaptiven Modellen mithilfe von Predictive Studio hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+Die Datenfelder für die Kundenzielgruppenzugehörigkeit werden wie unten dargestellt als Prädiktoren in adaptiven Modellen hinzugefügt.
+![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie mithilfe von Prediction Studio Zielgruppenzugehörigkeitsfelder als Prädikatoren in adaptiven Modellen hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Siehe [Einrichten einer OAuth 2.0-Client-Registrierung](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in [!DNL Pega Customer Decision Hub].
 
-Siehe [Erstellen einer Echtzeitausführung für Datenflüsse](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in [!DNL Pega Customer Decision Hub].
+Siehe [Erstellen einer Echtzeit-Ausführung für Datenflüsse](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in [!DNL Pega Customer Decision Hub].
 
-Siehe [Verwalten von Kundendatensätzen im Kundenprofil Designer](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
+Siehe [Verwalten von Kundendatensätzen im Kundenprofil-Designer](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

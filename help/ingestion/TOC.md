@@ -27,7 +27,7 @@ ht-degree: 95%
    - [Partielle Batch-Erfassung](batch-ingestion/partial.md)
    - [Fehlerbehebung](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
-   - CSV-Datei XDM {#map-csv} zuordnen
+   - Zuordnen einer CSV-Datei zu XDM {#map-csv}
       - [Übersicht](./tutorials/map-csv/overview.md)
       - [Zuordnen einer CSV-Datei zu einem vorhandenen Schema](./tutorials/map-csv/existing-schema.md)
       - [Zuordnen einer CSV-Datei unter Verwendung von KI-generierten Empfehlungen](./tutorials/map-csv/recommendations.md)

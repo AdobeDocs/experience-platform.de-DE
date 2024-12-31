@@ -1,5 +1,5 @@
 ---
-keywords: foresee; Erweiterung vorsehen; Ziel vorhersehen
+keywords: Foresee;Foresee-Erweiterung;Foresee-Ziel
 title: Gainsight-Erweiterung
 description: Die Gainsight-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: f73042e0-e540-4373-86c2-60be3749c049
@@ -14,7 +14,7 @@ ht-degree: 90%
 
 ## Übersicht {#overview}
 
-Mit [!DNL Gainsight] erhalten Produkteigentümer die Tools, um das Benutzerverhalten zu verstehen, die Produktakzeptanz zu steigern und Benutzerfeedback zu erfassen.
+[!DNL Gainsight] ermöglicht es Produkteigentümern, das Benutzerverhalten genau zu verstehen, die Produktakzeptanz zu fördern und Benutzer-Feedback zu sammeln.
 
 [!DNL Gainsight] ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 

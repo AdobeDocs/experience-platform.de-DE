@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: Experience Platform;Startseite;beliebte Themen;Identitäten auflisten;Cluster auflisten
 solution: Experience Platform
-title: Alle Identitäten in einem Cluster auflisten
+title: Auflisten aller Identitäten in einem Cluster
 description: Identitäten, die in einem Identitätsdiagramm miteinander verwandt sind, werden unabhängig vom Namespace als Teil desselben „Clusters“ in dem Identitätsdiagramm betrachtet. Folgende Optionen bieten die Möglichkeit, auf alle Cluster-Mitglieder zuzugreifen.
 role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
@@ -72,7 +72,7 @@ Verwenden Sie `POST` als Batch-Entsprechung der oben beschriebenen `GET`-Methode
 
 >[!NOTE]
 >
->Die Anfrage sollte maximal 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
+>Die Anfrage sollte höchstens 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -238,7 +238,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Die Antwort enthält immer einen Eintrag für jede XID, die in der Anfrage bereitgestellt wird, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob einer oder mehreren ein Cluster überhaupt zugeordnet ist.
+>Die Antwort hat immer einen Eintrag für jede XID in der Anfrage, unabhängig davon, ob die XIDs einer Anfrage zum selben Cluster gehören oder ob einem oder mehreren Cluster überhaupt zugeordnet sind.
 
 ## Nächste Schritte
 

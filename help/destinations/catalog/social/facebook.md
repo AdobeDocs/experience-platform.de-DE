@@ -1,5 +1,5 @@
 ---
-keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; instagram; Messaging; facebook Messaging
+keywords: facebook-Verbindung;facebook-Verbindung;facebook-Ziele;facebook;instagram;Messenger;facebook Messenger
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
@@ -14,27 +14,27 @@ ht-degree: 30%
 
 ## Übersicht {#overview}
 
-Aktivieren Sie Profile für Ihre [!DNL Facebook]-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
+Aktivieren Sie Profile für Ihre [!DNL Facebook] Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 
-Sie können dieses Ziel für Zielgruppen-Targeting in [!DNL Facebook's]-Apps verwenden, die von [!DNL Custom Audiences] unterstützt werden, einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] und [!DNL Messenger]. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
+Sie können dieses Ziel für das Audience-Targeting in [!DNL Facebook's] Familie von Apps verwenden, die von [!DNL Custom Audiences] unterstützt werden, einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] und [!DNL Messenger]. Die Auswahl der App, für die Sie eine Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
 
 ![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Anwendungsfälle
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL Facebook]-Ziel verwendet werden soll, finden Sie hier zwei Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook]-Ziel verwenden, finden Sie hier zwei Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit dieser Funktion bewältigen können.
 
-### Anwendungsfall 1
+### Anwendungsfall #1
 
-Ein Online-Einzelhändler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebote basierend auf ihren bisherigen Bestellungen zeigen. Der Online-Einzelhändler kann E-Mail-Adressen aus seinem eigenen CRM-System in Adobe Experience Platform erfassen, Zielgruppen aus eigenen Offline-Daten erstellen und diese Zielgruppen an die [!DNL Facebook]-Social-Plattform senden, wodurch seine Werbeausgaben optimiert werden.
+Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebote basierend auf ihren vorherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen aus seinem eigenen CRM in Adobe Experience Platform aufnehmen, Zielgruppen aus seinen eigenen Offline-Daten erstellen und diese Zielgruppen an die [!DNL Facebook] Social-Media-Plattform senden, wodurch seine Werbeausgaben optimiert werden.
 
-### Anwendungsfall 2
+### Anwendungsfall #2
 
-Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silber und Gold) und möchte über soziale Plattformen für jede dieser Ebenen personalisierte Angebote bereitstellen. Es wird jedoch nicht von allen Kunden die App der Fluglinie verwendet, und einige von ihnen haben sich nicht bei der Website des Unternehmens angemeldet. Die einzigen IDs, die das Unternehmen über diese Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
+Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silber und Gold) und möchte jeder dieser Stufen über soziale Plattformen personalisierte Angebote bieten. Allerdings nutzen nicht alle Kunden die Mobile App der Fluggesellschaft, und einige von ihnen haben sich nicht auf der Website des Unternehmens angemeldet. Die einzigen Kennungen, die das Unternehmen zu diesen Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
 
-Um sie über soziale Netzwerke hinweg anzusprechen, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform integrieren und dabei die E-Mail-Adressen als Kennungen verwenden.
+Um sie in Social Media als Zielgruppe anzusprechen, können sie die Kundendaten aus ihrem CRM in Adobe Experience Platform integrieren und die E-Mail-Adressen als Kennungen verwenden.
 
-Anschließend können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Zielgruppen zu erstellen, die sie über das [!DNL Facebook]-Ziel ansprechen können.
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Zielgruppen zu erstellen, die sie über das [!DNL Facebook] Ziel ansprechen können.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -43,18 +43,18 @@ Anschließend können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-Abgleich-Anforderungen](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Klartext- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-Übereinstimmungsanforderungen](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -65,92 +65,92 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im Facebook-Ziel verwendet werden. |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Facebook-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Voraussetzungen für facebook-Konten {#facebook-account-prerequisites}
+## Voraussetzungen für das facebook-Konto {#facebook-account-prerequisites}
 
-Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
+Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
-* Ihr [!DNL Facebook] -Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, die Inhaber des von Ihnen verwendeten Anzeigenkontos ist.
-* Für Ihr [!DNL Facebook] -Benutzerkonto muss die Berechtigung **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Das Geschäftskonto **Adobe Experience Cloud** muss als Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
+* Ihr [!DNL Facebook]-Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, der das von Ihnen verwendete Werbekonto gehört.
+* Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
+* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen [ Sie in der Dokumentation zu Facebook unter ](https://www.facebook.com/business/help/1717412048538897) zu Ihrem Business Manager hinzufügen .
   >[!IMPORTANT]
   >
-  > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die [!DNL Adobe Experience Platform] -Integration erforderlich.
-* Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist. Stellen Sie sicher, dass der Abschnitt &quot;`business_id=206617933627973`&quot; in der URL vorhanden ist, wenn Sie die Nutzungsbedingungen signieren.
+  > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die [!DNL Adobe Experience Platform] erforderlich.
+* Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, wo `accountID` Ihr [!DNL Facebook Ad Account ID] ist. Stellen Sie sicher, dass der Abschnitt `business_id=206617933627973` in der URL vorhanden ist, wenn Sie die Nutzungsbedingungen unterzeichnen.
   >[!IMPORTANT]
   >
-  >Stellen Sie beim Signieren der [!DNL Facebook Custom Audiences]-Nutzungsbedingungen sicher, dass Sie dasselbe Benutzerkonto verwenden, das Sie für die Authentifizierung in der Facebook-API verwendet haben.
+  >Achten Sie beim Signieren der [!DNL Facebook Custom Audiences] Nutzungsbedingungen darauf, dasselbe Benutzerkonto zu verwenden, das Sie zur Authentifizierung in der Facebook-API verwendet haben.
 
-## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
+## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 
-[!DNL Facebook] erfordert, dass keine personenbezogenen Daten (PII) klar gesendet werden. Daher können die für [!DNL Facebook] aktivierten Zielgruppen aus *Hash*-Identifikatoren wie E-Mail-Adressen oder Telefonnummern abgeleitet werden.
+[!DNL Facebook] erfordert, dass keine personenbezogenen Daten (PII) in klarer Form gesendet werden. Daher können die für [!DNL Facebook] aktivierten Zielgruppen als Hash-*(*) verschlüsselt werden, z. B. E-Mail-Adressen oder Telefonnummern.
 
-Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
+Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-## Hash-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
+## Hashing-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
-* **Aufnahme von rohen Telefonnummern**: Sie können rohe Telefonnummern im Format [!DNL E.164] in [!DNL Platform] aufnehmen. Sie sind bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den Namespace `Phone_E.164` aufzunehmen.
-* **Hash-Telefonnummern erfassen**: Sie können Ihre Telefonnummern vorab hash, bevor Sie sie in [!DNL Platform] aufnehmen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in den Namespace `Phone_SHA256` aufzunehmen.
+* **Aufnahme von rohen Telefonnummern**: Sie können rohe Telefonnummern im [!DNL E.164] Format in [!DNL Platform] aufnehmen. Sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre unformatierten Telefonnummern in den `Phone_E.164`-Namespace aufnehmen.
+* **Aufnehmen von Hash** Telefonnummern: Sie können Ihre Telefonnummern vor der Aufnahme in [!DNL Platform] vorab hashen. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre gehashten Telefonnummern in den `Phone_SHA256`-Namespace aufnehmen.
 
 >[!NOTE]
 >
->Telefonnummern, die in den Namespace `Phone` aufgenommen werden, können in [!DNL Facebook] nicht aktiviert werden.
+>Telefonnummern, die in den `Phone`-Namespace aufgenommen wurden, können in [!DNL Facebook] nicht aktiviert werden.
 
-## Anforderungen an das E-Mail-Hashing {#email-hashing-requirements}
+## Hash-Anforderungen für E-Mails {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder eindeutige E-Mail-Adressen in Experience Platform verwenden und diese bei der Aktivierung mit [!DNL Platform] hash lassen.
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in CLEAR in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
 
-Weiterführende Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassungsübersicht](/help/ingestion/batch-ingestion/overview.md) und der [Streaming-Erfassungsübersicht](/help/ingestion/streaming-ingestion/overview.md).
+Informationen zum Aufnehmen von E-Mail-Adressen im Experience Platform finden Sie [ „Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme“ und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
 
-Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
+Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
-* Entfernen Sie alle Leerzeichen am Anfang und am Ende der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
-* Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
+* Alle führenden und nachfolgenden Leerzeichen aus der E-Mail-Zeichenfolge kürzen; Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
+* Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hashen.
    * Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
-* Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
+* Stellen Sie sicher, dass die Hash-Zeichenfolge vollständig in Kleinbuchstaben geschrieben ist
    * Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-* Salz die Zeichenfolge nicht.
+* Die Schnur nicht salzen.
 
 >[!NOTE]
 >
->Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
-> Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
-> Die Option **[!UICONTROL Transformation anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Es wird nicht angezeigt, wenn Sie Namespaces auswählen.
+>Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
+> Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+> Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
 
-![Wenden Sie die im Zuordnungsschritt hervorgehobene Transformationssteuerung an.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Im Zuordnungsschritt hervorgehobenes Steuerelement „Umwandlung anwenden“.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie den Namespace `Extern_ID` zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mit [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden Sie in der [offiziellen Facebook-Dokumentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) .
+Bevor Sie den `Extern_ID`-Namespace zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden Sie in der offiziellen Dokumentation ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) [Facebook .
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook] -Ziels und zum Aktivieren von Zielgruppen.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook] Ziels und zum Aktivieren von Zielgruppen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Tutorial zur Zielkonfiguration [.](../../ui/connect-destination.md)
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die neuesten Informationen finden Sie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-1. Suchen Sie das Facebook-Ziel im Zielkatalog und wählen Sie **[!UICONTROL Einrichten]** aus.
+1. Suchen Sie das Facebook-Ziel im Zielkatalog und wählen Sie **[!UICONTROL Einrichten]**.
 2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
-   ![Authentifizieren Sie sich bei Facebook , der im Aktivierungs-Workflow angezeigt wird.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. Geben Sie Ihre Facebook-Anmeldedaten ein und wählen Sie **Anmelden** aus.
+   ![Der Schritt „Bei Facebook authentifizieren“ wird im Aktivierungs-Workflow angezeigt.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Geben Sie Ihre Facebook-Anmeldeinformationen ein und wählen Sie **Anmelden** aus.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -163,7 +163,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL Facebook Ad Account ID]. Sie finden diese ID in Ihrem [!DNL Facebook Ads Manager] -Konto. Stellen Sie bei der Eingabe dieser ID immer das Präfix `act_` voran.
+* **[!UICONTROL Konto-ID]**: Ihre [!DNL Facebook Ad Account ID]. Diese ID finden Sie in Ihrem [!DNL Facebook Ads Manager]. Stellen Sie bei der Eingabe dieser ID immer das Präfix `act_` voran.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -195,51 +195,51 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
-Im Schritt **[!UICONTROL Segmentplan]** müssen Sie beim Senden von Zielgruppen an [!DNL Facebook Custom Audiences] den [!UICONTROL Ursprung der Zielgruppe] angeben.
+Im Schritt **[!UICONTROL Segmentzeitplan]** müssen Sie die [!UICONTROL Herkunft der Zielgruppe] angeben, wenn Sie Zielgruppen an [!DNL Facebook Custom Audiences] senden.
 
-![Herkunft der Audience-Dropdown-Liste, die im Facebook-Aktivierungsschritt angezeigt wird.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Die Dropdown-Liste „Herkunft der Zielgruppe“ wird im Facebook-Aktivierungsschritt angezeigt.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Facebook Custom Audience] {#example-facebook}
 
-Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppendaten in [!DNL Facebook Custom Audience].
+Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Aktivieren von Zielgruppendaten in [!DNL Facebook Custom Audience].
 
-Quellfelder auswählen:
+Auswahl der Quellfelder:
 
-* Wählen Sie den Namespace `Email` als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht werden.
-* Wählen Sie den Namespace `Email_LC_SHA256` als Quellidentität aus, wenn Sie Kunden-E-Mail-Adressen bei der Datenerfassung gemäß den Anforderungen für den E-Mail-Hashing [!DNL Facebook] [E-Mail-Hashing](#email-hashing-requirements) in [!DNL Platform] gehasht haben.
-* Wählen Sie den Namespace `PHONE_E.164` als Quellkennung aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] hasst die Telefonnummern, um die [!DNL Facebook]-Anforderungen zu erfüllen.
-* Wählen Sie den Namespace `Phone_SHA256` als Quellidentität aus, wenn Sie bei der Datenerfassung Telefonnummern gemäß den Anforderungen für das Hashing der Telefonnummer [!DNL Facebook] [4 bei der Erfassung der Daten in [!DNL Platform] gehasht haben.](#phone-number-hashing-requirements)
-* Wählen Sie den Namespace `IDFA` als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
-* Wählen Sie den Namespace `GAID` als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
-* Wählen Sie den Namespace `Custom` als Quellidentität aus, wenn Ihre Daten aus anderen Kennungen bestehen.
+* Wählen Sie den `Email` Namespace als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht in einen Hash-Wert umgewandelt werden.
+* Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Platform] gemäß den [!DNL Facebook]E[Mail-Hash-Anforderungen](#email-hashing-requirements) gehasht haben.
+* Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] werden die Telefonnummern hashen, um [!DNL Facebook] Anforderungen zu erfüllen.
+* Wählen Sie den `Phone_SHA256`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
+* Wählen Sie den `IDFA` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
+* Wählen Sie den `GAID` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
+* Wählen Sie den `Custom` Namespace als Quellidentität aus, wenn Ihre Daten aus anderen Kennungstypen bestehen.
 
-Zielgruppenfelder auswählen:
+Auswählen der Zielfelder:
 
-* Wählen Sie den Namespace `Email_LC_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `Email` oder `Email_LC_SHA256` sind.
-* Wählen Sie den Namespace `Phone_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `PHONE_E.164` oder `Phone_SHA256` sind.
-* Wählen Sie die Namespaces `IDFA` oder `GAID` als Zielidentität aus, wenn Ihre Quell-Namespaces `IDFA` oder `GAID` sind.
-* Wählen Sie den Namespace `Extern_ID` als Zielidentität aus, wenn Ihr Quellnamespace ein benutzerdefinierter Namespace ist.
+* Wählen Sie den `Email_LC_SHA256`-Namespace als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `Email` oder `Email_LC_SHA256` sind.
+* Wählen Sie den `Phone_SHA256`-Namespace als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `PHONE_E.164` oder `Phone_SHA256` sind.
+* Wählen Sie die `IDFA` oder `GAID` Namespaces als Zielidentität aus, wenn Ihre Quell-Namespaces `IDFA` oder `GAID` sind.
+* Wählen Sie den `Extern_ID` Namespace als Zielidentität aus, wenn Ihr Quell-Namespace ein benutzerdefinierter Namespace ist.
 
 >[!IMPORTANT]
 >
->Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
+>Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
 > 
->Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+>Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
-![Wenden Sie die im Zuordnungsschritt hervorgehobene Transformationssteuerung an.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Im Zuordnungsschritt hervorgehobenes Steuerelement „Umwandlung anwenden“.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine benutzerdefinierte [!DNL Facebook] Zielgruppe programmgesteuert in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) erstellt wird. Die Zielgruppenmitgliedschaft wird hinzugefügt und entfernt, da Benutzer für die aktivierten Zielgruppen qualifiziert oder disqualifiziert sind.
+[!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine [!DNL Facebook] benutzerdefinierte Zielgruppe programmgesteuert in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) erstellt wird. Die Zielgruppenzugehörigkeit wird hinzugefügt und entfernt, da Benutzende für die aktivierten Zielgruppen qualifiziert oder disqualifiziert sind.
 
 >[!TIP]
 >
->Die Integration zwischen Adobe Experience Platform und [!DNL Facebook] unterstützt historische Zielgruppen-Backups. Alle historischen Zielgruppenqualifikationen werden an [!DNL Facebook] gesendet, wenn Sie die Zielgruppen für das Ziel aktivieren.
+>Die Integration zwischen Adobe Experience Platform und [!DNL Facebook] unterstützt Aufstockungen historischer Zielgruppen. Alle historischen Zielgruppenqualifikationen werden an [!DNL Facebook] gesendet, wenn Sie die Zielgruppen für das Ziel aktivieren.
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -249,12 +249,12 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kunden neu erstellte Konten verwenden und die [!DNL Facebook] -Berechtigungen noch nicht aktiv sind.
+Dieser Fehler tritt auf, wenn Kundinnen und Kunden neu erstellte Konten verwenden und die [!DNL Facebook] noch nicht aktiv sind.
 
 >[!IMPORTANT]
 >
->Stellen Sie sicher, dass Sie den [!DNL Facebook Custom Audience Terms of Service] unter `business ID 206617933627973` akzeptieren, wie in der URL-Vorlage im Abschnitt [Voraussetzungen für das Konto](#facebook-account-prerequisites) gezeigt.
+>Akzeptieren Sie die [!DNL Facebook Custom Audience Terms of Service] unter `business ID 206617933627973`, wie in der URL-Vorlage im Abschnitt [Voraussetzungen für das Konto](#facebook-account-prerequisites) dargestellt.
 
-Wenn Sie die Fehlermeldung `400 Bad Request` erhalten, nachdem Sie die Schritte unter [Voraussetzungen für Facebook-Konten](#facebook-account-prerequisites) ausgeführt haben, lassen Sie einige Tage zu, bis die [!DNL Facebook] -Berechtigungen in Kraft treten.
+Wenn Sie die `400 Bad Request` Fehlermeldung erhalten, nachdem Sie die Schritte unter [Voraussetzungen für das Facebook](#facebook-account-prerequisites)Konto ausgeführt haben, warten Sie einige Tage, bis die [!DNL Facebook] Berechtigungen wirksam werden.
 
 

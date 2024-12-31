@@ -22,7 +22,7 @@ Wenn Sie dateibasierte Ziele über Destination SDK erstellen, können Sie Standa
 
 Batch-Konfigurationseinstellungen sind Teil der Zielkonfiguration für dateibasierte Ziele.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein dateibasiertes Ziel konfigurieren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden der -Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Sie können die Dateibenennungs- und Exportzeitplaneinstellungen über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

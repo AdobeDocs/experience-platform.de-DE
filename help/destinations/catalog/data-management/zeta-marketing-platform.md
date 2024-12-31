@@ -1,6 +1,6 @@
 ---
 title: Zeta-Marketing-Plattform
-description: Die Zeta Marketing Platform (ZMP) ist ein Cloud-basiertes System, das Ihnen dabei hilft, Kunden effizienter zu gewinnen, zu wachsen und zu binden, basierend auf intelligenten (proprietären Daten und KI).
+description: Die Zeta Marketing Platform (ZMP) ist ein Cloud-basiertes System, mit dem Sie Kunden effizienter gewinnen, wachsen und halten können, basierend auf Intelligenz (proprietäre Daten und KI).
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
@@ -15,61 +15,61 @@ ht-degree: 28%
 
 ## Übersicht {#overview}
 
-Die Zeta Marketing Platform (ZMP) ist ein Cloud-basiertes System, das Ihnen dabei hilft, Kunden effizienter zu gewinnen, zu wachsen und zu binden, basierend auf intelligenten (proprietären Daten und KI). Weitere Informationen finden Sie unter [Zeta Global](https://zetaglobal.com/).
+Die Zeta Marketing Platform (ZMP) ist ein Cloud-basiertes System, mit dem Sie Kunden effizienter gewinnen, wachsen und halten können, basierend auf Intelligenz (proprietäre Daten und KI). Weitere Informationen finden Sie unter [Zeta Global](https://zetaglobal.com/).
 
-Mit dem in Adobe Experience Platform verfügbaren Zeta Marketing Platform-Connector können Sie Ihre Zielgruppen nahtlos von der Experience Platform mit dem ZMP synchronisieren.
+Mit dem in Adobe Experience Platform verfügbaren Zeta Marketing Platform-Connector können Sie Ihre Zielgruppen nahtlos vom Experience Platform in die ZMP synchronisieren.
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom *Zeta Global*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an das Team unter [Kontaktaufnahme](https://zetaglobal.com/about/contact-us/).
+>Der Ziel-Connector und die Dokumentationsseite werden vom Team *Zeta Global* erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an das Team unter [Kontakt](https://zetaglobal.com/about/contact-us/).
 
 ## Anwendungsfälle {#use-cases}
 
 ### Erstellen von Zielgruppensegmenten {#use-case-build-audiences}
 
-Ein Marketer möchte eindeutige Zielgruppenprofile erstellen, seine wertvollsten Segmente identifizieren und diese über alle digitalen Kanäle hinweg verwenden, die von der Zeta Marketing Platform unterstützt werden. Sie möchten eine echte 360-Grad-Ansicht eines Verbraucherprofils erstellen, aussagekräftige Zielgruppen erstellen und aktivieren. Weitere Informationen darüber, welche Kanäle die Zeta-Marketing-Plattform unterstützt, finden Sie [hier](https://zetaglobal.com/platform/integrations/).
+Ein Marketing-Experte möchte einzigartige Zielgruppenprofile erstellen, deren wertvollste Segmente identifizieren und diese über alle digitalen Kanäle hinweg nutzen, die die Zeta-Marketing-Plattform unterstützt. Sie möchten eine echte 360-Grad-Ansicht eines Verbraucherprofils erstellen, aussagekräftige Zielgruppen erstellen und aktivieren. Weitere Informationen zu den von der Zeta Marketing-Plattform unterstützten Kanälen finden Sie [hier](https://zetaglobal.com/platform/integrations/).
 
-### Benutzer mit Anzeigen als Ziel auswählen {#use-case-target-users}
+### Targeting von Benutzern mit Anzeigen {#use-case-target-users}
 
-Ein Advertiser möchte Benutzer über die Zeta-Demand Side Platform (DSP) in bestimmten Zielgruppen ansprechen, da diese Benutzer mit ihren Marken interagieren. Klicken Sie für weitere Informationen zum DSP auf [hier](https://knowledgebase.zetaglobal.com/pug/).
+Ein Werbetreibender zielt darauf ab, Benutzende innerhalb bestimmter Zielgruppen über die Zeta Demand Side Platform (DSP) anzusprechen, da diese Benutzenden mit ihren Marken interagieren. Weitere Informationen zur Zeta-DSP finden Sie unter [hier](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Voraussetzungen {#prerequisites}
 
-### Voraussetzungen für Zeta-Marketing-Plattform
+### Voraussetzungen für die Zeta-Marketing-Plattform
 
-* Bevor Sie eine neue Verbindung zum Ziel der Zeta Marketing Platform herstellen, müssen Sie eine leere Kundenliste in Ihrem Zeta Marketing Platform-Konto erstellen. Sie müssen eine dieser Kundenlisten als Zielgruppe für den Empfang der Adobe Experience Platform-Zielgruppe auswählen, die Sie senden möchten. Sie können eine leere Kundenliste im ZMP erstellen, indem Sie die Anweisungen [hier](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) befolgen.
-* Obwohl die Adobe Experience Platform die Aktivierung mehrerer Zielgruppen für eine bestimmte ZMP-Zielinstanz zulässt, ist es obligatorisch, dass jede ZMP-Zielinstanz nur eine Experience Platform-Zielgruppe erhält. Um mehrere Zielgruppen aus der Experience Platform zu verarbeiten, erstellen Sie zusätzliche ZMP-Zielinstanzen für jede Zielgruppe und wählen Sie eine andere Kundenliste aus der Dropdown-Liste aus. Dieser Ansatz stellt sicher, dass die ZMP-Zielgruppen nicht überschrieben werden. Weitere Informationen finden Sie unter [Ausfüllen von Zieldetails](#destination-details) .
+* Bevor Sie eine neue Verbindung zum Zeta Marketing Platform-Ziel einrichten, müssen Sie in Ihrem Zeta Marketing Platform-Konto eine leere Kundenliste erstellen. Sie müssen eine dieser Kundenlisten als Zielgruppe auswählen, um die Adobe Experience Platform-Zielgruppe zu erhalten, die Sie senden möchten. Sie können in der ZMP eine leere Kundenliste erstellen, indem Sie den Anweisungen [hier](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) folgen.
+* Obwohl Adobe Experience Platform die Aktivierung mehrerer Zielgruppen für eine bestimmte ZMP-Zielinstanz zulässt, ist es obligatorisch, dass jede ZMP-Zielinstanz nur eine Experience Platform-Zielgruppe erhält. Um mehrere Zielgruppen vom Experience Platform aus zu verarbeiten, erstellen Sie für jede Zielgruppe zusätzliche ZMP-Zielinstanzen und wählen Sie aus der Dropdown-Liste eine andere Kundenliste aus. Dadurch wird sichergestellt, dass die Ziel-ZMP-Zielgruppen nicht überschrieben werden. Weitere [ finden Sie unter „Ausfüllen ](#destination-details) Zieldetails“.
 * Verwenden Sie die folgenden Anmeldeinformationen, um das Ziel zu konfigurieren:
    * Benutzername: **api**
-   * Kennwort: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/kb/integrations) .
+   * Kennwort: Ihr ZMP REST API-Schlüssel. Sie können Ihren REST-API-Schlüssel finden, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Anwendungen** navigieren. Weitere Informationen finden [ in der ](https://knowledgebase.zetaglobal.com/kb/integrations)ZMP-Dokumentation“.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Zeta Marketing Platform] unterstützt die Aktivierung benutzerdefinierter Benutzer-IDs, die in der folgenden Tabelle beschrieben sind. Weitere Informationen finden Sie unter [identities](/help/identity-service/features/namespaces.md).
+[!DNL Zeta Marketing Platform] unterstützt die Aktivierung benutzerdefinierter Benutzer-IDs, die in der folgenden Tabelle beschrieben werden. Weitere Informationen finden Sie unter [Identitäten](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
-> Für das Ziel der Zeta Marketing Platform müssen Sie einen Quell-Identitäts-Namespace der ZMP `uid`-Zielidentität zuordnen. Dies hilft der Zeta Marketing Platform, jedes Profil eindeutig zu unterscheiden.
+> Das Ziel der Zeta Marketing Platform erfordert die Zuordnung eines Quell-Identity-Namespace zur ZMP `uid` Zielidentität. Dies hilft der Zeta Marketing-Plattform, jedes Profil eindeutig zu unterscheiden.
 
 | Ziel-Identität | Beschreibung | Zu beachten | Anmerkungen |
 ---------|----------|----------|----------|
-| uid | Eindeutige ID, die ZMP verwendet, um Kundenprofile zu unterscheiden | Obligatorisch | Wählen Sie den standardmäßigen Identitäts-Namespace `Email` aus, wenn Sie eindeutige Profile anhand ihrer E-Mail-Adressen identifizieren möchten. Alternativ können Sie Ihren benutzerdefinierten Namespace auch `uid` zuordnen, wenn Kundenprofile keine E-Mail haben. |
-| email_md5_id | E-Mail-MD5, die jedes Kundenprofil darstellt | Optional | Wählen Sie diese Zielidentität aus, wenn Sie Kundenprofile anhand von E-Mail-MD5-Werten eindeutig identifizieren möchten. E-Mail-Adressen müssen innerhalb der Experience Platform bereits im MD5-Format vorliegen, da die Plattform keinen Nur-Text in MD5 konvertiert. Setzen Sie in diesem Szenario `uid` (erforderlich) auf dieselben E-Mail-MD5-Werte oder einen anderen geeigneten Identitäts-Namespace. |
+| UID | Eindeutige ID, die ZMP verwendet, um Kundenprofile zu unterscheiden | Obligatorisch | Wählen Sie den `Email` Standard-Identity-Namespace aus, wenn Sie eindeutige Profile anhand ihrer E-Mail-Adressen identifizieren möchten. Alternativ können Sie auch festlegen, dass Ihr benutzerdefinierter Namespace `uid` zugeordnet wird, wenn Kundenprofile keine E-Mail haben. |
+| email_md5_id | E-Mail-MD5-Hashs, die die einzelnen Kundenprofile darstellen | Optional | Wählen Sie diese Zielidentität aus, wenn Sie Kundenprofile anhand von E-Mail-MD5-Werten eindeutig identifizieren möchten. Es ist wichtig, dass E-Mail-Adressen bereits im MD5-Format auf der Experience Platform vorliegen, da die Plattform keinen einfachen Text in MD5 konvertiert. Legen Sie in diesem Szenario `uid` (obligatorisch) auf dieselben E-Mail-MD5-Werte oder einen anderen geeigneten Identity-Namespace fest. |
 
 {style="table-layout:auto"}
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> Wenn einzelne Mitglieder der Platform-Audience hinzugefügt oder daraus entfernt werden, werden Aktualisierungen an den ZMP gesendet, um sicherzustellen, dass die Ziel-Kundenliste entsprechend synchronisiert wird.
+> Wenn einzelne Mitglieder zur Platform-Zielgruppe hinzugefügt oder daraus entfernt werden, werden Aktualisierungen an die ZMP gesendet, um sicherzustellen, dass die Ziel-Kundenliste entsprechend synchronisiert wird.
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -94,16 +94,16 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
 * **[!UICONTROL Benutzername]**: `api`
-* **[!UICONTROL Kennwort]**: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/kb/integrations) .
+* **[!UICONTROL Kennwort]**: Ihr ZMP REST-API-Schlüssel. Sie können Ihren REST-API-Schlüssel finden, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Anwendungen** navigieren. Weitere Informationen finden [ in der ](https://knowledgebase.zetaglobal.com/kb/integrations)ZMP-Dokumentation“.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Bild mit ZMP-Konfiguration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
+![Bild mit der ZMP-Konfiguration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL ZMP-Konto-Site-ID]**: Ihre ZMP **Site-ID**, an die Sie Ihre Zielgruppen senden möchten. Sie können Ihre Site-ID anzeigen, indem Sie zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie [hier](https://knowledgebase.zetaglobal.com/kb/integrations).
+* **[!UICONTROL ZMP-Konto-Site]** ID: Ihre ZMP **Site-ID**, an die Sie Ihre Zielgruppen senden möchten. Sie können Ihre Site-ID anzeigen, indem Sie zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Anwendungen** navigieren. Weitere Informationen finden Sie [hier](https://knowledgebase.zetaglobal.com/kb/integrations).
 * **[!UICONTROL ZMP-Segment]**: Das Kundenlistensegment in Ihrem ZMP-Site-ID-Konto, das Sie mit der Platform-Zielgruppe aktualisieren möchten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
@@ -117,32 +117,32 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 >[!IMPORTANT]
 > 
 >* Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Im Folgenden finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Export von Profilen in [!DNL Zeta Marketing Platform].
+Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Exportieren von Profilen in [!DNL Zeta Marketing Platform].
 
-Quellfelder auswählen:
-* Wählen Sie einen Quell-Identitäts-Namespace (benutzerdefiniert oder Standard, z. B. `Email`), der ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL Zeta Marketing Platform] verwendet.
-* Wählen Sie beliebige XDM-Quellprofilattribute aus, die in den [!DNL Zeta Marketing Platform] exportiert und aktualisiert werden müssen.
+Auswahl der Quellfelder:
+* Wählen Sie einen Quell-Identity-Namespace aus (benutzerdefiniert oder standardmäßig, z. B. `Email`), der ein Profil in Adobe Experience Platform und [!DNL Zeta Marketing Platform] eindeutig identifiziert.
+* Wählen Sie alle XDM-Quellprofilattribute aus, die in den [!DNL Zeta Marketing Platform] exportiert und aktualisiert werden müssen.
 
-Zielgruppenfelder auswählen:
-* (Obligatorisch) Wählen Sie `uid` als Zielidentität, der Sie einen Quell-Identitäts-Namespace zuordnen.
-* (Optional) Wählen Sie `email_md5_id` als Zielidentität aus, der Sie den Quell-Identitäts-Namespace zugeordnet haben, der E-Mail-md5-Werte darstellt. E-Mail-Adressen müssen innerhalb der Experience Platform bereits im MD5-Format vorliegen, da die Plattform keinen Normaltext in MD5 konvertiert
-* Wählen Sie bei Bedarf weitere Zielgruppen-Mappings aus.
+Auswählen der Zielfelder:
+* (Obligatorisch) Wählen Sie `uid` als Zielidentität aus, der Sie einen Quell-Identity-Namespace zuordnen.
+* (Optional) Wählen Sie `email_md5_id` als Zielidentität aus, der Sie den Quell-Identity-Namespace zugeordnet haben, der E-Mail-MD5-Werte darstellt. Es ist wichtig, dass E-Mail-Adressen bereits im MD5-Format auf der Experience Platform vorliegen, da die Plattform keinen einfachen Text in MD5 konvertiert
+* Wählen Sie bei Bedarf zusätzliche Zielgruppen-Mappings aus.
 
 ![Identitätszuordnung](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Eine erfolgreiche Zielgruppenaktivierung von Experience Platform an die Zeta Marketing Platform aktualisiert die Zielkundenliste im ZMP. Die Anzahl und die Beispielprofile in der Zielkundenliste entsprechen der Anzahl der Identitäten, die erfolgreich aktiviert wurden.
+Eine erfolgreiche Zielgruppenaktivierung vom Experience Platform auf die Zeta-Marketing-Plattform aktualisiert die Zielkundenliste in der ZMP. Die Anzahl und die Beispielprofile in der Zielkundenliste entsprechen der Anzahl der Identitäten, die erfolgreich aktiviert wurden.
 
 ![Kundenliste in ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
-Jedes von Experience Platform aktivierte Zielgruppenelement wird auch unter **Zielgruppen** > **Personen** im ZMP angezeigt. Sie können auch das Segment **Kundenliste** anzeigen, zu dem ein Profil gehört, wie unten dargestellt in der Einzelkundenansicht.
+Jedes Zielgruppenmitglied, das von Experience Platform aktiviert wurde, wird auch unter **Zielgruppen** > **Personen** in der ZMP angezeigt. Sie können auch das Segment **Kundenliste), zu** ein Profil gehört, in der Einzelkundenansicht anzeigen, wie unten dargestellt.
 
 ![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
 

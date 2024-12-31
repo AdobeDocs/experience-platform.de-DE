@@ -17,7 +17,7 @@ Verwenden Sie eine konfigurierbare Aggregation, um sich einen tiefen Einblick in
 
 Beim Erstellen eines Echtzeit-Ziels (Streaming) mit Destination SDK können Sie konfigurieren, wie die exportierten Profile in den resultierenden Exporten kombiniert werden sollen. Dieses Verhalten wird durch die Einstellungen der Aggregationsrichtlinie bestimmt.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein Streaming-Ziel konfigurieren](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Sie können die Einstellungen der Aggregationsrichtlinie über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

@@ -1,7 +1,7 @@
 ---
 keywords: Demandbase-Erweiterung;Demandbase;Demandbase-Ziel
 title: Demandbase-Erweiterung
-description: Die Demandbase-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Demandbase-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
 source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 ## Übersicht {#overview}
 
-Erhalten Sie [!DNL Demandbase] B2B-Kontoeinblicke direkt in Adobe Analytics, wo Sie Traffic und Verhalten nach Branche, Umsatz und Zielkonten segmentieren können. Diese kundenbasierte Ansicht liefert einzigartige Einblicke in Interaktion und Konversion und dient als Quelle für Ihre wertvollsten Besucher.
+Erhalten Sie [!DNL Demandbase] Einblicke in das B2B-Konto von Adobe Analytics, wo Sie Traffic und Verhalten nach Branche, Umsatz und Zielkonten segmentieren können. Diese kundenbasierte Ansicht liefert einzigartige Einblicke in Interaktion und Konversion und dient als Quelle für Ihre wertvollsten Besucher.
 
 [!DNL Demandbase] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
@@ -24,7 +24,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 

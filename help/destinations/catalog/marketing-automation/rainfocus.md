@@ -2,13 +2,13 @@
 title: RainFocus-Teilnehmerprofile
 description: Erfahren Sie, wie Sie mit dem Ziel-Connector für RainFocus-Teilnehmerprofile Zielgruppenprofile mit dem globalen RainFocus-Teilnehmerprofil synchronisieren können.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: aa3af07e5a0909c95d9e23d209b041fa1fcd67b6
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 44%
 
 ---
-
 
 # RainFocus-Teilnehmerprofile {#rainfocus-destination}
 

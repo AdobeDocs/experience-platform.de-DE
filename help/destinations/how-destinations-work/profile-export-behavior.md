@@ -21,7 +21,7 @@ Es gibt mehrere Zieltypen in Experience Platform, wie in der Abbildung unten dar
 
 ## Nachrichtenaggregation in Streaming-Zielen
 
-Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, sollten Sie sich mit dem Konzept der Nachrichtenaggregation für *Streaming-Ziele* vertraut machen.
+Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, müssen Sie das Konzept der Nachrichtenaggregation für (Streaming *Ziele*.
 
 Experience Platform-Ziele exportieren Daten an API-basierte Integrationen in Form von HTTPS-Aufrufen. Sobald der Ziel-Service von anderen Upstream-Services darüber informiert wird, dass Profile infolge der Batch-Aufnahme, Streaming-Aufnahme, Batch-Segmentierung, Streaming-Segmentierung oder Identitätsdiagramm-Änderungen aktualisiert wurden, werden die Daten exportiert und an Streaming-Ziele gesendet.
 
@@ -32,7 +32,7 @@ Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mi
 * Anzahl der Datensätze (maximal 10.000) oder
 * Zeitfenster-Intervall (300 Sekunden)
 
-Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Möglicherweise werden alle 2-3 Minuten 10.000 Datensätze angezeigt, da die Daten schneller verarbeitet und aggregiert werden als das Exportintervall von 300 Sekunden. Außerdem werden sie schneller gesendet. Etwa alle 2-3 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
+Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Möglicherweise werden alle 2 bis 3 Minuten 10.000 Datensätze angezeigt, da die Daten schneller verarbeitet und aggregiert werden als beim Exportintervall von 300 Sekunden und schneller gesendet werden, etwa alle 2 bis 3 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
 Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neuauswertungsinformationen von einem Upstream-Service erhält.
 
@@ -147,9 +147,9 @@ In allen oben genannten Exportsituationen enthalten die exportierten Dateien die
 
 Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in inkrementelle Dateiexporte. Wenn beispielsweise ein Attribut einem Profil hinzugefügt oder daraus entfernt wurde, wird das Profil nicht in den Export einbezogen.
 
-Wenn sich das Attribut `segmentMembership` eines Profils jedoch ändert, wird das Profil in die exportierten Dateien aufgenommen. Das heißt, wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte aufgenommen.
+Wenn sich jedoch das `segmentMembership` für ein Profil ändert, wird das Profil in die exportierten Dateien aufgenommen. Mit anderen Worten: Wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte eingeschlossen.
 
-Wenn einem Profil eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) im [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) hinzugefügt wird, wird das Profil auf ähnliche Weise in einen neuen inkrementellen Dateiexport aufgenommen.
+Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, ](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
 
 Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifikationen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 
@@ -159,10 +159,10 @@ Beachten Sie beispielsweise in der unten dargestellten Exporteinstellung, bei de
 
 ![Exporteinstellung mit mehreren ausgewählten Attributen](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Ein Profil &quot;*ist*&quot;, das in einen inkrementellen Dateiexport einbezogen wird, wenn es für das Segment qualifiziert oder disqualifiziert ist.
-* Ein Profil &quot;*is*&quot;ist in einem inkrementellen Dateiexport enthalten, wenn dem Identitätsdiagramm eine neue Telefonnummer hinzugefügt wird.
-* Ein Profil &quot;*ist nicht*&quot;ist in einem inkrementellen Dateiexport enthalten, wenn der Wert eines der zugeordneten XDM-Felder wie `xdm: loyalty.points`, `xdm: loyalty.tier` und `xdm: personalEmail.address` für ein Profil aktualisiert wird.
-* Jedes Mal, wenn das XDM-Feld `segmentMembership.status` im Zielaktivierungs-Workflow zugeordnet wird, werden Profile, die die Zielgruppe verlassen, *in exportierte inkrementelle Dateien mit dem Status `exited` ebenfalls mit* aufgenommen.
+* Ein Profil *wird* in einen inkrementellen Dateiexport eingeschlossen, wenn es für das Segment qualifiziert oder nicht qualifiziert ist.
+* Ein Profil *wird* in einen inkrementellen Dateiexport eingeschlossen, wenn dem Identitätsdiagramm eine neue Telefonnummer hinzugefügt wird.
+* Ein Profil *wird nicht* in einen inkrementellen Dateiexport eingeschlossen, wenn der Wert eines zugeordneten XDM-Felds wie `xdm: loyalty.points`, `xdm: loyalty.tier` oder `xdm: personalEmail.address` in einem Profil aktualisiert wird.
+* Sobald das XDM-Feld `segmentMembership.status` im Zielaktivierungs-Workflow zugeordnet wird, werden Profile, die die Zielgruppe verlassen *,* exportierten inkrementellen Dateien mit einem `exited` Status aufgenommen.
 
 >[!ENDSHADEBOX]
 
@@ -186,13 +186,13 @@ Im ersten Dateiexport nach der Einrichtung des Aktivierungs-Workflows wird die g
 
 | Was einen Zielexport bestimmt | In der exportierten Datei enthaltene Informationen |
 |---------|----------|
-| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Start eines Zielexports.</li><li>Änderungen in der Zielgruppenzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, oder Änderungen in Identitätszuordnungen, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen für ein Profil *nicht* qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | <p>Die Profile, für die die Zielgruppenzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status „Beendet“ werden in Zielexporte eingeschlossen, wenn im Zuordnungsschritt das XDM-Feld `segmentMembership.status` ausgewählt wird.</p> |
+| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Start eines Zielexports.</li><li>Alle Änderungen an der Zielgruppenzugehörigkeit eines Profils, unabhängig davon, ob es für das Segment qualifiziert oder nicht qualifiziert ist, oder Änderungen an Identitätszuordnungen qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen für ein Profil *nicht* qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | <p>Die Profile, für die die Zielgruppenzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status „Beendet“ werden in Zielexporte eingeschlossen, wenn im Zuordnungsschritt das XDM-Feld `segmentMembership.status` ausgewählt wird.</p> |
 
 {style="table-layout:fixed"}
 
 >[!TIP]
 >
->Zur Erinnerung: Änderungen bei Identitätszuordnungen für ein Profil qualifizieren es sich für einen inkrementellen Dateiexport. Änderungen der Attributwerte *nicht* qualifizieren sie für einen inkrementellen Dateiexport.
+>Zur Erinnerung: Änderungen an Identitätszuordnungen für ein Profil qualifizieren es für die Aufnahme in einen inkrementellen Dateiexport. Änderungen an Attributwerten *nicht* qualifizieren sie für die Aufnahme in einen inkrementellen Dateiexport.
 
 ## Nächste Schritte {#next-steps}
 

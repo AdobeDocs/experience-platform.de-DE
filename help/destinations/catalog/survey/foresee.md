@@ -1,5 +1,5 @@
 ---
-keywords: foresee; Erweiterung vorsehen; Ziel vorhersehen
+keywords: Foresee;Foresee-Erweiterung;Foresee-Ziel
 title: Foresee-Erweiterungsziel
 description: Die Foresee-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 3eca9e2e-fd41-4dca-a38f-8e281c45a01b
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 ## Übersicht {#overview}
 
-Konfigurieren von [!DNL ForeSee] -Produktbereitstellungen mithilfe von Tags.
+Konfigurieren [!DNL ForeSee] Produktbereitstellungen mithilfe von Tags.
 
 [!DNL Foresee] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der [Foresee-Erweiterungsseite](https://exchange.adobe.com/experiencecloud.details.100164.html) in der Adobe Exchange.
+Weitere Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der [Foresee-](https://exchange.adobe.com/experiencecloud.details.100164.html)) in der -Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

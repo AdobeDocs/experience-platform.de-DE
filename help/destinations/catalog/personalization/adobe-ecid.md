@@ -10,27 +10,27 @@ ht-degree: 40%
 
 ---
 
-# [!DNL Experience Cloud] ID-Diensterweiterung {#adobe-ecid-extension}
+# [!DNL Experience Cloud] ID-Service-Erweiterung {#adobe-ecid-extension}
 
 ## Übersicht {#overview}
 
-Diese Erweiterung implementiert den [!DNL Experience Cloud] ID-Dienst, der Besucher über alle [!DNL Experience Cloud] -Lösungen hinweg identifiziert.
+Diese Erweiterung implementiert den [!DNL Experience Cloud] ID-Service, der Besucher über alle [!DNL Experience Cloud] hinweg identifiziert.
 
-[!DNL Experience Cloud] ID-Dienst ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie auf der Seite [Experience Cloud ID-Dienst-Erweiterung](../../../tags/extensions/client/id-service/overview.md) in der Tag-Dokumentation.
+[!DNL Experience Cloud] ID-Service ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite [Experience Cloud ID Service-Erweiterung](../../../tags/extensions/client/id-service/overview.md) in der Tags-Dokumentation.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tagerweiterungen in Platform finden Sie in der [Übersicht über Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe ECID-Erweiterung](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten und ihn aufzufordern, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die Erweiterung des [!DNL Experience Cloud] ID-Diensts:
+So installieren Sie die [!DNL Experience Cloud] ID Service-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -38,17 +38,17 @@ Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleist
 
 Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Konfigurieren]** aus. Wenn das Feld **[!UICONTROL Konfigurieren]** ausgegraut ist, verfügen Sie nicht über die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 
-Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie in der Dokumentation zu [Tags](../../../tags/ui/administration/companies-and-properties.md) .
+Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Weitere Informationen zu Eigenschaften finden Sie in der [Tags-Dokumentation](../../../tags/ui/administration/companies-and-properties.md).
 
-Der Workflow leitet Sie zur Datenerfassungs-Benutzeroberfläche weiter, um die Installation abzuschließen.
+Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Experience Cloud ID-Dienst-Erweiterung](../../../tags/extensions/client/id-service/overview.md) in der Tag-Dokumentation.
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite zur Erweiterung des Experience Cloud ID-Service [](../../../tags/extensions/client/id-service/overview.md) in der Tags-Dokumentation.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch zum Hinzufügen einer neuen Erweiterung [](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 
-Nachdem Sie die Erweiterung installiert haben, können Sie mit der Einrichtung von Regeln beginnen. In der Datenerfassungs-Benutzeroberfläche können Sie Regeln für Ihre installierten Erweiterungen einrichten, um Ereignisdaten nur in bestimmten Situationen an das Erweiterungsziel zu senden. Weitere Informationen zum Einrichten von Regeln für Ihre Erweiterungen finden Sie in der Tag-Dokumentation unter Überblick über [Regeln](../../../tags/ui/managing-resources/rules.md) .
+Nachdem Sie die Erweiterung installiert haben, können Sie mit dem Einrichten von Regeln beginnen. In der Datenerfassungs-Benutzeroberfläche können Sie Regeln für Ihre installierten Erweiterungen einrichten, damit nur in bestimmten Situationen Ereignisdaten an das Erweiterungsziel gesendet werden. Weitere Informationen zum Einrichten von Regeln für Erweiterungen finden Sie in der Übersicht zu [Regeln](../../../tags/ui/managing-resources/rules.md) in der Tags-Dokumentation.
 
 ## Konfigurieren, Aktualisieren und Löschen von Erweiterungen {#configure-upgrade-delete}
 
@@ -56,6 +56,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, zeigt die Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung an. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

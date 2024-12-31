@@ -1,6 +1,6 @@
 ---
-description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
-title: Konfigurieren Sie ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+description: Erfahren Sie, wie Sie Destination SDK verwenden, um ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration zu konfigurieren.
+title: Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 8%
 
 ---
 
-# Konfigurieren eines [!DNL Azure Data Lake Storage] -Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
+# Konfigurieren eines [!DNL Azure Data Lake Storage] Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein [!DNL Azure Data Lake Storage] -Ziel mit benutzerdefinierten [Dateiformatierungsoptionen](configure-file-formatting-options.md) und einer benutzerdefinierten [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) konfigurieren.
+Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein [!DNL Azure Data Lake Storage]-Ziel mit benutzerdefinierten [Dateiformatierungsoptionen](configure-file-formatting-options.md) und einer benutzerdefinierten [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) konfigurieren.
 
 Auf dieser Seite werden alle Konfigurationsoptionen angezeigt, die für Azure Data Lake Storage-Ziele verfügbar sind. Sie können die in den folgenden Schritten angezeigten Konfigurationen bearbeiten oder bestimmte Teile der Konfigurationen nach Bedarf löschen.
 
-Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Konfigurationsoptionen im Destinations SDK](../../functionality/configuration-options.md).
+Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Konfigurationsoptionen in Destinations SDK](../../functionality/configuration-options.md).
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie die Seite [Erste Schritte der Destination SDK](../../getting-started.md) , um Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs zu erhalten.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte ](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Verwenden Sie zunächst den Endpunkt `/destination-server` , um [einen Server und eine Dateikonfiguration zu erstellen](../../authoring-api/destination-server/create-destination-server.md).
+Verwenden Sie zunächst den `/destination-server`-Endpunkt, um [eine Server- und Dateikonfiguration zu erstellen](../../authoring-api/destination-server/create-destination-server.md).
 
 **API-Format**
 
@@ -35,8 +35,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
-Die nachstehende Payload enthält eine generische [!DNL Azure Data Lake Storage] -Konfiguration mit benutzerdefinierten Konfigurationsparametern für die [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md), die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
+Die nachstehende Payload enthält eine generische [!DNL Azure Data Lake Storage] mit benutzerdefinierten [CSV-Dateiformatierungen](../../functionality/destination-server/file-formatting.md) Konfigurationsparametern, die Benutzerinnen und Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -119,13 +119,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Eine erfolgreiche Antwort gibt die neue Zielserverkonfiguration zurück, einschließlich der eindeutigen Kennung (`instanceId`) der Konfiguration. Speichern Sie diesen Wert, da er im nächsten Schritt erforderlich ist.
+Eine erfolgreiche Antwort gibt die neue Ziel-Server-Konfiguration zurück, einschließlich der eindeutigen Kennung (`instanceId`) der Konfiguration. Speichern Sie diesen Wert, da er im nächsten Schritt erforderlich ist.
 
 ## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Nachdem Sie die Konfiguration des Zielservers und der Dateiformatierung im vorherigen Schritt erstellt haben, können Sie jetzt den API-Endpunkt `/destinations` verwenden, um eine Zielkonfiguration zu erstellen.
+Nachdem Sie im vorherigen Schritt die Ziel-Server- und Dateiformatierungskonfiguration erstellt haben, können Sie jetzt den API-Endpunkt `/destinations` verwenden, um eine Zielkonfiguration zu erstellen.
 
-Um die Serverkonfiguration in Schritt 1 [ mit dieser Zielkonfiguration zu verbinden, ersetzen Sie den Wert `destinationServerId` in der unten stehenden API-Anfrage durch den Wert, der beim Erstellen Ihres Zielservers in Schritt 1 [4} erhalten wurde.](#create-server-file-configuration)](#create-server-file-configuration)
+Um die Server-Konfiguration in [Schritt 1](#create-server-file-configuration) mit dieser Zielkonfiguration zu verbinden, ersetzen Sie den `destinationServerId` in der unten stehenden API-Anfrage mit dem Wert, der beim Erstellen Ihres Ziel-Servers in [Schritt 1](#create-server-file-configuration) erhalten wurde.
 
 **API-Format**
 
@@ -394,48 +394,48 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließlich der eindeutigen Kennung (`instanceId`) der Konfiguration. Notieren Sie sich diesen Wert, da er erforderlich ist, wenn Sie weitere HTTP-Anfragen stellen müssen, um Ihre Zielkonfiguration zu aktualisieren.
+Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließlich der eindeutigen Kennung (`instanceId`) der Konfiguration. Speichern Sie diesen Wert, da er erforderlich ist, wenn Sie weitere HTTP-Anfragen zur Aktualisierung Ihrer Zielkonfiguration durchführen müssen.
 
 ## Schritt 3: Überprüfen der Experience Platform-Benutzeroberfläche {#verify-ui}
 
-Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog nun eine neue private Zielkarte an, die Sie verwenden können.
+Basierend auf den oben genannten Konfigurationen wird im Experience Platform-Katalog jetzt eine neue private Zielkarte angezeigt, die Sie verwenden können.
 
 ![Bildschirmaufzeichnung, die die Zielkatalogseite mit einer ausgewählten Zielkarte anzeigt.](../../assets/guides/batch/adls-destination-card.gif)
 
-Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen im [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [ im Aktivierungs-Workflow für dateibasierte Ziele ](../../../ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
-Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
+Beachten Sie beim Ausfüllen von Details zum Ziel, wie die Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 
 >[!TIP]
 >
->Die Reihenfolge, in der Sie die benutzerdefinierten Datenfelder zur Zielkonfiguration hinzufügen, wird nicht in der Benutzeroberfläche angezeigt. Die benutzerdefinierten Datenfelder werden immer in der Reihenfolge angezeigt, die in der nachfolgenden Bildschirmaufzeichnung angezeigt wird.
+>Die Reihenfolge, in der Sie die benutzerdefinierten Datenfelder zur Zielkonfiguration hinzufügen, wird nicht in der Benutzeroberfläche angezeigt. Die benutzerdefinierten Datenfelder werden immer in der Reihenfolge angezeigt, die in der folgenden Bildschirmaufzeichnung angezeigt wird.
 
-![Zieldetails ausfüllen](../../assets/guides/batch/file-configuration-options.gif)
+![Ausfüllen der Zieldetails](../../assets/guides/batch/file-configuration-options.gif)
 
-Beachten Sie bei der Planung von Exportintervalle, wie die angezeigten Felder die Felder sind, die Sie in der `batchConfig` -Konfiguration eingerichtet haben.
-![ Planungsoptionen für den Export](../../assets/guides/batch/file-export-scheduling.png)
+Beachten Sie bei der Planung von Exportintervallen, wie die Felder angezeigt werden, die Sie in der `batchConfig`-Konfiguration einrichten.
+![Exportplanoptionen](../../assets/guides/batch/file-export-scheduling.png)
 
-Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen darstellen, die Sie in der Konfiguration eingerichtet haben.
+Beachten Sie beim Anzeigen der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` Optionen darstellen, die Sie in der Konfiguration festgelegt haben.
 ![Konfigurationsoptionen für Dateinamen](../../assets/guides/batch/file-naming-options.gif)
 
-Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie die Schritte [1} und [2](#create-destination-configuration), um die Konfigurationen entsprechend Ihren Anforderungen zu ändern.](#create-server-file-configuration)
+Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritte 1](#create-server-file-configuration) und [2](#create-destination-configuration), um die Konfigurationen entsprechend Ihren Anforderungen zu ändern.
 
-## Schritt 4: (Optional) Publish Ihr Ziel {#publish-destination}
-
->[!NOTE]
->
->Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
-
-Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [API zur Zielveröffentlichung](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration an Adobe zur Überprüfung zu senden.
-
-## Schritt 5: (Optional) Ziel dokumentieren {#document-destination}
+## Schritt 4: (Optional) Publish - Ihr Ziel {#publish-destination}
 
 >[!NOTE]
 >
->Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
+
+Verwenden Sie nach dem Konfigurieren Ihres Ziels die [Zielveröffentlichungs-API](../../publishing-api/create-publishing-request.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+
+## Schritt 5: (Optional) Dokumentieren des Ziels {#document-destination}
+
+>[!NOTE]
+>
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
 
 Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](../../overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](../../docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](../../../catalog/overview.md) zu erstellen.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Artikels wissen Sie jetzt, wie Sie ein benutzerdefiniertes [!DNL Azure Data Lake Storage]-Ziel mithilfe von Destination SDK erstellen können. Anschließend kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) verwenden, um Daten an das Ziel zu exportieren.
+Durch das Lesen dieses Artikels wissen Sie jetzt, wie Sie mithilfe von Destination SDK ein benutzerdefiniertes [!DNL Azure Data Lake Storage] erstellen können. Als Nächstes kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele“ verwenden](../../../ui/activate-batch-profile-destinations.md) um Daten an das Ziel zu exportieren.

@@ -38,18 +38,18 @@ Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleist
 
 Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Konfigurieren]** aus. Wenn das Feld **[!UICONTROL Konfigurieren]** ausgegraut ist, verfügen Sie nicht über die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 
-Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Weitere Informationen finden Sie im Dokument zu [Eigenschaften](../../../tags/ui/administration/companies-and-properties.md#properties-page) in der Tag-Dokumentation.
+Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Weitere Informationen finden Sie im Dokument [Eigenschaften](../../../tags/ui/administration/companies-and-properties.md#properties-page) in der Tags-Dokumentation.
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Adobe Target v2-Erweiterung](../../../tags/extensions/client/target-v2/overview.md) in der Tag-Dokumentation.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Adobe Target v2-Erweiterung](../../../tags/extensions/client/target-v2/overview.md) in der Tags-Dokumentation.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch zum Hinzufügen einer neuen Erweiterung [](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 
 ## Verwenden der Erweiterung {#how-to-use}
 
-Nachdem Sie die Erweiterung installiert haben, können Sie mit der Einrichtung von Regeln beginnen. In der Datenerfassungs-Benutzeroberfläche können Sie Regeln für Ihre installierten Erweiterungen einrichten, um Ereignisdaten nur in bestimmten Situationen an das Erweiterungsziel zu senden. Weitere Informationen zum Einrichten von Regeln für Ihre Erweiterungen finden Sie in der Tag-Dokumentation unter Überblick über [Regeln](../../../tags/ui/managing-resources/rules.md) .
+Nachdem Sie die Erweiterung installiert haben, können Sie mit dem Einrichten von Regeln beginnen. In der Datenerfassungs-Benutzeroberfläche können Sie Regeln für Ihre installierten Erweiterungen einrichten, damit nur in bestimmten Situationen Ereignisdaten an das Erweiterungsziel gesendet werden. Weitere Informationen zum Einrichten von Regeln für Erweiterungen finden Sie in der Übersicht zu [Regeln](../../../tags/ui/managing-resources/rules.md) in der Tags-Dokumentation.
 
 ## Konfigurieren, Aktualisieren und Löschen von Erweiterungen {#configure-upgrade-delete}
 
@@ -57,6 +57,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, zeigt die Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung an. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

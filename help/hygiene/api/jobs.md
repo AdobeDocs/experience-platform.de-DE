@@ -1,5 +1,5 @@
 ---
-title: Datensätze mithilfe der Data Hygiene API löschen
+title: Löschen von Datensätzen mithilfe der Data Hygiene API
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 role: Developer
 hide: true
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 ---
 
-# Datensätze mithilfe der Data Hygiene API löschen
+# Löschen von Datensätzen mithilfe der Data Hygiene API
 
 <!-- >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ In diesem Abschnitt erhalten Sie eine Einführung in die wichtigsten Konzepte, d
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Hierbei handelt es sich um dieselben Anmeldeinformationen wie die, die Sie für den Zugriff auf die Privacy Service-API verwenden. Folgen Sie den Schritten in der [API-Übersicht](./overview.md#getting-started), um Werte für jede der erforderlichen Kopfzeilen für die Datenhygiene-API zu generieren, wie unten gezeigt:
+Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungs-Anmeldedaten erfassen. Hierbei handelt es sich um dieselben Anmeldedaten wie die, die Sie für den Zugriff auf die Privacy Service-API verwenden. Folgen Sie den Schritten in der [API-Übersicht](./overview.md#getting-started), um Werte für jede der erforderlichen Kopfzeilen für die Datenhygiene-API zu generieren, wie unten gezeigt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

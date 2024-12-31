@@ -7,7 +7,7 @@ exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
 source-wordcount: '3977'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -211,7 +211,7 @@ Das Format der Antwort hängt von der in der Anfrage verwendeten Accept-Kopfzeil
 
 **Antwort**
 
-Das zurückgegebene JSON-Schema beschreibt die Struktur sowie Feldebenen-Informationen wie Typ, Format, Minimum, Maximum usw. der Daten, dies serialisiert als JSON. Für den Fall, dass für die Datenaufnahme ein anderes Serialisierungsformat als JSON verwendet wird (z. B. Parquet oder Scala), steht im [Handbuch zur Schema Registry](../xdm/tutorials/create-schema-api.md) eine Tabelle mit dem gewünschten JSON-Typ („meta:xdmType“) und der entsprechenden Darstellung in anderen Formaten zur Verfügung.
+Das zurückgegebene JSON-Schema beschreibt die Struktur und die Informationen auf Feldebene („Typ“, „Format“, „Minimum“, „Maximum“ usw.) der Daten, serialisiert als JSON. Für den Fall, dass für die Datenaufnahme ein anderes Serialisierungsformat als JSON verwendet wird (z. B. Parquet oder Scala), steht im [Handbuch zur Schema Registry](../xdm/tutorials/create-schema-api.md) eine Tabelle mit dem gewünschten JSON-Typ („meta:xdmType“) und der entsprechenden Darstellung in anderen Formaten zur Verfügung.
 
 Ergänzend zu dieser Tabelle umfasst das [!DNL Schema Registry]-Entwicklerhandbuch ausführliche Beispiele für alle mit der [!DNL Schema Registry]-API durchführbaren Aufrufe.
 
@@ -789,5 +789,5 @@ Adobe Experience Platform erkennt derzeit keine zeitversetzten Daten. Daher müs
 | ---- | ------ | ----------- |
 | 19.01.2019 | Eigenschaft „fields“ aus Datensätzen entfernt | Bislang umfassten Datensätze eine „fields“-Eigenschaft, die eine Kopie des Schemas enthielt. Diese Funktion sollte nicht mehr verwendet werden. Ist die Eigenschaft „fields“ vorhanden, sollte sie ignoriert und stattdessen das Attribut „observedSchema“ oder „schemaRef“ verwendet werden. |
 | 15.03.2019 | Datensätze ergänzt um Eigenschaft „schemaRef“ | Die Eigenschaft „schemaRef“ eines Datensatzes enthält einen URI, der auf das XDM-Schema verweist, auf dem der Datensatz basiert, und der alle vom Datensatz potenziell verwendbaren Felder repräsentiert. |
-| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Die &quot;identityMap&quot;ist eine Kapselung aller eindeutigen Kennungen eines Subjekts, z. B. CRMID, ECID oder Treueprogramm-ID. Diese Zuordnung wird von [[!DNL Identity Service]](../identity-service/home.md) verwendet, um alle bekannten und anonymen Identitäten eines Subjekts aufzulösen und für jeden Endbenutzer ein individuelles Identitätsdiagramm zu erstellen. |
+| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Die „identityMap“ ist eine Kapselung aller eindeutigen Kennungen eines Subjekts, wie CRMID, ECID oder Treueprogramm-ID. Diese Zuordnung wird von [[!DNL Identity Service]](../identity-service/home.md) verwendet, um alle bekannten und anonymen Identitäten eines Subjekts aufzulösen und für jeden Endbenutzer ein individuelles Identitätsdiagramm zu erstellen. |
 | 30.05.2019 | Eigenschaft „Schema“ wurde eingestellt und aus Datensätzen entfernt | Anhand der Eigenschaft „Schema“ des Datensatzes wurde ein Verweis auf das Schema mit dem veralteten Endpunkt `/xdms` in der Service [!DNL Catalog] API bereitgestellt. Diese wurde ersetzt durch „schemaRef“, über das „id“, „version“ und „contentType“ des Schemas bereitgestellt wird, die in der neuen [!DNL Schema Registry]-API referenziert werden. |

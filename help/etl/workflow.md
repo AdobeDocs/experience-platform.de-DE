@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; ETL; etl; etl workflow; ETL workflow
+keywords: Experience Platform;Startseite;beliebte Themen;ETL;etl;etl-Workflow;ETL-Workflow
 solution: Experience Platform
 title: ETL-Workflow
 description: Verschiedene Tools für Extract, Transform and Load (ETL) unterscheiden sich im Format, bieten jedoch meist ähnliche Funktionen, um eine Kombination aus mehreren Datenquellen zu unterstützen.
@@ -25,7 +25,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image2.png)
 
-### Abbildung 2 - [!DNL Experience Platform] Connector aktiviert:
+### Abbildung 2: [!DNL Experience Platform] aktiviert:
 
 ![](images/image3.png)
 
@@ -33,11 +33,11 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image4.png)
 
-### Abbildung 4: Benutzeroberfläche für neue Umwandlungen mit der Auswahl von [!DNL Experience Platform] Verbindung:
+### Abbildung 4: Neue Transformations-Benutzeroberfläche mit Auswahl [!DNL Experience Platform] Verbindung:
 
 ![](images/image5.png)
 
-### Abbildung 5 - Durchsuchen von Quell- [!DNL Experience Platform]-Datensätzen:
+### Abbildung 5: Suchen nach Quell-[!DNL Experience Platform]-Datensätzen:
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image10.png)
 
-### Abbildung 10 - Definieren des Zieldatensatzes [!DNL Experience Data Model] (XDM):
+### Abbildung 10: Definieren des [!DNL Experience Data Model] (XDM)-Zieldatensatzes:
 
 ![](images/image11.png)
 

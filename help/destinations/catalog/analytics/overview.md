@@ -16,7 +16,7 @@ ht-degree: 84%
 
 Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 
-## Unterstützte Analyseziele {#supported-destinations}
+## Unterstützte Analytics-Ziele {#supported-destinations}
 
 Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Analyseziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 

@@ -15,7 +15,7 @@ ht-degree: 95%
 
 Verfolgen Sie Besucheraktionen auf Ihrer Website nach Ansichten Ihrer Promoted Pin. Messen Sie die Rendite auf Werbeausgaben und erstellen Sie zielgerichtete Zielgruppen. [Weitere Informationen](https://ads.pinterest.com/).
 
-[!DNL Pinterest Conversion Tracking] ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+[!DNL Pinterest Conversion Tracking] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

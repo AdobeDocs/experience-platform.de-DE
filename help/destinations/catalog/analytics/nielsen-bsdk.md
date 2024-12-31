@@ -1,7 +1,7 @@
 ---
-keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
+keywords: Nielsen BSDK;nielsen BSDK;nielsen BSDK
 title: Nielsen BSDK-Erweiterung
-description: Die Nielsen BSDK-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Nielsen-BSDK-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: e1c10673-e3f4-474d-98d7-960124b2bfc7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 ## Übersicht {#overview}
 
-Die Tag-Erweiterung [!DNL Nielsen Digital SDK] bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
+[!DNL Nielsen Digital SDK] Tag-Erweiterung bietet Zielgruppenmessung über die folgenden digitalen Messprodukte:
 
 DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen Inhalten einschließlich Inhalten mit Anzeigen ermöglicht; erlaubt eine umfassende Ansicht des Verbrauchs an digitalen Inhalten von Desktop-, Mobil-, Tablet- und vernetzten Geräten in Zielgruppen.
 
@@ -46,7 +46,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Nielsen BSDK auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der [Nielsen BSDK-Seite in der Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

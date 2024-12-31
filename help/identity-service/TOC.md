@@ -8,7 +8,7 @@ role: Admin,Developer
 source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 69%
+ht-degree: 71%
 
 ---
 
@@ -22,14 +22,14 @@ ht-degree: 69%
    - [Identitätsverknüpfungslogik](./features/identity-linking-logic.md)
    - [Identitätsdiagramm-Viewer](./features/identity-graph-viewer.md)
    - [Löschungen in Identity Service](./features/deletion.md)
-   - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
+   - {#identity-graph-linking-rules} zur Verknüpfung von Identitätsdiagramm-Regeln
       - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
-      - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung](./identity-graph-linking-rules/implementation-guide.md)
-      - [Beispieldiagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
-      - [Fehlerbehebung für Verknüpfungsregeln für Identitätsdiagramme](./identity-graph-linking-rules/troubleshooting.md)
+      - [Algorithmus zur Identitätsoptimierung](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung](./identity-graph-linking-rules/implementation-guide.md)
+      - [Beispielhafte Diagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
+      - [Fehlerbehebung für Regeln zur Identitätsdiagramm-Verknüpfung](./identity-graph-linking-rules/troubleshooting.md)
       - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
-      - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
+      - [Benutzeroberfläche für die Diagrammsimulation](./identity-graph-linking-rules/graph-simulation.md)
       - [Benutzeroberfläche für Identitätseinstellungen](./identity-graph-linking-rules/identity-settings-ui.md)
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)

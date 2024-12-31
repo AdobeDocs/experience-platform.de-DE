@@ -2,7 +2,7 @@
 keywords: Email;e-mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
-description: Mit E-Mail-Dienstanbietern (ESPs) können Sie Ihre E-Mail-Marketing-Aktivitäten verwalten, z. B. für den Versand von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
+description: E-Mail-Dienstanbieter (ESPs) ermöglichen es Ihnen, Ihre E-Mail-Marketing-Aktivitäten zu verwalten, z. B. zum Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 60%
 
 ## Übersicht {#overview}
 
-E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Adobe Experience Platform lässt sich in ESPs integrieren, indem es Ihnen ermöglicht, Zielgruppen für E-Mail-Marketing-Ziele zu aktivieren.
+E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Adobe Experience Platform lässt sich mit ESPs integrieren, indem Sie Zielgruppen für E-Mail-Marketing-Ziele aktivieren können.
 
 ## Unterstützte E-Mail-Marketing-Ziele {#supported-destinations}
 
@@ -35,7 +35,7 @@ Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
 
 ## Verbinden mit einem neuen E-Mail-Marketing-Ziel {#connect-destination}
 
-Um Zielgruppen an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
 
 ## Best Practices beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele {#best-practices}
 
@@ -68,13 +68,13 @@ Wählen Sie in der Schemafeldauswahl die anderen Felder aus, die Sie an das E-Ma
 
 {style="table-layout:auto"}
 
-## Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele {#activate}
+## Zielgruppen für E-Mail-Marketing-Ziele aktivieren {#activate}
 
-Einige E-Mail-Marketing-Ziele in den Katalogprofilen werden streaming über eine API-Integration mit dem Ziel exportiert.
+Einige E-Mail-Marketing-Ziele in den Katalogprofilen werden per Streaming über eine API-Integration mit dem Ziel exportiert.
 
-Andere Ziele exportieren Dateien an einen Cloud-Speicher-Speicherort. Nach Abschluss des Exports müssen Sie Daten vom Cloud-Speicher in Ihr E-Mail-Marketing-Ziel importieren.
+Andere Ziele exportieren Dateien an einen Cloud-Speicherort. Nach Abschluss des Exports müssen Sie Daten vom Cloud-Speicherort in Ihr E-Mail-Marketing-Ziel importieren.
 
-Folgen Sie den Links im Abschnitt [unterstützte E-Mail-Marketing-Ziele](#supported-destinations) , um zu erfahren, wie Sie Zielgruppen für jedes E-Mail-Marketing-Ziel aktivieren.
+Folgen Sie den Links im Abschnitt [Unterstützte E-Mail](#supported-destinations)Marketing-Ziele, um zu erfahren, wie Sie Zielgruppen für jedes E-Mail-Marketing-Ziel aktivieren.
 
 ## Weitere Ressourcen {#additional-resources}
 

@@ -1,6 +1,6 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf zum Löschen einer Berechtigungskonfiguration mit dem Adobe Experience Platform Destination SDK veranschaulicht.
-title: Löschen einer Berechtigungskonfiguration
+description: Auf dieser Seite wird der API-Aufruf zum Löschen einer Anmeldedaten-Konfiguration mit dem Adobe Experience Platform Destination SDK veranschaulicht.
+title: Löschen einer Anmeldedaten-Konfiguration
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 100%
 
 ---
 
-# Löschen einer Berechtigungskonfiguration
+# Löschen einer Anmeldedaten-Konfiguration
 
 >[!IMPORTANT]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Löschen einer Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` verwenden können.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Löschen einer Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` verwenden können.
 
 ## Verwendung des API-Endpunkts `/credentials` {#when-to-use}
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum 
 > 
 >Lesen Sie [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
 
-Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungsdaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Berechtigungskonfiguration erstellen.
+Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
 
 Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -33,15 +33,15 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 >
 >Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit Berechtigungs-API-Vorgängen {#get-started}
+## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
-## Löschen einer Berechtigungskonfiguration {#delete}
+## Löschen einer Anmeldedaten-Konfiguration {#delete}
 
-Sie können eine [vorhandene](create-credential-configuration.md) Berechtigungskonfiguration löschen, indem Sie eine `DELETE`-Anfrage an den Endpunkt `/authoring/credentials` mit der `{INSTANCE_ID}` der Berechtigungskonfiguration stellen, die Sie löschen möchten.
+Sie können eine [vorhandene](create-credential-configuration.md) Anmeldedaten-Konfiguration löschen, indem Sie eine `DELETE`-Anfrage an den Endpunkt `/authoring/credentials` mit der `{INSTANCE_ID}` der Anmeldedaten-Konfiguration stellen, die Sie löschen möchten.
 
-Wie Sie eine vorhandene Zielkonfiguration und die zugehörige `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel über das [Abrufen einer Berechtigungskonfiguration](retrieve-credential-configuration.md).
+Wie Sie eine vorhandene Zielkonfiguration und die zugehörige `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel über das [Abrufen einer Anmeldedaten-Konfiguration](retrieve-credential-configuration.md).
 
 **API-Format**
 
@@ -51,9 +51,9 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Die `ID` der Berechtigungskonfiguration, die Sie löschen möchten. |
+| `{INSTANCE_ID}` | Die `ID` der Anmeldedaten-Konfiguration, die Sie löschen möchten. |
 
-Die folgende Anfrage löscht eine Berechtigungskonfiguration, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
+Die folgende Anfrage löscht eine Anmeldedaten-Konfiguration, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 +++Anfrage
 
@@ -79,4 +79,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` löschen. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` löschen. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

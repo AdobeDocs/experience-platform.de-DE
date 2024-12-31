@@ -1,8 +1,8 @@
 ---
-keywords: Aktualisieren des Zielkontos, der Zielkonten, Aktualisieren von Konten, Aktualisieren des Ziels
+keywords: Zielkonto aktualisieren, Zielkonten, Aktualisieren von Konten, Ziel aktualisieren
 title: Aktualisieren von Zielkonten
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
+description: In diesem Tutorial werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgelistet
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -15,54 +15,54 @@ ht-degree: 10%
 
 ## Übersicht {#overview}
 
-Die Registerkarte **[!UICONTROL Konten]** enthält Details zu den Verbindungen, die Sie mit verschiedenen Zielen hergestellt haben. In der [Übersicht über Konten](../ui/destinations-workspace.md#accounts) finden Sie alle Informationen, die Sie für jedes Zielkonto erhalten können.
+Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben. Unter [Konten - Übersicht](../ui/destinations-workspace.md#accounts) finden Sie alle Informationen, die Sie zu den einzelnen Zielkonten erhalten können.
 
 In diesem Tutorial werden die Schritte zum Aktualisieren der Details des Zielkontos mithilfe der Experience Platform-Benutzeroberfläche beschrieben.
 
-Sie können die Details des Zielkontos aktualisieren, um die Anmeldeinformationen für Ihre aktuellen oder abgelaufenen Konten für die Ziele, die Sie derzeit verwenden, zu aktualisieren und erneut zu authentifizieren. In der Regel haben OAuth- und Trägertokens je nach Zielplattform eine begrenzte Lebensdauer. Wenn diese Token ablaufen, können Sie sie im unten beschriebenen Workflow aktualisieren. Dieser Workflow weist Sie an, den OAuth-Workflow zu durchlaufen oder ein Token erneut einzufügen. Ebenso können Sie die Anmeldeinformationen aktualisieren, wenn sich ein Kennwort oder ein Benutzerzugriff auf der nachgelagerten Plattform geändert hat.
+Sie können die Details des Zielkontos aktualisieren, um die Anmeldeinformationen für Ihre aktuellen oder abgelaufenen Konten für Ziele, die Sie derzeit verwenden, zu aktualisieren und erneut zu authentifizieren. Normalerweise haben OAuth- und Bearer-Token je nach Zielplattform eine begrenzte Lebensdauer. Wenn diese Token ablaufen, können Sie sie im Workflow aktualisieren, der weiter unten beschrieben wird. Dieser Workflow leitet Sie durch den OAuth-Workflow oder zum erneuten Einfügen eines Tokens. Wenn sich ein Kennwort oder der Benutzerzugriff in der nachgelagerten Plattform geändert hat, können Sie die Anmeldeinformationen ebenfalls aktualisieren.
 
-Bei Batch-Zielen können Sie den Zugriff- oder geheimen Schlüssel aktualisieren, wenn sich einer dieser Schlüssel geändert hat. Wenn Sie Ihre Dateien in Zukunft verschlüsseln möchten, können Sie außerdem einen öffentlichen RSA-Schlüssel einfügen, und Ihre exportierten Dateien werden in Zukunft verschlüsselt.
+Bei Batch-Zielen können Sie den Zugriffs- oder Geheimschlüssel aktualisieren, wenn sich einer dieser Schlüssel geändert hat. Wenn Sie Ihre Dateien in Zukunft verschlüsseln möchten, können Sie außerdem einen öffentlichen RSA-Schlüssel einfügen, und Ihre exportierten Dateien werden in Zukunft verschlüsselt.
 
 ![Registerkarte „Konten“](../assets/ui/update-accounts/destination-accounts.png)
 
 ## Aktualisieren von Konten {#update}
 
-Gehen Sie wie folgt vor, um Verbindungsdetails zu vorhandenen Zielen zu aktualisieren.
+Gehen Sie wie folgt vor, um Verbindungsdetails für vorhandene Ziele zu aktualisieren.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie in der oberen Kopfzeile **[!UICONTROL Konten]** aus, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Konten]** in der oberen Kopfzeile aus, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/update-accounts/accounts-tab.png)
 
 2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
 
-   ![Ziel-Konten filtern](../assets/ui/update-accounts/filter-accounts.png)
+   ![Filtern von Zielkonten](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos aus, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen für **[!UICONTROL Zielgruppen aktivieren]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** des Kontos bereitstellt. Wählen Sie die Schaltfläche ![Details bearbeiten](/help/images/icons/edit.png) **[!UICONTROL Details bearbeiten]** aus, um die Kontoinformationen zu bearbeiten.
+3. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen zum **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Bearbeiten von]** und **[!UICONTROL Löschen]** des Kontos bietet. Klicken Sie auf die ![Details bearbeiten](/help/images/icons/edit.png)Schaltfläche **[!UICONTROL Details bearbeiten]**, um die Kontoinformationen zu bearbeiten.
 
    ![Konto bearbeiten](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Geben Sie Ihre aktualisierten Kontoanmeldeinformationen ein.
 
-   * Wählen Sie für Konten, die den Verbindungstyp `OAuth1` oder `OAuth2` verwenden, die Option **[!UICONTROL OAuth erneut verbinden]** aus, um Ihre Kontoanmeldeinformationen zu verlängern. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
+   * Wählen Sie bei Konten, die einen `OAuth1`- oder `OAuth2` Verbindungstyp verwenden, die Option **[!UICONTROL OAuth erneut verbinden]** aus, um Ihre Kontoanmeldeinformationen zu verlängern. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
 
-   ![Details bearbeiten OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
+   ![OAuth-Details bearbeiten](../assets/ui/update-accounts/edit-details-oauth.png)
 
-   * Bei Konten, die den Verbindungstyp `Access Key` oder `ConnectionString` verwenden, können Sie Ihre Kontoauthentifizierungsinformationen bearbeiten, einschließlich Informationen wie Zugriffskennung, geheime Schlüssel oder Verbindungszeichenfolgen. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
+   * Bei Konten, die einen `Access Key`- oder `ConnectionString` Verbindungstyp verwenden, können Sie Ihre Kontoauthentifizierungsinformationen bearbeiten, einschließlich Informationen wie Zugriffs-ID, geheime Schlüssel oder Verbindungszeichenfolgen. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
 
-   ![Details bearbeiten - Zugriffsschlüssel](../assets/ui/update-accounts/edit-details-key.png)
+   ![Zugriffsschlüssel für Details bearbeiten](../assets/ui/update-accounts/edit-details-key.png)
 
-   * Bei Konten, die den Verbindungstyp `Bearer token` verwenden, können Sie bei Bedarf ein neues Trägertoken eingeben. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
+   * Bei Konten, die einen `Bearer token` Verbindungstyp verwenden, können Sie bei Bedarf ein neues Bearer-Token eingeben. Sie können auch den Namen und die Beschreibung Ihres Kontos aktualisieren.
 
-   ![Details-Bearer-Token bearbeiten](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![Bearbeiten von Details Bearer-Token](../assets/ui/update-accounts/edit-details-bearer.png)
 
-   * Bei Konten, die den Verbindungstyp `Server to server` verwenden, können Sie den Namen und die Beschreibung Ihres Kontos aktualisieren.
+   * Bei Konten, die einen `Server to server` Verbindungstyp verwenden, können Sie den Namen und die Beschreibung Ihres Kontos aktualisieren.
 
-   ![Details von Server zu Server bearbeiten](../assets/ui/update-accounts/edit-details-s2s.png)
+   ![Details Server-zu-Server bearbeiten](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Wählen Sie **[!UICONTROL Speichern]** aus, um die Aktualisierung der Kontodetails abzuschließen.
+5. Klicken Sie **[!UICONTROL Speichern]**, um die Aktualisierung der Kontodetails abzuschließen.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie den Arbeitsbereich **[!UICONTROL Ziele]** erfolgreich verwendet, um vorhandene Konten zu aktualisieren.
+In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich **[!UICONTROL Ziele]** verwendet, um vorhandene Konten zu aktualisieren.
 
-Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../catalog/overview.md).
+Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../catalog/overview.md).

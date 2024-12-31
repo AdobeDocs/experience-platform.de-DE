@@ -13,89 +13,89 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Die Regeln zur Verknüpfung von Identitätsdiagrammen sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
-Jede Kundenimplementierung ist einzigartig und auf die Ziele eines bestimmten Unternehmens zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der realen Welt:
+Jede Kundenimplementierung ist einzigartig und auf die Ziele einer bestimmten Organisation zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der Praxis sind:
 
-* Ihr Unternehmen kann davon ausgehen, dass jede E-Mail-Adresse eine Einzelperson darstellt, und daher [Identitätseinstellungen](./identity-settings-ui.md) verwenden, um den E-Mail-Namespace als eindeutig zu konfigurieren. Ein anderes Unternehmen könnte jedoch Einzelpersonen als Entitäten mit mehreren E-Mail-Adressen darstellen und so den E-Mail-Namespace als nicht eindeutig konfigurieren. Diese Unternehmen müssen einen anderen Identitäts-Namespace als eindeutig verwenden, z. B. einen CRMID-Namespace, sodass eine Einzelperson-Kennung vorhanden sein kann, die mit mehreren E-Mail-Adressen verknüpft ist.
-* Sie können das Online-Verhalten mithilfe des Namespace &quot;Anmelde-ID&quot;erfassen. Diese Anmelde-ID kann eine 1:1-Beziehung zur CRMID aufweisen, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall bestimmen Sie dann, dass der CRMID-Namespace eine genauere Darstellung einer Person darstellt, während der Anmelde-ID-Namespace der zweitwichtigste ist.
+* Ihr Unternehmen könnte jede E-Mail-Adresse als Einzelperson-Entität betrachten und daher [Identitätseinstellungen](./identity-settings-ui.md) verwenden, um den E-Mail-Namespace als eindeutig zu konfigurieren. Ein anderes Unternehmen möchte jedoch möglicherweise Einzelpersonen-Entitäten mit mehreren E-Mail-Adressen darstellen und daher den E-Mail-Namespace als nicht eindeutig konfigurieren. Diese Unternehmen müssen einen anderen Identity-Namespace als eindeutig verwenden, z. B. einen CRMID-Namespace, sodass es eine Einzelpersonen-Kennung geben kann, die mit den mehreren E-Mail-Adressen verknüpft ist.
+* Sie können das Online-Verhalten mithilfe eines „Anmelde-ID“-Namespace erfassen. Diese Anmelde-ID könnte eine 1:1-Beziehung mit der CRMID haben, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall stellen Sie dann fest, dass der CRM-Namespace eine genauere Darstellung einer Person ist, während der Namespace der Anmelde-ID der zweitwichtigste ist.
 
-Sie müssen im Identity Service Konfigurationen vornehmen, die die Wichtigkeit Ihrer Namespaces widerspiegeln, da dies beeinflusst, wie Profile und die zugehörigen Identitätsdiagramme gebildet und aufgeteilt werden.
+Sie müssen in Identity Service Konfigurationen vornehmen, die die Bedeutung Ihrer Namespaces widerspiegeln, da dies beeinflusst, wie Profile und ihre zugehörigen Identitätsdiagramme gebildet und aufgeteilt werden.
 
-## Legen Sie Ihre Prioritäten fest
+## Festlegen von Prioritäten
 
 Die Bestimmung der Namespace-Priorität basiert auf den folgenden Faktoren:
 
-### Identitätsdiagrammstruktur
+### Struktur des Identitätsdiagramms
 
-Wenn die Diagrammstruktur Ihres Unternehmens auf einer Ebene angeordnet ist, sollte die Namespace-Priorität dies widerspiegeln, damit die richtigen Links im Falle eines Diagrammausfalls entfernt werden.
+Wenn die Diagrammstruktur Ihres Unternehmens mehrschichtig ist, sollte die Namespace-Priorität dies widerspiegeln, damit die richtigen Links im Fall eines Diagrammausfalls entfernt werden.
 
 >[!TIP]
 >
->* &quot;Diagrammausfall&quot;bezieht sich auf Szenarien, in denen versehentlich mehrere unterschiedliche Profile zu einem Identitätsdiagramm zusammengeführt werden.
+>* „Diagrammausblendung“ bezieht sich auf Szenarien, in denen mehrere unterschiedliche Profile versehentlich zu einem einzigen Identitätsdiagramm zusammengeführt werden.
 >
->* Ein Diagramm mit Ebenen bezieht sich auf Identitätsdiagramme mit mehreren Ebenen von Links. Sehen Sie sich das folgende Bild an, um ein Beispiel für ein Diagramm mit drei Ebenen anzuzeigen.
+>* Ein geschichtetes Diagramm bezieht sich auf Identitätsdiagramme, die mehrere Ebenen von Links aufweisen. Im folgenden Bild sehen Sie ein Beispiel für ein Diagramm mit drei Ebenen.
 
-![Ein Diagramm mit Diagrammschichten](../images/namespace-priority/graph-layers.png)
+![Ein Diagramm von Diagrammschichten](../images/namespace-priority/graph-layers.png)
 
 ### Semantische Bedeutung des Namespace
 
-Eine Identität stellt ein Objekt der realen Welt dar. Im Identitätsdiagramm werden drei Objekte dargestellt. In der Reihenfolge ihrer Bedeutung sind sie:
+Eine Identität stellt ein reales Objekt dar. Das Identitätsdiagramm stellt drei Objekte dar. Nach ihrer Bedeutung sind sie:
 
 * Personen (geräteübergreifend, E-Mail, Telefonnummer)
-* Hardwaregerät
+* Hardwareeinheit
 * Webbrowser (Cookie)
 
-Personen-Namespaces sind im Vergleich zu Hardwaregeräten (wie IDFA, GAID), die im Vergleich zu Webbrowsern relativ unveränderlich sind, relativ unveränderlich. Grundsätzlich sind Sie (die Person) immer eine Einheit, die über mehrere Hardwaregeräte (Smartphone, Laptop, Tablet usw.) und mehrere Browser (Google Chrome, Safari, FireFox usw.) verfügen kann.
+Personen-Namespaces sind im Vergleich zu Hardware-Geräten (wie IDFA, GAID), die im Vergleich zu Webbrowsern relativ unveränderlich sind, relativ unveränderlich. Grundsätzlich sind Sie (eine Person) immer eine einzige Entität, die über mehrere Hardwaregeräte (Smartphone, Laptop, Tablet usw.) verfügen und mehrere Browser (Google Chrome, Safari, FireFox usw.) verwenden kann
 
-Eine andere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie viele Identitäten werden für eine bestimmte Entität erstellt? In den meisten Fällen verfügt eine Person über eine CRMID, eine Handvoll von Hardware-Geräte-IDs (IDFA/GAID-Resets sollten nicht oft auftreten) und sogar über mehr Cookies (eine Person könnte möglicherweise auf mehreren Geräten surfen, den Inkognito-Modus verwenden oder Cookies jederzeit zurücksetzen). Im Allgemeinen gibt **niedrigere Kardinalität einen Namespace mit einem höheren Wert an**.
+Eine weitere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie viele Identitäten werden für eine bestimmte Personenentität erstellt? In den meisten Fällen verfügt eine Person über eine CRMID, eine Handvoll Hardware-Geräte-IDs (IDFA-/GAID-Zurücksetzungen sollten nicht oft vorkommen) und noch mehr Cookies (eine Person könnte vorstellbar auf mehreren Geräten browsen, den Inkognito-Modus verwenden oder Cookies jederzeit zurücksetzen). Im Allgemeinen **eine niedrigere Kardinalität einen Namespace mit einem höheren Wert**.
 
-## Validieren der Namespace-Prioritätseinstellungen
+## Überprüfen der Einstellungen für die Namespace-Priorität
 
-Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren, können Sie das Tool zur Diagrammsimulation in der Benutzeroberfläche verwenden, um verschiedene Szenarien zum Reduzieren von Diagrammen zu testen und sicherzustellen, dass Ihre Prioritätskonfigurationen die erwarteten Diagrammergebnisse zurückgeben. Weitere Informationen finden Sie im Handbuch zur Verwendung des [Diagrammsimulations-Tools](./graph-simulation.md).
+Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren werden, können Sie das Diagrammsimulations-Tool in der Benutzeroberfläche verwenden, um verschiedene Szenarien zum Reduzieren von Diagrammen zu testen und sicherzustellen, dass Ihre Prioritätskonfigurationen die erwarteten Diagrammergebnisse zurückgeben. Weitere Informationen finden Sie im Handbuch zum Verwenden des [Diagrammsimulations-Tools](./graph-simulation.md).
 
 ## Namespace-Priorität konfigurieren
 
-Die Namespace-Priorität kann über die Benutzeroberfläche mit den [Identitätseinstellungen](./identity-settings-ui.md) konfiguriert werden. In der Benutzeroberfläche für Identitätseinstellungen können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
+Die Namespace-Priorität kann mithilfe der [Benutzeroberfläche für Identitätseinstellungen“ konfiguriert ](./identity-settings-ui.md). In der Benutzeroberfläche für Identitätseinstellungen können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
 
 >[!IMPORTANT]
 >
->Sie können Geräte-/Cookie-Namespaces nicht den Personen-Namespaces vorziehen. Diese Einschränkung stellt sicher, dass keine Fehlkonfigurationen auftreten.
+>Sie können keine Geräte-/Cookie-Namespaces gegenüber Personen-Namespaces priorisieren. Durch diese Einschränkung wird sichergestellt, dass keine Fehlkonfigurationen auftreten.
 
 ## Verwendung der Namespace-Priorität
 
-Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm zeigt dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen zu Adobe Experience Platform und Anwendungen](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm veranschaulicht dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen für Adobe Experience Platform und Programme](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Ein Diagramm des Anwendungsbereichs mit Namespace-Priorität](../images/namespace-priority/application-scope.png)
+![Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität](../images/namespace-priority/application-scope.png)
 
-### Identity Service: Identitätsoptimierungsalgorithmus
+### Identity Service: Algorithmus zur Identitätsoptimierung
 
-Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wichtige Rolle, um sicherzustellen, dass beim Reduzieren von Diagrammen die richtigen Links entfernt werden. Weitere Informationen finden Sie in der Übersicht über den [Identitätsoptimierungsalgorithmus](../identity-graph-linking-rules/identity-optimization-algorithm.md) .
+Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wichtige Rolle dabei, sicherzustellen, dass die richtigen Links entfernt werden, wenn Szenarien zum Reduzieren von Diagrammen auftreten. Weitere Informationen finden Sie unter [Übersicht über den Identitätsoptimierungsalgorithmus](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Echtzeit-Kundenprofil: primäre Identitätsfeststellung für Erlebnisereignisse
+### Echtzeit-Kundenprofil: Primäre Identitätsbestimmung für Erlebnisereignisse
 
-* Nachdem Sie Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
-   * Dies liegt daran, dass Erlebnisereignisse von Natur aus dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten. Mit der Namespace-Priorität wird sichergestellt, dass der wichtigste Namespace mit dem Erlebnisereignis verknüpft ist.
-* Daher werden die folgenden Konfigurationen **nicht mehr vom Echtzeit-Kundenprofil** verwendet:
-   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe des Web SDK, des Mobile SDK oder der Edge Network Server-API (Identitäts-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Dienste außerhalb des Echtzeit-Kundenprofils wie Daten-Lake-Speicher oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
-   * Alle Felder, die in einem XDM Experience Event Class-Schema als primäre Identität markiert sind.
-   * Standardmäßige primäre Identitätseinstellungen im Adobe Analytics-Quell-Connector (ECID oder AAID).
-* Andererseits bestimmt die Namespace-Priorität **nicht die primäre Identität für Profildatensätze**.
-   * Für Profildatensätze sollten Sie weiterhin Ihre Identitätsfelder im Schema definieren, einschließlich der primären Identität. Weitere Informationen finden Sie im Handbuch zum Definieren von Identitätsfeldern in der Benutzeroberfläche ](../../xdm/ui/fields/identity.md) .[
+* Nachdem Sie die Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
+   * Dies liegt daran, dass Erlebnisereignisse dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten, und die Namespace-Priorität stellt sicher, dass dem Erlebnisereignis der wichtigste Namespace zugeordnet ist.
+* Daher werden die folgenden Konfigurationen **vom Echtzeit-Kundenprofil nicht mehr verwendet**:
+   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe der Web SDK-, Mobile SDK- oder Edge Network Server-API (Identity-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Services außerhalb des Echtzeit-Kundenprofils wie Data Lake Storage oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
+   * Alle Felder, die in einem XDM-Erlebnisereignis-Klassenschema als primäre Identität gekennzeichnet sind.
+   * Standardeinstellungen für die primäre Identität im Adobe Analytics-Quell-Connector (ECID oder AAID).
+* Dagegen bestimmt **Namespace-Priorität nicht die primäre Identität für Profildatensätze**.
+   * Für Profildatensätze sollten Sie weiterhin Ihre Identitätsfelder im Schema definieren, einschließlich der primären Identität. Weitere Informationen finden Sie im Handbuch unter [Definieren von Identitätsfeldern in ](../../xdm/ui/fields/identity.md) Benutzeroberfläche“.
 
 >[!TIP]
 >
->* Namespace-Priorität ist **eine Eigenschaft eines Namespace**. Es handelt sich um einen numerischen Wert, der einem Namespace zugewiesen wird, um dessen relative Bedeutung anzugeben.
+>* Die Namespace-Priorität ist **eine Eigenschaft eines Namespace**. Dies ist ein numerischer Wert, der einem Namespace zugewiesen wird, um seine relative Bedeutung anzugeben.
 >
->* Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird. Ein Profilfragment ist ein Datensatz mit Daten, die Informationen über einen bestimmten Benutzer speichern: Attribute (z. B. CRM-Datensätze) oder Ereignisse (z. B. Website-Browsing).
+>* Die Primäre Identität ist die Identität, für die ein Profilfragment gespeichert wird. Ein Profilfragment ist ein Datensatz mit Daten, die Informationen zu einem bestimmten Benutzer speichern: Attribute (z. B. CRM-Datensätze) oder Ereignisse (z. B. Website-Browsen).
 
 ### Beispielszenario
 
-In diesem Abschnitt finden Sie ein Beispiel dafür, wie sich die Prioritätskonfiguration auf Ihre Daten auswirken kann.
+Dieser Abschnitt enthält ein Beispiel dafür, wie sich die Prioritätskonfiguration auf Ihre Daten auswirken kann.
 
 Angenommen, die folgenden Konfigurationen werden für eine bestimmte Sandbox festgelegt:
 
-| Namespace | Echtzeit-Anwendung des Namespace | Priorität |
+| Namespace | Reale Anwendung des Namespace | Priorität |
 | --- | --- | --- |
 | CRMID | Benutzer | 1 |
 | IDFA | Apple-Hardwaregerät (iPhone, IPad usw.) | 2 |
@@ -105,95 +105,95 @@ Angenommen, die folgenden Konfigurationen werden für eine bestimmte Sandbox fes
 
 {style="table-layout:auto"}
 
-In Anbetracht der oben beschriebenen Konfigurationen werden Benutzeraktionen und die Bestimmung der primären Identität als solche aufgelöst:
+Angesichts der oben beschriebenen Konfigurationen werden Benutzeraktionen und die Bestimmung der primären Identität als solche aufgelöst:
 
 | Benutzeraktion (Erlebnisereignis) | Authentifizierungsstatus | Datenquelle | Namespaces im Ereignis | Namespace der primären Identität |
 | --- | --- | --- | --- | --- |
-| Angebotsseite für Kreditkarten anzeigen | Nicht authentifiziert (anonym) | Web SDK | `{ECID}` | ECID |
+| Kreditkartenangebot-Seite anzeigen | Nicht authentifiziert (anonym) | Web SDK | `{ECID}` | ECID |
 | Hilfeseite anzeigen | Nicht authentifiziert | Mobile SDK | `{ECID, IDFA}` | IDFA |
-| Kontoübersicht anzeigen | Authentifiziert | Web SDK | `{CRMID, ECID}` | CRMID |
-| Für Eigenheimdarlehen anmelden | Authentifiziert | Analytics-Quell-Connector | `{CRMID, ECID, AAID}` | CRMID |
-| 1.000 USD aus der Überprüfung auf Einsparungen übertragen | Authentifiziert | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
+| Kontostand anzeigen | Authentifiziert | Web SDK | `{CRMID, ECID}` | CRMID |
+| Melden Sie sich für ein Eigenheimdarlehen an | Authentifiziert | Analytics-Quell-Connector | `{CRMID, ECID, AAID}` | CRMID |
+| Transfer von $1.000 vom Check-in zum Sparen | Authentifiziert | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
-### Segmentierungsdienst: Metadatenspeicherung von Segmentmitgliedschaften
+### Segmentierungs-Service: Speichern von Metadaten für die Segmentzugehörigkeit
 
 ![Ein Diagramm zum Speicher der Segmentzugehörigkeit](../images/namespace-priority/segment-membership-storage.png)
 
-Für ein bestimmtes zusammengeführtes Profil werden Segmentmitgliedschaften mit der Identität mit der höchsten Namespace-Priorität gespeichert.
+Für ein bestimmtes zusammengeführtes Profil werden Segmentzugehörigkeiten für die Identität mit der höchsten Namespace-Priorität gespeichert.
 
 Angenommen, es gibt zwei Profile:
 
-* Profil 1 steht für John.
-   * Johns Profil ist für S1 qualifiziert (Segmentmitgliedschaft 1). S1 könnte beispielsweise auf ein Segment von Kunden verweisen, die sich als männlich identifizieren.
-   * John&#39;s Profil qualifiziert sich auch für S2 (Segmentmitgliedschaft 2). Dies kann sich auf ein Segment von Kunden beziehen, deren Treuestatus Gold ist.
-* Profil 2 steht für Jane.
-   * Janes Profil ist für S3 qualifiziert (Segmentmitgliedschaft 3). Dies könnte sich auf ein Segment von Kunden beziehen, die sich als weiblich identifizieren.
-   * Janes Profil ist auch für S4 qualifiziert (Segmentmitgliedschaft 4). Dies kann sich auf ein Segment von Kunden beziehen, deren Treuestatus Platin ist.
+* Profil 1 stellt John dar.
+   * Johns Profil qualifiziert sich für S1 (Segmentzugehörigkeit 1). Beispielsweise könnte S1 auf ein Segment von Kundinnen und Kunden verweisen, die sich als männlich identifizieren.
+   * Johns Profil ist auch für S2 (Segmentzugehörigkeit 2) qualifiziert. Dies könnte sich auf ein Segment von Kundinnen und Kunden beziehen, deren Treuestatus „Gold“ ist.
+* Profil 2 stellt Jane dar.
+   * Janes Profil qualifiziert sich für S3 (Segmentzugehörigkeit 3). Dies könnte sich auf ein Segment von Kundinnen beziehen, die sich als weiblich identifizieren.
+   * Janes Profil qualifiziert sich auch für S4 (Segmentzugehörigkeit 4). Dies könnte sich auf ein Segment von Kundinnen und Kunden beziehen, deren Treuestatus Platin ist.
 
-Wenn John und Jane ein Gerät gemeinsam nutzen, wird die ECID (Webbrowser) von einer Person an eine andere übertragen. Dies hat jedoch keinen Einfluss auf die Informationen zur Segmentmitgliedschaft, die für John und Jane gespeichert wurden.
+Wenn John und Jane ein Gerät teilen, wird die ECID (Webbrowser) von einer Person auf eine andere übertragen. Dies hat jedoch keinen Einfluss auf die Segmentzugehörigkeitsinformationen, die für John und Jane gespeichert sind.
 
-Wenn die Segmentqualifikationskriterien ausschließlich auf anonymen Ereignissen basieren, die mit der ECID gespeichert wurden, würde Jane sich für dieses Segment qualifizieren
+Wenn die Segmentqualifikationskriterien ausschließlich auf anonymen Ereignissen basieren, die für die ECID gespeichert wurden, ist Jane für dieses Segment qualifiziert
 
-## Auswirkungen auf andere Experience Platform-Dienste {#implications}
+## Auswirkungen auf andere Experience Platform-Services {#implications}
 
-In diesem Abschnitt wird beschrieben, wie sich die Namespace-Priorität auf andere Experience Platform-Dienste auswirken kann.
+In diesem Abschnitt wird beschrieben, wie sich die Namespace-Priorität auf andere Experience Platform-Services auswirken kann.
 
-### Erweiterte Lebenszyklusverwaltung
+### Erweitertes Daten-Lifecycle-Management
 
-Löschanfragen von Datensammlungen funktionieren für eine bestimmte Identität wie folgt:
+Anfragen zum Löschen von Datenhygiene-Datensätzen funktionieren für eine bestimmte Identität wie folgt:
 
-* Echtzeit-Kundenprofil: Löscht alle Profilfragmente mit der angegebenen Identität als primäre Identität. **Die primäre Identität für das Profil wird jetzt anhand der Namespace-Priorität bestimmt.**
-* Data Lake: Löscht jeden Datensatz mit der angegebenen Identität als primäre Identität. Im Gegensatz zum Echtzeit-Kundenprofil basiert die primäre Identität im Data Lake auf der primären Identität, die im WebSDK (`primary=true`) angegeben ist, oder auf einem Feld, das als primäre Identität markiert ist
+* Echtzeit-Kundenprofil: Löscht jedes Profilfragment mit der angegebenen Identität als primäre Identität. **Die primäre Identität im Profil wird jetzt anhand der Namespace-Priorität bestimmt.**
+* Data Lake: Löscht alle Datensätze mit der angegebenen Identität als primäre Identität. Im Gegensatz zum Echtzeit-Kundenprofil basiert die primäre Identität im Data Lake auf der primären Identität, die im WebSDK (`primary=true`) angegeben ist, oder auf einem Feld, das als primäre Identität gekennzeichnet ist
 
-Weitere Informationen finden Sie in der [Übersicht über die erweiterte Lebenszyklusverwaltung](../../hygiene/home.md) .
+Weitere Informationen finden Sie im Abschnitt [Übersicht über das erweiterte Lebenszyklus-Management](../../hygiene/home.md).
 
 ### Berechnete Attribute
 
-Wenn die Identitätseinstellungen aktiviert sind, verwenden berechnete Attribute die Namespace-Priorität, um den berechneten Attributwert zu speichern. Für ein bestimmtes Ereignis hat die Identität mit der höchsten Namespace-Priorität den Wert des berechneten Attributs, das dagegen geschrieben wurde. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
+Wenn die Identitätseinstellungen aktiviert sind, verwenden berechnete Attribute die Namespace-Priorität, um den berechneten Attributwert zu speichern. Für ein bestimmtes Ereignis wird der Wert des berechneten Attributs für die Identität mit der höchsten Namespace-Priorität geschrieben. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für berechnete Attribute](../../profile/computed-attributes/ui.md).
 
 ### Data Lake
 
-Die Datenerfassung in Data Lake berücksichtigt weiterhin die primären Identitätseinstellungen, die für das [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) und Schemas konfiguriert wurden.
+Die Datenaufnahme im Data Lake berücksichtigt weiterhin die primären Identitätseinstellungen, die in [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) und Schemata konfiguriert sind.
 
-Data Lake bestimmt die primäre Identität nicht basierend auf der Namespace-Priorität. Adobe Customer Journey Analytics verwendet beispielsweise weiterhin Werte in der Identitätszuordnung, auch wenn die Namespace-Priorität aktiviert ist (z. B. Hinzufügen eines Datensatzes zu einer neuen Verbindung), da Customer Journey Analytics ihre Daten aus dem Data Lake verbraucht.
+Data Lake bestimmt keine primäre Identität basierend auf der Namespace-Priorität. Adobe Customer Journey Analytics verwendet beispielsweise auch dann Werte in der Identitätszuordnung, wenn die Namespace-Priorität aktiviert ist (z. B. beim Hinzufügen eines Datensatzes zu einer neuen Verbindung), da das Customer Journey Analytics die Daten aus dem Data Lake verwendet.
 
-### Experience-Datenmodell (XDM)-Schemas
+### Experience-Datenmodell (XDM)-Schemata
 
-Jedes Schema, das kein XDM-Erlebnisereignis ist, z. B. individuelle XDM-Profile, berücksichtigt weiterhin alle [Felder, die Sie als Identität markieren](../../xdm/ui/fields/identity.md).
+Jedes Schema, das kein XDM-Erlebnisereignis ist, z. B. einzelne XDM-Profile, berücksichtigt weiterhin alle [Felder, die Sie als Identität markieren](../../xdm/ui/fields/identity.md).
 
-Weitere Informationen zu XDM-Schemas finden Sie in der [Übersicht über Schemas](../../xdm/home.md).
+Weitere Informationen zu XDM-Schemata finden Sie unter [Schemata - Übersicht](../../xdm/home.md).
 
-### Intelligente Dienste
+### Intelligent Services
 
-Bei der Auswahl Ihrer Daten müssen Sie einen Namespace angeben, der verwendet wird, um die Ereignisse zu bestimmen, die Bewertungen berechnen, sowie die Ereignisse, die die berechneten Bewertungen speichern. Es wird empfohlen, den Namespace auszuwählen, der eine Person darstellt.
+Bei der Auswahl Ihrer Daten müssen Sie einen Namespace angeben, mit dem die Ereignisse bestimmt werden, die die Bewertungen berechnen, sowie die Ereignisse, die die berechneten Bewertungen speichern. Es wird empfohlen, den Namespace auszuwählen, der eine Person darstellt.
 
-* Wenn Sie Web-Verhaltensdaten mit WebSDk erfassen, sollten Sie den CRMID-Namespace in der Identitätszuordnung auswählen.
-* Wenn Sie Webverhaltensdaten mit dem Analytics-Quell-Connector erfassen, sollten Sie den Identitätsdeskriptor (CRMID) auswählen.
+* Wenn Sie Web-Verhaltensdaten mit WebSDK erfassen, wird empfohlen, den CRMID-Namespace innerhalb der Identitätszuordnung auszuwählen.
+* Wenn Sie Web-Verhaltensdaten mit dem Analytics-Quell-Connector erfassen, sollten Sie den Identitätsdeskriptor (CRMID) auswählen.
 
-Diese Konfiguration führt dazu, dass Bewertungen nur mit authentifizierten Ereignissen berechnet werden.
+Diese Konfiguration führt dazu, dass Scores nur anhand authentifizierter Ereignisse berechnet werden.
 
-Weitere Informationen finden Sie in den Dokumenten unter [Attribution AI](../../intelligent-services/attribution-ai/overview.md) und [Customer AI](../../intelligent-services/customer-ai/overview.md).
+Weitere Informationen finden Sie in den Dokumenten zu [Attribution AI ](../../intelligent-services/attribution-ai/overview.md) und [Kunden-KI](../../intelligent-services/customer-ai/overview.md).
 
 ### Partnerdefinierte Ziele
 
-Aktualisierte Ergebnisse zur Zielgruppendisqualifizierung für Profile, die mit einem freigegebenen Gerät verknüpft sind, werden möglicherweise nicht an nachgelagerte Ziele gesendet. Dies kann in bestimmten seltenen Fällen auftreten, wenn:
+Aktualisierte Ergebnisse zur Zielgruppen-Disqualifizierung für Profile, die mit einem freigegebenen Gerät verknüpft sind, können nicht an nachgelagerte Ziele gesendet werden. Dies kann in bestimmten seltenen Fällen vorkommen, in denen:
 
-* Die Zielgruppenqualifizierung basiert nur auf einer anonymen Aktivität.
-* Anmeldungen über mehrere Profile hinweg treten in einem kurzen Zeitraum auf.
+* Die Zielgruppen-Qualifizierung basiert nur auf anonymer Aktivität.
+* Anmeldungen über mehrere Profile hinweg erfolgen in einem kurzen Zeitraum.
 
-Weitere Informationen zu Partnerzielen finden Sie in der [Zielübersicht](../../destinations/home.md#adobe-built-and-partner-built-destinations).
+Weitere Informationen zu von Partnern erstellten Zielen finden Sie unter [Ziele - Übersicht](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
-[Privacy Service-Löschanfragen](../privacy.md) funktionieren wie folgt für eine bestimmte Identität:
+[Privacy Service-Löschanfragen](../privacy.md) funktionieren für eine bestimmte Identität wie folgt:
 
-* Echtzeit-Kundenprofil: Löscht alle Profilfragmente mit dem angegebenen Identitätswert als primäre Identität. **Die primäre Identität für das Profil wird jetzt anhand der Namespace-Priorität bestimmt.**
-* Data Lake: Löscht jeden Datensatz mit der angegebenen Identität als primäre oder sekundäre Identität.
+* Echtzeit-Kundenprofil: Löscht jedes Profilfragment mit dem angegebenen Identitätswert als primäre Identität. **Die primäre Identität im Profil wird jetzt anhand der Namespace-Priorität bestimmt.**
+* Data Lake: Löscht alle Datensätze mit der angegebenen Identität als primäre oder sekundäre Identität.
 
-Weitere Informationen finden Sie in der [Übersicht über den Datenschutzdienst](../../privacy-service/home.md) .
+Weitere Informationen finden Sie unter [Übersicht über Privacy Service](../../privacy-service/home.md).
 
 ### Adobe Target
 
-Adobe Target kann bei Verwendung der Kantensegmentierung zu unerwartetem Benutzer-Targeting für Szenarien mit freigegebenen Geräten führen.
+Adobe Target kann bei Verwendung der Edge-Segmentierung zu unerwartetem Benutzer-Targeting für gemeinsam genutzte Geräteszenarien führen.

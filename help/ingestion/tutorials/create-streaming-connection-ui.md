@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung; Streaming-Verbindung erstellen; Handbuch; Tutorial; Erstellen einer Streaming-Verbindung; Streaming-Erfassung; Erfassung;
+keywords: Experience Platform;Startseite;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;UI-Handbuch;Tutorial;Streaming-Verbindung erstellen;Streaming-Aufnahme;Aufnahme;
 solution: Experience Platform
 title: Erstellen einer Streaming-Verbindung über die Benutzeroberfläche
 type: Tutorial
@@ -14,8 +14,8 @@ ht-degree: 42%
 
 # Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 
-Um mit dem Streaming von Daten an [!DNL Experience Platform] zu beginnen, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
+Um Daten an [!DNL Experience Platform] zu streamen, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
 
-Nach der Registrierung einer Streaming-Verbindung verfügen Sie über eine eindeutige URL, die zum Streamen von Daten an [!DNL Platform] verwendet werden kann.
+Nach der Registrierung einer Streaming-Verbindung verfügen Sie über eine eindeutige URL, mit der Daten an [!DNL Platform] gestreamt werden können.
 
-Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Handbuch [HTTP API source UI guide](../../sources/tutorials/ui/create/streaming/http.md) .
+Informationen zum Erstellen einer Streaming-Verbindung finden Sie im [Handbuch zur Benutzeroberfläche der HTTP-API](../../sources/tutorials/ui/create/streaming/http.md).

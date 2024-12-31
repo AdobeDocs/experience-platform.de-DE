@@ -23,7 +23,7 @@ Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience P
 
 * [Identity Service](../home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
    * [Identitätsdiagramm](./identity-graph-viewer.md): In einem Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten einer Kundin oder eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie die Kundin oder der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
-   * [Identity-Namespaces](./namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert &quot;name<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRMID.
+   * [Identity-Namespaces](./namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRMID.
 * [Katalog-Service](../../catalog/home.md): Informieren Sie sich über Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake.
 * [Datenhygiene](../../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie einen automatisierten Ablauf von Datensätzen planen oder einzelne Datensätze aus einem Datensatz oder allen Datensätzen löschen.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Verwalten Sie Kundenanfragen für den Zugriff, den Opt-out vom Verkauf oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
@@ -31,7 +31,7 @@ Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience P
 
 ## Löschen einzelner Identitäten
 
-Anfragen zum Löschen einzelner Identitäten ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen mit einem Identity-Namespace verknüpften Benutzeridentität verbunden sind. Sie können von [Privacy Service](../../privacy-service/home.md) bereitgestellte Mechanismen für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und Einhaltung von Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwenden.
+Anfragen zum Löschen einzelner Identitäten ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen mit einem Identity-Namespace verknüpften Benutzeridentität verbunden sind. Sie können Mechanismen verwenden, die von [Privacy Service](../../privacy-service/home.md) für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und die Einhaltung von Datenschutzbestimmungen, z. B. der Datenschutz-Grundverordnung (DSGVO), bereitgestellt werden.
 
 Die folgenden Abschnitte beschreiben die Mechanismen, die Sie für Anfragen zum Löschen einzelner Identitäten in Experience Platform verwenden können.
 

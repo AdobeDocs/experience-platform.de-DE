@@ -21,7 +21,7 @@ Beim Konfigurieren des Partnerschemas für Ihr Ziel können Sie die von Ihrer Zi
 * Dynamische Partnerschemata erstellen, die von Experience Platform dynamisch aufgerufen werden können, um eine Liste aller unterstützten Attribute in Ihrem Ziel abzurufen.
 * Erforderliche Feldzuordnungen definieren, die für Ihre Zielplattform erforderlich sind.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein dateibasiertes Ziel konfigurieren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden der -Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Die Schemaeinstellungen können über den Endpunkt `/authoring/destinations` konfiguriert werden. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -148,7 +148,7 @@ In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch de
 
 | Parameter | Typ | Erforderlich/Optional | Beschreibung |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie die `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kundinnen und -Kunden über eine der [hier](customer-authentication.md) beschriebenen Authentifizierungsmethoden bei Ihrem System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungsdaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldeinformationen-Objekt ](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldeinformationen-API erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie die `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kundinnen und -Kunden über eine der [hier](customer-authentication.md) beschriebenen Authentifizierungsmethoden bei Ihrem System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldedaten-Objekt ](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldedaten-API erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `dynamicEnum.destinationServerId` | Zeichenfolge | Erforderlich | Die `instanceId` des dynamischen Schema-Servers. Dieser Ziel-Server enthält den API-Endpunkt, den Experience Platform aufruft, um das dynamische Schema abzurufen. |
 | `dynamicEnum.value` | Zeichenfolge | Erforderlich | Der Name des dynamischen Schemas, wie in der Konfiguration des dynamischen Schema-Servers definiert. |
 | `dynamicEnum.responseFormat` | Zeichenfolge | Erforderlich | Die Einstellung ist immer `SCHEMA`, wenn ein dynamisches Schema definiert wird. |
@@ -241,7 +241,7 @@ Daher wird das **[!UICONTROL Zielfeld]** in der Platform-Benutzeroberfläche aus
 
 ## Konfigurieren der Unterstützung für externe Zielgruppen {#external-audiences}
 
-Um Ihr Ziel so zu konfigurieren, dass die Aktivierung von [extern generierten Zielgruppen](../../../../segmentation/ui/audience-portal.md#import-audience) unterstützt wird, fügen Sie das unten stehende Codefragment in den Abschnitt `schemaConfig` ein.
+Um Ihr Ziel so zu konfigurieren, dass es die Aktivierung [extern generierter Zielgruppen](../../../../segmentation/ui/audience-portal.md#import-audience) unterstützt, fügen Sie den folgenden Ausschnitt im Abschnitt `schemaConfig` ein.
 
 ```json
 "schemaConfig": {
@@ -250,7 +250,7 @@ Um Ihr Ziel so zu konfigurieren, dass die Aktivierung von [extern generierten Zi
 }
 ```
 
-Weitere Informationen zur Funktion `segmentNamespaceDenyList` finden Sie in den Eigenschaftsbeschreibungen in der weiter oben stehenden Tabelle [1} auf dieser Seite.](#attributes-schema)
+Weitere Informationen zur `segmentNamespaceDenyList`-Funktion finden Sie [ den Eigenschaftsbeschreibungen in ](#attributes-schema)Tabelle) weiter oben auf dieser Seite.
 
 ## Nächste Schritte {#next-steps}
 

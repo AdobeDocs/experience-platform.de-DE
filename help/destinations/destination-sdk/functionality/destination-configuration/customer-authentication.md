@@ -26,7 +26,7 @@ Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destinat
 
 * Für Ziele, die eine [einfache Authentifizierung](#basic) verwenden, müssen Benutzerinnen und Benutzer einen Benutzernamen und ein Kennwort direkt auf der Authentifizierungsseite der Experience Platform-Benutzeroberfläche angeben.
 * Für Ziele, die eine [Bearer-Authentifizierung](#bearer) verwenden, müssen Benutzerinnen und Benutzer ein Bearer-Token bereitstellen.
-* Bei Zielen mit der [OAuth2-Autorisierung](#oauth2) werden Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
+* Für Ziele, die eine [OAuth2-Autorisierung](#oauth2) verwenden, werden Benutzerinnen und Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
 * Für [Amazon S3](#s3)-Ziele müssen Benutzerinnen und Benutzer ihren [!DNL Amazon S3]-Zugriffsschlüssel und geheimen Schlüssel angeben.
 * Für [Azure Blob](#blob)-Ziele müssen Benutzerinnen und Benutzer ihre [!DNL Azure Blob]-Verbindungszeichenfolge angeben.
 
@@ -123,7 +123,7 @@ Um die [!DNL OAuth2]-Authentifizierung für Ihr Ziel einzurichten, konfigurieren
 
 Die [!DNL Amazon S3]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie den Authentifizierungstyp Amazon S3 konfigurieren, müssen Benutzerinnen und Benutzer die S3-Anmeldeinformationen eingeben.
+Wenn Sie den Authentifizierungstyp Amazon S3 konfigurieren, müssen Benutzerinnen und Benutzer die S3-Anmeldedaten eingeben.
 
 ![Darstellung der Benutzeroberfläche mit S3-Authentifizierung](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
@@ -159,7 +159,7 @@ Um die [!DNL Azure Blob]-Authentifizierung für Ihr Ziel einzurichten, konfiguri
 
 Die [!DNL Azure Data Lake Storage]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie den Authentifizierungstyp [!DNL Azure Data Lake Storage] konfigurieren, müssen Benutzerinnen und Benutzer die Azure-Service-Prinzipalanmeldeinformationen und ihre Mandanteninformationen eingeben.
+Wenn Sie den Authentifizierungstyp [!DNL Azure Data Lake Storage] konfigurieren, müssen Benutzerinnen und Benutzer die Azure-Service-Prinzipalanmeldedaten und ihre Mandanteninformationen eingeben.
 
 ![UI-Rendering mit [!DNL Azure Data Lake Storage]-Authentifizierung](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 

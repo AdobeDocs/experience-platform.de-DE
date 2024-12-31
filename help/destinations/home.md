@@ -11,7 +11,7 @@ ht-degree: 63%
 
 # [!DNL Destinations] – Übersicht {#overview}
 
-![Übersichtsbanner Ziele .](./assets/overview/destinations-overview-banner.png)
+![Übersichtsbanner Ziele.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
@@ -39,13 +39,13 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 * Katalog der Zielplattformen durchsuchen, wo Sie Ihre Daten aktivieren können;
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * ein Konto an einem Speicherort erstellen oder Platform mit dem Konto auf der Zielplattform verknüpfen;
-* Wählen Sie aus, welche Zielgruppen oder Datensätze für Ziele aktiviert werden sollen.
-* Wählen Sie aus, welche [Experience-Datenmodell (XDM)-Felder](../xdm/home.md) exportiert werden sollen, wenn Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicher-Standorte und mehr aktiviert werden.
-* Aktivieren verschiedener Typen von Profilen und Zielgruppen für Ziele - Personen, Konten und Interessenten.
+* Auswählen, welche Zielgruppen oder Datensätze für Ziele aktiviert werden sollen;
+* Wählen Sie aus[ welche (Experience-Datenmodell(XDM)-Felder](../xdm/home.md) beim Aktivieren von Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicherorte und mehr exportiert werden sollen.
+* Aktivieren Sie verschiedene Arten von Profilen und Audiences für Ziele - Personen, Konten und potenzielle Kunden.
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
-Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie in der [Übersicht über Zieltypen und Kategorien](./destination-types.md).
+Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie unter [Zieltypen und Kategorien - Übersicht](./destination-types.md).
 
 ## Von Adobe und von Partnern erstellte Ziele {#adobe-and-partner-built-destinations}
 
@@ -55,24 +55,24 @@ Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probl
 
 ## Ziele und Zugriffssteuerungen {#access-controls}
 
-Die Funktion „Ziele“ in Platform arbeitet mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugriffssteuerung in Adobe Experience Platform](../access-control/home.md) und scrollen Sie nach unten zur Tabelle am unteren Seitenrand.
+Die Funktion „Ziele“ in Platform arbeitet mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugriffssteuerung in Adobe Experience Platform](../access-control/home.md) und scrollen Sie nach unten zur Tabelle unten auf der Seite.
 
 In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen aufgeführt, die zum Ausführen bestimmter Aktionen für Ziele erforderlich sind.
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ---- |
-| **[!UICONTROL Anzeigen von Zielen]** | Um auf die Registerkarte &quot;Ziele&quot;in der Experience Platform-Benutzeroberfläche zuzugreifen, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Ziele anzeigen]** [3}.](/help/access-control/home.md#permissions) |
-| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele verwalten]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [.](/help/access-control/home.md#permissions) |
-| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Zielgruppen für Ziele zu aktivieren und den Schritt [Zuordnen](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [.](/help/access-control/home.md#permissions) |
-| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Zielgruppen aus vorhandenen Datenflüssen hinzuzufügen oder aus ihnen zu entfernen, ohne Zugriff auf den Schritt [Zuordnen](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu haben, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [.](/help/access-control/home.md#permissions) |
-| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Datensatzziele verwalten und aktivieren]** | Zum Exportieren von Datensätzen in Ziele benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datenziele verwalten und aktivieren]** [.](/help/access-control/home.md#permissions) |
-| **[!UICONTROL Anzeigen von Identitätsdiagrammen]** | Um *Identitäten* in Ziele zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions) <br>. ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
+| **[!UICONTROL Anzeigen von Zielen]** | Um auf die Registerkarte Ziele in der Experience Platform-Benutzeroberfläche zuzugreifen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** ([) ](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele verwalten]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [ erforderlich](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Zielgruppen zu vorhandenen Datenflüssen hinzuzufügen oder daraus zu entfernen, ohne Zugriff auf den [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu haben, benötigen Sie die ]****[!UICONTROL  Ziele anzeigen[, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Anzeigen von]**, **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** | Um Datensätze in Ziele zu exportieren, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Anzeigen von Identitätsdiagrammen]** | Zum Exportieren *Identitäten* an Ziele benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions) <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-Das folgende Diagramm zeigt visuell, welche Berechtigungen Sie benötigen, abhängig von den Vorgängen, die Sie für Ziele ausführen möchten.
+Das folgende Diagramm zeigt visuell an, welche Berechtigungen Sie je nach den Vorgängen benötigen, die Sie für Ziele ausführen möchten.
 
-![Diagramm, das die erforderlichen Berechtigungen zum Ausführen bestimmter Aktionen für Ziele anzeigt.](/help/destinations/assets/overview/permissions-diagram.png)
+![Diagramm mit den erforderlichen Berechtigungen zum Ausführen bestimmter Aktionen für Ziele.](/help/destinations/assets/overview/permissions-diagram.png)
 
 Weiterführende Informationen zu Zugriffssteuerungen finden Sie im [Benutzerhandbuch zur Zugriffssteuerung](../access-control/ui/overview.md).
 
@@ -88,11 +88,11 @@ Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelemen
 
 Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
 
-![Beispiel der Überwachungsseite für Ziele.](./assets/overview/monitoring-page-example.png)
+![Beispiel für die Zielüberwachungsseite.](./assets/overview/monitoring-page-example.png)
 
-Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen Abschnitt *Datenexport überprüfen* , der anzeigt, wie Sie in der Zielplattform überprüfen können, ob Daten erfolgreich von Experience Platform bereitgestellt wurden. Sehen Sie sich ein Beispiel für diesen Abschnitt für das [Amazon Ads-Ziel](/help/destinations/catalog/advertising/amazon-ads.md#exported-data) an.
+Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen *Abschnitt „Datenexport validieren*, der angibt, wie Sie in der Zielplattform feststellen können, ob Daten erfolgreich von Experience Platform importiert wurden. Sehen Sie sich ein Beispiel für diesen Abschnitt für das [Amazon Ads-Ziel an](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
-## Data Governance-Einschränkungen bei der Aktivierung von Daten für Ziele {#data-governance}
+## Data-Governance-Einschränkungen beim Aktivieren von Daten für Ziele {#data-governance}
 
 Data Governance wird für Platform-Ziele durchgesetzt durch:
 
@@ -118,9 +118,9 @@ Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die
 
 ## Allgemeine Geschäftsbedingungen {#terms-and-conditions}
 
-Mit der Verwendung eines der Ziele, die als Beta (&quot;Beta&quot;) gekennzeichnet sind, erkennen Sie hiermit an, dass der Beta ohne jegliche Garantie ******&quot;as is&quot; bereitgestellt wird.
+Durch Verwendung eines der als Beta (“Beta„) gekennzeichneten Ziele erkennen Sie hiermit an, dass die Beta ohne Mängelgewähr ***jeglicher Gewährleistung bereitgestellt wird***.
 
-Adobe ist nicht verpflichtet, die Beta-Version zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Informativ zu verwenden und sich nicht auf die ordnungsgemäße Funktionsweise oder Leistung der Beta und/oder der Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Information von Adobe betrachtet.
+Adobe ist nicht verpflichtet, die Beta-Version zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, informative Inhalte zu verwenden und sich nicht auf die ordnungsgemäße Funktionsweise oder Leistung solcher Beta und/oder Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Information von Adobe betrachtet.
 
 Jedes „Feedback“ (Informationen zur Beta-Version, einschließlich, aber nicht beschränkt auf Probleme oder Mängel, auf die Sie bei der Verwendung der Beta-Version stoßen, Vorschläge, Verbesserungen und Empfehlungen), das Sie Adobe übermitteln, wird hiermit an Adobe übertragen, einschließlich aller Rechte, Titel und Interessen an diesem Feedback.
 

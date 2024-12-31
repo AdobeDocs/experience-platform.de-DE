@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Identitäten; Cluster-Verlauf
+keywords: Experience Platform;Startseite;beliebte Themen;Identitäten;Cluster-Verlauf
 solution: Experience Platform
-title: Abrufen des Cluster-Verlaufs einer Identität
-description: Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. Identity Service bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
+title: Cluster-Verlauf einer Identität abrufen
+description: Identitäten können Cluster im Verlauf verschiedener Gerätediagramm-Ausführungen verschieben. Identity Service bietet Einblicke in die Cluster-Verknüpfungen einer bestimmten Identität im Zeitverlauf.
 role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,12 +14,12 @@ ht-degree: 35%
 
 # Abrufen des Cluster-Verlaufs einer Identität
 
-Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. [!DNL Identity Service] bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
+Identitäten können Cluster im Verlauf verschiedener Gerätediagramm-Ausführungen verschieben. [!DNL Identity Service] bietet Einblick in die Cluster-Verknüpfungen einer bestimmten Identität im Zeitverlauf.
 
-Verwenden Sie den optionalen Parameter `graph-type` , um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
+Verwenden Sie den optionalen `graph-type`, um den Ausgabetyp anzugeben, von dem der Cluster abgerufen werden soll. Die Optionen sind:
 
-- `None` - Keine Identitätszusammenfügung durchführen.
-- `Private Graph` - Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
+- `None` - Keine Identitätszuordnung durchführen.
+- `Private Graph` - Führen Sie eine Identitätszuordnung anhand Ihres privaten Identitätsdiagramms durch. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
 
 ## Abrufen des Cluster-Verlaufs einer einzelnen Identität
 
@@ -66,11 +66,11 @@ curl -X GET \
 
 ## Abrufen des Cluster-Verlaufs mehrerer Identitäten
 
-Verwenden Sie die Methode `POST` als Batch-Entsprechung der oben beschriebenen Methode `GET`, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
+Verwenden Sie die `POST`-Methode als Batch-Äquivalent der oben beschriebenen `GET`-Methode, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
 
 >[!NOTE]
 >
->Die Anfrage sollte maximal 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
+>Die Anfrage sollte höchstens 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -80,7 +80,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Anfrageinhalt**
 
-Option 1: Geben Sie eine Liste von XIDs an, für die Cluster-Mitglieder abgerufen werden sollen.
+Option 1: Geben Sie eine Liste der XIDs an, für die Cluster-Mitglieder abgerufen werden sollen.
 
 ```shell
 {
@@ -89,7 +89,7 @@ Option 1: Geben Sie eine Liste von XIDs an, für die Cluster-Mitglieder abgerufe
 }
 ```
 
-Option 2: Geben Sie eine Liste von Identitäten als zusammengesetzte IDs an, wobei jeder den ID-Wert und den Namespace nach Namespace-Code benennt.
+Option 2: Geben Sie eine Liste der Identitäten als zusammengesetzte IDs an, wobei jede den ID-Wert und den Namespace nach Namespace-Code benennt.
 
 ```shell
 {
@@ -166,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Respomse**
+**Antwort**
 
 ```json
 {
@@ -214,8 +214,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Die Antwort enthält immer einen Eintrag für jede XID, die in der Anfrage bereitgestellt wird, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob einer oder mehreren ein Cluster überhaupt zugeordnet ist.
+>Die Antwort hat immer einen Eintrag für jede XID in der Anfrage, unabhängig davon, ob die XIDs einer Anfrage zum selben Cluster gehören oder ob einem oder mehreren Cluster überhaupt zugeordnet sind.
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort.
+Fahren Sie mit dem nächsten Tutorial fort, um [Identitätszuordnungen auflisten](./list-identity-mappings.md)

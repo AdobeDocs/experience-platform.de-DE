@@ -1,5 +1,5 @@
 ---
-keywords: Qualtrics;Qualtrics;Qualtrics Website Feedback;Qualtrics Website Feedback;Qualtrics Website Feedback
+keywords: Qualtrics;Qualtrics;Qualtrics Website Feedback;Qualtrics Website feedback;Qualtricks Website feedback
 title: Qualtrics Website Feedback-Erweiterung
 description: Die Qualtrics Website Feedback-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
@@ -14,7 +14,7 @@ ht-degree: 87%
 
 ## Übersicht {#overview}
 
-Mit [!DNL Qualtrics Website Feedback] können Sie Ihre Website-Besucher zur richtigen Zeit mit der richtigen Nachricht ansprechen. Unabhängig davon, ob Sie das Besuchererlebnis mit Website-Feedback-Umfragen verbessern oder die Konversion steigern möchten, wurde [!DNL Qualtrics Website Feedback] erläutert.
+[!DNL Qualtrics Website Feedback] können Sie Ihre Website-Besucher mit der richtigen Botschaft zum richtigen Zeitpunkt ansprechen. Egal, ob Sie das Besuchererlebnis mit Website-Feedback-Umfragen verbessern oder die Konversion steigern möchten, [!DNL Qualtrics Website Feedback] ist für Sie da.
 
 Mit einer intuitiven Point-and-Click-Oberfläche können Sie innerhalb weniger Minuten gezielt Web-Nachrichten mit Branding erstellen und bereitstellen. Die Daten und Einblicke, die Sie über Ihre Website erfassen, werden zusammen mit den Kunden-Feedback-Daten aus allen Kanälen angezeigt und bieten eine umfassende Sicht auf Ihr Kundenerlebnis – alles auf einer Plattform.
 

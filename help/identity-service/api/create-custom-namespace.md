@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;Namespaces;Identitäts-Namespace;Identitäts-Namespace;Identität;Identität
+keywords: Experience Platform;Startseite;beliebte Themen;Namespace;Namespace;Namespaces;Namespaces;Identity-Namespace;Identity-Namespace;Identität;Identität
 solution: Experience Platform
 title: Erstellen eines benutzerdefinierten Namespace in der Identity Service-API
-description: Mithilfe der Identity-Namespace-API können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
+description: Mit der Identity-Namespace-API können Sie einen benutzerdefinierten Identity-Namespace erstellen, der nur für Ihre Organisation verfügbar ist.
 role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # Erstellen eines benutzerdefinierten Namespace in der Identity Service-API
 
-Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
+Mit der [!DNL Identity Namespace]-API können Sie einen benutzerdefinierten Identity-Namespace erstellen, der nur für Ihre Organisation verfügbar ist.
 
-Empfehlungen zum Erstellen benutzerdefinierter Namespaces finden Sie in der Dokumentation zu den häufig gestellten Fragen zum Identity Service ](../troubleshooting-guide.md).[
+Empfehlungen zum Erstellen benutzerdefinierter Namespaces finden Sie unter [Häufig gestellte Fragen zu Identity Service](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial fort, um die native ID einer Identität ](./list-native-id.md) aufzulisten.[
+Fahren Sie mit dem nächsten Tutorial fort[ um die native ID einer Identität aufzulisten](./list-native-id.md)

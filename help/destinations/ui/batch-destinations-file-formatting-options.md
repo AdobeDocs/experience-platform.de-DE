@@ -1,6 +1,6 @@
 ---
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
-title: Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
+title: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 48%
 
 ---
 
-# Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
+# Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 
 >[!IMPORTANT]
 > 
@@ -26,13 +26,13 @@ Mithilfe der Experience Platform-Benutzeroberfläche können Sie verschiedene Da
 
 ## Dateiformatierungskonfiguration für CSV-Dateien {#file-configuration}
 
-Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Verbindung zum Ziel herstellen](/help/destinations/ui/connect-destination.md) . Wählen Sie **Datentyp: Segmente** und **Dateityp: CSV** aus, um die für die exportierten `CSV` -Dateien verfügbaren Dateiformatierungseinstellungen anzuzeigen.
+Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md). Wählen Sie **Datentyp: Segmente** und **Dateityp: CSV** aus, um die Dateiformatierungseinstellungen anzuzeigen, die für die exportierten `CSV`-Dateien verfügbar sind.
 
 >[!IMPORTANT]
 >
 >Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Der Zielentwickler kann bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Zielentwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung mit dem Ziel verfügbar sind. Erforderliche Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
 > 
->Die von Adobe erstellten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützen derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
+>Die Adobe-integrierten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützen derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
 
 ![Abbildung mit einigen der verfügbaren Dateiformatierungsoptionen.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -45,21 +45,21 @@ Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Verbindu
 
 Verwenden Sie dieses Steuerelement, um ein Trennzeichen für jedes Feld und jeden Wert in den exportierten CSV-Dateien festzulegen. Verfügbare Optionen sind:
 
-* Doppelpunkt `(:)`
-* Komma `(,)`
-* Pipe `(|)`
-* Semikolon `(;)`
-* Tab `(\t)`
+* `(:)`
+* `(,)`
+* `(|)`
+* `(;)`
+* `(\t)`
 
 #### Beispiele
 
-Zeigen Sie die folgenden Beispiele des Inhalts in den exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
+Sehen Sie sich die folgenden Beispiele für den Inhalt in den exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Doppelpunkt`(:)`]**: `male:John:Doe`
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Komma`(,)`]**: `male,John,Doe`
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Pipeline`(|)`]**: `male|John|Doe`
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Semikolon`(;)`]**: `male;John;Doe`
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Tab`(\t)`]**: `male \t John \t Doe`
+* Beispielausgabe mit **[!UICONTROL Doppelpunkt`(:)`]** ausgewählt: `male:John:Doe`
+* Beispielausgabe mit **[!UICONTROL Komma`(,)`]** ausgewählt: `male,John,Doe`
+* Beispielausgabe mit **[!UICONTROL Pipe`(|)`]** ausgewählt: `male|John|Doe`
+* Beispielausgabe mit **[!UICONTROL Semikolon`(;)`]** ausgewählt: `male;John;Doe`
+* Beispielausgabe mit **[!UICONTROL Registerkarte`(\t)`]** ausgewählt: `male \t John \t Doe`
 
 ### Anführungszeichen {#quote-character}
 
@@ -68,21 +68,21 @@ Zeigen Sie die folgenden Beispiele des Inhalts in den exportierten CSV-Dateien m
 >title="Anführungszeichen"
 >abstract="Verwenden Sie diese Option, wenn Sie doppelte Anführungszeichen aus exportierten Zeichenfolgen entfernen möchten. In der Dokumentation finden Sie Beispiele für jede Auswahl."
 
-Mit dieser Option können Sie steuern, ob doppelte Anführungszeichen in exportierten Zeichenfolgen entfernt oder beibehalten werden sollen.
+Verwenden Sie diese Option, um zu steuern, ob doppelte Anführungszeichen entfernt oder in exportierten Zeichenfolgen beibehalten werden sollen.
 
 Folgende Optionen sind verfügbar:
 
-* **[!UICONTROL Null-Zeichen (\0000)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen aus exportierten CSV-Dateien zu entfernen.
-* **[!UICONTROL Doppelte Anführungszeichen (&quot;)]**. Verwenden Sie diese Option, wenn die Zeichenfolgenwerte ein Trennzeichen oder doppelte Anführungszeichen enthalten. Mit dieser Option können Sie die Trennzeichen oder doppelten Anführungszeichen in Ihren exportierten CSV-Dateien beibehalten, sodass Sie richtig erkennen können, welcher Wert zu welchem Feld gehört.
+* **[!UICONTROL NULL (\0000)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen aus exportierten CSV-Dateien zu entfernen.
+* **[!UICONTROL Anführungszeichen („)]**. Verwenden Sie diese Option, wenn die Zeichenfolgenwerte ein Trennzeichen oder doppelte Anführungszeichen enthalten. Mit dieser Option können Sie die Trennzeichen oder doppelten Anführungszeichen in Ihren exportierten CSV-Dateien beibehalten, sodass Sie korrekt identifizieren können, welcher Wert welchem Feld entspricht.
 
 #### Beispiele
 
 Betrachten Sie den Eingabewert `Anna,"Doe,John"`.
 
-Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
+Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Null-Zeichen (\0000)]**: `Anna,Doe,John`
-* Beispielausgabe mit ausgewählten **[!UICONTROL Doppelzitaten (&quot;)]**: `Anna,"Doe,John"`
+* Beispielausgabe mit **[!UICONTROL Null-Zeichen (\0000)]** ausgewählt: `Anna,Doe,John`
+* Beispielausgabe mit **[!UICONTROL doppelten Anführungszeichen („)]** ausgewählt: `Anna,"Doe,John"`
 
 ### Escape-Zeichen {#escape-character}
 
@@ -91,17 +91,17 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 >title="Escape-Zeichen"
 >abstract="Legt ein einzelnes Zeichen fest, das zum Maskieren von Anführungszeichen verwendet wird, die innerhalb eines bereits mit Anführungszeichen versehenen Werts liegen. In der Dokumentation finden Sie Beispiele für jede Auswahl."
 
-Verwenden Sie diese Option, um ein einzelnes Zeichen zum Maskieren von Anführungszeichen in einem bereits zitierten Wert festzulegen. Diese Option ist beispielsweise nützlich, wenn Sie eine Zeichenfolge in doppelten Anführungszeichen setzen, wobei ein Teil der Zeichenfolge bereits in doppelten Anführungszeichen gesetzt ist. Diese Option bestimmt, durch welches Zeichen die inneren doppelten Anführungszeichen ersetzt werden sollen. Verfügbare Optionen sind:
+Verwenden Sie diese Option, um ein einzelnes Zeichen zum Maskieren von Anführungszeichen in einem bereits angegebenen Wert festzulegen. Diese Option ist beispielsweise nützlich, wenn eine Zeichenfolge in doppelte Anführungszeichen gesetzt wird, wobei ein Teil der Zeichenfolge bereits in doppelte Anführungszeichen gesetzt wird. Diese Option bestimmt, welches Zeichen die inneren doppelten Anführungszeichen ersetzen soll. Verfügbare Optionen sind:
 
-* Rücker Schrägstrich `(\)`
+* Schrägstrich `(\)`
 * Einfaches Anführungszeichen `(')`
 
 #### Beispiele
 
-Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
+Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL umgekehrten Schrägstrich`(\)`]**: `"Test,\"John\",LastName"`
-* Beispielausgabe mit ausgewähltem **[!UICONTROL einfachen Anführungszeichen`(')`]**: `"Test,'"John'",LastName"`
+* Beispielausgabe mit **[!UICONTROL Zurück-Schrägstrich`(\)`]**: `"Test,\"John\",LastName"`
+* Beispielausgabe mit &quot;**[!UICONTROL Anführungszeichen`(')`]** ausgewählt: `"Test,'"John'",LastName"`
 
 ### Ausgabe leerer Werte {#empty-value-output}
 
@@ -113,20 +113,20 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines leeren Werts festzulegen. Diese Option bestimmt, wie leere Werte in Ihren exportierten CSV-Dateien dargestellt werden. Verfügbare Optionen sind:
 
 * **[!UICONTROL Null (null)]**
-* **Leere Zeichenfolge in doppelten Anführungszeichen (&quot;&quot;)**
+* **Leere Zeichenfolge in doppelten Anführungszeichen (“„)**
 * **[!UICONTROL Leere Zeichenfolge]**
 
 #### Beispiele
 
-Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
+Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
-* Beispielausgabe mit ausgewähltem **&quot;**: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in doppelte Anführungszeichen um.
-* Beispielausgabe mit ausgewähltem **[!UICONTROL leeren String]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn so, wie er ist (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
+* Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in ein Paar doppelter Anführungszeichen um.
+* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn wie er ist (ohne doppelte Anführungszeichen).
 
 >[!TIP]
 >
->Die Differenz zwischen der Ausgabe eines leeren Werts und der Ausgabe eines Nullwerts im folgenden Abschnitt besteht darin, dass ein leerer Wert einen tatsächlichen Wert hat, der leer ist. Der NULL-Wert hat überhaupt keinen Wert. Stellen Sie sich den leeren Wert wie ein leeres Glas auf dem Tisch vor und den Nullwert, dass das Glas überhaupt nicht auf dem Tisch ist.
+>Der Unterschied zwischen der Ausgabe eines leeren Werts und der Ausgabe eines Nullwerts im folgenden Abschnitt besteht darin, dass ein leerer Wert einen tatsächlichen Wert hat, der leer ist. Der NULL-Wert hat überhaupt keinen Wert. Stellen Sie sich vor, dass der leere Wert ein leeres Glas auf der Tabelle und der Null-Wert überhaupt kein Glas auf der Tabelle hat.
 
 ### Ausgabe von Nullwerten {#null-value-output}
 
@@ -138,16 +138,16 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines Nullwerts in den exportierten Dateien festzulegen. Diese Option bestimmt, wie Nullwerte in Ihren exportierten CSV-Dateien dargestellt werden. Verfügbare Optionen sind:
 
 * **[!UICONTROL Null (null)]**
-* **Leere Zeichenfolge in doppelten Anführungszeichen (&quot;&quot;)**
+* **Leere Zeichenfolge in doppelten Anführungszeichen (“„)**
 * **[!UICONTROL Leere Zeichenfolge]**
 
 #### Beispiele
 
-Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
+Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall erfolgt keine Transformation und die CSV-Datei enthält den Nullwert.
-* Beispielausgabe mit ausgewähltem **&quot;**: `male,"",TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
-* Beispielausgabe mit ausgewähltem **[!UICONTROL leeren String]**: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`. In diesem Fall findet keine Umwandlung statt und die CSV-Datei enthält den Nullwert.
+* Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
+* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
 
 ### Komprimierungsformat {#compression-format}
 
@@ -156,7 +156,7 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 >title="Komprimierungsformat"
 >abstract="Legt den Komprimierungstyp zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE. In der Dokumentation finden Sie Beispiele für jede Auswahl."
 
-Legt den Komprimierungstyp zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE. Diese Option bestimmt, ob Sie komprimierte Dateien exportieren.
+Legt den Komprimierungstyp zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE. Diese Option bestimmt, ob komprimierte Dateien exportiert werden.
 
 ### Codierung
 

@@ -22,7 +22,7 @@ Im nachfolgenden Abschnitt erhalten Sie eine Einführung in die wichtigsten Konz
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Folgen Sie den Schritten im [API-Authentifizierungs-Handbuch](../../landing/api-authentication.md), um wie unten dargestellt Werte für die einzelnen Kopfzeilen zu generieren, die für die Data Hygiene API erforderlich sind:
+Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungs-Anmeldedaten erfassen. Folgen Sie den Schritten im [API-Authentifizierungs-Handbuch](../../landing/api-authentication.md), um wie unten dargestellt Werte für die einzelnen Kopfzeilen zu generieren, die für die Data Hygiene API erforderlich sind:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -44,17 +44,17 @@ Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Dat
 
 >[!IMPORTANT]
 >
->Löschanfragen zu Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Healthcare Shield** erworben haben.
+>Anfragen zum Löschen von Datensätzen sind nur für Organisationen verfügbar, die **Adobe Healthcare Shield** erworben haben.
 >
 >
 >Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
-Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt dargestellt, das als Arbeitsreihenfolge bezeichnet wird. Weitere Informationen zum Arbeiten mit Datensatzlöschungen in der API finden Sie im [Handbuch zum Workflow-Bestell-Endpunkt](./workorder.md) .
+Mit der Data Hygiene API können Sie alle Datensätze löschen, die mit einer Identität in einem oder allen Datensätzen verknüpft sind. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt repräsentiert, das als Arbeitsauftrag bezeichnet wird. Weitere Informationen [ Arbeiten mit Datensatzlöschungen in der API finden ](./workorder.md) im Handbuch für Arbeitsauftrags-Endpunkte .
 
 ## Kontingent
 
-Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Auftragsquoten für jeden Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Weitere Informationen zum Anzeigen des aktuellen Quotenstatus Ihrer Datenlebenszyklusprozesse finden Sie im [Quotenendpunkt-Handbuch](./quota.md) .
+Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Vorgangskontingent für jeden Typ von Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Einzelheiten zur Anzeige [ aktuellen Kontingent-Status Ihrer Datenlebenszyklusprozesse finden Sie ](./quota.md) „Handbuch für Kontingentendpunkte“.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenlebenszyklusanfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [UI-Handbuch zur Datenlebenszyklusbenutzeroberfläche](../ui/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Anfragen zum Datenlebenszyklus mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Datenlebenszyklus-Benutzeroberfläche](../ui/overview.md).

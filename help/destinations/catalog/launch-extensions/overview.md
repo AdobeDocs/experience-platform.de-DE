@@ -27,9 +27,9 @@ Um die Erweiterungen in der Platform-Benutzeroberfläche zu finden, navigieren S
 
 ## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder App verbessert. Dazu kann das Senden von Rohdaten für Ereignisse an ein Ziel wie [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) gehören, sie können aber auch andere Funktionen nutzen.
+Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet ](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
 
-Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die in der Benutzeroberfläche von Platform-Zielen angezeigten Erweiterungen sind *Tag-Erweiterungen*. Weiterführende Informationen zu den [Unterschieden zwischen Tags und der Ereignisweiterleitung](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) finden Sie in der Übersicht zur Ereignisweiterleitung.
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [ Ereignisweiterleitung finden Sie in der Übersicht ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
 
 
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 Die Tag-Funktionen von Platform sind für Kunden von Experience Cloud kostenlos. Das System vereinfacht die Tag-Bereitstellung auf Ihrer Website durch benutzerfreundliche Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. Tags haben einen geringen Platzbedarf auf Ihrer Website und ermöglicht das schnelle Laden Ihrer Seiten.
 
-Sie können zwar keine Zielgruppen für Tag-Erweiterungen aktivieren, Sie können aber Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen zu Regeln finden Sie in der [Tags-Dokumentation](../../../tags/ui/managing-resources/rules.md).
+Sie können zwar keine Zielgruppen für Tag-Erweiterungen aktivieren, aber Sie können Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen zu Regeln finden Sie in der [Tags-Dokumentation](../../../tags/ui/managing-resources/rules.md).
 
 ## Anwendungsbeispiele für Erweiterungen {#extensions-use-cases}
 

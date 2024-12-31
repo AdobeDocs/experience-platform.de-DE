@@ -1,5 +1,5 @@
 ---
-description: Auf dieser Seite werden die verschiedenen OAuth 2-Autorisierungsflüsse beschrieben, die von Destination SDK unterstützt werden, und Sie erhalten Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel.
+description: Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 title: OAuth 2-Autorisierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
@@ -12,9 +12,9 @@ ht-degree: 78%
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt mehrere Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Möglichkeit, sich mithilfe des [OAuth 2 Autorisierungs-Frameworks](https://tools.ietf.org/html/rfc6749) bei Ihrem Ziel zu authentifizieren.
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
 
-Auf dieser Seite werden die verschiedenen OAuth 2-Autorisierungsflüsse beschrieben, die von Destination SDK unterstützt werden, und Sie erhalten Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel.
+Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 
 >[!IMPORTANT]
 >
@@ -29,11 +29,11 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Nein |
 
-## Hinzufügen von OAuth 2-Autorisierungsdetails zur Zielkonfiguration {#how-to-setup}
+## Hinzufügen von OAuth 2-Autorisierungsdetails zu Ihrer Zielkonfiguration {#how-to-setup}
 
 ### Voraussetzungen in Ihrem System {#prerequisites}
 
-Als ersten Schritt müssen Sie in Ihrem System eine Anwendung für Adobe Experience Platform erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die für die Authentifizierung von Experience Platform an Ihrem Ziel erforderlich sind.
+Als ersten Schritt müssen Sie in Ihrem System eine Anwendung für Adobe Experience Platform erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren des Experience Platform bei Ihrem Ziel erforderlich sind.
 
 Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experience Platform OAuth 2-Umleitungs-/Callback-URLs, die Sie in der folgenden Liste finden.
 
@@ -46,7 +46,7 @@ Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experienc
 
 >[!IMPORTANT]
 >
->Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für Adobe Experience Platform in Ihrem System ist nur für den Gewährungstyp [OAuth 2 mit Autorisierungs-Code](#authorization-code) erforderlich. Für die beiden anderen unterstützten Gewährungstypen (Kennwort und Client-Anmeldeinformationen) können Sie diesen Schritt überspringen.
+>Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für Adobe Experience Platform in Ihrem System ist nur für den Gewährungstyp [OAuth 2 mit Autorisierungs-Code](#authorization-code) erforderlich. Für die beiden anderen unterstützten Gewährungstypen (Kennwort und Client-Anmeldedaten) können Sie diesen Schritt überspringen.
 
 Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 * eine Client-ID;
@@ -55,7 +55,7 @@ Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details zur [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) unter dem Parameter `customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach OAuth 2-Autorisierungstyp zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem `customerAuthenticationConfigurations`-Parameter zur [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -63,22 +63,22 @@ Experience Platform unterstützt die drei OAuth 2-Gewährungstypen in der folgen
 
 >[!IMPORTANT]
 >
->* Sie geben die Eingabeparameter wie in den folgenden Abschnitten beschrieben an. Adobe-interne Systeme stellen eine Verbindung zum Autorisierungssystem Ihrer Plattform her und erfassen Ausgabeparameter, mit denen der Benutzer authentifiziert und die Autorisierung für Ihr Ziel verwaltet wird.
+>* Sie geben die Eingabeparameter wie in den folgenden Abschnitten beschrieben an. Adobe-interne Systeme stellen eine Verbindung zum Autorisierungssystem Ihrer Plattform her und erfassen Ausgabeparameter, mit denen die Benutzerin bzw. der Benutzer authentifiziert und die Autorisierung für Ihr Ziel verwaltet wird.
 >* Die in der Tabelle fett hervorgehobenen Eingabeparameter sind erforderliche Parameter im OAuth 2-Autorisierungsfluss. Die anderen Parameter sind optional. Es gibt weitere benutzerdefinierte Eingabeparameter, die hier nicht gezeigt werden, aber in den Abschnitten [Anpassen der OAuth 2-Konfiguration](#customize-configuration) und [Aktualisierung des Zugriffstokens](#access-token-refresh) ausführlich beschrieben werden.
 
 | OAuth 2-Gewährung | Eingaben | Ausgaben |
 |---------|----------|---------|
 | Autorisierungs-Code | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 | Kennwort | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| Client-Anmeldeinformationen | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Client-Anmeldedaten | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style="table-layout:auto"}
 
-In der obigen Tabelle sind die Felder aufgeführt, die in standardmäßigen OAuth 2-Flüssen verwendet werden. Zusätzlich zu diesen Standardfeldern können verschiedene Partnerintegrationen zusätzliche Eingaben und Ausgaben erfordern. Adobe hat ein flexibles OAuth 2-Autorisierungs-Framework für die Destination SDK entwickelt, das Varianten des obigen Standardfeldmusters handhaben kann und gleichzeitig einen Mechanismus zur automatischen Neuerstellung ungültiger Ausgaben unterstützt, wie z. B. abgelaufene Zugriffstoken.
+In der obigen Tabelle sind die Felder aufgeführt, die in standardmäßigen OAuth 2-Flüssen verwendet werden. Zusätzlich zu diesen Standardfeldern können verschiedene Partnerintegrationen zusätzliche Eingaben und Ausgaben erfordern. Adobe hat ein flexibles OAuth 2-Autorisierungs-Framework für die Destination SDK entwickelt, das Varianten des oben genannten Standardfeldmusters handhaben kann und gleichzeitig einen Mechanismus zur automatischen Neuerstellung ungültiger Ausgaben unterstützt, z. B. abgelaufene Zugriffstoken.
 
-Die Ausgabe enthält in allen Fällen ein Zugriffstoken, das von Experience Platform verwendet wird, um sich zu authentifizieren und die Autorisierung für Ihr Ziel beizubehalten.
+Die Ausgabe enthält in allen Fällen ein Zugriffstoken, das von Experience Platform verwendet wird, um sich zu authentifizieren und die Autorisierung für Ihr Ziel zu bewahren.
 
-Das System, das Adobe für die OAuth 2-Autorisierung entwickelt hat:
+Das System, das von Adobe für die OAuth 2-Autorisierung entwickelt wurde:
 * Unterstützt alle drei OAuth 2-Gewährungstypen und berücksichtigt dabei alle Variationen in ihnen, z. B. zusätzliche Datenfelder, nicht standardmäßige API-Aufrufe und mehr.
 * Unterstützt Zugriffstoken mit variierenden Lebenszeitwerten (90 Tage, 30 Minuten oder ein beliebiger anderer von Ihnen angegebener Lebenszeitwert).
 * Unterstützt OAuth 2-Autorisierungsflüsse mit oder ohne Aktualisierungs-Token.
@@ -93,7 +93,7 @@ Wenn Ihr Ziel einen standardmäßigen OAuth 2.0-Autorisierungs-Code-Fluss (lesen
 
 {style="table-layout:auto"}
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -129,7 +129,7 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgen
 
 ## OAUth 2 mit Passwortgewährung
 
-Für die OAuth 2-Passwortgewährung (lesen Sie die [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.3)) erfordert Experience Platform den Benutzernamen und das Passwort der Benutzerin bzw. des Benutzers. Im Autorisierungsfluss tauscht Experience Platform diese Anmeldeinformationen gegen ein Zugriffstoken und optional ein Aktualisierungstoken aus.
+Für die OAuth 2-Passwortgewährung (lesen Sie die [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.3)) erfordert Experience Platform den Benutzernamen und das Passwort der Benutzerin bzw. des Benutzers. Im Autorisierungsfluss tauscht Experience Platform diese Anmeldeinformationen gegen ein Zugriffs-Token und optional ein Aktualisierungs-Token aus.
 Adobe verwendet die folgenden Standardeingaben, um die Zielkonfiguration zu vereinfachen und Werte zu überschreiben:
 
 | OAuth 2-Gewährung | Eingaben | Ausgaben |
@@ -142,7 +142,7 @@ Adobe verwendet die folgenden Standardeingaben, um die Zielkonfiguration zu vere
 >
 > Sie müssen in der unten stehenden Konfiguration keine Parameter für `username` und `password` hinzufügen. Wenn Sie `"grant": "OAUTH2_PASSWORD"` in der Zielkonfiguration hinzufügen, fordert das System die Benutzenden auf, in der Experience Platform-Benutzeroberfläche einen Benutzernamen und ein Passwort anzugeben, wenn sie sich bei Ihrem Ziel authentifizieren.
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -170,17 +170,17 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgen
 
 {style="table-layout:auto"}
 
-## OAuth 2 mit Gewährung von Client-Anmeldeinformationen
+## OAuth 2 mit Gewährung von Client-Anmeldedaten
 
-Sie können ein Ziel für OAuth 2 Client-Anmeldeinformationen konfigurieren (lesen Sie den Abschnitt [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.4)) konfigurieren, das die unten aufgeführten Standardeingaben und -ausgaben unterstützt. Sie können die Werte anpassen. Siehe [Anpassen der OAuth 2-Konfiguration](#customize-configuration) für Details.
+Sie können ein Ziel für OAuth 2 Client-Anmeldedaten konfigurieren (lesen Sie den Abschnitt [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.4)) konfigurieren, das die unten aufgeführten Standardeingaben und -ausgaben unterstützt. Sie können die Werte anpassen. Siehe [Anpassen der OAuth 2-Konfiguration](#customize-configuration) für Details.
 
 | OAuth 2-Gewährung | Eingaben | Ausgaben |
 |---------|----------|---------|
-| Client-Anmeldeinformationen | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Client-Anmeldedaten | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style="table-layout:auto"}
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -216,7 +216,7 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgen
 
 Die in den obigen Abschnitten beschriebenen Konfigurationen beschreiben standardmäßige OAuth 2-Gewährungen. Das von Adobe entworfene System bietet jedoch eine Flexibilität, sodass Sie für alle Variationen der OAuth 2-Gewährungen auch benutzerdefinierte Parameter verwenden können. Um die standardmäßigen OAuth 2-Einstellungen anzupassen, verwenden Sie die Parameter `authenticationDataFields`, wie in den Beispielen unten dargestellt.
 
-### Beispiel 1: Verwenden von `authenticationDataFields` zum Erfassen von Informationen aus der Autorisierungsantwort {#example-1}
+### Beispiel 1: Verwenden von `authenticationDataFields` zur Erfassung von Informationen aus der Autorisierungsantwort {#example-1}
 
 In diesem Beispiel verfügt eine Zielplattform über Aktualisierungstoken, die nach einer bestimmten Zeitdauer ablaufen. In diesem Fall richtet der Partner das benutzerdefinierte Feld `refreshTokenExpiration` ein, um das Ablaufdatum des Aktualisierungstokens aus dem Feld `refresh_token_expires_in` in der API-Antwort abzurufen.
 
@@ -365,7 +365,7 @@ Sie können die folgenden Parameter in `authenticationDataFields` zum Anpassen I
 | `authenticationDataFields.description` | Zeichenfolge | Eine Beschreibung des von Ihnen eingerichteten benutzerdefinierten Datenfelds. |
 | `authenticationDataFields.type` | Zeichenfolge | Definiert den Typ des benutzerdefinierten Datenfelds. <br> Akzeptierte Werte: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Boolesch | Gibt an, ob das benutzerdefinierte Datenfeld im Autorisierungsfluss erforderlich ist. |
-| `authenticationDataFields.format` | Zeichenfolge | Wenn Sie `"format":"password"` auswählen, verschlüsselt Adobe den Wert des Autorisierungsdatenfelds. Bei Verwendung mit `"fieldType": "CUSTOMER"` ist außerdem die Eingabe in der Benutzeroberfläche unsichtbar, wenn Benutzende etwas in das Feld eingeben. |
+| `authenticationDataFields.format` | String | Wenn Sie `"format":"password"` auswählen, verschlüsselt Adobe den Wert des Autorisierungsdatenfelds. Bei Verwendung mit `"fieldType": "CUSTOMER"` ist außerdem die Eingabe in der Benutzeroberfläche unsichtbar, wenn Benutzende etwas in das Feld eingeben. |
 | `authenticationDataFields.fieldType` | Zeichenfolge | Gibt an, ob die Eingabe vom Partner (d. h. Ihnen) oder von den Benutzenden stammt, wenn sie Ihr Ziel in Experience Platform einrichten. |
 | `authenticationDataFields.value` | Zeichenfolge. Boolesch. Ganzzahl | Der Wert des benutzerdefinierten Datenfelds. Der Wert entspricht dem ausgewählten Typ aus `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Zeichenfolge | Gibt an, auf welches Feld aus dem API-Antwortpfad verwiesen wird. |
@@ -479,10 +479,10 @@ Abhängig von Ihrer Autorisierungsanpassung müssen Sie möglicherweise auf Date
 | response.body | HTTP-Antworttext | ``{{ response.body.access_token }}`` |
 | response.status | HTTP-Antwortstatus | ``{{ response.status }}`` |
 | response.headers | HTTP-Antwort-Header | ``{{ response.headers.server[0] }}`` |
-| userContext | Auf Informationen zum aktuellen Autorisierungsversuch zugreifen | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| userContext | Zugriff auf Informationen zum aktuellen Autorisierungsversuch | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Artikels erhalten Sie jetzt Informationen zu den von Adobe Experience Platform unterstützten OAuth 2-Autorisierungsmustern und erfahren, wie Sie Ihr Ziel mit OAuth 2-Autorisierungsunterstützung konfigurieren. Als Nächstes können Sie Ihr OAuth 2-unterstütztes Ziel mithilfe von Destination SDK einrichten. Lesen Sie [Verwenden von Destination SDK, um Ihr Ziel zu konfigurieren](../../guides/configure-destination-instructions.md) für die nächsten Schritte.
+Durch das Lesen dieses Artikels kennen Sie jetzt die von Adobe Experience Platform unterstützten OAuth 2-Autorisierungsmuster und wissen, wie Sie Ihr Ziel mit OAuth 2-Autorisierungsunterstützung konfigurieren können. Als Nächstes können Sie Ihr OAuth 2-unterstütztes Ziel mithilfe von Destination SDK einrichten. Lesen Sie [Verwenden von Destination SDK, um Ihr Ziel zu konfigurieren](../../guides/configure-destination-instructions.md) für die nächsten Schritte.

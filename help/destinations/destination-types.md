@@ -16,36 +16,36 @@ Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Exper
 
 ## Zieltypen {#destination-types}
 
-In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt verschiedene Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele, soziale Ziele, CRM-Plattformen und vieles mehr exportieren können.
+In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt mehrere Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele, Social-Media-Ziele, CRM-Plattformen und viele mehr exportieren können.
 
-Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
+Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die über alle Organisationen im Zielkatalog verfügbar sind, und privaten Zielen unterschieden werden, die Kundinnen und Kunden von Real-Time CDP Ultimate erstellen können, um ihre spezifischen Exportanwendungsfälle zu erfüllen.
 
 >[!BEGINSHADEBOX]
 
-![Typen von Zielen.](./assets/destination-types/types-of-destinations-no-highlight.png "Typen von Zielen - Diagramm."){zoomable="yes"}
+![Abbildung mit den Zieltypen](./assets/destination-types/types-of-destinations-no-highlight.png "Abbildung mit den Zieltypen."){zoomable="yes"}
 
 >[!ENDSHADEBOX]
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]**, **[!UICONTROL Zielgruppenexport streamen]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile in Ziele.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Streaming-Zielgruppenexport]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile zu Zielen.
 
 ## Profilexportziele {#profile-export}
 
 Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Primärschlüssel dient. Experience Platform unterstützt derzeit zwei Typen von Zielen von Profilexporten:
 
 * [Batch-Ziele (dateibasiert)](#file-based)
-* [Erweiterte Unternehmensziele (Streaming-Profil-Exportziele)](#advanced-enterprise-destinations)
+* [Erweiterte Unternehmensziele (Exportziele von Streaming-Profilen)](#advanced-enterprise-destinations)
 
-### Erweiterte Unternehmensziele (Streaming-Profil-Exportziele) {#advanced-enterprise-destinations}
+### Erweiterte Unternehmensziele (Exportziele von Streaming-Profilen) {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >
->Erweiterte Unternehmensziele oder Streaming-Profil-Exportziele sind nur für Kunden von [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
+>Erweiterte Unternehmensziele oder Exportziele von Streaming-Profilen sind nur für [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html)-Kunden verfügbar.
 
-Verwenden Sie die erweiterten Ziel-Data Connectors für Unternehmen, um Adobe Real-time Customer Data Platform-Profile nahezu in Echtzeit an interne Systeme oder an andere Drittanbietersysteme zur Datensynchronisation, Analyse und weiteren Anwendungsfällen zur Profilanreicherung bereitzustellen.
+Verwenden Sie die erweiterten Data Connectors für Unternehmensziele, um Adobe Real-time Customer Data Platform-Profile nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
 
-Diese Ziele erhalten Zielgruppen- und Profildaten als Experience Platform-Datenströme.
+Diese Ziele empfangen Zielgruppen- und Profildaten als Experience Platform-Datenströme.
 
 Zu den erweiterten Unternehmenszielen gehören:
 
@@ -57,7 +57,7 @@ Zu den erweiterten Unternehmenszielen gehören:
 
 Dateibasierte Ziele empfangen `.csv`-Dateien, die Profile und/oder Attribute enthalten. [Amazon S3](catalog/cloud-storage/amazon-s3.md) ist ein Beispiel für ein Ziel, zu dem Sie Dateien mit Profilexporten exportieren können.
 
-## Zielgruppenexport-Ziele streamen {#streaming-destinations}
+## Exportziele für Streaming-Zielgruppen {#streaming-destinations}
 
 Zielgruppenexport-Ziele erhalten Experience Platform-Zielgruppendaten. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
 
@@ -67,28 +67,28 @@ Zu den Edge-Personalisierungszielen in Experience Platform gehören [Adobe Targe
 
 Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Profilexport- und Zielgruppenexport-Ziele - Videoübersicht {#video}
+## Ziele für Profil- und Zielgruppenexport - Videoübersicht {#video}
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## Typen exportierter Zielgruppen {#exported-audiences-types}
+## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
-Sie können drei Zielgruppentypen vom Experience Platform an verschiedene Ziele exportieren:
+Sie können drei Arten von Zielgruppen vom Experience Platform in verschiedene Ziele exportieren:
 
-* Zielgruppen
+* Personen und Zielgruppen
 * Konto-Zielgruppen
 * Potenzielle Zielgruppen
 
-Erfahren Sie mehr über die [verschiedenen Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
+Erfahren Sie mehr über [verschiedene Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
 
-Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie zu jedem Ziel exportieren können.
+Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie für jedes Ziel exportieren können.
 
-![Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png "Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können."){zoomable="yes"}
+![Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppentypen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png "Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppentypen exportiert werden können."){zoomable="yes"}
 
 
-## Datensatzexport-Ziele {#dataset-export-destinations}
+## Ziele für Datensatzexporte {#dataset-export-destinations}
 
 Einige Cloud-Speicherziele im Zielkatalog unterstützen Datensatzexporte. Verwenden Sie diese Ziele, um Rohdatensätze an Cloud-Speicherorte zu exportieren.
 
@@ -118,4 +118,4 @@ Erweiterungen sind hilfreich, wenn Ereignisdaten zum Auslösen einer Aktion oder
 
 Die Verbindungen und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) sind nach Zielkategorie (**Werbung**, **Cloud-Speicher**, **Umfrageplattformen**, **E-Mail-Marketing** usw.) gruppiert, je nach Marketing-Aktion, zu deren Erreichung sie beitragen. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Dokumentation zum Zielkatalog](./catalog/overview.md).
 
-![Auf der Katalogseite hervorgehobene Zielkategorien.](./assets/destination-types/destination-categories-menu.png "Auf der Katalogseite hervorgehobene Zielkategorien."){zoomable="yes"}
+![Zielkategorien, die auf der Katalogseite hervorgehoben sind.](./assets/destination-types/destination-categories-menu.png "Zielkategorien, die auf der Katalogseite hervorgehoben sind."){zoomable="yes"}

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datenerfassung; Batch; Batch; Datensatz aktivieren; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;Batch;Batch;Datensatz aktivieren;Übersicht zur Batch-Aufnahme;Übersicht;Übersicht zur Batch-Aufnahme;
 solution: Experience Platform
-title: Batch Ingestion-API - Übersicht
-description: Mit der Adobe Experience Platform Batch Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
+title: Übersicht über die Batch-Aufnahme-API
+description: Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der Registrierung des Experience-Datenmodells (XDM) entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 65%
 
 ---
 
-# Batch-Aufnahme-API - Übersicht
+# Übersicht über die Batch-Aufnahme-API
 
-Mit der Adobe Experience Platform Batch Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registry entsprechen.
+Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registrierung entsprechen.
 
-Die Referenz zur Batch Ingestion-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) enthält zusätzliche Informationen zu diesen API-Aufrufen.[
+Die [Referenz zur Batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)Aufnahme-API enthält zusätzliche Informationen zu diesen API-Aufrufen.
 
 Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
@@ -23,13 +23,13 @@ Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch Ingestion-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ### Voraussetzungen für [!DNL Data Ingestion]
 
 - Die hochzuladenden Daten müssen im Parquet- oder JSON-Format vorliegen.
-- Ein Datensatz, der im [[!DNL Catalog services]](../../catalog/home.md) erstellt wurde.
-- Der Inhalt der Parquet-Datei muss mit einer Untergruppe des Schemas des hochgeladenen Datensatzes übereinstimmen.
+- Ein in der [[!DNL Catalog services]](../../catalog/home.md) erstellter Datensatz.
+- Der Inhalt der Parquet-Datei muss mit einer Teilmenge des Schemas des Datensatzes übereinstimmen, in den hochgeladen wird.
 - Lassen Sie sich nach der Authentifizierung Ihr eindeutiges Zugriffstoken anzeigen.
 
 ### Best Practices zur Batch-Erfassung
@@ -37,26 +37,26 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch Ingestion-
 - Die empfohlene Batch-Größe liegt zwischen 256 MB und 100 GB.
 - Jeder Batch sollte maximal 1500 Dateien enthalten.
 
-### Einschränkungen bei der Batch-Erfassung
+### Einschränkungen bei der Batch-Aufnahme
 
 Die Erfassung von Batch-Daten unterliegt verschiedenen Einschränkungen:
 
 - Maximale Anzahl von Dateien pro Batch: 1.500
 - Maximale Batch-Größe: 100 GB
 - Maximale Anzahl von Eigenschaften oder Feldern pro Zeile: 10.000
-- Maximale Anzahl der Batches auf Data Lake pro Minute pro Benutzer: 2000
+- Maximale Anzahl von Batches auf dem Data Lake pro Minute und Benutzer: 2000
 
 >[!NOTE]
 >
->Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleinere Abschnitte unterteilt werden. Anweisungen zum Hochladen einer großen Datei finden Sie im Abschnitt [Hochladen einer großen Datei dieses Dokuments](#large-file-upload---create-file).
+>Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleinere Abschnitte unterteilt werden. Anweisungen zum Hochladen einer großen Datei finden Sie im Abschnitt [Hochladen großer Dateien dieses Dokuments](#large-file-upload---create-file).
 
 ### Typen
 
-Beim Erfassen von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model]- (XDM-)Schemas funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
+Bei der Datenaufnahme müssen Sie wissen, wie [!DNL Experience Data Model] (XDM)-Schemata funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
 
-Bei der Datenaufnahme gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
+Es gibt eine gewisse Flexibilität bei der Aufnahme von Daten - wenn ein Typ nicht mit dem übereinstimmt, was im Zielschema ist, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
 
-Beispielsweise haben weder JSON noch CSV den Typ `date` oder `date-time`. Daher werden diese Werte mit [ISO 8601 formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit ausgedrückt und in Millisekunden formatiert (15312639599 000) und werden zur Erfassungszeit in den Ziel-XDM-Typ konvertiert.
+Beispielsweise haben weder JSON noch CSV den Typ `date` oder `date-time`. Daher werden diese Werte mit [ISO 8601-formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) („2018-07-10T15:05:59.000-08:00„) oder in Millisekunden (1531263959000) formatierter Unix-Zeit ausgedrückt und zur Aufnahmezeit in den Ziel-XDM-Typ konvertiert.
 
 Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterstützt werden.
 
@@ -79,7 +79,7 @@ Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterst�
 
 ## Verwenden der API
 
-Mit der API [!DNL Data Ingestion] können Sie Daten in drei grundlegenden Schritten als Batches (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als Einheit erfasst werden sollen) in [!DNL Experience Platform] erfassen:
+Mit der [!DNL Data Ingestion]-API können Sie Daten als Batches (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als einzelne Einheit aufgenommen werden sollen) in drei grundlegenden Schritten in [!DNL Experience Platform] aufnehmen:
 
 1. Erstellen eines neuen Batches.
 2. Hochladen von Dateien in einen angegebenen Datensatz, der dem XDM-Schema der Daten entspricht.
@@ -142,15 +142,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Nachdem Sie erfolgreich einen neuen Batch zum Hochladen erstellt haben, können Dateien in einen bestimmten Datensatz hochgeladen werden.
 
-Sie können Dateien mit der Small File Upload-API hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. längere Timeouts, überschrittene Anforderungen an die Textgröße und andere Einschränkungen), können Sie zur Large File Upload-API wechseln. Diese API lädt die Datei in Teilen hoch und ordnet die Daten mithilfe des Aufrufs Large File Upload Complete-API zu.
+Sie können Dateien mithilfe der Small File Upload-API hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. verlängerte Zeitüberschreitungen, Anfragen nach Körpergröße überschritten und andere Einschränkungen), können Sie zur API für den Upload großer Dateien wechseln. Diese API lädt die Datei in Blöcken hoch und ordnet Daten mithilfe des API-Aufrufs zum Abschließen des Uploads großer Dateien zusammen.
 
 >[!NOTE]
 >
->Die Batch-Erfassung kann verwendet werden, um Daten im Profilspeicher schrittweise zu aktualisieren. Weitere Informationen finden Sie im Abschnitt zum [Aktualisieren eines Batches](#patch-a-batch) im Entwicklerhandbuch zur [Batch-Erfassung](api-overview.md).
+>Die Batch-Aufnahme kann verwendet werden, um Daten im Profilspeicher inkrementell zu aktualisieren. Weitere Informationen finden Sie im Abschnitt [Aktualisieren eines Batches](#patch-a-batch) im [Entwicklerhandbuch zur Batch-Aufnahme](api-overview.md).
 
 >[!INFO]
 >
->Die folgenden Beispiele verwenden das Dateiformat [Apache Parquet](https://parquet.apache.org/docs/) . Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
+>In den folgenden Beispielen wird das [Apache Parquet](https://parquet.apache.org/docs/)-Dateiformat verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
 
 ### Hochladen von kleinen Dateien
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Auf diese Weise werden die [!DNL Catalog] DataSetFile -Einträge für die abgeschlossenen Dateien erstellt und mit dem oben generierten Batch verknüpft. Der [!DNL Catalog]-Batch wird dann als erfolgreich markiert, wodurch bei nachgelagerten Flüssen die Aufnahme der verfügbaren Daten ausgelöst wird.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Dadurch werden die [!DNL Catalog] DataSetFile-Einträge für die abgeschlossenen Dateien erstellt und mit dem oben generierten Batch verknüpft. Der [!DNL Catalog]-Batch wird dann als erfolgreich markiert, wodurch bei nachgelagerten Flüssen die Aufnahme der verfügbaren Daten ausgelöst wird.
 
 **Anfrage**
 
@@ -408,10 +408,10 @@ Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batches an. Die
 | Status | Beschreibung |
 | ------ | ----------- |
 | Vorzeitig beendet | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
-| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Sobald sich der Batch im Status &quot;Geladen&quot;befindet, kann er nicht mehr abgebrochen werden. |
-| Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit &quot;Erfolg&quot;verwendet werden. |
+| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Sobald sich der Batch im Status „Geladen“ befindet, kann er nicht mehr abgebrochen werden. |
+| Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit „Erfolg“ verwendet werden. |
 | Gelöscht | Die Daten für den Batch wurden vollständig entfernt. |
-| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit &quot;Fehler&quot;verwendet werden. |
+| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit „Failure“ verwendet werden. |
 | Inaktiv | Der Batch wurde erfolgreich gefördert, wurde jedoch zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
 | Geladen | Die Daten für den Batch sind abgeschlossen und der Stapel kann gefördert werden. |
 | Wird geladen | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |

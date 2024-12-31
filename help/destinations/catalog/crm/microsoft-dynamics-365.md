@@ -17,21 +17,21 @@ ht-degree: 60%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/de-de/) ist eine Cloud-basierte Plattform für geschäftliche Anwendungen, die Enterprise Resource Planning (ERP) und Customer Relationship Management (CRM) mit Produktivitätsanwendungen und KI-Tools kombiniert, um einen rundum reibungsloseren und besser kontrollierten Betrieb, besseres Wachstumspotenzial und Kostenreduzierungen zu erzielen.
 
-Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), der es Ihnen ermöglicht, Identitäten innerhalb einer Zielgruppe in [!DNL Dynamics 365] zu aktualisieren.
+Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), mit der Sie Identitäten innerhalb einer Zielgruppe in [!DNL Dynamics 365] aktualisieren können.
 
 [!DNL Dynamics 365] verwendet OAuth 2 mit Autorisierungs-Grant als Authentifizierungsmechanismus für die Kommunikation mit der [!DNL Contact Entity Reference API]. Anweisungen zur Authentifizierung bei Ihrer [!DNL Dynamics 365]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
 ## Anwendungsbeispiele {#use-cases}
 
-Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Zielgruppen aus Ihren Offline-Daten erstellen und diese Zielgruppen an [!DNL Dynamics 365] senden, um sie in den Feeds der Benutzer anzuzeigen, sobald Zielgruppen und Profile in Adobe Experience Platform aktualisiert wurden.
+Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Zielgruppen aus Ihren Offline-Daten erstellen und diese Zielgruppen an [!DNL Dynamics 365] senden, damit sie in den Feeds der Benutzer angezeigt werden, sobald Zielgruppen und Profile in Adobe Experience Platform aktualisiert werden.
 
 ## Voraussetzungen {#prerequisites}
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Bevor Sie Daten für das Ziel [!DNL Dynamics 365] aktivieren, müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Zielgruppen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
+Bevor Sie Daten für das [!DNL Dynamics 365]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) in [!DNL Experience Platform] erstellt haben.
 
-Weitere Informationen zum Zielgruppenstatus finden Sie in der Adobe-Dokumentation für die Schemafeldergruppe [Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) .
+Adobe Weitere Informationen finden Sie in der Dokumentation zur [Schemafeldgruppe der Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
 ### Voraussetzungen für [!DNL Microsoft Dynamics 365] {#prerequisites-destination}
 
@@ -43,12 +43,12 @@ Navigieren Sie zur [Testversion-Seite](https://dynamics.microsoft.com/de-de/dyna
 
 #### Erstellen eines Felds in [!DNL Dynamics 365] {#prerequisites-custom-field}
 
-Erstellen Sie das benutzerdefinierte Feld des Typs `Simple` mit dem Felddatentyp `Single Line of Text` , mit dem Experience Platform den Zielgruppenstatus in [!DNL Dynamics 365] aktualisiert.
+Erstellen Sie das benutzerdefinierte Feld vom Typ &quot;`Simple`&quot; mit dem Felddatentyp &quot;`Single Line of Text`&quot;, den Experience Platform verwendet, um den Audience-Status in [!DNL Dynamics 365] zu aktualisieren.
 
-Weitere Informationen finden Sie in der Dokumentation zum [!DNL Dynamics 365] [Erstellen oder Bearbeiten eines Felds (Attribut)](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) .
+Weitere Anleitungen finden Sie in der [!DNL Dynamics 365] [Erstellen oder Bearbeiten eines Felds (Attribut](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1)).
 
-Notieren Sie sich das **[!UICONTROL Präfix der Anpassung]** des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellen. Sie benötigen dieses Präfix während des Schritts [Ausfüllen der Zieldetails](#destination-details) . Weitere Informationen finden Sie im Abschnitt [Felder erstellen und bearbeiten](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) der Dokumentation zu [!DNL Dynamics 365] .
-![Screenshot der Benutzeroberfläche von Dynamics 365 mit dem Präfix für die Anpassung.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
+Notieren Sie sich das **[!UICONTROL Anpassungspräfix]** des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellen. Sie benötigen dieses Präfix während des Schritts [Ausfüllen der Zieldetails](#destination-details). Weitere Informationen finden [ im Abschnitt ](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
+Screenshot der ![Dynamics 365-Benutzeroberfläche mit dem Anpassungspräfix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 Im Folgenden sehen Sie ein Beispiel-Setup in [!DNL Dynamics 365]:
 ![Screenshot der Benutzeroberfläche von Dynamics 365 mit den benutzerdefinierten Feldern.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
@@ -71,7 +71,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Dynamics 365]-CRM-Z
 | `Client ID` | Die [!DNL Dynamics 365]-Client-ID für Ihr [!DNL Azure Active Directory]-Programm. Eine Anleitung finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in). | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | Den [!DNL Dynamics 365]-Client-Geheim-Code für Ihr [!DNL Azure Active Directory]-Programm. Sie würden Option 2 innerhalb der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options) verwenden. | `abcde~abcdefghijklmnopqrstuvwxyz12345678` für Anleitung. |
 | `Tenant ID` | Die [!DNL Dynamics 365]-Mandanten-ID für Ihr [!DNL Azure Active Directory]-Programm. Eine Anleitung dazu finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in). | `1234567-aaaa-12ab-ba21-1234567890` |
-| `Region` | Die mit der Umgebungs-URL verknüpfte Microsoft-Region.<br> Eine Anleitung finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) . | Wenn Ihre Domäne wie folgt lautet, müssen Sie bei der Authentifizierung beim [Ziel](#authenticate) den hervorgehobenen Wert für das CRM-Feld in der Dropdown-Auswahl angeben.<br> *org57771b33.`crm`.dynamics.com*<br> Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, wäre Ihre URL `crm.dynamics.com` und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt wird, lautet Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen. |
+| `Region` | Die mit der Umgebungs-URL verknüpfte Microsoft-Region.<br> Anleitungen finden Sie [[!DNL Dynamics 365]  der ](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions). | Wenn Ihre Domain wie im Folgenden aussieht, müssen Sie bei der Authentifizierung beim [Ziel“ den hervorgehobenen Wert für das CRM](#authenticate)Feld in der Dropdown-Auswahl angeben<br> *org57771b33.`crm`.dynamics.com*<br> Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, ist Ihre URL `crm.dynamics.com`, und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt ist, wird Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen. |
 | `Environment URL` | Siehe die [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1), um eine Anleitung zu erhalten. | Wenn Ihre [!DNL Dynamics 365]-Domain wie im Folgenden aussieht, benötigen Sie den hervorgehobenen Wert.<br> *`org57771b33`.crm.dynamics.com* |
 
 {style="table-layout:auto"}
@@ -102,7 +102,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *(z. B. E-Mail-Adresse, Telefonnummer, Nachname)* gemäß Ihrer Feldzuordnung.</li><li> Jeder Zielgruppenstatus in [!DNL Dynamics 365] wird anhand des Werts **[!UICONTROL Zuordnungs-ID]** aktualisiert, der während des Schritts [Zielgruppenplanung](#schedule-audience-export-example) angegeben wurde, und erhält den entsprechenden Zielgruppenstatus von Platform.</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Jeder Zielgruppenstatus in [!DNL Dynamics 365] wird mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert, basierend auf dem Wert **[!UICONTROL Zuordnungs-ID]**, der im Schritt [Zielgruppen-Planung](#schedule-audience-export-example) angegeben wurde.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -111,7 +111,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -126,7 +126,7 @@ Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abs
 * **[!UICONTROL Client-ID]**: Die [!DNL Dynamics 365]-Client-ID für Ihr [!DNL Azure Active Directory]-Programm.
 * **[!UICONTROL Mandanten-ID]**: Die [!DNL Dynamics 365]-Mandanten-ID für Ihr [!DNL Azure Active Directory]-Programm.
 * **[!UICONTROL Client-Geheimnis]**: Der [!DNL Dynamics 365]-Client-Geheim-Code für Ihr [!DNL Azure Active Directory]-Programm.
-* **[!UICONTROL Region]**: Ihre [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) Region. Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, lautet Ihre URL `crm.dynamics.com` und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt wird, lautet Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen.
+* **[!UICONTROL Region]**: Ihre [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions). Ein Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, ist Ihre URL `crm.dynamics.com` und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt ist, wird Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen.
 * **[!UICONTROL Umgebungs-URL]**: Ihre [!DNL Dynamics 365]-Umgebungs-URL.
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
@@ -138,7 +138,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Anpasspräfix]**: Die `Customization prefix` des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellt haben. Weitere Informationen finden Sie im Abschnitt [Felder erstellen und bearbeiten](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) der Dokumentation zu [!DNL Dynamics 365] .
+* **[!UICONTROL Anpassungspräfix]**: Die `Customization prefix` des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellt haben. Weitere Informationen finden [ im Abschnitt ](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -150,8 +150,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -167,25 +167,25 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den Typ des Zielfelds aus, dem Sie Ihr Quellfeld zuordnen möchten.
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
-     ![Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung für den Kontakt.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnung für contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365] -Instanz hinzu:
+   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz hinzu:
 
-     | XDM-Profilschema | [!DNL Dynamics 365] Instanz | Obligatorisch |
+     | XDM-Profilschema | Instanz [!DNL Dynamics 365] | Obligatorisch |
      |---|---|---|
      | `contactid` | `contactid` | Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld **[!UICONTROL Attributname]** definieren. Eine umfassende Liste der unterstützten Attribute finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
-     ![Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung für E-Mails.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnung für E-Mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     > * Die Zielfeldnamen müssen in `lowercase` stehen.
-     > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem Zielfeld für [!DNL Dynamics 365] [Datum oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird eine Fehlermeldung vom Typ *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* ausgegeben und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
+     > * Die Namen der Zielfelder sollten in `lowercase` sein.
+     > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem Zielfeld vom Typ [!DNL Dynamics 365] ([ oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird die *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* Fehlermeldung angezeigt und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
 
-   * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365] -Instanz hinzu:
+   * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz hinzu:
 
-     | XDM-Profilschema | [!DNL Dynamics 365] Instanz |
+     | XDM-Profilschema | Instanz [!DNL Dynamics 365] |
      |---|---|
      | `person.name.firstName` | `firstname` |
      | `person.name.lastName` | `lastname` |
@@ -195,18 +195,18 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
-### Zielgruppenexport und Beispiel planen {#schedule-audience-export-example}
+### Planen des Zielgruppenexports und Beispiel {#schedule-audience-export-example}
 
-Im Schritt [[!UICONTROL Zielgruppenexport planen]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) des Aktivierungs-Workflows müssen Sie Platform-Zielgruppen manuell dem benutzerdefinierten Feldattribut in [!DNL Dynamics 365] zuordnen.
+Im Schritt [[!UICONTROL Planen des Zielgruppenexports]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) des Aktivierungs-Workflows müssen Sie Platform-Zielgruppen manuell dem benutzerdefinierten Feldattribut in [!DNL Dynamics 365] zuordnen.
 
-Wählen Sie dazu jede Zielgruppe aus und geben Sie dann das entsprechende benutzerdefinierte Feldattribut von [!DNL Dynamics 365] in das Feld **[!UICONTROL Zuordnungs-ID]** ein.
+Wählen Sie dazu jede Zielgruppe aus und geben Sie dann das entsprechende benutzerdefinierte Feldattribut aus [!DNL Dynamics 365] in das Feld **[!UICONTROL Zuordnungs-ID]** ein.
 
 >[!IMPORTANT]
 >
 >Der für die **[!UICONTROL Zuordnungs-ID]** verwendete Wert sollte genau mit dem Namen des benutzerdefinierten Feldattributs übereinstimmen, das in [!DNL Dynamics 365] erstellt wurde. Siehe die [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1), wenn Sie Anleitungen zum Auffinden Ihrer benutzerdefinierten Feldattribute benötigen.
 
 Nachfolgend finden Sie ein Beispiel:
-![Beispiel für einen Screenshot der Platform-Benutzeroberfläche mit der Option Zielgruppenexport planen](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Beispiel-Screenshot der Platform-Benutzeroberfläche mit der Option „Zielgruppenexport planen“.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## Überprüfen des Datenexports {#exported-data}
 
@@ -221,11 +221,11 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 1. Wechseln Sie zur Registerkarte **[!DNL Activation data]** und wählen Sie einen Zielgruppennamen aus.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Daten zur Aktivierung von Zielen.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
-1. Überwachen Sie die Audience-Zusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der in der Audience erstellten Anzahl entspricht.
-   ![Beispiel für einen Screenshot der Platform-Benutzeroberfläche mit der Audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+1. Überwachen Sie die Zielgruppenzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der in der Zielgruppe erstellten Anzahl entspricht.
+   ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Melden Sie sich bei der [!DNL Dynamics 365] -Website an, navigieren Sie zur Seite [!DNL Customers] > [!DNL Contacts] und überprüfen Sie, ob die Profile aus der Zielgruppe hinzugefügt wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Dynamics 365] anhand des Werts **[!UICONTROL Zuordnungs-ID]**, der beim Schritt [Zielgruppenplanung](#schedule-audience-export-example) angegeben wurde, mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert wurde.
-   ![Screenshot der Benutzeroberfläche von Dynamics 365, der die Seite &quot;Kontakte&quot;mit aktualisierten Zielgruppenstatus anzeigt.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
+1. Melden Sie sich bei der [!DNL Dynamics 365]-Website an und navigieren Sie dann zur Seite [!DNL Customers] > [!DNL Contacts] , um zu überprüfen, ob die Profile aus der Audience hinzugefügt wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Dynamics 365] mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert wurde, basierend auf dem Wert **[!UICONTROL Zuordnungs-ID]**, der im Schritt [Zielgruppen-Planung](#schedule-audience-export-example) angegeben wurde.
+   Screenshot der ![Dynamics 365-Benutzeroberfläche mit der Seite „Kontakte“ und aktualisierten Zielgruppenstatus.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -239,7 +239,7 @@ Wenn Sie beim Überprüfen eines Datenflusses die folgende Fehlermeldung erhalte
 
 ![Screenshot der Platform-Benutzeroberfläche mit Fehlermeldung wegen fehlerhafter Anfrage.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-Um diesen Fehler zu beheben, überprüfen Sie, ob die **[!UICONTROL Zuordnungs-ID]**, die Sie in [!DNL Dynamics 365] für Ihre Platform-Audience angegeben haben, gültig ist und in [!DNL Dynamics 365] vorhanden ist.
+Um diesen Fehler zu beheben, überprüfen Sie, ob die **[!UICONTROL Zuordnungs-ID]**, die Sie in [!DNL Dynamics 365] für Ihre Platform-Zielgruppe angegeben haben, in [!DNL Dynamics 365] vorhanden und gültig ist.
 
 ## Weitere Ressourcen {#additional-resources}
 
@@ -255,9 +255,9 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Oktober 2023 | Aktualisierung der Dokumentation | Die Anleitung wurde aktualisiert, um anzugeben, dass alle Zielattribut-Namen in Kleinbuchstaben geschrieben werden sollten, und zwar in den Schritten [Zuordnen und Beispiel](#mapping-considerations-example) . |
-| August 2023 | Funktions- und Dokumentationsaktualisierung | Unterstützung für benutzerdefinierte Feldpräfixe mit [!DNL Dynamics 365] für benutzerdefinierte Felder hinzugefügt, die nicht in der Standardlösung in [!DNL Dynamics 365] erstellt wurden. Im Schritt [Zieldetails ausfüllen](#destination-details) wurde ein neues Eingabefeld hinzugefügt, das **[!UICONTROL Anpasspräfix]**. (PLATIR-31602). |
-| November 2022 | Erstmalige Veröffentlichung | Erste Zielversion und Veröffentlichung der Dokumentation. |
+| Oktober 2023 | Dokumentation aktualisieren | Aktualisierte Anleitungen, um anzugeben, dass alle Zielattributnamen im Schritt [Zuordnungsüberlegungen und Beispiel“ in Kleinbuchstaben ](#mapping-considerations-example) werden sollten. |
+| August 2023 | Funktions- und Dokumentationsaktualisierung | Es wurde Unterstützung für [!DNL Dynamics 365] benutzerdefinierte Feldpräfixe für benutzerdefinierte Felder hinzugefügt, die nicht innerhalb der Standardlösung in [!DNL Dynamics 365] erstellt wurden. Ein neues Eingabefeld, **[!UICONTROL Anpassungspräfix]**, wurde im Schritt [Ausfüllen der Zieldetails](#destination-details) hinzugefügt. (PLATIR-31602). |
+| November 2022 | Erstmalige Veröffentlichung | Erstmalige Zielveröffentlichung und Dokumentation. |
 
 {style="table-layout:auto"}
 

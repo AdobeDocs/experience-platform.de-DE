@@ -848,13 +848,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 >[!ENDTABS]
 
 
-### Dynamische Dropdown-Zielserver erstellen {#dynamic-dropdown-servers}
+### Erstellen dynamischer Dropdown-Ziel-Server {#dynamic-dropdown-servers}
 
-Verwenden Sie [dynamische Dropdown-Listen](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors), um Dropdown-Kundendatenfelder dynamisch abzurufen und auszufüllen, basierend auf Ihrer eigenen API. Beispielsweise können Sie eine Liste vorhandener Benutzerkonten abrufen, die Sie für eine Zielverbindung verwenden möchten.
+Verwenden Sie [dynamische Dropdown](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors), um Dropdown-Kundendatenfelder basierend auf Ihrer eigenen API dynamisch abzurufen und aufzufüllen. Sie können beispielsweise eine Liste vorhandener Benutzerkonten abrufen, die Sie für eine Zielverbindung verwenden möchten.
 
-Sie müssen einen Zielserver für dynamische Dropdown-Listen konfigurieren, bevor Sie das Feld für dynamische Dropdown-Kundendaten konfigurieren können.
+Sie müssen einen Ziel-Server für dynamische Dropdown-Listen konfigurieren, bevor Sie das dynamische Dropdown-Kundendatenfeld konfigurieren können.
 
-Auf der Registerkarte unten finden Sie ein Beispiel für einen Zielserver, der verwendet wird, um die Werte, die in einem Dropdown-Selektor angezeigt werden sollen, dynamisch über eine API abzurufen.
+Auf der folgenden Registerkarte finden Sie ein Beispiel für einen Ziel-Server, der zum dynamischen Abrufen der Werte verwendet wird, die in einer Dropdown-Auswahl von einer API angezeigt werden sollen.
 
 Die nachstehende Beispiel-Payload enthält alle Parameter, die für einen dynamischen Schema-Server erforderlich sind.
 
@@ -864,7 +864,7 @@ Die nachstehende Beispiel-Payload enthält alle Parameter, die für einen dynami
 
 **Erstellen eines dynamischen Dropdown-Servers**
 
-Sie müssen einen dynamischen Dropdown-Server erstellen, der dem unten gezeigten ähnelt, wenn Sie ein Ziel konfigurieren, das die Werte für ein Dropdown-Feld für Kundendaten von Ihrem eigenen API-Endpunkt abruft.
+Sie müssen beim Konfigurieren eines Ziels, das die Werte für ein Dropdown-Kundendatenfeld aus Ihrem eigenen API-Endpunkt abruft, einen dynamischen Dropdown-Server ähnlich dem unten gezeigten erstellen.
 
 +++Anfrage
 
@@ -924,13 +924,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres dynamischen Dropdown-Servers dar, der nur für Adobe sichtbar ist. |
-| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie bei dynamischen Dropdown-Servern auf `URL_BASED` fest. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Für dynamische Dropdown-Server auf `URL_BASED` festgelegt. |
 | `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Adobe die URL im nachstehenden Feld `value` umwandeln muss. Verwenden Sie diese Option, wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE`, wenn von Adobe keine Umwandlung erforderlich ist, z. B. wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, zu dem sich Experience Platform verbinden und die Dropdown-Werte abrufen soll. |
+| `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll, und rufen Sie die Dropdown-Werte ab. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Verwenden Sie für dynamische Dropdown-Server `GET`. |
-| `httpTemplate.headers` | Objekt | *Optional.l* Schließen Sie alle Header ein, die zum Herstellen einer Verbindung mit dem dynamischen Dropdown-Server erforderlich sind. |
+| `httpTemplate.headers` | Objekt | *Optional.l* Schließen Sie alle Kopfzeilen ein, die für die Verbindung mit dem dynamischen Dropdown-Server erforderlich sind. |
 | `responseFields.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Zeichenfolgenzeichen, die die von Ihrer API erhaltene Antwort in die Werte umwandelt, die in der Platform-Benutzeroberfläche angezeigt werden. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Escape-Zeichen, die die von Ihrer API erhaltene Antwort in die Werte umwandelt, die in der Platform-Benutzeroberfläche angezeigt werden. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 

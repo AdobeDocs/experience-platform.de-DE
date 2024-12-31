@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung; Streaming-Verbindung erstellen; API-Handbuch; Tutorial; Erstellen einer Streaming-Verbindung; Streaming-Erfassung; Erfassung;
+keywords: Experience Platform;Startseite;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;API-Handbuch;Tutorial;Erstellen einer Streaming-Verbindung;Streaming-Aufnahme;Aufnahme;
 solution: Experience Platform
 title: Erstellen einer Streaming-Verbindung mithilfe der API
 type: Tutorial
@@ -12,10 +12,10 @@ ht-degree: 60%
 
 ---
 
-# Streaming-Verbindung mithilfe der API erstellen
+# Erstellen einer Streaming-Verbindung mithilfe der API
 
 Um mit dem Streamen von Daten an die Adobe Experience Platform zu beginnen, ist eine Registrierung der Streaming-Verbindung erforderlich. Bei der Registrierung einer Streaming-Verbindung müssen Sie einige wichtige Details wie die Quelle der Streaming-Daten angeben.
 
 Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an Platform verwendet werden kann.
 
-Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im [Handbuch zur HTTP-API-Quell-API](../../sources/tutorials/api/create/streaming/http.md) .
+Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im [Handbuch zur HTTP-API-Quelle](../../sources/tutorials/api/create/streaming/http.md).

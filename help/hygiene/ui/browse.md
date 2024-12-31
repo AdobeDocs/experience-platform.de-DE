@@ -1,6 +1,6 @@
 ---
-title: Durchsuchen von Arbeitsaufträgen für den Datenlebenszyklus
-description: Erfahren Sie, wie Sie bestehende Arbeitsaufträge für den Datenlebenszyklus in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten.
+title: Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen
+description: Erfahren Sie, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -17,17 +17,17 @@ ht-degree: 80%
 >abstract="Wenn eine Datenlebenszyklus-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Anders ausgedrückt, ist ein Arbeitsauftrag ein spezifischer Datenlebenszyklus-Prozess, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
 >text="See the data lifecycle UI guide to learn more."
 
-Wenn eine Datenlebenszyklus-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, z. B. einen geplanten Datensatzablauf, der den aktuellen Status und andere zugehörige Details enthält.
+Wenn eine Datenlebenszyklus-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen bestimmten Datenlebenszyklusprozess dar, z. B. eine geplante Datensatzgültigkeit, die den aktuellen Status und andere zugehörige Details enthält.
 
 In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der Adobe Experience Platform-Benutzeroberfläche anzeigen und verwalten können.
 
 ## Auflisten und Filtern vorhandener Arbeitsaufträge
 
-Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Data Lifecycle]** in der Benutzeroberfläche zugreifen, wird eine Liste der vorhandenen Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
+Beim ersten Zugriff auf den Arbeitsbereich **[!UICONTROL Datenlebenszyklus]** in der Benutzeroberfläche wird eine Liste der vorhandenen Arbeitsaufträge mit allgemeinen Details angezeigt.
 
-![Bild, das den Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Platform-Benutzeroberfläche anzeigt](../images/ui/browse/work-order-list.png)
+![Bild, das den Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
 
-In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Verbraucher]** aus, um eine Liste der Aufgaben zum Löschen von Datensätzen anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der geplanten Datensatzabläufe anzuzeigen.
+In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Verbraucher]** aus, um eine Liste der Aufgaben zum Löschen von Datensätzen anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der geplanten Datensatzgültigkeiten anzuzeigen.
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
 
@@ -37,9 +37,9 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](/help/images/icons/f
 
 Je nach angezeigtem Arbeitsauftrag sind unterschiedliche Filteroptionen verfügbar.
 
-### Filter für Datenlöschungen
+### Filter für das Löschen von Datensätzen
 
-Die folgenden Filter gelten für Löschanfragen zum Aufzeichnen von Löschanfragen:
+Die folgenden Filter gelten für Löschanfragen von Datensätzen:
 
 | Filter | Beschreibung |
 | --- | --- |
@@ -83,11 +83,11 @@ Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details an
 
 Je nach ausgewähltem Typ des Arbeitsauftrags sind unterschiedliche Informationen und Steuerelemente verfügbar. Diese werden in den folgenden Abschnitten erläutert.
 
-### Löschdetails aufzeichnen {#record-delete}
+### Details zum Löschen von Datensätzen {#record-delete}
 
-Die Details einer Anfrage zum Löschen von Datensätzen umfassen den aktuellen Status und die seit der Anforderung verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
+Zu den Details einer Löschanfrage für einen Datensatz gehören der aktuelle Status und die seit der Anfrage verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
 
-![Bild, das die Detailseite für eine Datensatzlöscharbeitsreihenfolge anzeigt](../images/ui/browse/record-delete-details.png)
+![Bild mit der Detailseite für einen Datensatz-Löscharbeitsauftrag](../images/ui/browse/record-delete-details.png)
 
 ### Details zur Datensatzgültigkeit {#dataset-expiration}
 
@@ -97,7 +97,7 @@ Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standa
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie bestehende Arbeitsaufträge für den Datenlebenszyklus in der Platform-Benutzeroberfläche anzeigen und verwalten. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
+In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
 
 * [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
 * [Löschen von Datensätzen verwalten](./record-delete.md)

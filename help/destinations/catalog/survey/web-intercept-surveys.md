@@ -1,5 +1,5 @@
 ---
-keywords: QuestionPro Intercept Surveys;QuestionPro;QuestionPro;questionpro
+keywords: QuestionPro Intercept-Umfragen;Questionpro Intercept-Umfragen;QuestionPro;Questionpro
 title: QuestionPro Intercept Surveys-Erweiterung
 description: Die QuestionPro Intercept Surveys-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 ## Übersicht {#overview}
 
-[!DNL QuestionPro Intercept Surveys] ist eine Plattform für die Bereitstellung von Umfragen und die Erfassung von Einstellungsdaten zum Zeitpunkt der Transaktion oder zum Zeitpunkt des Besuchs/Austritts von Benutzern auf Ihrer Website.
+[!DNL QuestionPro Intercept Surveys] ist eine Plattform zur Bereitstellung von Umfragen und zur Erfassung von Haltungsdaten am Transaktionsort oder beim Ein-/Ausstieg von Nutzern auf Ihrer Website.
 
 [!DNL QuestionPro Intercept Surveys] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 

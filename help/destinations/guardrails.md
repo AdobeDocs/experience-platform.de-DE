@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;Aktivierung;Fehlerbehebung;Leitplanken;Richtlinien;Limit
-title: Standardmäßige Limits für die Datenaktivierung
+title: Standard-Leitplanken für die Datenaktivierung
 solution: Experience Platform
 product: experience platform
 type: Documentation
@@ -13,11 +13,11 @@ ht-degree: 48%
 
 ---
 
-# Limits für die Datenaktivierung
+# Leitplanken für die Datenaktivierung
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. Bei der Betrachtung der folgenden Leitplanken wird angenommen, dass Sie eine ordnungsgemäße [Verbindung zu Zielen hergestellt haben](/help/destinations/ui/connect-destination.md).
 
@@ -27,21 +27,21 @@ Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen 
 >* Die in diesem Dokument dargelegten Beschränkungen werden ständig verbessert. Suchen Sie regelmäßig nach Updates.
 >* Je nach den individuellen Downstream-Beschränkungen können einige Ziele engere Leitplanken als die auf dieser Seite dokumentierten haben. Stellen Sie sicher, dass Sie auch die Seite [Katalog](/help/destinations/catalog/overview.md) des Ziels, zu dem Sie Daten verbinden und aktivieren, überprüfen.
 
-## Schutzarten {#limit-types}
+## Schutzmechanismen-Typen {#limit-types}
 
 In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
-| Schutztyp | Beschreibung |
+| Art der Leitplanke | Beschreibung |
 |----------|---------|
-| **Leistungsgarantie (weiche Begrenzung)** | Leistungsgarantien sind Nutzungsbeschränkungen, die sich auf das Scoping Ihrer Anwendungsfälle beziehen. Wenn Sie die Leistungsgarantien überschreiten, kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die eine Leistungsgarantie konsequent überschreiten, können zusätzliche Kapazität lizenzieren, um Leistungsbeeinträchtigungen zu vermeiden. |
-| **Systemerzwungene Limits (Hard Limit)** | Systemerzwungene Limits werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und API Sie davon abhält oder einen Fehler zurückgibt. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
 
 
 ## Aktivierungsbeschränkungen {#activation-limits}
 
-Die folgenden Limits bieten empfohlene Einschränkungen bei der Aktivierung von Echtzeit-Kundenprofildaten für Ziele.
+Die folgenden Leitplanken enthalten empfohlene Beschränkungen für die Aktivierung von Echtzeit-Kundenprofildaten für Ziele.
 
 ### Allgemeine Aktivierungsleitplanken {#general-activation-guardrails}
 
@@ -49,11 +49,11 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Anzahl an Zielgruppen zu einem einzelnen Ziel | 250 | Leistungsgarantie | Es wird empfohlen, maximal 250 Zielgruppen einem einzelnen Ziel in einem Datenfluss zuzuordnen. <br><br> Wenn Sie mehr als 250 Zielgruppen für ein Ziel aktivieren müssen, können Sie entweder: <ul><li> die Zuordnung von Zielgruppen aufheben, die Sie nicht mehr aktivieren möchten, oder</li><li>Erstellen Sie einen neuen Datenfluss zum gewünschten Ziel und ordnen Sie Zielgruppen diesem neuen Datenfluss zu.</li></ul> <br> Beachten Sie, dass Sie bei einigen Zielen auf weniger als 250 Zielgruppen beschränkt sein können, die dem Ziel zugeordnet sind. Diese Ziele werden weiter unten auf der Seite in den jeweiligen Abschnitten aufgeführt. |
-| Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungsgarantie | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Performance sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
-| Maximale Anzahl von Zielen | 100 | Systemerzwungene Limits | Sie können maximal 100 Ziele erstellen, mit denen Sie *pro Sandbox* Daten verbinden und aktivieren können. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
-| Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Systemerzwungene Limits | Derzeit ist es nur möglich, *Profilsatzattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Systemerzwungene Limits | Sie können Array-Attribute in [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) exportieren. Sie müssen weiterhin die Funktion `array_to_string` verwenden, um das Array in eine Zeichenfolge in der Zieldatei zu reduzieren. [Mehr dazu](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) über die Funktionalität. <br><br> Derzeit ist es **nicht** möglich, *Zuordnungsattribute* zu Zielen zu exportieren. Die Ausnahme von dieser Regel ist die [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md), die sowohl bei Streaming- als auch bei dateibasierten Aktivierungen exportiert wird. |
+| Maximale Anzahl von Zielgruppen für ein einzelnes Ziel | 250 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 250 Zielgruppen einem einzelnen Ziel in einem Datenfluss zuzuordnen. <br><br> Wenn Sie mehr als 250 Zielgruppen für ein Ziel aktivieren müssen, haben Sie folgende Möglichkeiten: <ul><li> Heben Sie die Zuordnung von Zielgruppen auf, die Sie nicht mehr aktivieren möchten, oder</li><li>Erstellen Sie einen neuen Datenfluss zum gewünschten Ziel und ordnen Sie Zielgruppen diesem neuen Datenfluss zu.</li></ul> <br> Beachten Sie, dass Sie bei einigen Zielen auf weniger als 250 dem Ziel zugeordnete Zielgruppen beschränkt sein können. Diese Ziele werden weiter unten auf der Seite in den jeweiligen Abschnitten aufgeführt. |
+| Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungs-Schutzmaßnahme | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Performance sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
+| Maximale Anzahl von Zielen | 100 | Vom System erzwungene Leitplanken | Sie können maximal 100 Ziele erstellen, mit denen Sie (pro Sandbox) Daten verbinden *aktivieren*. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
+| Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Vom System erzwungene Leitplanken | Derzeit ist es nur möglich, *Profilsatzattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). Sie müssen weiterhin die Funktion `array_to_string` verwenden, um das Array in der Zieldatei in eine Zeichenfolge zu reduzieren. [Weitere Informationen](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) über die Funktion. <br><br> Derzeit ist es **nicht** möglich, *Zuordnungsattribute“* Ziele zu exportieren. Die Ausnahme von dieser Regel ist die [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md), die sowohl bei Streaming- als auch bei dateibasierten Aktivierungen exportiert wird. |
 
 {style="table-layout:auto"}
 
@@ -73,9 +73,9 @@ Die folgenden Leitplanken gelten für die Aktivierung über [Batch-Ziele (dateib
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Systemerzwungene Limits | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
-| Maximale Anzahl an Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Leistungsgarantie | Es wird empfohlen, den Batch-Ziel-Datenflüssen maximal 100 Zielgruppen hinzuzufügen. |
-| Maximale Anzahl der zu aktivierenden Zeilen (Datensätze) pro Datei | 5 Millionen | Systemerzwungene Limits | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
+| Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Vom System erzwungene Leitplanken | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
+| Maximale Anzahl von Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 100 Zielgruppen zu Batch-Ziel-Datenflüssen hinzuzufügen. |
+| Maximale Anzahl der zu aktivierenden Zeilen (Datensätze) pro Datei | 5 Millionen | Vom System erzwungene Leitplanken | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +85,8 @@ Die folgenden Leitplanken gelten für die Methode der [Ad-hoc-Aktivierung](/help
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Zielgruppen, die pro Ad-hoc-Aktivierungsauftrag aktiviert werden | 80 | Systemerzwungene Limits | Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern. |
-| Gleichzeitige Ad-hoc-Aktivierungsaufträge pro Zielgruppe | 1 | Systemerzwungene Limits | Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus. |
+| Aktivierte Zielgruppen pro Ad-hoc-Aktivierungsauftrag | 80 | Vom System erzwungene Leitplanken | Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt zum Fehlschlagen des Auftrags. Dieses Verhalten kann sich in zukünftigen Versionen ändern. |
+| Gleichzeitige Ad-hoc-Aktivierungsaufträge pro Zielgruppe | 1 | Vom System erzwungene Leitplanken | Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus. |
 
 {style="table-layout:auto"}
 
@@ -96,15 +96,15 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Anzahl an Zielen der [benutzerdefinierten Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Leistungsgarantie | Sie können Datenflüsse zu 10 benutzerdefinierten Personalisierungszielen pro Sandbox einrichten. |
-| Maximale Anzahl von Attributen, die einem Personalisierungsziel pro Sandbox zugeordnet sind | 30 | Systemerzwungene Limits | Pro Sandbox können maximal 30 Attribute in einem Datenfluss einem Personalisierungsziel zugeordnet werden. |
-| Maximale Anzahl von Zielgruppen, die einem einzelnen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)-Ziel zugeordnet sind | 50 | Leistungsgarantie | Sie können maximal 50 Zielgruppen in einem Aktivierungsfluss zu einem einzelnen Adobe Target-Ziel aktivieren. |
+| Maximale Anzahl an Zielen der [benutzerdefinierten Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Leistungs-Schutzmaßnahme | Sie können Datenflüsse zu 10 benutzerdefinierten Personalisierungszielen pro Sandbox einrichten. |
+| Maximale Anzahl von Attributen, die einem Personalisierungsziel pro Sandbox zugeordnet sind | 30 | Vom System erzwungene Leitplanken | Pro Sandbox können maximal 30 Attribute in einem Datenfluss einem Personalisierungsziel zugeordnet werden. |
+| Maximale Anzahl von Zielgruppen, die einem einzelnen [Adobe Target-Ziel zugeordnet ](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Leistungs-Schutzmaßnahme | Sie können in einem Aktivierungsfluss maximal 50 Zielgruppen für ein einzelnes Adobe Target-Ziel aktivieren. |
 
 {style="table-layout:auto"}
 
 ### Datensatzexporte {#dataset-exports}
 
-Datensatzexporte werden derzeit in einem **[!UICONTROL First Full und dann Inkremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling) unterstützt. Die in diesem Abschnitt beschriebenen Limits gelten für den ersten vollständigen Export *, der nach der Einrichtung eines Workflows für den Datensatzexport erfolgt.*
+Datensatzexporte werden derzeit in einem &quot;**[!UICONTROL Full“- und dann einem „Inkrementellen]**-[&quot; ](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
 
 <!--
 
@@ -118,34 +118,34 @@ Datensatzexporte werden derzeit in einem **[!UICONTROL First Full und dann Inkre
 
 #### Datensatztypen {#dataset-types}
 
-Die Limits für den Datensatzexport gelten für zwei vom Experience Platform exportierte Datensatztypen, wie unten beschrieben:
+Die Leitplanken für den Datensatzexport gelten für zwei Arten von Datensätzen, die von Experience Platform exportiert werden, wie unten beschrieben:
 
-**Auf dem XDM-Erlebnisereignisschema basierende Datensätze**
-Bei Datensätzen, die auf dem XDM-Erlebnisereignis-Schema basieren, enthält das Datensatzschema eine Spalte der obersten Ebene *timestamp* . Daten werden nur als Anhang erfasst.
+**Datensätze, die auf dem XDM-Erlebnisereignis-Schema basieren**
+Im Fall von Datensätzen, die auf dem XDM-Erlebnisereignis-Schema basieren, enthält das Datensatzschema eine Spalte der obersten Ebene *Zeitstempel*. Die Daten werden nur angehängt aufgenommen.
 
-**Auf dem Schema &quot;XDM Individual Profile&quot;basierende Datensätze**
-Bei Datensätzen, die auf dem Schema &quot;XDM Individual Profile&quot;basieren, enthält das Datensatzschema keine Spalte der obersten Ebene mit *Zeitstempel*. Die Daten werden in aufbereiteter Weise erfasst.
+**Datensätze basierend auf dem Schema „XDM Individual Profile“**
+Bei Datensätzen, die auf dem Schema Individuelles XDM-Profil basieren, enthält das Datensatzschema keine Spalte *Zeitstempel* der obersten Ebene. Daten werden upsert aufgenommen.
 
-Die nachstehende Limits gelten für alle Datensätze, die aus Experience Platform exportiert werden. Sehen Sie sich auch die unten aufgeführten harten Limits an, die für verschiedene Datensätze und Komprimierungstypen spezifisch sind.
+Die nachstehende weiche Leitplanke gilt für alle Datensätze, die aus Experience Platform exportiert wurden. Beachten Sie auch die weiter unten stehenden harten Leitplanken, die speziell für verschiedene Datensatz- und Komprimierungstypen gelten.
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Größe der exportierten Datensätze | 5 Mrd. | Leistungsgarantie | Die hier beschriebene Beschränkung für Datensatzexporte ist ein *weicher Schutzschild*. Die Benutzeroberfläche blockiert Sie zwar nicht daran, Datensätze zu exportieren, die über 5 Milliarden Datensätze hinausgehen, das Verhalten ist jedoch unvorhersehbar und Exporte schlagen möglicherweise fehl oder haben eine sehr lange Exportlatenz. |
+| Größe der exportierten Datensätze | 5 Milliarden Datensätze | Leistungs-Schutzmaßnahme | Das hier beschriebene Limit für Datensatzexporte ist eine *weiche*. Während Sie beispielsweise durch die Benutzeroberfläche nicht daran gehindert werden, Datensätze zu exportieren, die größer als 5 Milliarden Datensätze sind, ist das Verhalten unvorhersehbar und Exporte können entweder fehlschlagen oder eine sehr lange Exportlatenz aufweisen. |
 
 {style="table-layout:auto"}
 
-#### Limits für geplante Datensatzexporte
+#### Leitplanken für geplante Datensatzexporte
 
-Bei geplanten oder wiederkehrenden Datensatzexporten sind die folgenden Limits für die beiden Formate der exportierten Datei (JSON oder Parquet) identisch und werden nach Datensatztyp gruppiert.
+Bei geplanten oder wiederkehrenden Datensatzexporten sind die folgenden Leitplanken für die beiden Formate der exportierten Datei (JSON oder Parquet) identisch und werden nach Datensatztyp gruppiert.
 
 >[!WARNING]
 >
 >Exporte in JSON-Dateien werden nur im komprimierten Modus unterstützt.
 
-| Datensatztyp | Leitplanke | Schutztyp | Beschreibung |
+| Datensatztyp | Leitplanke | Art der Leitplanke | Beschreibung |
 ---------|----------|---------|-------|
-| Auf dem **XDM-Erlebnisereignisschema** basierende Datensätze | Daten der letzten 365 Tage | Systemerzwungene Limits | Die Daten des letzten Kalenderjahres werden exportiert. |
-| Datensätze basierend auf dem Schema **XDM Individual Profile** | Zehn Milliarden Datensätze über alle exportierten Dateien in einem Datenfluss | Systemerzwungene Limits | Die Datensatzanzahl für komprimierte JSON- oder Parquet-Dateien muss weniger als zehn Milliarden und für unkomprimierte Parquet-Dateien eine Million betragen. Andernfalls schlägt der Export fehl. Reduzieren Sie die Größe des Datensatzes, den Sie exportieren möchten, wenn er den zulässigen Schwellenwert überschreitet. |
+| Datensätze, die auf dem **XDM-Erlebnisereignis-Schema basieren** | Daten der letzten 365 Tage | Vom System erzwungene Leitplanken | Die Daten aus dem letzten Kalenderjahr werden exportiert. |
+| Datensätze, die auf dem Schema **Individuelles XDM-Profil“ basieren** | Zehn Milliarden Datensätze in allen exportierten Dateien in einem Datenfluss | Vom System erzwungene Leitplanken | Die Datensatzanzahl des Datensatzes muss bei komprimierten JSON- oder Parquet-Dateien weniger als zehn Milliarden und bei unkomprimierten Parquet-Dateien weniger als eine Million betragen, da der Export sonst fehlschlägt. Verringern Sie die Größe des Datensatzes, den Sie exportieren möchten, wenn er größer als der zulässige Schwellenwert ist. |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-Weitere Informationen zum [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md).
+Weitere Informationen über [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md).
 
 
 ### Leitplanken des Destination SDK {#destination-sdk-guardrails}
@@ -177,8 +177,8 @@ Weitere Informationen zum [Exportieren von Datensätzen](/help/destinations/ui/e
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Anzahl an [privaten benutzerdefinierten Zielen](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Leistungsgarantie | Sie können mit dem Destination SDK maximal fünf private benutzerdefinierte Streaming- oder Batch-Ziele erstellen. Wenden Sie sich an einen Kundenbetreuer, wenn Sie mehr als fünf solcher Ziele erstellen müssen. |
-| Profilexportrichtlinie für das Destination SDK | <ul><li>`maxBatchAgeInSecs` (min. 1.800 und max. 3.600)</li><li>`maxNumEventsInBatch` (min. 1.000 und max. 10.000)</li></ul> | Systemerzwungene Limits | Wenn Sie die Option [Konfigurierbare Aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) für Ihr Ziel verwenden, achten Sie auf die Mindest- und Höchstwerte, die festlegen, wie oft HTTP-Meldungen an Ihr API-basiertes Ziel gesendet werden und wie viele Profile die Meldungen enthalten sollen. |
+| Maximale Anzahl an [privaten benutzerdefinierten Zielen](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Leistungs-Schutzmaßnahme | Sie können mit dem Destination SDK maximal fünf private benutzerdefinierte Streaming- oder Batch-Ziele erstellen. Wenden Sie sich an einen Kundenbetreuer, wenn Sie mehr als fünf solcher Ziele erstellen müssen. |
+| Profilexportrichtlinie für das Destination SDK | <ul><li>`maxBatchAgeInSecs` (mindestens 1.800 und höchstens 3.600)</li><li>`maxNumEventsInBatch` (mindestens 1.000 und höchstens 10.000)</li></ul> | Vom System erzwungene Leitplanken | Wenn Sie die Option [Konfigurierbare Aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) für Ihr Ziel verwenden, achten Sie auf die Mindest- und Höchstwerte, die festlegen, wie oft HTTP-Meldungen an Ihr API-basiertes Ziel gesendet werden und wie viele Profile die Meldungen enthalten sollen. |
 
 {style="table-layout:auto"}
 
@@ -194,10 +194,10 @@ Details zu Drosselungsschwellwerten oder -beschränkungen für bestimmte Ziele. 
 
 ## Nächste Schritte
 
-Weitere Informationen zu anderen Limits für Experience Platform-Services, End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP Product Description-Dokumenten finden Sie in der folgenden Dokumentation:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
 
-* [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
-* [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

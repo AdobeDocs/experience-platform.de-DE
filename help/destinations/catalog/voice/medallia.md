@@ -1,5 +1,5 @@
 ---
-keywords: Medallia; Medallia
+keywords: Medallien;Medallien
 title: Medallia-Erweiterung
 description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
@@ -14,7 +14,7 @@ ht-degree: 81%
 
 ## Übersicht {#overview}
 
-Stellen Sie [!DNL Medallia] schnell und nahtlos in Ihren Web-Eigenschaften bereit. Die Erweiterung ermöglicht Ihnen auch, Umfrageereignisse zu erkennen, Kundenfeedback in Echtzeit über Datenelemente zu erfassen, es in Regeln zu verwenden, um das Kundenerlebnis zu personalisieren und Daten mit Adobe Analytics zu teilen.
+Schnelle und nahtlose Bereitstellung von [!DNL Medallia] in Ihren Web-Eigenschaften. Mit der -Erweiterung können Sie auch Umfrageereignisse erkennen, Kundenfeedback über Datenelemente in Echtzeit erfassen, in Regeln verwenden, das Kundenerlebnis personalisieren und Daten mit Adobe Analytics teilen.
 
 [!DNL Medallia] ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Medallia auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der [Medallia-Seite zur Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

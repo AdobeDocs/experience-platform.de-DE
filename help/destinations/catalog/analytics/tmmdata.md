@@ -1,7 +1,7 @@
 ---
-keywords: TMMData;tmm data;tmmdata;TMM-Daten
+keywords: TMMData;TMM-Daten;tmmdata;TMM-Daten
 title: TMMData-Erweiterung
-description: Die TMMData-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die TMMData-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 81%
 
 ## Übersicht {#overview}
 
-[!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketingteams die Werkzeuge, um auf all ihre wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - zuzugreifen und sie miteinander zu kombinieren, um eine sichere, umfassende kanalübergreifende Analyse mit automatisierter Kampagneneinrichtung und direktem Import in Adobe und andere Analyse- und BI-Tools zu ermöglichen.
+[!DNL TMMData's] Foundation-Plattform für Adobe Marketing Cloud bietet Marketing-Teams Tools für den Zugriff und die Kombination aller wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - für eine zuverlässige, umfassende kanalübergreifende Analyse mit automatisierter Kampagneneinrichtung und direkten Importen in Adobe und andere Analyse- und BI-Tools.
 
 [!DNL TMMData] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [TMMData auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite [TMMData auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

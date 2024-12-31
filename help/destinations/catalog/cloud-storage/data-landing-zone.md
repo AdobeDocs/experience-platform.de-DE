@@ -14,31 +14,31 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite bezieht sich auf das [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *Quelle* im Quellkatalog. Weitere Informationen finden Sie in der Dokumentation zur [[!DNL Data Landing Zone] Quelle](/help/sources/connectors/cloud-storage/data-landing-zone.md) .
+>Diese Dokumentationsseite verweist auf das [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *Quelle* im Quellkatalog. Weitere Informationen finden Sie in der Dokumentation [[!DNL Data Landing Zone] Quelle](/help/sources/connectors/cloud-storage/data-landing-zone.md) .
 
 
 ## Übersicht {#overview}
 
-[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien aus Platform zu exportieren. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kunden von Platform und deren Anwendungen wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone] -Container pro Sandbox. Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder die Befehlszeilenschnittstelle verwenden.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien aus Platform zu exportieren. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Platform sowie die zugehörigen Programme wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder die Befehlszeilenschnittstelle verwenden.
 
-[!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. SAS steht für [gemeinsame Zugriffssignatur](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
+[!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. SAS steht für [Shared Access Signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
 Mit der SAS-basierten Authentifizierung können Sie sicher über eine öffentliche Internetverbindung auf Ihren [!DNL Data Landing Zone]-Container zugreifen. Für die Verwendung Ihres [!DNL Data Landing Zone]-Containers sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren.
 
 Platform erzwingt eine strikte sieben Tage lange Lebensdauer („time-to-live“, TTL) für alle Dateien, die in einen [!DNL Data Landing Zone]-Container hochgeladen werden. Alle Dateien werden nach sieben Tagen gelöscht.
 
-## Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicher über API oder Benutzeroberfläche herstellen {#connect-api-or-ui}
+## Verbinden mit dem [!UICONTROL Data Landing Zone]-Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem Speicherort für die [!UICONTROL Dateneinstiegszone] herzustellen, lesen Sie die Abschnitte [Verbindung zum Ziel herstellen](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate) weiter unten.
-* Um eine programmgesteuerte Verbindung zum Speicherort für [!UICONTROL Daten-Landing-Zone] herzustellen, lesen Sie das Tutorial [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API.](../../api/activate-segments-file-based-destinations.md)
+* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
+* Um programmgesteuert eine Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicherort herzustellen, lesen Sie das Tutorial [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -58,38 +58,38 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* Exportieren von Datensätzen mithilfe der Platform-Benutzeroberfläche](/help/destinations/ui/export-datasets.md).[
-* So exportieren [Datensätze programmgesteuert mit der Flow Service-API](/help/destinations/api/export-datasets.md).
+* Erfahren Sie[ wie Datensätze über die Platform-Benutzeroberfläche exportiert ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
-Beim Exportieren von *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Aktivierung der Zielgruppe.
+Beim Exportieren *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
-Beim Exportieren von *Datensätzen* erstellt Platform eine `.parquet` - oder `.json` -Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen des erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+Beim Exportieren *Datensätze* erstellt Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
 
 ## Voraussetzungen {#prerequisites}
 
-Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie das Ziel [!DNL Data Landing Zone] verwenden können.
+Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie das [!DNL Data Landing Zone]-Ziel verwenden können.
 
-### Verbinden Sie Ihren [!DNL Data Landing Zone]-Container mit [!DNL Azure Storage Explorer]
+### Verbinden des [!DNL Data Landing Zone] Containers mit [!DNL Azure Storage Explorer]
 
-Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) verwenden, um den Inhalt Ihres [!DNL Data Landing Zone] Containers zu verwalten. Um mit der Verwendung von [!DNL Data Landing Zone] zu beginnen, müssen Sie zunächst Ihre Anmeldeinformationen abrufen, sie in [!DNL Azure Storage Explorer] eingeben und Ihren [!DNL Data Landing Zone]-Container mit [!DNL Azure Storage Explorer] verbinden.
+Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) verwenden, um den Inhalt Ihres [!DNL Data Landing Zone]-Containers zu verwalten. Um [!DNL Data Landing Zone] verwenden zu können, müssen Sie zunächst Ihre Anmeldeinformationen abrufen, sie in [!DNL Azure Storage Explorer] eingeben und Ihren [!DNL Data Landing Zone]-Container mit [!DNL Azure Storage Explorer] verbinden.
 
 Wählen Sie in der Benutzeroberfläche von [!DNL Azure Storage Explorer] in der linken Navigationsleiste das Verbindungssymbol aus. Das Fenster **Ressource auswählen** wird angezeigt, in dem Sie Optionen für das Verbinden finden. Wählen Sie **[!DNL Blob container]** aus, um eine Verbindung zu Ihrem [!DNL Data Landing Zone]-Speicher herzustellen.
 
-![Wählen Sie eine Ressource aus, die in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Ressource auswählen, die in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Wählen Sie als Nächstes **Shared Access Signature URL (SAS)** als Verbindungsmethode und klicken Sie dann auf **Weiter**.
 
-![Wählen Sie die Verbindungsmethode aus, die in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![In der Azure-Benutzeroberfläche hervorgehobene Verbindungsmethode auswählen.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie einen **Anzeigenamen** und die **[!DNL Blob]Container-SAS-URL** angeben, die mit Ihrem [!DNL Data Landing Zone]-Container übereinstimmt.
 
 >[!BEGINSHADEBOX]
 
-### Rufen Sie die Anmeldeinformationen für Ihren [!DNL Data Landing Zone] ab {#retrieve-dlz-credentials}
+### Abrufen der Anmeldeinformationen für Ihre [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone] -Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldedaten wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md) .
+Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone]-Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldeinformationen wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md).
 
 **API-Format**
 
@@ -99,13 +99,13 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 | Abfrageparameter | Beschreibung |
 | --- | --- |
-| `dlz_destination` | Der `dlz_destination` -Typ ermöglicht es der API, einen Zielbehälter für die Einstiegszone von den anderen Behältertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
+| `dlz_destination` | Der `dlz_destination` ermöglicht es der API, einen Landing Zone-Ziel-Container von den anderen Containertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Im folgenden Anfragebeispiel werden Anmeldeinformationen für eine vorhandene Landingzone abgerufen.
+Im folgenden Anfragebeispiel werden Anmeldeinformationen für eine vorhandene Landing Zone abgerufen.
 
 ```shell
 curl -X GET \
@@ -119,7 +119,7 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt die Anmeldeinformationen für Ihre Einstiegszone zurück, einschließlich Ihrer aktuellen `SASToken` und `SASUri` sowie der `storageAccountName`, die Ihrem Einstiegszonen-Container entsprechen.
+Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landing Zone zurück, einschließlich Ihrer aktuellen `SASToken` und `SASUri` sowie der `storageAccountName`, die Ihrem Landing Zone-Container entspricht.
 
 ```json
 {
@@ -132,15 +132,15 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Einstiegszone zurü
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `containerName` | Der Name Ihrer Landingzone. |
-| `SASToken` | Das Token für die gemeinsame Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
-| `SASUri` | Der URI der Freigegebenen Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge ist eine Kombination aus dem URI für die Landingzone, für die Sie authentifiziert werden, und dem zugehörigen SAS-Token. |
+| `containerName` | Der Name Ihrer Landing Zone. |
+| `SASToken` | Das Shared Access Signature Token für Ihre Landing Zone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
+| `SASUri` | Der Signatur-URI für den gemeinsamen Zugriff für Ihre Landing Zone. Diese Zeichenfolge ist eine Kombination aus dem URI zur Landing Zone, für die Sie authentifiziert werden, und dem entsprechenden SAS-Token, |
 
 {style="table-layout:auto"}
 
-### [!DNL Data Landing Zone] Anmeldedaten aktualisieren {#update-dlz-credentials}
+### Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen {#update-dlz-credentials}
 
-Sie können Ihre Anmeldedaten bei Bedarf auch aktualisieren. Sie können Ihre `SASToken` aktualisieren, indem Sie eine POST-Anfrage an den `/credentials` -Endpunkt der [!DNL Connectors] -API richten.
+Sie können Ihre Anmeldedaten bei Bedarf auch aktualisieren. Sie können Ihre `SASToken` aktualisieren, indem Sie eine POST-Anfrage an den `/credentials`-Endpunkt der [!DNL Connectors]-API stellen.
 
 **API-Format**
 
@@ -150,14 +150,14 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 
 | Abfrageparameter | Beschreibung |
 | --- | --- |
-| `dlz_destination` | Der `dlz_destination` -Typ ermöglicht es der API, einen Zielbehälter für die Einstiegszone von den anderen Behältertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
-| `refresh` | Mit der Aktion `refresh` können Sie Ihre Landingzone-Anmeldedaten zurücksetzen und automatisch eine neue `SASToken` generieren. |
+| `dlz_destination` | Der `dlz_destination` ermöglicht es der API, einen Landing Zone-Ziel-Container von den anderen Containertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
+| `refresh` | Mit der `refresh` Aktion können Sie Ihre Anmeldeinformationen für die Landing Zone zurücksetzen und automatisch eine neue `SASToken` generieren. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden Ihre Landingzone-Anmeldedaten aktualisiert.
+Die folgende Anfrage aktualisiert Ihre Anmeldeinformationen für die Landing Zone.
 
 ```shell
 curl -X POST \
@@ -184,25 +184,25 @@ Die folgende Antwort gibt aktualisierte Werte für Ihre `SASToken` und `SASUri` 
 
 >[!ENDSHADEBOX]
 
-Geben Sie Ihren Anzeigenamen (`containerName`) und die [!DNL Data Landing Zone] SAS-URL ein, wie im oben beschriebenen API-Aufruf zurückgegeben, und wählen Sie dann **Weiter** aus.
+Geben Sie Ihren Anzeigenamen (`containerName`) und [!DNL Data Landing Zone] SAS-URL an, wie im oben beschriebenen API-Aufruf zurückgegeben, und klicken Sie dann auf **Weiter**.
 
 ![Geben Sie Verbindungsinformationen ein, die in der Azure-Benutzeroberfläche hervorgehoben sind.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 Das Fenster **Zusammenfassung** wird angezeigt. Es gibt Ihnen einen Überblick über Ihre Einstellungen, einschließlich Informationen zu Ihrem [!DNL Blob]-Endpunkt und Berechtigungen. Wenn Sie bereit sind, klicken Sie auf **Verbinden**.
 
-![Zusammenfassung der Einstellungen, die in der Azure-Benutzeroberfläche angezeigt werden.](/help/sources/images/tutorials/create/dlz/summary.png)
+![Zusammenfassung der in der Azure-Benutzeroberfläche angezeigten Einstellungen.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Eine erfolgreiche Verbindung aktualisiert Ihre Benutzeroberfläche von [!DNL Azure Storage Explorer] mit Ihrem [!DNL Data Landing Zone]-Container.
 
-![Zusammenfassung des DLZ-Benutzercontainers, der in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Zusammenfassung des DLZ-Benutzer-Containers, der in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-Da Ihr [!DNL Data Landing Zone]-Container jetzt mit [!DNL Azure Storage Explorer] verbunden ist, können Sie damit beginnen, Dateien von Experience Platform in Ihren [!DNL Data Landing Zone]-Container zu exportieren. Um Dateien zu exportieren, müssen Sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel [!DNL Data Landing Zone] herstellen, wie im folgenden Abschnitt beschrieben.
+Da Ihr [!DNL Data Landing Zone]-Container jetzt mit [!DNL Azure Storage Explorer] verbunden ist, können Sie damit beginnen, Dateien von Experience Platform in Ihren [!DNL Data Landing Zone]-Container zu exportieren. Um Dateien zu exportieren, müssen Sie eine Verbindung zum [!DNL Data Landing Zone]-Ziel in der Experience Platform-Benutzeroberfläche herstellen, wie im folgenden Abschnitt beschrieben.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -217,13 +217,13 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
-* **[!UICONTROL Dateityp]**: Wählen Sie das Format, das Experience Platform für die exportierten Dateien verwenden soll. Wenn Sie die Option [!UICONTROL CSV] auswählen, können Sie auch [die Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Dateityp]**: Wählen Sie das Format aus, das Experience Platform für die exportierten Dateien verwenden soll. Bei Auswahl der Option [!UICONTROL CSV] können Sie auch [die Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll.
-* **[!UICONTROL Manifestdatei einschließen]**: Schalten Sie diese Option ein, wenn Sie möchten, dass die Exporte eine Manifest-JSON-Datei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder:
-   * `flowRunId`: Der [Datenfluss-Lauf](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) , der die exportierte Datei generiert hat.
-   * `scheduledTime`: Die Uhrzeit in UTC, zu der die Datei exportiert wurde.
-   * `exportResults.sinkPath`: Der Pfad in Ihrem Speicherort, an dem die exportierte Datei abgelegt wird.
-   * 0: Der Name der exportierten Datei.`exportResults.name`
+* **[!UICONTROL Manifestdatei einschließen]**: Schalten Sie diese Option ein, wenn die Exporte eine JSON-Manifestdatei enthalten sollen, die Informationen zum Exportspeicherort, zur Exportgröße und mehr enthält. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder:
+   * `flowRunId`: Die [Datenflussausführung](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die die exportierte Datei generiert hat.
+   * `scheduledTime`: Die Zeit in UTC, zu der die Datei exportiert wurde.
+   * `exportResults.sinkPath`: Der Pfad an Ihrem Speicherort, an dem die exportierte Datei abgelegt wird.
+   * `exportResults.name`: Der Name der exportierten Datei.
    * `size`: Die Größe der exportierten Datei in Byte.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
@@ -236,10 +236,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../../ui/activate-batch-profile-destinations.md) .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
 
 ### Planung
 

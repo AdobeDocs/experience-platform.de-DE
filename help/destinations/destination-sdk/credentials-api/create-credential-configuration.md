@@ -1,6 +1,6 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf zum Erstellen einer Berechtigungskonfiguration im Adobe Experience Platform Destination SDK veranschaulicht.
-title: Erstellen einer Berechtigungskonfiguration
+description: Auf dieser Seite wird der API-Aufruf zum Erstellen einer Anmeldedaten-Konfiguration im Adobe Experience Platform Destination SDK veranschaulicht.
+title: Erstellen einer Anmeldedaten-Konfiguration
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 100%
 
 ---
 
-# Erstellen einer Berechtigungskonfiguration
+# Erstellen einer Anmeldedaten-Konfiguration
 
 >[!IMPORTANT]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Erstellen einer Berechtigungskonfiguration mit dem API-Endpunkt `/authoring/credentials` verwenden können.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Erstellen einer Anmeldedaten-Konfiguration mit dem API-Endpunkt `/authoring/credentials` verwenden können.
 
 ## Verwendung des API-Endpunkts `/credentials` {#when-to-use}
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum 
 > 
 >Lesen Sie [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
 
-Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungsdaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Berechtigungskonfiguration erstellen.
+Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
 
 Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -33,13 +33,13 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 >
 >Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit Berechtigungs-API-Vorgängen {#get-started}
+## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
-## Erstellen einer Zugangsdaten-Konfiguration {#create}
+## Erstellen einer Anmeldedaten-Konfiguration {#create}
 
-Sie können eine neue Zugangsdaten-Konfiguration erstellen, indem Sie eine `POST`-Anfrage an den Endpunkt `/authoring/credentials` senden.
+Sie können eine neue Anmeldedaten-Konfiguration erstellen, indem Sie eine `POST`-Anfrage an den Endpunkt `/authoring/credentials` senden.
 
 **API-Format**
 
@@ -47,7 +47,7 @@ Sie können eine neue Zugangsdaten-Konfiguration erstellen, indem Sie eine `POST
 POST /authoring/credentials
 ```
 
-Die folgenden Anfragen erstellen neue Berechtigungskonfigurationen, die durch die in der Payload bereitgestellten Parameter bestimmt werden.
+Die folgenden Anfragen erstellen neue Anmeldedaten-Konfigurationen, die durch die in der Payload bereitgestellten Parameter bestimmt werden.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -55,7 +55,7 @@ Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload
 
 >[!TAB Allgemein]
 
-**Erstellen einer Basisberechtigungskonfiguration**
+**Erstellen einer grundlegenden Anmeldedatenkonfiguration**
 
 +++Anfrage
 
@@ -79,8 +79,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `url` | Zeichenfolge | URL des Autorisierungsanbieters |
-| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Zugriffsdaten-Konfiguration |
-| `password` | Zeichenfolge | Passwort für die Anmeldung zur Zugangsdaten-Konfiguration |
+| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Anmeldedaten-Konfiguration |
+| `password` | Zeichenfolge | Passwort für die Anmeldung zur Anmeldedaten-Konfiguration |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 >[!TAB Amazon S3]
 
-**Erstellen einer [!DNL Amazon S3]-Berechtigungskonfiguration**
+**Erstellen einer [!DNL Amazon S3]-Anmeldedaten-Konfiguration**
 
 +++**Anfrage**
 
@@ -131,7 +131,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 >[!TAB SSH]
 
-**Erstellen einer SSH-Berechtigungskonfiguration**
+**Erstellen einer SSH-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
-| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Zugriffsdaten-Konfiguration |
+| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Anmeldedaten-Konfiguration |
 | `sshKey` | Zeichenfolge | SSH-Schlüssel für SFTP mit SSH-Authentifizierung |
 
 {style="table-layout:auto"}
@@ -168,7 +168,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 >[!TAB Azure Data Lake Storage]
 
-**Erstellen einer [!DNL Azure Data Lake Storage]-Berechtigungskonfiguration**
+**Erstellen einer [!DNL Azure Data Lake Storage]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -209,7 +209,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 >[!TAB Azure-Blobspeicher]
 
-**Erstellen einer [!DNL Azure Blob Storage]-Berechtigungskonfiguration**
+**Erstellen einer [!DNL Azure Blob Storage]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -250,4 +250,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Berechtigungs-Endpunkt verwendet wird und wie Sie eine Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` einrichten. Lesen Sie [Verwenden von Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Berechtigungs-Endpunkt verwendet wird und wie Sie eine Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` einrichten. Lesen Sie [Verwenden von Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

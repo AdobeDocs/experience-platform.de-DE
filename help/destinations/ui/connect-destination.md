@@ -14,12 +14,12 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 > 
->* Um eine Verbindung zu einem Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um eine Verbindung zu einem Ziel herzustellen, das Datensatzexporte unterstützt, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatz-Ziele verwalten und aktivieren]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung mit einem Ziel herzustellen, das Datensatzexporte unterstützt, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 
-Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindung mit Ihrer Zielplattform einrichten. In diesem Artikel erfahren Sie, wie Sie eine neue Zielverbindung einrichten, zu der Sie dann Zielgruppen aktivieren oder Datensätze über die Adobe Experience Platform-Benutzeroberfläche exportieren können.
+Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindung mit Ihrer Zielplattform einrichten. In diesem Artikel erfahren Sie, wie Sie eine neue Zielverbindung einrichten, für die Sie dann Zielgruppen aktivieren oder Datensätze über die Benutzeroberfläche von Adobe Experience Platform exportieren können.
 
 ## Suchen des gewünschten Ziels im Katalog {#setup}
 
@@ -27,23 +27,23 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 
    ![Screenshot der Experience Platform-Benutzeroberfläche mit der Zielkatalogseite.](../assets/ui/connect-destinations/catalog.png)
 
-2. Zielkarten im Katalog verfügen möglicherweise über unterschiedliche Aktionssteuerelemente, je nachdem, ob Sie über eine bestehende Verbindung zum Ziel verfügen und ob die Ziele die Aktivierung von Zielgruppen, den Export von Datensätzen oder beides unterstützen. Möglicherweise werden die folgenden Steuerelemente für Zielkarten angezeigt:
+2. Zielkarten im Katalog verfügen möglicherweise über verschiedene Aktionssteuerelemente, je nachdem, ob Sie über eine bestehende Verbindung mit dem Ziel verfügen und ob die Ziele das Aktivieren von Zielgruppen, den Export von Datensätzen oder beides unterstützen. Möglicherweise werden die folgenden Steuerelemente für Zielkarten angezeigt:
 
    * **[!UICONTROL Einrichten]**. Bevor Sie Zielgruppen aktivieren oder Datensätze exportieren können, muss zunächst eine Verbindung zu diesem Ziel eingerichtet werden.
-   * **[!UICONTROL Aktivieren]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt die Aktivierung von Zielgruppen und den Export von Datensätzen.
-   * **[!UICONTROL Aktivieren Sie Zielgruppen]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt nur die Aktivierung der Zielgruppe.
+   * **[!UICONTROL Aktivieren]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt die Zielgruppenaktivierung und den Export von Datensätzen.
+   * **[!UICONTROL Zielgruppen aktivieren]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt nur die Zielgruppenaktivierung.
 
    Weitere Informationen zum Unterschied zwischen diesen Steuerelementen finden Sie auch im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-   Wählen Sie entweder **[!UICONTROL Einrichten]**, **[!UICONTROL Aktivieren]** oder **[!UICONTROL Aktivieren von Zielgruppen]** aus, je nachdem, welche Kontrolle für Sie verfügbar ist.
+   Wählen Sie entweder **[!UICONTROL Einrichten]**, **[!UICONTROL Aktivieren]** oder **[!UICONTROL Zielgruppen aktivieren]**, je nachdem, welches Steuerelement Ihnen zur Verfügung steht.
 
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit dem hervorgehobenen Steuerelement „Einrichten“ dargestellt ist.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite angezeigt wird, wobei das Steuerelement Zielgruppen aktivieren hervorgehoben ist.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit dem hervorgehobenen Steuerelement „Zielgruppen aktivieren“ dargestellt ist.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Wenn Sie **[!UICONTROL Einrichten]** ausgewählt haben, springen Sie zum nächsten Schritt, um die [Authentifizierung](#authenticate) beim Ziel durchzuführen.
 
-   Wenn Sie &quot;**[!UICONTROL Aktivieren]**&quot;, &quot;**[!UICONTROL Zielgruppen aktivieren]**&quot;oder &quot;**[!UICONTROL Datensätze exportieren]**&quot;ausgewählt haben, wird jetzt eine Liste der vorhandenen Zielverbindungen angezeigt.
+   Wenn Sie **[!UICONTROL Aktivieren]**, **[!UICONTROL Zielgruppen aktivieren]** oder **[!UICONTROL Datensätze exportieren]** ausgewählt haben, können Sie jetzt eine Liste der vorhandenen Zielverbindungen sehen.
 
    Wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** aus, um eine neue Verbindung mit dem Ziel herzustellen.
 
@@ -53,7 +53,7 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 
 Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin, sich bei der Zielplattform zu authentifizieren.
 
-Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Platform-Workflow aufgefordert, Anmeldeinformationen zur Authentifizierung einzugeben. Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Platform-Workflow aufgefordert, Anmeldedaten zur Authentifizierung einzugeben. Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Für **[!DNL Amazon S3]erforderliche und optionale Authentifizierungsparameter**
 
@@ -83,15 +83,15 @@ Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formati
 
 ![Bild, das die Auswahl des Dateityps und verschiedene Optionen für CSV-Dateien zeigt.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Einrichten der Zielverbindung für die Aktivierung der Zielgruppe, Kontoaktivierung, Aktivierung von Interessenten oder Datensatzexporte {#segment-activation-or-dataset-exports}
+### Einrichten der Zielverbindung für Zielgruppenaktivierung, Kontoaktivierung, Interessentenaktivierung oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen für bekannte Kunden, Kontokunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, über die Sie die [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [Datensätze exportieren](/help/destinations/ui/export-datasets.md) können.
+Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [ Datensätze exportieren](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
->Beachten Sie beim Exportieren von Datensätzen, dass Exporte in JSON-Dateien nur in einem komprimierten Modus unterstützt werden. Exporte in [!DNL Parquet] -Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.
+>Beachten Sie beim Exportieren von Datensätzen, dass Exporte in JSON-Dateien nur in einem komprimierten Modus unterstützt werden. Exporte in [!DNL Parquet]-Dateien werden im komprimierten und unkomprimierten Modus unterstützt.
 
-![Bild, das die Auswahl des Datentyps anzeigt und Benutzern die Auswahl zwischen Zielgruppenaktivierung und Datensatzexporten ermöglicht.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Abbildung der Datentypauswahl-Steuerung, mit der Benutzende zwischen Zielgruppenaktivierung und Datensatzexporten wählen können.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Aktivieren von Ziel-Warnhinweisen {#enable-alerts}
 
@@ -115,4 +115,4 @@ Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen für be
 
 Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der Experience Platform-Benutzeroberfläche eine Verbindung zu einem Ziel herstellen können. Zur Erinnerung: Die verfügbaren und erforderlichen Verbindungsparameter variieren von Ziel zu Ziel. Sie sollten auch die Seite zur Zieldokumentation im [Zielkatalog](/help/destinations/catalog/overview.md) konsultieren, um spezifische Informationen zu den erforderlichen Eingaben und verfügbaren Optionen pro Zieltyp zu erhalten.
 
-Als Nächstes können Sie mit dem [Aktivieren von Zielgruppen](/help/destinations/ui/activation-overview.md) oder dem [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) in Ihr Ziel fortfahren.
+Als Nächstes können Sie mit dem [Aktivieren von Zielgruppen](/help/destinations/ui/activation-overview.md) oder [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) zu Ihrem Ziel fortfahren.

@@ -1,5 +1,5 @@
 ---
-keywords: Marketo Web Personalization; Marketo Web Personalization; Marketo Web Personalization-Erweiterung; Marketo Web Personalization-Erweiterung; Marketo; Marketo
+keywords: Marketo Web Personalization;Marketo Web Personalization;Marketo Web Personalization-Erweiterung;Marketo Web Personalization Extension;Marketo;Marketo
 title: Marketo Web-Personalisierungserweiterung
 description: Die Marketo Web Personalization-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
@@ -14,9 +14,9 @@ ht-degree: 76%
 
 ## Übersicht {#overview}
 
-Diese Erweiterung stellt das Skript für [!DNL Marketo's] Web Personalization- und ContentAI-Anwendungen bereit. [!DNL Marketo] Web Personalization identifiziert und personalisiert Inhalte eindeutig für Web-Besuchermerkmale, z. B. firmographische Daten für anonyme Besucher und eine breite Palette von Verhaltensattributen innerhalb der [!DNL Marketo] Interaktionsplattform für bekannte Besucher. [!DNL Marketo] ContentAI enthält Funktionen für KI-gestützte Empfehlungen und Personalisierung für Web- und E-Mail-Kampagnen, die für B2B-Kunden einzigartig sind.
+Diese Erweiterung stellt das Skript für [!DNL Marketo's] Web-Personalization- und ContentAI-Anwendungen bereit. [!DNL Marketo] Web Personalization identifiziert und personalisiert Inhalte eindeutig anhand von Web-Besuchermerkmalen, z. B. Firmografien für anonyme Besucher und eine breite Palette von Verhaltensattributen innerhalb der [!DNL Marketo] Interaktionsplattform für bekannte Besucher. [!DNL Marketo] ContentAI enthält Funktionen für KI-gestützte Empfehlungen und Personalisierung für Web- und E-Mail-Kampagnen, die für B2B-Kunden einzigartig sind.
 
-[!DNL Marketo Web Personalization] ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Web-Personalisierung und ContentAI in Marketo finden Sie unter [Web Personalization Overview](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
+[!DNL Marketo Web Personalization] ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Web-Personalisierung und ContentAI in Marketo finden Sie unter [Übersicht über Web-Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

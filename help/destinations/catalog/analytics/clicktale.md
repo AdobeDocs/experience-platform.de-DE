@@ -1,7 +1,7 @@
 ---
-keywords: clicktale;clicktale-Erweiterung;clicktale-Ziel
+keywords: Clicktale;Clicktale-Erweiterung;Clicktale-Ziel
 title: Clicktale-Erweiterung
-description: Die Clicktale-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Clicktale-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 ## Übersicht {#overview}
 
-Mit der Tag-Erweiterung [!DNL Clicktale] können Sie Code bereitstellen und Datenelemente mit dem Visual Editor [!DNL Clicktale's] zuordnen.
+Mit der [!DNL Clicktale] Tag-Erweiterung können Sie Code bereitstellen und Datenelemente mithilfe [!DNL Clicktale's] Visual Editors zuordnen.
 
 [!DNL Clicktale] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Clicktale extension page](https://exchange.adobe.com/experiencecloud.details.100082.html) in der Adobe Exchange.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [ClickTale-Erweiterung](https://exchange.adobe.com/experiencecloud.details.100082.html) in der -Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

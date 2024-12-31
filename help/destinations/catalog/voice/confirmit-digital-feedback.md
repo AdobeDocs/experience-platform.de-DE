@@ -1,7 +1,7 @@
 ---
-keywords: Confirmit Digital Feedback;Bestätigungserweiterung;Bestätigung
+keywords: Digitales Feedback bestätigen;Erweiterung bestätigen;bestätigen
 title: Confirmit Digital Feedback-Erweiterung
-description: Die Confirmit Digital Feedback-Erweiterung ist ein Voice of the Customer-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Confirmit Digital Feedback-Erweiterung ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 ## Übersicht {#overview}
 
-Mit der Lösung [!DNL Confirmit Digital Feedback] können Sie Ihren Website-Traffic in Echtzeit-Einblicke umwandeln. Mit [!DNL Confirmit] können unauffällige und zielgerichtete Umfragen entsprechend Ihren Anforderungen angezeigt werden, was Besucher dazu ermutigt, Feedback zu geben, z. B.:
+[!DNL Confirmit Digital Feedback] Lösung hilft Ihnen, den Traffic Ihrer Website in Echtzeit-Einblicke zu verwandeln. Mit [!DNL Confirmit], unaufdringlichen und zielgerichteten Umfragen können Sie Ihren Anforderungen entsprechend angezeigt werden, um Besucher zu ermutigen, Feedback zu geben, z. B.:
 
 * Website-Feedback
 * Transaktionszufriedenheit
@@ -23,7 +23,7 @@ Mit der Lösung [!DNL Confirmit Digital Feedback] können Sie Ihren Website-Traf
 * Kundenzufriedenheit insgesamt
 * Und vieles mehr
 
-[!DNL Confirmit] Digital Feedback ist eine &quot;Voice of the Customer&quot;-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] Digital Feedback ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

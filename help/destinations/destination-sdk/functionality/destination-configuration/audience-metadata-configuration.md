@@ -15,7 +15,7 @@ Beim Exportieren von Daten aus Experience Platform in Ihr Ziel benötigen Sie m�
 
 Destination SDK bietet Tools, mit denen Sie Zielgruppen in Ihrer Zielplattform programmgesteuert erstellen, aktualisieren oder löschen können.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein Streaming-Ziel konfigurieren](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Sie können die Vorlage für Zielgruppen-Metadaten über den Endpunkt `/authoring/audience-templates` konfigurieren. Nachdem Sie die Konfiguration der Zielgruppen-Metadaten erstellt haben, können Sie den Endpunkt `/authoring/destinations` zum Konfigurieren des Abschnitts `audienceMetadataConfig` verwenden. Dieser Abschnitt teilt Ihrem Ziel mit, welche Zielgruppenmetadaten Ihrer Zielgruppenvorlage zugeordnet werden sollen.
 
@@ -57,7 +57,7 @@ Beim Erstellen der Konfiguration für Ihre Zielgruppenmetadaten können Sie die 
 | `mapExperiencePlatformSegmentName` | Boolesch | Gibt an, ob der Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow der Zielgruppenname aus Experience Platform sein soll. |
 | `mapExperiencePlatformSegmentId` | Boolesch | Gibt an, ob der Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow die Zielgruppen-ID aus Experience Platform sein soll. |
 | `mapUserInput` | Boolesch | Aktiviert oder deaktiviert die Benutzereingabe für den Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow. Wenn er auf `true`, gesetzt ist, kann `audienceTemplateId` nicht vorhanden sein. |
-| `audienceTemplateId` | Zeichenfolge | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für Ihr Ziel verwendet wird. |
+| `audienceTemplateId` | String | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für Ihr Ziel verwendet wird. |
 
 {style="table-layout:auto"}
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Erfassung; Fehlerdiagnose; Fehlerdiagnose abrufen; Fehlerdiagnose abrufen; Fehler erhalten; Fehler abrufen; Fehler abrufen; Fehler abrufen; Fehler abrufen
+keywords: Experience Platform;Startseite;beliebte Themen;Batch-Aufnahme;Batch-Aufnahme;partielle Aufnahme;partielle Aufnahme;Fehler abrufen;Fehler abrufen;partielle Batch-Aufnahme;partielle Batch-Aufnahme;partielle Aufnahme;Aufnahme;Fehlerdiagnose;Fehlerdiagnose abrufen;Fehlerdiagnose abrufen;Fehler abrufen;Fehler abrufen;Fehler abrufen;
 solution: Experience Platform
-title: Fehlerdiagnose beim Abrufen der Datenerfassung
-description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
+title: Abrufen der Fehlerdiagnose für die Datenaufnahme
+description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Aufnahme, zur Verwaltung von Fehlern bei der partiellen Batch-Aufnahme sowie eine Referenz für Typen der partiellen Batch-Aufnahme.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 36%
 
 ---
 
-# Fehlerdiagnose bei der Datenerfassung abrufen
+# Abrufen der Fehlerdiagnose für die Datenaufnahme
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie Daten mithilfe verschiedener Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
-Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
+Dieses Dokument enthält Informationen zur Überwachung der Batch-Aufnahme, zur Verwaltung von Fehlern bei der partiellen Batch-Aufnahme sowie eine Referenz für Typen der partiellen Batch-Aufnahme.
 
 ## Erste Schritte
 
@@ -36,7 +36,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -48,9 +48,9 @@ Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, d
 
 Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tage aufbewahrt.
 
-### Eingabedateien auflisten {#list-files}
+### Auflisten von Eingabedateien {#list-files}
 
-Mit der folgenden Anfrage wird eine Liste aller Dateien abgerufen, die in einem finalisierten Batch bereitgestellt werden.
+Die folgende Anfrage ruft eine Liste aller Dateien ab, die in einem fertigen Batch bereitgestellt werden.
 
 **API-Format**
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die detailliert angeben, wo die Diagnose gespeichert wurde.
+Bei einer erfolgreichen Antwort werden JSON-Objekte zurückgegeben, die detailliert beschreiben, wo die Diagnose gespeichert wurde.
 
 ```json
 {
@@ -105,9 +105,9 @@ Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die detailliert angeben, wo
 }
 ```
 
-### Diagnose von Eingabedateien abrufen {#retrieve-diagnostics}
+### Abrufen von Eingabedateidiagnosen {#retrieve-diagnostics}
 
-Nachdem Sie eine Liste aller Eingabedateien abgerufen haben, können Sie die Diagnose der einzelnen Datei mit der folgenden Anfrage abrufen.
+Nachdem Sie eine Liste aller verschiedenen Eingabedateien abgerufen haben, können Sie die Diagnose der einzelnen Datei mithilfe der folgenden Anfrage abrufen.
 
 **API-Format**
 
@@ -132,20 +132,20 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` -Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` -Objekte im Format [JSON-Zeilen](https://jsonlines.readthedocs.io/en/latest/) zurück.
+Bei einer erfolgreichen Antwort werden JSON-Objekte mit `path` Objekten zurückgegeben, die detailliert beschreiben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte im Format [JSON-Zeilen](https://jsonlines.readthedocs.io/en/latest/) zurück.
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Fehler bei der Batch-Erfassung abrufen {#retrieve-errors}
+## Abrufen von Batch-Erfassungsfehlern {#retrieve-errors}
 
-Wenn Batches Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
+Wenn Batches Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut aufnehmen können.
 
 ### Status prüfen {#check-status}
 
-Um den Status des aufgenommenen Batches zu überprüfen, müssen Sie die Kennung des Batches im Pfad einer GET-Anfrage angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im [Catalog-Endpunkt-Handbuch](../../catalog/api/list-objects.md).
+Um den Status des erfassten Batches zu überprüfen, müssen Sie die ID des Batches im Pfad einer GET-Anfrage angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im [Handbuch für Catalog-Endpunkte](../../catalog/api/list-objects.md).
 
 **API-Format**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BATCH_ID}` | Der `id`-Wert des Batch, dessen Status Sie überprüfen möchten. |
-| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](../../catalog/api/filter-data.md). |
+| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch unter [Filtern von Katalogdaten](../../catalog/api/filter-data.md). |
 
 **Anfrage**
 
@@ -169,9 +169,9 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwort ohne Fehler**
+**Fehlerfreie Antwort**
 
-Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches zurück.
+Eine erfolgreiche Antwort gibt mit detaillierten Informationen zum Status des Batches zurück.
 
 ```json
 {
@@ -214,11 +214,11 @@ Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem der `inputRecordCount` vom `outputRecordCount` abgezogen wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund von Parsing, Konversion oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtrahieren der `inputRecordCount` von der `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 
-**Antwort mit Fehlern**
+**Fehlerbehebung**
 
-Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktiviert ist, gibt die Antwort mehr Informationen über die Fehler zurück, sowohl in der Payload selbst als auch in einer herunterladbaren Fehlerdatei. Beachten Sie, dass der Status eines Batches, der Fehler enthält, weiterhin einen Erfolgsstatus aufweisen kann.
+Wenn für den Batch mindestens ein Fehler vorhanden und die Fehlerdiagnose aktiviert ist, gibt die Antwort weitere Informationen zu den Fehlern zurück, sowohl innerhalb der Payload selbst als auch in einer herunterladbaren Fehlerdatei. Beachten Sie, dass der Status eines Stapels mit Fehlern immer noch den Status Erfolg haben kann.
 
 ```json
 {
@@ -277,12 +277,12 @@ Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktivie
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem der `inputRecordCount` vom `outputRecordCount` abgezogen wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
-| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **nur**, der generiert wird, wenn `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund von Parsing, Konversion oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtrahieren der `inputRecordCount` von der `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert wird **nur** generiert, wenn `errorDiagnostics` aktiviert ist. |
 
 >[!NOTE]
 >
->Wenn die Fehlerdiagnose nicht verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
+>Wenn keine Fehlerdiagnose verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
 >
 ```json
 >{
@@ -295,7 +295,7 @@ Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktivie
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial wurde beschrieben, wie Sie Fehler bei der partiellen Batch-Erfassung überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
+In diesem Tutorial wurde beschrieben, wie Sie Fehler bei der partiellen Batch-Aufnahme überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
 
 ## Anhang {#appendix}
 
@@ -303,23 +303,23 @@ Dieser Abschnitt enthält zusätzliche Informationen zu Fehlertypen bei der Aufn
 
 ### Fehlertypen bei der partiellen Batch-Erfassung {#partial-ingestion-types}
 
-Bei der partiellen Batch-Erfassung gibt es bei der Datenaufnahme drei verschiedene Fehlertypen:
+Die partielle Batch-Aufnahme hat drei verschiedene Fehlertypen bei der Datenaufnahme:
 
 - [Unlesbare Dateien](#unreadable)
-- [Ungültige Schemas oder Kopfzeilen](#schemas-headers)
+- [Ungültige Schemata oder Kopfzeilen](#schemas-headers)
 - [Nicht analysierbare Zeilen](#unparsable)
 
 ### Unlesbare Dateien {#unreadable}
 
 Wenn der erfasste Batch unlesbare Dateien enthält, werden die Fehler des Batch an den Batch selbst angehängt. Weiterführende Informationen zum Abrufen des fehlgeschlagenen Batch finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Ungültige Schemas oder Kopfzeilen {#schemas-headers}
+### Ungültige Schemata oder Kopfzeilen {#schemas-headers}
 
 Wenn der erfasste Batch ein ungültiges Schema oder ungültige Kopfzeilen enthält, werden die Fehler des Batch an den Batch selbst angehängt. Weiterführende Informationen zum Abrufen des fehlgeschlagenen Batch finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
 ### Nicht analysierbare Zeilen {#unparsable}
 
-Wenn der erfasste Batch nicht analysierbare Zeilen enthält, können Sie die folgende Anfrage verwenden, um eine Liste der Dateien anzuzeigen, die Fehler enthalten.
+Wenn der aufgenommene Batch unparable Zeilen enthält, können Sie die folgende Anfrage verwenden, um eine Liste von Dateien mit Fehlern anzuzeigen.
 
 **API-Format**
 
@@ -343,7 +343,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
+Eine erfolgreiche Antwort gibt eine Liste der Dateien zurück, die Fehler aufweisen.
 
 ```json
 {
@@ -374,7 +374,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
 }
 ```
 
-Anschließend können Sie detaillierte Informationen zu den Fehlern mit dem [Diagnostics-Abrufendpunkt](#retrieve-diagnostics) abrufen.
+Sie können dann detaillierte Informationen zu den Fehlern über den Endpunkt [Diagnoseabruf“ ](#retrieve-diagnostics).
 
 Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 

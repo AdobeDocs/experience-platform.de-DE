@@ -1,5 +1,5 @@
 ---
-keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle eloqua; oracle
+keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;oracle Eloqua;oracle
 title: (Dateien) Oracle Eloqua-Verbindung
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
@@ -12,17 +12,17 @@ ht-degree: 46%
 
 # [!DNL (Files) Oracle Eloqua]-Verbindung
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ist eine Software as a Service (SaaS)-Plattform für Marketing-Automatisierung, die von [!DNL Oracle] angeboten wird und B2B-Marketingexperten und -organisationen bei der Verwaltung von Marketing-Kampagnen und der Lead-Generierung von Verkäufen unterstützt.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ist eine SaaS-Plattform (Software as a Service) für die Marketing-Automatisierung, die von [!DNL Oracle] angeboten wird und B2B-Marketing-Experten und -Organisationen bei der Verwaltung von Marketing-Kampagnen und der Generierung von Vertriebs-Leads unterstützen soll.
 
-Um Zielgruppendaten an [!DNL Oracle Eloqua] zu senden, müssen Sie zunächst in Adobe Experience Platform das Ziel ](#connect-destination) verbinden und dann [ einen Datenimport einrichten](#import-data-into-eloqua) von Ihrem Speicherort zu [!DNL Oracle Eloqua].[
+Um Zielgruppendaten an [!DNL Oracle Eloqua] zu senden, müssen Sie zunächst [das Ziel verbinden](#connect-destination) in Adobe Experience Platform und dann [einen Datenimport einrichten](#import-data-into-eloqua) von Ihrem Speicherort in [!DNL Oracle Eloqua].
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -40,43 +40,43 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## IP-Adressen-Zulassungsliste {#allow-list}
 
-Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, dass Sie bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzufügen.
+Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, Ihrer Zulassungsliste bestimmte IP-Bereiche hinzuzufügen.
 
-Informationen zum Hinzufügen von Adobe-IPs zu Ihrer Zulassungsliste finden Sie unter [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) .
+Siehe [Zulassungsliste von IP-Adressen für SFTP](../cloud-storage/ip-address-allow-list.md)Ziele, wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 Dieses Ziel unterstützt die folgenden Verbindungstypen:
 
-* **[!UICONTROL SFTP mit Kennwort]**
+* **[!UICONTROL SFTP mit Passwort]**
 * **[!UICONTROL SFTP mit SSH-Schlüssel]**
 
 ### Verbindungsparameter {#parameters}
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* Für Verbindungen des Typs **[!UICONTROL SFTP mit Passwort]** müssen Sie Folgendes bereitstellen:
+* Bei Verbindungen **[!UICONTROL SFTP mit Passwort]** müssen Sie Folgendes angeben:
    * [!UICONTROL Domain]
    * [!UICONTROL Port]
    * [!UICONTROL Benutzername]
    * [!UICONTROL Passwort]
-* Für Verbindungen des Typs **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie Folgendes bereitstellen:
+* Bei Verbindungen **[!UICONTROL SFTP mit SSH]** müssen Sie Folgendes angeben:
    * [!UICONTROL Domain]
    * [!UICONTROL Port]
    * [!UICONTROL Benutzername]
    * [!UICONTROL SSH-Schlüssel]
 
-* Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien im Abschnitt **[!UICONTROL Schlüssel]** hinzuzufügen. Ihr öffentlicher Schlüssel muss als eine mit [!DNL Base64] verschlüsselte Zeichenfolge verfasst sein.
+* Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien unter dem Abschnitt „Schlüssel **[!UICONTROL eine Verschlüsselung mit PGP/GPG]**. Ihr öffentlicher Schlüssel muss als eine mit [!DNL Base64] verschlüsselte Zeichenfolge verfasst sein.
 * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad in Ihrem Speicherort an, unter dem Platform Ihre Exportdaten als CSV-Dateien hinterlegt.
-* **[!UICONTROL Dateiformat]**: Wählen Sie **CSV** aus, um CSV-Dateien an Ihren Speicherort zu exportieren.
+* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad an Ihrem Speicherort an, an dem Platform Ihre Exportdaten als CSV-Dateien ablegt.
+* **[!UICONTROL Dateiformat]**: Wählen Sie **CSV**, um CSV-Dateien an Ihren Speicherort zu exportieren.
 
 <!--
 
@@ -96,19 +96,19 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../../ui/activate-batch-profile-destinations.md) .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
 
 ### Zielattribute {#destination-attributes}
 
-Beim Aktivieren von Zielgruppen für dieses Ziel empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Best Practices beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele](overview.md#best-practices).
+Beim Aktivieren von Zielgruppen für dieses Ziel empfiehlt Adobe die Auswahl einer eindeutigen Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter „Best [ beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele](overview.md#best-practices).
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Oracle Eloqua]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Überprüfen der Aktivierung der Zielgruppe](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Aktivierung der Zielgruppe.
+Für [!DNL Oracle Eloqua]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Zielgruppenaktivierung überprüfen](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Zielgruppenaktivierung.
 
-## Datenimport in [!DNL Oracle Eloqua] einrichten {#import-data-into-eloqua}
+## Einrichten des Datenimports in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Nachdem Sie [!DNL Platform] mit Ihrem [!DNL SFTP]-Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort zu [!DNL Oracle Eloqua] einrichten. Weitere Informationen dazu finden Sie unter [Importieren von Kontakten oder Konten](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) im Abschnitt [!DNL Oracle Eloqua Help Center].
+Nachdem Sie [!DNL Platform] mit Ihrem [!DNL SFTP] Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Eloqua] einrichten. Informationen hierzu finden Sie unter [ von Kontakten oder Konten ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) der [!DNL Oracle Eloqua Help Center].

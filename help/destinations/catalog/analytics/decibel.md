@@ -1,7 +1,7 @@
 ---
 keywords: Dezibel-Erweiterung;Dezibel;Dezibel-Ziel
 title: Decibel-Erweiterung
-description: Die Decibel-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Decibel-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 94%
 
 ## Übersicht {#overview}
 
-Stellen Sie [!DNL Decibel] schnell und nahtlos in Ihren Web-Eigenschaften bereit. Zusätzliche erweiterte Konfigurationen können auch mit Regeln bereitgestellt werden, indem über die Erweiterung verfügbare Aktionen verwendet werden.
+Schnelles und nahtloses Bereitstellen von [!DNL Decibel] in Ihren Web-Eigenschaften. Zusätzliche erweiterte Konfigurationen können auch mit Regeln bereitgestellt werden, indem über die Erweiterung verfügbare Aktionen verwendet werden.
 
 [!DNL Decibel] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
 

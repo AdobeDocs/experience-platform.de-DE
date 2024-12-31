@@ -14,11 +14,11 @@ ht-degree: 80%
 
 ## Übersicht {#overview}
 
-Vom Lead-Management bis zum kontobasierten Marketing vereinfacht [!DNL Marketo Engagement Platform] die Planung, Orchestrierung und Messung der Interaktion mit Kunden und Interessenten in jeder Phase ihres Erlebnisses.
+Vom Lead-Management bis hin zum Account-basierten Marketing vereinfacht [!DNL Marketo Engagement Platform] die Planung, Orchestrierung und Messung der Interaktion mit Kunden und potenziellen Kunden in jeder Phase ihres Erlebnisses.
 
-[!DNL Marketo’s Munchkin] JavaScript ermöglicht das Tracking von Seitenbesuchen und -klicks von Endbenutzern auf Ihren [!DNL Marketo] -Landingpages und externen Webseiten.
+[!DNL Marketo’s Munchkin] JavaScript ermöglicht das Tracking von Endbenutzer-Seitenbesuchen und Klicks auf [!DNL Marketo] Landingpages und externe Web-Seiten.
 
-[!DNL Marketo Munchkin] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Marketo Munchkin finden Sie unter [Lead-Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in der Marketo-Dokumentation.
+[!DNL Marketo Munchkin] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Marketo Munchkin finden Sie unter [Lead-Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in der Dokumentation zu Marketo.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

@@ -14,7 +14,7 @@ ht-degree: 89%
 
 ## Übersicht {#overview}
 
-Die leistungsstarke Marketing-Automatisierungssoftware von [!DNL Marketo] hilft Marketern, die Kunst und Wissenschaft des digitalen Marketings zu beherrschen, um Kunden und Interessenten zu binden.
+Die leistungsstarke Marketing-Automatisierungssoftware von [!DNL Marketo] hilft Marketing-Experten, die Kunst und Wissenschaft des digitalen Marketings zu meistern, um Kunden und Interessenten anzusprechen.
 
 [!DNL Marketo] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 

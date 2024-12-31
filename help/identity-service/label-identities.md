@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Beschriftungsidentitäten
+keywords: Experience Platform;Startseite;beliebte Themen;Beschriftungsidentitäten
 title: Kennzeichnen eines Felds als Identität in der Benutzeroberfläche
 description: Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird von Identity Service als Identität interpretiert. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
 hide: true
@@ -22,7 +22,7 @@ Die folgenden Kriterien müssen erfüllt sein, damit ein Feld als Identität gek
 * Identitäten werden nur in Datensatz- und Zeitreihendaten erkannt
 * Nur PII-Felder sollten als Identität gekennzeichnet werden. Die Auswahl eines Felds, das generischere Daten darstellt, führt zu weniger präzisen Beziehungen und möglicherweise zu Fehlern beim Zugriff auf zugehörige Identitäten im Identitätsdiagramm
 
-Anweisungen zum Beschriften von Identitätsfeldern in der Benutzeroberfläche finden Sie im Handbuch zum [Definieren von Identitätsfeldern in der Benutzeroberfläche](../xdm/ui/fields/identity.md).
+Anweisungen zum Kennzeichnen von Identitätsfeldern in der Benutzeroberfläche finden Sie im Handbuch unter [Definieren von Identitätsfeldern in der Benutzeroberfläche](../xdm/ui/fields/identity.md).
 
 ## Nächste Schritte
 

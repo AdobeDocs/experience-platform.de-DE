@@ -1,6 +1,6 @@
 ---
 title: PubMatic Connect
-description: PubMatic maximiert den Kundenwert durch die Bereitstellung der programmatischen Digital-Marketing-Lieferkette der Zukunft. PubMatic Connect kombiniert Plattformtechnologie mit dediziertem Service, um Inventar und Daten zu verpacken und zu verarbeiten.
+description: PubMatic maximiert den Kundenwert durch die Bereitstellung der programmatischen Digital Marketing Supply Chain der Zukunft. PubMatic Connect kombiniert Plattformtechnologie und dedizierten Service, um die Art und Weise, wie Inventar und Daten gepackt und transagiert werden, zu verbessern.
 last-substantial-update: 2023-12-14T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
@@ -14,25 +14,25 @@ ht-degree: 42%
 
 ## Übersicht {#overview}
 
-Verwenden Sie [!DNL PubMatic Connect], um den Kundenwert zu maximieren, indem Sie die programmatische digitale Marketing-Lieferkette der Zukunft bereitstellen. [!DNL PubMatic Connect] kombiniert Plattformtechnologie mit dediziertem Service, um die Verpackung und den Austausch von Bestand und Daten zu verbessern.
+Nutzen Sie [!DNL PubMatic Connect], um den Kundenwert zu maximieren, indem Sie die programmatische Digital-Marketing-Lieferkette der Zukunft bereitstellen. [!DNL PubMatic Connect] kombiniert Plattformtechnologie und dedizierten Service, um die Art und Weise zu verbessern, wie Inventar und Daten gepackt und verarbeitet werden.
 
 Verwenden Sie dieses Ziel, um Zielgruppendaten an die [!DNL PubMatic Connect]-Plattform zu senden.
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL PubMatic]-Team erstellt und gepflegt. Bei Anfragen oder Aktualisierungsanfragen kontaktieren Sie diese direkt unter `support@pubmatic.com`.
+>Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL PubMatic]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `support@pubmatic.com`.
 
 ## Anwendungsfälle {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL PubMatic Connect]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
-### Nutzer der Zielgruppe auf mobilen, Web- und CTV-Plattformen {#targeting}
+### Ansprechen von Benutzern auf mobilen, Web- und Videoüberwachungsplattformen {#targeting}
 
-Herausgeber oder Datenanbieter möchten Zielgruppen von Adobe Experience Platform an [!DNL PubMatic Connect] senden, um Benutzer auf mobilen, Web- und CTV-Plattformen mit einer großen Auswahl an Kennungen anzusprechen.
+Herausgeber oder Datenanbieter möchten Zielgruppen von Adobe Experience Platform an [!DNL PubMatic Connect] senden, um Benutzende auf mobilen, Web- und TV-Plattformen mithilfe einer großen Anzahl von Kennungen anzusprechen.
 
 ## Voraussetzungen {#prerequisites}
 
-Wenden Sie sich an Ihren [!DNL PubMatic] -Kundenbetreuer, um sicherzustellen, dass Ihr Konto korrekt konfiguriert ist und das Einstieg in Zielgruppensegmente unterstützt. Sie werden auch sicherstellen, dass Sie über alle relevanten Details verfügen, um dieses Ziel zu verwenden und Sie während der Einrichtung zu unterstützen.
+Wenden Sie sich an Ihren [!DNL PubMatic] Account Manager, um sicherzustellen, dass Ihr Konto richtig konfiguriert ist und das Onboarding von Zielgruppensegmenten unterstützt. Er wird auch sicherstellen, dass Sie über alle relevanten Details verfügen, um dieses Ziel zu verwenden und Sie während der Einrichtung zu unterstützen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -41,18 +41,18 @@ Wenden Sie sich an Ihren [!DNL PubMatic] -Kundenbetreuer, um sicherzustellen, da
 | Ziel-Identität | Beschreibung | Zu beachten |
 | --------------- | ------ | --- |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style="table-layout:auto"}
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 | --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -63,8 +63,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 | --- | --- | --- |
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im PubMatic Connect-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil auf der Grundlage einer Segmentbewertung im Experience Platform aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im PubMatic Connect -Ziel verwendet werden. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-![Authentifizieren](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
+![Authentifizierung](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
 - **[!UICONTROL Bearer-Token]**: Füllen Sie das Bearer-Token aus, um sich beim Ziel zu authentifizieren.
 
@@ -92,10 +92,10 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 - **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 - **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-- **[!UICONTROL Datenpartner-ID]**: Die in Ihrem [!DNL PubMatic]-Konto für diese Integration eingerichtete Datenpartner-ID.
-- **[!UICONTROL Standard-Ländercode]**: Der standardmäßige Ländercode, der auf alle Identitäten angewendet werden soll, wenn im Profil keiner angegeben ist.
+- **[!UICONTROL Datenpartner-ID]**: Die Datenpartner-ID, die in Ihrem [!DNL PubMatic]-Konto für diese Integration eingerichtet wurde.
+- **[!UICONTROL Standard-Ländercode]**: Der standardmäßige Ländercode, der auf alle Identitäten angewendet werden soll, wenn im Profil keine angegeben ist.
 - **[!UICONTROL Konto-ID]**: Ihre [!DNL PubMatic Connect] Konto-ID.
-- **[!UICONTROL Kontotyp]**: Der Kontotyp Ihres [!DNL PubMatic] Plattformkontos. Wenden Sie sich an Ihren [!DNL PubMatic] -Kundenbetreuer, wenn Sie Fragen zur Auswahl haben. Folgende Optionen sind verfügbar:
+- **[!UICONTROL Kontotyp]**: Der Kontotyp Ihres [!DNL PubMatic] Platform-Kontos. Wenden Sie sich an Ihren [!DNL PubMatic] Account Manager, wenn Sie Fragen haben, für die Sie sich entscheiden können. Folgende Optionen sind verfügbar:
    - [!UICONTROL PUBLISHER]
    - [!UICONTROL DEMAND_PARTNER]
    - [!UICONTROL KÄUFER]
@@ -110,28 +110,28 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 
 >[!IMPORTANT]
 >
-> - Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+> - Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >
-> - Um _identities_ zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](../../assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+> - Zum Exportieren _Identitäten_ benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](../../assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Quellfelder auswählen:
+Auswahl der Quellfelder:
 
-- Wählen Sie einen Bezeichner aus (normalerweise Namespaces wie IDFA oder einen benutzerdefinierten ID-Namespace).
+- Wählen Sie eine Kennung aus (normalerweise Namespaces wie IDFA oder einen benutzerdefinierten ID-Namespace).
 
-Zielgruppenfelder auswählen:
+Auswählen der Zielfelder:
 
-- Wenden Sie sich an Ihren [!DNL PubMatic] -Kundenbetreuer, um Informationen dazu zu erhalten, welcher UID-Typ während dieses Schritts korrekt ist.
-- Wählen Sie die Nummer vom Typ [!DNL PubMatic UID] aus, die der im ersten Schritt ausgewählten Kennung entspricht.
+- Wenden Sie sich an Ihren [!DNL PubMatic] Account Manager, um Informationen darüber zu erhalten, welcher UID-Typ in diesem Schritt korrekt sein wird.
+- Wählen Sie die Nummer des [!DNL PubMatic UID] aus, die der im ersten Schritt ausgewählten Kennung entspricht.
 
-![Attribute und Identitäten zuordnen](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![Zuordnen von Attributen und Identitäten](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Mit der Benutzeroberfläche von [!DNL PubMatic] können Sie überprüfen, ob die Daten korrekt übermittelt wurden und ob die Segmente verfügbar sind. Es kann bis zu 24 Stunden dauern, bis Daten gepusht wurden, damit die [!DNL PubMatic] -Benutzeroberfläche aktualisiert wird.
+Über die [!DNL PubMatic] Benutzeroberfläche können Sie überprüfen, ob die Daten korrekt gepusht wurden und ob die Segmente verfügbar sind. Es kann bis zu 24 Stunden dauern, nachdem Daten per Push an die [!DNL PubMatic]-Benutzeroberfläche gesendet wurden.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

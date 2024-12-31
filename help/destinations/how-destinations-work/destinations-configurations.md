@@ -13,9 +13,9 @@ ht-degree: 92%
 
 Hinsichtlich des Exportverhaltens für Experience Platform-Ziele müssen Sie drei separate Ebenen berücksichtigen, auf denen Konfigurationen funktionieren.
 
-* Auf der ersten Ebene sind bestimmte Einstellungen im Zusammenhang mit dem Verhalten beim Profilexport und den Konfigurationseinstellungen allen Zielen, die zu einem Zieltyp gehören, gemein. Diese Einstellungen beziehen sich darauf, welche Trigger ein Zielexport ist und was in einem Export enthalten ist und von Zielentwicklern oder Real-Time CDP-Benutzern nicht bearbeitet werden kann.
+* Auf der ersten Ebene sind bestimmte Einstellungen im Zusammenhang mit dem Verhalten beim Profilexport und den Konfigurationseinstellungen allen Zielen, die zu einem Zieltyp gehören, gemein. Diese Einstellungen beziehen sich darauf, welche Trigger ein Zielexport sind und was in einem Export enthalten ist und von Zielentwicklerinnen und -entwicklern oder Real-Time CDP-Benutzerinnen und -Benutzern nicht bearbeitet werden kann.
 * Auf zweiter Ebene können bestimmte Einstellungen vom Zielentwickler-Team beim Authoring von Zielen mit Destination SDK auf Zielebene angepasst werden.
-* Auf dritter Ebene gibt es Konfigurationseinstellungen, die Real-Time CDP-Benutzer in den Aktivierungs-Workflows festlegen können.
+* Auf dritter Ebene gibt es Konfigurationseinstellungen, die Real-Time CDP-Benutzende in den Aktivierungs-Workflows festlegen können.
 
 ![Abbildung der Wechselwirkung zwischen allgemeinen und konfigurierbaren Exporteinstellungen für Ziele](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden alle gängigen und konfigurierbaren Exporteinstellungen 
 
 Das Verhalten beim Zielexport ist bei allen Zielen, die zu einem Zieltyp gehören, in Bezug darauf, *was einen Zielexport auslöst* und *was in den Zielexporten enthalten ist*, einheitlich. Zielexporte werden durch Benachrichtigungen ausgelöst, die der Ziel-Service vom [Upstream-Echtzeit-Kundenprofil-Service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram) erhält.
 
-Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Erfahren Sie mehr über [allgemeine Exportverhaltensmuster nach Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Zielentwicklern oder Real-Time CDP-Benutzern bearbeitet werden.
+Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Erfahren Sie mehr über [allgemeine Exportverhaltensmuster nach Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Zielentwicklerinnen und -entwicklern oder Real-Time CDP-Benutzenden bearbeitet werden.
 
 ## Durch Zielentwicklerinnen und -entwickler anpassbare Exporteinstellungen {#customizable-settings-by-destination-developers}
 
@@ -58,7 +58,7 @@ Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow 
 * [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
-* [Exportieren von Datensätzen in Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
+* [Exportieren von Datensätzen zu Cloud-Speicher-Zielen](/help/destinations/ui/export-datasets.md)
 
 ## Nächste Schritte {#next-steps}
 

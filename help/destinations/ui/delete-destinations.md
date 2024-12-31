@@ -1,8 +1,8 @@
 ---
-keywords: Ziele löschen, Ziele löschen, Ziel löschen
+keywords: Löschen von Zielen, Löschen von Zielen, Löschen von Zielen
 title: Löschen von Zielen
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
+description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgelistet
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -15,18 +15,18 @@ ht-degree: 32%
 
 ## Übersicht {#overview}
 
-In der Adobe Experience Platform-Benutzeroberfläche können Sie vorhandene Verbindungen zu Zielen löschen.
+In der Adobe Experience Platform-Benutzeroberfläche können Sie bestehende Verbindungen zu Zielen löschen.
 
-Durch das Löschen eines Ziels werden alle vorhandenen Datenflüsse zu diesem Ziel entfernt. Alle Zielgruppen, die für die Ziele aktiviert sind, die Sie löschen, werden vor dem Löschen des Datenflusses nicht zugeordnet.
+Durch das Löschen eines Ziels werden alle vorhandenen Datenflüsse zu diesem Ziel entfernt. Alle Zielgruppen, die für die zu löschenden Ziele aktiviert sind, werden nicht zugeordnet, bevor der Datenfluss gelöscht wird.
 
-Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Platform] [!DNL UI] zu löschen. Sie haben folgende Möglichkeiten:
+Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Platform]-[!DNL UI] zu löschen. Sie haben folgende Möglichkeiten:
 
-* [Löschen von Zielen aus der Registerkarte [!UICONTROL Durchsuchen]](#delete-browse-tab)
-* [Ziele von der Seite mit den Zieldetails löschen](#delete-destination-details-page)
+* [Löschen von Zielen auf der Registerkarte [!UICONTROL Durchsuchen]](#delete-browse-tab)
+* [Löschen von Zielen auf der Seite mit den Zieldetails](#delete-destination-details-page)
 
-## Löschen von Zielen über die Registerkarte &quot;Durchsuchen&quot;{#delete-browse-tab}
+## Löschen von Zielen auf der Registerkarte Durchsuchen{#delete-browse-tab}
 
-Gehen Sie wie folgt vor, um ein Ziel auf der Registerkarte [!UICONTROL Durchsuchen] zu löschen.
+Gehen Sie wie folgt vor, um ein Ziel von der Registerkarte [!UICONTROL Durchsuchen] zu löschen.
 
 1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile aus.
 
@@ -36,16 +36,16 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Registerkarte [!UICONTROL Durchsuch
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Wählen Sie die Schaltfläche ![Mehr ](/help/images/icons/more.png) in der Spalte &quot;Name&quot;und dann die Schaltfläche ![Löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]** aus, um eine vorhandene Zielverbindung zu entfernen.
+3. Wählen Sie die Schaltfläche ![Mehr](/help/images/icons/more.png) in der Spalte Name und dann ![Schaltfläche Löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]**, um eine vorhandene Zielverbindung zu entfernen.
    ![Ziele löschen](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Wählen Sie **[!UICONTROL Löschen]** aus, um das Entfernen der Zielverbindung zu bestätigen.
 
    ![Löschziel bestätigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## Ziele von der Seite mit den Zieldetails löschen{#delete-destination-details-page}
+## Löschen von Zielen auf der Seite mit den Zieldetails{#delete-destination-details-page}
 
-Gehen Sie wie folgt vor, um ein Ziel auf der Seite mit den Zieldetails zu löschen.
+Gehen Sie wie folgt vor, um ein Ziel von der Seite mit den Zieldetails zu löschen.
 
 1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile aus.
 
@@ -59,22 +59,22 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Seite mit den Zieldetails zu lösch
 
    ![Auswählen des Ziels](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * Wenn das Ziel über einen vorhandenen Datenfluss verfügt, gelangen Sie zur Registerkarte [!UICONTROL Datenfluss läuft] .
+   * Wenn das Ziel über vorhandene Datenflüsse verfügt, werden Sie zur Registerkarte [!UICONTROL Datenflussausführungen] weitergeleitet.
 
-     ![Registerkarte &quot;Datenfluss-Ausführung&quot;](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Registerkarte „Datenflussausführungen“](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
-   * Wenn das Ziel keine vorhandenen Datenflüsse aufweist, gelangen Sie zu einer leeren Seite, auf der Sie Zielgruppen aktivieren können.
+   * Wenn das Ziel nicht über vorhandene Datenflüsse verfügt, gelangen Sie auf eine leere Seite, auf der Sie mit der Aktivierung von Zielgruppen beginnen können.
 
      ![Zieldetails](../assets/ui/delete-destinations/destination-details-empty.png)
 
-4. Wählen Sie in der rechten Leiste **[!UICONTROL Löschen]** aus.
+4. Wählen **[!UICONTROL Löschen]** in der rechten Leiste aus.
 
    ![Ziel löschen](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-5. Wählen Sie **[!UICONTROL Löschen]** im Bestätigungsdialogfeld aus, um das Ziel zu entfernen.
+5. Wählen **[!UICONTROL im Bestätigungsdialogfeld]** Löschen“ aus, um das Ziel zu entfernen.
 
-   ![Ziel löschen, Bestätigung löschen](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+   ![Ziel löschen bestätigen](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >
-   >Je nach Server-Load kann es einige Minuten dauern, bis [!DNL Platform] das Ziel löscht.
+   >Je nach Server-Last kann es einige Minuten dauern, bis [!DNL Platform] das Ziel löscht.

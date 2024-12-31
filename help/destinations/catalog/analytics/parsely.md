@@ -1,7 +1,7 @@
 ---
-keywords: Parse. ly;parse;Parse;parse.ly;Parse.ly
+keywords: Analysieren. ly;parsing;parsing;parse.ly;parse.ly
 title: Parse.ly Analytics-Erweiterung
-description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Analytics-Erweiterung Parse.ly ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 91%
 
 [!DNL Parse.ly Analytics] hilft mehr als 2.500 Unternehmen, Daten zu verwenden, um ihre Online-Zielgruppe zu verstehen. Mit dieser Erweiterung wird ein JavaScript-Snippet installiert, das verfolgt, wie Besucher mit Inhalten auf Ihrer Site interagieren.
 
-Parse.ly ist eine Analyseerweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [Parse.ly Analytics](https://www.parse.ly/).
+Parse.ly ist eine Analytics-Erweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [Parse.ly Analytics](https://www.parse.ly/).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

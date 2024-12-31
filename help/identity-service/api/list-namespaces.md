@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;Startseite;beliebte Themen;Namespace-Liste;Namespace-Liste
 solution: Experience Platform
-title: Verfügbare Identitäts-Namespaces auflisten
-description: Liste aller verfügbaren Namespaces.
+title: Verfügbare Identity-Namespaces auflisten
+description: Listet alle verfügbaren Namespaces auf.
 role: Developer
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 ---
 
-# Verfügbare Identitäts-Namespaces auflisten
+# Verfügbare Identity-Namespaces auflisten
 
 **API-Format**
 
@@ -33,7 +33,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL false]&quot;sind Standard-Namespaces, während Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;mit dem Wert &quot;[!UICONTROL true]&quot;Namespaces sind, die von Ihrem Unternehmen erstellt wurden.
+Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot; von &quot;[!UICONTROL false]&quot; sind standardmäßige Namespaces, während diejenigen mit dem Wert &quot;[!UICONTROL custom]&quot; von &quot;[!UICONTROL true]&quot; Namespaces sind, die von Ihrer Organisation erstellt wurden.
 
 >[!NOTE]
 >

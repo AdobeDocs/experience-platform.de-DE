@@ -212,11 +212,11 @@ Befindet sich ein Batch im Status „Wird geladen“, bedeutet dies, dass die Co
 
 ### Gibt es eine Möglichkeit herauszufinden, ob ein Batch erfolgreich erfasst wurde?
 
-Ja, sobald der Batch-Status &quot;Aktiv&quot;ist, wurde der Batch erfolgreich erfasst. Um den Status des Batch zu ermitteln, führen Sie die [zuvor](#how-is-batch-ingestion-monitored) beschriebenen Schritte aus.
+Ja, sobald der Batch-Status „Aktiv“ ist, wurde der Batch erfolgreich aufgenommen. Um den Status des Batch zu ermitteln, führen Sie die [zuvor](#how-is-batch-ingestion-monitored) beschriebenen Schritte aus.
 
 ### Was passiert, wenn ein Batch fehlschlägt? {#what-if-a-batch-fails}
 
-Wenn ein Batch fehlschlägt, wird der Prozess beendet und gibt den Status `Failure` zurück. Der Grund für den Fehler kann im Abschnitt `errors` der Payload angegeben werden. Beispiele für Fehler sind nachfolgend aufgeführt:
+Wenn ein Batch fehlschlägt, wird der Prozess angehalten und gibt einen `Failure` zurück. Der Grund für den Fehler kann im Abschnitt `errors` der Payload ermittelt werden. Beispiele für Fehler sind nachfolgend aufgeführt:
 
 ```json
     "errors":[

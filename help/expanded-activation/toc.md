@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Handbuch zur erweiterten Aktivierung für Audience Manager
 user-guide-description: Aktivieren Sie mithilfe der erweiterten Aktivierung für Audience Manager Zielgruppen aus Audience Manager für Social-Media- und Werbeziele.
-description: In diesem Dokument wird das Inhaltsverzeichnis für die erweiterte Aktivierung von Adobe Audience Manager aufgeführt
+description: In diesem Dokument wird das Inhaltsverzeichnis für Adobe Audience Manager Expanded Activation aufgeführt
 feature: Destinations
 role: Admin,User
 source-git-commit: 2ca2558d2bfdae9f5ba58489c8161c83909a8e27

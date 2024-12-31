@@ -13,9 +13,9 @@ ht-degree: 66%
 
 # Datenerfassung – Übersicht
 
-Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Experience Platform Daten aus diesen Quellen erfasst, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Experience Platform-Dienste persistiert werden.
+Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Die Datenaufnahme in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Experience Platform Daten aus diesen Quellen aufnimmt, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Experience Platform-Services persistiert werden.
 
-In diesem Dokument werden die drei Hauptarten für die Aufnahme von Daten in Experience Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für detailliertere Informationen.
+In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in Experience Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 
 ## Batch-Erfassung
 
@@ -27,11 +27,11 @@ Weitere Informationen finden Sie in der [Übersicht zur Batch-Aufnahme](./batch-
 
 >[!TIP]
 >
->Verwenden Sie einzeilige JSON anstelle mehrzeiliger JSON als Eingabe für die Batch-Erfassung. Eine einzeilige JSON-Datei ermöglicht eine bessere Leistung, da das System eine Eingabedatei in mehrere Blöcke unterteilen und sie parallel verarbeiten kann, während mehrzeilige JSON-Dateien nicht aufgeteilt werden können. Dies kann die Datenverarbeitungskosten erheblich senken und die Latenz bei der Batch-Verarbeitung verbessern.
+>Verwenden Sie einzeiliges JSON anstelle von mehrzeiligem JSON als Eingabe für die Batch-Aufnahme. Einzeiliges JSON ermöglicht eine bessere Leistung, da das System eine Eingabedatei in mehrere Blöcke unterteilen und diese parallel verarbeiten kann, während mehrzeiliges JSON nicht aufgeteilt werden kann. Dies kann die Datenverarbeitungskosten erheblich reduzieren und die Batch-Verarbeitungslatenz verbessern.
 
 ## Streaming-Erfassung
 
-Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. Experience Platform unterstützt die Verwendung von Daten-Inlets zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake persistiert werden. Daten-Inlets können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
+Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. Experience Platform unterstützt die Verwendung von Daten-Inlets zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Daten-Inlets können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
 
 Weiterführende Informationen dazu finden Sie in unter [Streaming-Aufnahme – Übersicht](./streaming-ingestion/overview.md).
 
@@ -43,11 +43,11 @@ Quellverbindungen können so konfiguriert sein, dass Daten aus anderen Adobe-Pro
 
 Weiterführende Informationen dazu finden Sie in der [Übersicht zu Quellen](../sources/home.md).
 
-### ML-gestützte Schemaerstellung {#ml-assisted-schema-creation}
+### ML-unterstützte Schemaerstellung {#ml-assisted-schema-creation}
 
-Um neue Datenquellen schnell zu integrieren, können Sie jetzt maschinelle Lernalgorithmen verwenden, um ein Schema aus Beispieldaten zu generieren. Diese Automatisierung vereinfacht die Erstellung genauer Schemata, reduziert Fehler und beschleunigt den Prozess von der Datenerfassung über Analysen und Einblicke.
+Um neue Datenquellen schnell zu integrieren, können Sie jetzt maschinelle Lernalgorithmen verwenden, um ein Schema aus Beispieldaten zu generieren. Diese Automatisierung vereinfacht die Erstellung genauer Schemata, reduziert Fehler und beschleunigt den Prozess von der Datenerfassung bis hin zur Analyse und Erkenntnissen.
 
-Weitere Informationen zu diesem Workflow finden Sie im Handbuch zur Erstellung von [ML-unterstützten Schemas](../xdm/ui/ml-assisted-schema-creation.md) .
+Weitere Informationen zu [ Workflow finden Sie ](../xdm/ui/ml-assisted-schema-creation.md) Handbuch zur Erstellung XML-unterstützter Schemata .
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

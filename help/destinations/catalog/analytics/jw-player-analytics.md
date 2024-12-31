@@ -1,7 +1,7 @@
 ---
 keywords: JW-Player;JW-Player;JW-Player;JW-Erweiterung;JW-Erweiterung
 title: JW Player Analytics (Beta)-Erweiterung
-description: Die JW Player Analytics (Beta)-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die JW Player Analytics (Beta)-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 32bdb2db-5c1b-4184-b6d3-b07dc4d0b324
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 84%
 
 ## Übersicht {#overview}
 
-Mit dieser Erweiterung wird der [!DNL JW Player] -Adapter installiert, um [!DNL JW Player]-Ereignisse mit Adobe Video Analytics zu verbinden. Nutzen Sie die Vorteile von Adobe Video Analytics, um detaillierte Einblicke in die Videoanzeigegewohnheiten Ihrer Kunden zu gewinnen.
+Diese Erweiterung installiert den [!DNL JW Player], um [!DNL JW Player] Ereignisse mit Adobe Video Analytics zu verbinden. Nutzen Sie die Vorteile von Adobe Video Analytics, um detaillierte Einblicke in die Videoanzeigegewohnheiten Ihrer Kunden zu gewinnen.
 
-[!DNL JW Player Analytics] (Beta) ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (Beta) ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die Erweiterung [!DNL JW Player Analytics] (Beta):
+So installieren Sie die [!DNL JW Player Analytics] (Beta)-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Erweiterungsseite [JW Player Analytics (Beta)](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
+Weitere Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [JW Player Analytics (Beta)-Erweiterung](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

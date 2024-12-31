@@ -1,7 +1,7 @@
 ---
-keywords: InMoment;inmoment;Insight;Launch-Integration
+keywords: InMoment;inMoment;inMoment;Integration starten
 title: InMoment-Erweiterung
-description: Die InMoment-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die InMoment -Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 85%
 
 ## Übersicht {#overview}
 
-Mit der Tag-Erweiterung [!DNL InMoment] können Sie schnell und einfach Online-Feedback über das Digital Intercept-Produkt aktivieren. Im Programm können Abfangen über den CXI Cloud Admin konfiguriert und verwaltet werden, sodass CX-Manager ihre Programme besser steuern können.
+Mit der Tag-Erweiterung &quot;[!DNL InMoment]&quot; können Sie schnell und einfach Online-Feedback über das Produkt „Digital Intercept“ aktivieren. In der App können Intercepts über die CXI Cloud Admin konfiguriert und verwaltet werden, sodass CX-Manager mehr Kontrolle über ihr Programm haben.
 
 [!DNL InMoment] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
-![Insight-Erweiterung](../../assets/catalog/survey/inmoment/catalog.png)
+![InMoment-Erweiterung](../../assets/catalog/survey/inmoment/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 

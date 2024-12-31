@@ -1,6 +1,6 @@
 ---
-title: Best Practices für erweitertes Data Lifecycle Management
-description: Erfahren Sie, wie Sie mit der erweiterten Benutzeroberfläche für Data Lifecycle Management und der Data Hygiene-API Datenanforderungen in Adobe Experience Platform effizient verwalten können. In diesem Handbuch werden Best Practices beschrieben, wie das Maximieren von Identitäten pro Anfrage, das Festlegen einzelner Datensätze und die Berücksichtigung von API-Einschränkungen zur Vermeidung von Verlangsamungen. Das Dokument enthält Richtlinien zum Einrichten der automatischen Datensatzbereinigung, zum Überwachen des Status der Arbeitsaufträge und detaillierte Methoden zum Abrufen von Antworten. Befolgen Sie diese Verfahren, um die Anforderungsverarbeitung zu optimieren und die Antwortzeiten zu optimieren.
+title: Best Practices für die erweiterte Verwaltung des Datenlebenszyklus
+description: Erfahren Sie, wie Sie Datenhygiene-Anfragen in Adobe Experience Platform mithilfe der erweiterten Benutzeroberfläche für die Verwaltung von Datenlebenszyklen und der Datenhygiene-API effizient verwalten können. In diesem Handbuch werden Best Practices behandelt, wie die Maximierung von Identitäten pro Anfrage, die Angabe einzelner Datensätze und die Berücksichtigung von API-Drosselungen zur Vermeidung von Verzögerungen. Das Dokument enthält Richtlinien für die Einrichtung der automatischen Datensatzbereinigung, für die Überwachung des Arbeitsauftragsstatus und für detaillierte Methoden zum Abrufen von Antworten. Befolgen Sie diese Best Practices, um die Verarbeitung Ihrer Anfragen zu optimieren und die Antwortzeiten zu optimieren.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
 source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
 workflow-type: tm+mt
@@ -9,62 +9,62 @@ ht-degree: 0%
 
 ---
 
-# Best Practices für die erweiterte Lebenszyklusverwaltung
+# Best Practices für das erweiterte Data Lifecycle Management
 
-Verwenden Sie die Advanced Data Lifecycle Management-Benutzeroberfläche und die Data Hygiene-API, um Bereinigungsanfragen effizient zu verwalten und Daten aus Adobe Experience Platform-Diensten zu entfernen. Befolgen Sie diese Best Practices, um Ihre Anforderungsverarbeitung zu optimieren und die Antwortzeiten für die Fertigstellung zu optimieren.
+Verwenden Sie die erweiterte Data Lifecycle Management-Benutzeroberfläche und die Data Hygiene API, um Bereinigungsanfragen effizient zu verwalten und Daten aus Adobe Experience Platform-Services zu entfernen. Befolgen Sie diese Best Practices, um die Verarbeitung Ihrer Anfragen zu optimieren und die Antwortzeiten zu optimieren.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Verständnis des Arbeitsbereichs &quot;Datenlebenszyklus&quot;und der [Data Hygiene API](./api/overview.md) voraus. Machen Sie sich vor dem Fortfahren dieses Dokuments mit den Handbüchern zu [Erweitertes Data Lifecycle Management](./home.md) und [ Erstellen von Löschanfragen für Datensätze](./ui/record-delete.md) oder [Datensatzabläufen in der Benutzeroberfläche](./ui/dataset-expiration.md) oder über die API vertraut.
+Dieses Handbuch setzt ein Verständnis des Datenlebenszyklus-Arbeitsbereichs und der [Datenhygiene-API](./api/overview.md) voraus. Bevor Sie mit diesem Dokument fortfahren, machen Sie sich mit den Handbüchern [Erweitertes Daten-](./home.md)-Management“ und [Erstellen von Anfragen zum Löschen von Datensätzen](./ui/record-delete.md) oder [Datensatzgültigkeiten in der Benutzeroberfläche](./ui/dataset-expiration.md) oder über die API vertraut.
 
-## Richtlinien zur Erstellung von Arbeitsbestellungen {#work-order-creation-guidelines}
+## Richtlinien zur Erstellung von Arbeitsaufträgen {#work-order-creation-guidelines}
 
-Sie können den Endpunkt `/workorder` in der Data Hygiene API verwenden, um Löschanfragen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anforderung aktualisieren. Weitere Informationen zum Ausführen dieser Aktionen mit der API finden Sie im Dokument [Workflow-Bestellendpunkt](./api/workorder.md) .
+Sie können den `/workorder`-Endpunkt in der Data Hygiene API verwenden, um Anfragen zum Löschen von Datensätzen im Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anfrage aktualisieren. Informationen zum Ausführen dieser Aktionen mithilfe [ API finden ](./api/workorder.md) im Dokument zum Arbeitsauftrags-Endpunkt .
 
 >[!TIP]
 >
->Ein Arbeitsauftrag ist eine strukturierte Anforderung, die spezifische Datenverwaltungsvorgänge wie Datenbereinigung oder -umwandlung durchführt, um eine effiziente und systematische Verarbeitung zu gewährleisten.
+>Ein Arbeitsauftrag ist eine strukturierte Anfrage, die bestimmte Datenverwaltungsvorgänge wie Datenbereinigung oder -umwandlung durchführt, um eine effiziente und systematische Verarbeitung zu gewährleisten.
 
-Befolgen Sie diese Richtlinien, um Ihre Datenbereinigungsanforderungen zu optimieren:
+Befolgen Sie die folgenden Richtlinien, um die Übermittlung Ihrer Bereinigungsanfrage zu optimieren:
 
-1. **Identitäten pro Anforderung maximieren:** Pro Bereinigungsanfrage bis zu 100.000 Identitäten einschließen, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in eine einzige Anfrage stapeln, können Sie die Häufigkeit von API-Aufrufen reduzieren und das Risiko von Leistungsproblemen aufgrund übermäßiger Einzelidentitätsanfragen minimieren. Senden Sie Anfragen mit maximalen Identitätszahlen, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge aus Effizienzgründen stapelt werden.
-2. **Geben Sie einzelne Datensätze an:** Geben Sie zur maximalen Effizienz den zu verarbeitenden Datensatz an.
-3. **Überlegungen zur API-Drosselung:** Achten Sie auf API-Einschränkungen, um langsame Downloads zu verhindern. Kleinere Anforderungen (&lt; 100 IDs) mit höheren Frequenzen können zu 429 Antworten führen und erfordern eine erneute Übermittlung zu akzeptablen Raten.
+1. **Maximieren von Identitäten pro Anfrage:** Schließen Sie bis zu 100.000 Identitäten pro Bereinigungsanfrage ein, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in einer einzigen Anfrage stapeln, reduzieren Sie die Häufigkeit von API-Aufrufen und minimieren das Risiko von Leistungsproblemen aufgrund von übermäßigen Single-Identity-Anfragen. Senden Sie Anfragen mit maximaler Identitätsanzahl, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge im Batch verarbeitet werden, um die Effizienz zu steigern.
+2. **Spezifizieren einzelner Datensätze:** Geben Sie zur maximalen Effizienz den zu verarbeitenden einzelnen Datensatz an.
+3. **Überlegungen zur API-Drosselung** Achten Sie auf API-Drosselungen, um Langsamkeiten zu verhindern. Kleinere Anfragen (&lt; 100 IDs) mit höherer Häufigkeit können zu 429 Antworten führen und erfordern eine erneute Einreichung mit akzeptablen Raten.
 
 ### 429-Fehler verwalten {#manage-429-errors}
 
-Wenn der Fehler 429 angezeigt wird, bedeutet dies, dass Sie die zulässige Anzahl von Anfragen innerhalb eines bestimmten Zeitraums überschritten haben. Befolgen Sie diese Best Practices, um 429-Fehler effektiv zu verwalten:
+Wenn Sie einen 429-Fehler erhalten, bedeutet dies, dass Sie die zulässige Anzahl von Anfragen innerhalb eines bestimmten Zeitraums überschritten haben. Befolgen Sie die folgenden Best Practices, um 429 Fehler effektiv zu verwalten:
 
-- **Lesen Sie die Kopfzeile &quot;Retry-After&quot;**: Wenn ein 429-Fehler zurückgegeben wird, überprüfen Sie die Antwortheader &quot;Retry-After&quot;. Dieser Header gibt die Wartezeit vor einem erneuten Versuch der Anfrage an.
-- **Implementieren Sie die Wiederholungslogik**: Verwenden Sie den Wert &quot;Retry-After&quot;, um die Wiederholungslogik in Ihre Anwendung zu implementieren, und stellen Sie sicher, dass nach der angegebenen Zeit versucht wird, weitere Versuche durchzuführen, um nachfolgende 429-Fehler zu vermeiden.
-- **Batch your requests**: Vermeiden Sie das schnelle Senden zahlreicher kleiner Anfragen. Stapeln Sie stattdessen mehrere Identitäten in einer einzelnen Anfrage, um die Häufigkeit von Aufrufen zu reduzieren und das Risiko zu minimieren, dass Quotenbeschränkungen erreicht werden.
+- **Header „Wiederholen nach“ lesen**: Wenn ein 429-Fehler zurückgegeben wird, überprüfen Sie die Antwort-Header „Wiederholen nach“. Diese Kopfzeile gibt die Wartezeit an, bevor die Anfrage erneut versucht wird.
+- **Wiederholungslogik implementieren**: Verwenden Sie den Wert „Wiederholen nach“, um Wiederholungslogik in Ihrer Anwendung zu implementieren und sicherzustellen, dass Wiederholungsversuche nach der angegebenen Zeit unternommen werden, um nachfolgende 429-Fehler zu vermeiden.
+- **Batch Ihrer Anfragen**: Senden Sie nicht schnell hintereinander zahlreiche kleine Anfragen. Stattdessen sollten Sie mehrere Identitäten in einer einzigen Anfrage zusammenfassen, um die Anruffrequenz zu reduzieren und das Risiko zu minimieren, dass die Ratenbeschränkungen erreicht werden.
 
 ## Ablaufdatum des Datensatzes {#dataset-expiration}
 
-Richten Sie die automatische Bereinigung von Datensätzen für kurzlebige Daten ein. Verwenden Sie den Endpunkt `/ttl` in der Data Hygiene API, um Ablaufdaten für Datensätze zu planen, die basierend auf einem bestimmten Zeitpunkt oder Datum für die Bereinigung verwendet werden sollen. Weitere Informationen zum Erstellen eines Datensatzablaufs [und der [akzeptierten Abfrageparameter](./api/dataset-expiration.md#query-params) finden Sie im Handbuch zum Ablauf von Datensätzen ](./api/dataset-expiration.md) .
+Richten Sie die automatische Datensatzbereinigung für kurzlebige Daten ein. Verwenden Sie den `/ttl`-Endpunkt in der Datenhygiene-API, um Ablaufdaten für Datensätze zur Bereinigung basierend auf einer bestimmten Zeit oder einem bestimmten Datum zu planen. Informationen zum Erstellen einer Datensatzgültigkeit und [akzeptierten Abfrageparametern](./api/dataset-expiration.md) finden Sie [ Handbuch zum Datensatzgültigkeits-Endpunkt ](./api/dataset-expiration.md#query-params).
 
-## Überwachen der Arbeitsreihenfolge und des Datensatzablaufstatus {#monitor}
+## Überwachen des Arbeitsauftrags und des Datensatzgültigkeitsstatus {#monitor}
 
-Sie können den Fortschritt Ihres Daten-Lebenszyklusmanagements mithilfe von **I/O-Ereignissen** effizient überwachen. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeit-Benachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Diensten innerhalb von Platform.
+Sie können den Fortschritt des Daten-Lifecycle-Managements effizient mithilfe von **I/O Events** überwachen. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeitbenachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Services in Platform.
 
-E/A-Ereignis-Warnungen können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in der Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie im Handbuch zum [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md) .
+E/A-Ereignis-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie [ Handbuch unter „Abonnieren von Adobe I/O](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
 
-Verwenden Sie die folgenden Lebenszyklusmethoden und -richtlinien, um den Auftragsstatus effektiv abzurufen und zu überwachen:
+Verwenden Sie die folgenden Methoden und Richtlinien für den Datenlebenszyklus, um Auftragsstatus effektiv abzurufen und zu überwachen:
 
 ### I/O-Ereignisse {#io-events}
 
 Um den Fortschritt Ihrer Datenlebenszyklusaufgaben effizient zu überwachen, richten Sie I/O-Ereignisse ein und verwenden Sie sie, indem Sie die folgenden Schritte ausführen:
 
-- Richten Sie Webhooks ein, um Push-Benachrichtigungen für Statusänderungen zu erhalten.
+- Webhooks für den Empfang von Push-Benachrichtigungen bei Statusänderungen einrichten.
 - Verwenden Sie Benachrichtigungen, um den Fortschritt zu überwachen und nach Abschluss Aktualisierungen zu erhalten.
-- Vermeiden Sie die Implementierung von Abrufmechanismen zur Minimierung des API-Traffics.
+- Vermeiden Sie die Implementierung von Abrufmechanismen, um den API-Traffic zu minimieren.
 
-### Abrufen detaillierter Antworten für eine einzelne Arbeitsreihenfolge {#retrieve-detailed-work-order-response}
+### Abrufen detaillierter Antworten für einen einzelnen Arbeitsauftrag {#retrieve-detailed-work-order-response}
 
-Ausführliche Informationen zu einzelnen Arbeitsaufträgen erhalten Sie bei folgendem Ansatz:
+Detaillierte Informationen zu einzelnen Arbeitsaufträgen erhalten Sie nach folgendem Ansatz:
 
-- Stellen Sie eine GET-Anfrage an den `/workorder/{work_order_id}` -Endpunkt, um detaillierte Antwortdaten zu erhalten.
-- Abrufen produktspezifischer Antworten und Erfolgsmeldungen.
-- Vermeiden Sie die Verwendung dieser Methode für reguläre Abruftätigkeiten.
+- Stellen Sie eine GET-Anfrage an den `/workorder/{work_order_id}`-Endpunkt, um detaillierte Antwortdaten zu erhalten.
+- Rufen Sie produktspezifische Antworten und Erfolgsmeldungen ab.
+- Vermeiden Sie diese Methode für regelmäßige Abrufaktionen.
 
-Durch Einhaltung dieser Best Practices können Sie im Rahmen des erweiterten Data Lifecycle Managements effektiv Bereinigungsanfragen verwalten und die Reaktionszeiten optimieren.
+Durch Befolgung dieser Best Practices können Sie Bereinigungsanfragen effektiv verwalten und die Antwortzeiten im erweiterten Data Lifecycle Management optimieren.

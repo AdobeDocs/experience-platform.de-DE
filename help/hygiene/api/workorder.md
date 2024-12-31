@@ -1,6 +1,6 @@
 ---
-title: Work Order API Endpoint
-description: Mit dem /workorder -Endpunkt in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
+title: Arbeitsauftrags-API-Endpunkt
+description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
 badgeBeta: label="Beta" type="Informative"
 role: Developer
 badge: Beta
@@ -14,11 +14,11 @@ ht-degree: 56%
 
 # Arbeitsauftrags-Endpunkt {#work-order-endpoint}
 
-Mit dem Endpunkt `/workorder` in der Data Hygiene API können Sie Löschanfragen von Datensätzen in Adobe Experience Platform programmgesteuert verwalten.
+Mit dem `/workorder`-Endpunkt in der Data Hygiene API können Sie Anfragen zum Löschen von Datensätzen in Adobe Experience Platform programmgesteuert verwalten.
 
 >[!IMPORTANT]
 > 
->Die Funktion zum Löschen von Datensätzen befindet sich derzeit in Beta und ist nur in einer **begrenzten Version** verfügbar. Sie steht nicht allen Kunden zur Verfügung. Löschanfragen von Datensätzen sind nur für Organisationen in der eingeschränkten Version verfügbar.
+>Die Funktion zum Löschen von Datensätzen befindet sich derzeit in Beta und ist nur in einer **Version**. Sie steht nicht allen Kunden zur Verfügung. Löschanfragen für Datensätze sind nur für Organisationen in der eingeschränkten Version verfügbar.
 >
 >Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
@@ -26,13 +26,13 @@ Mit dem Endpunkt `/workorder` in der Data Hygiene API können Sie Löschanfragen
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Datensatzlöschanfrage erstellen {#create}
+## Erstellen einer Anfrage zum Löschen eines Datensatzes {#create}
 
-Sie können eine oder mehrere Identitäten aus einem Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder` -Endpunkt senden.
+Sie können eine oder mehrere Identitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt stellen.
 
 >[!IMPORTANT]
 > 
->Es gibt unterschiedliche Beschränkungen für die Gesamtzahl der eindeutigen Identitätsdatensätze, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrem Lizenzvertrag. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können jeden Monat bis zu 100.000 Identitätsdatensätze löschen. Organisationen, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben, können jeden Monat bis zu 600.000 Identitätsdaten-Löschvorgänge einreichen.<br>Mit einer einzelnen [Löschanfrage für Datensätze über die Benutzeroberfläche](../ui/record-delete.md) können Sie 10.000 IDs gleichzeitig senden. Die API-Methode zum Löschen von Datensätzen ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, bis zu Ihrer ID-Grenze so viele IDs pro Anfrage wie möglich zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollte vermieden werden, ein geringes Volumen oder eine einzelne ID pro Datensatz-Löschanfrage zu senden.
+>Es gibt verschiedene Beschränkungen für die Gesamtzahl der Löschvorgänge von eindeutigen Identitätsdatensätzen, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrer Lizenzvereinbarung. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können monatlich bis zu 100.000 Identitätseintragslöschungen übermitteln. Organisationen, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben, können monatlich bis zu 600.000 Identitätseinträge löschen.<br>Mit einer einzigen [Löschanfrage für Datensätze über die Benutzeroberfläche](../ui/record-delete.md) können Sie 10.000 IDs gleichzeitig senden. Die API-Methode zum Löschen von Datensätzen ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, so viele IDs wie möglich pro Anfrage bis zu Ihrem ID-Limit zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollten Sie die Übermittlung einer geringen Anzahl oder einer einzelnen ID pro Löschanfrage für den Datensatz vermeiden.
 
 **API-Format**
 
@@ -42,11 +42,11 @@ POST /workorder
 
 >[!NOTE]
 >
->Datenlebenszyklusanfragen können Datensätze nur basierend auf primären Identitäten oder einer Identitätszuordnung ändern. Eine Anfrage muss entweder die primäre Identität angeben oder eine Identitätszuordnung bereitstellen.
+>Datenlebenszyklusanfragen können nur Datensätze ändern, die auf primären Identitäten oder einer Identitätszuordnung basieren. Eine Anfrage muss entweder die primäre Identität angeben oder eine Identitätszuordnung bereitstellen.
 
 **Anfrage**
 
-Je nach dem Wert von `datasetId` in der Anfrage-Payload löscht der API-Aufruf Identitäten aus allen Datensätzen oder einem einzelnen Datensatz, den Sie angeben. Die folgende Anfrage löscht drei Identitäten aus einem bestimmten Datensatz.
+Abhängig vom Wert der `datasetId` in der Anfrage-Payload löscht der API-Aufruf Identitäten aus allen Datensätzen oder einem einzelnen von Ihnen angegebenen Datensatz. Die folgende Anfrage löscht drei Identitäten aus einem bestimmten Datensatz.
 
 ```shell
 curl -X POST \
@@ -86,17 +86,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `action` | Die auszuführende Aktion. Der Wert muss für Datenlöschungen auf `delete_identity` gesetzt werden. |
-| `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss das zugeordnete Experience-Datenmodell (XDM)-Schema des Datensatzes über eine primäre Identität verfügen. Wenn der Datensatz keine primäre Identität hat, muss er über eine Identitätszuordnung verfügen, damit er durch eine Data Lifecycle-Anfrage geändert werden kann.<br>Wenn eine Identitätszuordnung vorhanden ist, ist sie als Feld der obersten Ebene mit dem Namen `identityMap` vorhanden.<br>Beachten Sie, dass eine Datensatzzeile zwar viele Identitäten in ihrer Identitätszuordnung aufweisen kann, aber nur eine als primär markiert werden kann. `"primary": true` muss enthalten sein, um zu erzwingen, dass die `id` mit einer primären Identität übereinstimmt. |
-| `displayName` | Der Anzeigename für die Löschanfrage zum Datensatz. |
-| `description` | Eine Beschreibung für die Anfrage zum Löschen von Datensätzen. |
+| `action` | Die auszuführende Aktion. Für das Löschen von Datensätzen muss der Wert auf `delete_identity` festgelegt werden. |
+| `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss für das zugeordnete Experience-Datenmodell-Schema (XDM) des Datensatzes eine primäre Identität definiert sein. Wenn der Datensatz keine primäre Identität hat, muss er über eine Identitätszuordnung verfügen, damit er durch eine Data-Lifecycle-Anfrage geändert werden kann.<br>Wenn eine Identitätszuordnung vorhanden ist, ist sie als Feld der obersten Ebene mit dem Namen `identityMap` vorhanden.<br>Beachten Sie, dass eine Datensatzzeile viele Identitäten in ihrer Identitätszuordnung haben kann, aber nur eine als primär markiert werden kann. `"primary": true` müssen eingeschlossen werden, damit der `id` mit einer primären Identität übereinstimmt. |
+| `displayName` | Der Anzeigename für die Löschanfrage des Datensatzes. |
+| `description` | Eine Beschreibung für den Antrag auf Löschung eines Datensatzes. |
 | `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/features/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
 {style="table-layout:auto"}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zurück.
+Eine erfolgreiche Antwort gibt die Details des Datensatzlöschvorgangs zurück.
 
 ```json
 {
@@ -119,7 +119,7 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
 | `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
-| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Bei Löschungen von Datensätzen ist der Wert `identity-delete`. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Beim Löschen von Datensätzen ist der Wert `identity-delete`. |
 | `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
 | `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
@@ -128,9 +128,9 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 
 {style="table-layout:auto"}
 
-## Status eines Datensatzlöschens abrufen {#lookup}
+## Abrufen des Status einer Datensatzlöschung {#lookup}
 
-Nachdem Sie [eine Anfrage zum Löschen eines Datensatzes erstellt haben](#create), können Sie den Status mit einer GET-Anfrage prüfen.
+Nachdem Sie [eine Anfrage zum Löschen eines Datensatzes erstellt](#create) können Sie den Status mit einer GET-Anfrage überprüfen.
 
 **API-Format**
 
@@ -140,7 +140,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzes, den Sie suchen, löschen. |
+| `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzlöschens, nach dem Sie suchen. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
 | `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
-| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Bei Löschungen von Datensätzen ist der Wert `identity-delete`. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Beim Löschen von Datensätzen ist der Wert `identity-delete`. |
 | `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
 | `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
@@ -205,9 +205,9 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 | `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
 | `productStatusDetails` | Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Name des nachgelagerten Services.</li><li>`productStatus`: Aktueller Verarbeitungsstatus der Anfrage von dem nachgelagerten Service.</li><li>`createdAt`: Zeitstempel, der angibt, wann der letzte Status von dem Service veröffentlicht wurde.</li></ul> |
 
-## Aktualisieren von Löschanfragen für Datensätze
+## Aktualisieren einer Löschanfrage für einen Datensatz
 
-Sie können die `displayName` und `description` für einen Datensatz-Löschvorgang aktualisieren, indem Sie eine PUT-Anfrage stellen.
+Sie können die `displayName` und `description` für eine Datensatzlöschung aktualisieren, indem Sie eine PUT-Anfrage stellen.
 
 **API-Format**
 
@@ -217,7 +217,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzes, den Sie suchen, löschen. |
+| `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzlöschens, nach dem Sie suchen. |
 
 {style="table-layout:auto"}
 
@@ -238,14 +238,14 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `displayName` | Ein aktualisierter Anzeigename für die Löschanfrage zum Datensatz. |
-| `description` | Eine aktualisierte Beschreibung für die Anfrage zum Löschen von Datensätzen. |
+| `displayName` | Ein aktualisierter Anzeigename für die Löschanfrage des Datensatzes. |
+| `description` | Eine aktualisierte Beschreibung für die Löschanfrage des Datensatzes. |
 
 {style="table-layout:auto"}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zurück.
+Eine erfolgreiche Antwort gibt die Details des Datensatzlöschvorgangs zurück.
 
 ```json
 {
@@ -292,7 +292,7 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
 | `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
-| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Bei Löschungen von Datensätzen ist der Wert `identity-delete`. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Beim Löschen von Datensätzen ist der Wert `identity-delete`. |
 | `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
 | `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |

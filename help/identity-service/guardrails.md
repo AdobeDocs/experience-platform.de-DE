@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Limits; Richtlinien; Einschränkung
-title: Limits für Identity Service
-description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
+keywords: Experience Platform;Identität;Identity Service;Fehlerbehebung;Leitplanken;Richtlinien;Limit;
+title: Leitplanken für Identity Service
+description: Dieses Dokument enthält Informationen zur Verwendung und zu den Ratenbeschränkungen für Identity Service-Daten, damit Sie die Verwendung des Identitätsdiagramms optimieren können.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
@@ -10,13 +10,13 @@ ht-degree: 40%
 
 ---
 
-# Schutzmechanismen für [!DNL Identity Service] -Daten
+# Leitplanken für [!DNL Identity Service] Daten
 
 Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschränkungen für [!DNL Identity Service]-Daten, um Ihnen bei der optimalen Nutzung des Identitätsdiagramms zu helfen. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 ## Erste Schritte
 
@@ -35,8 +35,8 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Leitplanke | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen &quot;First-in-First-out&quot;-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität für dieses Diagramm zu schaffen (**Hinweis**: Das Echtzeit-Kundenprofil ist nicht betroffen). Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt zu [Verständnis der Löschlogik](#deletion-logic). |
-| Anzahl der Links zu einer Identität für eine Batch-Erfassung | 50 | Ein einzelner Batch kann anomale Identitäten enthalten, die unerwünschte Zusammenführungen von Diagrammen verursachen. Um dies zu verhindern, erfasst Identity Service keine Identitäten, die bereits mit 50 oder mehr Identitäten verknüpft sind. |
+| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen „first-in, first-out“-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität für dieses Diagramm zu schaffen (**Hinweis**: Das Echtzeit-Kundenprofil ist nicht betroffen). Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt zu [Grundlagen zur Löschlogik](#deletion-logic). |
+| Anzahl der Links zu einer Identität für eine einzelne Batch-Aufnahme | 50 | Ein einzelner Batch kann anormale Identitäten enthalten, die unerwünschte Diagrammzusammenführungen verursachen. Um dies zu verhindern, nimmt Identity Service keine Identitäten auf, die bereits mit 50 oder mehr Identitäten verknüpft sind. |
 | Anzahl der Identitäten in einem XDM-Eintrag | 20 | Die erforderliche Mindestanzahl von XDM-Einträgen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
 | Anzahl der Zeichen für einen Namespace-Anzeigenamen oder ein Identitätssymbol | Keine | Die Anzahl der Zeichen eines Namespace-Anzeigenamens oder Identitätssymbols ist unbegrenzt. |
@@ -50,7 +50,7 @@ In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolg
 | Namespace | Validierungsregel | Systemverhalten bei Verletzung einer Regel |
 | --- | --- | --- |
 | ECID | <ul><li>Der Identitätswert einer ECID muss genau 38 Zeichen betragen.</li><li>Der Identitätswert einer ECID darf nur aus Zahlen bestehen.</li></ul> | <ul><li>Wenn der Identitätswert der ECID nicht genau 38 Zeichen beträgt, wird der Eintrag übersprungen.</li><li>Wenn der Identitätswert der ECID nicht-numerische Zeichen enthält, wird der Eintrag übersprungen.</li></ul> |
-| Nicht-ECID | <ul><li>Der Identitätswert darf 1024 Zeichen nicht überschreiten.</li><li>Identitätswerte dürfen nicht &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;oder eine leere Zeichenfolge sein (z. B.: &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Wenn der Identitätswert 1024 Zeichen überschreitet, wird der Eintrag übersprungen.</li><li>Die Identität wird von der Erfassung ausgeschlossen.</li></ul> |
+| Nicht-ECID | <ul><li>Der Identitätswert darf 1024 Zeichen nicht überschreiten.</li><li>Identitätswerte dürfen nicht „null“, „anonym“, „ungültig“ oder eine leere Zeichenfolge sein (z. B.: &quot;&quot;, &quot;&quot;, &quot;„).</li></ul> | <ul><li>Wenn der Identitätswert 1024 Zeichen überschreitet, wird der Eintrag übersprungen.</li><li>Die Identität wird bei der Aufnahme blockiert.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -60,9 +60,9 @@ Ab dem 31. März 2023 blockiert Identity Service die Aufnahme der Adobe Analytic
 
 ## Performance-Garantien {#performance-guardrails}
 
-Identity Service überwacht eingehende Daten kontinuierlich, um eine hohe Leistung und Zuverlässigkeit im Maßstab zu gewährleisten. Ein Fluss von Erlebnisereignisdaten in einem kurzen Zeitraum kann jedoch zu Leistungsbeeinträchtigungen und Latenzzeiten führen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich.
+Identity Service überwacht eingehende Daten kontinuierlich, um eine hohe Leistung und Zuverlässigkeit in jedem Maßstab zu gewährleisten. Ein kurzer Zustrom von Erlebnisereignisdaten kann jedoch zu Leistungseinbußen und Latenzzeiten führen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich.
 
-## Grundlegendes zur Löschlogik bei Aktualisierung eines Identitätsdiagramms bei Kapazität {#deletion-logic}
+## Verstehen der Löschlogik, wenn ein Identitätsdiagramm bei Kapazität aktualisiert wird {#deletion-logic}
 
 Wenn ein vollständiges Identitätsdiagramm aktualisiert wird, löscht Identity Service die älteste Identität im Diagramm, bevor die neueste Identität hinzugefügt wird. Dies dient der Gewährleistung der Genauigkeit und Relevanz von Identitätsdaten. Dieser Löschvorgang folgt zwei Hauptregeln:
 
@@ -86,58 +86,58 @@ Wenn ein vollständiges Diagramm mit einer neuen Identität aktualisiert wird, b
 
 ### Auswirkungen auf die Implementierung
 
-In den folgenden Abschnitten werden die Implikationen erläutert, die die Löschlogik für Identity Service, Echtzeit-Kundenprofil und WebSDK hat.
+In den folgenden Abschnitten werden die Auswirkungen beschrieben, die die Löschlogik auf Identity Service, das Echtzeit-Kundenprofil und WebSDK hat.
 
-#### Identity Service: Änderung des benutzerdefinierten Namespace-Identitätstyps
+#### Identity Service: Änderungen am Identitätstyp des benutzerdefinierten Namespace
 
-Wenden Sie sich an Ihr Adobe-Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält:
+Wenden Sie sich an Ihr Adobe-Konto-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält:
 
-* Ein benutzerdefinierter Namespace, bei dem die Personen-IDs (z. B. CRMIDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.
-* Ein benutzerdefinierter Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.
+* Ein benutzerdefinierter Namespace, in dem die Personen-IDs (z. B. CRMIDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.
+* Ein benutzerdefinierter Namespace, in dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.
 
-Sobald diese Funktion verfügbar ist, werden Diagramme, die die Grenze von 50 Identitäten überschreiten, auf bis zu 50 Identitäten reduziert. Bei Real-Time CDP B2C Edition konnte dies zu einem minimalen Anstieg der Anzahl der Profile führen, die sich für eine Zielgruppe qualifizieren, da diese Profile zuvor in Segmentierung und Aktivierung ignoriert wurden.
+Sobald diese Funktion verfügbar ist, werden Diagramme, die die Beschränkung von 50 Identitäten überschreiten, auf bis zu 50 Identitäten reduziert. Für Real-Time CDP B2C Edition konnte dies zu einem minimalen Anstieg der Anzahl der Profile führen, die sich für eine Zielgruppe qualifizieren, da diese Profile zuvor von der Segmentierung und Aktivierung ignoriert wurden.
 
-#### Echtzeit-Kundenprofil: Auswirkung auf adressierbare Zielgruppen
+#### Echtzeit-Kundenprofil: Auswirkungen auf adressierbare Zielgruppen
 
-Das Löschen erfolgt nur für Daten im Identity Service, nicht aber für Echtzeit-Kundenprofile.
+Daten werden nur im Identity Service gelöscht, nicht jedoch im Echtzeit-Kundenprofil.
 
-* Dieses Verhalten könnte folglich mehr Profile mit einer einzigen ECID erstellen, da die ECID nicht mehr Teil des Identitätsdiagramms ist.
-* Damit Sie innerhalb Ihrer adressierbaren Berechtigungsnummern der Zielgruppe bleiben, wird empfohlen, den [pseudonymen Profildaten-Ablauf](../profile/pseudonymous-profiles.md) zu aktivieren, um Ihre alten Profile zu löschen.
+* Dieses Verhalten könnte daher mehr Profile mit einer einzelnen ECID erstellen, da die ECID nicht mehr Teil des Identitätsdiagramms ist.
+* Damit Sie innerhalb Ihrer adressierbaren Zielgruppen-Berechtigungsnummern bleiben, wird empfohlen, Ablauf von [pseudonymen Profildaten“ zu aktivieren](../profile/pseudonymous-profiles.md) um Ihre alten Profile zu löschen.
 
-#### Echtzeit-Kundenprofil und WebSDK: Primäres Löschen von Identitäten
+#### Echtzeit-Kundenprofil und WebSDK: Primäre Identitätslöschung
 
-Wenn Sie Ihre authentifizierten Ereignisse gegenüber der CRMID beibehalten möchten, sollten Sie Ihre primären IDs von ECID in CRMID ändern. In den folgenden Dokumenten finden Sie Anweisungen zur Implementierung dieser Änderung:
+Wenn Sie Ihre authentifizierten Ereignisse gegen die CRMID beibehalten möchten, wird empfohlen, Ihre primären IDs von ECID zu CRMID zu ändern. Anweisungen zum Implementieren dieser Änderung finden Sie in den folgenden Dokumenten:
 
-* [Identitätszuordnung für Experience Platform-Tags konfigurieren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identitätsdaten im Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Konfigurieren der Identitätszuordnung für das Experience Platform von Tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Identitätsdaten in der Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Beispielszenarien
 
-#### Beispiel 1: typisches großes Diagramm
+#### Beispiel 1: Typisch großes Diagramm
 
-*Diagrammnotizen:*
+*Diagrammhinweise:*
 
-* `t` = Zeitstempel
-* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` steht für die erste verknüpfte Identität (alt) und `t51` für die neueste verknüpfte Identität.
+* `t` = Zeitstempel.
+* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispielsweise stellt `t1` die erste verknüpfte Identität (älteste) dar und `t51` die neueste verknüpfte Identität.
 
 In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit dem ältesten Zeitstempel, bevor das Diagramm auf der linken Seite mit einer neuen Identität aktualisiert werden kann. Da die älteste Identität jedoch eine Geräte-ID ist, überspringt Identity Service diese Identität, bis er zum Namespace mit einem Typ gelangt, der höher in der Liste mit Löschprioritäten ist, was in diesem Fall `ecid-3` ist. Sobald die älteste Identität mit einer höheren Löschpriorität entfernt wurde, wird das Diagramm mit einer neuen Verknüpfung, `ecid-51`, aktualisiert.
 
-* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führt das Löschen durch.
+* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs nach [XID](./api/list-native-id.md) und führt den Löschvorgang durch.
 
 ![Ein Beispiel für die älteste Identität, die gelöscht wird, um die neueste Identität aufzunehmen](./images/graph-limits-v3.png)
 
-#### Beispiel 2: &quot;Diagrammaufteilung&quot;
+#### Beispiel 2: „Graph split“
 
 >[!BEGINTABS]
 
 >[!TAB Eingehendes Ereignis]
 
-*Diagrammnotizen:*
+*Diagrammhinweise:*
 
-* Das folgende Diagramm geht davon aus, dass bei `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
-* `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
+* Im folgenden Diagramm wird davon ausgegangen, dass `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
+* `(...)` gibt die anderen Identitäten an, die bereits innerhalb des Diagramms verknüpft sind.
 
-In diesem Beispiel wird ECID:32110 erfasst und mit einem großen Diagramm bei `timestamp=51` verknüpft, wodurch die Grenze von 50 Identitäten überschritten wird.
+In diesem Beispiel wird ECID:32110 aufgenommen und mit einem großen Diagramm bei `timestamp=51` verknüpft, wodurch die Beschränkung von 50 Identitäten überschritten wird.
 
 ![](./images/guardrails/before-split.png)
 
@@ -149,35 +149,35 @@ Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel
 
 >[!TAB Diagrammausgabe]
 
-Infolge des Löschens von ECID:35577 werden die Kanten, die CRMID:60013 und CRMID:25212 mit der inzwischen gelöschten ECID:35577 verknüpft haben, ebenfalls gelöscht. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
+Durch das Löschen von ECID:35577 werden auch die Edges gelöscht, die CRMID:60013 und CRMID:25212 mit der jetzt gelöschten ECID:35577 verknüpft haben. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
 
 ![](./images/guardrails/after-split.png)
 
 >[!ENDTABS]
 
-#### Beispiel 3: &quot;Hub-and-Spoke&quot;
+#### Beispiel 3: „Hub-and-Spoke“
 
 >[!BEGINTABS]
 
 >[!TAB Eingehendes Ereignis]
 
-*Diagrammnotizen:*
+*Diagrammhinweise:*
 
-* Das folgende Diagramm geht davon aus, dass bei `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
-* `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
+* Im folgenden Diagramm wird davon ausgegangen, dass `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
+* `(...)` gibt die anderen Identitäten an, die bereits innerhalb des Diagramms verknüpft sind.
 
-Aufgrund der Löschlogik können auch einige &quot;Hub&quot;-Identitäten gelöscht werden. Diese Hub-Identitäten beziehen sich auf Knoten, die mit mehreren individuellen Identitäten verknüpft sind, die sonst nicht verknüpft wären.
+Aufgrund der Löschlogik können auch einige „Hub“-Identitäten gelöscht werden. Diese Hub-Identitäten beziehen sich auf Knoten, die mit mehreren individuellen Identitäten verknüpft sind, deren Verknüpfung andernfalls aufgehoben würde.
 
-Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm bei `timestamp=51` verknüpft, wodurch die Grenze von 50 Identitäten überschritten wird.
+Im folgenden Beispiel wird ECID:21011 aufgenommen und mit dem Diagramm unter `timestamp=51` verknüpft, wodurch die Beschränkung von 50 Identitäten überschritten wird.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB Löschvorgang]
 
-Daher löscht Identity Service die älteste Identität nur aus dem Identitätsdiagramm, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
+Daher löscht Identity Service die älteste Identität nur aus dem Identitätsdiagramm, in diesem Fall ECID:35577. Das Löschen von ECID:35577 führt auch zum Löschen der folgenden Elemente:
 
-* Die Verknüpfung zwischen CRMID: 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
-* IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, dargestellt durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
+* Die Verknüpfung zwischen CRMID: 60013 und der jetzt gelöschten ECID:35577, was zu einem Szenario mit einer Diagrammaufspaltung führt.
+* IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, die von `(...)` repräsentiert werden. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
@@ -196,10 +196,10 @@ Weitere Informationen über [!DNL Identity Service] finden Sie in der folgenden 
 * [[!DNL Identity Service] – Übersicht](home.md)
 * [Identitätsdiagramm-Viewer](features/identity-graph-viewer.md)
 
-Weitere Informationen zu anderen Limits für Experience Platform-Services, End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP Product Description-Dokumenten finden Sie in der folgenden Dokumentation:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
 
-* [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
-* [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

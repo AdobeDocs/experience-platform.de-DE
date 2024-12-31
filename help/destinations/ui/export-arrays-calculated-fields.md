@@ -1,7 +1,7 @@
 ---
 title: Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenfolgen
 type: Tutorial
-description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays aus Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
+description: Erfahren Sie, wie Sie berechnete Felder verwenden, um Arrays von Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
@@ -21,13 +21,13 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Exportieren von Arrays über berechnete Felder ist allgemein verfügbar.
+>Die Funktion zum Exportieren von Arrays über berechnete Felder ist im Allgemeinen verfügbar.
 
-Erfahren Sie, wie Sie Arrays über berechnete Felder aus Real-Time CDP als Zeichenfolgen in [Cloud-Speicher-Ziele](/help/destinations/catalog/cloud-storage/overview.md) exportieren. Lesen Sie dieses Dokument, um die durch diese Funktion aktivierten Anwendungsfälle zu verstehen.
+Erfahren Sie, wie Sie Arrays über berechnete Felder aus Real-Time CDP in [Cloud-Speicherziele](/help/destinations/catalog/cloud-storage/overview.md) als Zeichenfolgen exportieren. Lesen Sie dieses Dokument, um die Anwendungsfälle zu verstehen, die durch diese Funktion aktiviert werden.
 
-Erhalten Sie umfassende Informationen zu berechneten Feldern - was diese sind und warum sie wichtig sind. Auf den unten verlinkten Seiten erhalten Sie eine Einführung in berechnete Felder in der Datenvorbereitung sowie weitere Informationen zu allen verfügbaren Funktionen:
+Hier erhalten Sie ausführliche Informationen über berechnete Felder - was diese sind und warum sie wichtig sind. Lesen Sie die unten verlinkten Seiten, um eine Einführung in berechnete Felder in die Datenvorbereitung und weitere Informationen zu allen verfügbaren Funktionen zu erhalten:
 
-* [Benutzerhandbuch und Übersicht](/help/data-prep/ui/mapping.md#calculated-fields)
+* [Handbuch zur Benutzeroberfläche und Übersicht](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funktionen zur Datenvorbereitung](/help/data-prep/functions.md)
 
 <!--
@@ -40,9 +40,9 @@ Erhalten Sie umfassende Informationen zu berechneten Feldern - was diese sind un
 
 ## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
 
-Unter Experience Platform können Sie [XDM-Schemas](/help/xdm/home.md) verwenden, um verschiedene Feldtypen zu verwalten. Bevor die Unterstützung für Array-Exporte hinzugefügt wurde, konnten Sie einfache Schlüssel-Wert-Paarfelder wie Zeichenfolgen aus dem Experience Platform in Ihre gewünschten Ziele exportieren. Ein Beispiel für ein solches Feld, das zuvor für den Export unterstützt wurde, ist `personalEmail.address`:`johndoe@acme.org`.
+Beim Experience Platform können Sie [XDM-Schemata](/help/xdm/home.md) verwenden, um verschiedene Feldtypen zu verwalten. Bevor die Unterstützung für Array-Exporte hinzugefügt wurde, konnten Sie einfache Schlüssel-Wert-Paarfelder wie Zeichenfolgen aus Experience Platform in Ihre gewünschten Ziele exportieren. Ein Beispiel für ein solches Feld, das zuvor für den Export unterstützt wurde, ist `personalEmail.address`:`johndoe@acme.org`.
 
-Andere Feldtypen im Experience Platform umfassen Array-Felder. Erfahren Sie mehr über [Verwalten von Array-Feldern in der Experience Platform-Benutzeroberfläche](/help/xdm/ui/fields/array.md). Zusätzlich zu den zuvor unterstützten Feldtypen können Sie jetzt Array-Objekte wie das folgende Beispiel exportieren, die mithilfe der Funktion `array_to_string` in eine Zeichenfolge verkettet werden.
+Andere Feldtypen in Experience Platform umfassen Array-Felder. Lesen Sie mehr über [Verwalten von Array-Feldern in der Experience Platform-Benutzeroberfläche](/help/xdm/ui/fields/array.md). Zusätzlich zu den zuvor unterstützten Feldtypen können Sie jetzt Array-Objekte wie das folgende Beispiel exportieren, die mithilfe der `array_to_string`-Funktion zu einer Zeichenfolge verkettet werden.
 
 ```
 organizations = [{
@@ -63,17 +63,17 @@ organizations = [{
 }]
 ```
 
-Weitere Informationen dazu, wie Sie mit verschiedenen Funktionen auf Elemente von Arrays zugreifen, Arrays umwandeln und filtern, Array-Elemente in eine Zeichenfolge einbinden und vieles mehr, finden Sie unter [umfassende Beispiele](#examples) .
+Siehe weiter unten [ausführliche Beispiele](#examples) wie Sie verschiedene Funktionen verwenden können, um auf Elemente von Arrays zuzugreifen, Arrays umzuwandeln und zu filtern, Array-Elemente in eine Zeichenfolge zu verknüpfen und vieles mehr.
 
 ## Bekannte Einschränkungen {#known-limitations}
 
 Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Funktion gelten:
 
-* Der Export in JSON- oder Parquet-Dateien *mit hierarchischen Schemas* wird derzeit nicht unterstützt. Mithilfe der Funktion `array_to_string` können Sie Arrays in CSV-, JSON- und Parquet-Dateien *nur als Zeichenfolgen exportieren*.
+* Der Export in JSON- oder Parquet *Dateien mit hierarchischen* wird derzeit nicht unterstützt. Sie können Arrays in CSV-, JSON- und Parquet *Dateien (nur als Zeichenfolgen) exportieren* indem Sie die Funktion `array_to_string` verwenden.
 
 ## Voraussetzungen {#prerequisites}
 
-[ Verbinden Sie](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel, gehen Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gehen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) .
+[Verbinden](/help/destinations/ui/connect-destination.md) mit dem gewünschten Cloud-Speicher-Ziel, schreiten Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Exportieren berechneter Felder {#how-to-export-calculated-fields}
 
@@ -89,35 +89,35 @@ Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Fu
 
 Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
-![Fügen Sie ein berechnetes Feld hinzu, das im Zuordnungsschritt des Batch-Aktivierungsarbeitsablaufs hervorgehoben ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Berechnetes Feld hinzufügen, das im Zuordnungsschritt des Batch-Aktivierungs-Workflows hervorgehoben ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Dadurch wird ein modales Fenster geöffnet, in dem Sie Funktionen und Felder auswählen können, um Attribute aus der Experience Platform zu exportieren.
+Dadurch wird ein modales Fenster geöffnet, in dem Sie Funktionen und Felder auswählen können, um Attribute aus dem Experience Platform zu exportieren.
 
-![Modales Fenster der Funktion des berechneten Felds, für das noch keine Funktion ausgewählt wurde.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Modales Fenster der berechneten Feldfunktionalität, bei dem noch keine Funktion ausgewählt ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-Verwenden Sie beispielsweise die Funktion `array_to_string` im Feld `organizations` , wie unten dargestellt, um das Organisations-Array als Zeichenfolge in eine CSV-Datei zu exportieren. Weitere Informationen dazu und weitere Beispiele finden Sie weiter unten unter ](#array-to-string-function-export-arrays).[
+Verwenden Sie beispielsweise die Funktion `array_to_string` im Feld `organizations` wie unten gezeigt, um das Organisations-Array als Zeichenfolge in eine CSV-Datei zu exportieren. Sehen Sie [weitere Informationen hierzu und weitere Beispiele weiter unten](#array-to-string-function-export-arrays).
 
-![Modales Fenster der Funktion des berechneten Felds mit ausgewählter Funktion &quot;Array-zu-String&quot;.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Modales Fenster der berechneten Feldfunktionalität mit ausgewählter Array-zu-String-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Wählen Sie **[!UICONTROL Speichern]** aus, um das berechnete Feld beizubehalten und zum Zuordnungsschritt zurückzukehren.
 
-![Modales Fenster der Funktionalität des berechneten Felds, wobei die Funktion &quot;Array-zu-String&quot;ausgewählt und das Steuerelement &quot;Speichern&quot;hervorgehoben ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Modales Fenster der berechneten Feldfunktion mit ausgewählter Array-zu-String-Funktion und hervorgehobenem Steuerelement „Speichern“.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-Füllen Sie im Zuordnungsschritt des Workflows das Feld **[!UICONTROL Ziel]** mit dem Wert der Spaltenüberschrift aus, die Sie für dieses Feld in den exportierten Dateien verwenden möchten.
+Füllen Sie im Zuordnungsschritt des Workflows das Feld **[!UICONTROL Zielfeld]** mit dem Wert der Spaltenüberschrift aus, die Sie für dieses Feld in den exportierten Dateien anzeigen möchten.
 
 ![Zuordnungsschritt mit hervorgehobenem Zielfeld.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
-![Zielfeld auswählen 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+![Zielfeld 2 auswählen](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Wenn Sie bereit sind, wählen Sie **[!UICONTROL Weiter]** aus, um mit dem nächsten Schritt des Aktivierungs-Workflows fortzufahren.
+Wenn Sie bereit sind **[!UICONTROL wählen Sie]** Weiter) aus, um mit dem nächsten Schritt des Aktivierungs-Workflows fortzufahren.
 
-![Zuordnungsschritt mit markiertem Zielfeld und ausgefülltem Zielwert.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Zuordnungsschritt mit hervorgehobenem Zielfeld und ausgefülltem Zielwert.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Beispielunterstützte Funktionen zum Exportieren von Arrays {#supported-functions}
+## Beispiele für unterstützte Funktionen zum Exportieren von Arrays {#supported-functions}
 
-Bei der Aktivierung von Daten für dateibasierte Ziele werden alle dokumentierten [Datenvorbereitungsfunktionen](/help/data-prep/functions.md) unterstützt.
+Alle dokumentierten [Datenvorbereitungsfunktionen](/help/data-prep/functions.md) werden beim Aktivieren von Daten für dateibasierte Ziele unterstützt.
 
-Die folgenden Funktionen, die speziell für die Verarbeitung von Arrays-Exporten gelten, werden zusammen mit Beispielen dokumentiert.
+Die folgenden Funktionen, die speziell für die Handhabung von Arrays gelten, werden zusammen mit Beispielen dokumentiert.
 
 * `array_to_string`
 * `flattenArray`
@@ -134,124 +134,124 @@ Die folgenden Funktionen, die speziell für die Verarbeitung von Arrays-Exporten
 
 ## Beispiele für Funktionen zum Exportieren von Arrays {#examples}
 
-In den folgenden Abschnitten finden Sie Beispiele und weitere Informationen zu einigen der oben aufgeführten Funktionen. Die übrigen aufgelisteten Funktionen finden Sie in der Dokumentation zu den allgemeinen Funktionen im Abschnitt &quot;Datenvorbereitung&quot;](/help/data-prep/functions.md).[
+In den folgenden Abschnitten finden Sie Beispiele und weitere Informationen zu einigen der oben aufgeführten Funktionen. Die übrigen aufgelisteten Funktionen finden Sie in der [Dokumentation zu allgemeinen Funktionen im Abschnitt Datenvorbereitung](/help/data-prep/functions.md).
 
-### `array_to_string` -Funktion zum Exportieren von Arrays {#array-to-string-function-export-arrays}
+### `array_to_string` Funktion zum Exportieren von Arrays {#array-to-string-function-export-arrays}
 
-Verwenden Sie die Funktion `array_to_string` , um die Elemente eines Arrays mithilfe eines gewünschten Trennzeichens wie `_` oder `|` in eine Zeichenfolge zu verketten.
+Verwenden Sie die Funktion `array_to_string` , um die Elemente eines Arrays mithilfe eines gewünschten Trennzeichens wie `_` oder `|` zu einer Zeichenfolge zu verketten.
 
-Sie können beispielsweise die folgenden XDM-Felder wie im Screenshot der Zuordnung gezeigt mit einer `array_to_string('_',organizations)` -Syntax kombinieren:
+Sie können beispielsweise die folgenden XDM-Felder wie im Screenshot zur Zuordnung gezeigt unter Verwendung einer `array_to_string('_',organizations)` Syntax kombinieren:
 
-* `organizations` Array
-* `person.name.firstName` Zeichenfolge
-* `person.name.lastName` Zeichenfolge
-* `personalEmail.address` Zeichenfolge
+* `organizations`
+* `person.name.firstName`
+* `person.name.lastName`
+* `personalEmail.address`
 
-![Zuordnungsbeispiel, einschließlich der Funktion array_to_string .](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
+![Zuordnungsbeispiel mit der Funktion array_to_string.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die Elemente des Arrays mithilfe des Zeichens `_` in eine einzelne Zeichenfolge verkettet werden.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die Elemente des Arrays mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden.
 
 ```
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `filterArray` -Funktion zum Exportieren gefilterter Arrays
+### `filterArray` Funktion zum Exportieren gefilterter Arrays
 
-Verwenden Sie die Funktion `filterArray` , um die Elemente eines exportierten Arrays zu filtern. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
+Verwenden Sie die Funktion `filterArray` zum Filtern der Elemente eines exportierten Arrays. Sie können diese Funktion mit der weiter oben beschriebenen `array_to_string` kombinieren.
 
-Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))` schreiben und die Organisationen mit einem Wert für `founded` im Jahr 2021 oder höher zurückgeben.
+Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))` schreiben, wodurch die Organisationen mit einem Wert für `founded` im Jahr 2021 oder neuer zurückgegeben werden.
 
-![Beispiel der Funktion &quot;filterArray&quot;.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+![Beispiel für die filterArray-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die beiden Elemente des Arrays, die die Bedingung erfüllen, mithilfe des Zeichens `_` in einer einzelnen Zeichenfolge verkettet werden.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die beiden Elemente des Arrays, die das Kriterium erfüllen, mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden.
 
 ```
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `transformArray` -Funktion zum Exportieren transformierter Arrays
+### `transformArray` Funktion zum Exportieren transformierter Arrays
 
-Verwenden Sie die Funktion `transformArray` , um die Elemente eines exportierten Arrays zu transformieren. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
+Verwenden Sie die Funktion `transformArray` , um die Elemente eines exportierten Arrays zu transformieren. Sie können diese Funktion mit der weiter oben beschriebenen `array_to_string` kombinieren.
 
-Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))` schreiben und die Namen der Organisationen zurückgeben, die in Großbuchstaben konvertiert wurden.
+Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))` schreiben und die Namen der in Großbuchstaben konvertierten Organisationen zurückgeben.
 
-![Beispiel der transformArray-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+![Beispiel für die Funktion „transformArray“](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die drei Elemente des Arrays transformiert und mit dem Zeichen `_` in eine einzelne Zeichenfolge verkettet werden.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die drei Elemente des Arrays mithilfe des `_`-Zeichens transformiert und in eine einzelne Zeichenfolge verkettet werden.
 
 ```
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
-### `iif` -Funktion zum Exportieren von Arrays {#iif-function-export-arrays}
+### `iif` Funktion zum Exportieren von Arrays {#iif-function-export-arrays}
 
-Verwenden Sie die Funktion `iif` , um Elemente eines Arrays unter bestimmten Bedingungen zu exportieren. Wenn Sie beispielsweise mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine einfache bedingte Funktion wie `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")` schreiben.
+Verwenden Sie die Funktion `iif` , um Elemente eines Arrays unter bestimmten Bedingungen zu exportieren. Wenn Sie beispielsweise von oben mit dem `organizations` Array-Objekt fortfahren, können Sie eine einfache bedingte Funktion wie `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")` schreiben.
 
-![Zuordnungsbeispiel, einschließlich der if-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Zuordnungsbeispiel mit der iif-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. In diesem Fall ist das erste Element des Arrays Marketing, sodass die Person Mitglied der Marketing-Abteilung ist.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: In diesem Fall ist das erste Element des Arrays Marketing , sodass die Person Mitglied der Marketing-Abteilung ist.
 
 ```
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
-### `add_to_array` -Funktion zum Exportieren von Arrays {#add-to-array-function-export-arrays}
+### `add_to_array` Funktion zum Exportieren von Arrays {#add-to-array-function-export-arrays}
 
-Verwenden Sie die Funktion `add_to_array` , um einem exportierten Array Elemente hinzuzufügen. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
+Verwenden Sie die Funktion `add_to_array` , um einem exportierten Array Elemente hinzuzufügen. Sie können diese Funktion mit der weiter oben beschriebenen `array_to_string` kombinieren.
 
-Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `source: array_to_string('_', add_to_array(organizations,"2023"))` schreiben und die Organisationen zurückgeben, zu denen eine Person im Jahr 2023 gehört.
+Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie eine Funktion wie `source: array_to_string('_', add_to_array(organizations,"2023"))` schreiben und die Organisationen zurückgeben, denen eine Person im Jahr 2023 angehört.
 
-![Zuordnungsbeispiel, einschließlich der Funktion add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+![Zuordnungsbeispiel einschließlich der Funktion „add_to_array“.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die drei Elemente des Arrays mithilfe des Zeichens `_` in eine einzelne Zeichenfolge verkettet werden und 2023 ebenfalls am Ende der Zeichenfolge angehängt wird.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die drei Elemente des Arrays mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden und 2023 ebenfalls am Ende der Zeichenfolge angehängt wird.
 
 ```
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
 
-### `flattenArray` -Funktion zum Exportieren von reduzierten Arrays
+### `flattenArray` Funktion zum Exportieren von reduzierten Arrays
 
-Verwenden Sie die Funktion `flattenArray` , um ein exportiertes mehrdimensionales Array zu reduzieren. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
+Verwenden Sie die Funktion `flattenArray` , um ein exportiertes multidimensionales Array zu reduzieren. Sie können diese Funktion mit der weiter oben beschriebenen `array_to_string` kombinieren.
 
-Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', flattenArray(organizations))` schreiben. Beachten Sie, dass die Funktion `array_to_string` das Eingabe-Array standardmäßig in eine Zeichenfolge reduziert.
+Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', flattenArray(organizations))` schreiben. Beachten Sie, dass die Funktion `array_to_string` das Eingabe-Array standardmäßig in eine Zeichenfolge reduziert.
 
-Die resultierende Ausgabe entspricht der oben beschriebenen `array_to_string` -Funktion.
+Die resultierende Ausgabe ist die gleiche wie für die weiter oben beschriebene `array_to_string`.
 
-### `coalesce` -Funktion zum Exportieren von Arrays {#coalesce-function-export-arrays}
+### `coalesce` Funktion zum Exportieren von Arrays {#coalesce-function-export-arrays}
 
-Verwenden Sie die Funktion `coalesce` , um auf das erste Element, das nicht null ist, eines Arrays zuzugreifen und es in eine Zeichenfolge zu exportieren.
+Verwenden Sie die Funktion `coalesce` , um auf das erste Element eines Arrays, das nicht null ist, zuzugreifen und es in eine Zeichenfolge zu exportieren.
 
-Sie können beispielsweise die folgenden XDM-Felder wie im Screenshot der Zuordnung gezeigt kombinieren, indem Sie eine `coalesce(subscriptions.hasPromotion)` -Syntax verwenden, um den ersten `true` von `false` -Wert im Array zurückzugeben:
+Sie können beispielsweise die folgenden XDM-Felder kombinieren, wie im Screenshot der Zuordnung gezeigt, indem Sie eine `coalesce(subscriptions.hasPromotion)` Syntax verwenden, um die erste `true` `false` Werts im Array zurückzugeben:
 
-* `"subscriptions.hasPromotion": [null, true, null, false, true]` Array
-* `person.name.firstName` Zeichenfolge
-* `person.name.lastName` Zeichenfolge
-* `personalEmail.address` Zeichenfolge
+* `"subscriptions.hasPromotion": [null, true, null, false, true]`
+* `person.name.firstName`
+* `person.name.lastName`
+* `personalEmail.address`
 
-![Zuordnungsbeispiel, einschließlich der Koalesce-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Zuordnungsbeispiel mit der Zusammenführungsfunktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie der erste Wert, der nicht null ist, im Array in die Datei exportiert wird.`true`
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie der erste `true` ungleich null im -Array in die Datei exportiert wird.
 
 ```
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
 
-### `size_of` -Funktion zum Exportieren von Arrays {#sizeof-function-export-arrays}
+### `size_of` Funktion zum Exportieren von Arrays {#sizeof-function-export-arrays}
 
-Verwenden Sie die Funktion `size_of` , um anzugeben, wie viele Elemente in einem Array vorhanden sind. Wenn Sie beispielsweise über ein Array-Objekt `purchaseTime` mit mehreren Zeitstempeln verfügen, können Sie mit der Funktion `size_of` angeben, wie viele separate Käufe von einer Person getätigt wurden.
+Verwenden Sie die Funktion `size_of` , um anzugeben, wie viele Elemente in einem Array vorhanden sind. Wenn Sie beispielsweise über ein `purchaseTime` Array-Objekt mit mehreren Zeitstempeln verfügen, können Sie die `size_of`-Funktion verwenden, um anzugeben, wie viele separate Käufe von einer Person getätigt wurden.
 
-Sie können beispielsweise die folgenden XDM-Felder wie im Screenshot der Zuordnung gezeigt kombinieren.
+Sie können beispielsweise die folgenden XDM-Felder unten kombinieren, wie im Screenshot zur Zuordnung dargestellt.
 
-* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` Array, das fünf separate Kaufzeiten durch den Kunden angibt
-* `personalEmail.address` Zeichenfolge
+* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` Array, das fünf separate Kaufzeiten des Kunden angibt
+* `personalEmail.address`
 
-![Zuordnungsbeispiel, einschließlich der size_of-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Zuordnungsbeispiel mit der Funktion size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die zweite Spalte die Anzahl der Elemente im Array anzeigt, die der Anzahl der separaten Käufe des Kunden entsprechen.
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, dass in der zweiten Spalte die Anzahl der Elemente im Array angegeben ist, die der Anzahl der separaten Käufe entspricht, die vom Kunden getätigt wurden.
 
 ```
 `Personal_Email,Times_Purchased
@@ -260,24 +260,24 @@ johndoe@acme.org,"5"
 
 ### Indexbasierter Array-Zugriff {#index-based-array-access}
 
-Sie können auf einen Index eines Arrays zugreifen, um ein einzelnes Element aus dem Array zu exportieren. Beispiel: Wenn Sie wie im obigen Beispiel für die Funktion `size_of` nur beim ersten Kauf eines bestimmten Produkts auf ein bestimmtes Produkt zugreifen und es exportieren möchten, können Sie mit `purchaseTime[0]` das erste Element des Zeitstempels exportieren, mit `purchaseTime[1]` das zweite Element des Zeitstempels exportieren, mit `purchaseTime[2]` das dritte Element des Zeitstempels exportieren usw.
+Sie können auf einen Index eines Arrays zugreifen, um ein einzelnes Element aus dem Array zu exportieren. Beispiel: Wenn Sie ähnlich wie im obigen Beispiel für die Funktion `size_of` nur beim ersten Kauf eines bestimmten Produkts auf zugreifen und es exportieren möchten, können Sie `purchaseTime[0]` verwenden, um das erste Element des Zeitstempels zu exportieren, `purchaseTime[1]` das zweite Element des Zeitstempels zu exportieren, `purchaseTime[2]` das dritte Element des Zeitstempels zu exportieren usw.
 
-![Zuordnungsbeispiel, das zeigt, wie auf ein Element eines Arrays zugegriffen werden kann.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Zuordnungsbeispiel, das zeigt, wie der Zugriff auf ein Element eines Arrays möglich ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert den Kunden zum ersten Mal, wenn er einen Kauf tätigt:
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert das erste Mal, dass der Kunde einen Kauf getätigt hat:
 
 ```
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
 
-### Funktionen `first` und `last` zum Exportieren von Arrays {#first-and-last-functions-export-arrays}
+### `first` und `last` Funktionen zum Exportieren von Arrays {#first-and-last-functions-export-arrays}
 
-Verwenden Sie die Funktionen `first` und `last` , um das erste oder letzte Element in ein Array zu exportieren. Wenn Sie beispielsweise mit dem Array-Objekt `purchaseTime` mit mehreren Zeitstempeln aus den vorherigen Beispielen fortfahren, können Sie diese verwenden, um Funktionen zum Exportieren der ersten oder letzten von einer Person getätigten Kaufzeit zu verwenden.
+Verwenden Sie die Funktionen `first` und `last` zum Exportieren des ersten oder letzten Elements in einem Array. Wenn Sie beispielsweise mit dem `purchaseTime` Array-Objekt mit mehreren Zeitstempeln aus den vorherigen Beispielen fortfahren, können Sie diese Funktionen verwenden, um die erste oder letzte von einer Person getätigte Kaufzeit zu exportieren.
 
-![Zuordnungsbeispiel, einschließlich der ersten und letzten Funktionen.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Zuordnungsbeispiel mit den ersten und letzten Funktionen.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert das erste und letzte Mal, dass der Kunde einen Kauf tätigt:
+In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert das erste und letzte Mal, dass der Kunde einen Kauf getätigt hat:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase

@@ -1,7 +1,7 @@
 ---
-keywords: Sprachziele; Sprachziele
+keywords: Sprachziele;Sprachziele
 title: Sprache der Kundenziele – Übersicht
-description: Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen gerecht werden.
+description: Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chatunterhaltungen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website an ihre Anforderungen anpassen können.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
 source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 31%
 
 ## Übersicht
 
-Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen gerecht werden.
+Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chatunterhaltungen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website an ihre Anforderungen anpassen können.
 
 ## Unterstützte Sprache der Kundenziele {#supported-destinations}
 
-Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Voice of the Customer-Ziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt Adobe Experience Platform die Sprache der unten aufgeführten Kundenziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 ### Verbindungen {#connections}
 

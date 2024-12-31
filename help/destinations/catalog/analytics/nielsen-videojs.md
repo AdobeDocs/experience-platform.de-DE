@@ -1,7 +1,7 @@
 ---
-keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen videojs player;Nielsen;Nielsen;Nielsen videojs player;Nielsen Digital SDK;Nielsen Digital SDK
+keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen videojs player;Nielsen;nielsen;nielsen videojs player;Nielsen digital SDK;nielsen digital sdk
 title: Nielsen VideoJS Player Handler-Erweiterung
-description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 91%
 
 ## Übersicht {#overview}
 
-Die Tag-Erweiterung [!DNL Nielsen Digital SDK] bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
+[!DNL Nielsen Digital SDK] Tag-Erweiterung bietet Zielgruppenmessung über die folgenden digitalen Messprodukte:
 
 DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen Inhalten einschließlich Inhalten mit Anzeigen ermöglicht; erlaubt eine umfassende Ansicht des Verbrauchs an digitalen Inhalten von Desktop-, Mobil-, Tablet- und vernetzten Geräten in Zielgruppen.
 

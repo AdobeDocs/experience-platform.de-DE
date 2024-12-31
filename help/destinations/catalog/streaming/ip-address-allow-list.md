@@ -1,8 +1,8 @@
 ---
-keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste-Ziel, Streaming-Ziele für Zulassungslisten
+keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste auf die Zulassungsliste setzte, Streaming-Ziele
 title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
-description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP REST API-Endpunkt, Amazon Kinesis oder Azure Event Hub-Instanz zu exportieren.
+description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten von Experience Platform sicher in Ihren HTTP-REST-API-Endpunkt, Amazon Kinesis oder Ihre Azure Event Hubs-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut zu besuchen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
+> * Adobe empfiehlt, ein Lesezeichen für diese Seite zu setzen und sie alle drei Monate erneut aufzurufen, um nach den neuesten IP-Adressen zu suchen. Adobe bietet keine Benachrichtigung über neue IP-Bereiche.
 > * Die Liste der hier dokumentierten IPs *gilt nicht* für Ziele, die Sie mit [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) erstellen.
 
 ## Übersicht {#overview}
@@ -26,15 +26,15 @@ Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Ausgehender Traffic von Experience Platform zu diesen Zielen durchläuft immer die auf dieser Seite aufgelisteten IPs.
+Ausgehender Traffic von Experience Platform an diese Ziele durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
-Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis]- oder [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Unternehmens-Sicherheits- und Compliance-Standards eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
+Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten von Experience Platform sicher in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis] oder Ihre [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Sicherheits- und Compliance-Standards des Unternehmens eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
 
-Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
+Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen.
 
-Adobe empfiehlt, dass Sie die folgenden IP-Bereiche zu einer Zulassungsliste hinzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung dieser Streaming-Ziele zu Fehlern oder Leistungseinbußen führen.
+Adobe auf die Zulassungsliste setzen empfiehlt, die folgenden IP-Bereiche zu einer -Seite hinzuzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies zu Fehlern oder Leistungseinbußen bei der Verwendung dieser Streaming-Ziele führen.
 
-## VA7: Kunden in den USA und Amerika {#us-americas}
+## VA7: Kunden aus den USA und Amerika {#us-americas}
 
 `20.186.185.239`
 `40.70.154.136/29`

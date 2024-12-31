@@ -1,7 +1,7 @@
 ---
-keywords: SessionCam;SessionCam;sessioncam
+keywords: SessionCam;Sitzungscam;sessionCam
 title: SessionCam-Erweiterung
-description: Die SessionCam-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die SessionCam-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 67d7b206-d6ed-47f5-9c04-67562ccd1644
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 92%
 
 ## Übersicht {#overview}
 
-[!DNL SessionCam] bietet eine wichtige Suite von Tools, die das Benutzerverhalten aufzeigen und Ihnen die wichtigsten zu behebenden Probleme zeigen.
+[!DNL SessionCam] bietet eine Reihe grundlegender Tools, die das Benutzerverhalten anzeigen und die wichtigsten zu behebenden Probleme aufzeigen.
 
 [!DNL SessionCam] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
 

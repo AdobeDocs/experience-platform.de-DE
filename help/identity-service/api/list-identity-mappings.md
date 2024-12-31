@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; identity; Identity
+keywords: Experience Platform;Startseite;beliebte Themen;Identität;Identität
 solution: Experience Platform
 title: Auflisten von Identitätszuordnungen
 description: Eine Zuordnung (ein Mapping) ist eine Sammlung aller Identitäten in einem Cluster für einen bestimmten Namespace.
@@ -67,7 +67,7 @@ Verwenden Sie die `POST`-Methode als Batch-Äquivalent zu der oben beschriebenen
 
 >[!NOTE]
 >
->Die Anfrage sollte maximal 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
+>Die Anfrage sollte höchstens 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 

@@ -1,5 +1,5 @@
 ---
-keywords: D&B Visitor Intelligence;D&B;Besucher Intelligence-Erweiterung
+keywords: D&B Visitor Intelligence;D&B;Erweiterung „Visitor Intelligence“
 title: D&B Visitor Intelligence-Erweiterung
 description: Die D&B Visitor Intelligence-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: e06833d9-51d7-4b0c-a9ce-28e0fadc2b62

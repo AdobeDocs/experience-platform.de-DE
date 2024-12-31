@@ -1,7 +1,7 @@
 ---
-keywords: Talk URL Inbox; Talk URL Inbox; Talk URL Inbox; Talk URL Inbox; Talk URL Inbox; Talk URL; Talk URL
+keywords: Talk URL Inbox;Talk URL Inbox;Talk URL Inbox;Talk URL Inbox;Talk URL;Talk URL;Talk URL;Talk URL
 title: Talk URL Inbox-Erweiterung
-description: Die Talk URL Inbox-Erweiterung ist eine Sprachausgabe des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Talk URL Inbox-Erweiterung ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 81%
 
 # [!DNL Talk URL Inbox]-Erweiterung {#talk-url-extension}
 
-Erhalten Sie Sprachnachrichten von den Besuchern Ihrer Webseite. Enthält gehostete Benutzeroberfläche und Cloud-basiertes maschinelles Lernen, um Ihre Sprachnachrichten sofort in Textinsights zu transkribieren.
+Empfangen Sie Sprachnachrichten von Ihren Web-Seitenbesuchern. Umfasst gehostete Benutzeroberfläche und Cloud-basiertes maschinelles Lernen, um Ihre Sprachnachrichten sofort in Texteinblicke zu transkribieren.
 
 [!DNL Talk URL Inbox] ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
@@ -40,7 +40,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Talk URL Inbox auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite [Talk URL Inbox on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

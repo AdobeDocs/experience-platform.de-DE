@@ -25,17 +25,17 @@ Um Profildaten an HTTP-Endpunkte zu senden, müssen Sie in [!DNL Adobe Experienc
 
 ## Anwendungsbeispiele {#use-cases}
 
-Mit dem HTTP-API-Ziel können Sie XDM-Profildaten und -Zielgruppen in allgemeine HTTP-Endpunkte exportieren. Dort können Sie Ihre eigenen Analysen oder beliebige andere Vorgänge ausführen, die Sie für aus Experience Platform exportierte Profildaten benötigen.
+Mit dem HTTP-API-Ziel können Sie XDM-Profildaten und -Zielgruppen in generische HTTP-Endpunkte exportieren. Dort können Sie Ihre eigenen Analysen oder beliebige andere Vorgänge ausführen, die Sie für aus Experience Platform exportierte Profildaten benötigen.
 
 HTTP-Endpunkte können entweder eigene Systeme von Kunden oder Lösungen von Drittanbietern sein.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
 
-| Audience Origin | Unterstützt | Beschreibung |
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -63,25 +63,25 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 >
 > Sie können auch das [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) verwenden, um eine Integration einzurichten und Profildaten von Experience Platform an einen HTTP-Endpunkt zu senden.
 
-## mTLS-Protokollunterstützung und -Zertifikat {#mtls-protocol-support}
+## Unterstützung und Zertifikat des mTLS-Protokolls {#mtls-protocol-support}
 
-Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) verwenden, um eine höhere Sicherheit bei ausgehenden Verbindungen zu Ihren HTTP-API-Zielverbindungen sicherzustellen.
+Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) verwenden, um erweiterte Sicherheit bei ausgehenden Verbindungen zu Ihren HTTP-API-Zielverbindungen zu gewährleisten.
 
-[!DNL mTLS] ist eine durchgängige Sicherheitsmethode für die gegenseitige Authentifizierung, mit der sichergestellt wird, dass beide Parteien, die Informationen teilen, die sind, die sie angeblich sind, bevor Daten freigegeben werden. [!DNL mTLS] enthält einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], bei dem der Server auch nach dem Zertifikat des Clients fragt und es an dessen Ende überprüft.
+[!DNL mTLS] ist eine End-to-End-Sicherheitsmethode für die gegenseitige Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen austauschen, vor der Datenfreigabe diejenigen sind, für die sie sich ausgeben. [!DNL mTLS] umfasst einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], bei dem der Server auch nach dem Zertifikat des Clients fragt und es an seinem Ende überprüft.
 
-Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] -Zielen verwenden möchten, muss für die Serveradresse, die Sie auf der Seite [Zieldetails](#destination-details) eingegeben haben, [!DNL TLS] Protokolle deaktiviert und nur [!DNL mTLS] aktiviert sein. Wenn das Protokoll [!DNL TLS] 1.2 noch am -Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Damit Sie [!DNL mTLS] mit Ihrem [!DNL HTTP API]-Ziel verwenden können, muss Ihr &quot;Empfangs&quot;-Server-Endpunkt ein nur [!DNL mTLS] aktivierter Verbindungsendpunkt sein.
+Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für die Server-Adresse, die Sie auf der Seite [Zieldetails](#destination-details) eingeben, [!DNL TLS] Protokolle deaktiviert und nur aktiviert [!DNL mTLS]. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL mTLS] mit Ihrem [!DNL HTTP API]-Ziel verwenden zu können.
 
 ### Zertifikat herunterladen {#certificate}
 
-Wenn Sie die Werte [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) überprüfen möchten, um eine zusätzliche Validierung von Drittanbietern durchzuführen, können Sie das folgende Zertifikat herunterladen:
+Wenn Sie die [!DNL Common Name] (CN) und das [!DNL Subject Alternative Names] (SAN) überprüfen möchten, um eine zusätzliche Validierung durch Dritte durchzuführen, können Sie das folgende Zertifikat herunterladen:
 
 * [Öffentliches HTTP-API-mTLS-Zertifikat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
-Sie können auch öffentliche Zertifikate sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt senden. Weitere Informationen finden Sie in der Dokumentation zum [öffentlichen Zertifikatendpunkt](../../../data-governance/mtls-api/public-certificate-endpoint.md) .
+Sie können öffentliche Zertifikate auch sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt stellen. Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
-Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste setzen können. Eine vollständige Liste der IP-Zulassungslisten für Streaming-Ziele finden Sie in der [IP-Adressen-Zulassungsliste für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md) .
+Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste setzen können. Siehe [IP-Adressen-Zulassungsliste für Streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md)Ziele, um die vollständige Liste der IPs in der Zulassungsliste aufzurufen.
 
 ## Unterstützte Authentifizierungstypen {#supported-authentication-types}
 
@@ -89,7 +89,7 @@ Das HTTP-API-Ziel unterstützt mehrere Authentifizierungstypen für Ihren HTTP-E
 
 * HTTP-Endpunkt ohne Authentifizierung;
 * Authentifizierung mit Bearer-Token;
-* [OAuth 2.0-Client-Anmeldeinformationen](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) Authentifizierung mit dem Textkörperformular mit [!DNL client ID], [!DNL client secret] und [!DNL grant type] im Hauptteil der HTTP-Anforderung, wie im folgenden Beispiel gezeigt.
+* [Client-Anmeldeinformationen für OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) Authentifizierung mit dem Textkörper-Formular, mit [!DNL client ID], [!DNL client secret] und [!DNL grant type] im Textkörper der HTTP-Anfrage, wie im folgenden Beispiel gezeigt.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -114,7 +114,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Beim Herstellen einer Verbindung zu diesem Ziel müssen Sie die folgenden Informationen angeben:
 
@@ -129,7 +129,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer-Token]** für die Verbindung zu Ihrem HTTP-Endpunkt wählen, füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
-![Bild des UI-Bildschirms, auf dem Sie mithilfe der Authentifizierung des Trägertokens eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe der Bearer-Token-Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer-Token]**: Fügen Sie das Bearer-Token ein, um sich bei Ihrer HTTP-Adresse zu authentifizieren.
 
@@ -137,7 +137,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer-Token]** für die Verbin
 
 Wenn Sie **[!UICONTROL keinen]** Authentifizierungstyp zum Herstellen einer Verbindung mit Ihrem HTTP-Endpunkt auswählen:
 
-![Bild des UI-Bildschirms, auf dem Sie ohne Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-none.png)
+![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie ohne Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur auf **[!UICONTROL Mit Ziel verbinden]** zu klicken, und die Verbindung zu Ihrem Endpunkt wird hergestellt.
 
@@ -145,7 +145,7 @@ Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur auf **[!UIC
 
 Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **[!UICONTROL OAuth 2 mit Passwort]** wählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
-![Bild des UI-Bildschirms, auf dem Sie mithilfe von OAuth 2 mit Kennwortauthentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Passwortauthentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -157,7 +157,7 @@ Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen für OAuth 2]** wählen, um sich mit Ihrem HTTP-Endpunkt zu verbinden, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
-![Bild des UI-Bildschirms, auf dem Sie eine Verbindung zum HTTP-API-Ziel herstellen können, indem Sie OAuth 2 mit Client-Anmeldedaten-Authentifizierung verwenden.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Authentifizierung über Client-Anmeldeinformationen eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -195,15 +195,15 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Bild des UI-Bildschirms mit ausgefüllten Feldern für die HTTP-Zieldetails.](../../assets/catalog/http/http-api-destination-details.png)
+![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Details zum HTTP-Ziel.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, um dieses Ziel in Zukunft zu erkennen.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Kopfzeilen]**: Geben Sie alle benutzerdefinierten Kopfzeilen ein, die in die Ziel-Aufrufe aufgenommen werden sollen. Verwenden Sie dazu folgendes Format: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP-Endpunkt]**: Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
 * **[!UICONTROL Abfrageparameter]**: Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie ein, wenn der Datenexport die Namen der Zielgruppen enthalten soll, die Sie exportieren. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
-* **[!UICONTROL Segment-Zeitstempel einschließen]**: Schalten Sie ein, wenn der Datenexport den UNIX-Zeitstempel zum Zeitpunkt der Erstellung und Aktualisierung der Zielgruppen sowie den UNIX-Zeitstempel enthalten soll, zu dem die Zielgruppen zur Aktivierung dem Ziel zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
+* **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
+* **[!UICONTROL Segmentzeitstempel einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -215,10 +215,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* [Bewertung von Einwilligungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit beim Export in das HTTP-API-Ziel nicht unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Profilexport-Ziele](../../ui/activate-streaming-profile-destinations.md) .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 
@@ -226,9 +226,9 @@ Im Schritt [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profi
 
 ## Profilexportverhalten {#profile-export-behavior}
 
-Experience Platform optimiert das Verhalten des Profilexports an Ihr HTTP-API-Ziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Aktualisierungen an einem Profil stattgefunden haben. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten beim Profilexport für Ihr HTTP-API-Ziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppen-Qualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
-* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
+* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
 * Die Aktualisierung des Profils wurde durch eine Änderung der Attribute für mindestens eines der dem Ziel zugeordneten Attribute bestimmt. Beispielsweise wird eines der Attribute, die dem Ziel im Zuordnungsschritt zugeordnet sind, einem Profil hinzugefügt.
 
@@ -248,15 +248,15 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 Betrachten Sie beispielsweise den folgenden Datenfluss an ein HTTP-Ziel, bei dem im Datenfluss drei Zielgruppen ausgewählt und dem Ziel vier Attribute zugeordnet sind.
 
-![Ein Beispiel für einen HTTP-API-Ziel-Datenfluss.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Beispiel für einen HTTP-API-Ziel-Datenfluss.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der *drei zugeordneten Segmente* qualifiziert. Im Datenexport werden jedoch im Objekt `segmentMembership` (siehe Abschnitt [Exportierte Daten](#exported-data) unten) möglicherweise weitere nicht zugeordnete Zielgruppen angezeigt, wenn das betreffende Profil Mitglied dieser Zielgruppe ist und diese dieselbe Zusammenführungsrichtlinie wie die Zielgruppe nutzen, die den Export ausgelöst hat. Wenn ein Profil für das Segment **Kunde mit DeLorean Cars** qualifiziert ist, aber auch Mitglied der Segmente **Überwachter &quot;Back to the Future&quot;** und **Science Fiction Fans** ist, sind diese beiden anderen Zielgruppen auch im Objekt `segmentMembership` des Datenexports vorhanden, auch wenn sie nicht im Datenfluss zugeordnet sind, sofern sie dieselbe Zusammenführungsrichtlinie nutzen mit dem Segment **Kunde mit DeLorean Cars** .
+Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der *drei zugeordneten Segmente* qualifiziert. Im Datenexport jedoch können im `segmentMembership` (siehe [Exportierte Daten](#exported-data) Abschnitt unten) weitere nicht zugeordnete Zielgruppen angezeigt werden, wenn dieses bestimmte Profil zu diesen Profil gehört und diese Zielgruppen dieselbe Zusammenführungsrichtlinie verwenden wie die Zielgruppe, die den Export ausgelöst hat. Wenn ein Profil sich für das Segment **Kunde mit DeLorean-Autos** qualifiziert hat, aber auch Mitglied der Segmente **Hat „Zurück in die Zukunft“** und **Science-Fiction-**&quot; ist, sind diese beiden anderen Zielgruppen ebenfalls im `segmentMembership` des Datenexports vorhanden, obwohl diese nicht im Datenfluss zugeordnet sind, falls diese dieselbe Zusammenführungsrichtlinie wie das Segment **Kunde mit DeLorean-Autos** verwenden.
 
 Aus Sicht der Profilattribute bestimmen alle Änderungen an den vier oben zugeordneten Attributen einen Zielexport, und eines der vier im Profil vorhandenen zugeordneten Attribute wird im Datenexport vorhanden sein.
 
 ## Aufstockung historischer Daten {#historical-data-backfill}
 
-Wenn Sie eine neue Zielgruppe zu einem vorhandenen Ziel hinzufügen oder wenn Sie ein neues Ziel erstellen und ihm Zielgruppen zuordnen, exportiert Experience Platform historische Zielgruppenqualifizierungsdaten an das Ziel. Profile, die sich für die Zielgruppe *vor* qualifiziert haben, die zum Ziel hinzugefügt wurde, werden innerhalb von etwa einer Stunde an das Ziel exportiert.
+Wenn Sie eine neue Zielgruppe zu einem vorhandenen Ziel hinzufügen oder wenn Sie ein neues Ziel erstellen und diesem Zielgruppen zuordnen, exportiert Experience Platform historische Zielgruppen-Qualifizierungsdaten an das Ziel. Profile, die sich für die Zielgruppe qualifiziert haben *zuvor* wurde die Zielgruppe zum Ziel hinzugefügt, werden innerhalb von etwa einer Stunde an das Ziel exportiert.
 
 ## Exportierte Daten {#exported-data}
 
@@ -317,7 +317,7 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen in Ihrem [!DNL HTTP]-Z
 
 Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von den Benutzeroberflächeneinstellungen, die Sie im Fluss „Ziel verbinden“ für die Optionen **[!UICONTROL Segmentnamen einschließen]** und **[!UICONTROL Zeitstempel für Segmente einschließen]** auswählen.
 
-+++ Das folgende Beispiel für den Datenexport enthält Zielgruppennamen im Abschnitt `segmentMembership`
++++ Das folgende Beispiel für den Datenexport enthält Zielgruppennamen im Abschnitt `segmentMembership` .
 
 ```json
 "segmentMembership": {
@@ -337,7 +337,7 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
 
 +++
 
-+++ Das unten stehende Beispiel für den Datenexport enthält Zielgruppen-Zeitstempel im Abschnitt `segmentMembership`
++++ Das folgende Beispiel für den Datenexport enthält Zielgruppen-Zeitstempel im Abschnitt `segmentMembership` .
 
 ```json
 "segmentMembership": {

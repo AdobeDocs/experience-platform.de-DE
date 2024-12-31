@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Batch-Erfassung; Batch-Erfassung; Erfassung; Entwicklerhandbuch; API-Handbuch; Hochladen; Parquet erfassen; JSON erfassen erfassen;
+keywords: Experience Platform;Startseite;beliebte Themen;Batch-Aufnahme;Batch-Aufnahme;Aufnahme;Entwicklerhandbuch;API-Handbuch;Hochladen;Parquet aufnehmen;JSON aufnehmen;
 solution: Experience Platform
-title: Handbuch zur Batch Ingestion-API
-description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
+title: Handbuch zur Batch-Aufnahme-API
+description: Dieses Dokument enthält eine umfassende Anleitung für Entwicklerinnen und Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 65%
 
 # Entwicklerhandbuch zur Batch-Erfassung
 
-Dieses Dokument enthält eine umfassende Anleitung zur Verwendung der [Batch-Aufnahme-API-Endpunkte](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie, wenn Sie die [Batch-Aufnahme-API-Übersicht](overview.md) lesen.
+Dieses Dokument enthält eine umfassende Anleitung zur Verwendung von [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)Endpunkten in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie in der [Übersicht über die Batch-Aufnahme-API](overview.md).
 
 Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch Ingestion-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Die Batch-Erfassung wird über eine RESTful-API bereitgestellt, mit der Sie grundlegende CRUD-Vorgänge für die unterstützten Objekttypen durchführen können.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Die Batch-Aufnahme wird über eine RESTful-API bereitgestellt, mit der Sie einfache CRUD-Vorgänge für die unterstützten Objekttypen durchführen können.
 
-Bevor Sie fortfahren, lesen Sie zunächst die Übersicht über die [Batch-Aufnahme-API](overview.md) und die Anleitung [Erste Schritte](getting-started.md).
+Bevor Sie fortfahren, lesen Sie die [Übersicht über die Batch](overview.md)Aufnahme-API“ und [Erste Schritte](getting-started.md).
 
 ## JSON-Dateien erfassen
 
@@ -35,7 +35,7 @@ Zunächst müssen Sie einen Batch erstellen, wobei JSON als Eingabeformat dient.
 
 >[!NOTE]
 >
->Die folgenden Beispiele sind für einzeilige JSON-Dateien vorgesehen. Um mehrzeilige JSON zu erfassen, muss die `isMultiLineJson`-Markierung gesetzt werden. Weiterführende Informationen finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](./troubleshooting.md).
+>Die folgenden Beispiele gelten für einzeilige JSON-Dateien. Um mehrzeilige JSON zu erfassen, muss die `isMultiLineJson`-Markierung gesetzt werden. Weiterführende Informationen finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](./troubleshooting.md).
 
 **API-Format**
 
@@ -93,11 +93,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Dateien hochladen
 
-Nachdem Sie einen Batch erstellt haben, können Sie die Batch-Kennung aus der Batch-Erstellungsantwort verwenden, um Dateien in den Batch hochzuladen. Sie haben die Möglichkeit, mehrere Dateien in den Batch hochzuladen.
+Nachdem Sie nun einen Batch erstellt haben, können Sie die Batch-ID aus der Antwort zur Batch-Erstellung verwenden, um Dateien in den Batch hochzuladen. Sie haben die Möglichkeit, mehrere Dateien in den Batch hochzuladen.
 
 >[!NOTE]
 >
->Im Anhang finden Sie ein [Beispiel einer ordnungsgemäß formatierten JSON-Datendatei](#data-transformation-for-batch-ingestion).
+>Ein (Beispiel [ ordnungsgemäß formatierten JSON-Datendatei) finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -115,7 +115,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 >[!NOTE]
 >
->Die API unterstützt das Hochladen einzelner Teile. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
+>Die -API unterstützt den einteiligen Upload. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -250,7 +250,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 >[!CAUTION]
 >
->Diese API unterstützt das Hochladen einzelner Teile. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
+>Diese API unterstützt den einteiligen Upload. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -423,7 +423,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 >[!CAUTION]
 >
->Diese API unterstützt das Hochladen einzelner Teile. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
+>Diese API unterstützt den einteiligen Upload. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TENANT_ID}` | Diese ID wird verwendet, um sicherzustellen, dass von Ihnen erstellte Ressourcen ordnungsgemäß benannt werden und in Ihrem Unternehmen enthalten sind. |
+| `{TENANT_ID}` | Diese ID wird verwendet, um sicherzustellen, dass die von Ihnen erstellten Ressourcen über einen ordnungsgemäßen Namespace verfügen und in Ihrer Organisation enthalten sind. |
 | `{SCHEMA_ID}` | Die Kennung des erstellten Schemas. |
 
 ### Batch erstellen
@@ -621,7 +621,7 @@ Nach dem Erstellen eines Batches können Sie die `batchId` verwenden, um Dateien
 
 >[!NOTE]
 >
->Im Anhang finden Sie ein [Beispiel einer ordnungsgemäß formatierten CSV-Datendatei](#data-transformation-for-batch-ingestion).
+>Ein Beispiel für eine [ CSV-Datendatei finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -639,7 +639,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 >[!CAUTION]
 >
->Diese API unterstützt das Hochladen einzelner Teile. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
+>Diese API unterstützt den einteiligen Upload. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -748,20 +748,20 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Batch Patch
+## Patchen eines Batches
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt das Aktualisieren oder Patchen von Profilspeicherdaten durch eine upsert -Aktion oder &quot;Patchen eines Batches&quot;.
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder das Patchen von Profilspeicherdaten durch eine Upsert-Aktion oder das „Patchen eines Batches“.
 
 >[!NOTE]
 >
->Diese Aktualisierungen sind nur für Profildatensätze zulässig, nicht für Erlebnisereignisse.
+>Diese Aktualisierungen sind nur für Profildatensätze und nicht für Erlebnisereignisse zulässig.
 
-Folgendes ist erforderlich, um einen Batch zu patchen:
+Zum Patchen eines Batches ist Folgendes erforderlich:
 
-- **Ein für Profil- und Attributaktualisierungen aktivierter Datensatz.** Dies erfolgt über Datensatz-Tags und erfordert, dass dem `unifiedProfile` -Array ein bestimmtes `isUpsert:true` -Tag hinzugefügt wird. Ausführliche Anweisungen zum Erstellen eines Datensatzes oder Konfigurieren eines vorhandenen Datensatzes für die Aktualisierung finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profilaktualisierungen [.](../../catalog/datasets/enable-upsert.md)
-- **Eine Parquet-Datei, die die zu patchierenden Felder und Identitätsfelder für das Profil enthält.** Das Datenformat für das Patchen eines Batches ähnelt dem normalen Batch-Erfassungsvorgang. Die erforderliche Eingabe ist eine Parquet-Datei. Zusätzlich zu den zu aktualisierenden Feldern müssen die hochgeladenen Daten die Identitätsfelder enthalten, damit sie mit den Daten im Profilspeicher übereinstimmen.
+- **Ein Datensatz, der für Profil- und Attributaktualisierungen aktiviert ist.** Dies erfolgt über Datensatz-Tags und erfordert das Hinzufügen eines bestimmten `isUpsert:true`-Tags zum `unifiedProfile`-Array. Ausführliche Anweisungen zum Erstellen eines Datensatzes oder zum Konfigurieren eines vorhandenen Datensatzes für upsert finden Sie im Tutorial zum [Aktivieren eines Datensatzes für Profilaktualisierungen](../../catalog/datasets/enable-upsert.md).
+- **Eine Parquet-Datei, die die zu patchenden Felder und Identitätsfelder für das Profil enthält.** Das Datenformat für das Patchen eines Batches ähnelt dem regulären Batch-Erfassungsvorgang. Als Eingabe wird eine Parquet-Datei benötigt. Zusätzlich zu den zu aktualisierenden Feldern müssen die hochgeladenen Daten auch die Identitätsfelder enthalten, damit sie mit den Daten im Profilspeicher übereinstimmen.
 
-Nachdem Sie einen Datensatz für Profil und Upload aktiviert haben und eine Parquet-Datei mit den Feldern, die Sie patchen möchten, sowie die erforderlichen Identitätsfelder, können Sie die Schritte zum [Erfassen von Parquet-Dateien](#ingest-parquet-files) ausführen, um den Patch über die Batch-Erfassung abzuschließen.
+Nachdem Sie einen Datensatz für Profil und upsert aktiviert haben und eine Parquet-Datei mit den Feldern, die Sie korrigieren möchten, sowie die erforderlichen Identitätsfelder, können Sie die Schritte für [Aufnehmen von Parquet-Dateien](#ingest-parquet-files) ausführen, um den Patch über die Batch-Aufnahme abzuschließen.
 
 ## Batch ersetzen
 
@@ -861,7 +861,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 >[!CAUTION]
 >
->Diese API unterstützt das Hochladen einzelner Teile. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet. Verwenden Sie nicht die Option „curl -F“, da dabei standardmäßig eine mehrteilige Anfrage verwendet wird, die mit der API nicht kompatibel ist.
+>Diese API unterstützt den einteiligen Upload. Stellen Sie sicher, dass der Content-Type „application/octet-stream“ lautet. Verwenden Sie nicht die Option „curl -F“, da dabei standardmäßig eine mehrteilige Anfrage verwendet wird, die mit der API nicht kompatibel ist.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -915,11 +915,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zur Aufnahme von Daten in Experience Platform mithilfe der Batch-Erfassung.
+Der folgende Abschnitt enthält zusätzliche Informationen zur Aufnahme von Daten in Experience Platform mithilfe der Batch-Aufnahme.
 
 ### Datenumwandlung für die Batch-Erfassung
 
-Um eine Datendatei in [!DNL Experience Platform] aufzunehmen, muss die hierarchische Dateistruktur dem Schema [Experience-Datenmodell (XDM)](../../xdm/home.md) entsprechen, das mit dem hochgeladenen Datensatz verknüpft ist.
+Um eine Datendatei in [!DNL Experience Platform] aufzunehmen, muss die hierarchische Struktur der Datei dem Schema des [Experience-Datenmodells (XDM) entsprechen](../../xdm/home.md) das mit dem Datensatz verknüpft ist, in den hochgeladen wird.
 
 Informationen dazu, wie Sie eine CSV-Datei einem XDM-Schema konform zuordnen, finden Sie im Dokument mit [Beispielumwandlungen](../../etl/transformations.md). Hier finden Sie außerdem ein Beispiel für eine richtig formatierte JSON-Datendatei. Im Dokument bereitgestellte Beispieldateien finden Sie hier:
 

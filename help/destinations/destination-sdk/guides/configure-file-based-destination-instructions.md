@@ -17,7 +17,7 @@ Auf dieser Seite wird beschrieben, wie Sie die Informationen in [Konfigurationso
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit dem Destination SDK](../getting-started.md), wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
+Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit dem Destination SDK](../getting-started.md), wie Sie die erforderlichen Adobe I/O-Authentifizierungs-Anmeldedaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 ## Schritte zum Verwenden der Konfigurationsoptionen im Destination SDK zum Einrichten Ihres Ziels {#steps}
 
@@ -25,9 +25,9 @@ Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Erstellen Sie zunächst [ einen Server und eine Dateikonfiguration](../authoring-api/destination-server/create-destination-server.md) mithilfe des `/destinations-server` -Endpunkts.
+Erstellen Sie zunächst [Server- und Dateikonfiguration](../authoring-api/destination-server/create-destination-server.md) mithilfe des `/destinations-server`-Endpunkts.
 
-Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Weitere Informationen zu den in der Konfiguration verwendeten Feldern und zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Serverkonfigurationen](../functionality/destination-server/server-specs.md).
+Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Weitere Informationen zu den in der Konfiguration verwendeten Feldern und zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie unter den entsprechenden [Server-Konfigurationen](../functionality/destination-server/server-specs.md).
 
 **API-Format**
 
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Im Folgenden finden Sie ein Beispiel für eine Zielkonfiguration, die mithilfe des API-Endpunkts `/destinations` erstellt wurde.
+Unten sehen Sie ein Beispiel für eine Zielkonfiguration, die mithilfe des `/destinations`-API-Endpunkts erstellt wurde.
 
-Um die Server- und Dateikonfiguration von Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie hier die `instance ID` des Servers und die Dateikonfiguration als `destinationServerId` hinzu.
+Um die Server- und Dateikonfiguration aus Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die `instance ID` der Server- und Dateikonfiguration wie hier `destinationServerId` hinzu.
 
 **API-Format**
 
@@ -400,7 +400,7 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` ist die gängigere der beiden Authentifizierungsregeln und die zu verwendende, wenn Sie von Benutzern verlangen, dass sie für Ihr Ziel eine bestimmte Form der Authentifizierung bereitstellen, bevor sie eine Verbindung herstellen und Daten exportieren können.
+>`CUSTOMER_AUTHENTICATION` ist die häufigere der beiden Authentifizierungsregeln und die zu verwendende, wenn Sie Benutzerinnen und Benutzer auffordern, Ihrem Ziel eine bestimmte Form der Authentifizierung bereitzustellen, bevor sie eine Verbindung einrichten und Daten exportieren können.
 
 * Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben, finden Sie in den folgenden Abschnitten Informationen zu den Authentifizierungstypen, die vom Destination SDK für dateibasierte Ziele unterstützt werden:
 
@@ -411,23 +411,23 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
    * [SFTP-Authentifizierung mit SSH-Schlüssel](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [SFTP-Authentifizierung mit Passwort](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Wenn Sie &quot;`"authenticationRule": "PLATFORM_AUTHENTICATION"`&quot;ausgewählt haben, lesen Sie die Dokumentation zur API für die Konfiguration von Anmeldedaten [.](../credentials-api/create-credential-configuration.md#when-to-use)
+* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, lesen Sie die [Dokumentation zur Berechtigungskonfigurations-API](../credentials-api/create-credential-configuration.md#when-to-use).
 
 
 ## Schritt 5: Testen des Ziels {#test-destination}
 
 Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritten eingerichtet haben, können Sie das [Zieltest-Tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) verwenden, um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
 
-Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
+Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen im Experience Platform finden Sie in den beiden folgenden Ressourcen:
 
-* [Erstellen einer Zielgruppe - Dokumentationsseite](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Erstellen einer Zielgruppe - Videoeinführung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Erstellen einer Audience - Dokumentationsseite](/help/segmentation/ui/audience-portal.md#create-audience)
+* [Erstellen einer Zielgruppe - Videoanleitung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 6: Veröffentlichen des Ziels {#publish-destination}
 
 >[!NOTE]
 >
->Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
 
 Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielveröffentlichungs-API](../publishing-api/create-publishing-request.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
@@ -435,14 +435,14 @@ Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielveröffentl
 
 >[!NOTE]
 >
->Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
 
 Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](../overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](../docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) zu erstellen.
 
-## Schritt 8: Senden des Ziels für die Adobe-Überprüfung {#submit-for-review}
+## Schritt 8: Ziel zur Überprüfung der Adobe übermitteln {#submit-for-review}
 
 >[!NOTE]
 >
->Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
 
-Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar ist, müssen Sie das Ziel offiziell zur Adobe-Überprüfung einreichen. Finden Sie vollständige Informationen darüber, wie Sie [ein in Destination SDK](../guides/submit-destination.md) erstelltes produktionalisiertes Ziel zur Überprüfung einreichen können.
+Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar werden kann, müssen Sie das Ziel offiziell zur Überprüfung der Adobe übermitteln. Hier finden Sie vollständige Informationen zum [Einreichen eines in Destination SDK erstellten produktbezogenen Ziels zur Überprüfung](../guides/submit-destination.md).

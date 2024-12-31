@@ -13,13 +13,13 @@ ht-degree: 73%
 ---
 
 
-# Advanced Data Lifecycle Management {#data-lifecycle}
+# Erweitertes Data Lifecycle Management {#data-lifecycle}
 
-* [Überblick über die erweiterte Lebenszyklusverwaltung](./home.md)
-* Data Lifecycle UI {#ui}
+* [Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus](./home.md)
+* {#ui} der Datenlebenszyklus-Benutzeroberfläche
    * [Übersicht](./ui/overview.md)
    * [Automatisierte Datensatzablauffristen](./ui/dataset-expiration.md)
-   * [(Beta) Datensätze löschen](./ui/record-delete.md)
+   * [(Beta) Löschen von Datensätzen](./ui/record-delete.md)
    * [Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen](./ui/browse.md)
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)

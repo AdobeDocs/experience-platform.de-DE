@@ -1,7 +1,7 @@
 ---
-keywords: dialogtech-Erweiterung;dialogtech;dialogtech-Ziel;DialogTech;DialogTech SourceTrak
+keywords: dialogTech-Erweiterung;dialogTech;dialogtech;dialogtech-Ziel;DialogTech;DialogTech SourceTrak
 title: DialogTech-Erweiterung
-description: Die DialogTech-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die DialogTech-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 

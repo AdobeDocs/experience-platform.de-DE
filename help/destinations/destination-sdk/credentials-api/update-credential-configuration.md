@@ -1,6 +1,6 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Berechtigungskonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
-title: Aktualisieren einer Berechtigungskonfiguration
+description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Anmeldedaten-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
+title: Aktualisieren einer Anmeldedaten-Konfiguration
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 100%
 
 ---
 
-# Aktualisieren einer Berechtigungskonfiguration
+# Aktualisieren einer Anmeldedaten-Konfiguration
 
 >[!IMPORTANT]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` zu aktualisieren.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` zu aktualisieren.
 
 ## Verwendung des API-Endpunkts `/credentials` {#when-to-use}
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verw
 > 
 >Lesen Sie [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
 
-Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungsdaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Berechtigungskonfiguration erstellen.
+Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
 
 Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -33,15 +33,15 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 >
 >Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit Berechtigungs-API-Vorgängen {#get-started}
+## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
-## Aktualisieren einer Berechtigungskonfiguration {#update}
+## Aktualisieren einer Anmeldedaten-Konfiguration {#update}
 
-Sie können eine [vorhandene](create-credential-configuration.md) Berechtigungskonfiguration durch eine `PUT`-Anfrage an den Endpunkt `/authoring/credentials` mit der aktualisierten Payload aktualisieren.
+Sie können eine [vorhandene](create-credential-configuration.md) Anmeldedaten-Konfiguration durch eine `PUT`-Anfrage an den Endpunkt `/authoring/credentials` mit der aktualisierten Payload aktualisieren.
 
-Wie Sie eine vorhandene Berechtigungskonfiguration und die entsprechende `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel zum [Abrufen einer Berechtigungskonfiguration](retrieve-credential-configuration.md).
+Wie Sie eine vorhandene Anmeldedaten-Konfiguration und die entsprechende `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel zum [Abrufen einer Anmeldedaten-Konfiguration](retrieve-credential-configuration.md).
 
 **API-Format**
 
@@ -51,9 +51,9 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die Kennung der Berechtigungskonfiguration, die Sie aktualisieren möchten. Wie Sie eine vorhandene Berechtigungskonfiguration und die entsprechende `{INSTANCE_ID}` abrufen, erfahren Sie unter [Abrufen einer Berechtigungskonfiguration](retrieve-credential-configuration.md). |
+| `{INSTANCE_ID}` | Die Kennung der Anmeldedaten-Konfiguration, die Sie aktualisieren möchten. Wie Sie eine vorhandene Anmeldedaten-Konfiguration und die entsprechende `{INSTANCE_ID}` abrufen, erfahren Sie unter [Abrufen einer Anmeldedaten-Konfiguration](retrieve-credential-configuration.md). |
 
-Mit den folgenden Anfragen werden bestehende Berechtigungskonfigurationen aktualisiert, die durch die in der Payload angegebenen Parameter definiert werden.
+Mit den folgenden Anfragen werden bestehende Anmeldedaten-Konfigurationen aktualisiert, die durch die in der Payload angegebenen Parameter definiert werden.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -61,7 +61,7 @@ Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload
 
 >[!TAB Allgemein]
 
-**Aktualisieren einer allgemeinen Berechtigungskonfiguration**
+**Aktualisieren einer allgemeinen Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -85,8 +85,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `url` | Zeichenfolge | URL des Autorisierungsanbieters |
-| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Zugriffsdaten-Konfiguration |
-| `password` | Zeichenfolge | Passwort für die Anmeldung zur Zugangsdaten-Konfiguration |
+| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Anmeldedaten-Konfiguration |
+| `password` | Zeichenfolge | Passwort für die Anmeldung zur Anmeldedaten-Konfiguration |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details Ihrer a
 
 >[!TAB Amazon S3]
 
-**Aktualisieren einer [!DNL Amazon S3]-Berechtigungskonfiguration**
+**Aktualisieren einer [!DNL Amazon S3]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -137,7 +137,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details Ihrer a
 
 >[!TAB SSH]
 
-**Aktualisieren einer [!DNL SSH]-Berechtigungskonfiguration**
+**Aktualisieren einer [!DNL SSH]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -159,7 +159,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
-| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Zugriffsdaten-Konfiguration |
+| `username` | Zeichenfolge | Benutzername für die Anmeldung zur Anmeldedaten-Konfiguration |
 | `sshKey` | Zeichenfolge | [!DNL SSH]-Schlüssel für [!DNL SFTP] mit [!DNL SSH]-Authentifizierung |
 
 {style="table-layout:auto"}
@@ -174,7 +174,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details Ihrer a
 
 >[!TAB Azure Data Lake Storage]
 
-**Aktualisieren einer [!DNL Azure Data Lake Storage]-Berechtigungskonfiguration**
+**Aktualisieren einer [!DNL Azure Data Lake Storage]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -215,7 +215,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details Ihrer a
 
 >[!TAB Azure-Blobspeicher]
 
-**Aktualisieren einer [!DNL Azure Blob]-Berechtigungskonfiguration**
+**Aktualisieren einer [!DNL Azure Blob]-Anmeldedaten-Konfiguration**
 
 +++Anfrage
 
@@ -256,4 +256,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` aktualisieren können. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` aktualisieren können. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

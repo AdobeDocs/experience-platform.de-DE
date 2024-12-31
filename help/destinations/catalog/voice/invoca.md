@@ -14,7 +14,7 @@ ht-degree: 86%
 
 ## Übersicht {#overview}
 
-[!DNL Invoca] bringt Aufrufdaten und Spracheinblicke in die Journey für digitale Kunden. Mit der [!DNL Invoca’s]-Aufrufintelligenzplattform verfügen Marketing-Experten endlich über Analysen, um die Ergebnisse der Aufrufe zu messen und Offline-Konversionen mit digitalen Ausgaben zu verbinden.
+[!DNL Invoca] bringt Anrufdaten und Spracheinblicke in die digitale Kunden-Journey. Mit [!DNL Invoca’s] Anruf-Intelligenz-Plattform verfügen Marketing-Experten endlich über Analysen, um Anrufergebnisse zu messen und Offline-Konversionen wieder mit digitalen Ausgaben zu verknüpfen.
 
 [!DNL Invoca Tags] ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
