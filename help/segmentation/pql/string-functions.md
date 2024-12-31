@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: PQL String-Funktionen
+title: PQL-Zeichenfolgen-Funktionen
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
@@ -12,11 +12,11 @@ ht-degree: 43%
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Ist wie
 
-Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge mit einem angegebenen Muster als boolescher Wert übereinstimmt.
+Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge einem angegebenen Muster als Boolesch entspricht.
 
 **Format**
 
@@ -31,7 +31,7 @@ Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge mit einem angegebene
 
 **Beispiel**
 
-Mit der folgenden PQL-Abfrage werden alle Städte abgerufen, die das Muster &quot;es&quot;enthalten.
+Die folgende PQL-Abfrage ruft alle Städte ab, die das Muster „es“ enthalten.
 
 ```sql
 city like "%es%"
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Beginnt mit
 
-Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als boolescher Wert beginnt.
+Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als Boolescher Wert beginnt.
 
 **Format**
 
@@ -55,7 +55,7 @@ Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer ange
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt bei Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person mit &quot;Joe&quot;beginnt.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person mit „Joe“ beginnt.
 
 ```sql
 person.name.startsWith("Joe")
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Beginnt nicht mit
 
-Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Teilzeichenfolge als boolescher Wert beginnt.
+Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge als Boolescher Wert beginnt.
 
 **Format**
 
@@ -79,7 +79,7 @@ Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mi
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob der Name der Person nicht mit &quot;Joe&quot;beginnt.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person nicht mit „Joe“ beginnt.
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Endet mit
 
-Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als boolescher Wert endet.
+Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als Boolescher Wert endet.
 
 **Format**
 
@@ -103,7 +103,7 @@ Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angege
 
 **Beispiel**
 
-Mit der folgenden PQL-Abfrage wird unter Berücksichtigung der Groß-/Kleinschreibung bestimmt, ob die E-Mail-Adresse der Person auf &quot;.com&quot;endet.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person mit &quot;.com“ endet.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Endet nicht mit
 
-Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Teilzeichenfolge als boolescher Wert endet.
+Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge als Boolescher Wert endet.
 
 **Format**
 
@@ -127,7 +127,7 @@ Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit 
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person nicht mit &quot;.com&quot;endet.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person nicht mit &quot;.com“ endet.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Enthält
 
-Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Teilzeichenfolge als boolescher Wert enthält.
+Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge als booleschen Wert enthält.
 
 **Format**
 
@@ -151,7 +151,7 @@ Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene 
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;enthält.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot; enthält.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Enthält nicht
 
-Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine angegebene Unterzeichenfolge als boolescher Wert enthält.
+Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge nicht als booleschen Wert enthält.
 
 **Format**
 
@@ -175,7 +175,7 @@ Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine ange
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;nicht enthält.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot; nicht enthält.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Gleich
 
-Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebenen Zeichenfolge als boolescher Wert übereinstimmt.
+Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge gleich der angegebenen Zeichenfolge als Boolescher Wert ist.
 
 **Format**
 
@@ -198,7 +198,7 @@ Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebene
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person &quot;John&quot; lautet.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person „John“ lautet.
 
 ```sql
 person.name.equals("John")
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Ungleich
 
-Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der angegebenen Zeichenfolge als boolescher Wert übereinstimmt.
+Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht gleich der angegebenen Zeichenfolge als boolescher Wert ist.
 
 **Format**
 
@@ -221,7 +221,7 @@ Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der 
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person nicht &quot;John&quot;lautet.
+Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person nicht „John“ lautet.
 
 ```sql
 person.name.notEqualTo("John")
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Stimmt überein mit
 
-Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zum Abgleichen von Mustern in regulären Ausdrücken als boolescher Wert finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
+Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern [ regulären Ausdrücken finden Sie ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) diesem Dokument als boolescher Wert.
 
 **Format**
 
@@ -239,7 +239,7 @@ Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimm
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt, ohne dass zwischen Groß- und Kleinschreibung unterschieden wird, ob der Name der Person mit &quot;John&quot;beginnt.
+Die folgende PQL-Abfrage bestimmt, ob der Name der Person ohne Unterscheidung der Groß-/Kleinschreibung mit „John“ beginnt.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,11 +247,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w` verwenden, müssen Sie **2} den umgekehrten Schrägstrich als Escape-Zeichen verwenden.** Anstatt also nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einschließen und `\\w` schreiben.
+>Wenn Sie Funktionen für reguläre Ausdrücke wie `\w` verwenden, **müssen** den umgekehrten Schrägstrich auslassen. Anstatt nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und `\\w` schreiben.
 
 ## Gruppe regelmäßiger Ausdrücke
 
-Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem regulären Ausdruck zu extrahieren, der als Zeichenfolge bereitgestellt wird.
+Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem regulären Ausdruck, der als Zeichenfolge bereitgestellt wird, zu extrahieren.
 
 **Format**
 
@@ -261,7 +261,7 @@ Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend
 
 **Beispiel**
 
-Die folgende PQL-Abfrage wird verwendet, um den Domänennamen aus einer E-Mail-Adresse zu extrahieren.
+Die folgende PQL-Abfrage wird verwendet, um den Domain-Namen aus einer E-Mail-Adresse zu extrahieren.
 
 ```sql
 emailAddress.regexGroup("@(\\w+)", 1)
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w` verwenden, müssen Sie **2} den umgekehrten Schrägstrich als Escape-Zeichen verwenden.** Anstatt also nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einschließen und `\\w` schreiben.
+>Wenn Sie Funktionen für reguläre Ausdrücke wie `\w` verwenden, **müssen** den umgekehrten Schrägstrich auslassen. Anstatt nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und `\\w` schreiben.
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit Zeichenfolgen-Funktionen vertraut gemacht haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit Zeichenfolgenfunktionen vertraut gemacht haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

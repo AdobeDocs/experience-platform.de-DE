@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;OneTrust
+keywords: Experience Platform;Startseite;beliebte Themen;OneTrust
 solution: Experience Platform
 title: Erstellen eines Datenflusses für eine OneTrust-Integrationsquelle mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und OneTrust-Integration herstellen.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit OneTrust Integration verbinden.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
@@ -11,37 +11,37 @@ ht-degree: 61%
 
 ---
 
-# Erstellen eines Datenflusses für eine [!DNL OneTrust Integration] -Quelle mithilfe der [!DNL Flow Service]-API
+# Erstellen eines Datenflusses für eine [!DNL OneTrust Integration] mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration]-Quelle unterstützt nur die Erfassung von Zustimmungs- und Voreinstellungsdaten und keine Cookies.
+>Die [!DNL OneTrust Integration]-Quelle unterstützt nur die Aufnahme von Einverständnis- und Voreinstellungsdaten und nicht Cookies.
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um sowohl historische als auch geplante Zustimmungsdaten von [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Adobe Experience Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um historische und geplante Einverständnisdaten von [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Adobe Experience Platform zu übertragen.
 
 ## Voraussetzungen
 
 >[!IMPORTANT]
 >
->Der Quell-Connector und die Dokumentation für [!DNL OneTrust Integration] wurden vom [!DNL OneTrust Integration]-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an das [[!DNL OneTrust] Team](https://my.onetrust.com/s/contactsupport?language=en_US).
+>Der [!DNL OneTrust Integration]-Quell-Connector und die Dokumentation wurden vom [!DNL OneTrust Integration]-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [[!DNL OneTrust] Team](https://my.onetrust.com/s/contactsupport?language=en_US).
 
-Bevor Sie [!DNL OneTrust Integration] mit Platform verbinden können, müssen Sie zunächst Ihr Zugriffstoken abrufen. Detaillierte Anweisungen zum Auffinden Ihres Zugriffstokens finden Sie im [[!DNL OneTrust Integration] OAuth 2-Handbuch](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Bevor Sie eine Verbindung zwischen [!DNL OneTrust Integration] und Platform herstellen können, müssen Sie zunächst Ihr Zugriffs-Token abrufen. Detaillierte Anweisungen zum Auffinden Ihres Zugriffs-Tokens finden Sie im [[!DNL OneTrust Integration] OAuth 2-Handbuch](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-Das Zugriffstoken wird nach seinem Ablauf nicht automatisch aktualisiert, da die Aktualisierungstoken des Systems nicht von [!DNL OneTrust] unterstützt werden. Daher müssen Sie sicherstellen, dass Ihr Zugriffstoken in der Verbindung aktualisiert wird, bevor es abläuft. Die maximale konfigurierbare Lebensdauer für ein Zugriffstoken beträgt ein Jahr. Weitere Informationen zum Aktualisieren Ihres Zugriffstokens finden Sie im Dokument [[!DNL OneTrust] zur Verwaltung Ihrer OAuth 2.0-Client-Anmeldedaten](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
+Das Zugriffstoken wird nach Ablauf nicht automatisch aktualisiert, da System-zu-System-Aktualisierungstoken von [!DNL OneTrust] nicht unterstützt werden. Daher müssen Sie sicherstellen, dass Ihr Zugriffstoken in der Verbindung aktualisiert wird, bevor es abläuft. Die konfigurierbare maximale Lebensdauer für ein Zugriffstoken beträgt ein Jahr. Weitere Informationen zum Aktualisieren Ihres Zugriffstokens finden Sie unter [[!DNL OneTrust] Verwalten Ihrer OAuth 2.0-Client-Anmeldeinformationen](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## [!DNL OneTrust Integration] über die [!DNL Flow Service]-API mit Platform verbinden
+## Verbinden von [!DNL OneTrust Integration] mit Platform mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration]-API-Spezifikationen werden für die Datenerfassung mit Adobe freigegeben.
+>Die [!DNL OneTrust Integration] API-Spezifikationen werden für Adobe zur Datenaufnahme freigegeben.
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL OneTrust Integration]-Quellverbindung und Erstellen eines Datenflusses, um [!DNL OneTrust Integration] -Daten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL OneTrust Integration]-Quellverbindung und zum Erstellen eines Datenflusses, um [!DNL OneTrust Integration] Daten mithilfe der (API[[!DNL Flow Service]  in Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL OneTrust Integration]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL OneTrust Integration] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -83,8 +83,8 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.` | Enthält die Anmeldeinformationen, die zum Authentifizieren Ihrer Quelle erforderlich sind, einschließlich des Zugriffstokens für die Verbindung mit der API. |
-| `auth.params.accessToken` | Das Zugriffstoken, das Ihrem [!DNL OneTrust Integration] -Konto entspricht. |
+| `auth.params.` | Enthält die Anmeldeinformationen, die zum Authentifizieren Ihrer Quelle erforderlich sind, einschließlich des Zugriffstokens für die Verbindung zur API. |
+| `auth.params.accessToken` | Das Zugriffstoken, das Ihrem [!DNL OneTrust Integration]-Konto entspricht. |
 
 **Antwort**
 
@@ -101,7 +101,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
 
-Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Platform] laden möchten:
+Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Platform] importieren möchten:
 
 **API-Format**
 
@@ -115,9 +115,9 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
-| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` gesetzt. |
+| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
-| `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
 
 **Anfrage**
@@ -137,9 +137,9 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück.
 
 >[!NOTE]
 >
->Die nachstehende JSON-Antwort-Payload wird für die Kürze ausgeblendet. Wählen Sie Klicken Sie auf mich , um die Antwort-Payload anzuzeigen.
+>Die unten stehende JSON-Antwort-Payload ist zur Vereinfachung ausgeblendet. Klicken Sie auf Mich , um die Antwort-Payload anzuzeigen.
 
-++ + Klicken auf mich
++++Hier klicken
 
 ```json
 {
@@ -695,7 +695,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung a
 
 ### Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit in der Anfrage-Payload definierten Datenzuordnungen ausgeführt wird.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird durch eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen erreicht, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -786,7 +786,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt beim Übertragen von Daten von [!DNL OneTrust Integration] an Platform besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL OneTrust Integration] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -794,7 +794,7 @@ Der letzte Schritt beim Übertragen von Daten von [!DNL OneTrust Integration] an
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Für die Erstellung einer einmaligen Erfassung ist jedoch kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen. Für die Erstellung einer einmaligen Aufnahme ist jedoch keine Festlegung eines Intervalls erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
 
 **API-Format**
 
@@ -844,7 +844,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
-| `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
@@ -853,7 +853,7 @@ curl -X POST \
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
-| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Erfassungszeitplanung des Datenflusses. |
+| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Aufnahmeplanung des Datenflusses. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
 | `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
@@ -870,24 +870,24 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses durchführen können.
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](../../monitor.md).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](../../monitor.md).
 
 ### Aktualisieren des Datenflusses
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows` -Endpunkt der [!DNL Flow Service] -API richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren der Datenflüsse für Quellen mithilfe der API](../../update-dataflows.md).
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows`-Endpunkt [!DNL Flow Service] -API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](../../update-dataflows.md).
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](../../update.md).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](../../update.md).
 
 ### Löschen des Datenflusses
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](../../delete-dataflows.md).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](../../delete-dataflows.md).
 
 ### Konto löschen
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](../../delete.md).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

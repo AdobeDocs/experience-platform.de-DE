@@ -28,7 +28,7 @@ Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Pro
 
 Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen die Aktualisierungshäufigkeit und „Zuletzt aktualisiert von“.
 
-Weitere Informationen zur Durchsuchen-Seite, einschließlich detaillierter Informationen zu den aufgelisteten Feldern, finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#list).
+Weitere Informationen zur Durchsuchen-Seite, einschließlich detaillierter Informationen zu den aufgelisteten Feldern, finden Sie unter [Audience Portal - Übersicht](./audience-portal.md#list).
 
 ## Zielgruppendetails {#details}
 
@@ -40,7 +40,7 @@ Die Seite mit Details zur potenziellen Zielgruppe wird angezeigt. Es werden Info
 
 ![Die Seite mit Details zur potenziellen Zielgruppe wird angezeigt.](../images/ui/prospect-audience/audience-details.png)
 
-Weitere Informationen zur Seite mit Zielgruppendetails finden Sie im Abschnitt [Zielgruppendetails der Audience Portal-Übersicht](./audience-portal.md#audience-details).
+Weitere Informationen zur Seite mit Zielgruppendetails finden Sie im Abschnitt [Zielgruppendetails“ der Übersicht über das Zielgruppenportal](./audience-portal.md#audience-details).
 
 ## Zielgruppe erstellen {#create}
 

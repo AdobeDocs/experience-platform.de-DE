@@ -23,7 +23,7 @@ Dieses Dokument bietet einen Überblick über Sandboxes in Experience Platform.
 
 Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Es werden zwei Arten von Sandboxes für Experience Platform unterstützt:
 
-* **Produktions-Sandbox**: Eine Produktions-Sandbox ist für die Verwendung mit Profilen in Ihrer Produktionsumgebung vorgesehen. Platform ermöglicht es Ihnen, mehrere Produktions-Sandboxes zu erstellen, um die richtigen Funktionen für Daten zu bieten und gleichzeitig die Isolierung beim Betreiben beizubehalten. Mit dieser Funktion können Sie bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Produktions-Sandboxes unterstützen eine Vielzahl von Produktionsprofilen bis hin zu Ihrer lizenzierten [!DNL Profile]-Verpflichtung (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen). Sie sind berechtigt, Ihr gesamtes lizenziertes Gesamtdatenvolumen zu verwenden (kumulativ gemessen in allen autorisierten Produktions-Sandboxes).
+* **Produktions-Sandbox**: Eine Produktions-Sandbox ist für die Verwendung mit Profilen in Ihrer Produktionsumgebung vorgesehen. Platform ermöglicht es Ihnen, mehrere Produktions-Sandboxes zu erstellen, um die richtigen Funktionen für Daten zu bieten und gleichzeitig die Isolierung beim Betreiben beizubehalten. Mit dieser Funktion können Sie bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Produktions-Sandboxes unterstützen eine Vielzahl von Produktionsprofilen bis hin zu Ihrer lizenzierten [!DNL Profile]-Verpflichtung (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen). Sie sind berechtigt, das gesamte lizenzierte Gesamtdatenvolumen zu verwenden (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen).
 
 * **Entwicklungs-Sandbox**: Eine Entwicklungs-Sandbox ist eine Sandbox, die ausschließlich für die Entwicklung und Tests mit Nicht-Produktionsprofilen verwendet werden kann. Entwicklungs-Sandboxes unterstützen eine Anzahl von Nicht-Produktions-Profilen mit bis zu 10 % Ihrer lizenzierten [!DNL Profile]-Verpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Sie haben maximal Anspruch auf Folgendes:
    * Ein Batch-Segmentierungsauftrag pro Tag und pro Entwicklungs-Sandbox;
@@ -42,7 +42,7 @@ Die standardmäßige Produktions-Sandbox ist letztendlich die erste Produktions-
 Zusammenfassend kann man sagen, dass Sandboxes folgende Vorteile bieten:
 
 * **Application Lifecycle Management**: Richten Sie separate virtuelle Umgebungen ein, um Programme für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
-* **Projekt- und Markenverwaltung**: Lassen Sie zu, dass mehrere Projekte innerhalb derselben Organisation parallel ausgeführt werden, während Isolation und Zugriffskontrolle gewährleistet sind.
+* **Projekt- und Markenverwaltung**: Lassen Sie es zu, dass in derselben Organisation mehrere Projekte parallel ausgeführt werden, während Isolation und Zugriffskontrolle gewährleistet bleiben.
 * **Flexibles Entwicklungsökosystem**: Stellen Sie Sandboxes auf nahtlose, skalierbare und kostengünstige Weise für Erkundungs-, Unterstützungs- und Demonstrationszwecke bereit.
 
 ## Zugriffskontrolle für Sandboxes

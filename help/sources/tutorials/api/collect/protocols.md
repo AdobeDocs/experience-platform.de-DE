@@ -18,7 +18,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Protokoll
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Protokollquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#protocols) eine Liste der Protokollquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Protokollquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellen - Übersicht](../../../home.md#protocols) eine Liste der Protokollquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 
@@ -196,7 +196,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des XDM-Zielschemas. |
-| `params.dataSetId` | Die Kennung des im vorherigen Schritt generierten Zieldatensatzes. **Hinweis**: Sie müssen beim Erstellen einer Zielverbindung eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
+| `params.dataSetId` | Die ID des Zieldatensatzes, die im vorherigen Schritt generiert wurde. **Hinweis**: Beim Erstellen einer Zielverbindung müssen Sie eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
@@ -319,9 +319,9 @@ Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation z
 
 >[!NOTE]
 >
->Die nachstehende JSON-Antwort-Payload wird für die Kürze ausgeblendet. Wählen Sie &quot;payload&quot;aus, um die Antwort-Payload anzuzeigen.
+>Die unten stehende JSON-Antwort-Payload ist zur Vereinfachung ausgeblendet. Wählen Sie „Payload“ aus, um die Antwort-Payload anzuzeigen.
 
-+++ Anzeigen der Payload
++++ Payload anzeigen
 
 ```json
 {
@@ -684,7 +684,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Frequenz lautet wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 
 **Antwort**
 

@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Google Cloud Storage-Basisverbindung mit der Flow Service-API
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit einem Google Cloud Storage-Konto verbinden.
+title: Erstellen einer Google Cloud Storage-Basisverbindung mithilfe der Flow Service-API
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google Cloud-Speicherkonto verbinden.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
@@ -22,20 +22,20 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einem Google Cloud Storage-Konto herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Google Cloud-Speicherkonto verbinden zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Damit [!DNL Flow Service] eine Verbindung zu Ihrem [!DNL Google Cloud Storage]-Konto herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Google Cloud Storage]-Konto herstellen können, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `accessKeyId` | Eine alphanumerische Zeichenfolge mit 61 Zeichen, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. |
-| `secretAccessKey` | Eine base-64-kodierte Zeichenfolge mit 40 Zeichen, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. |
-| `bucketName` | Der Name Ihres [!DNL Google Cloud Storage]-Buckets. Sie müssen einen Bucket-Namen angeben, wenn Sie Zugriff auf einen bestimmten Unterordner in Ihrem Cloud-Speicher gewähren möchten. |
-| `folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
+| `accessKeyId` | Eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. |
+| `secretAccessKey` | Eine mit Base-64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihres [!DNL Google Cloud Storage] bei Platform verwendet wird. |
+| `bucketName` | Der Name Ihres [!DNL Google Cloud Storage]. Sie müssen einen Behälternamen angeben, wenn Sie Zugriff auf einen bestimmten Unterordner in Ihrem Cloud-Speicher gewähren möchten. |
+| `folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
 
-Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel für Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und des geheimen Zugriffsschlüssels finden Sie in der [[!DNL Google Cloud Storage] Übersicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
+Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel für Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und Ihres geheimen Zugriffsschlüssels finden Sie in der [[!DNL Google Cloud Storage] Übersicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Verwenden von Platform-APIs
 
@@ -43,13 +43,13 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Google Cloud Storage]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Google Cloud Storage]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 >[!TIP]
 >
->In diesem Schritt können Sie auch die Unterordner angeben, auf die Ihr Konto Zugriff haben soll, indem Sie den Behälternamen und den Pfad zum Unterordner definieren.
+>In diesem Schritt können Sie auch die Unterordner festlegen, auf die Ihr Konto Zugriff haben soll, indem Sie den Behälternamen und den Pfad zum Unterordner definieren.
 
 **API-Format**
 
@@ -90,10 +90,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID, die Ihrem [!DNL Google Cloud Storage] -Konto zugeordnet ist. |
-| `auth.params.secretAccessKey` | Der geheime Zugriffsschlüssel, der Ihrem [!DNL Google Cloud Storage] -Konto zugeordnet ist. |
-| `auth.params.bucketName` | Der Name Ihres [!DNL Google Cloud Storage]-Buckets. Sie müssen einen Bucket-Namen angeben, wenn Sie Zugriff auf einen bestimmten Unterordner in Ihrem Cloud-Speicher gewähren möchten. |
-| `auth.params.folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
+| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID, die mit Ihrem [!DNL Google Cloud Storage]-Konto verknüpft ist. |
+| `auth.params.secretAccessKey` | Der mit Ihrem [!DNL Google Cloud Storage]-Konto verknüpfte geheime Zugriffsschlüssel. |
+| `auth.params.bucketName` | Der Name Ihres [!DNL Google Cloud Storage]. Sie müssen einen Behälternamen angeben, wenn Sie Zugriff auf einen bestimmten Unterordner in Ihrem Cloud-Speicher gewähren möchten. |
+| `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
 | `connectionSpec.id` | Die [!DNL Google Cloud Storage]-Verbindungsspezifikations-ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Antwort**
@@ -109,4 +109,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Google Cloud Storage] -Verbindung mithilfe von APIs erstellt und eine eindeutige ID als Teil des Antworttextes erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API](../../explore/cloud-storage.md) zu untersuchen.
+In diesem Tutorial haben Sie eine [!DNL Google Cloud Storage] mithilfe von APIs erstellt und eine eindeutige ID als Teil der Antwort erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu ](../../explore/cloud-storage.md).

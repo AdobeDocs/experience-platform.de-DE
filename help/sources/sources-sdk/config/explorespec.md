@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-title: Konfigurieren von Erkundungsspezifikationen für Self-Serve-Quellen (Batch-SDK)
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
+title: Konfigurieren von Erkundungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -10,13 +10,13 @@ ht-degree: 6%
 
 ---
 
-# Konfigurieren von Erkundungsspezifikationen für Self-Serve-Quellen (Batch-SDK)
+# Konfigurieren von Erkundungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 
-Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden und Überprüfen der in Ihrer Quelle enthaltenen Objekte erforderlich sind. Mithilfe von Erkunden-Spezifikationen wird auch das Antwortformat definiert, das zurückgegeben wird, wenn Objekte untersucht und untersucht werden.
+In den Erkundungsspezifikationen werden die Parameter definiert, die zum Untersuchen und Überprüfen von in der Quelle enthaltenen Objekten erforderlich sind. In den Analysespezifikationen wird auch das Antwortformat definiert, das zurückgegeben wird, wenn Objekte untersucht und geprüft werden.
 
 >[!TIP]
 >
->Die Analysespezifikationen sind hartcodiert und Sie können die unten stehende Payload einfach kopieren und in Ihre Verbindungsspezifikation einfügen.
+>Erkunden-Spezifikationen sind hartcodiert und Sie können einfach die unten stehende Payload kopieren und in Ihre Verbindungsspezifikation einfügen.
 
 ```json
 "exploreSpec": {
@@ -63,20 +63,20 @@ Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden un
 }
 ```
 
-| Spezifikationen | Beschreibung | Beispiel |
+| Erkunden von Spezifikationen | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `name` | Definiert den Namen oder die Kennung der Explorationsspezifikation. | `Resource` |
-| `type` | Definiert den Typ der Analysespezifikation. | `Resource` |
-| `requestSpec` | Enthält die Parameter, die zum Erkunden von Objekten in der Verbindung erforderlich sind. |
-| `requestSpec.type` | Definiert den Datentyp der Anforderungsspezifikation. | `object` |
-| `responseSpec` | Enthält die Parameter, die das Format der Antwortnachricht definieren, die bei einem Erkundungsaufruf zurückgegeben wird. |
+| `name` | Definiert den Namen oder die Kennung der Erkundungsspezifikation. | `Resource` |
+| `type` | Definiert den Typ der Explorationsspezifikation. | `Resource` |
+| `requestSpec` | Enthält die Parameter, die erforderlich sind, um Objekte in der Verbindung zu untersuchen. |
+| `requestSpec.type` | Definiert den Datentyp der Anfragespezifikation. | `object` |
+| `responseSpec` | Enthält die Parameter, die das Format der Antwortnachricht definieren, die für einen Erkundungsaufruf zurückgegeben wird. |
 | `responseSpec.type` | Definiert den Datentyp der Antwortspezifikation. | `object` |
 | `responseSpec.properties` | Enthält Informationen zur Formatierung der Antwortnachricht. |
 | `responseSpec.properties.format` | Definiert die Formatierung des Antwortschemas. | `object` |
-| `responseSpec.properties.format.type` | Definiert den Datentyp von Eigenschaften. | `string` |
+| `responseSpec.properties.format.type` | Definiert den Datentyp der Eigenschaften. | `string` |
 | `responseSpec.schema` | Enthält Informationen zur Formatierung des Antwortschemas. |
 | `responseSpec.schema.type` | Definiert den Datentyp des Schemas. | `object` |
-| `responseSpec.schema.properties` | Enthält Informationen zu den Spalten, dem Typ und den Elementen, die in einem Schema gespeichert sind. |
+| `responseSpec.schema.properties` | Enthält Informationen zu den Spalten, dem Typ und den Elementen, die in einem Schema enthalten sind. |
 | `responseSpec.schema.properties.columns.items.properties.name` | Zeigt den Namen der Datei an. |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Definiert den Datentyp des Dateinamens. | `string` |
 
@@ -84,4 +84,4 @@ Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden un
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Analysespezifikationen ausgefüllt haben, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mit der [!DNL Flow Service] -API fortfahren. Weitere Informationen finden Sie im API-Handbuch [Self-Serve-Sources (Batch SDK)](../api/api-overview.md) .
+Wenn Ihre Erkundungsspezifikationen ausgefüllt sind, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API fortfahren. Weitere Informationen finden [ im API-Handbuch ](../api/api-overview.md) Selbstbedienungsquellen (Batch-SDK) .

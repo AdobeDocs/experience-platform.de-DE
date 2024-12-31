@@ -1,56 +1,56 @@
 ---
-title: Aktualisierung der Segmentierungskriterien
-description: Erfahren Sie mehr über die Aktualisierungen der Berechtigungskriterien für die Segmentierung, die sich auf die Arten von Zielgruppen auswirken, die mithilfe von Streaming und Kantensegmentierung bewertet werden können.
+title: Aktualisierung der Segmentierungs-Eignungskriterien
+description: Erfahren Sie mehr über die Aktualisierungen der Segmentierungs-Eignungskriterien, die sich auf die Arten von Zielgruppen auswirken, die mithilfe von Streaming und Edge-Segmentierung ausgewertet werden können.
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
+# Aktualisierung der Segmentierungseignungskriterien
 
-# Aktualisierung der Segmentierungskriterien
-
-Ab dem 24. September 2024 werden zwei Aktualisierungen vorgenommen, die sich auf die Eignung für die Segmentierung auswirken.
+Ab dem 24. September 2024 werden zwei Aktualisierungen vorgenommen, die sich auf die Segmentierungseignung auswirken.
 
 1. Abfragetypen für Streaming- und Edge-Segmentierung
-2. Zusammenführungsrichtlinien für Streaming- und Edge-Segmentierung
+2. Zusammenführungsrichtlinien für Streaming und Edge-Segmentierung
 
 ## Abfragetypen
 
-Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Abfragetypen entsprechen, werden **nicht mehr** mit Streaming- oder Kantensegmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung bewertet.
+Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Abfragetypen entsprechen **werden nicht mehr** Streaming- oder Edge-Segmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung ausgewertet.
 
 - Ein einzelnes Ereignis mit einem Zeitfenster von mehr als 24 Stunden
-   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die in den letzten 3 Tagen eine Webseite angesehen haben.
+   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die sich eine Web-Seite in den letzten 3 Tagen angesehen haben.
 - Ein einzelnes Ereignis ohne Zeitfenster
-   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Webseite angezeigt haben.
+   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Web-Seite angesehen haben.
 
-Wenn Sie eine Segmentdefinition mithilfe von Streaming oder Kantensegmentierung auswerten müssen, die dem aktualisierten Abfragetyp entspricht, können Sie explizit eine Batch- und Streaming-Abfrage erstellen und diese mithilfe eines Segmentsegments kombinieren.
+Wenn Sie eine Segmentdefinition mit Streaming- oder Edge-Segmentierung auswerten müssen, die dem aktualisierten Abfragetyp entspricht, können Sie explizit eine Batch- und Streaming-Abfrage erstellen und sie mithilfe von Segmenten kombinieren.
 
-Wenn Sie beispielsweise eine Zielgruppe mit allen Profilen aktivieren müssen, die in den letzten 3 Tagen eine Webseite mit Streaming-Segmentierung angesehen haben, können Sie die folgenden Abfragen erstellen:
+Wenn Sie beispielsweise eine Zielgruppe mit allen Profilen aktivieren müssen, die in den letzten 3 Tagen eine Web-Seite mithilfe der Streaming-Segmentierung aufgerufen haben, können Sie die folgenden Abfragen erstellen:
 
-- F1 (Streaming): Alle Profile, die in den letzten 24 Stunden eine Webseite angesehen haben
-- F2 (Batch): Alle Profile, die in den letzten 3 Tagen eine Webseite angezeigt haben
+- Q1 (Streaming): Alle Profile, die sich eine Web-Seite in den letzten 24 Stunden angesehen haben
+- Q2 (Batch): Alle Profile, die in den letzten 3 Tagen eine Web-Seite angesehen haben
 
-Anschließend können Sie sie durch Verweis auf Q1 oder Q2 kombinieren.
+Sie können sie dann kombinieren, indem Sie sich auf Q1 oder Q2 beziehen.
 
-Wenn Sie eine Zielgruppe mit allen Profilen aktivieren müssen, die eine Webseite angesehen haben, können Sie die folgenden Abfragen erstellen:
+Wenn Sie eine Zielgruppe mit allen Profilen aktivieren müssen, die eine Web-Seite angesehen haben, können Sie die folgenden Abfragen erstellen:
 
-- F3 (Streaming): Alle Profile, die in den letzten 24 Stunden eine Webseite angesehen haben
-- F4 (Batch): Alle Profile, die eine Webseite angezeigt haben.
+- Q3 (Streaming): Alle Profile, die sich eine Web-Seite in den letzten 24 Stunden angesehen haben
+- Q4 (Batch): Alle Profile, die eine Web-Seite angesehen haben.
 
-Anschließend können Sie sie durch Verweis auf Q3 oder Q4 kombinieren.
+Sie können sie dann kombinieren, indem Sie sich auf Q3 oder Q4 beziehen.
 
 >[!IMPORTANT]
 >
->Alle vorhandenen Segmentdefinitionen, die mit den Abfragetypen übereinstimmen, werden mit Streaming oder Kantensegmentierung ausgewertet, bis sie bearbeitet werden.
+>Alle vorhandenen Segmentdefinitionen, die mit den Abfragetypen übereinstimmen, bleiben mithilfe von Streaming oder Edge-Segmentierung ausgewertet, bis sie bearbeitet werden.
 >
->Darüber hinaus werden alle vorhandenen Segmentdefinitionen, die derzeit die anderen Kriterien zur Bewertung von Streaming- oder Edge-Segmentierung erfüllen, mit Streaming- oder Edge-Segmentierung ausgewertet.
+>Darüber hinaus bleiben alle vorhandenen Segmentdefinitionen, die derzeit die anderen Bewertungskriterien für Streaming oder Edge-Segmentierung erfüllen, mit Streaming- oder Edge-Segmentierung bewertet.
 
 ## Zusammenführungsrichtlinie
 
-Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming- oder Kantensegmentierung **qualifiziert sind, müssen** in der Zusammenführungsrichtlinie &quot;Aktiv in Edge&quot;enthalten sein.
+Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming oder Edge-Segmentierung qualifiziert **müssen** in der Zusammenführungsrichtlinie „Active on Edge&quot; festgelegt sein.
 
-Alle vorhandenen Segmentdefinitionen, die mit Streaming oder Kantensegmentierung ausgewertet werden, funktionieren weiterhin wie bisher.
+Alle vorhandenen Segmentdefinitionen, die mithilfe von Streaming oder Edge-Segmentierung ausgewertet werden, funktionieren weiterhin wie bisher.

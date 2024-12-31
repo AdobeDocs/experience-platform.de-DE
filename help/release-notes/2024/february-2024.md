@@ -13,7 +13,7 @@ ht-degree: 29%
 
 **Versionsdatum: Donnerstag, 21. Februar 2024**
 
-Aktualisierungen vorhandener Funktionen im Experience Platform:
+Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 - [Warnhinweise](#alerts)
 - [Datenerfassung](#data-collection)
@@ -30,11 +30,11 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Tab Verlauf der Warnhinweise | Als Experience Platform-Administrator können Sie die Funktion zum Verwalten von Abonnenten von Warnhinweisen verwenden, um einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste einen Warnhinweis zuzuweisen. Weitere Informationen zur Verlaufs-Registerkarte finden Sie in der Dokumentation zur [Warnungen-Benutzeroberfläche](../../observability/alerts/ui.md) . |
+| Registerkarte „Warnhinweisverlauf“ | Als Experience Platform-Administrator können Sie die Funktion Abonnenten von Warnhinweisen verwalten verwenden, um einen Warnhinweis einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste zuzuweisen. Weitere Informationen zur Registerkarte „Verlauf[ finden Sie in der ](../../observability/alerts/ui.md) zur Warnhinweis-Benutzeroberfläche. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Warnhinweisen finden Sie in der [[!DNL Observability Insights] Übersicht](../../observability/home.md) .
+Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../../observability/home.md).
 
 ## Datenerfassung {#data-collection}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Web-In-App-Messaging-Unterstützung im Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | Das Adobe Experience Platform Web SDK unterstützt jetzt die Konfiguration von Web-In-App-Nachrichten für Adobe Journey Optimizer-Kampagnen. |
+| [Web-In-App-Messaging-Unterstützung in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK unterstützt jetzt die Konfiguration von Web-In-App-Nachrichten für Adobe Journey Optimizer-Kampagnen. |
 
 {style="table-layout:auto"}
 
@@ -72,9 +72,9 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [Gainsight PX-Verbindung](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX ist eine Produkterlebnisplattform, mit der Produktteams verstehen können, wie Benutzer ihre Produkte verwenden, Feedback erfassen und In-App-Interaktionen wie Produktumgehungen erstellen können, um das Onboarding und die Produktakzeptanz zu steigern. |
-| [Mailchimp-Tags-Verbindung](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp ist eine beliebte Marketing-Automatisierungsplattform und E-Mail-Marketing-Service. Sie können den Connector Mailchimp-Tags verwenden, um Ihre Kontakte zu strukturieren, zu beschriften oder zu kategorisieren. |
-| [SAP Commerce-Verbindung](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce ist eine Cloud-basierte E-Commerce-Plattformlösung für B2B- und B2C-Unternehmen und ist als Teil des SAP Customer Experience-Portfolios verfügbar. Mit diesem Ziel können Sie Ihre Kundendetails in SAP Commerce von einer bestehenden Experience Platform-Audience aktualisieren. |
+| [Gainsight PX-Verbindung](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX ist eine Produkterlebnisplattform, mit der Produkt-Teams verstehen können, wie Benutzer ihre Produkte verwenden, Feedback einholen und In-App-Interaktionen wie exemplarische Vorgehensweisen für Produkte erstellen können, um das Onboarding von Benutzern und die Produktakzeptanz zu fördern. |
+| [Mailchimp-Tags-Verbindung](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp ist eine beliebte Marketing-Automatisierungsplattform und E-Mail-Marketing-Service. Sie können den Mailchimp Tags-Connector verwenden, um Ihre Kontakte zu strukturieren, zu kennzeichnen oder zu kategorisieren. |
+| [SAP Commerce-Verbindung](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce ist eine Cloud-basierte E-Commerce-Plattformlösung für B2B- und B2C-Unternehmen und als Teil des SAP Customer Experience Portfolios verfügbar. Sie können dieses Ziel verwenden, um Ihre Kundendaten in SAP Commerce von einer bestehenden Experience Platform-Zielgruppe aus zu aktualisieren. |
 
 {style="table-layout:auto"}
 
@@ -82,12 +82,12 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Allgemeine verfügbare Kontozielgruppen aktivieren | Die Funktion zum Aktivieren von Kontozielgruppen für bestimmte Ziele ist jetzt allgemein für Unternehmen verfügbar, die die Editionen [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) von Real-time Customer Data Platform erwerben. Lesen Sie das Tutorial zum Aktivieren von Kontozielgruppen ](/help/destinations/ui/activate-account-audiences.md) , um vollständige Informationen zu erhalten, einschließlich unterstützter Ziele.[ |
-| Digital Markets Act - Instrumente zur Durchsetzung der Zustimmung für Google-Ziele | Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), der [Kundenabgleich](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union ([EU-Benutzerzustimmungsrichtlinie](https://www.google.com/about/company/user-consent-policy/)) definiert sind. Die Durchsetzung dieser Änderungen an den Zustimmungsanforderungen wird voraussichtlich ab dem 6. März 2024 in Kraft treten. <br/><br/> Um die EU-Richtlinie zur Einwilligung von Nutzern einzuhalten und im Europäischen Wirtschaftsraum (EWR) weiterhin Zielgruppenlisten für Benutzer zu erstellen, müssen Advertiser und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Einwilligung der Endnutzer weitergeben. Als Google-Partner bietet Ihnen Adobe die nötigen Tools, um diese Zustimmungsanforderungen gemäß DMA in der Europäischen Union zu erfüllen.<br/><br/>Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Zustimmungsrichtlinie](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) konfiguriert haben, um Profile ohne Zustimmung herauszufiltern, müssen keine Maßnahmen ergreifen.<br/><br/>Kunden, die keine Adobe Privacy &amp; Security Shield erworben haben, müssen die [Segmentdefinitionsfunktionen](../../segmentation/home.md#segment-definitions) in [Segment Builder](../../segmentation/ui/segment-builder.md) verwenden, um Profile ohne Zustimmung herauszufiltern, damit sie die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiterhin verwenden können. |
-| [!BADGE Beta]{type=Informative} Neuanordnen von Zuordnungsfeldern für Batch-Ziele | Sie können jetzt die Reihenfolge der Spalten in Ihren CSV-Exporten ändern, indem Sie die Zuordnungsfelder in den Schritt [Zuordnung](../../destinations/ui/activate-batch-profile-destinations.md#mapping) ziehen und ablegen. Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche entspricht der Reihenfolge der Spalten in der exportierten CSV-Datei von oben nach unten, wobei die oberste Zeile die ganz links in der CSV-Datei ist. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
-| [!BADGE Beta]{type=Informative} Vorausgewählte standardmäßige Exportpläne für Batch-Ziele | Experience Platform legt nun automatisch einen Standardzeitplan für jeden Dateiexport fest. Informationen zum Ändern des Standardzeitplans finden Sie in der Dokumentation zum [Planen von Zielgruppenexporten](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) . <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
-| [!BADGE Beta]{type=Informative} Zeitpläne zur Massenbearbeitung von Zielgruppenaktivierungen für Batch-Ziele | Sie können jetzt den Aktivierungsplan für mehrere Zielgruppen stapelweise auf der Seite [Aktivierungsdaten](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) bearbeiten. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
-| [!BADGE Beta]{type=Informative} Massen-Export von Dateien bei Bedarf an Batch-Zielen | Mit der Funktion [Dateien On-Demand exportieren](../../destinations/ui/export-file-now.md) können Sie jetzt Zielgruppen stapelweise in Batch-Ziele exportieren. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
+| Kontozielgruppen aktivieren, die allgemein verfügbar sind | Die Funktion zum Aktivieren von Account-Zielgruppen für bestimmte Ziele ist jetzt allgemein für Unternehmen verfügbar, die die [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-time Customer Data Platform erwerben. Lesen Sie das Tutorial [Aktivieren von Konto-Zielgruppen](/help/destinations/ui/activate-account-audiences.md), um vollständige Informationen zu erhalten, einschließlich unterstützter Ziele. |
+| Tools zur Durchsetzung von Einverständniserklärungen für Google-Ziele | Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Zustimmungspflichten wird voraussichtlich ab dem 6. März 2024 in Kraft treten. <br/><br/> Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Ihnen Adobe die notwendigen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.<br/><br/>Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.<br/><br/>Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die Funktionen [Segmentdefinition](../../segmentation/home.md#segment-definitions) in [Segment Builder](../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die vorhandenen Real-Time CDP Google-Ziele ohne Unterbrechung weiterhin verwendet werden können. |
+| [!BADGE Beta]{type=Informative} Ordnen Sie Zuordnungsfelder für Batch-Ziele neu an | Sie können jetzt die Reihenfolge der Spalten in Ihren CSV-Exporten ändern, indem Sie die Zuordnungsfelder im Schritt [Zuordnung“ ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) und ablegen. Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche wird in der Reihenfolge der Spalten in der exportierten CSV-Datei von oben nach unten widergespiegelt, wobei die oberste Zeile die Spalte in der CSV-Datei ganz links ist. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Um Zugriff auf diese Funktion zu erhalten, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter. |
+| [!BADGE Beta]{type=Informative} Vorab ausgewählte standardmäßige Exportpläne für Batch-Ziele | Experience Platform legt jetzt automatisch einen Standardzeitplan für jeden Dateiexport fest. Weitere Informationen zum Ändern des Standardzeitplans finden [ in der Dokumentation unter Planen ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) Zielgruppenexporten“. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Um Zugriff auf diese Funktion zu erhalten, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter. |
+| [!BADGE Beta]{type=Informative} Massenbearbeitung von Zielgruppen-Aktivierungszeitplänen für Batch-Ziele | Sie können jetzt den Aktivierungsplan für mehrere Zielgruppen stapelweise über die Seite „Aktivierungsdaten[ bearbeiten](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Um Zugriff auf diese Funktion zu erhalten, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter. |
+| [!BADGE Beta]{type=Informative} Massenexport von Dateien nach Bedarf an Batch-Ziele | Sie können Zielgruppen jetzt über die Funktion [Dateien bei Bedarf exportieren](../../destinations/ui/export-file-now.md) stapelweise in Batch-Ziele exportieren. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Um Zugriff auf diese Funktion zu erhalten, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter. |
 
 {style="table-layout:auto"}
 
@@ -95,17 +95,17 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dies zu erreichen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Sandbox-Werkzeuge | Verwenden Sie jetzt nicht nur Objekttypen für Zustimmungs- und Governance-Regeln, sondern auch Sandbox-Tools, um Schemas ohne aktivierte einheitliche Profile zu importieren, beim Import eines Segments nach fehlenden Attributen in der Ziel-Sandbox zu suchen und standardmäßig die vorhandene Zusammenführungsrichtlinie zu verwenden. Weitere Informationen zu diesen Funktionen finden Sie im Leitfaden für die Sandbox-Tools-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md).[ |
+| Sandbox-Werkzeuge | Zusätzlich zur Unterstützung von Objekttypen für Einverständnis- und Governance-Regeln verwenden Sie jetzt die Sandbox-Tools , um Schemas zu importieren, für die keine einheitlichen Profile aktiviert sind. Außerdem prüfen Sie beim Importieren eines Segments, ob in der Ziel-Sandbox fehlende Attribute vorhanden sind, und verwenden Sie standardmäßig die vorhandene Zusammenführungsrichtlinie. Weitere Informationen zu diesen Funktionen finden Sie im [Handbuch zur Sandbox-Tooling-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -115,7 +115,7 @@ Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Konto-Zielgruppen | Kundenzielgruppen sind jetzt allgemein verfügbar! Sie können jetzt die Kontosegmentierung verwenden, um die vollständige Leichtigkeit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen in den B2B- und B2P-Editionen der Echtzeit-Kundenplattform zu bringen. In dieser Version können Sie benutzerspezifische Zielgruppen als Prädikat für kontobasierte Zielgruppen verwenden, Suchfunktionen hinzufügen, die Verwendung benutzerdefinierter Entitäten unterstützen und mit Data Governance konform sein. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md) . |
+| Konto-Zielgruppen | Account-Zielgruppen sind jetzt allgemein verfügbar! Sie können jetzt die Kontosegmentierung verwenden, um die volle Einfachheit und Komplexität des Marketing-Segmentierungs-Erlebnisses von personenbasierten Zielgruppen zu Account-basierten Zielgruppen in den B2B- und B2P-Editionen der Echtzeit-Kundenplattform zu bringen. In dieser Version können Sie personenbasierte Zielgruppen als Prädikat für kontobasierte Zielgruppen verwenden, Suchfunktionen hinzufügen, die Verwendung benutzerdefinierter Entitäten unterstützen und mit Data Governance konform sind. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -127,8 +127,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Quelle [!BADGE Beta]{type=Informative} [!DNL Acxiom] | Verwenden Sie die [[!DNL Acxiom Prospecting Data Import] Quelle](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) , um Daten vom Prospektdienst von [!DNL Acxiom] abzurufen und sie Experience Platform zuzuordnen. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] | Verwenden Sie die [[!DNL Acxiom Prospecting Data Import] Quelle](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) um Daten von [!DNL Acxiom] Interessenten-Service abzurufen und sie Experience Platform zuzuordnen. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).

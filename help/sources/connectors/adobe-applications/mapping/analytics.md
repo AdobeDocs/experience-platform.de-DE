@@ -2,7 +2,7 @@
 keywords: Analytics-Zuordnungsfelder;Analytics-Zuordnung
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
-description: Weisen Sie mithilfe von Analytics Source Connector Adobe Analytics-Felder XDM-Feldern zu.
+description: Zuordnen von Adobe Analytics-Feldern zu XDM-Feldern mithilfe des Analytics Source Connectors.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 # Analytics-Feldzuordnungen
 
-Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle erfassen. Einige der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, damit sie erfolgreich zugeordnet werden können.
+Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle aufnehmen. Einige der über ADC aufgenommenen Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Umwandlungen und bestimmte Funktionen erfordern, um erfolgreich zugeordnet zu werden.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -23,14 +23,14 @@ Bestimmte Felder werden von Adobe Analytics direkt zum Experience-Datenmodell (X
 
 | Analytics-Feld | XDM-Feld | XDM-Typ | Beschreibung |
 | --------------- | --------- | -------- | ---------- |
-| `m_evar1`<br/>`[...]`<br/>`m_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Benutzerdefinierte Analytics-eVars. Jede Organisation kann eVars anders verwenden. |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | Zeichenfolge | Benutzerdefinierte Analytics-Eigenschaften. Jede Organisation kann Props unterschiedlich verwenden. |
+| `m_evar1`<br/>`[...]`<br/>`m_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Benutzerdefinierte Analytics-eVars. Jede Organisation kann eVars unterschiedlich verwenden. |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | Zeichenfolge | Benutzerdefinierte Analytics-Props. Jede Organisation kann Props anders verwenden. |
 | `m_browser` | `_experience.analytics.environment.`<br/>`browserID` | Ganzzahl | Zahlenkennung des Browsers. |
 | `m_browser_height` | `environment.browserDetails.viewportHeight` | Ganzzahl | Höhe des Browsers in Pixel. |
 | `m_browser_width` | `environment.browserDetails.viewportWidth` | Ganzzahl | Breite des Browsers in Pixel. |
 | `m_campaign` | `marketing.trackingCode` | Zeichenfolge | Variable, die in der Dimension „Trackingcode“ verwendet wird. |
 | `m_channel` | `web.webPageDetails.siteSection` | Zeichenfolge | Variable, die in der Dimension „Site-Bereiche“ verwendet wird. |
-| `m_domain` | `environment.domain` | Zeichenfolge | Variable, die in der Dimension „Domain“ verwendet wird. Er basiert auf dem Internetdienstanbieter (ISP) des Benutzers. |
+| `m_domain` | `environment.domain` | Zeichenfolge | Variable, die in der Dimension „Domain“ verwendet wird. Sie basiert auf dem Internet Service Provider (ISP) des Benutzers. |
 | `m_geo_city` | `placeContext.geo.city` | Zeichenfolge | Name der Stadt des Treffers. Dies basiert auf der IP-Adresse des Treffers. |
 | `m_geo_dma` | `placeContext.geo.dmaID` | Ganzzahl | Numerische Kennung des demografischen Bereichs für den Treffer. Dies basiert auf der IP-Adresse des Treffers. |
 | `m_geo_region` | `placeContext.geo.stateProvince` | Zeichenfolge | Name des Bundeslands oder der Region des Treffers. Dies basiert auf der IP-Adresse des Treffers. |
@@ -38,7 +38,7 @@ Bestimmte Felder werden von Adobe Analytics direkt zum Experience-Datenmodell (X
 | `m_keywords` | `search.keywords` | Zeichenfolge | Die in der Keyword-Dimension verwendete Variable. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | Ganzzahl | Numerische Kennung, die das Betriebssystem des Besuchers darstellt. Dieser Wert basiert auf der Spalte „user_agent“. |
 | `m_page_url` | `web.webPageDetails.URL` | Zeichenfolge | URL des Seitenaufrufs. |
-| `m_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit Seitenname. Dies ähnelt der Adobe Analytics-Metrik &quot;Seitenansichten&quot;. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit einem Seitennamen. Dies ähnelt der Metrik Adobe Analytics-Seitenansichten . |
 | `m_referrer` | `web.webReferrer.URL` | Zeichenfolge | Seiten-URL der vorherigen Seite. |
 | `m_search_page_num` | `search.pageDepth` | Ganzzahl | Wird von der Dimension „Rangansicht aller Suchseiten“ verwendet. Gibt an, auf welcher Seite der Suchergebnisse Ihre Site angezeigt wurde, ehe der Benutzer sich zu Ihrer Site durchgeklickt hat. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | Zeichenfolge | Statusvariable. |
@@ -118,7 +118,7 @@ Bestimmte Felder werden von Adobe Analytics direkt zum Experience-Datenmodell (X
 
 {style="table-layout:auto"}
 
-## Aufspaltungsfelder
+## Aufspaltung von Zuordnungsfeldern
 
 Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Positionen zugeordnet.
 
@@ -132,30 +132,30 @@ Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Pos
 
 ## Generierte Zuordnungsfelder
 
-Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodass Logik über eine Direktkopie von Adobe Analytics hinaus in XDM generiert werden muss.
+Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logiken generiert werden müssen, die über eine direkte Kopie aus Adobe Analytics hinausgehen.
 
 | Analytics-Feld | XDM-Feld | XDM-Typ | Beschreibung |
 | --------------- | --------- | -------- | ----------- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objekt | Benutzerdefinierte Analytics-Eigenschaften, die als Listen-Props konfiguriert sind. Sie enthält eine durch Trennzeichen getrennte Liste von Werten. | {} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objekt | Benutzerdefinierte Analytics-Props, konfiguriert als Listen-Props. Sie enthält eine durch Trennzeichen getrennte Liste von Werten. | {} |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objekt | Wird von Hierarchievariablen verwendet. Sie enthält eine durch Trennzeichen getrennte Liste von Werten. | {values (array), delimiter (string)} |
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Benutzerdefinierte Analytics-Listenvariablen. Enthält eine durch Trennzeichen getrennte Liste von Werten. | {value (string), key (string)} |
-| `m_color` | `device.colorDepth` | integer | Die Farbtiefen-ID, die auf dem Wert der Spalte c_color basiert. |
+| `m_color` | `device.colorDepth` | integer | Die Farbtiefe-ID, die auf dem Wert der Spalte c_color basiert. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | Boolescher Wert | Variable, die in der Dimension „Cookie-Unterstützung“ verwendet wird. |
-| `m_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
-| `m_geo_country` | `placeContext.geo.countryCode` | Zeichenfolge | Abkürzung des Landes, aus dem der Treffer stammt, basierend auf der IP. |
+| `m_geo_country` | `placeContext.geo.countryCode` | Zeichenfolge | Abkürzung für das Land, aus dem der Treffer stammt, basierend auf der IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
-| `m_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
+| `m_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Ein Flag, das angibt, ob Java™ aktiviert ist. |
 | `m_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `m_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Variable, die nur in Bildanforderungen zum Linktracking verwendet wird. Die Variable enthält die URL des angeklickten Downloadlinks, Exitlinks oder benutzerspezifischen Links. |
 | `m_page_event_var2` | `web.webInteraction.name` | Zeichenfolge | Variable, die nur in Bildanforderungen zum Linktracking verwendet wird. Damit wird der benutzerdefinierte Name des Links aufgeführt, sofern angegeben. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | Boolescher Wert | Variable, die zum Ausfüllen der Dimension „Seiten nicht gefunden“ dient. Diese Variable sollte entweder leer sein oder „ErrorPage“ enthalten. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben wird, bleibt dieser Wert leer. |
 | `m_paid_search` | `search.isPaid` | Boolescher Wert | Markierung, die gesetzt wird, wenn der Treffer mit der Paid Search-Erkennung übereinstimmt. |
 | `m_product_list` | `productListItems[].items` | array | Produktliste, so wie sie von der Variable der Produkte übergeben wurde. | {SKU (string), quantity (integer), priceTotal (number)} |
-| `m_ref_type` | `web.webReferrer.type` | Zeichenfolge | Eine numerische ID, die den Typ des Verweises für den Treffer darstellt.<br/>`1`: Innerhalb Ihrer Site<br/>`2`: Andere Websites<br/>`3`: Suchmaschinen<br/>`4`: Festplatte<br/>`5`: USENET<br/>`6`: Eingegeben/mit Lesezeichen versehen (kein Referrer)<br/>`7`: E-Mail<br/>`8`: Kein JavaScript<br/>`9`: Soziale Netzwerke |
+| `m_ref_type` | `web.webReferrer.type` | Zeichenfolge | Eine numerische ID, die den Typ des Verweises für den Treffer darstellt.<br/>`1`: Innerhalb Ihrer Website<br/>`2`: Andere Websites<br/>`3`: Suchmaschinen<br/>`4`: Festplatte<br/>`5`: USENET<br/>`6`: Eingegeben/Mit Lesezeichen versehen (kein Referrer)<br/>`7`: E-Mail<br/>`8`: Kein JavaScript<br/>`9`: Social Networks |
 | `m_search_engine` | `search.searchEngine` | Zeichenfolge | Numerische Kennung, die die Suchmaschine darstellt, die den Besucher auf Ihre Site verwiesen hat. |
 | `post_currency` | `commerce.order.currencyCode` | Zeichenfolge | Der während der Transaktion verwendete Währungscode. |
 | `post_cust_hit_time_gmt` | `timestamp` | Zeichenfolge | Dieser Wert wird nur in für Zeitstempel aktivierten Datensätzen verwendet. Dies ist der Zeitstempel, der mit dem Treffer gesendet wird, basierend auf der UNIX®-Zeit. |
@@ -166,16 +166,16 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `post_visid_high` + `visid_low` | `endUserIDs._experience.aaid.id` | Zeichenfolge | Eindeutige Kennung für einen Besuch. |
 | `post_visid_high` | `endUserIDs._experience.aaid.primary` | Boolescher Wert | Wird mit `visid_low` verwendet, um einen Besuch eindeutig zu identifizieren. |
 | `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | Zeichenfolge | Wird mit `visid_low` verwendet, um einen Besuch eindeutig zu identifizieren. |
-| `post_visid_low` | `identityMap` | Objekt | Wird mit visid_high zur eindeutigen Identifizierung eines Besuchs verwendet. |
-| `hit_time_gmt` | `receivedTimestamp` | Zeichenfolge | Der Zeitstempel des Treffers basierend auf der UNIX®-Zeit. |
+| `post_visid_low` | `identityMap` | Objekt | Wird mit visid_high verwendet, um einen Besuch eindeutig zu identifizieren. |
+| `hit_time_gmt` | `receivedTimestamp` | Zeichenfolge | Der Zeitstempel des Treffers, basierend auf der UNIX®-Zeit. |
 | `hitid_high` + `hitid_low` | `_id` | Zeichenfolge | Eindeutige Kennung zur Identifizierung eines Treffers. |
-| `hitid_low` | `_id` | Zeichenfolge | Wird mit hitid_high zur eindeutigen Identifizierung eines Treffers verwendet. |
+| `hitid_low` | `_id` | Zeichenfolge | Wird mit hitid_high verwendet, um einen Treffer eindeutig zu identifizieren. |
 | `ip` | `environment.ipV4` | Zeichenfolge | IP-Adresse basierend auf der HTTP-Kopfzeile der Bildanforderung. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | Boolescher Wert | Die verwendete JavaScript-Version. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | Objekt | Die Experience Cloud-Besucher-ID. |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Boolescher Wert | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Boolescher Wert | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
 | `mcvisid_low` | `identityMap` | Objekt | Die Experience Cloud-Besucher-ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | Zeichenfolge | Trefferzusammenfügungs-ID. Die Analytics-Felder sdid_high und sdid_low sind die ergänzenden Daten-IDs, mit denen zwei (oder mehr) eingehende Treffer zusammengefügt werden. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | Zeichenfolge | Mobile Services – Beacon-Nähe. |
@@ -186,14 +186,14 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 
 ## Erweiterte Zuordnungsfelder
 
-Markierte Felder (auch &quot;Nachwerte&quot;genannt) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Suchtabellen angepasst hat. Die meisten Post-Werte haben ein vorverarbeitetes Gegenstück. Ihr Unternehmen kann entscheiden, ob Sie das vorverarbeitete Feld, das Feld nach der Verarbeitung oder beides verwenden möchten.
+Ausgewählte Felder (so genannte „Post-Werte„) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Lookup-Tabellen angepasst hat. Die meisten Nachbearbeitungswerte haben ein vorverarbeitetes Gegenstück. Ihr Unternehmen kann entscheiden, ob Sie das vorverarbeitete Feld, das nachverarbeitete Feld oder beides verwenden möchten.
 
-Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Service finden Sie unter [Adobe-definierte Funktionen](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zu Query Service.
+Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
 | Analytics-Feld | XDM-Feld | XDM-Typ | Beschreibung |
 | --------------- | --------- | -------- | ---------- |
-| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Benutzerdefinierte Analytics-eVars. Jede Organisation kann eVars anders verwenden. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | Zeichenfolge | Benutzerdefinierte Analytics-Eigenschaften. Jede Organisation kann Props unterschiedlich verwenden. |
+| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Benutzerdefinierte Analytics-eVars. Jede Organisation kann eVars unterschiedlich verwenden. |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | Zeichenfolge | Benutzerdefinierte Analytics-Props. Jede Organisation kann Props anders verwenden. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | Ganzzahl | Höhe des Browsers in Pixel. |
 | `post_browser_width` | `environment.browserDetails.viewportWidth` | Ganzzahl | Breite des Browsers in Pixel. |
 | `post_campaign` | `marketing.trackingCode` | Zeichenfolge | Variable, die in der Dimension „Trackingcode“ verwendet wird. |
@@ -203,14 +203,14 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | Zeichenfolge | Variable, die in der Dimension „Ursprüngliche Entrypage“ verwendet wird. Seitenname der Entrypage des Besuchers. |
 | `post_keywords` | `search.keywords` | Zeichenfolge | Die Keywords, die für den Treffer gesammelt wurden. |
 | `post_page_url` | `web.webPageDetails.URL` | Zeichenfolge | URL des Seitenaufrufs. |
-| `post_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit Seitenname. Dies ähnelt der Adobe Analytics-Metrik &quot;Seitenansichten&quot;. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit einem Seitennamen. Dies ähnelt der Metrik Adobe Analytics-Seitenansichten . |
 | `post_purchaseid` | `commerce.order.purchaseID` | Zeichenfolge | Variable, die zur eindeutigen Identifizierung von Käufen dient. |
 | `post_referrer` | `web.webReferrer.URL` | Zeichenfolge | URL der vorherigen Seite. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | Zeichenfolge | Statusvariable. |
 | `post_user_server` | `web.webPageDetails.server` | Zeichenfolge | Variable, die in der Dimension „Server“ verwendet wird. |
 | `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | Zeichenfolge | Variable, die zum Ausfüllen der Dimension „Postleitzahl“ dient. |
 | `browser` | `_experience.analytics.environment.`<br/>`browserID` | Ganzzahl | Numerische Kennung des Browsers. |
-| `domain` | `environment.domain` | Zeichenfolge | Variable, die in der Dimension „Domain“ verwendet wird. Er basiert auf dem Internetdienstanbieter (ISP) des Benutzers. |
+| `domain` | `environment.domain` | Zeichenfolge | Variable, die in der Dimension „Domain“ verwendet wird. Sie basiert auf dem Internet Service Provider (ISP) des Benutzers. |
 | `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | Zeichenfolge | Die erste verweisende URL für den Besucher. |
 | `geo_city` | `placeContext.geo.city` | Zeichenfolge | Name der Stadt des Treffers. Dies basiert auf der IP-Adresse des Treffers. |
 | `geo_dma` | `placeContext.geo.dmaID` | Ganzzahl | Numerische Kennung des demografischen Bereichs für den Treffer. Dies basiert auf der IP-Adresse des Treffers. |
@@ -223,29 +223,29 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | Ganzzahl | Eine Variable, die in der Dimension „Treffertiefe“ verwendet wird. Der Wert erhöht sich bei jedem vom Benutzer generierten Treffer um 1 und wird nach jedem Besuch zurückgesetzt. |
 | `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | Zeichenfolge | Die erste verweisende Stelle des Besuchs. |
 | `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | Ganzzahl | Der erste Seitenname des Besuchs. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objekt | Benutzerdefinierte Analytics-Eigenschaften, die als Listen-Props konfiguriert sind. Sie enthält eine durch Trennzeichen getrennte Liste von Werten. |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objekt | Benutzerdefinierte Analytics-Props, konfiguriert als Listen-Props. Sie enthält eine durch Trennzeichen getrennte Liste von Werten. |
 | `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objekt | Wird von Hierarchievariablen verwendet und enthält eine durch Trennzeichen getrennte Liste von Werten. | {values (array), delimiter (string)} |
 | `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Eine Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). | {value (string), key (string)} |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | Boolescher Wert | Die Variable, die in der Dimension „Cookie-Unterstützung“ verwendet wird. |
-| `post_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
+| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
-| `post_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
+| `post_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Ein Flag, das angibt, ob Java™ aktiviert ist. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | Zeichenfolge | Die Art des in der Bildanforderung gesendeten Treffers (Standardtreffer, angeklickter Downloadlink, Exitlink oder benutzerspezifischer Link). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Gleich 1, wenn es sich bei dem Treffer um einen Link-Klick handelt. Dies ähnelt der Metrik Seitenereignisse in Adobe Analytics. |
-| `post_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Dies ist die URL des angeklickten Downloadlinks, Exitlinks oder benutzerspezifischen Links. |
-| `post_page_event_var2` | `web.webInteraction.name` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Dies ist der benutzerdefinierte Name des Links. |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | number | ist gleich 1, wenn der Treffer ein Link-Klick ist. Dies ähnelt der Metrik Seitenereignisse in Adobe Analytics. |
+| `post_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Dies ist die URL des Downloadlinks, des Exitlinks oder des angeklickten benutzerspezifischen Links. |
+| `post_page_event_var2` | `web.webInteraction.name` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Es ist der benutzerdefinierte Name des Links. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | Boolescher Wert | Damit wird die Dimension „Seiten nicht gefunden“ ausgefüllt. Diese Variable sollte entweder leer sein oder „ErrorPage“ enthalten. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben wird, bleibt dieser Wert leer. |
 | `post_product_list` | `productListItems[].items` | array | Produktliste, so wie sie von der Variable der Produkte übergeben wurde. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `post_search_engine` | `search.searchEngine` | Zeichenfolge | Numerische Kennung, die die Suchmaschine darstellt, die den Besucher auf Ihre Site verwiesen hat. |
 | `mvvar1_instances` | `.list.items[]` | Objekt | Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). |
 | `mvvar2_instances` | `.list.items[]` | Objekt | Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). |
 | `mvvar3_instances` | `.list.items[]` | Objekt | Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). |
 | `color` | `device.colorDepth` | Ganzzahl | Farbtiefen-ID, basierend auf dem Wert der Spalte „c_color“. |
-| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | Zeichenfolge | Numerische ID, die den Typ der verweisenden Stelle der ersten verweisenden Stelle des Besuchers darstellt. |
-| `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | integer | Zeitstempel des ersten Treffers des Besuchers in UNIX®-Zeit. |
+| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | Zeichenfolge | Die numerische ID, die den Referrer-Typ des ersten Referrers des Besuchers darstellt. |
+| `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | integer | Zeitstempel des ersten Treffers des Besuchers in der UNIX®-Zeit. |
 | `geo_country` | `placeContext.geo.countryCode` | Zeichenfolge | Abkürzung für das Land, aus dem der Treffer stammt, basierend auf der IP-Adresse. |
 | `geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
@@ -254,6 +254,6 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | Boolescher Wert | Eine Markierung (1 = paid, 0 = not paid), die angibt, ob der erste Treffer des Besuchs ein Paid Search-Treffer war oder nicht. |
 | `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | Zeichenfolge | Numerische ID des Typs der verweisenden Stelle der ersten verweisenden Stelle des Besuchs. |
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | Zeichenfolge | Numerische ID der ersten Suchmaschine des Besuchs. |
-| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Zeitstempel des ersten Treffers des Besuchs in UNIX®-Zeit. |
+| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Zeitstempel des ersten Treffers des Besuchs in der UNIX®-Zeit. |
 
 {style="table-layout:auto"}

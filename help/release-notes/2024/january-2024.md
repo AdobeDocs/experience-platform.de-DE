@@ -17,7 +17,7 @@ Neue Funktionen in Adobe Experience Platform:
 
 - [Anwendungsfall-Playbooks](#use-case-playbooks)
 
-Aktualisierungen vorhandener Funktionen im Experience Platform:
+Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 - [Attributbasierte Zugriffssteuerung](#abac)
 - [Datenvorbereitung](#data-prep)
@@ -31,15 +31,15 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 ## Anwendungsfall-Playbooks {#use-case-playbooks}
 
-Die Funktion [!UICONTROL Anwendungsfall-Playbooks] ist jetzt allgemein für alle Real-Time CDP- und Adobe Journey Optimizer-Kunden verfügbar. [!UICONTROL Anwendungsfall-Playbooks] sind so konzipiert, dass sie Benutzer bei der Bewältigung von Problemen unterstützen, wenn sie mit Real-time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie beginnen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, können Sie mithilfe von &quot;Case Playbooks&quot;verschiedene Assets erstellen, damit Sie sie testen und in Produktionsumgebungen importieren können, sobald sie bereit sind.
+Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
 
-Lesen Sie die folgenden Dokumentationsseiten, um mit [!UICONTROL Nutzungsszenario-Playbooks] zu beginnen:
+Lesen Sie die folgenden Dokumentationsseiten, um mit [!UICONTROL Playbooks für Anwendungsfälle] zu beginnen:
 
-- Lesen Sie die [Übersichtsseite](/help/use-case-playbooks/playbooks/overview.md) , um den Zweck und die Verfügbarkeitsinformationen zu verstehen und eine umfassende Demonstration der Funktionsweise von Playbooks von der Erkennung über das Erstellen von Instanzen bis hin zum Importieren generierter Assets in andere Sandbox-Umgebungen zu erhalten.
-- Eine Liste aller [verfügbaren Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md) abrufen, gruppiert nach Produkt (Real-Time CDP oder Journey Optimizer)
-- Hier erhalten Sie Informationen zu allen [erforderlichen Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) für die Verwendung von Playbooks und den von den Playbooks generierten Assets.
-- Grundlegendes zur [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md), mit der Sie generierte Assets in andere Sandbox-Umgebungen kopieren können
-- Besorgen Sie sich [Tipps zur Fehlerbehebung](/help/use-case-playbooks/playbooks/troubleshooting.md) , wenn Sie bei der Verwendung von &quot;Use Case Playbooks&quot;auf Fehler oder Schwierigkeiten stoßen.
+- Lesen Sie die [Übersichtsseite](/help/use-case-playbooks/playbooks/overview.md) um den Zweck und die Verfügbarkeitsinformationen zu verstehen und eine durchgängige Demonstration der Funktionsweise von Playbooks von der Erkennung über die Erstellung von Instanzen bis zum Import generierter Assets in andere Sandbox-Umgebungen zu erhalten.
+- Abrufen einer Liste aller [verfügbaren Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md) gruppiert nach Produkt (Real-Time CDP oder Journey Optimizer)
+- Erhalten Sie Informationen zu allen [erforderlichen Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) um Playbooks und die von den Playbooks generierten Assets zu verwenden.
+- Machen Sie sich mit der [Funktionalität zur Datenerkennung](/help/use-case-playbooks/playbooks/data-awareness.md) vertraut, mit der Sie generierte Assets in andere Sandbox-Umgebungen kopieren können
+- Erhalten Sie [Tipps zur Fehlerbehebung](/help/use-case-playbooks/playbooks/troubleshooting.md) wenn Sie bei der Verwendung von Anwendungsfall-Playbooks auf Fehler oder Schwierigkeiten stoßen.
 
 ## Attributbasierte Zugriffssteuerung {#abac}
 
@@ -49,9 +49,9 @@ Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Adminis
 
 **Neue oder aktualisierte Dokumentation**
 
-| Aktualisierung der Dokumentation | Beschreibung |
+| Dokumentation aktualisieren | Beschreibung |
 | --- | --- |
-| Neue API-Endpunkte für attributbasierte Zugriffskontrolle dokumentiert | Die Referenzdokumentation zur API für die Zugriffskontrolle ](https://developer.adobe.com/experience-platform-apis/references/access-control/) enthält jetzt API-Rollen, Richtlinien und Produktendpunkte für die attributbasierte Zugriffskontrolle. [ Diese Endpunkte können zum Abrufen relevanter Rollen, Richtlinien und Produkte für einen Benutzer für bestimmte Ressourcen in einer angegebenen Sandbox verwendet werden. |
+| Neue API-Endpunkte für die attributbasierte Zugriffssteuerung dokumentiert | Die [Referenzdokumentation zur Zugriffssteuerungs-](https://developer.adobe.com/experience-platform-apis/references/access-control/)&quot; enthält jetzt attributbasierte Zugriffssteuerungs-API-Rollen, Richtlinien und Produktendpunkte. Diese Endpunkte können verwendet werden, um relevante Rollen, Richtlinien und Produkte für einen Benutzer bzw. eine Benutzerin in bestimmten Ressourcen in einer bestimmten Sandbox abzurufen. |
 
 {style="table-layout:auto"}
 
@@ -65,11 +65,11 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Zuordnungsfunktionen | <ul><li>`object_to_map`: Verwenden Sie die Funktion `object_to_map` , um Zuordnungs-Datentypen zu erstellen. Diese Funktion unterstützt mehrere verschiedene Syntaxen. Weitere Informationen finden Sie im Handbuch zu [Funktionen für Hierarchien - Objekte](../../data-prep/functions.md#objects) . </li><li>`to_map`: Verwenden Sie die Funktion `to_map` , um eine Zuordnung mit den angegebenen Feld- und Wertpaaren mithilfe von Objekten zu erstellen. Weitere Informationen finden Sie im Handbuch zu [Funktionen für Hierarchien - maps](../../data-prep/functions.md#map) . </li><li>`array_to_map`: Verwenden Sie die Funktion `array_to_map` , um eine Zuordnung mit den angegebenen Feld- und Wertpaaren mithilfe von Objekt-Arrays zu erstellen. Weitere Informationen finden Sie im Handbuch zu [Funktionen für Hierarchien - maps](../../data-prep/functions.md#map) . |
+| Neue Zuordnungsfunktionen | <ul><li>`object_to_map`: Verwenden Sie die Funktion `object_to_map` , um Zuordnungsdatentypen zu erstellen. Diese Funktion unterstützt mehrere verschiedene Syntaxen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Objekte](../../data-prep/functions.md#objects). </li><li>`to_map`: Verwenden Sie die Funktion `to_map` , um mithilfe von -Objekten eine Zuordnung mit den angegebenen Feldnamen- und Wertepaaren zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Karten](../../data-prep/functions.md#map). </li><li>`array_to_map`: Verwenden Sie die Funktion `array_to_map` , um eine Zuordnung mit den angegebenen Feldnamen- und Wertepaaren mithilfe von Objekt-Arrays zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Karten](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenvorbereitung finden Sie in der [Datenvorbereitung - Übersicht](../../data-prep/home.md) .
+Weitere Informationen zur Datenvorbereitung finden Sie unter [Datenvorbereitung - Übersicht](../../data-prep/home.md).
 
 ## Dashboards {#dashboards}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| SQL anzeigen | Jetzt können Sie die SQL hinter Ihren Profilen, Audiences, Zielen und benutzerdefinierten Insights mit dem Umschalter SQL anzeigen anzeigen und die Abfrage dann über den Abfrage-Editor bei Bedarf ausführen. Der Zugriff auf die SQL-Datenbank, die Ihre Real-time Customer Data Platform-Einblicke unterstützt, hilft Ihnen, die Logik hinter der Analyse Ihres Datenmodells zu verstehen. Diese Transparenz macht Ihre Adobe-CDP-Daten in Echtzeit leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.<br>Lassen Sie sich von der SQL von über 40 vorhandenen Einblicken inspirieren, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Die SQL ist auch für Ihre Einblicke in [Profile](../../dashboards/insights/profiles.md), [Zielgruppen](../../dashboards/insights/audiences.md) und [Ziele](../../dashboards/insights/destinations.md) in der Experience League-Dokumentation verfügbar. In diesen Dokumenten werden die geschäftlichen Anwendungsfälle hervorgehoben, die mit den Standardeinblicken beantwortet werden können. Weitere Informationen finden Sie im Handbuch zu [Anzeigen von Insight SQL](../../dashboards/view-sql.md). |
+| SQL anzeigen | Sie können jetzt mit dem Umschalter SQL anzeigen den SQL-Code hinter Ihren Profilen, Zielgruppen, Zielen und benutzerdefinierten Einblicken anzeigen und dann die Abfrage bei Bedarf über den Abfrage-Editor ausführen. Der Zugriff auf den SQL-Code, der Ihren Real-time Customer Data Platform-Einblicken zugrunde liegt, hilft Ihnen, die Logik hinter der Analyse Ihres Datenmodells zu verstehen. Diese Transparenz macht Ihre Adobe-Real-Time CDP-Daten zugänglicher, verständlicher und wirkungsvoller für die Entscheidungsfindung.<br>Nutzen Sie die Inspiration aus dem SQL-Code von über 40 vorhandenen Einblicken, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Die SQL-Abfrage ist auch für Ihre [Profile](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md) und [Ziele](../../dashboards/insights/destinations.md) in der Experience League-Dokumentation verfügbar. In diesen Dokumenten werden die geschäftlichen Anwendungsfälle beschrieben, die mit den standardmäßigen Einblicken beantwortet werden können. Weitere Informationen finden Sie im Handbuch unter [Anzeigen von Insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [Öffentliche Verbindung](../../destinations/catalog/advertising/pubmatic.md) | Verwenden Sie dieses Ziel, um Zielgruppendaten an die [!DNL PubMatic Connect]-Plattform zu senden. |
+| [PubMatische Verbindung](../../destinations/catalog/advertising/pubmatic.md) | Verwenden Sie dieses Ziel, um Zielgruppendaten an die [!DNL PubMatic Connect]-Plattform zu senden. |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Neuer Authentifizierungstyp **für übernommene Rolle** für Amazon S3-Ziele | Verwenden Sie den neuen Authentifizierungstyp für Rollen, wenn Sie Experience Platform mit Ihren Amazon S3-Buckets verbinden, wenn Sie Kontoschlüssel und geheime Schlüssel nicht mit Experience Platform teilen möchten. Weitere Informationen zur neuen Authentifizierungsmethode finden Sie im Abschnitt [Authentifizierung](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) der Amazon S3-Dokumentation. |
+| Neuer Authentifizierungstyp **übernommene Rolle** für Amazon S3-Ziele | Verwenden Sie den neuen Authentifizierungstyp Angenommene Rolle beim Verbinden von Experience Platform mit Ihren Amazon S3-Buckets, wenn Sie keine Kontoschlüssel und Geheimschlüssel für Experience Platform freigeben möchten. Weitere Informationen über die neue Authentifizierungsmethode finden Sie [ Abschnitt „Authentifizierung](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) in der Dokumentation zu Amazon S3. |
 
 {style="table-layout:auto"}
 
@@ -113,13 +113,13 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 **Neue oder aktualisierte Dokumentation**
 
-| Aktualisierung der Dokumentation | Beschreibung |
+| Dokumentation aktualisieren | Beschreibung |
 | --- | --- |
-| Dokumentationsumstrukturierung | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Präsentation und Übersichtlichkeit von Konzepten in Identity Service zu verbessern:<ul><li>Besuchen Sie die [Identity Service - Übersichtsseite](../../identity-service/home.md) , um eine erweiterte Terminologieanleitung, ein Anwendungsbeispiel mit detaillierten Informationen zu einer typischen Journey, eine Aufschlüsselung der Art und Weise zu erhalten, wie Identity Service Identitäten miteinander verknüpft, und eine Zusammenfassung der Rolle, die Identity Service innerhalb des Experience Platform-Ökosystems spielt.</li><li>Lesen Sie das Handbuch zu [Verständnis der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) , um eine detaillierte Zusammenfassung der Zusammenarbeit zwischen den beiden Diensten und der Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben zu erhalten.</li><li>Erläuterungen und Visualisierungen zum Verhalten des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie im Leitfaden zur Verknüpfungslogik des [Identitätsdienstes](../../identity-service/features/identity-linking-logic.md) .</li></ul> |
+| Neustrukturierung der Dokumentation | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Darstellung und Klarheit von Konzepten in Identity Service zu verbessern:<ul><li>Auf der [Identity Service-Übersichtsseite](../../identity-service/home.md) finden Sie ein erweitertes Terminologiehandbuch, ein Anwendungsbeispiel mit einer typischen Kunden-Journey, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service im Experience Platform-Ökosystem spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine detaillierte Zusammenfassung, wie die beiden Services zusammenarbeiten und die Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Erläuterungen und Visualisierungen [ Verhaltens des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie ](../../identity-service/features/identity-linking-logic.md) Handbuch zur Identitätsdienst-Verknüpfungslogik .</li></ul> |
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zum Identity Service finden Sie in der [Übersicht zum Identity Service](../../identity-service/home.md) .
+Weitere Informationen zu Identity Service finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -129,20 +129,20 @@ Die auf Experience Platform aufbauende Real-Time Customer Data Platform ([!DNL R
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierungen der [Real-Time CDP-Startseite](https://experience.adobe.com) | <ul><li>**Profil-Widget**: Sie können jetzt das Profil-Widget verwenden, um zur Profilübersichtsseite zu navigieren und Profilmetriken für Ihre Organisation anzuzeigen.</li><li>**Karte Profilmetriken**: Die Karte Profilmetriken im Dashboard der Startseite zeigt jetzt die Gesamtanzahl der Profile in Ihrer Organisation an, je nach Ihrer jeweiligen Zusammenführungsrichtlinie.</li><li>**Schemas-Widget**: Sie können jetzt das Schemas-Widget verwenden, um zum Workflow für die Schemaerstellung in der Benutzeroberfläche zu navigieren.</li></ul> |
+| Aktualisierungen der Startseite von [Real-Time CDP](https://experience.adobe.com) | <ul><li>**Profile-Widget**: Sie können jetzt das Widget Profile verwenden, um zur Seite „Profile - Übersicht“ zu navigieren und Profilmetriken für Ihr Unternehmen anzuzeigen.</li><li>**Karte Profilmetriken**: Die Karte Profilmetriken im Dashboard der Startseite zeigt jetzt die Gesamtzahl der Profile in Ihrer Organisation an, abhängig von Ihrer jeweiligen Zusammenführungsrichtlinie.</li><li>**Widget „Schemata**: Sie können jetzt das Widget „Schemata“ verwenden, um zum Workflow für die Schemaerstellung in der Benutzeroberfläche zu navigieren.</li></ul> |
 
 {style="table-layout:auto"}
 
 **Neue oder aktualisierte Dokumentation**
 
-| Aktualisierung der Dokumentation | Beschreibung |
+| Dokumentation aktualisieren | Beschreibung |
 | --- | --- |
-| Startseite der neuen Real-Time CDP-Dokumentation | Besuchen Sie die [neue Real-Time CDP-Dokumentationsseite](/help/rtcdp/home.md) , um einen Überblick über die ersten Schritte mit dem Produkt, Limits, Beispielanwendungsfällen und vieles mehr zu erhalten. |
-| Anwendungsbeispiele für Real-Time CDP - Überblick | Besuchen Sie die Seite [Übersicht über neue Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md) , um eine Sammlung von Beispielanwendungsfällen zu erhalten, die Ihr Unternehmen mit Real-Time CDP erreichen kann. |
+| Neue Startseite zur Dokumentation zu Real-Time CDP | Auf der [neuen Homepage der Real-Time CDP](/help/rtcdp/home.md)Dokumentation) finden Sie Informationen zu den ersten Schritten mit dem Produkt, Leitplanken, Beispielanwendungsfällen und vieles mehr. |
+| Beispiele für Real-Time CDP-Anwendungsfälle - Übersicht | Auf der [neuen Seite mit der Übersicht über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md) finden Sie eine Sammlung von Beispielanwendungsfällen, die Ihr Unternehmen mit Real-Time CDP erreichen kann. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Real-Time CDP finden Sie in der [Real-Time CDP - Übersicht](../../rtcdp/overview.md) .
+Weitere Informationen zu Real-Time CDP finden Sie in der [Übersicht über Real-Time CDP](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -156,7 +156,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 {style="table-layout:auto"}
 
-Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersicht](../../profile/home.md) .
+Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersicht](../../profile/home.md)
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -166,8 +166,8 @@ Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersi
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Extern generierte Zielgruppen-Upload | Die maximale Anzahl von Spalten wurde auf **25** erhöht. |
-| Schätzungen von Segment Builder | Schätzungen und qualifizierte Profile werden jetzt im Bereich der Zielgruppeneigenschaften angezeigt. Weitere Informationen zu dieser Änderung finden Sie im [UI-Handbuch für Segment Builder](../../segmentation/ui/segment-builder.md). |
+| Extern generierter Zielgruppen-Upload | Die maximale Anzahl von Spalten wurde auf **25** erhöht. |
+| Schätzungen von Segment Builder | Schätzungen und qualifizierte Profile werden jetzt im Abschnitt Zielgruppeneigenschaften angezeigt. Weitere Informationen zu dieser Änderung finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../../segmentation/ui/segment-builder.md). |
 
 {style="table-layout:auto"}
 
@@ -181,9 +181,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] sources | Verwenden Sie die [!DNL Oracle NetSuite] -Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) - und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) -Konten an die Experience Platform zu übertragen. |
-| Quelle [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Verwenden Sie die Integration von [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto an die Experience Platform zu übertragen. |
-| Unterstützung der Authentifizierung für Schlüssel-Paar-Batch-Quellen für [!DNL Snowflake] | Sie können jetzt die Schlüsselpaar-Authentifizierung beim Erstellen eines neuen [!DNL Snowflake] -Kontos für Batch-Daten verwenden. Weitere Informationen finden Sie im Handbuch zum Erstellen eines [!DNL Snowflake] Kontos mithilfe der API](../../sources/tutorials/api/create/databases/snowflake.md) oder im Handbuch zum Erstellen eines  [!DNL Snowflake]  Kontos mithilfe der Benutzeroberfläche ](../../sources/tutorials/ui/create/databases/snowflake.md).[[ |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] | Verwenden Sie die [!DNL Oracle NetSuite] Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) auf Experience Platform zu übertragen. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Verwenden Sie die [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) Integration im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto auf Experience Platform zu übertragen. |
+| Unterstützung der Schlüsselpaar-Authentifizierung für [!DNL Snowflake] Batch-Quelle | Sie können jetzt die Schlüsselpaar-Authentifizierung verwenden, wenn Sie ein neues [!DNL Snowflake] für Batch-Daten erstellen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der ](../../sources/tutorials/api/create/databases/snowflake.md)) oder im Handbuch [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
 

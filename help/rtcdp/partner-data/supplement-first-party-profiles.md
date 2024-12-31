@@ -20,15 +20,15 @@ Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpa
 
 ![Anreichern von Profilen mit von Partnern bereitgestellten Attributen – allgemeine Übersicht über Anwendungsfälle.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
-## Warum sollten Sie diesen Anwendungsfall beachten? {#why-this-use-case}
+## Gründe für diesen Anwendungsfall {#why-this-use-case}
 
-Die meisten Marken, selbst diejenigen, die reich an Erstanbieterdaten sind, können von der Optimierung ihrer Daten und einem differenzierteren Verständnis von Kunden, deren Verhalten, Mustern und Präferenzen profitieren.
+Die meisten Marken, auch solche mit umfangreichen First-Party-Daten, können von der Optimierung ihrer Daten und einem differenzierteren Verständnis ihrer Kunden, deren Verhaltensweisen, Muster und Vorlieben profitieren.
 
-Adobe Real-time Customer Data Platform kann Marken dabei helfen, ihre Erstanbieterdaten mit wertvollen Einblicken, Kennungen und Attributen eines oder mehrerer vertrauenswürdiger Partner verantwortungsbewusst zu ergänzen.
+Adobe Real-time Customer Data Platform kann Marken dabei unterstützen, ihre First-Party-Daten verantwortungsvoll mit wertvollen Einblicken, Kennungen und Attributen von einem oder mehreren vertrauenswürdigen Partnern zu ergänzen.
 
-Adobe versteht, dass es keinen einheitlichen Ansatz gibt und eine nahtlose Interoperabilität mit Daten- und Identitätspartnern ermöglicht, um eine individuelle und durchdachte Interaktion in allen Phasen des Kundenlebenszyklus zu fördern. Diese Funktionen werden durch ein vertrauenswürdiges Data Governance-Framework unterstützt, das eine differenzierte Kontrolle darüber ermöglicht, wo und wie Partnerdaten verwendet werden. Sie können beispielsweise von Partnern bereitgestellte Einblicke für die Segmentierung, aber nicht für die Personalisierung verwenden.
+Adobe weiß, dass es keinen universellen Ansatz gibt, und ermöglicht eine nahtlose Interoperabilität mit Daten- und Identitätspartnern, um ein individuelles und durchdachtes Engagement in allen Phasen des Kundenlebenszyklus zu fördern. Diese Funktionen werden durch ein vertrauenswürdiges Data Governance-Framework unterstützt, das eine nuancierte Kontrolle darüber ermöglicht, wo und wie Partnerdaten verwendet werden. Beispielsweise können Sie von Partnern bereitgestellte Einblicke für die Segmentierung, aber nicht für die Personalisierung verwenden.
 
-Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie Ihre Kundendatensätze mit demografischen und Intent-Signalen anreichern möchten.
+Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie Ihre Kundendatensätze mit demografischen und Absichtssignalen anreichern müssen.
 
 ## Voraussetzungen und Planung
 
@@ -36,16 +36,16 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 * Denken Sie über den Speicherort nach, an dem die Zielgruppenliste aus Real-Time CDP exportiert und für den Datenanbieter freigegeben wird. Dieser Speicherort muss Dateiexporte unterstützen.
 * Welche Kennungen erwartet der Datenanbieter, damit Bezug auf zusätzliche Attribute genommen werden kann?
-* Wie wird die Datei mit den von Partnern bereitgestellten Attributen wieder in Real-Time CDP aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md) aufgenommen werden.
+* Wie wird die Datei mit den von den Partnern bereitgestellten Attributen wieder in Real-Time CDP aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md) aufgenommen werden.
 * Wie häufig werden von Partnern bereitgestellte Attribute voraussichtlich wieder nach Real-Time CDP zurückgeholt und aktualisiert?
 
 >[!WARNING]
 >
->Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP erfasst werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtvolumen der Daten finden Sie in der [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) .
+>Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtdatenvolumen finden Sie in ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) [Real-time Customer Data Platform-Produktbeschreibung.
 
-## Videoeinführung {#video-walkthrough}
+## Videoanleitung {#video-walkthrough}
 
-Sehen Sie sich das Video-Tutorial unten an, um sich einen Überblick darüber zu verschaffen, wie Erstanbieter-Zielgruppen mit von Partnern bereitgestellten Attributen ergänzt werden:
+Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise dazu zu erhalten, wie Erstanbieter-Zielgruppen durch von Partnern bereitgestellte Attribute ergänzt werden:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
@@ -106,7 +106,7 @@ Commenting out links for now
 
 ### Exportieren von anzureichernden Zielgruppen bei verschlüsselten oder gehashten personenbezogenen Daten (PII) {#export-audiences}
 
-Exportieren Sie die Zielgruppen, die vom Partner angereichert werden sollen. Verwenden Sie die von Real-Time CDP bereitgestellten Cloud-Speicher-Ziele, z. B. Amazon S3 oder SFTP. Weitere Informationen zum Abschließen dieses Schrittes finden Sie auf den folgenden Dokumentationsseiten:
+Exportieren Sie die Zielgruppen, die vom Partner angereichert werden sollen. Verwenden Sie die von Real-Time CDP bereitgestellten Cloud-Speicherziele, z. B. Amazon S3 oder SFTP. Weitere Informationen zum Abschließen dieses Schrittes finden Sie auf den folgenden Dokumentationsseiten:
 
 * Dokumentationsseite für [Amazon S3-Ziele](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Dokumentationsseite für [SFTP-Ziele](/help/destinations/catalog/cloud-storage/sftp.md)
@@ -137,5 +137,5 @@ Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite 
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
 * Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
-* [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
-* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Personalisieren Sie Onsite-Erlebnisse für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder eine Vorgeschichte mit Ihrer Marke hat.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

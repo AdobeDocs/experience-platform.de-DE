@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Segments in Adobe Experience Platform
-description: In diesem Video erhalten Sie grundlegende Informationen zum Erstellen eines Segments mithilfe der Platform-Benutzeroberfläche.
+description: Dieses Video vermittelt ein grundlegendes Verständnis der Erstellung eines Segments mithilfe der Platform-Benutzeroberfläche.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,9 +19,9 @@ ht-degree: 14%
 
 # Erstellen eines Segments in der Experience Platform-Benutzeroberfläche
 
-Das folgende Video soll Ihr Verständnis für das Erstellen von Segmenten unterstützen. Es wird ein Beispiel für ein Kundenerlebnis und eine kurze Übersicht über die wichtigsten Funktionen in der [!DNL Platform] -Benutzeroberfläche angezeigt. Weitere Informationen zur Segmentierung und zum Erstellen von Segmenten in der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
+Im folgenden Video erfahren Sie, wie Sie Segmente erstellen. Es zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einer kurzen Übersicht über die wichtigsten Funktionen in der [!DNL Platform]. Weitere Informationen zur Segmentierung und zum Erstellen von Segmenten in der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
-Wenn Sie ein Segment mithilfe der Segmentation-API erstellen möchten, lesen Sie bitte den Leitfaden [Erstellen einer Segment-API](../tutorials/create-a-segment.md) .
+Wenn Sie daran interessiert sind, ein Segment mithilfe der Segmentierungs-API zu erstellen, lesen Sie bitte das [Handbuch zur Erstellung einer Segment-API](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >

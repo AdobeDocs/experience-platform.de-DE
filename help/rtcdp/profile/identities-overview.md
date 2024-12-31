@@ -23,9 +23,9 @@ Identity-Namespaces sind eine [!DNL Identity Service]-Komponente und dienen als 
 
 ## Identitätsdiagramme
 
-Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanäle hinweg. Alle Diagramme zur Kundenidentität werden von Identity Service als Reaktion auf Kundenaktivitäten gemeinsam verwaltet und aktualisiert.
+Im Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten zusammengefasst. Dort wird visuell veranschaulicht, wie der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert. Alle Diagramme zur Kundenidentität werden von Identity Service als Reaktion auf Kundenaktivität gemeinsam verwaltet und aktualisiert.
 
-[!DNL Identity Service] verwaltet ein Identitätsdiagramm, das nur für Ihre Organisation sichtbar und basierend auf Ihren Daten erstellt ist. [!DNL Identity Service] erweitert Ihr Diagramm, wenn ein erfasster Datensatz mehr als eine Identität enthält, und fügt eine Beziehung zwischen den gefundenen Identitäten hinzu.
+[!DNL Identity Service] verwaltet ein Identitätsdiagramm, das nur für Ihre Organisation sichtbar ist und auf Grundlage Ihrer Daten erstellt wird. [!DNL Identity Service] erweitert das Diagramm, wenn ein erfasster Datensatz mehr als eine Identität enthält, indem eine Beziehung zwischen den gefundenen Identitäten hinzugefügt wird.
 
 ## Nächste Schritte
 

@@ -1,6 +1,6 @@
 ---
-title: Anwendungsbeispiele in Real-Time CDP
-description: Sehen Sie sich Beispielanwendungsfälle für alle Dienste an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen.
+title: Beispiele für Anwendungsfälle in Real-Time CDP
+description: Sehen Sie sich Beispiele für dienstübergreifende Anwendungsfälle an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen.
 feature: Use Cases
 exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
@@ -10,21 +10,21 @@ ht-degree: 6%
 
 ---
 
-# Anwendungsbeispiele in Real-Time CDP
+# Beispiele für Anwendungsfälle in Real-Time CDP
 
-Sehen Sie sich Beispielanwendungsfälle für alle Dienste an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen. Auf dieser Seite werden einige Anwendungsfälle erfasst, die durch die Verwendung verschiedener Adobe Experience Platform-Dienste möglich wurden.
+Sehen Sie sich Beispiele für dienstübergreifende Anwendungsfälle an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen. Auf dieser Seite werden einige Anwendungsfälle erfasst, die durch die Verwendung verschiedener Adobe Experience Platform-Services ermöglicht werden.
 
 >[!IMPORTANT]
 >
->Die auf dieser Seite dargestellten Anwendungsfälle sind eine Teilmenge der Unternehmensanwendungsfälle, die Sie mit Real-Time CDP ausführen können. Wir arbeiten daran, eine Dokumentation für weitere Beispielanwendungsfälle hinzuzufügen. Wenden Sie sich in der Zwischenzeit an Ihren Adobe-Support-Mitarbeiter, um weitere Anwendungsfälle zu untersuchen, die zusätzlich zu den aktuell auf der Seite dokumentierten Anwendungsfällen auftreten.
+>Die auf dieser Seite vorgestellten Anwendungsfälle sind eine Teilmenge der Anwendungsfälle für Unternehmen, die Sie mit Real-Time CDP durchführen können. Wir arbeiten daran, eine Dokumentation für weitere Beispielanwendungsfälle hinzuzufügen. Wenden Sie sich in der Zwischenzeit an Ihren Adobe-Support-Mitarbeiter, um weitere Anwendungsfälle zusätzlich zu den derzeit auf der Seite dokumentierten zu erkunden.
 
-## Unterstützung von Partnerdaten {#partner-data-support}
+## Partner Data Support {#partner-data-support}
 
-Wenn Drittanbieter-Cookies in den nächsten Jahren verschwinden sollen, kann die Unterstützung von Partnerdaten die durch die Einstellung von Drittanbieter-Cookies ausgelöste Lücke füllen.
+Da Drittanbieter-Cookies in den nächsten Jahren ausgeblendet werden, kann die Unterstützung von Partnerdaten die Lücke füllen, die durch die Einstellung von Drittanbieter-Cookies entstanden ist.
 
-Adobe Real-Time CDP bietet umfassende Unterstützung für Partner-IDs, sodass Sie potenzielle Zielgruppen erstellen, bekannte Zielgruppen mit Attributen von Partnern anreichern und vieles mehr.
+Adobe Real-Time CDP bietet umfassende Unterstützung für Partner-IDs, mit denen Sie Zielgruppen von potenziellen Kunden erstellen, bekannte Zielgruppen mit Attributen von Partnern anreichern und vieles mehr.
 
-Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsfälle gruppiert werden. Ausführliche Informationen zur Implementierung finden Sie in den folgenden Dokumentations-Links.
+Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsfälle gruppiert werden. Unter den unten stehenden Links zur Dokumentation finden Sie ausführliche Implementierungsinformationen.
 
 ### Kundenakquise {#customer-acquisition}
 
@@ -32,7 +32,7 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
 <tr>
   <td>
     <a href="../partner-data/prospecting.md">
-      <img alt="Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
+      <img alt="Neue Kunden ohne Abhängigkeit von Drittanbieter-Cookies gewinnen und ansprechen" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
@@ -40,12 +40,12 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     </div>
     <p>
-    <em>Engage and acquisition new Customers without dependency on third-party cookies</em>
+    <em>Kundengewinnung und -gewinnung ohne Abhängigkeit von Drittanbieter-Cookies</em>
     <p>
   </td>
   <td>
     <a href="../partner-data/onsite-personalization.md">
-      <img alt="Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung" src="/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png" />
+      <img alt="Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung" src="/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png" />
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
@@ -58,7 +58,7 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
   </td>
   <td>
     <a href="../partner-data/offsite-retargeting.md">
-      <img alt="Erfahren Sie, wie Sie eine Zielgruppe nicht authentifizierter Besucher erstellen und diese mithilfe von durch Partner bereitgestellten dauerhaften IDs erneut ansprechen." src="../assets/offsite-retargeting/header.png" />
+      <img alt="Erfahren Sie, wie Sie mithilfe von vom Partner bereitgestellten dauerhaften IDs eine Zielgruppe nicht authentifizierter Besucher erstellen und erneut ansprechen können." src="../assets/offsite-retargeting/header.png" />
     </a>
     <div>
       <a href="../partner-data/offsite-retargeting.md">
@@ -66,7 +66,7 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     </div>
     <p>
-    <em>Erfahren Sie, wie Sie eine Zielgruppe nicht authentifizierter Besucher erstellen und diese mithilfe von vom Partner bereitgestellten dauerhaften IDs erneut ansprechen.</em>
+    <em>Erfahren Sie, wie Sie mithilfe von durch den Partner bereitgestellten dauerhaften IDs eine Zielgruppe aus nicht authentifizierten Besuchern erstellen und erneut auf sie abzielen.</em>
     <p>
   </td>
   </tr>
@@ -82,11 +82,11 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong> Ergänzung von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen</strong>
+    <strong>Erstanbieterprofile mit von Partnern bereitgestellten Attributen ergänzen</strong>
     </a>
     </div>
     <p>
-    <em> Ergänzung von Erstanbieterprofilen durch Attribute vertrauenswürdiger Datenpartner, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.</em>
+    <em>Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihren Kundenstamm zu erhalten und die Zielgruppenoptimierung zu verbessern.</em>
     <p>
   </td>
   </tr>
@@ -102,11 +102,11 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Intelligente erneute Interaktion</strong>
+    <strong>Intelligente Rückgewinnung</strong>
     </a>
     </div>
     <p>
-    <em>Kontaktieren Sie Kunden erneut, die eine Konversion auf intelligente und verantwortungsvolle Weise abgebrochen haben. Engagieren Sie Kunden mit veralteten Erlebnissen, um die Konversion zu steigern und den Kundenlebenszeitwert zu erhöhen.</em>
+    <em>Erneutes Ansprechen von Kunden, die eine Konversion abgebrochen haben, auf intelligente und verantwortungsvolle Weise. Kontaktieren Sie abgelaufene Kundinnen und Kunden mit Erlebnissen, um die Konversionsrate zu erhöhen und den Kundenlebenszeitwert zu erhöhen.</em>
     <p>
   </td>
   </tr>

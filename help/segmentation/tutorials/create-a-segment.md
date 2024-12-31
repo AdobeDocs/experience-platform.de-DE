@@ -1,8 +1,8 @@
 ---
 solution: Experience Platform
-title: Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
+title: Erstellen einer Segmentdefinition mit der Segmentierungs-Service-API
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie eine Segmentdefinition mithilfe der Adobe Experience Platform Segmentation Service-API entwickeln, testen, in der Vorschau anzeigen und speichern.
+description: In diesem Tutorial erfahren Sie, wie Sie mit der Segmentierungs-Service-API von Adobe Experience Platform eine Segmentdefinition entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 24%
 
 ---
 
-# Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
+# Erstellen einer Segmentdefinition mit der Segmentierungs-Service-API
 
-Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mit dem [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Dieses Dokument enthält ein Tutorial zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mithilfe der [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
 Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste voraus, die am Erstellen von Segmentdefinitionen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Dieses Tutorial setzt ein Grundverständnis der verschiedenen [!DNL Adobe Experience Platform]-Services voraus, die bei der Erstellung von Segmentdefinitionen zum Einsatz kommen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen oder anderen externen Quellen aus Echtzeit-Kundenprofildaten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen oder anderen externen Quellen aus Echtzeit-Kundenprofildaten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] -APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -53,33 +53,33 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage enthält. Dieses Objekt wird auch als PQL-Eigenschaft bezeichnet. PQL prädikiert die Definition der Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile] angeben. Weitere Informationen zum Schreiben von PQL-Abfragen finden Sie im [PQL-Handbuch](../pql/overview.md) .
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen ](../pql/overview.md) Sie im Handbuch zu PQL [.
 
-Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions` -Endpunkt in der [!DNL Segmentation] -API richten. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit eine Segmentdefinition erfolgreich definiert werden kann.
+Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt in der [!DNL Segmentation]-API stellen. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die für die erfolgreiche Definition einer Segmentdefinition erforderlich sind.
 
-Eine ausführliche Erläuterung zum Definieren einer Segmentdefinition finden Sie im [Entwicklerhandbuch für die Segmentdefinition](../api/segment-definitions.md#create).
+Eine ausführliche Erläuterung zur Definition einer Segmentdefinition finden Sie im [Entwicklerhandbuch zur Segmentdefinition](../api/segment-definitions.md#create).
 
 ## Schätzen und Anzeigen der Vorschau einer Zielgruppe {#estimate-and-preview-an-audience}
 
-Bei der Entwicklung Ihrer Segmentdefinition können Sie die Schätzungs- und Vorschau-Tools in [!DNL Real-Time Customer Profile] verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die prognostizierte Zielgruppengröße und das Konfidenzintervall. Vorschau bietet paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
+Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools Schätzung und Vorschau in [!DNL Real-Time Customer Profile] verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die projizierte Zielgruppengröße und das Konfidenzintervall. Die Vorschau bietet paginierte Listen von qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem vergleichen können, was Sie erwarten.
 
-Durch Schätzung und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Prädikate testen und optimieren, bis sie ein gewünschtes Ergebnis erzielen und dort in einer aktualisierten Segmentdefinition verwendet werden können.
+Durch Schätzen und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Eigenschaften testen und optimieren, bis sie ein erwünschtes Ergebnis liefern, wo sie dann in einer aktualisierten Segmentdefinition verwendet werden können.
 
-Es gibt zwei erforderliche Schritte, um eine Vorschau Ihrer Segmentdefinition anzuzeigen oder eine Schätzung davon zu erhalten:
+Es gibt zwei erforderliche Schritte, um eine Vorschau anzuzeigen oder eine Schätzung Ihrer Segmentdefinition abzurufen:
 
-1. [Vorschauauftrag erstellen](#create-a-preview-job)
-2. [Anzeigen der Schätzung oder Vorschau](#view-an-estimate-or-preview) mithilfe der ID des Vorschauauftrags
+1. [Erstellen eines Vorschauauftrags](#create-a-preview-job)
+2. [Schätzung oder Vorschau anzeigen](#view-an-estimate-or-preview) unter Verwendung der ID des Vorschauauftrags
 
-### Erstellung von Schätzungen
+### So werden Schätzungen generiert
 
-Da für das Echtzeit-Kundenprofil aktivierte Daten in Platform erfasst werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Profile um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn sich die Profilanzahl nicht um mehr als 5 % ändert, wird der Sampling-Auftrag wöchentlich automatisch ausgeführt.
+Wenn für das Echtzeit-Kundenprofil aktivierte Daten in Platform aufgenommen werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn sich die Profilanzahl nicht um mehr als 5 % ändert, wird der Sampling-Auftrag automatisch wöchentlich ausgeführt.
 
-Die Art und Weise, wie das Beispiel ausgelöst wird, hängt vom verwendeten Erfassungstyp ab:
+Die Art und Weise, wie die Stichprobe ausgelöst wird, hängt von der Art der Aufnahme ab, die verwendet wird:
 
-- Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Wenn dieser Schwellenwert erreicht wurde, wird automatisch ein Beispielauftrag ausgelöst, um die Anzahl zu aktualisieren.
-- Bei der Batch-Erfassung wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
+- Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Anstieg- oder Absenkungsschwellenwert von 5 % erreicht wurde. Wenn dieser Schwellenwert erreicht wurde, wird automatisch ein Beispielvorgang ausgelöst, um die Anzahl zu aktualisieren.
+- Bei der Batch-Aufnahme wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht ist. Mit der Profil-API können Sie den neuesten erfolgreichen Beispielvorgang in der Vorschau anzeigen sowie die Profilverteilung nach Datensatz und Identity-Namespace auflisten.
 
-Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
+Die Stichprobengröße hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
@@ -87,21 +87,21 @@ Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profi
 | 1 bis 20 Millionen | 1 Million |
 | Über 20 Millionen | 5 % der Gesamtgröße |
 
-Schätzungen laufen in der Regel über 10-15 Sekunden, beginnend mit einer groben Schätzung und verfeinern, sobald mehr Datensätze gelesen werden.
+Schätzungen dauern im Allgemeinen über 10-15 Sekunden, beginnend mit einer groben Schätzung und Verfeinerung, wenn mehr Datensätze gelesen werden.
 
-### Vorschauauftrag erstellen
+### Erstellen eines Vorschauauftrags
 
-Sie können einen neuen Vorschauauftrag erstellen, indem Sie eine POST-Anfrage an den `/preview` -Endpunkt senden.
+Sie können einen neuen Vorschauauftrag erstellen, indem Sie eine POST-Anfrage an den `/preview`-Endpunkt senden.
 
-Detaillierte Anweisungen zum Erstellen eines Vorschauauftrags finden Sie im Handbuch [Endpunkte für Vorschau und Schätzungen](../api/previews-and-estimates.md#create-preview).
+Detaillierte Anweisungen zum Erstellen eines Vorschauauftrags finden Sie im [Handbuch zu Vorschauen und Schätzungen von Endpunkten](../api/previews-and-estimates.md#create-preview).
 
-### Anzeigen einer Schätzung oder Vorschau
+### Anzeigen eines Kostenvoranschlags oder einer Vorschau
 
-Schätzungs- und Vorschauprozesse werden asynchron ausgeführt, da unterschiedliche Abfragen unterschiedliche Zeiträume in Anspruch nehmen können. Nachdem eine Abfrage initiiert wurde, können Sie API-Aufrufe verwenden, um den aktuellen Status der Schätzung oder Vorschau während des Vorgangs abzurufen (GET).
+Schätzungs- und Vorschauprozesse werden asynchron ausgeführt, da die Ausführung verschiedener Abfragen unterschiedlich lange dauern kann. Sobald eine Abfrage initiiert wurde, können Sie API-Aufrufe verwenden, um den aktuellen Status der Schätzung oder Vorschau abzurufen (GET), während sie fortgesetzt wird.
 
-Mit der API [!DNL Segmentation Service] können Sie den aktuellen Status eines Vorschauauftrags anhand seiner Kennung nachschlagen. Wenn der Status &quot;RESULT_READY&quot;lautet, können Sie die Ergebnisse anzeigen. Um den aktuellen Status eines Vorschauauftrags nachzuschlagen, lesen Sie den Abschnitt über den Abschnitt [Abrufen eines Vorschauauftrags](../api/previews-and-estimates.md#get-preview) im Handbuch zu Vorschauen und Schätzungen-Endpunkten. Um den aktuellen Status eines Schätzauftrags zu ermitteln, lesen Sie bitte den Abschnitt über das Abrufen eines Schätzauftrags ](../api/previews-and-estimates.md#get-estimate) im Handbuch für Vorschau- und Schätzendpunkte.[
+Mithilfe der [!DNL Segmentation Service]-API können Sie den aktuellen Status eines Vorschauauftrags anhand seiner ID nachschlagen. Wenn der Status „RESULT_READY“ lautet, können Sie die Ergebnisse anzeigen. Um den aktuellen Status eines Vorschauauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum [ eines Vorschauauftrags ](../api/previews-and-estimates.md#get-preview) Handbuch für Vorschauen und Schätzungen von Endpunkten. Um den aktuellen Status eines Schätzauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum Abrufen [ Schätzauftrags ](../api/previews-and-estimates.md#get-estimate) Handbuch für Vorschauen und Schätzungen von Endpunkten.
 
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie einen Segmentauftrag erstellen, um mithilfe der [!DNL Segmentation Service] -API eine Zielgruppe zu erstellen. Detaillierte Anweisungen dazu finden Sie im Tutorial zum [Auswerten und Aufrufen von Segmentergebnissen](./evaluate-a-segment.md) .
+Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie mithilfe der [!DNL Segmentation Service]-API einen Segmentauftrag erstellen, um eine Zielgruppe zu erstellen. Ausführliche Anweisungen dazu finden Sie im Tutorial [Bewerten von und Zugreifen auf ](./evaluate-a-segment.md)Segmentergebnisse).

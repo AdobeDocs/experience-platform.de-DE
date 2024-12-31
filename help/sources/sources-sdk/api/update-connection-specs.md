@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API
-description: Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren.
+description: Sie können die Eigenschaften einer Verbindungsspezifikation durch einen PUT-Vorgang aktualisieren.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 14%
 
 # Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API
 
-Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
+Sie können die Eigenschaften einer Verbindungsspezifikation durch einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich wären.
 
 **API-Format**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` der im vorherigen Schritt erstellten [!DNL MailChimp] Quelle.
+Die folgende Anfrage aktualisiert den `name` der im vorherigen Schritt erstellten [!DNL MailChimp].
 
 ```shell
 PUT -X GET \
@@ -205,7 +205,7 @@ PUT -X GET \
 
 **Antwort**
 
-Bei einem erfolgreichen Aufruf werden die aktualisierten Details zur Verbindungsspezifikation zurückgegeben, einschließlich des aktualisierten Namens.
+Ein erfolgreicher Aufruf gibt die aktualisierten Details der Verbindungsspezifikation zurück, einschließlich ihres aktualisierten Namens.
 
 ```json
 {

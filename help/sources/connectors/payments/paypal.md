@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
+keywords: Experience Platform;Startseite;beliebte Themen;Paypal;paypal;PayPal
 solution: Experience Platform
-title: Übersicht über PayPal Source Connector
+title: Übersicht über den PayPal-Source-Connector
 description: Erfahren Sie, wie Sie PayPal über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
@@ -15,11 +15,11 @@ ht-degree: 58%
 
 >[!WARNING]
 >
->Die Quelle [!DNL PayPal] wird Ende Juni 2025 eingestellt.
+>Die [!DNL PayPal] wird Ende Juni 2025 eingestellt.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Zahlungsanwendung eines Drittanbieters. Unterstützung für Zahlungsdienstleister ist [!DNL PayPal].
+Experience Platform unterstützt die Aufnahme von Daten aus Zahlungsprogrammen von Drittanbietern. Die Unterstützung für Zahlungsdienstleister umfasst [!DNL PayPal].
 
 ## IP-Adressen-Zulassungsliste
 
@@ -29,11 +29,11 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL PayPa
 
 ## Verbinden von [!DNL PayPal] mit Platform mithilfe von APIs
 
-- [PayPal-Basisverbindung mit der Flow Service-API erstellen](../../tutorials/api/create/payments/paypal.md)
+- [Erstellen einer PayPal-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/payments/paypal.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Zahlungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/payments.md)
 
 ## Verbinden von [!DNL PayPal] mit Platform über die Benutzeroberfläche
 
-- [Erstellen einer PayPal-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/payments/paypal.md)
+- [Erstellen einer PayPal-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/payments/paypal.md)
 - [Erstellen eines Datenflusses für eine Zahlungsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/payments.md)

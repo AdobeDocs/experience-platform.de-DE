@@ -17,26 +17,26 @@ ht-degree: 26%
 >title="Umgestaltung der Zeitbeschränkungen"
 >abstract="Zeitbeschränkungen auf Regelebene und Gruppenebene wurden entfernt, um die Verwendung von Zeitbeschränkungen klarer zu gestalten. Bitte schreiben Sie Ihre Beschränkung als Zeitbegrenzung auf Arbeitsebene oder Kartenebene neu."
 
-In der Version vom Januar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform Segmentation Service eingeführt, die neue Einschränkungen hinzufügen, für die Zeitbeschränkungen definiert werden können. Diese Änderungen wirken sich auf neu erstellte oder bearbeitete Segmente aus, die über die Benutzeroberfläche von Segment Builder vorgenommen werden. In diesem Handbuch wird erläutert, wie Sie diesen Änderungen entgegenwirken.
+In der Version vom Januar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform-Segmentierungs-Service eingeführt, die neue Einschränkungen hinzufügen, in denen Zeitbeschränkungen definiert werden können. Diese Änderungen wirken sich auf neu erstellte oder bearbeitete Segmente aus, die über die Segment Builder-Benutzeroberfläche vorgenommen werden. In diesem Handbuch wird erläutert, wie Sie diesen Änderungen entgegenwirken.
 
-Vor der Version vom Januar 2024 bezogen sich alle Zeitbeschränkungen auf Regelebene, Gruppenebene und Arbeitsfläche Redundant auf denselben Zeitstempel. Um die Verwendung von Zeitbeschränkungen klarzustellen, wurden Zeitbeschränkungen auf Regel- und Gruppenebene entfernt. Um diese Änderung zu berücksichtigen, müssen alle Zeitbeschränkungen **** in Zeitbeschränkungen auf **Arbeitsflächenebene** oder **Kartenebene** umgeschrieben werden.
+Vor der Version vom Januar 2024 bezogen sich alle Zeitbeschränkungen auf Regel-, Gruppen- und Arbeitsflächen-Ebene redundant auf denselben Zeitstempel. Um die Verwendung von Zeitbeschränkungen klarzustellen, wurden Zeitbeschränkungen auf Regel- und Gruppenebene entfernt. Um dieser Änderung Rechnung zu tragen **müssen alle Zeitbeschränkungen** **Arbeitsflächen-Ebene** oder **Kartenebene** umgeschrieben werden.
 
-Zuvor konnten an ein einzelnes Ereignis mehrere Zeitbegrenzungsregeln angehängt werden. Mit dieser kürzlich erfolgten Aktualisierung führt der Versuch, einer Regel eine Zeitbeschränkung hinzuzufügen, jetzt zu einem **Fehler**.
+Zuvor konnten einem einzelnen Ereignis mehrere Zeitbeschränkungsregeln beigefügt werden. Im Rahmen dieser letzten Aktualisierung führt der Versuch, einer Regel eine Zeitbeschränkung hinzuzufügen, jetzt zu einem **Fehler**.
 
-![Die Zeitbegrenzung auf Regelebene wird hervorgehoben. Der Fehler, der anschließend auftritt, wird ebenfalls hervorgehoben. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Die Zeitbeschränkung auf Regelebene ist hervorgehoben. Der anschließend auftretende Fehler wird ebenfalls hervorgehoben. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-Zeitbeschränkungen können jetzt nur noch auf Arbeitsflächenebene oder auf Kartenebene angewendet werden.
+Zeitbeschränkungen können jetzt nur auf der Arbeitsflächen- oder Kartenebene angewendet werden.
 
-Beim Anwenden einer Zeitbegrenzung auf die Arbeitsfläche können Sie weiterhin alle verfügbaren Zeitbeschränkungen auswählen.
+Beim Anwenden einer Zeitbeschränkung auf Arbeitsflächen-Ebene können Sie dennoch alle verfügbaren Zeitbeschränkungen auswählen.
 
 >[!NOTE]
 >
->Wenn sich auf der Arbeitsfläche nur die Karte **1} befindet, ist die Anwendung der Zeitbegrenzung auf die Karte** entspricht **, um die Zeitbegrenzung auf die Arbeitsfläche anzuwenden.**
+>Wenn auf der Arbeitsfläche nur **eine** Karte vorhanden ist, entspricht das Anwenden der Zeitbeschränkung auf die Karte **** dem Anwenden der Zeitbeschränkung auf der Arbeitsfläche.
 >
->Wenn sich **mehrere** Karten auf der Arbeitsfläche befinden, wird diese Zeitbegrenzung durch Anwendung der Zeitbegrenzung auf die Arbeitsflächenebene auf **alle** Karten auf der Arbeitsfläche angewendet.
+>Wenn sich **(mehrere** Karten auf der Arbeitsfläche befinden, wird diese Zeitbeschränkung durch Anwenden der Zeitbeschränkung auf die Arbeitsfläche-Ebene auf **alle** Karten auf der Arbeitsfläche angewendet.
 
-![Die Zeitbegrenzung auf Leinwandebene wird hervorgehoben.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![Die Zeitbeschränkung auf Arbeitsflächen-Ebene ist hervorgehoben.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Um eine Zeitbegrenzung auf Kartenebene anzuwenden, wählen Sie die spezifische Karte aus, auf die Sie die Zeitbegrenzung anwenden möchten. Der Container **[!UICONTROL Ereignisregeln]** wird angezeigt. Sie können jetzt die Zeitbegrenzung auswählen, die Sie auf die Karte anwenden möchten.
+Um eine Zeitbeschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten. Der **[!UICONTROL Ereignisregeln]**-Container wird angezeigt. Jetzt können Sie die Zeitbeschränkung auswählen, die Sie auf die Karte anwenden möchten.
 
-![Die Zeitbegrenzung auf Kartenebene wird hervorgehoben.](../images/ui/segment-refactoring/card-time-constraint.png)
+![Die Zeitbeschränkung auf Kartenebene ist hervorgehoben.](../images/ui/segment-refactoring/card-time-constraint.png)

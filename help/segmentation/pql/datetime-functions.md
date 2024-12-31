@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Datums- und Uhrzeitfunktionen von PQL
-description: Mit Datums- und Uhrzeitfunktionen können Datums- und Uhrzeitvorgänge für Werte in Profile Query Language (PQL) durchgeführt werden.
+title: Datums- und Uhrzeitfunktionen in PQL
+description: Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte in Profile Query Language (PQL) durchzuführen.
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 8%
 
 # Datums- und Uhrzeitfunktionen
 
-Mit Datums- und Uhrzeitfunktionen können Datums- und Uhrzeitvorgänge für Werte in [!DNL Profile Query Language] (PQL) ausgeführt werden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte in [!DNL Profile Query Language] (PQL) auszuführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Aktueller Monat
 
@@ -52,7 +52,7 @@ person.birthdate.getMonth() = 6
 
 ## Aktuelles Jahr
 
-Die Funktion `currentYear` gibt das aktuelle Jahr als Ganzzahl zurück.
+Die `currentYear` gibt das aktuelle Jahr als Ganzzahl zurück.
 
 **Format**
 
@@ -70,7 +70,7 @@ product.saleYear = currentYear()
 
 ## Jahr abrufen
 
-Die Funktion `getYear` gibt das Jahr als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
+Die `getYear` gibt das Jahr als Ganzzahl zurück, basierend auf einem bestimmten Zeitstempel.
 
 **Format**
 
@@ -80,15 +80,15 @@ Die Funktion `getYear` gibt das Jahr als Ganzzahl basierend auf einem bestimmten
 
 **Beispiel**
 
-Die folgende PQL-Abfrage prüft, ob das Geburtsjahr der Person in den Jahren 1991, 1992, 1993, 1994 oder 1995 zurückgeht.
+Die folgende PQL-Abfrage prüft, ob das Geburtsjahr der Person in die Jahre 1991, 1992, 1993, 1994 oder 1995 fällt.
 
 ```sql
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 ```
 
-## Aktueller Tag im Monat
+## Aktueller Tag des Monats
 
-Die Funktion `currentDayOfMonth` gibt den aktuellen Tag des Monats als Ganzzahl zurück.
+Die `currentDayOfMonth` gibt den aktuellen Tag des Monats als Ganzzahl zurück.
 
 **Format**
 
@@ -104,9 +104,9 @@ Die folgende PQL-Abfrage prüft, ob der Geburtstag der Person mit dem aktuellen 
 person.birthDay = currentDayOfMonth()
 ```
 
-## Tag des Monats
+## Tag des Monats abrufen
 
-Die Funktion `getDayOfMonth` gibt den Tag basierend auf einem bestimmten Zeitstempel als Ganzzahl zurück.
+Die `getDayOfMonth` gibt den Tag als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
 
 **Format**
 
@@ -124,11 +124,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Tritt auf
 
-Die Funktion `occurs` vergleicht die angegebene Zeitstempelfunktion mit einem festen Zeitraum als booleschen Wert.
+Die `occurs` vergleicht die angegebene Zeitstempelfunktion mit einem festen Zeitraum als booleschen Wert.
 
 **Format**
 
-Die Funktion `occurs` kann mit einem der folgenden Formate geschrieben werden:
+Die `occurs` kann in einem der folgenden Formate geschrieben werden:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -139,15 +139,15 @@ Die Funktion `occurs` kann mit einem der folgenden Formate geschrieben werden:
 
 | Argument | Beschreibung |
 | --------- | ----------- |
-| `{COMPARISON}` | Ein Vergleichsoperator. Kann einer der folgenden Operatoren sein: `>`, `>=`, `<`, `<=`, `=`, `!=`. Weitere Informationen zu den Vergleichsfunktionen finden Sie im Dokument [Vergleichsfunktionen](./comparison-functions.md). |
+| `{COMPARISON}` | Ein Vergleichsoperator. Kann einer der folgenden Operatoren sein: `>`, `>=`, `<`, `<=`, `=`, `!=`. Weitere Informationen zu den Vergleichsfunktionen finden Sie im [Dokument zu Vergleichsfunktionen](./comparison-functions.md). |
 | `{INTEGER}` | Eine nicht negative Ganzzahl. |
 | `{TIME_UNIT}` | Eine Zeiteinheit. Kann eines der folgenden Wörter sein: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
-| `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem verglichen werden soll. Kann eines der folgenden Wörter sein: `before`, `after`, `from`. |
-| `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (eine von `this`, `last` oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
+| `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem Datum verglichen werden soll. Kann eines der folgenden Wörter sein: `before`, `after`, `from`. |
+| `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (`this`, `last` oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
 
 >[!NOTE]
 >
->Die Verwendung des Wortes `on` ist optional. Es ist vorhanden, um die Lesbarkeit für einige Kombinationen zu verbessern, z. B. `timestamp occurs on date(2019,12,31)`.
+>Die Verwendung des Wortes `on` ist optional. Sie dient dazu, die Lesbarkeit für einige Kombinationen zu verbessern, z. B. `timestamp occurs on date(2019,12,31)`.
 
 **Beispiel**
 
@@ -177,11 +177,11 @@ product.saleDate occurs = 3 hours before now
 
 ## Heute
 
-`today` ist ein reserviertes Wort, das den Zeitstempel des Beginns des Tages der PQL-Ausführung darstellt.
+`today` ist ein reserviertes Wort, das den Zeitstempel des Starts des Tages der PQL-Ausführung darstellt.
 
 **Beispiel**
 
-Die folgende PQL-Abfrage prüft, ob der Geburtstag einer Person vor drei Tagen erfolgte.
+Die folgende PQL-Abfrage prüft, ob der Geburtstag einer Person vor drei Tagen war.
 
 ```sql
 person.birthday occurs = 3 days before today
@@ -189,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit Datums- und Uhrzeitfunktionen vertraut gemacht haben, können Sie diese nun in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit Datums- und Uhrzeitfunktionen vertraut gemacht haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

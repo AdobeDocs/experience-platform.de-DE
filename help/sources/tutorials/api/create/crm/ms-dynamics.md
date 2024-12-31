@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
+keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Microsoft Dynamics;Dynamics;Dynamics
 solution: Experience Platform
-title: Erstellen einer Microsoft Dynamics-Basisverbindung mit der Flow Service-API
+title: Erstellen einer Microsoft Dynamics-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Platform mit einem Microsoft Dynamics-Konto verbinden.
+description: Erfahren Sie, wie Sie Platform mithilfe der Flow Service-API mit einem Microsoft Dynamics-Konto verbinden.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 55%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Microsoft Dynamics] (nachfolgend als &quot;[!DNL Dynamics]&quot; bezeichnet) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Microsoft Dynamics] (nachstehend &quot;[!DNL Dynamics]&quot; genannt) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -25,32 +25,32 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Platform mithilfe der [!DNL Flow Service] -API erfolgreich mit einem Dynamics-Konto verbinden zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Platform mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Dynamics-Konto verbinden zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um [!DNL Flow Service] mit [!DNL Dynamics] zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 >[!BEGINTABS]
 
->[!TAB Grundlegende Authentifizierung]
+>[!TAB Einfache Authentifizierung]
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `serviceUri` | Die Dienst-URL Ihrer [!DNL Dynamics] -Instanz. |
-| `username` | Der Benutzername für Ihr [!DNL Dynamics] -Benutzerkonto. |
-| `password` | Das Kennwort für Ihr [!DNL Dynamics]-Konto. |
+| `serviceUri` | Die Service-URL Ihrer [!DNL Dynamics]. |
+| `username` | Der Benutzername für Ihr [!DNL Dynamics] Benutzerkonto. |
+| `password` | Das Kennwort für Ihr [!DNL Dynamics]. |
 
 >[!TAB Service-Prinzipal- und Schlüsselauthentifizierung]
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `servicePrincipalId` | Die Client-ID Ihres [!DNL Dynamics]-Kontos. Diese ID ist bei der Verwendung der Service-Prinzipal- und schlüsselbasierten Authentifizierung erforderlich. |
-| `servicePrincipalKey` | Der Geheimschlüssel des Dienstprinzips. Diese Berechtigung ist bei der Verwendung von Dienstprinzipal und schlüsselbasierter Authentifizierung erforderlich. |
+| `servicePrincipalId` | Die Client-ID Ihres [!DNL Dynamics]. Diese ID ist erforderlich, wenn die Service-Prinzipal- und schlüsselbasierte Authentifizierung verwendet wird. |
+| `servicePrincipalKey` | Der geheime Schlüssel des Service-Prinzipals. Diese Berechtigung ist erforderlich, wenn die Authentifizierung über einen Service-Prinzipal und einen Schlüssel verwendet wird. |
 
 >[!ENDTABS]
 
-Weitere Informationen zu den ersten Schritten finden Sie in [diesem [!DNL Dynamics] Dokument](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+Weitere Informationen zu den ersten Schritten finden Sie [diesem  [!DNL Dynamics] Dokument](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Verwenden von Platform-APIs
 
@@ -60,21 +60,21 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 >[!TIP]
 >
->Nach der Erstellung können Sie den Authentifizierungstyp einer Basis-Verbindung vom Typ [!DNL Dynamics] nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL Dynamics] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Dynamics]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Dynamics]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 ### Erstellen einer [!DNL Dynamics] Basisverbindung
 
 >[!TIP]
 >
->Nach der Erstellung können Sie den Authentifizierungstyp einer Basis-Verbindung vom Typ [!DNL Dynamics] nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL Dynamics] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Der erste Schritt beim Erstellen einer Quellverbindung besteht darin, Ihre [!DNL Dynamics]-Quelle zu authentifizieren und eine Basisverbindungs-ID zu generieren. Mittels einer Basisverbindungs-ID können Sie Dateien aus Ihrer Quelle durchsuchen, zwischen Dateien innerhalb der Quelle navigieren und bestimmte Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt beim Bereitstellen der [!DNL Dynamics]-Authentifizierungsberechtigungsdaten als Teil der Anfrageparameter.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt beim Bereitstellen der [!DNL Dynamics]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter.
 
 **API-Format**
 
@@ -84,9 +84,9 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Grundlegende Authentifizierung]
+>[!TAB Einfache Authentifizierung]
 
-Um eine [!DNL Dynamics] -Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] -API und geben Sie dabei Werte für die `serviceUri`, `username` und `password` Ihrer Verbindung an.
+Um eine [!DNL Dynamics] Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine Verbindungsanfrage an die [!DNL Flow Service]-API und geben dabei Werte für `serviceUri`, `username` und `password` Ihrer POST an.
 
 +++Anfrage
 
@@ -118,9 +118,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.serviceUri` | Der Dienst-URI, der Ihrer [!DNL Dynamics]-Instanz zugeordnet ist. |
-| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Dynamics] -Konto zugeordnet ist. |
-| `auth.params.password` | Das Ihrem [!DNL Dynamics]-Konto zugeordnete Kennwort. |
+| `auth.params.serviceUri` | Der Service-URI, der Ihrer [!DNL Dynamics]-Instanz zugeordnet ist. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Dynamics]-Konto zugeordnet ist. |
+| `auth.params.password` | Das mit Ihrem [!DNL Dynamics]-Konto verknüpfte Kennwort. |
 | `connectionSpec.id` | Die [!DNL Dynamics]-Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 +++
@@ -138,9 +138,9 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 +++
 
->[!TAB Service principal key-based authentication]
+>[!TAB Schlüsselbasierte Authentifizierung für Service-Prinzipal]
 
-Um eine [!DNL Dynamics] -Basisverbindung mithilfe der schlüsselbasierten Authentifizierung des Dienstprinzipals zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] -API und geben Sie dabei Werte für die `serviceUri`, `servicePrincipalId` und `servicePrincipalKey` Ihrer Verbindung an.
+Um eine [!DNL Dynamics] Basisverbindung mithilfe der Authentifizierung über einen Schlüssel zu erstellen, stellen Sie eine Verbindungsanfrage an die [!DNL Flow Service]-API und geben dabei Werte für die `serviceUri`, `servicePrincipalId` und `servicePrincipalKey` Ihrer POST an.
 
 +++Anfrage
 
@@ -172,9 +172,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.serviceUri` | Der Dienst-URI, der Ihrer [!DNL Dynamics]-Instanz zugeordnet ist. |
-| `auth.params.servicePrincipalId` | Die Client-ID Ihres [!DNL Dynamics]-Kontos. Diese ID ist bei der Verwendung der Service-Prinzipal- und schlüsselbasierten Authentifizierung erforderlich. |
-| `auth.params.servicePrincipalKey` | Der Geheimschlüssel des Dienstprinzips. Diese Berechtigung ist bei der Verwendung von Dienstprinzipal und schlüsselbasierter Authentifizierung erforderlich. |
+| `auth.params.serviceUri` | Der Service-URI, der Ihrer [!DNL Dynamics]-Instanz zugeordnet ist. |
+| `auth.params.servicePrincipalId` | Die Client-ID Ihres [!DNL Dynamics]. Diese ID ist erforderlich, wenn die Service-Prinzipal- und schlüsselbasierte Authentifizierung verwendet wird. |
+| `auth.params.servicePrincipalKey` | Der geheime Schlüssel des Service-Prinzipals. Diese Berechtigung ist erforderlich, wenn die Authentifizierung über einen Service-Prinzipal und einen Schlüssel verwendet wird. |
 | `connectionSpec.id` | Die [!DNL Dynamics]-Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 +++
@@ -200,4 +200,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 In diesem Tutorial haben Sie eine [!DNL Microsoft Dynamics]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/crm.md)
+* [Erstellen eines Datenflusses, um CRM-Daten mithilfe der API  [!DNL Flow Service]  Platform zu übertragen](../../collect/crm.md)

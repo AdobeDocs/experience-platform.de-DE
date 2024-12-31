@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox developer guide
+keywords: Experience Platform;Startseite;beliebte Themen;Sandbox-Entwicklerhandbuch
 solution: Experience Platform
 title: Erste Schritte mit der Sandbox-API
-description: Mit der Sandbox-API können Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+description: Mit der Sandbox-API können Entwicklerinnen und Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -20,7 +20,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-AP
 
 ## Voraussetzungen
 
-Um Sandboxes für Ihre Organisation verwalten zu können, benötigen Sie Sandbox-Administratorberechtigungen. Benutzer ohne Zugriffsberechtigungen können nur den Endpunkt [Verfügbare Sandboxes ](./available.md) verwenden, um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre Organisation verwalten zu können, müssen Sie über Sandbox-Administrationsberechtigungen verfügen. Benutzende ohne Zugriffsberechtigungen können nur den [verfügbaren Sandbox-Endpunkt](./available.md) verwenden, um aktive Sandboxes für den aktuellen Benutzenden aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 

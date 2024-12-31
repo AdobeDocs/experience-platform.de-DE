@@ -13,28 +13,28 @@ ht-degree: 24%
 
 ## Übersicht
 
-Der [!DNL Edge Network Server API] verarbeitet sowohl authentifizierte als auch nicht authentifizierte Datenerfassung, je nach Ereignisquelle und API-Erfassungsdomäne.
+Die [!DNL Edge Network Server API] verarbeitet die Datenerfassung sowohl authentifizierter als auch nicht authentifizierter Daten, je nach Ereignisquelle und API-Erfassungsdomäne.
 
-Für jede Anfrage überprüft der [!DNL Server API] die Einstellung &quot;datastream [!DNL access type]&quot;. Mit dieser Einstellung können Kunden einen Datastream so konfigurieren, dass entweder authentifizierte Daten oder sowohl authentifizierte als auch nicht authentifizierte Daten akzeptiert werden. Standardmäßig werden beide Datentypen akzeptiert.
+Für jede Anfrage überprüft der [!DNL Server API] die Einstellung für die Datenstrom-[!DNL access type] . Mit dieser Einstellung können Kundinnen und Kunden einen Datenstrom so konfigurieren, dass er entweder authentifizierte Daten oder sowohl authentifizierte als auch nicht authentifizierte Daten akzeptiert. Standardmäßig werden beide Datentypen akzeptiert.
 
-Weitere Informationen zum Konfigurieren des Zugriffstyps auf den Datastream finden Sie in der Dokumentation zum Erstellen und Konfigurieren eines Datastreams ](../datastreams/overview.md#create).[
+Einzelheiten zum Konfigurieren des Zugriffstyps auf den Datenstrom finden Sie in der Dokumentation zum [Erstellen und Konfigurieren eines Datenstroms](../datastreams/overview.md#create).
 
-Nachstehend finden Sie eine Zusammenfassung des Verhaltens, die auf der Konfiguration des Datastreams [!DNL Access Type] und dem Endpunkt basiert, an den die Anfrage gesendet wird.
+Nachstehend finden Sie eine Zusammenfassung des Verhaltens, basierend auf der Konfiguration der Datenstrom-[!DNL Access Type] und dem Endpunkt, an dem die Anfrage empfangen wird.
 
 | [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
-| mix (Standard) | Authentifiziert keine Anforderung | Authentifizierungsanfrage |
-| authentifiziert | Authentifizierungsanfrage | Authentifizierungsanfrage |
+| Gemischt (Standard) | Anfrage wird nicht authentifiziert | Authentifiziert eine Anfrage |
+| Authentifiziert | Authentifiziert eine Anfrage | Authentifiziert eine Anfrage |
 
-API-Aufrufe von einem privaten Server mit `server.adobedc.net` sollten immer authentifiziert werden.
+API-Aufrufe von einem privaten Server auf `server.adobedc.net` sollten immer authentifiziert werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Aufrufe an [!DNL Server API] vornehmen können, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
+Bevor Sie die [!DNL Server API] aufrufen können, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 * Sie haben ein Organisationskonto mit Zugriff auf Adobe Experience Platform.
-* Für Ihr Experience Platform-Konto sind die Rollen `developer` und `user` für das Adobe Experience Platform API-Produktprofil aktiviert. Wenden Sie sich an Ihren Administrator von [Admin Console](../access-control/home.md) , um diese Rollen für Ihr Konto zu aktivieren.
-* Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, wechseln Sie zum Ordner [Adobe Developer Console](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
+* Für Ihr Experience Platform-Konto sind die Rollen `developer` und `user` für das Adobe Experience Platform-API-Produktprofil aktiviert. Wenden Sie sich an Ihren [Admin Console](../access-control/home.md)-Administrator, um diese Rollen für Ihr Konto zu aktivieren.
+* Sie haben eine Adobe ID. Wenn Sie keine Adobe ID haben, gehen Sie zur [Adobe Developer Console](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
 
 ## Sammeln von Anmeldeinformationen {#credentials}
 
@@ -58,19 +58,19 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Konfigurieren von Schreibberechtigungen für Datensätze {#dataset-write-permissions}
 
-Um die Schreibberechtigungen für Datensätze zu konfigurieren, wechseln Sie zur Admin Console [1}, suchen Sie das Produktprofil, das an Ihren API-Schlüssel angehängt ist, und legen Sie die folgenden Berechtigungen fest:](https://adminconsole.adobe.com)
+Zum Konfigurieren der Schreibberechtigungen für Datensätze wechseln Sie zur Admin Console [](https://adminconsole.adobe.com) suchen Sie das Produktprofil, das an Ihren API-Schlüssel angehängt ist, und legen Sie die folgenden Berechtigungen fest:
 
-* Wählen Sie im Abschnitt [!UICONTROL Sandboxes] die Sandbox des Datenspeichers aus.
-* Wählen Sie im Abschnitt [!UICONTROL Datenverwaltung] die Berechtigung **[!UICONTROL Datensätze verwalten]** aus.
+* Wählen [!UICONTROL  im Abschnitt ] die Datenstrom-Sandbox aus.
+* Wählen Sie [!UICONTROL  Abschnitt ] die Berechtigung **[!UICONTROL Datensätze verwalten]** aus.
 
 ## Fehlerbehebung bei Autorisierungsfehlern {#troubleshooting-authorization}
 
 | Fehler-Code | Fehlermeldung | Beschreibung |
 | --- | --- | --- |
-| `EXEG-0500-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird in den folgenden Situationen angezeigt:  <ul><li>Der Header-Wert `authorization` fehlt.</li><li>Der Header-Wert `authorization` enthält nicht das erforderliche `Bearer` -Token.</li><li>Das angegebene Autorisierungs-Token hat ein ungültiges Format.</li><li>Der Datastream erfordert Authentifizierung, aber die Anfrage fehlt an den erforderlichen Kopfzeilen.</li></ul> |
-| `EXEG-0501-401` | Ungültiger Benutzerautorisierungs-Token | Diese Fehlermeldung wird in den folgenden Situationen angezeigt: <ul><li>Dem API-Aufruf fehlt der erforderliche `x-user-token` -Header.</li><li>Das angegebene Benutzer-Token hat ein ungültiges Format.</li></ul> |
-| `EXEG-0502-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das bereitgestellte Autorisierungstoken ein gültiges Format (JWT) aufweist, die Signatur jedoch ungültig ist. Im Tutorial [Authentifizierung ](../landing/api-authentication.md) erfahren Sie, wie Sie ein gültiges JWT-Token abrufen. |
-| `EXEG-0503-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das angegebene Autorisierungstoken abgelaufen ist. Führen Sie das [Authentifizierungs-Tutorial](../landing/api-authentication.md) durch, um ein neues Token zu generieren. |
-| `EXEG-0504-401` | Erforderlicher Produktkontext fehlt | Diese Fehlermeldung wird in den folgenden Situationen angezeigt:  <ul><li>Das Entwicklerkonto hat keinen Zugriff auf den Adobe Experience Platform-Produktkontext.</li><li>Das Unternehmenskonto hat noch keinen Anspruch auf Adobe Experience Platform.</li></ul> |
-| `EXEG-0505-401` | Erforderlicher Gültigkeitsbereich für Autorisierungs-Token fehlt | Dieser Fehler gilt nur für die Authentifizierung von Dienstkonten. Die Fehlermeldung wird angezeigt, wenn das im Aufruf enthaltene Dienstautorisierungstoken zu einem Dienstkonto gehört, das keinen Zugriff auf den IMS-Bereich `acp.foundation` hat. |
-| `EXEG-0506-401` | Sandbox nicht zum Schreiben verfügbar | Diese Fehlermeldung wird angezeigt, wenn das Entwicklerkonto keinen `WRITE` -Zugriff auf die Experience Platform-Sandbox hat, in der der Datastream definiert ist. |
+| `EXEG-0500-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird in einer der folgenden Situationen angezeigt:  <ul><li>Der `authorization` Kopfzeilenwert fehlt.</li><li>Der `authorization` Kopfzeilenwert enthält nicht das erforderliche `Bearer`-Token.</li><li>Das angegebene Autorisierungs-Token hat ein ungültiges Format.</li><li>Der Datenstrom erfordert eine Authentifizierung, aber der Anfrage fehlen erforderliche Kopfzeilen.</li></ul> |
+| `EXEG-0501-401` | Ungültiger Benutzerautorisierungs-Token | Diese Fehlermeldung wird in einer der folgenden Situationen angezeigt: <ul><li>Im API-Aufruf fehlt die erforderliche `x-user-token`-Kopfzeile.</li><li>Das angegebene Benutzer-Token hat ein ungültiges Format.</li></ul> |
+| `EXEG-0502-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das angegebene Autorisierungs-Token ein gültiges Format (JWT) hat, seine Signatur jedoch ungültig ist. Sehen Sie sich das [Authentifizierungs-Tutorial](../landing/api-authentication.md) an, um zu erfahren, wie Sie ein gültiges JWT-Token abrufen. |
+| `EXEG-0503-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das angegebene Autorisierungs-Token abgelaufen ist. Gehen Sie das [Authentifizierungs-Tutorial](../landing/api-authentication.md) um ein neues Token zu generieren. |
+| `EXEG-0504-401` | Erforderlicher Produktkontext fehlt | Diese Fehlermeldung wird in einer der folgenden Situationen angezeigt:  <ul><li>Das Entwicklerkonto hat keinen Zugriff auf den Adobe Experience Platform-Produktkontext.</li><li>Das Unternehmenskonto ist noch nicht zum Adobe von Experience Platform berechtigt.</li></ul> |
+| `EXEG-0505-401` | Erforderlicher Gültigkeitsbereich für Autorisierungs-Token fehlt | Dieser Fehler gilt nur für die Authentifizierung des Service-Kontos. Die Fehlermeldung wird angezeigt, wenn das im Aufruf enthaltene Autorisierungs-Token für den Service zu einem Service-Konto gehört, das keinen Zugriff auf den `acp.foundation` IMS-Bereich hat. |
+| `EXEG-0506-401` | Sandbox nicht zum Schreiben verfügbar | Diese Fehlermeldung wird angezeigt, wenn das Entwicklerkonto keinen `WRITE` auf die Experience Platform-Sandbox hat, in der der Datenstrom definiert ist. |

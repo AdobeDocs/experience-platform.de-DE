@@ -36,11 +36,11 @@ Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereigniss
 
 >[!NOTE]
 >
->Wenn Sie die Informationsblase eines Attributs auswählen, können Sie die Verteilung der Werte des Felds, auch Zusammenfassungsdaten genannt, anzeigen. Diese sind auf der Registerkarte &quot;Attribute&quot;nur **1} verfügbar und stehen nicht für die Verwendung auf der Registerkarte &quot;Ereignisse&quot;oder &quot;Zielgruppen&quot;zur Verfügung.**
+>Wenn Sie die Informationsblase eines Attributs auswählen, können Sie die Verteilung der Werte, auch als Zusammenfassungsdaten bezeichnet, des Felds anzeigen. Diese sind **nur** auf der Registerkarte Attribute verfügbar und nicht zur Verwendung auf der Registerkarte Ereignisse oder Zielgruppen verfügbar.
 >
->Zusammenfassungsdaten werden angezeigt, wenn das Attribut die folgenden Kriterien erfüllt: Alle Werte des Attributs sind maximal 100 Zeichen und es gibt 3000 oder weniger eindeutige Werte für das Attribut.
+>Zusammenfassungsdaten werden angezeigt, wenn das Attribut die folgenden Kriterien erfüllt: Alle Werte des Attributs sind 100 Zeichen oder weniger und es gibt 3.000 oder weniger eindeutige Werte für das Attribut.
 >
->Ein Attribut enthält jedoch **nicht** Zusammenfassungsdaten, wenn es sich um Daten mit mehreren Entitäten handelt, die über eine Beziehung mit dem Profil verknüpft sind. Wenn Sie beispielsweise ein benutzerdefiniertes Schema mit dem Namen `Vehicle` haben, enthalten die **properties** im Schema `Vehicle` die Zusammenfassungsdaten **nicht**.
+>Ein Attribut verfügt jedoch **nicht** über Zusammenfassungsdaten, wenn es sich um Daten mit mehreren Entitäten handelt, die über eine Beziehung mit dem Profil verknüpft sind. Wenn Sie beispielsweise über ein benutzerdefiniertes Schema mit dem Namen `Vehicle` verfügen **verfügen die** Eigenschaften) im `Vehicle` Schema **nicht** über Zusammenfassungsdaten.
 
 Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von [!DNL Segment Builder] sehen. Der Abschnitt **[!UICONTROL Felder]** enthält eine Registerkarte für jeden der Hauptbausteine: [!UICONTROL Attribute], [!UICONTROL Ereignisse] und [!UICONTROL Zielgruppen].
 
@@ -119,9 +119,9 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 
 >[!NOTE]
 >
->Für in Platform erstellte Zielgruppen werden nur Zielgruppen mit der Zusammenführungsrichtlinie **Dasselbe** angezeigt.
+>Für Zielgruppen, die in Platform erstellt werden, werden nur Zielgruppen angezeigt **die dieselbe** haben.
 
-Auf der Registerkarte **[!UICONTROL Zielgruppen]** werden alle Zielgruppen aufgelistet, die aus externen Quellen wie Adobe Audience Manager oder Customer Journey Analytics importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen.
+Auf **[!UICONTROL Registerkarte]** Zielgruppen“ werden alle Zielgruppen, die aus externen Quellen (wie Adobe Audience Manager oder Customer Journey Analytics) importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen aufgelistet.
 
 Auf der Registerkarte **[!UICONTROL Zielgruppen]** können Sie alle verfügbaren Quellen als eine Ordnergruppe anzeigen. Wenn Sie diese Ordner auswählen, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie das Ordnersymbol auswählen (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Auswählen eines Ordnernamens im Baum durch die Ordnerstruktur zurücknavigieren.
 
@@ -133,9 +133,9 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 >[!IMPORTANT]
 >
->Ab der Version vom Juni 2024 stellen die Zeitbeschränkungen &quot;Dieser Monat&quot;und &quot;Dieses Jahr&quot;jeweils &quot;Aktueller Monat&quot;bzw. &quot;Aktuelles Jahr&quot;dar. Wenn Sie beispielsweise am 18. Juli eine Zielgruppe erstellt haben, die nach &quot;all Customers, deren Geburtstag diesen Monat auftritt&quot;sucht, erhält die Zielgruppe alle Kunden, deren Geburtstag vom 1. Juli bis 31. Juli stattgefunden hat. Am 1. August erhält diese Zielgruppe alle Kunden, deren Geburtstag vom 1. August bis zum 31. August auftritt.
+>Ab der Version vom Juni 2024 stellen die Zeitbeschränkungen „Dieser Monat“ und „Dieses Jahr“ die Zeitbeschränkungen „Monat bis heute“ bzw. „Jahr bis heute“ dar. Wenn Sie beispielsweise am 18. Juli eine Zielgruppe erstellt haben, die nach „allen Kunden, deren Geburtstag in diesem Monat stattfindet“ sucht, erhält die Zielgruppe alle Kunden, deren Geburtstag vom 1. Juli bis zum 31. Juli stattfand. Am 1. August erhielt diese Zielgruppe alle Kunden, deren Geburtstag vom 1. August bis zum 31. August stattfindet.
 >
->Zuvor waren &quot;Dieser Monat&quot;und &quot;dieses Jahr&quot;30 Tage bzw. 365 Tage, die Monate mit 31 Tagen und Schaltjahren nicht berücksichtigten.
+>Zuvor repräsentierten „Dieser Monat“ und „dieses Jahr“ jeweils 30 Tage bzw. 365 Tage, was Monate mit 31 Tagen und Schaltjahren nicht berücksichtigte.
 >
 >Um die Logik Ihrer Zielgruppen zu aktualisieren, speichern Sie Ihre zuvor erstellten Zielgruppen erneut.
 
@@ -234,15 +234,15 @@ Die Zählungsfunktion wird jetzt hinzugefügt. Nun können Sie die Zählungsfunk
 
 ![Eine Liste der Zählungsfunktionen wird angezeigt und hervorgehoben.](../images/ui/segment-builder/select-count.png)
 
-### Zeitbeschränkungen {#time-constraints}
+### Zeitliche Beschränkungen {#time-constraints}
 
-Mit Zeitbeschränkungen können Sie zeitbasierte Attribute, Ereignisse und die Reihenfolge zwischen den Ereignissen zeitbegrenzen.
+Mit Zeitbeschränkungen können Sie Zeitbeschränkungen auf zeitbasierte Attribute, Ereignisse und die Sequenz zwischen den Ereignissen anwenden.
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Segmentdefinition mit den Zeitbeschränkungen &quot;Dieser Monat&quot;oder &quot;Dieses Jahr&quot;vor Juni 2024 erstellt haben, müssen Sie Ihre Segmentdefinitionen erneut speichern. Vor Juni 2024 basierte &quot;Dieser Monat&quot;auf 30 Tagen und &quot;Dieses Jahr&quot;auf 365 Tagen.
+>Wenn Sie eine Segmentdefinition mit den Zeitbeschränkungen „Diesen Monat“ oder „Dieses Jahr“ vor Juni 2024 erstellt haben, müssen Sie Ihre Segmentdefinitionen erneut speichern. Vor Juni 2024 basierte „Dieser Monat“ auf 30 Tagen und „Dieses Jahr“ auf 365 Tagen.
 
-Die Liste der verfügbaren Zeitbeschränkungen lautet wie folgt:
+Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 
 +++ Verfügbare Zeitbeschränkungen
 
@@ -250,71 +250,71 @@ Die Liste der verfügbaren Zeitbeschränkungen lautet wie folgt:
 >
 >Alle Zeitbeschränkungen basieren auf UTC.
 >
->Wenn das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktiviert ist, wird außerdem das Jahr **nicht** im Rahmen der Segmentdefinitionsbewertung verglichen.
+>Wenn das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktiviert ist, wird das Jahr **nicht** als Teil der Segmentdefinitionsbewertung verglichen.
 
-| Zeitliche Beschränkung | Beschreibung | Kann ignoriertes Jahr aktivieren | Beispiel |
+| Zeitliche Beschränkung | Beschreibung | Kann Jahr ignorieren aktivieren | Beispiel |
 | --------------- | ----------- | ------------------- | ------- |
-| Heute | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt heute auf. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Heute&quot;.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| Gestern | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt gestern auf. | Ja | ![Ein Beispiel für die Zeitbegrenzung &quot;Gestern&quot;, die verwendet wird.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| Dieser Monat | Das Attribut oder Ereignis, mit dem **muss** verglichen wird, tritt in diesem Kalendermonat auf. | Ja | ![Ein Beispiel für die Zeitbegrenzung &quot;Dieser Monat&quot;, die verwendet wird.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| Dieses Jahr | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt in diesem Kalenderjahr auf. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Dieses Jahr&quot;.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| Benutzerdefiniertes Datum | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt am angegebenen Datum auf. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Benutzerdefiniertes Datum&quot;.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| Letzten | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt innerhalb des letzten ausgewählten Zeitraums auf. Dieser Zeitraum ist **einschließlich** bis zur Auswertungszeit. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In last&quot;.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| Von (bis) | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt innerhalb der beiden ausgewählten Kalenderdaten auf. Dieser Zeitraum ist **einschließlich** beider Daten. | Ja, wenn benutzerdefiniertes Datum | ![Ein Beispiel für die Verwendung von &quot;Von bis&quot;.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Während | Das Attribut oder Ereignis, mit dem **muss** verglichen wird, tritt innerhalb des ausgewählten Monats oder Jahres auf. Wenn ein Monat ausgewählt wird, müssen Sie sowohl den Monat als auch das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat.  Wenn ein Jahr ausgewählt wird, müssen Sie nur das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat. Wenn Sie einen Monat auswählen, können Sie auch das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktivieren. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Während&quot;.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| Within (+/-) | Das Attribut oder Ereignis, mit dem **muss** verglichen werden, tritt innerhalb von Tagen, Wochen, Monaten oder Jahren ab dem ausgewählten Datum auf. Dieser Zeitraum ist **einschließlich** beider Daten. Das ausgewählte Datum kann heute, gestern oder ein anderes benutzerdefiniertes Datum Ihrer Wahl sein. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In&quot;.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| Vorher | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt vor dem ausgewählten Datum auf. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren vor. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Vor&quot;.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| Nachher | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt nach dem ausgewählten Datum auf. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren vor. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Nach&quot;.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| Rollbereich | Das zu vergleichende Attribut oder Ereignis muss zwischen den beiden relativen Daten auftreten. Die Daten können in Sekunden, Minuten, Stunden, Tagen, Wochen, Monaten oder Jahren dargestellt werden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Rollierender Bereich&quot;.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| Nächste | Das zu vergleichende Attribut oder Ereignis muss innerhalb des nächsten ausgewählten Zeitraums auftreten. Die ausgewählten Zeiträume umfassen Minuten, Stunden, Tage, Wochen, Monate und Jahre. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In Nächstes&quot;.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| Existiert | Das -Attribut ist vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Existiert&quot;.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| Nicht vorhanden | Das -Attribut ist nicht vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Existiert nicht&quot;.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Heute | Das Attribut oder Ereignis, das verglichen wird **muss** heute eintreten. | Ja | ![Ein Beispiel für die Zeitbeschränkung „Heute“, die verwendet wird.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Gestern | Das Attribut oder Ereignis, das verglichen wird **muss** gestern eintreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Gestern“](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Dieser Monat | Das zu vergleichende Attribut oder Ereignis **muss** in diesem Kalendermonat auftreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Diesen Monat“](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Dieses Jahr | Das zu vergleichende Attribut oder Ereignis **muss** in diesem Kalenderjahr auftreten. | Nein | ![Ein Beispiel für die Zeitbeschränkung „Dieses Jahr“, die verwendet wird.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Benutzerdefiniertes Datum | Das zu vergleichende Attribut oder Ereignis **muss** an dem angegebenen Datum auftreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Benutzerdefiniertes Datum“.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Letzte | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb des letzten ausgewählten Zeitraums auftreten. Dieser Zeitraum ist **einschließlich** bis zur Auswertungszeit. | Nein | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „In Last“.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| Von (bis) | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb der beiden ausgewählten Kalenderdaten auftreten. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Ja, wenn benutzerdefiniertes Datum | ![Ein Beispiel für die Verwendung von „Von zu“](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Während | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb des ausgewählten Monats oder Jahres auftreten. Wenn ein Monat ausgewählt ist, müssen Sie sowohl den Monat als auch das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat.  Wenn ein Jahr ausgewählt ist, müssen Sie einfach das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat. Wenn Sie einen Monat auswählen, können Sie auch das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktivieren. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Während“.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Innerhalb (+/-) | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb von Tagen, Wochen, Monaten oder Jahren nach dem ausgewählten Datum auftreten. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. Das ausgewählte Datum kann Heute, Gestern oder ein anderes benutzerdefiniertes Datum Ihrer Wahl sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Innerhalb von“.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Vorher | Das zu vergleichende Attribut oder Ereignis **muss** vor dem ausgewählten Datum liegen. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Vor“.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Nachher | Das zu vergleichende Attribut oder Ereignis **muss** nach dem ausgewählten Datum auftreten. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Nach“.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rollbereich | Das zu vergleichende Attribut oder Ereignis muss zwischen den beiden relativen Daten auftreten. Die Datumsangaben können in Sekunden, Minuten, Stunden, Tagen, Wochen, Monaten oder Jahren dargestellt werden. | Nein | ![Ein Beispiel für die verwendete Zeitbeschränkung „Rollierender Bereich“](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| Nächste | Das zu vergleichende Attribut oder Ereignis muss innerhalb des nächsten ausgewählten Zeitraums auftreten. Die ausgewählten Zeiträume umfassen Minuten, Stunden, Tage, Wochen, Monate und Jahre. | Nein | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „In nächster Zeit“](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Existiert | Das Attribut ist vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbeschränkung „Vorhanden“](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| existiert nicht | Das Attribut ist nicht vorhanden. | Nein | ![Ein Beispiel für die Zeitbeschränkung „Ist nicht vorhanden“ wird verwendet.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
-Wenn Sie eine Zeitbegrenzung auf ein Ereignis anwenden, können Sie sie entweder auf die Arbeitsfläche, die Kartenebene oder zwischen Ereignissen anwenden.
+Wenn Sie eine Zeitbeschränkung auf ein Ereignis anwenden, können Sie sie entweder auf der Arbeitsfläche, auf Kartenebene oder zwischen Ereignissen anwenden.
 
-#### Begrenzung auf Arbeitsflächenebene
+#### Einschränkung auf Canvas-Ebene
 
-Um eine Zeitbegrenzung auf Arbeitsflächenebene anzuwenden, wählen Sie das Uhrensymbol aus, das über der Zeitleiste der Ereignisse angezeigt wird.
+Um eine Zeitbeschränkung auf Arbeitsflächen-Ebene anzuwenden, wählen Sie das Uhrensymbol aus, das über der Zeitleiste von Ereignissen angezeigt wird.
 
-![Die Zeitbegrenzungsauswahl auf Arbeitsflächenebene wird hervorgehoben.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![Die Zeitbeschränkungsauswahl auf Arbeitsflächen-Ebene ist hervorgehoben.](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
-Wenn Sie eine Zeitbegrenzung auf die Arbeitsflächenebene anwenden, wird die Zeitbegrenzung auf **alle** Ereignisse in der Zielgruppe angewendet.
+Wenn Sie eine Zeitbeschränkung auf der Arbeitsflächen-Ebene anwenden, wird die Zeitbeschränkung auf **alle** Ereignisse in der Zielgruppe angewendet.
 
-#### Begrenzung auf Kartenebene
+#### Einschränkung auf Kartenebene
 
-Um eine Begrenzung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die die Zeitbegrenzung angewendet werden soll, gefolgt vom Auslassungssymbol und **[!UICONTROL Zeitregel anwenden]**. Auf diese Weise können Sie eine Zeitbegrenzung innerhalb des Containers **[!UICONTROL Ereignisregeln]** auswählen.
+Um eine Beschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten, gefolgt vom Symbol mit den Auslassungspunkten und **[!UICONTROL Zeitregel anwenden]**. Auf diese Weise können Sie eine Zeitbeschränkung im Container **[!UICONTROL Ereignisregeln]** auswählen.
 
-![Die Zeitbegrenzungsauswahl auf Kartenebene ist hervorgehoben.](../images/ui/segment-builder/time-constraints/card-level.png)
+![Die Zeitbeschränkungsauswahl auf Kartenebene ist hervorgehoben.](../images/ui/segment-builder/time-constraints/card-level.png)
 
-Wenn Sie eine Zeitbegrenzung auf Kartenebene anwenden, wird die Zeitbegrenzung auf das Ereignis **specified** in der Zielgruppe angewendet.
+Wenn Sie eine Zeitbeschränkung auf Kartenebene anwenden, gilt die Zeitbeschränkung für das **spezifizierte** Ereignis in der Zielgruppe.
 
-#### Zwischen Ereignisbegrenzung
+#### Zwischen Ereignisbegrenzungen
 
-Um eine Zeitbegrenzung zwischen Ereignissen anzuwenden, wählen Sie das Uhrensymbol zwischen den beiden Ereignissen aus, auf die Sie die Zeitbegrenzung anwenden möchten.
+Um eine Zeitbeschränkung zwischen Ereignissen anzuwenden, wählen Sie das Uhrensymbol zwischen den beiden Ereignissen aus, auf die Sie die Zeitbeschränkung anwenden möchten.
 
-![Die Zeitbegrenzungsauswahl zwischen Ereignissen wird hervorgehoben.](../images/ui/segment-builder/time-constraints/between-event.png)
+![Die Zeitbeschränkungsauswahl zwischen Ereignissen ist hervorgehoben.](../images/ui/segment-builder/time-constraints/between-event.png)
 
-Wenn Sie eine Zeitbegrenzung zwischen dem Ereignis anwenden, wird die Zeitbegrenzung auf die Zeit **zwischen** der Ereignisse angewendet.
+Wenn Sie eine Zeitbeschränkung zwischen den Ereignissen anwenden, gilt die Zeitbeschränkung für die Zeit **zwischen** den Ereignissen.
 
-Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet sich von der Hauptliste der Zeitbeschränkungen und umfasst folgende Elemente:
+Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet sich von der Hauptliste der Zeitbeschränkungen und ist wie folgt:
 
 +++ Verfügbare Zeitbeschränkungen
 
 | Zeitliche Beschränkung | Beschreibung |
 | --------------- | ----------- |
-| Nachher | Das letztgenannte Ereignis **muss mindestens** nach dem vorherigen Ereignis stattfinden. |
-| Within | Die beiden Ereignisse **must** finden während des Zeitraums statt, der innerhalb der Zeitbegrenzung aufgeführt ist. |
+| Nachher | Das letztgenannte Ereignis **muss mindestens** nach dem vorangegangenen Ereignis stattfinden. |
+| Innerhalb von | Die beiden Ereignisse **müssen** innerhalb des in der Zeitbeschränkung angegebenen Zeitraums stattfinden. |
 
 >[!NOTE]
 >
->Bei Verwendung der Zeitbegrenzung &quot;Nach&quot;kann das letztgenannte Ereignis mehr als die in der Zeitbegrenzung aufgelistete Zeitdauer betragen. >
->Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbegrenzung &quot;Nach 1 Stunde&quot;zwischen diesen beiden Ereignissen setzen, qualifiziert sich eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis.
+>Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
+>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
->Wenn Sie beispielsweise über ein Seitenansichtsereignis und ein Checkout-Ereignis verfügen und sowohl die Zeitbeschränkungen &quot;Nach 1 Stunde&quot;als auch &quot;Innerhalb 24 Stunden&quot;festlegen, qualifiziert sich eine Segmentdefinition mit einem Checkout-Ereignis 12 Stunden nach dem Seitenansichtsereignis, aber eine Segmentdefinition mit einem Checkout-Ereignis 36 Stunden nach dem Seitenansichtsereignis würde nicht qualifiziert.
+>Wenn Sie beispielsweise über ein Seitenansichtsereignis und ein Checkout -Ereignis verfügen und sowohl die Zeitbeschränkungen „Nach 1 Stunde“ als auch „Innerhalb von 24 Stunden“ festlegen, würde eine Segmentdefinition mit einem Checkout -Ereignis 12 Stunden nach dem Seitenansichtsereignis qualifiziert, aber eine Segmentdefinition mit einem Checkout -Ereignis 36 Stunden nach dem Seitenansichtsereignis nicht.
 
 +++
 
@@ -368,17 +368,17 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >abstract="Die Schätzungen der Segmentdefinition können aktualisiert werden, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für die vorgeschlagene Segmentdefinition qualifiziert sind. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=de#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** rechts im Arbeitsbereich eine Schätzung der Größe der resultierenden Segmentdefinition an, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
-**[!UICONTROL Qualifizierte Profile]** gibt die Anzahl der **tatsächlichen** Profile an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden aktualisiert, nachdem der Segmentbewertungsauftrag ausgeführt wurde.
+**[!UICONTROL Qualifizierte Profile]** gibt die **tatsächliche** Anzahl von Profilen an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert.
 
-Der Zeitstempel für qualifizierte Profile gibt den neuesten **Batch**-Segmentbewertungsauftrag an und wird für Segmentdefinitionen, die mithilfe von Streaming oder Kantensegmentierung ausgewertet werden, **nicht** angezeigt. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentbewertungsauftrag ausgeführt wird.
+Der Zeitstempel für qualifizierte Profile gibt den neuesten Segmentauswertungsauftrag **Batch** an und wird **für Segmentdefinitionen angezeigt,** mithilfe von Streaming oder Edge-Segmentierung ausgewertet wurden. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentauswertungsauftrag ausgeführt wird.
 
-**[!UICONTROL Geschätzte Profile]** gibt eine **ungefähre** Anzahl von Profilen basierend auf dem **Beispielauftrag** an. Sie können eine aktualisierte Version dieses Werts sehen, nachdem Sie die neuen Regeln oder Bedingungen hinzugefügt und **[!UICONTROL Schätzung aktualisieren]** ausgewählt haben. Wenn Sie die Informationsblase auswählen, erhalten Sie den Fehlerschwellenwert und die aktuelle Beispielauftragszeit.
+**[!UICONTROL Geschätzte Profile]** gibt **(**) Anzahl der Profile basierend auf dem **Beispielvorgang** an. Sie können eine aktualisierte Version dieses Werts sehen, nachdem Sie die neuen Regeln oder Bedingungen hinzugefügt und **[!UICONTROL Schätzung aktualisieren]** ausgewählt haben. Durch Auswahl der Informationsblase erhalten Sie den Fehlerschwellenwert und die aktuelle Zeit des Beispielauftrags.
 
-![Qualifizierte Profile und geschätzte Profile werden im Abschnitt &quot;Zielgruppeneigenschaften&quot;hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
+![Qualifizierte Profile und „Geschätzte Profile“ werden im Abschnitt mit den Zielgruppeneigenschaften hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
 
-Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich Name, Beschreibung und Auswertungstyp. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
 Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 
@@ -386,9 +386,9 @@ Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durc
 
 >[!NOTE]
 >
->Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet.
+>Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet, und bei mehr als 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet.
 >
->Darüber hinaus basiert diese Schätzung auf dem Zeitpunkt, zu dem der letzte Profilstichprobenauftrag ausgeführt wurde. Wenn Sie also eine relative Datumsfunktion wie &quot;Heute&quot;oder &quot;Diese Woche&quot;verwenden, werden die Berechnungen der Schätzung von der letzten Laufzeit des Beispielauftrags für das Profil abgeleitet. Wenn heute beispielsweise der 24. Januar ist und der letzte Beispielauftrag am 22. Januar ausgeführt wurde, basiert die Funktion &quot;Gestern&quot;für das relative Datum auf dem 21. Januar und nicht auf dem 23. Januar.
+>Darüber hinaus basiert diese Schätzung auf dem Zeitpunkt, an dem der letzte Beispielvorgang für ein Profil ausgeführt wurde. Wenn Sie also eine relative Datumsfunktion wie „Heute“ oder „Diese Woche“ verwenden, basiert die Schätzung auf den Berechnungen der letzten Laufzeitbeispiele für Profilaufträge. Wenn heute beispielsweise der 24. Januar ist und der letzte Profilbeispielvorgang am 22. Januar ausgeführt wurde, basiert die relative Datumsfunktion „Gestern“ auf dem 21. Januar und nicht auf dem 23. Januar.
 >
 >Weiterführende Informationen zum Generieren von Schätzungen für Segmentdefinitionen finden Sie im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Tutorials zum Erstellen von Segmentdefinitionen.
 
@@ -396,7 +396,7 @@ Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Aus
 
 Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
 
-Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie die Erstellung abgeschlossen haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können Sie sie **nicht** wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie im Popup-Fenster **[!UICONTROL Speichern]** auswählen. Durch das Abbrechen des Dialogfelds wird die ursprüngliche Auswertungsmethode **beibehalten**.
+Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie sie fertig erstellt haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können **nicht** sie wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie im Popup **[!UICONTROL Speichern]** auswählen. Durch Abbrechen des Dialogfelds **die ursprüngliche** beibehalten.
 
 ![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dieses gibt Aufschluss darüber, welche Methoden zur Auswertung für die Segmentdefinition infrage kommen und welche nicht.](../images/ui/segment-builder/select-evaluation-method.png)
 

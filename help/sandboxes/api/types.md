@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Listen-Sandboxes
+keywords: Experience Platform;Startseite;beliebte Themen;Sandboxes auflisten
 solution: Experience Platform
 title: Sandbox-Typen-API-Endpunkt
 description: Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt /sandboxTypes stellen.
@@ -12,7 +12,7 @@ ht-degree: 73%
 
 ---
 
-# Sandbox-Typen-Endpunkt
+# Endpunkt für Sandbox-Typen
 
 Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/sandboxTypes` senden.
 
@@ -20,7 +20,7 @@ Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abr
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Liste der unterstützten Sandbox-Typen abrufen
+## Abrufen einer Liste unterstützter Sandbox-Typen
 
 Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/sandboxTypes` senden.
 

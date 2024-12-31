@@ -12,11 +12,11 @@ ht-degree: 52%
 
 # Objektfunktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Objekten vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Objekten vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Ist null
 
-Die Funktion `isNull` bestimmt, ob eine Objektreferenz nicht als boolescher Wert vorhanden ist.
+Die Funktion `isNull` bestimmt, ob ein Objektverweis nicht als boolescher Wert vorhanden ist.
 
 **Format**
 
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## Is not null
 
-Die Funktion `isNotNull` bestimmt, ob eine Objektreferenz als boolescher Wert vorhanden ist.
+Die Funktion `isNotNull` bestimmt, ob ein Objektverweis als boolescher Wert vorhanden ist.
 
 **Format**
 

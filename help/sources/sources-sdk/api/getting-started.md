@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Erste Schritte mit Self-Serve-Quellen (Batch-SDK)
-description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Batch SDK) zu erstellen.
+title: Erste Schritte mit Selbstbedienungsquellen (Batch-SDK)
+description: In diesem Dokument erhalten Sie eine Einführung in die erforderlichen Informationen, die Sie kennen sollten, bevor Sie versuchen, eine neue Quelle mithilfe von Selbstbedienungsquellen (Batch-SDK) zu erstellen.
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 51%
 
 ---
 
-# Erste Schritte mit Self-Serve-Quellen (Batch-SDK)
+# Erste Schritte mit Selbstbedienungsquellen (Batch-SDK)
 
-Self-Serve-Quellen (Batch SDK) ermöglichen Ihnen die Integration Ihrer eigenen REST-basierten Quelle, um Batch-Daten an Adobe Experience Platform zu übertragen. Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) durchführen.
+Mit Selbstbedienungsquellen (Batch-SDK) können Sie Ihre eigene REST-basierte Quelle integrieren, um Batch-Daten in Adobe Experience Platform zu bringen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Voraussetzungen
 
-Um Self-Serve-Quellen (Batch-SDK) zu verwenden, müssen Sie sicherstellen, dass Sie Zugriff auf eine mit Adobe Experience Platform-Quellen bereitgestellte Sandbox der Organisation haben.
+Um Selbstbedienungsquellen (Batch-SDK) verwenden zu können, müssen Sie sicherstellen, dass Sie Zugriff auf eine Organisations-Sandbox mit Adobe Experience Platform-Quellen haben.
 
 Dieses Handbuch setzt außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -26,7 +26,7 @@ Dieses Handbuch setzt außerdem ein Verständnis der folgenden Komponenten von A
 
 ## Lesen von Beispiel-API-Aufrufen
 
-Die Dokumentation zu Self-Serve-Quellen (Batch SDK) und der [!DNL Flow Service]-API enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In der Dokumentation zu den Selbstbedienungsquellen (Batch-SDK) und der [!DNL Flow Service]-API wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
@@ -36,7 +36,7 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,4 +50,4 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Nächste Schritte
 
-Informationen zum Erstellen einer neuen Quelle mit Self-Serve-Quellen (Batch SDK) finden Sie im Tutorial zum Erstellen einer neuen Quelle [ .](./create.md)
+Informationen zum Erstellen einer neuen Quelle mit Selbstbedienungsquellen (Batch-SDK) finden Sie im Tutorial [Erstellen einer neuen Quelle](./create.md).

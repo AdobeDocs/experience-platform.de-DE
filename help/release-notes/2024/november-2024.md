@@ -13,7 +13,7 @@ ht-degree: 19%
 
 >[!TIP]
 >
->Die neue Produktdokumentation für den [AI-Assistenten](../../ai-assistant/landing.md) ist jetzt verfügbar. Verwenden Sie diese Seite als Hub für alle Ressourcen, die mit AI Assistant verbunden sind.
+>Die neue [KI-Assistent](../../ai-assistant/landing.md)Produktdokumentation) ist jetzt verfügbar. Verwenden Sie diese Seite als Hub für alle Ressourcen im Zusammenhang mit dem KI-Assistenten.
 
 **Versionsdatum: Mittwoch, 26. November 2024**
 
@@ -24,20 +24,20 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Abfrage-Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Dokumentationsaktualisierungen](#documentation-updates)
-   - [Dokumentation zur interaktiven Experience Platform-API](#interactive-experience-platform-api-documentation)
+   - [Dokumentation zur Interactive Experience Platform API](#interactive-experience-platform-api-documentation)
    - [Neues Inhaltsverzeichnis auf Experience League](#new-table-of-contents-on-experience-league)
    - [Neue Landingpage des KI-Assistenten](#new-ai-assistant-landing-page)
 
 ## KI-Assistent {#ai-assistant}
 
-AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie Ihre Workflows in Adobe-Applikationen beschleunigen können. Sie können den AI-Assistenten verwenden, um Produktwissen besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und operative Einblicke zu erhalten. Der AI-Assistent unterstützt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und betriebliche Erkenntnisse zu gewinnen. Der KI-Assistent unterstützt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Alpha]{type=Informative} Überwachen Sie wichtige Änderungen und prognostizieren Sie das Zielgruppenwachstum. | Verwenden Sie den KI-Assistenten, um signifikante Änderungen zu überwachen und Wachstumsprognosen für Ihre Zielgruppe und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsorientierte Projektionen zur Unterstützung datenbasierter Entscheidungen anzubieten. Weitere Informationen finden Sie im Handbuch zum [Überwachen bedeutender Änderungen und Vorhersagen des Zielgruppenwachstums](../../ai-assistant/new-features/audience-forecasting.md). |
-| [!BADGE Alpha]{type=Informative} Schätzung der natürlichen Sprache | Verwenden Sie die Funktionen zur Schätzung der natürlichen Sprache des KI-Assistenten, um die Größe der Zielgruppe zu schätzen und die Tendenzen der Zielgruppe auf der Grundlage einfacher, kommunikativer Fragen vorherzusagen. Weitere Informationen finden Sie in der Anleitung zu [Verwenden der Schätzung natürlicher Sprachen mit dem KI-Assistenten](../../ai-assistant/new-features/natural-language.md). |
+| [!BADGE Alpha ]{type=Informative} Überwachen Sie signifikante Änderungen und prognostizieren Sie das Zielgruppenwachstum | Verwenden Sie den KI-Assistenten, um signifikante Änderungen zu überwachen und Wachstumsprognosen für Ihre Audience und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsgerichtete Prognosen anzubieten, um dateninformierte Entscheidungsfindungen zu unterstützen. Weitere Informationen finden Sie im Handbuch unter [Überwachen signifikanter Änderungen und Prognostizieren des Zielgruppenwachstums](../../ai-assistant/new-features/audience-forecasting.md). |
+| [!BADGE Alpha ]{type=Informative} Schätzung der natürlichen Sprache | Nutzen Sie die Funktionen des KI-Assistenten zur Schätzung natürlicher Sprachen, um die Größe von Zielgruppen zu schätzen und die Neigung von Zielgruppen auf der Grundlage einfacher, dialogorientierter Fragen vorherzusagen. Weitere Informationen finden Sie im Handbuch unter [Verwenden der Schätzung natürlicher Sprache mit dem KI-Assistenten](../../ai-assistant/new-features/natural-language.md). |
 
 {style="table-layout:auto"}
 
@@ -49,8 +49,8 @@ AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie 
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [ Magnite-Streaming in Echtzeit](/help/destinations/catalog/advertising/magnite-streaming.md) | Exportieren Sie Zielgruppen für Aktivierung, Targeting oder Unterdrückung in die Magnite-Streaming-Plattform. Beachten Sie, dass Sie für den korrekten Export von Zielgruppen nach Magnite sowohl die Echtzeit- als auch die Batch-Ziele verwenden müssen. |
-| [Magnite-Streaming-Batch](/help/destinations/catalog/advertising/magnite-batch.md) | Exportieren Sie Zielgruppen für Aktivierung, Targeting oder Unterdrückung in die Magnite-Streaming-Plattform. Beachten Sie, dass Sie für den korrekten Export von Zielgruppen nach Magnite sowohl die Echtzeit- als auch die Batch-Ziele verwenden müssen. |
+| [Magnite-Streaming in Echtzeit](/help/destinations/catalog/advertising/magnite-streaming.md) | Exportieren Sie Zielgruppen für Aktivierung, Targeting oder Unterdrückung in der Magnite-Streaming-Plattform. Damit Zielgruppen korrekt in Magnitre exportiert werden können, müssen Sie sowohl die Echtzeit- als auch die Batch-Ziele verwenden. |
+| [Magnite Streaming Batch](/help/destinations/catalog/advertising/magnite-batch.md) | Exportieren Sie Zielgruppen für Aktivierung, Targeting oder Unterdrückung in der Magnite-Streaming-Plattform. Damit Zielgruppen korrekt in Magnitre exportiert werden können, müssen Sie sowohl die Echtzeit- als auch die Batch-Ziele verwenden. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Suchen nach Profilattributen in Echtzeit am Edge](/help/destinations/ui/activate-edge-profile-lookup.md) | Erfahren Sie, wie Sie in Echtzeit nach Edge-Profilattributen suchen, um Personalisierungserlebnisse bereitzustellen, oder Entscheidungsregeln über nachgelagerte Anwendungen mithilfe der benutzerdefinierten Personalization-Ziel- und Edge Network-API informieren. |
+| [Profilattribute in Echtzeit am Edge nachschlagen](/help/destinations/ui/activate-edge-profile-lookup.md) | Erfahren Sie, wie Sie mithilfe der benutzerdefinierten Ziel- und Edge Network-API von Personalization Edge-Profilattribute in Echtzeit nachschlagen können, um Personalisierungserlebnisse bereitzustellen oder Entscheidungsregeln über nachgelagerte Anwendungen zu informieren. |
 
 {style="table-layout:auto"}
 
@@ -66,38 +66,38 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 ## Abfrage-Service {#query-service}
 
-Abfragen von Daten im Adobe Experience Platform Data Lake mithilfe von SQL mit Query Service. Nahtloses Kombinieren von Datensätzen und Generieren neuer Datensätze aus Ihren Abfrageergebnissen zur Leistungsverbesserung von Berichten, zur Aktivierung von Datenwissenschaft-Workflows oder zur Erleichterung der Aufnahme in das Echtzeit-Kundenprofil. Beispielsweise können Sie Kundentransaktionsdaten mit Verhaltensdaten zusammenführen, um hochwertige Zielgruppen für zielgerichtete Marketing-Kampagnen zu identifizieren.
+Abfragen von Daten im Data Lake von Adobe Experience Platform unter Verwendung von Standard-SQL mit dem Abfrage-Service. Nahtlose Kombination von Datensätzen und Generierung neuer Datensätze aus Ihren Abfrageergebnissen, um das Reporting zu optimieren, datenwissenschaftliche Workflows zu ermöglichen oder die Aufnahme in das Echtzeit-Kundenprofil zu erleichtern. Sie können beispielsweise Kundentransaktionsdaten mit Verhaltensdaten zusammenführen, um hochwertige Zielgruppen für zielgerichtete Marketing-Kampagnen zu identifizieren.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dater Distiller Authorization API | Verwalten und erzwingen IP-basierte Zugriffsbeschränkungen für Query Service-Sandboxes, um die Datensicherheit zu erhöhen und die Einhaltung von Unternehmensrichtlinien sicherzustellen. Weitere Informationen zu den wichtigsten Funktionen finden Sie im [Data Distiller Authorization API guide](../../query-service/auth-api/overview.md) (Handbuch zur Data Authorization API) oder in der [OpenAPI-Dokumentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) . Dort finden Sie umfassende Informationen einschließlich Endpunktdetails, Parameterlisten, Anforderungs-/Antwortbeispielen und Testfunktionen. |
+| Dater Distiller Authorization API | Verwalten und Erzwingen von IP-basierten Zugriffsbeschränkungen für Query Service-Sandboxes, um die Datensicherheit zu erhöhen und die Einhaltung von Unternehmensrichtlinien sicherzustellen. Weitere Informationen, einschließlich Details zu Endpunkten[ Parameterlisten, Anfrage-/Antwortbeispielen und Testfunktionen, finden Sie im Data Distiller Authorization API](../../query-service/auth-api/overview.md)Handbuch für weitere Informationen zu den wichtigsten Funktionen und Funktionen oder in der [OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)Dokumentation. |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dies zu erreichen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Package-Freigabe mit der Sandbox-Tool-API | Verwenden Sie zwei neue API-Endpunkte, [`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking) und [`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages), um die organisationsübergreifende Freigabe von Paketen zu handhaben, z. B. die Validierung von Anforderungen, die Paketanzeige und den Import von Paketen mithilfe der Sandbox-Tool-API. |
+| Package-Freigabe mit der Sandbox-Tooling-API | Verwenden Sie zwei neue API-Endpunkte, [`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking) und [`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages), um die Paketfreigabe zwischen Organisationen zu verarbeiten, z. B. Anforderungsgenehmigungen, Paketsichtbarkeit und den Import von Paketen mithilfe der Sandbox-Tool-API. |
 
-Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Dokumentationsaktualisierungen {#documentation-updates}
 
-### Dokumentation zur interaktiven Experience Platform-API {#interactive-api-documentation}
+### Dokumentation zur Interactive Experience Platform API {#interactive-api-documentation}
 
-Die [Experience Platform API-Dokumentation](https://developer.adobe.com/experience-platform-apis/) ist jetzt vollständig interaktiv, sodass Sie APIs direkt auf der Seite mit der API-Referenzdokumentation authentifizieren und untersuchen können. Sie können jetzt die gewünschte API-Referenzdokumentationsseite aufrufen, Ihre API-Authentifizierungsberechtigungen erstellen oder abrufen, sie in den Block **[!UICONTROL Testen Sie es]** einfügen und den Aufruf ausführen. Alles auf einer Seite. [Mehr dazu](/help/landing/api-authentication.md#get-credentials-functionality) über die Funktionalität.
+Die [Experience Platform-API-Dokumentation](https://developer.adobe.com/experience-platform-apis/) ist jetzt vollständig interaktiv, sodass Sie sich authentifizieren und APIs direkt auf der Seite mit der API-Referenzdokumentation erkunden können. Sie können jetzt zur gewünschten Seite zur API-Referenzdokumentation wechseln, Ihre API-Authentifizierungsdaten erstellen oder abrufen, sie in den Block &quot;**[!UICONTROL versuchen]** einfügen und den Aufruf ausführen. Alles auf einer Seite. [Weitere Informationen](/help/landing/api-authentication.md#get-credentials-functionality) über die Funktion.
 
 ### Neues Inhaltsverzeichnis auf Experience League {#new-table-of-contents-on-experience-league}
 
-Das Inhaltsverzeichnis auf den Experience League-Dokumentationsseiten wurde verbessert, um Lesern ein besseres Erlebnis zu bieten, einschließlich eines Keyword-Filters, um die genaue Seite zu ermitteln, die Sie benötigen, der Möglichkeit, alle Seiten zu erweitern und mehr. <br> ![Neues Inhaltsverzeichnis einschließlich Keyword-Filter und Möglichkeit, alle Seiten zu erweitern.](../2024/assets/november/new-toc-experience.gif "Neues Inhaltsverzeichnis einschließlich Keyword-Filter und Möglichkeit, alle Seiten zu erweitern."){width="250" align="center" zoomable="yes"}
+Das Inhaltsverzeichnis auf Experience League-Dokumentationsseiten wurde verbessert, um den Lesern ein besseres Erlebnis zu bieten, einschließlich eines Keyword-Filters, um die genaue benötigte Seite zu ermitteln, der Möglichkeit, alle Seiten zu erweitern und mehr. <br> ![Neues Inhaltsverzeichnis-Erlebnis einschließlich Keyword-Filter und Möglichkeit, alle Seiten zu erweitern.](../2024/assets/november/new-toc-experience.gif "Neues Inhaltsverzeichnis-Erlebnis einschließlich Keyword-Filter und Möglichkeit, alle Seiten zu erweitern."){width="250" align="center" zoomable="yes"}
 
 ### Neue Landingpage des KI-Assistenten {#new-ai-assistant-landing-page}
 
-Verwenden Sie die neue Seite mit der Produktdokumentation für den [AI-Assistenten](../../ai-assistant/landing.md) als Hub für alle Elemente des AI-Assistenten. In der Produktdokumentation finden Sie Video-Tutorials, technische Dokumentation, Anwendungsbeispiele und Links zu Blog-Beiträgen zum AI-Assistenten.
+Verwenden Sie die neue Seite [KI-Assistent](../../ai-assistant/landing.md)Produktdokumentation) als Drehscheibe für alle Dinge mit dem KI-Assistenten. Siehe die Produktdokumentation für Video-Tutorials, technische Dokumentation, Anwendungsfälle und Links zu Blog-Beiträgen über AI Assistant.

@@ -15,7 +15,7 @@ ht-degree: 67%
 
 # Hilfe zur Real-Time Customer Data Platform {#rtcdp}
 
-* [Real-Time CDP-Dokumentation](home.md)
+* [Dokumentation zu Real-Time CDP](home.md)
 * Erste Schritte {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDP – Übersicht](overview.md)
@@ -33,7 +33,7 @@ ht-degree: 67%
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
    * [Administration – Übersicht](administration/admin-overview.md)
-* Zielgruppen und Segmentierung {#segmentation}
+* Zielgruppen und {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
    * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
@@ -44,14 +44,14 @@ ht-degree: 67%
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
-* Schutzstreifen {#guardrails}
-   * [Übersicht über Real-Time CDP-Limits](guardrails/overview.md)
-   * [Schutzmechanismen für die Datenerfassung](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Schutzmechanismen für den  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
-   * [Limits für [!DNL Real-Time Customer Profile] Daten und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
-   * [Limits für  [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Schutzmechanismen für  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Limits für die Datenaktivierung über Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+* Leitplanken {#guardrails}
+   * [Übersicht über Real-Time CDP-Schutzmechanismen](guardrails/overview.md)
+   * [Schutzmaßnahmen bei der Datenaufnahme](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Leitplanken für den [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Leitplanken für  [!DNL Real-Time Customer Profile]  und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
+   * [Leitplanken für [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Schutzmaßnahmen für [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Leitplanken für die Datenaktivierung durch Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Zusammenführungsrichtlinien {#merge-policies}
@@ -75,16 +75,16 @@ ht-degree: 67%
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
 * Anwendungsfälle {#use-cases}
-   * [Überblick über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
-   * Kundenakquise {#customer-acquisition}
-      * [Engage and acquisition new Customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)
-      * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
+   * [Übersicht über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
+   * {#customer-acquisition} zur Kundenakquise
+      * [Kundengewinnung und -gewinnung ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
+      * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
-   * Profilanreicherung {#profile-enrichment}
+   * {#profile-enrichment} zur Profilanreicherung
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Personalisierte Einblicke und Interaktion {#personalization-insights-engagement}
-      * [einmaligen Kundenwert auf Lebenszeitwert erhöhen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
-      * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [Intelligentes erneutes Engagement Ihrer Kunden: Beispiele für Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
+   * Personalisierte Einblicke und Interaktions-{#personalization-insights-engagement}
+      * [Weiterentwicklung des einmaligen Kundenwerts zum Lebenszeitwert](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
+      * [Kunden auf intelligente Weise wieder ansprechen](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Kunden intelligent wieder ansprechen: Luma-Beispiele](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)

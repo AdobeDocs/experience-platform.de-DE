@@ -13,15 +13,15 @@ ht-degree: 51%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Lesen Sie dieses Dokument für die erforderlichen Schritte, die Sie ausführen müssen, um Ihr [!DNL SFTP]-Konto erfolgreich mit Experience Platform zu verbinden.
+Lesen Sie dieses Dokument über die erforderlichen Schritte, die Sie durchführen müssen, um Ihr [!DNL SFTP]-Konto erfolgreich mit Experience Platform zu verbinden.
 
 >[!TIP]
 >
->Sie müssen die interaktive Tastaturauthentifizierung in der SFTP-Serverkonfiguration vor der Verbindung deaktivieren. Durch Deaktivieren der Einstellung können Kennwörter manuell eingegeben werden, anstatt über einen Dienst oder ein Programm einzugeben.
+>Sie müssen die interaktive Tastaturauthentifizierung in der SFTP-Server-Konfiguration vor der Verbindung deaktivieren. Durch Deaktivieren der Einstellung können Passwörter manuell eingegeben werden, im Gegensatz zur Eingabe über einen Dienst oder ein Programm.
 
 ## Voraussetzungen {#prerequisites}
 
-Lesen Sie diesen Abschnitt, um die erforderlichen Schritte durchzuführen, damit Sie Ihre [!DNL SFTP]-Quelle erfolgreich mit Experience Platform verbinden können.
+Lesen Sie diesen Abschnitt, um die erforderlichen Schritte zu erfahren, die Sie ausführen müssen, um Ihre [!DNL SFTP] erfolgreich mit Experience Platform zu verbinden.
 
 ### IP-Adressen-Zulassungsliste
 
@@ -154,47 +154,47 @@ more ~/.ssh/authorized_keys
 
 ### Sammeln erforderlicher Anmeldedaten {#credentials}
 
-Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihren [!DNL SFTP]-Server mit Experience Platform zu verbinden.
+Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihren [!DNL SFTP] mit Experience Platform zu verbinden.
 
 >[!BEGINTABS]
 
->[!TAB Grundlegende Authentifizierung]
+>[!TAB Einfache Authentifizierung]
 
-Geben Sie die entsprechenden Werte für die folgenden Anmeldeinformationen ein, um Ihren [!DNL SFTP] -Server mithilfe der einfachen Authentifizierung zu authentifizieren.
-
-| Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
-| `host` | Der Name oder die IP-Adresse, die Ihrem [!DNL SFTP] -Server zugeordnet ist. |
-| `port` | Der [!DNL SFTP] Server-Port, mit dem Sie eine Verbindung herstellen. Wenn nicht angegeben, wird der Wert standardmäßig auf `22` gesetzt. |
-| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL SFTP] -Server. |
-| `password` | Das Kennwort für Ihren [!DNL SFTP] -Server. |
-| `maxConcurrentConnections` | Mit diesem Parameter können Sie eine maximale Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen festlegen, dass dieser Wert kleiner als der von SFTP festgelegte Grenzwert ist. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, betrifft sie nur zukünftige Datenflüsse und nicht vorhandene Datenflüsse. |
-| `folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. [!DNL SFTP] -Quelle, können Sie den Ordnerpfad angeben, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
-| `disableChunking` | Während der Datenerfassung kann die Quelle [!DNL SFTP] die Dateilänge zuerst abrufen, die Datei in mehrere Teile unterteilen und sie dann parallel lesen. Sie können diesen Wert aktivieren oder deaktivieren, um anzugeben, ob Ihr [!DNL SFTP]-Server Dateilängen abrufen oder Daten aus einem bestimmten Offset lesen kann. |
-| `connectionSpec.id` | (Nur API) Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
-
->[!TAB Authentifizierung mit öffentlichen SSH-Schlüsseln]
-
-Geben Sie die entsprechenden Werte für die folgenden Anmeldeinformationen ein, um Ihren [!DNL SFTP]-Server mithilfe der Authentifizierung mit dem öffentlichen SSH-Schlüssel zu authentifizieren.
+Geben Sie die entsprechenden Werte für die folgenden Anmeldeinformationen an, um Ihren [!DNL SFTP]-Server mit einfacher Authentifizierung zu authentifizieren.
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Name oder die IP-Adresse, die Ihrem [!DNL SFTP] -Server zugeordnet ist. |
-| `port` | Der [!DNL SFTP] Server-Port, mit dem Sie eine Verbindung herstellen. Wenn nicht angegeben, wird der Wert standardmäßig auf `22` gesetzt. |
-| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL SFTP] -Server. |
-| `password` | Das Kennwort für Ihren [!DNL SFTP] -Server. |
-| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
-| `passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
-| `maxConcurrentConnections` | Mit diesem Parameter können Sie eine maximale Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen festlegen, dass dieser Wert kleiner als der von SFTP festgelegte Grenzwert ist. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, betrifft sie nur zukünftige Datenflüsse und nicht vorhandene Datenflüsse. |
-| `folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. [!DNL SFTP] -Quelle, können Sie den Ordnerpfad angeben, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
-| `disableChunking` | Während der Datenerfassung kann die Quelle [!DNL SFTP] die Dateilänge zuerst abrufen, die Datei in mehrere Teile unterteilen und sie dann parallel lesen. Sie können diesen Wert aktivieren oder deaktivieren, um anzugeben, ob Ihr [!DNL SFTP]-Server Dateilängen abrufen oder Daten aus einem bestimmten Offset lesen kann. |
-| `connectionSpec.id` | (Nur API) Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `host` | Der Name oder die IP-Adresse, die mit Ihrem [!DNL SFTP]-Server verknüpft ist. |
+| `port` | Der [!DNL SFTP] Server-Port, mit dem Sie eine Verbindung herstellen. Wenn kein Wert angegeben wird, ist der Standardwert `22`. |
+| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL SFTP]. |
+| `password` | Das Kennwort für Ihren [!DNL SFTP]. |
+| `maxConcurrentConnections` | Mit diesem Parameter können Sie einen Maximalwert für die Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen diesen Wert kleiner als das von SFTP festgelegte Limit festlegen. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, wirkt sie sich nur auf zukünftige Datenflüsse aus, nicht auf vorhandene Datenflüsse. |
+| `folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. [!DNL SFTP] -Quelle können Sie den Ordnerpfad bereitstellen, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
+| `disableChunking` | Während der Datenaufnahme kann die [!DNL SFTP] zunächst die Dateilänge abrufen, die Datei in mehrere Teile aufteilen und diese dann parallel lesen. Sie können diesen Wert aktivieren oder deaktivieren, um anzugeben, ob Ihr [!DNL SFTP] Dateilängen abrufen oder Daten von einem bestimmten Offset lesen kann. |
+| `connectionSpec.id` | (Nur API) Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!TAB SSH-Authentifizierung mit öffentlichem Schlüssel]
+
+Geben Sie die entsprechenden Werte für die folgenden Anmeldeinformationen ein, um Ihren [!DNL SFTP]-Server mithilfe der SSH-Authentifizierung mit öffentlichem Schlüssel zu authentifizieren.
+
+| Anmeldedaten | Beschreibung |
+| ---------- | ----------- |
+| `host` | Der Name oder die IP-Adresse, die mit Ihrem [!DNL SFTP]-Server verknüpft ist. |
+| `port` | Der [!DNL SFTP] Server-Port, mit dem Sie eine Verbindung herstellen. Wenn kein Wert angegeben wird, ist der Standardwert `22`. |
+| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL SFTP]. |
+| `password` | Das Kennwort für Ihren [!DNL SFTP]. |
+| `privateKeyContent` | Der mit Base64 kodierte Inhalt des privaten SSH-Schlüssels. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
+| `passPhrase` | Die Passphrase oder das Passwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Passphrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
+| `maxConcurrentConnections` | Mit diesem Parameter können Sie einen Maximalwert für die Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen diesen Wert kleiner als das von SFTP festgelegte Limit festlegen. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, wirkt sie sich nur auf zukünftige Datenflüsse aus, nicht auf vorhandene Datenflüsse. |
+| `folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. [!DNL SFTP] -Quelle können Sie den Ordnerpfad bereitstellen, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
+| `disableChunking` | Während der Datenaufnahme kann die [!DNL SFTP] zunächst die Dateilänge abrufen, die Datei in mehrere Teile aufteilen und diese dann parallel lesen. Sie können diesen Wert aktivieren oder deaktivieren, um anzugeben, ob Ihr [!DNL SFTP] Dateilängen abrufen oder Daten von einem bestimmten Offset lesen kann. |
+| `connectionSpec.id` | (Nur API) Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 >[!ENDTABS]
 
-## SFTP mit Experience Platform verbinden
+## Verbinden von SFTP mit Experience Platform
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen SFTP-Server mit dem Experience Platform verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden eines SFTP-Servers mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden der APIs
 

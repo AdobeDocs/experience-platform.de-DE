@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Google Ads; Google Ads
+keywords: Experience Platform;Startseite;beliebte Themen;Google Ads;Google Ads
 title: Übersicht über Google Ads Source
-description: Erfahren Sie, wie Sie Google Ads über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Google Ads mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
@@ -10,19 +10,19 @@ ht-degree: 54%
 
 ---
 
-# [!DNL Google Ads] source
+# [!DNL Google Ads]
 
 >[!WARNING]
 >
->Die Quelle [!DNL Google Ads] ist vorübergehend nicht verfügbar. Adobe arbeitet an der Lösung von Problemen mit dieser Quelle.
+>Die [!DNL Google Ads] ist vorübergehend nicht verfügbar. Adobe arbeitet daran, Probleme mit dieser Quelle zu beheben.
 
 >[!NOTE]
 >
->Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../home.md#terms-and-conditions) .
+>Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] bietet Unterstützung für die Aufnahme von Daten aus einem Drittanbieter-Werbesystem. Die Unterstützung für Werbetreibende umfasst [!DNL Google Ads].
+[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Der Support für Werbeanbieter umfasst [!DNL Google Ads].
 
 ## IP-Adressen-Zulassungsliste
 
@@ -40,5 +40,5 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google Ads
 
 ### Verwenden der Benutzeroberfläche
 
-* [Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/advertising/ads.md)
-* [Erstellen eines Datenflusses für eine Verbindung mit einer Werbequelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)
+* [Erstellen einer Google Ads-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/advertising/ads.md)
+* [Erstellen eines Datenflusses für eine Werbequellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;Blob;blob;Azure Blob;azure blob
+keywords: Experience Platform;Startseite;beliebte Themen;Blob;blob;Azure Blob;Azure Blob
 solution: Experience Platform
-title: Azure Blob Source Connector - Überblick
-description: Erfahren Sie, wie Sie Azure Blob mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+title: Azure Blob Source Connector - Übersicht
+description: Erfahren Sie, wie Sie Azure Blob mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
 source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 67%
 
 # Azure-Blob-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] bringen.
 
-Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten von [!DNL Azure Blob] durch Batches einbringen.
+Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten von [!DNL Azure Blob] über Batches importieren.
 
 ## IP-Adressen-Zulassungsliste
 
@@ -23,7 +23,7 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 >[!IMPORTANT]
 >
->Die Quelle [!DNL Azure Blob] unterstützt keine Konnektivität mit demselben Bereich zum Experience Platform. Wenn Ihre [!DNL Azure] -Instanz denselben Netzwerkbereich wie Experience Platform verwendet, kann keine Verbindung zu Experience Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt.
+>Die [!DNL Azure Blob]-Quelle unterstützt keine Konnektivität derselben Region mit Experience Platform. Wenn Ihre [!DNL Azure]-Instanz dieselbe Netzwerkregion wie Experience Platform verwendet, kann keine Verbindung zu Experience Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
@@ -38,15 +38,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 ## [!DNL Azure Blob] mit [!DNL Platform] verbinden
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie Azure Blob mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden von Azure Blob mit Adobe Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 
-- [Erstellen einer Azure Blob-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Erstellen einer Azure Blob-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Untersuchen der Datenstruktur und des Inhalts einer Cloud-Speicherquelle mit der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer Azure Blob-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Erstellen einer Azure Blob-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

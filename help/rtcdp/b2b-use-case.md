@@ -1,9 +1,9 @@
 ---
-keywords: RTCDP; CDP; Real-time Customer Data Platform; Echtzeit-Kundendatenplattform; Echtzeit-CDP; cdp; rtcdp
-title: Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition
+keywords: RTCDP;CDP;Real-time Customer Data Platform;Real-time Customer Data Platform;Real-time CDP;cdp;rtcdp
+title: Anwendungsbeispiel für Real-time Customer Data Platform B2B edition
 description: Dieses Beispiel-Szenario zeigt eine mögliche Konfiguration Ihrer Implementierung der B2B-Edition von Adobe Real-time Customer Data Platform.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
@@ -12,12 +12,12 @@ ht-degree: 76%
 
 ---
 
-# Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition
+# Anwendungsbeispiel für Real-time Customer Data Platform B2B edition
 
-Real-time Customer Data Platform B2B Edition erweitert die bestehenden Real-Time CDP- und Adobe Experience Platform-Angebote, um B2B-Daten und -Workflows zu unterstützen. Dieses Dokument enthält ein Beispiel für einen Anwendungsfall, der die zusätzlichen Vorteile von B2B Edition verdeutlicht. Dazu gehören:
+Real-time Customer Data Platform B2B edition erweitert die bestehenden Real-Time CDP- und Adobe Experience Platform-Angebote, um B2B-Daten und -Workflows zu unterstützen. Dieses Dokument enthält ein Beispiel für einen Anwendungsfall, der die zusätzlichen Vorteile von B2B Edition verdeutlicht. Dazu gehören:
 
 - Kombinieren Sie Personen- und Account-Daten aus verschiedenen isolierten Datenquellen, um eine umfassende Übersicht zu erhalten, die ein besseres Verständnis der Kunden und eine genauere Segmentierung ermöglicht. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung von XDM-Schema-Beziehungen](./schemas/b2b.md) zur Verwendung mit verschiedenen B2B-Quellen.
-- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Zielgruppen sind nicht mehr nur auf Personalattribute und Erlebnisereignisse beschränkt. In der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) finden Sie weitere Beispiele für die Erstellung von B2B-spezifischen Zielgruppen.
+- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Zielgruppen sind nicht mehr nur auf Personenattribute und Erlebnisereignisse beschränkt. In der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) finden Sie weitere Beispiele für die Erstellung von B2B-spezifischen Zielgruppen.
 - Native Unterstützung für den Anwendungsfall, dass eine Person mit mehreren Accounts verbunden ist.
 
 ## Anwendungsfall
@@ -44,21 +44,21 @@ Im letzten Monat hat `p2@townsend.com` die neue Produktseite besucht und dieser 
 
 ## Das Problem
 
-Line 1 hat soeben ein neues Softwareprodukt veröffentlicht und möchte es an Bodeas bestehenden erstklassigen Kundenstamm weiterverkaufen. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
+Sparte 1 hat gerade ein neues Software-Produkt auf den Markt gebracht und möchte es dem bestehenden Kundenstamm von Bodea als Upsell anbieten. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
 
 Da die relevanten Townsend-Informationen in Marketo 1 als Account 1 und in Marketo 2 als Account 2 gespeichert sind, kann das Marketing-Team von Bodea die Informationen in den beiden Silos nicht effizient nutzen.
 
 Dies hindert das Marketing-Team von Bodea daran, bestimmte Geschäftskontakte in diesen Unternehmen mit dieser neuen Möglichkeit effizient anzusprechen.
 
-Bis heute hat Townsend über sämtliche Accounts insgesamt mehr als eine Million Dollar für Bodea-Produkte ausgegeben. Eine Zielgruppe, die mit ihrem alten System erstellt wurde, würde jedoch niemanden aus Townsend einschließen, es sei denn, die in einem einzigen Verkaufssystem insgesamt aufgewendeten Mittel beliefen sich auf mehr als 1 Million Dollar. Der Grund dafür ist, dass die Umsatzdaten in den Accounts der verschiedenen Vertriebssysteme getrennt sind.
+Bis heute hat Townsend über sämtliche Accounts insgesamt mehr als eine Million Dollar für Bodea-Produkte ausgegeben. Eine Zielgruppe, die mit ihrem alten System erstellt wurde, würde jedoch niemanden von Townsend einschließen, es sei denn, die Gesamtausgaben innerhalb eines einzigen Vertriebssystems beliefen sich auf mehr als 1 Million Dollar. Der Grund dafür ist, dass die Umsatzdaten in den Accounts der verschiedenen Vertriebssysteme getrennt sind.
 
-Da die Ausgaben von Townsend auf verschiedene Vertriebssysteme aufgeteilt sind und nicht einzeln mehr als eine Million umfassen, würde die Segmentdefinition niemanden finden, der in Marketo 1 oder Marketo 2 qualifiziert ist.
+Da die Ausgaben von Townsend auf verschiedene Vertriebssysteme aufgeteilt sind und einzeln nicht mehr als eine Million betragen, würde die Segmentdefinition weder in Marketo 1 noch in Marketo 2 jemanden finden, der qualifiziert ist.
 
-### Lösung des Problems durch die Real-Time CDP B2B Edition
+### Wie Real-Time CDP B2B edition das Problem löst
 
-Mit Real-Time CDP B2B Edition kann das Marketing-Team von Bodea:
+Mit Real-Time CDP B2B edition kann das Marketing-Team von Bodea:
 
-- Kombinieren Sie die Daten aus allen unterschiedlichen Quellen (mehrere Marketo- und CRM-Instanzen und das Master-Datenmanagement) in Real-Time CDP B2B Edition.
+- Daten aus allen unterschiedlichen Quellen (mehrere Marketo- und CRM-Instanzen und Master Data Management) in Real-Time CDP B2B edition kombinieren.
 
 Mit Real-time Customer Data Platform B2B Edition kann Bodea den Marketo Engage-Quell-Connector nutzen, um B2B-Daten aus Marketo 1 und Marketo 2 in Experience Platform zu bringen und diese Daten mithilfe von an Platform angeschlossenen Programmen aktuell zu halten. Weitere Informationen finden Sie in der Dokumentation zum [Marketo-Quell-Connector](../sources/connectors/adobe-applications/marketo/marketo.md).
 
@@ -77,7 +77,7 @@ Der Einfachheit halber und für den Zweck dieses Beispiels werden die Personen a
 | Opportunity 1, 200.000 Dollar |
 | Opportunity 2, 900.000 Dollar |
 
-- Erstellen Sie eindeutige Zielgruppen, indem Sie diese aggregierten Daten für verschiedene Marketinginitiativen verwenden. In diesem Beispiel findet die Segmentdefinition alle Personen, die:
+- Erstellen Sie mithilfe dieser aggregierten Daten einzigartige Zielgruppen für verschiedene Marketing-Initiativen. In diesem Beispiel findet die Segmentdefinition alle Personen, die:
 
    - Verbundene Opportunities (für ALLE Accounts) mit einem Wert von über 1 Million Dollar haben
    - UND
@@ -89,14 +89,14 @@ Durch den Einsatz von Marketo Engage und LinkedIn verfügt Bodea über eine End-
 
 ## Nächste Schritte
 
-Durch die Lektüre dieses Dokuments haben Sie sich nun mit den Zielvorgaben und Problemen vertraut gemacht, die mit Real-Time CDP B2B Edition gelöst werden können.
+Durch das Lesen dieses Dokuments haben Sie nun eine Einführung in die Arten von Zielen und Problemen erhalten, die mit Real-Time CDP B2B edition gelöst werden können.
 
 Zum besseren Verständnis der B2B-spezifischen Funktionen wird die folgende Dokumentation empfohlen:
 
-- [Real-time Customer Data Platform B2B Edition End-to-End-Tutorial](./b2b-tutorial.md)
-- [Quellen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
+- [Tutorial mit der Beschreibung aller Schritte in Real-time Customer Data Platform B2B edition](./b2b-tutorial.md)
+- [Quellen in Real-time Customer Data Platform B2B edition](./sources/b2b.md)
 - [Schemata in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [Beispiele für B2B-Segmentierung](./segmentation/b2b.md)
 - [Übersicht über Account-Profile](./accounts/account-profile-overview.md)
-- [Ziele in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [Ziele in Real-time Customer Data Platform B2B edition](./destinations/b2b.md)
 - [Konfigurieren eines Ziels für abgeglichene LinkedIn-Zielgruppen](../destinations/catalog/social/linkedin.md)

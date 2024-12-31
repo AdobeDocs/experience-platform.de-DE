@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für Pinterest Ads mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Pinterest Ads herstellen.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Pinterest Ads verbinden.
 badge: Beta
 hide: true
 hidefromtoc: true
@@ -16,9 +16,9 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../../../home.md#terms-and-conditions) .
+>Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden ](../../../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und eines Datenflusses, um [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Adobe Experience Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und eines Datenflusses, um [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten mithilfe der (API[[!DNL Flow Service]  in Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte {#getting-started}
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Pinterest Ads] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Pinterest Ads] herstellen zu können.
 
 ### Voraussetzungen {#prerequisites}
 
@@ -35,19 +35,19 @@ Um [!DNL Pinterest Ads] mit Experience Platform zu verbinden, müssen Sie Werte 
 
 * Die [!DNL Pinterest] `accessToken`.
 * Die [!DNL Pinterest] `adAccountId`.
-* Eine der ID [!DNL Pinterest] `campaign`, `adGroup` oder `ad` ist nach Bedarf.
+* Eine [!DNL Pinterest] `campaign`, `adGroup` oder `ad` IDs nach Bedarf.
 
-Weitere Informationen zu diesen Verbindungseigenschaften finden Sie in der [[!DNL Pinterest Ads] Übersicht](../../../../connectors/advertising/pinterest-ads.md#prerequisites) .
+Weitere Informationen zu diesen Verbindungseigenschaften finden Sie unter [[!DNL Pinterest Ads] Übersicht](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-## [!DNL Pinterest Ads] über die [!DNL Flow Service]-API mit Platform verbinden {#connect-platform-to-flow-api}
+## Verbinden von [!DNL Pinterest Ads] mit Platform mithilfe der [!DNL Flow Service]-API {#connect-platform-to-flow-api}
 
-Im Folgenden werden die Schritte beschrieben, die zum Verbinden von [!DNL Pinterest Ads] mit Experience Platform durchgeführt werden müssen.
+Im Folgenden werden die Schritte beschrieben, die zum Verbinden von [!DNL Pinterest Ads] mit Experience Platform unternommen werden müssen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Pinterest Ads]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Pinterest Ads] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.accessToken` | Enthält den Wert [!DNL Pinterest] Zugriffstoken , der für die Authentifizierung Ihrer Quelle erforderlich ist. |
+| `auth.params.accessToken` | Enthält den Wert des [!DNL Pinterest] Zugriffstokens , der zur Authentifizierung Ihrer Quelle erforderlich ist. |
 
 **Antwort**
 
@@ -103,8 +103,8 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ### Durchsuchen der Quelle {#explore}
 
-Mithilfe der im vorherigen Schritt generierten Basis-Verbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
-Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in Platform einbringen möchten:
+Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner untersuchen, indem Sie GET-Anfragen ausführen.
+Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in Platform importieren möchten:
 
 **API-Format**
 
@@ -118,13 +118,13 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
-| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` gesetzt. |
+| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
-| `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den zulässigen Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte `{"ad_account_id":"{PINTEREST_AD_ACCOUNT_ID}","object_ids":"{COMMA_SEPERATED_OBJECT_IDS}","object_type":"{OBJECT_TYPE}}"}` -Zeichenfolge in base64 kodieren. |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte `{"ad_account_id":"{PINTEREST_AD_ACCOUNT_ID}","object_ids":"{COMMA_SEPERATED_OBJECT_IDS}","object_type":"{OBJECT_TYPE}}"}` in base64 kodieren. |
 
-[!DNL Pinterest Ads] unterstützt mehrere [!DNL Pinterest] Analytics-API-Endpunkte. Je nachdem, welcher Objekttyp Sie verwenden, lautet die zu sendende Anforderung wie folgt:
+[!DNL Pinterest Ads] unterstützt mehrere [!DNL Pinterest] Analytics-API-Endpunkte. Je nachdem, welchen Objekttyp Sie nutzen, wird die Anfrage wie folgt gesendet:
 
 **Anfrage**
 
@@ -132,7 +132,7 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 
 >[!TAB Kampagnen]
 
-Bei [!DNL Pinterest Ads] wird bei Verwendung der Campaign Analytics-API der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}` übergeben. Bei der Kodierung in base64 entspricht sie &quot;`YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9`&quot;, wie unten dargestellt.
+Bei der Verwendung der Campaign Analytics-API wird [!DNL Pinterest Ads] der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}` übergeben. Bei Kodierung in base64 entspricht dies `YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -145,7 +145,7 @@ curl -X GET \
 
 >[!TAB Anzeigengruppen]
 
-Bei [!DNL Pinterest Ads] wird bei Verwendung der Analytics-API für Anzeigengruppen der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}` übergeben. Bei der Kodierung in base64 entspricht sie &quot;`eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9`&quot;, wie unten dargestellt.
+Bei der Verwendung der Analytics-API für Anzeigengruppen wird [!DNL Pinterest Ads] der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}` übergeben. Bei Kodierung in base64 entspricht dies `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -158,7 +158,7 @@ curl -X GET \
 
 >[!TAB Werbeanzeigen]
 
-Bei [!DNL Pinterest Ads] wird bei Verwendung der Ads Analytics-API der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}` übergeben. Bei der Kodierung in base64 entspricht sie &quot;`eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=`&quot;, wie unten dargestellt.
+Bei der Verwendung der Ads Analytics-API wird [!DNL Pinterest Ads] der Wert für `{SOURCE_PARAMS}` als `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}` übergeben. Bei Kodierung in base64 entspricht dies `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -175,13 +175,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->Einige Datensätze wurden abgeschnitten, um eine bessere Präsentation zu ermöglichen.
+>Einige Datensätze wurden gekürzt, um eine bessere Präsentation zu ermöglichen.
 
 >[!BEGINTABS]
 
 >[!TAB Kampagnen]
 
-Eine erfolgreiche Antwort gibt die Datenstruktur der entsprechenden [!DNL Pinterest Ads] -API zurück, die Sie aufgerufen haben.
+Eine erfolgreiche Antwort gibt die Datenstruktur der entsprechenden [!DNL Pinterest Ads]-API zurück, die Sie aufgerufen haben.
 
 ```json
 {
@@ -439,7 +439,7 @@ Eine erfolgreiche Antwort gibt die Datenstruktur der entsprechenden [!DNL Pinter
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Kennung der Basisverbindung, einem Pfad zur Quelldatendatei und einer Kennung der Verbindungsspezifikation.
+Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Basisverbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -449,7 +449,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Die [!DNL Pinterest Ads]-Quelle unterstützt mehrere [!DNL Pinterest] Analytics-API-Endpunkte. Je nachdem, welcher Objekttyp Sie verwenden, erstellt die folgende Anfrage eine Quellverbindung:
+Die [!DNL Pinterest Ads]-Quelle unterstützt mehrere [!DNL Pinterest] Analytics-API-Endpunkte. Je nachdem, welchen Objekttyp Sie verwenden, erstellt die folgende Anfrage eine Quellverbindung:
 
 >[!BEGINTABS]
 
@@ -490,8 +490,8 @@ curl -X POST \
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL Pinterest Ads]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 | `params.ad_account_id` | Die [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Da der Campaign Analytics-API-Endpunkt [!DNL Pinterest] erforderlich ist, lautet der Wert `campaigns`. |
-| `params.object_ids` | Die kommagetrennte Liste von [!DNL Pinterest] Kampagnen-IDs. |
+| `params.object_type` | Da der [!DNL Pinterest] Campaign Analytics-API-Endpunkt erforderlich ist, würde der Wert `campaigns`. |
+| `params.object_ids` | Die kommagetrennte Liste [!DNL Pinterest] Kampagnen-IDs. |
 
 >[!TAB Anzeigengruppen]
 
@@ -530,8 +530,8 @@ curl -X POST \
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL Pinterest Ads]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 | `params.ad_account_id` | Die [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Da der Analytics-API-Endpunkt &quot;Anzeigengruppen&quot;von [!DNL Pinterest] erforderlich ist, lautet der Wert `ad_groups`. |
-| `params.object_ids` | Die kommagetrennte Liste von [!DNL Pinterest] Anzeigengruppen-IDs. |
+| `params.object_type` | Da der Analytics-API-Endpunkt für [!DNL Pinterest] Anzeigengruppen erforderlich ist, würde der Wert `ad_groups`. |
+| `params.object_ids` | Die kommagetrennte Liste der [!DNL Pinterest] Anzeigengruppen-IDs. |
 
 >[!TAB Werbeanzeigen]
 
@@ -570,8 +570,8 @@ curl -X POST \
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL Pinterest Ads]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 | `params.ad_account_id` | Die [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Da der Ad Analytics-API-Endpunkt [!DNL Pinterest] erforderlich ist, lautet der Wert `ads`. |
-| `params.object_ids` | Die kommagetrennte Liste mit [!DNL Pinterest] Anzeigen-IDs. |
+| `params.object_type` | Da der [!DNL Pinterest] Ad Analytics-API-Endpunkt erforderlich ist, würde der Wert `ads`. |
+| `params.object_ids` | Die kommagetrennte Liste der [!DNL Pinterest]-IDs. |
 
 >[!ENDTABS]
 
@@ -602,9 +602,9 @@ Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tuto
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die ID der Festnetzverbindungsspezifikation angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
+Sie verfügen jetzt über die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -661,7 +661,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung a
 
 ### Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit in der Anfrage-Payload definierten Datenzuordnungen ausgeführt wird.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird durch eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen erreicht, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -758,7 +758,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `outputSchema.schemaRef.id` | Die ID des [Ziel-XDM-Schema](#target-schema), die in einem früheren Schritt generiert wurde. |
-| `mappings.sourceType` | Der Quell-Attributtyp, der zugeordnet wird. |
+| `mappings.sourceType` | Der Typ des Quellattributs, das zugeordnet wird. |
 | `mappings.source` | Das Quellattribut, das einem Ziel-XDM-Pfad zugeordnet werden muss. |
 | `mappings.destination` | Der Ziel-XDM-Pfad, dem das Quellattribut zugeordnet wird. |
 
@@ -779,7 +779,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt beim Übertragen von Daten von [!DNL Pinterest Ads] an Platform besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Pinterest Ads] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -787,7 +787,7 @@ Der letzte Schritt beim Übertragen von Daten von [!DNL Pinterest Ads] an Platfo
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Für die Erstellung einer einmaligen Erfassung ist jedoch kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen. Für die Erstellung einer einmaligen Aufnahme ist jedoch keine Festlegung eines Intervalls erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
 
 **API-Format**
 
@@ -837,7 +837,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
-| `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
@@ -846,7 +846,7 @@ curl -X POST \
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
-| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Erfassungszeitplanung des Datenflusses. |
+| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Aufnahmeplanung des Datenflusses. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
 | `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
@@ -863,24 +863,24 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Anhang {#appendix}
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses durchführen können.
 
 ### Überwachen Ihres Datenflusses {#monitor-dataflow}
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aktualisieren des Datenflusses {#update-dataflow}
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows` -Endpunkt der [!DNL Flow Service] -API richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch zum [Aktualisieren der Datenflüsse für Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) .
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows`-Endpunkt [!DNL Flow Service] -API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Konto aktualisieren {#update-account}
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses {#delete-dataflow}
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Konto löschen {#delete-account}
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

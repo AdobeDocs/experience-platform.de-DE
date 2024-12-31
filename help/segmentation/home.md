@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
 source-wordcount: '1700'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument v
 
 ## Funktionsweise der Segmentierung
 
-Bei der Segmentierung werden bestimmte Attribute oder Verhaltensweisen definiert, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm zu unterscheiden. Beispielsweise könnten Sie für eine E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Ihre Schuhe zu kaufen?“ eine Zielgruppe bestehend aus allen Anwendern zusammenstellen, die in den letzten 30 Tagen nach Laufschuhen gesucht, den Kauf jedoch nicht abgeschlossen haben.
+Bei der Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Beispielsweise könnten Sie für eine E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Ihre Schuhe zu kaufen?“ eine Zielgruppe bestehend aus allen Anwendern zusammenstellen, die in den letzten 30 Tagen nach Laufschuhen gesucht, den Kauf jedoch nicht abgeschlossen haben.
 
 Nachdem eine Zielgruppe konzeptionell definiert wurde, wird sie in [!DNL Experience Platform] erstellt. Normalerweise werden Zielgruppen vom Marketer oder der Zielgruppenspezialistin bzw. dem -spezialisten erstellt, in manchen Unternehmen kann diese Tätigkeit aber auch durch die Marketing-Abteilung in Zusammenarbeit mit Datenanalystinnen bzw. -analysten erfolgen. Nach Überprüfung der gesendeten Daten an [!DNL Platform], kann die Datenanalystin bzw. der Datenanalyst die Zielgruppe auf zwei Arten erstellen: entweder durch Erstellen einer Segmentdefinition, durch Auswahl der Felder und Werte, die zum Erstellen der Regeln oder Bedingungen der Zielgruppe verwendet werden, oder durch Zusammenstellen einer Zielgruppe mithilfe der Zielgruppenkomposition.
 
@@ -54,11 +54,11 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 
 ### Komposition föderierter Zielgruppen {#fac}
 
-Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
 >[!AVAILABILITY]
 >
->Die Komposition föderierter Zielgruppen ist derzeit nur für eine Gruppe von ausgewählten Organisationen verfügbar (eingeschränkte Verfügbarkeit). Weitere Informationen erhalten Sie beim Adobe-Support.
+>Die Komposition föderierter Zielgruppen ist derzeit nur für eine Reihe von Organisationen verfügbar (begrenzte Verfügbarkeit). Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 ## Bewerten von Zielgruppen {#evaluate-segments}
 
@@ -100,7 +100,7 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=de" text="Handbuch zur Benutzeroberfläche für Edge-Segmentierung"
 
-Bei der Segmentierung mit Edge können Segmente in Platform sofort [auf dem Edge Network](../web-sdk/home.md) ausgewertet werden, was Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten ermöglicht.
+Bei der Segmentierung in Edge werden Segmente in Platform sofort ([ Edge Network) ausgewertet](../web-sdk/home.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./ui/edge-segmentation.md).
 

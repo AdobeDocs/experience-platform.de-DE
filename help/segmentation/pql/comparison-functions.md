@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: PQL-Vergleichsfunktionen
-description: Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und "true"oder "false"entsprechend zurückzugeben.
+description: Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und entsprechend „true“ oder „false“ zurückzugeben.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: a4385d8872b71ded7e9121d445e10f1ffbd83cfe
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 80%
 
 # Vergleichsfunktionen
 
-Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und `true` oder `false` entsprechend zurückzugeben. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und entsprechend `true` oder `false` zurückzugeben. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Gleich
 
@@ -124,4 +124,4 @@ person.birthMonth <= 2
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit den Vergleichsfunktionen vertraut gemacht haben, können Sie diese nun in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit Vergleichsfunktionen vertraut gemacht haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

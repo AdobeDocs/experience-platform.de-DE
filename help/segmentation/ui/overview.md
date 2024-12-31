@@ -25,7 +25,7 @@ Die Arbeit mit Zielgruppen und Segmentdefinitionen erfordert ein Verständnis de
 
 Sie sollten auch die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
 
-- **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (plattformgenerierte Zielgruppe), der Zielgruppenzusammenstellung oder aus externen Quellen wie benutzerdefinierten Uploads (extern generierte Zielgruppe) erstellt werden.
+- **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (Platform-generierte Zielgruppe), der Zielgruppenkomposition oder aus externen Quellen wie benutzerdefinierten Uploads (extern generierte Zielgruppe) generiert werden.
 - **Segmentdefinition**: Die Regeln, die Adobe Experience Platform verwendet, um wichtige Merkmale oder Verhaltensweisen einer Zielgruppe zu beschreiben.
 - **Segmentieren**: Der Vorgang der Aufteilung von Profilen in Zielgruppen.
 
@@ -47,11 +47,11 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 
 ## Durchsuchen {#browse}
 
-Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus, um das Audience Portal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
+Wählen Sie die **[!UICONTROL Durchsuchen]**, um das Zielgruppenportal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie die Profilanzahl, Herkunft, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
-Darüber hinaus können Sie mit Audience Portal neue Zielgruppen mit Segment Builder oder Zielgruppenkomposition erstellen und extern generierte Zielgruppen in Platform importieren.
+Darüber hinaus können Sie mit dem Zielgruppenportal neue Zielgruppen mithilfe von Segment Builder oder der Zielgruppenkomposition erstellen und extern generierte Zielgruppen in Platform importieren.
 
-Weitere Informationen zu Audience Portal finden Sie in der [Übersicht über Audience Portal](./audience-portal.md) .
+Weitere Informationen zu Audience Portal finden Sie unter [Audience Portal - Übersicht](./audience-portal.md).
 
 ## Kompositionen {#compositions}
 
@@ -65,9 +65,9 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 
 | Aktion | Beschreibung |
 | ------ | ----------- |
-| Duplizieren | Kopiert die ausgewählte Zielgruppe. |
-| Verwalten des Zugriffs | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-| Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängige Zielgruppen sind, **können nicht** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie in den [FAQ zur Segmentierung](../faq.md#lifecycle-states) . |
+| Duplizieren | Kopiert die ausgewählte Audience. |
+| Verwalten des Zugriffs | Verwaltet die Zugriffsbeschriftungen für die Zielgruppe. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
+| Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängen **können** nicht gelöscht werden. Weitere Informationen zum Löschen von Audiences finden Sie unter [Häufig gestellte Fragen zur Segmentierung](../faq.md#lifecycle-states). |
 
 Sie können das Symbol ![Tabelle anpassen](/help/images/icons/column-settings.png) auswählen, um zu ändern, welche Felder angezeigt werden.
 
@@ -92,9 +92,9 @@ Die Seite „Zielgruppenkomposition“ wird mit den Bausteinen angezeigt, aus de
 
 ## Komposition föderierter Zielgruppen {#fac}
 
-Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
-![Eine Liste der Zielgruppen, die in Federated Audience Komposition für Ihr Unternehmen erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
+![Eine Liste von Zielgruppen, die in der Federated-Audience-Komposition für Ihre Organisation erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
 
 ## Streaming-Segmentierung  {#streaming-segmentation}
 

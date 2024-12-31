@@ -11,14 +11,14 @@ ht-degree: 8%
 
 # Datenerfassung
 
-Der [!DNL Server API] bietet zwei Arten von Datenerfassungs-Endpunkten:
+Die [!DNL Server API] bietet zwei Arten von Datenerfassungs-Endpunkten:
 
-* [Endpunkte der interaktiven Datenerfassung](interactive-data-collection.md), die verwendet werden, wenn der Client erwartet, dass eine Antwort vom Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
-* [Nicht interaktive Ereignisdatenerfassung](non-interactive-data-collection.md), die verwendet wird, wenn vom Server keine Antwort erwartet wird. Diese Endpunkte werden nur für die Datenerfassung verwendet.
+* [Endpunkte für die interaktive Datenerfassung](interactive-data-collection.md) werden verwendet, wenn der Client erwartet, dass eine Antwort vom Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Services zurückgeben.
+* [Nicht interaktive Ereignisdatenerfassung](non-interactive-data-collection.md) Wird verwendet, wenn vom Server keine Antwort erwartet wird. Diese Endpunkte werden nur für die Datenerfassung verwendet.
 
-## `Event` Objekt {#event-object}
+## `Event` {#event-object}
 
-Die von [!DNL Server API] erfassten Daten sind im Objekt `Event` strukturiert. Die Struktur dieses Objekts wird nachfolgend beschrieben.
+Die vom [!DNL Server API] erfassten Daten sind im `Event` strukturiert. Die Struktur dieses Objekts wird nachfolgend beschrieben.
 
 ```json
 {
@@ -56,6 +56,6 @@ Die von [!DNL Server API] erfassten Daten sind im Objekt `Event` strukturiert. D
 
 | Attribut | Typ | Beschreibung |
 | --- | --- | --- |
-| `xdm` | Objekt | *Erforderlich*. JSON-Objekt, das Daten im XDM-Format enthält, die dem Datensatzschema entsprechen. |
-| `data` | Objekt | *Optional*. JSON-Objekt mit Freiformdaten, die vom Edge Network XDM zugeordnet werden können. |
+| `xdm` | Objekt | *Erforderlich*. JSON-Objekt, das Daten im XDM-Format entsprechend dem Datensatzschema enthält. |
+| `data` | Objekt | *Optional*. JSON-Objekt, das Freiformdaten enthält, die vom Edge Network XDM zugeordnet werden können. |
 

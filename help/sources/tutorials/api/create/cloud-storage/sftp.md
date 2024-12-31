@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer SFTP-Basisverbindung mit der Flow Service-API
-description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einem SFTP-Server (Secure File Transfer Protocol) herstellen.
+title: Erstellen einer SFTP-Basisverbindung mithilfe der Flow Service-API
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 27%
 
 ---
 
-# Erstellen einer SFTP-Basisverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer SFTP-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -24,13 +24,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!IMPORTANT]
 >
->Es wird empfohlen, beim Erfassen von JSON-Objekten mit einer Quellverbindung vom Typ [!DNL SFTP] Zeilenumbrüche oder Zeilenumbrüche zu vermeiden. Um die Beschränkung zu umgehen, verwenden Sie ein einzelnes JSON-Objekt pro Zeile und verwenden mehrere Zeilen für die darauf folgenden Dateien.
+>Es wird empfohlen, bei der Aufnahme von JSON-Objekten mit einer [!DNL SFTP] Quellverbindung Zeilenumbrüche oder Zeilenumbrüche zu vermeiden. Um die Einschränkung zu umgehen, verwenden Sie ein einzelnes JSON-Objekt pro Zeile und verwenden Sie mehrere Zeilen für nachfolgende Dateien.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einem [!DNL SFTP] -Server herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu einem [!DNL SFTP]-Server herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Ausführliche Anweisungen zum Abrufen Ihrer Authentifizierungsberechtigungen finden Sie im [[!DNL SFTP] Authentifizierungshandbuch](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) .
+Lesen Sie [[!DNL SFTP] Authentifizierungshandbuch](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials), um ausführliche Schritte zum Abrufen Ihrer Authentifizierungsdaten zu erhalten.
 
 ### Verwenden von Platform-APIs
 
@@ -40,17 +40,17 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 >[!TIP]
 >
->Nach der Erstellung können Sie den Authentifizierungstyp einer Basis-Verbindung vom Typ [!DNL SFTP] nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL SFTP] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Die Quelle [!DNL SFTP] unterstützt sowohl die einfache Authentifizierung als auch die Authentifizierung über den öffentlichen SSH-Schlüssel. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten.
+Die [!DNL SFTP]-Quelle unterstützt sowohl die einfache Authentifizierung als auch die Authentifizierung über einen öffentlichen SSH-Schlüssel. In diesem Schritt können Sie auch den Pfad zu dem Unterordner festlegen, auf den Sie Zugriff gewähren möchten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt beim Bereitstellen der [!DNL SFTP]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter.
 
 >[!IMPORTANT]
 >
->Der Connector [!DNL SFTP] unterstützt einen RSA- oder DSA-Typ OpenSSH-Schlüssel. Stellen Sie sicher, dass der Inhalt der Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` beginnt und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
+>Der [!DNL SFTP]-Connector unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass Ihr Schlüsseldateiinhalt mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` beginnt und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine Datei im PPK-Format handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
 
 **API-Format**
 
@@ -60,7 +60,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Grundlegende Authentifizierung]
+>[!TAB Einfache Authentifizierung]
 
 +++Anfrage
 
@@ -96,20 +96,20 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.host` | Der Hostname Ihres SFTP-Servers. |
-| `auth.params.port` | Der Port des SFTP-Servers. Dieser ganzzahlige Wert ist standardmäßig auf 22 festgelegt. |
+| `auth.params.host` | Der Host-Name Ihres SFTP-Servers. |
+| `auth.params.port` | Der Port des SFTP-Servers Der Standardwert für diese Ganzzahl ist 22. |
 | `auth.params.username` | Der Benutzername, der Ihrem SFTP-Server zugeordnet ist. |
-| `auth.params.password` | Das Ihrem SFTP-Server zugeordnete Kennwort. |
-| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn diese Option aktiviert ist, muss dieser Wert auf mindestens 1 gesetzt werden. |
-| `auth.params.folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
-| `auth.params.disableChunking` | Ein boolean -Wert, der bestimmt, ob Ihr SFTP-Server das Blockieren unterstützt oder nicht. |
-| `connectionSpec.id` | Die Spezifikations-ID der SFTP-Server-Verbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.password` | Das mit Ihrem SFTP-Server verknüpfte Kennwort. |
+| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
+| `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
+| `auth.params.disableChunking` | Ein boolescher Wert, der bestimmt, ob der SFTP-Server die Unterteilung unterstützt oder nicht. |
+| `connectionSpec.id` | Die SFTP-Server-Verbindungsspezifikations-ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu untersuchen.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erstellten Verbindung zurückgegeben. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -120,7 +120,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 +++
 
->[!TAB Authentifizierung mit öffentlichen SSH-Schlüsseln]
+>[!TAB SSH-Authentifizierung mit öffentlichem Schlüssel]
 
 +++Anfrage
 
@@ -157,21 +157,21 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.host` | Der Hostname Ihres [!DNL SFTP] -Servers. |
-| `auth.params.port` | Der Port des SFTP-Servers. Dieser ganzzahlige Wert ist standardmäßig auf 22 festgelegt. |
-| `auth.params.username` | Der Benutzername, der Ihrem [!DNL SFTP] -Server zugeordnet ist. |
-| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
-| `auth.params.passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
-| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn diese Option aktiviert ist, muss dieser Wert auf mindestens 1 gesetzt werden. |
-| `auth.params.folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
-| `auth.params.disableChunking` | Ein boolean -Wert, der bestimmt, ob Ihr SFTP-Server das Blockieren unterstützt oder nicht. |
-| `connectionSpec.id` | Die [!DNL SFTP] Server-Verbindungsspezifikations-ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.host` | Der Hostname Ihres [!DNL SFTP]. |
+| `auth.params.port` | Der Port des SFTP-Servers Der Standardwert für diese Ganzzahl ist 22. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL SFTP]-Server zugeordnet ist. |
+| `auth.params.privateKeyContent` | Der mit Base64 kodierte Inhalt des privaten SSH-Schlüssels. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
+| `auth.params.passPhrase` | Die Passphrase oder das Passwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Passphrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
+| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
+| `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
+| `auth.params.disableChunking` | Ein boolescher Wert, der bestimmt, ob der SFTP-Server die Unterteilung unterstützt oder nicht. |
+| `connectionSpec.id` | Die Spezifikations-ID der [!DNL SFTP]-Server-Verbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu untersuchen.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erstellten Verbindung zurückgegeben. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -186,4 +186,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Flow Service] -API eine [!DNL SFTP] -Verbindung erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API](../../explore/cloud-storage.md) zu untersuchen.
+In diesem Tutorial haben Sie eine [!DNL SFTP] mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu ](../../explore/cloud-storage.md).

@@ -26,9 +26,9 @@ Die folgende Dokumentation enthält Informationen darüber, wie Sie [!DNL Mailch
 ## Verbinden von [!DNL Mailchimp Campaigns] mit Platform
 
 * [Erstellen Sie eine Quellverbindung, um [!DNL Mailchimp Campaigns] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [Erstellen Sie eine Quellverbindung, um  [!DNL Mailchimp Campaigns] Daten über die Benutzeroberfläche an Platform zu übertragen.](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Campaigns]  über die Benutzeroberfläche in Platform zu ](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Verbinden von [!DNL Mailchimp Members] mit Platform
 
 * [Erstellen Sie eine Quellverbindung, um [!DNL Mailchimp Members] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [Erstellen Sie eine Quellverbindung, um  [!DNL Mailchimp Members] Daten über die Benutzeroberfläche an Platform zu übertragen.](../../tutorials/ui/create/marketing-automation/mailchimp-members.md)
+* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Members]  über die Benutzeroberfläche in Platform zu ](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

@@ -1,6 +1,6 @@
 ---
-title: Sandbox Tooling Packages API Endpoint
-description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
+title: Sandbox Tooling Packages-API-Endpunkt
+description: Mit dem Endpunkt /packages in der Sandbox-Tooling-API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
 source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 10%
 
 ---
 
-# Pakete-Endpunkt
+# Packages-Endpunkt
 
-Mit Sandbox-Tools können Sie verschiedene Artefakte auswählen (auch als Objekte bezeichnet) und sie in ein Paket exportieren. Ein Paket kann aus einem einzelnen Artefakt oder mehreren Artefakten bestehen (z. B. Datensätzen oder Schemas). Alle Artefakte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
+Mit den Sandbox-Tools können Sie verschiedene Artefakte (auch als Objekte bezeichnet) auswählen und in ein Paket exportieren. Ein Paket kann aus einem einzelnen Artefakt oder aus mehreren Artefakten (z. B. Datensätzen oder Schemata) bestehen. Alle Artefakte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
 
-Mit dem Endpunkt `/packages` in der Sandbox-Tool-API können Sie Pakete in Ihrer Organisation programmgesteuert verwalten, einschließlich der Veröffentlichung eines Pakets und des Imports eines Pakets in eine Sandbox.
+Der `/packages`-Endpunkt in der Sandbox-Tooling-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Paketen in Ihrer Organisation, einschließlich der Veröffentlichung eines Pakets und des Imports eines Pakets in eine Sandbox.
 
-## Package erstellen {#create}
+## Erstellen eines Pakets {#create}
 
-Sie können ein Multiartifact-Paket erstellen, indem Sie eine POST-Anfrage an den `/packages` -Endpunkt senden und dabei Werte für den Paketnamen und den Pakettyp angeben.
+Sie können ein Paket mit mehreren Artefakten erstellen, indem Sie eine POST-Anfrage an den `/packages`-Endpunkt stellen und dabei Werte für den Namen und den Pakettyp Ihres Pakets angeben.
 
 **API-Format**
 
@@ -56,15 +56,15 @@ curl -X POST \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `name` | Der Name Ihres Pakets. | Zeichenfolge | Ja |
-| `description` | Eine Beschreibung, die weitere Informationen zu Ihrem Paket enthält. | Zeichenfolge | Nein |
-| `packageType` | Der Pakettyp ist **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | String | JA |
+| `description` | Eine Beschreibung, um weitere Informationen zu Ihrem Paket bereitzustellen. | Zeichenfolge | Nein |
+| `packageType` | Der Pakettyp ist **PARTIAL** um anzugeben, dass Sie bestimmte Artefakte in ein Paket aufnehmen. | String | JA |
 | `sourceSandbox` | Die Quell-Sandbox des Pakets. | Objekt | Nein |
-| `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Erstellungsdatum. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
-| `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Der `artifacts` -Wert sollte **null** oder **leer** sein, wenn der `packageType` den Wert `FULL` aufweist. | Array | Nein |
+| `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert liegt 90 Tage ab dem Erstellungsdatum. Das Feld für den Ablauf der Antwort lautet Epoche UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
+| `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Der `artifacts` sollte **null** oder **leer** sein, wenn die `packageType` `FULL` ist. | Array | Nein |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ihr neu erstelltes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zu Status, Ablauf und Liste der Artefakte.
+Eine erfolgreiche Antwort gibt Ihr neu erstelltes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zum Status, zum Ablauf und zur Liste der Artefakte.
 
 ```json
 {
@@ -100,11 +100,11 @@ Eine erfolgreiche Antwort gibt Ihr neu erstelltes Paket zurück. Die Antwort ent
 
 ## Aktualisieren eines Pakets {#update}
 
-Sie können ein Paket aktualisieren, indem Sie eine PUT-Anfrage an den Endpunkt `/packages` senden.
+Sie können ein Paket aktualisieren, indem Sie eine PUT-Anfrage an den `/packages`-Endpunkt senden.
 
 ### Hinzufügen von Artefakten zu einem Paket {#add-artifacts}
 
-Um Artefakte zu einem Paket hinzuzufügen, müssen Sie `id` angeben und **ADD** für die `action` einschließen.
+Um Artefakte zu einem Paket hinzuzufügen, müssen Sie einen `id` angeben und **ADD** für die `action` einschließen.
 
 **API-Format**
 
@@ -137,28 +137,28 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um Artefakte zum Paket hinzuzufügen, sollte der Aktionswert **ADD** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
-| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. Artefakte werden dedupliziert, bevor sie zum Paket hinzugefügt werden. Eine vollständige Liste der unterstützten Artefakte finden Sie in der nachfolgenden Tabelle. | Array | Nein |
-| `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Zeitpunkt, zu dem die PUT-API aufgerufen wird, wenn in der Payload kein Ablaufdatum angegeben ist. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
+| `action` | Um Artefakte in das Paket einzufügen, sollte der Aktionswert &quot;**&quot;**. Diese Aktion wird nur für Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
+| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Das Paket wird nicht geändert, wenn die Liste **null** oder **leer**. Artefakte werden dedupliziert, bevor sie dem Paket hinzugefügt werden. Eine vollständige Liste der unterstützten Artefakte finden Sie in der folgenden Tabelle. | Array | Nein |
+| `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert liegt bei 90 Tagen ab dem Zeitpunkt, zu dem die PUT-API aufgerufen wird, wenn in der Payload kein Ablauf angegeben ist. Das Feld für den Ablauf der Antwort lautet Epoche UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
 
 Die folgenden Artefakttypen werden derzeit unterstützt.
 
-| Artefakt | Plattform | Objekt | Teilfluss | Vollständige Sandbox |
+| Artefakt | Plattform | Objekt | Teilstrom | Vollständige Sandbox |
 | --- | --- | --- | --- | --- |
 | `JOURNEY` | Adobe Journey Optimizer | Journeys | Ja | Nein |
-| `ID_NAMESPACE` | Kundendatenplattform | Identitäten | Ja | Ja |
-| `REGISTRY_DATATYPE` | Kundendatenplattform | Datentyp | Ja | Ja |
-| `REGISTRY_CLASS` | Kundendatenplattform | Klasse | Ja | Ja |
-| `REGISTRY_MIXIN` | Kundendatenplattform | Feldergruppe | Ja | Ja |
-| `REGISTRY_SCHEMA` | Kundendatenplattform | Schemata | Ja | Ja |
-| `CATALOG_DATASET` | Kundendatenplattform | Datensätze | Ja | Ja |
-| `DULE_CONSENT_POLICY` | Kundendatenplattform | Einverständnis und Governance-Richtlinien | Ja | Ja |
-| `PROFILE_SEGMENT` | Kundendatenplattform | Zielgruppen | Ja | Ja |
-| `FLOW` | Kundendatenplattform | Datenfluss der Quellen | Ja | Ja |
+| `ID_NAMESPACE` | Customer Data Platform | Identitäten | Ja | Ja |
+| `REGISTRY_DATATYPE` | Customer Data Platform | Datentyp | Ja | Ja |
+| `REGISTRY_CLASS` | Customer Data Platform | Klasse | Ja | Ja |
+| `REGISTRY_MIXIN` | Customer Data Platform | Feldergruppe | Ja | Ja |
+| `REGISTRY_SCHEMA` | Customer Data Platform | Schemata | Ja | Ja |
+| `CATALOG_DATASET` | Customer Data Platform | Datensätze | Ja | Ja |
+| `DULE_CONSENT_POLICY` | Customer Data Platform | Einverständnis- und Governance-Richtlinien | Ja | Ja |
+| `PROFILE_SEGMENT` | Customer Data Platform | Zielgruppen | Ja | Ja |
+| `FLOW` | Customer Data Platform | Datenfluss der Quellen | Ja | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zu Status, Ablauf und Liste der Artefakte.
+Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zum Status, zum Ablauf und zur Liste der Artefakte.
 
 ```json
 {
@@ -198,7 +198,7 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 ### Löschen von Artefakten aus einem Paket {#delete-artifacts}
 
-Um Artefakte aus einem Package zu löschen, müssen Sie `id` angeben und **DELETE** für die `action` einschließen.
+Um Artefakte aus einem Paket zu löschen, müssen Sie einen `id` angeben und **DELETE** für die `action` einschließen.
 
 **API-Format**
 
@@ -230,12 +230,12 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um Artefakte aus einem Package zu löschen, sollte der Aktionswert **DELETE** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
-| `artifacts` | Eine Liste von Artefakten, die aus dem Paket gelöscht werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. | Array | Nein |
+| `action` | Um Artefakte aus einem Paket zu löschen, sollte der Aktionswert **DELETE** sein. Diese Aktion wird nur für Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
+| `artifacts` | Eine Liste von Artefakten, die aus dem Paket gelöscht werden sollen. Das Paket wird nicht geändert, wenn die Liste **null** oder **leer**. | Array | Nein |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zu Status, Ablauf und Liste der Artefakte.
+Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort enthält die entsprechende Paket-ID sowie Informationen zum Status, zum Ablauf und zur Liste der Artefakte.
 
 ```json
 {
@@ -271,9 +271,9 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 >[!NOTE]
 >
->Mit der Aktion **UPDATE** werden die Paketmetadatenfelder des Pakets aktualisiert und **kann** nicht zum Hinzufügen/Löschen von Artefakten zu einem Paket verwendet werden.
+>Die **UPDATE**-Aktion wird verwendet, um die Paketmetadatenfelder des Pakets zu aktualisieren, und **kann nicht** zum Hinzufügen/Löschen von Artefakten zu einem Paket verwendet werden.
 
-Um die Metadatenfelder in einem Paket zu aktualisieren, müssen Sie einen `id` angeben und **UPDATE** für den `action` einschließen.
+Um die Metadatenfelder in einem Paket zu aktualisieren, müssen Sie einen `id` angeben und **UPDATE** für die `action` einschließen.
 
 **API-Format**
 
@@ -305,9 +305,9 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um die Metadatenfelder in einem Paket zu aktualisieren, sollte der Aktionswert **UPDATE** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
+| `action` | Um die Metadatenfelder in einem Paket zu aktualisieren, sollte der Aktionswert (**)**. Diese Aktion wird nur für Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
 | `name` | Der aktualisierte Name des Pakets. Doppelte Paketnamen sind nicht zulässig. | Array | Ja |
-| `sourceSandbox` | Die Source-Sandbox sollte derselben Organisation angehören, die in der Kopfzeile der Anfrage angegeben ist. | Objekt | Ja |
+| `sourceSandbox` | Die Source-Sandbox muss derselben Organisation angehören, die auch im Header der Anfrage angegeben ist. | Objekt | Ja |
 
 **Antwort**
 
@@ -345,7 +345,7 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 ## Löschen eines Pakets {#delete}
 
-Um ein DELETE zu löschen, senden Sie eine Paketanfrage an den Endpunkt `/packages` und geben Sie die Kennung des Pakets an, das Sie löschen möchten.
+Um ein DELETE zu löschen, stellen Sie eine Paketanforderung an den `/packages`-Endpunkt und geben Sie die ID des Pakets an, das Sie löschen möchten.
 
 **API-Format**
 
@@ -355,11 +355,11 @@ DELETE /packages/{PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie löschen möchten. |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie löschen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird das Paket mit der Kennung {PACKAGE_ID} gelöscht.
+Die folgende Anfrage löscht das Paket mit der ID {PACKAGE_ID}.
 
 ```shell
 curl -X DELETE \
@@ -372,7 +372,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt einen Grund zurück, der anzeigt, dass die Paket-ID gelöscht wurde.
+Bei einer erfolgreichen Antwort wird ein Grund zurückgegeben, der die gelöschte Paket-ID anzeigt.
 
 ```json
 {
@@ -380,9 +380,9 @@ Eine erfolgreiche Antwort gibt einen Grund zurück, der anzeigt, dass die Paket-
 }
 ```
 
-## Publish a package {#publish}
+## Publish A-Paket {#publish}
 
-Um den Import eines Packages in eine Sandbox zu ermöglichen, müssen Sie es veröffentlichen. Stellen Sie eine GET-Anfrage an den `/packages` -Endpunkt, während Sie die Kennung des Pakets angeben, das Sie veröffentlichen möchten.
+Um den Import eines Pakets in eine Sandbox zu aktivieren, müssen Sie es veröffentlichen. Stellen Sie eine GET-Anfrage an den `/packages`-Endpunkt, während Sie die ID des Pakets angeben, das Sie veröffentlichen möchten.
 
 **API-Format**
 
@@ -396,7 +396,7 @@ GET /packages/{PACKAGE_ID}/export
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird das Paket mit der ID {PACKAGE_ID} veröffentlicht.
+Die folgende Anfrage veröffentlicht das Paket mit der ID {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -409,7 +409,7 @@ curl -X GET \
 
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Dieser vom Benutzer angegebene Zeitraum definiert das Ablaufdatum des Pakets (in Tagen) ab der Veröffentlichung des Pakets. Dieser Wert darf nicht negativ sein.<br> Wenn kein Wert angegeben ist, wird der Standardwert als 90 (Tage) ab dem Datum der Veröffentlichung berechnet. | Ganzzahl | Nein |
+| `expiryPeriod` | Dieser benutzerdefinierte Zeitraum definiert das Paketablaufdatum (in Tagen) ab dem Zeitpunkt der Veröffentlichung des Pakets. Dieser Wert sollte nicht negativ sein.<br> Wenn kein Wert angegeben ist, wird der Standardwert 90 (Tage) ab dem Datum der Veröffentlichung berechnet. | Ganzzahl | Nein |
 
 **Antwort**
 
@@ -431,9 +431,9 @@ Eine erfolgreiche Antwort gibt das veröffentlichte Paket zurück.
 }
 ```
 
-## Paket nachschlagen {#look-up-package}
+## Suchen eines Pakets {#look-up-package}
 
-Sie können nach einem einzelnen GET suchen, indem Sie eine Anfrage an den `/packages` -Endpunkt senden, der die entsprechende Paketkennung im Anfragepfad enthält.
+Sie können ein einzelnes Paket suchen, indem Sie eine GET-Anfrage an den `/packages`-Endpunkt stellen, der die entsprechende ID des Pakets im Anfragepfad enthält.
 
 **API-Format**
 
@@ -443,11 +443,11 @@ GET /packages/{PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie nachschlagen möchten. |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für {PACKAGE_ID} ab.
+Mit der folgenden Anfrage werden Informationen zu {PACKAGE_ID} abgerufen.
 
 ```shell
 curl -X GET \
@@ -460,7 +460,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details für die abgefragte Paket-ID zurück. Die Antwort enthält den Namen, die Beschreibung, das Veröffentlichungsdatum und das Ablaufdatum, die Quell-Sandbox des Pakets sowie eine Liste von Artefakten.
+Eine erfolgreiche Antwort gibt Details zur abgefragten Paket-ID zurück. Die Antwort enthält den Namen, die Beschreibung, das Veröffentlichungs- und Ablaufdatum, die Quell-Sandbox des Pakets sowie eine Liste von Artefakten.
 
 ```json
 {
@@ -499,9 +499,9 @@ Eine erfolgreiche Antwort gibt Details für die abgefragte Paket-ID zurück. Die
 }
 ```
 
-## Auflisten von Packages {#list-packages}
+## Auflisten von Paketen {#list-packages}
 
-Sie können alle Pakete in Ihrer Organisation auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/packages` senden.
+Sie können alle Pakete in Ihrer Organisation auflisten, indem Sie eine GET-Anfrage an den `/packages`-Endpunkt stellen.
 
 **API-Format**
 
@@ -511,11 +511,11 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [ Abschnitt ](./appendix.md) Abfrageparameter . |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen der Pakete basierend auf dem {QUERY_PARAMS} ab.
+Die folgende Anfrage ruft Informationen zu den Paketen basierend auf der {QUERY_PARAMS} ab.
 
 ```shell
 curl -X GET \
@@ -606,7 +606,7 @@ Bei einer erfolgreichen Antwort wird eine Liste von Paketen zurückgegeben, die 
 
 ## Package importieren {#import}
 
-Dieser Endpunkt wird zum Abrufen der in Konflikt stehenden Objekte in der angegebenen Ziel-Sandbox verwendet. Konfliktobjekte stellen ähnliche Objekte dar, die bereits in der Ziel-Sandbox vorhanden sind.
+Dieser Endpunkt wird verwendet, um die in Konflikt stehenden Objekte in der angegebenen Ziel-Sandbox abzurufen. Widersprüchliche Objekte stellen ähnliche Objekte dar, die bereits in der Ziel-Sandbox vorhanden sind.
 
 **API-Format**
 
@@ -616,11 +616,11 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie nachschlagen möchten. |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage importiert die {PACKAGE_ID}.
+Mit der folgenden Anfrage wird die {PACKAGE_ID} importiert.
 
 ```shell
 curl -X GET \
@@ -633,7 +633,7 @@ curl -X GET \
 
 **Antwort**
 
-In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das Originalpaket sowie das `alternatives` -Fragment als Array an, das nach Rang geordnet ist.
+In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das ursprüngliche Paket plus das `alternatives` Fragment als Array sortiert nach Rangfolge an.
 
 +++Antwort anzeigen
 
@@ -747,15 +747,15 @@ In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das Originalpa
 
 +++
 
-## Importe übermitteln {#submit-import}
+## Import übermitteln {#submit-import}
 
 >[!NOTE]
 >
->Mit der Konfliktbeilegung ist es inhärent, dass das alternative Artefakt bereits in der Ziel-Sandbox vorhanden ist.
+>Bei der Konfliktauflösung ist es inhärent, dass das alternative Artefakt bereits in der Ziel-Sandbox vorhanden ist.
 
-Sie können einen Package-Import senden, sobald Sie Konflikte überprüft und Ersatzteile bereitgestellt haben, indem Sie eine POST-Anfrage an den Endpunkt `/packages` stellen. Das Ergebnis wird als Payload bereitgestellt, die den Importauftrag für die Ziel-Sandbox startet, wie in der Payload angegeben.
+Sie können einen Import für ein Package starten, nachdem Sie Konflikte überprüft und Ersetzungen bereitgestellt haben, indem Sie eine POST-Anfrage an den `/packages`-Endpunkt senden. Das Ergebnis wird als Payload bereitgestellt, die den Importvorgang für die Ziel-Sandbox startet, wie in der Payload angegeben.
 
-Die Nutzlast akzeptiert auch den vom Benutzer angegebenen Auftragsnamen und die Beschreibung für den Importauftrag. Wenn der vom Benutzer angegebene Name und die Beschreibung nicht verfügbar sind, werden der Paketname und die Beschreibung für den Auftragsnamen und die Beschreibung verwendet.
+Payload akzeptiert auch den vom Benutzer angegebenen Auftragsnamen und die Beschreibung für den Importauftrag. Wenn der vom Benutzer angegebene Name und die Beschreibung nicht verfügbar sind, wird der Paketname und die Beschreibung für den Auftragsnamen und die Beschreibung verwendet.
 
 **API-Format**
 
@@ -765,7 +765,7 @@ POST /packages/import
 
 **Anfrage**
 
-Die folgende Anfrage ruft die zu importierenden Pakete ab. Die Payload ist eine Zuordnung von Substitutionen, bei der, wenn ein Eintrag vorhanden ist, der Schlüssel der vom Paket bereitgestellte `artifactId` und die Alternative der Wert ist. Wenn die Zuordnung oder Payload **leer** ist, werden keine Ersetzungen durchgeführt.
+Die folgende Anfrage ruft zu importierende Pakete ab. Die Payload ist eine Zuordnung von Ersetzungen, bei der, wenn ein Eintrag vorhanden ist, der Schlüssel der vom Paket bereitgestellte `artifactId` ist und die Alternative der Wert ist. Wenn die Zuordnung oder Payload **leer** ist, werden keine Ersetzungen durchgeführt.
 
 ```shell
 curl -X POST \
@@ -793,7 +793,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
-| `alternatives` | `alternatives` stellt die Zuordnung von Quell-Sandbox-Artefakten zu den vorhandenen Ziel-Sandbox-Artefakten dar. Da sie bereits vorhanden sind, verhindert der Importauftrag, dass diese Artefakte in der Ziel-Sandbox erstellt werden. | Zeichenfolge | Nein |
+| `alternatives` | `alternatives` stellen die Zuordnung von Quell-Sandbox-Artefakten zu den vorhandenen Ziel-Sandbox-Artefakten dar. Da sie bereits vorhanden sind, vermeidet der Importvorgang das Erstellen dieser Artefakte in der Ziel-Sandbox. | Zeichenfolge | Nein |
 
 **Antwort**
 
@@ -818,9 +818,9 @@ curl -X POST \
 }
 ```
 
-## Alle abhängigen Objekte auflisten {#dependent-objects}
+## Auflisten aller abhängigen Objekte {#dependent-objects}
 
-Auflisten aller abhängigen Objekte für die exportierten Objekte in einem Package durch eine POST-Anfrage an den Endpunkt `/packages` bei Angabe der Paketkennung.
+Listen Sie alle abhängigen Objekte für die exportierten Objekte in einem Package auf, indem Sie eine POST-Anfrage an den `/packages`-Endpunkt stellen und dabei die ID des Packages angeben.
 
 **API-Format**
 
@@ -830,11 +830,11 @@ POST /packages/{PACKAGE_ID}/children
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PACKAGE_ID}` | Die Kennung des Pakets. |
+| `{PACKAGE_ID}` | Die ID des Pakets. |
 
 **Anfrage**
 
-Die folgende Anfrage listet alle abhängigen Objekte für den {PACKAGE_ID} auf.
+Die folgende Anfrage listet alle abhängigen Objekte für die {PACKAGE_ID} auf.
 
 ```shell
 curl -X POST \
@@ -861,7 +861,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von untergeordneten Elementen für die Objekte zurück.
+Eine erfolgreiche Antwort gibt eine Liste von untergeordneten Elementen für die -Objekte zurück.
 
 ```json
 [
@@ -898,9 +898,9 @@ Eine erfolgreiche Antwort gibt eine Liste von untergeordneten Elementen für die
 ]
 ```
 
-## Überprüfen rollenbasierter Berechtigungen zum Importieren aller Paketartefakte {#role-based-permissions}
+## Rollenbasierte Berechtigungen zum Importieren aller Paket-Artefakte überprüfen {#role-based-permissions}
 
-Sie können überprüfen, ob Sie berechtigt sind, Paketartefakte zu importieren, indem Sie eine GET-Anfrage an den `/packages` -Endpunkt senden und dabei die Paketkennung und den Ziel-Sandbox-Namen angeben.
+Sie können überprüfen, ob Sie über Berechtigungen zum Importieren von Paket-Artefakten verfügen, indem Sie eine GET-Anfrage an den Endpunkt `/packages` stellen, während Sie die ID des Pakets und den Namen der Ziel-Sandbox angeben.
 
 **API-Format**
 
@@ -910,11 +910,11 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie importieren möchten. |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie importieren möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage überprüft Ihre Berechtigungen auf {PACKAGE_ID} und die Sandbox.
+Mit der folgenden Anfrage werden Ihre Berechtigungen für die {PACKAGE_ID} und Sandbox überprüft.
 
 ```shell
 curl -X GET \
@@ -927,7 +927,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ressourcenberechtigungen für die Ziel-Sandbox zurück, einschließlich einer Liste der erforderlichen Berechtigungen, fehlender Berechtigungen, des Typs des Artefakts und einer Entscheidung, ob die Erstellung zulässig ist.
+Bei einer erfolgreichen Antwort werden Ressourcenberechtigungen für die Ziel-Sandbox zurückgegeben, einschließlich einer Liste der erforderlichen Berechtigungen, fehlender Berechtigungen, des Typs eines Artefakts und einer Entscheidung darüber, ob die Erstellung zulässig ist.
 
 +++Antwort anzeigen
 
@@ -1046,9 +1046,9 @@ Eine erfolgreiche Antwort gibt Ressourcenberechtigungen für die Ziel-Sandbox zu
 
 +++
 
-## Listen von Export-/Importvorgängen {#list-jobs}
+## Export-/Importvorgänge auflisten {#list-jobs}
 
-Sie können die aktuellen Export-/Importvorgänge auflisten, indem Sie eine GET-Anfrage an den `/packages` -Endpunkt senden.
+Sie können aktuelle Export-/Importvorgänge auflisten, indem Sie eine GET-Anfrage an den `/packages`-Endpunkt senden.
 
 **API-Format**
 
@@ -1058,7 +1058,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [ Abschnitt ](./appendix.md) Abfrageparameter . |
 
 **Anfrage**
 
@@ -1075,7 +1075,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt alle erfolgreichen Importaufträge zurück.
+Eine erfolgreiche Antwort gibt alle erfolgreichen Importvorgänge zurück.
 
 ```json
 {
@@ -1159,13 +1159,13 @@ Eine erfolgreiche Antwort gibt alle erfolgreichen Importaufträge zurück.
 }
 ```
 
-## Freigeben von Paketen über Organisationen hinweg {#org-linking}
+## Package-Freigabe über Organisationen hinweg {#org-linking}
 
-Der Endpunkt `/handshake` in der Sandbox-Tool-API ermöglicht es Ihnen, mit anderen Organisationen zusammenzuarbeiten, um Pakete freizugeben.
+Der `/handshake`-Endpunkt in der Sandbox-Tooling-API ermöglicht es Ihnen, mit anderen Organisationen zusammenzuarbeiten, um Pakete freizugeben.
 
 ### Senden einer Freigabeanfrage {#send-request}
 
-Senden Sie eine Anfrage zur Freigabe an eine Zielpartner-Organisation, indem Sie eine POST-Anfrage an den `/handshake/bulkCreate` -Endpunkt senden. Dies ist erforderlich, bevor Sie private Pakete freigeben können.
+Senden Sie eine Anfrage an eine Zielpartnerorganisation zur Freigabe, indem Sie eine POST-Anfrage an den `/handshake/bulkCreate`-Endpunkt stellen. Dies ist erforderlich, bevor Sie private Pakete freigeben können.
 
 **API-Format**
 
@@ -1175,7 +1175,7 @@ POST /handshake/bulkCreate
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Freigabe zwischen einer Zielpartner-Organisation und der Quellorganisation initiiert.
+Mit der folgenden Anfrage wird die Freigabe einer Genehmigung zwischen einer Zielpartnerorganisation und der Quellorganisation initiiert.
 
 ```shell
 curl -X POST \
@@ -1197,12 +1197,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
-| `targetIMSOrgIds` | Eine Liste der Zielunternehmen, an die eine Freigabeanfrage gesendet werden soll. | Array | Ja |
+| `targetIMSOrgIds` | Eine Liste der Zielorganisationen, an die die Freigabeanfrage gesendet werden soll. | Array | Ja |
 | `sourceIMSDetails` | Details zur Quellorganisation. | Objekt | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zu Ihrer Freigabeanforderung zurück.
+Eine erfolgreiche Antwort gibt Details zu Ihrer Freigabeanfrage zurück.
 
 ```json
 {
@@ -1230,9 +1230,9 @@ Eine erfolgreiche Antwort gibt Details zu Ihrer Freigabeanforderung zurück.
 }
 ```
 
-### Genehmigen empfangener Freigabeanfragen {#approve-requests}
+### Validieren empfangener Freigabeanfragen {#approve-requests}
 
-Genehmigen Sie Freigabeanfragen von Zielpartner-Organisationen, indem Sie eine POST-Anfrage an den `/handshake/action` -Endpunkt senden. Nach der Genehmigung können Partner-Quellorganisationen private Pakete freigeben.
+Genehmigen Sie Freigabeanfragen von Zielpartnerorganisationen, indem Sie eine POST-Anfrage an den `/handshake/action`-Endpunkt senden. Nach der Genehmigung können Quellpartnerorganisationen private Pakete freigeben.
 
 **API-Format**
 
@@ -1242,7 +1242,7 @@ POST /handshake/action
 
 **Anfragen**
 
-Mit der folgenden Anfrage wird eine Freigabeanforderung von einer Zielpartner-Organisation genehmigt.
+Mit der folgenden Anfrage wird eine Freigabeanfrage von einer Zielpartnerorganisation genehmigt.
 
 ```shell
 curl -X POST  \
@@ -1267,14 +1267,14 @@ curl -X POST  \
 
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
-| `linkingID` | Die ID der Freigabeanfrage, auf die Sie reagieren. | Zeichenfolge | Ja |
-| `status` | Die Aktion, die auf die Freigabeanforderung durchgeführt wird. Zulässige Werte sind `APPROVED` oder `REJECTED`. | Zeichenfolge | Ja |
-| `reason` | Der Grund, aus dem die Maßnahmen ergriffen werden. | Zeichenfolge | Ja |
-| `targetIMSOrgDetails` | Details zur Zielorganisation, bei der der ID-Wert die **ID** der Zielorganisation sein sollte, der Name-Wert der **NAME** der Zielorganisation und der Regionswert die Zielorganisationen **REGION** sein sollte. | Objekt | Ja |
+| `linkingID` | Die ID der Freigabeanfrage, auf die Sie antworten. | Zeichenfolge | Ja |
+| `status` | Die Aktion, die bei der Freigabeanfrage durchgeführt wird. Zulässige Werte sind `APPROVED` oder `REJECTED`. | Zeichenfolge | Ja |
+| `reason` | Der Grund, warum die Aktion durchgeführt wird. | Zeichenfolge | Ja |
+| `targetIMSOrgDetails` | Details zur Zielorganisation, bei der der ID-Wert die **ID** der Zielorganisation, der Namenswert der **NAME** der Zielorganisation und der Regionswert die **REGION** sein sollte. | Objekt | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur genehmigten Freigabeanforderung zurück.
+Eine erfolgreiche Antwort gibt Details zur genehmigten Freigabeanfrage zurück.
 
 ```json
 {
@@ -1298,9 +1298,9 @@ Eine erfolgreiche Antwort gibt Details zur genehmigten Freigabeanforderung zurü
 }
 ```
 
-### Ausgehende/eingehende Freigabeanforderungen auflisten {#outgoing-and-incoming-requests}
+### Auflisten ausgehender/eingehender Freigabeanfragen {#outgoing-and-incoming-requests}
 
-Auflisten ausgehender und eingehender Freigabeanfragen durch eine GET-Anfrage an den `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` -Endpunkt.
+Listen Sie ausgehende und eingehende Freigabeanfragen auf, indem Sie eine GET-Anfrage an den `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`-Endpunkt senden.
 
 **API-Format**
 
@@ -1310,9 +1310,9 @@ GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 
 | Parameter | Akzeptierte/Standardwerte |
 | --- | --- |
-| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `APPROVED`, `REJECTED` und `IN_PROGRESS`. |
-| `start` | Der Standardwert des Starts ist `0`. |
-| `limit` | Der Standardwert für limit ist `20`. |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. Status. Zulässige Werte für den Status sind: `APPROVED`, `REJECTED` und `IN_PROGRESS`. |
+| `start` | Der Standardwert von start ist `0`. |
+| `limit` | Der Standardwert für Limit ist `20`. |
 | `orderBy` | Sortiert Datensätze in auf- oder absteigender Reihenfolge. |
 | `requestType` | Akzeptiert entweder `INCOMING` oder `OUTGOING`. |
 
@@ -1333,7 +1333,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste der ausgehenden und eingehenden Freigabeanfragen und deren Details zurück.
+Eine erfolgreiche Antwort gibt eine Liste von ausgehenden und eingehenden Freigabeanfragen und deren Details zurück.
 
 ```json
 {
@@ -1368,13 +1368,13 @@ Eine erfolgreiche Antwort gibt eine Liste der ausgehenden und eingehenden Freiga
 }
 ```
 
-## Packages übertragen
+## Pakete übertragen
 
-Verwenden Sie den Endpunkt `/transfer` in der Sandbox-Tool-API, um neue Anfragen zur Paketfreigabe abzurufen und zu erstellen.
+Verwenden Sie den `/transfer`-Endpunkt in der Sandbox-Tooling-API, um neue Anfragen zur Paketfreigabe abzurufen und zu erstellen.
 
-### Neue Freigabeanforderung {#share-request}
+### Neue Freigabeanfrage {#share-request}
 
-Rufen Sie das Paket einer veröffentlichten Quellorganisation ab und geben Sie es für eine Zielorganisation frei, indem Sie eine POST-Anfrage an den `/transfer` -Endpunkt senden und dabei die Paket-ID und die ID der Zielorganisation angeben.
+Rufen Sie das Paket einer veröffentlichten Quellorganisation ab und geben Sie es für eine Zielorganisation frei, indem Sie eine POST-Anfrage an den `/transfer`-Endpunkt stellen und dabei die Package-ID und die ID der Zielorganisation angeben.
 
 **API-Format**
 
@@ -1384,7 +1384,7 @@ POST /transfer
 
 **Anfrage**
 
-Die folgende Anfrage ruft ein Quellorganisationspaket ab und gibt es für eine Zielorganisation frei.
+Mit der folgenden Anfrage wird ein Quellorganisationspaket abgerufen und für eine Zielorganisation freigegeben.
 
 ```shell
 curl -X POST \
@@ -1407,7 +1407,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `packageId` | Die ID des Pakets, das Sie freigeben möchten. | Zeichenfolge | Ja |
-| `targets` | Eine Liste der Organisationen, für die Pakete freigegeben werden sollen. | Array | Ja |
+| `targets` | Eine Liste der Organisationen, für die das Paket freigegeben werden soll. | Array | Ja |
 
 **Antwort**
 
@@ -1432,9 +1432,9 @@ Eine erfolgreiche Antwort gibt Details zum angeforderten Paket und dessen Freiga
 ]
 ```
 
-### Abrufen einer Freigabeanforderung nach ID {#fetch-transfer-by-id}
+### Abrufen einer Freigabeanfrage nach ID {#fetch-transfer-by-id}
 
-Rufen Sie die Details einer Freigabeanfrage ab, indem Sie eine GET-Anfrage an den `/transfer/{TRANSFER_ID}` -Endpunkt senden und dabei die Transfer-ID angeben.
+Rufen Sie die Details einer Freigabeanfrage ab, indem Sie eine GET-Anfrage an den `/transfer/{TRANSFER_ID}`-Endpunkt stellen und dabei die Übertragungs-ID angeben.
 
 **API-Format**
 
@@ -1448,7 +1448,7 @@ GET /transfer/{TRANSFER_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft eine Übertragung mit der Kennung {TRANSFER_ID} ab.
+Mit der folgenden Anfrage wird eine Übertragung mit der ID {TRANSFER_ID} abgerufen.
 
 ```shell
 curl -X GET \
@@ -1461,7 +1461,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine Erfolgsantwort gibt Details einer Freigabeanfrage zurück.
+Eine erfolgreiche Antwort gibt Details zu einer Freigabeanfrage zurück.
 
 ```json
 {
@@ -1479,9 +1479,9 @@ Eine Erfolgsantwort gibt Details einer Freigabeanfrage zurück.
 }
 ```
 
-### Abrufen der Freigabeliste {#transfers-list}
+### Freigabeliste abrufen {#transfers-list}
 
-Rufen Sie eine Liste von Übertragungsanfragen ab, indem Sie eine GET-Anfrage an den `/transfer/list?{QUERY_PARAMETERS}` -Endpunkt senden und dabei die Abfrageparameter nach Bedarf ändern.
+Rufen Sie eine Liste von Übertragungsanfragen ab, indem Sie eine GET-Anfrage an den `/transfer/list?{QUERY_PARAMETERS}`-Endpunkt senden und die Abfrageparameter nach Bedarf ändern.
 
 **API-Format**
 
@@ -1491,14 +1491,14 @@ GET `/transfer/list?{QUERY_PARAMETERS}`
 
 | Parameter | Akzeptierte/Standardwerte |
 | --- | --- |
-| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
-| `start` | Der Standardwert des Starts ist `0`. |
-| `limit` | Der Standardwert für limit ist `20`. |
-| `orderBy` | Die Reihenfolge akzeptiert nur das Feld `createdDate` . |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. Status. Zulässige Statuswerte sind: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
+| `start` | Der Standardwert von start ist `0`. |
+| `limit` | Der Standardwert für Limit ist `20`. |
+| `orderBy` | Bei der Sortierung wird nur das Feld `createdDate` akzeptiert. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft eine Liste von Übertragungsanfragen aus den angegebenen Suchparametern ab.
+Mit der folgenden Anfrage wird eine Liste von Übertragungsanfragen aus den angegebenen Suchparametern abgerufen.
 
 ```shell
 curl -X GET \
@@ -1511,7 +1511,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den bereitgestellten Suchparametern zurück.
+Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den angegebenen Suchparametern zurück.
 
 ```json
 {
@@ -1555,9 +1555,9 @@ Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den be
 }
 ```
 
-### Aktualisierung der Paketverfügbarkeit von privat zu öffentlich {#update-availability}
+### Paketverfügbarkeit von privat auf öffentlich aktualisieren {#update-availability}
 
-Ändern Sie ein Package von &quot;privat&quot;in &quot;öffentlich&quot;, indem Sie eine GET-Anfrage an den Endpunkt `/packages/update` senden. Standardmäßig wird ein Package mit privater Verfügbarkeit erstellt.
+Ändern Sie ein Paket von privat in öffentlich, indem Sie eine GET-Anfrage an den `/packages/update`-Endpunkt stellen. Standardmäßig wird ein Paket mit privater Verfügbarkeit erstellt.
 
 **API-Format**
 
@@ -1567,7 +1567,7 @@ PUT `/packages/update`
 
 **Anfrage**
 
-Die folgende Anfrage ändert die Verfügbarkeit von Paketen von privat zu öffentlich.
+Die folgende Anfrage ändert eine Verfügbarkeit der Pakete von privat in öffentlich.
 
 ```shell
 curl -X PUT \
@@ -1587,12 +1587,12 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um die Sichtbarkeit auf &quot;public&quot;zu aktualisieren, sollte der Aktionswert **UPDATE** sein. | Zeichenfolge | Ja |
-| `packageVisbility` | Um die Sichtbarkeit zu aktualisieren, sollte der Wert für packageVisibility **PUBLIC** lauten. | Zeichenfolge | Ja |
+| `action` | Um die Sichtbarkeit für die Öffentlichkeit zu aktualisieren, sollte der Aktionswert &quot;**&quot;**. | Zeichenfolge | Ja |
+| `packageVisbility` | Um die Sichtbarkeit zu aktualisieren, sollte der packageVisibility-Wert &quot;**&quot;**. | Zeichenfolge | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zu einem Paket und dessen Sichtbarkeit zurück.
+Eine erfolgreiche Antwort gibt Details zu einem Paket und seiner Sichtbarkeit zurück.
 
 ```json
 {
@@ -1628,7 +1628,7 @@ Eine erfolgreiche Antwort gibt Details zu einem Paket und dessen Sichtbarkeit zu
 
 ### Anfrage zum Importieren eines öffentlichen Pakets {#pull-public-package}
 
-Importieren Sie ein Package aus einer Quellorganisation mit öffentlicher Verfügbarkeit, indem Sie eine POST an den Endpunkt `/transfer/pullRequest` anfordern.
+Importieren Sie ein Package aus einer Quellorganisation mit öffentlicher Verfügbarkeit, indem Sie eine POST-Anfrage an den `/transfer/pullRequest`-Endpunkt stellen.
 
 **API-Format**
 
@@ -1638,7 +1638,7 @@ POST /transfer/pullRequest
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein Paket importiert und seine Verfügbarkeit auf &quot;Öffentlich&quot;gesetzt.
+Mit der folgenden Anfrage wird ein Paket importiert und seine Verfügbarkeit auf „Öffentlich“ festgelegt.
 
 ```shell
 curl -X POST \
@@ -1658,7 +1658,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `imsOrgId` | Die ID aus der Quellorganisation des Pakets. | Zeichenfolge | Ja |
-| `packageId` | Die ID aus dem zu importierenden Package. | Zeichenfolge | Ja |
+| `packageId` | Die ID aus dem zu importierenden Paket. | Zeichenfolge | Ja |
 
 **Antwort**
 
@@ -1682,9 +1682,9 @@ Eine erfolgreiche Antwort gibt Details zum importierten öffentlichen Paket zur�
 }
 ```
 
-### Öffentliche Pakete auflisten {#list-public-packages}
+### Auflisten öffentlicher Pakete {#list-public-packages}
 
-Rufen Sie eine Liste von Paketen mit öffentlicher Sichtbarkeit ab, indem Sie eine GET-Anfrage an den Endpunkt `/transfer/list?{QUERY_PARAMS}` senden.
+Rufen Sie eine Liste von Paketen mit öffentlicher Sichtbarkeit ab, indem Sie eine GET-Anfrage an den `/transfer/list?{QUERY_PARAMS}`-Endpunkt stellen.
 
 **API-Format**
 
@@ -1694,10 +1694,10 @@ GET /transfer/list?{QUERY_PARAMS}
 
 | Parameter | Akzeptierte/Standardwerte |
 | --- | --- |
-| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `COMPLETED` und `FAILED`. |
-| `start` | Der Standardwert des Starts ist `0`. |
-| `limit` | Der Standardwert für limit ist `20`. |
-| `orderBy` | Die Reihenfolge akzeptiert nur das Feld `createdDate` . |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. Status. Zulässige Statuswerte sind: `COMPLETED` und `FAILED`. |
+| `start` | Der Standardwert von start ist `0`. |
+| `limit` | Der Standardwert für Limit ist `20`. |
+| `orderBy` | Bei der Sortierung wird nur das Feld `createdDate` akzeptiert. |
 | `requestType` | Akzeptiert entweder `PUBLIC` oder `PRIVATE`. |
 
 **Anfrage**
@@ -1717,7 +1717,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste öffentlicher Pakete und deren Details zurück.
+Eine erfolgreiche Antwort gibt eine Liste von öffentlichen Paketen und deren Details zurück.
 
 +++Antwort anzeigen
 
@@ -1933,9 +1933,9 @@ Eine erfolgreiche Antwort gibt eine Liste öffentlicher Pakete und deren Details
 
 +++
 
-## Package-Payload kopieren (#package-payload)
+## Payload des Pakets kopieren (#package-payload)
 
-Sie können die Payload eines öffentlichen Pakets kopieren, indem Sie eine GET-Anfrage an den Endpunkt `/packages/payload` senden, der die entsprechende Paketkennung im Anfragepfad enthält.
+Sie können die Payload eines öffentlichen Pakets kopieren, indem Sie eine GET-Anfrage an den `/packages/payload`-Endpunkt stellen, der die entsprechende ID des Pakets im Anfragepfad enthält.
 
 **API-Format**
 
@@ -1965,7 +1965,7 @@ curl -X GET \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `imsOrdId` | Die ID der Organisation, zu der das Paket gehört. | Zeichenfolge | Ja |
-| `packageId` | Die ID des Pakets, das die angeforderte Payload nutzt. | Zeichenfolge | Ja |
+| `packageId` | Die ID des Pakets, das die angeforderte Payload ist. | Zeichenfolge | Ja |
 
 **Antwort**
 

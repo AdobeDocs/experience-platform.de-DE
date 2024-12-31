@@ -19,7 +19,7 @@ ht-degree: 82%
    * [Übersicht zur Sandbox-UI](ui/overview.md)
    * [Sandbox-Benutzerhandbuch](ui/user-guide.md)
    * [Sandbox-Werkzeuge](ui/sandbox-tooling.md)
-   * [Freigeben von Paketen in der gesamten Organisation](ui/sharing-packages-across-orgs.md)
+   * [Package-Freigabe innerhalb der Organisation](ui/sharing-packages-across-orgs.md)
 * Sandbox-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
@@ -27,7 +27,7 @@ ht-degree: 82%
    * [Sandbox-Verwaltung](api/sandboxes.md)
    * [Sandbox-Typen](api/types.md)
    * [Anhang](api/appendix.md)
-* Sandbox Tooling API {#sandbox-tooling-api}
+* Sandbox Tooling API-{#sandbox-tooling-api}
    * [Übersicht](sandbox-tooling-api/overview.md)
    * [Erste Schritte](sandbox-tooling-api/getting-started.md)
    * [Packages       ](sandbox-tooling-api/packages.md)

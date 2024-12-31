@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Azure File Storage; Azure-Dateispeicher; aze-Dateispeicher
+keywords: Experience Platform;Startseite;beliebte Themen;Azure File Storage;Azure File Storage
 solution: Experience Platform
-title: Übersicht über den Azure File Storage Source Connector
-description: Erfahren Sie, wie Sie Azure File Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+title: Überblick über den Azure File Storage Source Connector
+description: Erfahren Sie, wie Sie Azure File Storage mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 79%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
-Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten von [!DNL Azure File Storage] durch Batches einbringen.
+Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten von [!DNL Azure File Storage] über Batches importieren.
 
 ## IP-Adressen-Zulassungsliste
 
@@ -34,15 +34,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 ## [!DNL Azure File Storage] mit [!DNL Platform] verbinden
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL Azure File Storage] mit [!DNL Platform] verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Azure File Storage] mit [!DNL Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 
-- [Erstellen einer Azure File Storage-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Erstellen einer Azure File Storage-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Untersuchen der Datenstruktur und des Inhalts einer Cloud-Speicherquelle mit der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer Azure File Storage-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Erstellen einer Azure File Storage-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

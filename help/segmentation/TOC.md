@@ -17,7 +17,7 @@ ht-degree: 94%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Limits bei der Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentierungs-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
@@ -33,7 +33,7 @@ ht-degree: 94%
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
-   - [Audience Portal](ui/audience-portal.md)
+   - [Zielgruppen-Portal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Komposition föderierter Zielgruppen (begrenzte Verfügbarkeit)](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)

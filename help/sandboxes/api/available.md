@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;list available sandboxes;list sandboxes
+keywords: Experience Platform;Startseite;beliebte Themen;verfügbare Sandboxes auflisten;Sandboxes auflisten
 solution: Experience Platform
-title: Verfügbarer Sandbox-API-Endpunkt
+title: Verfügbare Sandbox-API-Endpunkte
 description: Sie können die für den aktuellen Benutzer verfügbaren Sandboxes auflisten, indem Sie eine GET-Anfrage an den verfügbaren Sandbox-Endpunkt senden.
 role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
@@ -12,11 +12,11 @@ ht-degree: 30%
 
 ---
 
-# Verfügbare Sandbox-Endpunkte
+# Verfügbarer Sandbox-Endpunkt
 
 >[!NOTE]
 >
->Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, steht dieser Endpunkt allen Benutzern zur Verfügung, auch solchen ohne Sandbox Administration-Zugriffsberechtigungen.
+>Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, ist dieser Endpunkt für alle Benutzer verfügbar, einschließlich der Benutzer ohne Zugriffsberechtigungen für die Sandbox-Administration.
 
 Sie können die für den aktuellen Benutzer verfügbaren Sandboxes auflisten, indem Sie eine GET-Anfrage an den verfügbaren Sandbox-Endpunkt senden.
 
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
 
 **Anfrage**
 
@@ -104,7 +104,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die für den ak
 | --- | --- |
 | `name` | Der Name der Sandbox. Dient zum Suchen in API-Aufrufen. |
 | `title` | Der Anzeigename für die Sandbox. |
-| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <ul><li>`creating`: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>`active`: Die Sandbox wird erstellt und aktiv.</li><li>`failed`: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>0: Die Sandbox wurde manuell deaktiviert.`deleted`</li></ul> |
+| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <ul><li>`creating`: Die Sandbox wurde erstellt, wird aber noch vom System bereitgestellt.</li><li>`active`: Die Sandbox wird erstellt und aktiv.</li><li>`failed`: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>`deleted`: Die Sandbox wurde manuell deaktiviert.</li></ul> |
 | `type` | Der Sandbox-Typ, entweder „Entwicklung“ oder „Produktion“. |
 | `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die standardmäßige Produktions-Sandbox für die Organisation ist. |
 | `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |

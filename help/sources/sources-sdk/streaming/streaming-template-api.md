@@ -1,6 +1,6 @@
 ---
-title: Dokumentation - Self-Service-Vorlage für Streaming-SDK-API
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Streaming-Daten aus einer Quelle an Adobe Experience Platform übertragen können.
+title: Dokumentationsvorlage für Selbstbedienungs-Streaming-SDK-API
+description: Erfahren Sie, wie Sie Streaming-Daten aus einer Quelle mithilfe der Flow Service-API in Adobe Experience Platform übertragen.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -10,52 +10,52 @@ ht-degree: 43%
 
 ---
 
-# Erstellen Sie eine Quellverbindung und einen Datenfluss zum Streamen von *YOURSOURCE*-Daten mithilfe der [!DNL Flow Service]-API.
+# Erstellen einer Quellverbindung und eines Datenflusses zum Streamen von *YOURSOURCE*-Daten mithilfe der [!DNL Flow Service]-API
 
-*Wenn Sie diese Vorlage durchlaufen, ersetzen oder löschen Sie alle kursiv gedruckten Absätze (beginnend mit dieser).*
+*Wenn Sie diese Vorlage durchlaufen, ersetzen oder löschen Sie alle kursiv gedruckten Absätze (beginnend mit diesem).*
 
-*Aktualisieren Sie zunächst die Metadaten (Titel und Beschreibung) oben auf der Seite. Bitte ignorieren Sie alle DNL-Instanzen auf dieser Seite. Dies ist ein Tag, das unseren maschinellen Übersetzungsprozessen hilft, die Seite korrekt in die verschiedenen Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation Tags hinzu, nachdem Sie sie gesendet haben.*
+*Aktualisieren Sie zunächst die Metadaten (Titel und Beschreibung) oben auf der Seite. Alle Instanzen von DNL auf dieser Seite ignorieren. Dieses Tag hilft unseren maschinellen Übersetzungsprozessen dabei, die Seite korrekt in die verschiedenen Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation nach dem Absenden Tags hinzu.*
 
 ## Übersicht
 
-*Bieten Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Werts, den es Kunden bietet. Fügen Sie einen Link zu Ihrer Homepage für die Produktdokumentation hinzu, um ihn weiter zu lesen.*
+*Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es für Kunden bietet. Fügen Sie einen Link zu Ihrer Startseite der Produktdokumentation für weitere Informationen hinzu.*
 
 >[!IMPORTANT]
 >
->Diese Quell-Connector- und Dokumentationsseite wird vom *YOURSOURCE*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt unter *Link oder E-Mail-Adresse einfügen, an die Sie zur Aktualisierung gelangen*.
+>Dieser Quell-Connector und die Dokumentationsseite werden vom Team *YOURSOURCE* erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Link oder E-Mail-Adresse einfügen, unter der Sie für Aktualisierungen erreichbar sind*.
 
 ## Voraussetzungen
 
-*Fügen Sie in diesem Abschnitt Informationen zu allen Elementen hinzu, die Kunden beachten müssen, bevor sie mit der Einrichtung der Quelle in der Adobe Experience Platform-Benutzeroberfläche beginnen. Dies kann ungefähr sein:*
+*Fügen Sie in diesem Abschnitt Informationen zu allen Dingen hinzu, die Kundinnen und Kunden beachten müssen, bevor Sie die -Quelle in der Benutzeroberfläche von Adobe Experience Platform einrichten. Dies kann sein über:*
 
-* *muss einer Zulassungsliste hinzugefügt werden*
+* *muss zu einer Zulassungsliste hinzugefügt werden*
 * *Anforderungen für E-Mail-Hashing*
-* *alle Kontospezifikationen auf Ihrer Seite*
-* *Abrufen eines API-Schlüssels für die Verbindung mit Ihrer Plattform*
+* *Alle Kontospezifikationen auf Ihrer Seite*
+* *So erhalten Sie einen API-Schlüssel für die Verbindung mit Ihrer Plattform*
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Um *YOURSOURCE* mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung zwischen *YOURSOURCE* und Experience Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| *Berechtigung 1* | *Bitte fügen Sie hier eine kurze Beschreibung zur Authentifizierungsberechtigung Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu* |
-| *credential two* | *Bitte fügen Sie hier eine kurze Beschreibung zur Authentifizierungsberechtigung Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu* |
-| *Berechtigung drei* | *Bitte fügen Sie hier eine kurze Beschreibung zur Authentifizierungsberechtigung Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu* |
+| *Anmeldedaten eins* | *Bitte fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsdaten Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsdaten Ihrer Quelle hinzu* |
+| *Berechtigung zwei* | *Bitte fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsdaten Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsdaten Ihrer Quelle hinzu* |
+| *Berechtigung 3* | *Bitte fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsdaten Ihrer Quelle hinzu* | *Bitte fügen Sie hier ein Beispiel für die Authentifizierungsdaten Ihrer Quelle hinzu* |
 
-Weitere Informationen zu diesen Anmeldedaten finden Sie in der Dokumentation zur Authentifizierung für *YOURSOURCE* . *Fügen Sie hier einen Link zur Authentifizierungsdokumentation Ihrer Plattform hinzu*.
+Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumentation zur *YOURSOURCE*-Authentifizierung . *Fügen Sie hier einen Link zur Authentifizierungsdokumentation Ihrer Plattform hinzu*.
 
 ### Integrieren von *YOURSOURCE* in Ihren Webhook
 
-*Das Streaming-SDK erfordert, dass Ihre Quelle Webhooks unterstützen kann, um mit Experience Platform kommunizieren zu können. In diesem Abschnitt müssen Sie die Schritte angeben, die Ihre Benutzer ausführen müssen, um YOURSOURCE mit einem Webhook zu integrieren.*
+*Streaming-SDK erfordert, dass Ihre Quelle Webhooks unterstützen kann, um mit Experience Platform kommunizieren zu können. In diesem Abschnitt müssen Sie die Schritte angeben, die Ihre Benutzerinnen und Benutzer ausführen müssen, um IHRE QUELLE mit einem Webhook zu integrieren.*
 
 ## Verbinden von *YOURSOURCE* mit Platform mithilfe der [!DNL Flow Service]-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung von *YOURSOURCE* und Erstellen eines Datenflusses, um *YOURSOURCE* -Daten mithilfe der API [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer *YOURSOURCE*-Quellverbindung und zum Erstellen eines Datenflusses, um *YOURSOURCE*-Daten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übertragen.
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Erstellen Sie eine Quellverbindung, indem Sie eine POST-Anfrage an die [!DNL Flow Service] -API richten und dabei die Verbindungsspezifikations-ID Ihrer Quelle, Details wie Name und Beschreibung und das Datenformat angeben.
+Erstellen Sie eine Quellverbindung, indem Sie eine Quellanfrage an die [!DNL Flow Service]-API richten und dabei die Verbindungsspezifikations-ID Ihrer POST, Details wie Name und Beschreibung und das Format Ihrer Daten angeben.
 
 **API-Format**
 
@@ -94,7 +94,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Quellverbindung. Stellen Sie sicher, dass der Name Ihrer Quellverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Quellverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen über Ihre Quellverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
-| `data.format` | Das Format der *YOURSOURCE*-Daten, die Sie erfassen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
+| `data.format` | Das Format der *YOURSOURCE*-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 
 **Antwort**
 
@@ -123,9 +123,9 @@ Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tuto
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die ID der Festnetzverbindungsspezifikation angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
+Sie verfügen jetzt über die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -172,7 +172,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die dem Data Lake entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der *YOURSOURCE* -Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der *YOURSOURCE*-Daten, die Sie an Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -189,7 +189,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung a
 
 ### Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit in der Anfrage-Payload definierten Datenzuordnungen ausgeführt wird.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird durch eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen erreicht, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -252,7 +252,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt beim Übertragen von Daten von *YOURSOURCE* an Platform besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von *YOURSOURCE* an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -303,7 +303,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
-| `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
@@ -326,9 +326,9 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ### Abrufen der Streaming-Endpunkt-URL
 
-Mit dem erstellten Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Sie werden diese Endpunkt-URL verwenden, um Ihre Quelle für einen Webhook zu abonnieren, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
+Nachdem Ihr Datenfluss erstellt wurde, können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Mit dieser Endpunkt-URL abonnieren Sie Ihre Quelle für einen Webhook, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
 
-Um Ihre Streaming-Endpunkt-URL abzurufen, stellen Sie eine GET-Anfrage an den `/flows` -Endpunkt und geben Sie die Kennung Ihres Datenflusses an.
+Um Ihre Streaming-Endpunkt-URL abzurufen, stellen Sie eine GET-Anfrage an den `/flows`-Endpunkt und geben Sie die ID Ihres Datenflusses an.
 
 **API-Format**
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Informationen zu Ihrem Datenfluss zurück, einschließlich Ihrer Endpunkt-URL, die als `inletUrl` markiert ist.
+Bei einer erfolgreichen Antwort werden Informationen zu Ihrem Datenfluss zurückgegeben, einschließlich Ihrer Endpunkt-URL, die als `inletUrl` markiert ist.
 
 ```json
 {
@@ -430,24 +430,24 @@ Eine erfolgreiche Antwort gibt Informationen zu Ihrem Datenfluss zurück, einsch
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses durchführen können.
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aktualisieren des Datenflusses
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows` -Endpunkt der [!DNL Flow Service] -API richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch zum [Aktualisieren der Datenflüsse für Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) .
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows`-Endpunkt [!DNL Flow Service] -API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Konto löschen
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

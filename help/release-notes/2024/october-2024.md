@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, Oktober 2024
 description: Versionshinweise von Oktober 2024 für Adobe Experience Platform.
-source-git-commit: f30a124a40928abf69366d311131e353c2779191
+exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
+source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 25%
@@ -10,7 +11,7 @@ ht-degree: 25%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Mittwoch, 29. Oktober 2024**
+**Veröffentlichungsdatum: 29. Oktober 2024**
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
@@ -23,17 +24,17 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 
 ## Dashboards {#dashboards}
 
-Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke in die Daten Ihres Unternehmens erhalten, wie sie bei täglichen Momentaufnahmen erfasst werden.
+Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Einblicke in die Daten Ihres Unternehmens erhalten, die in täglichen Schnappschüssen erfasst werden.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Data Distiller-Vorlagen | Erkunden Sie mehrere Vorlagen, um strukturierte Einblicke in Zielgruppendaten zu erhalten. Verwenden Sie Dashboards wie **Erweiterte [!UICONTROL Zielgruppenüberschneidungen]**, **[!UICONTROL Zielgruppenvergleich]**, **[!UICONTROL Zielgruppentrends]** und **[!UICONTROL Zielgruppenidentitätsüberschneidungen]**, um datengesteuerte Entscheidungen zu treffen, die Segmentierung zu optimieren und Interaktionsstrategien zu verbessern. Weitere Informationen finden Sie im [Data Distiller Templates-Handbuch](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) . |
-| Erweiterte Zielgruppenüberschneidungen | Analysieren Sie schnell Zielgruppen-Schnittmengen für bestimmte Zielgruppen oder sehen Sie sich alle Überschneidungen an, um wertvolle Einblicke über das gesamte Zielgruppensatz hinweg zu erhalten. Nutzen Sie diese Einblicke, um die Segmentierung zu verfeinern, redundantes Messaging zu reduzieren und zielgerichtetere Kampagnen zu erstellen, um die Marketingeffizienz zu verbessern. Weitere Informationen finden Sie im Handbuch [Erweiterte Zielgruppenüberschneidungen](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) . |
-| Verbesserungen beim Zielgruppenvergleich | Zeigen Sie mithilfe des Dashboards **Zielgruppenvergleich** einen parallelen Vergleich der Schlüsselmetriken zwischen verschiedenen Zielgruppen an. Mit diesem Dashboard können Sie bestimmte Zeitrahmen und KPIs auswählen, z. B. die Zielgruppengröße und die Identitätszusammenstellung, um fundiertere Entscheidungen über Zielgruppensegmentierung und Targeting-Strategien zu treffen. Weitere Informationen finden Sie im [Handbuch zum Zielgruppenvergleich](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) . |
-| Visualisierung von Zielgruppentrends | Analysieren Sie Zielgruppenmetriken im Zeitverlauf mit dem Dashboard **[!UICONTROL Zielgruppentrends]** . Visualisieren Sie Trends für die Zielgruppengröße, die Anzahl der Identitäten und die Anzahl der einzelnen Identitätsprofile, um die Zielgruppenentwicklung zu überwachen, das Wachstum zu messen und Ihre Interaktionsstrategien zu verfeinern. Weitere Informationen finden Sie im Leitfaden [Audience Trends ](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) . |
-| Analyse von Identitätsüberschneidungen | Identitätsüberschneidungen in ausgewählten Zielgruppen analysieren mit dem Dashboard **[!UICONTROL Zielgruppenidentitätsüberschneidungen]** . Zeigen Sie Identitätstrends und -aufschlüsselungen an, um zu verstehen, wie verschiedene Identitätstypen innerhalb Ihrer Zielgruppe zusammenhängen. Dies verbessert die Identitätszuordnung und verbessert die Genauigkeit der Kundensegmentierung. Weitere Informationen finden Sie im Handbuch [Überschneidungen bei Zielgruppenidentitäten](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) . |
+| Data Distiller-Vorlagen | Erkunden Sie mehrere Vorlagen, um strukturierte Einblicke in Zielgruppendaten zu erhalten. Verwenden Sie Dashboards wie **Erweitert [!UICONTROL Zielgruppenüberschneidungen]**, **[!UICONTROL Zielgruppenvergleich]**, **[!UICONTROL Zielgruppentrends]** und **[!UICONTROL Zielgruppenidentitätsüberschneidungen]** um datengesteuerte Entscheidungen zu treffen, die Segmentierung zu optimieren und Interaktionsstrategien zu verbessern. Weitere Informationen finden [ im Handbuch zu Data Distiller](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)Vorlagen . |
+| Erweiterte Zielgruppenüberschneidungen | Analysieren Sie Zielgruppenüberschneidungen schnell für bestimmte Zielgruppen oder sehen Sie sich alle Überschneidungen an, um wertvolle Einblicke in Ihren gesamten Zielgruppensatz zu erhalten. Nutzen Sie diese Erkenntnisse, um die Segmentierung zu verfeinern, redundantes Messaging zu reduzieren und zielgerichtetere Kampagnen für eine verbesserte Marketing-Effizienz zu erstellen. Weitere Informationen finden Sie [ Handbuch ](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) erweiterte Zielgruppenüberschneidungen . |
+| Verbesserungen beim Zielgruppenvergleich | Zeigen Sie mithilfe des Dashboards **Zielgruppenvergleich“ einen Vergleich von Schlüsselmetriken zwischen verschiedenen Zielgruppengruppen**. Mit diesem Dashboard können Sie bestimmte Zeitrahmen und KPIs wie Zielgruppengröße und Identitätszusammensetzung auswählen, um fundiertere Entscheidungen über Zielgruppensegmentierung und Zielgruppenbestimmungsstrategien zu treffen. Weitere Informationen finden [ im Handbuch ](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) Zielgruppenvergleich . |
+| Visualisierung von Zielgruppen-Trends | Analysieren Sie Zielgruppenmetriken im Zeitverlauf mit dem Dashboard **[!UICONTROL Zielgruppentrends]**. Visualisieren Sie Trends für die Zielgruppengröße, die Anzahl der Identitäten und die Anzahl der einzelnen Identitätsprofile, um die Zielgruppenentwicklung zu überwachen, das Wachstum zu messen und Ihre Interaktionsstrategien zu verfeinern. Weitere Informationen finden Sie [ Handbuch ](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) Zielgruppen-Trends . |
+| Analyse der Identitätsüberschneidungen | Analysieren Sie Identitätsüberschneidungen in ausgewählten Zielgruppen mit dem Dashboard **[!UICONTROL Zielgruppenidentitätsüberschneidungen]** . Zeigen Sie Identitätstrends und -aufschlüsselungen an, um zu verstehen, wie verschiedene Identitätstypen innerhalb Ihrer Zielgruppe zusammenhängen, und verbessern Sie so die Identitätszuordnung und die Genauigkeit der Kundensegmentierung. Weitere Informationen finden Sie [ Handbuch zur ](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) von Identitätsüberschneidungen der Zielgruppe . |
 
 {style="table-layout:auto"}
 
@@ -41,17 +42,17 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 ## Datenerfassung {#collection}
 
-Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundenerlebnisdaten erfassen und an das Experience Platform-Edge Network senden können, wo sie angereichert, transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Experience Platform-Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
 
 **Neue Funktionen**
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Tags und Erweiterungen | Adobe Analytics JSON-Ansicht | Sie können jetzt die Adobe Analytics-Tag-Erweiterung verwenden, um eVars-, Props- und Ereigniseinstellungen als JSON zu untersuchen, das jetzt in die Web SDK-Erweiterung aufgenommen und zur Bearbeitung exportiert werden kann. Sie können diese Daten auch hochladen oder kopieren und auf Ihrem Gerät speichern. Weitere Informationen finden Sie in der Dokumentation zur Adobe Analytics-Erweiterung ](../../tags/extensions/client/analytics/overview.md) .[ |
+| Tags und Erweiterungen | Adobe Analytics JSON-Ansicht | Sie können jetzt die Adobe Analytics-Tags-Erweiterung verwenden, um eVars, Props und Ereigniseinstellungen als JSON zu untersuchen, die jetzt in die Web-SDK-Erweiterung aufgenommen und zur Bearbeitung exportiert werden können. Sie können diese Daten auch hochladen oder kopieren und auf Ihrem Gerät speichern. Weitere Informationen finden Sie in der Dokumentation ](../../tags/extensions/client/analytics/overview.md) Erweiterung [Adobe Analytics . |
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Datenerfassung - Übersicht](../../collection/home.md) .
+Weitere Informationen finden Sie im Abschnitt [Übersicht über die Datenerfassung](../../collection/home.md).
 
 ## Ziele {#destinations}
 
@@ -61,9 +62,9 @@ Weitere Informationen finden Sie in der [Datenerfassung - Übersicht](../../coll
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [Array-Exportunterstützung allgemein verfügbar](../../destinations/ui/export-arrays-calculated-fields.md) | Alle Kunden können jetzt die Option **[!UICONTROL Berechnetes Feld hinzufügen]** verwenden, wenn sie Zielgruppen *für dateibasierte Ziele aktivieren*, um ganze Arrays oder Elemente von Arrays zu exportieren. Beachten Sie, dass Sie weiterhin die Funktion `array_to_string` verwenden müssen, um das Array in eine Zeichenfolge in der Zieldatei zu reduzieren. <br> ![Fügen Sie eine berechnete Feldauswahl mit Funktionen und Feldern hinzu.](../2024/assets/october/array-export.gif "Fügen Sie ein berechnetes Feld mit einer Auswahl der Funktion array_to_string und des Organisations-Arrays hinzu."){width="250" align="center" zoomable="yes"} |
-| [Verbesserungen der Berichtsgenauigkeit für Streaming-Ziele](/help/destinations/ui/export-datasets.md) | Ab Oktober 2024 führt Adobe eine Aktualisierung durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Diese Verbesserung sorgt für eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und Zielplattformen. <br> Vor dieser Aktualisierung umfasste **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche. Nach dieser Aktualisierung ist nur der letzte Aktivierungsversuch in der Gesamtanzahl enthalten. <br> Diese Verbesserung gilt derzeit für das Ziel [Google-Kundenabgleich](../../destinations/catalog/advertising/google-customer-match.md), wird jedoch schrittweise für andere Experience Platform-Streaming-Ziele eingeführt. Nach dieser Verbesserung kann es bei Benutzern des Ziels [Google-Kundenabgleich](../../destinations/catalog/advertising/google-customer-match.md) zu einem erwarteten Rückgang der Anzahl der **[!UICONTROL fehlgeschlagenen Identitäten]** kommen. |
-| Flexible Auswirkungen der Zielgruppenbewertung auf die [Batch-Zielgruppenaktivierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Wenn Sie die [flexible Zielgruppenbewertung](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) für Zielgruppen ausführen, die bereits nach der Segmentbewertung aktiviert werden sollen, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenbewertungsauftrag abgeschlossen ist, unabhängig von früheren täglichen Aktivierungsaufträgen. <br> Dies kann dazu führen, dass Zielgruppen mehrmals pro Tag exportiert werden, basierend auf Ihren Aktionen. |
+| [Array-Exportunterstützung allgemein verfügbar](../../destinations/ui/export-arrays-calculated-fields.md) | Alle -Kunden können jetzt die Option **[!UICONTROL Berechnetes Feld hinzufügen]** beim Aktivieren von Zielgruppen *für dateibasierte Ziele* verwenden, um ganze Arrays oder Elemente von Arrays zu exportieren. Beachten Sie, dass Sie weiterhin die Funktion `array_to_string` verwenden müssen, um das Array in der Zieldatei in eine Zeichenfolge zu reduzieren. <br> ![Hinzufügen der berechneten Feldauswahl mit Funktionen und Feldern.](../2024/assets/october/array-export.gif "Fügen Sie ein berechnetes Feld mit einer Auswahl der Funktion array_to_string und dem Array „Organisations“ hinzu."){width="250" align="center" zoomable="yes"} |
+| [Verbesserungen der Berichtsgenauigkeit für Streaming-Ziele](/help/destinations/ui/export-datasets.md) | Ab Oktober 2024 führt Adobe ein Update durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Experience Platform- und der Zielplattform-Berichterstellung sichergestellt. <br> Vor diesem Update wurden bei **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche einbezogen. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen. <br> Diese Verbesserung gilt derzeit für das [Ziel von Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt. Nach dieser Verbesserung kann es bei Benutzenden des [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen. |
+| Auswirkungen der flexiblen Zielgruppenauswertung auf [Batch-Zielgruppenaktivierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Wenn Sie [flexible Zielgruppenauswertung](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) für Zielgruppen ausführen, die bereits nach der Segmentauswertung aktiviert werden sollen, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenauswertungsauftrag abgeschlossen ist, unabhängig von vorherigen täglichen Aktivierungsaufträgen. <br> Dies kann dazu führen, dass Zielgruppen basierend auf Ihren Aktionen mehrmals täglich exportiert werden. |
 
 {style="table-layout:auto"}
 
@@ -77,26 +78,26 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung | Flexible Zielgruppenevaluierung ermöglicht Ihnen, schnell neue Zielgruppen auf Anforderung für zeitkritische Kommunikation zu erstellen. Weitere Informationen zu dieser neuen Funktion finden Sie in der [Dokumentation zu Audience Portal](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) . |
+| [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung | Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf schnell neue Zielgruppen für zeitkritische Kommunikation erstellen. Weitere Informationen zu dieser neuen Funktion finden Sie in der [Audience Portal-Dokumentation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md).
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie unter [Segmentierung - Übersicht](../../segmentation/home.md).
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dies zu erreichen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Freigabe von Sandbox-Toolkits | Sie können jetzt Sandbox-Tools verwenden, um Sandbox-Konfigurationen zwischen Sandboxes mühelos unternehmensübergreifend zu exportieren und zu importieren. Es sind jetzt zwei Kategorien von freigegebenen Paketen verfügbar:<br><ul><li>**[Privates Paket](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Verwenden Sie die private Paketfreigabe für Organisationen, die die Freigabeanforderung von der Quellorganisation genehmigt haben.</li><li>**[Öffentliches Paket](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** Öffentliche Pakete können ohne zusätzliche Genehmigungen freigegeben werden und können einfach mit der Payload des Pakets importiert werden.</li></ul><br>Weiterführende Informationen zu diesen Funktionen finden Sie im Handbuch zum Thema [Freigeben von Paketen in Unternehmen](../../sandboxes/ui/sharing-packages-across-orgs.md). |
-| [Paketfreigabe](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in der Sandbox-Tool-API | Verwenden Sie die Sandbox-Tool-API, um Anforderungen an zwei neue Endpunkte zu senden: `/handshake` und `/transfer` für die unternehmensübergreifende Freigabe, den Abruf und die Erstellung von Anfragen zur Paketfreigabe. Dem `/packages` -Endpunkt wurde eine zusätzliche Anfrage hinzugefügt, um die Payload eines Pakets abzurufen. |
+| Sandbox-Tooling-Paketfreigabe | Sie können jetzt Sandbox-Tools verwenden, um Sandbox-Konfigurationen zwischen Sandboxes über verschiedene Organisationen hinweg einfach zu exportieren und zu importieren. Es sind jetzt zwei Kategorien von freigegebenen Paketen verfügbar:<br><ul><li>**[Privates Paket](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Verwenden Sie die private Paketfreigabe für Organisationen, die die Freigabeanfrage von der Quellorganisation genehmigt haben.</li><li>**[Öffentliches Paket](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** Öffentliche Pakete können ohne zusätzliche Genehmigungen freigegeben werden und können einfach über die Payload des Pakets importiert werden.</li></ul><br>Weitere Informationen zu diesen Funktionen finden Sie im Handbuch zum [Freigeben von Paketen in Unternehmen](../../sandboxes/ui/sharing-packages-across-orgs.md). |
+| [Package-Freigabe](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in der Sandbox-Tooling-API | Verwenden Sie die Sandbox-Tooling-API , um Anfragen an zwei neue Endpunkte zu senden: `/handshake` und `/transfer` für die organisationsübergreifende Freigabe, den Abruf und die Erstellung von Anfragen zur Paketfreigabe. Dem `/packages`-Endpunkt wurde eine zusätzliche Anfrage hinzugefügt, um die Payload eines Pakets abzurufen. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Quellen {#sources}
 
@@ -108,7 +109,7 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für das Filtern von standardmäßigen Aktivitätsentitäten in [!DNL Marketo Engage] | Sie können die [!DNL Flow Service] -API verwenden, um bei der Aufnahme von Daten aus Ihrer [!DNL Marketo Engage]-Quelle die standardmäßigen Aktivitätsentitäten zu filtern. Lesen Sie das Handbuch zum [Filtern [!DNL Marketo] standardmäßiger Aktivitätsdaten](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) , um weitere Informationen zu erhalten. |
+| Unterstützung für das Filtern von standardmäßigen Aktivitätsentitäten in [!DNL Marketo Engage] | Sie können die [!DNL Flow Service]-API verwenden, um bei der Aufnahme von Daten aus Ihrer [!DNL Marketo Engage] Aktivitätsentitäten nach Standard-Aktivitätsentitäten zu filtern. Weitere Informationen finden Sie im Handbuch [Filtern [!DNL Marketo] standardmäßige ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)). |
 
 {style="table-layout:auto"}
 

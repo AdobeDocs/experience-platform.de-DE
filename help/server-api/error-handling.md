@@ -1,6 +1,6 @@
 ---
 title: Umgang mit Fehlern
-description: Erfahren Sie mehr über die möglichen Fehler, die bei der Ausführung von API-Anfragen an die Adobe Experience Platform Edge Network Server-API auftreten können.
+description: Erfahren Sie mehr über die möglichen Fehler, auf die Sie beim Ausführen von API-Anfragen an die Adobe Experience Platform Edge Network Server-API stoßen können.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
 source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
@@ -13,49 +13,49 @@ ht-degree: 9%
 
 ## Übersicht {#overview}
 
-API-Fehler in der Adobe Experience Platform Edge Network Server-API können verschiedene Ursachen haben: interne (Edge Network selbst) oder externe (Eingabe, Konfiguration oder vorgelagerte Beziehung).
+API-Fehler in der Adobe Experience Platform Edge Network Server-API können verschiedene Ursachen haben: intern (Edge Network selbst) oder extern (Eingabe, Konfiguration oder Upstream-bezogene).
 
 ## Fehlertypen {#error-types}
 
 | Fehler | Typ | Beschreibung | Status-Code |
 | --- | --- | --- | --- |
-| `RequestProcessingError` | intern | Allgemeiner Zweckfehler, der vom Adobe Experience Platform-Edge Network bei unerwarteten Umständen ausgegeben wurde. | `500` |
-| `InputError` | Externe | Enthält Fehler, die durch fehlerhafte Eingabe verursacht wurden, sowie Entitätsvalidierungsfehler. | `4xx` |
-| `ConfigurationError` | Externe | Serverseitige Konfigurationsfehler. | `422` |
-| `UpstreamError` | Externe | Kommunikationsfehler bei Upstream-Diensten. | `207 Multi-Status` |
+| `RequestProcessingError` | Intern | Allgemeiner Fehler, der vom Adobe Experience Platform-Edge Network unter unerwarteten Umständen ausgegeben wurde. | `500` |
+| `InputError` | Extern | Umfasst Fehler, die durch fehlerhafte Eingabe verursacht werden, sowie Fehler bei der Entitätsvalidierung. | `4xx` |
+| `ConfigurationError` | Extern | Server-seitige Konfigurationsfehler. | `422` |
+| `UpstreamError` | Extern | Kommunikationsfehler mit Upstream-Services. | `207 Multi-Status` |
 
 ## Schweregrad
 
-Server-API-Fehler können auch nach Schweregrad aufgeteilt werden:
+Server-API-Fehler können auch nach Schweregrad unterteilt werden:
 
 * **Schwerwiegende Fehler** stoppt die Dispatch-Pipeline.
-* **Nicht tödliche Fehler** konnten eine partielle Verarbeitung signalisieren, während die Anforderungsverarbeitung fortgesetzt werden konnte.
-   * Wenn vorhanden, wird der Gesamtstatuscode der Anfrage in `207 Multi-Status` geändert.
+* **Nicht schwerwiegende Fehler** können eine teilweise Verarbeitung signalisieren, während die Anforderungsverarbeitung fortgesetzt werden kann.
+   * Wenn vorhanden, wird der Gesamtstatus-Code der Anfrage in `207 Multi-Status` geändert.
 
 | Fehler | Typ | Bemerkungen          |
 | --- | --- | --- |
-| `RequestProcessingError` | Tödlich | Kann jederzeit während der Anforderungsverarbeitung erfolgen. |
-| `InputError` | Tödlich | Tritt auf, wenn die Anfrage akzeptiert wird, bevor sie in einem vorgelagerten Schritt gesendet wird. |
-| `ConfigurationError` | Tödlich | Tritt auf, wenn die Anfrage akzeptiert wird, bevor sie in einem vorgelagerten Schritt gesendet wird. |
-| `UpstreamError` | Nicht tödlich | Kommunikationsfehler bei Upstream-Diensten. |
+| `RequestProcessingError` | FATAL | Kann während der Anfrageverarbeitung jederzeit passieren. |
+| `InputError` | FATAL | Dies geschieht, wenn die Anfrage akzeptiert wird, bevor sie an den Upstream gesendet wird. |
+| `ConfigurationError` | FATAL | Dies geschieht, wenn die Anfrage akzeptiert wird, bevor sie an den Upstream gesendet wird. |
+| `UpstreamError` | Nicht tödlich | Kommunikationsfehler mit Upstream-Services. |
 
 ### Schwerwiegende Fehler {#fatal-errors}
 
-Schwerwiegende Fehler stoppen die Anforderungsverarbeitung und führen zur Rückgabe des Nicht-2xx-Antwortstatus. Sehen Sie sich den Abschnitt [Fehlertypen](#error-types) an, um den erwarteten Statuscode für jeden Fehlertyp anzuzeigen.
+Schwerwiegende Fehler unterbrechen die Anfrageverarbeitung und führen dazu, dass ein Nicht-2xx-Antwortstatus zurückgegeben wird. Sehen Sie sich den [Fehlertypen](#error-types) an, um den erwarteten Status-Code für jeden Fehlertyp anzuzeigen.
 
-Fehler werden von einem Antworttext begleitet, der ein Fehlerobjekt enthält. In diesem Fall enthält der Antworttext ein Problemdetail gemäß der Definition in [RFC 7807-Problemdetails für HTTP-APIs](https://tools.ietf.org/html/rfc7807).
+Zu Fehlern wird ein Antworttext mit einem Fehlerobjekt hinzugefügt. In diesem Fall enthält der Antworttext ein Problemdetail, wie in [RFC 7807 Problemdetails für HTTP-APIs](https://tools.ietf.org/html/rfc7807) definiert.
 
-Der zurückgegebene Inhaltstyp ist der Medientyp `application/problem+json` . Sofern vorhanden, enthält diese Antwort maschinenlesbare Details zum Fehler. Zu den Problemdetails zählen URI-Typen.
+Der zurückgegebene Inhaltstyp ist der `application/problem+json` Medientyp. Wenn vorhanden, enthält diese Antwort maschinenlesbare Details zum Fehler. Zu den Problemdetails gehört ein URI-Typ.
 
-Alle Fehlerobjekte verfügen über die Nachrichteneigenschaften `type`, `status`, `title`, `detail` und `report`, sodass der API-Client erkennen kann, welches Problem vorliegt.
+Alle Fehlerobjekte verfügen über die Eigenschaften &quot;`type`&quot;, &quot;`status`&quot;, &quot;`title`&quot;, &quot;`detail`&quot; und &quot;`report`&quot;, sodass der API-Client feststellen kann, wo das Problem liegt.
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ------ | ----------- |
-| `type` | Zeichenfolge | Eine URI-Referenz (RFC3986), die den Problemtyp identifiziert, gefolgt vom Format `https://ns.adobe.com/aep/errors/<ERROR-CODE>`. |
+| `type` | Zeichenfolge | Eine URI-Referenz (RFC3986), die den Problemtyp identifiziert und dem Format `https://ns.adobe.com/aep/errors/<ERROR-CODE>` folgt. |
 | `status` | Zahl | Der vom Server für dieses Auftreten des Problems generierte HTTP-Status-Code. |
-| `title` | Zeichenfolge | Eine kurze, für Menschen lesbare Zusammenfassung des Problemtyps. |
-| `detail` | Zeichenfolge | Eine kurze, für Menschen lesbare Beschreibung des Problemtyps. |
-| `report` | Objekt | Eine Zuordnung von zusätzlichen Eigenschaften, die das Debugging unterstützen, z. B. die Anfrage-ID oder die Organisations-ID. In einigen Fällen kann er Daten enthalten, die für den jeweiligen Fehler spezifisch sind, z. B. eine Liste mit Validierungsfehlern. |
+| `title` | String | Eine kurze, für Menschen lesbare Zusammenfassung des Problemtyps. |
+| `detail` | String | Eine kurze, für Menschen lesbare Beschreibung des Problemtyps. |
+| `report` | Objekt | Eine Zuordnung zusätzlicher Eigenschaften, die beim Debugging helfen, z. B. die Anfrage-ID oder die Organisations-ID. In einigen Fällen kann sie Daten enthalten, die für den jeweiligen Fehler spezifisch sind, z. B. eine Liste mit Validierungsfehlern. |
 
 ```json
 {
@@ -75,18 +75,18 @@ Alle Fehlerobjekte verfügen über die Nachrichteneigenschaften `type`, `status`
 }
 ```
 
-### Nicht tödliche Fehler {#non-fatal-errors}
+### Nicht schwerwiegende Fehler {#non-fatal-errors}
 
-Nicht-tödliche Fehler können weiter aufgeschlüsselt werden in:
+Nicht schwerwiegende Fehler können weiter unterteilt werden in:
 
-* Fehler: Probleme, die während der Verarbeitung der Anfrage aufgetreten sind, aber nicht dazu geführt haben, dass die gesamte Anfrage abgelehnt wurde (z. B. nicht kritische Upstream-Fehler).
-* Warnungen: Nachrichten von Upstream-Diensten, die darauf hinweisen könnten, dass die Anfrage teilweise verarbeitet wurde.
+* Fehler: Probleme, die bei der Verarbeitung der Anfrage aufgetreten sind, aber nicht dazu geführt haben, dass die gesamte Anfrage abgelehnt wurde (z. B. ein nicht kritischer Fehler im Vorfeld).
+* Warnungen: Nachrichten von Upstream-Services, die darauf hinweisen können, dass eine teilweise Verarbeitung der Anfrage stattgefunden hat.
 
-Bei nicht tödlichen Fehlern (ohne Warnungen) ändert der [!DNL Server API] den Antwortstatus auf `207 Multi-Status`.
+Wenn nicht schwerwiegende Fehler (außer Warnungen) auftreten, ändert der [!DNL Server API] den Antwortstatus in `207 Multi-Status`.
 
-Warnungen hingegen sind meist informativ, da sie im Allgemeinen eine potenziell vorübergehende Bedingung darstellen, die sich nicht vollständig auf die Anfrage auswirkte. Ein Beispiel hierfür ist ein Teilprofil, das in der Segmentierungsmaschine gelesen wird. In diesem Fall hat die Genauigkeit bis zu einem gewissen Grad Auswirkungen, die Funktionalität wird jedoch weiterhin bereitgestellt.
+Warnhinweise sind dagegen meist informativ, da sie in der Regel eine potenziell vorübergehende Bedingung darstellen, die sich nicht in vollem Umfang auf die Anfrage ausgewirkt hat. Ein Beispiel hierfür ist ein in der Segmentierungs-Engine gelesenes Teilprofil. In diesem Fall wird die Genauigkeit etwas beeinträchtigt, die Funktionalität wird jedoch weiterhin bereitgestellt.
 
-Fehler, die nicht tödlich sind, werden im Format _Problemdetails_ dargestellt, sind jedoch direkt in die Standardantwort des Edge-Gateways eingebettet, die vom Typ `application/json` ist.
+Nicht schwerwiegende Fehler werden im Format _Problemdetails_ dargestellt, sind jedoch direkt in die Standardantwort des Edge-Gateways vom Typ `application/json` eingebettet.
 
 ```json
 {
@@ -116,13 +116,13 @@ Fehler, die nicht tödlich sind, werden im Format _Problemdetails_ dargestellt, 
 }
 ```
 
-## Umgang mit `4xx` und `5xx` Antworten
+## Umgang mit `4xx`- und `5xx`
 
 | Fehler-Code | Beschreibung |
 |---|---|
-| `4xx Bad Request` | Die meisten `4xx`-Fehler wie 400, 403, 404 sollten nicht im Namen des Clients wiederholt werden, mit Ausnahme von `429`. Dies sind Client-Fehler und werden nicht erfolgreich sein. Der Client muss den Fehler beheben, bevor die Anfrage erneut versucht werden kann. |
-| `429 Too Many Requests` | `429` HTTP-Antwortcode zeigt an, dass das Adobe Experience Platform-Edge Network oder ein Upstream-Dienst die Rate begrenzt. In diesem Fall muss der Aufrufer in einem solchen Szenario die Antwort-Kopfzeile `Retry-After` berücksichtigen. Jede Antwort, die zurückgegeben wird, muss den HTTP-Antwort-Code mit einem Domain-spezifischen Fehler-Code enthalten. |
-| `500 Internal Server Error` | `500`-Fehler sind generische, allgemeingültige Fehler. Fehler vom Typ `500` dürfen nicht wiederholt werden, mit Ausnahme von `502` und `503`. Intermediäre müssen mit einem `500` -Fehler antworten und können mit einem allgemeinen Fehlercode/einer allgemeinen Fehlermeldung oder einem domänenspezifischeren Fehlercode/einer domänenspezifischen Fehlermeldung reagieren. |
-| `502 Bad Gateway` | Gibt an, dass das Adobe Experience Platform-Edge Network eine ungültige Antwort von Upstream-Servern erhalten hat. Hierzu kann es aufgrund von Netzwerkproblemen zwischen Servern kommen. Das temporäre Netzwerkproblem kann möglicherweise gelöst werden, sodass ein erneuter Versuch das Problem beheben kann, sodass Empfänger von `502` -Fehlern die Anfrage nach einiger Zeit erneut versuchen können. |
-| `503 Service Unavailable` | Dieser Fehler-Code gibt an, dass der Service vorübergehend nicht verfügbar ist. Hierzu kann es während Wartungszeiträumen kommen. Empfänger von `503` -Fehlern können die Anfrage möglicherweise erneut versuchen, müssen jedoch die `Retry-After` -Kopfzeile berücksichtigen. |
-| `504 Gateway Timeout` | Gibt an, dass bei Adobe Experience Platform-Edge Network-Anfragen an die Upstream-Server eine Zeitüberschreitung aufgetreten ist. Dies kann aufgrund von Netzwerkproblemen zwischen Servern, DNS-Problemen oder anderen Netzwerkproblemen auftreten. Die temporären Netzwerkprobleme können nach einiger Zeit behoben werden und ein erneuter Versuch kann das Problem lösen. |
+| `4xx Bad Request` | Die meisten `4xx` Fehler, z. B. 400, 403, 404, sollten nicht im Namen des Clients erneut versucht werden, mit Ausnahme von `429`. Hierbei handelt es sich um Clientfehler, die nicht erfolgreich sind. Der Client muss den Fehler beheben, bevor er die Anfrage erneut versuchen kann. |
+| `429 Too Many Requests` | `429` HTTP-Antwort-Code gibt an, dass das Adobe Experience Platform-Edge Network oder ein vorgelagerter Service die Rate einschränkt, mit der die Anfragen verarbeitet werden. In diesem Fall muss der Aufrufer in einem solchen Fall die `Retry-After`-Antwortkopfzeile beachten. Jede Antwort, die zurückgegeben wird, muss den HTTP-Antwort-Code mit einem Domain-spezifischen Fehler-Code enthalten. |
+| `500 Internal Server Error` | `500`-Fehler sind generische, allgemeingültige Fehler. `500` Fehler dürfen nicht erneut versucht werden, mit Ausnahme von `502` und `503`. Die Vermittler müssen mit einem `500` Fehler antworten und können mit einem allgemeinen Fehlercode/einer allgemeinen Fehlermeldung oder einem eher Domain-spezifischen Fehlercode/einer Fehlermeldung antworten. |
+| `502 Bad Gateway` | Gibt an, dass das Adobe Experience Platform-Edge Network eine ungültige Antwort von den Upstreamservern erhalten hat. Hierzu kann es aufgrund von Netzwerkproblemen zwischen Servern kommen. Das temporäre Netzwerkproblem kann möglicherweise behoben werden, sodass das Problem möglicherweise durch einen erneuten Versuch behoben wird. Empfangende `502` Fehler können die Anfrage daher nach einiger Zeit erneut ausführen. |
+| `503 Service Unavailable` | Dieser Fehler-Code gibt an, dass der Service vorübergehend nicht verfügbar ist. Hierzu kann es während Wartungszeiträumen kommen. Empfänger `503` Fehler können die Anfrage wiederholen, müssen jedoch die `Retry-After`-Kopfzeile beachten. |
+| `504 Gateway Timeout` | Gibt an, dass die Adobe Experience Platform-Edge Network-Anfrage an die Upstream-Server abgelaufen ist. Dies kann aufgrund von Netzwerkproblemen zwischen Servern, DNS-Problemen oder anderen Netzwerkproblemen passieren. Die temporären Netzwerkprobleme können nach einiger Zeit behoben werden, und ein erneuter Versuch kann das Problem beheben. |

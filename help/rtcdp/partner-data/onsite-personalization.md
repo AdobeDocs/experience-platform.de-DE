@@ -1,5 +1,5 @@
 ---
-title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung
+title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
@@ -10,7 +10,7 @@ ht-degree: 89%
 
 ---
 
-# Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung
+# Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung
 
 >[!AVAILABILITY]
 >
@@ -20,13 +20,13 @@ Erfahren Sie, wie Sie die partnergestützte Erkennung nutzen können, um den Bes
 
 ![Eine Infografik, die beschreibt, wie Sie mit von Partnern bereitgestellten Attributen personalisierte Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
-## Warum sollten Sie diesen Anwendungsfall beachten? {#why-this-use-case}
+## Gründe für diesen Anwendungsfall {#why-this-use-case}
 
-Die Fragmentierung digitaler Erlebnisse, während Verbraucher mit Marken interagieren, ist sehr real und wird immer schwieriger zu lösen. Die besten Kundeninteraktionsstrategien für kohärente Erlebnisse, zielgerichtete Empfehlungen und maßgeschneiderte Interaktionen werden durch die Benutzererkennung eingeschränkt.
+Die Fragmentierung digitaler Erlebnisse, da Verbraucher auf unzählige Arten mit Marken interagieren, ist sehr real und wird immer schwieriger zu lösen. Die besten Strategien zur Kundeninteraktion für kohärente Erlebnisse, zielgerichtete Empfehlungen und maßgeschneiderte Interaktionen werden durch die Erkennung der Benutzer eingeschränkt.
 
-Hier kann die von Partnern unterstützte Echtzeit-Erkennung einen entscheidenden Unterschied machen. Mit Adobe können Identitätspartner unsere ausgereiften clientseitigen Datenerfassungs- und marktführenden Erlebnisoptimierungsangebote einbinden, um die Abkürzung für die Bereitstellung von Erlebnissen ab dem ersten Besuch effektiv zu erhöhen, ohne dass zuvor ein Verlauf oder eine Authentifizierung erfolgt ist.
+Hier kann die partnergestützte Echtzeit-Erkennung einen bedeutenden Unterschied machen. Adobe ermöglicht Identitätspartnern, sich in unsere ausgereiften Client-seitigen Datenerfassungs- und marktführenden Erlebnisoptimierungsangebote einzubinden, um die Messlatte für die Bereitstellung von Erlebnissen ab dem ersten Besuch effektiv zu erhöhen, ohne dass ein Vorgeschichte oder eine Authentifizierung erforderlich ist.
 
-Dies ist besonders nützlich für Vertikale mit niedrigen Authentifizierungsraten, wie z. B. für Consumer Packaged Goods, Online-Einzelhandel und mehr.
+Dies ist besonders für Vertikale mit niedrigen Authentifizierungsraten nützlich, wie Konsumgüter, Online-Einzelhandel und mehr.
 
 ## Branchenbeispiel {#industry-example}
 
@@ -39,7 +39,7 @@ Diese Marke hat sich für eine Technologie zur Partnererkennung entschieden, um 
 Wenn Sie planen, von Partnern bereitgestellte Attribute zu verwenden, um Ihren authentifizierten und nicht authentifizierten Besucherinnen und Besuchern personalisierte Erlebnisse zu bieten, sollten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess berücksichtigen:
 
 * Welche Eingaben erwartet die Erkennungstechnologie Ihres Partners, damit zusätzliche Attribute hinzugefügt werden können?
-* Inwieweit können Sie Personalisierungen in verschiedenen Kanälen und für verschiedene Anwendungsfälle bereitstellen, die auf probabilistisch abgeleiteten Datensätzen basieren, im Vergleich zu deterministisch bestätigten Attributen?
+* In welchem Umfang sind Sie mit der Bereitstellung von Personalisierung in verschiedenen Kanälen und für verschiedene Anwendungsfälle, die auf probabilistisch abgeleiteten Datensätzen basieren, vertraut, im Vergleich zu deterministisch bestätigten Attributen?
 * Wie sollte sich das Erlebnis für vorauthentifizierte, aber erkannte Besucherinnen und Besucher bei der Authentifizierung ändern?
 
 ### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
@@ -60,9 +60,9 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
    * [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (oder eine von Ihnen ausgewählte Personalisierungsplattform. In diesem Anwendungsbeispiel wird Adobe Target als Personalisierungs-Engine hervorgehoben)
 
-## Videoeinführung {#video-walkthrough}
+## Videoanleitung {#video-walkthrough}
 
-Sehen Sie sich das Video-Tutorial unten an, um eine exemplarische Vorgehensweise zum Personalisieren von Onsite-Erlebnissen für unbekannte Besucher zu erhalten:
+Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise zur Personalisierung von Onsite-Erlebnissen für unbekannte Besucher zu erhalten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
@@ -209,7 +209,7 @@ Benennen Sie das Datenelement `partnerData`, belassen Sie den Wert [!UICONTROL E
 
 Um das zweite Datenelement einzurichten, benennen Sie die neue Variable `pageVisit`, setzen Sie die **[!UICONTROL Erweiterung]** auf **[!UICONTROL Adobe Experience Platform]** und wählen Sie als den Datentyp **[!UICONTROL XDM-Objekt]** aus.
 
-![Markierte Auswahlen zur korrekten Konfiguration des Datenelements &quot;pageVisit&quot;.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Hervorgehobene Auswahlen, um das Datenelement „pageVisit“ korrekt zu konfigurieren.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 Wählen Sie im Schema die Attribute von Drittanbietern aus, die den Werten entsprechen, die Sie vom Datenpartner erwarten. Wählen Sie dann das Optionsfeld mit dem Titel **[!UICONTROL Gesamtes Objekt bereitstellen]** aus. Klicken Sie auf das Symbol, das wie eine Datenbank aussieht, und wählen Sie das `partnerData`-Datenelement aus, das Sie zuvor erstellt haben.
 
@@ -257,13 +257,13 @@ Geben Sie `interact` in das Suchfeld ein, aktualisieren Sie die Seite, und Sie s
 
 Jetzt können Sie Zielgruppen für die Personalisierung erstellen und aktivieren.
 
-#### Erstellen der Zielgruppe und Einrichten der Kantensegmentierung
+#### Erstellen einer Zielgruppe und Einrichten der Edge-Segmentierung
 
-Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um Ihre Website-Besucher zu erfassen.
+Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um die Besucher Ihrer Website zu erfassen.
 
-![Ansicht, wie Sie zu Zielgruppen navigieren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Ansicht der Navigation zu Audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Sie müssen Ihre Zielgruppe mit [Kantensegmentierung](/help/segmentation/ui/edge-segmentation.md) einrichten, damit die Zielgruppenzugehörigkeit Ihrer Besucher beim Besuch Ihrer Webeigenschaft in Echtzeit ausgewertet wird.
+Sie müssen Ihre Zielgruppe mit [Edge-Segmentierung](/help/segmentation/ui/edge-segmentation.md) einrichten, damit die Zielgruppenzugehörigkeit Ihrer Besucher in Echtzeit ausgewertet wird, wenn sie Ihre Web-Eigenschaft besuchen.
 
 Stellen Sie sicher, dass auch eine [„Active-On-Edge“-Zusammenführungsrichtlinie](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) für die Edge-Zielgruppen eingerichtet ist.
 
@@ -287,4 +287,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
-* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

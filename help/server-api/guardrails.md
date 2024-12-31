@@ -1,6 +1,6 @@
 ---
 title: Leitlinien für die Performance der Edge Network Server-API
-description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
+description: Erfahren Sie, wie Sie die Server-API in Leitplanken für optimale Leistung verwenden.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
 source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
@@ -14,68 +14,68 @@ ht-degree: 5%
 
 ## Übersicht {#overview}
 
-Leistungsgarantien definieren Nutzungsbeschränkungen im Zusammenhang mit Anwendungsfällen Ihrer Server-API. Eine Überschreitung der in diesem Artikel beschriebenen Leistungsgarantien könnte zu einer Leistungsbeeinträchtigung führen.
+Die Leistung betreffende Leitplanken definieren Nutzungsbeschränkungen für Ihre Server-API-Anwendungsfälle. Das Überschreiten der in diesem Artikel beschriebenen Leistungsschutzmechanismen kann zu Leistungseinbußen führen.
 
-Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch überschrittene Nutzungsbeschränkungen verursacht werden. Kunden, die die Leistungsgarantien konsequent überschreiten, können zusätzliche Verarbeitungskapazität anfordern, um eine Leistungsbeeinträchtigung zu vermeiden.
+Adobe ist nicht für Leistungseinbußen verantwortlich, die durch Überschreitung von Nutzungsbeschränkungen verursacht werden. Kunden, die die Leistungsleitplanken konsequent überschreiten, können zusätzliche Verarbeitungskapazität anfordern, um eine Leistungsbeeinträchtigung zu vermeiden.
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
-Alle auf dieser Seite beschriebenen Leistungsgarantien gelten für die IMS-Organisation. Für Benutzer mit mehreren konfigurierten IMS-Organisationen unterliegt jede Organisation den nachstehenden Leistungsgarantien. Weitere Informationen zu [!DNL IMS Organizations] finden Sie im [Experience Platform-Glossar](../landing/glossary.md) .
+Alle auf dieser Seite beschriebenen Leistungs-Schutzmechanismen gelten auf der Ebene der IMS-Organisation. Für Benutzende mit mehreren konfigurierten IMS-Organisationen unterliegt jede Organisation einzeln den unten stehenden Leistungsschutzmechanismen. Weitere Informationen zu ](../landing/glossary.md) finden Sie im [Experience Platform-Glossar[!DNL IMS Organizations].
 
 ## Definitionen
 
-* **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Platform-Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
-* **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-Minuten-Intervalle in einem Monat berechnet.
-* Ein **Upstream** ist ein Dienst hinter dem Edge Network, der für einen bestimmten Datastream aktiviert ist, z. B. Adobe Server Side Forwarding, Adobe Edge Segmentation oder Adobe Target.
-* Eine **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem für einen Datastream vorkonfigurierten vorgelagerten Fragment.
-* Eine **Anfrage** ist eine einzelne Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API] gesendet wird. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
-* Ein **error** ist eine Anforderung, die aufgrund eines Edge Networks [internal service error](error-handling.md) fehlschlägt.
+* **Verfügbarkeit** wird für jedes Fünf-Minuten-Intervall als Prozentsatz der vom Experience Platform-Edge Network verarbeiteten Anfragen berechnet, die nicht fehlerhaft sind und sich nur auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünf-Minuten-Intervall keine Anfragen gestellt hat, gilt dieses Intervall als 100 % verfügbar.
+* **Monthly Uptime Percentage** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-Minuten-Intervalle in einem Monat berechnet.
+* Ein **Upstream** ist ein Service hinter dem Edge Network, der für einen bestimmten Datenstrom aktiviert ist, z. B. Adobe-Server-seitige Weiterleitung, Adobe Edge-Segmentierung oder Adobe Target.
+* Eine **Anfrageeinheit** entspricht einem 8 KB großen Fragment einer Anfrage und einem für einen Datenstrom vorkonfigurierten Fragment.
+* Eine **Anfrage** ist eine einzelne Nachricht, die von einem kundeneigenen Programm an die [!DNL Server API] gesendet wird. Eine Anfrage kann eine oder mehrere Anfrageeinheiten enthalten.
+* Ein **Fehler** ist jede Anfrage, die aufgrund eines Edge Networks [Interner Service-Fehler](error-handling.md) fehlschlägt.
 
-## Dienstbeschränkungen
+## Service-Beschränkungen
 
-Alle Datastreams erzwingen bestimmte Nutzungsbeschränkungen, die hauptsächlich steuern, wie viele Ereignisse gleichzeitig gesendet werden können, wie ihre Größe und die Anzahl der Upstream-Dienste, an die diese Anfragen weitergeleitet werden.
+Alle Datenströme erzwingen bestimmte Nutzungsbeschränkungen, die hauptsächlich steuern, wie viele Ereignisse gleichzeitig gesendet werden können, ihre Größe und die Anzahl der Upstream-Services, an die diese Anfragen weitergeleitet werden.
 
-### Anfrageeinheiten
+### Einheiten anfordern
 
-Alle Beschränkungen werden über eine **Anfrageeinheit (RU)** angewendet und normalisiert, die als **8-KB-Fragment** einer Anforderung für einen in einem Datastream konfigurierten Upstream-Dienst definiert ist.
+Alle Limits werden über eine **Anfrageeinheit (RU)) angewendet und normalisiert** die als **8 KB-Fragment** einer Anfrage definiert ist, die an einen Upstream-Service gesendet wird, der in einem Datenstrom konfiguriert ist.
 
 #### Beispiele
 
-| Nach Datastream konfigurierte Upstreams | Durchschnittliche Anforderungsgröße | Anfrageeinheiten |
+| Für jeden Datenstrom konfigurierte Upstreams | Durchschnittliche Anfragengröße | Einheiten anfordern |
 | --- | --- | --- |
-| 1 (Adobe Platform) | 8 KB (1 Fragment) | 1 |
-| 2 (Adobe Platform, Adobe Target) | 8 KB (1 Fragment) | 2 |
-| 2 (Adobe Platform, Adobe Target) | 16 KB (2 Fragmente) | 4 |
-| 2 (Adobe Platform, Adobe Target) | 64 KB (8 Fragmente) | 16 |
+| 1 (Adobe-Plattform) | 8 KB (1 Fragment) | 1 |
+| 2 (Adobe-Plattform, Adobe Target) | 8 KB (1 Fragment) | 2 |
+| 2 (Adobe-Plattform, Adobe Target) | 16 KB (2 Fragmente) | 4 |
+| 2 (Adobe-Plattform, Adobe Target) | 64 KB (8 Fragmente) | 16 |
 
-### Einschränkungen für Anfrageeinheiten
+### Limits für Anforderungseinheiten
 
-Die folgende Tabelle zeigt die Standardgrenzwerte. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie höhere Anforderungseinheiten benötigen.
+Die nachstehende Tabelle zeigt die standardmäßigen Grenzwerte. Wenn Sie höhere Limits für Anfrageeinheiten benötigen, wenden Sie sich an Ihren Kundenbetreuer.
 
-| Endpunkt | Anforderungen von Einheiten pro Sekunde |
+| Endpunkt | Anforderungseinheiten pro Sekunde |
 | --- | --- |
 | `/v2/interact` | 4.000 |
 | `/v2/collect` | 6000 |
 
-### HTTP-Anfragegrößenbeschränkung
+### Größenbeschränkung für HTTP-Anfragen
 
-| Payload-Format | Maximale Größe für eine Anforderung | Max. 8 KB Anforderungsfragmente |
+| Payload-Format | Maximale Größe einer Anfrage | Max. 8 KB Anfragefragmente |
 | --- | --- | --- |
-| JSON-Klartext | 64 KB | 8 |
+| JSON-Nur-Text | 64 KB | 8 |
 
 
 >[!NOTE]
 >
->Abhängig von der Payload selbst sind die binären Formate im Allgemeinen 20-40 % kompakter, sodass Sie mehr Daten als im Nur-Text-JSON übertragen können. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie eine höhere Kapazität für Ihre Datenspeicher benötigen.
+>Je nach Payload sind Binärformate im Allgemeinen 20-40 % kompakter, sodass Sie mehr Daten pushen können als in Nur-Text-JSON. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie eine höhere Kapazität für Ihre Datenströme benötigen.
 
 ## Nächste Schritte
 
-Weitere Informationen zu anderen Limits für Experience Platform-Services, End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP Product Description-Dokumenten finden Sie in der folgenden Dokumentation:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
 
-* [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
-* [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -15,7 +15,7 @@ ht-degree: 94%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

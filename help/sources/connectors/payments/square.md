@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; square
+keywords: Experience Platform;Startseite;beliebte Themen;Square
 solution: Experience Platform
-title: Quadratischer Source Connector - Überblick
-description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Square und Adobe Experience Platform herstellen.
+title: Übersicht über Square Source Connector
+description: Erfahren Sie, wie Sie Square mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 61%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Zahlungsanwendung eines Drittanbieters. Unterstützung für Zahlungsdienstleister ist [!DNL Square].
+Experience Platform unterstützt die Aufnahme von Daten aus Zahlungsprogrammen von Drittanbietern. Die Unterstützung für Zahlungsdienstleister umfasst [!DNL Square].
 
 ## IP-Adressen-Zulassungsliste
 
@@ -25,11 +25,11 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Squar
 
 ## Verbinden von [!DNL Square] mit Platform mithilfe von APIs
 
-* [Erstellen einer quadratischen Basisverbindung mit der Flow Service-API](../../tutorials/api/create/payments/square.md)
+* [Erstellen einer Square-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/payments/square.md)
 * [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Zahlungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/payments.md)
 
 ## Verbinden von [!DNL Square] mit Platform über die Benutzeroberfläche
 
-* [Erstellen einer Quadratquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/create/payments/square.md)
+* [Erstellen einer Square-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/payments/square.md)
 * [Erstellen eines Datenflusses für eine Zahlungsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/payments.md)

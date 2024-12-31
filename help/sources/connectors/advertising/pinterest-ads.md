@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;Pinterest Ads;
+keywords: Experience Platform;Startseite;beliebte Themen;Pinterest Ads;
 title: Übersicht über pinterest Ads Source
-description: Erfahren Sie, wie Sie Pinterest Ads über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Pinterest Ads mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badge: Beta
 hide: true
 hidefromtoc: true
@@ -17,89 +17,89 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../home.md#terms-and-conditions) .
+>Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden ](../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Die Unterstützung für Werbetreibende umfasst [!DNL Pinterest Ads].
+Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Der Support für Werbeanbieter umfasst [!DNL Pinterest Ads].
 
-[[!DNL Pinterest]](https://www.pinterest.com) ist eine visuelle Suchmaschine, mit der Sie Rezepte, Innendekorationen, Stilinspirierungen und andere Ideen im Internet finden können. Diese werden in kleinem Maßstab mit Bildern, animierten GIF und Videos in Pinnwänden präsentiert. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) ermöglicht es Ihnen, Ihr Geschäft auszubauen und mit [!DNL Pinterest] 400 Millionen Menschen zu erreichen.
+[[!DNL Pinterest]](https://www.pinterest.com) ist eine visuelle Discovery-Engine zum Suchen von Rezepten, Wohnkultur, Stilinspiration und anderen Ideen im Internet. Diese werden in kleinem Maßstab anhand von Bildern, animierten GIF und Videos im Pinnwand-Format präsentiert. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) können Sie Ihr Unternehmen ausbauen und mit [!DNL Pinterest] 400 Millionen Menschen erreichen.
 
-Mit [!DNL Pinterest Ads] können Sie Benutzer über gezielte Werbung erreichen, um Ihre Produkte zu entdecken und zu kaufen. Pins von [!DNL Pinterest Ads] werden gesponsert, um eine zusätzliche Belichtung in relevanten Suchergebnissen zu erhalten. Benutzer, die sich für [!DNL Pinterest Business] angemeldet haben, können vorhandene Pins mit der besten Leistung bewerben, ein neues Bild oder Video erstellen oder sogar ein Bild bewerben, das von einer Website veröffentlicht wurde. [!DNL Pinterest Ads] bietet verschiedene Anzeigenformate, die Ihnen bei der Erreichung Ihrer spezifischen Kampagnenziele helfen.
+Mit [!DNL Pinterest Ads] können Sie Benutzer über zielgerichtete Anzeigen erreichen, um Ihre Produkte zu entdecken und zu kaufen. Pins von [!DNL Pinterest Ads] werden gesponsert, um zusätzliche Belichtung in relevanten Suchergebnissen zu erhalten. Benutzer, die [!DNL Pinterest Business] abonniert haben, können bestehende Pins mit der besten Leistung weiterleiten, ein neues Bild oder Video erstellen oder sogar ein Bild weiterleiten, das von einer Website angeheftet wurde. [!DNL Pinterest Ads] bietet verschiedene Werbeformate, mit denen Sie Ihre spezifischen Kampagnenziele erreichen können.
 
 ## [!DNL Pinterest] APIs {#pinterest-apis}
 
-Die Quelle [!DNL Pinterest Ads] nutzt die [!DNL Pinterest] -APIs, um Ihre [!DNL Pinterest Ads] -Daten abzurufen, zusammen mit allen Leistungs- und Metriken. Folgende API-Endpunkte werden unterstützt:
+Die [!DNL Pinterest Ads]-Quelle nutzt die [!DNL Pinterest]-APIs zum Abrufen Ihrer [!DNL Pinterest Ads]-Daten sowie aller Leistungs- und Metriken. Folgende API-Endpunkte werden unterstützt:
 
-* [Kampagnenanalyse](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
-* [Anzeigengruppenanalysen](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
-* [Anzeigen-Analyse](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
+* [Campaign-Analyse](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
+* [Anzeigengruppenanalyse](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
+* [Ads Analytics](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-Verwenden Sie die [!DNL Pinterest Ads]-Quelle, um Ihre Daten von [!DNL Pinterest] auf die Experience Platform zu übertragen, wo Sie dann Datenanalysen ausführen können. Daten werden ab dem Datum der Aufnahme für einen rückdatierten Zeitraum von 90 Tagen zurückgegeben. [!DNL Pinterest Ads] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit den [!DNL Pinterest] -APIs.
+Verwenden Sie die [!DNL Pinterest Ads], um Ihre Daten von [!DNL Pinterest] auf Experience Platform zu übertragen, wo Sie dann Datenanalysen durchführen können. Die Daten werden ab dem Aufnahmedatum für einen Zeitraum von 90 Tagen zurückgegeben. [!DNL Pinterest Ads] verwendet Träger-Token als Authentifizierungsmechanismus für die Kommunikation mit den [!DNL Pinterest]-APIs.
 
 ## Voraussetzungen {#prerequisites}
 
-Der erste Schritt beim Erstellen einer Quellverbindung mit dem Wert [!DNL Pinterest Ads] besteht darin, sicherzustellen, dass Sie über ein Pinterest-Entwicklerkonto verfügen. Wenn Sie noch kein Konto haben, besuchen Sie die Seite [Registrieren](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) , um sich zu registrieren und Ihr Konto zu erstellen.
+Der erste Schritt beim Erstellen einer [!DNL Pinterest Ads]-Quellverbindung besteht darin, sicherzustellen, dass Sie über ein Pinterest-Entwicklerkonto verfügen. Wenn Sie noch kein Konto haben, besuchen Sie die Seite [Anmelden](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/), um sich zu registrieren und Ihr Konto zu erstellen.
 
-### App [!DNL Pinterest] einrichten und Zugriffstoken generieren {#create-app-and-generate-token}
+### Einrichten [!DNL Pinterest] App und Generieren des Zugriffstokens {#create-app-and-generate-token}
 
 >[!IMPORTANT]
 >
->Es wird empfohlen, die [!DNL Pinterest] -APIs zu verwenden, um Ihr Zugriffstoken zu generieren, da die Generierung Ihres Zugriffstokens in der Benutzeroberfläche einen eingeschränkten Zugriff bietet. Über die Benutzeroberfläche können Sie nur auf die folgenden Bereiche zugreifen: `pins:read`, `boards:read` und `user_accounts:read`. Diese Einschränkung eignet sich nicht für die Verwendung mit den Analytics-Endpunkten der [!DNL Pinterest] -API.
+>Es wird empfohlen, die [!DNL Pinterest]-APIs zum Generieren Ihres Zugriffs-Tokens zu verwenden, da das Generieren Ihres Zugriffs-Tokens in der Benutzeroberfläche eingeschränkten Zugriff bietet. Über die Benutzeroberfläche können Sie nur auf die folgenden Bereiche zugreifen: `pins:read`, `boards:read` und `user_accounts:read`. Diese Einschränkung ist für die Verwendung mit den Analytics-Endpunkten der [!DNL Pinterest]-API nicht ausreichend.
 
-Um Ihr Zugriffstoken zu generieren, lesen Sie die [!DNL Pinterest] Handbücher für [Einrichten der App](https://developers.pinterest.com/docs/getting-started/set-up-app/) und [Authentifizierung mit OAuth 2.0](https://developers.pinterest.com/docs/getting-started/authentication/).
+Informationen zum Generieren Ihres Zugriffs-Tokens finden Sie in den [!DNL Pinterest] Handbüchern unter [Einrichten der App](https://developers.pinterest.com/docs/getting-started/set-up-app/) und [Authentifizieren mit OAuth 2.0](https://developers.pinterest.com/docs/getting-started/authentication/).
 
-### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
+### Sammeln erforderlicher Anmeldedaten {#gather-required-credentials}
 
 Um eine Verbindung zwischen [!DNL Pinterest Ads] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Zugriffs-Token | Das Zugriffstoken [!DNL Pinterest Ads] für Ihr Benutzerkonto. Das Benutzerkonto des Tokens muss entweder Inhaber des angegebenen [!DNL Pinterest Ad]-Kontos sein oder über Business Access einer der erforderlichen Rollen zugewiesen werden: Admin, Analyst oder Campaign Manager. Weiterführende Informationen zum Zugriffstoken finden Sie im [[!DNL Pinterest] Handbuch zum Generieren Ihres Zugriffstokens](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
-| Anzeigen-Konto-ID | Die zugehörige [!DNL Pinterest Ads] Anzeigen-Konto-ID für Ihren Geschäftsbereich. Informationen zum Abrufen Ihrer Anzeigenkonto-ID. Lesen Sie das [[!DNL Pinterest] -Handbuch zum Suchen von IDs im Anzeigen-Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
-| Kampagnen-, Anzeigengruppen- oder Anzeigen-ID | Die IDs `campaign`, `ad group` oder `ad`, die Ihrer Anzeigenkonto-ID entsprechen. Um die erforderlichen IDs abzurufen, navigieren Sie zur Seite &quot;[!DNL Pinterest]&quot;für **Pinterest Business Hub** > **Ad Account Summary** > **Kampagnen** / **Anzeigengruppen** / **Anzeigen**&quot;und kopieren Sie die erforderlichen IDs direkt unter jeden ihrer Namen. |
+| Zugriffs-Token | Das [!DNL Pinterest Ads] Zugriffstoken für Ihr Benutzerkonto. Das Benutzerkonto des Tokens muss entweder Besitzer des angegebenen [!DNL Pinterest Ad]-Kontos sein oder über eine der erforderlichen Rollen verfügen, die ihm über den Geschäftszugriff gewährt werden: Admin, Analyst oder Campaign Manager. Weitere Informationen zum Zugriffs-Token finden Sie im [[!DNL Pinterest] Handbuch zum Generieren Ihres Zugriffs-Tokens](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
+| Werbekonto-ID | Die zugehörige [!DNL Pinterest Ads]-Konto-ID für Ihre Geschäftseinheit. Für Informationen zum Abrufen Ihrer Werbekonto-ID. Besuchen Sie das [[!DNL Pinterest] Handbuch zum Suchen von IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
+| Kampagne, Anzeigengruppe oder Anzeigenkennung | Die `campaign`-, `ad group`- oder `ad`-IDs, die Ihrer Werbekonto-ID entsprechen. Um die erforderlichen IDs zu erhalten, gehen Sie zur Seite [!DNL Pinterest] für **Pinterest Business Hub** > **Anzeigenkontenzusammenfassung** > **Kampagnen** / **Anzeigengruppen** / **Anzeigen** und kopieren Sie die erforderlichen IDs, die direkt unter jedem ihrer Namen erwähnt werden. |
 
 >[!NOTE]
 >
->Die [!DNL Pinterest] -API stellt einzelne APIs zum Abrufen der mit jeder ID verknüpften Daten bereit. Dementsprechend müssen Sie nur die entsprechenden IDs für den gewünschten ID-Typ übergeben.
+>Die [!DNL Pinterest]-API stellt einzelne APIs zum Abrufen von mit jeder ID verknüpften Daten bereit. Dementsprechend müssen Sie nur die entsprechenden IDs für den ID-Typ übergeben, an dem Sie interessiert sind.
 
 ## Leitplanken {#guardrails}
 
-Die folgenden Abschnitte enthalten Informationen zu Datensicherungen für [!DNL Pinterest].
+Die folgenden Abschnitte enthalten Informationen zu Datenleitplanken für [!DNL Pinterest].
 
 ### [!DNL Pinterest] Datumsbereich {#pinterest-date-range}
 
-Die [!DNL Pinterest] -API unterstützt sowohl einen `start_date` als auch einen `end_date` -Parameter zum Abrufen von Analysedaten zwischen einem bestimmten Datumsbereich.
+Die [!DNL Pinterest]-API unterstützt sowohl einen `start_date`- als auch einen `end_date`, um Analytics-Daten zwischen einem bestimmten Datumsbereich abzurufen.
 
-* Der `start_date` darf nicht länger als 90 Tage vor dem aktuellen Datum sein.
-* Die `end_date` darf nicht länger als 90 Tage nach der `start_date` sein.
+* Das `start_date` darf nicht mehr als 90 Tage vor dem aktuellen Datum liegen.
+* Die `end_date` darf 90 Tage nach dem `start_date` nicht überschreiten.
 
-Bei der Planung Ihres Datenflusses müssen Sie eine der folgenden Häufigkeits- und Intervalleinstellungen konfigurieren:
+Beim Planen Ihres Datenflusses müssen Sie eine der folgenden Einstellungen für Häufigkeit und Intervall konfigurieren:
 
 | Häufigkeit | Intervall |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
 
-Wenn beispielsweise die Aufnahme am 15. März 2023 mit einer Häufigkeit und einem Intervall festgelegt ist, die auf `Day=1` oder `Hour=24` konfiguriert sind, ruft die API [!DNL Pinterest] nur Daten ab, die bis zum 15. Dezember 2022 zurückliegen, da die Berechnung für 90 Tage zurückdatiert ist.
+Wenn die Aufnahme beispielsweise am 15. März 2023 mit einer Häufigkeit und einem Intervall eingestellt ist, die auf `Day=1` oder `Hour=24` konfiguriert sind, ruft die [!DNL Pinterest]-API Daten nur ab dem 15. Dezember 2022 ab, da die Berechnung 90 Tage zurückdatiert ist.
 
-### [!DNL Pinterest] Zeitraum {#pinterest-time-range}
+### [!DNL Pinterest] {#pinterest-time-range}
 
-Die [!DNL Pinterest] -API unterstützt verschiedene Arten von Zeitgranularität, um zu erfahren, wie Daten abgerufen werden können:
+Die [!DNL Pinterest]-API unterstützt verschiedene Arten der Zeitgranularität für das Abrufen von Daten:
 
 | Zeitgranularität | Beschreibung |
 | --- | --- |
-| **INSGESAMT** | Die Datenmetriken werden über einen bestimmten Datumsbereich aggregiert. |
+| **INSGESAMT** | Die Datenmetriken werden über einen angegebenen Datumsbereich aggregiert. |
 | **TAG** | Die Datenmetriken werden täglich aufgeschlüsselt. |
 | **STUNDE** | Die Datenmetriken werden stündlich aufgeschlüsselt. |
-| **WEEKLY** | Die Datenmetriken werden wöchentlich aufgeschlüsselt. |
-| **MONTHLY** | Die Datenmetriken werden monatlich aufgeschlüsselt. |
+| **WÖCHENTLICH** | Die Datenmetriken werden wöchentlich aufgeschlüsselt. |
+| **MONATLICH** | Die Datenmetriken werden monatlich aufgeschlüsselt. |
 
-Für Platform ist die Quelle [!DNL Pinterest Ads] intern auf `Day` konfiguriert, was bedeutet, dass Daten täglich aggregiert werden. Wenn Sie beispielsweise `impressions recorded` als Metrik verwenden, erhalten Sie, da die Granularität als `DAY` konfiguriert ist, `xx` Impressionen auf `day 1`, `yy` Impressionen auf `day 2` usw.
+Für Platform ist die [!DNL Pinterest Ads] intern so konfiguriert, dass `Day` Daten aggregiert werden, und zwar täglich. Wenn Sie beispielsweise `impressions recorded` als Metrik verwenden, erhalten Sie, da die Granularität als `DAY` konfiguriert ist, `xx` Impressionen zu `day 1`, `yy` Impressions zu `day 2` usw.
 
 >[!IMPORTANT]
 >
->Pinterest begrenzt die API täglich auf 1000 API-Aufrufe, um Informationen aus Anzeigen, Anzeigengruppen oder Anzeigenkampagnen zu lesen. Informationen zu den Ratenbeschränkungen für zugrunde liegende API-Aufrufe finden Sie in der [[!DNL Pinterest] Dokumentation zu Ratenbeschränkungen](https://developers.pinterest.com/docs/reference/ratelimits/).
+>Pinterest begrenzt die Anzahl der API-Aufrufe pro Tag auf 1.000, um Informationen aus Anzeigen, Anzeigengruppen oder Anzeigenkampagnen zu lesen. Informationen zu Ratenbeschränkungen für zugrunde liegende API-Aufrufe finden Sie in der [[!DNL Pinterest] Dokumentation zu ](https://developers.pinterest.com/docs/reference/ratelimits/).
 
 ## Verbinden von [!DNL Pinterest Ads] mit Platform {#connect-to-platform}
 
@@ -107,11 +107,11 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Pinte
 
 ### Verbinden von [!DNL Pinterest Ads] mit Platform mithilfe von APIs {#connect-to-platform-using-api}
 
-* [Erstellen einer Pinterest-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/advertising/pinterest-ads.md)
+* [Erstellen einer Pinterest-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Werbequelle mithilfe der Flow Service-API](../../tutorials/api/collect/advertising.md)
 
 ### Verbinden von [!DNL Pinterest Ads] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
-* [Erstellen einer Pinterest-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/advertising/pinterest-ads.md)
-* [Erstellen eines Datenflusses für eine Verbindung mit einer Werbequelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)
+* [Erstellen einer Pinterest-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/advertising/pinterest-ads.md)
+* [Erstellen eines Datenflusses für eine Werbequellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)

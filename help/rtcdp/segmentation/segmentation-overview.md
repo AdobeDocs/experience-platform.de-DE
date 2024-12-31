@@ -1,7 +1,7 @@
 ---
 keywords: Segmentierung;Segmentierung rtcdp;Real-time Customer Data Platform-Segmentierung
 title: Segmentierungs-Service in Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Experience Platform-Dienste und Funktionen. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Merkmalen aufteilen.
+description: Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Experience Platform-Services und -Funktionen. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Merkmalen aufteilen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
@@ -19,11 +19,11 @@ Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele Services und
 
 ## Segmentierung
 
-Bei der Segmentierung werden bestimmte Attribute oder Verhaltensweisen definiert, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm zu unterscheiden. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe verschiedener Segmentdefinitionen können Sie sich auf Ihre verschiedenen Zielgruppen konzentrieren und so ein benutzerspezifischeres Marketing-Erlebnis bieten.
+Bei der Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe verschiedener Segmentdefinitionen können Sie sich auf Ihre verschiedenen Zielgruppen konzentrieren und ein individuelleres Marketing-Erlebnis bieten.
 
 ## [!DNL Segment Builder]
 
-Mit [!DNL Platform] können Sie einfach Segmentdefinitionen erstellen und aufrufen sowie verschiedene Bausteine verwenden, um Ihre Zielgruppen weiter zu charakterisieren. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
+[!DNL Platform] können Sie mühelos Segmentdefinitionen erstellen und darauf zugreifen sowie verschiedene Bausteine verwenden, um Ihre Zielgruppen weiter zu charakterisieren. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
 
 ## Kunden-KI
 
@@ -36,7 +36,7 @@ Mithilfe von Einflussfaktoren kann Kunden-KI vorhersagen, was eine Kundin oder e
 * Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihrer Firma
 * Optimierung von Echtzeit-Kundenprofilen mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion
 * Optimierung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte
-* Erstellen von Kundenzielgruppen basierend auf Einflussfaktoren und Tendenzwerten.
+* Erstellen von Zielgruppen von Kunden basierend auf Einflussfaktoren und Tendenz-Scores.
 
 Auf Kunden-KI kann über die Registerkarte **[!UICONTROL Services]** unter **[!UICONTROL Adobe-Services]** zugegriffen werden.
 
@@ -44,7 +44,7 @@ Auf Kunden-KI kann über die Registerkarte **[!UICONTROL Services]** unter **[!U
 
 ### Erste Schritte mit Kunden-KI
 
-Für die ersten Schritte mit Kunden-KI müssen Sie dem [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) folgen und das Eingabeschema entsprechend Ihrem Anwendungsfall konfigurieren. Als Nächstes müssen Sie [eine Kunden-KI-Instanz konfigurieren](../../intelligent-services/customer-ai/user-guide/configure.md). Nach dem Konfigurieren einer Instanz wird ein Modell generiert, mit dem Sie [Ihre Insights und Bewertungen anzeigen](../../intelligent-services/customer-ai/user-guide/discover-insights.md) können. Mithilfe der von Ihrem Modell generierten Daten können Sie Zielgruppen für datengesteuerte Aktivierung erstellen.
+Für die ersten Schritte mit Kunden-KI müssen Sie dem [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) folgen und das Eingabeschema entsprechend Ihrem Anwendungsfall konfigurieren. Als Nächstes müssen Sie [eine Kunden-KI-Instanz konfigurieren](../../intelligent-services/customer-ai/user-guide/configure.md). Nach dem Konfigurieren einer Instanz wird ein Modell generiert, mit dem Sie [Ihre Insights und Bewertungen anzeigen](../../intelligent-services/customer-ai/user-guide/discover-insights.md) können. Mithilfe der von Ihrem Modell generierten Daten können Sie Zielgruppen für eine datengesteuerte Aktivierung erstellen.
 
 Weitere Informationen zu Kunden-KI finden Sie in der [Kunden-KI-Übersicht](../../intelligent-services/customer-ai/overview.md). In diesem Video wird zudem gezeigt, wie Kunden-KI Kundenprofile mit KI-basierten Tendenzen anreichert sowie bei der Kundensegmentierung und Zielgruppenbestimmung hilft.
 

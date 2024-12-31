@@ -16,7 +16,7 @@ ht-degree: 96%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -129,4 +129,4 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 In diesem Tutorial haben Sie eine [!DNL Zoho]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/crm.md)
+* [Erstellen eines Datenflusses, um CRM-Daten mithilfe der API  [!DNL Flow Service]  Platform zu übertragen](../../collect/crm.md)

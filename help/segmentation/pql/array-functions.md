@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Array-, List- und Set PQL Functions
-description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen vereinfachen.
+title: Funktionen für Arrays, Listen und Sets in PQL
+description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 57%
 
 # Funktionen für Arrays, Listen und Sets
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Enthalten
 
-Mit der Funktion `in` wird bestimmt, ob ein Element einem Array oder einer Liste als boolescher Wert angehört.
+Mit der Funktion `in` wird bestimmt, ob ein Element als boolescher Wert Mitglied eines Arrays oder einer Liste ist.
 
 **Format**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Nicht enthalten
 
-Mit der Funktion `notIn` wird bestimmt, ob ein Element nicht Mitglied eines Arrays oder einer Liste als boolescher Wert ist.
+Mit der Funktion `notIn` wird bestimmt, ob ein Element nicht als boolescher Wert Mitglied eines Arrays oder einer Liste ist.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Schnittmengen
 
-Mit der Funktion `intersects` wird bestimmt, ob zwei Arrays oder Listen mindestens ein gemeinsames Element als boolescher Wert aufweisen.
+Mit der Funktion `intersects` wird bestimmt, ob zwei Arrays oder Listen mindestens einen gemeinsamen Member als booleschen Wert aufweisen.
 
 **Format**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Schnittmenge
 
-Mit der Funktion `intersection` werden die gemeinsamen Elemente von zwei Arrays oder Listen als Liste bestimmt.
+Mit der Funktion `intersection` werden die gemeinsamen Elemente zweier Arrays oder Listen als Liste bestimmt.
 
 **Format**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Teilmenge von
 
-Mit der `subsetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Teilmenge eines anderen Arrays (Array B) ist. Mit anderen Worten, dass alle Elemente in Array A Elemente von Array B als boolescher Wert sind.
+Mit der `subsetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Teilmenge eines anderen Arrays (Array B) ist. Mit anderen Worten, alle Elemente in Array A sind Elemente von Array B als boolescher Wert.
 
 **Format**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Obermenge
 
-Mit der `supersetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Obermenge eines anderen Arrays (Array B) ist. Mit anderen Worten, dieses Array A enthält alle Elemente in Array B als booleschen Wert.
+Mit der `supersetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Obermenge eines anderen Arrays (Array B) ist. Mit anderen Worten: Array A enthält alle Elemente in Array B als Boolescher Wert.
 
 **Format**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Enthält
 
-Mit der Funktion `includes` wird bestimmt, ob ein Array oder eine Liste ein bestimmtes Element als boolescher Wert enthält.
+Mit der Funktion `includes` wird bestimmt, ob ein Array oder eine Liste ein bestimmtes Element als boolesch enthält.
 
 **Format**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Verschieden
 
-Mit der Funktion `distinct` werden doppelte Werte aus einem Array oder einer Liste als Array entfernt.
+Die Funktion `distinct` wird verwendet, um doppelte Werte aus einem Array oder einer Liste als Array zu entfernen.
 
 **Format**
 
@@ -164,7 +164,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Gruppieren nach
 
-Die Funktion `groupBy` wird verwendet, um Werte eines Arrays oder einer Liste basierend auf dem Wert des Ausdrucks als Zuordnung von eindeutigen Werten des Gruppierungsausdrucks zu Arrays zu unterteilen, die Partitionen des Werts des Array-Ausdrucks sind.
+Die Funktion `groupBy` wird verwendet, um Werte eines Arrays oder einer Liste basierend auf dem Wert des Ausdrucks als Zuordnung von eindeutigen Werten des Gruppierungsausdrucks zu Arrays, die Partitionen des Werts des Array-Ausdrucks sind, in eine Gruppe zu unterteilen.
 
 **Format**
 
@@ -187,7 +187,7 @@ xEvent[type="order"].groupBy(storeId)
 
 ## Filter
 
-Die Funktion `filter` wird zum Filtern eines Arrays oder einer Liste anhand eines Ausdrucks als Array oder Liste verwendet, je nach Eingabe.
+Die Funktion `filter` wird verwendet, um ein Array oder eine Liste je nach Eingabe auf der Grundlage eines Ausdrucks als Array oder Liste zu filtern.
 
 **Format**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Zuordnung
 
-Mit der Funktion `map` wird ein neues Array erstellt, indem ein Ausdruck auf jedes Element in einem Array als Array angewendet wird.
+Die Funktion `map` wird verwendet, um ein neues Array zu erstellen, indem ein Ausdruck als Array auf jedes Element in einem bestimmten Array angewendet wird.
 
 **Format**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## Erste `n` in Array {#first-n}
 
-Die Funktion `topN` gibt die ersten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge als Array sortiert werden.
+Die Funktion `topN` wird verwendet, um die ersten `N` Elemente in einem Array zurückzugeben, wenn sie in aufsteigender Reihenfolge auf der Grundlage des angegebenen numerischen Ausdrucks als Array sortiert werden.
 
 **Format**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Letzte `n` in Array
 
-Die Funktion `bottomN` gibt die letzten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge als Array sortiert werden.
+Die Funktion `bottomN` wird verwendet, um die letzten `N` Elemente in einem Array zurückzugeben, wenn sie in aufsteigender Reihenfolge auf der Grundlage des angegebenen numerischen Ausdrucks als Array sortiert werden.
 
 **Format**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Erstes Element
 
-Mit der Funktion `head` wird das erste Element im Array oder in der Liste als Objekt zurückgegeben.
+Die Funktion `head` wird verwendet, um das erste Element im Array oder der Liste als -Objekt zurückzugeben.
 
 **Format**
 

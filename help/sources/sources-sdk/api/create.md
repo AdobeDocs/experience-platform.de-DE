@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API
-description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
+description: Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Self-Service-Quellen.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 46%
 
 ---
 
-# Erstellen einer neuen Verbindungsspezifikation mit der [!DNL Flow Service]-API
+# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
-Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mit der [!DNL Flow Service] -API erstellen und eine neue Quelle über Self-Serve-Quellen (Batch SDK) integrieren.
+Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API und zum Integrieren einer neuen Quelle über Selbstbedienungsquellen (Batch-SDK).
 
 ## Erste Schritte
 
@@ -23,7 +23,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Um eine neue Batch-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle an Adobe ausrichten.
+Um eine neue Batch-Quelle mithilfe von Selbstbedienungsquellen zu erstellen, müssen Sie sich zunächst mit Adobe abstimmen, ein privates Git-Repository anfordern und sich bei Adobe an den Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle ausrichten.
 
 Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
 
@@ -38,22 +38,22 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
-| {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `mailchimp-members` |
-| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. Die Liste der verfügbaren Quellkategorien, die von Self-Serve-Quellen (Batch SDK) unterstützt werden, umfasst: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an Ihren Adobe-Kundenbetreuer, um darüber zu diskutieren. | `mailchimp-members-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Mailchimp Members] -Daten an Experience Platform übertragen können. |
-| {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
-| {your_source}-label.txt | Der Quellname, wie er im Experience Platform-Quellkatalog angezeigt werden soll. | Mailchimp-Mitglieder |
-| {your_source}-connectionSpec.json | Eine JSON-Datei mit der Verbindungsspezifikation Ihrer Quelle. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `mailchimp-members-connectionSpec.json` |
+| {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte im Zusammenhang mit Ihrer Quelle in Ihrem privaten Git-Repository enthalten. | `mailchimp-members` |
+| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. Zu den verfügbaren Quellkategorien, die von Selbstbedienungsquellen (Batch-SDK) unterstützt werden, gehören: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um das Problem zu besprechen. | `mailchimp-members-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Mailchimp Members] auf Experience Platform übertragen können. |
+| {your_source}-icon.svg | Das Bild, das zur Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
+| {your_source}-label.txt | Der Name Ihrer Quelle, wie er im Experience Platform-Quellkatalog angezeigt werden sollte. | Mailchimp-Mitglieder |
+| {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie während der Ausführung dieses Handbuchs Ihre Verbindungsspezifikation ausfüllen werden. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle der Schlüsselwerte `text` in der Verbindungsspezifikation verwenden.
+>Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle von Schlüsselwerten `text` in der Verbindungsspezifikation verwenden.
 
-Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anforderung (PA) erstellen, damit Adobe sie überprüfen kann. Wenn Ihr PR genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
+Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anfrage (PR) für das Adobe erstellen, um sie zu überprüfen. Wenn Ihr Pull Request genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
 
-Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, wie z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
+Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch unter [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
 
 ## Kopieren der Vorlage für die Verbindungsspezifikation
 

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
-description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
+description: Mit dem Endpunkt Segmentdefinitionen in der Segmentierungs-Service-API von Adobe Experience Platform können Sie Segmentdefinitionen für Ihr Unternehmen programmgesteuert verwalten.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
@@ -11,23 +11,23 @@ ht-degree: 13%
 
 ---
 
-# Endpunkt der Segmentdefinitionen
+# Endpunkt für Segmentdefinitionen
 
-Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage enthält. Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL prädikiert die Definition der Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensätze oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen finden Sie im [PQL-Handbuch](../pql/overview.md) .
+Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen ](../pql/overview.md) Sie im Handbuch zu PQL [.
 
-Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentdefinitionen und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
+Dieses Handbuch enthält Informationen, die Ihnen dabei helfen, Segmentdefinitionen besser zu verstehen, und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der -API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-API. Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
 
 ## Abrufen einer Liste von Segmentdefinitionen {#list}
 
-Sie können eine Liste aller Segmentdefinitionen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/segment/definitions` senden.
+Sie können eine Liste aller Segmentdefinitionen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt stellen.
 
 **API-Format**
 
-Der `/segment/definitions`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um den teuren Verwaltungsaufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/segment/definitions`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Obwohl diese Parameter optional sind, wird ihre Verwendung dringend empfohlen, um kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /segment/definitions
@@ -40,17 +40,17 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
-| `start` | Gibt den Startversatz für die zurückgegebenen Segmentdefinitionen an. | `start=4` |
+| `start` | Gibt den Anfangsversatz für die zurückgegebenen Segmentdefinitionen an. | `start=4` |
 | `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentdefinitionen an. | `limit=20` |
 | `page` | Gibt an, auf welcher Seite die Ergebnisse der Segmentdefinitionen beginnen. | `page=5` |
-| `sort` | Gibt an, nach welchem Feld die Ergebnisse sortiert werden sollen. Ist im folgenden Format geschrieben: `[attributeName]:[desc/asc]`. | `sort=updateTime:desc` |
+| `sort` | Gibt an, nach welchem Feld die Ergebnisse sortiert werden sollen. Wird im folgenden Format geschrieben: `[attributeName]:[desc/asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Gibt an, ob die Segmentdefinition Streaming-fähig ist. | `evaluationInfo.continuous.enabled=true` |
 
 +++
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Segmentdefinitionen abgerufen, die innerhalb Ihres Unternehmens veröffentlicht wurden.
+Die folgende Anfrage ruft die letzten beiden Segmentdefinitionen ab, die in Ihrer Organisation veröffentlicht wurden.
 
 +++ Eine Beispielanfrage zum Abrufen einer Liste von Segmentdefinitionen.
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentdefinitionen für die angegebene Organisation als JSON zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste von Segmentdefinitionen für die angegebene Organisation als JSON zurück.
 
 +++ Eine Beispielantwort beim Abrufen einer Liste von Segmentdefinitionen.
 
@@ -166,7 +166,7 @@ Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage a
 
 >[!IMPORTANT]
 >
->Segmentdefinitionen, die über die API erstellt wurden, können nicht mit dem Segment Builder bearbeitet werden.****
+>Segmentdefinitionen, die über die API erstellt wurden **können nicht** mit Segment Builder bearbeitet werden.
 
 **API-Format**
 
@@ -176,7 +176,7 @@ POST /segment/definitions
 
 **Anfrage**
 
-Beim Erstellen einer neuen Segmentdefinition können Sie sie im Format `pql/text` oder `pql/json` erstellen.
+Beim Erstellen einer neuen Segmentdefinition können Sie diese entweder im `pql/text`- oder im `pql/json`-Format erstellen.
 
 >[!BEGINTABS]
 
@@ -218,14 +218,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen werden kann. |
 | `description` | (Optional) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
-| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Zu den unterstützten Werten gehören `pql/text` und `pql/json`. |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur PQL unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks im Wert an. Zu den unterstützten Werten gehören `pql/text` und `pql/json`. |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
-| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf &quot;true&quot;. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie &quot;`evaluationInfo.continuous.enabled`&quot;auf &quot;true&quot;. Wenn Sie ein Kantensegment erstellen möchten, setzen Sie &quot;`evaluationInfo.synchronous.enabled`&quot;auf &quot;true&quot;. Wenn Sie das Feld leer lassen, wird die Segmentdefinition als **Batch**-Segment erstellt. |
-| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
+| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf „true“. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie `evaluationInfo.continuous.enabled` auf „true“. Wenn Sie ein Edge-Segment erstellen möchten, setzen Sie `evaluationInfo.synchronous.enabled` auf „true“. Wenn dies leer gelassen wird, wird die Segmentdefinition als **Batch-** erstellt. |
+| `schema` | Das Schema, das mit den Entitäten im Segment verknüpft ist. Besteht entweder aus einem `id` oder aus `name` Feld. |
 
 +++
 
@@ -269,13 +269,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen werden kann. |
 | `description` | (Optional) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
-| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf &quot;true&quot;. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie &quot;`evaluationInfo.continuous.enabled`&quot;auf &quot;true&quot;. Wenn Sie ein Kantensegment erstellen möchten, setzen Sie &quot;`evaluationInfo.synchronous.enabled`&quot;auf &quot;true&quot;. Wenn Sie das Feld leer lassen, wird die Segmentdefinition als **Batch**-Segment erstellt. |
-| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
+| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf „true“. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie `evaluationInfo.continuous.enabled` auf „true“. Wenn Sie ein Edge-Segment erstellen möchten, setzen Sie `evaluationInfo.synchronous.enabled` auf „true“. Wenn dies leer gelassen wird, wird die Segmentdefinition als **Batch-** erstellt. |
+| `schema` | Das Schema, das mit den Entitäten im Segment verknüpft ist. Besteht entweder aus einem `id` oder aus `name` Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
-| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur PQL unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks im Wert an. |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
 
 +++
@@ -332,13 +332,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellte
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine systemgenerierte ID Ihrer neu erstellten Segmentdefinition. |
-| `evaluationInfo` | Ein Objekt, das angibt, welcher Evaluierungstyp für die Segmentdefinition durchgeführt wird. Dabei kann es sich um Batch-, Streaming- (auch als fortlaufend bezeichnet) oder Edge-Segmentierung (auch als synchrone Segmentierung bezeichnet) handeln. |
+| `evaluationInfo` | Ein -Objekt, das angibt, welcher Art der Auswertung die Segmentdefinition unterzogen wird. Dabei kann es sich um Batch-, Streaming- (auch als fortlaufende Segmentierung bezeichnet) oder Edge- (auch als synchrone Segmentierung bezeichnet) handeln. |
 
 +++
 
 ## Abrufen einer bestimmten Segmentdefinition {#get}
 
-Sie können detaillierte Informationen zu einer bestimmten Segmentdefinition abrufen, indem Sie eine GET-Anfrage an den `/segment/definitions` -Endpunkt senden und im Anfragepfad die Kennung der Segmentdefinition angeben, die Sie abrufen möchten.
+Sie können detaillierte Informationen zu einer bestimmten Segmentdefinition abrufen, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt senden und im Anfragepfad die ID der Segmentdefinition angeben, die Sie abrufen möchten.
 
 **API-Format**
 
@@ -348,7 +348,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` -Wert der Segmentdefinition, die Sie abrufen möchten. |
+| `{SEGMENT_ID}` | Der `id` Wert der Segmentdefinition, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -413,21 +413,21 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
-| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
-| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
+| `id` | Eine systemgenerierte schreibgeschützte ID der Segmentdefinition. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen werden kann. |
+| `schema` | Das Schema, das mit den Entitäten im Segment verknüpft ist. Besteht entweder aus einem `id` oder aus `name` Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
-| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur PQL unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks im Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine textliche Darstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
-| `evaluationInfo` | Ein Objekt, das angibt, welcher Typ von Auswertung, Batch, Streaming (auch als kontinuierlich bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition durchlaufen wird. |
+| `evaluationInfo` | Ein Objekt, das angibt, welchem Typ von Auswertung, Batch, Streaming (auch als fortlaufend bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition unterzogen wird. |
 
 +++
 
 ## Massenabruf von Segmentdefinitionen {#bulk-get}
 
-Sie können detaillierte Informationen über mehrere angegebene Segmentdefinitionen abrufen, indem Sie eine POST-Anfrage an den `/segment/definitions/bulk-get` -Endpunkt senden und die `id` -Werte der Segmentdefinitionen im Anfrageinhalt angeben.
+Sie können detaillierte Informationen zu mehreren angegebenen Segmentdefinitionen abrufen, indem Sie eine POST-Anfrage an den `/segment/definitions/bulk-get`-Endpunkt senden und die `id` Werte der Segmentdefinitionen im Anfragetext angeben.
 
 **API-Format**
 
@@ -437,7 +437,7 @@ POST /segment/definitions/bulk-get
 
 **Anfrage**
 
-+++ Eine Beispielanfrage bei Verwendung des Massen-GET-Endpunkts.
++++ Eine Beispielanfrage bei Verwendung des Massenabruf-Endpunkts.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -460,15 +460,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `ids` | Ein Array, das Objekte enthält, die die IDs der Segmentdefinitionen angeben, die Sie abrufen möchten. |
+| `ids` | Ein Array, das Objekte mit den IDs der Segmentdefinitionen enthält, die Sie abrufen möchten. |
 
 +++
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentdefinitionen zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 207 mit den angeforderten Segmentdefinitionen zurückgegeben.
 
-+++ Eine Beispielantwort bei Verwendung des Bulk-GET-Endpunkts.
++++ Eine Beispielantwort bei Verwendung des Massenabruf-Endpunkts.
 
 ```json
 {
@@ -556,25 +556,25 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
-| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
-| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
+| `id` | Eine systemgenerierte schreibgeschützte ID der Segmentdefinition. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen werden kann. |
+| `schema` | Das Schema, das mit den Entitäten im Segment verknüpft ist. Besteht entweder aus einem `id` oder aus `name` Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
-| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur PQL unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks im Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine textliche Darstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
-| `evaluationInfo` | Ein Objekt, das angibt, welcher Typ von Auswertung, Batch, Streaming (auch als kontinuierlich bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition durchlaufen wird. |
+| `evaluationInfo` | Ein Objekt, das angibt, welchem Typ von Auswertung, Batch, Streaming (auch als fortlaufend bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition unterzogen wird. |
 
 +++
 
 ## Löschen einer bestimmten Segmentdefinition {#delete}
 
-Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie eine DELETE-Anfrage an den `/segment/definitions` -Endpunkt senden und im Anfragepfad die Kennung der Segmentdefinition angeben, die Sie löschen möchten.
+DELETE Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie eine Segmentanfrage an den `/segment/definitions`-Endpunkt senden und im Anfragepfad die ID der Segmentdefinition angeben, die Sie löschen möchten.
 
 >[!NOTE]
 >
-> Eine Segmentdefinition, die in einer Zielaktivierung verwendet wird **kann nicht** gelöscht werden.
+> Eine Segmentdefinition, die in einer Zielaktivierung verwendet wird (**)** gelöscht werden.
 
 **API-Format**
 
@@ -584,7 +584,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` -Wert der Segmentdefinition, die Sie löschen möchten. |
+| `{SEGMENT_ID}` | Der `id` der Segmentdefinition, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -606,7 +606,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 ohne Meldung zurück.
 
 ## Aktualisieren einer bestimmten Segmentdefinition
 
-Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH-Anfrage an den `/segment/definitions` -Endpunkt senden und im Anfragepfad die Kennung der Segmentdefinition angeben, die Sie aktualisieren möchten.
+Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH-Anfrage an den `/segment/definitions`-Endpunkt senden und im Anfragepfad die ID der Segmentdefinition angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -616,7 +616,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` -Wert der Segmentdefinition, die Sie aktualisieren möchten. |
+| `{SEGMENT_ID}` | Der `id` der Segmentdefinition, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -624,7 +624,7 @@ Mit der folgenden Anfrage wird das Land der Arbeitsadresse von den USA nach Kana
 
 >[!NOTE]
 >
->Da dieser API-Aufruf **den Inhalt der Segmentdefinition ersetzt, stellen Sie sicher, dass** alle **die Felder, die Sie beibehalten möchten, als Teil des Anfrageinhalts enthalten sind.**
+>Da dieser API-**den** der Segmentdefinition ersetzt, stellen Sie sicher **dass** Felder, die Sie beibehalten möchten, als Teil des Anfragetexts enthalten sind.
 
 +++ Eine Beispielanfrage zum Aktualisieren einer Segmentdefinition.
 
@@ -709,7 +709,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu aktu
 
 ## Segmentdefinition konvertieren
 
-Sie können eine Segmentdefinition zwischen `pql/text` und `pql/json` oder `pql/json` in `pql/text` konvertieren, indem Sie eine POST-Anfrage an den `/segment/conversion` -Endpunkt senden.
+Sie können eine Segmentdefinition zwischen `pql/text` und `pql/json` oder `pql/json` in `pql/text` konvertieren, indem Sie eine POST-Anfrage an den `/segment/conversion`-Endpunkt senden.
 
 **API-Format**
 
@@ -719,7 +719,7 @@ POST /segment/conversion
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird das Format der Segmentdefinition von `pql/text` in `pql/json` geändert.
+Die folgende Anfrage ändert das Format der Segmentdefinition von `pql/text` in `pql/json`.
 
 +++ Eine Beispielanfrage zum Konvertieren der Segmentdefinition.
 
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu konvertierten Segmentdefinition zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu konvertierten Segmentdefinition zurückgegeben.
 
 +++ Eine Beispielantwort beim Konvertieren der Segmentdefinition.
 
@@ -776,4 +776,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu konvertie
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon, wie Segmentdefinitionen funktionieren. Weiterführende Informationen zum Erstellen eines Segments finden Sie im Tutorial zum Erstellen eines Segments](../tutorials/create-a-segment.md) .[
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie Segmentdefinitionen funktionieren. Weitere Informationen zum Erstellen eines Segments finden Sie im Tutorial [Erstellen eines Segments](../tutorials/create-a-segment.md) .

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; FTP; ftp;
+keywords: Experience Platform;Startseite;beliebte Themen;FTP;FTP;
 solution: Experience Platform
-title: Übersicht über FTP Source Connector
+title: FTP Source Connector - Übersicht
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP-Server mit Adobe Experience Platform verbinden.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Der FTP-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../home.md#terms-and-conditions) .
+>Der FTP-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
@@ -23,7 +23,7 @@ Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übe
 
 >[!IMPORTANT]
 >
->Beim Erstellen eines Datenflusses mit dem FTP-Quell-Connector wird dringend empfohlen, einen einmaligen Erfassungszeitplan festzulegen, da weiterhin Probleme mit inkrementellen Aktualisierungen auf FTP-Servern auftreten.
+>Beim Erstellen eines Datenflusses mit dem FTP-Quell-Connector wird dringend empfohlen, einen einmaligen Aufnahmezeitplan festzulegen, da Probleme mit inkrementellen Aktualisierungen in FTP-Servern fortbestehen.
 
 ## IP-Adressen-Zulassungsliste
 
@@ -42,15 +42,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 ## FTP mit [!DNL Platform] verbinden
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP-Server mit [!DNL Platform] verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden eines FTP-Servers mit [!DNL Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden der APIs
 
-- [Erstellen einer FTP-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Erstellen einer FTP-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Untersuchen der Datenstruktur und des Inhalts einer Cloud-Speicherquelle mit der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer FTP-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/ftp.md)
+- [Erstellen einer FTP-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/ftp.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

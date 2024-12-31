@@ -1,6 +1,6 @@
 ---
-title: Übersicht über Amazon Kinesis Source Connector
-description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Amazon Kinesis und Adobe Experience Platform herstellen.
+title: Übersicht über den Amazon Kinesis Source Connector
+description: Erfahren Sie, wie Sie Amazon Kinesis mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
@@ -10,36 +10,36 @@ ht-degree: 14%
 
 ---
 
-# [!DNL Amazon Kinesis] source
+# [!DNL Amazon Kinesis]
 
 >[!IMPORTANT]
 >
->Die Quelle &quot;[!DNL Amazon Kinesis]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
+>Die [!DNL Amazon Kinesis] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] bringen.
 
-Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten von [!DNL Amazon Kinesis] in Echtzeit einbringen.
+Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit [!DNL Platform] können Sie Daten aus [!DNL Amazon Kinesis] in Echtzeit importieren.
 
 >[!NOTE]
 >
->Der Skalierungsfaktor für [!DNL Kinesis] muss erhöht werden, wenn Sie Daten mit hohem Volumen erfassen müssen. Derzeit beträgt das maximale Datenvolumen, das Sie von Ihrem [!DNL Kinesis] -Konto an Platform übermitteln können, 4.000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit höherem Datenvolumen zu skalieren und aufzunehmen.
+>Der Skalierungsfaktor für [!DNL Kinesis] muss erhöht werden, wenn Daten mit hohem Volumen aufgenommen werden sollen. Derzeit beträgt das maximale Datenvolumen, das Sie von Ihrem [!DNL Kinesis]-Konto an Platform übermitteln können, 4.000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit einem größeren Datenvolumen zu skalieren und aufzunehmen.
 
 ## Voraussetzungen
 
-Im folgenden Abschnitt finden Sie weitere Informationen zur erforderlichen Einrichtung, bevor Sie eine [!DNL Kinesis]-Quellverbindung erstellen können.
+Im folgenden Abschnitt finden Sie weitere Informationen zur erforderlichen Einrichtung, bevor Sie eine [!DNL Kinesis] Quellverbindung erstellen können.
 
-### Zugriffsrichtlinie einrichten
+### Einrichten der Zugriffsrichtlinie
 
-Ein [!DNL Kinesis] -Stream erfordert die folgenden Berechtigungen, um eine Quellverbindung zu erstellen:
+Ein [!DNL Kinesis]-Stream benötigt die folgenden Berechtigungen, um eine Quellverbindung zu erstellen:
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-Diese Berechtigungen werden über die Konsole [!DNL Kinesis] angeordnet und von Platform überprüft, sobald Sie Ihre Anmeldeinformationen eingeben und Ihren Daten-Stream auswählen.
+Diese Berechtigungen werden über die [!DNL Kinesis] Console angeordnet und von Platform überprüft, sobald Sie Ihre Anmeldeinformationen eingeben und Ihren Daten-Stream auswählen.
 
-Im folgenden Beispiel werden die Mindestzugriffsberechtigungen angezeigt, die zum Erstellen einer Quellverbindung mit dem Wert [!DNL Kinesis] erforderlich sind.
+Im folgenden Beispiel werden die Mindestzugriffsrechte angezeigt, die zum Erstellen einer [!DNL Kinesis]-Quellverbindung erforderlich sind.
 
 ```json
 {
@@ -63,39 +63,39 @@ Im folgenden Beispiel werden die Mindestzugriffsberechtigungen angezeigt, die zu
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `kinesis:GetShardIterator` | Eine Aktion, die erforderlich ist, um durch Datensätze zu navigieren. |
+| `kinesis:GetShardIterator` | Eine Aktion, die zum Durchlaufen von Datensätzen erforderlich ist. |
 | `kinesis:GetRecords` | Eine Aktion, die erforderlich ist, um Datensätze von einer bestimmten Offset- oder Shard-ID abzurufen. |
-| `kinesis:DescribeStream` | Eine Aktion, die Informationen zum Stream einschließlich der Shard Map zurückgibt, die zum Generieren einer SHARD-ID erforderlich ist. |
-| `kinesis:ListStreams` | Eine Aktion, die erforderlich ist, um verfügbare Streams aufzulisten, die Sie über die Benutzeroberfläche auswählen können. |
+| `kinesis:DescribeStream` | Eine Aktion, die Informationen zum Stream zurückgibt, einschließlich der Shard-Zuordnung, die zum Generieren einer Shard-ID erforderlich ist. |
+| `kinesis:ListStreams` | Eine Aktion, die erforderlich ist, um verfügbare Streams aufzulisten, die Sie in der Benutzeroberfläche auswählen können. |
 
-Weitere Informationen zum Steuern des Zugriffs für [!DNL Kinesis]-Datenströme finden Sie im folgenden [[!DNL Kinesis] Dokument](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Weitere Informationen zum Steuern des Zugriffs für [!DNL Kinesis] Datenströme finden Sie im folgenden [[!DNL Kinesis] Dokument](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-### Iterator-Typ konfigurieren
+### Iterationstyp konfigurieren
 
 [!DNL Kinesis] unterstützt die folgenden Iteratortypen, mit denen Sie die Reihenfolge angeben können, in der Ihre Daten gelesen werden:
 
-| Trennzeichentyp | Beschreibung |
+| Iteratortyp | Beschreibung |
 | ------------- | ----------- |
-| `AT_SEQUENCE_NUMBER` | Die Daten werden ausgehend von einer Position gelesen, die durch eine bestimmte Sequenznummer identifiziert wird. |
-| `AFTER_SEQUENCE_NUMBER` | Die Daten werden ab der Position gelesen, die durch eine bestimmte Sequenznummer identifiziert wird. |
+| `AT_SEQUENCE_NUMBER` | Das Auslesen der Daten erfolgt ausgehend von einer durch eine bestimmte Ablaufnummer identifizierten Position. |
+| `AFTER_SEQUENCE_NUMBER` | Die Daten werden nach einer durch eine bestimmte Folgenummer identifizierten Position ausgelesen. |
 | `AT_TIMESTAMP` | Die Daten werden ausgehend von einer Position gelesen, die durch einen bestimmten Zeitstempel identifiziert wird. |
-| `TRIM_HORIZON` | Die Daten werden ab dem ältesten Datensatz gelesen. |
+| `TRIM_HORIZON` | Die Daten werden ausgehend vom ältesten Datensatz gelesen. |
 | `LATEST` | Die Daten werden ab dem letzten Datensatz gelesen. |
 
-Eine [!DNL Kinesis] UI-Quelle unterstützt derzeit nur `TRIM_HORIZON`, während die API sowohl `TRIM_HORIZON` als auch `LATEST` als Modi zum Abrufen von Daten unterstützt. Der standardmäßige Iteratorwert, den Platform für die [!DNL Kinesis] -Quelle verwendet, ist `TRIM_HORIZON`.
+Eine [!DNL Kinesis] UI-Quelle unterstützt derzeit nur `TRIM_HORIZON`, während die API sowohl `TRIM_HORIZON` als auch `LATEST` als Modus unterstützt, um Daten abzurufen. Der standardmäßige Iteratorwert, den Platform für die [!DNL Kinesis]-Quelle verwendet, ist `TRIM_HORIZON`.
 
 Weitere Informationen zu Iteratortypen finden Sie im folgenden [[!DNL Kinesis] Dokument](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
 ## [!DNL Amazon Kinesis] mit [!DNL Platform] verbinden
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL Amazon Kinesis] mit [!DNL Platform] verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Amazon Kinesis] mit [!DNL Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 
-- [Erstellen einer Amazon Kinesis-Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Erstellen einer Amazon Kinesis-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Erfassen von Streaming-Daten mit der Flow Service-API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer Amazon Kinesis-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Erstellen einer Amazon Kinesis-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung über die Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

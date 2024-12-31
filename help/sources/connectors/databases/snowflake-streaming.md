@@ -1,5 +1,5 @@
 ---
-title: Snowflake Streaming Source Connector - Übersicht
+title: Übersicht über den Snowflake Streaming Source Connector
 description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Streaming-Daten von Ihrer Snowflake-Instanz in Adobe Experience Platform aufzunehmen
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
@@ -11,27 +11,27 @@ ht-degree: 18%
 
 ---
 
-# [!DNL Snowflake] Streaming-Quelle
+# Streaming-Quelle [!DNL Snowflake]
 
 >[!IMPORTANT]
 >
-> Die Streaming-Quelle [!DNL Snowflake] steht in der API Benutzern zur Verfügung, die Real-time Customer Data Platform Ultimate erworben haben.
+> Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt Streaming-Daten aus einer [!DNL Snowflake] -Datenbank.
+Experience Platform unterstützt das Streaming von Daten aus einer [!DNL Snowflake].
 
-## Grundlegendes zur Streaming-Quelle [!DNL Snowflake]
+## Verstehen der [!DNL Snowflake] Streaming-Quelle
 
-Die Streaming-Quelle [!DNL Snowflake] funktioniert durch das Laden von Daten, indem regelmäßig eine SQL-Abfrage ausgeführt und für jede Zeile in der Ergebnismenge ein Ausgabedatensatz erstellt wird.
+Die [!DNL Snowflake]-Streaming-Quelle lädt Daten durch periodisches Ausführen einer SQL-Abfrage und Erstellen eines Ausgabedatensatzes für jede Zeile im resultierenden Satz.
 
-Durch die Verwendung von [!DNL Kafka Connect] zeichnet die Streaming-Quelle [!DNL Snowflake] den neuesten Datensatz auf, den sie von jeder Tabelle erhält, sodass sie an der richtigen Stelle für die nächste Iteration beginnen kann. Die Quelle verwendet diese Funktion, um Daten zu filtern und bei jeder Iteration nur die aktualisierten Zeilen aus einer Tabelle zu erhalten.
+Durch Verwendung von [!DNL Kafka Connect] verfolgt die [!DNL Snowflake]-Streaming-Quelle den neuesten Datensatz, den sie von jeder Tabelle erhält, sodass sie an der richtigen Stelle für die nächste Iteration beginnen kann. Die Quelle verwendet diese Funktion zum Filtern von Daten und ruft bei jeder Iteration nur die aktualisierten Zeilen aus einer Tabelle ab.
 
 ## Voraussetzungen
 
-Im folgenden Abschnitt werden die erforderlichen Schritte beschrieben, die ausgeführt werden müssen, bevor Sie Daten von Ihrer [!DNL Snowflake]-Datenbank an Experience Platform streamen können:
+Im folgenden Abschnitt werden die erforderlichen Schritte beschrieben, die ausgeführt werden müssen, bevor Sie Daten aus Ihrer [!DNL Snowflake] auf Experience Platform streamen können:
 
-### Aktualisieren der IP-Adressen-Zulassungsliste
+### Zulassungsliste der IP-Adressen aktualisieren
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources).
 
@@ -39,52 +39,52 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Amazo
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Damit [!DNL Flow Service] eine Verbindung zu [!DNL Snowflake] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit [!DNL Snowflake] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `account` | Die vollständige Kontokennung (Kontoname oder Kontostandort) Ihres [!DNL Snowflake]-Kontos, das mit dem Suffix `snowflakecomputing.com` angehängt wird. Die Kontokennung kann in verschiedenen Formaten verwendet werden: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (z. B. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (z. B. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (z. B. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Weitere Informationen finden Sie unter [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
-| `database` | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an die Plattform übermitteln möchten. |
-| `username` | Der Benutzername für das [!DNL Snowflake]-Konto. |
-| `password` | Das Kennwort für das [!DNL Snowflake] -Benutzerkonto. |
-| `role` | (Optional) Eine benutzerdefinierte Rolle, die für einen Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public` verwendet. |
+| `account` | Die vollständige Kontokennung (Kontoname oder Konto-Locator) Ihres [!DNL Snowflake] Kontos, an die das Suffix `snowflakecomputing.com` angehängt ist. Die Kontokennung kann in verschiedenen Formaten vorliegen: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (z. B. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (z. B. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (z. B. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Weitere Informationen finden Sie im [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `warehouse` | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
+| `database` | Die [!DNL Snowflake]-Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
+| `username` | Der Benutzername für das [!DNL Snowflake]. |
+| `password` | Das Kennwort für das [!DNL Snowflake] Benutzerkonto. |
+| `role` | (Optional) Eine benutzerdefinierte Rolle, die für einen Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn kein Wert angegeben wird, ist dieser Standardwert `public`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Snowflake] ist `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 {style="table-layout:auto"}
 
-### Rolleneinstellungen konfigurieren {#configure-role-settings}
+### Konfigurieren von Rolleneinstellungen {#configure-role-settings}
 
-Sie müssen Berechtigungen für eine Rolle konfigurieren, auch wenn die standardmäßige öffentliche Rolle zugewiesen ist, damit Ihre Quellverbindung auf die relevante [!DNL Snowflake] -Datenbank, das Schema und die Tabelle zugreifen kann. Die verschiedenen Berechtigungen für verschiedene [!DNL Snowflake] -Entitäten lauten wie folgt:
+Sie müssen Berechtigungen für eine Rolle konfigurieren, auch wenn die standardmäßige öffentliche Rolle zugewiesen ist, damit Ihre Quellverbindung auf die entsprechende [!DNL Snowflake]-Datenbank, das Schema und die entsprechende Tabelle zugreifen kann. Die verschiedenen Berechtigungen für verschiedene [!DNL Snowflake]-Entitäten lauten wie folgt:
 
-| [!DNL Snowflake] entity | Berechtigung &quot;Rolle anfordern&quot; |
+| Entität [!DNL Snowflake] | Rollenberechtigung verlangen |
 | --- | --- |
-| Warehouse | OPERATE, USAGE |
-| Datenbank | NUTZUNG |
-| Schema | NUTZUNG |
-| Tabelle | SELECT |
+| Warehouse | BEDIENEN, NUTZUNG |
+| Datenbank | GEBRAUCH |
+| Schema | GEBRAUCH |
+| Tabelle | AUSWÄHLEN |
 
 >[!NOTE]
 >
->Die automatische Wiederaufnahme und das automatische Aussetzen müssen in der Konfiguration der erweiterten Einstellungen Ihres Warehouse aktiviert sein.
+>Die Funktion zum automatischen Fortsetzen und automatischen Aussetzen muss in den erweiterten Einstellungen Ihres Warehouse aktiviert sein.
 
-Weiterführende Informationen zur Rollen- und Berechtigungsverwaltung finden Sie in der [[!DNL Snowflake] API-Referenz](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+Weitere Informationen zur Rollen- und Berechtigungsverwaltung finden Sie in der [[!DNL Snowflake] API-Referenz](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
 
 ## Einschränkungen und häufig gestellte Fragen {#limitations-and-frequently-asked-questions}
 
-* Der Datendurchsatz für die Quelle [!DNL Snowflake] beträgt 2000 Datensätze pro Sekunde.
-* Die Preise variieren je nach der aktiven Lagerzeit und der Lagergröße. Für die Quell-Integration von [!DNL Snowflake] ist das kleinste, x-kleine Warehouse ausreichend. Es wird empfohlen, das automatische Aussetzen zu aktivieren, damit das Warehouse selbst ausgesetzt werden kann, wenn es nicht in Verwendung ist.
-* Die [!DNL Snowflake] -Quelle fragt die Datenbank alle 10 Sekunden nach neuen Daten ab.
+* Der Datendurchsatz für die [!DNL Snowflake] beträgt 2000 Datensätze pro Sekunde.
+* Die Preise variieren je nach der Zeit, die ein Lager aktiv ist, und der Größe des Lagers. Für die [!DNL Snowflake]-Quellintegration genügt ein kleinstes X-kleines Warehouse. Es wird empfohlen, das automatische Aussetzen zu aktivieren, damit das Warehouse bei Nichtverwendung selbstständig aussetzen kann.
+* Die [!DNL Snowflake] fragt alle 10 Sekunden die Datenbank nach neuen Daten ab.
 * Konfigurationsoptionen:
-   * Sie können beim Erstellen einer Quellverbindung eine boolesche Markierung `backfill` für Ihre [!DNL Snowflake] Quelle aktivieren.
-      * Wenn die Aufstockung auf &quot;true&quot;festgelegt ist, wird der Wert für timestamp.initial auf 0 gesetzt. Das bedeutet, dass Daten mit einer Zeitstempelspalte abgerufen werden, die größer als 0 Epochenzeit ist.
-      * Wenn die Aufstockung auf &quot;false&quot;festgelegt ist, wird der Wert für timestamp.initial auf -1 gesetzt. Das bedeutet, dass Daten mit einer Zeitstempelspalte abgerufen werden, die größer ist als die aktuelle Zeit (der Zeitpunkt, zu dem die Quelle beginnt zu erfassen).
-   * Die Spalte mit dem Zeitstempel sollte wie folgt formatiert sein: `TIMESTAMP_LTZ` oder `TIMESTAMP_NTZ`. Wenn die Zeitstempelspalte auf `TIMESTAMP_NTZ` gesetzt ist, sollte die entsprechende Zeitzone, in der die Werte gespeichert werden, über den Parameter `timezoneValue` übergeben werden. Wenn nicht angegeben, wird für den Wert standardmäßig UTC verwendet.
-      * `TIMESTAMP_TZ` kann nicht in einer Zeitstempelspalte oder einer Zuordnung verwendet werden.
+   * Sie können beim Erstellen einer Quellverbindung ein `backfill` boolesches Flag für Ihre [!DNL Snowflake]-Quelle aktivieren.
+      * Wenn die Aufstockung auf „true“ gesetzt ist, wird der Wert für „timestamp.initial“ auf 0 gesetzt. Das bedeutet, dass Daten mit einer Zeitstempelspalte größer als 0 Epochenzeit abgerufen werden.
+      * Wenn die Aufstockung auf „false“ festgelegt ist, wird der Wert für „timestamp.initial“ auf -1 festgelegt. Das bedeutet, dass Daten mit einer Zeitstempelspalte abgerufen werden, die größer ist als die aktuelle Zeit (die Zeit, in der die Quelle mit der Aufnahme beginnt).
+   * Die Zeitstempelspalte sollte als Typ formatiert sein: `TIMESTAMP_LTZ` oder `TIMESTAMP_NTZ`. Wenn die Zeitstempelspalte auf `TIMESTAMP_NTZ` gesetzt ist, sollte die entsprechende Zeitzone, in der die Werte gespeichert sind, über den `timezoneValue` Parameter weitergeleitet werden. Wenn kein Wert angegeben wird, wird standardmäßig UTC verwendet.
+      * `TIMESTAMP_TZ` kann weder in einer Zeitstempelspalte noch in einer Zuordnung verwendet werden.
 
 ## Nächste Schritte
 
-Im folgenden Tutorial erfahren Sie, wie Sie mithilfe der API Ihre [!DNL Snowflake]-Streaming-Quelle mit Experience Platform verbinden:
+Im folgenden Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake]-Streaming-Quelle mithilfe der -API mit dem Experience Platform verbinden:
 
-* [Streamen von Daten aus einer [!DNL Snowflake] Datenbank an die Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Streamen von Daten aus einer [!DNL Snowflake] Datenbank an das Experience Platform mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Experience Platform-Benutzeroberfläche](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus einer Datenbank  [!DNL Snowflake]  Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus einer  [!DNL Snowflake]  auf Experience Platform mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

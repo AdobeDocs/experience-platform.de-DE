@@ -1,6 +1,6 @@
 ---
-title: Segment Search API Endpoint
-description: In der Adobe Experience Platform Segmentation Service-API wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu durchsuchen und nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mithilfe der API.
+title: API-Endpunkt für die Segmentsuche
+description: In der Segmentierungs-Service-API von Adobe Experience Platform wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu suchen und sie nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiele für API-Aufrufe zum Ausführen einfacher Aktionen mithilfe der -API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -10,23 +10,23 @@ ht-degree: 5%
 
 ---
 
-# Segmentsuchendpunkt
+# Endpunkt der Segmentsuche
 
-Die Segmentsuche wird verwendet, um Felder zu durchsuchen, die in verschiedenen Datenquellen enthalten sind, und sie nahezu in Echtzeit zurückzugeben.
+Die Segmentsuche wird verwendet, um Felder aus verschiedenen Datenquellen zu suchen und sie nahezu in Echtzeit zurückzugeben.
 
-Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mithilfe der API.
+Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiele für API-Aufrufe zum Ausführen einfacher Aktionen mithilfe der -API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-API. Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
 
-Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt &quot;Erste Schritte&quot;beschrieben werden, benötigen alle Anforderungen an den Segmentsuchendpunkt die folgende zusätzliche Kopfzeile:
+Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt Erste Schritte beschrieben sind, erfordern alle Anfragen an den Segmentsuchendpunkt die folgende zusätzliche Kopfzeile:
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version: „1.0“
 
 ### Suchen über mehrere Namespaces hinweg
 
-Dieser Suchendpunkt kann verwendet werden, um über verschiedene Namespaces hinweg zu suchen und eine Liste mit Suchergebnissen zurückzugeben. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
+Dieser Suchendpunkt kann verwendet werden, um über verschiedene Namespaces hinweg zu suchen und eine Liste von Suchergebnissen zurückzugeben. Es können mehrere Parameter verwendet werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden.
 
 **API-Format**
 
@@ -38,7 +38,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Microsoft-Implementierung der Suchsyntax von [Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Microsoft-Implementierung der [Suchsyntax von Lucene) ](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -83,9 +83,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit folgenden Informationen z
 }
 ```
 
-### Suche nach einzelnen Entitäten
+### Suchen nach einzelnen Entitäten
 
-Mit diesem Suchendpunkt können Sie eine Liste aller im angegebenen Namespace indizierten Volltext-Objekte abrufen. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
+Dieser Suchendpunkt kann verwendet werden, um eine Liste aller Volltext-indizierten Objekte innerhalb des angegebenen Namespace abzurufen. Es können mehrere Parameter verwendet werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden.
 
 **API-Format**
 
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Microsoft-Implementierung der Suchsyntax von [Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
-| `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den angegebenen Ordner, der mit {ENTITY_ID} angegeben ist. |
-| `limit={LIMIT}` | *(Optional)* Wobei {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse darstellt. Der Standardwert lautet 50. |
-| `page={PAGE}` | *(Optional)* Wobei {PAGE} die Seitennummer darstellt, die zum Paginieren der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0** beginnt. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Hierbei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schemaklasse-Wert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem gesucht werden soll. |
+| `s={SEARCH_TERM}` | *(Optional)* Hierbei enthält {SEARCH_TERM} eine Abfrage, die der Microsoft-Implementierung der [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `entityId={ENTITY_ID}` | *(Optional)* Schränkt die Suche auf den angegebenen Ordner ein, der mit {ENTITY_ID} angegeben ist. |
+| `limit={LIMIT}` | *(Optional)* Dabei steht {LIMIT} für die Anzahl der zurückzugebenden Suchergebnisse. Der Standardwert lautet 50. |
+| `page={PAGE}` | *(Optional)* Dabei entspricht {PAGE} der Seitenzahl, die für die Paginierung der Ergebnisse der durchsuchten Abfrage verwendet wird. Bitte beachten Sie, dass die Seitennummer bei **0** beginnt. |
 
 
 **Anfrage**
@@ -120,7 +120,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück, wobei die Ergebnisse mit der Suchabfrage übereinstimmen.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Ergebnissen zurückgegeben, die mit der Suchanfrage übereinstimmen.
 
 ```json
 {
@@ -156,9 +156,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück, wobei die Ergebnisse
 }
 ```
 
-### Abrufen von Strukturinformationen über ein Suchobjekt
+### Abrufen von Strukturinformationen zu einem Suchobjekt
 
-Mit diesem Suchendpunkt können Sie die Strukturinformationen zum angeforderten Suchobjekt abrufen.
+Dieser Suchendpunkt kann verwendet werden, um die Strukturinformationen zum angeforderten Suchobjekt abzurufen.
 
 **API-Format**
 
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem Sie suchen möchten. |
-| `entityId={ENTITY_ID}` | **(Erforderlich)** Die Kennung des Suchobjekts, für das Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Hierbei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schemaklasse-Wert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem gesucht werden soll. |
+| `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, zu dem Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
 
 **Anfrage**
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Strukturinformationen zum angeforderten Suchobjekt zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Strukturinformationen zum angeforderten Suchobjekt zurück.
 
 ```json
 {
@@ -219,45 +219,45 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Strukturinf
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon, wie die Segmentsuche funktioniert.
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie die Segmentsuche funktioniert.
 
 ## Anhang {#appendix}
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder [!DNL Platform] zu suchen, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
->  Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
+>  Für Best Practices sollte der Suchausdruck HTML-kodiert sein, wie im Beispiel oben gezeigt.
 
 ### Suchfelder {#search-fields}
 
-In der folgenden Tabelle sind die Felder aufgeführt, die im Suchabfrageparameter gesucht werden können.
+In der folgenden Tabelle sind die Felder aufgeführt, die mit dem Abfrageparameter durchsucht werden können.
 
 | Feldname | Beschreibung |
 | ---------- | ----------- |
 | folderId | Der Ordner oder die Ordner mit der Ordner-ID der angegebenen Suche. |
-| folderLocation | Der Speicherort bzw. die Speicherorte mit dem Ordnerspeicherort der angegebenen Suche. |
-| parentFolderId | Die Segmentdefinition oder der Ordner mit der übergeordneten Ordner-ID der angegebenen Suche. |
-| segmentId | Die Segmentdefinition, die mit der Segment-ID Ihrer angegebenen Suche übereinstimmt. |
-| segmentName | Die Segmentdefinition, die dem Segmentnamen der angegebenen Suche entspricht. |
-| segmentDescription | Die Segmentdefinition, die mit der Segmentbeschreibung der angegebenen Suche übereinstimmt. |
+| folderLocation | Der Speicherort oder die Speicherorte, die den Ordnerspeicherort Ihrer angegebenen Suche haben. |
+| parentFolderId | Die Segmentdefinition oder der Ordner, die bzw. der die übergeordnete Ordner-ID der angegebenen Suche aufweist. |
+| segmentId | Die Segmentdefinition, die der Segment-ID Ihrer angegebenen Suche entspricht. |
+| segmentName | Die Segmentdefinition, die dem Segmentnamen Ihrer angegebenen Suche entspricht. |
+| segmentDescription | Die Segmentdefinition, die der Segmentbeschreibung der angegebenen Suche entspricht. |
 
 ### Suchausdruck {#search-expression}
 
-In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfragen bei der Verwendung der Segmentsuche-API.
+In der folgenden Tabelle sind die Besonderheiten der Funktionsweise von Suchabfragen bei Verwendung der Segmentsuche-API aufgeführt.
 
->  Die folgenden Beispiele werden in einem nicht-HTML-kodierten Format angezeigt, um eine bessere Übersichtlichkeit zu erzielen. Best Practices finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
+>  Die folgenden Beispiele werden zur besseren Übersichtlichkeit in einem nicht-HTML-kodierten Format angezeigt. Bewährte Verfahren finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
 
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |
-| foo | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;in einem der durchsuchbaren Felder gefunden wird. |
-| foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn in einem der durchsuchbaren Felder **beide** die Wörter &quot;foo&quot;und &quot;bar&quot;gefunden werden. |
-| foo OR bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **entweder** das Wort &quot;foo&quot;oder das Wort &quot;bar&quot;in einem der durchsuchbaren Felder gefunden werden. |
-| foo NOT bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;gefunden wird, das Wort &quot;bar&quot;jedoch in keinem der durchsuchbaren Felder gefunden wird. |
-| name: foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **beide** die Wörter &quot;foo&quot;und &quot;bar&quot;im Feld &quot;name&quot;gefunden werden. |
-| run* | Eine Platzhaltersuche. Die Verwendung eines Sternchens (*) entspricht 0 oder mehr Zeichen, d. h. es werden Ergebnisse ausgegeben, wenn der Inhalt eines durchsuchbaren Felds ein Wort enthält, das mit &quot;run&quot;beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;wird ausgeführt&quot;, &quot;läuft&quot;, &quot;runner&quot;oder &quot;runt&quot;angezeigt werden. |
-| Cam? | Eine Platzhaltersuche. Verwenden eines Fragezeichens (?) entspricht nur genau einem Zeichen. Das bedeutet, dass Ergebnisse ausgegeben werden, wenn der Inhalt eines durchsuchbaren Felds mit &quot;cam&quot;und einem zusätzlichen Buchstaben beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;Camp&quot;oder &quot;Cams&quot;angezeigt werden, aber keine Ergebnisse zurückgeben, wenn die Wörter &quot;Camera&quot;oder &quot;Campfire&quot;angezeigt werden. |
-| &quot;blauer Regenschirm&quot; | Eine Satzsuche. Dies gibt Ergebnisse zurück, wenn der Inhalt eines durchsuchbaren Felds den vollständigen Wortlaut &quot;blauer Schirm&quot;enthält. |
-| blue\~ | Eine unscharfe Suche. Optional können Sie eine Zahl zwischen 0 und 2 nach der Tilde (~) setzen, um den Bearbeitungsabstand anzugeben. Beispielsweise würde &quot;blue\~1&quot;&quot;blue&quot;, &quot;blues&quot;oder &quot;kleue&quot;zurückgeben. Die unscharfe Suche kann **nur** auf Begriffe und nicht auf Ausdrücke angewendet werden. Sie können jedoch am Ende jedes Wortes in einer Wortgruppe Tildes anhängen. Beispielsweise würde &quot;camping\~ in\~ the\~ summer\~&quot;mit &quot;camping im Sommer&quot;übereinstimmen. |
-| &quot;Hotel Airport&quot;\~5 | Näherungssuche. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. Beispielsweise findet die Wortgruppe `"hotel airport"~5` die Begriffe &quot;Hotel&quot;und &quot;Flughafen&quot;in einem Dokument innerhalb von 5 Wörtern voneinander. |
-| `/a[0-9]+b$/` | Suche nach regulären Ausdrücken. Diese Art der Suche findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Um beispielsweise Dokumente zu finden, die &quot;motel&quot;oder &quot;hotel&quot;enthalten, geben Sie &quot;`/[mh]otel/`&quot;an. Die Suche nach regulären Ausdrücken wird mit einzelnen Wörtern abgeglichen. |
+| foo | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort „foo“ in einem der durchsuchbaren Felder gefunden wird. |
+| Lebensmittel UND Bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück **wenn** beide“ Wörter „foo“ und „bar“ in einem der durchsuchbaren Felder gefunden werden. |
+| Fußleiste ODER | Eine boolesche Suche. Dies gibt Ergebnisse zurück **wenn entweder** Wort „foo“ oder das Wort „bar“ in einem der durchsuchbaren Felder gefunden wird. |
+| Foo NOT bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort „foo“ gefunden wird, aber das Wort „bar“ in keinem der durchsuchbaren Felder gefunden wird. |
+| Name: foo AND bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück **wenn** beide“ Wörter „foo“ und „bar“ im Feld „name“ gefunden werden. |
+| Durchgang* | Eine Platzhaltersuche. Bei Verwendung eines Sternchens (*) besteht eine Übereinstimmung aus 0 oder mehr Zeichen, was bedeutet, dass Ergebnisse zurückgegeben werden, wenn der Inhalt eines der durchsuchbaren Felder ein Wort enthält, das mit „run“ beginnt. Dies liefert z. B. Ergebnisse, wenn die Wörter „running“, „running“, „runner“ oder „runt“ erscheinen. |
+| Cam? | Eine Platzhaltersuche. Mit einem Fragezeichen (?) stimmt nur mit genau einem Zeichen überein, d. h. es werden Ergebnisse zurückgegeben, wenn der Inhalt eines der durchsuchbaren Felder mit „cam“ und einem zusätzlichen Buchstaben beginnt. Beispielsweise werden Ergebnisse zurückgegeben, wenn die Wörter „camp“ oder „cams“ angezeigt werden, jedoch keine Ergebnisse, wenn die Wörter „campaign“ oder „campfire“ zu sehen sind. |
+| „Blauer Regenschirm“ | Eine Suche nach Phrasen. Daraufhin werden Ergebnisse zurückgegeben, wenn der Inhalt eines der durchsuchbaren Felder die vollständige Phrase „blue umbrella“ enthält. |
+| blau\~ | Eine unscharfe Suche. Optional können Sie eine Zahl zwischen 0 und 2 nach der Tilde (~) einfügen, um den Bearbeitungsabstand festzulegen. „blue\~1“ würde beispielsweise „blue“, „blues“ oder „glue“ zurückgeben. Eine unscharfe Suche kann **nur** auf Begriffe und nicht auf Phrasen angewendet werden. Sie können jedoch Tilden an das Ende jedes Wortes in einer Phrase anhängen. So würde beispielsweise „camping\~ in\~ der\~ Sommer\~&quot; mit „camping im Sommer“ übereinstimmen. |
+| „Hotelflughafen“\~5 | Eine Suche in der Nähe. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. Zum Beispiel findet die Phrase `"hotel airport"~5` die Begriffe „Hotel“ und „Flughafen“ innerhalb von 5 Wörtern voneinander in einem Dokument. |
+| `/a[0-9]+b$/` | Suche nach regulären Ausdrücken. Diese Art der Suche findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Um beispielsweise Dokumente zu finden, die „motel“ oder „hotel“ enthalten, geben Sie `/[mh]otel/` an. Suchen nach regulären Ausdrücken werden mit einzelnen Wörtern abgeglichen. |
 
-Eine ausführlichere Dokumentation zur Abfragesyntax finden Sie in der Dokumentation zur [Lucene-Abfragesyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) .
+Eine detailliertere Dokumentation zur Abfragesyntax finden Sie in der [Dokumentation zur Lucene-Abfragesyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax).

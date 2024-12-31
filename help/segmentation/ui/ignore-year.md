@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Aktualisierung der Zeitbegrenzung für das Jahr ignorieren
-description: Erfahren Sie, wie Sie ein Problem mit der Zeitbegrenzung für das Jahr ignorieren können.
+title: Update der Jahreszeitbeschränkung ignorieren
+description: Erfahren Sie, wie Sie ein Problem mit der Zeitbeschränkung „Jahr ignorieren“ beheben.
 exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
 source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
@@ -19,12 +19,12 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Sie können die Zeitbegrenzung &quot;Jahr ignorieren&quot;nur in einer Segmentdefinition verwenden, die mit **Batch-Segmentierung** ausgewertet wurde. Wenn Sie die Zeitbegrenzung &quot;Jahr ignorieren&quot;zu Ihrer Segmentdefinition hinzufügen, ist die resultierende Zielgruppe **nicht für Streaming- oder Edge-Segmentierung geeignet**.
+>Sie können die Zeitbeschränkung „Jahr ignorieren“ nur in einer Segmentdefinition verwenden, die mithilfe der **Batch-Segmentierung“ ausgewertet**. Wenn Sie Ihrer Segmentdefinition die Zeitbeschränkung „Jahr ignorieren“ hinzufügen, wird die resultierende Zielgruppe **nicht** Streaming oder Edge-Segmentierung geeignet.
 
-In der Version vom Februar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform-Segmentierungsdienst eingeführt, die ein Problem mit der Option &quot;Jahr ignorieren&quot;bei der Erstellung und Auswertung von Zielgruppen beheben.
+In der Version vom Februar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform Segmentation Service eingeführt, die ein Problem mit der Option „Jahr ignorieren“ bei der Erstellung und Auswertung von Zielgruppen beheben.
 
-Die Option &quot;Jahr ignorieren&quot;ist so konzipiert, dass die Jahreskomponente eines Datums bei der Durchführung von Zielgruppenbewertungen ignoriert wird. Sie können diese Option in Situationen verwenden, in denen die zeitliche Beziehung zwischen verschiedenen Ereignissen wichtig ist, das spezifische Jahr jedoch unwichtig ist, z. B. ein Geburtsdatumsfeld.
+Die Option „Jahr ignorieren“ soll bei der Durchführung von Zielgruppenbewertungen die Jahreskomponente eines Datums ignorieren. Sie können diese Option in Situationen verwenden, in denen die zeitliche Beziehung zwischen verschiedenen Ereignissen wichtig ist, das bestimmte Jahr jedoch unwichtig ist, z. B. in einem Feld Geburtsdatum .
 
-In Schaltjahren wie 2024 konnte das zugrunde liegende System diese Option jedoch nicht ordnungsgemäß handhaben, was zu ungenauen Zielgruppenbewertungen führte. Wenn also &quot;Jahr ignorieren&quot;in einem Schaltjahr aktiviert ist, würde die Zielgruppenbewertung einen Tag verpassen.
+In Schaltjahren wie 2024 konnte das zugrunde liegende System diese Option jedoch nicht ordnungsgemäß verarbeiten, was zu ungenauen Zielgruppenbewertungen führte. Wenn in einem Schaltjahr „Jahr ignorieren“ aktiviert ist, würde die Zielgruppenbewertung einen Tag verpassen.
 
-Wenn Sie eine Zielgruppe erstellt haben, bevor diese Korrektur veröffentlicht wurde, müssen Sie die Zielgruppe nur im Segment Builder erneut speichern, um die Korrektur anwenden zu können. Wenn Sie sich nicht sicher sind, ob Ihre Zielgruppe von dieser Lösung betroffen ist, werden Sie vom Segment Builder aufgefordert, den Benutzer aufzufordern, wenn dieses Problem die bestehende Zielgruppe betrifft.
+Wenn Sie eine Zielgruppe erstellt haben, bevor diese Fehlerbehebung veröffentlicht wurde, müssen Sie nur die Zielgruppe im Segment Builder erneut speichern, um die Fehlerbehebung anzuwenden. Wenn Sie sich nicht sicher sind, ob Ihre Zielgruppe von dieser Auflösung betroffen ist, fordert Sie Segment Builder auf, anzugeben, ob die vorhandene Zielgruppe von diesem Problem betroffen ist.

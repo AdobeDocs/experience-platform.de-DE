@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Azure Event Hubs Source Connector
+title: Übersicht über den Source-Connector für Azure Event Hubs
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
@@ -10,11 +10,11 @@ ht-degree: 20%
 
 ---
 
-# [!DNL Azure Event Hubs] source
+# [!DNL Azure Event Hubs]
 
 >[!IMPORTANT]
 >
->Die Quelle &quot;[!DNL Azure Event Hubs]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
+>Die [!DNL Azure Event Hubs] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in Platform importieren.
 
@@ -22,31 +22,31 @@ Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertrage
 
 ## Skalierung mit [!DNL Event Hubs]
 
-Der Skalierungsfaktor Ihrer [!DNL Event Hubs] -Instanz muss erhöht werden, wenn Sie Daten mit hohem Volumen aufnehmen, die Parallelität erhöhen oder die Geschwindigkeit der Aufnahmeplattform erhöhen müssen.
+Der Skalierungsfaktor Ihrer [!DNL Event Hubs] muss erhöht werden, wenn Sie Daten mit hohem Datenvolumen aufnehmen, die Parallelität erhöhen oder die Geschwindigkeit der Aufnahmeplattform erhöhen müssen.
 
-### Aufnehmen von Daten mit höherem Volumen
+### Höheres Datenvolumen aufnehmen
 
-Derzeit beträgt das maximale Datenvolumen, das Sie von Ihrem [!DNL Event Hubs] -Konto an Platform übermitteln können, 2.000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit höherem Datenvolumen zu skalieren und aufzunehmen.
+Derzeit beträgt das maximale Datenvolumen, das Sie von Ihrem [!DNL Event Hubs]-Konto an Platform übermitteln können, 2.000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit einem größeren Datenvolumen zu skalieren und aufzunehmen.
 
-### Erhöhen Sie den Parallelismus für [!DNL Event Hubs] und die Plattform
+### Steigerung der Parallelität auf [!DNL Event Hubs] und Platform
 
-Parallelismus bezieht sich auf die gleichzeitige Ausführung der gleichen Aufgaben an mehreren Verarbeitungseinheiten, um die Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der Seite [!DNL Event Hubs] erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie in diesem [[!DNL Event Hubs] Dokument zur Skalierung](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) .
+Parallelität bezieht sich auf die gleichzeitige Ausführung derselben Aufgaben auf mehreren Verarbeitungseinheiten, um Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] Seite erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Dokument ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) Skalierung .
 
-Um die Geschwindigkeit der Aufnahme auf Platform-Seite zu erhöhen, muss Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die aus Ihren [!DNL Event Hubs]-Partitionen gelesen werden sollen. Sobald Sie die Parallelität auf der Seite [!DNL Event Hubs] erhöht haben, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Plattformaufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
+Um die Aufnahmegeschwindigkeit auf der Platform-Seite zu erhöhen, muss Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von Ihren [!DNL Event Hubs]-Partitionen gelesen werden. Sobald Sie die Parallelität auf der [!DNL Event Hubs] erhöht haben, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um die Plattformaufgaben auf der Grundlage Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
 
-## Verwenden Sie ein virtuelles Netzwerk, um eine Verbindung zu [!DNL Event Hubs] mit Platform herzustellen.
+## Verwenden eines virtuellen Netzwerks zur Verbindung von [!DNL Event Hubs] mit Platform
 
-Sie können ein virtuelles Netzwerk einrichten, um [!DNL Event Hubs] mit Platform zu verbinden, während die Firewall-Messungen aktiviert sind. Um ein virtuelles Netzwerk einzurichten, rufen Sie dieses Dokument mit dem [[!DNL Event Hubs] Netzwerkregelsatz](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) auf und führen Sie die folgenden Schritte aus:
+Sie können ein virtuelles Netzwerk einrichten, um [!DNL Event Hubs] mit Platform zu verbinden, während Ihre Firewall-Maßnahmen aktiviert sind. Um ein virtuelles Netzwerk einzurichten, gehen Sie zu diesem [[!DNL Event Hubs] Dokument zu Netzwerkregelsätzen](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) und führen Sie die unten aufgeführten Schritte aus:
 
-* Wählen Sie **Testen Sie es** aus dem REST-API-Bedienfeld aus.
-* Authentifizieren Sie Ihr [!DNL Azure] -Konto mit Ihren Anmeldedaten im selben Browser.
-* Wählen Sie den Namespace, die Ressourcengruppe und das Abonnement [!DNL Event Hubs] aus, die Sie für Platform bereitstellen möchten, und wählen Sie dann **AUSFÜHREN** aus.
-* Fügen Sie im angezeigten JSON-Textkörper das folgende Platform-Subnetz unter `virtualNetworkRules` innerhalb von `properties` hinzu:
+* Wählen **im REST** API-Bedienfeld aus.
+* Authentifizieren Sie Ihr [!DNL Azure]-Konto mit Ihren Anmeldedaten im selben Browser.
+* Wählen Sie den [!DNL Event Hubs] Namespace, die Ressourcengruppe und das Abonnement aus, die Sie in Platform importieren möchten, und wählen Sie dann **AUSFÜHREN**.
+* Fügen Sie im angezeigten JSON-Text das folgende Platform-Subnetz unter `virtualNetworkRules` in `properties` hinzu:
 
 
 >[!IMPORTANT]
 >
->Sie müssen den JSON-Hauptteil, den Sie erhalten, sichern, bevor Sie `virtualNetworkRules` mit dem Platform-Subnetz aktualisieren, da es Ihre vorhandenen IP-Filterregeln enthält. Andernfalls werden die Regeln nach dem Aufruf gelöscht.
+>Sie müssen einen Backup des JSON-Bodys erstellen, den Sie erhalten, bevor Sie `virtualNetworkRules` mit dem Platform-Subnetz aktualisieren, da es Ihre vorhandenen IP-Filterregeln enthält. Andernfalls werden die Regeln nach dem Aufruf gelöscht.
 
 
 ```json
@@ -58,7 +58,7 @@ Sie können ein virtuelles Netzwerk einrichten, um [!DNL Event Hubs] mit Platfor
 }
 ```
 
-Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
+In der folgenden Liste finden Sie die verschiedenen Regionen von Platform-Subnetzen:
 
 ### VA7: Nordamerika
 
@@ -117,7 +117,7 @@ Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
 }
 ```
 
-Weitere Informationen zu Netzwerkregelsätzen finden Sie im folgenden [[!DNL Event Hubs] Dokument](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) .
+Weitere Informationen [[!DNL Event Hubs]  Netzwerkregelsätze finden Sie ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) folgenden Dokument.
 
 ## Verbinden von [!DNL Event Hubs] mit Platform
 
@@ -125,10 +125,10 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Event Hubs
 
 ### Verwenden von APIs
 
-* [Erstellen einer Quell-Verbindung für Ereignis-Hub mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Erstellen einer Event Hubs-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/eventhub.md)
 * [Erfassen von Streaming-Daten mit der Flow Service-API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der Benutzeroberfläche
 
-* [Erstellen einer Quell-Verbindung für Ereignis-Hub in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [Erstellen einer Event Hubs-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
 * [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung über die Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

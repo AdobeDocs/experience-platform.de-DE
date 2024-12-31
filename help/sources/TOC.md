@@ -35,7 +35,7 @@ ht-degree: 97%
          - [Marketo Engage-Connector](connectors/adobe-applications/marketo/marketo.md)
          - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
-         - [Migrationshandbuch zur ECID-Zuordnung](connectors/adobe-applications/marketo/migration.md)
+         - [Migrationshandbuch für die ECID-Zuordnung](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
       - [Google Ads-Connector](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -92,7 +92,7 @@ ht-degree: 97%
       - [Snowflake Streaming-Connector](connectors/databases/snowflake-streaming.md)
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
-   - Daten- und Identitätspartner {#data-partner}
+   - {#data-partner} für Daten- und Identitätspartner
       - [Acxiom-Datenaufnahme](connectors/data-partners/acxiom-data-ingestion.md)
       - [Datenimport aus Acxiom Prospecting](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Identitätsauflösung für Unternehmen von Merkury](connectors/data-partners/merkury.md)
@@ -116,7 +116,7 @@ ht-degree: 97%
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
       - [Square-Connector](connectors/payments/square.md)
-      - [Stripe-Connector](connectors/payments/stripe.md)
+      - [Stripe-Anschluss](connectors/payments/stripe.md)
    - Protokolle {#protocols}
       - [Generic OData-Connector](connectors/protocols/odata.md)
       - [Generic REST-API-Connector](connectors/protocols/generic-rest.md)
@@ -303,7 +303,7 @@ ht-degree: 97%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake-Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Daten- und Identitätspartner {#data-partner}
+      - {#data-partner} für Daten- und Identitätspartner
          - [Acxiom-Datenaufnahme](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Datenimport aus Acxiom Prospecting](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Identitätsauflösung für Unternehmen von Merkury](tutorials/ui/create/data-partners/merkury.md)
@@ -348,7 +348,7 @@ ht-degree: 97%
       - [Datenfluss der Zahlungsverbindung](tutorials/ui/dataflow/payments.md)
       - [Datenfluss der Protokollverbindung](tutorials/ui/dataflow/protocols.md)
    - [Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche](tutorials/ui/templates.md)
-   - [Quellenobjekte filtern](tutorials/ui/filter.md)
+   - [Filtern von Quellobjekten](tutorials/ui/filter.md)
    - [Aufnehmen verschlüsselter Daten](tutorials/ui/encryped-ingestion.md)
    - [On-Demand-Aufnahme](tutorials/ui/on-demand-ingestion.md)
    - [Überwachen von Batch-Datenflüssen](tutorials/ui/monitor.md)

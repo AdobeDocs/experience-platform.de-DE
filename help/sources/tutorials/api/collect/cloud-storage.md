@@ -18,7 +18,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Spe
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Cloud-Speicherquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#cloud-storage) eine Liste der Cloud-Speicher-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Cloud-Speicherquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellen - Übersicht](../../../home.md#cloud-storage) eine Liste der Cloud-Speicherquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 
@@ -37,9 +37,9 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `sourceConnections` -Endpunkt der [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID, den Pfad zur Quelldatei, die Sie erfassen möchten, und die entsprechende Verbindungsspezifikations-ID Ihrer Quelle angeben.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `sourceConnections`-Endpunkt [!DNL Flow Service] -API stellen und dabei Ihre Basisverbindungs-ID, den Pfad zur aufzunehmenden Quelldatei und die entsprechende Verbindungsspezifikations-ID angeben.
 
-Beim Erstellen einer Quellverbindung müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
+Beim Erstellen einer Quellverbindung müssen Sie auch einen -Aufzählungswert für das Datenformatattribut definieren.
 
 Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Quellen:
 
@@ -92,15 +92,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `baseConnectionId` | Die Kennung der Basisverbindung Ihrer Cloud-Speicherquelle. |
+| `baseConnectionId` | Die ID der Basisverbindung Ihrer Cloud-Speicherquelle. |
 | `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON` und `parquet`. |
 | `data.properties` | (Optional) Eine Reihe von Eigenschaften, die Sie beim Erstellen einer Quellverbindung auf Ihre Daten anwenden können. |
-| `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Wert angegeben wird, wird ein Komma (`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von getrennten Dateien verwendet werden. |
-| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der Parameter `encoding` ist nur verfügbar, wenn CSV-Dateien mit Trennzeichen aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung `UTF-8` erfasst. |
-| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die Eigenschaft `compressionType` kann nur bei der Erfassung von getrennten oder JSON-Dateien verwendet werden. |
-| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen ganzen Ordner.  **Hinweis**: Sie können anstelle des Dateinamens ein Sternchen verwenden, um die Aufnahme eines ganzen Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten Ordner `/acme/summerCampaign/` auf. |
-| `params.type` | Der Dateityp der Quelldatendatei, die Sie aufnehmen. Verwenden Sie den Typ &quot;`file`&quot;, um eine einzelne Datei zu erfassen, und verwenden Sie den Typ &quot;`folder`&quot;, um einen ganzen Ordner aufzunehmen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer spezifischen Cloud-Speicherquelle zugeordnet ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
+| `data.properties.columnDelimiter` | (Optional) Ein einzelnes Zeichen als Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Wert angegeben wird, wird ein Komma (`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter`-Eigenschaft kann nur beim Aufnehmen von durch Trennzeichen getrennten Dateien verwendet werden. |
+| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Die unterstützten Kodierungstypen sind: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der `encoding`-Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardcodierung `UTF-8` aufgenommen. |
+| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Aufnahme definiert. Die unterstützten komprimierten Dateitypen sind: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die `compressionType`-Eigenschaft kann nur verwendet werden, wenn durch Trennzeichen getrennte oder JSON-Dateien aufgenommen werden. |
+| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen gesamten Ordner.  **Hinweis**: Sie können ein Sternchen anstelle des Dateinamens verwenden, um die Aufnahme eines gesamten Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten `/acme/summerCampaign/` auf. |
+| `params.type` | Der Dateityp der aufgenommenen Quelldatendatei. Verwenden Sie den Typ `file`, um eine einzelne Datei aufzunehmen, und den Typ `folder`, um einen ganzen Ordner aufzunehmen. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrer spezifischen Cloud-Speicherquelle verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
 
@@ -113,9 +113,9 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-### Verwenden Sie reguläre Ausdrücke, um einen bestimmten Dateisatz für die Aufnahme auszuwählen. {#regex}
+### Verwenden regulärer Ausdrücke, um einen bestimmten Satz von Dateien für die Aufnahme auszuwählen {#regex}
 
-Sie können beim Erstellen einer Quellverbindung reguläre Ausdrücke verwenden, um einen bestimmten Dateisatz von Ihrer Quelle an Platform zu erfassen.
+Sie können reguläre Ausdrücke verwenden, um beim Erstellen einer Quellverbindung einen bestimmten Satz von Dateien aus Ihrer Quelle in Platform aufzunehmen.
 
 **API-Format**
 
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Im folgenden Beispiel wird der reguläre Ausdruck im Dateipfad verwendet, um die Aufnahme aller CSV-Dateien anzugeben, deren Name `premium` enthält.
+Im folgenden Beispiel wird ein regulärer Ausdruck im Dateipfad verwendet, um die Aufnahme aller CSV-Dateien anzugeben, die `premium` im Namen haben.
 
 ```shell
 curl -X POST \
@@ -153,9 +153,9 @@ curl -X POST \
   }'
 ```
 
-### Quellverbindung zur rekursiven Erfassung von Daten konfigurieren
+### Konfigurieren einer Quellverbindung zum rekursiven Aufnehmen von Daten
 
-Beim Erstellen einer Quellverbindung können Sie den Parameter `recursive` verwenden, um Daten aus tief verschachtelten Ordnern zu erfassen.
+Beim Erstellen einer Quellverbindung können Sie den `recursive`-Parameter verwenden, um Daten aus tief verschachtelten Ordnern aufzunehmen.
 
 **API-Format**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Im folgenden Beispiel informiert der Parameter `recursive: true` [!DNL Flow Service] darüber, dass während des Aufnahmevorgangs alle Unterordner rekursiv gelesen werden sollen.
+Im folgenden Beispiel informiert der `recursive: true`-Parameter [!DNL Flow Service], alle Unterordner während des Aufnahmevorgangs rekursiv zu lesen.
 
 ```shell
 curl -X POST \
@@ -253,7 +253,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des XDM-Zielschemas. |
 | `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` festgelegt werden, wodurch die neueste Nebenversion des Schemas zurückgegeben wird. |
-| `params.dataSetId` | Die Kennung des im vorherigen Schritt generierten Zieldatensatzes. **Hinweis**: Sie müssen beim Erstellen einer Zielverbindung eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
+| `params.dataSetId` | Die ID des Zieldatensatzes, die im vorherigen Schritt generiert wurde. **Hinweis**: Beim Erstellen einer Zielverbindung müssen Sie eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
@@ -368,9 +368,9 @@ curl -X GET \
 
 >[!NOTE]
 >
->Die nachstehende JSON-Antwort-Payload wird für die Kürze ausgeblendet. Wählen Sie &quot;payload&quot;aus, um die Antwort-Payload anzuzeigen.
+>Die unten stehende JSON-Antwort-Payload ist zur Vereinfachung ausgeblendet. Wählen Sie „Payload“ aus, um die Antwort-Payload anzuzeigen.
 
-+++ Anzeigen der Payload
++++ Payload anzeigen
 
 **Antwort**
 
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Frequenz lautet wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 
 **Antwort**
 

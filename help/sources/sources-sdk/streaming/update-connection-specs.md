@@ -1,6 +1,6 @@
 ---
-title: Verbindungsspezifikation für Streaming SDK mithilfe der Flow Service-API aktualisieren
-description: Im folgenden Dokument finden Sie Anweisungen zur Verwendung einer Verbindungsspezifikation mithilfe der Flow Service-API für Self-Serve-Quellen (Streaming-SDK).
+title: Aktualisieren einer Verbindungsspezifikation für Streaming-SDK mithilfe der Flow Service-API
+description: Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der Flow Service-API für Selbstbedienungsquellen (Streaming-SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
 badge: Beta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
+Sie können die Eigenschaften einer Verbindungsspezifikation durch einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich wären.
 
 **API-Format**
 
@@ -26,7 +26,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Anfrage**
 
-Die folgende Anfrage fügt eine Beschreibung zur Spezifikation der Streaming-Verbindung hinzu, die im vorherigen Tutorial erstellt wurde.
+Die folgende Anfrage fügt eine Beschreibung der im vorherigen Tutorial erstellten Streaming-Verbindungsspezifikation hinzu.
 
 ```shell
 PUT -X GET \
@@ -110,7 +110,7 @@ PUT -X GET \
 
 **Antwort**
 
-Bei einem erfolgreichen Aufruf werden die aktualisierten Details zur Verbindungsspezifikation zurückgegeben, einschließlich des aktualisierten Namens.
+Ein erfolgreicher Aufruf gibt die aktualisierten Details der Verbindungsspezifikation zurück, einschließlich ihres aktualisierten Namens.
 
 ```json
 {
@@ -196,4 +196,4 @@ Bei einem erfolgreichen Aufruf werden die aktualisierten Details zur Verbindungs
 
 ## Nächste Schritte
 
-Nachdem Sie die Aktualisierungen Ihrer Verbindungsspezifikation abgeschlossen haben, können Sie jetzt mit [Testen und Senden Ihrer Quelle zur Integration](./submit.md) fortfahren.
+Nachdem Sie die Aktualisierungen Ihrer Verbindungsspezifikation abgeschlossen haben, können Sie jetzt mit [Testen und Senden Ihrer Quelle für die Integration](./submit.md) fortfahren.

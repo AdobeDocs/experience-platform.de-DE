@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Segmenten mit mehreren Entitäten in Adobe Experience Platform
-description: In diesem Video erhalten Sie grundlegende Informationen zum Erstellen eines Segments mit mehreren Entitäten mithilfe der Platform-Benutzeroberfläche.
+description: Dieses Video vermittelt ein grundlegendes Verständnis der Erstellung eines Segments mit mehreren Entitäten mithilfe der Platform-Benutzeroberfläche.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,7 +19,7 @@ ht-degree: 17%
 
 # Erstellen von Segmenten mit mehreren Entitäten in der Experience Platform-Benutzeroberfläche
 
-Das folgende Video soll Sie bei der Erstellung dynamischer Segmente unterstützen. Es wird ein Beispiel für ein Kundenerlebnis und eine kurze Übersicht über die wichtigsten Funktionen in der [!DNL Platform] -Benutzeroberfläche angezeigt. Weiterführende Informationen zur Segmentierung mehrerer Entitäten finden Sie im Handbuch zur [Segmentierung mehrerer Entitäten](../multi-entity-segmentation.md).
+Im folgenden Video erfahren Sie, wie Sie dynamische Segmente erstellen. Es zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einer kurzen Übersicht über die wichtigsten Funktionen in der [!DNL Platform]. Weitere Informationen zur Segmentierung mehrerer Entitäten finden Sie im Handbuch [Segmentierung mehrerer Entitäten](../multi-entity-segmentation.md).
 
 >[!NOTE]
 >

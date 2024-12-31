@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Campaign Managed Cloud Services;campaign;campaign managed services
+keywords: Experience Platform;Startseite;beliebte Themen;Adobe Campaign Managed Cloud Services;Kampagne;Campaign Managed Services
 title: Adobe Campaign Managed Cloud Services
-description: Erfahren Sie, wie Sie Campaign Managed Cloud Service über die Benutzeroberfläche mit Platform verbinden.
+description: Erfahren Sie, wie Sie Campaign Managed Cloud Service über die Benutzeroberfläche mit Platform verbinden
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
@@ -14,70 +14,70 @@ ht-degree: 9%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung. Weitere Informationen finden Sie in der Dokumentation zu [Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) .
+Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und stellt dazu eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung bereit. Weitere Informationen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) Adobe Campaign v8 .[
 
-Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Versandlogs und Trackinglog-Daten aus Adobe Campaign v8 in Adobe Experience Platform importieren.
+Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Adobe Campaign v8-Versandlogs und -Trackinglog-Daten an Adobe Experience Platform übertragen.
 
 ## Voraussetzungen
 
-Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8 auf Experience Platform zu bringen, müssen Sie zunächst die folgenden Voraussetzungen erfüllen:
+Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8-Version auf Experience Platform zu bringen, müssen Sie zunächst die folgenden Voraussetzungen erfüllen:
 
-* [Richten Sie den Ereignisprotokollimport mithilfe der Adobe Campaign-Clientkonsole ein](#view-delivery-and-tracking-log-data)
-* [Erstellen eines XDM ExperienceEvent-Schemas](#create-a-schema)
+* [Einrichten des Ereignisprotokollimports mithilfe der Adobe Campaign-Client-Konsole](#view-delivery-and-tracking-log-data)
+* [Erstellen eines XDM-ExperienceEvent-Schemas](#create-a-schema)
 * [Erstellen eines Datensatzes](#create-a-dataset)
 
-### Anzeigen von Versand- und Trackinglog-Daten {#view-delivery-and-tracking-log-data}
+### Versand- und Trackinglog-Daten anzeigen {#view-delivery-and-tracking-log-data}
 
 >[!IMPORTANT]
 >
->Sie benötigen Zugriff auf die Adobe Campaign v8 Client Console, um Ihre Protokolldaten in Campaign anzeigen zu können. Informationen zum Herunterladen und Installieren der Clientkonsole finden Sie in der Dokumentation zu [Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) .
+>Sie müssen Zugriff auf die Client-Konsole von Adobe Campaign v8 haben, um Ihre Protokolldaten in Campaign anzeigen zu können. In der [Campaign v8-Dokumentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) finden Sie Informationen zum Herunterladen und Installieren der Client-Konsole.
 
-Melden Sie sich über die Client-Konsole bei Ihrer Campaign v8-Instanz an. Wählen Sie auf der Registerkarte [!DNL Explorer] die Option [!DNL Administration] und dann [!DNL Configuration] aus. Wählen Sie als Nächstes [!DNL Data schemas] aus und wenden Sie dann den Filter `broadLog` auf Namen oder Titel an. Wählen Sie in der angezeigten Liste das Quellschema der Versandlogs der Empfänger mit dem Namen `broadLogRcp` aus.
+Melden Sie sich über die Client-Konsole bei Ihrer Campaign v8-Instanz an. Wählen Sie auf der Registerkarte [!DNL Explorer] die Option [!DNL Administration] und dann [!DNL Configuration] aus. Wählen Sie als Nächstes [!DNL Data schemas] aus und wenden Sie dann den `broadLog` auf Namen oder Titel an. Wählen Sie in der angezeigten Liste das Quellschema der Empfänger-Versandlogs mit dem Namen `broadLogRcp` aus.
 
-![Die Adobe Campaign v8-Clientkonsole mit ausgewählter Registerkarte &quot;Explorer&quot;, die erweiterten Knoten Administration, Konfiguration und Datenschemata sowie der Filtersatz &quot;broad&quot;(breit).](./images/campaign/explorer.png)
+![Die Adobe Campaign v8-Client-Konsole mit der ausgewählten Registerkarte „Explorer“, erweiterten die Knoten „Administration“, „Konfiguration“ und „Datenschemata“ und setzten die Filterung auf „Umfassend“.](./images/campaign/explorer.png)
 
-Wählen Sie dann die Registerkarte **Daten** aus.
+Wählen Sie als Nächstes die **Daten** aus.
 
-![Die Adobe Campaign v8-Clientkonsole mit ausgewählter Registerkarte &quot;Daten&quot;.](./images/campaign/data.png)
+![Die Client-Konsole von Adobe Campaign v8 mit ausgewählter Registerkarte „Daten“.](./images/campaign/data.png)
 
-Klicken Sie mit der rechten Maustaste/Tastenanschlag im Datenbereich, um das Kontextmenü zu öffnen. Wählen Sie hier **Liste konfigurieren..** aus.
+Klicken/klicken Sie mit der rechten Maustaste im Datenbedienfeld, um das Kontextmenü zu öffnen. Wählen Sie hier **Liste konfigurieren…**
 
-![Die Adobe Campaign v8-Clientkonsole mit geöffnetem Kontextmenü und aktivierter Option Liste konfigurieren.](./images/campaign/configure.png)
+![Die Client-Konsole von Adobe Campaign v8 mit dem Kontextmenü wird geöffnet und die Option Liste konfigurieren ist ausgewählt.](./images/campaign/configure.png)
 
-Das Listenkonfigurationsfenster wird angezeigt und bietet eine Oberfläche, über die Sie der bereits vorhandenen Liste die gewünschten Felder hinzufügen können, um die Daten im Datenbereich anzuzeigen.
+Das Listenkonfigurationsfenster wird angezeigt und bietet eine Oberfläche, über die Sie beliebige Felder zu der bereits vorhandenen Liste hinzufügen können, um die Daten im Datenbereich anzuzeigen.
 
-![Eine Liste der Konfigurationen für die Versandlogs der Empfänger, die zur Ansicht hinzugefügt werden können.](./images/campaign/list-configuration.png)
+![Eine Liste der Konfigurationen für Empfänger-Versandlogs, die zur Anzeige hinzugefügt werden können.](./images/campaign/list-configuration.png)
 
-Jetzt können Sie Ihre Versandlogs der Empfänger anzeigen, einschließlich der Konfigurationsfelder, die im vorherigen Schritt hinzugefügt wurden.
+Jetzt können Sie die Versand-Logs Ihrer Empfänger einschließlich der im vorherigen Schritt hinzugefügten Konfigurationsfelder anzeigen.
 
 >[!TIP]
 >
 >Sie können dieselben Schritte wiederholen, aber nach `tracking` filtern, um Ihre Trackinglog-Daten anzuzeigen.
 
-![Die Versandlogs der Empfänger wurden mit Informationen zu Name, Kanal des Versands, internem Versandnamen und Titel der letzten Änderung angezeigt.](./images/campaign/recipient-delivery-logs.png)
+![Die Versand-Logs der Empfänger werden mit Informationen zu ihrem zuletzt geänderten Namen, ihrem Versandkanal, ihrem internen Versandnamen und ihrer Bezeichnung angezeigt.](./images/campaign/recipient-delivery-logs.png)
 
 ### Erstellen eines Schemas {#create-a-schema}
 
-Erstellen Sie anschließend ein XDM ExperienceEvent-Schema für Versandlogs und Trackinglogs. Sie müssen die Feldergruppe Kampagnenversandlogs auf Ihr Versandlog-Schema und die Feldergruppe Kampagnen-Trackinglogs auf Ihr Trackinglog-Schema anwenden. Sie müssen auch das Feld `externalID` als primäre Identität Ihres Schemas definieren.
+Als Nächstes erstellen Sie ein XDM ExperienceEvent-Schema für Versandlogs und Trackinglogs. Sie müssen die Feldergruppe Versandlogs in Campaign auf Ihr Versandlog-Schema und die Feldergruppe Tracking-Logs in Campaign auf Ihr Trackinglog-Schema anwenden. Sie müssen auch das Feld `externalID` als primäre Identität Ihres Schemas definieren.
 
 >[!NOTE]
 >
->Ihr XDM ExperienceEvent-Schema muss Profil-fähig sein, damit Ihre Campaign-Daten in [!DNL Real-Time Customer Profile] aufgenommen werden können.
+>Ihr XDM ExperienceEvent-Schema muss Profil-aktiviert sein, damit Sie Ihre Campaign-Daten in [!DNL Real-Time Customer Profile] aufnehmen können.
 
-Detaillierte Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch zum Erstellen eines XDM-Schemas in der Benutzeroberfläche ](../../../xdm/tutorials/create-schema-ui.md).[
+Detaillierte Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch unter [Erstellen eines XDM-Schemas in der Benutzeroberfläche](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Erstellen eines Datensatzes {#create-a-dataset}
 
-Schließlich müssen Sie einen Datensatz für Ihre Schemas erstellen. Detaillierte Anweisungen zum Erstellen eines Datensatzes finden Sie im Handbuch zum Erstellen eines Datensatzes in der Benutzeroberfläche ](../../../catalog/datasets/user-guide.md).[
+Schließlich müssen Sie einen Datensatz für Ihre Schemata erstellen. Detaillierte Anweisungen zum Erstellen eines Datensatzes finden Sie im Handbuch unter [Erstellen eines Datensatzes in der Benutzeroberfläche](../../../catalog/datasets/user-guide.md).
 
-## Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung über die Platform-Benutzeroberfläche
+## Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
 
-Nachdem Sie nun auf Ihre Datenprotokolle in der Campaign-Clientkonsole zugegriffen, ein Schema und einen Datensatz erstellt haben, können Sie nun eine Quellverbindung erstellen, um Ihre Campaign Managed Services-Daten an Platform zu übertragen.
+Nachdem Sie nun auf Ihre Datenprotokolle in der Client-Konsole von Campaign zugegriffen, ein Schema erstellt und einen Datensatz erstellt haben, können Sie jetzt mit dem Erstellen einer Quellverbindung fortfahren, um Ihre Campaign Managed Services-Daten in Platform zu übertragen.
 
-Detaillierte Anweisungen zum Übertragen Ihrer Campaign v8-Versandlogs und -Trackinglog-Daten zu Experience Platform finden Sie im Handbuch zum Erstellen einer Campaign v8-Quellverbindung in der Benutzeroberfläche ](../../tutorials/ui/create/adobe-applications/campaign.md).[
+Detaillierte Anweisungen zum Übertragen Ihrer Versand-Logs und Trackinglog-Daten von Campaign v8 auf Experience Platform finden Sie im Handbuch unter [Erstellen einer Managed Services-Quellverbindung in der Benutzeroberfläche von Campaign](../../tutorials/ui/create/adobe-applications/campaign.md).
 
 >[!IMPORTANT]
 >
->Es gibt einen Sonderfall, bei dem die Interaktion eines kürzlich entfernten E-Mail-Empfängers mit einer E-Mail personenbezogene Daten erneut in Experience Platform erfassen könnte. In einigen Fällen könnte dies das Marketing für diesen Benutzer erneut aktivieren.
+>Es gibt einen Sonderfall, bei dem die Interaktion eines kürzlich entfernten E-Mail-Empfängers mit einer E-Mail personenbezogene Daten erneut in Experience Platform aufnehmen könnte. In einigen Fällen kann dies das Marketing für diesen Benutzer wieder aktivieren.
 >
->* Dieses Szenario ist nur aktiv zwischen der Ausführung einer Datenschutzanfrage in Experience Platform und der Ausführung in Adobe Campaign Classic. Nachdem die Anfrage in Campaign ausgeführt wurde, wird geprüft, ob der Datensatz nicht nach Campaign exportiert wird. Stellen Sie eine DSGVO-Anfrage nach 72 Stunden Ausführung erneut aus, um dies zu beheben.
+>* Dieses Szenario ist nur zwischen der Zeit aktiv, zu der eine Datenschutzanfrage auf Experience Platform ausgeführt wurde, und der Zeit, zu der sie in Adobe Campaign Classic ausgeführt wurde. Nachdem die Anfrage in Campaign ausgeführt wurde, gibt es eine Prüfung, um sicherzustellen, dass der Datensatz nicht in Campaign exportiert wird. Bitte stellen Sie nach 72 Stunden der Ausführung eine DSGVO-Anfrage erneut, um das Problem zu beheben.

@@ -27,13 +27,13 @@ Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulat
 
 ## Opt-out-Funktionen
 
-[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden von [!DNL Real-Time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mithilfe der booleschen Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einer Zielgruppe abgemeldet haben.
+[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die kundenseitigen Opt-out-Voreinstellungen werden von [!DNL Real-Time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzende ausgeschlossen werden, die sich mit boolescher Logik („AND NOT„) im Segmentprädikat von einer Zielgruppe abgemeldet haben.
 
 Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) in der Dokumentation zum Segmentierungs-Service in Adobe Experience Platform.
 
 ## IAB TCF 2.0-Unterstützung
 
-[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einwilligungsdaten können dann je nach Anwendungsfall in exportierte Zielgruppen einbezogen werden.
+[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einverständnisdaten können dann je nach Anwendungsfall bei der Frage berücksichtigt werden, ob bestimmte Profile in exportierte Zielgruppen aufgenommen werden.
 
 Weiterführende Informationen finden Sie in der Übersicht zur [IAB TCF 2.0-Unterstützung in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
 

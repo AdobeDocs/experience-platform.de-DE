@@ -14,13 +14,13 @@ ht-degree: 5%
 
 ## Übersicht {#overview}
 
-Nicht-interaktive Ereignis-Datenerfassungs-Endpunkte werden verwendet, um mehrere Ereignisse an Experience Platform-Datensätze oder andere Ausgänge zu senden.
+Nicht interaktive Endpunkte für die Ereignisdatenerfassung werden verwendet, um mehrere Ereignisse an Experience Platform-Datensätze oder andere Outlets zu senden.
 
 Das Senden von Ereignissen im Batch-Modus wird empfohlen, wenn Endbenutzerereignisse für einen kurzen Zeitraum lokal in die Warteschlange gestellt werden (z. B. wenn keine Netzwerkverbindung besteht).
 
-Batch-Ereignisse sollten nicht unbedingt demselben Endbenutzer angehören, d. h. Ereignisse können unterschiedliche Identitäten innerhalb ihres `identityMap` -Objekts enthalten.
+Batch-Ereignisse sollten nicht unbedingt zum selben Endbenutzer gehören, d. h. Ereignisse können unterschiedliche Identitäten in ihrem `identityMap` enthalten.
 
-## Beispiel für nicht interaktiven API-Aufruf {#example}
+## Beispiel für einen nicht interaktiven API-Aufruf {#example}
 
 ### API-Format {#api-format}
 
@@ -90,17 +90,17 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja | Die ID des vom Datenerfassungs-Endpunkt verwendeten Datastreams. |
-| `requestId` | `String` | Nein | Geben Sie eine externe Anfrage-Tracking-ID an. Wenn keines angegeben ist, generiert das Edge Network eines für Sie und gibt es im Antworttext/in den Kopfzeilen zurück. |
-| `silent` | `Boolean` | Nein | Optionaler boolean -Parameter, der angibt, ob das Edge Network eine `204 No Content` -Antwort mit einer leeren Payload zurückgeben soll oder nicht. Kritische Fehler werden mithilfe des entsprechenden HTTP-Status-Codes und der Payload gemeldet. |
+| `dataStreamId` | `String` | Ja | Die ID des vom Datenerfassungs-Endpunkt verwendeten Datenstroms. |
+| `requestId` | `String` | Nein | Geben Sie eine externe Anforderungsverfolgungs-ID an. Wenn keine angegeben wird, generiert das Edge Network eine für Sie und gibt sie im Antworttext/in den Kopfzeilen zurück. |
+| `silent` | `Boolean` | Nein | Optionaler boolescher Parameter, der angibt, ob das Edge Network eine `204 No Content` Antwort mit leerer Payload zurückgeben soll oder nicht. Kritische Fehler werden mit dem entsprechenden HTTP-Status-Code und der entsprechenden Payload gemeldet. |
 
 ### Antwort {#response}
 
-Eine erfolgreiche Antwort gibt einen der folgenden Status zurück und einen `requestID` , wenn in der Anfrage keiner angegeben wurde.
+Eine erfolgreiche Antwort gibt einen der folgenden Status sowie eine -`requestID` zurück, wenn in der Anfrage keiner angegeben wurde.
 
-* `202 Accepted` , wenn die Anfrage erfolgreich verarbeitet wurde;
-* `204 No Content` , wenn die Anfrage erfolgreich verarbeitet wurde und der Parameter `silent` auf `true` gesetzt wurde;
-* `400 Bad Request` , wenn die Anforderung nicht ordnungsgemäß gebildet wurde (z. B. die obligatorische primäre Identität nicht gefunden wurde).
+* `202 Accepted`, wann die Anfrage erfolgreich verarbeitet wurde
+* `204 No Content`, wann die Anfrage erfolgreich verarbeitet und der `silent` auf `true` gesetzt wurde;
+* `400 Bad Request` wenn die Anfrage nicht ordnungsgemäß erstellt wurde (z. B. wurde die obligatorische primäre Identität nicht gefunden).
 
 ```json
 {

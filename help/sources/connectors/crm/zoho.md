@@ -15,7 +15,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

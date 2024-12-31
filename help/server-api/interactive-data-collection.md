@@ -13,15 +13,15 @@ ht-degree: 15%
 
 ## Übersicht {#overview}
 
-Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform-Edge Network-Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
+Interaktive Datenerfassungs-Endpunkte erhalten ein einzelnes Edge Network und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform-Ereignisserver zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Services zurückgeben.
 
 >[!IMPORTANT]
 >
->Der Endpunkt `/interact` ist in erster Linie für die Verwendung durch die Experience Platform SDKs vorgesehen. Dieser Endpunkt unterliegt zusätzlichen Änderungen, und sein Verhalten kann sich ohne Vorankündigung weiterentwickeln. Beispielsweise können der Antwort-Payload in Zukunft neue Elemente hinzugefügt werden.
+>Der `/interact`-Endpunkt wurde hauptsächlich für die Verwendung durch die Experience Platform-SDKs entwickelt. Dieser Endpunkt unterliegt additiven Änderungen und sein Verhalten kann sich ohne Vorankündigung ändern. Beispielsweise könnten der Antwort-Payload in Zukunft neue Elemente hinzugefügt werden.
 
-Die Serverantwort enthält ein oder mehrere `Handle` -Objekte, wie unten dargestellt.
+Die Antwort des Servers enthält ein oder mehrere `Handle`, wie unten dargestellt.
 
-## Beispiel für API-Aufruf
+## Beispiel für einen API-Aufruf
 
 ### API-Format {#format}
 
@@ -66,12 +66,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Datenspeicher-ID. |
-| `requestId` | `String` | Nein | Geben Sie eine Client-Zufallskennung für die Korrelation interner Server-Anforderungen an. Wenn keine angegeben ist, generiert das Edge-Netzwerk eine und gibt sie in der Antwort zurück. |
+| `dataStreamId` | `String` | Ja. | Datenstrom-ID. |
+| `requestId` | `String` | Nein | Geben Sie eine zufällige Client-ID zum Korrelieren interner Server-Anfragen an. Wenn keine angegeben ist, generiert das Edge-Netzwerk eine und gibt sie in der Antwort zurück. |
 
 ### Antwort {#response}
 
-Eine erfolgreiche Antwort gibt den HTTP-Status `200 OK` mit einem oder mehreren `Handle` -Objekten zurück, je nachdem, welche Echtzeit-Edge-Dienste in der Datastream-Konfiguration aktiviert sind.
+Bei einer erfolgreichen Antwort wird der HTTP-Status `200 OK` mit einem oder mehreren `Handle` zurückgegeben, je nachdem, welche Echtzeit-Edge-Services in der Datenstromkonfiguration aktiviert sind.
 
 ```json
 {

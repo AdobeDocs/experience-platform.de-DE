@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Konten und -Kontakte mithilfe der Flow Service-API.
+title: Erstellen einer Quellverbindung und eines Datenflusses für SugarCRM-Konten und -Kontakte mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit SugarCRM-Konten und -Kontakten verbinden.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
 source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
@@ -11,7 +11,7 @@ ht-degree: 54%
 
 # Erstellen einer Quellverbindung und eines Datenflusses für [!DNL SugarCRM Accounts & Contacts] mithilfe der Flow Service-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SugarCRM Accounts & Contacts]-Quellverbindung und Erstellen eines Datenflusses, um [[!DNL SugarCRM]](https://www.sugarcrm.com/) -Konten und -Kontaktdaten mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Adobe Experience Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SugarCRM Accounts & Contacts]-Quellverbindung und zum Erstellen eines Datenflusses, um [[!DNL SugarCRM]](https://www.sugarcrm.com/)- und Kontaktdaten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Adobe Experience Platform zu übertragen.
 
 ## Erste Schritte
 
@@ -20,27 +20,27 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL SugarCRM] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL SugarCRM] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um eine Verbindung zwischen [!DNL SugarCRM Accounts & Contacts] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `host` | Der SugarCRM-API-Endpunkt, mit dem die Quelle eine Verbindung herstellt. | `developer.salesfusion.com` |
-| `username` | Ihr Benutzername für das SugarCRM-Entwicklerkonto. | `abc.def@example.com@sugarmarketdemo000.com` |
-| `password` | Ihr SugarCRM-Entwicklerkontokennwort. | `123456789` |
+| `host` | Der SugarCRM-API-Endpunkt, mit dem sich die Quelle verbindet. | `developer.salesfusion.com` |
+| `username` | Benutzername Ihres SugarCRM-Entwicklerkontos. | `abc.def@example.com@sugarmarketdemo000.com` |
+| `password` | Ihr SugarCRM-Entwicklerkonto-Passwort. | `123456789` |
 
-## [!DNL SugarCRM Accounts & Contacts] über die [!DNL Flow Service]-API mit Platform verbinden
+## Verbinden von [!DNL SugarCRM Accounts & Contacts] mit Platform mithilfe der [!DNL Flow Service]-API
 
-Im Folgenden werden die Schritte beschrieben, die Sie durchführen müssen, um Ihre [!DNL SugarCRM] -Quelle zu authentifizieren, eine Quellverbindung zu erstellen und einen Datenfluss zu erstellen, über den Ihre Konto- und Kontaktdaten an Experience Platform weitergeleitet werden.
+Im Folgenden werden die Schritte beschrieben, die Sie ausführen müssen, um Ihre [!DNL SugarCRM] zu authentifizieren, eine Quellverbindung zu erstellen und einen Datenfluss zu erstellen, um Ihre Konto- und Kontaktdaten auf Experience Platform zu bringen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL SugarCRM Accounts & Contacts]-Authentifizierungsdaten als Teil des Anfragetexts an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL SugarCRM Accounts & Contacts] Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -85,8 +85,8 @@ curl -X POST \
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
 | `auth.params.host` | Der SugarCRM-API-Host: *developer.salesfusion.com* |
-| `auth.params.username` | Ihr Benutzername für das SugarCRM-Entwicklerkonto. |
-| `auth.params.password` | Ihr SugarCRM-Entwicklerkontokennwort. |
+| `auth.params.username` | Benutzername Ihres SugarCRM-Entwicklerkontos. |
+| `auth.params.password` | Ihr SugarCRM-Entwicklerkonto-Passwort. |
 
 **Antwort**
 
@@ -101,8 +101,8 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ### Durchsuchen der Quelle {#explore}
 
-Mithilfe der im vorherigen Schritt generierten Basis-Verbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
-Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in Platform einbringen möchten:
+Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner untersuchen, indem Sie GET-Anfragen ausführen.
+Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in Platform importieren möchten:
 
 **API-Format**
 
@@ -116,13 +116,13 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
-| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` gesetzt. |
-| `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle wäre der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
+| `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Einzelne Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie verwenden, übergeben Sie einen der folgenden : <ul><li>`accounts` : Unternehmen, zu denen Ihre Organisation eine Beziehung hat.</li><li>`contacts` : Einzelne Personen, mit denen Ihre Organisation eine bestehende Beziehung hat.</li></ul> |
 
-Der [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welcher Objekttyp Sie verwenden, lautet die zu sendende Anforderung wie folgt:
+Die [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie nutzen, wird die Anfrage wie folgt gesendet:
 
 **Anfrage**
 
@@ -130,7 +130,7 @@ Der [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, w
 
 >[!TAB Konten]
 
-Für die API [!DNL SugarCRM] Konten wird der Wert für `{SOURCE_PARAMS}` als `{"object_type":"accounts"}` übergeben. Bei der Kodierung in base64 entspricht sie &quot;`eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=`&quot;, wie unten dargestellt.
+Für [!DNL SugarCRM] Konto-API wird der Wert für `{SOURCE_PARAMS}` als `{"object_type":"accounts"}` übergeben. Bei Kodierung in base64 entspricht dies `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -141,9 +141,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB Contacts]
+>[!TAB Kontakte]
 
-Für [!DNL SugarCRM] Kontakte-API wird der Wert für `{SOURCE_PARAMS}` als `{"object_type":"contacts"}` übergeben. Bei der Kodierung in base64 entspricht sie &quot;`eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=`&quot;, wie unten dargestellt.
+Für [!DNL SugarCRM] Kontakte-API wird der Wert für `{SOURCE_PARAMS}` als `{"object_type":"contacts"}` übergeben. Bei Kodierung in base64 entspricht dies `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -158,17 +158,17 @@ curl -X GET \
 
 **Antwort**
 
-Je nachdem, welcher Objekttyp Sie verwenden, lautet die erhaltene Antwort wie folgt:
+Je nachdem, welchen Objekttyp Sie verwenden, wird die erhaltene Antwort wie folgt aussehen:
 
 >[!NOTE]
 >
->Einige Datensätze wurden abgeschnitten, um eine bessere Präsentation zu ermöglichen.
+>Einige Datensätze wurden gekürzt, um eine bessere Präsentation zu ermöglichen.
 
 >[!BEGINTABS]
 
 >[!TAB Konten]
 
-Eine erfolgreiche Antwort gibt eine Struktur zurück, wie unten dargestellt.
+Eine erfolgreiche Antwort gibt eine Struktur wie unten gezeigt zurück.
 
 ```json
 {
@@ -349,9 +349,9 @@ Eine erfolgreiche Antwort gibt eine Struktur zurück, wie unten dargestellt.
 }
 ```
 
->[!TAB Contacts]
+>[!TAB Kontakte]
 
-Eine erfolgreiche Antwort gibt eine Struktur zurück, wie unten dargestellt.
+Eine erfolgreiche Antwort gibt eine Struktur wie unten gezeigt zurück.
 
 ```json
 {
@@ -580,13 +580,13 @@ POST /sourceConnections
 
 Die folgende Anfrage erstellt eine Quellverbindung für [!DNL SugarCRM Accounts & Contacts]:
 
-Wählen Sie je nach dem von Ihnen verwendeten Objekttyp aus den folgenden Registerkarten aus:
+Je nachdem, welchen Objekttyp Sie verwenden, wählen Sie aus den folgenden Registerkarten:
 
 >[!BEGINTABS]
 
 >[!TAB Konten]
 
-Für die API [!DNL SugarCRM] Konten sollte der Eigenschaftswert `object_type` `accounts` sein.
+Für [!DNL SugarCRM] Konto-API sollte der Wert der `object_type`-Eigenschaft `accounts` sein.
 
 ```shell
 curl -X POST \
@@ -614,9 +614,9 @@ curl -X POST \
   }'
 ```
 
->[!TAB Contacts]
+>[!TAB Kontakte]
 
-Für [!DNL SugarCRM] Kontakte-API sollte der Eigenschaftswert `object_type` `contacts` sein.
+Für [!DNL SugarCRM] Kontakte-API sollte der Wert der `object_type`-Eigenschaft `contacts` sein.
 
 ```shell
 curl -X POST \
@@ -653,8 +653,8 @@ curl -X POST \
 | `baseConnectionId` | Die Basisverbindungs-ID von [!DNL SugarCRM Accounts & Contacts]. Diese ID wurde in einem früheren Schritt generiert. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL SugarCRM Accounts & Contacts]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
-| `object_type` | [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Einzelne Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
-| `path` | Dieser Wert hat den gleichen Wert wie für *`object_type`*. |
+| `object_type` | [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie verwenden, übergeben Sie einen der folgenden : <ul><li>`accounts` : Unternehmen, zu denen Ihre Organisation eine Beziehung hat.</li><li>`contacts` : Einzelne Personen, mit denen Ihre Organisation eine bestehende Beziehung hat.</li></ul> |
+| `path` | Dieser hat den gleichen Wert, den Sie für *`object_type`* auswählen. |
 
 **Antwort**
 
@@ -683,9 +683,9 @@ Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tuto
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die ID der Festnetzverbindungsspezifikation angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
+Sie verfügen jetzt über die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID zum Data Lake. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -746,7 +746,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung a
 
 ### Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit in der Anfrage-Payload definierten Datenzuordnungen ausgeführt wird.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird durch eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen erreicht, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -864,7 +864,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `outputSchema.schemaRef.id` | Die ID des [Ziel-XDM-Schema](#target-schema), die in einem früheren Schritt generiert wurde. |
-| `mappings.sourceType` | Der Quell-Attributtyp, der zugeordnet wird. |
+| `mappings.sourceType` | Der Typ des Quellattributs, das zugeordnet wird. |
 | `mappings.source` | Das Quellattribut, das einem Ziel-XDM-Pfad zugeordnet werden muss. |
 | `mappings.destination` | Der Ziel-XDM-Pfad, dem das Quellattribut zugeordnet wird. |
 
@@ -885,7 +885,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt beim Übertragen von Daten von [!DNL SugarCRM Accounts & Contacts] an Platform besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL SugarCRM Accounts & Contacts] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -893,7 +893,7 @@ Der letzte Schritt beim Übertragen von Daten von [!DNL SugarCRM Accounts & Cont
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Dann müssen Sie den Frequenzwert auf einen der Werte `hour` oder `day` festlegen. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Der Intervallwert sollte je nach der `scheduleParams.frequency` Auswahl von `hour` oder `day` auf `1` oder `24` gesetzt werden.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Häufigkeitswert auf `hour` oder `day` festlegen. Der Intervallwert bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen. Der Intervallwert sollte auf `1` oder `24` festgelegt werden, je nach `scheduleParams.frequency` Auswahl von `hour` oder `day`.
 
 **API-Format**
 
@@ -943,7 +943,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
-| `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
@@ -952,9 +952,9 @@ curl -X POST \
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
-| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Erfassungszeitplanung des Datenflusses. |
+| `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Aufnahmeplanung des Datenflusses. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `hour` oder `day`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der Intervallwert sollte je nach der `scheduleParams.frequency` Auswahl von `hour` oder `day` auf `1` oder `24` gesetzt werden. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Der Intervallwert sollte auf `1` oder `24` festgelegt werden, je nach `scheduleParams.frequency` Auswahl von `hour` oder `day`. |
 
 **Antwort**
 
@@ -969,24 +969,24 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, die Sie zum Überwachen, Aktualisieren und Löschen Ihres Datenflusses durchführen können.
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch zum [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Vollständige API-Beispiele finden Sie im Handbuch unter [Überwachen Ihrer Quelldatenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aktualisieren des Datenflusses
 
-Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows` -Endpunkt der [!DNL Flow Service] -API richten und dabei die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch zum [Aktualisieren der Datenflüsse für Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) .
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie seinen Ausführungsplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an den `/flows`-Endpunkt [!DNL Flow Service] -API stellen und dabei die ID Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Datenflusses in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Quelldatenflüssen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der Kopfzeile `If-Match` angeben. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mit der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durchführen und dabei Ihre Basisverbindungs-ID als Abfrageparameter angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` Ihres Quellkontos in der `If-Match`-Kopfzeile angeben. Vollständige API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 
-Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Kennung des Datenflusses angeben, den Sie im Rahmen des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch zum Löschen Ihrer Datenflüsse mit der API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).[
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen und dabei die ID des Datenflusses angeben, den Sie als Teil des Abfrageparameters löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Konto löschen
 
-Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch zum Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).[
+Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

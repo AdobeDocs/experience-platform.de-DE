@@ -1,5 +1,5 @@
 ---
-keywords: Datenqualität; rtcdp-Datenqualität
+keywords: Datenqualität;RTCDP-Datenqualität
 title: Datenqualität in Real-time Customer Data Platform
 description: Ein Dokument zur Datenqualität in Adobe Real-time Customer Data Platform
 feature: Get Started, Data Ingestion, Best Practices
@@ -13,8 +13,8 @@ ht-degree: 24%
 
 # Datenqualität in Real-time Customer Data Platform
 
-Mit Adobe Real-time Customer Data Platform (Real-Time CDP) können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, um eine konsistente und koordinierte Kundenerfahrung zu bieten. Darum müssen Sie unbedingt sicherstellen, dass Ihre Daten vollständig, präzise und übersichtlich sind.
+Mit Adobe Real-time Customer Data Platform (Real-Time CDP) können Sie Daten aus verschiedenen Quellen zusammenführen und zusammenführen, um Ihren Kunden ein konsistentes und koordiniertes Erlebnis zu bieten. Darum müssen Sie unbedingt sicherstellen, dass Ihre Daten vollständig, präzise und übersichtlich sind.
 
-Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele Experience Platform-Dienste und Funktionen. Somit können Sie sich darauf verlassen, dass Ihre Daten bei der Erfassung überprüft und validiert werden.
+Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele der Experience Platform-Services und -Funktionen. Somit können Sie sich darauf verlassen, dass Ihre Daten bei der Erfassung überprüft und validiert werden.
 
-Weitere Informationen zu Prüfungen und Best Practices bei der Datenaufnahme finden Sie in der [Dokumentation zur Datenqualität](../../ingestion/quality/overview.md).
+Ausführlichere Informationen zu Prüfungen und Best Practices bei der Datenaufnahme finden Sie in der [Dokumentation zur Datenqualität](../../ingestion/quality/overview.md).

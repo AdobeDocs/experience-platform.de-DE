@@ -1,6 +1,6 @@
 ---
-title: Sandbox Tooltools-API-Endpunkt
-description: Mit dem Endpunkt /tools in der Sandbox Tooling API können Sie JSON-Auftragsdaten in Adobe Experience Platform abrufen.
+title: API-Endpunkt für Sandbox-Tools
+description: Mit dem Endpunkt /tools in der Sandbox-Tooling-API können Sie JSON-Auftragsdaten in Adobe Experience Platform abrufen.
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 955c6946786e9425bdb99d623595420a6d13747e
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 22%
 
 Mit Sandbox-Tools können Sie verschiedene Artefakte auswählen und in ein Paket exportieren. Ein Paket kann aus einem oder mehreren Objekten bestehen. Alle Objekte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
 
-Mit dem Endpunkt `/tools` in der Sandbox-Tool-API können Sie JSON-Auftragsdaten auflisten und abrufen.
+Mit dem `/tools`-Endpunkt in der Sandbox-Tooling-API können Sie JSON-Auftragsdaten auflisten und abrufen.
 
 ## Vorgangsdetails {#details}
 
-Um die JSON-Daten des Auftrags unabhängig abzurufen, stellen Sie eine GET-Anfrage an den `/tools` -Endpunkt und geben Sie die ID des Auftrags an.
+Um die JSON-Auftragsdaten unabhängig abzurufen, stellen Sie eine GET-Anfrage an den `/tools`-Endpunkt und geben Sie die ID des Auftrags an.
 
 **API-Format**
 
@@ -27,11 +27,11 @@ GET /tools/job/{JOB_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {JOB_ID} | Die ID des Auftrags, den Sie nachschlagen möchten. |
+| {JOB_ID} | Die ID des Auftrags, den Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für {JOB_ID} ab.
+Mit der folgenden Anfrage werden Informationen zu {JOB_ID} abgerufen.
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details für die abgefragte Auftrags-ID zurückgegeben, wobei Echtzeitstatusaktualisierungen bereitgestellt werden, wenn `completedTasks` und `failedTasks` im Laufe des Auftrags aktualisiert werden.
+Eine erfolgreiche Antwort gibt Details für die abgefragte Auftrags-ID zurück, die Echtzeit-Statusaktualisierungen bereitstellt, wenn `completedTasks` und `failedTasks` aktualisiert werden, wenn der Auftrag fortschreitet.
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Dynamics-Zuordnungsfelder
-description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Microsoft Dynamics-Quellfeldern und den entsprechenden XDM-Feldern.
+description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Microsoft Dynamics-Quellfeldern und den zugehörigen XDM-Feldern.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Kontakte {#contacts}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -60,7 +60,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Leads {#leads}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -99,7 +99,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Konten {#accounts}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
@@ -136,7 +136,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Opportunitys {#opportunities}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
@@ -160,7 +160,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Rollen von Kontakten bei Opportunitys {#opportunity-contact-roles}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
@@ -171,14 +171,14 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Weitere Informationen finden Sie im Anhang für die Schritte zum [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) . | Eine Liste der möglichen Werte und Beschriftungen für das Quellfeld `record1objecttypecode` finden Sie in diesem Referenzdokument für die [[!DNL Microsoft Dynamics] Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options) . |
-| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Weitere Informationen finden Sie im Anhang für die Schritte zum [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) . | Eine Liste der möglichen Werte und Beschriftungen für das Quellfeld `record2objecttypecode` finden Sie in diesem Referenzdokument für die [[!DNL Microsoft Dynamics] Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options) . |
+| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record1objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record2objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
 ## Kampagnen {#campaigns}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
@@ -203,7 +203,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Marketing-Liste {#marketing-list}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
@@ -218,7 +218,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Marketing-Listenmitglieder {#marketing-list-members}
 
-| Quellfeld | Target-XDM-Feld | Anmerkungen |
+| Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
@@ -234,9 +234,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie beim Konfigurieren von B2B-Zuordnungen für Ihre [!DNL Microsoft] Dynamics-Quelle verwenden können.
 
-### Felder vom Typ Liste auswählen {#picklist-type-fields}
+### Felder vom Typ Auswahlliste {#picklist-type-fields}
 
-Sie können [berechnete Felder](../../../../data-prep/ui/mapping.md#calculated-fields) verwenden, um ein Quellfeld vom Typ Picklist von [!DNL Microsoft Dynamics] einem Ziel-XDM-Feld zuzuordnen.
+Sie können [berechnete Felder](../../../../data-prep/ui/mapping.md#calculated-fields) verwenden, um ein Quellfeld vom Typ Auswahlliste von [!DNL Microsoft Dynamics] einem XDM-Zielfeld zuzuordnen.
 
 Das Feld `genderCode` enthält beispielsweise zwei Optionen:
 
@@ -245,24 +245,24 @@ Das Feld `genderCode` enthält beispielsweise zwei Optionen:
 | 1 | `male` |
 | 2 | `female` |
 
-Sie können die folgenden Optionen verwenden, um das Quellfeld `genderCode` dem Zielfeld `person.gender` zuzuordnen:
+Sie können die folgenden Optionen verwenden, um das `genderCode` Quellfeld `person.gender` Zielfeld zuzuordnen:
 
 #### Logischen Operator verwenden
 
-| Quellfeld | Target-XDM-Feld |
+| Quellfeld | XDM-Zielfeld |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in den Optionen gefunden wird, oder `default`, wenn `default` vorhanden ist und der Schlüssel nicht gefunden wird. Der Wert entspricht `null` , wenn die Optionen `null` sind oder es kein `default` gibt und der Schlüssel nicht gefunden wird.
+In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in Optionen gefunden wird, oder `default`, wenn `default` vorhanden und der Schlüssel nicht gefunden wird. Der Wert entspricht &quot;`null`&quot;, wenn die Optionen `null` oder keine `default` vorhanden sind und der Schlüssel nicht gefunden wurde.
 
 #### Berechnetes Feld verwenden
 
-| Quellfeld | Target-XDM-Feld |
+| Quellfeld | XDM-Zielfeld |
 | --- | --- |
 | `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 
 >[!TIP]
 >
->Eine verschachtelte Iteration des obigen Vorgangs wäre ähnlich wie: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>Eine verschachtelte Iteration des obigen Vorgangs ähnelt: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Weitere Informationen finden Sie im Dokument [für logische Operatoren in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) .
+Weitere Informationen finden Sie im [Dokument zu logischen Operatoren in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

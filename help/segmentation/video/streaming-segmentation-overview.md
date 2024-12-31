@@ -1,6 +1,6 @@
 ---
 title: Streaming-Segmentierung in Adobe Experience Platform
-description: In diesem Video erhalten Sie ein grundlegendes Verständnis der Streaming-Segmentierung in Adobe Experience Platform und eine Übersicht über die Verwendung der Platform-Benutzeroberfläche bei der Streaming-Segmentierung.
+description: In diesem Video erhalten Sie ein grundlegendes Verständnis der Streaming-Segmentierung in Adobe Experience Platform und einen Überblick darüber, wie Sie die Streaming-Segmentierung mithilfe der Platform-Benutzeroberfläche durchführen.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,12 +19,12 @@ ht-degree: 13%
 
 # Streaming-Segmentierung in der Experience Platform-Benutzeroberfläche
 
-Das folgende Video soll Ihr Verständnis von Streaming-Segmentierung unterstützen. Es wird ein Beispiel für ein Kundenerlebnis und eine kurze Übersicht über die wichtigsten Funktionen in der [!DNL Platform] -Benutzeroberfläche angezeigt. Weitere Informationen zur Streaming-Segmentierung und zur Streaming-Segmentierung in der Benutzeroberfläche finden Sie im Handbuch zur [Streaming-Segmentierungsbenutzeroberfläche](../ui/streaming-segmentation.md).
+Das folgende Video soll Ihnen dabei helfen, die Streaming-Segmentierung zu verstehen. Es zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einer kurzen Übersicht über die wichtigsten Funktionen in der [!DNL Platform]. Weitere Informationen zur Streaming-Segmentierung und zur Streaming-Segmentierung in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung](../ui/streaming-segmentation.md).
 
-Wenn Sie an Streaming-Segmentierung mithilfe der Segmentation-API interessiert sind, lesen Sie bitte das [Handbuch zur Streaming-Segmentierungs-API](../api/streaming-segmentation.md).
+Wenn Sie an Streaming-Segmentierung mithilfe der Segmentierungs-API interessiert sind, lesen Sie bitte das [Handbuch zur API für die Streaming-Segmentierung](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [UI-Handbuch zur Streaming-Segmentierung](../ui/streaming-segmentation.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch zur [-Benutzeroberfläche](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

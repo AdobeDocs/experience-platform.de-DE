@@ -1,6 +1,6 @@
 ---
 title: Snowflake Source Connector - Übersicht
-description: Erfahren Sie, wie Sie Snowflake über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Snowflake mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
 source-git-commit: 8d6baef1549498e137d336ac2c8a42428496dedf
@@ -10,33 +10,33 @@ ht-degree: 21%
 
 ---
 
-# [!DNL Snowflake] source
+# [!DNL Snowflake]
 
 >[!IMPORTANT]
 >
->* Die Quelle &quot;[!DNL Snowflake]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
->* Standardmäßig interpretiert die Quelle [!DNL Snowflake] `null` als eine leere Zeichenfolge. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um sicherzustellen, dass Ihre `null` -Werte in Adobe Experience Platform korrekt als `null` geschrieben sind.
->* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige Zeitstempel, der für die [!DNL Snowflake]-Quelle unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
+>* Die [!DNL Snowflake] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>* Standardmäßig interpretiert die [!DNL Snowflake]-Quelle `null` als leere Zeichenfolge. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um sicherzustellen, dass Ihre `null` wie in Adobe Experience Platform `null` geschrieben sind.
+>* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige Zeitstempel, der für die [!DNL Snowflake]-Quelle unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter ist [!DNL Snowflake].
+Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Datenbanktypen herstellen, z. B. relationale Datenbanken, NoSQL oder Data Warehouses. Die Unterstützung für Datenbankanbieter umfasst [!DNL Snowflake].
 
 ## Voraussetzungen {#prerequisites}
 
-In diesem Abschnitt werden die Einrichtungsaufgaben beschrieben, die Sie ausführen müssen, bevor Sie Ihre [!DNL Snowflake]-Quelle mit Experience Platform verbinden können.
+In diesem Abschnitt werden die Einrichtungsaufgaben beschrieben, die Sie durchführen müssen, bevor Sie Ihre [!DNL Snowflake] mit Experience Platform verbinden können.
 
-### Konto-ID abrufen {#retrieve-your-account-identifier}
+### Kontokennung abrufen {#retrieve-your-account-identifier}
 
-Sie müssen Ihre Kontokennung vom Dashboard der Benutzeroberfläche [!DNL Snowflake] abrufen, da Sie die Kontokennung verwenden, um Ihre [!DNL Snowflake] -Instanz auf dem Experience Platform zu authentifizieren.
+Sie müssen Ihre Kontokennung vom Dashboard der [!DNL Snowflake]-Benutzeroberfläche abrufen, da Sie die Kontokennung zur Authentifizierung Ihrer [!DNL Snowflake]-Instanz auf dem Experience Platform verwenden werden.
 
 So rufen Sie Ihre Kontokennung ab:
 
-* Navigieren Sie zu Ihrem Konto im Dashboard für die Benutzeroberfläche von [[!DNL Snowflake] Anwendungen](https://app.snowflake.com/).
-* Wählen Sie im linken Navigationsbereich **[!DNL Accounts]**, gefolgt von **[!DNL Active Accounts]** aus der Kopfzeile.
-* Wählen Sie als Nächstes das Informationssymbol aus und wählen Sie dann den Domänennamen der aktuellen URL aus und kopieren Sie ihn.
+* Navigieren Sie im Dashboard der [[!DNL Snowflake] -Benutzeroberfläche zu Ihrem ](https://app.snowflake.com/).
+* Wählen Sie in der linken Navigationsleiste **[!DNL Accounts]** und dann **[!DNL Active Accounts]** aus der Kopfzeile aus.
+* Klicken Sie anschließend auf das Informationssymbol und wählen Sie den Domain-Namen der aktuellen URL aus und kopieren Sie ihn.
 
-![Das Dashboard der Snowflake-Benutzeroberfläche mit dem ausgewählten Domänennamen.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+![Das Dashboard der Snowflake-Benutzeroberfläche mit dem ausgewählten Domain-Namen.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
 ### Privaten Schlüssel abrufen {#retrieve-your-private-key}
 
@@ -46,7 +46,7 @@ Wenn Sie die Schlüsselpaar-Authentifizierung für Ihre [!DNL Snowflake]-Verbind
 
 >[!TAB Erstellen eines verschlüsselten privaten Schlüssels]
 
-Um Ihren verschlüsselten privaten Schlüssel [!DNL Snowflake] zu generieren, führen Sie den folgenden Befehl auf Ihrem Terminal aus:
+Um Ihren verschlüsselten [!DNL Snowflake] privaten Schlüssel zu generieren, führen Sie den folgenden Befehl auf Ihrem Terminal aus:
 
 ```shell
 openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
@@ -62,7 +62,7 @@ MIIE6T...
 
 >[!TAB Erstellen eines unverschlüsselten privaten Schlüssels]
 
-Um Ihren unverschlüsselten privaten Schlüssel [!DNL Snowflake] zu generieren, führen Sie den folgenden Befehl auf Ihrem Terminal aus:
+Um Ihren unverschlüsselten [!DNL Snowflake] privaten Schlüssel zu generieren, führen Sie den folgenden Befehl auf Ihrem Terminal aus:
 
 ```shell
 openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
@@ -78,25 +78,25 @@ MIIE6T...
 
 >[!ENDTABS]
 
-Als Nächstes nehmen Sie Ihren privaten Schlüssel und kodieren ihn in [!DNL Base64]. Vergewissern Sie sich, dass Sie keine Transformationen oder Formatkonvertierungen an Ihrem privaten Schlüssel [!DNL Snowflake] vornehmen. Außerdem müssen Sie sicherstellen, dass am Ende Ihres privaten Schlüssels keine Zeilenumbruchzeichen folgen, bevor Sie ihn in [!DNL Base64] kodieren.
+Nehmen Sie als Nächstes Ihren privaten Schlüssel und kodieren Sie ihn in [!DNL Base64]. Stellen Sie sicher, dass Sie auf Ihrem [!DNL Snowflake] privaten Schlüssel keine Umwandlungen oder Formatkonvertierungen vornehmen. Darüber hinaus müssen Sie sicherstellen, dass am Ende des privaten Schlüssels keine nachfolgenden Zeilenumbruchzeichen vorhanden sind, bevor Sie ihn in [!DNL Base64] kodieren.
 
-### Konfigurationen überprüfen
+### Überprüfen von Konfigurationen
 
-Bevor Sie eine Quellverbindung für Ihre [!DNL Snowflake] -Daten erstellen können, müssen Sie außerdem sicherstellen, dass die folgenden Konfigurationen erfüllt sind:
+Bevor Sie eine Quellverbindung für Ihre [!DNL Snowflake] erstellen können, müssen Sie auch sicherstellen, dass die folgenden Konfigurationen erfüllt sind:
 
-* Das einem bestimmten Benutzer zugewiesene Standard-Warehouse muss mit dem Warehouse übereinstimmen, das Sie bei der Authentifizierung bei Experience Platform eingeben.
-* Die einem bestimmten Benutzer zugewiesene Standardrolle muss Zugriff auf dieselbe Datenbank haben, die Sie bei der Authentifizierung bei Experience Platform eingeben.
+* Das einem Benutzer zugewiesene Standard-Warehouse muss dem Warehouse entsprechen, das Sie bei der Authentifizierung auf Experience Platform eingegeben haben.
+* Die einem Benutzer zugewiesene Standardrolle muss Zugriff auf dieselbe Datenbank haben, die Sie bei der Authentifizierung auf Experience Platform eingegeben haben.
 
 So überprüfen Sie Ihre Rolle und Ihr Warehouse:
 
-* Wählen Sie im linken Navigationsbereich **[!DNL Admin]** und dann **[!DNL Users & Roles]** aus.
-* Wählen Sie den entsprechenden Benutzer aus und wählen Sie dann oben rechts die Auslassungspunkte (`...`) aus.
-* Navigieren Sie im angezeigten Fenster [!DNL Edit user] zu [!DNL Default Role] , um die dem jeweiligen Benutzer zugeordnete Rolle anzuzeigen.
-* Navigieren Sie im selben Fenster zu &quot;[!DNL Default Warehouse]&quot;, um das dem jeweiligen Benutzer zugeordnete Warehouse anzuzeigen.
+* Wählen Sie in der linken Navigationsleiste **[!DNL Admin]** und dann **[!DNL Users & Roles]** aus.
+* Wählen Sie den entsprechenden Benutzer aus und klicken Sie dann oben rechts auf die Auslassungspunkte (`...`).
+* Navigieren Sie im sich öffnenden [!DNL Edit user] zu [!DNL Default Role], um die Rolle anzuzeigen, die dem jeweiligen Benutzer zugeordnet ist.
+* Navigieren Sie im selben Fenster zu [!DNL Default Warehouse] , um das mit dem jeweiligen Benutzer verknüpfte Warehouse anzuzeigen.
 
 ![Die Snowflake-Benutzeroberfläche, in der Sie Ihre Rolle und Ihr Warehouse überprüfen können.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-Nach erfolgreicher Codierung können Sie diesen [!DNL Base64]-kodierten privaten Schlüssel auf dem Experience Platform zur Authentifizierung Ihres [!DNL Snowflake]-Kontos verwenden.
+Nach erfolgreicher Kodierung können Sie diesen [!DNL Base64] privaten Schlüssel auf dem Experience Platform zur Authentifizierung Ihres [!DNL Snowflake]-Kontos verwenden.
 
 ## IP-Adressen-Zulassungsliste
 
@@ -112,5 +112,5 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Snowf
 
 ## Verbinden von [!DNL Snowflake] mit Platform über die Benutzeroberfläche
 
-* [Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/snowflake.md)
-* [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+* [Erstellen einer Snowflake-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/databases/snowflake.md)
+* [Erstellen eines Datenflusses für eine Datenbank-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)

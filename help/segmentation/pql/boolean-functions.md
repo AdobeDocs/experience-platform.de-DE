@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Boolesche PQL-Funktionen
-description: Boolesche Funktionen werden verwendet, um boolesche Logik für verschiedene Elemente in Profile Query Language (PQL) durchzuführen.
+description: Boolesche Funktionen werden verwendet, um eine boolesche Logik auf verschiedene Elemente in Profile Query Language (PQL) anzuwenden.
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 58%
 
 # Boolesche Funktionen
 
-Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL) durchzuführen.  Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+Boolesche Funktionen werden verwendet, um eine boolesche Logik auf verschiedene Elemente in [!DNL Profile Query Language] (PQL) anzuwenden.  Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Und
 
-Mit der Funktion `and` wird ein logisches Bindewort als boolescher Wert erstellt.
+Die Funktion `and` wird verwendet, um eine logische Verknüpfung als Boolesch zu erstellen.
 
 **Format**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Oder
 
-Mit der Funktion `or` wird eine logische Trennung als boolescher Wert erstellt.
+Die Funktion `or` wird verwendet, um eine logische Trennung als boolesch zu erstellen.
 
 **Format**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Wenn 
 
-Die Funktion `if` wird verwendet, um einen Ausdruck aufzulösen, je nachdem, ob eine angegebene Bedingung als boolescher Wert wahr ist.
+Die Funktion `if` wird verwendet, um einen Ausdruck aufzulösen, wenn eine angegebene Bedingung als boolescher Wert wahr ist.
 
 **Format**
 
@@ -95,4 +95,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit booleschen Funktionen vertraut gemacht haben, können Sie diese nun in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit booleschen Funktionen vertraut gemacht haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

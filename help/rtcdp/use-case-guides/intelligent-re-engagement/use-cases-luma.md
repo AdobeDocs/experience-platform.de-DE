@@ -1,6 +1,6 @@
 ---
-title: Intelligente Beispiele für die Wiederaufnahme von Interaktionen in Luma
-description: Beispielvideos für den Anwendungsfall Intelligente erneute Interaktion .
+title: Beispiele für intelligente Luma-Interaktionen
+description: Beispielvideos für einen Anwendungsfall mit intelligenter Rückgewinnung.
 feature: Use Cases
 exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
@@ -10,9 +10,9 @@ ht-degree: 1%
 
 ---
 
-# Intelligentes erneutes Engagement Ihrer Kunden: Beispiele für Luma
+# Kunden intelligent wieder ansprechen: Luma-Beispiele
 
-Erfahren Sie, wie Adobe den Anwendungsfall für intelligente erneute Interaktion an die Luma-Demosite angepasst hat, basierend auf der im Tutorial für Datenarchitekten und Dateningenieure und im Tutorial zum Platform Web SDK dokumentierten Foundation-Implementierung.
+Erfahren Sie, wie Adobe den Anwendungsfall zur intelligenten Rückgewinnung an die Luma-Demo-Site angepasst hat. Dies baut auf der im Tutorial zu Datenarchitekten und Dateningenieuren und im Platform Web SDK-Tutorial dokumentierten Basisimplementierung auf.
 
 ## Implementierung
 

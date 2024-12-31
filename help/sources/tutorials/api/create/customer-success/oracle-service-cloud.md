@@ -10,11 +10,11 @@ ht-degree: 95%
 
 ---
 
-# Erstellen einer Oracle Service Cloud-Quellverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer Oracle Service Cloud-Quellverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!WARNING]
 >
->Die Quelle [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Oracle Service Cloud] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

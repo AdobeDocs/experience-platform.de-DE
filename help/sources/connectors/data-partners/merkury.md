@@ -1,6 +1,6 @@
 ---
-title: Merkur Enterprise Identity Resolution Source - Überblick
-description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche die Enterprise Identity-Auflösung von Merkury mit Adobe Experience Platform verbinden.
+title: Übersicht über die Merkury Enterprise Identity Resolution Source
+description: Erfahren Sie, wie Sie die Merkury Enterprise Identity Resolution über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-12-12T00:00:00Z
 badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
@@ -15,21 +15,21 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
+>Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Adobe Experience Platform unterstützt die Aufnahme von Daten aus einer Datenpartner-Anwendung. Unterstützung für Datenpartner ist [!DNL Merkury Enterprise Identity Resolution].
+Adobe Experience Platform unterstützt die Aufnahme von Daten aus einer Datenpartneranwendung. Unterstützung für Datenpartner umfasst [!DNL Merkury Enterprise Identity Resolution].
 
-Sie können [!DNL Merkury] bis [!DNL Merkle] verwenden, um mehr digitale Besucher zu erkennen - auch ohne Cookies - und die relevanten und personalisierten Erlebnisse bereitzustellen, die Ihre Kunden benötigen.
+Sie können [!DNL Merkury] nutzen, [!DNL Merkle] mehr digitale Besucher zu erkennen - auch ohne die Verwendung von Cookies - und die relevanten und personalisierten Erlebnisse bereitzustellen, die Ihre Kunden benötigen.
 
-Sie können die **Personen-ID** als Teil der [!DNL Merkury] -Quelle verwenden, um alles, was Ihr Unternehmen über eine Person weiß, in einem einzigen umfassenden Profil zu kombinieren. Diese Details können Folgendes umfassen:
+Sie können die **Personen-ID** als Teil der [!DNL Merkury] nutzen, um alles, was Ihr Unternehmen über eine Person weiß, zu einem einzigen, umfassenden Profil zu kombinieren. Zu diesen Details können gehören:
 
-- digitales Verhalten
+- Digitale Verhaltensweisen
 - Kaufpräferenzen
 - Identifizierungsinformationen wie Name, E-Mail-Adresse, physische Adresse oder Geräte-ID.
 
-Sie können aufgenommene Daten als Experience-Datenmodell (XDM)-JSON, XDM-Parquet oder als durch Trennzeichen getrennte formatieren. Jeder Schritt des Prozesses ist in die Quellarbeit integriert
+Sie können aufgenommene Daten als Experience-Datenmodell (XDM), JSON, XDM Parquet oder mit Trennzeichen formatieren. Jeder Schritt des Prozesses wird in die Arbeitsquellen integriert
 
-![Eine Abbildung des Datenverarbeitungs-Workflows für die Merkury-Quelle.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
+![Abbildung des Datenverarbeitungs-Workflows für die Merkury-Quelle.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
 ## IP-Adressen-Zulassungsliste
 
@@ -48,15 +48,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 ## Voraussetzungen
 
-Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendung der [!DNL Merkury]-Quelle beginnen können:
+Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendung der [!DNL Merkury] beginnen können:
 
-- Sie müssen Ihr [!DNL Merkury]-Setup mit Ihrem [!DNL Merkury]-Team abschließen.
-- Sie müssen Ihre Anmeldeinformationen (Zugriffsschlüssel, geheimer Schlüssel und Bucket-Name) aus Ihrem [!DNL Merkury]-Team abrufen. 
+- Sie müssen die [!DNL Merkury]-Einrichtung mit Ihrem [!DNL Merkury]-Team abschließen.
+- Sie müssen Ihre Anmeldeinformationen (Zugriffsschlüssel, geheimer Schlüssel und Behältername) von Ihrem [!DNL Merkury]-Team abrufen. 
 
 >[!NOTE]
 >
->Ein Dateipfad wie `myBucket/folder/subfolder/subsubfolder/abc.csv` kann dazu führen, dass Sie nur auf `subsubfolder/abc.csv` zugreifen. Wenn Sie auf den Unterordner zugreifen möchten, können Sie den Behälterparameter als myBucket und den OrdnerPath als Ordner/Unterordner angeben, um sicherzustellen, dass die Dateiexploration im Unterordner anstatt in `subsubfolder/abc.csv` beginnt.
+>Ein Dateipfad wie `myBucket/folder/subfolder/subsubfolder/abc.csv` kann dazu führen, dass Sie nur auf `subsubfolder/abc.csv` zugreifen. Wenn Sie auf den Unterordner zugreifen möchten, können Sie den Bucket-Parameter als myBucket und den folderPath als Ordner/Unterordner angeben, um sicherzustellen, dass die Dateiexploration beim Unterordner beginnt und nicht beim `subsubfolder/abc.csv`.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Merkury]-Konto an Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch zum Verbinden von [1}mit dem Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/data-partners/merkury.md) fortfahren. [!DNL Merkury] 
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Merkury]-Konto auf Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Merkury] Experience Platform über die Benutzeroberfläche fortfahren](../../tutorials/ui/create/data-partners/merkury.md).

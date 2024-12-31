@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-title: Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (Batch SDK)
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
+title: Konfigurieren von Authentifizierungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -10,19 +10,19 @@ ht-degree: 4%
 
 ---
 
-# Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (Batch SDK)
+# Konfigurieren von Authentifizierungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 
 Authentifizierungsspezifikationen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrer Quelle herstellen können.
 
-Das Array `authSpec` enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Platform erforderlich sind. Jede Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
+Das `authSpec`-Array enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Platform erforderlich sind. Jede beliebige Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
 
 ## Authentifizierungsspezifikationen
 
-Self-Serve-Quellen (Batch SDK) unterstützen OAuth 2-Aktualisierungs-Codes und einfache Authentifizierung. Die folgenden Tabellen enthalten Anleitungen zur Verwendung eines OAuth 2-Aktualisierungscodes und einer einfachen Authentifizierung
+Selbstbedienungsquellen (Batch-SDK) unterstützen OAuth 2-Aktualisierungs-Codes und die Standardauthentifizierung. In den folgenden Tabellen finden Sie Anleitungen zur Verwendung eines OAuth 2-Aktualisierungs-Codes und einer einfachen Authentifizierung
 
-### OAuth 2-Aktualisierungscode
+### OAuth 2-Aktualisierungs-Code
 
-Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwendung durch Generieren eines temporären Zugriffstokens und eines Aktualisierungstokens. Mit dem Zugriffstoken können Sie sicher auf Ihre Ressourcen zugreifen, ohne andere Anmeldeinformationen angeben zu müssen. Mit dem Aktualisierungs-Token können Sie hingegen ein neues Zugriffstoken generieren, sobald das Zugriffstoken abläuft.
+Ein OAuth 2-Aktualisierungs-Code ermöglicht den sicheren Zugriff auf eine Anwendung, indem er ein temporäres Zugriffstoken und ein Aktualisierungstoken generiert. Mit dem Zugriffs-Token können Sie sicher auf Ihre Ressourcen zugreifen, ohne andere Anmeldeinformationen angeben zu müssen, während Sie mit dem Aktualisierungs-Token ein neues Zugriffs-Token generieren können, sobald das Zugriffs-Token abläuft.
 
 ```json
 {
@@ -113,29 +113,29 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `oAuth2-refresh-code` |
-| `authSpec.type` | Definiert den Typ der von der Quelle unterstützten Authentifizierung. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Enthält Informationen zum Schema, Datentyp und Eigenschaften der Authentifizierung. |
+| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `oAuth2-refresh-code` |
+| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
-| `authSpec.spec.properties` | Enthält Informationen zu den Anmeldeinformationen, die für die Authentifizierung verwendet werden. |
+| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |
 | `authSpec.spec.properties.description` | Zeigt eine kurze Beschreibung der Berechtigung an. |
 | `authSpec.spec.properties.type` | Definiert den Datentyp der Berechtigung. | `string` |
-| `authSpec.spec.properties.clientId` | Die mit Ihrer Anwendung verknüpfte Client-ID. Die Client-ID wird zusammen mit Ihrem Client-Geheimnis verwendet, um Ihr Zugriffstoken abzurufen. |
-| `authSpec.spec.properties.clientSecret` | Das mit Ihrer Anwendung verknüpfte Client-Geheimnis. Das Client-Geheimnis wird zusammen mit Ihrer Client-ID verwendet, um Ihr Zugriffstoken abzurufen. |
-| `authSpec.spec.properties.accessToken` | Das Zugriffstoken autorisiert Ihren sicheren Zugriff auf Ihre Anwendung. |
-| `authSpec.spec.properties.refreshToken` | Das Aktualisierungstoken wird verwendet, um ein neues Zugriffstoken zu generieren, wenn das Zugriffstoken abläuft. |
+| `authSpec.spec.properties.clientId` | Die mit Ihrer Anwendung verknüpfte Client-ID. Die Client-ID wird zusammen mit Ihrem Client-Geheimnis verwendet, um Ihr Zugriffs-Token abzurufen. |
+| `authSpec.spec.properties.clientSecret` | Das mit Ihrer Anwendung verknüpfte Client-Geheimnis. Das Client-Geheimnis wird zusammen mit Ihrer Client-ID verwendet, um Ihr Zugriffs-Token abzurufen. |
+| `authSpec.spec.properties.accessToken` | Das Zugriffstoken autorisiert den sicheren Zugriff auf Ihre Anwendung. |
+| `authSpec.spec.properties.refreshToken` | Das Aktualisierungs-Token wird verwendet, um ein neues Zugriffs-Token zu generieren, wenn das Zugriffs-Token abläuft. |
 | `authSpec.spec.properties.expirationDate` | Definiert das Ablaufdatum des Zugriffstokens. |
-| `authSpec.spec.properties.refreshTokenUrl` | Die URL, die zum Abrufen des Aktualisierungstokens verwendet wird. |
-| `authSpec.spec.properties.accessTokenUrl` | Die URL, die zum Abrufen des Aktualisierungstokens verwendet wird. |
+| `authSpec.spec.properties.refreshTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |
+| `authSpec.spec.properties.accessTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |
 | `authSpec.spec.properties.requestParameterOverride` | Ermöglicht die Angabe von Berechtigungsparametern, die bei der Authentifizierung überschrieben werden sollen. |
-| `authSpec.spec.required` | Zeigt die Anmeldeinformationen an, die für die Authentifizierung erforderlich sind. | `accessToken` |
+| `authSpec.spec.required` | Zeigt die für die Authentifizierung erforderlichen Anmeldeinformationen an. | `accessToken` |
 
 {style="table-layout:auto"}
 
 
 ### Einfache Authentifizierung
 
-Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilfe einer Kombination aus Benutzername und Passwort Ihres Kontos auf Ihre Anwendung zugreifen können.
+Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie über eine Kombination aus Ihrem Kontonamen und Ihrem Kontokennwort auf Ihre Anwendung zugreifen können.
 
 ```json
 {
@@ -167,21 +167,21 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `Basic Authentication` |
-| `authSpec.type` | Definiert den Typ der von der Quelle unterstützten Authentifizierung. | `BasicAuthentication` |
-| `authSpec.spec` | Enthält Informationen zum Schema, Datentyp und Eigenschaften der Authentifizierung. |
+| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `BasicAuthentication` |
+| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
-| `authSpec.spec.description` | Zeigt weitere Informationen zu Ihrem Authentifizierungstyp an. |
-| `authSpec.spec.properties` | Enthält Informationen zu den Anmeldeinformationen, die für die Authentifizierung verwendet werden. |
-| `authSpec.spec.properties.username` | Der mit Ihrer Anwendung verknüpfte Konto-Benutzername. |
+| `authSpec.spec.description` | Zeigt weitere Informationen für Ihren Authentifizierungstyp an. |
+| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |
+| `authSpec.spec.properties.username` | Der mit Ihrem Programm verknüpfte Benutzername für das Konto. |
 | `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |
-| `authSpec.spec.required` | Gibt die Felder an, die als Pflichtwerte für die Eingabe in Platform erforderlich sind. | `username` |
+| `authSpec.spec.required` | Gibt die Felder an, die als obligatorische Werte für die Eingabe in Platform erforderlich sind. | `username` |
 
 {style="table-layout:auto"}
 
-## Beispielauthentifizierungsspezifikation
+## Beispiel einer Authentifizierungsspezifikation
 
-Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungsspezifikation mit einer [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) -Quelle.
+Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungsspezifikation unter Verwendung einer [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
 
 ## Nächste Schritte
 
-Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument unter [Konfigurieren von Quellspezifikationen](./sourcespec.md) .
+Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument [Konfigurieren von Quellspezifikationen](./sourcespec.md) .

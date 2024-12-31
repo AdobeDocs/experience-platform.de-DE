@@ -1,5 +1,5 @@
 ---
-title: Intelligente Erneute Interaktion
+title: Intelligente Rückgewinnung
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
@@ -14,29 +14,29 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Dies ist eine Beispielimplementierung, und die Beispiele auf dieser Seite, wie z. B. die Segmentsyntax, sind lediglich Beispiele. Sie sollten die Beispiele als Anleitung verwenden, da Ihre Implementierung unterschiedlich sein kann.
+>Dies ist eine Beispielimplementierung, und die Beispiele auf dieser Seite, wie Segmentsyntax, sind nur Beispiele. Verwenden Sie die Beispiele als Anleitung, da Ihre Implementierung unterschiedlich sein kann.
 
-Kontaktieren Sie Kunden, die eine Konversion auf intelligente und verantwortungsvolle Weise abgebrochen haben. Engagieren Sie Kunden mit veralteten Erlebnissen, um die Konversion zu steigern und den Kundenlebenszeitwert zu erhöhen.
+Binden Sie Kunden, die eine Konversion abgebrochen haben, wieder auf intelligente und verantwortungsvolle Weise ein. Kontaktieren Sie abgelaufene Kundinnen und Kunden mit Erlebnissen, um die Konversionsrate zu erhöhen und den Kundenlebenszeitwert zu erhöhen.
 
-Berücksichtigen Sie dabei Echtzeit-Überlegungen, berücksichtigen Sie alle Eigenschaften und Verhaltensweisen von Verbrauchern und bieten Sie eine schnelle Umqualifizierung basierend auf Online- und Offline-Ereignissen.
+Überlegungen in Echtzeit anstellen, alle Verbraucherqualitäten und -verhaltensweisen berücksichtigen und eine schnelle Neuqualifizierung auf der Grundlage von Online- und Offline-Ereignissen bieten.
 
-Nachstehend finden Sie eine allgemeine Architekturansicht der verschiedenen Komponenten von Real-Time CDP und Journey Optimizer. Dieses Diagramm zeigt, wie Daten durch die beiden Experience Platform-Apps von der Datenerfassung bis zu dem Punkt fließen, an dem sie durch Journey oder Kampagnen aktiviert werden, zu Zielen, um den auf dieser Seite beschriebenen Anwendungsfall zu erreichen.
+Nachfolgend finden Sie eine allgemeine Architekturansicht der verschiedenen Komponenten von Real-Time CDP und Journey Optimizer. Dieses Diagramm zeigt, wie Daten durch die beiden Experience Platform-Apps von der Datenerfassung bis zu dem Punkt fließen, an dem sie über Journey oder Kampagnen für Ziele aktiviert werden, um den auf dieser Seite beschriebenen Anwendungsfall zu erreichen.
 
-![Intelligente visuelle Übersicht zur erneuten Interaktion auf hoher Ebene.](../intelligent-re-engagement/images/step-by-step.png)
+![Intelligentes Re-Engagement - Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/step-by-step.png)
 
-## Anwendungsfallübersicht {#overview}
+## Anwendungsfall - Übersicht {#overview}
 
-Sie erstellen Schemas, Datensätze und Zielgruppen, während Sie Beispiele für Rückgewinnungsszenarien durcharbeiten. Außerdem lernen Sie die Funktionen kennen, die zum Einrichten der Beispiel-Journey in [!DNL Adobe Journey Optimizer] erforderlich sind, sowie die Funktionen, die zum Erstellen von Paid-Media-Anzeigen in Zielen erforderlich sind. In diesem Handbuch werden Beispiele dafür verwendet, wie Kunden in den unten beschriebenen Anwendungsfällen erneut angesprochen werden:
+Während Sie Beispiele für Rückgewinnungsszenarien durcharbeiten, erstellen Sie Schemata, Datensätze und Zielgruppen. Außerdem erfahren Sie, welche Funktionen zum Einrichten der Beispiel-Journey in [!DNL Adobe Journey Optimizer] und welche zum Erstellen von Paid-Media-Anzeigen in Zielen erforderlich sind. In diesem Handbuch werden Beispiele für die erneute Interaktion mit Kundinnen und Kunden in den unten beschriebenen Anwendungsfall-Journey verwendet:
 
-* **Szenario mit abgebrochener Produktsuche** - Geben Sie Kunden als Ziel an, die das Durchsuchen von Produkten sowohl auf der Website als auch in der App abgebrochen haben.
-* **Szenario mit Warenkorb abgebrochen** - Geben Sie Kunden als Ziel an, die Produkte in den Warenkorb gelegt, aber noch nicht auf der Website und in der App gekauft haben.
-* **Bestellbestätigungsszenario** - Fokussieren Sie sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.
+* **Szenario zum Abbruch der Produktsuche** - Targeting von Kunden, die das Durchsuchen von Produkten sowohl auf der Website als auch in der Mobile App abgebrochen haben.
+* **Szenario „Warenkorbabbruch** - Targeting von Kunden, die Produkte in den Warenkorb gelegt haben, aber noch nicht sowohl auf der Website als auch in der Mobile App gekauft wurden.
+* **Szenario zur Bestellbestätigung** - Konzentrieren Sie sich auf Produktkäufe, die über die Website und die Mobile App getätigt werden.
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
-Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Real-Time CDP- und Adobe Journey Optimizer-Funktionen (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/home.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
+Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Funktionen von Real-Time CDP und Adobe Journey Optimizer (aufgeführt in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/home.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integriert Daten aus verschiedenen Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnenzielgruppen zu erstellen und personalisierte Datenelemente zu unterteilen, die in der E-Mail und in den Kacheln der Web-Promo verwendet werden (z. B. Name oder kontobezogene Informationen). Die CDP wird auch verwendet, um Zielgruppen über E-Mail und Web zu aktivieren (über [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integriert Daten in alle Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Die CDP wird auch verwendet, um Zielgruppen in E-Mails und im Internet zu aktivieren (über [!DNL Adobe Target]).
    * [Schemata](/help/xdm/home.md)
    * [Profile](/help/profile/home.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
@@ -44,72 +44,72 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Ziele](/help/destinations/home.md)
 
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=de) - Hilft Ihnen, Ihren Kunden verbundene, kontextbezogene und personalisierte Erlebnisse bereitzustellen.
-   * [Ereignis oder Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=de) - Hilft Ihnen, Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bereitzustellen.
+   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen/ Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
-   * [Journey Actions](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Journey-Aktionen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
-## Anwendungsfall {#achieve-use-case-instruction}
+## So erreichen Sie den Anwendungsfall {#achieve-use-case-instruction}
 
-Im Folgenden finden Sie einen allgemeinen Überblick über die drei Beispielszenarien zur erneuten Interaktion.
+Im Folgenden finden Sie einen allgemeinen Überblick über die drei Beispielszenarien für die Rückgewinnung von Kontakten.
 
 >[!BEGINTABS]
 
->[!TAB Szenario für abgebrochene Produktdurchsuchungen]
+>[!TAB Szenario mit abgebrochener Produktsuche]
 
-Das Szenario zum Durchsuchen von nicht mehr unterstützten Produkten zielt sowohl auf das Website- als auch auf die mobile App auf das abgebrochene Durchsuchen von Produkten ab. Dieses Szenario wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. In diesem Beispiel wird die Markeninteraktion nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Listen hinzugefügt wurden.<p>![Kunden - intelligente, abgebrochene Produktsuche - Überblick auf hoher Ebene](../intelligent-re-engagement/images/re-engagement-journey.png "Intelligenter Kunde, abgebrochener Produktbrowser - Überblick auf hoher Ebene."){width="1920" zoomable="yes"}</p>
+Das Szenario zum Durchsuchen abgebrochener Produkte zielt auf das Durchsuchen abgebrochener Produkte sowohl auf der Website als auch in der mobilen App ab. Dieses Szenario wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. In diesem Beispiel wird die Interaktion mit einer Marke nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine zusätzlichen Listen vorhanden sind.<p>![Kunden-Szenario mit intelligentem Produktabbruch - Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Kundenspezifisches Szenario für die Suche nach verworfenen Produkten - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-1. Sie erstellen Schemas und Datensätze und aktivieren sie dann für [!UICONTROL Profil].
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
-3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
-4. Sie erstellen fokussierte Zielgruppen aus der Profilliste, um zu überprüfen, ob ein **Kunde** in den letzten drei Tagen eine Interaktion durchgeführt hat.
-5. Sie erstellen in [!DNL Adobe Journey Optimizer] eine Journey zum Durchsuchen von Produkten, die abgebrochen wurden.
+1. Sie erstellen Schemata und Datensätze und aktivieren dann für [!UICONTROL Profil].
+2. Sie nehmen Daten über Web SDK, Mobile SDK oder API in Experience Platform auf. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
+3. Sie nehmen zusätzliche profilaktivierte Daten auf, die über Identitätsdiagramme mit dem authentifizierten Web- und Mobile-App-Besucher verknüpft werden können.
+4. Sie erstellen zielgerichtete Zielgruppen aus der Liste der Profile, um zu überprüfen **ob ein** in den letzten drei Tagen eine Interaktion abgeschlossen hat.
+5. Sie erstellen in [!DNL Adobe Journey Optimizer] eine Journey zur Produktsuche, die nicht mehr verwendet wird.
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** zusammen, um Zielgruppen für die gewünschten Paid-Media-Ziele zu aktivieren.
-7. [!DNL Adobe Journey Optimizer] sucht nach Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
+7. [!DNL Adobe Journey Optimizer] sucht nach Einverständnis und sendet die verschiedenen konfigurierten Aktionen.
 
->[!TAB Szenario mit abgelaufenem Warenkorb]
+>[!TAB Szenario mit Transaktionsabbruch]
 
-Das Szenario &quot;Stehen gelassener Warenkorb&quot;gilt, wenn Produkte in den Warenkorb gelegt, aber noch nicht auf der Website und in der App gekauft wurden. Darüber hinaus werden Paid Media-Kampagnen mit dieser Methode gestartet und beendet.<p>![Kunden haben das Szenario &quot;Warenkorb abgebrochen&quot;mit einer allgemeinen visuellen Übersicht übersehen.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Kunden, die den Warenkorb verlassen haben, haben eine allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
+Das Szenario „Transaktionsabbruch“ gilt, wenn Produkte in den Warenkorb gelegt, aber noch nicht sowohl auf der Website als auch in der Mobile App gekauft wurden. Außerdem werden Kampagnen mit bezahlten Medien mit dieser Methode gestartet und gestoppt.<p>![Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht](../intelligent-re-engagement/images/abandoned-cart-journey.png "Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-1. Sie erstellen Schemas und Datensätze, die für [!UICONTROL Profil] aktiviert sind.
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
-3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
-4. Sie können fokussierte Zielgruppen aus der Profilliste erstellen, um zu überprüfen, ob ein **Kunde** einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen hat. Das Ereignis **[!UICONTROL Zum Warenkorb hinzufügen]** löst einen Timer aus, der 30 Minuten wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird der **Kunde** den Zielgruppen **[!UICONTROL Warenkorb abbrechen]** hinzugefügt.
-5. In [!DNL Adobe Journey Optimizer] erstellen Sie eine Journey für den abgebrochenen Warenkorb.
+1. Wenn Sie Schemata und Datensätze erstellen, aktivieren Sie für [!UICONTROL Profil].
+2. Sie nehmen Daten über Web SDK, Mobile SDK oder API in Experience Platform auf. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
+3. Sie nehmen zusätzliche profilaktivierte Daten auf, die über Identitätsdiagramme mit dem authentifizierten Web- und Mobile-App-Besucher verknüpft werden können.
+4. Sie erstellen zielgerichtete Zielgruppen aus der Liste der Profile, um zu überprüfen, ob ein **Kunde** einen Artikel in seinen Warenkorb gelegt, den Kauf jedoch nicht abgeschlossen hat. Das **[!UICONTROL Zum Warenkorb hinzufügen]**-Ereignis startet einen Timer, der 30 Minuten wartet und dann auf den Kauf prüft. Wenn kein Kauf getätigt wurde, wird der **Kunde** zu den Zielgruppen **[!UICONTROL Warenkorb]**.
+5. Sie erstellen eine Journey aus einem Transaktionsabbruch in [!DNL Adobe Journey Optimizer].
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** zusammen, um Zielgruppen für die gewünschten Paid-Media-Ziele zu aktivieren.
-7. [!DNL Adobe Journey Optimizer] sucht nach Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
+7. [!DNL Adobe Journey Optimizer] sucht nach Einverständnis und sendet die verschiedenen konfigurierten Aktionen.
 
->[!TAB Bestellbestätigungsszenario]
+>[!TAB Szenario zur Bestellbestätigung]
 
-Das Szenario zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.<p>![Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene."){width="1920" zoomable="yes"}</p>
+Das Szenario der Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die Mobile App getätigt werden.<p>![Kundenbestellungsbestätigungsszenario Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario mit Bestätigung von Kundenaufträgen - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-1. Sie erstellen Schemas und Datensätze und aktivieren sie dann für [!UICONTROL Profil].
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
-3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
+1. Sie erstellen Schemata und Datensätze und aktivieren dann für [!UICONTROL Profil].
+2. Sie nehmen Daten über Web SDK, Mobile SDK oder API in Experience Platform auf. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
+3. Sie nehmen zusätzliche profilaktivierte Daten auf, die über Identitätsdiagramme mit dem authentifizierten Web- und Mobile-App-Besucher verknüpft werden können.
 4. Sie erstellen eine Bestätigungs-Journey in [!DNL Adobe Journey Optimizer].
-5. [!DNL Adobe Journey Optimizer] sendet eine Auftragsbestätigungsnachricht mithilfe des bevorzugten Kanals.
+5. [!DNL Adobe Journey Optimizer] sendet eine Bestätigungsnachricht über den bevorzugten Kanal.
 
 >[!ENDTABS]
 
-Um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene abzuschließen, lesen Sie die folgenden Abschnitte durch, die Links zu weiteren Informationen und detaillierteren Anweisungen enthalten.
+Um die einzelnen Schritte in den oben stehenden allgemeinen Übersichten abzuschließen, lesen Sie die folgenden Abschnitte, in denen Links zu weiteren Informationen und detaillierteren Anweisungen enthalten sind.
 
-### Erstellen von Schemata und Angeben von Feldergruppen {#schema-design}
+### Erstellen von Schemata und Festlegen von Feldergruppen {#schema-design}
 
-Ressourcen des Experience-Datenmodells (XDM) werden im Arbeitsbereich [!UICONTROL Schemas] in [!DNL Adobe Experience Platform] verwaltet. Sie können die von [!DNL Adobe] bereitgestellten Kernressourcen anzeigen und untersuchen (z. B. Feldgruppen) und benutzerdefinierte Ressourcen und Schemata für Ihre Organisation erstellen.
+Experience-Datenmodell (XDM)-Ressourcen werden im Arbeitsbereich [!UICONTROL Schemata] in [!DNL Adobe Experience Platform] verwaltet. Sie können die von [!DNL Adobe] bereitgestellten Kernressourcen (z. B. Feldgruppen) anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
-Weitere Informationen zum Erstellen von [Schemas](/help/xdm/home.md) finden Sie im Tutorial zum Erstellen von Schemas [.](/help/xdm/tutorials/create-schema-ui.md) und [Modellieren Ihrer Kundenerlebnisdaten mit XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Weitere Informationen zum Erstellen von [Schemata](/help/xdm/home.md) finden Sie im Tutorial [Erstellen eines Schemas“.](/help/xdm/tutorials/create-schema-ui.md) und [Modellieren von Kundenerlebnisdaten mit XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
-Es gibt vier Schemaentwürfe, die für den Anwendungsfall der erneuten Interaktion verwendet werden. Für jedes Schema müssen spezifische Felder eingerichtet werden. Sie müssen die Aufnahme des Schemas in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Schemas für die Verwendung im Echtzeit-Kundenprofil finden Sie unter [Aktivieren eines Schemas für das Echtzeit-Kundenprofil](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
+Es gibt vier Schema-Designs, die für den Anwendungsfall zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder eingerichtet werden. Sie müssen das Schema aktivieren, damit es in das Echtzeit-Kundenprofil aufgenommen werden kann. Weitere Informationen zur Aktivierung des Schemas für die Verwendung im Echtzeit-Kundenprofil finden Sie unter [Aktivieren eines Schemas für das Echtzeit-Kundenprofil](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 
-#### Schema für Kundenattribute
+#### Kundenattribut-Schema
 
-Dieses Schema wird verwendet, um die Profildaten zu strukturieren und zu referenzieren, aus denen Ihre Kundeninformationen bestehen. Diese Daten werden in der Regel über Ihr CRM-System oder ein ähnliches System in [!DNL Adobe Experience Platform] erfasst und sind erforderlich, um auf Kundendetails zu verweisen, die für die Personalisierung, Marketingzustimmung und erweiterte Zielgruppenfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Profildaten, aus denen Ihre Kundeninformationen bestehen, zu strukturieren und zu referenzieren. Diese Daten werden in der Regel über Ihr CRM-System oder ein ähnliches System in [!DNL Adobe Experience Platform] aufgenommen und sind erforderlich, um auf Kundendetails zu verweisen, die für Personalisierung, Marketing-Einverständnis und erweiterte Zielgruppenfunktionen verwendet werden.
 
-Das Kundenattributschema wird durch eine Klasse vom Typ [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) dargestellt, die die folgenden Feldgruppen enthält:
+Das Kundenattribut-Schema wird durch eine Klasse [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) dargestellt, die die folgenden Feldergruppen enthält:
 
-+++Persönliche Kontaktdetails (Feldergruppe)
++++Persönliche Kontaktdaten (Feldergruppe)
 
-[Persönliche Kontaktdetails](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die Klasse &quot;XDM Individual Profile&quot;, die die Kontaktinformationen für eine Person beschreibt.
+[Persönliche Kontaktdetails](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die Klasse „XDM Individual Profile“, die die Kontaktinformationen für eine einzelne Person beschreibt.
 
 | Felder | Beschreibung |
 | --- | --- |
@@ -118,15 +118,15 @@ Das Kundenattributschema wird durch eine Klasse vom Typ [[!UICONTROL XDM Individ
 
 +++
 
-+ + + externe Source-Systemprüfungsdetails (Feldergruppe)
++++Audit-Details des externen Source-Systems (Feldergruppe)
 
-[Externe Source-Systemprüfungsattribute](/help/xdm/data-types/external-source-system-audit-attributes.md) ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
+[External Source System Audit Attributes](/help/xdm/data-types/external-source-system-audit-attributes.md) ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 
 +++
 
-+++Einverständnis- und Präferenzfeldgruppen (Feldergruppe)
++++Feldergruppen für Einverständnis und Voreinstellungen (Feldergruppe)
 
-Die Feldergruppe [Einverständnisse und Voreinstellungen](/help/xdm/field-groups//profile/consents.md) enthält ein einzelnes Objektfeld, Einverständniserklärungen, um Einverständnisinformationen und Präferenzinformationen zu erfassen.
+Die [Einverständnis und Voreinstellungen](/help/xdm/field-groups//profile/consents.md) bietet ein einzelnes Feld vom Typ „Einverständnis“, um Einverständnis- und Voreinstellungsinformationen zu erfassen.
 
 | Felder | Anforderung |
 | --- | --- |
@@ -139,110 +139,110 @@ Die Feldergruppe [Einverständnisse und Voreinstellungen](/help/xdm/field-groups
 
 +++
 
-+++ Profiltestdetails (Feldergruppe)
++++Details zum Profiltest (Feldergruppe)
 
-Mit dieser Feldergruppe können Sie Ihre Journey vor der Veröffentlichung mithilfe von Testprofilen testen. Weitere Informationen zum Erstellen von Testprofilen finden Sie in den Tutorials [Testprofile erstellen](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) und [Testen des Journey-Tutorials](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=de).
+Mit dieser Feldergruppe können Sie Ihren Journey vor der Veröffentlichung mithilfe von Testprofilen testen. Weitere Informationen zum Erstellen von Testprofilen finden Sie im Tutorial [Erstellen von Testprofilen](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) und [Testen des Journey-](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=de).
 
 +++
 
 #### Schema für digitale Transaktionen des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Diese Daten werden in der Regel über das [Web SDK](/help/web-sdk/home.md) in [!DNL Adobe Experience Platform] erfasst und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey verwendet werden, sowie auf detaillierte Online-Kundenanalysen, erweiterte Zielgruppenfunktionen und personalisiertes Messaging.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität auf Ihrer Website oder auf zugehörigen digitalen Plattformen besteht. Diese Daten werden in der Regel über [Web SDK](/help/web-sdk/home.md) in [!DNL Adobe Experience Platform] aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse, zu erweiterten Zielgruppenfunktionen und zum personalisierten Messaging verwendet werden.
 
-Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse dargestellt.
+Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse dargestellt.
 
 +++XDM ExperienceEvent (Klasse)
 
-Die Klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) enthält die folgenden Feldergruppen:
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse umfasst die folgenden Feldergruppen:
 
 | Felder | Beschreibung |
 | --- | --- |
-| `_id` | Identifiziert individuelle Ereignisse, die in [!DNL Adobe Experience Platform] erfasst werden. |
-| `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit auftreten. |
-| `eventType` | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
+| `_id` | identifiziert einzelne Ereignisse, die in [!DNL Adobe Experience Platform] aufgenommen werden, eindeutig. |
+| `timestamp` | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit liegen. |
+| `eventType` | Eine Zeichenfolge, die den Kategorietyp für das Ereignis angibt. |
 
 +++
 
-+ + + Endbenutzer-ID-Details (Feldergruppe)
++++Details zur Endbenutzer-ID (Feldergruppe)
 
-Die Feldergruppe [Endbenutzer-ID-Details](/help/xdm/field-groups/event/enduserids.md) wird verwendet, um die Identitätsdaten einer Person in mehreren Adobe-Applikationen zu beschreiben.
+Die [Details zur Endbenutzer-](/help/xdm/field-groups/event/enduserids.md)) wird verwendet, um die Identitätsinformationen einer Person in mehreren Adobe-Anwendungen zu beschreiben.
 
 | Felder | Beschreibung |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.emailid.id` | E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.id` | Endbenutzer-E-Mail-Adressen-ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierter Status der Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-ID-Namespace-Code (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Namespace-Code der Marketing Cloud-ID (MCID). |
 
 +++
 
-+ + + Commerce Details (Feldergruppe)
++++Commerce-Details (Feldergruppe)
 
-Die Feldergruppe [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Checkout, Abbruch) zu beschreiben.
+Die Feldergruppe [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Kasse, Abbruch) zu beschreiben.
 
 | Felder | Beschreibung |
 | --- | --- |
 | `commerce.cart.cartID` | Eine ID für den Warenkorb. |
-| `commerce.order.orderType` | Ein Objekt, das den Produktanordnungstyp beschreibt. |
+| `commerce.order.orderType` | Ein Objekt, das den Produktbestelltyp beschreibt. |
 | `commerce.order.payments.paymentAmount` | Ein Objekt, das den Zahlungsbetrag der Produktbestellung beschreibt. |
-| `commerce.order.payments.paymentType` | Ein Objekt, das den Produktzahlungstyp beschreibt. |
-| `commerce.order.payments.transactionID` | Eine Transaktions-ID der Objektproduktbestellung. |
-| `commerce.order.purchaseID` | Eine Kauf-ID für Objektprodukte. |
-| `productListItems.name` | Eine Liste von Artikelnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
-| `productListItems.priceTotal` | Der Gesamtpreis der Artikelliste, die die von einem Kunden ausgewählten Produkte darstellt. |
+| `commerce.order.payments.paymentType` | Ein Objekt, das den Zahlungstyp für Produktbestellungen beschreibt. |
+| `commerce.order.payments.transactionID` | Eine Objektproduktauftragstransaktions-ID. |
+| `commerce.order.purchaseID` | Eine Objektproduktbestellungs-Kauf-ID. |
+| `productListItems.name` | Eine Liste von Elementnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
+| `productListItems.priceTotal` | Der Gesamtpreis der Liste der Artikel, die die von einem Kunden ausgewählten Produkte darstellen. |
 | `productListItems.product` | Die ausgewählten Produkte. |
-| `productListItems.quantity` | Die Anzahl der Elemente, die für die von einem Kunden ausgewählten Produkte stehen. |
+| `productListItems.quantity` | Die Menge der Liste der Artikel, die die von einem Kunden ausgewählten Produkte darstellen. |
 
 +++
 
-+ + + externe Source-Systemprüfungsdetails (Feldergruppe)
++++Audit-Details des externen Source-Systems (Feldergruppe)
 
-Externe Source-Systemprüfungsattribute sind ein standardmäßiger XDM-Datentyp (Experience Data Model), der Prüfdetails zu einem externen Quellsystem erfasst.
+External Source System Audit Attributes ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 
 +++
 
-#### Schema für Offline-Transaktionen des Kunden
+#### Offline-Transaktionsschema des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Plattformen außerhalb Ihrer Website auftreten. Diese Daten werden in der Regel von einem POS (oder ähnlichen System) in [!DNL Adobe Experience Platform] erfasst und meist über eine API-Verbindung an Platform gestreamt. Ihr Zweck besteht darin, auf die verschiedenen Offline-Konversionsereignisse zu verweisen, die zur Auslösung von Journey verwendet werden, eine tiefe Online- und Offline-Kundenanalyse, erweiterte Zielgruppenfunktionen und personalisiertes Messaging.
+Dieses Schema wird verwendet, um die Ereignisdaten, aus denen Ihre Kundenaktivität besteht und die auf Plattformen außerhalb Ihrer Website auftreten, zu strukturieren und zu referenzieren. Diese Daten werden normalerweise aus einem POS (oder einem ähnlichen System) in [!DNL Adobe Experience Platform] aufgenommen und meistens über eine API-Verbindung an Platform gestreamt. Sie dient als Referenz für die verschiedenen Offline-Konversionsereignisse, die zum Auslösen von Journey-Analysen, einer umfassenden Online- und Offline-Kundenanalyse, erweiterten Zielgruppenfunktionen und personalisiertem Messaging verwendet werden.
 
-Das Offline-Transaktionsschema des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse dargestellt.
+Das Offline-Transaktionsschema des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse dargestellt.
 
 +++XDM ExperienceEvent (Klasse)
 
-Die Klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) enthält die folgenden Feldergruppen:
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse umfasst die folgenden Feldergruppen:
 
 | Felder | Beschreibung |
 | --- | --- |
-| `_id` | Identifiziert individuelle Ereignisse, die in [!DNL Adobe Experience Platform] erfasst werden. |
-| `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit auftreten. |
-| `eventType` | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
+| `_id` | identifiziert einzelne Ereignisse, die in [!DNL Adobe Experience Platform] aufgenommen werden, eindeutig. |
+| `timestamp` | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit liegen. |
+| `eventType` | Eine Zeichenfolge, die den Kategorietyp für das Ereignis angibt. |
 
 +++
 
-+ + + Commerce Details (Feldergruppe)
++++Commerce-Details (Feldergruppe)
 
-Die Feldergruppe [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Checkout, Abbruch) zu beschreiben.
+Die Feldergruppe [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Kasse, Abbruch) zu beschreiben.
 
 | Felder | Beschreibung |
 | --- | --- |
 | `commerce.cart.cartID` | Eine ID für den Warenkorb. |
-| `commerce.order.orderType` | Ein Objekt, das den Produktanordnungstyp beschreibt. |
+| `commerce.order.orderType` | Ein Objekt, das den Produktbestelltyp beschreibt. |
 | `commerce.order.payments.paymentAmount` | Ein Objekt, das den Zahlungsbetrag der Produktbestellung beschreibt. |
-| `commerce.order.payments.paymentType` | Ein Objekt, das den Produktzahlungstyp beschreibt. |
-| `commerce.order.payments.transactionID` | Eine Transaktions-ID der Objektproduktbestellung. |
-| `commerce.order.purchaseID` | Eine Kauf-ID für Objektprodukte. |
-| `productListItems.name` | Eine Liste von Artikelnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
-| `productListItems.priceTotal` | Der Gesamtpreis der Artikelliste, die die von einem Kunden ausgewählten Produkte darstellt. |
+| `commerce.order.payments.paymentType` | Ein Objekt, das den Zahlungstyp für Produktbestellungen beschreibt. |
+| `commerce.order.payments.transactionID` | Eine Objektproduktauftragstransaktions-ID. |
+| `commerce.order.purchaseID` | Eine Objektproduktbestellungs-Kauf-ID. |
+| `productListItems.name` | Eine Liste von Elementnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
+| `productListItems.priceTotal` | Der Gesamtpreis der Liste der Artikel, die die von einem Kunden ausgewählten Produkte darstellen. |
 | `productListItems.product` | Die ausgewählten Produkte. |
-| `productListItems.quantity` | Die Anzahl der Elemente, die für die von einem Kunden ausgewählten Produkte stehen. |
+| `productListItems.quantity` | Die Menge der Liste der Artikel, die die von einem Kunden ausgewählten Produkte darstellen. |
 
 +++
 
-+++Persönliche Kontaktdetails (Feldergruppe)
++++Persönliche Kontaktdaten (Feldergruppe)
 
-[Persönliche Kontaktdetails](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die Klasse &quot;XDM Individual Profile&quot;, die die Kontaktinformationen für eine Person beschreibt.
+[Persönliche Kontaktdetails](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die Klasse „XDM Individual Profile“, die die Kontaktinformationen für eine einzelne Person beschreibt.
 
 | Felder | Beschreibung |
 | --- | --- |
@@ -251,143 +251,143 @@ Die Feldergruppe [Commerce-Details](/help/xdm/field-groups/event/commerce-detail
 
 +++
 
-+ + + externe Source-Systemprüfungsdetails (Feldergruppe)
++++Audit-Details des externen Source-Systems (Feldergruppe)
 
-Externe Source-Systemprüfungsattribute sind ein standardmäßiger XDM-Datentyp (Experience Data Model), der Prüfdetails zu einem externen Quellsystem erfasst.
+External Source System Audit Attributes ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 
 +++
 
-#### Adobe-Web-Connector-Schema
+#### Adobe des Web-Connector-Schemas
 
 >[!NOTE]
 >
->Dies ist eine optionale Implementierung, wenn Sie den [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md) verwenden.
+>Dies ist eine optionale Implementierung, wenn Sie die [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md) verwenden.
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Dieses Schema ähnelt dem Schema Customer Digital Transactions , ist jedoch insofern anders, als es verwendet werden soll, wenn [Web SDK](/help/web-sdk/home.md) keine Option für die Datenerfassung ist. Daher ist dieses Schema erforderlich, wenn Sie die [!DNL Adobe Analytics Source Connector] verwenden, um Ihre Online-Daten als primären oder sekundären Datastream an [!DNL Adobe Experience Platform] zu senden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität auf Ihrer Website oder auf zugehörigen digitalen Plattformen besteht. Dieses Schema ähnelt dem Schema für digitale Transaktionen bei Kunden, unterscheidet sich jedoch insofern, als es verwendet werden soll, wenn [Web SDK](/help/web-sdk/home.md) keine Option für die Datenerfassung ist. Daher wird dieses Schema benötigt, wenn Sie die [!DNL Adobe Analytics Source Connector] verwenden, um Ihre Online-Daten entweder als primären oder sekundären Datenstrom an [!DNL Adobe Experience Platform] zu senden.
 
-Das Web-Connector-Schema [!DNL Adobe] wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse dargestellt.
+Das [!DNL Adobe]-Web-Connector-Schema wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse dargestellt.
 
 +++XDM ExperienceEvent (Klasse)
 
-Die Klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) enthält die folgenden Feldergruppen:
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse umfasst die folgenden Feldergruppen:
 
 | Felder | Beschreibung |
 | --- | --- |
-| `_id` | Identifiziert individuelle Ereignisse, die in [!DNL Adobe Experience Platform] erfasst werden. |
-| `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit auftreten. |
-| `eventType` | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
+| `_id` | identifiziert einzelne Ereignisse, die in [!DNL Adobe Experience Platform] aufgenommen werden, eindeutig. |
+| `timestamp` | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß RFC 3339 Abschnitt 5.6. Dieser Zeitstempel muss in der Vergangenheit liegen. |
+| `eventType` | Eine Zeichenfolge, die den Kategorietyp für das Ereignis angibt. |
 
 +++
 
-+ + + Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
++++Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
 
 Die Feldergruppe [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) erfasst allgemeine Metriken, die von Adobe Analytics erfasst werden.
 
 | Felder | Beschreibung |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.emailid.id` | E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.id` | Endbenutzer-E-Mail-Adressen-ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierter Status der Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-ID-Namespace-Code (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Namespace-Code der Marketing Cloud-ID (MCID). |
 
 +++
 
-+ + + externe Source-Systemprüfungsdetails (Feldergruppe)
++++Audit-Details des externen Source-Systems (Feldergruppe)
 
-Externe Source-Systemprüfungsattribute sind ein standardmäßiger XDM-Datentyp (Experience Data Model), der Prüfdetails zu einem externen Quellsystem erfasst.
+External Source System Audit Attributes ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 
 +++
 
-### Datensatz aus einem Schema erstellen {#create-datasets}
+### Erstellen eines Datensatzes aus einem Schema {#create-datasets}
 
-Ein Datensatz ist eine Speicher- und Verwaltungsstruktur für eine Datengruppe. Jedes Schema für intelligente Rückgewinnungsszenarien sollte über einen eigenen Datensatz verfügen.
+Ein Datensatz ist eine Speicher- und Verwaltungsstruktur für eine Gruppe von Daten. Jedes Schema für Szenarien zur intelligenten erneuten Interaktion sollte über einen eigenen Datensatz verfügen.
 
-Weitere Informationen zum Erstellen eines [Datensatzes](/help/catalog/datasets/overview.md) aus einem Schema finden Sie im Handbuch zur [Benutzeroberfläche für Datensätze](/help/catalog/datasets/user-guide.md).
+Weitere Informationen zum Erstellen eines [Datensatzes](/help/catalog/datasets/overview.md) aus einem Schema finden Sie im [Handbuch zur Benutzeroberfläche von Datensätzen](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE]
 >
->Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der Anleitung zum [Einbringen von Daten in das Echtzeit-Kundenprofil](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=de).
+>Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie auch aktivieren, dass der Datensatz in das Echtzeit-Kundenprofil aufgenommen wird. Weitere Informationen zur Aktivierung des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie im Tutorial [Einbringen von Daten in das Echtzeit-Kundenprofil](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=de).
 
 ### Einverständnis und Data Governance {#privacy-consent}
 
 >[!IMPORTANT]
 >
->Es ist gesetzlich vorgeschrieben, Kunden die Möglichkeit zu geben, sich vom Erhalt von Nachrichten einer Marke abzumelden und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie in der Übersicht über die [Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html) .
+>Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Einverständniserklärungen
 
-Wenn Sie einen Rückgewinnungspfad erstellen, sollten Sie die folgenden [Zustimmungsrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) hinzufügen:
+Erwägen Sie beim Erstellen eines Rückgewinnungspfads das Hinzufügen der folgenden [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 
-* Wenn `consents.marketing.email.val = "Y"`, dann Kann E-Mail
-* Wenn `consents.marketing.sms.val = "Y"`, dann Kann SMS
-* Wenn `consents.marketing.push.val = "Y"`, kann Push
-* Wenn `consents.share.val = "Y"`, kann Werbung
+* Wenn `consents.marketing.email.val = "Y"` dann eine E-Mail senden können
+* Wenn `consents.marketing.sms.val = "Y"` dann kann SMS
+* Wenn `consents.marketing.push.val = "Y"` dann Push ausführen kann
+* Wenn `consents.share.val = "Y"` dann werben können
 
-#### Beschriftung und Durchsetzung von Data Governance
+#### Data Governance-Kennzeichnung und -Durchsetzung
 
-Ziehen Sie beim Erstellen eines Rückgewinnungspfads die folgenden [Data Governance-Beschriftungen](/help/data-governance/labels/overview.md) hinzu:
+Erwägen Sie beim Erstellen eines Rückgewinnungspfads das Hinzufügen der folgenden [Data Governance-Kennzeichnungen](/help/data-governance/labels/overview.md):
 
-* Persönliche E-Mail-Adressen werden als direkt identifizierbare Daten verwendet, die zur Identifizierung oder zum Kontakt mit einer bestimmten Person und nicht mit einem Gerät verwendet werden.
+* Personenbezogene E-Mail-Adressen werden als direkt identifizierbare Daten verwendet, die zur Identifizierung oder Kontaktaufnahme mit einer bestimmten Person und nicht mit einem Gerät verwendet werden.
    * `personalEmail.address = I1`
 
 #### Datennutzungsrichtlinien
 
-Für das Szenario mit abgebrochenen Produktdurchsuchvorgängen sind keine [Datennutzungsrichtlinien](/help/data-governance/policies/overview.md) erforderlich. Beachten Sie jedoch Folgendes:
+Für [ Szenario mit abgebrochener Produktsuche sind keine ](/help/data-governance/policies/overview.md)Datennutzungsrichtlinien“ erforderlich. Beachten Sie jedoch Folgendes:
 
-* Einschränken vertraulicher Daten
-* Einschränken von Onsite Advertising
+* Einschränken sensibler Daten
+* Onsite-Advertising einschränken
 * E-Mail-Targeting einschränken
 * Site-übergreifendes Targeting einschränken
-* Beschränkung der Kombination direkt identifizierbarer Daten mit anonymen Daten
+* Einschränkung der Kombination direkt identifizierbarer Daten mit anonymen Daten
 
 ### Erstellen von Zielgruppen {#create-audience}
 
-In den Rückgewinnungsszenarios werden Zielgruppen verwendet, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Zielgruppen können auf unterschiedliche Weise in [!DNL Adobe Experience Platform] erstellt werden.
+Die Rückgewinnungsszenarien verwenden Zielgruppen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Zielgruppen können in [!DNL Adobe Experience Platform] auf verschiedene Weise erstellt werden.
 
-Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im Handbuch [Benutzeroberfläche des Zielgruppendienstes](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience) .
+Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Zielgruppen-Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
-Weitere Informationen zum direkten Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im Handbuch [Benutzeroberfläche für Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md) .
+Weitere Informationen zum direkten Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 
 Weitere Informationen zum Erstellen von Zielgruppen mithilfe von Platform-abgeleiteten Zielgruppendefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
->[!TAB Szenario für abgebrochene Produktdurchsuchungen]
+>[!TAB Szenario mit abgebrochener Produktsuche]
 
-Diese Zielgruppe wird als Erweiterung des klassischen Szenarios &quot;Warenkorbabbruch&quot;erstellt. Während sich der Warenkorbabbruch in der Regel auf einen Zusatz zum Warenkorb ohne anschließenden Kauf in einem bestimmten Zeitraum konzentriert, sucht diese Zielgruppe nach einer früheren Interaktion, insbesondere nach denjenigen, die möglicherweise ein bestimmtes Produkt durchsucht, es jedoch nicht zum Warenkorb hinzugefügt haben und innerhalb eines bestimmten Zeitraums keine Nachbearbeitungsaktivität auf Ihrer Site hatten. Diese Zielgruppe hilft dabei, Ihre Marke für Kunden, die diese Aufnahmekriterien erfüllen, &quot;ganz oben im Kopf&quot;zu halten und kann auch für Kunden genutzt werden, deren digitale Eigenschaften von einem herkömmlichen E-Commerce-Modell abweichen können.
+Diese Zielgruppe wird als Erweiterung des klassischen Szenarios „Warenkorbabbruch“ erstellt. Während sich der Warenkorbabbruch in der Regel auf einen Zusatz zum Warenkorb ohne nachfolgenden Kauf in einem bestimmten Zeitraum konzentriert, sucht diese Zielgruppe nach einem früheren Interaktion, insbesondere nach denjenigen, die ein bestimmtes Produkt besucht haben, es jedoch nicht zum Warenkorb hinzugefügt haben und innerhalb eines bestimmten Zeitraums keine Folgeaktivität auf Ihrer Site hatten. Diese Zielgruppe hilft dabei, Ihre Marke für Kunden, die diese Einschlusskriterien erfüllen, „am besten zu verstehen“ und kann auch für Kunden genutzt werden, deren digitale Eigenschaften sich von einem herkömmlichen E-Commerce-Modell unterscheiden können.
 
-+ + + Abgebrochene Produktansicht ohne Interaktion in den letzten drei Tagen
++++Abgebrochene Produktansicht ohne Interaktion in den letzten drei Tagen
 
-Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs verwendet, bei dem Benutzer in den folgenden 3 Tagen Produkte online angesehen und nicht interagiert haben (Site-Besuche, App-Besuche, Online-Einkäufe, Offline-Käufe und zum Warenkorbereignis hinzugefügte Ereignisse).
+Das folgende Ereignis wird für das Szenario zum Durchsuchen abgebrochener Produkte verwendet, in dem Benutzer Produkte online angesehen und in den 3 Tagen danach nicht interagiert haben (Site-Besuche, App-Besuche, Online-Kauf, Offline-Kauf und Ereignisse zum Hinzufügen zum Warenkorb).
 
-Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Zielgruppe erforderlich:
 
 * `eventType: commerce.productViews`
-* Und `THEN` (sequenzielles Ereignis) schließen `eventType: commerce.productListAdds` UND `application.launch` UND `web.webpagedetails.pageViews` UND `commerce.purchases` aus (dies schließt sowohl online als auch offline ein)
+* Und `THEN` (sequenzielles Ereignis) schließen `eventType: commerce.productListAdds` UND `application.launch` UND `web.webpagedetails.pageViews` UND `commerce.purchases` aus (dies umfasst sowohl online als auch offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
 +++
 
-+++ Produktansicht mit Interaktion in den letzten drei Tagen
++++Produktansicht mit Interaktion in den letzten drei Tagen
 
-Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs verwendet, bei dem Benutzer Produkte online angesehen und in den folgenden 3 Tagen Interaktionen durchgeführt haben (Site-Besuche, App-Besuche, Online-Einkäufe, Offline-Käufe und Hinzufügen zu Warenkorbereignissen).
+Das folgende Ereignis wird für das Szenario zum Durchsuchen abgebrochener Produkte verwendet, in dem Benutzer Produkte online angesehen und in den 3 Tagen danach interagiert haben (Site-Besuche, App-Besuche, Online-Kauf, Offline-Kauf und Ereignisse zum Warenkorb hinzufügen).
 
-Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Zielgruppe erforderlich:
 
 * `eventType: commerce.productViews`
-* Und `THEN` (sequenzielles Ereignis) enthält `eventType: commerce.productListAdds` ODER `application.launch` ODER `web.webpagedetails.pageViews` ODER `commerce.purchases` (dies schließt sowohl online als auch offline ein)
+* Und `THEN` (sequenzielles Ereignis) umfassen `eventType: commerce.productListAdds` ODER `application.launch` ODER `web.webpagedetails.pageViews` ODER `commerce.purchases` (dies umfasst sowohl online als auch offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
 
-+++Interaktions-Streaming am letzten Tag
++++Interaktions-Streaming in den letzten Tagen
 
-Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs verwendet, bei dem die Benutzer in den letzten 1 Tagen interagiert haben (Site-Besuche, App-Besuche, Online-Einkäufe, Offline-Käufe und Hinzufügen zu Warenkorbereignissen).
+Das folgende Ereignis wird für das Szenario zum Durchsuchen abgebrochener Produkte verwendet, bei dem sich Benutzende in den letzten 1 Tag engagiert haben (Site-Besuche, App-Besuche, Online-Kauf, Offline-Kauf und Ereignisse zum Warenkorb hinzufügen).
 
-Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Zielgruppe erforderlich:
 
 * `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Streaming)
@@ -396,22 +396,22 @@ Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erford
 
 +++Interaktionsstapel in den letzten drei Tagen
 
-Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs verwendet, bei dem sich die Benutzer in den letzten drei Tagen engagiert haben (Site-Besuche, App-Besuche, Online-Einkäufe, Offline-Käufe und Hinzufügen zu Warenkorbereignissen).
+Das folgende Ereignis wird für das Szenario zum Durchsuchen abgebrochener Produkte verwendet, bei dem sich Benutzende in den letzten 3 Tagen engagiert haben (Site-Besuche, App-Besuche, Online-Kauf, Offline-Kauf und Ereignisse zum Warenkorb hinzufügen).
 
-Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Zielgruppe erforderlich:
 
 * `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
-   * `Timestamp: in last 3 days` (Batch)
+   * `Timestamp: in last 3 days` (Stapel)
 
 +++
 
->[!TAB Szenario mit abgelaufenem Warenkorb]
+>[!TAB Szenario mit Transaktionsabbruch]
 
-Diese Zielgruppe wird erstellt, um das klassische Szenario &quot;Warenkorbabbruch&quot;zu unterstützen. Ihr Zweck besteht darin, Kunden zu finden, die ein Produkt zum Warenkorb hinzugefügt, aber letztlich nicht mit einem Kauf ausgeführt haben. Diese Zielgruppe hilft Ihnen dabei, nicht nur Ihre Marke &quot;ganz oben im Kopf&quot;für Ihre Kunden zu halten, sondern auch die Produkte, die sie ohne nachfolgenden Kauf zurückgelassen haben.
+Diese Zielgruppe wird erstellt, um das klassische Szenario „Warenkorbabbruch“ zu unterstützen. Sie dient dazu, Kunden zu finden, die ein Produkt in ihren Warenkorb gelegt haben, es aber letztendlich nicht durch einen Kauf umgesetzt haben. Diese Zielgruppe wird nicht nur dazu beitragen, dass Ihre Marke für Ihre Kunden „auf dem Laufenden bleibt“, sondern auch die Produkte, die sie ohne einen späteren Kauf zurückgelassen haben.
 
-Die folgenden Ereignisse werden für das Szenario mit einem abgebrochenen Warenkorb verwendet, in dem Benutzer zwischen 1 und 4 Tagen ein Produkt zum Warenkorb hinzugefügt, den Kauf jedoch nicht abgeschlossen oder den Warenkorb gelöscht haben.
+Die folgenden Ereignisse werden für das Szenario „Warenkorbabbruch“ verwendet, in dem Benutzer vor 1 bis 4 Tagen ein Produkt zum Warenkorb hinzugefügt, den Kauf jedoch nicht abgeschlossen oder den Warenkorb nicht geleert haben.
 
-Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Zielgruppe erforderlich:
 
 * `eventType: commerce.productListAdds`
    * `Timestamp: >= 1 days before now AND <= 4 days before now `
@@ -420,13 +420,13 @@ Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erford
 * `eventType: commerce.productListRemovals`
    * `Timestamp: <= 4 days before now`
 
-Der Deskriptor für das Szenario &quot;Abbruch des Warenkorbs&quot;wird wie folgt angezeigt:
+Der Deskriptor für das Szenario „Transaktionsabbruch“ wird wie folgt angezeigt:
 
 `Include eventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude eventType = commerce.purchases 30 minutes before now OR eventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
->[!TAB Bestellbestätigungsszenario]
+>[!TAB Szenario zur Bestellbestätigung]
 
-Für diese Journey müssen keine Zielgruppen erstellt werden.
+Auf dieser Journey müssen keine Zielgruppen erstellt werden.
 
 >[!ENDTABS]
 
@@ -434,22 +434,22 @@ Für diese Journey müssen keine Zielgruppen erstellt werden.
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] umfasst nicht alle in den Diagrammen angezeigten Elemente. Alle [gebührenpflichtigen Medienanzeigen](/help/destinations/catalog/social/overview.md) werden in [!UICONTROL Zielen] erstellt.
+>[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden in &quot;[!UICONTROL &quot; ].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) hilft Ihnen, Ihren Kunden verbundene, kontextbezogene und personalisierte Erlebnisse bereitzustellen. Die Journey ist der gesamte Vorgang der Interaktion eines Kunden mit der Marke. Für jede Journey von Anwendungsfällen sind spezifische Informationen erforderlich. Im Folgenden finden Sie die genauen Daten, die für jede Journey benötigt werden.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich. Unten finden Sie die genauen Daten, die für jede Journey benötigt werden.
 
 >[!BEGINTABS]
 
->[!TAB Szenario für abgebrochene Produktdurchsuchungen]
+>[!TAB Szenario mit abgebrochener Produktsuche]
 
-Das Szenario zum Durchsuchen von nicht mehr unterstützten Produkten zielt sowohl auf das Website- als auch auf die mobile App auf das abgebrochene Durchsuchen von Produkten ab.<p>![Kunden, die das Durchsuchen von Produkten abgebrochen haben, sehen eine allgemeine Übersicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Kunden, die das Durchsuchen von Produkten abgebrochen haben, erhalten eine allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
+Das Szenario zum Durchsuchen abgebrochener Produkte zielt auf das Durchsuchen abgebrochener Produkte sowohl auf der Website als auch in der mobilen App ab.<p>![Vom Kunden aufgegebenes Szenario zur Produktsuche Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Szenario zur Produktsuche durch Kunden aufgegeben Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
 +++Ereignisse
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [allgemeinen Ereignisleitfaden](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Ereignis 1: Produktansichten
-   * Schema: Customer Digital Transactions
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -468,7 +468,7 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
          * `_id`
 
 * Ereignis 2: Zum Warenkorb hinzufügen
-   * Schema: Customer Digital Transactions
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -494,8 +494,8 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Ereignis 3: Markeninteraktion
-   * Schema: Customer Digital Transactions
+* Veranstaltung 3: Markeninteraktion
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -534,25 +534,25 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
 
 +++
 
-+++Journey-Arbeitsfläche für Schlüssellogik
++++Journey Canvas-Schlüssellogik
 
-Für die Schlüssellogik der Journey-Arbeitsfläche müssen Sie bestimmte Ereignisse identifizieren und Aktionen konfigurieren, die nach dem Eintreten des Ereignisses ausgeführt werden.
+Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereignisse zu identifizieren und Aktionen zu konfigurieren, die nach dem Eintreten des Ereignisses stattfinden sollen.
 
-* Journey-Einstiegslogik
-   * Ereignis für Produktansicht
+* Journey-Eingabelogik
+   * Produktansichtsereignis
 
 * Bedingungen
-   * Suchen Sie nach mindestens einem Online- oder Offline-Kaufereignis seit der letzten Ansicht des Produkts.
-      * Schema: Customer Digital Transactions
+   * Suchen Sie nach mindestens einem Online- oder Offline-Kaufereignis seit der letzten Anzeige des Produkts.
+      * Schema: Digitale Kundentransaktionen
       * `eventType = commerce.purchases`
       * `timestamp > timestamp of product last viewed`
 
-   * Suchen Sie nach mindestens einem Offline-Kauf seit der letzten Ansicht des Produkts:
-      * Schema: Offline-Kundentransaktionen
+   * Suchen Sie nach mindestens einem Offline-Kauf seit der letzten Anzeige des Produkts:
+      * Schema: Offline-Transaktionen von Kunden
       * `eventType = commerce.purchases`
       * `timestamp > timestamp of product last viewed`
 
-   * Bedingungen - Auswählen des Target-Kanals
+   * Bedingungen - Wählen Sie den Zielkanal aus
       * E-Mail
          * `consents.marketing.email.val = y`
       * Push-Benachrichtigung
@@ -565,16 +565,16 @@ Für die Schlüssellogik der Journey-Arbeitsfläche müssen Sie bestimmte Ereign
 
 +++
 
->[!TAB Szenario mit abgelaufenem Warenkorb]
+>[!TAB Szenario mit Transaktionsabbruch]
 
-Das Szenario mit einem abgebrochenen Warenkorb zielt auf Produkte ab, die im Warenkorb platziert, aber noch nicht auf der Website und in der App gekauft wurden.<p>![Kunden haben das Szenario &quot;Warenkorb abgebrochen&quot;mit einer allgemeinen visuellen Übersicht übersehen.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Kunden, die den Warenkorb verlassen haben, haben eine allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
+Das Szenario „Transaktionsabbruch“ zielt auf Produkte ab, die in den Warenkorb gelegt, aber noch nicht sowohl auf der Website als auch in der Mobile App gekauft wurden.<p>![Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht](../intelligent-re-engagement/images/abandoned-cart-journey.png "Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
 +++Ereignisse
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [allgemeinen Ereignisleitfaden](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Ereignis 2: Zum Warenkorb hinzufügen
-   * Schema: Customer Digital Transactions
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -600,8 +600,8 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Ereignis 4: Online-Käufe
-   * Schema: Customer Digital Transactions
+* Event 4: Online-Käufe
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -626,8 +626,8 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Ereignis 3: Markeninteraktion
-   * Schema: Customer Digital Transactions
+* Veranstaltung 3: Markeninteraktion
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -666,27 +666,27 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
 
 +++
 
-+++Journey-Arbeitsfläche für Schlüssellogik
++++Journey Canvas-Schlüssellogik
 
-Für die Schlüssellogik der Journey-Arbeitsfläche müssen Sie bestimmte Ereignisse identifizieren und Aktionen konfigurieren, die nach dem Eintreten des Ereignisses ausgeführt werden.
+Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereignisse zu identifizieren und Aktionen zu konfigurieren, die nach dem Eintreten des Ereignisses stattfinden sollen.
 
-* Journey-Einstiegslogik
-   * `AddToCart` Ereignis
+* Journey-Eingabelogik
+   * `AddToCart`
 
-* AuthenticatedState in authenticated
+* AuthenticatedState in Authenticated
 
 * Bedingung: Offline-Käufe seit dem letzten Abbruch des Warenkorbs:
-   * Schema: Offline-Kundentransaktionen
+   * Schema: Offline-Transaktionen von Kunden
    * `eventType = commerce.purchases`
    * `timestamp > timestamp of cart was last abandoned`
 
-* Bedingung: Der Warenkorb wurde gelöscht, da der Warenkorb zuletzt abgebrochen wurde:
-   * Schema: Customer Digital Transactions
+* Bedingung: Der Warenkorb wurde geleert, da der Warenkorb zuletzt verlassen wurde:
+   * Schema: Digitale Kundentransaktionen
    * `eventType = commerce.cartCleared`
-   * `cartID` (Kennung des Warenkorbs)
+   * `cartID` (ID des Warenkorbs)
    * `timestamp > timestamp of cart was last abandoned`
 
-* Target-Kanal auswählen (einen oder mehrere Kanäle für eine größere Reichweite auswählen)
+* Zielkanal auswählen (einen oder mehrere Kanäle für eine breitere Reichweite auswählen)
    * E-Mail
       * `consents.marketing.email.val = y`
    * Push-Benachrichtigung
@@ -698,16 +698,16 @@ Für die Schlüssellogik der Journey-Arbeitsfläche müssen Sie bestimmte Ereign
 
 +++
 
->[!TAB Bestellbestätigungsszenario]
+>[!TAB Szenario zur Bestellbestätigung]
 
-Das Szenario zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.<p>![Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene."){width="1920" zoomable="yes"}</p>
+Das Szenario der Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die Mobile App getätigt werden.<p>![Kundenbestellungsbestätigungsszenario Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario mit Bestätigung von Kundenaufträgen - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
 +++Ereignisse
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [allgemeinen Ereignisleitfaden](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
-* Ereignis 4: Online-Käufe
-   * Schema: Customer Digital Transactions
+* Event 4: Online-Käufe
+   * Schema: Digitale Kundentransaktionen
    * Felder:
       * `eventType`
    * Bedingung:
@@ -734,51 +734,51 @@ Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Na
 
 +++
 
-+++Journey-Arbeitsfläche für Schlüssellogik
++++Journey Canvas-Schlüssellogik
 
-Für die Schlüssellogik der Journey-Arbeitsfläche müssen Sie bestimmte Ereignisse identifizieren und Aktionen konfigurieren, die nach dem Eintreten des Ereignisses ausgeführt werden.
+Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereignisse zu identifizieren und Aktionen zu konfigurieren, die nach dem Eintreten des Ereignisses stattfinden sollen.
 
-* Journey-Einstiegslogik
-   * Bestellereignis
+* Journey-Eingabelogik
+   * Bestellungsereignis
 
 * Bedingungen
-   * Wählen Sie Zielkanal (wählen Sie einen oder mehrere Kanäle für eine größere Reichweite aus).
-      * Eine Bestellbestätigung gilt als Serving in der Natur, daher ist eine Zustimmungsprüfung in der Regel nicht erforderlich.
+   * Zielkanal auswählen (einen oder mehrere Kanäle für eine breitere Reichweite auswählen).
+      * Die Bestellbestätigung gilt als Dienstleistung in der Natur, sodass eine Einverständnisprüfung in der Regel nicht erforderlich ist.
       * E-Mail
       * Push-Benachrichtigung
       * SMS
 
-   * Kanalinhalt-Personalization
-      * Zeigen Sie Bestelldetails an und können eine Liste von Produkten im Tabellenformat anzeigen.
+   * Kanalinhalt Personalization
+      * Zeigen Sie Informationen zu Bestelldetails an und können Sie eine Liste von Produkten mithilfe eines Tabellenformats anzeigen.
 
 +++
 
 >[!ENDTABS]
 
-Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Leitfaden [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Einrichten von Paid-Media-Anzeigen in Zielen {#paid-media-ads}
+### Einrichten von Paid Media-Anzeigen in Zielen {#paid-media-ads}
 
-Das Ziel-Framework wird für Paid-Media-Anzeigen verwendet. Nachdem die Einwilligung überprüft wurde, wird sie an die verschiedenen konfigurierten Ziele gesendet. Weitere Informationen zu Zielen finden Sie im Dokument [Ziele - Übersicht](/help/destinations/home.md) .
+Das Ziel-Framework wird für Paid-Media-Anzeigen verwendet. Nachdem das Einverständnis geprüft wurde, wird es an die verschiedenen konfigurierten Ziele gesendet. Weitere Informationen zu Zielen finden Sie im Dokument [Ziele - Übersicht](/help/destinations/home.md).
 
 #### Für Ziele erforderliche Daten
 
-Streaming-Zielgruppenexport-Ziele (z. B. Facebook, Google Customer Match, Google DV360) unterstützen verschiedene Identitäten aus Kundendaten:
+Exportziele für Streaming-Zielgruppen (z. B. Facebook, Google Customer Match, Google DV360) unterstützen verschiedene Identitäten aus Kundendaten:
 
 * `personalEmail.address`
 * `ECID`
 * `mobilePhone.number`
 
-Sie können die abgebrochene Produktsuche aktivieren und die Zielgruppen des Warenkorbs für Paid Media-Anzeigen verlassen.
+Sie können Zielgruppen für abgebrochene Produkte aktivieren und Zielgruppen für bezahlte Medienanzeigen aus dem Warenkorb entfernen.
 
 * Stream/Ausgelöst
-   * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media &amp; Social](/help/destinations/catalog/social/overview.md)
+   * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Bezahlte Medien und Social Media](/help/destinations/catalog/social/overview.md)
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming-Ziel](/help/destinations/catalog/streaming/http-destination.md)
-   * [Benutzerdefiniertes Ziel, das mithilfe von Destination SDK erstellt wurde.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates [benutzerdefiniertes Ziel mit Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations) erstellen
+   * [Benutzerdefiniertes Ziel, erstellt mithilfe der -Destination SDK.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates (benutzerdefiniertes [ mithilfe von Destination SDK erstellen](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie Ihre Kunden, die eine Konversion auf intelligente und verantwortungsvolle Weise abgebrochen haben, erneut ansprechen, haben Sie hoffentlich Konversionen erhöht und den Wert für die Kundenlebensdauer erhöht.
+Indem Sie Ihre Kunden, die eine Konversion abgebrochen haben, wieder auf intelligente und verantwortungsvolle Weise angesprochen haben, haben Sie hoffentlich die Konversionen erhöht und den Kundenlebenszeitwert erhöht.
 
-Als Nächstes können Sie weitere von Real-Time CDP unterstützte Anwendungsfälle untersuchen, z. B. [Anzeigen personalisierter Inhalte für nicht authentifizierte Benutzer](/help/rtcdp/partner-data/onsite-personalization.md) in Ihren Webeigenschaften.
+Als Nächstes können Sie sich mit anderen von Real-Time CDP unterstützten Anwendungsfällen beschäftigen, z. B. [Anzeigen personalisierter Inhalte für nicht authentifizierte Benutzende](/help/rtcdp/partner-data/onsite-personalization.md) in Ihren Web-Eigenschaften.

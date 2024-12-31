@@ -1,6 +1,6 @@
 ---
-title: Real-Time CDP-Schutzmechanismen
-description: Erfahren Sie mehr über die Datensicherungen in den verschiedenen Diensten und Bereichen von Real-Time CDP.
+title: Real-Time CDP-Leitplanken
+description: Erfahren Sie mehr über die Datenleitplanken in den verschiedenen Services und Bereichen von Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
@@ -10,55 +10,55 @@ ht-degree: 7%
 
 ---
 
-# Real-Time CDP-Schutzmechanismen
+# Real-Time CDP-Leitplanken
 
-Limits sind Schwellenwerte, die die Datennutzung und Systemnutzung, Leistungsoptimierung und Vermeidung von Fehlern oder unerwarteten Ergebnissen in Real-Time CDP unterstützen. Leitplanken können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
+Leitplanken sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnutzung, die Leistungsoptimierung und die Vermeidung von Fehlern oder unerwarteten Ergebnissen in Real-Time CDP bieten. Leitplanken können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
-Beginnen Sie hier und folgen Sie den unten stehenden Links, um alle Limits über die verschiedenen Dienste und Bereiche von Real-Time CDP hinweg zu verstehen:
+Beginnen Sie hier und folgen Sie den unten stehenden Links, um alle Leitplanken in den verschiedenen Services und Bereichen von Real-Time CDP zu verstehen:
 
 * [Schutzmaßnahmen bei der Datenaufnahme](/help/ingestion/guardrails.md)
-* [Schutzmechanismen für die  [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
-* [Limits für [!DNL Real-Time Customer Profile] Daten und Segmentierung](/help/profile/guardrails.md)
-* [Limits für [!DNL Identity Service] Daten](/help/identity-service/guardrails.md)
+* [Leitplanken für das  [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+* [Leitplanken für  [!DNL Real-Time Customer Profile]  und Segmentierung](/help/profile/guardrails.md)
+* [Leitplanken für [!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * [Schutzmechanismen für [!DNL Query Service]](/help/query-service/guardrails.md)
-* [Limits für die Datenaktivierung über Ziele](/help/destinations/guardrails.md)
-* [Limits für Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
+* [Leitplanken für die Datenaktivierung durch Ziele](/help/destinations/guardrails.md)
+* [Leitplanken für Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Besuchen Sie außerdem [die Entwürfe für digitale Erlebnisse](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) , um weitere Informationen zu erhalten, z. B. [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+>Besuchen Sie außerdem [Blueprints für digitale Erlebnisse](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html), um weitere Informationen wie [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services zu erhalten.
 
-## Schutzarten {#guardrail-types}
+## Schutzmechanismen-Typen {#guardrail-types}
 
-Beachten Sie, dass die beiden Schutzmechanismen für alle Real-Time CDP-Bereiche und -Dienste gelten:
+Beachten Sie Folgendes: Die beiden Leitplantentypen für alle Bereiche und Services von Real-Time CDP sind:
 
-| Schutztyp | Beschreibung |
+| Art der Leitplanke | Beschreibung |
 |----------|---------|
-| **Leistungsgarantie (weiche Begrenzung)** | Leistungsgarantien sind Nutzungsbeschränkungen, die sich auf das Scoping Ihrer Anwendungsfälle beziehen. Wenn Sie die Leistungsgarantien überschreiten, kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die eine Leistungsgarantie konsequent überschreiten, können zusätzliche Kapazität lizenzieren, um Leistungsbeeinträchtigungen zu vermeiden. |
-| **Systemerzwungene Limits (Hard Limit)** | Systemerzwungene Limits werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und API Sie davon abhält oder einen Fehler zurückgibt. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
 
-## Lizenzierung und Berechtigungsinformationen für Real-Time CDP {#product-descriptions}
+## Informationen zu Real-Time CDP-Lizenzen und -Berechtigungen {#product-descriptions}
 
-Darüber hinaus finden Sie in den folgenden Produktbeschreibungslinks Lizenzierungs- und Berechtigungsinformationen, die auf der von Ihnen erworbenen Real-Time CDP-Bearbeitung und -Ebene basieren:
+Informationen zu Lizenzen und Berechtigungen basierend auf der von Ihnen erworbenen Real-Time CDP Edition und Stufe finden Sie unter den unten stehenden Links zur Produktbeschreibung:
 
 * [Alle Adobe-Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html)
-* [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P-Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Schutzmechanismen für andere Experience Platform-Anwendungen  {#guardrails-other-aep-apps}
 
 Ähnliche Schutzmechanismen gibt es auch für andere Experience Platform-Anwendungen. Weitere Informationen finden Sie unter den folgenden Links:
 
-* [Adobe Journey Optimizer-Limits](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Customer Journey Analytics-Limits](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Nächste Schritte
 
-Nachdem Sie die Limits verstanden haben, die für verschiedene Bereiche und Dienste von Real-Time CDP gelten, können Sie einen [Beispielanwendungsfall einer Real-Time CDP-Implementierung](/help/rtcdp/get-started.md) befolgen.
+Nachdem Sie sich mit den Leitplanken vertraut gemacht haben, die für verschiedene Bereiche und Services von Real-Time CDP gelten, können Sie einem [Anwendungsbeispiel einer Real-Time CDP-Implementierung“](/help/rtcdp/get-started.md).

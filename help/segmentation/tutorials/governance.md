@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Durchsetzen der Datennutzungskonformität für ein Zielgruppensegment mithilfe von APIs
+title: Erzwingen der Einhaltung von Datennutzungsregeln für ein Zielgruppensegment mithilfe von APIs
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Durchsetzen von Segmentdefinitionen zur Datennutzungskonformität mithilfe von APIs beschrieben.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
@@ -11,7 +11,7 @@ ht-degree: 42%
 
 ---
 
-# Durchsetzen der Datennutzungskonformität für eine Segmentdefinition mithilfe von APIs
+# Erzwingen der Einhaltung von Datennutzungsregeln für eine Segmentdefinition mithilfe von APIs
 
 In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für Segmentdefinitionen mithilfe von APIs beschrieben.
 
@@ -19,16 +19,16 @@ In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformi
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus.
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von [!DNL Experience Data Model (XDM)] Daten innerhalb von [!DNL Platform] verwendet. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
-   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Regeln, die von [!DNL Real-Time Customer Profile] verwendet werden, um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
-- [[!DNL Segmentation]](../home.md): Wie [!DNL Real-Time Customer Profile] eine große Gruppe von Einzelanwendern im Profilspeicher in kleinere Gruppen unterteilt, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
-- [Data Governance](../../data-governance/home.md): Data Governance bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datennutzung unter Verwendung der folgenden Komponenten:
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung [!DNL Experience Data Model (XDM)] Daten in [!DNL Platform] verwendet. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
+   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Regeln, mit denen [!DNL Real-Time Customer Profile] bestimmen, welche Daten unter bestimmten Bedingungen zu einer vereinigten Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
+- [[!DNL Segmentation]](../home.md): Wie [!DNL Real-Time Customer Profile] eine große Gruppe von Personen im Profilspeicher in kleinere Gruppen mit ähnlichen Eigenschaften unterteilt, die ähnlich auf Marketing-Strategien reagieren.
+- [Data Governance](../../data-governance/home.md): Data Governance bietet die Infrastruktur für Datennutzungskennzeichnungen und -durchsetzung, wobei die folgenden Komponenten verwendet werden:
    - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
    - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
-   - [Richtliniendurchsetzung](../../data-governance/enforcement/overview.md): Ermöglicht es Ihnen, Datennutzungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
+   - [Richtliniendurchsetzung](../../data-governance/enforcement/overview.md): Ermöglicht die Durchsetzung von Datennutzungsrichtlinien und die Verhinderung von Datenvorgängen, bei denen Richtlinien verletzt werden.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] -APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -54,11 +54,11 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 - Content-Type: application/json
 
-## Suchen nach einer Zusammenführungsrichtlinie für eine Segmentdefinition {#merge-policy}
+## Suchen einer Zusammenführungsrichtlinie für eine Segmentdefinition {#merge-policy}
 
-Dieser Workflow beginnt mit dem Zugriff auf eine bekannte Segmentdefinition. Segmentdefinitionen, die für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sind, enthalten eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in die Segmentdefinition aufgenommen werden sollen, die wiederum alle zutreffenden Datennutzungsbezeichnungen enthalten.
+Dieser Workflow beginnt mit dem Zugriff auf eine bekannte Segmentdefinition. Segmentdefinitionen, die für die Verwendung in aktiviert sind, [!DNL Real-Time Customer Profile] eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition enthalten. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in die Segmentdefinition aufgenommen werden sollen, die wiederum alle anwendbaren Datennutzungskennzeichnungen enthalten.
 
-Mithilfe der API [!DNL Segmentation] können Sie eine Segmentdefinition anhand ihrer Kennung nachschlagen, um die zugehörige Zusammenführungsrichtlinie zu finden.
+Mithilfe der [!DNL Segmentation]-API können Sie eine Segmentdefinition anhand ihrer ID nachschlagen, um die zugehörige Zusammenführungsrichtlinie zu finden.
 
 **API-Format**
 
@@ -124,7 +124,7 @@ Eine erfolgreiche Antwort gibt die Details der Segmentdefinition zurück.
 
 ## Suchen nach Quelldatensätzen in der Zusammenführungsrichtlinie {#datasets}
 
-Zusammenführungsrichtlinien enthalten Informationen zu ihren Quelldatensätzen, die wiederum Datennutzungsbezeichnungen enthalten. Sie können nach den Details einer Zusammenführungsrichtlinie suchen, indem Sie die Kennung der Zusammenführungsrichtlinie in einer GET-Anfrage an die [!DNL Profile] -API senden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Endpunktleitfaden [Zusammenführungsrichtlinien .](../../profile/api/merge-policies.md)
+Zusammenführungsrichtlinien enthalten Informationen über die Quelldatensätze, die wiederum Datennutzungsbeschriftungen enthalten. Sie können die Details einer Zusammenführungsrichtlinie nachschlagen, indem Sie die Zusammenführungsrichtlinien-ID in einer GET-Anfrage an die [!DNL Profile]-API angeben. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien-Endpunkten](../../profile/api/merge-policies.md).
 
 **API-Format**
 
@@ -179,15 +179,15 @@ Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurü
 | `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence` ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order` aufgelistet. Wenn der Wert `timestampOrdered` ist, werden alle Datensätze, die mit dem in `schema.name` referenzierten Schema verknüpft sind, von der Richtlinie verwendet. |
 | `attributeMerge.data.order` | Wenn `attributeMerge.type` `dataSetPrecedence` ist, ist dieses Attribut ein Array, das die IDs der von dieser Zusammenführungsrichtlinie verwendeten Datensätze enthält. Diese IDs werden im nächsten Schritt verwendet. |
 
-## Bewerten von Datensätzen auf Richtlinienverletzungen
+## Auswerten von Datensätzen auf Richtlinienverletzungen
 
 >[!NOTE]
 >
-> In diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datennutzungsrichtlinie verfügen, die verhindert, dass bestimmte Marketing-Aktionen für Daten durchgeführt werden, die bestimmte Beschriftungen enthalten. Wenn Sie keine entsprechenden Nutzungsrichtlinien für die zu bewertenden Datensätze haben, führen Sie das Tutorial zur Erstellung von Richtlinien [1} durch, um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.](../../data-governance/policies/create.md)
+> Bei diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datennutzungsrichtlinie verfügen, die verhindert, dass bestimmte Marketing-Aktionen für Daten mit bestimmten Kennzeichnungen ausgeführt werden. Wenn Sie keine anwendbaren Nutzungsrichtlinien für die Datensätze haben, die ausgewertet werden, befolgen Sie bitte das [Tutorial zur Richtlinienerstellung](../../data-governance/policies/create.md) um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.
 
-Nachdem Sie die IDs der Quelldatensätze der Zusammenführungsrichtlinie erhalten haben, können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um diese Datensätze anhand bestimmter Marketing-Aktionen zu bewerten und auf Verstöße gegen Datennutzungsrichtlinien zu prüfen.
+Nachdem Sie die IDs der Quelldatensätze der Zusammenführungsrichtlinie abgerufen haben, können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um diese Datensätze mit bestimmten Marketing-Aktionen zu bewerten, um Verstöße gegen Datennutzungsrichtlinien festzustellen.
 
-Um die Datensätze zu bewerten, müssen Sie den Namen der Marketing-Aktion im Pfad einer POST-Anfrage angeben und dabei die Datensatz-IDs im Anfragetext angeben, wie im folgenden Beispiel gezeigt.
+Um die Datensätze auszuwerten, müssen Sie den Namen der Marketing-Aktion im Pfad einer POST-Anfrage angeben und dabei die Datensatz-IDs im Anfrageinhalt angeben, wie im folgenden Beispiel dargestellt.
 
 **API-Format**
 
@@ -198,11 +198,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der Datennutzungsrichtlinie verknüpft ist, nach der die Datensätze ausgewertet werden. Je nachdem, ob die Richtlinie von Adobe oder Ihrem Unternehmen definiert wurde, müssen Sie `/marketingActions/core` bzw. `/marketingActions/custom` verwenden. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der Datennutzungsrichtlinie verknüpft ist, nach der Sie die Datensätze bewerten. Je nachdem, ob die Richtlinie durch Adobe oder Ihr Unternehmen definiert wurde, müssen Sie `/marketingActions/core` bzw. `/marketingActions/custom` verwenden. |
 
 **Anfrage**
 
-Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` mit Datensätzen, die im [vorherigen Schritt](#datasets) abgerufen wurden. Die Anfrage-Payload ist ein Array, das die IDs jedes Datensatzes enthält.
+Die folgende Anfrage testet die `exportToThirdParty` Marketing-Aktion mit Datensätzen, die im [ Schritt abgerufen ](#datasets). Die Anfrage-Payload ist ein Array, das die IDs der einzelnen Datensätze enthält.
 
 ```shell
 curl -X POST \
@@ -231,7 +231,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den URI für die Marketing-Aktion, die Datennutzungsbezeichnungen, die aus den bereitgestellten Datensätzen erfasst wurden, und eine Liste aller Datennutzungsrichtlinien zurück, die beim Testen der Aktion mit diesen Bezeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie &quot;Daten an Dritte exportieren&quot;im Array `violatedPolicies` angezeigt, was bedeutet, dass die Marketing-Aktion einen Richtlinienverstoß ausgelöst hat.
+Bei einer erfolgreichen Antwort werden der URI für die Marketing-Aktion, die Datennutzungskennzeichnungen, die aus den bereitgestellten Datensätzen gesammelt wurden, und eine Liste aller Datennutzungsrichtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Kennzeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt, was darauf hinweist, dass die Marketing-Aktion einen Richtlinienverstoß ausgelöst hat.
 
 ```json
 {
@@ -357,28 +357,28 @@ Eine erfolgreiche Antwort gibt den URI für die Marketing-Aktion, die Datennutzu
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `duleLabels` | Eine Liste der Datennutzungsbezeichnungen, die aus den bereitgestellten Datensätzen extrahiert wurden. |
+| `duleLabels` | Eine Liste von Datennutzungskennzeichnungen, die aus den bereitgestellten Datensätzen extrahiert wurden. |
 | `discoveredLabels` | Eine Liste der Datensätze, die in der Payload der Anfrage angegeben wurden; angezeigt werden die in den einzelnen Datensätzen gefundenen Kennzeichnungen auf Datensatzebene und Feldebene. |
-| `violatedPolicies` | Ein Array, das alle Datennutzungsrichtlinien auflistet, die verletzt wurden, indem die Marketing-Aktion (angegeben in `marketingActionRef`) gegen die bereitgestellte `duleLabels` getestet wurde. |
+| `violatedPolicies` | Ein Array, das alle Datennutzungsrichtlinien auflistet, die durch Testen der Marketing-Aktion (angegeben in `marketingActionRef`) hinsichtlich der angegebenen `duleLabels` verletzt wurden. |
 
 Mithilfe der in der API-Antwort zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
 
 ## Filtern von Datenfeldern
 
-Wenn Ihre Segmentdefinition die Auswertung nicht besteht, können Sie die in der Segmentdefinition enthaltenen Daten mithilfe einer der beiden unten beschriebenen Methoden anpassen.
+Wenn die Segmentdefinition die Auswertung nicht besteht, können Sie die in der Segmentdefinition enthaltenen Daten durch eine der beiden unten beschriebenen Methoden anpassen.
 
 ### Aktualisieren der Zusammenführungsrichtlinie der Segmentdefinition
 
-Durch Aktualisieren der Zusammenführungsrichtlinie einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen sind. Weitere Informationen finden Sie im Abschnitt zum Aktualisieren einer vorhandenen Zusammenführungsrichtlinie ](../../profile/api/merge-policies.md#update) im Tutorial zu API-Zusammenführungsrichtlinien .[
+Durch Aktualisieren der Zusammenführungsrichtlinie einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen sind. Weitere Informationen finden Sie im Abschnitt [Aktualisieren einer vorhandenen Zusammenführungsrichtlinie](../../profile/api/merge-policies.md#update) im Tutorial API-Zusammenführungsrichtlinie .
 
-### Eingrenzen bestimmter Datenfelder beim Exportieren der Segmentdefinition
+### Beschränken bestimmter Datenfelder beim Exportieren der Segmentdefinition
 
-Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL Segmentation] -API können Sie die im Export enthaltenen Daten mit dem Parameter `fields` filtern. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
+Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL Segmentation]-API können Sie die im Export enthaltenen Daten mithilfe des `fields`-Parameters filtern. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
 
-Betrachten Sie eine Segmentdefinition mit Datenfeldern namens &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Auf diese Weise werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren der Segmentdefinition ausgeschlossen.
+Stellen Sie sich eine Segmentdefinition vor, die Datenfelder mit den Namen „A“, „B“ und „C“ enthält. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Dadurch würden die Felder „A“ und „B“ beim Exportieren der Segmentdefinition ausgeschlossen.
 
-Weitere Informationen finden Sie im Abschnitt zum Exportieren einer Segmentdefinition [ im Tutorial zur Segmentierung.](./evaluate-a-segment.md#export)
+Weitere Informationen finden Sie im Abschnitt [Exportieren ](./evaluate-a-segment.md#export) Segmentdefinition“ im Segmentierungs-Tutorial.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie nach den mit einer Segmentdefinition verknüpften Datennutzungsbezeichnungen gesucht und diese auf Richtlinienverletzungen gegenüber bestimmten Marketing-Aktionen getestet. Weitere Informationen zu Data Governance in [!DNL Experience Platform] finden Sie in der Übersicht zu [Data Governance](../../data-governance/home.md).
+In diesem Tutorial haben Sie die mit einer Segmentdefinition verbundenen Datennutzungskennzeichnungen nachgeschlagen und sie auf Richtlinienverletzungen bei bestimmten Marketing-Aktionen getestet. Weitere Informationen zu Data Governance in [!DNL Experience Platform] finden Sie in der Übersicht zu [Data Governance](../../data-governance/home.md).

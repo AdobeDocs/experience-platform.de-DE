@@ -1,6 +1,6 @@
 ---
-title: Azure Data Lake Storage Gen2 Source Connector - Überblick
-description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche Azure Data Lake Storage Gen2 mit Adobe Experience Platform verbinden.
+title: Übersicht über den Source-Connector für Azure Data Lake Storage Gen2
+description: Erfahren Sie, wie Sie Azure Data Lake Storage Gen2 mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
 source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 66%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
-Cloud-Speicher-Quellen können Ihre eigenen Daten in Experience Platform übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Experience Platform können Sie Daten von [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) durch Batches einbringen.
+Cloud-Speicherquellen können Ihre eigenen Daten in Experience Platform übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Experience Platform können Sie Daten aus [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) über Batches importieren.
 
 ## IP-Adressen-Zulassungsliste
 
@@ -21,7 +21,7 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 >[!IMPORTANT]
 >
->Die Quelle [!DNL Azure Data Lake Storage Gen2] unterstützt keine Konnektivität mit demselben Bereich zum Experience Platform. Wenn Ihre [!DNL Azure] -Instanz denselben Netzwerkbereich wie Experience Platform verwendet, kann keine Verbindung zu Experience Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt.
+>Die [!DNL Azure Data Lake Storage Gen2]-Quelle unterstützt keine Konnektivität derselben Region mit Experience Platform. Wenn Ihre [!DNL Azure]-Instanz dieselbe Netzwerkregion wie Experience Platform verwendet, kann keine Verbindung zu Experience Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
@@ -38,17 +38,17 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 >[!NOTE]
 >
->Dem Dienstprinzipal, der beim Erstellen eines [!DNL Azure Data Lake Storage Gen2] -Kontos verwendet wird, sollte mindestens die Rolle **Speicherblock-Reader** zugewiesen sein, die von der Zugriffskontrolle (IAM) zugewiesen wurde.
+>Dem Service-Prinzipal, der zum Erstellen eines [!DNL Azure Data Lake Storage Gen2]-Kontos verwendet wird, sollte mindestens die Rolle **Storage Blob Data Reader** von Access Control (IAM) zugewiesen sein
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL Azure Data Lake Storage Gen2] mit dem Experience Platform verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Azure Data Lake Storage Gen2] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 
-- [Erstellen einer [!DNL Azure Data Lake Storage Gen2] Basisverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Erstellen  [!DNL Azure Data Lake Storage Gen2]  Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Untersuchen der Datenstruktur und des Inhalts einer Cloud-Speicherquelle mit der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer [!DNL Azure Data Lake Storage Gen2] Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Erstellen einer  [!DNL Azure Data Lake Storage Gen2] -Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer neuen Verbindungsspezifikation für das Streaming-SDK mithilfe der Flow Service-API
-description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
+title: Erstellen einer neuen Verbindungsspezifikation für Streaming-SDK mithilfe der Flow Service-API
+description: Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Self-Service-Quellen.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -10,15 +10,15 @@ ht-degree: 36%
 
 ---
 
-# Erstellen einer neuen Verbindungsspezifikation mit der [!DNL Flow Service]-API
+# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
-Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mit der [!DNL Flow Service] -API erstellen und eine neue Quelle über Self-Serve-Quellen (Streaming-SDK) integrieren.
+Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API und zum Integrieren einer neuen Quelle über Selbstbedienungsquellen (Streaming-SDK).
 
 ## Erste Schritte
 
@@ -26,7 +26,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Um eine neue Streaming-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle an Adobe ausrichten.
+Um eine neue Streaming-Quelle mithilfe von Selbstbedienungsquellen zu erstellen, müssen Sie sich zunächst mit Adobe abstimmen, ein privates Git-Repository anfordern und sich bei Adobe an den Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle ausrichten.
 
 Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
 
@@ -41,22 +41,22 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
-| {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `medallia` |
-| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an Ihren Adobe-Kundenbetreuer, um darüber zu diskutieren. | `medallia-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Medallia] -Daten an Experience Platform übertragen können. |
-| {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
-| {your_source}-label.txt | Der Quellname, wie er im Experience Platform-Quellkatalog angezeigt werden soll. | Medallia |
-| {your_source}-connectionSpec.json | Eine JSON-Datei mit der Verbindungsspezifikation Ihrer Quelle. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `medallia-connectionSpec.json` |
+| {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte im Zusammenhang mit Ihrer Quelle in Ihrem privaten Git-Repository enthalten. | `medallia` |
+| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um das Problem zu besprechen. | `medallia-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Medallia] auf Experience Platform übertragen können. |
+| {your_source}-icon.svg | Das Bild, das zur Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
+| {your_source}-label.txt | Der Name Ihrer Quelle, wie er im Experience Platform-Quellkatalog angezeigt werden sollte. | Medallien |
+| {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie während der Ausführung dieses Handbuchs Ihre Verbindungsspezifikation ausfüllen werden. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle der Schlüsselwerte `text` in der Verbindungsspezifikation verwenden.
+>Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle von Schlüsselwerten `text` in der Verbindungsspezifikation verwenden.
 
-Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anforderung (PA) erstellen, damit Adobe sie überprüfen kann. Wenn Ihr PR genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
+Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anfrage (PR) für das Adobe erstellen, um sie zu überprüfen. Wenn Ihr Pull Request genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
 
-Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, wie z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
+Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch unter [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
 
 ## Kopieren der Vorlage für die Verbindungsspezifikation
 
@@ -139,7 +139,7 @@ Sobald Sie sich die Vorlage für die Verbindungsspezifikation besorgt haben, kö
 
 Eine Verbindungsspezifikation kann in zwei verschiedene Teile unterteilt werden: die Quellspezifikationen und die Erkundungsspezifikationen.
 
-Weitere Informationen zu den Abschnitten einer Verbindungsspezifikation finden Sie in den folgenden Dokumenten:
+In den folgenden Dokumenten finden Sie weitere Informationen zu den Abschnitten einer Verbindungsspezifikation:
 
 * [Konfigurieren Ihrer Quellspezifikation](../config/sourcespec.md)
 * [Konfigurieren Ihrer Erkundungsspezifikation](../config/explorespec.md)
@@ -154,7 +154,7 @@ POST /connectionSpecs
 
 **Anfrage**
 
-Die folgende Anfrage ist ein Beispiel für eine vollständig erstellte Verbindungsspezifikation für eine Streaming-Quelle:
+Die folgende Anfrage ist ein Beispiel für eine vollständig verfasste Verbindungsspezifikation für eine Streaming-Quelle:
 
 ```shell
 curl -X POST \

@@ -1,8 +1,8 @@
 ---
-title: Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
-description: Ein Überblick über die verschiedenen Anwendungsfälle der Adobe Real-time Customer Data Platform B2B Edition.
+title: Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B edition
+description: Ein Überblick über die verschiedenen verfügbaren Anwendungsfälle für Adobe Real-time Customer Data Platform B2B edition.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
@@ -11,133 +11,133 @@ ht-degree: 0%
 
 ---
 
-# Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
+# Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B edition
 
-Dieses Dokument enthält Beispiele für Segmentdefinitionen in Adobe Real-time Customer Data Platform B2B Edition und wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+Dieses Dokument enthält Beispiele für Segmentdefinitionen in Adobe Real-time Customer Data Platform B2B edition und dafür, wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
->Die für diese Anwendungsfälle der Segmentierung erforderlichen Attribute stehen nur Kunden von Real-time Customer Data Platform B2B Edition zur Verfügung. Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie stattdessen die [Segmentierungsübersicht](./segmentation-overview.md) .
+>Die für diese Segmentierungsanwendungsfälle erforderlichen Attribute stehen nur Kunden von Real-time Customer Data Platform B2B edition zur Verfügung. Wenn Sie Real-time Customer Data Platform B2B edition nicht verwenden, lesen Sie stattdessen [Segmentierungsübersicht](./segmentation-overview.md).
 
 ## Voraussetzungen {#prerequisites}
 
 Bevor Sie die Segmentierungsattribute für B2B-Klassen verwenden können, müssen Sie die folgenden Schritte ausführen:
 
-1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Die B2B Edition-Klassen umfassen Konto, Kampagne, Chancen, Marketingliste und mehr. Informationen zu [Einrichten von Schemas für die Verwendung mit B2B-Klassen](../schemas/b2b.md) finden Sie in der Schemadokumentation.
-2. Erstellen Sie Beziehungen zwischen Ihren Experience-Datenmodell (XDM) B2B-Schemas. Zielgruppen, die auf B2B Edition-Attributen basieren, erfordern Beziehungen zwischen den Klassen, um die erweiterte Funktion zur B2B-Segmentierung vollständig zu nutzen. Weitere Informationen finden Sie in der Dokumentation zu [Definieren einer Beziehung zwischen zwei B2B-Schemas](../../xdm/tutorials/relationship-b2b.md) .
-3. Erfassen Sie Daten mithilfe von Datensätzen, die auf Ihren B2B-Schemas basieren. Informationen zum Erfassen von Daten finden Sie in der Quelldokumentation für [ .](../../sources/connectors/adobe-applications/marketo/marketo.md)
-4. Weitere Informationen zum Erstellen von Zielgruppen finden Sie im [Segment Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md) .
+1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Zu den B2B edition-Klassen gehören Konto, Kampagne, Opportunity, Marketing-Liste und mehr. Informationen zum [ von Schemas zur Verwendung mit B2B-Klassen ](../schemas/b2b.md) Sie in der Schemadokumentation .
+2. Erstellen Sie Beziehungen zwischen Ihren B2B-Schemata des Experience-Datenmodells (XDM). Zielgruppen, die auf B2B edition-Attributen basieren, erfordern Beziehungen zwischen den -Klassen, um die erweiterte B2B-Segmentierungsfunktion in vollem Umfang nutzen zu können. Weitere Informationen finden Sie in der Dokumentation [Definieren einer Beziehung zwischen zwei B2B](../../xdm/tutorials/relationship-b2b.md)Schemata“.
+3. Nehmen Sie Daten mithilfe von Datensätzen auf der Grundlage Ihrer B2B-Schemata auf. Informationen zur Datenaufnahme finden [ in der Quellendokumentation ](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Eine detailliertere Anleitung [ Erstellen von Zielgruppen ](../../segmentation/ui/segment-builder.md) Sie im Segment Builder-Benutzerhandbuch .
 
 Sobald diese Anforderungen erfüllt sind, können Sie diese Attribute für gängige B2B-Anwendungsfälle kombinieren.
 
 ## Erste Schritte {#getting-started}
 
-Sobald die Vereinigungsschemas für die B2B-Klassen Beziehungen hergestellt haben und zum Erfassen von Daten verwendet wurden, werden ihre Attribute in der linken Leiste des Segment Builder verfügbar gemacht.
+Sobald die Vereinigungsschemata für die B2B-Klassen Beziehungen hergestellt haben und zur Aufnahme von Daten verwendet wurden, werden ihre Attribute in der linken Leiste von Segment Builder verfügbar gemacht.
 
-B2B-Klassen und ihre Attribute werden mit einer `B2B` -Beschriftung im Segmentierungsarbeitsbereich angehängt, um sie von den in Real-time Customer Data Platform standardmäßig verfügbaren Klassen zu unterscheiden.
+B2B-Klassen und ihre Attribute werden im Segmentierungsarbeitsbereich mit einer `B2B`-Kennzeichnung versehen, um sie von den in Real-time Customer Data Platform standardmäßig verfügbaren Unterschieden werden zu können.
 
-Um Zielgruppen für B2B-Anwendungsfälle effektiv erstellen zu können, ist es wichtig, über eine genaue Kenntnis des Schemas zu verfügen und zu verstehen, wie das Datenmodell aussieht. Beachten Sie auch den Pfad, den die Daten von einem Datenobjekt zum anderen führen.
+Um Zielgruppen für B2B-Anwendungsfälle effektiv erstellen zu können, ist es wichtig, über genaue Kenntnisse des Schemas zu verfügen und zu verstehen, wie das Datenmodell aussieht. Es ist auch nützlich, sich des Pfads bewusst zu sein, den die Daten von einem Datenobjekt zum anderen nehmen.
 
-Die folgende Abbildung zeigt die Beziehungen zwischen den B2B-Klassen, die in Real-Time CDP B2B Edition verfügbar sind.
+Die folgende Abbildung zeigt die Beziehungen zwischen den B2B-Klassen, die in Real-Time CDP B2B edition verfügbar sind.
 
 ![B2B-Klasse ERD](../assets/segmentation/b2b-classes.png)
 
-Da Ihr Datenmodell kompliziert sein kann, können Sie über die Platform-Benutzeroberfläche eine detailliertere visuelle Darstellung Ihres Datenmodells anzeigen, um die relevanten Attribute für Ihren Anwendungsfall zu finden. Beginnen Sie mit der Platform-Benutzeroberfläche und wählen Sie im linken Navigationsbereich Schemas aus.
+Da Ihr Datenmodell kompliziert sein kann, können Sie über die Platform-Benutzeroberfläche eine detailliertere visuelle Darstellung Ihres Datenmodells anzeigen, um die relevanten Attribute für Ihren Anwendungsfall zu finden. Navigieren Sie zunächst zur Platform-Benutzeroberfläche und wählen Sie im linken Navigationsbereich Schemas aus.
 
-Wählen Sie das entsprechende Schema aus der verfügbaren Liste aus und wählen Sie die entsprechende Beziehung aus der Seitenleiste [!UICONTROL Komposition] aus. Im folgenden Beispiel zeigt die Auswahl der Beziehung &quot;Person&quot;an, welches Attribut im aktuellen Schema auf das zugehörige Schema &quot;Person&quot;verweist (wenn es das Quellschema in der Beziehung ist) oder durch das Schema &quot;Person&quot;referenziert wird (wenn es das Referenzschema in der Beziehung ist).
+Wählen Sie das entsprechende Schema aus der verfügbaren Liste und wählen Sie die entsprechende Beziehung aus der Seitenleiste [!UICONTROL Komposition] aus. Im folgenden Beispiel wird bei Auswahl der Beziehung „Person“ angezeigt, welches Attribut im aktuellen Schema auf das zugehörige Schema „Person“ verweist (wenn es das Quellschema in der Beziehung ist) oder vom Schema „Person“ referenziert wird (wenn es das Referenzschema in der Beziehung ist).
 
-![Beispiel für Quell-Schlüssel bei Verwendung der Personenbeziehung im Schema-Arbeitsbereich](../assets/segmentation/source-key-schema-relationship-example.png)
+![Beispiel für einen Quellschlüssel unter Verwendung der Personenbeziehung im Schemaarbeitsbereich](../assets/segmentation/source-key-schema-relationship-example.png)
 
-Diese Beziehung spiegelt sich im Segment Builder durch die Verwendung von `Key` -Ordnern wider, wie in der Abbildung unten dargestellt.
+Diese Beziehung spiegelt sich in Segment Builder durch die Verwendung von `Key` wider, wie in der Abbildung unten dargestellt.
 
-![Quell-Key-Beispiel für die Verwendung des Segment-Builders im Segmentierungsarbeitsbereich](../assets/segmentation/source-key-segmentation-example.png)
+![Beispiel für einen Quellschlüssel unter Verwendung von Segment Builder im Segmentierungsarbeitsbereich](../assets/segmentation/source-key-segmentation-example.png)
 
-Weitere Informationen zu den verfügbaren B2B-Klassen finden Sie in der Dokumentation zu den [Schemas in der Real-time Customer Data Platform B2B Edition-Dokumentation](../schemas/b2b.md) .
+Weitere Informationen zu den verfügbaren B2B[Klassen finden Sie ](../schemas/b2b.md) der Dokumentation zu Schemas in Real-time Customer Data Platform B2B edition .
 
-Die folgenden Anwendungsfälle liefern Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen, um diese Ergebnisse zu erzielen. Anhand dieser Beispiele können Sie Ihre eigenen Zielgruppen erstellen.
+Die folgenden Anwendungsfälle enthalten Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen und so diese Ergebnisse zu erzielen. Diese Beispiele können bei der Erstellung eigener Zielgruppen verwendet werden.
 
-## Beispiele für verschiedene Anwendungsfälle der Segmentierung {#use-cases}
+## Beispiele für verschiedene Anwendungsfälle für die Segmentierung {#use-cases}
 
-Die folgenden Anwendungsfälle stehen für die Segmentierung mit der B2B Edition zur Verfügung. In jedem Beispiel wird beschrieben, was die Zielgruppe tut, und welche Klassen für die Erstellung verwendet wurden. Die bereitgestellten Bilder markieren den Dateipfad in der Seitenleiste [!UICONTROL Attribute] , die die Struktur des Schemas widerspiegelt. Der Abschnitt [!UICONTROL Segmenteigenschaften] rechts neben der Anzeige enthält eine schriftliche Aufschlüsselung der Attribute der Zielgruppe.
+Die folgenden Anwendungsfälle sind für die Segmentierung mit der B2B edition verfügbar. Jedes Beispiel enthält eine Beschreibung der Aktionen der Zielgruppe und eine Beschreibung der Klassen, mit denen sie erstellt wurde. Die bereitgestellten Bilder heben den Dateipfad in der Seitenleiste [!UICONTROL Attribute] hervor, die die Struktur des Schemas widerspiegelt. Der [!UICONTROL Segmenteigenschaften] auf der rechten Seite der Anzeige enthält eine schriftliche Aufschlüsselung der Attribute der Zielgruppe.
 
-### Beispiel 1: Suche nach &quot;Entscheidungsträgern&quot;für B2B-Chancen {#find-decision-maker}
+### Beispiel 1: „Entscheidungsträger“ für B2B-Opportunities suchen {#find-decision-maker}
 
-Finden Sie alle Menschen, die der &quot;Entscheidungsträger&quot;jeder Gelegenheit sind. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] und der Klasse [!UICONTROL XDM Business Opportunity Person Relation] .
+Finden Sie alle Personen, die bei jeder Gelegenheit „Entscheidungsträger“ sind. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] und der Klasse [!UICONTROL XDM Business Opportunity Person Relation].
 
-![UI, die Beispiel 1-Einstellungen anzeigt](../assets/segmentation/example-1.png)
+![Benutzeroberfläche mit Beispiel-1-Einstellungen](../assets/segmentation/example-1.png)
 
-### Beispiel 2: Ermitteln von B2B-Profilen, die Chancen im Vergleich zu einem bestimmten Dollarbetrag erhalten {#find-opportunities-amount}
+### Beispiel 2: B2B-Profile suchen, die Opportunities über einem bestimmten Dollarbetrag zugewiesen wurden {#find-opportunities-amount}
 
-Finden Sie alle Personen, die direkt mit allen Möglichkeiten verbunden sind, deren Opportunitätsbetrag größer ist als der angegebene Betrag ($1 Million). Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Opportunity Person Relation] und der Klasse [!UICONTROL XDM Business Opportunity] .
+Findet alle Personen, die direkt einer Opportunity zugewiesen sind, deren Opportunity-Betrag den angegebenen Betrag ($1 Million) übersteigt. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Opportunity Person Relation] und der Klasse [!UICONTROL XDM Business Opportunity].
 
-![UI, die Beispiel 2-Einstellungen anzeigt](../assets/segmentation/example-2.png)
+![Benutzeroberfläche mit Beispiel-2-Einstellungen](../assets/segmentation/example-2.png)
 
-### Beispiel 3: Ermitteln von B2B-Profilen, die Chancen nach Standort zugewiesen sind {#find-opportunities-location}
+### Beispiel 3: B2B-Profile suchen, die Vertriebschancen zugewiesen wurden, nach Standort {#find-opportunities-location}
 
-Finden Sie alle Personen, die allen Möglichkeiten direkt zugewiesen sind, in denen sich das Konto an einem bestimmten Ort (Kanada) befindet. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Opportunity Person Relation] , der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM Business Account] .
+Alle Personen suchen, die einer Opportunity direkt zugewiesen sind, bei der sich das Konto an einem bestimmten Ort (Kanada) befindet. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Opportunity Person Relation], der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM Business Account].
 
-![UI mit Beispiel 3-Einstellungen](../assets/segmentation/example-3.png)
+![Benutzeroberfläche mit Beispiel-3-Einstellungen](../assets/segmentation/example-3.png)
 
-### Beispiel 4: Suche nach &quot;Entscheidungsträgern&quot;für Chancen nach Branche und Browsing-Verhalten {#find-industry-browsing-behavior}
+### Beispiel 4: Finden Sie „Entscheidungsträger“ für Chancen nach Branche und Browser-Verhalten {#find-industry-browsing-behavior}
 
-Finden Sie alle Personen, die ein &quot;Entscheidungsträger&quot;sind, von jeder Gelegenheit, wo sich das Konto in der &quot;Finance&quot;-Branche befindet, und besuchten Sie die Preisseite in den letzten drei Tagen. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Opportunity Person Relation] , der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM ExperienceEvent] .
+Finden Sie alle Personen, die „Entscheidungsträger“ für eine Opportunity sind, bei denen das Konto in der „Finanzbranche“ angesiedelt ist, und haben die Preisseite in den letzten drei Tagen besucht. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Opportunity Person Relation], der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM ExperienceEvent].
 
-![UI mit Beispiel 4-Einstellungen](../assets/segmentation/example-4.png)
+![Benutzeroberfläche mit Beispiel 4-Einstellungen](../assets/segmentation/example-4.png)
 
-### Beispiel 5: B2B-Profile nach Möglichkeiten nach Abteilungsname und Opportunitätsbetrag suchen {#find-department-opportunity-amount}
+### Beispiel 5: B2B-Profile für Opportunitys nach Abteilungsname und Opportunity-Betrag suchen {#find-department-opportunity-amount}
 
-Finden Sie alle Personen, die in einer Personalabteilung arbeiten und über ein Konto verfügen, das mindestens eine offene Chance im Wert des angegebenen Betrags (1 Million Dollar) oder mehr hat. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM Business Opportunity] .
+Finden Sie alle Personen, die in einer Personalabteilung arbeiten und über ein Konto verfügen, über das mindestens eine offene Opportunity im Wert von mindestens 1 Million Dollar verfügt. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM Business Opportunity].
 
-![UI mit Beispiel-5-Einstellungen](../assets/segmentation/example-5.png)
+![Benutzeroberfläche mit Beispiel-5-Einstellungen](../assets/segmentation/example-5.png)
 
-### Beispiel 6: B2B-Profile nach Berufsbezeichnung und Jahresumsatz ermitteln {#find-by-job-title-and-revenue}
+### Beispiel 6: B2B-Profile nach Tätigkeitsbezeichnung und jährlichem Kontoumsatz suchen {#find-by-job-title-and-revenue}
 
-Finden Sie alle Personen, deren Berufsbezeichnung Vizepräsident ist und die einen beliebigen Jahresumsatz von mindestens 100 Millionen Euro haben und die die Preisseite im letzten Monat mindestens dreimal besucht haben. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM ExperienceEvent] .
+Finden Sie alle Personen, deren Berufsbezeichnung Vizepräsident ist und die über ein Konto mit einem Jahresumsatz in Höhe des angegebenen Betrags (100 Millionen US-Dollar) oder mehr verfügen und die Preisseite im letzten Monat mindestens drei Mal besucht haben. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM ExperienceEvent].
 
-![UI mit Beispiel 6-Einstellungen](../assets/segmentation/example-6.png)
+![Benutzeroberfläche mit Beispiel-6-Einstellungen](../assets/segmentation/example-6.png)
 
-### Beispiel 7: &quot;Entscheidungsträger&quot;nach Opportunitätsstatus und Browsing-Verhalten suchen {#find-by-opportunity-status-and-browsing-behavior}
+### Beispiel 7: Finden Sie „Entscheidungsträger“ nach Opportunity-Status und Browser-Verhalten {#find-by-opportunity-status-and-browsing-behavior}
 
-Finden Sie alle Personen, die ein &quot;Entscheidungsträger&quot;jeder verlorenen Gelegenheit sind und die Preisseite in der letzten Woche besucht haben. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Opportunity Person Relation] , der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM ExperienceEvent] .
+Finden Sie alle Personen, die „Entscheidungsträger“ für eine abgeschlossene Opportunity sind und die Preisseite in der letzten Woche besucht haben. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Opportunity Person Relation], der Klasse [!UICONTROL XDM Business Opportunity] und der Klasse [!UICONTROL XDM ExperienceEvent].
 
-![UI mit Beispiel 7-Einstellungen](../assets/segmentation/example-7.png)
+![Benutzeroberfläche mit Beispiel-7-Einstellungen](../assets/segmentation/example-7.png)
 
-### Beispiel 8: Verwenden verwandter Konten zum Erweitern der Segmentierungsreichweite {#related-accounts}
+### Beispiel 8: Verwenden verwandter Konten, um den Segmentierungsbereich zu erweitern {#related-accounts}
 
-Finden Sie alle Personen, die in einer Personalabteilung (HR) arbeiten und mit einem Konto *oder einem verwandten Konto* des Kontos verbunden sind, das mindestens eine offene Chance im Wert des angegebenen Betrags ($1 Million) oder mehr hat. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile] , der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM Business Opportunity] .
+Finden Sie alle Personen, die in einer Personalabteilung arbeiten und mit einem Konto (*einem der zugehörigen Konten des Kontos) verbunden sind,* mindestens eine offene Opportunity im Wert des angegebenen Betrags (1 Million USD) oder höher hat. Diese Zielgruppe erfordert eine Verknüpfung zwischen der Klasse [!UICONTROL XDM Individual Profile], der Klasse [!UICONTROL XDM Business Account] und der Klasse [!UICONTROL XDM Business Opportunity].
 
-![UI, die die Segmentierung für verwandte Konten anzeigt](../assets/segmentation/example-8.png)
+![Benutzeroberfläche mit Segmentierung für verwandte Konten](../assets/segmentation/example-8.png)
 
-### Beispiel 9: Nutzen Sie Lead-Bewertungen und/oder Kontobewertungen zur Profilqualifizierung {#account-scoring}
+### Beispiel 9: Lead- und/oder Kontobewertungen zur Profilqualifizierung verwenden {#account-scoring}
 
-Finden Sie alle Profile mit einem Lead-Ergebnis über 80.
+Findet alle Profile mit einer Lead-Bewertung von über 80.
 
-![UI, die die Segmentierung für die prädiktive Lead- und Kontobewertung anzeigt](../assets/segmentation/example-9.png)
+![Benutzeroberfläche mit Segmentierung für prädiktives Lead- und Konto-Scoring](../assets/segmentation/example-9.png)
 
-### Beispiel 10: Suchen Sie nach B2B-Profilen, die mit Konten verknüpft sind, deren übergeordnete Organisation über einen bestimmten Dollarbetrag Umsatz verfügt {#find-parent-org-amount}
+### Beispiel 10: B2B-Profile suchen, die mit Konten verknüpft sind, deren übergeordnete Organisation über einen bestimmten Dollarbetrag Umsatz hat {#find-parent-org-amount}
 
-Finden Sie alle Personen, die mit Konten verknüpft sind, deren übergeordnete Organisation einen Umsatz hat, der über dem angegebenen Betrag liegt ($100.000.000).
+Ermitteln Sie alle Personen, die mit Konten verknüpft sind, deren übergeordnete Organisation einen Umsatz hat, der über dem angegebenen Betrag (100.000.000 $) liegt.
 
-![UI, die die übergeordnete Segmentierung der Segmentierung anzeigt](../assets/segmentation/example-10.png)
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-10.png)
 
-### Beispiel 11: B2B-Profile nach Berufsbezeichnung und Kontoname mit aktiver Beziehung suchen {#find-by-job-title-and-account-name}
+### Beispiel 11: B2B-Profile nach Auftragstitel und Kontoname mit einer aktiven Beziehung suchen {#find-by-job-title-and-account-name}
 
-Suchen Sie alle Personen, die ein &quot;Manager&quot;sind, im Konto &quot;Acme&quot;, wobei die Kontobeziehung &quot;aktiv&quot;ist.
+Finden Sie alle Personen, die „Manager“ sind, auf dem Konto „Acme“, wobei die Kontobeziehung „Aktiv“ ist.
 
-![UI, die die übergeordnete Segmentierung der Segmentierung anzeigt](../assets/segmentation/example-11.png)
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-11.png)
 
-### Beispiel 12: Finden Sie B2B-Profile für Kampagnen, bei denen die tatsächlichen Kosten die budgetedCost übersteigen. {#find-actualcost-exceed-budgetcost}
+### Beispiel 12: B2B-Profile für Kampagnen suchen, bei denen die Ist-Kosten die budgetierten Kosten überschreiten {#find-actualcost-exceed-budgetcost}
 
-Finden Sie alle Personen, die für Kampagnen angesprochen werden, bei denen die tatsächlichen Kosten die budgetedCost überstiegen haben.
+Ermitteln Sie alle Personen, die für Kampagnen vorgesehen sind, bei denen die Ist-Kosten die budgetierten Kosten überschritten haben.
 
-![UI, die die übergeordnete Segmentierung der Segmentierung anzeigt](../assets/segmentation/example-12.png)
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-12.png)
 
-### Beispiel 13: Suchen Sie nach B2B-Profilen, die zu einer statischen Marketo-Liste gehören, und isDeleted=false {#find-marketo-static-list}
+### Beispiel 13: B2B-Profile finden, die zu einer statischen Marketo-Liste gehören, und isDeleted=false {#find-marketo-static-list}
 
-Suchen Sie alle Personen, die zur statischen Marketo-Liste &quot;Jubiläumsbenutzer&quot;gehören, wobei isDeleted=false lautet.
+Suchen Sie alle Personen, die zur statischen Marketo-Liste „Anniversary users“ gehören, wobei isDeleted=false ist.
 
-![UI, die die übergeordnete Segmentierung der Segmentierung anzeigt](../assets/segmentation/example-13.png)
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-13.png)
 
 ## Nächste Schritte {#next-steps}
 
-Nach der Lektüre dieser Übersicht haben Sie jetzt ein Verständnis der Segmentierungsmöglichkeiten, die mit Real-Time CDP, B2B Edition verfügbar sind. Weitere Informationen zum Segmentierungsdienst finden Sie in der [Dokumentation zur Segmentierung](../../segmentation/home.md) .
+Nach dem Lesen dieser Übersicht haben Sie jetzt ein Verständnis der Segmentierungsmöglichkeiten, die mit Real-Time CDP, B2B edition verfügbar sind. Weitere Informationen zum Segmentierungs-Service finden Sie in der [Segmentierungsdokumentation](../../segmentation/home.md).

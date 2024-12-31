@@ -49,7 +49,7 @@ Sobald eine Sandbox ausgewählt ist, wird der Bildschirm mit der ausgewählten S
 
 >[!NOTE]
 >
->Für die Erstellung einer neuen Sandbox müssen Sie sie einer Rolle in [[!UICONTROL Berechtigungen]](../../access-control/abac/ui/permissions.md) hinzufügen, bevor Sie mit der Verwendung beginnen können. Informationen zum Bereitstellen einer Sandbox für eine Rolle finden Sie in der Dokumentation [Verwalten von Sandboxes für eine Rolle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) .
+>Für die Erstellung einer neuen Sandbox müssen Sie sie einer Rolle in [[!UICONTROL Berechtigungen“ hinzufügen]](../../access-control/abac/ui/permissions.md) bevor Sie sie verwenden können. Informationen zum Bereitstellen einer Sandbox für eine Rolle finden Sie in der Dokumentation [Verwalten von Sandboxes für eine Rolle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
 
 Das folgende Video bietet einen schnellen Überblick über die Verwendung von Sandboxes in Experience Platform.
 
@@ -82,23 +82,23 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die 
 >* Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das in der Sandbox gehostete Identitätsdiagramm auch von Adobe Audience Manager für [Benutzerbasierte Ziele (People Based Destinations, PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
 >* Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn sie Daten für CDA- und PBD-Funktionen enthält.
 >* Eine benutzerdefinierte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nach einer Warnmeldung zurückgesetzt werden.
->* Bevor Sie einen Sandbox-Reset starten, müssen Sie Ihre Kompositionen manuell löschen, um sicherzustellen, dass die zugehörigen Zielgruppendaten ordnungsgemäß bereinigt werden.
+>* Vor dem Zurücksetzen einer Sandbox müssen Sie Ihre Kompositionen manuell löschen, um sicherzustellen, dass die zugehörigen Zielgruppendaten ordnungsgemäß bereinigt werden.
 
-### Löschen von Zielgruppenkompositionen
+### Audience-Kompositionen löschen
 
-Die Zielgruppenzusammensetzung ist derzeit nicht in die Sandbox-Funktion zum Zurücksetzen integriert. Daher müssen Zielgruppen vor dem Zurücksetzen der Sandbox manuell gelöscht werden.
+Die Zielgruppenkomposition ist derzeit nicht in die Funktion zum Zurücksetzen der Sandbox integriert, sodass Zielgruppen vor dem Zurücksetzen der Sandbox manuell gelöscht werden müssen.
 
-Wählen Sie **[!UICONTROL Zielgruppen]** aus der linken Navigation und dann **[!UICONTROL Kompositionen]**.
+Wählen Sie **[!UICONTROL linken Navigationsbereich]** Zielgruppen“ und dann **[!UICONTROL Kompositionen]** aus.
 
-![Die Registerkarte [!UICONTROL Kompositionen] im Arbeitsbereich [!UICONTROL Zielgruppen].](../images/ui/audiences.png)
+![Registerkarte [!UICONTROL Kompositionen] im Arbeitsbereich [!UICONTROL Zielgruppen].](../images/ui/audiences.png)
 
-Wählen Sie als Nächstes das Auslassungszeichen (`...`) neben der ersten Zielgruppe und dann **[!UICONTROL Löschen]** aus.
+Klicken Sie als Nächstes auf das Auslassungszeichen (`...`) neben der ersten Zielgruppe und dann auf **[!UICONTROL Löschen]**.
 
-![Das Zielgruppenmenü, das die Option [!UICONTROL Löschen] markiert.](../images/ui/delete-composition.png)
+![Das Zielgruppen-Menü mit hervorgehobener Option [!UICONTROL Löschen].](../images/ui/delete-composition.png)
 
-Eine Bestätigung des erfolgreichen Löschvorgangs wird angezeigt und Sie werden zum Tab **[!UICONTROL Kompositionen]** zurückgeleitet.
+Eine Bestätigung des erfolgreichen Löschvorgangs wird angezeigt, und Sie kehren zur Registerkarte **[!UICONTROL Kompositionen]** zurück.
 
-Wiederholen Sie die obigen Schritte mit allen Kompositionen. Dadurch werden alle Zielgruppen aus dem Zielgruppenbestand gelöscht. Nachdem alle Zielgruppen entfernt wurden, können Sie die Sandbox weiterhin zurücksetzen.
+Wiederholen Sie die obigen Schritte mit allen Ihren Kompositionen. Dadurch werden alle Zielgruppen aus dem Zielgruppeninventar gelöscht. Nachdem alle Zielgruppen entfernt wurden, können Sie die Sandbox zurücksetzen.
 
 ### Zurücksetzen einer Sandbox
 

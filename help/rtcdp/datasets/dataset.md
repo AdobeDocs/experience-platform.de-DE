@@ -1,5 +1,5 @@
 ---
-keywords: Datensätze; rtcdp-Datensätze
+keywords: Datensätze;RTCDP-Datensätze
 title: Datensätze in Real-time Customer Data Platform
 description: Übersicht über Datensätze in Real-time Customer Data Platform
 feature: Datasets
@@ -13,6 +13,6 @@ ht-degree: 10%
 
 # Datensätze in Real-time Customer Data Platform
 
-In der Benutzeroberfläche von Real-time Customer Data Platform können Sie alle Datensätze, die Ihr Unternehmen erstellt hat, anzeigen und verwalten sowie neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Die Registerkarte **[!UICONTROL Durchsuchen]** enthält eine Liste von Datensätzen, einschließlich der Spalten, die den Namen, die erstellte Datei (Datum und Uhrzeit), die Quelle, das Schema und den letzten Batch-Status sowie Datum und Uhrzeit der letzten Aktualisierung des Datensatzes enthalten.
+In der Real-time Customer Data Platform-Benutzeroberfläche können Sie alle Datensätze anzeigen und verwalten, die Ihr Unternehmen erstellt hat, und neue erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Die **[!UICONTROL Durchsuchen]**-Registerkarte enthält eine Liste von Datensätzen, einschließlich Spalten mit Namen, Erstellungsdatum (Datum und Uhrzeit), Quelle, Schema und dem letzten Batch-Status sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
 
-Informationen zu Datensätzen in [!DNL Experience Platform] erhalten Sie, indem Sie die [Datensatzübersicht](../../catalog/datasets/overview.md) lesen.
+Um Informationen zu Datensätzen in [!DNL Experience Platform] zu erhalten, lesen Sie zunächst den Abschnitt [Datensätze - Übersicht](../../catalog/datasets/overview.md).

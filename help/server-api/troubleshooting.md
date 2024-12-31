@@ -12,8 +12,8 @@ ht-degree: 2%
 
 # Fehlerbehebung
 
-Mit der Adobe Experience Platform Edge Network Server API können Sie Debugging-Informationen aus Diensten erfassen, da Ihre Ereignisse über die Edge Network-Datenerfassungs-Pipeline verarbeitet werden.
+Mit der Adobe Experience Platform Edge Network Server-API können Sie Debugging-Informationen aus -Services erfassen, während Ihre Edge Networks über die Ereignisdatenerfassungs-Pipeline verarbeitet werden.
 
-Mit demselben Mechanismus, der vom [Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) verwendet wird, können Sie API-basierte Implementierungen debuggen.
+Mit demselben Mechanismus, der vom [Experience Platform-Debugger verwendet wird](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) können Sie API-basierte Implementierungen debuggen.
 
-Mit [Assurance](../assurance/home.md) können Sie eine Debugging-Sitzungs-ID erstellen, die Sie in den Edge Network-Anforderungen zur Verfolgung von  weiter verwenden können.
+Mit [Assurance](../assurance/home.md) können Sie eine Debugging-Sitzungs-ID erstellen, die Sie in Ereignisanfragen weiter verwenden können, um Edge Networks zu verfolgen.

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;Sandbox;Sandbox;Sandbox;Sandboxes;Sandboxes
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;Sandbox;Sandbox;Sandboxes;Sandboxes;Sandboxes
 solution: Experience Platform
-title: Anhang zum Sandbox-API-Handbuch
-description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Sandbox-API.
+title: Sandbox-API-Handbuch - Anhang
+description: Dieses Dokument enthält zusätzliche Informationen zur Arbeit mit der Sandbox-API.
 role: Developer
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,19 +12,19 @@ ht-degree: 4%
 
 ---
 
-# Anhang zum Sandbox-API-Handbuch
+# Sandbox-API-Handbuch - Anhang
 
-Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL Sandbox]-API.
+Dieses Dokument enthält zusätzliche Informationen zur Arbeit mit der [!DNL Sandbox]-API.
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Sandboxes.
+Die [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) unterstützt die Verwendung von Abfrageparametern zum Seiten- und Filtern von Ergebnissen beim Auflisten von Sandboxes.
 
 >[!NOTE]
 >
->Die Abfrageparameter `limit` und `offset` müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie &quot;Keine&quot;angeben, ist die Standardbegrenzung 50 und der Versatz 0.
+>Die Abfrageparameter `limit` und `offset` müssen zusammen angegeben werden. Wenn Sie nur einen angeben, gibt die API einen Fehler zurück. Wenn Sie „Keine“ angeben, ist die standardmäßige Begrenzung 50 und der Versatz 0.
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden. |
-| `offset` | Die Anzahl der Entitäten aus dem ersten Datensatz, aus dem die Antwortliste gestartet (versetzt) werden soll. |
+| `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden sollen. |
+| `offset` | Die Anzahl der Entitäten vom ersten Datensatz bis zum Start (Offset) der Antwortliste. |

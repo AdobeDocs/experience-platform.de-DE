@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
-description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Streaming-SDK) zu erstellen.
+title: Erste Schritte mit Selbstbedienungsquellen (Streaming-SDK)
+description: In diesem Dokument erhalten Sie eine Einführung in die erforderlichen Informationen, die Sie kennen sollten, bevor Sie versuchen, eine neue Quelle mithilfe von Selbstbedienungsquellen (Streaming-SDK) zu erstellen.
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -10,44 +10,44 @@ ht-degree: 34%
 
 ---
 
-# Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
+# Erste Schritte mit Selbstbedienungsquellen (Streaming-SDK)
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Self-Serve-Quellen (Streaming-SDK) ermöglichen Ihnen die Integration Ihrer eigenen Quelle, um Streaming-Daten an Adobe Experience Platform zu übertragen. Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) durchführen.
+Mit Selbstbedienungsquellen (Streaming-SDK) können Sie Ihre eigene Quelle integrieren, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Allgemeine Vorgehensweise
 
-Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle unter Experience Platform ist unten beschrieben:
+Der schrittweise Prozess zum Konfigurieren Ihrer Quelle auf Experience Platform wird unten beschrieben:
 
 ### Integration
 
-* [Erstellen Sie eine neue Verbindungsspezifikation für das Streaming-SDK](create.md).
-* [Aktualisieren Sie die Streaming-Flussspezifikation mit Ihrer neuen Verbindungsspezifikations-ID](update-flow-specs.md).
+* [Erstellen Sie eine neue Verbindungsspezifikation für Streaming-SDK](create.md).
+* [Aktualisieren der Streaming-Flussspezifikation mit Ihrer neuen Verbindungsspezifikations-ID](update-flow-specs.md).
 * [Testen und Senden Ihrer Streaming-Quelle](submit.md).
 
 ### Dokumentation
 
-* Um mit der Dokumentation Ihrer Quelle zu beginnen, lesen Sie die [Übersicht über das Erstellen der Dokumentation für Self-Serve-Quellen](../documentation/doc-overview.md).
-* Anweisungen zum Erstellen einer Dokumentation mit GitHub finden Sie im Handbuch unter [Verwenden der GitHub-Web-Oberfläche](../documentation/github.md) .
-* Anweisungen zum Erstellen von Dokumentationen mit Ihrem lokalen Computer finden Sie im Handbuch unter [Verwenden eines Texteditors](../documentation/text-editor.md) .
-* [Verwenden Sie die Dokumentationsvorlage für die Streaming-SDK-API, um Ihre Quelle in der API zu dokumentieren](streaming-template-api.md).
+* Um mit der Dokumentation Ihrer Quelle zu beginnen, lesen Sie [Übersicht über das Erstellen der Dokumentation für Selbstbedienungsquellen](../documentation/doc-overview.md).
+* Anweisungen zum Erstellen [ Dokumentation mit GitHub finden Sie im Handbuch unter ](../documentation/github.md)Verwenden der GitHub-Web-Benutzeroberfläche“.
+* Anweisungen zum Erstellen [ Dokumentation auf Ihrem lokalen Computer finden Sie ](../documentation/text-editor.md) Handbuch unter „Verwenden eines Texteditors“.
+* [Verwenden Sie die Dokumentationsvorlage für die Streaming-SDK-API , um Ihre Quelle in der API zu dokumentieren](streaming-template-api.md).
 * [Verwenden Sie die Dokumentationsvorlage für die Streaming-SDK-Benutzeroberfläche, um Ihre Quelle in der Benutzeroberfläche zu dokumentieren](streaming-template-ui.md).
 
 Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 
 * [API-Dokumentationsvorlage](../assets/streaming/streaming-template-api.zip)
-* [Benutzeroberflächendokumentationsvorlage](../assets/streaming/streaming-template-ui.zip)
+* [Dokumentationsvorlage für die Benutzeroberfläche](../assets/streaming/streaming-template-ui.zip)
 
 ## Voraussetzungen
 
 >[!IMPORTANT]
 >
->Die Quelle, die Sie mit Experience Platform integrieren, muss in der Lage sein, einen Webhook zu unterstützen, für den ein Endpunkt angemeldet werden kann, um Updates zu senden.
+>Die Quelle, die Sie mit Experience Platform integrieren, muss einen Webhook unterstützen können, für den ein Endpunkt abonniert werden kann, um Aktualisierungen zu senden.
 
-Um Self-Serve-Quellen (Streaming-SDK) zu verwenden, müssen Sie sicherstellen, dass Sie Zugriff auf eine Sandbox-Organisation haben, die über Adobe Experience Platform-Quellen verfügt.
+Um Selbstbedienungsquellen (Streaming-SDK) verwenden zu können, müssen Sie sicherstellen, dass Sie Zugriff auf eine Sandbox-Organisation haben, die mit Adobe Experience Platform-Quellen bereitgestellt ist.
 
 Dieses Handbuch setzt außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -56,7 +56,7 @@ Dieses Handbuch setzt außerdem ein Verständnis der folgenden Komponenten von A
 
 ## Lesen von Beispiel-API-Aufrufen
 
-Die Dokumentation zu Self-Serve-Quellen (Streaming-SDK) und der [!DNL Flow Service]-API enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In der Dokumentation zu den Selbstbedienungsquellen (Streaming-SDK) und der [!DNL Flow Service]-API wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
@@ -66,7 +66,7 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -80,4 +80,4 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Nächste Schritte
 
-Informationen zum Erstellen einer neuen Quelle mit Self-Serve-Quellen (Streaming-SDK) finden Sie im Tutorial zum Erstellen einer neuen Quelle [ .](./create.md)
+Informationen zum Erstellen einer neuen Quelle mit Selbstbedienungsquellen (Streaming-SDK) finden Sie im Tutorial [Erstellen einer neuen Quelle](./create.md).

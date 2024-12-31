@@ -1,5 +1,5 @@
 ---
-title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
+title: Neue Kunden ohne Abhängigkeit von Drittanbieter-Cookies gewinnen und ansprechen
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
@@ -10,7 +10,7 @@ ht-degree: 85%
 
 ---
 
-# Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
+# Neue Kunden ohne Abhängigkeit von Drittanbieter-Cookies gewinnen und ansprechen
 
 >[!AVAILABILITY]
 >
@@ -20,17 +20,17 @@ Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre P
 
 ![Anwendungsfall „Kundenprospektion“ – visuelle allgemeine Übersicht.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
-## Warum sollten Sie diesen Anwendungsfall beachten? {#why-this-use-case}
+## Gründe für diesen Anwendungsfall {#why-this-use-case}
 
-Gleichzeitig stehen Marken vor gewaltigen Herausforderungen, wenn es darum geht, Nutzungsszenarien für die Kundenakquise auf höchstem Niveau verantwortungsbewusst auszuführen, ohne von Drittanbieter-Cookies, begrenzten Budgets und einer höheren Nachfrage nach Transparenz und Rendite aus Werbeausgaben abhängig zu sein.
+Marken stehen gleichzeitig vor gewaltigen Herausforderungen bei der verantwortungsvollen Ausführung erstklassiger Anwendungsfälle zur Kundenakquise, ohne auf Drittanbieter-Cookies angewiesen zu sein, mit begrenzten Budgets und höherer Nachfrage nach Transparenz und Return on Ad-Spend.
 
-Adobe Real-time Customer Data Platform kann Marken dabei helfen, ihre Data Management Platform (DMP)-unterstützten Anwendungsfälle sicher auf Cookie-lose Alternativen umzustellen. Dies geschieht auf eine Weise, die die vollständige Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Zielgruppenkuratierung und -Aktivierung in ein einziges System vorantreibt. All dies ohne Kompromisse bei Adobe unschwören Fokus auf eine verantwortungsvolle Nutzung von Daten über ein patentiertes Data Governance- und Zustimmungsframework.
+Adobe Real-time Customer Data Platform kann Marken dabei helfen, ihre von der Data Management Platform (DMP) unterstützten Anwendungsfälle sicher auf Alternativen ohne Cookies umzustellen, und zwar auf eine Weise, die die volle Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Audience Curation und Aktivierung in ein einziges System bringt. Und das alles ohne Kompromisse bei der Adobe, ohne unbeirrt auf eine verantwortungsvolle Nutzung der Daten über ein patentiertes Data Governance- und Einverständnissystem zu setzen.
 
-Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie eine Kampagne durchführen müssen, um potenzielle Kunden oder bekannte Kunden zu gewinnen.
+Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie eine Kampagne ausführen müssen, um potenzielle Kunden und Nutzerinnen für eine Karriere zu gewinnen.
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
-Wenn Sie erwägen, sich an neue Kunden zu wenden und diese zu gewinnen, sollten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess beachten:
+Berücksichtigen Sie bei der Kontaktaufnahme mit und der Akquise von Neukunden die folgenden Voraussetzungen in Ihrem Planungsprozess:
 
 * Wie häufig werden von Partnern bereitgestellte Profile voraussichtlich wieder in Real-Time CDP aufgenommen und aktualisiert?
 * Welche Identitäten benötigen Ihre nachgelagerten Ziele?
@@ -51,9 +51,9 @@ Bevor Sie Real-Time CDP erweitern, um neue Kundinnen und Kunden anzusprechen und
 5. Als **Kundin bzw. Kunde** aktivieren Sie potenzielle Zielgruppen für Ziele, die die in Ihrer Interessentenliste verfügbaren Identitäten akzeptieren.
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** bei der Last-Mile-Aktivierung von Zielgruppen bei gewünschten zahlungspflichtigen Medienzielen zusammen.
 
-## Videoeinführung {#video-walkthrough}
+## Videoanleitung {#video-walkthrough}
 
-Sehen Sie sich das Video-Tutorial unten an, um eine exemplarische Vorgehensweise zum Erreichen und Ansprechen potenzieller Zielgruppen zu erhalten:
+Im folgenden Video-Tutorial finden Sie eine exemplarische Vorgehensweise, wie Sie potenzielle Zielgruppen erreichen und ansprechen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
@@ -110,7 +110,7 @@ Die Klasse **[!UICONTROL XDM Individual Prospect Profile]** ist mit den unten au
 
 ![Vorkonfigurierte Felder für die Klasse „XDM Individual Prospect Profile“.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Als Nächstes müssen Sie die zuvor erstellte Partner-ID-Identität als primäre Identität für das Schema auswählen. Profildatensätze müssen eine primäre Kennung aufweisen. Dieser Schritt ist erforderlich, um sicherzustellen, dass Interessensdaten in den Profilspeicher geladen und für die Segmentierung und Aktivierung verfügbar gemacht werden können.
+Als Nächstes müssen Sie die zuvor erstellte Partner-ID-Identität als primäre Identität für das Schema auswählen. Profildatensätze müssen eine primäre Kennung aufweisen. Dieser Schritt ist erforderlich, um sicherzustellen, dass Daten potenzieller Kundinnen und Kunden in den Profilspeicher geladen und zur Segmentierung und Aktivierung bereitgestellt werden können.
 
 >[!AVAILABILITY]
 >
@@ -124,7 +124,7 @@ Beachten Sie, dass das Schema noch nicht für das Profil aktiviert ist. Schalten
 
 #### Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern im Schema
 
-Erwägen Sie das Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Erfahren Sie mehr über [Beschriftungen für Data Governance von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Erwägen Sie das Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Weitere Informationen zu [Data-Governance-Kennzeichnungen von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Gehen Sie dazu wie folgt vor:
 
@@ -197,7 +197,7 @@ Sie können auch ein Interessentenprofil für eine weitere Inspektion auswählen
 
 ![Ansicht, wie Interessentenprofile inspiziert werden können.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-Weitere Informationen zu [Interessenten-Profilen](/help/profile/ui/prospect-profile.md).
+Lesen Sie mehr über [Interessentenprofile](/help/profile/ui/prospect-profile.md).
 
 ### Erstellen von Interessentenzielgruppen {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ Beachten Sie, dass sich das Erlebnis des Erstellens von Zielgruppen für Interes
 * Nur Batch-Profilauswertung.
 * Das Erstellen von Zielgruppen basierend auf Zeitreihenereignissen wird nicht unterstützt.
 
-Lesen Sie mehr über [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md).
+Weitere Informationen über [Zielgruppen potenzieller Kundinnen und Kunden](/help/segmentation/ui/prospect-audience.md).
 
 ### Aktivieren von Interessentenprofilen für Ziele {#activate-to-destinations}
 
-Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. Derzeit unterstützen nur bestimmte Cloud-Speicher-Ziele die Aktivierung von potenziellen Profilen.
+Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. Derzeit unterstützen nur bestimmte Cloud-Speicher-Ziele die Aktivierung von Interessentenprofilen.
 
-![Ziele, die Interessenten-Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Ziele, die Zielgruppen potenzieller Kundinnen und Kunden unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[Mehr dazu](/help/destinations/ui/activate-prospect-audiences.md) über das Aktivieren von Perspektiven für Cloud-Speicher-Ziele.
+[Weitere Informationen](/help/destinations/ui/activate-prospect-audiences.md) zum Aktivieren von potenziellen Kunden für Cloud-Speicher-Ziele.
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
-* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Personalisieren Sie Onsite-Erlebnisse für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder eine Vorgeschichte mit Ihrer Marke hat.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

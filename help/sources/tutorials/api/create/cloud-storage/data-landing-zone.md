@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;
 solution: Experience Platform
-title: Data Landing Zone über die Flow Service-API mit Adobe Experience Platform verbinden
+title: Verbinden der Data Landing Zone mit Adobe Experience Platform mithilfe der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit der Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
 workflow-type: tm+mt
@@ -16,11 +16,11 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->Diese Seite ist spezifisch für den [!DNL Data Landing Zone] *source* -Connector im Experience Platform. Informationen zum Herstellen einer Verbindung zum [!DNL Data Landing Zone] *Ziel*-Connector finden Sie auf der Seite [[!DNL Data Landing Zone] Zieldokumentation](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Diese Seite ist spezifisch für den [!DNL Data Landing Zone]-Quell *Connector* Experience Platform. Informationen zum Herstellen einer Verbindung zum [!DNL Data Landing Zone]-*-*-Connector finden Sie auf [[!DNL Data Landing Zone] Zieldokumentationsseite](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] ist eine sichere, Cloud-basierte Dateispeichereinrichtung, mit der Dateien in Adobe Experience Platform importiert werden können. Daten werden nach sieben Tagen automatisch aus dem [!DNL Data Landing Zone] gelöscht.
+[!DNL Data Landing Zone] ist eine sichere, Cloud-basierte Dateispeichereinrichtung, um Dateien in Adobe Experience Platform zu importieren. Daten werden nach sieben Tagen automatisch aus dem [!DNL Data Landing Zone] gelöscht.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Data Landing Zone]-Quellverbindung mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Dieses Tutorial enthält außerdem Anweisungen zum Abrufen Ihrer [!DNL Data Landing Zone]-Anmeldedaten sowie zum Anzeigen und Aktualisieren Ihrer Anmeldedaten.
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Data Landing Zone]-Quellverbindung mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Dieses Tutorial enthält auch Anweisungen zum Abrufen Ihrer [!DNL Data Landing Zone] sowie zum Anzeigen und Aktualisieren Ihrer Anmeldeinformationen.
 
 ## Erste Schritte
 
@@ -29,13 +29,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
 
-Für dieses Tutorial müssen Sie außerdem das Handbuch [ Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md) lesen, um zu erfahren, wie Sie sich bei Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
+Für dieses Tutorial müssen Sie auch das Handbuch [Erste Schritte mit Platform-APIs“ lesen](../../../../../landing/api-guide.md) um zu erfahren, wie Sie sich bei Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
 
-## Eine verwendbare Landingzone abrufen
+## Abrufen einer verwendbaren Landing Zone
 
-Der erste Schritt bei der Verwendung von APIs für den Zugriff auf [!DNL Data Landing Zone] besteht darin, eine GET-Anfrage an den `/landingzone` -Endpunkt der [!DNL Connectors] -API zu richten und dabei `type=user_drop_zone` als Teil Ihres Anfrage-Headers anzugeben.
+Der erste Schritt bei der Verwendung von APIs für den Zugriff auf [!DNL Data Landing Zone] besteht darin, eine GET-Anfrage an den `/landingzone`-Endpunkt der [!DNL Connectors]-API zu stellen und dabei `type=user_drop_zone` als Teil Ihres Anfrage-Headers bereitzustellen.
 
 **API-Format**
 
@@ -45,11 +45,11 @@ GET /data/foundation/connectors/landingzone?type=user_drop_zone
 
 | Kopfzeilen | Beschreibung |
 | --- | --- |
-| `user_drop_zone` | Mit dem Typ `user_drop_zone` kann die API einen Einstiegszonen-Container von den anderen für Sie verfügbaren Behältertypen unterscheiden. |
+| `user_drop_zone` | Der `user_drop_zone` ermöglicht es der API, einen Landing Zone-Container von den anderen Containertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine vorhandene Landingzone abgerufen.
+Mit der folgenden Anfrage wird eine vorhandene Landing Zone abgerufen.
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt Informationen zu einer Landingzone zurück, einschließlich der zugehörigen `containerName` und `containerTTL`.
+Die folgende Antwort gibt Informationen zu einer Landing Zone zurück, einschließlich der entsprechenden `containerName` und `containerTTL`.
 
 ```json
 {
@@ -74,12 +74,12 @@ Die folgende Antwort gibt Informationen zu einer Landingzone zurück, einschlie�
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `containerName` | Der Name der abgerufenen Landingzone. |
-| `containerTTL` | Die Ablaufzeit (in Tagen), die auf Ihre Daten in der Landingzone angewendet wird. Jede Person innerhalb einer bestimmten Landingzone wird nach sieben Tagen gelöscht. |
+| `containerName` | Der Name der Landing Zone, die Sie abgerufen haben. |
+| `containerTTL` | Die Gültigkeitsdauer (in Tagen), die auf Ihre Daten in der Landing Zone angewendet wird. Alle innerhalb einer bestimmten Landing Zone werden nach sieben Tagen gelöscht. |
 
-## [!DNL Data Landing Zone]-Anmeldeinformationen abrufen
+## [!DNL Data Landing Zone] abrufen
 
-Um Anmeldeinformationen für eine [!DNL Data Landing Zone] abzurufen, stellen Sie eine GET-Anfrage an den `/credentials` -Endpunkt der [!DNL Connectors] -API.
+Um Anmeldeinformationen für eine [!DNL Data Landing Zone] abzurufen, stellen Sie eine GET-Anfrage an den `/credentials`-Endpunkt der [!DNL Connectors]-API.
 
 **API-Format**
 
@@ -89,7 +89,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 
 **Anfrage**
 
-Im folgenden Anfragebeispiel werden Anmeldeinformationen für eine vorhandene Landingzone abgerufen.
+Im folgenden Anfragebeispiel werden Anmeldeinformationen für eine vorhandene Landing Zone abgerufen.
 
 ```shell
 curl -X GET \
@@ -103,7 +103,7 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt die Anmeldeinformationen für Ihre Daten-Landingzone zurück, einschließlich Ihres aktuellen `SASToken`, `SASUri`, `storageAccountName` und Ablaufdatums.
+Die folgende Antwort gibt die Anmeldeinformationen für Ihre Data Landing Zone zurück, einschließlich Ihres aktuellen `SASToken`, `SASUri`, `storageAccountName` und Ablaufdatums.
 
 ```json
 {
@@ -117,14 +117,14 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Daten-Landingzone z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `containerName` | Der Name Ihrer Landingzone. |
-| `SASToken` | Das Token für die gemeinsame Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
-| `SASUri` | Der URI der Freigegebenen Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge ist eine Kombination aus dem URI für die Landingzone, für die Sie authentifiziert werden, und dem zugehörigen SAS-Token. |
-| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es in Ihrer Anwendung weiterhin zum Hochladen von Daten in die Data Landing Zone verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der GET-Anmeldedaten-Aufruf ausgeführt wird. |
+| `containerName` | Der Name Ihrer Landing Zone. |
+| `SASToken` | Das Shared Access Signature Token für Ihre Landing Zone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
+| `SASUri` | Der Signatur-URI für den gemeinsamen Zugriff für Ihre Landing Zone. Diese Zeichenfolge ist eine Kombination aus dem URI zur Landing Zone, für die Sie authentifiziert werden, und dem entsprechenden SAS-Token, |
+| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es weiterhin in Ihrer Anwendung zum Hochladen von Daten in die Data Landing Zone verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der Aufruf der GET-Anmeldeinformationen durchgeführt wird. |
 
 ### Abrufen der erforderlichen Felder mithilfe von APIs
 
-Nachdem Sie Ihr Token generiert haben, können Sie die erforderlichen Felder programmgesteuert abrufen, indem Sie die folgenden Anforderungsbeispiele verwenden:
+Nachdem Sie Ihr Token generiert haben, können Sie die erforderlichen Felder programmgesteuert abrufen, indem Sie die folgenden Anfragebeispiele verwenden:
 
 >[!BEGINTABS]
 
@@ -223,9 +223,9 @@ public class Main {
 >[!ENDTABS]
 
 
-## [!DNL Data Landing Zone] Anmeldedaten aktualisieren
+## Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen
 
-Sie können Ihre `SASToken` aktualisieren, indem Sie eine POST-Anfrage an den `/credentials` -Endpunkt der [!DNL Connectors] -API richten.
+Sie können Ihre `SASToken` aktualisieren, indem Sie eine POST-Anfrage an den `/credentials`-Endpunkt der [!DNL Connectors]-API stellen.
 
 **API-Format**
 
@@ -235,12 +235,12 @@ POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&act
 
 | Kopfzeilen | Beschreibung |
 | --- | --- |
-| `user_drop_zone` | Mit dem Typ `user_drop_zone` kann die API einen Einstiegszonen-Container von den anderen für Sie verfügbaren Behältertypen unterscheiden. |
-| `refresh` | Mit der Aktion `refresh` können Sie Ihre Landingzone-Anmeldedaten zurücksetzen und automatisch eine neue `SASToken` generieren. |
+| `user_drop_zone` | Der `user_drop_zone` ermöglicht es der API, einen Landing Zone-Container von den anderen Containertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
+| `refresh` | Mit der `refresh` Aktion können Sie Ihre Anmeldeinformationen für die Landing Zone zurücksetzen und automatisch eine neue `SASToken` generieren. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden Ihre Landingzone-Anmeldedaten aktualisiert.
+Die folgende Anfrage aktualisiert Ihre Anmeldeinformationen für die Landing Zone.
 
 ```shell
 curl -X POST \
@@ -266,9 +266,9 @@ Die folgende Antwort gibt aktualisierte Werte für Ihre `SASToken` und `SASUri` 
 }
 ```
 
-## Dateistruktur und Inhalt der Landingzone durchsuchen
+## Dateistruktur und Inhalte der Landing Zone erkunden
 
-Sie können die Dateistruktur und den Inhalt Ihrer Landingzone durchsuchen, indem Sie eine GET-Anfrage an den `connectionSpecs` -Endpunkt der [!DNL Flow Service] -API richten.
+Sie können die Dateistruktur und den Inhalt Ihrer Landing Zone untersuchen, indem Sie eine GET-Anfrage an den `connectionSpecs`-Endpunkt der [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -293,7 +293,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im abgefragten Ordner gefunden wurden. Notieren Sie sich die Eigenschaft `path` der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im abgefragten Verzeichnis gefunden wurden. Notieren Sie sich die `path`-Eigenschaft der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -321,9 +321,9 @@ Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im
 ]
 ```
 
-## Dateistruktur und Inhalt der Landingzone-Vorschau
+## Vorschau der Dateistruktur und des Inhalts der Landing Zone
 
-Um die Dateistruktur in Ihrer Landingzone zu überprüfen, führen Sie eine GET-Anfrage aus, geben Sie dabei den Pfad der Datei an und geben Sie ihn als Abfrageparameter ein.
+Um die Dateistruktur in Ihrer Landing Zone zu überprüfen, führen Sie eine GET-Anfrage aus, wobei Sie den Dateipfad und den Typ als Abfrageparameter angeben.
 
 **API-Format**
 
@@ -335,9 +335,9 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 | --- | --- | --- |
 | `{CONNECTION_SPEC_ID}` | Die Verbindungsspezifikations-ID, die [!DNL Data Landing Zone] entspricht. Diese feste ID lautet: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 | `{OBJECT_TYPE}` | Der Typ des Objekts, auf das Sie zugreifen möchten. | `file` |
-| `{OBJECT}` | Pfad und Name des Objekts, auf das Sie zugreifen möchten. | `dlz-user-container/data8.csv` |
-| `{FILE_TYPE}` | Der Dateityp. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `{PREVIEW}` | Ein boolean -Wert, der definiert, ob die Dateivorschau unterstützt wird. | </ul><li>`true`</li><li>`false`</li></ul> |
+| `{OBJECT}` | Der Pfad und der Name des Objekts, auf das Sie zugreifen möchten. | `dlz-user-container/data8.csv` |
+| `{FILE_TYPE}` | Der Typ der Datei. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
+| `{PREVIEW}` | Ein boolescher Wert, der definiert, ob die Dateivorschau unterstützt wird. | </ul><li>`true`</li><li>`false`</li></ul> |
 
 **Anfrage**
 
@@ -415,20 +415,20 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück, einsc
 }
 ```
 
-### Verwenden Sie `determineProperties`, um die Informationen der Dateieigenschaft eines [!DNL Data Landing Zone] automatisch zu erkennen.
+### `determineProperties` verwenden, um Dateieigenschaftsinformationen eines [!DNL Data Landing Zone] automatisch zu erkennen
 
-Sie können den Parameter `determineProperties` verwenden, um beim Aufrufen eines GET zur Inhaltsanalyse und -struktur Ihrer Quelle Eigenschaftsinformationen des Dateiinhalts Ihrer [!DNL Data Landing Zone] automatisch zu erkennen.
+Sie können den `determineProperties`-Parameter verwenden, um Eigenschafteninformationen des Dateiinhalts Ihrer [!DNL Data Landing Zone] automatisch zu erkennen, wenn Sie einen GET-Aufruf ausführen, um den Inhalt und die Struktur Ihrer Quelle zu untersuchen.
 
-#### Anwendungsfälle für `determineProperties`
+#### `determineProperties` Anwendungsfälle
 
-In der folgenden Tabelle werden verschiedene Szenarien beschrieben, auf die Sie stoßen können, wenn Sie den Abfrageparameter `determineProperties` verwenden oder manuell Informationen zu Ihrer Datei angeben.
+In der folgenden Tabelle sind verschiedene Szenarien aufgeführt, auf die Sie stoßen können, wenn Sie den `determineProperties` Abfrageparameter verwenden oder manuell Informationen zu Ihrer Datei angeben.
 
 | `determineProperties` | `queryParams` | Antwort |
 | --- | --- | --- |
-| True | K. A. | Wenn `determineProperties` als Abfrageparameter angegeben wird, wird die Erkennung der Dateieigenschaften durchgeführt und die Antwort gibt einen neuen `properties` -Schlüssel zurück, der Informationen zum Dateityp, Komprimierungstyp und Spaltentrennzeichen enthält. |
-| K. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams` angegeben werden, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
+| True | K. A. | Wenn `determineProperties` als Abfrageparameter angegeben wird, erfolgt die Erkennung der Dateieigenschaften, und die Antwort gibt einen neuen `properties` zurück, der Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen enthält. |
+| K. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams` bereitgestellt werden, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
 | True | True | Wenn beide Optionen gleichzeitig ausgeführt werden, wird ein Fehler zurückgegeben. |
-| K. A. | K. A. | Wenn keine der beiden Optionen angegeben wird, wird ein Fehler zurückgegeben, da es nicht möglich ist, Eigenschaften für die Antwort abzurufen. |
+| K. A. | K. A. | Wenn keine der beiden Optionen bereitgestellt wird, wird ein Fehler zurückgegeben, da es keine Möglichkeit gibt, Eigenschaften für die Antwort abzurufen. |
 
 **API-Format**
 
@@ -438,7 +438,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `determineProperties` | Mit diesem Abfrageparameter kann die [!DNL Flow Service] -API Informationen zu den Eigenschaften Ihrer Datei erkennen, einschließlich Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen. | `true` |
+| `determineProperties` | Mit diesem Abfrageparameter kann die [!DNL Flow Service]-API Informationen zu den Eigenschaften Ihrer Datei erkennen, einschließlich Informationen zu Dateityp, Komprimierungstyp und Spaltentrennzeichen. | `true` |
 
 **Anfrage**
 
@@ -453,9 +453,9 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlich Dateinamen und Datentypen sowie einen `properties` -Schlüssel mit Informationen zu `fileType`, `compressionType` und `columnDelimiter` zurück.
+Bei einer erfolgreichen Antwort wird die Struktur der abgefragten Datei zurückgegeben, einschließlich Dateinamen und Datentypen sowie eines `properties` Schlüssels, der Informationen zu `fileType`, `compressionType` und `columnDelimiter` enthält.
 
-++ + Klicken auf mich
++++Hier klicken
 
 ```json
 {
@@ -548,14 +548,14 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlic
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `properties.fileType` | Der entsprechende Dateityp der abgefragten Datei. Folgende Dateitypen werden unterstützt: `delimited`, `json` und `parquet`. |
+| `properties.fileType` | Der entsprechende Dateityp der abgefragten Datei. Die unterstützten Dateitypen sind: `delimited`, `json` und `parquet`. |
 | `properties.compressionType` | Der entsprechende Komprimierungstyp, der für die abgefragte Datei verwendet wird. Folgende Komprimierungstypen werden unterstützt: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `properties.columnDelimiter` | Das entsprechende Spaltentrennzeichen, das für die abgefragte Datei verwendet wird. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Der Standardwert ist ein Komma `(,)`. |
+| `properties.columnDelimiter` | Das entsprechende Spaltentrennzeichen, das für die abgefragte Datei verwendet wird. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Der Standardwert ist ein `(,)`. |
 
 
 ## Erstellen einer Quellverbindung
 
-Eine Quellverbindung erstellt und verwaltet die Verbindung zu der externen Quelle, aus der Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie der Datenquelle, dem Datenformat und der Kennung der Quellverbindung, die zum Erstellen eines Datenflusses erforderlich ist. Eine Quellverbindungsinstanz ist für einen Mandanten und eine Organisation spezifisch.
+Eine Quellverbindung erstellt und verwaltet die Verbindung zu der externen Quelle, aus der Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie Datenquelle, Datenformat und der Quellverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich sind. Eine Quellverbindungsinstanz ist für einen Mandanten und eine Organisation spezifisch.
 
 Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API.
 
@@ -595,7 +595,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihrer [!DNL Data Landing Zone]-Quellverbindung. |
 | `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. |
-| `params.path` | Der Pfad zur Datei, die Sie in Platform laden möchten. |
+| `params.path` | Der Pfad zur Datei, die Sie an Platform übermitteln möchten. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die [!DNL Data Landing Zone] entspricht. Diese feste ID lautet: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Antwort**
@@ -611,4 +611,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone] -Anmeldeinformationen abgerufen, die Dateistruktur durchsucht, um die Datei zu finden, die Sie an Platform übermitteln möchten, und eine Quellverbindung erstellt, um Ihre Daten an Platform zu übertragen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mit der  [!DNL Flow Service] API](../../collect/cloud-storage.md) an Platform zu bringen.
+In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone]-Anmeldeinformationen abgerufen, die Dateistruktur untersucht, um die Datei zu finden, die Sie in Platform importieren möchten, und eine Quellverbindung erstellt, um mit dem Übertragen Ihrer Daten an Platform zu beginnen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mithilfe der - [!DNL Flow Service]  in Platform zu ](../../collect/cloud-storage.md).

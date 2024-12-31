@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: PAL Arithmetic-Funktionen
-description: Arithmetische Funktionen dienen der Durchführung grundlegender Berechnungen von Werten in Profile Query Language (PQL).
+title: Arithmetische PAL-Funktionen
+description: Mit arithmetischen Funktionen lassen sich einfache Berechnungen für Werte in Profile Query Language (PQL) durchführen.
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 51%
 
 # Arithmetische Funktionen
 
-Arithmetische Funktionen dienen der Durchführung grundlegender Berechnungen von Werten in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
+Mit arithmetischen Funktionen lassen sich einfache Berechnungen für Werte in [!DNL Profile Query Language] (PQL) durchführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Hinzufügen
 
-Mit der Funktion `+` (Addition) wird die Summe zweier Argumentausdrücke als Zahl ermittelt.
+Die Funktion `+` (Addition) wird verwendet, um die Summe zweier Argumentausdrücke als Zahl zu ermitteln.
 
 **Format**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Multiplizieren
 
-Mit der Funktion `*` (Multiplikation) wird das Produkt zweier Argumentausdrücke als Zahl ermittelt.
+Die Funktion `*` (Multiplikation) wird verwendet, um das Produkt zweier Argumentausdrücke als Zahl zu finden.
 
 **Format**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Subtrahieren
 
-Mit der Funktion `-` (Subtraktion) wird der Unterschied zwischen zwei Argumentausdrücken als Zahl ermittelt.
+Mit der Funktion `-` (Subtraktion) wird die Differenz zweier Argumentausdrücke als Zahl ermittelt.
 
 **Format**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Rest
 
-Die Funktion `%` (Modulo/Rest) wird verwendet, um den Rest zu finden, nachdem die beiden Argumentausdrücke als Zahl geteilt wurden.
+Die Funktion `%` (modulo/rest) wird verwendet, um den Rest zu finden, nachdem die beiden Argumentausdrücke als Zahl dividiert wurden.
 
 **Format**
 

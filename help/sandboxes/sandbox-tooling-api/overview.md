@@ -1,6 +1,6 @@
 ---
-title: Handbuch zur Sandbox Tooling-API
-description: Sandbox-Tools in Adobe Experience Platform ermöglichen den Export und Import einer Momentaufnahme von Sandbox-Konfigurationen zwischen Sandboxes.
+title: Handbuch zur Sandbox-Tooling-API
+description: Mit den Sandbox-Tools in Adobe Experience Platform können Sie einen Schnappschuss der Sandbox-Konfigurationen zwischen Sandboxes exportieren und importieren.
 exl-id: 4bcc095b-5db1-4824-8b7c-c2ea5a393b98
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 14%
 
 ---
 
-# Leitfaden zur Tool-API für [!DNL Sandbox]
+# Handbuch zur [!DNL Sandbox] Tooling-API
 
-Die Tool-API [!DNL Sandbox] bietet mehrere Endpunkte, mit denen Sie Momentaufnahmen zwischen Sandboxes exportieren und importieren können, die Ihnen in Ihrer Organisation zur Verfügung stehen. Alle Interaktionen erfolgen über HTTP-Endpunkte. Die Quell-Sandbox wird vor dem Exportieren einer Momentaufnahme auf Artefakte überprüft, bei denen es sich um die in einem Paket enthaltenen Objekte handelt. Wenn eine Importanfrage gestellt wird, wird ein [!DNL Azure Blob] -Schnappschuss abgerufen und als Vorlage verwendet, um fast ähnliche Artefakte für die Ziel-Sandbox zu erzeugen. Eine Liste der unterstützten Objekte und Einschränkungen finden Sie in der Dokumentation zu [Sandbox-Tools](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling) .
+Die [!DNL Sandbox]-Tooling-API bietet mehrere Endpunkte, mit denen Sie Momentaufnahmen zwischen Sandboxes exportieren und importieren können, die Ihnen in Ihrem Unternehmen zur Verfügung stehen. Alle Interaktionen erfolgen über HTTP-Endpunkte. Die Quell-Sandbox wird vor dem Exportieren eines Schnappschusses auf Artefakte überprüft, bei denen es sich um die in einem Paket enthaltenen Objekte handelt. Wenn eine Importanfrage gestellt wird, wird ein [!DNL Azure Blob]-Schnappschuss abgerufen und als Vorlage verwendet, um fast ähnliche Artefakte für die Ziel-Sandbox zu erzeugen. In der [Sandbox-Tools](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)-Dokumentation finden Sie eine Liste der unterstützten Objekte und Einschränkungen.
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
 ## Packages        {#packages}
 
-Über den Endpunkt Sandbox-Tooling-Pakete können Sie Pakete verwalten. Das Sandbox-Tooling-Paket ist eine Sammlung von Artefaktdefinitionen, einschließlich Paket-ID, Name, Beschreibung, Organisations-ID und Ersteller-ID. Weitere Informationen zum Arbeiten mit Paketen in der API finden Sie im [Paket-Endpunkthandbuch](./packages.md) .
+Mit dem Sandbox Tooling Packages-Endpunkt können Sie Pakete verwalten. Das Sandbox-Tooling-Paket ist eine Sammlung von Artefaktdefinitionen, einschließlich Paket-ID, Name, Beschreibung, Organisations-ID und Ersteller-ID. Weitere Informationen [ Arbeiten mit Paketen in der API finden ](./packages.md) im Handbuch zum packages-Endpunkt .
 
 ## Tools {#tools}
 
-Über den Endpunkt Sandbox-Tools können Sie die JSON-Auftragsdaten unabhängig voneinander abrufen. Weitere Informationen zum Abrufen von Job-JSON-Daten in der API finden Sie im [Tools-Endpunkthandbuch](./tools.md) .
+Mit dem Endpunkt Sandbox-Tools können Sie die JSON-Auftragsdaten unabhängig abrufen. Weitere Informationen zum Abrufen von JSON[Auftragsdaten in der API finden Sie ](./tools.md) „tools-Endpunkthandbuch“.
 
 ## Nächste Schritte {#next-steps}
 
-Um Aufrufe mithilfe der Sandbox-Tool-API zu tätigen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) und wählen Sie dann eine der Endpunkthandbücher aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.
+Um mit Aufrufen mit der Sandbox-Tooling-API zu beginnen, lesen Sie [Erste Schritte](./getting-started.md) und wählen Sie dann eines der Endpunkthandbücher aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden.

@@ -3,7 +3,7 @@ title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 100%
 
