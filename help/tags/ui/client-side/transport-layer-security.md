@@ -1,6 +1,6 @@
 ---
-title: Informationen zur Transport Layer Security (TLS)
-description: Informationen darüber, welche TLS-Versionen und -Chiffren verwendet werden
+title: Informationen zu Transport Layer Security (TLS)
+description: Informationen darüber, welche TLS-Versionen und Chiffren verwendet werden
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 24%
 
 ---
 
-# Informationen zur Transport Layer Security (TLS)
+# Informationen zu Transport Layer Security (TLS)
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Referenz zu den terminologischen Änderungen finden Sie im Dokument [Begriffsaktualisierungen](../../term-updates.md) .
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine Übersicht der terminologischen Änderungen finden Sie im Dokument [Terminologieaktualisierungen](../../term-updates.md).
 
-Transport Layer Security (TLS) ist ein kryptografisches Protokoll, das End-to-End-Sicherheit für Daten bietet, die zwischen Anwendungen über das Internet gesendet werden. Weitere Informationen zu TLS finden Sie in der Dokumentation zu den [TLS-Grundlagen](https://www.internetsociety.org/deploy360/tls/basics/) .
+Transport Layer Security (TLS) ist ein kryptografisches Protokoll, das End-to-End-Sicherheit für Daten bietet, die zwischen Anwendungen über das Internet gesendet werden. Weitere Informationen zu TLS finden Sie in der Dokumentation [TLS-Grundlagen](https://www.internetsociety.org/deploy360/tls/basics/) .
 
-Tags in Adobe Experience Platform sind ein Tag-Management-System, das dazu dient, Skripte auf Ihrer Website dynamisch zu laden. TLS sichert die Kommunikation zwischen dem Adobe-Host `assets.adobedtm.com` und Ihrer Website, wenn diese Skripte geladen werden.
+Tags in Adobe Experience Platform sind ein Tag-Management-System, das dazu dient, Skripte auf Ihrer Website dynamisch zu laden. TLS sichert die Kommunikation zwischen dem Adobe-Host-`assets.adobedtm.com` und Ihrer Website, wenn diese Skripte geladen werden.
 
-Es sind mehrere TLS-Versionen verfügbar, die eine Reihe verschiedener Chiffren unterstützen. Nicht alle Versionen und Chiffren sind identisch mit denen, die einige als weniger oder sicherer betrachten als andere.
+Es sind mehrere TLS-Versionen verfügbar, und sie unterstützt eine Reihe verschiedener Chiffren. Nicht alle Versionen und Chiffren sind die gleichen wie einige gelten als weniger oder sicherer als andere.
 
-## Unterstützte TLS-Versionen und Ciphers
+## Unterstützte TLS-Versionen und Chiffren
 
 Die Adobe-Host-Option unterstützt derzeit die folgenden TLS-Versionen und -Chiffren:
 
@@ -51,9 +51,9 @@ PORT    STATE SERVICE
 
 ### Selbstständiges Hosting
 
-Wenn Sie [Ihre Bibliothek selbst hosten](../publishing/hosts/self-hosting-libraries.md), werden die unterstützten TLS-Versionen von Ihrem eigenen Hosting-Dienst bestimmt.
+Wenn Sie Ihre Bibliothek [selbst hosten](../publishing/hosts/self-hosting-libraries.md) werden die unterstützten TLS-Versionen von Ihrem eigenen Hosting-Service bestimmt.
 
-## TLS-Ciphers to be removed 1. Mai 2024
+## TLS-Chiffren werden am 1. Mai 2024 entfernt
 
 ```
 PORT    STATE SERVICE

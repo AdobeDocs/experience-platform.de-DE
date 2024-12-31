@@ -1,6 +1,6 @@
 ---
 title: onBeforeEventSend
-description: Erfahren Sie, wie Sie das Web SDK so konfigurieren, dass eine JavaScript-Funktion registriert wird, die die Daten ändern kann, die Sie unmittelbar vor dem Senden dieser Daten an Adobe senden.
+description: Erfahren Sie, wie Sie Web SDK so konfigurieren, dass eine JavaScript-Funktion registriert wird, mit der Sie die Daten ändern können, die Sie unmittelbar vor dem Senden dieser Daten an Adobe senden.
 exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
 source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
@@ -11,32 +11,32 @@ ht-degree: 0%
 
 # `onBeforeEventSend`
 
-Mit dem Rückruf `onBeforeEventSend` können Sie eine JavaScript-Funktion registrieren, die die gesendeten Daten ändern kann, bevor diese Daten an Adobe gesendet werden. Mit diesem Rückruf können Sie das Objekt `xdm` oder `data` bearbeiten, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch bedingt abbrechen, z. B. mit erkanntem clientseitigem Bot-Traffic.
+Mit dem `onBeforeEventSend` Callback können Sie eine JavaScript-Funktion registrieren, die die Daten ändern kann, die Sie gerade vor dem Senden dieser Daten an Adobe senden. Dieser Rückruf ermöglicht es Ihnen, das `xdm`- oder `data`-Objekt zu bearbeiten, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch ganz abbrechen, z. B. bei erkanntem Client-seitigem Bot-Traffic.
 
 >[!WARNING]
 >
->Dieser Rückruf ermöglicht die Verwendung von benutzerdefiniertem Code. Wenn Code, den Sie in den Rückruf einschließen, eine nicht abgefangene Ausnahme ausgibt, wird die Verarbeitung für das Ereignis angehalten. Daten werden nicht an Adobe gesendet.
+>Dieser Callback ermöglicht die Verwendung von benutzerdefiniertem Code. Wenn ein Code, den Sie in den Callback einbeziehen, eine nicht abgefangene Ausnahme auslöst, wird die Verarbeitung für das Ereignis angehalten. Daten werden nicht an Adobe gesendet.
 
-## Vor dem Ereignis-Rückruf konfigurieren mit der Web SDK-Tag-Erweiterung {#tag-extension}
+## Konfigurieren eines -Ereignisses vor dem Senden eines Callbacks mithilfe der Tag-Erweiterung „Web SDK&quot; {#tag-extension}
 
-Wählen Sie bei der Konfiguration der Tag-Erweiterung [ die Schaltfläche **[!UICONTROL Vor dem Senden des Rückruffods durch das Ereignis bereitstellen]** aus. ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) Diese Schaltfläche öffnet ein modales Fenster, in das Sie den gewünschten Code einfügen können.
+Klicken Sie beim **[!UICONTROL Konfigurieren der Tag-Erweiterung]** auf die Schaltfläche [Bereitstellen eines Ereignisses vor dem Senden des Callback-Codes](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Diese Schaltfläche öffnet ein modales Fenster, in dem Sie den gewünschten Code einfügen können.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenerfassung] und wählen Sie dann die Schaltfläche **[!UICONTROL Vor dem Senden des Rückrufcodes für das Ereignis bereitstellen]** aus.
-1. Diese Schaltfläche öffnet ein modales Fenster mit einem Code-Editor. Fügen Sie den gewünschten Code ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um das modale Fenster zu schließen.
-1. Klicken Sie unter den Erweiterungseinstellungen auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenerfassung] und klicken Sie dann auf die Schaltfläche **[!UICONTROL Bereitstellung eines Ereignisses vor dem Senden des Callback-Codes]**.
+1. Diese Schaltfläche öffnet ein modales Fenster mit einem Code-Editor. Fügen Sie den gewünschten Code ein und klicken Sie dann auf **[!UICONTROL Speichern]**, um das modale Fenster zu schließen.
+1. Klicken **[!UICONTROL unter]** auf „Speichern“ und veröffentlichen Sie Ihre Änderungen.
 
-Im Code-Editor haben Sie Zugriff auf die folgenden Variablen:
+Innerhalb des Code-Editors haben Sie Zugriff auf die folgenden Variablen:
 
 * **`content.xdm`**: Die [XDM](../sendevent/xdm.md)-Payload für das Ereignis.
-* **`content.data`**: Die [data](../sendevent/data.md) -Objekt-Payload für das Ereignis.
-* **`return true`**: Beenden Sie sofort den Rückruf und senden Sie Daten mit den aktuellen Werten im `content` -Objekt an Adobe.
-* **`return false`**: Beenden Sie den Callback sofort und brechen Sie das Senden von Daten an Adobe ab.
+* **`content.data`**: Die [Daten](../sendevent/data.md) Objekt-Payload für das Ereignis.
+* **`return true`**: Sofort den Callback beenden und Daten mit den aktuellen Werten im `content` Objekt an Adobe senden.
+* **`return false`**: Sofort den Callback beenden und das Senden von Daten an Adobe abbrechen.
 
-Alle Variablen, die außerhalb von `content` definiert sind, können verwendet werden, sind jedoch nicht in der Payload enthalten, die an Adobe gesendet wird.
+Alle Variablen, die außerhalb von `content` definiert wurden, können verwendet werden, sind jedoch nicht in der Payload enthalten, die an Adobe gesendet wird.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,11 +64,11 @@ if (myBotDetector.isABot()) {
 ```
 
 >[!TIP]
->Vermeiden Sie es, beim ersten Ereignis auf einer Seite `false` zurückzugeben. Die Ausgabe von `false` beim ersten Ereignis kann sich negativ auf die Personalisierung auswirken.
+>Vermeiden Sie die Rückgabe von `false` beim ersten Ereignis auf einer Seite. Eine Rückkehr der `false` beim ersten Ereignis kann sich negativ auf die Personalisierung auswirken.
 
-## Vor dem Ereignis-Rückruf konfigurieren mit der Web SDK JavaScript-Bibliothek {#library}
+## Konfigurieren eines -Ereignisses vor dem Senden eines Callbacks mithilfe der Web SDK JavaScript-Bibliothek {#library}
 
-Registrieren Sie den Rückruf `onBeforeEventSend` , wenn Sie den Befehl `configure` ausführen. Sie können den Variablennamen `content` in einen beliebigen Wert ändern, indem Sie die Parametervariable innerhalb der Inline-Funktion ändern.
+Registrieren Sie den `onBeforeEventSend` Callback, wenn Sie den `configure` Befehl ausführen. Sie können den Namen der `content` in einen beliebigen Wert ändern, indem Sie die Parametervariable innerhalb der Inline-Funktion ändern.
 
 ```js
 alloy("configure", {
@@ -105,7 +105,7 @@ alloy("configure", {
 });
 ```
 
-Sie können auch Ihre eigene Funktion anstelle einer Inline-Funktion registrieren.
+Anstelle einer Inline-Funktion können Sie auch eine eigene Funktion registrieren.
 
 ```js
 function lastChanceLogic(content) {

@@ -31,13 +31,13 @@ Der grundlegende Tag-Workflow:
 
 Tags sind vollständig mit Ihrer Adobe ID integriert. Benutzerberechtigungen werden über die Admin Console mit anderen Adobe-Produkten und -Lösungen aus [!DNL Creative Cloud], [!DNL Document Cloud] und Experience Cloud verwaltet.
 
-Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das bedeutet, dass individuelle Rechte explizit gewährt werden müssen. Diese Rechte werden Gruppen zugewiesen, dann werden Benutzer den entsprechenden Gruppen hinzugefügt, um Zugriff zu erhalten. Selbst wenn Ihr Unternehmen Zugriff auf die Datenerfassung hat, können einzelne Benutzer nichts tun, bis ihnen ein Administrator ausdrücklich einige Rechte gewährt.
+Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das bedeutet, dass individuelle Rechte explizit gewährt werden müssen. Diese Rechte werden Gruppen zugewiesen, dann werden Benutzer den entsprechenden Gruppen hinzugefügt, um Zugriff zu erhalten. Selbst wenn Ihr Unternehmen Zugriff auf die Datenerfassung hat, können einzelne Benutzer nichts tun, bis ihnen ein Administrator explizit einige Rechte gewährt.
 
 Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie im [Handbuch zu Datenerfassungsberechtigungen](../../collection/permissions.md).
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Sie können dies tun, indem Sie direkt zum [Experience Cloud-Anmeldebildschirm](https://experience.adobe.com/) navigieren und entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]** auswählen.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm [Experience Cloud ](https://experience.adobe.com/) und wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen v
 * Sitzung und lokaler Speicher
 * Alles andere
 
-Nachdem das Datenelement definiert wurde, können Sie das Element überall in der Benutzeroberfläche für jede beliebige Erweiterung verwenden. Weitere Informationen finden Sie in der Dokumentation zu [Datenelementen](../ui/managing-resources/data-elements.md).
+Nachdem das Datenelement definiert wurde, können Sie es an einer beliebigen Stelle in der gesamten Benutzeroberfläche für eine beliebige Erweiterung verwenden. Weitere Informationen finden Sie in der Dokumentation zu [Datenelementen](../ui/managing-resources/data-elements.md).
 
 **Regeln** befinden sich im logischen Kern Ihrer Implementierung und legen das Was, Wann, Wo und Wie und wo für alle Tags auf Ihrer Site fest. Definieren Sie ein Ereignis, legen Sie Bedingungen und Ausnahmen fest und definieren Sie dann die Aktionen und die Reihenfolge. Schlussendlich veröffentlichen Sie Ihre Änderungen, um die Ergebnisse zu sehen. Weitere Informationen finden Sie unter [Regeln](../ui/managing-resources/rules.md).
 
@@ -135,5 +135,5 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
 * **[Datensammlungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
-* **[Entwicklerdokumente](../api/overview.md)**: Nehmen Sie an der Tag-Entwickler-Community teil, um Erweiterungen zu erstellen oder die Tags-APIs zu verwenden
+* **[Entwicklerdokumente](../api/overview.md)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.

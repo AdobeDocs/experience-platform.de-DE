@@ -21,7 +21,7 @@ Dieses Handbuch bietet einen Überblick über die verschiedenen Arten von Berech
 
 >[!NOTE]
 >
->Anweisungen zum Konfigurieren von Berechtigungen für Benutzer, die Admin Console verwenden, finden Sie im Tutorial zum Verwalten von Berechtigungen für die Datenerfassung [.](../../../collection/permissions.md)
+>Anweisungen zum Konfigurieren von Berechtigungen für Benutzerinnen und Benutzer, die Admin Console verwenden, finden Sie im Tutorial [Verwalten von Berechtigungen für die Datenerfassung](../../../collection/permissions.md).
 
 ## Berechtigungstypen
 
@@ -42,7 +42,7 @@ Standardmäßig gewähren Produktprofile Zugriff auf alle Eigenschaften, die in 
 
 ### Eigenschaftsrechte {#property-rights}
 
-Jede Tag-Eigenschaft, die Sie in der Benutzeroberfläche erstellen, steht in Admin Console zur Verfügung, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
+Jede Tag-Eigenschaft, die Sie in der Benutzeroberfläche erstellen, wird in Admin Console verfügbar, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
 
 Wenn ein Produktprofil nicht auf Eigenschaft A1 zugreifen kann, können Benutzer, die zu diesem Profil gehören, keine Einstellungen innerhalb der Eigenschaft A1 anzeigen oder ändern.
 
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die verfügbaren Eigenschaftsrechte und die Funkti
 
 | Eigenschaftsrecht | Beschreibung |
 | --- | --- |
-| **Entwickeln** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen von Bibliotheken und Einbauen von Bibliotheken in bestehende Entwicklungsumgebungen </li><li>Eine Bibliothek zur Genehmigung einreichen</li></ul>Die meisten täglichen Aufgaben in der Benutzeroberfläche erfordern dieses Recht. |
+| **Entwickeln** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen von Bibliotheken und Einbauen von Bibliotheken in bestehende Entwicklungsumgebungen </li><li>Eine Bibliothek zur Genehmigung einreichen</li></ul>Die meisten alltäglichen Aufgaben in der Benutzeroberfläche erfordern dieses Recht. |
 | **Genehmigen** | Dies ermöglicht es Ihnen, eingereichte Bibliotheken in die Staging-Umgebung einzubauen. Sie können eine Bibliothek auch für die Veröffentlichung genehmigen, nachdem die nötigen Tests abgeschlossen wurden. |
 | **Veröffentlichen** | Dies ermöglicht Ihnen die Veröffentlichung genehmigter Bibliotheken in der Produktionsumgebung. |
 | **Erweiterungen verwalten** | Hiermit können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
@@ -68,7 +68,7 @@ Unternehmensrechte gelten für Berechtigungen, die mehrere Eigenschaften umfasse
 | --- | --- |
 | **Eigenschaften verwalten** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen neuer Eigenschaften</li><li>Ändern von Metadaten und Einstellungen auf Eigenschaftsebene</li><li>Löschen von Eigenschaften</li></ul>In der Regel führen Administratoren diese Rolle aus. Weitere Informationen finden Sie in der [Dokumentation zu Eigenschaften](companies-and-properties.md). |
 | **Entwickeln von Erweiterungen** | Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
-| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
+| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Anmeldedaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
 
 {style="table-layout:auto"}
 
@@ -121,4 +121,4 @@ In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die S
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch zum [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../collection/permissions.md).
+Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../collection/permissions.md).

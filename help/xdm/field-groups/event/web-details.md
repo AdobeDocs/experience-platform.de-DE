@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schemadesign;Schemafeldgruppe;Feldergruppe;
 solution: Experience Platform
-title: Feldgruppe "Webdetails-Schema"
-description: Erfahren Sie mehr über die Feldergruppe Webdetails .
+title: Schemafeldgruppe „Web-Details“
+description: Erfahren Sie mehr über die Schemafeldgruppe „Web-Details“.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 20%
 
 ---
 
-# [!UICONTROL Webdetails] Schemafeldgruppe
+# [!UICONTROL Web-Details] Schemafeldgruppe
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Webdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zur Beschreibung von Informationen zu Webdetailereignissen wie Interaktion, Seitendetails und Referrer verwendet wird.
+[!UICONTROL Web-Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), mit der Informationen zu Web-Detailereignissen wie Interaktion, Seitendetails und Referrer beschrieben werden.
 
 ![](../../images/field-groups/web-details.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `web` | [Web-Informationen](../../data-types/web-information.md) | Beschreibt Link-Klicks, Webseitendetails, Referrer-Informationen und Browserdetails. |
+| `web` | [Web-Informationen](../../data-types/web-information.md) | Beschreibt Link-Klicks, Web-Seitendetails, Referrer-Informationen und Browser-Details. |
 
 {style="table-layout:auto"}
 

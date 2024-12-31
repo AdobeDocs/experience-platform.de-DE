@@ -3,7 +3,7 @@ title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 100%
 

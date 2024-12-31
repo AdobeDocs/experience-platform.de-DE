@@ -1,6 +1,6 @@
 ---
-title: Erstanbieter-Geräte-IDs im Web SDK
-description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) im Adobe Experience Platform Web SDK konfigurieren.
+title: IDs von Erstanbieter-Geräten in Web SDK
+description: Erfahren Sie, wie Sie First-Party-Geräte-IDs (FPIDs) in der Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
@@ -10,125 +10,125 @@ ht-degree: 0%
 ---
 
 
-# Erstanbieter-Geräte-IDs im Web SDK
+# IDs von Erstanbieter-Geräten in Web SDK
 
-Das Adobe Experience Platform Web SDK weist Website-Besuchern mithilfe von Cookies [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=de) zu, um das Benutzerverhalten zu verfolgen. Um Browserbeschränkungen für Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als Erstanbieter-Geräte-IDs (`FPIDs`) bezeichnet.
+Adobe Experience Platform Web SDK weist Website-Besuchern mithilfe von Cookies [Adobe Experience Cloud-IDs (ECIDs](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=de) zu, um das Benutzerverhalten zu verfolgen. Um Browser-Einschränkungen hinsichtlich der Cookie-Lebensdauer zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als First-Party-Geräte-IDs (`FPIDs`) bezeichnet.
 
 >[!NOTE]
 >
->Die Unterstützung der Erstanbieter-Geräte-ID ist nur verfügbar, wenn Daten über das Web SDK an das Experience Platform-Edge Network gesendet werden.
+>Die Unterstützung von Erstanbieter-Geräte-IDs ist nur verfügbar, wenn Daten über die Web-SDK an das Experience Platform-Edge Network gesendet werden.
 
 >[!IMPORTANT]
 >
->Geräte-IDs von Erstanbietern sind nicht mit der Funktion [Drittanbieter-Cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) im Web SDK kompatibel.
->Sie können entweder Geräte-IDs von Erstanbietern verwenden oder Sie können Drittanbieter-Cookies verwenden, aber Sie können nicht beide Funktionen gleichzeitig verwenden.
+>IDs von Erstanbieter-Geräten sind nicht mit der Funktion [Drittanbieter-Cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) in Web SDK kompatibel.
+>Sie können entweder Erstanbieter-Geräte-IDs verwenden oder Drittanbieter-Cookies verwenden. Sie können jedoch nicht beide Funktionen gleichzeitig verwenden.
 
-In diesem Dokument wird beschrieben, wie Sie Erstanbieter-Geräte-IDs für Ihre Web SDK-Implementierung konfigurieren.
+In diesem Dokument wird erläutert, wie Erstanbieter-Geräte-IDs für Ihre Web SDK-Implementierung konfiguriert werden.
 
 ## Voraussetzungen
 
-In diesem Handbuch wird davon ausgegangen, dass Sie mit der Funktionsweise von Identitätsdaten für das Platform Web SDK vertraut sind, einschließlich der Rolle von ECIDs und `identityMap`. Weitere Informationen finden Sie in der Übersicht zu [Identitätsdaten im Web SDK](./overview.md) .
+In diesem Handbuch wird davon ausgegangen, dass Sie mit der Funktionsweise von Identitätsdaten für Platform Web SDK vertraut sind, einschließlich der Rolle von ECIDs und `identityMap`. Weitere Informationen finden Sie in der Übersicht [Identitätsdaten in der Web](./overview.md)SDK) .
 
-## Verwenden von Erstanbieter-Geräte-IDs (FPIDs) {#using-fpid}
+## Verwenden von First-Party-Geräte-IDs (FPIDs) {#using-fpid}
 
-Geräte-IDs von Erstanbietern ([!DNL FPIDs]) verfolgen Besucher anhand von Erstanbieter-Cookies. Erstanbieter-Cookies sind am effektivsten, wenn sie mit einem Server gesetzt werden, der einen DNS-Eintrag [A record](https://datatracker.ietf.org/doc/html/rfc1035) (für IPv4) oder einen [AAAA-Eintrag](https://datatracker.ietf.org/doc/html/rfc3596) (für IPv6) verwendet, im Gegensatz zu einem DNS-Code [!DNL CNAME] oder [!DNL JavaScript].
-
->[!IMPORTANT]
->
->Datensätze vom Typ [!DNL A] oder [!DNL AAAA] werden nur zum Setzen und Verfolgen von Cookies unterstützt. Die primäre Methode für die Datenerfassung ist [!DNL DNS] [!DNL CNAME]. Anders ausgedrückt: [!DNL FPIDs] wird mit einem [!DNL A] -Datensatz oder [!DNL AAAA] Datensatz festgelegt und dann mit einem [!DNL CNAME] an Adobe gesendet.
->
->Das [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wird auch für die Erstanbieter-Datenerfassung unterstützt.
-
-Sobald ein [!DNL FPID] -Cookie gesetzt ist, kann der zugehörige Wert abgerufen und an Adobe gesendet werden, während Ereignisdaten erfasst werden. Erfasste [!DNL FPIDs] werden als Samen verwendet, um [!DNL ECIDs] zu generieren, die weiterhin die primäre ID in Adobe Experience Cloud-Anwendungen sind.
-
-Um eine [!DNL FPID] für einen Website-Besucher an das Edge Network zu senden, müssen Sie die [!DNL FPID] in die `identityMap` für diesen Besucher aufnehmen. Weitere Informationen finden Sie im Abschnitt weiter unten in diesem Dokument zu [Verwendung von FPIDs in `identityMap`](#identityMap) .
-
-### Formatierungsanforderungen für Geräte-IDs von Erstanbietern {#formatting-requirements}
-
-Das Edge Network akzeptiert nur [!DNL IDs], die dem [UUIDv4-Format](https://datatracker.ietf.org/doc/html/rfc4122) entsprechen. Geräte-IDs, die nicht im Format [!DNL UUIDv4] vorliegen, werden abgelehnt.
-
-Die Erstellung eines [!DNL UUID] -Werts führt fast immer zu einer eindeutigen, zufälligen Kennung, wobei die Wahrscheinlichkeit einer Kollision vernachlässigbar ist. [!DNL UUIDv4] kann nicht mit IP-Adressen oder anderen personenbezogenen Daten ([!DNL PII]) gesendet werden. [!DNL UUIDs] sind allgegenwärtig und es gibt Bibliotheken für praktisch jede Programmiersprache, um sie zu generieren.
-
-## Festlegen eines Erstanbieter-ID-Cookies in der Benutzeroberfläche von Datastreams {#setting-cookie-datastreams}
-
-Sie können in der Benutzeroberfläche von Datastreams einen Cookie-Namen angeben, in dem sich die [!DNL FPID] befinden kann, anstatt den Cookie-Wert lesen und die [!DNL FPID] in die Identitätszuordnung aufnehmen zu müssen.
+Erstanbieter-Geräte-IDs ([!DNL FPIDs]) verfolgen Besucher mithilfe von Erstanbieter-Cookies. Erstanbieter-Cookies sind am effektivsten, wenn sie mit einem Server gesetzt werden, der einen DNS-[A-Eintrag](https://datatracker.ietf.org/doc/html/rfc1035) (für IPv4) oder [AAAA-Eintrag](https://datatracker.ietf.org/doc/html/rfc3596) (für IPv6) im Gegensatz zu einem DNS-[!DNL CNAME] oder [!DNL JavaScript]-Code verwendet.
 
 >[!IMPORTANT]
 >
->Für diese Funktion muss [Erstanbieter-Datenerfassung](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) aktiviert sein.
+>[!DNL A]- oder [!DNL AAAA] werden nur für das Setzen und Tracking von Cookies unterstützt. Die primäre Methode zur Datenerfassung erfolgt über eine [!DNL DNS] [!DNL CNAME]. Mit anderen Worten: [!DNL FPIDs] werden mit einem [!DNL A] oder [!DNL AAAA] Datensatz festgelegt und dann mit einem [!DNL CNAME] an Adobe gesendet.
+>
+>Das [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wird weiterhin für die Erstanbieter-Datenerfassung unterstützt.
 
-Detaillierte Informationen zum Konfigurieren eines Datenspeichers finden Sie in der Dokumentation zu [datastreams](../../datastreams/configure.md) .
+Sobald ein [!DNL FPID] Cookie gesetzt wurde, kann sein Wert abgerufen und bei der Erfassung von Ereignisdaten an Adobe gesendet werden. Die erfassten [!DNL FPIDs] werden als Testadressen verwendet, um [!DNL ECIDs] zu generieren, die weiterhin die primären IDs in Adobe Experience Cloud-Programmen sind.
 
-Aktivieren Sie beim Konfigurieren Ihres Datastreams die Option **[!UICONTROL Erstanbieter-ID-Cookie]** . Diese Einstellung weist das Edge Network an, beim Suchen einer Erstanbieter-Geräte-ID auf ein bestimmtes Cookie zu verweisen, anstatt diesen Wert in der [Identitätszuordnung](#identityMap) nachzuschlagen.
+Um eine [!DNL FPID] für einen Website-Besucher an das Edge Network zu senden, müssen Sie die [!DNL FPID] in die `identityMap` für diesen Besucher einschließen. Weitere Informationen finden Sie im Abschnitt weiter unten in diesem Dokument [Verwenden von FPIDs in `identityMap`](#identityMap).
 
-Weitere Informationen zur Arbeit mit Adobe Experience Cloud finden Sie in der Dokumentation zu [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) .
+### Formatierungsanforderungen für First-Party-Geräte-IDs {#formatting-requirements}
 
-![Bild der Platform-Benutzeroberfläche, das die Konfiguration des Datastreams anzeigt und die Einstellung des Erstanbieter-ID-Cookies hervorhebt](../assets/first-party-id-datastreams.png)
+Das Edge Network akzeptiert nur [!DNL IDs], die dem Format [UUIDv4“ ](https://datatracker.ietf.org/doc/html/rfc4122). Geräte-IDs, die nicht im [!DNL UUIDv4] Format vorliegen, werden abgelehnt.
 
-Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll.
+Die Erstellung einer [!DNL UUID] führt fast immer zu einer eindeutigen, zufälligen ID, wobei die Wahrscheinlichkeit, dass eine Kollision auftritt, vernachlässigbar ist. [!DNL UUIDv4] können nicht mit IP-Adressen oder anderen personenbezogenen Daten ([!DNL PII]) gesendet werden. [!DNL UUIDs] sind allgegenwärtig und Bibliotheken können für praktisch jede Programmiersprache gefunden werden, um sie zu erzeugen.
 
-Wenn Sie Erstanbieter-IDs verwenden, können Sie keine ID-Synchronisierungen von Drittanbietern durchführen. Die ID-Synchronisierungen von Drittanbietern basieren auf dem [!DNL Visitor ID]-Dienst und dem von diesem Dienst generierten `UUID`. Bei Verwendung der Erstanbieter-ID-Funktion wird [!DNL ECID] ohne Verwendung des [!DNL Visitor ID]-Dienstes generiert, was die Synchronisierung von Drittanbieter-IDs unmöglich macht.
+## Festlegen eines Erstanbieter-ID-Cookies in der Datenstrom-Benutzeroberfläche {#setting-cookie-datastreams}
 
-Wenn Sie Erstanbieter-IDs verwenden, werden [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager)-Funktionen, die auf die Aktivierung in Partnerplattformen abzielen, nicht unterstützt, da die Audience Manager-Partner-ID-Synchronisierungen hauptsächlich auf `UUIDs` oder `DIDs` basieren. Die [!DNL ECID], die von einer Erstanbieter-ID abgeleitet wird, ist nicht mit einer `UUID` verknüpft, sodass sie nicht adressierbar ist.
-
-## Festlegen eines Cookies mithilfe eines eigenen Servers {#set-cookie-server}
-
-Beim Festlegen eines Cookies mithilfe eines Servers, dessen Eigentümer Sie sind, können Sie verschiedene Methoden verwenden, um zu verhindern, dass das Cookie aufgrund von Browserrichtlinien eingeschränkt wird:
-
-* Generieren von Cookies mithilfe von serverseitigen Skriptsprachen
-* Setzen von Cookies als Reaktion auf eine API-Anfrage an eine Subdomain oder einen anderen Endpunkt auf der Site
-* Generieren von Cookies mit einem [!DNL CMS]
-* Generieren von Cookies mit einem [!DNL CDN]
+Sie können einen Cookie-Namen in der Datenstrom-Benutzeroberfläche angeben, in dem sich der [!DNL FPID] befinden kann, anstatt den Cookie-Wert lesen und den [!DNL FPID] in die Identitätszuordnung einschließen zu müssen.
 
 >[!IMPORTANT]
 >
->Cookies, die mit der JavaScript-Methode `document.cookie` gesetzt werden, werden fast nie vor Browserrichtlinien geschützt, die die Cookie-Dauer einschränken.
+>Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
 
-### Festlegen des Cookies {#when-to-set-cookie}
+Siehe [Dokumentation zu Datenströmen](../../datastreams/configure.md) für detaillierte Informationen zur Konfiguration eines Datenstroms.
 
-Das Cookie [!DNL FPID] sollte idealerweise gesetzt werden, bevor Anforderungen an das Edge Network gesendet werden. In Szenarien, in denen dies nicht möglich ist, wird jedoch weiterhin ein [!DNL ECID] mit vorhandenen Methoden generiert und dient als primäre Kennung, solange das Cookie vorhanden ist.
+Aktivieren Sie beim Konfigurieren Ihres Datenstroms die Option **[!UICONTROL Erstanbieter-ID-Cookie]** . Diese Einstellung weist das Edge Network an, bei der Suche nach einer First-Party-Geräte-ID ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der [Identitätszuordnung](#identityMap).
 
-Wenn die [!DNL ECID] irgendwann von einer Browser-Löschrichtlinie beeinflusst wird, die [!DNL FPID] jedoch nicht, wird die [!DNL FPID] beim nächsten Besuch zur primären Kennung und wird zum Testen der [!DNL ECID] bei jedem nachfolgenden Besuch verwendet.
+Weitere Informationen zur Funktionsweise [ Erstanbieter-Cookies finden ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) in der Dokumentation zu Adobe Experience Cloud .
 
-### Festlegen des Ablaufs für das Cookie {#set-expiration}
+![Platform-UI-Bild mit der Datenstromkonfiguration, in der die First-Party-ID-Cookie-Einstellung hervorgehoben ist](../assets/first-party-id-datastreams.png)
 
-Das Festlegen des Ablaufs eines Cookies sollte bei der Implementierung der [!DNL FPID] -Funktion sorgfältig berücksichtigt werden. Bei der Entscheidung sollten Sie die Länder oder Regionen berücksichtigen, in denen Ihre Organisation tätig ist, sowie die Gesetze und Richtlinien in jeder dieser Regionen.
+Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert ist.
 
-Im Rahmen dieser Entscheidung möchten Sie möglicherweise eine unternehmensweite Cookie-Einstellung oder eine Richtlinie festlegen, die für Benutzer in jedem Gebietsschema, in dem Sie tätig sind, unterschiedlich ist.
+Wenn Sie Erstanbieter-IDs verwenden, können Sie keine ID-Synchronisierungen von Drittanbietern durchführen. ID-Synchronisierungen von Drittanbietern basieren auf dem [!DNL Visitor ID]-Service und den von diesem Service generierten `UUID`. Bei Verwendung der ID-Funktion von Erstanbietern wird die [!DNL ECID] ohne Verwendung des [!DNL Visitor ID]-Service generiert, was die Synchronisierung von Drittanbieter-IDs unmöglich macht.
 
-Unabhängig von der Einstellung, die Sie für den anfänglichen Ablauf eines Cookies auswählen, müssen Sie sicherstellen, dass Sie eine Logik einschließen, die den Ablauf des Cookies bei jedem neuen Besuch der Site verlängert.
+Wenn Sie Erstanbieter-IDs verwenden, werden [Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager)-Funktionen, die auf die Aktivierung in Partnerplattformen abzielen, nicht unterstützt, da die Synchronisierung der Audience Manager-Partner-IDs größtenteils auf `UUIDs` oder `DIDs` basiert. Die von einer Erstanbieter-ID abgeleitete [!DNL ECID] ist nicht mit einer `UUID` verknüpft, sodass sie nicht adressierbar ist.
+
+## Setzen eines Cookies mit Ihrem eigenen Server {#set-cookie-server}
+
+Beim Setzen eines Cookies mit einem Server, dessen Eigentümer Sie sind, können Sie verschiedene Methoden verwenden, um zu verhindern, dass das Cookie aufgrund von Browser-Richtlinien eingeschränkt wird:
+
+* Generieren von Cookies mithilfe von Server-seitigen Skriptsprachen
+* Setzen von Cookies als Reaktion auf eine API-Anfrage an eine Subdomain oder einen anderen Endpunkt auf der Website
+* Generieren von Cookies mithilfe eines [!DNL CMS]
+* Generieren von Cookies mithilfe eines [!DNL CDN]
+
+>[!IMPORTANT]
+>
+>Cookies, die mit der `document.cookie`-Methode von JavaScript gesetzt werden, sind fast nie vor Browser-Richtlinien geschützt, die die Cookie-Dauer beschränken.
+
+### Wann das Cookie gesetzt werden soll {#when-to-set-cookie}
+
+Das [!DNL FPID]-Cookie sollte idealerweise gesetzt werden, bevor Anfragen an das Edge Network gesendet werden. In Fällen, in denen dies nicht möglich ist, wird jedoch weiterhin ein [!DNL ECID] mit vorhandenen Methoden generiert und fungiert als primäre Kennung, solange das Cookie vorhanden ist.
+
+Angenommen, die [!DNL ECID] ist letztendlich von einer Browser-Löschrichtlinie betroffen, die [!DNL FPID] jedoch nicht, wird die [!DNL FPID] beim nächsten Besuch zur primären Kennung und wird zum Seed der [!DNL ECID] bei jedem nachfolgenden Besuch verwendet.
+
+### Einstellen des Ablaufs für das Cookie {#set-expiration}
+
+Das Setzen des Ablaufs eines Cookies sollte bei der Implementierung der [!DNL FPID] sorgfältig berücksichtigt werden. Bei der Entscheidung sollten Sie die Länder oder Regionen berücksichtigen, in denen Ihre Organisation tätig ist, sowie die Gesetze und Richtlinien in jeder dieser Regionen.
+
+Im Rahmen dieser Entscheidung sollten Sie möglicherweise eine unternehmensweite Cookie-Setzungsrichtlinie oder eine Richtlinie einführen, die für die Benutzer in jedem Gebietsschema, in dem Sie tätig sind, variiert.
+
+Unabhängig von der Einstellung, die Sie für den anfänglichen Ablauf eines Cookies auswählen, müssen Sie sicherstellen, dass Sie eine Logik einschließen, die den Ablauf des Cookies jedes Mal verlängert, wenn eine neue Website besucht wird.
 
 ## Auswirkungen von Cookie-Flags {#cookie-flag-impact}
 
-Es gibt verschiedene Cookie-Flags, die sich auf die Behandlung von Cookies in verschiedenen Browsern auswirken:
+Es gibt verschiedene Cookie-Flags, die sich darauf auswirken, wie Cookies in verschiedenen Browsern behandelt werden:
 
 * [`HTTPOnly`](#http-only)
-* [`Secure`](#secure)
+* [`Sicher`](#secure)
 * [`SameSite`](#same-site)
 
 ### `HTTPOnly` {#http-only}
 
-Auf Cookies, die mit dem Flag `HTTPOnly` gesetzt wurden, kann nicht mithilfe clientseitiger Skripte zugegriffen werden. Wenn Sie beim Festlegen von [!DNL FPID] eine `HTTPOnly` -Markierung setzen, müssen Sie also eine serverseitige Skriptsprache verwenden, um den Cookie-Wert zur Aufnahme in `identityMap` zu lesen.
+Auf Cookies, die mit dem `HTTPOnly`-Flag gesetzt werden, kann nicht über Client-seitige Skripte zugegriffen werden. Wenn Sie also beim Festlegen der [!DNL FPID] ein `HTTPOnly`-Flag festlegen, müssen Sie eine Server-seitige Skriptsprache verwenden, um den Cookie-Wert zur Aufnahme in die `identityMap` zu lesen.
 
-Wenn Sie sich dafür entscheiden, dass das Edge Network den Wert des [!DNL FPID] -Cookies liest, stellt das Setzen des `HTTPOnly` -Flags sicher, dass der Wert von keinem clientseitigen Skript aufgerufen wird, jedoch keine negativen Auswirkungen auf die Fähigkeit des Edge Networks, das Cookie zu lesen.
+Wenn Sie möchten, dass das Edge Network den Wert des [!DNL FPID] Cookies liest, wird durch das Setzen des `HTTPOnly`-Flags sichergestellt, dass Client-seitige Skripte nicht auf den Wert zugreifen können, jedoch keine negativen Auswirkungen auf die Fähigkeit des Edge Networks haben, das Cookie zu lesen.
 
 >[!NOTE]
 >
->Die Verwendung des Flags `HTTPOnly` hat keine Auswirkungen auf die Cookie-Richtlinien, die die Lebensdauer von Cookies einschränken können. Sie sollten dies jedoch dennoch berücksichtigen, während Sie den Wert von [!DNL FPID] festlegen und lesen.
+>Die Verwendung des `HTTPOnly`-Flags hat keine Auswirkungen auf die Cookie-Richtlinien, die die Cookie-Lebensdauer einschränken können. Sie sollten dies jedoch berücksichtigen, wenn Sie den Wert der [!DNL FPID] festlegen und lesen.
 
 ### `Secure` {#secure}
 
-Mit dem Attribut `Secure` festgelegte Cookies werden nur mit einer verschlüsselten Anfrage über das Protokoll [!DNL HTTPS] an den Server gesendet. Die Verwendung dieses Flag kann dazu beitragen, sicherzustellen, dass man-in-the-Middle-Angreifer nicht einfach auf den Wert des Cookies zugreifen können. Wenn möglich, ist es immer empfehlenswert, das `Secure` -Flag festzulegen.
+Cookies, die mit dem `Secure`-Attribut gesetzt werden, werden nur mit einer verschlüsselten Anfrage über das [!DNL HTTPS]-Protokoll an den Server gesendet. Die Verwendung dieser Markierung kann sicherstellen, dass für Man-in-the-Middle-Angreifer kein einfacher Zugriff auf den Wert des Cookies möglich ist. Wenn möglich, ist es immer eine gute Idee, die `Secure` Flag zu setzen.
 
 ### `SameSite` {#same-site}
 
-Mit dem Attribut `SameSite` können Server bestimmen, ob Cookies mit Site-übergreifenden Anforderungen gesendet werden. Das -Attribut bietet einen gewissen Schutz vor Site-übergreifenden Fälschungsangriffen. Es gibt drei mögliche Werte: `Strict`, `Lax` und `None`. Wenden Sie sich an Ihr internes Team, um zu bestimmen, welche Einstellung für Ihr Unternehmen geeignet ist.
+Mit dem Attribut `SameSite` können Server bestimmen, ob Cookies mit Site-übergreifenden Anfragen gesendet werden. Das -Attribut bietet einen gewissen Schutz vor Cross-Site-Forgery-Angriffen. Es gibt drei mögliche Werte: `Strict`, `Lax` und `None`. Besprechen Sie mit Ihrem internen Team, welche Einstellung für Ihr Unternehmen am besten geeignet ist.
 
-Wenn kein `SameSite` -Attribut angegeben ist, ist die Standardeinstellung für einige Browser jetzt `SameSite=Lax`.
+Wenn kein `SameSite`-Attribut angegeben ist, ist die Standardeinstellung für einige Browser jetzt `SameSite=Lax`.
 
 ## Verwenden von FPIDs in `identityMap` {#identityMap}
 
-Nachfolgend finden Sie ein Beispiel dafür, wie Sie einen [!DNL FPID] im `identityMap` festlegen:
+Im Folgenden finden Sie ein Beispiel dafür, wie Sie ein [!DNL FPID] im `identityMap` festlegen:
 
 ```json
 {
@@ -144,7 +144,7 @@ Nachfolgend finden Sie ein Beispiel dafür, wie Sie einen [!DNL FPID] im `identi
 }
 ```
 
-Wie bei anderen Identitätstypen können Sie die [!DNL FPID] mit anderen Identitäten in `identityMap` einbeziehen. Im Folgenden finden Sie ein Beispiel für die [!DNL FPID], die mit einem authentifizierten [!DNL CRM ID] enthalten ist:
+Wie bei anderen Identitätstypen können Sie die [!DNL FPID] mit anderen Identitäten in `identityMap` einbeziehen. Im Folgenden finden Sie ein Beispiel für die [!DNL FPID], die in einem authentifizierten [!DNL CRM ID] enthalten sind:
 
 ```json
 {
@@ -167,7 +167,7 @@ Wie bei anderen Identitätstypen können Sie die [!DNL FPID] mit anderen Identit
 }
 ```
 
-Wenn der [!DNL FPID] in einem Cookie enthalten ist, das vom Edge Network gelesen wird, wenn die Erstanbieter-Datenerfassung aktiviert ist, sollten Sie nur den authentifizierten [!DNL CRM ID] erfassen:
+Wenn die [!DNL FPID] in einem Cookie enthalten ist, das vom Edge Network gelesen wird, wenn die Erstanbieter-Datenerfassung aktiviert ist, sollten Sie nur die authentifizierten [!DNL CRM ID] erfassen:
 
 ```json
 {
@@ -183,7 +183,7 @@ Wenn der [!DNL FPID] in einem Cookie enthalten ist, das vom Edge Network gelesen
 }
 ```
 
-Die folgende `identityMap` würde zu einer Fehlerantwort des Edge Networks führen, da die `primary` -Anzeige für die [!DNL FPID] fehlt. Mindestens eine der in `identityMap` vorhandenen IDs muss als `primary` markiert sein.
+Das folgende `identityMap` würde zu einer Fehlerantwort des Edge Networks führen, da es nicht den `primary` für die [!DNL FPID] enthält. Mindestens eine der in `identityMap` vorhandenen IDs muss als `primary` markiert sein.
 
 ```json
 {
@@ -204,7 +204,7 @@ Die folgende `identityMap` würde zu einer Fehlerantwort des Edge Networks führ
 }
 ```
 
-Die vom Edge Network zurückgegebene Fehlerantwort ähnelt in diesem Fall der folgenden:
+Die vom Edge Network zurückgegebene Fehlerantwort würde in diesem Fall der folgenden ähneln:
 
 ```json
 {
@@ -220,46 +220,46 @@ Die vom Edge Network zurückgegebene Fehlerantwort ähnelt in diesem Fall der fo
 }
 ```
 
-## Festlegen einer FPID in Ihrer eigenen Domäne {#setting-fpid-domain}
+## Festlegen einer FPID in Ihrer eigenen Domain {#setting-fpid-domain}
 
-Zusätzlich zum Festlegen von [!DNL FPID] in der Identitätszuordnung können Sie das [!DNL FPID] -Cookie in Ihrer eigenen Domäne setzen, wenn Sie eine Erstanbieter-Datenerfassung [!DNL CNAME] konfiguriert haben.
+Sie können nicht nur den [!DNL FPID] in der Identitätszuordnung festlegen, sondern auch das [!DNL FPID]-Cookie in Ihrer eigenen Domain, wenn Sie eine Erstanbieter-Datenerfassung konfiguriert [!DNL CNAME].
 
-Wenn die Erstanbieter-Datenerfassung mit dem Wert &quot;[!DNL CNAME]&quot;aktiviert wird, werden alle Cookies für Ihre Domäne auf Anforderungen gesendet, die an den Datenerfassungsendpunkt gesendet werden.
+Wenn die Erstanbieter-Datenerfassung mithilfe eines [!DNL CNAME] aktiviert ist, werden alle Cookies für Ihre Domain bei Anfragen an den Datenerfassungsendpunkt gesendet.
 
-Alle Cookies, die für die Datenerfassung in Adobe nicht relevant sind, werden gelöscht. Für [!DNL FPID] können Sie den Namen des [!DNL FPID] -Cookies in der Datastream-Konfiguration angeben. Wenn Sie dies tun, liest das Edge Network den Inhalt des Cookies [!DNL FPID], anstatt nach dem Wert [!DNL FPID] in der Identitätszuordnung zu suchen.
+Alle Cookies, die für die Datenerfassung der Adobe nicht relevant sind, werden gelöscht. Sie können [!DNL FPID] den Namen des [!DNL FPID]-Cookies in der Datenstromkonfiguration angeben. In diesem Fall liest das Edge Network den Inhalt des [!DNL FPID]-Cookies, anstatt nach dem [!DNL FPID] in der Identitätszuordnung zu suchen.
 
-Um diese Funktion verwenden zu können, müssen Sie die [!DNL FPID] auf der obersten Ebene Ihrer Domäne und nicht auf eine bestimmte Subdomäne festlegen. Wenn Sie ihn für eine Subdomäne festlegen, wird der Cookie-Wert nicht an das Edge Network gesendet und die [!DNL FPID] -Lösung funktioniert nicht wie gewünscht.
+Um diese Funktion verwenden zu können, müssen Sie die [!DNL FPID] auf der obersten Ebene Ihrer Domain anstatt einer bestimmten Subdomain festlegen. Wenn Sie ihn für eine Subdomain festlegen, wird der Cookie-Wert nicht an das Edge Network gesendet und die [!DNL FPID] Lösung funktioniert nicht wie beabsichtigt.
 
 ## ID-Hierarchie {#id-hierarchy}
 
-Wenn sowohl [!DNL ECID] als auch [!DNL FPID] vorhanden sind, wird die [!DNL ECID] bei der Identifizierung des Benutzers priorisiert. Dadurch wird sichergestellt, dass ein vorhandener [!DNL ECID]-Wert im Browser-Cookie-Store weiterhin die primäre Kennung bleibt und die vorhandenen Besucherzahlen keine Auswirkungen haben. Für bestehende Benutzer wird der [!DNL FPID] erst dann zur primären Identität, wenn der [!DNL ECID] abläuft oder infolge einer Browserrichtlinie oder eines manuellen Prozesses gelöscht wird.
+Wenn sowohl ein [!DNL ECID] als auch ein [!DNL FPID] vorhanden sind, wird der [!DNL ECID] bei der Identifizierung des Benutzers priorisiert. Dadurch wird sichergestellt, dass eine vorhandene [!DNL ECID] im Browser-Cookie-Speicher vorhanden ist, die primäre Kennung bleibt und die Anzahl vorhandener Besucher nicht beeinträchtigt wird. Für bestehende Benutzer wird die [!DNL FPID] erst dann zur primären Identität, wenn die [!DNL ECID] abläuft oder als Ergebnis einer Browser-Richtlinie oder eines manuellen Prozesses gelöscht wird.
 
 Identitäten werden in der folgenden Reihenfolge priorisiert:
 
-1. [!DNL ECID] enthalten in der `identityMap`
-1. [!DNL ECID] in einem Cookie gespeichert
-1. [!DNL FPID] enthalten in der `identityMap`
-1. [!DNL FPID] in einem Cookie gespeichert
+1. In der `identityMap` enthaltene [!DNL ECID]
+1. In einem Cookie gespeicherte [!DNL ECID]
+1. In der `identityMap` enthaltene [!DNL FPID]
+1. In einem Cookie gespeicherte [!DNL FPID]
 
-## Migration zu Erstanbieter-Geräte-IDs {#migrating-to-fpid}
+## Migrieren zu First-Party-Geräte-IDs {#migrating-to-fpid}
 
-Wenn Sie von einer früheren Implementierung zu Erstanbieter-Geräte-IDs migrieren, ist es möglicherweise schwierig, sich vorzustellen, wie die Transition auf einer niedrigen Ebene aussehen könnte.
+Wenn Sie von einer früheren Implementierung zu Erstanbieter-Geräte-IDs migrieren, kann es schwierig sein, sich ein Bild davon zu machen, wie die Transition auf niedriger Ebene aussehen könnte.
 
-Zur Veranschaulichung dieses Vorgangs sollten Sie sich ein Szenario ansehen, an dem ein Kunde beteiligt ist, der Ihre Site bereits besucht hat, und welche Auswirkungen eine Migration von [!DNL FPID] auf die Identifizierung dieses Kunden in Adobe-Lösungen haben würde.
+Zur Veranschaulichung dieses Prozesses sollten Sie sich ein Szenario ansehen, in dem ein Kunde involviert ist, der bereits Ihre Site besucht hat, und welche Auswirkungen eine [!DNL FPID] auf die Art und Weise hätte, wie dieser Kunde in Adobe-Lösungen identifiziert wird.
 
-![Diagramm, das zeigt, wie die ID-Werte eines Kunden zwischen Besuchen nach der Migration zu FPIDs aktualisiert werden ](../assets/identity/tracking/visits.png)
+![Diagramm, das zeigt, wie die ID-Werte eines Kunden zwischen Besuchen nach der Migration zu FPIDs aktualisiert werden](../assets/identity/tracking/visits.png)
 
 >[!IMPORTANT]
 >
->Das `ECID` -Cookie wird immer priorisiert gegenüber dem `FPID`.
+>Das `ECID`-Cookie hat immer Vorrang vor dem `FPID`.
 
 | Besuch | Beschreibung |
 | --- | --- |
-| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID] -Cookies begonnen. Der im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) enthaltene [!DNL ECID] ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
-| Zweiter Besuch | Der Rollout der [!DNL FPID] -Lösung wurde gestartet. Die vorhandene [!DNL ECID] ist weiterhin vorhanden und bleibt die primäre Kennung für die Besucheridentifizierung. |
-| Dritter Besuch | Zwischen dem zweiten und dritten Besuch ist genügend Zeit vergangen, um die [!DNL ECID] aufgrund der Browserrichtlinie zu löschen. Da die [!DNL FPID] jedoch mit einem [!DNL DNS] [!DNL A] -Datensatz festgelegt wurde, bleibt der [!DNL FPID] erhalten. Die [!DNL FPID] wird jetzt als primäre ID betrachtet und zum Testen der [!DNL ECID] verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird nun als neuer Besucher in den Adobe Experience Platform- und Experience Cloud-Lösungen betrachtet. |
-| Vierter Besuch | Zwischen dem dritten und vierten Besuch ist genügend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browserrichtlinie zu löschen. Wie beim vorherigen Besuch bleibt der [!DNL FPID] aufgrund der Art und Weise, wie er festgelegt wurde. Diesmal wird derselbe [!DNL ECID] wie beim vorherigen Besuch generiert. Der Benutzer wird in den Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer wie beim vorherigen Besuch gesehen. |
-| Fünfter Besuch | Zwischen dem vierten und fünften Besuch hat der Endbenutzer alle Cookies in seinem Browser gelöscht. Ein neuer [!DNL FPID] wird generiert und zum Testen der Erstellung eines neuen [!DNL ECID] verwendet. Der Benutzer wird nun als neuer Besucher in den Adobe Experience Platform- und Experience Cloud-Lösungen betrachtet. |
+| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID]-Cookies begonnen. Die im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) enthaltene [!DNL ECID] ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
+| Zweiter Besuch | Der Rollout der [!DNL FPID] Lösung hat begonnen. Die vorhandene [!DNL ECID] ist noch vorhanden und bleibt die primäre Kennung zur Besucheridentifizierung. |
+| Dritter Besuch | Zwischen dem zweiten und dem dritten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Da die [!DNL FPID] jedoch mit einem [!DNL DNS] [!DNL A]-Eintrag festgelegt wurde, bleibt die [!DNL FPID] bestehen. Die [!DNL FPID] wird jetzt als primäre ID betrachtet und zum Testen der [!DNL ECID] verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird jetzt als neuer Besucher in den Lösungen Adobe Experience Platform und Experience Cloud betrachtet. |
+| Vierter Besuch | Zwischen dem dritten und vierten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Wie beim vorherigen Besuch bleibt die [!DNL FPID] aufgrund der Art und Weise, wie sie festgelegt wurde, bestehen. Diesmal wird derselbe [!DNL ECID] wie beim vorherigen Besuch generiert. Der Benutzer wird in allen Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer wie beim vorherigen Besuch angezeigt. |
+| Fünfter Besuch | Zwischen dem vierten und fünften Besuch hat der Endbenutzer alle Cookies in seinem Browser gelöscht. Ein neues [!DNL FPID] wird generiert und verwendet, um die Erstellung eines neuen [!DNL ECID] zu beschleunigen. Der Benutzer wird jetzt als neuer Besucher in den Lösungen Adobe Experience Platform und Experience Cloud betrachtet. |
 
 {style="table-layout:auto"}
 
@@ -267,18 +267,18 @@ Zur Veranschaulichung dieses Vorgangs sollten Sie sich ein Szenario ansehen, an 
 
 Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Erstanbieter-Geräte-IDs.
 
-### Inwiefern unterscheidet sich das Senden einer ID vom bloßen Generieren einer ID?
+### Inwiefern unterscheidet sich das Seeding einer ID vom einfachen Generieren einer ID?
 
-Das Sitzungskonzept ist insofern einzigartig, als die an Adobe Experience Cloud übergebenen [!DNL FPID] mithilfe eines deterministischen Algorithmus in eine [!DNL ECID] umgewandelt werden. Jedes Mal, wenn derselbe [!DNL FPID] an das Edge Network gesendet wird, wird derselbe [!DNL ECID] von den [!DNL FPID] sediert.
+Das Seeding-Konzept ist insofern einzigartig, als die an Adobe Experience Cloud übergebene [!DNL FPID] mithilfe eines deterministischen Algorithmus in eine [!DNL ECID] konvertiert wird. Jedes Mal, wenn derselbe [!DNL FPID] an das Edge Network gesendet wird, wird derselbe [!DNL ECID] vom [!DNL FPID] gesendet.
 
-### Wann sollte die Erstanbieter-Geräte-ID generiert werden?
+### Wann soll die First-Party-Geräte-ID generiert werden?
 
-Um die potenzielle Besucherinflation zu reduzieren, sollte der [!DNL FPID] generiert werden, bevor Sie Ihre erste Anfrage mit dem Web SDK stellen. Wenn Sie dies jedoch nicht tun können, wird für diesen Benutzer weiterhin ein [!DNL ECID] generiert und als primäre Kennung verwendet. Die [!DNL FPID], die generiert wurde, wird erst dann zur primären Kennung, wenn die [!DNL ECID] nicht mehr vorhanden ist.
+Um die mögliche Besucherinflation zu reduzieren, sollte die [!DNL FPID] vor der ersten Anfrage mit dem Web SDK generiert werden. Wenn Sie dies nicht tun können, wird dennoch eine [!DNL ECID] für diesen Benutzer generiert und als primäre Kennung verwendet. Die generierte [!DNL FPID] wird erst dann zur primären Kennung, wenn die [!DNL ECID] nicht mehr vorhanden ist.
 
-### Welche Datenerfassungsmethoden unterstützen Erstanbieter-Geräte-IDs?
+### Welche Datenerfassungsmethoden unterstützen First-Party-Geräte-IDs?
 
-Derzeit unterstützt nur das Web SDK Erstanbieter-Geräte-IDs.
+Derzeit unterstützt nur Web SDK IDs von Erstanbieter-Geräten.
 
-### Werden Erstanbieter-Geräte-IDs in Platform- oder Experience Cloud-Lösungen gespeichert?
+### Werden First-Party-Geräte-IDs auf beliebigen Platform- oder Experience Cloud-Lösungen gespeichert?
 
-Sobald die [!DNL FPID] zum Testen eines [!DNL ECID] verwendet wurde, wird sie aus dem `identityMap` entfernt und durch den generierten [!DNL ECID] ersetzt. Der [!DNL FPID] wird nicht in Adobe Experience Platform- oder Experience Cloud-Lösungen gespeichert.
+Nachdem der [!DNL FPID] zum Seed eines [!DNL ECID] verwendet wurde, wird er aus dem `identityMap` gelöscht und durch den generierten [!DNL ECID] ersetzt. Das [!DNL FPID] wird in keiner Adobe Experience Platform- oder Experience Cloud-Lösung gespeichert.

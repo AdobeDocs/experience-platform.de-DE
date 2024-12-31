@@ -1,6 +1,6 @@
 ---
 title: thirdPartyCookiesEnabled
-description: Lassen Sie die Verwendung von Drittanbieter-Cookies zur Identifizierung von Besuchern zu.
+description: Zulassen der Verwendung von Drittanbieter-Cookies zur Identifizierung von Besuchern.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
 source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
@@ -12,26 +12,26 @@ ht-degree: 0%
 
 # `thirdPartyCookiesEnabled`
 
-Die Eigenschaft `thirdPartyCookiesEnabled` ist ein boolescher Wert, der bestimmt, ob das Web SDK Cookies in einem Drittanbieterkontext setzt. Die Aktivierung dieser Option ist nützlich, wenn Sie Besucher zwischen Subdomänen oder Domänen identifizieren möchten, deren Inhaber Ihre Organisation ist. Viele moderne Browser beschränken jedoch die Einstellung und Gültigkeit von Drittanbieter-Cookies.
+Die `thirdPartyCookiesEnabled`-Eigenschaft ist ein boolescher Wert, der bestimmt, ob die Web-SDK Cookies in einem Drittanbieterkontext setzt. Die Aktivierung dieser Option ist nützlich, wenn Sie Besucher zwischen Subdomains oder Domains identifizieren möchten, deren Inhaber Ihr Unternehmen ist. Viele moderne Browser beschränken jedoch das Setzen und Ablaufen von Drittanbieter-Cookies.
 
-Die `thirdPartyCookiesEnabled` -Eigenschaft steuert auch, ob bei [`getIdentity`](../getidentity.md) -Aufrufen ein [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) angefordert werden kann.
+Die `thirdPartyCookiesEnabled`-Eigenschaft steuert auch, ob eine [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) für [`getIdentity`](../getidentity.md)-Aufrufe angefordert werden kann.
 
-Wenn diese Option aktiviert ist, verwendet das Web SDK Adobe Audience Manager zur Identifizierung eines Besuchers. Wenn diese Option deaktiviert ist, ist der Aufruf an Audience Manager deaktiviert. Weitere Informationen finden Sie unter [Aufrufe an die Domäne &quot;demdex.net&quot;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=de) im Audience Manager-Benutzerhandbuch.
+Wenn diese Option aktiviert ist, verwendet die Web-SDK Adobe Audience Manager, um einen Besucher zu identifizieren. Wenn diese Option deaktiviert ist, ist der Aufruf von Audience Manager deaktiviert. Weitere Informationen finden [ unter „Aufrufe an die ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=de)-Domain“ im Benutzerhandbuch für Audience Manager.
 
-## Drittanbieter-Cookies mithilfe der Web SDK-Tag-Erweiterung aktivieren
+## Aktivieren von Drittanbieter-Cookies mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Aktivieren Sie das Kontrollkästchen **[!UICONTROL Drittanbieter-Cookies verwenden]** bei der Konfiguration der Tag-Erweiterung [.](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)
+Aktivieren Sie **[!UICONTROL Kontrollkästchen „Third-Party-Cookies verwenden]** beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Identität] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Drittanbieter-Cookies verwenden]** .
-1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Identität] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Verwendung von Drittanbieter-Cookies]**.
+1. Klicken Sie **[!UICONTROL Speichern]** und veröffentlichen Sie Ihre Änderungen.
 
-## Drittanbieter-Cookies mithilfe der Web SDK JavaScript-Bibliothek aktivieren
+## Aktivieren von Drittanbieter-Cookies mithilfe der Web SDK JavaScript-Bibliothek
 
-Legen Sie den booleschen Wert `thirdPartyCookiesEnabled` fest, wenn Sie den Befehl `configure` ausführen. Wenn Sie diese Eigenschaft beim Konfigurieren des Web SDK weglassen, wird standardmäßig `true` verwendet. Setzen Sie diesen Wert auf &quot;`false`&quot;, wenn Sie nicht möchten, dass das Web SDK Audience Manager zur Besucheridentifizierung verwendet.
+Legen Sie beim Ausführen des `configure`-Befehls den booleschen Wert `thirdPartyCookiesEnabled` fest. Wenn Sie diese Eigenschaft beim Konfigurieren der Web-SDK auslassen, wird sie standardmäßig auf `true` gesetzt. Legen Sie diesen Wert auf `false` fest, wenn Sie nicht möchten, dass die Web-SDK Audience Manager zur Identifizierung von Besuchern verwendet.
 
 ```js
 alloy("configure", {

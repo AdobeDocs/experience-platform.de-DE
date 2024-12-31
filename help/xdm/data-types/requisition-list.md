@@ -1,6 +1,6 @@
 ---
-title: Datentyp "Anforderungsliste"
-description: Erfahren Sie mehr über den Datentyp "Erlebnis-Datenmodell der Anforderungsliste"(XDM).
+title: Datentyp der Anforderungsliste
+description: Erfahren Sie mehr über den Datentyp „Anforderungsliste - Experience-Datenmodell (XDM)“.
 exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 7%
 
 ---
 
-# Datentyp [!UICONTROL Anforderungsliste]
+# [!UICONTROL Anforderungsliste] Datentyp
 
-[!UICONTROL Anforderungsliste] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine kuratierte Sammlung von Artikeln für die Beschaffung oder den Kauf beschreibt. Verwenden Sie den Datentyp [!UICONTROL Anforderungsliste] , um Anforderungslisten zu identifizieren und zu beschreiben.
+[!UICONTROL Anforderungsliste] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine kuratierte Sammlung von Artikeln für die Beschaffung oder den Kauf beschreibt. Verwenden Sie [!UICONTROL  Datentyp „Anforderungsliste] zur Identifizierung und Beschreibung von Anforderungslisten.
 
-![Ein Diagramm des Datentyps [!UICONTROL Anforderungsliste].](../images/data-types/requisition-list.png)
+![Diagramm des Datentyps [!UICONTROL Anforderungsliste].](../images/data-types/requisition-list.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |---------------------------|-------------------|-----------|--------------------------------------------------|

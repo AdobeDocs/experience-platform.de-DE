@@ -1,6 +1,6 @@
 ---
-title: Datentyp Kategorie
-description: Erfahren Sie mehr über den Datentyp "Category data Experience Data Model (XDM)".
+title: Datentyp der Kategorie
+description: Erfahren Sie mehr über den Datentyp Kategoriedaten für das Experience-Datenmodell (XDM).
 exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 9%
 
 # [!UICONTROL Kategoriedaten] Datentyp
 
-[!UICONTROL Kategoriedaten] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Informationen zu einer Produktkategorie beschreibt.
+[!UICONTROL Kategoriedaten] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Kategorie eines Produkts beschreibt.
 
-![Ein Diagramm des Kategoriedatentyps.](../images/data-types/category-data.png)
+![Ein Diagramm des Datentyps „Kategorie“.](../images/data-types/category-data.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |-----------------|--------------------|-----------|------------------------------------------|
 | [!UICONTROL Kategoriekennung] | `categoryID` | Zeichenfolge | Die Kennung für die Kategorie des Produkts. |
-| [!UICONTROL Kategoriename] | `categoryName` | Zeichenfolge | Der Name der Produktkategorie. |
-| [!UICONTROL Kategoriepfad] | `categoryPath` | Zeichenfolge | Der Pfad der Produktkategorie. |
+| [!UICONTROL Kategoriename] | `categoryName` | Zeichenfolge | Der Name der Kategorie des Produkts. |
+| [!UICONTROL Kategoriepfad] | `categoryPath` | Zeichenfolge | Der Pfad der Kategorie des Produkts. |
 
 {style="table-layout:auto"}
 

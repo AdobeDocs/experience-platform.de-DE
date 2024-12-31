@@ -45,7 +45,7 @@ Beim erneuten Veröffentlichen einer älteren Bibliothek passiert Folgendes:
 
 * Die Art und Weise, wie in Entwicklungs- und Staging-Umgebungen vorgelagerte Vorgänge berechnet werden, ändert sich nicht.
 
-Wenn Sie einen Rollback durchführen, weil es ein Problem mit einer Regel gibt, achten Sie auf die jeweiligen Gegebenheiten. Die Regelrevision, die mittlerweile in der Produktionsumgebung vorhanden ist, könnte z. B. drei Revisionen alt sein. Wenn Sie diese Regel in der Benutzeroberfläche anzeigen, um sie zu beheben, spiegelt sie weiterhin die zuletzt gespeicherten Änderungen wider und nicht die derzeit in Produktion befindlichen Änderungen.
+Wenn Sie einen Rollback durchführen, weil es ein Problem mit einer Regel gibt, achten Sie auf die jeweiligen Gegebenheiten. Die Regelrevision, die mittlerweile in der Produktionsumgebung vorhanden ist, könnte z. B. drei Revisionen alt sein. Wenn Sie diese Regel in der Benutzeroberfläche anzeigen, um das Problem zu beheben, wird sie weiterhin mit den zuletzt gespeicherten Änderungen angezeigt und nicht mit den Änderungen, die sich derzeit in der Produktion befinden.
 
 Deshalb informiert Platform Sie darüber, dass eine Eigenschaft erneut veröffentlicht wurde, um Sie daran zu erinnern, dass das, was Sie in der Datenerfassungs-Benutzeroberfläche sehen, eine frühere Version ist. Diese Benachrichtigung kann geschlossen werden und wird einmal pro Browser-Sitzung angezeigt, wenn Sie die Eigenschaft zum ersten Mal anzeigen.
 

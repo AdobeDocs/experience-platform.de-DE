@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Schemadesign; Feldergruppe; Feldergruppe; Personen; Personendetails; Profilpersonendetails; Person
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;Person;Personendetails;Profil;Person;
 solution: Experience Platform
-title: Schemafeldgruppe "Demografische Details"
-description: Erfahren Sie mehr über die Schemafeldergruppe Demografische Details .
+title: Schemafeldgruppe für demografische Details
+description: Erfahren Sie mehr über die Schemafeldgruppe „Demografische Details“.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -18,20 +18,20 @@ ht-degree: 40%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Demografische Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe stellt ein `person` -Objekt auf der Stammebene bereit, dessen Unterfelder Informationen über eine Person beschreiben.
+[!UICONTROL Demografische Details] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md). Die Feldergruppe stellt ein `person`-Objekt auf Stammebene bereit, dessen Unterfelder Informationen zu einer einzelnen Person beschreiben.
 
 ![](../../images/field-groups/demographic-details.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `person.name` | [Name der Person](../../data-types/person-name.md) | Ein Objekt, dessen Unterfelder verschiedene Elemente eines Personennamens beschreiben. |
-| `person.birthDate` | Datum | Das vollständige Datum, an dem eine Person geboren wurde, in Form eines Zeitstempels nach ISO 8601. |
-| `person.birthDayAndMonth` | Zeichenfolge | Der Tag und Monat, an dem eine Person geboren wurde, im Format MM-TT. Dieses Feld sollte verwendet werden, wenn der Geburtstag und -monat bekannt sind, nicht aber das Jahr. |
+| `person.name` | [Personenname](../../data-types/person-name.md) | Ein Objekt, dessen Unterfelder verschiedene Elemente des Namens einer Person beschreiben. |
+| `person.birthDate` | Datum | Das vollständige Geburtsdatum einer Person in Form eines ISO 8601-Zeitstempels. |
+| `person.birthDayAndMonth` | String | Der Tag und Monat, an dem eine Person geboren wurde, im Format MM-TT. Dieses Feld sollte verwendet werden, wenn der Geburtstag und -monat bekannt sind, nicht aber das Jahr. |
 | `person.birthYear` | Ganzzahl | Das Jahr, in dem eine Person geboren wurde, einschließlich des Jahrhunderts (wie 1989). Dieses Feld sollte verwendet werden, wenn nur das Alter der Person bekannt ist, nicht das vollständige Geburtsdatum. |
-| `person.gender` | Zeichenfolge | Die Geschlechtsidentität der Person. |
-| `person.martialStatus` | Zeichenfolge | Beschreibt die Beziehung einer Person zu einer bedeutenden anderen Person. |
-| `person.nationality` | Zeichenfolge | Die rechtliche Beziehung zwischen einer Person und ihrem Land, dargestellt mit dem ISO 3166-1 Alpha-2-Code. |
-| `person.taxId` | Zeichenfolge | Die Steuer-/Steuerkennung der Person, wie die TIN in den USA oder die CIF/NIF in Spanien. |
+| `person.gender` | String | Die Geschlechtsidentität der Person. |
+| `person.martialStatus` | String | Beschreibt die Beziehung einer Person zu einer bedeutenden anderen Person. |
+| `person.nationality` | String | Die rechtliche Beziehung zwischen einer Person und ihrem Land, dargestellt mit dem ISO 3166-1 Alpha-2-Code. |
+| `person.taxId` | String | Die Steuernummer der Person, z. B. die TIN in den USA oder die CIF/NIF in Spanien. |
 
 {style="table-layout:auto"}
 

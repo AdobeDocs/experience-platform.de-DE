@@ -1,7 +1,7 @@
 ---
-title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
-keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
+title: Rendern von personalisierten Inhalten mit der Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Web SDK personalisierte Inhalte rendern können.
+keywords: Personalisierung;renderDecisions;sendEvent;decisionScopes;Vorschläge;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
@@ -12,15 +12,15 @@ ht-degree: 2%
 
 # Rendern von personalisierten Inhalten
 
-Das Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Adobe-Personalisierungslösungen, einschließlich [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
+Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Adobe-Personalisierungslösungen, einschließlich [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
 
-Darüber hinaus ermöglicht das Web SDK Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele wie [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und die [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren von Experience Platform für die Personalisierung von Seiten mit und nächsten Seiten finden Sie im [dedizierten Handbuch](../../destinations/ui/activate-edge-personalization-destinations.md).
+Darüber hinaus ermöglicht der Web-SDK die Personalisierung derselben Seite und der nächsten Seite über Adobe Experience Platform-Personalisierungsziele wie [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und die [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren von Experience Platform für die Personalisierung der gleichen und der nächsten Seite finden Sie im [Handbuch zu diesem Thema](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Inhalte, die innerhalb von Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und der [Web-Campaign-Benutzeroberfläche](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) von Adobe Journey Optimizer erstellt wurden, können vom SDK automatisch abgerufen und wiedergegeben werden. Inhalte, die innerhalb von Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-basierter Experience-Kanal](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer Decisioning erstellt wurden, können vom SDK nicht automatisch gerendert werden. Stattdessen müssen Sie diesen Inhalt mit dem SDK anfordern und dann den Inhalt manuell selbst rendern.
+Inhalte, die in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und der [Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), können von SDK automatisch abgerufen und gerendert werden. Inhalte, die in Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-Based Experience Channel](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer decisioning erstellt wurden, können nicht automatisch von SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit der SDK anfordern und dann den Inhalt manuell selbst rendern.
 
-## Automatisches Rendern von Inhalten {#automatic}
+## Inhalt automatisch rendern {#automatic}
 
-Beim Senden von Ereignissen an den Server können Sie die `renderDecisions`-Option auf `true` festlegen. Dies zwingt das SDK dazu, personalisierte Inhalte automatisch zu rendern, die für das automatische Rendering geeignet sind.
+Beim Senden von Ereignissen an den Server können Sie die Option `renderDecisions` auf `true` setzen. Dadurch wird SDK gezwungen, automatisch alle personalisierten Inhalte zu rendern, die für das automatische Rendering geeignet sind.
 
 ```javascript
 alloy("sendEvent", {
@@ -38,11 +38,11 @@ alloy("sendEvent", {
 });
 ```
 
-Das Rendern personalisierter Inhalte erfolgt asynchron. Daher sollten Sie keine Annahmen darüber treffen, wann ein bestimmtes Inhaltselement das Rendering abgeschlossen hat.
+Das Rendern personalisierter Inhalte ist asynchron, sodass Sie nicht davon ausgehen sollten, wann ein bestimmtes Inhaltselement das Rendering abgeschlossen hat.
 
-## Manuelles Rendern von Inhalten {#manual}
+## Manuelles Rendern von Inhalt {#manual}
 
-Um auf Personalisierungsinhalte zuzugreifen, können Sie eine Callback-Funktion bereitstellen, die aufgerufen wird, nachdem das SDK eine erfolgreiche Antwort vom Server erhalten hat. Ihr Rückruf wird mit einem `result` -Objekt bereitgestellt, das eine `propositions` -Eigenschaft enthalten kann, die alle zurückgegebenen Personalisierungsinhalte enthält. Im Folgenden finden Sie ein Beispiel dafür, wie Sie beim Senden eines Ereignisses eine Rückruffunktion bereitstellen.
+Für den Zugriff auf Personalisierungsinhalte können Sie eine Rückruffunktion bereitstellen, die aufgerufen wird, nachdem die SDK eine erfolgreiche Antwort vom Server erhalten hat. Ihr Callback wird als `result`-Objekt bereitgestellt, das eine `propositions`-Eigenschaft enthalten kann, die alle zurückgegebenen Personalisierungsinhalte enthält. Nachfolgend finden Sie ein Beispiel dafür, wie Sie beim Senden eines Ereignisses eine Rückruffunktion bereitstellen würden.
 
 ```javascript
 alloy("sendEvent", {
@@ -54,9 +54,9 @@ alloy("sendEvent", {
   });
 ```
 
-In diesem Beispiel ist `result.propositions`, sofern vorhanden, ein Array, das Personalisierungsvorschläge für das Ereignis enthält. Standardmäßig enthält es nur Vorschläge, die für das automatische Rendering geeignet sind.
+In diesem Beispiel ist `result.propositions`, falls vorhanden, ein Array mit Personalisierungsvorschlägen im Zusammenhang mit dem Ereignis. Standardmäßig enthält sie nur Vorschläge, die für das automatische Rendering geeignet sind.
 
-Das `propositions` -Array kann in etwa wie im folgenden Beispiel aussehen:
+Das `propositions`-Array kann in etwa wie im folgenden Beispiel aussehen:
 
 ```json
 [
@@ -103,11 +103,11 @@ Das `propositions` -Array kann in etwa wie im folgenden Beispiel aussehen:
 ]
 ```
 
-Im Beispiel wurde die Option `renderDecisions` nicht auf `true` gesetzt, als der Befehl `sendEvent` ausgeführt wurde. Daher versuchte das SDK nicht, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen dies zum manuellen Rendern bereitgestellt, wenn Sie dies möchten. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
+In diesem Beispiel wurde die `renderDecisions`-Option bei Ausführung des `sendEvent`-Befehls nicht auf `true` gesetzt, weshalb die SDK nicht versuchte, automatisch Inhalte zu rendern. Die SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für die automatische Wiedergabe infrage kommen, und hat Ihnen diese zur manuellen Wiedergabe bereitgestellt, wenn Sie dies tun möchten. Beachten Sie, dass die `renderAttempted` jedes Vorschlagsobjekts auf `false` gesetzt ist.
 
-Wenn Sie stattdessen die Option `renderDecisions` beim Senden des Ereignisses auf `true` gesetzt hätten, hätte das SDK versucht, alle Vorschläge zu rendern, die für das automatische Rendering infrage kommen (wie zuvor beschrieben). Daher würde für jedes der Vorschlagsobjekte seine Eigenschaft `renderAttempted` auf `true` gesetzt. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
+Wenn Sie stattdessen beim Senden des Ereignisses die Option `renderDecisions` auf `true` gesetzt hätten, hätte die SDK versucht, alle Vorschläge zu rendern, die für das automatische Rendern infrage kommen (wie zuvor beschrieben). Infolgedessen würde die `renderAttempted`-Eigenschaft jedes Vorschlagsobjekts auf `true` gesetzt. In diesem Fall müssten diese Vorschläge nicht manuell gerendert werden.
 
-Bislang haben wir nur Personalisierungsinhalte besprochen, die für das automatische Rendering infrage kommen (d. h. alle Inhalte, die im Visual Experience Composer von Adobe Target oder in der Web-Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt wurden). Um Personalisierungsinhalte abzurufen, die nicht für die automatische Wiedergabe geeignet sind, müssen Sie den Inhalt anfordern, indem Sie beim Senden des Ereignisses die Option `decisionScopes` ausfüllen. __ Ein Perimeter ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
+Bisher haben wir nur Personalisierungsinhalte behandelt, die für das automatische Rendering geeignet sind (d. h. alle Inhalte, die in Adobe Target Visual Experience Composer oder der Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt wurden). Um Personalisierungsinhalte abzurufen _die nicht automatisch gerendert_ können, müssen Sie den Inhalt anfordern, indem Sie die Option `decisionScopes` beim Senden des Ereignisses ausfüllen. Ein Bereich ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
 
 Siehe folgendes Beispiel:
 
@@ -122,7 +122,7 @@ alloy("sendEvent", {
   });
 ```
 
-In diesem Beispiel werden Vorschläge, die dem Umfang `salutation` oder `discount` entsprechen, zurückgegeben und in das Array `result.propositions` aufgenommen, wenn sie auf dem Server gefunden werden. Beachten Sie, dass Vorschläge, die für das automatische Rendering infrage kommen, auch weiterhin im Array `propositions` enthalten sind, unabhängig davon, wie Sie die Optionen `renderDecisions` oder `decisionScopes` konfigurieren. Das Array `propositions` würde in diesem Fall in etwa wie im folgenden Beispiel aussehen:
+Wenn in diesem Beispiel Vorschläge auf dem Server gefunden werden, die mit dem `salutation`- oder `discount` übereinstimmen, werden sie zurückgegeben und in das `result.propositions`-Array aufgenommen. Beachten Sie, dass Vorschläge, die sich für das automatische Rendering qualifizieren, weiterhin im `propositions`-Array enthalten sind, unabhängig davon, wie Sie `renderDecisions`- oder `decisionScopes` konfigurieren. Das `propositions`-Array würde in diesem Fall in etwa wie im folgenden Beispiel aussehen:
 
 ```json
 [
@@ -220,13 +220,13 @@ In diesem Beispiel werden Vorschläge, die dem Umfang `salutation` oder `discoun
 ]
 ```
 
-An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem Beispiel handelt es sich bei dem Vorschlag, der dem `discount` -Bereich entspricht, um einen HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Gehen Sie wie folgt vor, wenn Sie ein Element auf Ihrer Seite mit der Kennung `daily-special` haben und den Inhalt aus dem Vorschlag `discount` in das Element `daily-special` rendern möchten:
+An dieser Stelle können Sie den Vorschlagsinhalt nach Belieben rendern. In diesem Beispiel ist der Vorschlag, der mit dem `discount` übereinstimmt, ein HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Wenn Sie ein Element mit der ID `daily-special` auf Ihrer Seite haben und den Inhalt aus dem `discount` in das `daily-special` rendern möchten, gehen Sie wie folgt vor:
 
-1. Extrahieren Sie Vorschläge aus dem Objekt `result` .
-1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit dem Umfang &quot;`discount`&quot;.
-1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag, suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
-1. Wenn Sie ein Element mit HTML-Inhalt finden, suchen Sie das Element `daily-special` auf der Seite und ersetzen Sie dessen HTML durch den personalisierten-Inhalt.
-1. Nachdem der Inhalt wiedergegeben wurde, senden Sie ein `display` -Ereignis.
+1. Extrahieren von Vorschlägen aus dem `result`.
+1. Durchsuchen Sie jeden Vorschlag auf der Suche nach dem Vorschlag mit einem Umfang von `discount`.
+1. Wenn Sie einen Vorschlag finden, durchsuchen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das Inhalt HTML ist. (Es ist besser zu überprüfen, als anzunehmen.)
+1. Wenn Sie ein Element finden, das HTML-Inhalte enthält, suchen Sie das `daily-special` auf der Seite und ersetzen Sie die HTML durch den personalisierten Inhalt.
+1. Nachdem der Inhalt gerendert wurde, senden Sie ein `display`.
 
 Ihr Code würde wie folgt aussehen:
 
@@ -294,27 +294,27 @@ alloy("sendEvent", {
 
 >[!TIP]
 >
->Wenn Sie Adobe Target verwenden, entsprechen die Bereiche Mboxes auf dem Server, sie werden jedoch alle gleichzeitig und nicht einzeln angefordert. Die globale Mbox wird immer zurückgegeben.
+>Wenn Sie Adobe Target verwenden, entsprechen die Bereiche den Mboxes auf dem Server, mit der Ausnahme, dass sie alle gleichzeitig und nicht einzeln angefordert werden. Die globale Mbox wird immer zurückgegeben.
 
 ### Verwalten von Flackern
 
-Das SDK bietet Funktionen zum [Verwalten von Flackern](../personalization/manage-flicker.md) während des Personalisierungsprozesses.
+Die SDK bietet Funktionen [Verwalten von Flackern](../personalization/manage-flicker.md) während des Personalisierungsprozesses.
 
-## Vorschläge in Einzelseitenanwendungen rendern, ohne Metriken zu erhöhen {#applypropositions}
+## Vorschläge rendern in Single-Page Applications ohne Inkrementierung von Metriken {#applypropositions}
 
-Mit dem Befehl `applyPropositions` können Sie ein Array von Vorschlägen aus [!DNL Target] oder Adobe Journey Optimizer in Einzelseitenanwendungen rendern oder ausführen, ohne die Metriken [!DNL Analytics] und [!DNL Target] zu erhöhen. Dies erhöht die Genauigkeit des Reportings.
+Mit dem Befehl `applyPropositions` können Sie ein Vorschläge-Array aus [!DNL Target] oder Adobe Journey Optimizer in Einzelseitenanwendungen rendern oder ausführen, ohne die [!DNL Analytics]- und [!DNL Target] zu inkrementieren. Dies erhöht die Genauigkeit des Reportings.
 
 >[!IMPORTANT]
 >
->Wenn Vorschläge für den Bereich `__view__` (oder eine Weboberfläche) beim Laden der Seite gerendert wurden, wird ihre `renderAttempted` -Markierung auf `true` gesetzt. Der Befehl `applyPropositions` rendert die Vorschläge des Bereichs `__view__` (oder der Weboberfläche), die die Markierung `renderAttempted: true` aufweisen, nicht erneut.
+>Wenn Vorschläge für den `__view__` (oder eine Web-Oberfläche) beim Laden der Seite gerendert wurden, wird ihr `renderAttempted`-Flag auf `true` gesetzt. Der Befehl `applyPropositions` rendert die Vorschläge für den `__view__` (oder die Web-Oberfläche), die das `renderAttempted: true`-Flag aufweisen, nicht erneut.
 
-### Anwendungsfall 1: Wiedergeben von Vorschlägen zur Ansicht von Einzelseiten-Apps
+### Anwendungsfall 1: Rendern von Ansichtsvorschlägen für Einzelseiten-Apps
 
-Der im folgenden Beispiel beschriebene Anwendungsfall rendert die zuvor abgerufenen und gerenderten Vorschläge zur Warenkorbansicht erneut, ohne dass Anzeigebenachrichtigungen gesendet werden.
+Der im folgenden Beispiel beschriebene Anwendungsfall rendert die zuvor abgerufenen und gerenderten Warenkorbansichtsvorschläge erneut, ohne Anzeigebenachrichtigungen zu senden.
 
-Im folgenden Beispiel wird der Befehl `sendEvent` bei einer Änderung der Ansicht ausgelöst und speichert das resultierende Objekt in einer Konstante.
+Im folgenden Beispiel wird der Befehl `sendEvent` bei einer Änderung der Ansicht ausgelöst und das resultierende Objekt in einer Konstante gespeichert.
 
-Als Nächstes wird bei der Aktualisierung der Ansicht oder einer Komponente der Befehl `applyPropositions` mit den Vorschlägen des vorherigen Befehls `sendEvent` aufgerufen, um die Anzeigevorschläge erneut darzustellen.
+Wenn die Ansicht oder eine Komponente aktualisiert wird, wird als Nächstes der Befehl `applyPropositions` mit den Vorschlägen aus dem vorherigen `sendEvent` aufgerufen, um die Ansichtsvorschläge erneut zu rendern.
 
 ```js
 var cartPropositions = alloy("sendEvent", {
@@ -339,13 +339,13 @@ alloy("applyPropositions", {
 });
 ```
 
-### Anwendungsfall 2: Wiedergabevorschläge ohne Selektor
+### Anwendungsfall 2: Vorschläge rendern, die keinen Selektor haben
 
-Dieser Anwendungsfall gilt für Erlebnisse, die mit dem [!DNL Target Form-based Experience Composer] oder dem [code-basierten Experience-Kanal](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) von Adobe Journey Optimizer erstellt wurden.
+Dieser Anwendungsfall gilt für Erlebnisse, die mit dem [!DNL Target Form-based Experience Composer] oder dem ([-basierten Erlebniskanal) von Adobe Journey Optimizer ](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
-Sie müssen den Selektor, die Aktion und den Perimeter im `applyPropositions` -Aufruf angeben.
+Sie müssen den Selektor, die Aktion und den Umfang im `applyPropositions`-Aufruf angeben.
 
-Unterstützt werden `actionTypes`:
+Folgende `actionTypes` werden unterstützt:
 
 * `setHtml`
 * `replaceHtml`
@@ -404,4 +404,4 @@ alloy("sendEvent", {
 });
 ```
 
-Wenn Sie für einen Entscheidungsbereich keine Metadaten angeben, werden die zugehörigen Vorschläge nicht gerendert.
+Wenn Sie keine Metadaten für einen Entscheidungsumfang angeben, werden die zugehörigen Vorschläge nicht gerendert.

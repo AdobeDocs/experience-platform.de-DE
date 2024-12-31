@@ -1,6 +1,6 @@
 ---
 title: Umgang mit Befehlsantworten
-description: Lösen Sie mithilfe von JavaScript-Versprechen Antworten aus Befehlen.
+description: Verarbeiten Sie Antworten von Befehlen mithilfe von JavaScript-Versprechen.
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
 workflow-type: tm+mt
@@ -11,31 +11,31 @@ ht-degree: 0%
 
 # Umgang mit Befehlsantworten
 
-Einige Web SDK-Befehle können ein Objekt zurückgeben, das Daten enthält, die für Ihr Unternehmen möglicherweise nützlich sind. Sie können bei Bedarf festlegen, was mit diesen Daten geschehen soll. Befehlsantworten sind für Vorschläge und Ziele nützlich, da sie Edge Network-Daten erfordern, um effektiv zu funktionieren.
+Einige Web-SDK-Befehle können ein -Objekt mit Daten zurückgeben, die für Ihr Unternehmen möglicherweise nützlich sind. Sie können bei Bedarf auswählen, was mit diesen Daten gemacht werden soll. Befehlsantworten sind für Vorschläge und Ziele nützlich, da sie Edge Network-Daten benötigen, um effektiv zu funktionieren.
 
-Befehlsantworten verwenden JavaScript [Promises](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) und fungieren als Proxy für einen Wert, der beim Erstellen des Promises nicht bekannt ist. Sobald der Wert bekannt ist, wird das Promise mit dem Wert &quot;aufgelöst&quot;.
+Befehlsantworten verwenden JavaScript [Promises](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) als Proxy für einen Wert, der beim Erstellen des Promises nicht bekannt ist. Sobald der Wert bekannt ist, wird die Zusage mit dem Wert „aufgelöst“.
 
-## Verarbeiten von Befehlsantworten mit der Web SDK-Tag-Erweiterung
+## Verarbeiten von Befehlsantworten mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Erstellen Sie eine Regel, die das Ereignis **[!UICONTROL Ereignis zum Abschluss senden]** als Teil einer Regel abonniert.
+Erstellen Sie eine Regel, die das Ereignis **[!UICONTROL Senden abgeschlossen]** als Teil einer Regel abonniert.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen Sie unter [!UICONTROL Ereignisse] ein vorhandenes Ereignis aus oder erstellen Sie ein Ereignis.
-1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den Ereignistyp [!UICONTROL 5} auf **[!UICONTROL Ereignis-Abschluss senden]** fest.]
-1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen [!UICONTROL  unter „Ereignisse] ein vorhandenes Ereignis aus oder erstellen Sie ein Ereignis.
+1. Legen Sie das [!UICONTROL Erweiterung] Dropdown-Feld auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und setzen Sie den [!UICONTROL Ereignistyp] auf **[!UICONTROL Ereignis senden abgeschlossen]**.
+1. Klicken Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 
-Anschließend können Sie die Aktionen **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** auf diese Regel anwenden.
+Sie können dann die Aktionen **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** auf diese Regel anwenden.
 
-1. Wählen Sie beim Anzeigen der oben erstellten oder bearbeiteten Regel eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den [!UICONTROL Aktionstyp] je nach gewünschtem Verhalten auf **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** fest.
+1. Wenn Sie die oben erstellte oder bearbeitete Regel anzeigen, wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Legen Sie im Dropdown[!UICONTROL Feld ]Erweiterung“ den Wert **[!UICONTROL Adobe Experience Platform Web SDK]** fest, und legen Sie [!UICONTROL Aktionstyp] je nach gewünschtem Verhalten **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** fest.
 1. Legen Sie die gewünschten Felder der Aktion fest und klicken Sie dann auf **[!UICONTROL Änderungen beibehalten]**.
 
-## Umgang mit Befehlsantworten mithilfe der Web SDK JavaScript-Bibliothek
+## Verarbeiten von Befehlsantworten mithilfe der Web SDK JavaScript-Bibliothek
 
-Verwenden Sie die Methoden `then` und `catch`, um zu bestimmen, wann ein Befehl erfolgreich ausgeführt wird oder fehlschlägt. Sie können entweder `then` oder `catch` auslassen, wenn deren Zwecke für Ihre Implementierung nicht wichtig sind.
+Verwenden Sie die `then` und `catch` Methoden, um zu bestimmen, wann ein Befehl erfolgreich ist oder fehlschlägt. Sie können entweder `then` oder `catch` auslassen, wenn deren Zwecke für Ihre Implementierung nicht wichtig sind.
 
 ```javascript
 alloy("sendEvent", {
@@ -57,7 +57,7 @@ alloy("sendEvent", {
   });
 ```
 
-Alle von Befehlen zurückgegebenen Promises verwenden ein `result` -Objekt. Sie können beispielsweise Bibliotheksinformationen über den Befehl [`getLibraryInfo`](getlibraryinfo.md) vom Objekt `result` abrufen:
+Alle von Befehlen zurückgegebenen Zusagen verwenden ein `result`. Beispielsweise können Sie Bibliotheksinformationen mithilfe des [`getLibraryInfo`](getlibraryinfo.md)-Befehls aus dem `result` abrufen:
 
 ```js
 alloy("getLibraryInfo")
@@ -68,4 +68,4 @@ alloy("getLibraryInfo")
   });
 ```
 
-Der Inhalt dieses `result` -Objekts hängt von einer Kombination aus dem von Ihnen verwendeten Befehl und der Zustimmung des Benutzers ab. Wenn ein Benutzer seine Zustimmung zu einem bestimmten Zweck nicht erteilt hat, enthält das Antwortobjekt nur Informationen, die im Kontext dessen bereitgestellt werden können, was der Benutzer zugestimmt hat.
+Der Inhalt dieses `result` hängt von einer Kombination aus dem von Ihnen verwendeten Befehl und dem Einverständnis des Benutzers ab. Wenn ein Benutzer für einen bestimmten Zweck sein Einverständnis nicht gegeben hat, enthält das Antwortobjekt nur Informationen, die im Zusammenhang mit dem bereitgestellt werden können, was der Benutzer eingewilligt hat.

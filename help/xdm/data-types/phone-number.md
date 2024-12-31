@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data-type;data-type
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;Felder;Schemata;Schemata;Telefonnummer;xdm:phoneNumber;datatype;Datentyp;Datentyp;
 solution: Experience Platform
-title: Datentyp Telefonnummer
-description: Erfahren Sie mehr über den XDM-Datentyp für Telefonnummern.
+title: Datentyp der Telefonnummer
+description: Erfahren Sie mehr über den XDM-Datentyp Telefonnummer .
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 18%
 
 ---
 
-# Datentyp [!UICONTROL Telefonnummer]
+# [!UICONTROL Telefonnummer] Datentyp
 
 [!UICONTROL Telefonnummer] ist ein standardmäßiger XDM-Datentyp, der die Details einer Telefonnummer beschreibt.
 
@@ -20,9 +20,9 @@ ht-degree: 18%
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `extension` | Die interne Wählnummer, die für Anrufe von einer privaten Vermittlungsstelle, einem Operator oder einer Telefonzentrale verwendet wird. |
-| `number` | Die Telefonnummer. Beachten Sie, dass die Telefonnummer eine Zeichenfolge ist und aussagekräftige Zeichen wie Klammern `()`, Bindestriche `-` oder Zeichen enthalten kann, die auf IDs für Unterwählungen wie Erweiterungen `x` (z. B. `1-353(0)18391111` oder `+613 9403600x1234` verweisen. |
-| `primary` | Ein boolescher Wert, der anzeigt, ob dies die primäre Telefonnummer des Kontakts ist. Im Gegensatz zu Adresse oder E-Mail-Adresse kann es mehrere primäre Telefonnummern geben, eine pro Kommunikationskanal. Der Kommunikationskanal wird durch den Typ definiert (der durch den Namen der übergeordneten Eigenschaft angegeben wird): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` und `fax`. |
-| `status` | Gibt an, ob die Telefonnummer derzeit verwendet werden kann. |
+| `number` | Die Telefonnummer. Beachten Sie, dass die Telefonnummer eine Zeichenfolge ist und aussagekräftige Zeichen wie Klammern `()`, Bindestriche `-` oder Zeichen zur Angabe von Unterwahlkennungen wie Erweiterungen `x` z. B. `1-353(0)18391111` oder `+613 9403600x1234` enthalten kann. |
+| `primary` | Ein boolescher Wert, der angibt, ob dies die primäre Telefonnummer des Kontakts ist. Im Gegensatz zu Adresse oder E-Mail-Adresse kann es mehrere primäre Telefonnummern geben; eine pro Kommunikationskanal. Der Kommunikationskanal wird durch den Typ definiert (angegeben durch den Namen der übergeordneten Eigenschaft): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` und `fax`. |
+| `status` | Zeigt an, ob die Telefonnummer derzeit verwendet werden kann. |
 | `statusReason` | Eine Beschreibung des aktuellen Status. |
 | `validity` | Ein Grad der technischen Korrektheit der Telefonnummer. |
 

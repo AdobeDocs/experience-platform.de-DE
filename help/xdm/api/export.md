@@ -1,5 +1,5 @@
 ---
-title: API-Endpunkt exportieren
+title: Export API Endpoint
 description: Mit dem Endpunkt /export in der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes freigeben.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
@@ -11,17 +11,17 @@ ht-degree: 12%
 
 # Export-Endpunkt
 
-Alle Ressourcen innerhalb des [!DNL Schema Library] sind in einer bestimmten Sandbox in Adobe Experience Platform enthalten. In einigen Fällen möchten Sie möglicherweise Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und Organisationen freigeben. Mit dem Endpunkt `/rpc/export` in der API [!DNL Schema Registry] können Sie eine Export-Payload für beliebige Schemas, Schemafeldgruppen oder Datentypen in der [!DNL Schema Library] generieren und diese Payload dann verwenden, um diese Ressource (und alle abhängigen Ressourcen) über den [`/rpc/import` -Endpunkt](./import.md) in eine Ziel-Sandbox und Organisation zu importieren.
+Alle Ressourcen innerhalb der [!DNL Schema Library] sind in einer bestimmten Sandbox in Adobe Experience Platform enthalten. In einigen Fällen empfiehlt es sich, Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und Organisationen freizugeben. Mit dem `/rpc/export`-Endpunkt in der [!DNL Schema Registry]-API können Sie eine Export-Payload für ein beliebiges Schema, eine beliebige Schemafeldgruppe oder einen beliebigen Datentyp im [!DNL Schema Library] generieren und diese Payload dann verwenden, um diese Ressource (und alle abhängigen Ressourcen) über den [`/rpc/import`-Endpunkt in eine Ziel-Sandbox und Organisation zu importieren](./import.md).
 
 ## Erste Schritte
 
-Der Endpunkt `/rpc/export` ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Der `/rpc/export`-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-Der Endpunkt `/rpc/export` ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie in den API-Aufrufen unten dargestellt.
+Der `/rpc/export`-Endpunkt ist Teil der Remote Procedure Calls (RPCs), die vom [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API benötigen RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den `/rpc` Namespace verwenden, wie in den folgenden API-Aufrufen veranschaulicht.
 
 ## Export-Payload für eine Ressource generieren {#export}
 
-Für vorhandene Schemas, Feldergruppen oder Datentypen im [!DNL Schema Library] können Sie eine Export-Payload generieren, indem Sie eine GET-Anfrage an den `/export` -Endpunkt senden und dabei die Kennung der Ressource im Pfad angeben.
+Für ein vorhandenes Schema, eine Feldergruppe oder einen Datentyp im [!DNL Schema Library] können Sie eine Export-Payload generieren, indem Sie eine GET-Anfrage an den `/export`-Endpunkt senden und im Pfad die ID der Ressource angeben.
 
 **API-Format**
 
@@ -37,7 +37,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Export-Payload für eine `Restaurant` -Feldergruppe abgerufen.
+Die folgende Anfrage ruft eine Export-Payload für eine `Restaurant` Feldergruppe ab.
 
 ```shell
 curl -X GET \
@@ -51,9 +51,9 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Ziel-XDM-Ressource und alle abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein vom Mandanten erstellter `Property` -Datentyp, den die Feldergruppe `Restaurant` verwendet, während das zweite Objekt die Feldergruppe `Restaurant` selbst ist. Diese Payload kann dann verwendet werden, um [die Ressource](#import) in eine andere Sandbox oder Organisation zu importieren.
+Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die XDM-Zielressource und alle ihre abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im -Array ein von einem Mandanten erstellter `Property`-Datentyp, den die `Restaurant` Feldgruppe verwendet, während das zweite Objekt die `Restaurant` Feldgruppe selbst ist. Diese Payload kann dann verwendet werden, um [ Ressource in ](#import) andere Sandbox oder Organisation zu importieren.
 
-Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>` ersetzt werden. Dadurch kann die Schema Registry die richtige Mandantenkennung automatisch auf die Ressourcen anwenden, je nachdem, wo sie im nachfolgenden Importaufruf gesendet werden.
+Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>` ersetzt werden. Dadurch kann die Schemaregistrierung automatisch die richtige Mandanten-ID auf die Ressourcen anwenden, je nachdem, wohin sie im nachfolgenden Importaufruf gesendet werden.
 
 ```json
 [
@@ -195,6 +195,6 @@ Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TEN
 
 ## Ressource importieren {#import}
 
-Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an den `/rpc/import` -Endpunkt senden, um das Schema zu generieren.
+Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an den `/rpc/import`-Endpunkt senden, um das Schema zu generieren.
 
-Weitere Informationen zum Generieren von Schemas aus Export-Payloads finden Sie im [Import-Endpunkthandbuch](./import.md) .
+Weitere Informationen [ Generieren von Schemata aus Export](./import.md)Payloads finden Sie im Handbuch zum Import-Endpunkt .

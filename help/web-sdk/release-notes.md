@@ -18,29 +18,29 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.24.1 – Samstag, 6. Dezember 2024
 
-**Korrigiert und verbessert**
+**Behoben und Verbesserungen**
 
-- Es wurde ein Abhängigkeitsproblem im Zusammenhang mit [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) behoben, das bei einigen Kundenintegrationen Fehler verursachte. Für die Web-SDK ist jetzt die [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) -Version 2.0.3 oder höher erforderlich.
+- Es wurde ein Abhängigkeitsproblem im Zusammenhang mit der [Adobe Experience Platform-Regel](https://github.com/adobe/aepsdk-rulesengine-typescript/)Engine behoben, das in einigen Kundenintegrationen zu Fehlern führte. Für Web SDK ist jetzt die [Adobe Experience Platform-Regel](https://github.com/adobe/aepsdk-rulesengine-typescript/)Engine, Version 2.0.3 oder höher, erforderlich.
 
 ## Version 2.24.0 – Freitag, 31. Oktober 2024
 
 **Neue Funktionen**
 
-- [Datenspeicherüberschreibungen](../datastreams/overrides.md) werden jetzt beim Starten von Mediensitzungen unterstützt.
+- [Datenstrom-Überschreibungen](../datastreams/overrides.md) werden jetzt beim Starten von Mediensitzungen unterstützt.
 
-- Unterstützung für Adobe Target-Antwort-Token im Überwachungs-Hook [`onContentRendering`](monitoring-hooks.md#onContentRendering)hinzugefügt.
+- Unterstützung für Adobe Target-Antwort-Token im Überwachungs[`onContentRendering`](monitoring-hooks.md#onContentRendering)Hook hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Wenn mehrere In-App-Nachrichten zurückgegeben werden, wird nur die mit der höchsten Priorität angezeigt. Die anderen werden als unterdrückt aufgezeichnet.
-- Leere Datastream-Überschreibungen werden nicht mehr an das Edge Network gesendet, wodurch potenzielle Konflikte mit serverseitigen Routing-Konfigurationen verringert werden.
-- Die folgenden Namen der Protokollmeldungskomponenten wurden umbenannt, um sie an andere Adobe-SDKs anzupassen:
-   - `DecisioningEngine` wurde in `RulesEngine` umbenannt.
-   - `LegacyMediaAnalytics` wurde in `MediaAnalyticsBridge` umbenannt.
-   - `Privacy` wurde in `Consent` umbenannt.
-- Fehlerkorrektur - bei der Wiedergabe von Standardinhalt-Elementen über [`applyPropositions`](../web-sdk/commands/applypropositions.md) tritt kein Fehler mehr auf.
-- Korrektur eines CSS-Fehlers in Adobe Target-Verschiebungs- und Größenanpassungsaktionen.
-- Der Schlüssel `machineLearning` wurde aus [`sendEvent`](../web-sdk/commands/sendevent/overview.md) -Antworten entfernt.
+- Wenn mehrere In-App-Nachrichten zurückgegeben werden, wird nur die Nachricht mit der höchsten Priorität angezeigt. Die anderen werden als unterdrückt aufgezeichnet.
+- Leere Datenstrom-Überschreibungen werden nicht mehr an das Edge Network gesendet, wodurch potenzielle Konflikte mit Server-seitigen Routing-Konfigurationen reduziert werden.
+- Die folgenden Namen der Protokollnachrichten-Komponenten wurden umbenannt, um sie an andere Adobe-SDKs anzupassen:
+   - `DecisioningEngine` wurde in `RulesEngine` umbenannt
+   - `LegacyMediaAnalytics` wurde in `MediaAnalyticsBridge` umbenannt
+   - `Privacy` wurde in `Consent` umbenannt
+- Fehlerkorrektur - Beim Rendern von Standardinhaltelementen über [`applyPropositions`](../web-sdk/commands/applypropositions.md) tritt jetzt kein Fehler mehr auf.
+- Ein CSS-Fehler in Aktionen zum Verschieben und Ändern der Größe von Adobe Target wurde behoben.
+- Der `machineLearning` Schlüssel wurde aus [`sendEvent`](../web-sdk/commands/sendevent/overview.md) Antworten entfernt.
 
 ## Version 2.23.0 – Freitag, 19. September 2024
 
@@ -50,73 +50,73 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem Cookies beim lokalen Ausführen der Web SDK nicht richtig geschrieben wurden.
+- Es wurde ein Problem behoben, bei dem Cookies bei der lokalen Ausführung der Web-SDK nicht korrekt geschrieben wurden.
 
 ## Version 2.22.0 – Freitag, 22. August 2024
 
 **Neue Funktionen**
 
-- Unterstützung für Personalisierungsüberwachungshaken hinzugefügt.
+- Es wurde Unterstützung für Hooks zur Personalisierungsüberwachung hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Die Unterstützung für Internet Explorer wurde entfernt und die Größe der Bibliothek gzip um 9 % verringert.
-- Es wurde ein Problem behoben, bei dem die Details des Activity Map-Links nicht initialisiert wurden, wenn der Erweiterungspunkt `onInstanceConfigured` für den Monitor aufgerufen wurde.
-- Es wurde ein Problem behoben, bei dem Cookie-Ziele nicht auf den richtigen Pfad gesetzt wurden.
-- Es wurde ein Kundenproblem behoben, das beim -Aufruf auftrat.
-- Es wurde ein Problem behoben, bei dem eine ungültige URL-Kodierung im Parameter `adobe_mc` dazu führte, dass [sendEvent](commands/sendevent/overview.md) -Aufrufe fehlschlugen.
+- Die Unterstützung für Internet Explorer wurde entfernt, wodurch die Gzip-Größe der Bibliothek um 9 % verringert wurde.
+- Es wurde ein Problem behoben, bei dem Activity Map-Link-Details nicht initialisiert wurden, wenn der `onInstanceConfigured` Monitor-Hook aufgerufen wurde.
+- Es wurde ein Problem behoben, bei dem Cookie-Ziele nicht auf den richtigen Pfad eingestellt wurden.
+- Es wurde ein Kundenproblem mit einem -Aufruf an behoben.
+- Es wurde ein Problem behoben, bei dem eine ungültige URL-Codierung im `adobe_mc`-Parameter dazu führte, [sendEvent](commands/sendevent/overview.md)-Aufrufe fehlschlugen.
 
 ## Version 2.21.1 – Freitag, 18. Juli 2024
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Fehlerkorrektur - bei der Verwendung der NPM-Bibliothek tritt kein Build mehr auf.
+- Fehlerkorrektur - Bei der Verwendung der NPM-Bibliothek tritt jetzt kein Build-Fehler mehr auf.
 
 ## Version 2.21.0 – Mittwoch, 16. Juli 2024
 
 **Neue Funktionen**
 
-- Unterstützung für das automatische Tracking von Vorschlagsinteraktionen hinzugefügt.
-- Es wurde ein benutzerdefiniertes Build-Skript hinzugefügt, das eine Datei vom Typ &quot;legate.js&quot;bereitstellt.
-- Verbesserte Klick-Sammlung mit Unterstützung für ActivityMap und Ereignisgruppierung.
+- Unterstützung für die automatische Interaktionsverfolgung von Vorschlägen wurde hinzugefügt.
+- Es wurde ein benutzerdefiniertes Build-Skript hinzugefügt, das eine alloy.js-Datei bereitstellt.
+- Verbesserte Klick-Sammlung mit ActivityMap- und Ereignisgruppierungsunterstützung.
 
 ## Version 2.20.0 – Mittwoch, 21. Mai 2024
 
 **Neue Funktionen**
 
-- Unterstützung für [Streaming-Mediensammlung](../web-sdk/commands/configure/streamingmedia.md) hinzugefügt.
+- Es wurde Unterstützung für [Streaming Media Collection](../web-sdk/commands/configure/streamingmedia.md) hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Fehler behoben, durch den der Standardinhalt vom Codeausschnitt zur Vorab-Ausblendung ausgeblendet wurde, wenn die Zustimmung abgelehnt wurde.
+- Es wurde ein Fehler behoben, der dazu führte, dass der Standardinhalt durch den Code-Ausschnitt zum Vorab-Ausblenden ausgeblendet wurde, wenn das Einverständnis abgelehnt wurde.
 
 ## Version 2.19.2 – Donnerstag, 10. Januar 2024
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, durch das Identitätsfehler andere Fehler maskierten und Identitätsfehler in Warnungen geändert wurden.
-- Es wurde ein Problem behoben, durch das Seitenaufrufe am Ende nicht gesendet wurden, wenn der Seitenaufruf am Anfang war und `renderDecisions` auf `false` festgelegt war.
-- Es wurde ein Problem behoben, bei dem Web SDK domänenübergreifende Identitäten nicht gelesen hat, wenn mehrere `adobe_mc` Abfragezeichenfolgenparameter vorhanden waren.
+- Es wurde ein Problem behoben, bei dem Identitätsfehler andere Fehler maskierten und Identitätsfehler in Warnungen änderten.
+- Es wurde ein Problem behoben, bei dem Seitenaufrufe am Ende nie gesendet wurden, wenn der Seitenaufruf am Anfang war und `renderDecisions` auf `false` gesetzt war.
+- Es wurde ein Problem behoben, bei dem Web SDK beim Lesen domänenübergreifender Identitäten mehrere `adobe_mc` Abfragezeichenfolgenparameter aufwies.
 
 ## Version 2.19.1 – Samstag, 10. November 2023
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem das von `sendEvent` -Aufrufen zurückgegebene Vorschlagsarray immer leer war.
+- Es wurde ein Problem behoben, bei dem das Vorschläge-Array, das von `sendEvent` Aufrufen zurückgegeben wurde, immer leer war.
 
 ## Version 2.19.0 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
-- Unterstützung für das Rendern von In-App-Nachrichten aus Adobe Journey Optimizer hinzugefügt.
-- Zusätzliche Unterstützung für [oben und unten von Seitenereignissen](use-cases/top-bottom-page-events.md).
-- Dem Befehl `sendEvent` wurde die Option [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) hinzugefügt, um die Anforderung des seitenweiten Umfangs und der Standardoberfläche zu steuern.
+- Unterstützung für das Rendern von In-App-Nachrichten von Adobe Journey Optimizer wurde hinzugefügt.
+- Es wurde Unterstützung für [Ereignisse oben und unten auf der Seite](use-cases/top-bottom-page-events.md) hinzugefügt.
+- Dem `sendEvent`-Befehl wurde [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) Option hinzugefügt, um das Anfordern des seitenweiten Bereichs und der Standardoberfläche zu steuern.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Die kombinierte Personalisierung zeigt Ereignisse beim Rendern mehrerer Personalisierungstypen zusammen.
-- Es wurde ein Problem behoben, bei dem bei Namen von Einzelseiten-Apps zwischen Groß- und Kleinschreibung unterschieden wurde.
-- Es wurde ein Problem mit Shadow DOM-personalisierten Angebots-Selektoren behoben.
+- Kombinierte Personalisierung zeigt Ereignisse zusammen an, wenn mehrere Personalisierungstypen gerendert werden.
+- Es wurde ein Problem behoben, bei dem bei den Ansichtsnamen einer Einzelseitenanwendung die Groß-/Kleinschreibung beachtet wurde.
+- Es wurde ein Problem mit personalisierten Shadow-DOM-Angebotsselektoren behoben.
 
 ## Version 2.18.0 – 31. Juli 2023
 
@@ -175,7 +175,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Es wurde Unterstützung für [seitenweise vollständige Migration](home.md#migrating-to-web-sdk) hinzugefügt. Das Adobe Target-Profil wird jetzt beibehalten, wenn Besuchende zwischen at.js- und Web SDK-Seiten wechseln.
 - Es wurde konfigurierbare Unterstützung für [hohe Entropie bei Client-Hinweisen für Benutzeragenten](/help/web-sdk/use-cases/client-hints.md) hinzugefügt.
-- Unterstützung für den Befehl [`applyResponse`](/help/web-sdk/commands/applyresponse.md) hinzugefügt. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
+- Es wurde Unterstützung für den [`applyResponse`](/help/web-sdk/commands/applyresponse.md)-Befehl hinzugefügt. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
 - QA-Modus-Links funktionieren jetzt über mehrere Seiten.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -232,7 +232,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-- Stellen Sie zusätzliche Informationen aus dem Edge Network im Rückgabewert von `sendEvent` bereit, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
+- Zusätzliche Informationen aus dem Edge Network werden im Rückgabewert von `sendEvent` verfügbar gemacht, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
 
 ## Version 2.6.4 – 7. September 2021
 
@@ -263,13 +263,13 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- SDK kann jetzt als [NPM-Paket](/help/web-sdk/install/npm.md) installiert werden.
+- SDK kann jetzt als NPM[Paket installiert ](/help/web-sdk/install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
-- Der Rückruf [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
+- Der [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
-- Der Befehl [`getIdentity`](/help/web-sdk/commands/getidentity.md) gibt jetzt die ID des Edge-Bereichs neben der Identität zurück.
+- Der Befehl [`getIdentity`](/help/web-sdk/commands/getidentity.md) gibt jetzt die ID der Edge-Region zusammen mit der Identität zurück.
 - Die vom Server empfangenen Warnungen und Fehler wurden verbessert und werden nun auf besser geeignete Weise gehandhabt.
-- Adobe Consent 2.0-Standard für den Befehl [`setConsent`](/help/web-sdk/commands/setconsent.md) wird nun unterstützt.
+- Es wurde Unterstützung für Adobe-Einverständnis 2.0-Standard für den [`setConsent`](/help/web-sdk/commands/setconsent.md) hinzugefügt.
 - Die Einverständisvoreinstellungen werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, dem Platform Web SDK und dem Platform Edge Network zu ermöglichen. Wenn Sie Einverständnisvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, `setConsent` bei jedem Laden der Seite aufzurufen.
 - Es wurden zwei [Überwachungs-Hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected`, hinzugefügt.
 - Fehlerbehebung: Die Benachrichtigungsereignisse für Personalisierungsinteraktionen enthielten doppelte Informationen über dieselbe Aktivität, wenn Benutzende zu einer neuen Singe-Page-App-Ansicht navigiert haben, zur ursprünglichen Ansicht zurückgekehrt sind und dann auf ein für die Konversion qualifiziertes Element geklickt haben.
@@ -287,8 +287,8 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.2.0 – Oktober 2020
 
-- Fehlerbehebung: Das Opt-in-Objekt hinderte Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
-- Fehlerbehebung: Sorgen Sie dafür, dass Web SDK über Anforderungen informiert wird, die Personalisierungsangebote zurückgeben sollten, um ein flackerndes Problem zu vermeiden.
+- Fehlerbehebung: Das Opt-in-Objekt hinderte Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` wurde.
+- Fehlerbehebung: Machen Sie Web SDK auf Anfragen aufmerksam, die Personalisierungsangebote zurückgeben sollten, um ein flackerndes Problem zu verhindern.
 
 ## Version 2.1.0 – August 2020
 
@@ -296,5 +296,5 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 - Es wurde Unterstützung für den IAB 2.0-Einverständnisstandard hinzugefügt.
 - Es wurde Unterstützung für die Übergabe zusätzlicher IDs im Befehl `setConsent` hinzugefügt.
 - Es wurde Unterstützung zum Außerkraftsetzen von `datasetId` im Befehl `sendEvent` hinzugefügt.
-- Support-Überwachungs-Hooks ([mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+- Überwachungs-Hooks für Support [mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 - `environment: browser` wird nun in den Kontextdaten der Implementierungsdetails übergeben.

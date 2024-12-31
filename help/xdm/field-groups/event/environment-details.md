@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Umgebung; Umgebungsdetails;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;Umgebung;Umgebungsdetails;
 solution: Experience Platform
-title: Feldergruppe "Umgebungsdetails"
-description: Erfahren Sie mehr über die Feldergruppe ExperienceEvent Environment Details .
+title: Schemafeldgruppe „Umgebungsdetails“
+description: Erfahren Sie mehr über die Schemafeldgruppe „ExperienceEvent-Umgebungsdetails“.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -18,15 +18,15 @@ ht-degree: 13%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Umgebungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zum Erfassen von Informationen zu Umgebungsdetails im Zusammenhang mit einem Erlebnisereignis wie Gerätedetails, Browserinformationen, lokaler Zeit und anderen geografischen Informationen verwendet wird.
+[!UICONTROL Umgebungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), mit der Informationen zu Umgebungsdetails im Zusammenhang mit einem Erlebnisereignis wie Gerätedetails, Browser-Informationen, Ortszeit und andere geografische Informationen erfasst werden.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `device` | [Gerät](../../data-types/device.md) | Beschreibt eine identifizierte Geräte-, Anwendungs- oder Geräte-Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies. |
-| `environment` | [Umgebung](../../data-types/environment.md) | Beschreibt Informationen zum situationsspezifischen Kontext der Ereignisüberwachung, insbesondere mit detaillierten Informationen zu vorübergehenden Informationen wie Netzwerk- oder Softwareversionen. |
-| `placeContext` | [Kontext platzieren](../../data-types/place-context.md) | Beschreibt die vorübergehenden Umstände im Zusammenhang mit der Ereignisbeobachtung. Beispiele sind gebietsschemaspezifische Informationen wie Wetter, Ortszeit, Traffic, Wochentag, Werktag vs. Urlaub und Arbeitszeit. |
+| `environment` | [Umgebung](../../data-types/environment.md) | Beschreibt Informationen zum situativen Kontext der Ereignisbeobachtung, insbesondere mit Details zu vorübergehenden Informationen wie Netzwerk- oder Softwareversionen. |
+| `placeContext` | [Ortskontext](../../data-types/place-context.md) | Beschreibt die vorübergehenden Umstände im Zusammenhang mit der Ereignisbeobachtung. Beispiele sind gebietsschemaspezifische Informationen wie Wetter, Ortszeit, Verkehr, Wochentag, Werktag vs. Urlaub und Arbeitszeit. |
 
 {style="table-layout:auto"}
 

@@ -1,6 +1,6 @@
 ---
 title: Versanddatentyp
-description: Erfahren Sie mehr über den XDM-Datentyp (Shipping Experience Data Model).
+description: Erfahren Sie mehr über den Datentyp Versand-Experience-Datenmodell (XDM) .
 exl-id: c3a58e46-c80e-4896-b21c-47dc5a6c869b
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 19%
 
 ---
 
-# Datentyp [!UICONTROL Versand]
+# [!UICONTROL Versand] Datentyp
 
-[!UICONTROL Versand] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zum Versand eines oder mehrerer Produkte liefert. Sie enthält Details zur Logistik und Details zur Lieferung von bestellten Artikeln.
+[!UICONTROL Shipping] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zum Versand eines oder mehrerer Produkte bereitstellt. Sie enthält Details zur Logistik und Details zur Lieferung bestellter Artikel.
 
 
-![Ein Diagramm des Datentyps [!UICONTROL Shipping].](../images/data-types/shipping.png)
+![Diagramm des Datentyps [!UICONTROL Versand].](../images/data-types/shipping.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |----------------------|-----------------------|-----------|------------------------------------------------------|
-| [!UICONTROL Versandmethode] | `shippingMethod` | Zeichenfolge | Die vom Kunden gewählte Versandmethode. |
-| [!UICONTROL Versandbetrag] | `shippingAmount` | number | Der Betrag, den der Kunde für die Lieferung zahlen musste. |
+| [!UICONTROL Versandart] | `shippingMethod` | Zeichenfolge | Die vom Kunden gewählte Versandart. |
+| [!UICONTROL Lieferbetrag] | `shippingAmount` | number | Der Betrag, den der Kunde für die Lieferung zahlen musste. |
 | [!UICONTROL Währungscode] | `currencyCode` | Zeichenfolge | Der alphabetische ISO 4217-Währungscode, der für die Preisgestaltung des Produkts verwendet wird. |
-| [!UICONTROL Versandziel] | `shippingDestination` | Zeichenfolge | Das vom Benutzer angegebene Schiff zum Ziel (z. B. zu Hause, im Speicher usw.). |
-| [!UICONTROL Versanddatum] | `shipDate` | Zeichenfolge | Das Datum, an dem ein oder mehrere Artikel aus einer Bestellung versandt werden. |
-| [!UICONTROL Versandadresse] | `address` | [[!UICONTROL address]](./address.md) | Die Lieferadresse. |
-| [!UICONTROL Tracking Number] | `trackingNumber` | number | Die vom Versandunternehmen angegebene Trackingnummer. |
-| [!UICONTROL Tracking-URL] | `trackingURL` | Zeichenfolge | Die URL zur Verfolgung des Versandstatus eines Bestellartikels. |
+| [!UICONTROL Versandziel] | `shippingDestination` | Zeichenfolge | Die vom Benutzer angegebene Lieferadresse (z. B. Startseite, Geschäft usw.). |
+| [!UICONTROL Lieferdatum] | `shipDate` | Zeichenfolge | Das Datum, an dem ein oder mehrere Artikel aus einer Bestellung versendet werden. |
+| [!UICONTROL Lieferadresse] | `address` | [[!UICONTROL Adresse]](./address.md) | Die Lieferadresse. |
+| [!UICONTROL Tracking-Nummer] | `trackingNumber` | number | Die vom Versandunternehmen angegebene Tracking-Nummer. |
+| [!UICONTROL Tracking-URL] | `trackingURL` | Zeichenfolge | Die URL zum Nachverfolgen des Versandstatus eines Bestellartikels. |
 
 {style="table-layout:auto"}
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schemadesign;Schemafeldgruppe;Feldergruppe;
 solution: Experience Platform
-title: Feldergruppe "Kanaldetails"
-description: Erfahren Sie mehr über die Feldergruppe Kanaldetails .
+title: Schemafeldgruppe „Kanaldetails“
+description: Erfahren Sie mehr über die Schemafeldgruppe „Kanaldetails“.
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -23,7 +23,7 @@ ht-degree: 20%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `channel` | [Erlebniskanal](../../data-types/experience-channel.md) | Ein Objekt, das die Produktrückgabe, die Registrierung der Garantie und die Warenkorb-/Bestellvorgänge beschreibt. |
+| `channel` | [Erlebniskanal](../../data-types/experience-channel.md) | Ein Objekt, das Produktretouren, die Garantieregistrierung und die Warenkorb-/Bestellprozesse beschreibt. |
 
 {style="table-layout:auto"}
 

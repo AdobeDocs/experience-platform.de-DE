@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Zahlungselement; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;Felder;Schemata;Schemata;Zahlungsposten;Datentyp;Datentyp;
 solution: Experience Platform
-title: Datentyp des Zahlungselements
-description: Erfahren Sie mehr über den Datentyp des Experience-Datenmodells für Zahlungselemente (XDM).
+title: Datentyp des Zahlungspostens
+description: Erfahren Sie mehr über den Datentyp „Zahlungsposten-Experience-Datenmodell (XDM)“.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,18 +11,18 @@ ht-degree: 20%
 
 ---
 
-# Datentyp [!UICONTROL Zahlungselement]
+# [!UICONTROL Zahlungsartikel] Datentyp
 
-[!UICONTROL Zahlungselement] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der eine Zahlung beschreibt, die mit einer Bestellung verknüpft ist, die die Art der Zahlung, den Betrag und die zugehörige Währung definiert.
+[!UICONTROL Zahlungsposten] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Zahlung beschreibt, die mit einer Bestellung verknüpft ist und die die Art der Zahlung, den Betrag und die zugehörige Währung definiert.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Alle Instanzen müssen dem regulären Ausdruck `^[A-Z]{3}$` entsprechen. Beispiele sind `USD` und `EUR`. |
+| `currencyCode` | Zeichenfolge | Der ISO 4217-Währungscode, der für die Bestellsummen verwendet wird. Alle Instanzen müssen dem `^[A-Z]{3}$` für reguläre Ausdrücke entsprechen. Beispiele sind `USD` und `EUR`. |
 | `paymentAmount` | Double | Der Betrag der Zahlung. |
-| `paymentType` | Zeichenfolge | Die Zahlungsmethode für diese Bestellung. Zu den zulässigen Enum-Werten gehören: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
-| `transactionID` | Zeichenfolge | Die eindeutige Transaktionskennung für diesen Zahlungsposten. |
+| `paymentType` | String | Die Zahlungsmethode für diese Bestellung. Zu den akzeptierten Enum-Werten gehören: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
+| `transactionID` | String | Die eindeutige Transaktionskennung für diesen Zahlungsposten. |
 
 {style="table-layout:auto"}
 

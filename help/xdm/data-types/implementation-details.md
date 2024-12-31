@@ -1,6 +1,6 @@
 ---
-title: Datentyp "Implementierungsdetails"
-description: Erfahren Sie mehr über die Implementierungsdetails zum Experience-Datenmodell (XDM)-Datentyp.
+title: Datentyp „Implementierungsdetails“
+description: Erfahren Sie mehr über den Datentyp Implementierungsdetails Experience-Datenmodell (XDM) .
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Implementierungsdetails]-Datentyp
+# [!UICONTROL Implementierungsdetails] Datentyp
 
-[!UICONTROL Implementierungsdetails] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der eine Technologieimplementierung beschreibt, z. B. eine API oder ein SDK.
+[!UICONTROL Implementierungsdetails] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Technologieimplementierung beschreibt, z. B. eine API oder eine SDK.
 
 ![Datentypstruktur](../images/data-types/implementation-details.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `environment` | Zeichenfolge | Die Umgebung der Implementierung. |
-| `name` | Zeichenfolge | Die Kennung für das SDK oder den Endpunkt. Alle SDKs oder Endpunkte werden über einen URI identifiziert, einschließlich Erweiterungen. |
-| `version` | Zeichenfolge | Die Version der API oder des SDK. |
+| `name` | String | Die Kennung für den SDK- oder -Endpunkt. Alle SDKs oder Endpunkte werden über einen URI identifiziert, einschließlich Erweiterungen. |
+| `version` | String | Die Version der API oder von SDK. |
 
 {style="table-layout:auto"}
 

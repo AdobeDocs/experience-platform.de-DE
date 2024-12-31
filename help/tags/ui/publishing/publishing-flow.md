@@ -42,7 +42,7 @@ Was den Veröffentlichungsablauf betrifft, gibt es vier Grundzustände, in denen
 * [[!UICONTROL Genehmigt]](#approved)
 * [[!UICONTROL Veröffentlicht]](#published)
 
-Diese vier Status werden als Spalten auf der Registerkarte **[!UICONTROL Veröffentlichungsfluss]** dargestellt.
+Diese vier Status werden auf der Registerkarte **[!UICONTROL Publishing-Ablauf]** als Spalten dargestellt.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Was im Upstream enthalten ist, hängt vom aktuellen Stand der Bibliothek ab. Bei
 
 ![](./images/approval-workflow/upstream.png)
 
-Beim Bearbeiten einer Bibliothek in der Benutzeroberfläche werden alle Ressourcen, die vom Upstream übernommen werden, im Abschnitt **[!UICONTROL Ressourcen - Upstream]** dargestellt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
+Beim Bearbeiten einer Bibliothek in der Benutzeroberfläche werden alle Ressourcen, die von Upstream-Elementen geerbt werden, im Abschnitt **[!UICONTROL Upstream-Ressourcen]** angezeigt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; api; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schemaregistrierung;
 solution: Experience Platform
 title: Erste Schritte mit der Schema Registry-API
-description: Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Schema Registry-API durchführen.
+description: In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Schema Registry-API durchführen.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
@@ -13,18 +13,18 @@ ht-degree: 42%
 
 # Erste Schritte mit der [!DNL Schema Registry]-API
 
-Mit der API [!DNL Schema Registry] können Sie verschiedene XDM-Ressourcen (Experience-Datenmodell) erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Schema Registry]-API durchführen.
+Mit der [!DNL Schema Registry]-API können Sie verschiedene Experience-Datenmodell (XDM)-Ressourcen erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Schema Registry]-API durchführen.
 
 ## Voraussetzungen
 
-Die Verwendung des Entwicklerhandbuchs setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Die Verwendung des Entwicklerhandbuchs setzt Grundkenntnisse der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemata.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-XDM verwendet die JSON-Schema-Formatierung, um die Struktur der erfassten Kundenerlebnisdaten zu beschreiben und zu validieren. Es wird daher dringend empfohlen, die [offizielle JSON-Schema-Dokumentation](https://json-schema.org/) zu lesen, um ein besseres Verständnis dieser zugrunde liegenden Technologie zu erhalten.
+XDM verwendet JSON-Schemaformatierung, um die Struktur der aufgenommenen Kundenerlebnisdaten zu beschreiben und zu validieren. Es wird daher dringend empfohlen, die [offizielle JSON-Schema-Dokumentation](https://json-schema.org/) zu lesen, um diese zugrunde liegende Technologie besser zu verstehen.
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -38,7 +38,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -46,15 +46,15 @@ Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, d
 >
 >Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Dokumentation](../../sandboxes/home.md).
 
-Für alle Nachschlageanfragen (GET) an [!DNL Schema Registry] ist eine zusätzliche `Accept` -Kopfzeile erforderlich, deren Wert das Format der von der API zurückgegebenen Informationen bestimmt. Weitere Informationen finden Sie unten im Abschnitt [Accept-Kopfzeile](#accept).
+Alle Lookup(GET)-Anfragen an den [!DNL Schema Registry] erfordern eine zusätzliche `Accept`-Kopfzeile, deren Wert das Format der von der API zurückgegebenen Informationen bestimmt. Weitere Informationen finden Sie unten im Abschnitt [Accept-Kopfzeile](#accept).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 * `Content-Type: application/json`
 
-## Ihre TENANT_ID kennen {#know-your-tenant_id}
+## Kennenlernen der MANDANTEN-ID {#know-your-tenant_id}
 
-In den API-Handbüchern finden Sie Verweise auf eine `TENANT_ID`. Diese ID wird verwendet, um sicherzustellen, dass von Ihnen erstellte Ressourcen ordnungsgemäß benannt werden und in Ihrem Unternehmen enthalten sind. Wenn Sie Ihre ID nicht kennen, können Sie sie mit der folgenden GET-Anfrage abrufen:
+In den API-Handbüchern finden Sie Verweise auf eine `TENANT_ID`. Diese ID wird verwendet, um sicherzustellen, dass die von Ihnen erstellten Ressourcen über einen ordnungsgemäßen Namespace verfügen und in Ihrer Organisation enthalten sind. Wenn Sie Ihre ID nicht kennen, können Sie sie mit der folgenden GET-Anfrage abrufen:
 
 **API-Format**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Informationen zur Verwendung des [!DNL Schema Registry] durch Ihr Unternehmen zurückgegeben. Dies beinhaltet ein `tenantId`-Attribut, dessen Wert Ihre `TENANT_ID` ist.
+Bei einer erfolgreichen Antwort werden Informationen zur Verwendung der [!DNL Schema Registry] durch Ihr Unternehmen zurückgegeben. Dies beinhaltet ein `tenantId`-Attribut, dessen Wert Ihre `TENANT_ID` ist.
 
 ```JSON
 {
@@ -152,15 +152,15 @@ Bei einer erfolgreichen Antwort werden Informationen zur Verwendung des [!DNL Sc
  }
 ```
 
-## Erläuterung der `CONTAINER_ID` {#container}
+## Verstehen der `CONTAINER_ID` {#container}
 
-Für Aufrufe der [!DNL Schema Registry] -API muss ein `CONTAINER_ID` verwendet werden. Es gibt zwei Container, für die API-Aufrufe durchgeführt werden können: den `global` -Container und den `tenant` -Container.
+Aufrufe der [!DNL Schema Registry]-API erfordern die Verwendung eines `CONTAINER_ID`. Es gibt zwei Container, gegen die API-Aufrufe durchgeführt werden können: den `global`-Container und den `tenant`-Container.
 
 ### Globaler Container
 
-Der `global` -Container enthält alle vom Partner bereitgestellten Standardklassen, Schemafeldgruppen, Datentypen und Schemas, die vom Adobe und von [!DNL Experience Platform] -Partner bereitgestellt werden. Sie dürfen nur Listen- und Suchanfragen (GET) für den `global` -Container ausführen.
+Der `global`-Container enthält alle standardmäßigen Adobe- und [!DNL Experience Platform] von Partnerklassen, Schemafeldgruppen, Datentypen und Schemata. Sie können nur Listen- und Suchanfragen (GET) an den `global`-Container richten.
 
-Ein Beispiel für einen Aufruf, der den `global` -Container verwendet, würde wie folgt aussehen:
+Ein Beispiel für einen Aufruf, der den `global`-Container verwendet, würde wie folgt aussehen:
 
 ```http
 GET /global/classes
@@ -168,19 +168,19 @@ GET /global/classes
 
 ### Mandanten-Container
 
-Der `tenant` -Container ist nicht mit Ihrem eindeutigen `TENANT_ID` zu verwechseln. Er enthält alle Klassen, Feldgruppen, Datentypen, Schemas und Deskriptoren, die von einer Organisation definiert wurden. Diese sind für jede Organisation eindeutig, d. h. sie sind für andere Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie im `tenant` -Container erstellen.
+Um nicht mit Ihrer eindeutigen `TENANT_ID` verwechselt zu werden, enthält der `tenant`-Container alle Klassen, Feldergruppen, Datentypen, Schemata und Deskriptoren, die von einer Organisation definiert wurden. Diese sind für jede Organisation eindeutig, d. h. sie sind für andere Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie im `tenant`-Container erstellen.
 
-Ein Beispiel für einen Aufruf, der den `tenant` -Container verwendet, würde wie folgt aussehen:
+Ein Beispiel für einen Aufruf, der den `tenant`-Container verwendet, würde wie folgt aussehen:
 
 ```http
 POST /tenant/fieldgroups
 ```
 
-Wenn Sie eine Klasse, Feldergruppe, ein Schema oder einen Datentyp im `tenant` -Container erstellen, wird diese(r) im [!DNL Schema Registry]-Container gespeichert und ihr `$id` -URI zugewiesen, der Ihre `TENANT_ID` enthält. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
+Wenn Sie eine Klasse, eine Feldergruppe, ein Schema oder einen Datentyp im `tenant`-Container erstellen, wird er im [!DNL Schema Registry] gespeichert und einem `$id` URI zugewiesen, der Ihre `TENANT_ID` enthält. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
 
-## Ressourcenidentifizierung {#resource-identification}
+## Ressourcenkennung {#resource-identification}
 
-XDM-Ressourcen werden mit einem `$id` -Attribut in Form eines URI identifiziert, z. B. die folgenden Beispiele:
+XDM-Ressourcen werden mit einem `$id` in Form eines URI identifiziert, z. B. die folgenden Beispiele:
 
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
@@ -190,16 +190,16 @@ Um den URI REST-freundlicher zu gestalten, verfügen Schemata auch über eine Pu
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Aufrufe der API [!DNL Schema Registry] unterstützen entweder den URL-kodierten URI `$id` oder den URI `meta:altId` (Punktnotationsformat). Es empfiehlt sich, den URL-kodierten `$id`-URI zu verwenden, wenn Sie einen REST-Aufruf an die API ausführen, wie z. B.:
+Aufrufe der [!DNL Schema Registry]-API unterstützen entweder den URL-kodierten `$id`-URI oder die `meta:altId` (Punktnotation). Es empfiehlt sich, den URL-kodierten `$id`-URI zu verwenden, wenn Sie einen REST-Aufruf an die API ausführen, wie z. B.:
 
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Accept-Kopfzeile {#accept}
 
-Bei der Ausführung von Listen- und Lookup-Vorgängen (GET) in der [!DNL Schema Registry]-API ist ein `Accept` -Header erforderlich, um das Format der von der API zurückgegebenen Daten zu bestimmen. Bei der Suche nach bestimmten Ressourcen muss auch eine Versionsnummer in der Kopfzeile `Accept` enthalten sein.
+Bei der Durchführung von Listen- und Lookup-Vorgängen (GET) in der [!DNL Schema Registry]-API ist eine `Accept`-Kopfzeile erforderlich, um das Format der von der API zurückgegebenen Daten zu bestimmen. Beim Suchen nach bestimmten Ressourcen muss auch eine Versionsnummer in die `Accept`-Kopfzeile aufgenommen werden.
 
-In der folgenden Tabelle sind kompatible `Accept` -Kopfzeilenwerte aufgeführt, einschließlich solcher mit Versionsnummern, sowie Beschreibungen dessen, was die API zurückgibt, wenn sie verwendet werden.
+In der folgenden Tabelle sind kompatible `Accept`-Header-Werte aufgeführt, einschließlich solcher mit Versionsnummern, zusammen mit Beschreibungen dazu, was die API bei ihrer Verwendung zurückgeben wird.
 
 | Accept | Beschreibung |
 | ------- | ------------ |
@@ -210,32 +210,32 @@ In der folgenden Tabelle sind kompatible `Accept` -Kopfzeilenwerte aufgeführt, 
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw-XDM mit `$ref` und `allOf`. Keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Deskriptoren sind enthalten. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` und `allOf` aufgelöst, hat Titel und Beschreibungen. Veraltete Felder werden mit dem Attribut `meta:status` von `deprecated` gekennzeichnet. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` und `allOf` aufgelöst wurden, enthält Titel und Beschreibungen. Verworfene Felder werden mit dem `meta:status` Attribut `deprecated` gekennzeichnet. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Platform unterstützt derzeit nur eine Hauptversion für jedes Schema (`1`). Daher muss der Wert für `version` bei Suchanfragen immer `1` sein, um die neueste Nebenversion des Schemas zurückzugeben. Weitere Informationen zur Schemaversionierung finden Sie im Unterabschnitt unten.
+>Platform unterstützt derzeit nur eine Hauptversion für jedes Schema (`1`). Daher muss bei Suchanfragen immer der Wert für `version` `1` werden, damit die neueste Nebenversion des Schemas zurückgegeben wird. Weitere Informationen zur Schemaversionierung finden Sie im folgenden Unterabschnitt .
 
 ### Schemaversionierung {#versioning}
 
-Schemaversionen werden durch `Accept` -Kopfzeilen in der Schema Registry-API und in den `schemaRef.contentType` -Eigenschaften in nachgelagerten Platform-Dienst-API-Payloads referenziert.
+Schemaversionen werden von `Accept`-Kopfzeilen in der Schema Registry-API und in `schemaRef.contentType` Eigenschaften in nachgelagerten Platform-Service-API-Payloads referenziert.
 
-Derzeit unterstützt Platform nur eine einzelne Hauptversion (`1`) für jedes Schema. Gemäß den [Regeln der Schemaentwicklung](../schema/composition.md#evolution) muss jede Aktualisierung eines Schemas zerstörungsfrei sein, d. h. neue Nebenversionen eines Schemas (`1.2`, `1.3` usw.) sind immer abwärtskompatibel mit früheren Nebenversionen. Daher gibt die Schema Registry bei Angabe von `version=1` immer die **neueste** Hauptversion `1` eines Schemas zurück, was bedeutet, dass frühere Nebenversionen nicht zurückgegeben werden.
+Derzeit unterstützt Platform für jedes Schema nur eine Hauptversion (`1`). Gemäß den [Regeln der Schemaentwicklung](../schema/composition.md#evolution) muss jede Aktualisierung eines Schemas zerstörungsfrei sein, d. h., neue Nebenversionen eines Schemas (`1.2`, `1.3` usw.) sind immer abwärtskompatibel mit vorherigen Nebenversionen. Daher gibt die Schemaregistrierung bei der Angabe von `version=1` immer die **neueste** Hauptversion `1` eines Schemas zurück, was bedeutet, dass frühere Nebenversionen nicht zurückgegeben werden.
 
 >[!NOTE]
 >
->Die zerstörungsfreie Anforderung für die Schemaentwicklung wird erst erzwungen, nachdem das Schema von einem Datensatz referenziert wurde und einer der folgenden Fälle wahr ist:
+>Die zerstörungsfreie Anforderung an die Schemaentwicklung wird erst durchgesetzt, nachdem das Schema von einem Datensatz referenziert wurde und einer der folgenden Fälle zutrifft:
 >
 >* Daten wurden in den Datensatz aufgenommen.
->* Der Datensatz wurde für die Verwendung im Echtzeit-Kundenprofil aktiviert (auch wenn keine Daten erfasst wurden).
+>* Der Datensatz wurde für die Verwendung im Echtzeit-Kundenprofil aktiviert (auch wenn keine Daten aufgenommen wurden).
 >
->Wenn das Schema keinem Datensatz zugeordnet wurde, der eines der oben genannten Kriterien erfüllt, kann es geändert werden. In allen Fällen bleibt die Komponente `version` jedoch weiterhin bei `1`.
+>Wenn das Schema nicht mit einem Datensatz verknüpft wurde, der eines der oben genannten Kriterien erfüllt, kann jede Änderung daran vorgenommen werden. In allen Fällen bleibt die `version` jedoch weiterhin `1`.
 
 ## XDM-Feldbeschränkungen und Best Practices
 
-Die Felder eines Schemas werden innerhalb seines `properties`-Objekts aufgelistet. Jedes Feld ist selbst ein Objekt, das Attribute zur Beschreibung und Einschränkung der Daten enthält, die das Feld enthalten kann. Codebeispiele und optionale Einschränkungen für die am häufigsten verwendeten Datentypen finden Sie im Handbuch [Definieren benutzerdefinierter Felder in der API](../tutorials/custom-fields-api.md) .
+Die Felder eines Schemas werden innerhalb seines `properties`-Objekts aufgelistet. Jedes Feld selbst ist ein Objekt, das Attribute enthält, um die Daten zu beschreiben und einzuschränken, die das Feld enthalten kann. Codebeispiele und optionale Einschränkungen für [ am häufigsten verwendeten Datentypen finden Sie im Handbuch unter ](../tutorials/custom-fields-api.md)Definieren benutzerdefinierter Felder in der API“.
 
 Das folgende Beispielfeld veranschaulicht ein korrekt formatiertes XDM-Feld, wobei weitere Einzelheiten zu den Benennungsbeschränkungen und Best Practices weiter unten aufgeführt sind. Diese Verfahren können auch bei der Definition anderer Ressourcen angewendet werden, die ähnliche Attribute enthalten.
 
@@ -254,13 +254,13 @@ Das folgende Beispielfeld veranschaulicht ein korrekt formatiertes XDM-Feld, wob
 * Der Name eines Feldobjekts kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, darf jedoch **nicht** mit einem Unterstrich beginnen.
    * **Richtig:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Falsch:** `_fieldName`
-* Bei Feldnamen wird nicht zwischen Groß- und Kleinschreibung unterschieden. Sie müssen unterschiedliche Namen auf derselben Ebene im Schema haben.
+* Bei Feldnamen wird nicht zwischen Groß- und Kleinschreibung unterschieden und sie müssen unterschiedliche Namen auf derselben Ebene in Ihrem Schema haben.
 * Die CamelCase-Notation (gemischte Groß-/Kleinschreibung) wird für den Namen des Feldobjekts bevorzugt. Beispiel: `fieldName`
 * Das Feld sollte einen `title` in Titelschrift-Notation (erster Buchstabe groß) enthalten. Beispiel: `Field Name`
 * Für das Feld ist ein `type` erforderlich.
    * Die Definition bestimmter Typen erfordert möglicherweise ein optionales `format`.
    * Wenn eine bestimmte Formatierung der Daten erforderlich ist, kann `examples` als Array hinzugefügt werden.
-   * Der Feldtyp kann auch mit einem beliebigen Datentyp in der Registry definiert werden. Weitere Informationen finden Sie im Abschnitt zum Erstellen eines Datentyps [ im Endpunkthandbuch zu Datentypen.](./data-types.md#create)
+   * Der Feldtyp kann auch mit einem beliebigen Datentyp in der Registry definiert werden. Weitere Informationen finden Sie im [ zum Erstellen eines ](./data-types.md#create) im Handbuch zum Datentypendpunkt .
 * In `description` wird das Feld und relevante Informationen zu den Felddaten erklärt. Dies sollte in vollständigen Sätzen mit klarer Sprache geschrieben sein, damit jeder, der auf das Schema zugreift, die Absicht des Feldes verstehen kann.
 
 ## Nächste Schritte

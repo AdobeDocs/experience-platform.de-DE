@@ -1,6 +1,6 @@
 ---
 title: sendMediaEvent
-description: Erfahren Sie, wie Sie mit dem Befehl sendMediaEvent Mediensitzungen im Web SDK verfolgen können.
+description: Erfahren Sie, wie Sie mit dem Befehl sendMediaEvent Mediensitzungen in Web SDK verfolgen können.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
 source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # `sendMediaEvent`
 
-Der Befehl `sendMediaEvent` ist Teil der Komponente Web SDK `streamingMedia` . Sie können diese Komponente verwenden, um Daten zu Mediensitzungen auf Ihrer Website zu erfassen. Informationen zum Konfigurieren dieser Komponente finden Sie in der Dokumentation zu `streamingMedia` [Dokumentation](configure/streamingmedia.md) .
+Der Befehl `sendMediaEvent` ist Teil der Web SDK-`streamingMedia`. Sie können diese Komponente verwenden, um Daten zu Mediensitzungen auf Ihrer Website zu erfassen. Informationen zum Konfigurieren dieser Komponente finden [ in der `streamingMedia` ](configure/streamingmedia.md)Dokumentation).
 
-Verwenden Sie den Befehl `sendMediaEvent` , um Medienwiedergaben, Pausen, Beendigungen, Player-Statusaktualisierungen und andere zugehörige Ereignisse zu verfolgen.
+Verwenden Sie den `sendMediaEvent`-Befehl, um Medienwiedergaben, Pausen, Abschlüsse, Aktualisierungen des Player-Status und andere zugehörige Ereignisse zu verfolgen.
 
-Web SDK kann Medienereignisse basierend auf dem Typ des Medien-Sitzungs-Tracking verarbeiten:
+Web SDK kann Medienereignisse je nach Typ des Medien-Sitzungs-Trackings verarbeiten:
 
-* **Ereignisbehandlung für automatisch verfolgte Sitzungen**. In diesem Modus müssen Sie die `sessionID` nicht an das Medienereignis oder den Abspielleistenwert übergeben. Das Web SDK verarbeitet dies für Sie basierend auf der angegebenen Player-ID und der beim Starten der Mediensitzung bereitgestellten Rückruffunktion `getPlayerDetails` .
-* **Ereignisbehandlung für manuell verfolgte Sitzungen**. In diesem Modus müssen Sie die `sessionID` zusammen mit dem Wert der Abspielleiste (Ganzzahlwert) an das Medienereignis übergeben. Bei Bedarf können Sie auch die Details zur Erlebnisqualität übermitteln.
+* **Ereignisverarbeitung für automatisch verfolgte Sitzungen**. In diesem Modus müssen Sie die `sessionID` nicht an das Medienereignis oder den Abspielkopfwert übergeben. Die Web-SDK übernimmt dies für Sie basierend auf der angegebenen Player-ID und der `getPlayerDetails` Rückruffunktion, die beim Starten der Mediensitzung bereitgestellt wurde.
+* **Ereignisverarbeitung für manuell verfolgte Sitzungen**. In diesem Modus müssen Sie die `sessionID` zusammen mit dem Abspielkopfwert (ganzzahliger Wert) an das Medienereignis übergeben. Bei Bedarf können Sie auch Details zur Erlebnisqualität weitergeben.
 
-## Umgang mit Medienereignissen nach Typ {#handle-by-type}
+## Verarbeiten von Medienereignissen nach Typ {#handle-by-type}
 
-Wählen Sie die folgenden Registerkarten aus, um Beispiele für die Handhabung von Ereignistypen für jeden Ereignistyp und für die Tracking-Methode von Sitzungen zu erhalten (automatisch oder manuell).
+Wählen Sie die folgenden Registerkarten aus, um Beispiele für die Verarbeitung von Ereignistypen für jeden Ereignistyp und jede Sitzungsverfolgungsmethode anzuzeigen (automatisch oder manuell).
 
 
 ### Play {#play}
 
-Der Ereignistyp `media.play` wird verwendet, um zu verfolgen, wann die Medienwiedergabe beginnt. Dieses Ereignis sollte gesendet werden, wenn der Player den Status von einem anderen Status zu &quot;Playing&quot;(Wiedergabe) ändert. Andere Status, von denen der Player zu &quot;Playing&quot;(Wiedergabe) wechselt, umfassen &quot;Buffering&quot;(Puffern), den Fortsetzen der Wiedergabe von &quot;Paused&quot;(Pause), den Player, der sich von einem Fehler erholt, oder die automatische Wiedergabe.
+Der `media.play` Ereignistyp wird verwendet, um zu verfolgen, wann die Medienwiedergabe beginnt. Dieses Ereignis sollte gesendet werden, wenn der Player von einem anderen Status aus den Status „Playing“ (Wiedergabe) wechselt. Andere Zustände, von denen der Player zu „Playing“ (Wiedergabe) wechselt, sind „Buffering“ (Pufferung), die Wiederaufnahme von „Paused“ (angehalten), die Wiederherstellung des Players nach einem Fehler oder die automatische Wiedergabe.
 
 >[!BEGINTABS]
 
@@ -63,7 +63,7 @@ sessionPromise.then(sessionID => {
 
 ### Aussetzen {#pause}
 
-Der Ereignistyp `media.pauseStart` wird verwendet, um zu verfolgen, wann eine Medienwiedergabe angehalten wird. Dieses Ereignis sollte gesendet werden, wenn der Benutzer die Taste **[!UICONTROL Pause]** drückt. Es gibt keinen Ereignistyp Fortsetzen . Eine Wiederaufnahme wird erkannt, wenn Sie ein `media.play` -Ereignis nach einer `media.pauseStart` senden.
+Der `media.pauseStart` Ereignistyp wird verwendet, um zu verfolgen, wann eine Medienwiedergabe angehalten wurde. Dieses Ereignis sollte gesendet werden, wenn der Benutzer auf &quot;**[!UICONTROL &quot;]**. Es gibt keinen Resume-Ereignistyp. Ein Lebenslauf wird abgeleitet, wenn Sie nach einem `media.pauseStart` ein `media.play` senden.
 
 >[!BEGINTABS]
 
@@ -99,7 +99,7 @@ sessionPromise.then(sessionID => {
 
 ### Fehler {#error}
 
-Der Ereignistyp `media.error` wird verwendet, um zu verfolgen, wann während der Medienwiedergabe ein Fehler auftritt. Dieses Ereignis sollte gesendet werden, wenn ein Fehler auftritt.
+Der `media.error`-Ereignistyp wird verwendet, um zu verfolgen, wann während der Medienwiedergabe ein Fehler auftritt. Dieses Ereignis sollte bei einem Fehler gesendet werden.
 
 >[!BEGINTABS]
 
@@ -145,7 +145,7 @@ sessionPromise.then(sessionID => {
 
 ### Start der Werbeunterbrechung {#ad-break-start}
 
-Der Ereignistyp `media.adBreakStart` wird verwendet, um zu verfolgen, wann eine Werbeunterbrechung beginnt. Dieses Ereignis sollte gesendet werden, wenn eine Werbeunterbrechung beginnt.
+Der `media.adBreakStart` Ereignistyp wird verwendet, um den Beginn einer Werbeunterbrechung zu verfolgen. Dieses Ereignis sollte gesendet werden, wenn eine Werbeunterbrechung beginnt.
 
 >[!BEGINTABS]
 
@@ -191,9 +191,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Abschluss der Werbeunterbrechung {#ad-break-complete}
+### Werbeunterbrechung abgeschlossen {#ad-break-complete}
 
-Der Ereignistyp `media.adBreakComplete` wird verwendet, um nachzuverfolgen, wann eine Werbeunterbrechung abgeschlossen ist. Dieses Ereignis sollte nach Abschluss einer Werbeunterbrechung gesendet werden.
+Der `media.adBreakComplete` Ereignistyp wird verwendet, um zu verfolgen, wann eine Werbeunterbrechung abgeschlossen ist. Dieses Ereignis sollte gesendet werden, wenn eine Werbeunterbrechung abgeschlossen ist.
 
 >[!BEGINTABS]
 
@@ -229,7 +229,7 @@ sessionPromise.then(sessionID => {
 
 ### Anzeigenstart {#ad-start}
 
-Der Ereignistyp `media.adStart` wird verwendet, um zu verfolgen, wann eine Anzeige beginnt. Dieses Ereignis sollte beim Start einer Anzeige gesendet werden.
+Der `media.adStart` Ereignistyp wird verwendet, um den Beginn einer Anzeige zu verfolgen. Dieses Ereignis sollte beim Start einer Anzeige gesendet werden.
 
 >[!BEGINTABS]
 
@@ -317,9 +317,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Abschluss der Anzeige {#ad-complete}
+### Hinzufügen abgeschlossen {#ad-complete}
 
-Der Ereignistyp `media.adComplete` wird verwendet, um nachzuverfolgen, wann eine Anzeige abgeschlossen ist. Dieses Ereignis sollte gesendet werden, wenn eine Anzeige abgeschlossen ist.
+Der `media.adComplete` Ereignistyp wird verwendet, um zu verfolgen, wann eine Anzeige abgeschlossen ist. Dieses Ereignis sollte gesendet werden, wenn eine Anzeige abgeschlossen ist.
 
 >[!BEGINTABS]
 
@@ -355,7 +355,7 @@ sessionPromise.then(sessionID => {
 
 ### Überspringen einer Anzeige {#ad-skip}
 
-Der Ereignistyp `media.adSkip` wird verwendet, um zu verfolgen, wann eine Anzeige übersprungen wird. Dieses Ereignis sollte gesendet werden, wenn eine Anzeige übersprungen wird.
+Der `media.adSkip` Ereignistyp wird verwendet, um zu verfolgen, wann eine Anzeige übersprungen wird. Dieses Ereignis sollte gesendet werden, wenn eine Anzeige übersprungen wird.
 
 >[!BEGINTABS]
 
@@ -391,7 +391,7 @@ sessionPromise.then(sessionID => {
 
 ### Kapitelstart {#chapter-start}
 
-Der Ereignistyp `media.chapterStart` wird verwendet, um zu verfolgen, wann ein Kapitel beginnt. Dieses Ereignis sollte beim Start eines Kapitels gesendet werden.
+Der `media.chapterStart` Ereignistyp wird verwendet, um den Beginn eines Kapitels zu verfolgen. Dieses Ereignis sollte gesendet werden, wenn ein Kapitel beginnt.
 
 >[!BEGINTABS]
 
@@ -467,9 +467,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Kapitelbeendigung {#chapter-complete}
+### Kapitel abgeschlossen {#chapter-complete}
 
-Der Ereignistyp `media.chapterComplete` wird verwendet, um zu verfolgen, wann ein Kapitel abgeschlossen ist. Dieses Ereignis sollte nach Abschluss eines Kapitels gesendet werden.
+Der `media.chapterComplete` Ereignistyp wird verwendet, um zu verfolgen, wann ein Kapitel abgeschlossen ist. Dieses Ereignis sollte gesendet werden, wenn ein Kapitel abgeschlossen ist.
 
 >[!BEGINTABS]
 
@@ -503,9 +503,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Überspringen eines Kapitels {#chapter-skip}
+### Kapitelübersprung {#chapter-skip}
 
-Der Ereignistyp `media.chapterSkip` wird verwendet, um zu verfolgen, wann ein Kapitel übersprungen wird. Dieses Ereignis sollte gesendet werden, wenn ein Kapitel übersprungen wird.
+Der `media.chapterSkip` Ereignistyp wird verwendet, um zu verfolgen, wann ein Kapitel übersprungen wird. Dieses Ereignis sollte gesendet werden, wenn ein Kapitel übersprungen wird.
 
 >[!BEGINTABS]
 
@@ -539,9 +539,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Pufferstart {#buffer-start}
+### Start der Pufferung {#buffer-start}
 
-Der Ereignistyp `media.bufferStart` wird verwendet, um zu verfolgen, wann die Pufferung beginnt. Dieses Ereignis sollte beim Start der Pufferung gesendet werden. Es gibt keinen `bufferResume` -Ereignistyp. Eine `bufferResume` wird abgeleitet, wenn Sie ein Wiedergabeereignis nach `bufferStart` senden.
+Der `media.bufferStart` Ereignistyp wird verwendet, um zu verfolgen, wann die Pufferung beginnt. Dieses Ereignis sollte beim Start der Pufferung gesendet werden. Es gibt keinen `bufferResume` Ereignistyp. Ein `bufferResume` wird abgeleitet, wenn Sie nach dem `bufferStart` ein Wiedergabeereignis senden.
 
 >[!BEGINTABS]
 
@@ -577,7 +577,7 @@ sessionPromise.then(sessionID => {
 
 ### Bitratenänderung {#bitrate-change}
 
-Der Ereignistyp `media.bitrateChange` wird verwendet, um zu verfolgen, wann sich die Bitrate ändert. Dieses Ereignis sollte gesendet werden, wenn sich die Bitrate ändert.
+Der `media.bitrateChange` Ereignistyp wird verwendet, um zu verfolgen, wann sich die Bitrate ändert. Dieses Ereignis sollte gesendet werden, wenn sich die Bitrate ändert.
 
 >[!BEGINTABS]
 
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Statusaktualisierungen {#state-updates}
 
-Der Ereignistyp `media.statesUpdate` wird verwendet, um zu verfolgen, wann sich der Player-Status ändert. Dieses Ereignis sollte gesendet werden, wenn sich der Player-Status ändert.
+Der `media.statesUpdate` Ereignistyp wird verwendet, um zu verfolgen, wann sich der Player-Status ändert. Dieses Ereignis sollte gesendet werden, wenn sich der Player-Status ändert.
 
 >[!BEGINTABS]
 
@@ -684,9 +684,9 @@ sessionPromise.then(sessionID => {
 
 ### Sitzungsende {#session-end}
 
-Der Ereignistyp `media.sessionEnd` wird verwendet, um das Media Analytics-Backend darauf hinzuweisen, die Sitzung sofort zu schließen, wenn der Benutzer die Anzeige des Inhalts abgebrochen hat und wahrscheinlich nicht zurückkehren wird.
+Der Ereignistyp `media.sessionEnd` wird verwendet, um das Media Analytics-Backend zu benachrichtigen, dass die Sitzung sofort geschlossen wird, wenn der Benutzer die Anzeige des Inhalts verlassen hat und er wahrscheinlich nicht mehr zurückkehren wird.
 
-Wenn Sie kein `sessionEnd` -Ereignis senden, wird die Sitzung abgebrochen, nachdem 10 Minuten lang keine Ereignisse eingegangen sind oder die Abspielleiste sich 30 Minuten lang nicht verändert hat. Die Sitzung wird automatisch gelöscht.
+Wenn Sie kein `sessionEnd` senden, wird eine abgebrochene Sitzung beendet, wenn für 10 Minuten keine Ereignisse empfangen werden oder wenn für 30 Minuten keine Abspielkopfbewegung stattfindet. Die Sitzung wird automatisch gelöscht.
 
 >[!BEGINTABS]
 
@@ -720,9 +720,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Sitzungsende {#session-complete}
+### Sitzung abgeschlossen {#session-complete}
 
-Der Ereignistyp `media.sessionComplete` wird verwendet, um zu verfolgen, wann eine Mediensitzung abgeschlossen ist. Dieses Ereignis sollte gesendet werden, wenn das Ende des Hauptinhalts erreicht ist.
+Der `media.sessionComplete` Ereignistyp wird verwendet, um den Abschluss einer Mediensitzung zu verfolgen. Dieses Ereignis sollte gesendet werden, wenn das Ende des Hauptinhalts erreicht ist.
 
 >[!BEGINTABS]
 

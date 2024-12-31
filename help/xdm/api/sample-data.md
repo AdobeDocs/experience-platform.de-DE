@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Beispieldaten; Beispieldaten; rpc
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Beispieldaten;Beispieldaten;rpc;
 solution: Experience Platform
 title: API-Endpunkt für Beispieldaten
 description: Mit dem Endpunkt /sampledata in der Schema Registry-API können Sie Beispieldaten generieren, die der Struktur eines vorhandenen XDM-Schemas zugeordnet sind.
@@ -13,19 +13,19 @@ ht-degree: 18%
 
 # Endpunkt für Beispieldaten
 
-Um Daten in Adobe Experience Platform zu erfassen, müssen Format und Datenstruktur einem vorhandenen Experience-Datenmodell (XDM)-Schema entsprechen. Je nach Komplexität des Schemas für einen bestimmten Datensatz kann es schwierig sein, die genaue Form der Daten zu bestimmen, die der Datensatz bei der Erfassung erwartet.
+Um Daten in Adobe Experience Platform aufzunehmen, müssen das Format und die Struktur der Daten einem vorhandenen Experience-Datenmodell (XDM)-Schema entsprechen. Je nach Komplexität des Schemas für einen bestimmten Datensatz kann es schwierig sein, die genaue Form der Daten zu bestimmen, die der Datensatz bei der Aufnahme erwartet.
 
-Mithilfe des Endpunkts `/sampledata` in der API [!DNL Schema Registry] können Sie ein Beispielaufnahme-Objekt für ein zuvor erstelltes Schema generieren.
+Mithilfe des `/sampledata`-Endpunkts in der [!DNL Schema Registry]-API können Sie ein Beispielaufnahmeobjekt für jedes zuvor erstellte Schema generieren.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-Der Beispieldaten-Endpunkt ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie im API-Aufruf unten dargestellt.
+Der Beispieldatenendpunkt ist Teil der Remote Procedure Calls (RPCs), die vom [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API benötigen RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den `/rpc`-Namespace verwenden, wie im folgenden API-Aufruf veranschaulicht.
 
-## Beispieldaten für ein Schema abrufen
+## Abrufen von Beispieldaten für ein Schema
 
-Sie können Beispieldaten für ein beliebiges Schema in der Schema Library abrufen, indem Sie die Kennung des Schemas im Pfad einer GET-Anfrage an den -Endpunkt angeben.
+Sie können Beispieldaten für ein beliebiges Schema in der Schemabibliothek abrufen, indem Sie die ID des Schemas im Pfad einer GET-Anfrage an den -Endpunkt angeben.
 
 **API-Format**
 
@@ -35,13 +35,13 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, für das Sie Beispieldaten generieren möchten. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-codierte `$id` des Schemas, für das Sie Beispieldaten generieren möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Anfrage generiert Beispieldaten für ein &quot;Loyalty Members&quot;-Schema.
+Die folgende Anfrage generiert Beispieldaten für ein Schema von Mitgliedern des Treueprogramms.
 
 ```shell
 curl -X GET \

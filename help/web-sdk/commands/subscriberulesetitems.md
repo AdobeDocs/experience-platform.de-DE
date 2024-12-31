@@ -1,68 +1,68 @@
 ---
 title: subscribeRulesetItems
-description: Abonnieren Sie mit dem Befehl subscribeRulesetItems Inhaltskarten für eine bestimmte Oberfläche.
-source-git-commit: 01cba985e22e4673fb60721c810ac9cbee287386
+description: Abonnieren von Inhaltskarten für eine bestimmte Oberfläche mit dem Befehl „subscribeRuleSetItems“.
+exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 3%
 
 ---
 
-
 # `subscribeRulesetItems`
 
-Mit dem Befehl `subscribeRulesetItems` können Sie Vorschläge abonnieren, die das Ergebnis zufrieden stellender Regelsätze sind. Dazu können Sie angeben, nach welchen Oberflächen und Schemata gefiltert werden soll, und eine Rückruffunktion bereitstellen.
+Mit dem Befehl `subscribeRulesetItems` können Sie Vorschläge abonnieren, die das Ergebnis erfüllter Regelsätze sind. Hierzu können Sie angeben, nach welchen Oberflächen und Schemata gefiltert werden soll, und eine Rückruffunktion bereitstellen.
 
-Jedes Mal, wenn Regelsätze ausgewertet werden, empfängt die Callback-Funktion ein `result` -Objekt mit einem Array von Vorschlägen darin.
+Jedes Mal, wenn Regelsätze ausgewertet werden, empfängt die Callback-Funktion ein `result` mit einem Array von Vorschlägen darin.
 
 >[!IMPORTANT]
 >
->Der Befehl `subscribeRulesetItems` ist die einzige Möglichkeit, Vorschläge zu erhalten, die aus Regelsätzen stammen, da sie nicht zusammen mit [`sendEvent`](sendevent/overview.md) Ergebnissen zurückgegeben werden.
+>Der Befehl `subscribeRulesetItems` ist die einzige Möglichkeit, Vorschläge aus Regelsätzen abzurufen, da sie nicht zusammen mit [`sendEvent`](sendevent/overview.md) Ergebnissen zurückgegeben werden.
 
-## Komprimierungsoptionen {#command-options}
+## Befehlsoptionen {#command-options}
 
-Dieser Befehl akzeptiert ein `options` -Objekt mit den folgenden Eigenschaften:
+Dieser Befehl akzeptiert ein `options` mit den folgenden Eigenschaften:
 
 | Eigenschaft | Typ | Beschreibung |
 | --- | --- | --- |
-| `surfaces` | Zeichenfolgen-Array | Eine Liste der Oberflächen. Vorschläge werden nur von der Callback-Funktion empfangen, wenn sie mit einer der hier angegebenen Oberflächen übereinstimmen. |
-| `schemas` | Zeichenfolgen-Array | Eine Liste von Schemas. Vorschläge werden nur von der Callback-Funktion empfangen, wenn sie mit einem der hier angegebenen Schemas übereinstimmen. |
-| `callback` | Funktion | Eine Callback-Funktion, die aufgerufen wird, wenn Vorschläge das Ergebnis erfüllter Regelsätze sind. Die Callback-Funktion empfängt beim Aufrufen zwei Parameter: `result` und `collectEvent`. Weitere Informationen finden Sie unter [Rückrufparameter](#callback-parameters) . |
+| `surfaces` | Zeichenfolgen-Array | Eine Liste von Oberflächen. Vorschläge werden von der Callback-Funktion nur dann empfangen, wenn sie mit einer der hier bereitgestellten Oberflächen übereinstimmen. |
+| `schemas` | Zeichenfolgen-Array | Eine Liste von Schemata. Vorschläge werden nur dann von der Callback-Funktion empfangen, wenn sie mit einem der hier bereitgestellten Schemata übereinstimmen. |
+| `callback` | Funktion | Eine Callback-Funktion, die aufgerufen wird, wenn Vorschläge das Ergebnis erfüllter Regelsätze sind. Die Rückruffunktion erhält zwei Parameter, wenn sie aufgerufen wird: `result` und `collectEvent`. Siehe [Callback-Parameter](#callback-parameters) für Details. |
 
 ### Callback-Parameter {#callback-parameters}
 
-Die Callback-Funktion empfängt beim Aufrufen die beiden in der folgenden Tabelle beschriebenen Parameter.
+Die Rückruffunktion empfängt beim Aufrufen die beiden in der folgenden Tabelle beschriebenen Parameter.
 
 | Parameter | Typ | Beschreibung |
 | --- | --- | --- |
-| `result` | Objekt | Dieses Objekt enthält ein `propositions` -Array.  Diese Vorschläge sind das direkte Ergebnis zufrieden stellender Regelsätze. Das `result` -Objekt ist genauso strukturiert wie das [result -Objekt](command-responses.md), das von `sendEvent` mit einer `then` -Klausel zurückgegeben wird. |
-| `collectEvent` | Funktion | Eine bequeme Funktion, mit der Sie Edge Network-Ereignisse senden können, um Interaktionen, Anzeigen und andere Ereignisse zu verfolgen. |
+| `result` | Objekt | Dieses Objekt enthält ein `propositions`-Array.  Diese Vorschläge sind das direkte Ergebnis von zufriedenen Regelsätzen. Das `result`-Objekt ist genauso strukturiert wie das [Ergebnisobjekt](command-responses.md) das von `sendEvent` mit einer `then` -Klausel zurückgegeben wird. |
+| `collectEvent` | Funktion | Eine Komfortfunktion, mit der Sie Edge Network-Ereignisse senden können, um Interaktionen, Anzeigen und andere Ereignisse zu verfolgen. |
 
 ### `collectEvent`-Funktion {#collectevent-function}
 
-Die Funktion `collectEvent` ist eine praktische Funktion, mit der Sie Edge Network-Ereignisse senden können, um Interaktionen, Anzeigen und andere Ereignisse zu verfolgen. Es akzeptiert die beiden in der folgenden Tabelle beschriebenen Parameter.
+Die Funktion `collectEvent` ist eine praktische Funktion, mit der Sie Ereignisereignisse senden können, um Edge Networks, Anzeigen und andere Ereignisse zu verfolgen. Sie akzeptiert die beiden in der folgenden Tabelle beschriebenen Parameter.
 
 | Parameter | Typ | Beschreibung |
 | --- | --- | --- |
 | Ereignistyp | String | Eine Zeichenfolge, die angibt, welcher Vorschlagsereignistyp ausgegeben werden soll. Unterstützte Ereignistypen sind `display`, `interact` oder `dismiss`. |
 | `propositions` | Array | Ein Array von Vorschlägen, die dem Ereignis entsprechen. |
 
-## Abonnieren von Inhaltskarten mit der Web SDK-Tag-Erweiterung {#tag-extension}
+## Abonnieren von Inhaltskarten mit der Tag-Erweiterung Web SDK {#tag-extension}
 
-Gehen Sie wie folgt vor, um über die Benutzeroberfläche &quot;Tags&quot;Inhaltskarten zu abonnieren.
+Gehen Sie wie folgt vor, um Inhaltskarten über die Benutzeroberfläche für Tags zu abonnieren.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen Sie unter [!UICONTROL Ereignisse] ein vorhandenes Ereignis aus oder erstellen Sie ein neues.
-1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und setzen Sie den **[!UICONTROL Ereignistyp]** auf **[!UICONTROL Regelsatzelemente abonnieren]**.
+1. Wählen [!UICONTROL  unter &quot;]&quot; ein vorhandenes Ereignis aus oder erstellen Sie ein neues.
+1. Legen Sie das [!UICONTROL Erweiterung] Dropdown-Feld auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und setzen Sie den **[!UICONTROL Ereignistyp]** auf **[!UICONTROL Regelsatzelemente abonnieren]**.
 1. Wählen Sie rechts im Bildschirm die Schemata und Oberflächen aus, für die Sie Inhaltskarten abonnieren möchten.
-1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 
-## Abonnieren von Inhaltskarten mit der Web SDK JavaScript-Bibliothek {#library}
+## Abonnieren von Inhaltskarten mit der Web SDK JavaScript Library {#library}
 
-Der folgende Beispielcode abonniert die `web://mywebsite.com/#welcome` -Oberfläche für Inhaltskarten und verwendet die `collectEvent`-Convenience-Methode, um `display` -Ereignisse für alle Vorschläge auszugeben.
+Der folgende Beispiel-Code abonniert die `web://mywebsite.com/#welcome` für Inhaltskarten und verwendet die `collectEvent` Convenience-Methode zum Ausgeben `display` Ereignisse für alle Vorschläge.
 
 ```js
 alloy("subscribeRulesetItems", {

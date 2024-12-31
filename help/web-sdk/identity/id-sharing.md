@@ -1,7 +1,7 @@
 ---
 title: Mobile-zu-Web und Domain-übergreifender ID-Austausch
-description: Erfahren Sie, wie Sie Besucher-IDs von mobilen auf Web-Eigenschaften und domänenübergreifend beibehalten können.
-keywords: Identität; mobil; ID; Freigabe; Domäne; domänenübergreifend; SDK; Plattform;
+description: Erfahren Sie, wie Sie Besucher-IDs von Mobile zu Web-Eigenschaften und domänenübergreifend beibehalten
+keywords: Identität;Mobil;ID;Freigabe;Domain;domänenübergreifend;SDK;Plattform;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -14,47 +14,47 @@ ht-degree: 3%
 
 ## Übersicht
 
-Das Adobe Experience Platform Web SDK unterstützt Funktionen zur Freigabe von Besucher-IDs, mit denen Kunden personalisierte Erlebnisse präziser zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend bereitstellen können.
+Adobe Experience Platform Web SDK unterstützt die Freigabe von Besucher-IDs, mit denen Kunden personalisierte Erlebnisse präziser zwischen Mobile Apps und mobilen Web-Inhalten sowie domänenübergreifend bereitstellen können.
 
 ## Anwendungsfälle {#use-cases}
 
-### Einheitliche Personalisierung zwischen mobilen Apps und mobilen Websites
+### Konsistente Personalisierung zwischen mobilen Apps und mobilen Websites
 
-Ein Bekleidungsunternehmen möchte das Kundenerlebnis auf der Grundlage seiner Interessen personalisieren und die Personalisierung in einer Mobile App, die auch WebViews lädt, präzise halten. Durch die Verwendung der Funktion zur Freigabe von Mobilgeräte-zu-Web-IDs können sie sicherstellen, dass Kunden die genauesten Angebote unterbreitet werden. Dabei wird dieselbe Besucherkennung in der App und derselbe mobile Webinhalt verwendet, indem die [!DNL ECID] an die mobile Web-URL übergeben wird.
+Ein Bekleidungsunternehmen möchte die Erlebnisse seiner Kunden auf der Grundlage seiner Interessen personalisieren und die Personalisierung in einer mobilen Anwendung, die auch WebViews lädt, präzise halten. Durch die Verwendung der ID-Freigabe von Mobilgeräten an das Web können sie sicherstellen, dass Kundinnen und Kunden die genauesten Angebote unterbreitet werden, indem sie dieselbe Besucherkennung in der App und denselben mobilen Webinhalt verwenden, indem sie die [!DNL ECID] an die mobile Web-URL übergeben.
 
-### Konsistente Personalisierung über Domänen hinweg
+### Konsistente Personalisierung über Domains hinweg
 
-Ein Einzelhändler mit mehreren Online-Stores möchte das Kundenerlebnis über seine Domänen hinweg personalisieren, basierend auf Kundeninteressen. Mithilfe der domänenübergreifenden ID-Freigabe-Funktion des Web SDK kann der Einzelhändler auf der Grundlage von Kundeninteressen präzise Angebote für alle ihre Domänen bereitstellen.
+Ein Einzelhändler mit mehreren Online-Shops möchte das Kundenerlebnis je nach Kundeninteressen domänenübergreifend personalisieren. Mithilfe der Domain-übergreifenden ID-Sharing-Funktion von Web SDK kann der Einzelhändler auf der Grundlage der Kundeninteressen präzise Angebote für alle seine Domains bereitstellen.
 
-### Berichte zu Besucheraktivitäten verbessern
+### Verbessern der Berichterstellung für Besucheraktivitäten
 
-Ein Technologie-Händler möchte die Berichte zu Besucheraktivitäten verbessern und dabei Informationen darüber erhalten, wann seine Besucher von der Mobile App zur mobilen Website oder zu ihren anderen Domänen wechseln. Mithilfe der domänenübergreifenden ID-Freigabe-Funktion des Web SDK kann das Marketing-Team Besucher über ihre Webeigenschaften hinweg genau verfolgen und Aktivitätsberichte generieren.
+Ein Technologiehändler möchte das Reporting zu Besucheraktivitäten verbessern, indem er Informationen darüber erhält, wann seine Besucher von der Mobile App zu ihrer mobilen Website oder zu anderen Domains wechseln. Mithilfe der Domain-übergreifenden ID-Freigabe von Web SDK kann das Marketing-Team Besuchende über ihre Web-Eigenschaften hinweg genau verfolgen und Aktivitätsberichte erstellen.
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie Version 2.11.0 (oder höher) verwenden.[!DNL Web SDK]
+Um die Freigabe von Mobile-zu-Web- und Domain-übergreifenden IDs zu verwenden, müssen Sie [!DNL Web SDK] Version 2.11.0 oder höher verwenden.
 
-Bei Edge Network-Implementierungen für Mobilgeräte wird diese Funktion in der Erweiterung [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) ab Version 1.1.0 (iOS und Android) unterstützt.
+Bei mobilen Edge Network-Implementierungen wird diese Funktion ab Version 1.1.0 (iOS [ Android) in der ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) „Identität für Edge Network&quot; unterstützt.
 
-Diese Funktion ist auch mit der [!DNL VisitorAPI.js] -Version 1.7.0 oder höher kompatibel.
+Diese Funktion ist auch mit [!DNL VisitorAPI.js] Version 1.7.0 oder höher kompatibel.
 
-## Freigabe mobiler oder Web-IDs {#mobile-to-web}
+## Mobile-zu-Web-ID-Freigabe {#mobile-to-web}
 
-Verwenden Sie die API `getUrlVariables` aus der Erweiterung [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) , um die Kennungen als Abfrageparameter abzurufen und sie beim Öffnen von [!DNL webViews] an Ihre URL anzuhängen.
+Verwenden Sie die `getUrlVariables`-API aus der [Identität für Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)-Erweiterung, um die Kennungen als Abfrageparameter abzurufen und sie beim Öffnen von [!DNL webViews] an Ihre URL anzuhängen.
 
-Es ist keine zusätzliche Konfiguration erforderlich, damit das Web SDK `ECID` -Werte in der Abfragezeichenfolge akzeptiert.
+Es ist keine zusätzliche Konfiguration erforderlich, damit Web SDK `ECID` Werte in der Abfragezeichenfolge akzeptiert.
 
-Der Abfragezeichenfolgenparameter umfasst:
+Der Abfragezeichenfolgenparameter enthält:
 
 * `MCID`: Die Experience Cloud-ID (`ECID`)
-* `MCORGID`: Die Experience Cloud `orgID`, die mit der im [!DNL Web SDK] konfigurierten `orgID` übereinstimmen muss.
+* `MCORGID`: Die Experience Cloud-`orgID`, die mit den in der [!DNL Web SDK] konfigurierten `orgID` übereinstimmen muss.
 * `TS`: Ein Zeitstempelparameter, der nicht älter als fünf Minuten sein darf.
 
 
-Bei der Freigabe von Mobile-to-Web-IDs wird der Parameter `adobe_mc` verwendet. Wenn der Parameter `adobe_mc` vorhanden und gültig ist, wird der Parameter `ECID` aus der Abfragezeichenfolge in der ersten Anfrage an das Edge Network automatisch zur Identitätszuordnung hinzugefügt. Bei allen nachfolgenden Edge Network-Interaktionen wird dieser `ECID` verwendet.
+Die Freigabe der Mobile-zu-Web-IDs verwendet den `adobe_mc`. Wenn der `adobe_mc` vorhanden und gültig ist, wird der `ECID` aus der Abfragezeichenfolge bei der ersten Anfrage an das Edge Network automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
 
-Weitere Informationen zum Übergeben von Besucher-IDs von einer mobilen App an eine WebView finden Sie in der Dokumentation zum [Umgang mit WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Weitere Informationen zum Übergeben von Besucher-IDs von einer Mobile App an eine WebView finden Sie in der Dokumentation unter [ von WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
 
-## Implementieren der domänenübergreifenden ID-Freigabe {#cross-domain-sharing}
+## Domain-übergreifende ID-Freigabe implementieren {#cross-domain-sharing}
 
-Implementierungsanweisungen mit der Web SDK-Tag-Erweiterung und der Web SDK JavaScript-Bibliothek finden Sie im Befehl [`appendIdentityToUrl`](../commands/appendidentitytourl.md) .
+Implementierungsanweisungen, bei denen sowohl die Tag-Erweiterung Web SDK als auch die Web SDK JavaScript-Bibliothek verwendet werden, finden Sie unter dem Befehl [`appendIdentityToUrl`](../commands/appendidentitytourl.md) .

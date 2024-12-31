@@ -1,6 +1,6 @@
 ---
-title: Datentyp "Rückerstattungselement"
-description: Erfahren Sie mehr über den Datentyp "Refund Item Experience Data Model (XDM)".
+title: Datentyp des Erstattungsartikels
+description: Erfahren Sie mehr über den Datentyp „Rückerstattungsartikel-Experience-Datenmodell (XDM)“.
 exl-id: 9968d314-c6f3-49d9-b860-709d7478c43a
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 13%
 
 ---
 
-# Datentyp [!UICONTROL Rückerstattungselement]
+# [!UICONTROL Rückerstattungsartikel] Datentyp
 
-[!UICONTROL Rückerstattungselement] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Informationen über eine Rückerstattung im Zusammenhang mit einer Bestellung erfasst.
+[!UICONTROL Rückerstattungsartikel] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen erfasst, die sich auf eine Rückerstattung beziehen, die mit einer Bestellung verbunden ist.
 
-![Ein Diagramm des Datentyps &quot;Rückerstattungselement&quot;.](../images/data-types/refund-item.png)
+![Abbildung des Datentyps „Erstattungsartikel“.](../images/data-types/refund-item.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
-| [!UICONTROL Transaktions-ID] | `transactionID` | Zeichenfolge | Die eindeutige Transaktionskennung für dieses Erstattungselement. |
+| [!UICONTROL Transaktions-ID] | `transactionID` | Zeichenfolge | Die eindeutige Transaktionskennung für diesen Rückerstattungsartikel. |
 | [!UICONTROL Erstattungsbetrag] | `refundAmount` | number | Der Wert der Erstattung. |
-| [!UICONTROL Rückerstattungsgrund] | `refundReason` | Zeichenfolge | Der Grund, warum eine Erstattung gewährt wurde. |
-| [!UICONTROL Rückerstattungstyp] | `refundPaymentType` | Zeichenfolge | Die Zahlungsmethode für diese Bestellung. Benutzerdefinierte Werte sind zulässig. |
-| [!UICONTROL Währungscode] | `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für diesen Erstattungsbetrag verwendet wird. Beispiele: &quot;USD&quot;, &quot;EUR&quot;. |
+| [!UICONTROL Grund für die Rückerstattung] | `refundReason` | Zeichenfolge | Der Grund, warum eine Erstattung gewährt wurde. |
+| [!UICONTROL Art der Rückerstattung] | `refundPaymentType` | Zeichenfolge | Die Zahlungsmethode für diese Bestellung. Benutzerdefinierte Werte sind zulässig. |
+| [!UICONTROL Währungscode] | `currencyCode` | Zeichenfolge | Der ISO 4217-Währungscode, der für diesen Erstattungsartikel verwendet wird. Beispiele: „USD“, „EUR“. |
 
 {style="table-layout:auto"}
 

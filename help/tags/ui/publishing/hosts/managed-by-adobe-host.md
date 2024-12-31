@@ -54,7 +54,7 @@ Sobald Ihr Build auf dem von Adobe verwalteten Host bereitgestellt wurde, vertei
 >
 >Bei von Adobe verwalteten Hosts kann es bis zu fünf Minuten dauern, bis die allererste in einer neuen Umgebung veröffentlichte Bibliothek an das globale CDN übertragen wird.
 
-Wenn ein Edge-Knoten eine Anforderung für eine bestimmte Datei erhält (z. B. Ihren Bibliotheks-Build), prüft der Knoten zunächst die Ablaufzeit für die Datei. Wenn die Zeit nicht abgelaufen ist, stellt der Edge-Knoten die zwischengespeicherte Version bereit. Wenn die Zeit abgelaufen ist, fordert der Edge-Knoten eine neue Kopie von der nächsten Quelle an, stellt diese aktualisierte Kopie bereit und speichert dann die aktualisierte Kopie mit einer neuen Ablaufzeit zwischen.
+Wenn ein Edge-Knoten eine Anfrage für eine bestimmte Datei erhält (z. B. Ihren Bibliotheks-Build), prüft der Knoten zunächst die Ablaufzeit für die Datei. Wenn die Zeit nicht abgelaufen ist, stellt der Edge-Knoten die zwischengespeicherte Version bereit. Wenn die Zeit abgelaufen ist, fordert der Edge-Knoten eine neue Kopie vom nächstgelegenen Ursprung an, stellt diese aktualisierte Kopie bereit und speichert dann die aktualisierte Kopie mit einer neuen Ablaufzeit zwischen.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Diese gestaffelten Cache-Invalidierungen geben den Quell-Server-Gruppen Zeit, di
 
 Bibliotheks-Builds werden auch über den `cache-control`-HTTP-Header im Browser zwischengespeichert. Bei der Verwendung von Hosts, die von Adobe verwaltet werden, haben Sie keine Kontrolle über die Header, die in API-Antworten zurückgegeben werden. Daher wird die Adobe-Standardeinstellung für die Zwischenspeicherung verwendet. Mit anderen Worten können Sie keine benutzerdefinierten Header für von Adobe verwaltete Hosts verwenden. Wenn Sie einen benutzerdefinierten `cache-control`-Header benötigen, sollten Sie das Hosting stattdessen [selbst übernehmen](self-hosting-libraries.md).
 
-Die Ablaufzeit für Ihren im Browser zwischengespeicherten Bibliotheks-Build (der durch die Kopfzeile `cache-control` bestimmt wird) hängt von der verwendeten Tag-Umgebung ab:
+Die Ablaufzeit für Ihren im Browser zwischengespeicherten Bibliotheks-Build (bestimmt durch den `cache-control`-Header) hängt von der verwendeten Tag-Umgebung ab:
 
 | Umgebung | Wert `cache-control` |
 | --- | --- |
@@ -90,7 +90,7 @@ Cache-Steuerungs-Header werden nur für den Hauptbibliotheks-Build angewendet. A
 
 ## Verwenden von Adobe-verwaltetem Hosting in der Benutzeroberfläche
 
-Wenn Sie zum ersten Mal eine Eigenschaft in der Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
+Wenn Sie zum ersten Mal eine Eigenschaft in der Platform- oder Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
 
 >[!NOTE]
 >

@@ -16,7 +16,7 @@ ht-degree: 84%
 
 Die hybride Personalisierung beschreibt den Prozess des Server-seitigen Abrufens von Personalisierungsinhalten mithilfe der [Edge Network Server-API](../../server-api/overview.md) und des Client-seitigen Renderns mithilfe des [Web SDK](../home.md).
 
-Sie können die hybride Personalisierung mit Personalisierungslösungen wie Adobe Target, Adobe Journey Optimizer oder Offer decisioning verwenden, wobei der Unterschied darin besteht, dass die [!UICONTROL Server API]-Payload verwendet wird.
+Sie können hybride Personalisierung mit Personalisierungslösungen wie Adobe Target, Adobe Journey Optimizer oder Offer decisioning verwenden, wobei der Unterschied in den Payload-Inhalten der [!UICONTROL Server-API] besteht.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -25,7 +25,7 @@ Bevor Sie hybride Personalisierung in Ihre Web-Eigenschaften implementieren, mü
 * Sie haben entschieden, welche Personalisierungslösung Sie verwenden möchten. Dies wirkt sich auf die Payload-Inhalte der [!UICONTROL Server-API] aus.
 * Sie haben Zugriff auf einen Anwendungs-Server, mit dem Sie die Aufrufe der [!UICONTROL Server-API] vornehmen können.
 * Sie haben Zugriff auf die [Edge Network Server API](../../server-api/authentication.md).
-* Sie haben [konfiguriert](/help/web-sdk/commands/configure/overview.md) und das Web SDK auf den Seiten bereitgestellt, die Sie personalisieren möchten.
+* Sie haben [ Web SDK korrekt ](/help/web-sdk/commands/configure/overview.md)konfiguriert) und auf den Seiten bereitgestellt, die Sie personalisieren möchten.
 
 ## Flussdiagramm {#flow-diagram}
 
@@ -39,9 +39,9 @@ Im folgenden Flussdiagramm wird die Reihenfolge der Schritte beschrieben, die zu
 1. Die Server-API gibt die Personalisierungsinhalte an Ihren Anwendungs-Server zurück.
 1. Der Anwendungs-Server gibt eine HTML-Antwort an den Client-Browser zurück, die die [Identitäts- und Cluster-Cookies](#cookies) enthält.
 1. Auf der Client-Seite wird der Befehl [!DNL Web SDK] `applyResponse` aufgerufen, wobei die Kopfzeilen und der Hauptteil der Antwort der [!UICONTROL Server-API] aus dem vorherigen Schritt übergeben werden.
-1. Der [!DNL Web SDK] rendert Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) -Angebote und Journey Optimizer-Webkanalelemente automatisch, da die `renderDecisions` -Markierung auf `true` gesetzt ist.
-1. Target-formularbasierte Angebote [!DNL HTML]/[!DNL JSON] und code-basierte Journey Optimizer-Erlebnisse werden manuell über die Methode `applyProposition` angewendet, um die [!DNL DOM] basierend auf dem Personalisierungsinhalt im Vorschlag zu aktualisieren.
-1. Bei formularbasierten Target-Angeboten vom Typ [!DNL HTML]/[!DNL JSON] und code-basierten Journey Optimizer-Erlebnissen müssen Anzeigeereignisse manuell gesendet werden, um anzugeben, wann der zurückgegebene Inhalt angezeigt wurde. Dies geschieht über den Befehl `sendEvent`.
+1. Die [!DNL Web SDK] rendert Target-[[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und Journey Optimizer-Webkanal-Elemente automatisch, da das `renderDecisions`-Flag auf `true` gesetzt ist.
+1. Zielformularbasierte [!DNL HTML]/[!DNL JSON]-Angebote und Journey Optimizer-Code-basierte Erlebnisse werden manuell über die `applyProposition` angewendet, um die [!DNL DOM] basierend auf dem Personalisierungsinhalt im Vorschlag zu aktualisieren.
+1. Bei formularbasierten [!DNL HTML]/[!DNL JSON]-Angeboten in Target und Journey Optimizer müssen Anzeigeereignisse manuell gesendet werden, um anzugeben, wann der zurückgegebene Inhalt angezeigt wurde. Dies geschieht über den Befehl `sendEvent`.
 
 ## Cookies {#cookies}
 
@@ -70,7 +70,7 @@ Wenn Sie für Analytics [einen Datenstrom konfigurieren](../../datastreams/overv
 Das Beispiel aus dieser Implementierung verwendet zwei verschiedene Datenströme:
 
 * Ein für Analytics konfigurierter Datenstrom. Dieser Datenstrom wird für Web SDK-Interaktionen verwendet.
-* Ein zweiter Datenstrom ohne eine Analytics-Konfiguration. Dieser Datastream wird für Server-API-Anfragen verwendet. Sie müssen diesen Datastream mit derselben Zielkonfiguration wie den für Analytics konfigurierten Datastream konfigurieren.
+* Ein zweiter Datenstrom ohne eine Analytics-Konfiguration. Dieser Datenstrom wird für Server-API-Anfragen verwendet. Sie müssen diesen Datenstrom mit derselben Zielkonfiguration konfigurieren wie den Datenstrom, den Sie für Analytics konfiguriert haben.
 
 Auf diese Weise werden bei der Server-seitigen Anforderung keine Analytics-Ereignisse registriert, bei den Client-seitigen Anforderungen jedoch schon. Dies führt dazu, dass Analytics-Anforderungen genau gezählt werden.
 

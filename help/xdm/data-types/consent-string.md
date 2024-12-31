@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Datentyp der Zustimmungszeichenfolge
-description: Erfahren Sie mehr über den XDM-Datentyp "Consent String".
+title: Datentyp der Einverständniszeichenfolge
+description: Erfahren Sie mehr über den XDM-Datentyp der Einverständniszeichenfolge.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -10,19 +10,19 @@ ht-degree: 13%
 
 ---
 
-# Datentyp [!UICONTROL Consent String]
+# [!UICONTROL Einverständniszeichenfolge] Datentyp
 
-[!UICONTROL Einverständniszeichenfolge] ist ein standardmäßiger XDM-Datentyp, der einen Zeichenfolgenwert beschreibt, der die Einwilligung eines Kunden darstellt. Sie enthält kontextbezogene Informationen wie den Standard für die Zustimmungszeichenfolge (z. B. das [IAB Transparency and Consent Framework (TCF) 2.0](../field-groups/profile/iab.md)).
+[!UICONTROL Einverständniszeichenfolge] ist ein standardmäßiger XDM-Datentyp, der einen Zeichenfolgenwert beschreibt, der das Einverständnis eines Kunden darstellt. Sie enthält kontextuelle Informationen wie den Standard für die Einverständniszeichenfolge (z. B. das [IAB Transparency and Consent Framework (TCF) 2.0](../field-groups/profile/iab.md)).
 
 ![](../images/data-types/consent-string.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `consentStandard` | Zeichenfolge | Der Standard für die Zustimmungszeichenfolge. Dies hilft bei der Bestimmung des Formats der Einverständniszeichenfolge, wie es von den Services der Einverständnisverwaltung festgelegt wird. |
-| `consentStandardVersion` | Zeichenfolge | Die Version des Zustimmungsstandards, die verwendet wird, um das Format der Zustimmungszeichenfolge genau zu definieren, das von den Zustimmungsverwaltungsdiensten festgelegt wurde. |
-| `consentStringValue` | Zeichenfolge | Die vollständige Zustimmungszeichenfolge, die vom Zustimmungsverwaltungsdienst bereitgestellt wird. `consentStandard` und `consentStandardVersion` helfen bei der Definition, wie diese Zeichenfolge analysiert wird. |
-| `containsPersonalData` | Boolesch | Wenn dieses Feld wahr ist, bedeutet dies, dass diese Zustimmungszeichenfolge für die Durchsetzung der Zustimmung verarbeitet werden muss. |
-| `gdprApplies` | Boolesch | Wenn dieses Feld zutrifft, bedeutet dies, dass die Einwilligung mit personenbezogenen Daten eingeht. |
+| `consentStandard` | Zeichenfolge | Der Standard für die Einverständniszeichenfolge. Dies hilft bei der Bestimmung des Formats der Einverständniszeichenfolge, wie es von den Services der Einverständnisverwaltung festgelegt wird. |
+| `consentStandardVersion` | String | Die Version des Einverständnisstandards, die verwendet wird, um das Format der Einverständniszeichenfolge genau zu definieren, wie es von den Services der Einverständnisverwaltung festgelegt wird. |
+| `consentStringValue` | String | Die vollständige Einverständniszeichenfolge, wie vom Einverständnisverwaltungs-Service bereitgestellt. `consentStandard` und `consentStandardVersion` helfen zu definieren, wie diese Zeichenfolge analysiert werden soll. |
+| `containsPersonalData` | Boolesch | Wenn dieses Feld „true“ ist, bedeutet dies, dass diese Einverständniszeichenfolge zur Durchsetzung des Einverständnisses verarbeitet werden muss. |
+| `gdprApplies` | Boolesch | Wenn dieses Feld wahr ist, bedeutet dies, dass die Einwilligung mit personenbezogenen Daten erfolgt. |
 
 {style="table-layout:auto"}
 

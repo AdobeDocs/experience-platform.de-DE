@@ -1,6 +1,6 @@
 ---
 title: onBeforeLinkClickSend
-description: Callback, der kurz vor dem Senden von Linktracking-Daten ausgeführt wird.
+description: Callback, der unmittelbar vor dem Senden der Linktracking-Daten ausgeführt wird.
 exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -14,38 +14,38 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Dieser Rückruf wird nicht mehr unterstützt. Verwenden Sie stattdessen [`filterClickDetails`](clickcollection.md) .
+>Dieser Callback ist veraltet. Verwenden Sie stattdessen [`filterClickDetails`](clickcollection.md) .
 
-Mit dem Rückruf `onBeforeLinkClickSend` können Sie eine JavaScript-Funktion registrieren, die die von Ihnen gesendeten Linktracking-Daten ändern kann, bevor diese Daten an Adobe gesendet werden. Mit diesem Rückruf können Sie das Objekt `xdm` oder `data` bearbeiten, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch bedingt abbrechen, z. B. mit erkanntem clientseitigem Bot-Traffic. Es wird auf Web SDK 2.15.0 oder höher unterstützt.
+Mit dem `onBeforeLinkClickSend` Callback können Sie eine JavaScript-Funktion registrieren, die Linktracking-Daten ändern kann, die Sie senden, bevor diese Daten an Adobe gesendet werden. Dieser Rückruf ermöglicht es Ihnen, das `xdm`- oder `data`-Objekt zu bearbeiten, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch ganz abbrechen, z. B. bei erkanntem Client-seitigem Bot-Traffic. Es wird ab Web SDK 2.15.0 unterstützt.
 
-Dieser Rückruf wird nur ausgeführt, wenn [`clickCollectionEnabled`](clickcollectionenabled.md) aktiviert ist und [`filterClickDetails`](clickcollection.md) keine registrierte Funktion enthält. Wenn `clickCollectionEnabled` deaktiviert ist oder `filterClickDetails` eine registrierte Funktion enthält, wird dieser Rückruf nicht ausgeführt. Wenn `onBeforeEventSend` und `onBeforeLinkClickSend` beide registrierte Funktionen enthalten, wird zuerst `onBeforeLinkClickSend` ausgeführt.
+Dieser Rückruf wird nur ausgeführt, wenn [`clickCollectionEnabled`](clickcollectionenabled.md) aktiviert ist und [`filterClickDetails`](clickcollection.md) keine registrierte Funktion enthält. Wenn `clickCollectionEnabled` deaktiviert ist oder `filterClickDetails` eine registrierte Funktion enthält, wird dieser Callback nicht ausgeführt. Wenn `onBeforeEventSend` und `onBeforeLinkClickSend` beide registrierte Funktionen enthalten, wird `onBeforeLinkClickSend` zuerst ausgeführt.
 
 >[!WARNING]
 >
->Dieser Rückruf ermöglicht die Verwendung von benutzerdefiniertem Code. Wenn Code, den Sie in den Rückruf einschließen, eine nicht abgefangene Ausnahme ausgibt, wird die Verarbeitung für das Ereignis angehalten. Daten werden nicht an Adobe gesendet.
+>Dieser Callback ermöglicht die Verwendung von benutzerdefiniertem Code. Wenn ein Code, den Sie in den Callback einbeziehen, eine nicht abgefangene Ausnahme auslöst, wird die Verarbeitung für das Ereignis angehalten. Daten werden nicht an Adobe gesendet.
 
-## Vor dem Link-Klick Callback mit der Web SDK-Tag-Erweiterung konfigurieren {#tag-extension}
+## Konfigurieren Sie einen Link, bevor Sie auf „Rückruf senden“ klicken, indem Sie die Tag-Erweiterung „Web SDK&quot; verwenden. {#tag-extension}
 
-Wählen Sie bei der Konfiguration der Tag-Erweiterung [ die Schaltfläche **[!UICONTROL Vor dem Link-Klick-Ereignis bereitstellen - Callback-Code senden]** aus. ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) Diese Schaltfläche öffnet ein modales Fenster, in das Sie den gewünschten Code einfügen können.
+Wählen Sie beim Konfigurieren **[!UICONTROL Tag-Erweiterung die Schaltfläche]** Vor Link-Klick-Ereignis-Rückruf-Code [Bereitstellen](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) aus. Diese Schaltfläche öffnet ein modales Fenster, in dem Sie den gewünschten Code einfügen können.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenerfassung] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Klick-Datenerfassung aktivieren]** .
-1. Wählen Sie die Schaltfläche mit der Bezeichnung **[!UICONTROL Vor dem Link-Klick-Ereignis-Rückrufcode senden]** angeben.
-1. Diese Schaltfläche öffnet ein modales Fenster mit einem Code-Editor. Fügen Sie den gewünschten Code ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um das modale Fenster zu schließen.
-1. Klicken Sie unter den Erweiterungseinstellungen auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenerfassung] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Aktivieren und auf Datenerfassung klicken]**.
+1. Klicken Sie auf die Schaltfläche **[!UICONTROL Bereitstellen eines Links vor dem Klicken auf den Rückruf-Code für das Ereignis senden]**.
+1. Diese Schaltfläche öffnet ein modales Fenster mit einem Code-Editor. Fügen Sie den gewünschten Code ein und klicken Sie dann auf **[!UICONTROL Speichern]**, um das modale Fenster zu schließen.
+1. Klicken **[!UICONTROL unter]** auf „Speichern“ und veröffentlichen Sie Ihre Änderungen.
 
-Im Code-Editor haben Sie Zugriff auf die folgenden Variablen:
+Innerhalb des Code-Editors haben Sie Zugriff auf die folgenden Variablen:
 
-* **`content.clickedElement`**: Das DOM-Element, auf das geklickt wurde.
+* **`content.clickedElement`**: Das angeklickte DOM-Element.
 * **`content.xdm`**: Die XDM-Payload für das Ereignis.
 * **`content.data`**: Die Payload des Datenobjekts für das Ereignis.
-* **`return true`**: Beenden Sie den Rückruf sofort mit den aktuellen Variablenwerten. Der Rückruf `onBeforeEventSend` wird ausgeführt, wenn er eine registrierte Funktion enthält.
-* **`return false`**: Beenden Sie den Callback sofort und brechen Sie das Senden von Daten an Adobe ab. Der Rückruf `onBeforeEventSend` wird nicht ausgeführt.
+* **`return true`**: Sofort den Callback mit den aktuellen Variablenwerten beenden. Der `onBeforeEventSend`-Rückruf wird ausgeführt, wenn er eine registrierte Funktion enthält.
+* **`return false`**: Sofort den Callback beenden und das Senden von Daten an Adobe abbrechen. Der `onBeforeEventSend`-Callback wird nicht ausgeführt.
 
-Alle Variablen, die außerhalb von `content` definiert sind, können verwendet werden, sind jedoch nicht in der Payload enthalten, die an Adobe gesendet wird.
+Alle Variablen, die außerhalb von `content` definiert wurden, können verwendet werden, sind jedoch nicht in der Payload enthalten, die an Adobe gesendet wird.
 
 ```js
 // Set an already existing value to something else
@@ -65,11 +65,11 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-Ähnlich wie bei [`onBeforeEventSend`](onbeforeeventsend.md) können Sie `return true` die Funktion sofort abschließen oder `return false` den Versand von Daten an Adobe abbrechen. Wenn Sie das Senden von Daten in `onBeforeLinkClickSend` abbrechen, wenn sowohl `onBeforeEventSend` als auch `onBeforeLinkClickSend` registrierte Funktionen enthalten, wird die Funktion `onBeforeEventSend` nicht ausgeführt.
+Ähnlich wie bei [`onBeforeEventSend`](onbeforeeventsend.md) können Sie `return true`, die Funktion sofort abzuschließen, oder `return false`, das Senden von Daten an Adobe abzubrechen. Wenn Sie den Versand von Daten in `onBeforeLinkClickSend` abbrechen, wenn sowohl `onBeforeEventSend` als auch `onBeforeLinkClickSend` registrierte Funktionen enthalten, wird die `onBeforeEventSend` nicht ausgeführt.
 
-## Vor dem Link-Klick Callback mit der Web SDK JavaScript-Bibliothek konfigurieren {#library}
+## Vor dem Klicken auf „Rückruf senden“ unter Verwendung der Web SDK JavaScript-Bibliothek konfigurieren {#library}
 
-Registrieren Sie den Rückruf `onBeforeLinkClickSend` , wenn Sie den Befehl `configure` ausführen. Sie können den Variablennamen `content` in einen beliebigen Wert ändern, indem Sie die Parametervariable innerhalb der Inline-Funktion ändern.
+Registrieren Sie den `onBeforeLinkClickSend` Callback, wenn Sie den `configure` Befehl ausführen. Sie können den Namen der `content` in einen beliebigen Wert ändern, indem Sie die Parametervariable innerhalb der Inline-Funktion ändern.
 
 ```js
 alloy("configure", {
@@ -92,7 +92,7 @@ alloy("configure", {
 });
 ```
 
-Sie können auch Ihre eigene Funktion anstelle einer Inline-Funktion registrieren.
+Anstelle einer Inline-Funktion können Sie auch eine eigene Funktion registrieren.
 
 ```js
 function lastChanceLinkLogic(content) {

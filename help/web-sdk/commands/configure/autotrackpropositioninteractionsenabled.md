@@ -1,25 +1,25 @@
 ---
 title: autoTrackPropositionInteractionsEnabled
-description: Erfahren Sie, wie Sie das Experience Platform Web SDK so konfigurieren, dass es automatisch Linkdaten erfasst.
-source-git-commit: ec5fd1c8228388ced96f58476e0174c8a0ff00df
+description: Erfahren Sie, wie Sie Experience Platform Web SDK so konfigurieren, dass Linkdaten automatisch erfasst werden.
+exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
+source-git-commit: 11f3ccf494878dd8ee16bfc87a5cc901cc945b3e
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
 
 ---
 
-
 # `autoTrackPropositionInteractionsEnabled`
 
-Die Eigenschaft `autoTrackPropositionInteractionsEnabled` ist eine optionale Einstellung, die bestimmt, ob das Web SDK automatisch Vorschlagsinteraktionen erfassen soll.
+Die `autoTrackPropositionInteractionsEnabled`-Eigenschaft ist eine optionale Einstellung, die bestimmt, ob die Web-SDK automatisch Vorschlagsinteraktionen erfassen soll.
 
-Der Wert ist eine Zuordnung von Entscheidungsträgern, von denen jeder einen Wert enthält, der angibt, wie automatische Vorschlagsinteraktionen verarbeitet werden sollen.
+Der Wert ist eine Zuordnung von Entscheidungsanbietern mit jeweils einem -Wert, der angibt, wie automatische Vorschlagsinteraktionen verarbeitet werden sollen.
 
 ## Unterstützte Werte {#supported-values}
 
-Standardmäßig werden bei automatischen Vorschlagsinteraktionen _immer_ für Adobe Journey Optimizer (`AJO`) und _nie_ für Adobe Target (`TGT`) erfasst.
+Standardmäßig werden automatische Vorschlagsinteraktionen (_)_ Adobe Journey Optimizer (`AJO`) und _nie)_ Adobe Target (`TGT`) erfasst.
 
-Der Standardwert `autoTrackPropositionInteractions` ist unten dargestellt.
+Der Standardwert von `autoTrackPropositionInteractions` wird unten angezeigt.
 
 ```json
 {
@@ -28,31 +28,31 @@ Der Standardwert `autoTrackPropositionInteractions` ist unten dargestellt.
 }
 ```
 
-Die unterstützten Konfigurationswerte für die einzelnen Entscheidungsanbieter finden Sie in der folgenden Tabelle.
+In der folgenden Tabelle finden Sie die unterstützten Konfigurationswerte für jeden Entscheidungsanbieter.
 
 | Wert | Beschreibung |
 | --- | --- |
-| `always` | [!DNL Web SDK] erfasst immer automatisch `interact`-Ereignisse für alle Elemente, die mit einem Vorschlag verknüpft sind. |
-| `never` | [!DNL Web SDK] erfasst nie automatisch `interact`-Ereignisse für Elemente, die mit einem Vorschlag verknüpft sind. |
-| `decoratedElementsOnly` | [!DNL Web SDK] erfasst automatisch `interact` -Ereignisse für Elemente, die mit einem Vorschlag verknüpft sind, jedoch nur, wenn das Element Datenattribute enthält, die eine Bezeichnung oder ein Token angeben. |
+| `always` | [!DNL Web SDK] erfasst immer automatisch `interact` Ereignisse für alle Elemente, die mit einem Vorschlag verbunden sind. |
+| `never` | [!DNL Web SDK] werden nie automatisch `interact` Ereignisse für Elemente erfassen, die mit einem Vorschlag verbunden sind. |
+| `decoratedElementsOnly` | [!DNL Web SDK] erfasst automatisch `interact` Ereignisse für Elemente, die mit einem Vorschlag verknüpft sind, jedoch nur, wenn das Element Datenattribute enthält, die eine Beschriftung oder ein Token angeben. |
 
-## Automatisches Angebotsinteraktions-Tracking {#logic}
+## Automatisches Tracking der Vorschlagsinteraktionen {#logic}
 
-Wenn Sie die automatische Verfolgung von Vorschlagsinteraktionen aktivieren, werden alle Klicks innerhalb eines Vorschlagselements, die in das DOM gerendert werden, automatisch von [!DNL Web SDK] erfasst. Dazu gehören alle Erlebnisse, die automatisch von [!DNL Web SDK] an das DOM gerendert werden, und Erlebnisse, die mit dem Befehl [`applyPropositions`](../applypropositions.md) an das DOM gerendert werden.
+Wenn Sie die automatische Interaktionsverfolgung für Vorschläge aktivieren, werden alle Klicks innerhalb eines Vorschlagselements, die im DOM gerendert werden, automatisch vom [!DNL Web SDK] erfasst. Dazu gehören alle Erlebnisse, die automatisch vom [!DNL Web SDK] im DOM gerendert werden, und Erlebnisse, die mit dem Befehl [`applyPropositions`](../applypropositions.md) im DOM gerendert werden.
 
 ### Datenattribute {#data-attributes}
 
-Sie können Datenattribute für Elemente verwenden, um einer Interaktion eine Spezifität hinzuzufügen.
+Sie können Datenattribute für Elemente verwenden, um einer Interaktion Spezifität hinzuzufügen.
 
 | Name | Datenattribut | Beschreibung |
 | --- | --- | --- |
-| [!DNL Label] | `data-aep-click-label` | Wenn das Datenattribut &quot;Titel&quot;in einem angeklickten Element vorhanden ist, wird es mit den an die [!DNL Edge Network] gesendeten Interaktionsdetails einbezogen. Der [!DNL Web SDK] sucht nach einem Beschriftungsdatenattribut, das mit dem angeklickten Element und dem Aufstieg der DOM-Struktur beginnt. Der [!DNL Web SDK] verwendet die erste Bezeichnung, die er findet. |
-| [!DNL Token] | `data-aep-click-token` | Verwenden Sie dieses Token bei der Nutzung von Entscheidungsrichtlinien in [code-basierten Adobe Journey Optimizer-Kampagnen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Mit dem Token können Sie ermitteln, auf welches Entscheidungsrichtlinienelement geklickt wurde. Wenn das Token-Datenattribut in einem angeklickten Element vorhanden ist, wird es mit den an das Edge Network gesendeten Interaktionsdetails einbezogen. Der [!DNL Web SDK] sucht nach einem Token-Datenattribut, das mit dem angeklickten Element und dem Aufstieg der DOM-Struktur beginnt. Der [!DNL Web SDK] verwendet das erste Token, das er findet. |
-| [!DNL Interact ID] | `data-aep-interact-id` | Der [!DNL Web SDK] fügt diese eindeutige ID beim Rendern von Vorschlägen automatisch zu Containerelementen hinzu. Das Web SDK verwendet diese ID, um [!DNL DOM] -Elemente mit Vorschlägen zu korrelieren. Da dies eine für [!DNL Web SDK] erforderliche ID ist, sollten Sie sie in keiner Weise ändern. Du kannst es ignorieren. |
+| [!DNL Label] | `data-aep-click-label` | Wenn das Datenattribut „Beschriftung“ für ein angeklicktes Element vorhanden ist, wird es in die Interaktionsdetails aufgenommen, die an das [!DNL Edge Network] gesendet werden. Die [!DNL Web SDK] sucht nach einem Beschriftungsdatenattribut, das mit dem Element beginnt, auf das geklickt wurde und in der DOM-Struktur nach oben navigiert. Die [!DNL Web SDK] verwendet die erste Kennzeichnung, die sie findet. |
+| [!DNL Token] | `data-aep-click-token` | Verwenden Sie dieses Token bei der Nutzung von Entscheidungsrichtlinien in [Adobe Journey Optimizer-Code-basierten Kampagnen](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Mit dem Token können Sie erkennen, auf welches Entscheidungsrichtlinienelement geklickt wurde. Wenn das Token-Datenattribut in einem angeklickten Element vorhanden ist, wird es in die Interaktionsdetails aufgenommen, die an das Edge Network gesendet werden. Die [!DNL Web SDK] sucht nach einem Token-Datenattribut, das mit dem Element beginnt, auf das geklickt wurde und zur DOM-Struktur hinaufgeht. Der [!DNL Web SDK] verwendet das erste Token, das er findet. |
+| [!DNL Interact ID] | `data-aep-interact-id` | Der [!DNL Web SDK] fügt beim Rendern von Vorschlägen automatisch diese eindeutige ID zu Container-Elementen hinzu. Web SDK verwendet diese ID, um [!DNL DOM] Elemente mit Vorschlägen zu korrelieren. Da es sich um eine vom [!DNL Web SDK] benötigte ID handelt, sollten Sie sie in keiner Weise ändern. Sie können ihn ignorieren. |
 
 **Beispiel**
 
-Ein Beispiel für die Verwendung von Datenattributen finden Sie im folgenden Codefragment.
+Ein Beispiel für die Verwendung von Datenattributen finden Sie im folgenden Code-Snippet .
 
 ```html
 <div class="row movies" data-aep-interact-id="5">
@@ -83,13 +83,13 @@ Ein Beispiel für die Verwendung von Datenattributen finden Sie im folgenden Cod
 </div>
 ```
 
-### Der Befehl `applyPropositions` {#apply-propositions}
+### Der `applyPropositions` Befehl {#apply-propositions}
 
-Informationen zur Funktionsweise dieses Befehls finden Sie in der Dokumentation zu [`applyPropositions`](../applypropositions.md) .
+Weitere Informationen zur Funktionsweise dieses Befehls finden Sie in der [`applyPropositions`](../applypropositions.md)-Dokumentation .
 
-Der Befehl `applyPropositions` ist eine praktische Methode, Vorschläge für die [!DNL DOM] zu rendern. Im Fall von code-basierten Kampagnen mit `JSON` können Sie diesen Befehl jedoch verwenden, um ein vorhandenes [!DNL DOM] -Element (oder das Element, das Ihr Anwendungscode basierend auf den `JSON` -Werten wiedergegeben hat) mit einem Vorschlag zu korrelieren.
+Der Befehl `applyPropositions` ist eine praktische Methode, Vorschläge für die [!DNL DOM] zu rendern. Im Fall von Code-basierten Kampagnen mit `JSON` können Sie diesen Befehl jedoch verwenden, um ein vorhandenes [!DNL DOM]-Element (oder das Element, das Ihr Programm-Code auf dem Bildschirm basierend auf den `JSON`-Werten gerendert hat) mit einem Vorschlag zu korrelieren.
 
-Diese Korrelation aktiviert das automatische Interaktionstracking für dieses Element und weist diesem Element den entsprechenden Vorschlag zu. Setzen Sie dazu die `actionType` auf `track`.
+Diese Korrelation aktiviert das automatische Interaktionstracking für dieses Element und weist diesem Element den entsprechenden Vorschlag zu. Legen Sie dazu die `actionType` auf `track` fest.
 
 **Beispiel**
 
@@ -120,20 +120,20 @@ alloy("sendEvent", {
 });
 ```
 
-## Automatische Vorschläge und Interaktionen zum Klick-Tracking über die Web SDK-Tag-Erweiterung aktivieren {#tag-extension}
+## Automatische Vorschläge und Interaktionen für das Klick-Tracking über die Tag-Erweiterung von Web SDK aktivieren {#tag-extension}
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-2. Navigieren Sie zu **Datenerfassung** > **Tags**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+2. Navigieren Sie **Datenerfassung** > **Tags**.
 3. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-4. Navigieren Sie zu **Erweiterungen** und wählen Sie auf der Adobe Experience Platform Web SDK-Karte **Konfigurieren** aus.
-5. Scrollen Sie nach unten zum Abschnitt **[!UICONTROL Datenerfassung]** und aktivieren Sie dann das Kontrollkästchen **Vorschläge und Linktracking der Interaktionen aktivieren**.
-6. Wählen Sie **Speichern** aus und veröffentlichen Sie dann Ihre Änderungen.
+4. Navigieren Sie zu **Erweiterungen** und wählen Sie dann **Konfigurieren** auf der Karte Adobe Experience Platform Web SDK aus.
+5. Scrollen Sie nach unten zum Abschnitt **[!UICONTROL Datenerfassung]** und aktivieren Sie dann das Kontrollkästchen **Vorschläge und Interaktions-Linktracking aktivieren**.
+6. Wählen **Speichern** und veröffentlichen Sie Ihre Änderungen.
 
-## Automatisches Link-Tracking von Vorschlägen und Interaktionen über die Web SDK JavaScript-Bibliothek aktivieren {#library}
+## Aktivieren des Trackings von automatischen Vorschlägen und Interaktionen von Links über die Web SDK JavaScript-Bibliothek {#library}
 
-Das Tracking von Vorschlägen ist standardmäßig in [!DNL Web SDK] aktiviert. Sie können sie jedoch mit dem Wert `autoTrackPropositionInteractionsEnabled` weiter konfigurieren, wenn Sie den Befehl [`configure`](../configure/overview.md) ausführen.
+Die Vorschlagsverfolgung ist in [!DNL Web SDK] standardmäßig aktiviert. Sie können ihn jedoch mithilfe des `autoTrackPropositionInteractionsEnabled`-Werts beim Ausführen des [`configure`](../configure/overview.md)-Befehls weiter konfigurieren.
 
-Wenn Sie diese Eigenschaft beim Konfigurieren des Web SDK weglassen, wird standardmäßig `{"AJO": "always", "TGT": "never"}` verwendet. Wenn Sie es vorziehen, die Interaktionen mit Vorschlägen nicht automatisch zu verfolgen, setzen Sie den Wert auf `{"AJO": "never", "TGT": "never"}`.
+Wenn Sie diese Eigenschaft beim Konfigurieren der Web-SDK auslassen, wird sie standardmäßig auf `{"AJO": "always", "TGT": "never"}` gesetzt. Wenn Sie es vorziehen, Vorschlagsinteraktionen nicht automatisch zu verfolgen, setzen Sie den Wert auf `{"AJO": "never", "TGT": "never"}`.
 
 ```javascript
 alloy("configure", {

@@ -1,7 +1,7 @@
 ---
-title: Übersicht über die Installation des Web SDK
-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
-keywords: Web SDK-Installation;Web SDK installieren;Internet Explorer;Zusage;npm-Paket
+title: Web SDK-Installationsübersicht
+description: Erfahren Sie, wie Sie den Experience Platform Web SDK installieren.
+keywords: Web SDK-Installation;Installieren von Web SDK;Internet Explorer;Promise;npm-Paket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
 workflow-type: tm+mt
@@ -10,18 +10,18 @@ ht-degree: 0%
 
 ---
 
-# Übersicht über die Installation des Web SDK
+# Web SDK-Installationsübersicht
 
-Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web SDK unterstützt:
+Es gibt drei unterstützte Möglichkeiten, Adobe Experience Platform Web SDK zu verwenden:
 
-1. **[Web SDK tag extension](extension.md)**: Adobe empfiehlt die Verwendung dieser Methode. Installieren Sie einen Tag-Lader auf Ihrer Site und konfigurieren Sie dann Ihre Implementierung über die Adobe Experience Platform-Benutzeroberfläche zur Datenerfassung.
-1. **[Web SDK JavaScript Library](library.md)**: Verweisen Sie auf eine von CDN gehostete Bibliotheksdatei oder hosten Sie die Bibliotheksdatei mithilfe Ihrer eigenen Infrastruktur. Rufen Sie die Bibliothek im Code auf Ihrer Site auf.
-1. **[NPM](npm.md)**: Installieren Sie das Web SDK mithilfe des NPM-Paketmanagers auf Ihrer Site.
+1. **[Web SDK-Tag-Erweiterung](extension.md)**: Adobe empfiehlt die Verwendung dieser Methode. Installieren Sie einen Tag-Loader auf Ihrer Site und konfigurieren Sie dann Ihre Implementierung über die Datenerfassungs-Benutzeroberfläche von Adobe Experience Platform.
+1. **[Web SDK JavaScript-Bibliothek](library.md)**: Verweisen Sie auf eine CDN-gehostete Bibliotheksdatei oder hosten Sie die Bibliotheksdatei mithilfe Ihrer eigenen Infrastruktur. Aufrufe an die -Bibliothek im Code auf Ihrer Site.
+1. **[NPM](npm.md)**: Installieren Sie Web SDK mithilfe des NPM-Package Managers auf Ihrer Site.
 
 ## Voraussetzungen
 
-Bevor Sie das Web SDK verwenden oder installieren, müssen Sie die folgenden Anforderungen erfüllen:
+Bevor Sie Web SDK verwenden oder installieren, müssen Sie die folgenden Anforderungen erfüllen:
 
-* Die Architektur in Adobe Experience Platform muss zuerst konfiguriert werden. Zu diesen Einstellungen gehören alle erforderlichen Schemas, Identitäten und Datastreams.
-* Sie müssen über die richtigen Berechtigungen für den Zugriff auf die entsprechenden Tools verfügen. Wenn Ihr Unternehmen z. B. die Tag-Erweiterung verwendet, müssen Sie über die richtigen Berechtigungen für den Zugriff auf die Datenerfassungs-Benutzeroberfläche verfügen. Weitere Informationen finden Sie unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) .
-* Es wird empfohlen, eine Erstanbieterdomäne (CNAME) zu verwenden. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, können Sie diesen verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Adobe empfiehlt jedoch, einen vor der Veröffentlichung in der Produktion zu verwenden. Weitere Informationen finden Sie unter [Erstanbieter-Geräte-IDs](../identity/first-party-device-ids.md) .
+* Die -Architektur in Adobe Experience Platform muss zuerst konfiguriert werden. Zu diesen Einstellungen gehören alle erforderlichen Schemata, Identitäten und Datenströme.
+* Sie müssen über die entsprechenden Berechtigungen verfügen, um auf die entsprechenden Tools zugreifen zu können. Wenn Ihr Unternehmen beispielsweise beschließt, die Tag-Erweiterung zu verwenden, müssen Sie über die richtigen Berechtigungen für den Zugriff auf die Datenerfassungs-Benutzeroberfläche verfügen. Weitere [ finden Sie unter ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) von Datenerfassungsberechtigungen .
+* Es wird empfohlen, eine Erstanbieterdomäne (CNAME) zu verwenden. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, können Sie diesen verwenden. Testen in der Entwicklungsumgebung funktioniert ohne einen CNAME, aber Adobe empfiehlt, einen zu haben, bevor er in der Produktionsumgebung veröffentlicht wird. Weitere Informationen finden [ unter ](../identity/first-party-device-ids.md)-IDs von Erstanbietern .

@@ -1,6 +1,6 @@
 ---
-title: prehidingStyle
-description: Erstellen Sie eine CSS-Definition, die das Laden personalisierter Inhalte ohne Flackern ermöglicht.
+title: PrehidingStyle
+description: Erstellen Sie eine CSS-Definition, mit der personalisierte Inhalte geladen werden können, ohne dass sie flackern.
 exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -11,27 +11,27 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-Mit der Eigenschaft `prehidingStyle` können Sie einen CSS-Selektor definieren, um personalisierte Inhalte auszublenden, bis sie geladen werden. Diese Eigenschaft ist in synchronen Web SDK-Implementierungen nützlich, um Flackern zu vermeiden. Adobe empfiehlt die Verwendung des [Codebeispiels zum Vorab-Ausblenden](../../personalization/manage-flicker.md) für asynchrone Web SDK-Implementierungen.
+Mit der `prehidingStyle` Eigenschaft können Sie einen CSS-Selektor definieren, um personalisierte Inhalte bis zum Laden auszublenden. Diese Eigenschaft ist bei synchronen Web-SDK-Implementierungen hilfreich, um Flackern zu vermeiden. Adobe empfiehlt die Verwendung des [Snippets zum Vorab-Ausblenden](../../personalization/manage-flicker.md) für asynchrone Web SDK-Implementierungen.
 
-Die CSS-Selektoren, die Sie in dieser Eigenschaft definieren, fangen an, Inhalte auszublenden, wenn Sie den ersten [`sendEvent`](../sendevent/overview.md) -Befehl auf einer Seite ausführen. Der Inhalt wird beim Empfang einer Antwort von Adobe nicht ausgeblendet, die normalerweise personalisierte Inhalte enthält. Der Inhalt wird auch dann nicht ausgeblendet, wenn der Befehl `sendEvent` fehlschlägt oder eine Zeitüberschreitung auftritt.
+Die in dieser Eigenschaft definierten CSS-Selektoren beginnen mit dem Ausblenden von Inhalten, wenn Sie den ersten [`sendEvent`](../sendevent/overview.md) auf einer Seite ausführen. Inhalte werden beim Empfang einer Antwort von Adobe eingeblendet, die normalerweise personalisierte Inhalte enthält. Inhalte werden auch eingeblendet, wenn der `sendEvent`-Befehl fehlschlägt oder eine Zeitüberschreitung auftritt.
 
-Wenn Sie sowohl `prehidingStyle` als auch den Codeausschnitt zur Vorab-Ausblendung in Ihre Implementierung einbeziehen, hat das Codeausschnitt zur Vorab-Ausblendung Vorrang vor dieser Konfigurationseigenschaft.
+Wenn Sie sowohl `prehidingStyle` als auch den Code-Ausschnitt zum Vorab-Ausblenden in Ihre Implementierung aufnehmen, hat der Code-Ausschnitt zum Vorab-Ausblenden Vorrang vor dieser Konfigurationseigenschaft.
 
-## Vorab Ausblenden des Stils mithilfe der Web SDK-Tag-Erweiterung
+## Vorab-Ausblenden des Stils mit der Tag-Erweiterung „Web SDK&quot;
 
-Wählen Sie beim Konfigurieren der Tag-Erweiterung [ die Schaltfläche **[!UICONTROL Vorab-Ausblendestil bereitstellen](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) aus.]**
+Klicken Sie beim **[!UICONTROL der Tag]**[ Erweiterung auf die Schaltfläche „Vorab-Ausblendungsstil bereitstellen](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Scrollen Sie nach unten zum Bereich [!UICONTROL Personalization] und wählen Sie dann die Schaltfläche **[!UICONTROL Vorab-Ausblendestil bereitstellen]** aus.
-1. Diese Schaltfläche öffnet ein modales Fenster mit einem CSS-Editor. Fügen Sie den gewünschten CSS-Selektor und Deklarationsblock ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um das modale Fenster zu schließen.
-1. Klicken Sie unter den Erweiterungseinstellungen auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Personalization] und klicken Sie dann auf die Schaltfläche **[!UICONTROL Vorab-Ausblendstil]**.
+1. Diese Schaltfläche öffnet ein modales Fenster mit einem CSS-Editor. Fügen Sie den gewünschten CSS-Selektor- und Deklarationsblock ein und klicken Sie dann auf **[!UICONTROL Speichern]**, um das modale Fenster zu schließen.
+1. Klicken **[!UICONTROL unter]** auf „Speichern“ und veröffentlichen Sie Ihre Änderungen.
 
-## Vorab Ausblenden des Stils mithilfe der Web SDK JavaScript-Bibliothek
+## Vorab-Ausblenden des Stils mit der Web SDK JavaScript-Bibliothek
 
-Legen Sie die Zeichenfolge `prehidingStyle` fest, wenn Sie den Befehl `configure` ausführen. Wenn Sie diese Eigenschaft beim Konfigurieren des Web SDK auslassen, wird beim Ausführen des ersten `sendEvent` -Befehls auf einer Seite nichts ausgeblendet. Legen Sie diesen Wert auf den gewünschten CSS-Selektor und Deklarationsblock für synchron geladene Bibliotheken fest.
+Legen Sie die `prehidingStyle` beim Ausführen des `configure`-Befehls fest. Wenn Sie diese Eigenschaft beim Konfigurieren der Web-SDK auslassen, wird beim Ausführen des ersten `sendEvent` auf einer Seite nichts ausgeblendet. Legen Sie diesen Wert auf den gewünschten CSS-Selektor und Deklarationsblock für synchron geladene Bibliotheken fest.
 
 ```js
 alloy("configure", {

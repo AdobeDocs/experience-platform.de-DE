@@ -15,15 +15,15 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Mit Adobe Experience Platform können Sie Tag-Bibliotheks-Builds an einen gesicherten SFTP-Server übermitteln, den Sie hosten. So erhalten Sie mehr Kontrolle über die Speicherung und Verwaltung Ihrer Builds. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche einrichten.
+Mit Adobe Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesicherten SFTP-Server bereitstellen, den Sie hosten, sodass Sie besser steuern können, wie Ihre Builds gespeichert und verwaltet werden. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche einrichten.
 
 >[!NOTE]
 >
->Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [Adobe-verwalteten Hosts](./managed-by-adobe-host.md) .
+>Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [Adobe](./managed-by-adobe-host.md)verwalteten Hosts.
 >
->Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie im [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
+>Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie im [Handbuch zum Self-Hosting](./self-hosting-libraries.md).
 
-## Einrichten eines Zugriffsschlüssels für Ihren Server {#access-key}
+## Einrichten eines Zugriffsschlüssels für den Server {#access-key}
 
 Platform stellt mithilfe eines verschlüsselten Schlüssels eine Verbindung mit Ihrer SFTP-Site her. Es sind einige Schritte nötig, um dies korrekt einzurichten:
 
@@ -33,11 +33,11 @@ Auf Ihrem SFTP-Server muss ein öffentliches/privates Schlüsselpaar installiert
 
 ### Schlüssel verschlüsseln
 
-Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln öffentlicher Schlüssel finden Sie im Abschnitt zum [Verschlüsseln von Werten](../../../api/guides/encrypting-values.md) im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
+Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln [ öffentlichen Schlüsseln finden Sie ](../../../api/guides/encrypting-values.md) Abschnitt zum Verschlüsseln von Werten im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
 
-### IP-Adressen der Auf die Zulassungsliste setzen-Plattform
+### Zulassungsliste Platform-IP-Adressen
 
-Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die in Ihrer Unternehmensfirewall verwendet werden sollen, damit Platform Ihren SFTP-Server erreichen und eine Verbindung mit ihm herstellen kann. Diese IP-Adressen sind:
+Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die innerhalb Ihrer Unternehmens-Firewall verwendet werden, damit Platform Ihren SFTP-Server erreichen und eine Verbindung zu ihm herstellen kann. Diese IP-Adressen lauten:
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -51,35 +51,35 @@ Detaillierte Informationen finden Sie im folgenden Artikel von Medium zum [Einri
 
 ## Erstellen eines SFTP-Hosts {#create}
 
-Wählen Sie im linken Navigationsbereich **[!UICONTROL Hosts]** , gefolgt von **[!UICONTROL Host hinzufügen]**.
+Wählen **[!UICONTROL Hosts]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Host hinzufügen]**.
 
-![Bild, das die in der Benutzeroberfläche ausgewählte Schaltfläche &quot;Add Host&quot;anzeigt](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
+![Bild, das die ausgewählte Schaltfläche „Host hinzufügen“ in der Benutzeroberfläche zeigt](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-Das Dialogfeld zur Hosterstellung wird angezeigt. Geben Sie einen Namen für den Host ein und wählen Sie unter **[!UICONTROL Typ]** **[!UICONTROL SFTP]** aus.
+Das Dialogfeld „Host-Erstellung“ wird angezeigt. Geben Sie einen Namen für den Host ein und wählen Sie unter **[!UICONTROL Type]** die Option **[!UICONTROL SFTP]** aus.
 
-![Bild, das die ausgewählte SFTP-Hosting-Option anzeigt](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
+![Bild, das die ausgewählte SFTP-Hosting-Option zeigt](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
 ### SFTP-Host konfigurieren {#configure}
 
-Das Dialogfeld wird um zusätzliche Konfigurationsoptionen für den SFTP-Host erweitert. Diese werden nachfolgend erläutert.
+Das Dialogfeld wird erweitert und enthält zusätzliche Konfigurationsoptionen für den SFTP-Host. Diese werden nachfolgend erläutert.
 
-![Bild, das die erforderlichen Details für eine SFTP-Hostverbindung anzeigt](../../../images/ui/publishing/sftp-hosts/host-details.png)
+![Bild mit den erforderlichen Details für eine SFTP-Host-Verbindung](../../../images/ui/publishing/sftp-hosts/host-details.png)
 
 | Konfigurationsfeld | Beschreibung |
 | --- | --- |
-| [!UICONTROL Verwenden Sie keine Symlinks] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf die Bibliothek [builds](../builds.md) zu verweisen, die auf dem Server gespeichert sind. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
+| [!UICONTROL Verwenden Sie keine Symlinks] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-[ (Builds](../builds.md) zu verweisen, die auf dem Server gespeichert werden. Nicht alle Server unterstützen jedoch die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
 | [!UICONTROL SFTP-Server-URL] | Der URL-Basispfad für Ihren Server. |
-| [!UICONTROL Pfad] | Der Pfad zum Anhängen an die Basis-Server-URL für diesen Host. |
-| [!UICONTROL Port] | Der Port muss einer der folgenden sein:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als Best Practice im Hinblick auf die Sicherheit beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports sind in der Regel über Unternehmens-Firewalls erlaubt und enthalten einige Bereiche für mehr Flexibilität. |
-| [!UICONTROL Benutzername] | Der Benutzername, der beim Zugriff auf den Server verwendet werden soll. |
-| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [vorherigen Schritt](#access-key) erstellt haben. |
+| [!UICONTROL Pfad] | Der Pfad, der an die Basis-Server-URL für diesen Host angehängt werden soll. |
+| [!UICONTROL Port] | Der Port muss einer der folgenden sein:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als Best Practice im Hinblick auf die Sicherheit beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports werden in der Regel über Unternehmens-Firewalls zugelassen und enthalten aus Gründen der Flexibilität einige Bereiche. |
+| [!UICONTROL Benutzername] | Der Benutzername, der beim Zugriff auf den Server verwendet wird. |
+| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [ Schritt erstellt ](#access-key). |
 
-Wählen Sie **[!UICONTROL Speichern]** aus, um den Host mit der ausgewählten Konfiguration zu erstellen.
+Wählen Sie **[!UICONTROL Speichern]**, um den Host mit der ausgewählten Konfiguration zu erstellen.
 
 ![Bild, das den zu speichernden SFTP-Host anzeigt](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die Möglichkeit getestet, die Dateien an Ihren SFTP-Server zu senden. Platform erstellt einen Ordner, schreibt eine Datei in diesen Ordner, prüft, ob die Datei vorhanden ist, und bereinigt sie dann nach sich selbst. Wenn das Benutzerkonto auf Ihrem SFTP-Server (der mit dem sicheren Zertifikat verbunden ist, das Sie für Platform bereitgestellt haben) nicht über die erforderlichen Berechtigungen zum Ausführen dieser Aktion verfügt, wird der Host in den Status &quot;Fehlgeschlagen&quot;versetzt.
+Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die Möglichkeit getestet, die Dateien an Ihren SFTP-Server zu senden. Platform erstellt einen Ordner, schreibt eine Datei in diesen Ordner, prüft, ob die Datei dort vorhanden ist, und bereinigt sie anschließend selbst. Wenn das Benutzerkonto auf Ihrem SFTP-Server (das an das sichere Zertifikat angehängt ist, das Sie Platform bereitgestellt haben) nicht über die erforderlichen Berechtigungen zum Ausführen dieser Aktion verfügt, wechselt der Host in den Status „Fehlgeschlagen“.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Nachdem der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen](../environments.md) zum Veröffentlichen von Tag-Bibliotheken verknüpfen. Weitere Informationen zum allgemeinen Verfahren zum Aktivieren von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Veröffentlichungsübersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Sobald der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen) verknüpfen, ](../environments.md) Tag-Bibliotheken zu veröffentlichen. Weitere Informationen zum allgemeinen Prozess der Aktivierung von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Publishing-Übersicht](../overview.md).

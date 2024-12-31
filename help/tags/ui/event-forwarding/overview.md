@@ -53,13 +53,13 @@ Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt au
 
 ### Properties {#properties}
 
-Die Ereignisweiterleitung verwaltet ihren eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anzeigen, indem Sie im linken Navigationsbereich die Option **[!UICONTROL Ereignisweiterleitung]** auswählen.
+Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Properties, die von Tags getrennt sind. Diese können Sie in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche durch Auswahl von **[!UICONTROL Ereignisweiterleitung]** im linken Navigationsbereich anzeigen.
 
 >[!TIP]
 >
->Verwenden Sie die Hilfe zum Produkt in der rechten Leiste, um mehr über die Ereignisweiterleitung zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
+>Verwenden Sie die produktinterne Hilfe im rechten Bereich, um mehr über die Ereignisweiterleitung zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
 
-![Eigenschaften der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/properties.png)
+![Properties der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/properties.png)
 
 Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre Plattform auf. Sie unterscheiden nicht zwischen Web oder Mobile, da sie nur Daten verarbeiten, die vom Platform Edge Network empfangen werden, das selbst Ereignisdaten sowohl von Web- als auch von mobilen Plattformen empfangen kann.
 
@@ -67,7 +67,7 @@ Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre
 
 Die Ereignisweiterleitung verfügt über einen eigenen Katalog kompatibler Erweiterungen, z. B. die [Core](../../extensions/server/core/overview.md)-Erweiterung und die [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md)-Erweiterung. Sie können die verfügbaren Erweiterungen für Properties der Ereignisweiterleitung in der Benutzeroberfläche anzeigen, indem Sie im linken Navigationsbereich auf **[!UICONTROL Erweiterungen]** und dann auf **[!UICONTROL Katalog]** klicken.
 
-Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
 ![Erweiterungen für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/extensions.png)
 
@@ -83,17 +83,17 @@ Um Daten im Platform Edge Network zu referenzieren, müssen Sie ein Datenelement
 
 Der Wert **[!UICONTROL Pfad]** für das Datenelement muss dem Muster `arc.event.{ELEMENT}` entsprechen (z. B.: `arc.event.xdm.web.webPageDetails.URL`). Dieser Pfad muss korrekt angegeben werden, damit Daten gesendet werden können.
 
-Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
-![Beispiel für ein Datenelement vom Typ Pfad zur Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/data-reference.png)
+![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Regeln {#rules}
 
 Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [Datenstrom](../../../datastreams/overview.md) erhält, und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
 
-Darüber hinaus gilt ein 30-Sekunden-Timeout für ein einzelnes Ereignis, da es über alle Regeln (und damit alle Aktionen) innerhalb einer Ereignisweiterleitungseigenschaft verarbeitet wird. Das bedeutet, dass alle Regeln und Aktionen für ein einzelnes Ereignis in diesem Zeitraum abgeschlossen sein müssen.
+Darüber hinaus gibt es eine maximale Wartezeit von 30 Sekunden, die für ein einzelnes Ereignis gilt, da es über alle Regeln (und somit alle Aktionen) hinweg in einer Ereignisweiterleitungs-Eigenschaft verarbeitet wird. Das bedeutet, dass alle Regeln und Aktionen für ein einzelnes Ereignis innerhalb dieses Zeitraums abgeschlossen sein müssen.
 
-Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
 ![Regeln für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/rules.png)
 
@@ -101,13 +101,13 @@ Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über
 
 In Tag-Regeln werden Datenelemente am Anfang und am Ende des Datenelementnamens mit einem `%`-Token versehen (zum Beispiel: `%viewportHeight%`). In Ereignisweiterleitungsregeln dagegen werden Datenelemente mit einem `{{`-Token am Anfang und einem `}}`-Token am Ende des Datenelementnamens versehen (zum Beispiel: `{{viewportHeight}}`).
 
-Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
-![Beispiel für ein Datenelement vom Typ Pfad zur Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/tokenization.png)
+![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Sequenz von Regelaktionen {#action-sequencing}
 
-Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer sequentiell ausgeführt. Wenn eine Regel beispielsweise zwei Aktionen hat, beginnt die zweite Aktion erst nach Abschluss der vorherigen Aktion. (Und in den Fällen, in denen eine Antwort von einem Endpunkt erwartet wird, hat dieser Endpunkt reagiert.) Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann nicht asynchron mit Tag-Regeln ausgeführt werden.
+Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer sequentiell ausgeführt. Wenn eine Regel beispielsweise zwei Aktionen hat, beginnt die zweite Aktion erst dann mit der Ausführung, wenn die vorherige Aktion abgeschlossen ist (und in Fällen, in denen eine Antwort von einem Endpunkt erwartet wird, hat dieser Endpunkt geantwortet). Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann im Gegensatz zu Tag-Regeln nicht asynchron ausgeführt werden.
 
 ## Geheimnisse {#secrets}
 
@@ -115,7 +115,7 @@ Bei der Ereignisweiterleitung können Sie Geheimnisse erstellen, verwalten und s
 
 ## Videoüberblick {#video}
 
-Das folgende Video soll Ihnen dabei helfen, die Ereignisweiterleitung und die Real-Time CDP-Verbindungen besser zu verstehen.
+Das folgende Video soll Ihnen dabei helfen, die Ereignisweiterleitung und Real-Time CDP-Verbindungen besser zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429308)
 

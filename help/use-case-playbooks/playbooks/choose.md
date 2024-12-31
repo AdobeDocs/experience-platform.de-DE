@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Auswahl aus einer Auswahl an Büchern
-description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall wählen, um Spielbücher zu aktivieren.
+title: Aus einer Auswahl von Playbooks auswählen
+description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall auswählen und Playbooks aktivieren.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
@@ -11,15 +11,15 @@ ht-degree: 88%
 
 ---
 
-# Auswahl aus einer Auswahl an Büchern
+# Aus einer Auswahl von Playbooks auswählen
 
-Um ein Playbook zu verwenden, wählen Sie im linken Navigationsbereich **[!UICONTROL Playbooks]** aus. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
+Um ein Playbook zu verwenden, wählen **[!UICONTROL im linken Navigationsbereich]** Playbooks“ aus. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
 ## Suchen und filtern {#search-and-filter}
 
 Verwenden Sie das Suchfenster und die auf der Seite verfügbaren Filter, um das richtige Playbook für Ihren Anwendungsfall zu finden und auszuwählen.
 
-Sie können beispielsweise Playbooks filtern, die Sie basierend auf der gewünschten Phase im Marketing-Trichter (Konversion, Interaktion oder Bindung) verwenden können. Sie können die angezeigten Playbooks auch nach der Branche filtern, in der Sie sich befinden, oder nach der Produktberechtigungen, auf die Sie Zugriff haben - Adobe Journey Optimizer oder Real-Time CDP.
+Sie können beispielsweise Playbooks filtern, die Sie basierend auf der gewünschten Phase im Marketing-Trichter (Konversion, Interaktion oder Bindung) verwenden können. Sie können die angezeigten Playbooks auch nach der Branche filtern, in der Sie sich befinden, oder nach der Produktberechtigung, auf die Sie Zugriff haben - Adobe Journey Optimizer oder Real-Time CDP.
 
 ![Filtern von Playbooks nach Marketing-Trichter, Branche oder Produkt](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

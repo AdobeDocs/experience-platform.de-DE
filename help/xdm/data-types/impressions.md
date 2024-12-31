@@ -1,6 +1,6 @@
 ---
-title: Impressions-Datentyp
-description: Erfahren Sie mehr über den XDM-Datentyp Impressionen.
+title: Datentyp Impressions
+description: Erfahren Sie mehr über den XDM-Datentyp Impressions .
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# Datentyp [!UICONTROL Impressionen]
+# [!UICONTROL Impressions]-Datentyp
 
-[!UICONTROL Impressionen] ist ein standardmäßiger XDM-Datentyp, der eine Marketing-Impression beschreibt. Hierbei handelt es sich um eine Metrik, mit der die Anzahl der digitalen Ansichten oder Interaktionen für einen Inhaltsabschnitt wie Werbung, einen digitalen Beitrag oder eine Webseite quantifiziert wird.
+[!UICONTROL Impressions] ist ein standardmäßiger XDM-Datentyp, der eine Marketing-Impression beschreibt, eine Metrik, mit der die Anzahl der digitalen Ansichten oder Interaktionen für ein Inhaltselement wie eine Werbung, einen digitalen Beitrag oder eine Web-Seite quantifiziert wird.
 
 ![](../images/data-types/impressions.png)
 
@@ -19,8 +19,8 @@ ht-degree: 6%
 | --- | --- | --- |
 | `ID` | Zeichenfolge | Eine eindeutige ID für die Impression. |
 | `displays` | Ganzzahl | Die Häufigkeit, mit der das Impressionselement einem Kunden angezeigt wurde. |
-| `selected` | Ganzzahl | Die Anzahl der ausgewählten oder angeklickten Impressionselemente. |
-| `type` | Zeichenfolge | Die Art der Impression. |
+| `selected` | Ganzzahl | Die Häufigkeit, mit der das Impressionselement ausgewählt oder angeklickt wurde. |
+| `type` | String | Die Art der Impression. |
 
 {style="table-layout:auto"}
 

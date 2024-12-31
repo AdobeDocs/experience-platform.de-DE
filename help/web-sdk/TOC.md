@@ -18,18 +18,18 @@ ht-degree: 52%
 
 * [Web SDK – Übersicht](home.md)
 * [Versionshinweise](release-notes.md)
-* Web SDK-Installation {#install}
+* Web SDK-{#install}
    * [Übersicht](install/overview.md)
-   * [Installieren des Web SDK mit der Tag-Erweiterung](install/extension.md)
-   * [Installieren des Web SDK mithilfe der JavaScript-Bibliothek](install/library.md)
-   * [Installieren des Web SDK mit dem NPM-Paket](install/npm.md)
+   * [Installieren von Web SDK mithilfe der Tag-Erweiterung](install/extension.md)
+   * [Installieren von Web SDK mithilfe der JavaScript-Bibliothek](install/library.md)
+   * [Installieren von Web SDK mithilfe des NPM-Pakets](install/npm.md)
 * Befehle {#commands}
-   * configure {#configure}
+   * Konfigurieren von {#configure}
       * [Übersicht](commands/configure/overview.md)
       * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
-      * [context](commands/configure/context.md)
+      * [Kontext](commands/configure/context.md)
       * [datastreamId](commands/configure/datastreamid.md)
       * [debugEnabled](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -37,21 +37,21 @@ ht-degree: 52%
       * [edgeBasePath](commands/configure/edgebasepath.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
-      * [streamingMedia](commands/configure/streamingmedia.md)
+      * [StreamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
-      * [prehidingStyle](commands/configure/prehidingstyle.md)
+      * [PrehidingStyle](commands/configure/prehidingstyle.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
-   * sendEvent {#sendevent}
+   * sendEvent-{#sendevent}
       * [Übersicht](commands/sendevent/overview.md)
       * [data](commands/sendevent/data.md)
-      * [documentUnloading](commands/sendevent/documentunloading.md)
+      * [DokumentEntladen](commands/sendevent/documentunloading.md)
       * [Personalisierung](commands/sendevent/personalization.md)
       * [renderDecisions](commands/sendevent/renderdecisions.md)
       * [type](commands/sendevent/type.md)
-      * [xdm](commands/sendevent/xdm.md)
+      * [XDM](commands/sendevent/xdm.md)
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyPropositions](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
@@ -72,7 +72,7 @@ ht-degree: 52%
    * [Mobile-zu-Web und Domain-übergreifender ID-Austausch](identity/id-sharing.md)
 
 * Personalisierung {#personalization}
-   * [Verwalten von Anzeigeereignissen](personalization/display-events.md)
+   * [Anzeigeereignisse verwalten](personalization/display-events.md)
    * [Rendern von personalisierten Inhalten](personalization/rendering-personalization-content.md)
    * [Personalisierung über Hybridimplementierung](personalization/hybrid-personalization.md)
    * [Verwalten von Flackern](personalization/manage-flicker.md)
@@ -84,14 +84,14 @@ ht-degree: 52%
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Analytics for Target (A4T)-Protokollierung {#a4t}
          * [Übersicht](personalization/adobe-target/analytics-logging/overview.md)
-         * [Clientseitige Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
+         * [Client-seitige Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
          * [Server-seitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Übersicht](personalization/ajo/overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/ajo/web-spa-implementation.md)
-      * [Konfigurieren der Web-In-App-Messaging-Unterstützung im Web SDK](personalization/web-in-app-messaging.md)
+      * [Konfigurieren der Web-In-App-Messaging-Unterstützung in Web SDK](personalization/web-in-app-messaging.md)
 
 * Einverständnis {#consent}
    * IAB-Transparenz und -Einverständnis – Framework 2.0 {#iab-tcf}
@@ -101,13 +101,13 @@ ht-degree: 52%
 
 * Anwendungsfälle {#use-cases}
    * [Übersicht](use-cases/overview.md)
-   * [Senden von Daten an Adobe Analytics mithilfe des Web SDK](use-cases/adobe-analytics.md)
-   * [Benutzeragenten-Clienthinweise](use-cases/client-hints.md)
-   * [Commerce-Daten erfassen](use-cases/collect-commerce-data.md)
-   * [Konfigurieren einer CSP](use-cases/configuring-a-csp.md)
+   * [Senden von Daten an Adobe Analytics mithilfe der Web-SDK](use-cases/adobe-analytics.md)
+   * [User Agent Client-Hinweise](use-cases/client-hints.md)
+   * [Erfassen von Commerce-Daten](use-cases/collect-commerce-data.md)
+   * [Konfigurieren eines CSP](use-cases/configuring-a-csp.md)
    * [Debugging-Methoden](use-cases/debugging.md)
-   * [Mehrere Web SDK-Instanzen verwenden](use-cases/multiple-instances.md)
-   * [Ereignisse der oberen und unteren Seite konfigurieren](use-cases/top-bottom-page-events.md)
-* [Überwachungshooks](monitoring-hooks.md)
+   * [Verwenden mehrerer SDK-Web-Instanzen](use-cases/multiple-instances.md)
+   * [Konfigurieren von Ereignissen der oberen und unteren Seite](use-cases/top-bottom-page-events.md)
+* [Überwachungshaken](monitoring-hooks.md)
 * [Häufig gestellte Fragen](faq.md)
 * [Ressourcen](resources.md)

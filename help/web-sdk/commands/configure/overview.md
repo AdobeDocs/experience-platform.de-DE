@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren des Adobe Experience Platform Web SDK
-description: Verwenden Sie den Befehl "configure", um bei Verwendung des Web SDK die erforderlichen Einstellungen festzulegen.
+title: Konfigurieren von Adobe Experience Platform Web SDK
+description: Verwenden Sie den configure-Befehl, um die erforderlichen Einstellungen festzulegen, wenn Sie die Web-SDK verwenden.
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 0%
 
 ---
 
-# Konfigurieren des Adobe Experience Platform Web SDK
+# Konfigurieren von Adobe Experience Platform Web SDK
 
-Die Konfiguration für das Web SDK erfolgt mit dem Befehl `configure` . Die Konfiguration des Web SDK ist ein wichtiger und erforderlicher Schritt, der immer dann erfolgen muss, wenn die Bibliothek oder Tag-Erweiterung verwendet wird.
+Die Konfiguration für die Web-SDK erfolgt mit dem Befehl `configure` . Die Konfiguration der Web-SDK ist ein wichtiger und erforderlicher Schritt, der immer dann erfolgen muss, wenn die Bibliothek oder Tag-Erweiterung verwendet wird.
 
-## Web SDK mit der Tag-Erweiterung konfigurieren {#configure-tag-extension}
+## Konfigurieren von Web SDK mithilfe der Tag-Erweiterung {#configure-tag-extension}
 
-Gehen Sie wie folgt vor, um das Web SDK über die Tag-Erweiterung zu konfigurieren.
+Gehen Sie wie folgt vor, um Web SDK über die Tag-Erweiterung zu konfigurieren.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Gehen Sie zur Konfigurationsseite [Web SDK Tag-Erweiterung ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) , um detaillierte Informationen zu allen Konfigurationsoptionen zu erhalten.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Gehen Sie zur [Seite Konfiguration von Web SDK Tag-Erweiterungen](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), um detaillierte Informationen zu allen Konfigurationsoptionen zu erhalten.
 
-Diese Konfigurationseinstellungen werden immer dann festgelegt, wenn Sie die Erweiterung verwenden, um Daten an Adobe zu senden.
+Diese Konfigurationseinstellungen werden festgelegt, wenn Sie die Erweiterung zum Senden von Daten an Adobe verwenden.
 
-## Web SDK mithilfe der JavaScript-Bibliothek konfigurieren {#configure-js}
+## Konfigurieren von Web SDK mithilfe der JavaScript-Bibliothek {#configure-js}
 
-Führen Sie den Befehl `configure` aus. Dieser Befehl ist erforderlich, bevor Sie andere Web SDK-Befehle wie [`sendEvent`](../sendevent/overview.md) aufrufen können.
+Führen Sie den `configure` Befehl aus. Dieser Befehl ist erforderlich, bevor Sie andere Web-SDK-Befehle aufrufen können, z. B. [`sendEvent`](../sendevent/overview.md).
 
-Die Eigenschaften [`datastreamId`](datastreamid.md) und [`orgId`](orgid.md) sind erforderlich. Alle anderen Eigenschaften sind je nach den Implementierungsanforderungen Ihres Unternehmens optional.
+Die [`datastreamId`](datastreamid.md)- und [`orgId`](orgid.md) sind erforderlich. Alle anderen Eigenschaften sind optional, je nach den Implementierungsanforderungen Ihres Unternehmens.
 
 Detaillierte Informationen zu den einzelnen unterstützten Befehlen finden Sie im Inhaltsverzeichnis dieses Benutzerhandbuchs.
 

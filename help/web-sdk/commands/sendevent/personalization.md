@@ -1,6 +1,6 @@
 ---
 title: Personalisierung
-description: Verteilen Sie verschiedene Inhalte an verschiedene Benutzer und erstellen Sie ihnen ein personalisiertes Erlebnis.
+description: Rendern verschiedener Inhalte für verschiedene Benutzer und Erstellen eines personalisierten Erlebnisses für sie.
 exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
 source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # `personalization`
 
-Das Objekt `personalization` enthält verschiedene Eigenschaften, mit denen Sie Ihr Benutzererlebnis an den Benutzer anpassen können. Dies ist besonders bei Adobe Target- oder Adobe Journey Optimizer-Implementierungen nützlich, da es die treibende Kraft ist, mit der Sie angezeigte Inhalte pro Benutzer anpassen können.
+Das `personalization`-Objekt enthält mehrere Eigenschaften, mit denen Sie das Benutzererlebnis je nach Benutzer anpassen können. Dies ist besonders bei Adobe Target- oder Adobe Journey Optimizer-Implementierungen nützlich, da es die treibende Kraft ist, mit der Sie die angezeigten Inhalte pro Benutzerin bzw. Benutzer anpassen können.
 
-Weitere Informationen finden Sie in der Dokumentation zum Rendern personalisierter Inhalte durch [1}.](../../personalization/rendering-personalization-content.md)
+Weitere Informationen finden Sie in der Dokumentation [ Rendern ](../../personalization/rendering-personalization-content.md) personalisierten Inhalten .
 
 <!--
 ## Properties within this object

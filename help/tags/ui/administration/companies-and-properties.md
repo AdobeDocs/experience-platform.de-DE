@@ -25,7 +25,7 @@ Mobile-Eigenschaften können mehrere Anwendungen enthalten. In einer Mobile-Eige
 
 ## Best Practices für die Planung von Eigenschaften {#best-practices-for-planning-properties}
 
-Tag-Implementierungen in Adobe Experience Platform können sehr unterschiedlich sein. Sie haben verschiedensten Anforderungen bezüglich Datenerfassung, Variablennutzung, Erweiterungen, Drittanbieter-Tags, anderer Systeme und Technologien, Personen, Teams, geografischer Regionen usw. Sie sollten Ihre Eigenschaften so strukturieren, dass sie dem Workflow und den Prozessen Ihres Unternehmens entsprechen.
+Tag-Implementierungen in Adobe Experience Platform können sehr unterschiedlich sein. Sie haben verschiedensten Anforderungen bezüglich Datenerfassung, Variablennutzung, Erweiterungen, Drittanbieter-Tags, anderer Systeme und Technologien, Personen, Teams, geografischer Regionen usw. Sie sollten Ihre Eigenschaften so strukturieren, dass sie zum Workflow und den Prozessen Ihres Unternehmens passen.
 
 Beachten Sie bei der Planung von Eigenschaften Folgendes:
 

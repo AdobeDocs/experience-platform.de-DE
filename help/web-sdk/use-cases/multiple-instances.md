@@ -1,7 +1,7 @@
 ---
-title: Mehrere Web SDK-Instanzen verwenden
+title: Verwenden mehrerer SDK-Web-Instanzen
 description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren.
-keywords: mehrere Eigenschaften
+keywords: Multiple Properties
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -10,7 +10,7 @@ ht-degree: 64%
 
 ---
 
-# Mehrere Web SDK-Instanzen verwenden
+# Verwenden mehrerer SDK-Web-Instanzen
 
 Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf derselben Seite interagieren möchten. Zu diesen Fällen gehören:
 
@@ -18,7 +18,7 @@ Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf 
 * Datenaustausch-Beziehungen zwischen mehreren Firmen
 * Kunden, die neue Adobe-Lösungen testen und ihre vorhandene Implementierung nicht stören möchten
 
-Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im Basis-Code einen weiteren Namen hinzufügen. Im folgenden Beispiel werden zwei Namen angegeben: `titanium` und `copper`.
+Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im Basis-Code einen weiteren Namen hinzufügen. Das folgende Beispiel stellt zwei Namen bereit: `titanium` und `copper`.
 
 ```html
 <script>
@@ -32,9 +32,9 @@ Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, i
 
 Daher erstellt das Skript zwei Instanzen des SDK. Die globale Funktion für die Interaktion mit der ersten Instanz heißt `titanium` und die globale Funktion für die Interaktion mit der zweiten Instanz heißt `copper`.
 
-Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `titanium` auftritt, wird von `copper` isoliert gehalten.
+Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jegliche Kommunikation oder Datenpersistenz, die aufgrund der Interaktion mit `titanium` auftritt, wird von `copper` isoliert.
 
-Im obigen Beispiel können Sie Befehle mit jeder Instanz ausführen:
+Im folgenden Beispiel können Sie Befehle mit jeder Instanz ausführen:
 
 ```javascript
 titanium("configure", {

@@ -1,6 +1,6 @@
 ---
-title: Senden von Daten an Adobe Analytics mithilfe des Web SDK
-description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
+title: Senden von Daten an Adobe Analytics mithilfe der Web-SDK
+description: Erfahren Sie, wie Sie mit Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
@@ -10,39 +10,39 @@ ht-degree: 0%
 ---
 
 
-# Senden von Daten an Adobe Analytics mithilfe des Web SDK
+# Senden von Daten an Adobe Analytics mithilfe der Web-SDK
 
-Das Experience Platform Web SDK kann Daten über das Experience Platform-Edge Network an Adobe Analytics senden. Adobe bietet mehrere Optionen zum Senden von Daten an Adobe Analytics mithilfe des Web SDK:
+Der Experience Platform Web SDK kann Daten über das Experience Platform-Edge Network an Adobe Analytics senden. Adobe bietet mehrere Optionen, um Daten mithilfe der Web-SDK an Adobe Analytics zu senden:
 
-* Fügen Sie Ihrem Schema die Feldergruppe [**[!UICONTROL Adobe Analytics ExperienceEvent]**](../../xdm/field-groups/event/analytics-full-extension.md) hinzu und verwenden Sie dann das Objekt [`XDM` ](../commands/sendevent/xdm.md) .
-* Verwenden Sie das [`data` -Objekt](../commands/sendevent/data.md) , um Daten ohne XDM-Schema an Adobe Analytics zu senden.
+* Fügen Sie die [**[!UICONTROL Adobe Analytics ExperienceEvent]**](../../xdm/field-groups/event/analytics-full-extension.md)Feldergruppe zu Ihrem Schema hinzu und verwenden Sie dann das [`XDM`-Objekt](../commands/sendevent/xdm.md).
+* Verwenden Sie das [`data` -](../commands/sendevent/data.md), um Daten ohne XDM-Schema an Adobe Analytics zu senden.
 * Verwenden Sie automatisch generierte [Kontextdatenvariablen](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) und [Verarbeitungsregeln](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about).
 
-## Verwenden des Objekts `XDM` {#use-xdm-object}
+## Verwenden des `XDM` {#use-xdm-object}
 
-Wenn Sie ein vordefiniertes Adobe Analytics-spezifisches Schema verwenden möchten, können Sie Ihrem Schema die Schemafeldergruppe [Adobe Analytics ExperienceEvent](../../xdm/field-groups/event/analytics-full-extension.md) hinzufügen. Nach dem Hinzufügen können Sie dieses Schema mit dem Objekt `xdm` im Web SDK füllen, um Daten an eine Report Suite zu senden. Wenn Daten in das Edge Network eingehen, wird das XDM-Objekt in ein Format übersetzt, das von Adobe Analytics verstanden wird.
+Wenn Sie ein vordefiniertes Schema verwenden möchten, das speziell für Adobe Analytics gilt, können Sie die Schemafeldgruppe [Adobe Analytics ExperienceEvent](../../xdm/field-groups/event/analytics-full-extension.md) zu Ihrem Schema hinzufügen. Nach dem Hinzufügen können Sie dieses Schema mithilfe des `xdm`-Objekts in der Web-SDK ausfüllen, um Daten an eine Report Suite zu senden. Wenn Daten am Edge Network eintreffen, wird das XDM-Objekt in ein Format übersetzt, das Adobe Analytics versteht.
 
-Es gibt zwei Möglichkeiten, Daten über das Web SDK an Adobe Analytics zu senden:
+Es gibt zwei Möglichkeiten, Daten über Web SDK an Adobe Analytics zu senden:
 
-* [Senden von Daten an Adobe Analytics mithilfe der Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [Senden von Daten an Adobe Analytics mithilfe der Tag-Erweiterung „Web SDK&quot;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
 * [Senden von Daten an Adobe Analytics mithilfe der Web SDK JavaScript-Bibliothek](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-Eine vollständige Referenz zu XDM-Feldern und deren Zuordnung zu Analytics-Variablen finden Sie unter [Zuordnung von XDM-Objektvariablen zu Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) im Adobe Analytics-Implementierungshandbuch.
+Siehe [XDM-Objektvariablenzuordnung zu Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) im Adobe Analytics-Implementierungshandbuch für eine vollständige Referenz zu XDM-Feldern und deren Zuordnung zu Analytics-Variablen.
 
-## Verwenden des Objekts `data` {#use-data-object}
+## Verwenden des `data` {#use-data-object}
 
-Als Alternative zur Verwendung des XDM-Objekts können Sie stattdessen das Datenobjekt verwenden. Das Datenobjekt ist auf Implementierungen ausgerichtet, die derzeit AppMeasurement verwenden, wodurch die Aktualisierung auf das Web SDK viel einfacher wird.
+Als Alternative zur Verwendung des XDM-Objekts können Sie stattdessen das Datenobjekt verwenden. Das Datenobjekt ist auf Implementierungen ausgerichtet, die derzeit AppMeasurement verwenden, was das Upgrade auf die Web-SDK viel einfacher macht.
 
-Je nachdem, ob Sie AppMeasurement oder die Analytics-Tag-Erweiterung verwenden, finden Sie in den folgenden Handbüchern Informationen zur Migration zum Web SDK:
+Je nachdem, ob Sie AppMeasurement oder die Analytics-Tag-Erweiterung verwenden, finden Sie in den folgenden Handbüchern Details zur Migration zu Web SDK:
 
-* [Migration von der Adobe Analytics-Tag-Erweiterung zur Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [Migration von AppMeasurement zum Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [Migrieren von der Adobe Analytics-Tag-Erweiterung zur Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [Migration vom AppMeasurement zur Web-SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-Eine vollständige Referenz zu Datenobjektfeldern und deren Zuordnung zu Analytics-Variablen finden Sie in der Dokumentation zu [Datenobjektvariablenzuordnung zu Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) im Adobe Analytics-Implementierungshandbuch.
+Eine vollständige Referenz der Datenobjektfelder und ihrer Zuordnung zu Analytics[Variablen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)Datenobjektvariablenzuordnung zu Adobe Analytics&quot; im Adobe Analytics-Implementierungshandbuch.
 
-## Kontextdatenvariablen verwenden {#use-context-data-variables}
+## Verwenden von Kontextdatenvariablen {#use-context-data-variables}
 
-Variablen, die nicht automatisch zugeordnet werden, sind als [Kontextdatenvariablen](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) verfügbar. Anschließend können Sie [Verarbeitungsregeln](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) verwenden, um Kontextdatenvariablen Analytics-Variablen zuzuordnen. Wenn Sie beispielsweise über ein benutzerdefiniertes XDM-Schema verfügten, das wie folgt aussah:
+Alle Variablen, die nicht automatisch zugeordnet werden, sind als [Kontextdatenvariablen“ ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata). Anschließend können Sie [Verarbeitungsregeln](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) verwenden, um Kontextdatenvariablen Analytics-Variablen zuzuordnen. Angenommen, Sie haben ein benutzerdefiniertes XDM-Schema, das wie folgt aussieht:
 
 ```json
 {
@@ -66,7 +66,7 @@ Variablen, die nicht automatisch zugeordnet werden, sind als [Kontextdatenvariab
 }
 ```
 
-Dann wären diese Felder die Kontextdatenschlüssel, die Ihnen in der Oberfläche für Verarbeitungsregeln zur Verfügung stehen:
+Dann wären diese Felder die Kontextdatenschlüssel, die Ihnen in der Benutzeroberfläche für Verarbeitungsregeln zur Verfügung stehen:
 
 ```javascript
 a.x.key //value
@@ -82,26 +82,26 @@ a.x.objectarray.2.ad3 //600x50
 
 ## Häufig gestellte Fragen
 
-+++ Wie unterscheidet ich Seitenansichtsaufrufe von Linktracking-Aufrufen im Web SDK?
++++Wie unterscheide ich Seitenansichtsaufrufe von Linktracking-Aufrufen in Web SDK?
 
-AppMeasurement in Adobe Analytics verwendet separate Methodenaufrufe für Seitenansichten ([`t()` method](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method)) und Linktracking-Aufrufe ([`tl()` method](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)). Das Web SDK stellt stattdessen nur den Befehl [`sendEvent`](../commands/sendevent/overview.md) zum Senden von Seitenansichten und Linktracking bereit. Die Daten, die Sie in ein Ereignis aufnehmen, bestimmen, ob es sich um eine [Seitenansicht](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) oder ein [Seitenereignis](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) in Adobe Analytics handelt.
+Beim AppMeasurement in Adobe Analytics werden separate Methodenaufrufe für Seitenansichten ([`t()`) ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method) Linktracking-Aufrufe ([`tl()`) ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method). Die Web-SDK stellt stattdessen nur den [`sendEvent`](../commands/sendevent/overview.md)-Befehl zum Senden sowohl von Seitenansichten als auch von Linktracking bereit. Die Daten, die Sie in ein Ereignis einbeziehen, bestimmen, ob es sich um eine [Seitenansicht](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) oder ein [Seitenereignis](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) in Adobe Analytics handelt.
 
-Standardmäßig werden alle Ereignisse in Adobe Analytics als Seitenansichten betrachtet. Wenn Sie ein Web SDK-Ereignis auf einen Adobe Analytics-Linktracking-Aufruf setzen möchten, legen Sie die folgenden Felder fest:
+Standardmäßig werden alle Ereignisse in Adobe Analytics als Seitenansichten betrachtet. Wenn Sie ein Web-SDK-Ereignis auf einen Adobe Analytics-Linktracking-Aufruf festlegen möchten, legen Sie die folgenden Felder fest:
 
 * **XDM-Objekt**: `xdm.web.webInteraction.name`, `web.webInteraction.type` und `web.webInteraction.URL`
 * **Datenobjekt**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType` und `data.__adobe.analytics.linkURL`
 * **Kontextdaten**: Nicht unterstützt
 
-Weitere Informationen finden Sie unter der [`tl()` -Methode](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) im Adobe Analytics-Implementierungshandbuch.
+Weitere Informationen finden Sie ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) der [`tl()` Methode im Adobe Analytics-Implementierungshandbuch .
 
-Wenn Sie im Befehl `configure` die Option [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) aktivieren, werden diese Felder für Sie ausgefüllt.
+Wenn Sie [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) im `configure`-Befehl aktivieren, werden diese Felder für Sie ausgefüllt.
 
 +++
 
-+++ Wie unterscheidet ein Datastream Daten von anderen Diensten mit Daten, die für Adobe Analytics bestimmt sind?
++++Wie unterscheidet ein Datenstrom Daten von anderen Services mit Daten, die für Adobe Analytics vorgesehen sind?
 
-Alle Ereignisse, die an einen Datastream gesendet werden, werden an alle konfigurierten Dienste übergeben. Wenn Sie beispielsweise separate Aufrufe für Personalisierung und Analytics tätigen, werden beide Ereignisse an Analytics und Target gesendet. Diese Ereignisse werden in Analytics-Berichten aufgezeichnet und können sich auf Metriken wie die Absprungrate auswirken.
+Alle Ereignisse, die an einen Datenstrom gesendet werden, werden an alle konfigurierten Services übergeben. Wenn Sie beispielsweise separate Aufrufe für Personalisierung und Analyse ausführen, werden beide Ereignisse an Analytics und Target gesendet. Diese Ereignisse werden im Analytics-Reporting aufgezeichnet und können Metriken wie die Absprungrate beeinflussen.
 
-Wenn Sie das Web SDK verwenden, werden diese Aufrufe normalerweise im Befehl [`sendEvent`](../commands/sendevent/overview.md) kombiniert.
+Wenn Sie die Web-SDK verwenden, werden diese Aufrufe normalerweise im [`sendEvent`](../commands/sendevent/overview.md)-Befehl kombiniert.
 
 +++

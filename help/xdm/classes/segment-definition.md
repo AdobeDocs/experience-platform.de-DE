@@ -10,28 +10,28 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Segmentdefinition] class
+# [!UICONTROL Segmentdefinition] Klasse
 
-&quot;[!UICONTROL Segmentdefinition]&quot;ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die Details einer Segmentdefinition erfasst. Die Klasse enthält erforderliche Felder wie die ID und den Namen einer Zielgruppe sowie andere optionale Attribute. Diese Klasse sollte verwendet werden, wenn Sie Segmentdefinitionen aus externen Systemen in Adobe Experience Platform einbinden.
+&quot;[!UICONTROL Segmentdefinition]&quot; ist eine standardmäßige Klasse des Experience-Datenmodells (XDM), die die Details einer Segmentdefinition erfasst. Die Klasse enthält erforderliche Felder wie die ID und den Namen einer Zielgruppe sowie andere optionale Attribute. Diese Klasse sollte verwendet werden, wenn Sie Segmentdefinitionen aus externen Systemen in Adobe Experience Platform importieren.
 
 >[!NOTE]
 >
->Diese Klasse sollte nur zum Erfassen von Informationen zu Segmentdefinitionen selbst verwendet werden. Um Informationen zur Zielgruppenmitgliedschaft in Ihren Profildaten zu erfassen, sollten Sie die Feldergruppe [Segmentzugehörigkeitsdetails](../field-groups/profile/segmentation.md) in Ihrem Schema [!UICONTROL XDM Individual Profile] verwenden.
+>Diese Klasse sollte nur verwendet werden, um Informationen über die Segmentdefinitionen selbst zu erfassen. Um Informationen zur Zielgruppenzugehörigkeit in Ihren Profildaten zu erfassen, sollten Sie die Feldergruppe [Details zur Segmentzugehörigkeit](../field-groups/profile/segmentation.md) in Ihrem Schema [!UICONTROL XDM Individual Profile] verwenden.
 
 ![](../images/classes/segment-definition.png)
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_repo` | Ein Objekt, das die folgenden [!UICONTROL DateTime] -Felder enthält: <ul><li>`createDate`: Das Datum und die Uhrzeit, zu der die Ressource im Datenspeicher erstellt wurde, z. B. wann die Daten zum ersten Mal erfasst wurden.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
-| `_id` | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemseitig generiert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten.<br><br>Es ist wichtig zu unterscheiden, dass dieses Feld **nicht** eine Identität darstellt, die mit einer bestimmten Person verknüpft ist, sondern den Datensatz selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) beschränkt werden. |
+| `_repo` | Ein Objekt, das die folgenden &quot;[!UICONTROL &quot;-] enthält: <ul><li>`createDate`: Datum und die Uhrzeit, zu der die Ressource im Datenspeicher erstellt wurde, z. B. zum Zeitpunkt der ersten Datenaufnahme.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
+| `_id` | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes nachzuverfolgen, Doppelungen von Daten zu verhindern und diesen Datensatz in nachgelagerten Services nachzuschlagen.<br><br>Da dieses Feld systemgeneriert ist, wird bei der Datenaufnahme kein expliziter Wert bereitgestellt. Sie können jedoch auch weiterhin eigene eindeutige ID-Werte angeben, wenn Sie dies wünschen.<br><br>Es ist wichtig zu erkennen, dass dieses Feld **keine** Identität repräsentiert, die mit einer einzelnen Person in Verbindung steht, sondern den Datensatz an sich. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder“ ](../schema/composition.md#identity) werden. |
 | `createdByBatchID` | Die ID des erfassten Batches, der zur Erstellung des Datensatzes geführt hat. |
 | `description` | Eine Beschreibung für die Segmentdefinition. |
-| `identityMap` | Ein Zuordnungsfeld mit einem Satz von Namespaced-Identitäten für die Kontakte, für die die Zielgruppe gilt. Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätszuordnungen in den [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) . |
-| `modifiedByBatchID` | Die ID des letzten erfassten Batches, der zur Aktualisierung des Datensatzes geführt hat. |
+| `identityMap` | Ein Zuordnungsfeld, das einen Satz von Identitäten mit Namespace für die Einzelpersonen enthält, für die die Zielgruppe gilt. Weitere Informationen zu ihrem Anwendungsfall finden Sie im Abschnitt [Identitätszuordnungen“ in ](../schema/composition.md#identityMap)Grundlagen der Schemakomposition“. |
+| `modifiedByBatchID` | Die ID des zuletzt aufgenommenen Batches, der zur Aktualisierung des Datensatzes geführt hat. |
 | `repositoryCreatedBy` | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. |
 | `segmentName` | **(Erforderlich)** Ein Name für die Segmentdefinition. |
 | `segmentStatus` | Der Status der Zielgruppe aus dem externen System. Folgende Werte werden akzeptiert: <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
-| `version` | Die aktuelle Versionsnummer der Segmentdefinition. |
+| `version` | Die neueste Versionsnummer der Segmentdefinition. |
 
 {style="table-layout:auto"}

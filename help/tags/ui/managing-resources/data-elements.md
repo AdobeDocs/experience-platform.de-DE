@@ -95,11 +95,11 @@ Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibli
 >
 >Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen sind nicht beschränkt.
 
-In den folgenden Abschnitten werden die in der **Haupterweiterung** verfügbaren Datenelementtypen beschrieben. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
+In den folgenden Abschnitten werden die Typen von Datenelementen beschrieben, die in der **Core-Erweiterung“ verfügbar**. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
 
 ### Cookie
 
-Auf jedes verfügbare Domänen-Cookie kann im Feld Cookie-Name verwiesen werden.
+Jedes verfügbare Domain-Cookie kann im Feld Cookie-Name referenziert werden.
 
 #### Beispiel:
 
@@ -139,7 +139,7 @@ Mithilfe der `_satellite`-Objektsyntax können Sie dies dann in benutzerdefinier
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Bei Verwendung der Prozentsyntax (`%`) müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
+Bei Verwendung der `%`-Syntax müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
 
 ```text
 %data element name%
@@ -163,7 +163,7 @@ Wert abrufen von:
 
 Verfügbare JavaScript-Objekte oder -Variablen können mit dem Pfadfeld referenziert werden.
 
-Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement in allen Ihren Regeln referenzieren. Wenn sich die Datenquelle der Daten jemals ändert, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle ändern.
+Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie in allen Ihren Regeln auf das Datenelement verweisen. Wenn sich die Quelle der Daten jemals ändert, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle ändern.
 
 Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namens `Page_Name` wie hier gezeigt:
 
@@ -215,7 +215,7 @@ Nur der Abschnitt „Name“ ist erforderlich und spezielle Bezeichner wie „?�
 
 ### Zufällige Nummer
 
-Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Sie wird häufig zum Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die Zufallszahl kann auch verwendet werden, um sensible Daten zu verschleiern oder zu verbergen. Mögliche Beispiele sind:
+Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Er wird häufig für das Sampling von Daten oder das Erstellen von IDs verwendet, wie z. B. eine Treffer-ID. Die Zufallszahl kann auch verwendet werden, um sensible Daten zu verschleiern oder zu verbergen. Mögliche Beispiele sind:
 
 * Generieren einer Treffer-ID
 * Verketten der Nummer für ein Benutzer-Token oder einen Zeitstempel zur Gewährleistung der Eindeutigkeit

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;Felder;Schemata;Schemata;Geo;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
 title: Geo-Datentyp
 description: Erfahren Sie mehr über den Geo-XDM-Datentyp.
@@ -13,20 +13,20 @@ ht-degree: 52%
 
 # [!UICONTROL Geo]-Datentyp
 
-[!UICONTROL Geo] ist ein standardmäßiger XDM-Datentyp, der den geografischen Bereich beschreibt, in dem ein Ereignis beobachtet wurde.
+[!UICONTROL Geo] ist ein standardmäßiger XDM-Datentyp, der das geografische Gebiet beschreibt, in dem ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL Geo-Koordinaten]](./geo-coordinates.md) | Beschreibt die geografischen Koordinaten eines Orts. |
-| `_id` | Zeichenfolge | Eine eindeutige, systemgenerierte ID für die Koordinaten. |
-| `city` | Zeichenfolge | Der Name der Stadt. |
-| `countryCode` | Zeichenfolge | Der zweistellige <a href="https://datahub.io/core/country-list">ISO 3166-1-Alpha-2</a>-Code für das Land. |
+| `_schema` | [[!UICONTROL Geo-Koordinaten]](./geo-coordinates.md) | Beschreibt die geografischen Koordinaten eines Ortes. |
+| `_id` | String | Eine eindeutige, systemgenerierte ID für die Koordinaten. |
+| `city` | String | Der Name der Stadt. |
+| `countryCode` | String | Der zweistellige <a href="https://datahub.io/core/country-list">ISO 3166-1-Alpha-2</a>-Code für das Land. |
 | `dmaID` | Ganzzahl | Das von Nielsen Media Research ausgewiesene Marktgebiet. |
 | `msaID` | Ganzzahl | Das großstädtische statistische Erhebungsgebiet in den USA, in dem die Beobachtung stattfand. |
-| `postalCode` | Zeichenfolge | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
-| `stateProvince` | Zeichenfolge | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
+| `postalCode` | String | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
+| `stateProvince` | String | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
 {style="table-layout:auto"}
 

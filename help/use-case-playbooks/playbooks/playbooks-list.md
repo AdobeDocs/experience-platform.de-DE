@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Verfügbare Anwendungsbeispiele für Real-time Customer Data Platform und Adobe Journey Optimizer.
-description: Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer.
+title: Verfügbare Playbooks für Anwendungsfälle für Real-time Customer Data Platform und Adobe Journey Optimizer.
+description: Eine Liste aller Playbooks in Real-time Customer Data Platform und Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# Verfügbare Anwendungsfälle Playbooks
+# Playbooks für verfügbare Anwendungsfälle
 
-Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu erhalten, die Sie in Real-time Customer Data Platform und Adobe Journey Optimizer entdecken und verwenden können.
+Auf dieser Seite erhalten Sie einen Überblick über alle verfügbaren Playbooks, die Sie in Real-time Customer Data Platform und Adobe Journey Optimizer entdecken und verwenden können.
 
 ## Verwenden von Playbooks für Anwendungsfälle in Journey Optimizer {#optimizer-playbooks}
 
@@ -24,65 +24,65 @@ Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu 
 
 | Playbook-Name | Beschreibung |
 | ------------- |  ----------- |
-| Abgebrochenes Browsen: Merchandise | Fans sollten dazu angehalten werden, erneut zu interagieren, nachdem sie nach dem Durchsuchen eines Produkts Ihre Website oder App verlassen haben. |
-| Abgebrochenes Browsen: Produkt | Lassen Sie Kunden dazu übergehen, sich nach dem Durchsuchen eines Produkts erneut zu engagieren, nachdem sie Ihre Website oder App verlassen haben. |
-| Abgebrochenes Browsen: Reservierung | Überreden Sie Gäste, sich erneut zu engagieren, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine potenzielle Reservierung durchsucht haben. |
-| Warenkorb abgebrochen: Merchandise | Fans sollten dazu angehalten werden, wieder aktiv zu werden, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Artikel zum Warenkorb hinzugefügt haben. |
-| Warenkorb abgebrochen: Produkt | Lassen Sie Kunden dazu übergehen, sich erneut zu engagieren, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Produkte zum Warenkorb hinzugefügt haben. |
-| Warenkorb abgebrochen: Reservierung | Lassen Sie die Gäste nach dem Verlassen Ihrer Website oder App, nachdem sie eine neue Reservierung zum Warenkorb hinzugefügt haben, dazu überreden, wieder zu interagieren. |
-| Eincheckerinnerung mit App-Download-CTA | Erinnern Sie die Gäste daran, einzuchecken, und ermutigen Sie sie, die App herunterzuladen, damit sie einfach auf Informationen zugreifen können. |
-| Zielwerbung | Überzeugen Sie sich von einer neuen Reservierung während einer laufenden Kampagne zur Förderung des Reiseziels. |
-| Game Promotion | Fans sollten gebeten werden, Tickets für ein bevorstehendes Spiel zu kaufen. |
-| In-App-Willkommen für Fans | Willkommen neue Fans! |
-| In-App-Willkommen für Gäste | Willkommen neue Gäste! |
-| In-App-Willkommen für Käufer | Willkommen neue Käufer. |
-| Erhöhung des Kaufs von Werbeartikeln während des Spiels | Überreden Sie die Fans, Waren zu kaufen, während sie sich in der Nähe der Spielseite befinden. |
-| Erhöhen Sie den Produktkauf während des Store-Besuchs | Überreden Sie die Käufer, Produkte zu kaufen, während sie sich in der Nähe des Stores befinden. |
-| Erhöhen Sie den Kauf von Produkten und Dienstleistungen während des Aufenthalts. | Überreden Sie Gäste, Produkte und Dienstleistungen zu kaufen, während sie sich im Haus befinden. |
-| Einzelspielkäufe erhöhen | Targeting von Fans, um wiederholte Einzelspielkäufe zu erhöhen. |
-| Post-Event-Umfrage und Anreizangebot | Fans sollten dazu angehalten werden, auf eine Umfrage nach einem Ereignis zu reagieren, indem sie eine Anreizaktion anbieten. |
-| Umfrage nach der Reise | Überreden Sie die Gäste, auf eine Umfrage nach einem Ausflug zu reagieren, indem Sie ein Anreizangebot anbieten. |
-| Produktwerbung | Überreden Sie Kunden, während einer laufenden Produktpromo-Kampagne Produkte zu kaufen. |
-| Kaufbestätigung: Merchandise | Bestätigen Sie einen neuen Merchandise-Kauf-Fan. |
-| Kaufbestätigung: Produkt | Bestätigen Sie einen neuen Produktkauf. |
+| Abgebrochenes Browsen: Waren | Schüren Sie Fans, die nach dem Durchsuchen eines Produkts Ihre Website oder App verlassen haben, damit sie sich erneut mit Ihnen beschäftigen. |
+| Abgebrochenes Browsen: Produkt | Anreizen Sie Kundinnen und Kunden dazu, sich erneut mit Ihnen zu beschäftigen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie ein Produkt durchsucht haben. |
+| Abgebrochenes Browsen: Reservierung | Bitten Sie die Gäste, nach dem Verlassen Ihrer Website oder App nach dem Durchsuchen einer potenziellen Reservierung erneut zu interagieren. |
+| Transaktionsabbruch: Waren | Anreizen Sie Fans, die Interaktion erneut aufzunehmen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Waren zum Warenkorb hinzugefügt haben. |
+| Transaktionsabbruch: Produkt | Anreizen Sie Kundinnen und Kunden, die Interaktion erneut aufzunehmen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Produkte zum Warenkorb hinzugefügt haben. |
+| Transaktionsabbruch: Reservierung | Bitten Sie Gäste, sich erneut zu engagieren, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine neue Reservierung zum Warenkorb hinzugefügt haben. |
+| Check-in-Erinnerung mit App Download CTA | Erinnern Sie die Gäste daran, einzuchecken, und ermutigen Sie sie, die App herunterzuladen, um leicht auf Informationen zuzugreifen. |
+| Ziel-Promotion | Bitten Sie die Gäste, während einer laufenden Kampagne zur Förderung eines Reiseziels eine neue Reservierung vorzunehmen. |
+| Spielförderung | Drängen Sie Fans, Tickets für ein bevorstehendes Spiel zu kaufen. |
+| In-App-Begrüßung für Fans | Begrüße neue Fans. |
+| In-App-Willkommen für Gäste | Begrüßen Sie neue Gäste. |
+| In-App-Willkommen für Käufer | Willkommen bei neuen Käufern. |
+| Erhöhen Sie den Warenkauf während des Spiels | Nudge Fans, um Waren zu kaufen, während sie in der Nähe der Spiel-Website. |
+| Erhöhen des Produktkaufs während des Ladenbesuchs | Drängen Sie Kunden, Produkte zu kaufen, während sie sich in der Nähe des Geschäfts befinden. |
+| Erhöhen Sie den Kauf von Produkten und Services während des Aufenthalts | Halten Sie Gäste an, Produkte und Dienstleistungen zu kaufen, während sie sich in der Unterkunft befinden. |
+| Einzelspielkäufe erhöhen | Targeting von Fans, um wiederholte Einzelspielkäufe zu steigern. |
+| Umfrage nach Veranstaltungen und Incentive-Aktion | Motivieren Sie Fans, auf eine Umfrage nach dem Event zu antworten, indem Sie eine Incentive-Aktion anbieten. |
+| Erhebung nach der Reise | Bitten Sie die Gäste, an einer Umfrage nach der Reise teilzunehmen, indem Sie eine Incentive-Aktion anbieten. |
+| Produktwerbung | Motivieren Sie Kundinnen und Kunden dazu, während einer laufenden Produktwerbungskampagne Produkte zu kaufen. |
+| Kaufbestätigung: Merchandise | Bestätigen Sie den Kauf eines neuen Merchandise-Fans. |
+| Kaufbestätigung: Produkt | Bestätigen Sie den Kauf eines neuen Produkts. |
 | Kaufbestätigung: Reservierung | Bestätigen Sie einen neuen Reservierungsgast. |
-| Fans erneut ansprechen | Intelligentes und verantwortungsvolles erneutes Ansprechen von Fans, die eine Konversion abgebrochen haben, bevor sie abgeschlossen wurden. Handeln Sie mit Intelligenz und Einfühlungsvermögen, um Erlebnisse für Ihre Fans und nicht nur Erinnerungen zu schaffen. |
-| Erneute Interaktion der Gäste | Intelligentes und verantwortungsvolles erneutes Ansprechen von Gästen, die eine Reservierung vor deren Abschluss abgebrochen haben. Handeln Sie mit Intelligenz und Einfühlungsvermögen, um Erlebnisse für Ihre Gäste zu schaffen, und nicht nur an Erinnerungen. |
-| Kundenbindung erneut verstärken | Intelligentes und verantwortungsvolles erneutes Ansprechen von Kunden, die einen Kauf abgebrochen haben, bevor er abgeschlossen wurde. Handeln Sie mit Intelligenz und Einfühlungsvermögen, um Erlebnisse für Ihre Kunden zu schaffen, und nicht nur an Erinnerungen. |
-| Nachricht zum Geburtstag an Fans senden | Grüßen Sie Fans zu ihrem Geburtstag mit einem exklusiven Angebot. |
-| Geburtstagsnachricht an Gäste senden | Begrüßen Sie die Gäste zum Geburtstag mit einem exklusiven Angebot. |
-| Geburtstagsnachricht an Käufer senden | Gönnen Sie sich ein exklusives Angebot zum Geburtstag. |
-| Senden von E-Mails an integrierte neue Fans | Willkommen bei Ihren neu registrierten Fans per E-Mail. |
-| E-Mails an neue Gäste senden | Willkommen Ihre neu registrierten Gäste per E-Mail. |
-| E-Mails an neue integrierte Käufer senden | Willkommen bei Ihren neu registrierten Käufern per E-Mail. |
-| Reisebeleg - Checkout | Geben Sie eine Quittung ein, wenn Gäste auschecken. |
-| Upsell Single Game Purchase to Mini Package Purchaser | Fans sollten dazu angehalten werden, von Einzel-Game-Ticketkäufern zu Game-Ticketkäufern umzurechnen. |
-| Willkommen Neue Ticket-Paketkäufer | Verbessern Sie das Fan-Erlebnis, indem Sie eine Willkommens-E-Mail senden, die den App-Download fördert. |
+| Fans wieder einbinden | Fans, die eine Konvertierung abgebrochen haben, können intelligent und verantwortungsvoll wieder mit ihr interagieren, bevor sie sie abschließen. Handeln Sie mit Intelligenz und Empathie, um Erlebnisse für Ihre Fans zu schaffen, und nicht nur bloße Erinnerungen. |
+| Erneutes Interagieren mit Gästen | Gast, die eine Reservierung aufgegeben haben, werden wieder auf intelligente und verantwortungsvolle Weise einbezogen, bevor sie abgeschlossen werden. Handeln Sie mit Intelligenz und Empathie, um Erlebnisse für Ihre Gäste zu schaffen, und nicht nur Erinnerungen. |
+| Erneutes Interagieren mit Käufern | Kundinnen und Kunden, die einen Kauf vor Abschluss abgebrochen haben, intelligent und verantwortungsvoll wieder ansprechen. Handeln Sie mit Intelligenz und Empathie, um Erlebnisse für Ihre Kunden zu schaffen, und nicht nur Erinnerungen. |
+| Geburtstagsnachricht an Fans senden | Begrüßen Sie Fans an ihrem Geburtstag mit einem exklusiven Angebot. |
+| Geburtstagsnachricht an Gäste senden | Begrüßen Sie Gäste an ihrem Geburtstag mit einem exklusiven Angebot. |
+| Geburtstagsnachricht an Kunden senden | Begrüßen Sie Kunden an ihrem Geburtstag mit einem exklusiven Angebot. |
+| E-Mails an neue Fans senden | Begrüßen Sie neu registrierte Fans per E-Mail. |
+| E-Mails an neue Gäste senden | Begrüßen Sie neu registrierte Gäste per E-Mail. |
+| E-Mails an neue Kunden senden | Begrüßen Sie neu registrierte Kunden per E-Mail. |
+| Reisequittung - Checkout | Geben Sie eine Quittung, wenn Sie auschecken. |
+| Upsell Einzelspielkäufe an Mini-Paketkäufer | Nudge Fans zu konvertieren von Einzelspiel-Ticket-Käufer zu Spiel-Ticket-Paket-Käufer. |
+| Willkommen beim Kauf neuer Ticketpakete | Verbessern Sie das Fan-Erlebnis durch eine Begrüßungs-E-Mail, die zum Herunterladen der Mobile App ermutigt. |
 
 {style="table-layout:auto"}
 
-## Anwendungsbeispiele für Playbooks in Real-time Customer Data Platform {#rtcdp-playbooks}
+## Playbooks für Anwendungsfälle in Real-time Customer Data Platform {#rtcdp-playbooks}
 
 | Playbook-Name | Beschreibung |
 | ------------- | ----------- |
-| Abgebrochenes Browsen: Merchandise - zur Aktivierung | Retargeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Ware zum Warenkorb hinzugefügt haben. |
-| Abgebrochenes Browsen: Produkt - zur Aktivierung | Retargeting von Käufern, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Produkte zum Warenkorb hinzugefügt haben |
-| Abgebrochenes Browsen: Reservierung - zur Aktivierung | Retargeting von Gästen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine neue Reservierung zum Warenkorb hinzugefügt haben. |
-| Warenkorb abgebrochen: Waren - zur Aktivierung | Retargeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Sportartikel zum Warenkorb hinzugefügt haben. |
-| Warenkorb abgebrochen: Produkt—zur Aktivierung | Retargeting von Käufern, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Produkte zum Warenkorb hinzugefügt haben |
-| Abgebrochener Warenkorb: Reservierung - zur Aktivierung | Retargeting von Gästen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine neue Reservierung zum Warenkorb hinzugefügt haben. |
-| Zielwerbung - zur Aktivierung | Reisen Sie Ihre Gäste auf eine Reservierung während einer laufenden Reiseziel-Promotion an. |
-| Game Promotion - zur Aktivierung | Targeting von Fans für Tickets für ein bevorstehendes Spiel. |
-| Erhöhung des Kaufs von Waren während des Spiels - zur Aktivierung | Targeting von Fans, um Waren zu kaufen, während sie sich in der Nähe der Spiel-Site befinden. |
-| Erhöhen Sie den Produktkauf während des Store-Besuchs - zur Aktivierung | Reichen Sie die Käufer dazu an, Waren zu kaufen, während sie sich in der Nähe des Stores befinden. |
-| Erhöhen Sie den Kauf von Produkten und Dienstleistungen während des Aufenthalts - zur Aktivierung. | Greifen Sie darauf zu, dass Gäste Produkte und Dienstleistungen kaufen, während sie sich im Besitz befinden. |
-| Produktwerbung - zur Aktivierung | Wählen Sie Kunden während einer laufenden Produktpromo-Kampagne zum Kauf von Produkten aus. |
-| Senden einer Geburtstagsnachricht an Fans zur Aktivierung | Geben Sie Fans zum Geburtstag mit einer &quot;Happy Birthday&quot;-Nachricht und einem exklusiven Angebot ein. |
-| Versand einer Geburtstagsnachricht an Gäste zur Aktivierung | Nehmen Sie an Ihrem Geburtstag eine &quot;Happy Birthday&quot;-Nachricht und ein exklusives Angebot teil. |
-| Geburtstagsnachricht an Käufer zur Aktivierung senden | Geben Sie den Käufern zum Geburtstag eine &quot;Alles Gute zum Geburtstag&quot;-Nachricht und ein exklusives Angebot. |
+| Abgebrochenes Browsen: Ware - zur Aktivierung | Targeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Ware zum Warenkorb hinzugefügt haben |
+| Abgebrochenes Browsen: Produkt - zur Aktivierung | Targeting von Käufern nach dem Verlassen Ihrer Website oder Mobile App nach dem Hinzufügen der Produkte zum Warenkorb neu. |
+| Abgebrochenes Browsen: Reservierung - zur Aktivierung | Targeting von Gästen nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen einer neuen Reservierung zum Warenkorb neu. |
+| Transaktionsabbruch: Ware - zur Aktivierung | Targeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Sportartikel zum Warenkorb hinzugefügt haben. |
+| Transaktionsabbruch: Produkt - zur Aktivierung | Targeting von Kundinnen und Kunden nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen von Produkten zum Warenkorb neu. |
+| Transaktionsabbruch: Reservierung - zur Aktivierung | Targeting von Gästen nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen einer neuen Reservierung zum Warenkorb neu. |
+| Ziel-Promotion - zur Aktivierung | Targeting von Gästen, um eine Reservierung während einer laufenden Reisezielaktion zu machen. |
+| Game Promotion - zur Aktivierung | Targeting-Fans, um Tickets für ein bevorstehendes Spiel zu kaufen. |
+| Merchandising-Kauf während des Spiels erhöhen - zur Aktivierung | Targeting-Fans, um Waren zu kaufen, während sie sich in der Nähe der Spieleseite befinden. |
+| Produkterwerb während des Ladenbesuchs steigern - Für Aktivierung | Targeting von Käufern, Waren zu kaufen, während sie sich in der Nähe des Geschäfts befinden. |
+| Erhöhen des Kaufs von Produkten und Services während des Aufenthalts - zur Aktivierung | Targeting von Gästen, um Produkte und Dienstleistungen zu kaufen, während sie sich in der Eigenschaft befinden. |
+| Produktwerbung - zur Aktivierung | Targeting von Kundinnen und Kunden zum Kauf von Produkten während einer laufenden Produktwerbekampagne. |
+| Geburtstagsnachricht an Fans senden - zur Aktivierung | Sprechen Sie Fans an ihrem Geburtstag mit einer „Happy Birthday“-Nachricht und einem exklusiven Angebot an. |
+| Geburtstagsnachricht an Gäste senden - zur Aktivierung | Sprechen Sie Ihre Gäste an ihrem Geburtstag mit einer „Happy Birthday“-Nachricht und einem exklusiven Angebot an. |
+| Geburtstagsnachricht an Kunden senden - zur Aktivierung | Targeting Sie Kunden an ihrem Geburtstag mit einer „Happy Birthday“-Nachricht und einem exklusiven Angebot. |
 
 {style="table-layout:auto"}
 
 ## Nächste Schritte
 
-Nachdem Sie die verfügbaren Playbooks kennen, lesen Sie diesen [Leitfaden](/help/use-case-playbooks/playbooks/choose.md) , um zu verstehen, wie Sie mit den Playbooks beginnen, und wählen Sie in der Benutzeroberfläche das richtige für Sie aus.
+Nachdem Sie nun mit den verfügbaren Playbooks vertraut sind, lesen Sie dieses [Handbuch](/help/use-case-playbooks/playbooks/choose.md), um zu verstehen, wie Sie mit den Playbooks beginnen und das richtige für Sie in der Benutzeroberfläche auswählen.

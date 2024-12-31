@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; POI; POI-Details; POI-Details; POI-Details; Point-of-Interest-Details; Datentyp; Datentyp; Datentyp
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;Felder;Schemata;Schemata;Schemata;poi;POI-Details;Point of Interest;Point of Interest-Details;Datentyp;Datentyp;
 solution: Experience Platform
-title: Datentyp "Point of Interest Details"
-description: Erfahren Sie mehr über den XDM-Datentyp für POI-Details.
+title: Datentyp „Point of Interest-Details“
+description: Erfahren Sie mehr über den XDM-Datentyp „Point of Interest“.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,22 +11,22 @@ ht-degree: 16%
 
 ---
 
-# [!UICONTROL POI-Details]-Datentyp
+# [!UICONTROL Details zum Point of Interest]-Datentyp
 
-[!UICONTROL Details zum Zielpunkt] ist ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
+[!UICONTROL Point of Interest-Details] ist ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Beschreibt die Beacon-Details, die für die POI-Interaktion aktiv sind. |
-| `geoInteractionDetails` | [[!UICONTROL Details zur Geo-Interaktion]](./geo-interaction-details.md) | Beschreibt die für die POI-Interaktion aktiven Geodetails. |
-| `category` | Zeichenfolge | Eine allgemeine Kategorie, die vom Administrator der POI-Definitionen für die Organisation der POIs zugewiesen wurde. |
-| `distanceToPOICenter` | Double | Die geschätzte Entfernung vom POI-Zentrum in Metern. |
-| `locatingType` | Zeichenfolge | Der Mechanismus zur Bestimmung des Standorts. Zu den zulässigen Werten gehören: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
-| `name` | Zeichenfolge | Ein Name für den POI. |
-| `poiID` | Zeichenfolge | Eine eindeutige Kennung des POI. |
-| `type` | Zeichenfolge | Der allgemeine Typ des POI unter Verwendung eines vom Administrator der POI-Definitionen ausgewählten Typisierungsschemas. |
+| `geoInteractionDetails` | [[!UICONTROL Details zur Geo-Interaktion]](./geo-interaction-details.md) | Beschreibt die für die POI-Interaktion aktiven geografischen Details. |
+| `category` | String | Eine allgemeine Kategorie, die vom Administrator der POI-Definitionen für die Organisation der POIs zugewiesen wurde. |
+| `distanceToPOICenter` | Double | Die geschätzte Entfernung vom POI-Mittelpunkt in Metern. |
+| `locatingType` | String | Der Mechanismus zur Standortbestimmung. Zu den akzeptierten Werten gehören: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
+| `name` | String | Ein Name für den POI. |
+| `poiID` | String | Eine eindeutige Kennung des POI. |
+| `type` | String | Der allgemeine Typ des POI unter Verwendung eines vom Administrator der POI-Definitionen ausgewählten Typisierungsschemas. |
 
 {style="table-layout:auto"}
 

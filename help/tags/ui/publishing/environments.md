@@ -91,7 +91,7 @@ Klicken Sie auf **[!UICONTROL Host]**, um einen vorkonfigurierten Host für die 
 
 ![](./images/environments/select-host.png)
 
-Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Tag-Hosts finden Sie in der [Übersicht über Hosts](./hosts/hosts-overview.md).
+Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Tag-Hosts finden Sie in der [Hosts - Übersicht](./hosts/hosts-overview.md).
 
 ### Archivierungseinstellungen {#archive}
 

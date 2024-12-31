@@ -1,9 +1,9 @@
 ---
-title: Clientseitige Protokollierung für A4T-Daten im Platform Web SDK
-description: Erfahren Sie, wie Sie die clientseitige Protokollierung für Adobe Analytics for Target (A4T) mithilfe des Experience Platform Web SDK aktivieren.
+title: Client-seitige Protokollierung für A4T-Daten in Platform Web SDK
+description: Erfahren Sie, wie Sie die Client-seitige Protokollierung für Adobe Analytics for Target (A4T) mithilfe der Experience Platform Web SDK aktivieren.
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-keywords: Target; a4t; Protokollierung; Web SDK; Erlebnis; Plattform;
+keywords: Target;A4T;Protokollierung;Web SDK;Experience Platform;Plattform
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -12,49 +12,49 @@ ht-degree: 0%
 
 ---
 
-# Clientseitige Protokollierung für A4T-Daten im Platform Web SDK
+# Client-seitige Protokollierung für A4T-Daten in Platform Web SDK
 
 ## Übersicht {#overview}
 
-Mit dem Adobe Experience Platform Web SDK können Sie [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) -Daten auf der Clientseite Ihrer Webanwendung erfassen.
+Mit Adobe Experience Platform Web SDK können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Clientseitige Protokollierung bedeutet, dass relevante [!DNL Target] -Daten auf Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert sein, wenn Sie Daten mithilfe der [Dateneinfüge-API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) manuell an Analytics senden möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target] auf der Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) möchten.
 
 >[!NOTE]
 >
->Eine Methode zur Durchführung dieses Vorgangs mit [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de) befindet sich derzeit in der Entwicklung und wird demnächst verfügbar sein.
+>Eine Methode zur Durchführung dieses Vorgangs mit [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de) ist derzeit in Entwicklung und wird in naher Zukunft verfügbar sein.
 
-In diesem Dokument werden die Schritte zum Einrichten der clientseitigen A4T-Protokollierung für das Web SDK beschrieben und einige Implementierungsbeispiele für häufige Anwendungsfälle bereitgestellt.
+In diesem Dokument werden die Schritte zum Einrichten der Client-seitigen A4T-Protokollierung für die Web-SDK beschrieben und einige Implementierungsbeispiele für gängige Anwendungsfälle bereitgestellt.
 
 ## Voraussetzungen {#prerequisites}
 
-In diesem Tutorial wird davon ausgegangen, dass Sie mit den grundlegenden Konzepten und Prozessen im Zusammenhang mit der Verwendung des Web SDK zu Personalisierungszwecken vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die folgende Dokumentation:
+In diesem Tutorial wird davon ausgegangen, dass Sie mit den grundlegenden Konzepten und Prozessen der Verwendung von Web SDK zu Personalisierungszwecken vertraut sind. Bitte lesen Sie die folgende Dokumentation, wenn Sie eine Einführung benötigen:
 
-* [Web SDK konfigurieren](/help/web-sdk/commands/configure/overview.md)
-* [Ereignisse senden](/help/web-sdk/commands/sendevent/overview.md)
+* [Konfigurieren der Web-SDK](/help/web-sdk/commands/configure/overview.md)
+* [Senden von Ereignissen](/help/web-sdk/commands/sendevent/overview.md)
 * [Rendern von Personalisierungsinhalten](../../rendering-personalization-content.md)
 
-## Clientseitige Protokollierung in Analytics einrichten {#set-up-client-side-logging}
+## Einrichten der Client-seitigen Analytics-Protokollierung {#set-up-client-side-logging}
 
-In den folgenden Unterabschnitten wird beschrieben, wie Sie die clientseitige Protokollierung für Ihre Web SDK-Implementierung aktivieren.
+In den folgenden Unterabschnitten wird beschrieben, wie Sie die Client-seitige Analytics-Protokollierung für Ihre Web SDK-Implementierung aktivieren.
 
-### Aktivieren der clientseitigen Analytics-Protokollierung {#enable-analytics-client-side-logging}
+### Aktivieren der Client-seitigen Analytics-Protokollierung {#enable-analytics-client-side-logging}
 
-Um die clientseitige Protokollierung in Analytics für Ihre Implementierung als aktiviert zu betrachten, müssen Sie die Adobe Analytics-Konfiguration in Ihrem [Datastream](../../../../datastreams/overview.md) deaktivieren.
+Um zu erwägen, dass die Client-seitige Protokollierung von Analytics für Ihre Implementierung aktiviert ist, müssen Sie die Adobe Analytics-Konfiguration in Ihrem [Datenstrom) ](../../../../datastreams/overview.md).
 
-![Analytics-Datastream-Konfiguration deaktiviert](../assets/disable-analytics-datastream.png)
+![Analytics-Datenstromkonfiguration deaktiviert](../assets/disable-analytics-datastream.png)
 
-### [!DNL A4T] -Daten aus dem SDK abrufen und an Analytics senden {#a4t-to-analytics}
+### Abrufen [!DNL A4T] Daten aus der SDK und Senden an Analytics {#a4t-to-analytics}
 
-Damit diese Berichtsmethode ordnungsgemäß funktioniert, müssen Sie die [!DNL A4T] -bezogenen Daten senden, die aus dem Befehl [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) im Analytics-Treffer abgerufen wurden.
+Damit diese Berichtsmethode ordnungsgemäß funktioniert, müssen Sie die [!DNL A4T] Daten senden, die mit dem [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md)-Befehl im Analytics-Treffer abgerufen wurden.
 
-Wenn Target Edge eine Vorschlagsantwort berechnet, wird überprüft, ob die clientseitige Protokollierung in Analytics aktiviert ist (d. h. ob Analytics in Ihrem Datastream deaktiviert ist). Wenn die clientseitige Protokollierung aktiviert ist, fügt das System jedem Vorschlag in der Antwort ein Analytics-Token hinzu.
+Wenn Target Edge eine Vorschlagsantwort berechnet, prüft es, ob die Client-seitige Analytics-Protokollierung aktiviert ist (d. h. ob Analytics in Ihrem Datenstrom deaktiviert ist). Wenn die Client-seitige Protokollierung aktiviert ist, fügt das System zu jedem Vorschlag in der Antwort ein Analytics-Token hinzu.
 
-Der Fluss sieht in etwa so aus:
+Der Fluss sieht in etwa wie folgt aus:
 
 ![Client-seitiger Protokollierungsfluss](../assets/analytics-client-side-logging.png)
 
-Im Folgenden finden Sie ein Beispiel für eine `interact` -Antwort, wenn die clientseitige Protokollierung in Analytics aktiviert ist. Wenn der Vorschlag für eine Aktivität mit Analytics-Berichten gilt, verfügt er über eine `scopeDetails.characteristics.analyticsToken` -Eigenschaft.
+Im Folgenden finden Sie ein Beispiel für eine `interact`-Antwort, wenn die Client-seitige Protokollierung in Analytics aktiviert ist. Wenn sich der Vorschlag auf eine Aktivität mit Analytics-Reporting bezieht, weist er eine `scopeDetails.characteristics.analyticsToken` Eigenschaft auf.
 
 ```json
 {
@@ -136,7 +136,7 @@ Im Folgenden finden Sie ein Beispiel für eine `interact` -Antwort, wenn die cli
 }
 ```
 
-Vorschläge für formularbasierte Experience Composer-Aktivitäten können sowohl Inhalte als auch Klickmetriken unter demselben Vorschlag enthalten. Anstatt also ein einzelnes Analytics-Token für die Inhaltsanzeige in der Eigenschaft `scopeDetails.characteristics.analyticsToken` zu haben, können für diese sowohl ein Anzeige- als auch ein Klick-Analytics-Token in den Eigenschaften `scopeDetails.characteristics.analyticsDisplayToken` und `scopeDetails.characteristics.analyticsClickToken` angegeben werden, entsprechend.
+Vorschläge für formularbasierte Experience Composer -Aktivitäten können unter demselben Vorschlag sowohl Inhalts- als auch Klick-Metrik-Elemente enthalten. Anstatt also ein einzelnes Analytics-Token für die Inhaltsanzeige in `scopeDetails.characteristics.analyticsToken` Eigenschaft zu haben, können diese entsprechend sowohl ein Anzeige- als auch ein Klick-Analytics-Token in den `scopeDetails.characteristics.analyticsDisplayToken`- und `scopeDetails.characteristics.analyticsClickToken`-Eigenschaften angegeben haben.
 
 ```json
 {
@@ -204,13 +204,13 @@ Vorschläge für formularbasierte Experience Composer-Aktivitäten können sowoh
 }
 ```
 
-Alle Werte aus `scopeDetails.characteristics.analyticsToken` sowie `scopeDetails.characteristics.analyticsDisplayToken` (für angezeigten Inhalt) und `scopeDetails.characteristics.analyticsClickToken` (für Klickmetriken) sind die A4T-Payloads, die erfasst und als `tnta`-Tag im Aufruf der [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) eingefügt werden müssen.
+Alle Werte aus `scopeDetails.characteristics.analyticsToken` sowie `scopeDetails.characteristics.analyticsDisplayToken` (für angezeigte Inhalte) und `scopeDetails.characteristics.analyticsClickToken` (für Klickmetriken) sind die A4T-Payloads, die erfasst und als `tnta`-Tag in den Aufruf [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) aufgenommen werden müssen.
 
 >[!IMPORTANT]
 >
->Die Eigenschaften `analyticsToken`, `analyticsDisplayToken` und `analyticsClickToken` können mehrere Token enthalten, die als einzelne, kommagetrennte Zeichenfolge verkettet sind.
+>Die `analyticsToken`-, `analyticsDisplayToken`- `analyticsClickToken` -Eigenschaften können mehrere Token enthalten, die als einzelne, durch Kommas getrennte Zeichenfolge verkettet sind.
 >
->In den Implementierungsbeispielen, die im nächsten Abschnitt bereitgestellt werden, werden mehrere Analytics-Token iterativ erfasst. Verwenden Sie eine ähnliche Funktion, um ein Array von Analytics-Token zu verketten:
+>In den im nächsten Abschnitt bereitgestellten Implementierungsbeispielen werden mehrere Analytics-Token iterativ erfasst. Verwenden Sie zum Verketten eines Arrays von Analytics-Token eine Funktion ähnlich dieser:
 >
 >```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
@@ -223,15 +223,15 @@ Alle Werte aus `scopeDetails.characteristics.analyticsToken` sowie `scopeDetails
 
 ## Implementierungsbeispiele {#implementation-examples}
 
-Die folgenden Unterabschnitte zeigen, wie Sie die clientseitige Protokollierung in Analytics für häufige Anwendungsfälle implementieren.
+Die folgenden Unterabschnitte zeigen, wie Sie die Client-seitige Analytics-Protokollierung für gängige Anwendungsfälle implementieren.
 
-### Formularbasierte Experience Composer-Aktivitäten {#form-based-composer}
+### Form-Based Experience Composer-Aktivitäten {#form-based-composer}
 
-Sie können das Web SDK verwenden, um die Ausführung von Vorschlägen aus den Aktivitäten [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) zu steuern.
+Sie können die Web-SDK verwenden, um die Ausführung von Vorschlägen aus [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de)-Aktivitäten zu steuern.
 
-Wenn Sie Vorschläge für einen bestimmten Entscheidungsbereich anfordern, enthält der zurückgegebene Vorschlag das entsprechende Analytics-Token. Es empfiehlt sich, den Befehl &quot;Platform Web SDK `sendEvent`&quot;zu verketten und die zurückgegebenen Vorschläge zu durchlaufen, um sie beim gleichzeitigen Erfassen der Analytics-Token auszuführen.
+Wenn Sie Vorschläge für einen bestimmten Entscheidungsumfang anfordern, enthält der zurückgegebene Vorschlag das entsprechende Analytics-Token. Best Practice ist es, den `sendEvent`-Befehl von Platform Web SDK zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um sie auszuführen, während die Analytics-Token gleichzeitig erfasst werden.
 
-Sie können einen `sendEvent` -Befehl für einen formularbasierten Experience Composer-Aktivitätsbereich wie den folgenden Trigger ausführen:
+Sie können einen `sendEvent`-Befehl für einen formularbasierten Experience Composer-Aktivitätsbereich wie den folgenden Trigger ausführen:
 
 ```javascript
 alloy("sendEvent", {
@@ -251,7 +251,7 @@ alloy("sendEvent", {
 });
 ```
 
-Von hier aus müssen Sie Code implementieren, um die Vorschläge auszuführen und eine Payload zu erstellen, die letztendlich an Analytics gesendet wird. Dies ist ein Beispiel dafür, was `results.propositions` enthalten könnte:
+Von hier aus müssen Sie Code implementieren, um die Vorschläge auszuführen und eine Payload zu erstellen, die schließlich an Analytics gesendet wird. Dies ist ein Beispiel dafür, was `results.propositions` enthalten könnte:
 
 ```json
 [
@@ -376,7 +376,7 @@ Von hier aus müssen Sie Code implementieren, um die Vorschläge auszuführen un
 ]
 ```
 
-Um das Analytics-Token aus einem Vorschlag mit Inhaltselementen zu extrahieren, können Sie eine Funktion implementieren, die der folgenden ähnelt:
+Um das Analytics-Token aus einem Vorschlag mit Inhaltselementen zu extrahieren, können Sie eine Funktion ähnlich der folgenden implementieren:
 
 ```javascript
 function getDisplayAnalyticsPayload(proposition) {
@@ -391,7 +391,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-Ein Vorschlag kann verschiedene Elementtypen aufweisen, wie durch die Eigenschaft `schema` des betreffenden Elements angegeben. Es werden vier Vorschlagselementschemata für formularbasierte Experience Composer-Aktivitäten unterstützt:
+Ein Vorschlag kann verschiedene Arten von Elementen aufweisen, wie in der `schema` Eigenschaft des betreffenden Elements angegeben. Für Form-Based Experience Composer-Aktivitäten werden vier Vorschlagselement-Schemas unterstützt:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -400,11 +400,11 @@ var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
 var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
 ```
 
-`HTML_SCHEMA` und `JSON_SCHEMA` sind die Schemas, die den Typ des Angebots widerspiegeln, während `MEASUREMENT_SCHEMA` die Metriken widerspiegelt, die an ein DOM-Element angehängt werden sollen.
+`HTML_SCHEMA` und `JSON_SCHEMA` sind die Schemata, die den Typ des Angebots widerspiegeln, während `MEASUREMENT_SCHEMA` die Metriken widerspiegeln, die an ein DOM-Element angehängt werden sollen.
 
-Analytics-Payloads für Klickmetriken sollten erfasst und separat von den Inhaltselementen an Analytics gesendet werden, und zwar zu dem Zeitpunkt, zu dem der Besucher tatsächlich auf den zuvor angezeigten Inhalt klickt.
+Analytics-Payloads für Klickmetriken sollten getrennt von Inhaltselementen erfasst und an Analytics gesendet werden, und zwar zu dem Zeitpunkt, zu dem der Besucher tatsächlich auf den zuvor angezeigten Inhalt klickt.
 
-Die folgende Hilfsfunktion zum Abrufen der A4T-Klickmetrik-Payloads ist in diesem Fall praktisch:
+Die folgende Hilfsfunktion zum Abrufen der Klickmetrik -Payloads von A4T ist in diesem Fall praktisch:
 
 ```javascript
 function getClickAnalyticsPayload(proposition) {
@@ -419,18 +419,18 @@ function getClickAnalyticsPayload(proposition) {
 }
 ```
 
-#### Implementierungszusammenfassung {#implementation-summary}
+#### Zusammenfassung der Implementierung {#implementation-summary}
 
-Zusammenfassend müssen die folgenden Schritte ausgeführt werden, wenn formularbasierte Experience Composer-Aktivitäten mit dem Platform Web SDK angewendet werden:
+Zusammenfassend lässt sich sagen, dass beim Anwenden von formularbasierten Experience Composer -Aktivitäten mit Platform Web SDK die folgenden Schritte ausgeführt werden müssen:
 
-1. Senden Sie ein Ereignis, das formularbasierte Experience Composer-Aktivitätsangebote abruft.
-1. Wenden Sie die Inhaltsänderungen auf die Seite an.
-1. Senden Sie das Benachrichtigungsereignis `decisioning.propositionDisplay` .
+1. Senden eines Ereignisses, das Form-Based Experience Composer-Aktivitätsangebote abruft;
+1. Anwenden der Inhaltsänderungen auf die Seite
+1. Senden des `decisioning.propositionDisplay` Benachrichtigungsereignisses;
 1. Erfassen Sie die Analytics-Display-Token aus der SDK-Antwort und erstellen Sie eine Payload für den Analytics-Treffer.
 1. Senden der Payload an Analytics mithilfe der [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
-1. Wenn in den gelieferten Vorschlägen Klickmetriken enthalten sind, sollten Klicklistener eingerichtet werden, damit bei einem Klick das `decisioning.propositionInteract` -Benachrichtigungsereignis gesendet wird. Der `onBeforeEventSend` -Handler sollte so konfiguriert werden, dass beim Abfangen von `decisioning.propositionInteract` -Ereignissen die folgenden Aktionen ausgeführt werden:
-   1. Erfassen der Klick-Analytics-Token von `xdm._experience.decisioning.propositions`
-   1. Senden des Klickanalysetreffers mit der erfassten Analytics-Nutzlast über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+1. Wenn in den zugestellten Vorschlägen Klickmetriken vorhanden sind, sollten Klick-Listener so eingerichtet sein, dass bei einem Klick das `decisioning.propositionInteract` Benachrichtigungsereignis gesendet wird. Der `onBeforeEventSend`-Handler sollte so konfiguriert sein, dass beim Abfangen `decisioning.propositionInteract` Ereignisse die folgenden Aktionen auftreten:
+   1. Abrufen der Click Analytics-Token aus `xdm._experience.decisioning.propositions`
+   1. Senden des Klick-Analytics-Treffers mit der erfassten Analytics-Payload über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer-Aktivitäten {#visual-experience-composer-acitivties}
 
-Mit dem Web SDK können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) erstellt wurden.
+Mit Web SDK können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC) erstellt wurden](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 
 >[!NOTE]
 >
->Die Schritte zur Implementierung dieses Anwendungsfalls ähneln den Schritten für [Formularbasierte Experience Composer-Aktivitäten](#form-based-composer). Weitere Informationen finden Sie im vorherigen Abschnitt .
+>Die Schritte zur Implementierung dieses Anwendungsfalls ähneln den Schritten für [Form-Based Experience Composer activities](#form-based-composer). Bitte lesen Sie den vorherigen Abschnitt für weitere Details.
 
-Wenn die automatische Wiedergabe aktiviert ist, können Sie die Analytics-Token aus den Vorschlägen erfassen, die auf der Seite ausgeführt wurden. Es empfiehlt sich, den Befehl &quot;Platform Web SDK `sendEvent`&quot;zu verketten und die zurückgegebenen Vorschläge zu durchlaufen, um die vom Web SDK zu rendernden Vorschläge zu filtern.
+Wenn das automatische Rendering aktiviert ist, können Sie die Analytics-Token aus den Vorschlägen erfassen, die auf der Seite ausgeführt wurden. Best Practice ist es, den `sendEvent`-Befehl von Platform Web SDK zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um die Vorschläge zu filtern, die Web SDK gerendert haben soll.
 
 **Beispiel**
 
@@ -509,13 +509,13 @@ alloy("sendEvent", {
 });
 ```
 
-### Umgang mit Seitenmetriken mit `onBeforeEventSend` {#using-onbeforeeventsend}
+### Verwenden von `onBeforeEventSend` zur Verarbeitung von Seitenmetriken {#using-onbeforeeventsend}
 
-Mithilfe von Adobe Target-Aktivitäten können Sie verschiedene Metriken auf der Seite einrichten, die entweder manuell an das DOM angehängt oder automatisch an das DOM (mit VEC erstellte Aktivitäten) angehängt werden. Bei beiden Typen handelt es sich um eine verzögerte Benutzerinteraktion auf der Webseite.
+Mithilfe von Adobe Target-Aktivitäten können Sie verschiedene Metriken auf der Seite einrichten, entweder manuell an das DOM angehängt oder automatisch an das DOM angehängt (in VEC erstellte Aktivitäten). Bei beiden Typen handelt es sich um eine verzögerte Endbenutzerinteraktion auf der Web-Seite.
 
-Um dies zu berücksichtigen, empfiehlt es sich, Analytics-Payloads mithilfe des Erweiterungspunkts `onBeforeEventSend` Adobe Experience Platform Web SDK zu erfassen. Der Erweiterungspunkt `onBeforeEventSend` sollte mit dem Befehl `configure` konfiguriert werden und wird über alle Ereignisse angezeigt, die über den Datastream gesendet werden.
+Daher empfiehlt es sich, Analytics-Payloads mithilfe des `onBeforeEventSend` Adobe Experience Platform Web SDK-Hooks zu erfassen. Der `onBeforeEventSend`-Hook sollte mit dem `configure`-Befehl konfiguriert werden und wird für alle Ereignisse angezeigt, die über den Datenstrom gesendet werden.
 
-Im Folgenden finden Sie ein Beispiel dafür, wie `onBeforeEventSent` für Trigger Analytics-Treffer konfiguriert werden kann:
+Im Folgenden finden Sie ein Beispiel dafür, wie `onBeforeEventSent` so konfiguriert werden können, dass Analytics-Treffer im Trigger empfangen werden:
 
 ```javascript
 alloy("configure", {
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde die clientseitige Protokollierung für A4T-Daten im Web SDK behandelt. Weitere Informationen zur Verarbeitung von A4T-Daten im Edge Network finden Sie im Handbuch zur [serverseitigen Protokollierung](server-side.md) .
+In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum Umgang mit [4T-Daten im Edge Network finden ](server-side.md) im Handbuch zur Server-seitigen Protokollierung .

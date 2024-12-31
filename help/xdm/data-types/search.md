@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Suche; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;Felder;Schemata;Schemata;Suche;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
-title: Suchdatentyp
-description: Erfahren Sie mehr über den Datentyp "Search Experience Data Model"(XDM).
+title: Datentyp suchen
+description: Erfahren Sie mehr über den Datentyp „Experience-Datenmodell (XDM) suchen“.
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL Search]-Datentyp
+# [!UICONTROL Suche] Datentyp
 
 [!UICONTROL Suche] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
 
@@ -19,13 +19,13 @@ ht-degree: 18%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche bezahlt wurde oder nicht. |
-| `keywords` | Zeichenfolge | Die Suchbegriffe für die Suche. |
+| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche gebührenpflichtig ist. |
+| `keywords` | String | Die Suchbegriffe für die Suche. |
 | `pageDepth` | Ganzzahl | Die Klicktiefe in den Suchergebnissen. |
-| `position` | Ganzzahl | Die Position oder der Rang der Auflistung auf der Suchergebnisseite. |
-| `searchEngine` | Zeichenfolge | Die von der Suche verwendete Suchmaschine. |
-| `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
-| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side` oder `bottom`. |
+| `position` | Ganzzahl | Die Position oder der Rang des Listeneintrags auf der Suchergebnisseite. |
+| `searchEngine` | String | Die von der Suche verwendete Suchmaschine. |
+| `searchEngineID` | String | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
+| `slot` | String | Der benannte Abschnitt der Seite, auf der das Suchergebnis erschienen ist. Der Wert dieser Eigenschaft muss gleich einem der bekannten von Ihnen definierten Aufzählungswerte sein, z. B. `top`, `side` oder `bottom`. |
 
 {style="table-layout:auto"}
 

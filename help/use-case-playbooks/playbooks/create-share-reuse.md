@@ -22,7 +22,7 @@ Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anw
 >title="Erstellen einer Instanz"
 >abstract="Erstellen Sie eine Liste mit Assets wie Journeys, Zielgruppen, Schemata oder Zielen, die für Journeys oder Aktivierungsszenarien verwendet werden können."
 
-Bevor Sie eine Playbook-Instanz erstellen, sollten Sie die verfügbaren Playbooks durchsuchen, um [das richtige Playbook auszuwählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
+Bevor Sie eine Playbook-Instanz erstellen, erkunden Sie die verfügbaren Playbooks, um [das richtige Playbook auszuwählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
 
 ![Erstellen einer Playbook-Instanz.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -44,7 +44,7 @@ Nachdem Sie eine Instanz basierend auf einem Playbook erstellt haben, können Si
 
 Es ist wichtig zu verstehen, dass die generierten Assets je nach aktiviertem Anwendungsfall unterschiedlich sind:
 
-* Für verschiedene Arten von Playbooks werden verschiedene Assets generiert. Diese Assets werden speziell für den auf dem Playbook basierenden Anwendungsfall erstellt. Ein Playbook generiert beispielsweise ein Schema, eine Zielgruppe, eine Journey und Nachrichten. Ein anderes Playbook generiert ein Schema, eine Zielgruppe und ein Ziel, für das Daten aktiviert werden sollen.
+* Für verschiedene Arten von Playbooks werden verschiedene Assets generiert. Diese Assets werden speziell für den auf dem Playbook basierenden Anwendungsfall erstellt. Beispielsweise generiert ein Playbook ein Schema, eine Zielgruppe, eine Journey und Nachrichten. Ein anderes Playbook generiert ein Schema, eine Zielgruppe und ein Ziel, für das Daten aktiviert werden können.
 * Die Assets selbst unterscheiden sich zwischen den Playbooks. Für das Playbook **[!UICONTROL Geburtstagsnachricht an Gäste senden]** gilt für die erstellte Zielgruppe etwa die Regel `birthday=today AND year=any`.
 
 Beispiel: Für das Playbook **[!UICONTROL Abgebrochener Warenkorb: Artikel]** können Sie sehen, dass eine bestimmte Journey erstellt wurde, die die für diesen Anwendungsfall erstellten Nachrichten enthält.
@@ -63,7 +63,7 @@ Das oben beschriebene Verhalten gilt für alle Assets, die erstellt werden, mit 
 >
 >Testen Sie in der Entwicklungs-Sandbox und wechseln Sie zur Produktion, wenn Sie dazu bereit sind.
 >
->Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange testen, wie Sie es in der Entwicklungs-Sandbox wünschen, und die Asset-Logik (Zielgruppendefinitionen, Journey, Schemas usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind. Sie können zur Entwicklungs-Sandbox und dann zur Produktions-Sandbox wechseln, indem Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) verwenden.
+>Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets in der Entwicklungs-Sandbox so lange testen, wie Sie möchten, und Sie können die Asset-Logik (Zielgruppendefinitionen, Journey, Schemata usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind. Sie können zur Entwicklungs-Sandbox und dann zur Produktions-Sandbox wechseln, indem Sie die Funktion [Datenerkennung](/help/use-case-playbooks/playbooks/data-awareness.md) verwenden.
 
 ## Wiederverwenden von Playbooks {#reuse-playbooks}
 
@@ -77,7 +77,7 @@ Sie können die generierte Instanz und erstellten Assets für andere Team-Mitgli
 
 ## Videoeinführung des End-to-End-Playbook-Prozesses
 
-In diesem Video erfahren Sie, wie Sie von Anfang bis Ende Instanzen eines Nutzungsszenarios-Playbooks entdecken, erstellen, veröffentlichen und beheben können und wie Sie die vom Playbook generierten Assets in andere Sandboxes kopieren, die in Ihrer Organisation eingerichtet sind.
+Sehen Sie sich dieses Video an, um zu erfahren, wie Sie Instanzen eines Anwendungsfall-Playbooks von Anfang bis Ende entdecken, erstellen, veröffentlichen und beheben sowie die vom Playbook generierten Assets in andere in Ihrer Organisation eingerichtete Sandboxes kopieren können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 

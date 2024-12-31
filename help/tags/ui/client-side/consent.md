@@ -15,7 +15,7 @@ ht-degree: 96%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Durch gesetzliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) wird verlangt, dass Unternehmen die Einwilligung ihrer Benutzer verwalten können. Adobe-Kunden können von Besuchern verlangen, dass sie sich anmelden, bevor Adobe-Lösungen für den jeweiligen Besucher ausgeführt werden können. Besucher sollten die Möglichkeit erhalten, ihre Opt-in- und Opt-out-Status selbst zu verwalten.
+Rechtliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) erfordern, dass Unternehmen in der Lage sind, die Einwilligung ihrer Benutzer zu verwalten. Adobe-Kunden können von Besuchern verlangen, dass sie sich anmelden, bevor Adobe-Lösungen für den jeweiligen Besucher ausgeführt werden können. Besucher sollten die Möglichkeit erhalten, ihre Opt-in- und Opt-out-Status selbst zu verwalten.
 
 Adobe Experience Cloud-Kunden benötigen eine Vielzahl von Implementierungen dieser Anforderungen. Manche verwenden externe Einwilligungsmanager, andere bauen eigene auf.
 

@@ -12,33 +12,33 @@ ht-degree: 0%
 
 # `data`
 
-Mit dem Objekt `data` können Sie eine Payload an Adobe senden, die nicht mit einem XDM-Schema übereinstimmt. Dies ist in Nicht-XDM-Szenarien nützlich, z. B. beim direkten Senden von Daten an Adobe Analytics, Adobe Target oder Adobe Audience Manager. Wenn Daten in den Datastream eingehen, können Sie [Datenvorbereitung-Zuordnung](/help/data-prep/ui/mapping.md) verwenden, um jedem Feld im `data` -Objekt XDM-Felder zuzuweisen.
+Mit dem `data`-Objekt können Sie eine Payload an Adobe senden, die nicht mit einem XDM-Schema übereinstimmt. Dies ist in Nicht-XDM-Szenarien nützlich, z. B. wenn Daten direkt an Adobe Analytics, Adobe Target oder Adobe Audience Manager gesendet werden. Wenn Daten im Datenstrom eingehen, können Sie [Datenvorbereitung-Zuordnung](/help/data-prep/ui/mapping.md) verwenden, um jedem Feld im `data`-Objekt XDM-Felder zuzuweisen.
 
 >[!IMPORTANT]
 >
->Die Daten in diesem Objekt müssen mindestens eine der folgenden Aktionen aufweisen:
+>Daten in diesem Objekt müssen mindestens eine der folgenden Aktionen aufweisen:
 >
->* Ein Dienst im Datastream muss so konfiguriert werden, dass Daten aus einer bestimmten Eigenschaft im `data` -Objekt abgerufen werden.
->* Die angegebene Eigenschaft muss mithilfe von data prep einem XDM-Feld zugeordnet werden.
+>* Ein Service im Datenstrom muss so konfiguriert sein, dass Daten aus einer bestimmten Eigenschaft im `data`-Objekt abgerufen werden.
+>* Die angegebene Eigenschaft muss mithilfe der Datenvorbereitung einem XDM-Feld zugeordnet werden.
 >
->Wenn eine bestimmte Eigenschaft keinem XDM-Feld zugeordnet oder von einem konfigurierten Dienst verwendet wird, gehen diese Daten dauerhaft verloren.
+>Wenn eine bestimmte Eigenschaft keinem XDM-Feld zugeordnet ist oder von einem konfigurierten Service verwendet wird, gehen diese Daten dauerhaft verloren.
 
-## Verwenden des Objekts `data` über die Web SDK-Tag-Erweiterung {#tag-extension}
+## Verwenden des `data`-Objekts über die Web-SDK-Tag-Erweiterung {#tag-extension}
 
 Geben Sie ein Datenelement im Feld **[!UICONTROL Daten]** innerhalb der Aktionen einer Tag-Regel an.
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den Aktionstyp ] auf **[!UICONTROL Ereignis senden]** fest.[!UICONTROL 
-1. Geben Sie das Datenelement mit dem gewünschten Objekt im Feld **[!UICONTROL Daten]** an.
-1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen [!UICONTROL  unter &quot;]&quot; eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Legen Sie das [!UICONTROL Erweiterung] Dropdown-Feld auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und legen Sie den [!UICONTROL Aktionstyp] auf **[!UICONTROL Ereignis senden]**.
+1. Geben Sie das Datenelement an, das das gewünschte Objekt im Feld **[!UICONTROL Daten]** enthält.
+1. Klicken Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 
-## Verwenden des Objekts `data` über die Web SDK JavaScript-Bibliothek {#library}
+## Verwenden des `data`-Objekts über die Web SDK JavaScript-Bibliothek {#library}
 
-Legen Sie das Objekt `data` als Teil des JSON-Objekts innerhalb des Parameters des Befehls `sendEvent` fest. Für Daten, die Sie im Datastream zuordnen möchten, können Sie dieses Objekt beliebig strukturieren. Stellen Sie bei Daten, die von bestimmten Diensten verwendet werden, sicher, dass die Objekthierarchie mit den Erwartungen des Dienstes übereinstimmt. Sie können sowohl das Objekt `data` als auch das Objekt [`xdm`](xdm.md) im selben Befehl `sendEvent` einbeziehen.
+Legen Sie das `data`-Objekt als Teil des JSON-Objekts innerhalb des -Parameters des `sendEvent`-Befehls fest. Für Daten, die Sie im Datenstrom zuordnen möchten, können Sie dieses Objekt beliebig strukturieren. Stellen Sie bei Daten, die von bestimmten Services verwendet werden, sicher, dass die Objekthierarchie mit dem übereinstimmt, was der Service erwartet. Sie können sowohl das `data`- als auch das [`xdm`](xdm.md)-Objekt in denselben `sendEvent`-Befehl aufnehmen.
 
 ```javascript
 alloy("sendEvent", {
@@ -46,6 +46,6 @@ alloy("sendEvent", {
 });
 ```
 
-## Verwenden des Objekts `data` mit Adobe Analytics {#analytics}
+## Verwenden des `data`-Objekts mit Adobe Analytics {#analytics}
 
-Sie können das `data` -Objekt mit Adobe Analytics verwenden, um Daten an eine Report Suite ohne XDM-Schema zu senden. Variablen sind so konfiguriert, dass sie dieselbe Syntax wie [!DNL AppMeasurement] -Variablen verwenden und so den Aktualisierungsprozess auf das Web SDK vereinfachen. Weitere Informationen finden Sie unter [Zuordnung von Datenobjektvariablen zu Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) im Implementierungshandbuch zu Adobe Analytics.
+Sie können das `data`-Objekt mit Adobe Analytics verwenden, um Daten ohne XDM-Schema an eine Report Suite zu senden. Variablen sind so konfiguriert, dass sie dieselbe Syntax wie [!DNL AppMeasurement] verwenden, was den Upgrade-Prozess auf die Web-SDK vereinfacht. Adobe Analytics Weitere Informationen finden [ unter „Zuordnen von Datenobjektvariablen zu ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)&quot; im Adobe Analytics-Implementierungshandbuch.

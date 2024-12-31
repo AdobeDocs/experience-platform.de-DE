@@ -19,9 +19,9 @@ Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platfor
 
 ## Voraussetzungen
 
-Dieses Tutorial setzt ein grundlegendes Verständnis der Verwendung von Umgebungen und Einbettungscodes für Tags voraus. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
+Dieses Tutorial setzt Grundkenntnisse der Verwendung von Umgebungen und Einbettungs-Codes für Tags voraus. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
 
-Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger“ installiert sein. Platform Debugger ist für den Chrome-Browser verfügbar. Verwenden Sie den folgenden Link, um die Erweiterung zu installieren, bevor Sie das Tutorial starten:
+Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger“ installiert sein. Der Platform-Debugger ist für den Chrome-Browser verfügbar. Verwenden Sie den folgenden Link, um die Erweiterung zu installieren, bevor Sie mit dem Tutorial beginnen:
 
 * [Platform Debugger für Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 

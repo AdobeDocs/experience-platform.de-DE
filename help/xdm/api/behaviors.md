@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Verhalten; Verhalten; Verhalten; Verhalten; Verhalten;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schemaregistrierung;Verhalten;Verhalten;
 solution: Experience Platform
-title: Verhalten-API-Endpunkt
-description: Mit dem Endpunkt /verhaltenors in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
+title: Verhaltens-API-Endpunkt
+description: Mit dem Endpunkt /behavior in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,28 +11,28 @@ ht-degree: 23%
 
 ---
 
-# Verhaltens-Endpunkt
+# Verhaltensendpunkt
 
-Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das von allen Schemas übernommen wird, die diese Klasse verwenden. Für fast alle Anwendungsfälle in Platform gibt es zwei verfügbare Verhaltensweisen:
+Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das alle Schemas, die diese Klasse verwenden, erben. Für fast alle Anwendungsfälle in Platform stehen zwei Verhaltensweisen zur Verfügung:
 
 * **[!UICONTROL Datensatz]**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
 * **[!UICONTROL Zeitreihe]**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 
 >[!NOTE]
 >
->Es gibt einige Anwendungsfälle in Platform, bei denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen anwendet. Für diese Fälle ist ein drittes &quot;Ad-hoc&quot;-Verhalten verfügbar. Weitere Informationen finden Sie im Tutorial zum Erstellen eines Ad-hoc-Schemas ](../tutorials/ad-hoc.md) .[
+>Es gibt einige Anwendungsfälle in Platform, in denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen aufweist. In diesen Fällen ist ein drittes „Ad-hoc“-Verhalten verfügbar. Weitere Informationen finden Sie im Tutorial [Erstellen eines Ad](../tutorials/ad-hoc.md)hoc-Schemas“.
 >
->Allgemeine Informationen zu Datenverhalten in Bezug darauf, wie sie sich auf die Schemakomposition auswirken, finden Sie im Handbuch zu den [Grundlagen der Schemakomposition](../schema/composition.md).
+>Weitere allgemeine Informationen zu Datenverhalten im Hinblick darauf, wie es die Schemakomposition beeinflusst, finden Sie im Handbuch zu den [Grundlagen der Schemakomposition](../schema/composition.md).
 
-Mit dem Endpunkt `/behaviors` in der API [!DNL Schema Registry] können Sie verfügbare Verhaltensweisen im Container `global` anzeigen.
+Mit dem `/behaviors`-Endpunkt in der [!DNL Schema Registry]-API können Sie verfügbare Verhaltensweisen im `global`-Container anzeigen.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Liste von Verhaltensweisen abrufen {#list}
+## Abrufen einer Liste von Verhaltensweisen {#list}
 
-Sie können eine Liste aller verfügbaren Verhaltensweisen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/behaviors` senden.
+Sie können eine Liste aller verfügbaren Verhaltensweisen abrufen, indem Sie eine GET-Anfrage an den `/behaviors`-Endpunkt senden.
 
 **API-Format**
 
@@ -87,9 +87,9 @@ curl -X GET \
 }
 ```
 
-## Verhalten nachschlagen {#lookup}
+## Suchen eines Verhaltens {#lookup}
 
-Sie können ein bestimmtes Verhalten nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage an den `/behaviors` -Endpunkt angeben.
+Sie können ein bestimmtes Verhalten nachschlagen, indem Sie im Pfad einer GET-Anfrage an den `/behaviors`-Endpunkt dessen Kennung angeben.
 
 **API-Format**
 
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BEHAVIOR_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Verhaltens, das Sie nachschlagen möchten. |
+| `{BEHAVIOR_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Verhaltens, das Sie suchen möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Anfrage ruft die Details des Datensatzverhaltens ab, indem sie im Anfragepfad den Wert &quot;`meta:altId`&quot; angibt.
+Mit der folgenden Anfrage werden die Details des Datensatzverhaltens abgerufen, indem im Anfragepfad dessen `meta:altId` angegeben wird.
 
 ```shell
 curl -X GET \
@@ -119,7 +119,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Verhaltens zurück, einschließlich der Version, Beschreibung und der Attribute, die das Verhalten den Klassen bereitstellt, die es anwenden.
+Eine erfolgreiche Antwort gibt die Details des Verhaltens zurück, einschließlich der Version, Beschreibung und der Attribute, die das Verhalten den Klassen bereitstellt, die es verwenden.
 
 ```json
 {
@@ -172,4 +172,4 @@ Eine erfolgreiche Antwort gibt die Details des Verhaltens zurück, einschließli
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung des Endpunkts `/behaviors` in der API [!DNL Schema Registry] behandelt. Informationen zum Zuweisen eines Verhaltens zu einer Klasse mithilfe der API finden Sie im [Klassen-Endpunkthandbuch](./classes.md).
+In diesem Handbuch wurde die Verwendung des `/behaviors`-Endpunkts in der [!DNL Schema Registry]-API behandelt. Informationen zum Zuweisen eines Verhaltens zu einer Klasse mithilfe der API finden Sie im [Classes-Endpunkthandbuch](./classes.md).

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Unterbringung;
-title: Feldergruppe "Reservierungsschema"
-description: Erfahren Sie mehr über die Feldergruppe "Reservierungsschema".
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;ExperienceEvent;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;Reservierung;Unterkunft;
+title: Schemafeldgruppe für die Unterkunftsreservierung
+description: Erfahren Sie mehr über die Schemafeldgruppe „Unterkunftsreservierung“.
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -10,63 +10,63 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Reservierungsreservierung] Schemafeldgruppe
+# [!UICONTROL Unterkunftsreservierung] Schemafeldgruppe
 
-[!UICONTROL Reservierung unterbringen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zum Erfassen von Informationen zu einer Reservierung verwendet wird.
+[!UICONTROL Unterkunftsreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Unterkunftsreservierung zu erfassen.
 
-Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Reservierung unterbringen] auch das Array `lodgingReservations` . Dieses Objekt dient zur Beschreibung einer oder mehrerer Reservierungen mit Eigenschaften, die für die Unterkunft eindeutig sind.
+Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ „Objekt“, `reservations`. Zusätzlich zu diesen allgemeinen Feldern enthält [!UICONTROL Unterkunftsreservierung] auch `lodgingReservations` Array. Dieses Array von Objekten wird verwendet, um eine oder mehrere Reservierungen mit für die Unterkunft eindeutigen Eigenschaften zu beschreiben.
 
 >[!NOTE]
 >
->In diesem Dokument werden die Details des `lodgingReservations` -Arrays behandelt. Informationen zu den anderen Feldern, die unter dem Objekt `reservations` bereitgestellt werden, finden Sie in der Feldgruppenreferenz [[!UICONTROL Reservierungsdetails] ](./reservation-details.md).
+>In diesem Dokument werden die Details des `lodgingReservations`-Arrays behandelt. Informationen zu den anderen Feldern, die unter dem `reservations` Objekt bereitgestellt werden, finden Sie in der [[!UICONTROL Reservierungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
-![Reservierungsstruktur unterbringen](../../images/field-groups/lodging-reservation/structure.png)
+![Struktur der ](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` ist ein Array von Objekten, die eine Liste von Reservierungen für Unterkünfte darstellen. Wenn eine Reservierung mehrere verschiedene Hotels entlang der Route einer Reise beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `lodgingReservations` für eine einzelne Veranstaltung aufgeführt werden.
+`lodgingReservations` ist ein Array von Objekten, das eine Liste der Unterkunftsreservierungen darstellt. Wenn ein Reservierungsereignis beispielsweise Reservierungen in mehreren verschiedenen Hotels entlang der Route einer Reise umfasst, können diese Reservierungen als einzelne Objekte unter `lodgingReservations` für ein einzelnes Ereignis aufgeführt werden.
 
-Die Struktur der einzelnen Objekte, die unter &quot;`lodgingReservations`&quot;bereitgestellt werden, ist unten aufgeführt.
+Die Struktur der einzelnen -Objekte, die unter `lodgingReservations` bereitgestellt werden, wird unten angezeigt.
 
-![lodgingReservations structure](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![lodgingReservations-Struktur](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL Währung]](../../data-types/currency.md) | Der durchschnittliche Tagespreis des Hotelzimmers. |
-| `lodgingCheckIn` | Objekt | Ein Objekt, das die Unterbringung von Check-in-Details beschreibt. Umfasst die folgenden Werte:<ul><li>`digitalKey`: (Integer) Gibt an, wann ein Gast beim Einchecken die Verwendung eines digitalen Schlüssels auswählt.</li><li>`earlyCheckInRequested`: (Integer) Gibt an, wann ein Gast vor den normalen Eincheckzeiten einen Check-in anfordert.</li><li>`lateCheckInRequested`: (Integer) Gibt an, wann ein Gast einen Check-in zu einem späteren Zeitpunkt als zu den normalen Check-in-Stunden anfordert.</li><li>`noRoomCheckIn`: (Integer) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abgeschlossen hat, wenn zu diesem Zeitpunkt keine Zimmer verfügbar sind.</li><li>`oneRoomCheckIn`: (Integer) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abgeschlossen hat, wenn zu diesem Zeitpunkt nur ein Zimmer verfügbar ist.</li><li>`roomKeys`: (Integer) Die Anzahl der Standard-Zimmerschlüssel, die beim Check-in bereitgestellt werden.</li><li>`userSelectedRoom`: (Boolesch) Gibt an, ob der Gast beim Einchecken sein Zimmer ausgewählt hat.</li></ul> |
-| `rackrate` | [[!UICONTROL Währung]](../../data-types/currency.md) | Die Kosten für eine Buchung am selben Tag ohne vorherige Reservierung. |
-| `ID` | Zeichenfolge | Die Reservierungsnummer oder -kennung. |
-| `agentID` | Zeichenfolge | Die mit der Hotelbuchung verknüpfte Agenten-ID. |
-| `basePrice` | Zeichenfolge | Der Basispreis vor Rabatten wird hinzugefügt. |
-| `bookingID` | Zeichenfolge | Die mit der Hotelbuchung verknüpfte Buchungskennung. |
-| `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung abgebrochen wurde. |
-| `checkInDate` | DateTime | Das Check-in Datum für die Zimmerreservierung. |
-| `checkOutDate` | DateTime | Das Datum des Auscheckens für die Zimmerreservierung. |
-| `confirmationNumber` | Zeichenfolge | Die Buchungsbestätigungsnummer oder -kennung. |
-| `couponCode` | Zeichenfolge | Gutscheincode für die Hotelbuchung. |
+| `lodgingCheckIn` | Objekt | Ein Objekt, das Details zum Einchecken in einer Unterkunft beschreibt. Enthält die folgenden Werte:<ul><li>`digitalKey`: (Ganzzahl) Gibt an, wenn ein Gast beim Einchecken die Verwendung eines digitalen Schlüssels auswählt.</li><li>`earlyCheckInRequested`: (Ganzzahl) Gibt an, wenn ein Gast anfordert, früher als die normalen Check-in-Zeiten einzuchecken.</li><li>`lateCheckInRequested`: (Ganzzahl) Gibt an, wenn ein Gast anfordert, später als die normalen Check-in-Zeiten einzuchecken.</li><li>`noRoomCheckIn`: (Ganzzahl) Dieser Wert wird erfasst, wenn ein Gast das Einchecken abschließt, wenn zu diesem Zeitpunkt keine Zimmer verfügbar sind.</li><li>`oneRoomCheckIn`: (Ganzzahl) Dieser Wert wird erfasst, wenn ein Gast das Einchecken abschließt, wenn zu diesem Zeitpunkt nur ein Zimmer verfügbar ist.</li><li>`roomKeys`: (Integer) Die Anzahl der beim Check-in bereitgestellten Standard-Zimmerschlüssel.</li><li>`userSelectedRoom`: (Boolesch) Gibt an, ob der Gast sein Zimmer beim Einchecken ausgewählt hat.</li></ul> |
+| `rackrate` | [[!UICONTROL Währung]](../../data-types/currency.md) | Die Kosten für eine Reservierung am selben Tag ohne vorherige Buchungsvereinbarungen. |
+| `ID` | String | Die Reservierungsnummer oder -kennung. |
+| `agentID` | String | Die Agent-ID, die mit der Hotelbuchung verknüpft ist. |
+| `basePrice` | String | Der Grundpreis vor Abzug aller Rabatte. |
+| `bookingID` | String | Die mit der Hotelbuchung verknüpfte Buchungs-ID. |
+| `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung storniert wurde. |
+| `checkInDate` | DateTime | Das Eincheckdatum für die Zimmerreservierung. |
+| `checkOutDate` | DateTime | Das Check-out-Datum für die Zimmerreservierung. |
+| `confirmationNumber` | String | Die Nummer oder Kennung der Reservierungsbestätigung. |
+| `couponCode` | String | Ein Couponcode, der mit der Hotelbuchung verknüpft ist. |
 | `created` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung erstellt wurde. |
-| `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für den Kauf verwendet wird. |
-| `discountPercent` | Double | Der mit der Buchung verbundene Rabattprozentsatz. |
-| `freeCancelation` | Boolesch | Gibt an, ob das Zimmer kostenfrei storniert werden kann. |
-| `guestID` | Zeichenfolge | Die mit der Hotelbuchung verknüpfte Gast-ID. |
-| `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
-| `loyaltyID` | Zeichenfolge | Die Kennung des Treueprogramms für den in der Reservierung aufgelisteten Gast. |
+| `currencyCode` | String | Der ISO 4217-Währungscode, der für den Kauf verwendet wurde. |
+| `discountPercent` | Double | Der mit der Buchung verknüpfte Rabattprozentsatz. |
+| `freeCancelation` | Boolesch | Gibt an, ob das Zimmer über eine kostenlose Stornierungsrichtlinie verfügt. |
+| `guestID` | String | Die Gäste-ID, die mit der Hotelbuchung verknüpft ist. |
+| `length` | Ganzzahl | Die Gesamtzahl der Tage für die Reservierung. |
+| `loyaltyID` | String | Die ID des Treueprogramms für den in der Reservierung aufgeführten Gast. |
 | `modification` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung geändert wurde. |
-| `modificationDate` | DateTime | Der Zeitpunkt der letzten Änderung der Reservierung. |
+| `modificationDate` | DateTime | Der Zeitpunkt, zu dem die Reservierung zuletzt geändert wurde. |
 | `numberOfAdults` | Ganzzahl | Die Anzahl der Erwachsenen, die mit der Reservierung verbunden sind. |
-| `numberOfChildren` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Kinder. |
-| `numberOfRooms` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Zimmer. |
-| `propertyID` | Zeichenfolge | Kennung des Hotels oder Resorts für die Reservierung. |
-| `propertyName` | Zeichenfolge | Der Name des Hotels oder Resorts für die Reservierung. |
-| `purpose` | Zeichenfolge | Der Zweck der Reservierung, in der Regel geschäftlich oder persönlich. |
-| `ratePlan` | Zeichenfolge | Das Tarifangebot, zu dem das Zimmer verkauft wurde. |
-| `refundable` | Boolesch | Gibt an, ob das Zimmer erstattbar ist. |
-| `reservationStatus` | Zeichenfolge | Der Status der Reservierung. |
-| `roomAccessibilityType` | Zeichenfolge | Der Barrierefreiheitstyp des Raums, z. B. Mobilität, Anhörung oder andere. |
+| `numberOfChildren` | Ganzzahl | Die Anzahl der Kinder, die mit der Reservierung verknüpft sind. |
+| `numberOfRooms` | Ganzzahl | Die Anzahl der Zimmer, die mit der Reservierung verbunden sind. |
+| `propertyID` | String | Eine Kennung des Hotels oder Resorts für die Reservierung. |
+| `propertyName` | String | Der Name des Hotels oder Resorts für die Reservierung. |
+| `purpose` | String | Der Zweck der Reservierung, in der Regel entweder geschäftlich oder privat. |
+| `ratePlan` | String | Das Tarifangebot, zu dem das Zimmer verkauft wurde. |
+| `refundable` | Boolesch | Gibt an, ob das Zimmer erstattungsfähig ist. |
+| `reservationStatus` | String | Der Status der Reservierung. |
+| `roomAccessibilityType` | String | Die Art der Barrierefreiheit des Raums, z. B. Mobilität, Gehör oder andere. |
 | `roomCapacity` | Ganzzahl | Die Anzahl der Personen im Hotelzimmer. |
-| `roomType` | Zeichenfolge | Die Art des reservierten Zimmers. |
-| `smoking` | Boolesch | Gibt an, ob das Rauchen in dem Zimmer erlaubt ist. |
-| `tripType` | Zeichenfolge | Gibt an, ob die Reservierung für eine Einweg-, Hin- und Rückfahrt oder für eine mehrstündige Reise gilt. |
+| `roomType` | String | Die Art des zu reservierenden Zimmers. |
+| `smoking` | Boolesch | Zeigt an, ob das Rauchen im Zimmer erlaubt ist. |
+| `tripType` | String | Gibt an, ob die Reservierung für eine einfache Fahrt, eine Hin- und Rückfahrt oder eine Reise mit mehreren Städten gilt. |
 
 {style="table-layout:auto"}
 

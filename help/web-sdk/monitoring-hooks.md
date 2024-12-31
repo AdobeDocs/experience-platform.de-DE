@@ -1,23 +1,23 @@
 ---
-title: Überwachungshaken für das Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mithilfe der vom Adobe Experience Platform Web SDK bereitgestellten Überwachungshooks Ihre Implementierung debuggen und Web SDK-Protokolle erfassen können.
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+title: Überwachungs-Hooks für Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit den von Adobe Experience Platform Web SDK bereitgestellten Überwachungs-Hooks Ihre Implementierung debuggen und Web SDK-Protokolle erfassen können.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
+# Überwachungs-Hooks für Web SDK
 
-# Überwachungshooks für Web SDK
+Adobe Experience Platform Web SDK enthält Überwachungs-Hooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich, um eigene Debugging-Tools zu entwickeln und Web SDK-Protokolle zu erfassen.
 
-Das Adobe Experience Platform Web SDK enthält Überwachungshooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich für die Entwicklung Ihrer eigenen Debugging-Tools und zum Erfassen von Web SDK-Protokollen.
-
-Das Web SDK Trigger die Überwachungsfunktionen unabhängig davon, ob Sie [Debugging](commands/configure/debugenabled.md) aktiviert haben.
+Die Web SDK-Trigger übernehmen die Überwachungsfunktionen unabhängig davon, ob Sie „Debugging[ aktiviert ](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
-Diese Rückruffunktion wird ausgelöst, wenn Sie erfolgreich eine neue Web SDK-Instanz erstellt haben. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, wenn Sie erfolgreich eine neue Web SDK-Instanz erstellt haben. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onInstanceCreated(data) {
@@ -28,12 +28,12 @@ onInstanceCreated(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.instance` | Funktion | Die Instanzfunktion, mit der Web SDK-Befehle aufgerufen werden. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.instance` | Funktion | Die zum Aufrufen von Web-SDK-Befehlen verwendete Instanzfunktion. |
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-Diese Rückruffunktion wird vom Web SDK ausgelöst, wenn der Befehl [`configure`](commands/configure/overview.md) erfolgreich aufgelöst wurde. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird von der Web-SDK ausgelöst, wenn der [`configure`](commands/configure/overview.md) erfolgreich aufgelöst wurde. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
  onInstanceConfigured(data) {
@@ -44,12 +44,12 @@ Diese Rückruffunktion wird vom Web SDK ausgelöst, wenn der Befehl [`configure`
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.config` | Objekt | Ein Objekt, das die für Ihre Web SDK-Instanz verwendete Konfiguration enthält. Dies sind die Optionen, die an den Befehl [`configure`](commands/configure/overview.md) übergeben werden, wobei alle Standardwerte hinzugefügt werden. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.config` | Objekt | Ein Objekt, das die Konfiguration enthält, die Sie für Ihre SDK-Webinstanz verwendet haben. Dies sind die Optionen, die an den [`configure`](commands/configure/overview.md)-Befehl übergeben werden, wobei alle Standardwerte hinzugefügt werden. |
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-Diese Rückruffunktion wird vom Web SDK ausgelöst, bevor ein anderer Befehl ausgeführt wird. Mit dieser Funktion können Sie die Konfigurationsoptionen eines bestimmten Befehls abrufen. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird von Web SDK ausgelöst, bevor ein anderer Befehl ausgeführt wird. Mit dieser Funktion können Sie die Konfigurationsoptionen eines bestimmten Befehls abrufen. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onBeforeCommand(data) {
@@ -61,13 +61,13 @@ onBeforeCommand(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.commandName` | String | Der Name des Web SDK-Befehls, vor dem diese Funktion ausgeführt wird. |
-| `data.options` | Objekt | Ein Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.commandName` | String | Der Name des Web-SDK-Befehls, vor dem diese Funktion ausgeführt wird. |
+| `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
 
 ## `onCommandResolved` {#onCommandResolved}
 
-Diese Rückruffunktion wird beim Auflösen von Befehlsversprechen ausgelöst. Sie können diese Funktion verwenden, um die Befehlsoptionen und das Ergebnis anzuzeigen. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, wenn Befehlszusagen aufgelöst werden. Sie können diese Funktion verwenden, um die Befehlsoptionen und das Ergebnis anzuzeigen. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onCommandResolved(data) {
@@ -80,14 +80,14 @@ onCommandResolved(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
 | `data.commandName` | String | Der Name des ausgeführten Web SDK-Befehls. |
-| `data.options` | Objekt | Ein Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
-| `data.result` | Objekt | Ein Objekt, das das Ergebnis des Web SDK-Befehls enthält. |
+| `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
+| `data.result` | Objekt | Ein Objekt, das das Ergebnis des Web-SDK-Befehls enthält. |
 
 ## `onCommandRejected` {#onCommandRejected}
 
-Diese Rückruffunktion wird ausgelöst, bevor ein Befehlsversprechen zurückgewiesen wird. Sie enthält Informationen zum Grund der Ablehnung des Befehls. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, bevor eine Befehlszusage abgelehnt wird, und enthält Informationen über den Grund, warum der Befehl abgelehnt wurde. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onCommandRejected(data) {
@@ -100,14 +100,14 @@ onCommandRejected(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
 | `data.commandName` | String | Der Name des ausgeführten Web SDK-Befehls. |
-| `data.options` | Objekt | Ein Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
-| `data.error` | Objekt | Ein Objekt, das die vom Netzwerkaufruf des Browsers zurückgegebene Fehlermeldung enthält (`fetch` in den meisten Fällen), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
+| `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
+| `data.error` | Objekt | Ein Objekt, das die Fehlermeldung enthält, die vom Netzwerkaufruf des Browsers zurückgegeben wurde (in den meisten Fällen `fetch`), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
 
 ## `onBeforeNetworkRequest` {#onBeforeNetworkRequest}
 
-Diese Rückruffunktion wird ausgelöst, bevor eine Netzwerkanforderung ausgeführt wird. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, bevor eine Netzwerkanfrage ausgeführt wird. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onBeforeNetworkRequest(data) {
@@ -120,14 +120,14 @@ onBeforeNetworkRequest(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.requestId` | String | Der vom Web SDK generierte `requestId` , um das Debugging zu aktivieren. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
 | `data.url` | String | Die angeforderte URL. |
-| `data.payload` | Objekt | Das Nutzlastobjekt der Netzwerkanforderung, das durch eine `POST` -Methode in das JSON-Format konvertiert und im Hauptteil der Anfrage gesendet wird. |
+| `data.payload` | Objekt | Das Payload-Objekt der Netzwerkanfrage, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
 
 ## `onNetworkResponse` {#onNetworkResponse}
 
-Diese Rückruffunktion wird ausgelöst, wenn der Browser eine Antwort erhält. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, wenn der Browser eine Antwort erhält. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onNetworkResponse(data) {
@@ -144,18 +144,18 @@ onNetworkResponse(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.requestId` | String | Der vom Web SDK generierte `requestId` , um das Debugging zu aktivieren. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
 | `data.url` | String | Die angeforderte URL. |
-| `data.payload` | Objekt | Das Payload-Objekt, das durch eine `POST` -Methode in das JSON-Format konvertiert und im Hauptteil der Anfrage gesendet wird. |
+| `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
 | `data.body` | String | Der Antworttext im Zeichenfolgenformat. |
 | `data.parsedBody` | Objekt | Ein Objekt, das den analysierten Antworttext enthält. Wenn beim Analysieren des Antworttextes ein Fehler auftritt, ist dieser Parameter nicht definiert. |
 | `data.status` | String | Der Antwort-Code im ganzzahligen Format. |
-| `data.retriesAttempted` | Ganzzahl | Die Anzahl der Wiederholungsversuche, die beim Senden der Anfrage versucht wurden. Null bedeutet, dass die Anfrage beim ersten Versuch erfolgreich war. |
+| `data.retriesAttempted` | Ganzzahl | Die Anzahl weiterer Versuche, die beim Senden der Anfrage unternommen wurden. Null bedeutet, dass die Anfrage beim ersten Versuch erfolgreich war. |
 
 ## `onNetworkError` {#onNetworkError}
 
-Diese Rückruffunktion wird ausgelöst, wenn die Netzwerkanforderung fehlgeschlagen ist. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, wenn die Netzwerkanfrage fehlgeschlagen ist. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onNetworkError(data) {
@@ -169,15 +169,15 @@ onNetworkError(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
-| `data.requestId` | String | Der vom Web SDK generierte `requestId` , um das Debugging zu aktivieren. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
+| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
 | `data.url` | String | Die angeforderte URL. |
-| `data.payload` | Objekt | Das Payload-Objekt, das durch eine `POST` -Methode in das JSON-Format konvertiert und im Hauptteil der Anfrage gesendet wird. |
-| `data.error` | Objekt | Ein Objekt, das die vom Netzwerkaufruf des Browsers zurückgegebene Fehlermeldung enthält (`fetch` in den meisten Fällen), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
+| `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
+| `data.error` | Objekt | Ein Objekt, das die Fehlermeldung enthält, die vom Netzwerkaufruf des Browsers zurückgegeben wurde (in den meisten Fällen `fetch`), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
 
 ## `onBeforeLog` {#onBeforeLog}
 
-Diese Rückruffunktion wird ausgelöst, bevor das Web SDK alles in der Konsole protokolliert. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird ausgelöst, bevor Web SDK etwas in der Konsole protokolliert. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
 onBeforeLog(data) {
@@ -190,7 +190,7 @@ onBeforeLog(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
 | `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
 | `data.level` | String | Die Protokollierungsebene. Unterstützte Ebenen: `log`, `info`, `warn`, `error`. |
 | `data.arguments` | Zeichenfolgen-Array | Die Argumente der Protokollmeldung. |
@@ -198,7 +198,7 @@ onBeforeLog(data) {
 
 ## `onContentRendering` {#onContentRendering}
 
-Diese Rückruffunktion wird in verschiedenen Phasen des Renderns von der Komponente `personalization` ausgelöst. Die Payload kann je nach dem Parameter `status` unterschiedlich ausfallen. Weitere Informationen zu den Funktionsparametern finden Sie im folgenden Beispiel.
+Diese Rückruffunktion wird von der `personalization`-Komponente in verschiedenen Renderingphasen ausgelöst. Die Payload kann je nach `status` unterschiedlich sein. Siehe folgendes Beispiel für Details zu den Funktionsparametern.
 
 ```js
  onContentRendering(data) {
@@ -211,10 +211,10 @@ Diese Rückruffunktion wird in verschiedenen Phasen des Renderns von der Kompone
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
 | `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
-| `data.payload` | Objekt | Das Payload-Objekt, das durch eine `POST` -Methode in das JSON-Format konvertiert und im Hauptteil der Anfrage gesendet wird. |
-| `data.status` | String | Die Komponente `personalization` benachrichtigt das Web SDK über den Status des Renderings.  Unterstützte Werte: <ul><li>`rendering-started`: Gibt an, dass das Web SDK im Begriff ist, Vorschläge zu rendern. Bevor das Web SDK beginnt, einen Entscheidungsbereich oder eine Ansicht zu rendern, können Sie im `data` -Objekt die Vorschläge sehen, die von der `personalization` -Komponente gerendert werden sollen, sowie den Bereichsnamen.</li><li>`no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.</li> <li>`rendering-failed`: Gibt an, dass das Web SDK einen Vorschlag nicht rendern konnte.</li><li>`rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsbereich abgeschlossen wurde.</li> <li>`rendering-redirect`: Gibt an, dass das Web SDK einen Weiterleitungsantrag rendert.</li></ul> |
+| `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
+| `data.status` | String | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status.  Unterstützte Werte: <ul><li>`rendering-started`: Gibt an, dass Web SDK Vorschläge rendern wird. Bevor Web SDK mit dem Rendern eines Entscheidungsumfangs oder einer Ansicht beginnt, können Sie im `data` die Vorschläge sehen, die von der `personalization` gerendert werden sollen, sowie den Namen des Bereichs.</li><li>`no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.</li> <li>`rendering-failed`: Gibt an, dass Web SDK einen Vorschlag nicht rendern konnte.</li><li>`rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsumfang abgeschlossen ist.</li> <li>`rendering-redirect`: Gibt an, dass Web SDK einen Umleitungsvorschlag rendert.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -230,13 +230,13 @@ onContentHiding(data) {
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
-| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web SDK-Instanz gespeichert wird. |
+| `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
 | `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
-| `data.status` | String | Die Komponente `personalization` benachrichtigt das Web SDK über den Status des Renderings. Unterstützte Werte: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | String | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status. Unterstützte Werte: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## Angeben von Überwachungshooks bei Verwendung des NPM-Pakets {#specify-monitoris-npm}
+## Angeben von Überwachungs-Hooks bei Verwendung des NPM-Pakets {#specify-monitoris-npm}
 
-Wenn Sie das Web SDK über das Paket [NPM](install/npm.md) verwenden, können Sie Überwachungshooks in der Funktion `createInstasnce` angeben, wie unten dargestellt.
+Wenn Sie Web SDK über das [NPM-Paket](install/npm.md) verwenden, können Sie Überwachungs-Hooks in der `createInstasnce` angeben, wie unten dargestellt.
 
 ```js
 var monitor = {
@@ -253,20 +253,20 @@ alloy("sendEvent", { ... });
 
 ## Beispiel {#example}
 
-Das Web SDK sucht nach einem Array von Objekten in einer globalen Variablen namens `__alloyMonitors`.
+Web SDK sucht in einer globalen Variablen namens `__alloyMonitors` nach einem Array von Objekten.
 
-Um alle Web SDK-Ereignisse zu erfassen, müssen Sie Ihre Monitoring-Hooks definieren, bevor der Web SDK-Code auf Ihrer Seite geladen wird. Jede Überwachungsmethode erfasst ein Web SDK-Ereignis.
+Um alle Web SDK-Ereignisse zu erfassen, müssen Sie Ihre Überwachungs-Hooks definieren, bevor der Web SDK-Code auf Ihrer Seite geladen wird. Jede Überwachungsmethode erfasst ein Web SDK-Ereignis.
 
-Sie können Überwachungs-Hooks *nach dem Laden von* Web SDK-Code auf Ihrer Seite definieren, aber alle Hooks, die vor dem Laden der Seite ausgelöst wurden, werden *nicht* erfasst.
+Sie können Überwachungs-Hooks (*)* Laden von Web SDK-Code auf Ihrer Seite definieren, aber alle Hooks, die vor dem Laden der Seite ausgelöst wurden, *nicht*.
 
 Wenn Sie Ihr Überwachungs-Hook-Objekt definieren, müssen Sie nur die Methoden definieren, für die Sie eine spezielle Logik definieren möchten.
-Wenn Sie sich beispielsweise nur für `onContentRendering` interessieren, können Sie diese Methode einfach definieren. Sie müssen nicht alle Überwachungshooks gleichzeitig verwenden.
+Wenn Ihnen beispielsweise nur `onContentRendering` wichtig ist, können Sie einfach diese Methode definieren. Sie müssen nicht alle Überwachungs-Hooks gleichzeitig verwenden.
 
 Sie können mehrere Überwachungs-Hook-Objekte definieren. Alle Objekte mit der angegebenen Methode werden aufgerufen, wenn das entsprechende Ereignis ausgelöst wird.
 
 >[!TIP]
 >
->Unten finden Sie eine Beispielseite mit allen implementierten Monitoring-Hooks.
+>Unten finden Sie eine Beispielseite mit allen implementierten Überwachungs-Hooks.
 
 ```html
 <!DOCTYPE html>

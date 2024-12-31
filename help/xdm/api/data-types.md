@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Datenmodell;Datentypregistrierung;Schema Registry;Datentyp;Datentyp;Datentypen;erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Datentypregistrierung;Schemaregistrierung;Datentyp;Datentypen;erstellen
 solution: Experience Platform
 title: Datentypen-API-Endpunkt
 description: Mit dem Endpunkt /datatypes in der Schema Registry-API können Sie XDM-Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
@@ -11,25 +11,25 @@ ht-degree: 13%
 
 ---
 
-# Datentypendpunkt
+# Datentyp-Endpunkt
 
-Datentypen werden in Klassen oder Schemafeldgruppen auf die gleiche Weise wie einfache literale Felder als Referenztyp verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Mit dem Endpunkt `/datatypes` in der API [!DNL Schema Registry] können Sie Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Datentypen werden in Klassen oder Schemafeldergruppen auf dieselbe Weise als Felder vom Typ „Verweis“ verwendet wie grundlegende Literalfelder, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Datentypen ähneln zwar den Feldergruppen insofern, als sie die konsistente Verwendung einer Struktur mit mehreren Feldern ermöglichen, sind jedoch flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldergruppen nur auf der Stammebene hinzugefügt werden können. Mit dem `/datatypes`-Endpunkt in der [!DNL Schema Registry]-API können Sie Datentypen in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 
 >[!NOTE]
 >
->Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp nicht in einem anderen Schema erstellen. Diese Einschränkung gilt für den gesamten Mandanten Ihres Unternehmens.
+>Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp in einem anderen Schema nicht erstellen. Diese Einschränkung gilt für den Mandanten Ihrer Organisation.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Liste von Datentypen abrufen {#list}
+## Abrufen einer Liste von Datentypen {#list}
 
-Sie können alle Datentypen unter dem Container `global` oder `tenant` auflisten, indem Sie eine GET-Anfrage an `/global/datatypes` bzw. `/tenant/datatypes` richten.
+Sie können alle Datentypen unter dem `global`- oder `tenant`-Container auflisten, indem Sie eine GET-Anfrage an `/global/datatypes` bzw. `/tenant/datatypes` stellen.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen beschränkt die Schema Registry Ergebnissätze auf 300 Elemente. Um Ressourcen zurückzugeben, die über diese Grenze hinausgehen, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -39,14 +39,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für von Adobe erstellte Datentypen oder `tenant` für Datentypen, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query) . |
+| `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für vom Adobe erstellte Datentypen oder `tenant` für Datentypen Ihres Unternehmens. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Liste von Datentypen aus dem `tenant` -Container abgerufen, wobei mithilfe eines `orderby` -Abfrageparameters die Datentypen nach ihrem `title` -Attribut sortiert werden.
+Die folgende Anfrage ruft eine Liste von Datentypen aus dem `tenant`-Container ab und verwendet einen `orderby` Abfrageparameter, um die Datentypen nach ihrem `title` Attribut zu sortieren.
 
 ```shell
 curl -X GET \
@@ -58,18 +58,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile ab. Die folgenden `Accept` -Header sind für die Auflistung von Datentypen verfügbar:
+Das Format der Antwort hängt von der in der Anfrage gesendeten `Accept`-Kopfzeile ab. Die folgenden `Accept`-Kopfzeilen sind für die Auflistung von Datentypen verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
-| `application/vnd.adobe.xed+json` | Gibt den vollständigen JSON-Datentyp für jede Ressource zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Limit: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile zum Auflisten von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt den vollständigen JSON-Datentyp für jede Ressource mit `$ref` und `allOf` zurück. (Limit: 300) |
 
 {style="table-layout:auto"}
 
 **Antwort**
 
-In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet, daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jeden Datentyp. Mit der anderen `Accept` -Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Datentyps zurückgegeben. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende Kopfzeile `Accept` aus.
+Die obige Anfrage verwendete den `application/vnd.adobe.xed-id+json` `Accept`-Header. Daher enthält die Antwort für jeden Datentyp nur die Attribute `title`, `$id`, `meta:altId` und `version`. Bei Verwendung der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Datentyps zurückgegeben. Wählen Sie den entsprechenden `Accept`-Header entsprechend den Informationen aus, die Sie in Ihrer Antwort benötigen.
 
 ```json
 {
@@ -103,7 +103,7 @@ In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `A
 
 ## Nachschlagen eines Datentyps {#lookup}
 
-Sie können nach einem bestimmten Datentyp suchen, indem Sie die Kennung des Datentyps in den Pfad einer GET-Anfrage einschließen.
+Sie können einen bestimmten Datentyp suchen, indem Sie die ID des Datentyps in den Pfad einer GET-Anfrage aufnehmen.
 
 **API-Format**
 
@@ -113,14 +113,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, der den Datentyp enthält, den Sie abrufen möchten: `global` für einen von der Adobe erstellten Datentyp oder `tenant` für einen Datentyp, der Ihrem Unternehmen gehört. |
-| `{DATA_TYPE_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Datentyps, den Sie nachschlagen möchten. |
+| `{CONTAINER_ID}` | Der Container, der den Datentyp enthält, den Sie abrufen möchten: `global` für einen von Adobe erstellten Datentyp oder `tenant` für einen Datentyp, der Ihrem Unternehmen gehört. |
+| `{DATA_TYPE_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Datentyps, den Sie suchen möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein Datentyp anhand des im Pfad angegebenen `meta:altId` -Werts abgerufen.
+Die folgende Anfrage ruft einen Datentyp anhand des im Pfad angegebenen `meta:altId`-Werts ab.
 
 ```shell
 curl -X GET \
@@ -132,7 +132,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile ab. Für alle Nachschlageanfragen muss in der Kopfzeile `Accept` ein `version` angegeben werden. Die folgenden `Accept` -Header sind verfügbar:
+Das Format der Antwort hängt von der in der Anfrage gesendeten `Accept`-Kopfzeile ab. Bei allen Suchanfragen muss eine `version` in die `Accept`-Kopfzeile aufgenommen werden. Die folgenden `Accept` sind verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -146,7 +146,7 @@ Das Antwortformat hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile a
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datentyps zurück. Die zurückgegebenen Felder hängen von der in der Anfrage gesendeten `Accept` -Kopfzeile ab. Experimentieren Sie mit verschiedenen `Accept` -Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details des Datentyps zurück. Die zurückgegebenen Felder hängen von der `Accept` ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -227,7 +227,7 @@ Eine erfolgreiche Antwort gibt die Details des Datentyps zurück. Die zurückgeg
 
 ## Erstellen eines Datentyps {#create}
 
-Sie können einen benutzerdefinierten Datentyp unter dem Container `tenant` definieren, indem Sie eine POST-Anfrage ausführen.
+Sie können einen benutzerdefinierten Datentyp unter dem `tenant`-Container definieren, indem Sie eine POST-Anfrage stellen.
 
 **API-Format**
 
@@ -237,11 +237,11 @@ POST /tenant/datatypes
 
 **Anfrage**
 
-Im Gegensatz zu Feldergruppen ist bei der Definition eines Datentyps weder das Feld `meta:extends` noch das Feld `meta:intendedToExtend` erforderlich. Außerdem müssen keine Felder verschachtelt werden, um Kollisionen zu vermeiden.
+Im Gegensatz zu Feldergruppen sind für die Definition eines Datentyps keine `meta:extends` oder `meta:intendedToExtend` Felder erforderlich. Ebenso wenig müssen Felder verschachtelt werden, um Kollisionen zu vermeiden.
 
-Beim Definieren der Feldstruktur des Datentyps selbst können Sie Primitive-Typen (z. B. `string` oder `object`) verwenden oder andere vorhandene Datentypen über `$ref` -Attribute referenzieren. Eine ausführliche Anleitung zum erwarteten Format für verschiedene XDM-Feldtypen finden Sie im Handbuch zum [Definieren benutzerdefinierter XDM-Felder in der API](../tutorials/custom-fields-api.md) .
+Bei der Definition der Feldstruktur des Datentyps selbst können Sie primitive Typen verwenden (z. B. `string` oder `object`) oder Sie können durch `$ref` Attribute auf andere vorhandene Datentypen verweisen. Ausführliche Anleitungen zum erwarteten [ für verschiedene XDM-Feldtypen finden Sie ](../tutorials/custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter XDM-Felder in der API“.
 
-Die folgende Anfrage erstellt einen Objektdatentyp &quot;Property Construction&quot;mit den Untereigenschaften `yearBuilt`, `propertyType` und `location`:
+Die folgende Anfrage erstellt einen Objekttyp „Eigenschaftskonstruktion“ mit den Untereigenschaften `yearBuilt`, `propertyType` und `location`:
 
 ```SHELL
 curl -X POST \
@@ -287,7 +287,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt) und eine Payload zurückgegeben, die Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altId` und `version` enthält. Diese drei Werte sind schreibgeschützt und werden durch die [!DNL Schema Registry] zugewiesen.
+Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt) und eine Payload zurückgegeben, die Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altId` und `version` enthält. Diese drei Werte sind schreibgeschützt und werden vom [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -353,15 +353,15 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-Wenn Sie eine GET-Anfrage zum Auflisten aller Datentypen](#list) im Mandanten-Container ausführen, wäre jetzt der Datentyp Eigenschaftendetails enthalten. Alternativ können Sie [eine Nachschlageanfrage (GET) durchführen](#lookup), indem Sie den URL-kodierten `$id` -URI verwenden, um den neuen Datentyp direkt anzuzeigen.[
+Wenn Sie eine GET-Anfrage ausführen[ um alle Datentypen ](#list) Mandanten-Container aufzulisten, würde dies jetzt den Datentyp Eigenschaftsdetails enthalten, oder Sie können [eine Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um den neuen Datentyp direkt anzuzeigen.
 
-## Datentyp aktualisieren {#put}
+## Aktualisieren eines Datentyps {#put}
 
-Sie können einen ganzen Datentyp durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Datentyps über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen eines neuen Datentyps ](#create) in einer POST-Anfrage erforderlich sind.[
+Sie können einen gesamten Datentyp durch einen PUT-Vorgang ersetzen, wobei die Ressource im Wesentlichen neu geschrieben wird. Beim Aktualisieren eines Datentyps über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [Erstellen eines neuen Datentyps](#create) in einer POST-Anfrage erforderlich sind.
 
 >[!NOTE]
 >
->Wenn Sie nur einen Teil eines Datentyps aktualisieren möchten, anstatt ihn vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils eines Datentyps](#patch).
+>Wenn Sie nur einen Teil eines Datentyps aktualisieren möchten, anstatt ihn vollständig zu ersetzen, finden Sie weitere Informationen im Abschnitt [Aktualisieren eines Teils eines Datentyps](#patch).
 
 **API-Format**
 
@@ -371,13 +371,13 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_TYPE_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Datentyps, den Sie neu schreiben möchten. |
+| `{DATA_TYPE_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Datentyps, den Sie umschreiben möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Anfrage schreibt einen vorhandenen Datentyp neu und fügt ein neues `floorSize` -Feld hinzu.
+Die folgende Anfrage schreibt einen vorhandenen Datentyp neu und fügt ein neues `floorSize` hinzu.
 
 ```SHELL
 curl -X PUT \
@@ -486,13 +486,13 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Datentyps zurück.
 }
 ```
 
-## Einen Teil eines Datentyps aktualisieren {#patch}
+## Aktualisieren eines Teils eines Datentyps {#patch}
 
-Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Der [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Datentyps mithilfe eines PUT-Vorgangs](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt über [Ersetzen eines Datentyps mithilfe eines PUT-Vorgangs](#put).
 
 **API-Format**
 
@@ -502,15 +502,15 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_TYPE_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Datentyps, den Sie aktualisieren möchten. |
+| `{DATA_TYPE_ID}` | Die URL-codierte `$id`-URI oder -`meta:altId` des Datentyps, den Sie aktualisieren möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Beispielanfrage aktualisiert den `description` eines vorhandenen Datentyps und fügt ein neues `floorSize` -Feld hinzu.
+Die folgende Beispielanfrage aktualisiert die `description` eines vorhandenen Datentyps und fügt ein neues `floorSize` hinzu.
 
-Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), das Feld, für das der Vorgang ausgeführt werden soll (`path`), und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
+Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), in welchem Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -629,9 +629,9 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die `d
 }
 ```
 
-## Datentyp löschen {#delete}
+## Löschen eines Datentyps {#delete}
 
-Gelegentlich kann es erforderlich sein, einen Datentyp aus der Schema Registry zu entfernen. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der im Pfad angegebenen Datentyp-ID.
+Gelegentlich kann es erforderlich sein, einen Datentyp aus der Schemaregistrierung zu entfernen. Dies geschieht, indem eine DELETE-Anfrage mit der Datentyp-ID durchgeführt wird, die im Pfad angegeben ist.
 
 **API-Format**
 
@@ -641,7 +641,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_TYPE_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Datentyps, den Sie löschen möchten. |
+| `{DATA_TYPE_ID}` | Die URL-codierte `$id`-URI oder `meta:altId` des Datentyps, den Sie löschen möchten. |
 
 {style="table-layout:auto"}
 
@@ -660,4 +660,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Nachschlageanfrage (GET)](#lookup) für den Datentyp ausführen. Sie müssen einen `Accept` -Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da der Datentyp aus der Schema Registry entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) ](#lookup) Datentyp ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da der Datentyp aus der Schemaregistrierung entfernt wurde.

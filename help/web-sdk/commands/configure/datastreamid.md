@@ -1,6 +1,6 @@
 ---
 title: datastreamId
-description: Bestimmen Sie die Datastream-ID, an die Sie Daten senden möchten.
+description: Bestimmen Sie die Datenstrom-ID, an die Sie Daten senden möchten.
 exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -11,34 +11,34 @@ ht-degree: 0%
 
 # `datastreamId`
 
-Die `datastreamId` -Eigenschaft ist eine Zeichenfolge, die bestimmt, an welchen [Datastraam](../../../datastreams/overview.md) in Adobe Experience Platform Daten gesendet werden sollen. Diese Eigenschaft ist beim Senden von Daten an Adobe erforderlich. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
+Die `datastreamId`-Eigenschaft ist eine Zeichenfolge, die bestimmt[ an welchen ](../../../datastreams/overview.md)Datenstrom) in Adobe Experience Platform Sie Daten senden möchten. Diese Eigenschaft ist erforderlich, wenn Daten an Adobe gesendet werden. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
 
-So suchen Sie eine Datastream-ID:
+So suchen Sie eine Datenstrom-ID:
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenspeicher]**.
-1. Verwenden Sie das Suchfeld, um den gewünschten Datastream zu suchen, und wählen Sie dann neben der Datastream-ID **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) aus.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenströme]**.
+1. Verwenden Sie das Suchfeld, um den gewünschten Datenstrom zu finden, und wählen Sie dann **[!UICONTROL Kopieren]** ![Kopieren](../../assets/copy.png) neben der Datenstrom-ID aus.
 
-Alternativ können Sie den gewünschten Datastream-Namen auswählen und die Datastream-ID wird in der rechten Spalte angezeigt, die Sie kopieren können.
+Alternativ können Sie den gewünschten Datenstromnamen auswählen. Die Datenstrom-ID wird dann in der rechten Spalte angezeigt, damit Sie sie kopieren können.
 
-## Wählen Sie die Datastraam-ID mithilfe der Web SDK-Tag-Erweiterung aus.
+## Wählen Sie die Datenstrom-ID mithilfe der Tag-Erweiterung „Web SDK&quot; aus
 
-Wählen Sie aus einer Liste der verfügbaren Datenspeicher aus oder geben Sie eine Datastraam-ID direkt ein, wenn [die Tag-Erweiterung konfigurieren](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Wählen Sie aus einer Liste der verfügbaren Datenströme aus oder geben Sie beim [Konfigurieren der Tag-Erweiterung“ direkt eine Datenstrom-ID ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Suchen Sie den Abschnitt [!UICONTROL Datastreams] und wählen Sie dann die gewünschte Methode zur Bestimmung des Datastreams aus.
-   * Wenn Sie aus einer Liste auswählen, wählen Sie die Sandbox und den Datastream aus den jeweiligen Dropdown-Listen aus.
-   * Geben Sie bei der Eingabe von Werten die gewünschte Datastream-ID ein.
-1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Suchen Sie den Abschnitt [!UICONTROL Datenströme] und wählen Sie dann die gewünschte Methode zur Bestimmung des Datenstroms aus.
+   * Wenn Sie aus einer Liste auswählen, wählen Sie die Sandbox und den Datenstrom aus der jeweiligen Dropdown-Liste aus.
+   * Geben Sie bei der Eingabe von Werten die gewünschte Datenstrom-ID ein.
+1. Klicken Sie **[!UICONTROL Speichern]** und veröffentlichen Sie Ihre Änderungen.
 
-Sie können Daten für Produktions-, Staging- und Entwicklungs-Tag-Umgebungen an verschiedene Datastreams senden.
+Sie können Daten an verschiedene Datenströme für Produktions-, Staging- und Entwicklungs-Tag-Umgebungen senden.
 
-## Auswählen der Datastraam-ID mithilfe der Web SDK JavaScript-Bibliothek
+## Wählen Sie die Datenstrom-ID mithilfe der Web SDK JavaScript-Bibliothek aus
 
-Legen Sie die String-Eigenschaft `datastreamID` fest, wenn Sie den Befehl `configure` ausführen. Diese Eigenschaft ist für alle Web SDK-Implementierungen erforderlich. Wenn Sie diese Eigenschaft weglassen, weiß das Web SDK nicht, an welchen Datenspeicher Daten gesendet werden sollen, was dazu führt, dass diese Daten dauerhaft verloren gehen.
+Legen Sie beim Ausführen des `configure`-Befehls die `datastreamID`-Zeichenfolgeneigenschaft fest. Diese Eigenschaft ist für alle Implementierungen von Web SDK erforderlich. Wenn Sie diese Eigenschaft auslassen, weiß Web SDK nicht, an welchen Datenstrom Daten gesendet werden sollen, sodass diese Daten dauerhaft verloren gehen.
 
 ```js
 alloy("configure", {
@@ -47,4 +47,4 @@ alloy("configure", {
 });
 ```
 
-Wenn Sie mehrere Instanzen des Web SDK auf einer einzelnen Seite konfigurieren, müssen Sie für jede Instanz ein anderes `datastreamId` konfigurieren.
+Wenn Sie mehrere Instanzen von Web SDK auf einer Seite konfigurieren, müssen Sie für jede Instanz einen anderen `datastreamId` konfigurieren.

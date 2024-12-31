@@ -29,7 +29,7 @@ Tags werden [!DNL Adobe Experience Cloud]-Kunden als inbegriffene Mehrwertfunkti
 
 ## Wichtigste Funktionen {#key-features}
 
-Verwenden Sie die Hilfe zum Produkt in der rechten Leiste, um mehr über Tags zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
+Verwenden Sie die produktinterne Hilfe im rechten Bedienfeld, um mehr über Tags zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
 
 ![Tags-Eigenschaften in der Datenerfassungs-Benutzeroberfläche.](./images/ui/tags-overview/tags-properties.png)
 

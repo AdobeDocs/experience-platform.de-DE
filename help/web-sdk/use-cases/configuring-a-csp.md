@@ -1,9 +1,9 @@
 ---
-title: Konfigurieren einer CSP
+title: Konfigurieren eines CSP
 seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie eine CSP für das Experience Platform Web SDK konfigurieren
+description: Erfahren Sie, wie Sie eine CSP für den Experience Platform Web SDK konfigurieren
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
-keywords: Konfigurieren; Konfiguration; SDK; Edge; Web SDK; konfigurieren; Kontext; Web; Gerät; Umgebung; Web SDK-Einstellungen; Content Security-Richtlinie
+keywords: Konfigurieren;Konfiguration;SDK;Edge;Web SDK;Konfigurieren;Kontext;Web;Gerät;Umgebung;Web SDK-Einstellungen;Inhaltssicherheitsrichtlinie;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
 source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
@@ -12,34 +12,34 @@ ht-degree: 0%
 
 ---
 
-# Konfigurieren einer CSP
+# Konfigurieren eines CSP
 
-Eine [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen zu beschränken, die ein Browser verwenden darf. Die CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Das Adobe Experience Platform Web SDK benötigt keine CSP. Durch Hinzufügen einer kann die Angriffsfläche jedoch reduziert werden, um schädliche Angriffe zu verhindern.
+Eine [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen einzuschränken, die ein Browser verwenden darf. Der CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Adobe Experience Platform Web SDK erfordert keine CSP, aber das Hinzufügen einer CSP kann die Angriffsfläche reduzieren, um vor böswilligen Angriffen zu schützen.
 
-Das CSP muss die Bereitstellung und Konfiguration von [!DNL Platform Web SDK] widerspiegeln. Die folgende CSP zeigt, welche Änderungen erforderlich sein können, damit das SDK ordnungsgemäß funktioniert. Abhängig von Ihrer spezifischen Umgebung sind wahrscheinlich zusätzliche CSP-Einstellungen erforderlich.
+Das CSP muss widerspiegeln, wie [!DNL Platform Web SDK] bereitgestellt und konfiguriert wird. Das folgende CSP zeigt, welche Änderungen erforderlich sein können, damit SDK ordnungsgemäß funktioniert. Abhängig von Ihrer spezifischen Umgebung sind wahrscheinlich zusätzliche CSP-Einstellungen erforderlich.
 
-## Beispiel für eine Content-Sicherheitsrichtlinie
+## Beispiel für eine Content Security-Richtlinie
 
-Die folgenden Beispiele zeigen, wie Sie eine CSP konfigurieren.
+Die folgenden Beispiele zeigen, wie Sie einen CSP konfigurieren.
 
-### Zugriff auf die Edge-Domäne zulassen
+### Zugriff auf die Edge-Domain zulassen
 
 ```
 default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-Im obigen Beispiel sollte `EDGE-DOMAIN` durch die Erstanbieterdomäne ersetzt werden. Die Erstanbieterdomäne ist für die Einstellung [edgeDomain](../commands/configure/edgedomain.md) konfiguriert. Wenn keine Erstanbieterdomäne konfiguriert wurde, sollte `EDGE-DOMAIN` durch `*.adobedc.net` ersetzt werden. Wenn die Besuchermigration mit [idMigrationEnabled](../commands/configure/idmigrationenabled.md) aktiviert ist, muss die `connect-src` -Direktive auch `*.demdex.net` enthalten.
+Im obigen Beispiel sollte `EDGE-DOMAIN` durch die Erstanbieter-Domain ersetzt werden. Die Erstanbieterdomäne ist für die Einstellung [edgeDomain](../commands/configure/edgedomain.md) konfiguriert. Wenn keine Erstanbieterdomäne konfiguriert wurde, sollte `EDGE-DOMAIN` durch `*.adobedc.net` ersetzt werden. Wenn die Besuchermigration mit [idMigrationEnabled](../commands/configure/idmigrationenabled.md) aktiviert ist, muss die `connect-src`-Anweisung auch `*.demdex.net` enthalten.
 
-### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen
+### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen.
 
-[!DNL Platform Web SDK] kann den Seiteninhalt ändern und muss genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Um dies zu erreichen, empfiehlt Adobe die Verwendung einer Nonce für die CSP-Direktive [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) . Eine Nonce ist ein Server-generiertes kryptografisch starkes zufälliges Token, das einmal pro eindeutigem Seitenaufruf generiert wird.
+[!DNL Platform Web SDK] können Seiteninhalte ändern und müssen genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Um dies zu erreichen, empfiehlt Adobe die Verwendung einer Nonce für die CSP[Anweisung „default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Eine Nonce ist ein vom Server generiertes kryptografisch starkes Zufallstoken, das einmal pro eindeutiger Seitenansicht generiert wird.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Darüber hinaus muss die CSP-Nonce als Attribut zum Skript-Tag [!DNL Platform Web SDK] [Basis-Code](../install/library.md) hinzugefügt werden. [!DNL Platform Web SDK] verwendet diese Nonce dann beim Hinzufügen von Inline-Skript- oder Stil-Tags zur Seite:
+Darüber hinaus muss die CSP-Nonce dem Skript-Tag [!DNL Platform Web SDK]Basis[ als ](../install/library.md) hinzugefügt werden. [!DNL Platform Web SDK] verwenden diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ Darüber hinaus muss die CSP-Nonce als Attribut zum Skript-Tag [!DNL Platform We
 </script>
 ```
 
-Wenn keine Nonce verwendet wird, besteht die andere Option darin, der CSP-Direktive `script-src` und `style-src` den Wert `unsafe-inline` hinzuzufügen:
+Wenn keine Nonce verwendet wird, besteht die andere Option darin, `unsafe-inline` zu den `script-src`- und `style-src` CSP-Anweisungen hinzuzufügen:
 
 ```
 script-src 'unsafe-inline'
@@ -59,11 +59,11 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe empfiehlt **nicht**, `unsafe-inline` anzugeben, da es die Ausführung eines Skripts auf der Seite ermöglicht, wodurch die Vorteile des CSP eingeschränkt werden.
+>Adobe empfiehlt **nicht** die Angabe von `unsafe-inline`, da dies die Ausführung jedes Skripts auf der Seite ermöglicht, was die Vorteile des CSP einschränkt.
 
-## CSP für In-App-Nachrichten konfigurieren {#in-app-messaging}
+## Konfigurieren eines CSP für In-App-Messaging {#in-app-messaging}
 
-Wenn Sie [Web In-App Messaging](../personalization/web-in-app-messaging.md) konfigurieren, müssen Sie die folgende Anweisung in Ihre CSP aufnehmen:
+Beim Konfigurieren von [Web-In-App](../personalization/web-in-app-messaging.md)Messaging) müssen Sie die folgende Anweisung in Ihr CSP aufnehmen:
 
 ```
 default-src  blob:;

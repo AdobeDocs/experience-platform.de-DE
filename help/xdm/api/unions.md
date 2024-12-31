@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; api; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Vereinigung; Vereinigungen; segmentMembership; timeSeriesEvents;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Vereinigung;Vereinigungen;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unions-API-Endpunkt
-description: Mit dem Endpunkt /Vereinigungen in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+description: Mit dem Endpunkt "/unions“ in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
@@ -11,33 +11,33 @@ ht-degree: 39%
 
 ---
 
-# Unions-Endpunkt
+# Vereinigungs-Endpunkt
 
-Vereinigungen (oder Vereinigungsansichten) sind systemgenerierte schreibgeschützte Schemas, die die Felder aller Schemas aggregieren, die dieselbe Klasse ([!DNL XDM ExperienceEvent] oder [!DNL XDM Individual Profile]) aufweisen und für [[!DNL Real-Time Customer Profile]](../../profile/home.md) aktiviert sind.
+Vereinigungen (oder Vereinigungsansichten) sind systemgenerierte, schreibgeschützte Schemata, die die Felder aller Schemata aggregieren, die dieselbe Klasse ([!DNL XDM ExperienceEvent] oder [!DNL XDM Individual Profile]) haben und für die [[!DNL Real-Time Customer Profile]](../../profile/home.md) aktiviert sind.
 
 In diesem Dokument werden wesentliche Konzepte für die Arbeit mit Vereinigungen in der Schema Registry-API beschrieben, einschließlich Beispielaufrufen für verschiedene Vorgänge. Weitere allgemeine Informationen zu Vereinigungen in XDM finden Sie im Abschnitt zu Vereinigungen in den [Grundlagen der Schema-Komposition](../schema/composition.md#union).
 
-## Felder des Vereinigungsschemas
+## Vereinigungsschemafelder
 
-Der [!DNL Schema Registry] enthält automatisch drei Schlüsselfelder innerhalb eines Vereinigungsschemas: `identityMap`, `timeSeriesEvents` und `segmentMembership`.
+Die [!DNL Schema Registry] enthält automatisch drei Schlüsselfelder innerhalb eines Vereinigungsschemas: `identityMap`, `timeSeriesEvents` und `segmentMembership`.
 
 ### Identitätszuordnung
 
-Die `identityMap` eines Vereinigungsschemas ist eine Darstellung der bekannten Identitäten innerhalb der zugehörigen Datensatz-Schemata der Vereinigung. Die Identitätszuordnung teilt Identitäten in verschiedene Arrays auf, die nach Namensraum geordnet sind. Jede aufgelistete Identität ist selbst ein Objekt, das einen eindeutigen `id` -Wert enthält. Weitere Informationen finden Sie in der [Dokumentation für Identity Service](../../identity-service/home.md).
+Die `identityMap` eines Vereinigungsschemas ist eine Darstellung der bekannten Identitäten innerhalb der zugehörigen Datensatz-Schemata der Vereinigung. Die Identitätszuordnung teilt Identitäten in verschiedene Arrays auf, die nach Namensraum geordnet sind. Jede aufgelistete Identität ist selbst ein Objekt, das einen eindeutigen `id` enthält. Weitere Informationen finden Sie in der [Dokumentation für Identity Service](../../identity-service/home.md).
 
 ### Zeitreihenereignisse
 
-Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die sich auf die Schemata beziehen, die der Vereinigung zugeordnet sind. Wenn Profildaten in Datensätze exportiert werden, ist dieses Array für jeden Datensatz enthalten. Dies ist in verschiedenen Anwendungsfällen nützlich, z. B. beim Machine Learning, bei dem Modelle zusätzlich zu den Datensatzattributen den gesamten Verhaltensverlauf eines Profils benötigen.
+Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die sich auf die Schemata beziehen, die der Vereinigung zugeordnet sind. Wenn Profildaten in Datensätze exportiert werden, wird dieses Array für jeden Datensatz eingeschlossen. Dies ist in verschiedenen Anwendungsfällen nützlich, z. B. beim Machine Learning, bei dem Modelle zusätzlich zu den Datensatzattributen den gesamten Verhaltensverlauf eines Profils benötigen.
 
 ### Segmentzugehörigkeitszuordnung
 
-Die Zuordnung `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Platform erfasst werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können. Weitere Informationen finden Sie im Tutorial zum Erstellen von Zielgruppen mithilfe von APIs ](../../segmentation/tutorials/create-a-segment.md).[
+Die `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Platform aufgenommen werden, und ermöglicht so die Integration in andere Lösungen wie Adobe Audience Manager. Weitere Informationen finden Sie im Tutorial [Erstellen von Zielgruppen mithilfe ](../../segmentation/tutorials/create-a-segment.md) APIs“.
 
-## Abrufen einer Vereinigungsliste {#list}
+## Abrufen einer Liste von Vereinigungen {#list}
 
-Wenn Sie das Tag `union` in einem Schema festlegen, fügt das Tag [!DNL Schema Registry] das Schema automatisch zur Vereinigung für die Klasse hinzu, auf der das Schema basiert. Wenn für die betreffende Klasse keine Vereinigung existiert, wird automatisch eine neue Vereinigung erstellt. Die `$id` für die Vereinigung ähnelt der standardmäßigen `$id` anderer [!DNL Schema Registry] -Ressourcen, wobei der einzige Unterschied darin besteht, dass zwei Unterstriche und das Wort &quot;Vereinigung&quot;(`__union`) angehängt werden.
+Wenn Sie das `union`-Tag für ein Schema festlegen, fügt der [!DNL Schema Registry] das Schema automatisch zur Vereinigung für die Klasse hinzu, auf der das Schema basiert. Wenn für die betreffende Klasse keine Vereinigung vorhanden ist, wird automatisch eine neue Vereinigung erstellt. Der `$id` für die Union ähnelt dem `$id` anderer [!DNL Schema Registry] Ressourcen, mit dem einzigen Unterschied, dass durch zwei Unterstriche und das Wort „union“ (`__union`) angehängt wird.
 
-Sie können eine Liste der verfügbaren Vereinigungen anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `/tenant/unions` senden.
+Sie können eine Liste der verfügbaren Vereinigungen anzeigen, indem Sie eine GET-Anfrage an den `/tenant/unions`-Endpunkt senden.
 
 **API-Format**
 
@@ -57,18 +57,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-Das Antwortformat hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile ab. Die folgenden `Accept` -Header stehen für die Auflistung von Vereinigungen zur Verfügung:
+Das Format der Antwort hängt von der in der Anfrage gesendeten `Accept`-Kopfzeile ab. Die folgenden `Accept` Kopfzeilen sind für die Auflistung von Vereinigungen verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
-| `application/vnd.adobe.xed+json` | Gibt die vollständige JSON-Klasse für jede Ressource zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Limit: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile zum Auflisten von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt für jede Ressource eine vollständige JSON-Klasse mit `$ref` und `allOf` zurück. (Limit: 300) |
 
 {style="table-layout:auto"}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein `results`-Array im Antworttext zurück. Wenn Vereinigungen definiert wurden, werden die Details für jede Vereinigung als Objekte im Array bereitgestellt. Wenn keine Vereinigungen definiert wurden, wird dennoch der HTTP-Status 200 (OK) zurückgegeben, jedoch das `results`-Array ist leer.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein `results`-Array im Antworttext zurück. Wenn Vereinigungen definiert wurden, werden die Details für jede Vereinigung als -Objekte innerhalb des -Arrays bereitgestellt. Wenn keine Vereinigungen definiert wurden, wird dennoch der HTTP-Status 200 (OK) zurückgegeben, jedoch das `results`-Array ist leer.
 
 ```JSON
 {
@@ -95,7 +95,7 @@ Sie können eine bestimmte Vereinigung durch eine GET-Anfrage anzeigen, die die 
 
 >[!NOTE]
 >
->Vereinigungssuchen sind mit dem Endpunkt `/unions` und `/schemas` verfügbar, um sie für die Verwendung in [!DNL Profile] -Exporten in einen Datensatz zu aktivieren.
+>Vereinigungssuchvorgänge sind mit dem `/unions`- und `/schemas`-Endpunkt verfügbar, um sie für die Verwendung in [!DNL Profile] Exporten in einen Datensatz zu aktivieren.
 
 **API-Format**
 
@@ -106,7 +106,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{UNION_ID}` | Der URL-kodierte `$id` -URI der Vereinigung, die Sie nachschlagen möchten. Bei URIs für Vereinigungs-Schemata wird „__Vereinigung“ angehängt. |
+| `{UNION_ID}` | Der URL-kodierte `$id`-URI der Vereinigung, die Sie suchen möchten. Bei URIs für Vereinigungs-Schemata wird „__Vereinigung“ angehängt. |
 
 {style="table-layout:auto"}
 
@@ -180,11 +180,11 @@ Das Antwortformat hängt von der Accept-Kopfzeile ab, die in der Anfrage gesende
 
 ## Aktivieren eines Schemas für die Vereinigungs-Mitgliedschaft {#enable}
 
-Damit ein Schema in die Vereinigung für seine Klasse aufgenommen werden kann, muss dem Attribut `meta:immutableTags` des Schemas ein Tag `union` hinzugefügt werden. Dies können Sie erreichen, indem Sie eine PATCH-Anfrage stellen, um dem betreffenden Schema ein `meta:immutableTags` -Array mit dem einzelnen Zeichenfolgenwert `union` hinzuzufügen. Ein detailliertes Beispiel finden Sie im [Schemas-Endpunkthandbuch](./schemas.md#union) .
+Damit ein Schema in die Vereinigung für seine Klasse aufgenommen werden kann, muss zum `meta:immutableTags` des Schemas ein `union`-Tag hinzugefügt werden. Sie können dies erreichen, indem Sie eine PATCH-Anfrage stellen, um dem betreffenden Schema ein `meta:immutableTags`-Array mit einem einzelnen Zeichenfolgenwert von `union` hinzuzufügen. Ein ausführliches Beispiel finden [ im Handbuch ](./schemas.md#union)schemas endpoint“.
 
 ## Auflisten von Schemata in einer Vereinigung {#list-schemas}
 
-Um zu sehen, welche Schemas zu einer bestimmten Vereinigung gehören, können Sie eine GET-Anfrage an den `/tenant/schemas` -Endpunkt stellen. Mithilfe des Abfrageparameters `property` können Sie die Antwort so konfigurieren, dass nur Schemata zurückgegeben werden, die ein `meta:immutableTags`-Feld und eine `meta:class` gleich der Klasse enthalten, auf deren Vereinigung Sie zugreifen.
+Um zu sehen, welche Schemata Teil einer bestimmten Vereinigung sind, können Sie eine GET-Anfrage an den `/tenant/schemas`-Endpunkt senden. Mithilfe des Abfrageparameters `property` können Sie die Antwort so konfigurieren, dass nur Schemata zurückgegeben werden, die ein `meta:immutableTags`-Feld und eine `meta:class` gleich der Klasse enthalten, auf deren Vereinigung Sie zugreifen.
 
 **API-Format**
 
@@ -194,13 +194,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CLASS_ID}` | Die `$id` der Klasse, deren Vereinigungsfähiges Schema Sie auflisten möchten. |
+| `{CLASS_ID}` | Die `$id` der Klasse, deren vereinigungsaktivierte Schemata Sie auflisten möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Liste aller Schemas abgerufen, die Teil der Vereinigung für die [!DNL XDM Individual Profile] -Klasse sind.
+Die folgende Anfrage ruft eine Liste aller Schemas ab, die Teil der Vereinigung für die [!DNL XDM Individual Profile]-Klasse sind.
 
 ```SHELL
 curl -X GET \
@@ -212,18 +212,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der in der Anfrage gesendeten `Accept` -Kopfzeile ab. Die folgenden `Accept` -Header stehen zur Auflistung von Schemas zur Verfügung:
+Das Format der Antwort hängt von der in der Anfrage gesendeten `Accept`-Kopfzeile ab. Die folgenden `Accept`-Kopfzeilen sind für die Auflistung von Schemata verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
-| `application/vnd.adobe.xed+json` | Gibt das vollständige JSON-Schema für jede Ressource zurück, wobei das ursprüngliche `$ref` und `allOf` enthalten sind. (Limit: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile zum Auflisten von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt das vollständige JSON-Schema für jede Ressource mit den ursprünglichen `$ref` und `allOf` zurück. (Limit: 300) |
 
 {style="table-layout:auto"}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine gefilterte Liste von Schemas zurück, die nur die Schemas enthalten, die zur angegebenen Klasse gehören und für die Vereinigungszugehörigkeit aktiviert wurden. Beachten Sie, dass bei der Verwendung mehrerer Abfrageparameter von einer UND-Beziehung ausgegangen wird.
+Eine erfolgreiche Antwort gibt eine gefilterte Liste von Schemata zurück, die nur diejenigen enthalten, die zur angegebenen Klasse gehören und für die Vereinigungsmitgliedschaft aktiviert wurden. Beachten Sie, dass bei Verwendung mehrerer Abfrageparameter von einer AND-Beziehung ausgegangen wird.
 
 ```JSON
 {

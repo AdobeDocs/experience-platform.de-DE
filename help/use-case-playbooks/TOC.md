@@ -17,10 +17,10 @@ ht-degree: 68%
 
 * Playbooks {#playbooks}
    * [Übersicht](/help/use-case-playbooks/playbooks/overview.md)
-   * [Navigieren Sie zu &quot;Anwendungsfall-Playbooks&quot;.](/help/use-case-playbooks/playbooks/navigate.md)
+   * [Navigieren zu Playbooks für Anwendungsfälle](/help/use-case-playbooks/playbooks/navigate.md)
    * [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md)
-   * [Verfügbare Anwendungsfälle Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
-   * [Auswahl aus einer Auswahl an Büchern](/help/use-case-playbooks/playbooks/choose.md)
+   * [Playbooks für verfügbare Anwendungsfälle](/help/use-case-playbooks/playbooks/playbooks-list.md)
+   * [Aus einer Auswahl von Playbooks auswählen](/help/use-case-playbooks/playbooks/choose.md)
    * [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md)
-   * [Übersicht über das Datenbewusstsein in &quot;Anwendungsfallbüchern&quot;](/help/use-case-playbooks/playbooks/data-awareness.md)
+   * [Übersicht über die Datenerkennung in Playbooks für Anwendungsfälle](/help/use-case-playbooks/playbooks/data-awareness.md)
    * [Fehlerbehebung und bekannte Einschränkungen](/help/use-case-playbooks/playbooks/troubleshooting.md)

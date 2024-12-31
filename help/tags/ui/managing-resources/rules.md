@@ -53,17 +53,17 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
 >[!TIP]
 >
->Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
+>Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
 1. Öffnen Sie die Registerkarte [!UICONTROL Regeln] und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
 
-   ![Registerkarte Regeln , auf der das Namensfeld hervorgehoben wird.](../../images/launch-rule-builder.png)
+   ![Registerkarte „Regeln“ mit hervorgehobenem Namensfeld.](../../images/launch-rule-builder.png)
 
 1. Geben Sie einen Namen für die Regel ein.
 1. Klicken Sie unter „Ereignisse“ auf das Symbol **[!UICONTROL Hinzufügen]**.
 1. Wählen Sie Ihre Erweiterung und einen der für diese Erweiterung verfügbaren Ereignistypen aus und konfigurieren Sie dann die Einstellungen für das Ereignis.
 
-   ![Seite zur Regelereigniskonfiguration.](../../images/rule-event-config.png)
+   ![Seite für die Konfiguration von Regelereignissen.](../../images/rule-event-config.png)
 
    Die verfügbaren Ereignistypen hängen von der ausgewählten Erweiterung ab. Die Ereigniseinstellungen unterscheiden sich je nach Ereignistyp. Einige Ereignisse verfügen nicht über Eigenschaften, die konfiguriert werden müssen.
 
@@ -91,9 +91,9 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
      Wenn sie später ausgeführt werden soll, geben Sie eine Zahl über 50 an. Weitere Informationen zur Reihenfolge finden Sie unter [Regelreihenfolge](rules.md#rule-ordering).
 
-1. Wählen Sie das Symbol Bedingungen **[!UICONTROL Hinzufügen]** aus, wählen Sie dann einen Logiktyp, eine Erweiterung und einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
+1. Klicken Sie auf das Symbol **[!UICONTROL Hinzufügen]** für Bedingungen, wählen Sie dann einen Logiktyp, eine Erweiterung sowie einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
 
-   ![Konfigurationsseite der Regelbedingungen.](../../images/condition-settings.png)
+   ![Seite zur Konfiguration von Regelbedingungen.](../../images/condition-settings.png)
 
    Die verfügbaren Bedingungstypen hängen von der ausgewählten Erweiterung ab. Die Bedingungseinstellungen unterscheiden sich je nach Bedingungstyp.
 
@@ -106,9 +106,9 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
    Sie können beliebig viele Bedingungen hinzufügen. Mehrere Bedingungen innerhalb derselben Regel werden durch AND verknüpft.
 
-1. Wählen Sie das Symbol Aktionen **[!UICONTROL Hinzufügen]** aus, wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und wählen Sie dann **[!UICONTROL Änderungen beibehalten]** aus.
+1. Wählen Sie das Symbol Aktionen **[!UICONTROL Hinzufügen]**, wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
 
-   ![Seite mit der Aktionskonfiguration für Regeln.](../../images/action-settings.png)
+   ![Seite für die Konfiguration von Regeln.](../../images/action-settings.png)
 
    Die verfügbaren Aktionstypen hängen von der ausgewählten Erweiterung ab. Die Aktionseinstellungen unterscheiden sich je nach Aktionstyp.
 
@@ -181,7 +181,7 @@ Wenn die Einstellung aktiviert ist, wenn ein Ereignis zur Laufzeit ausgelöst wi
 
 Wenn eine Bedingung als „false“ ausgewertet wird oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Bedingungen und Aktionen dieser Regel aus der Warteschlange entfernt.
 
-Wenn eine Aktion fehlschlägt oder ihren definierten Timeout erreicht, werden die nachfolgenden Aktionen dieser Regel aus der Warteschlange entfernt.
+Wenn eine Aktion fehlschlägt oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Aktionen dieser Regel aus der Warteschlange entfernt.
 
 ### Deaktiviert
 

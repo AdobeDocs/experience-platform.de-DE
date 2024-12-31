@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Reservierungsdetails;
-title: Feldergruppe "Buchungsdetails"
-description: Erfahren Sie mehr über die Feldergruppe Buchungsdetails .
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;ExperienceEvent;felder;schemas;schemas;schema design;feldgruppe;feldergruppe;reservierung;reservierungsdetails;
+title: Schemafeldgruppe „Reservierungsdetails“
+description: Erfahren Sie mehr über die Schemafeldgruppe „Reservierungsdetails“.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -12,30 +12,30 @@ ht-degree: 8%
 
 # [!UICONTROL Reservierungsdetails] Schemafeldgruppe
 
-[!UICONTROL Reservierungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zum Erfassen von Informationen zu einer Reservierung verwendet wird, einschließlich der Länge, Änderung, des erstattbaren Status und der Anzahl der Zimmer.
+[!UICONTROL Reservierungsdetails] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Reservierung zu erfassen, einschließlich Länge, Änderung, Erstattungsstatus und Anzahl der Zimmer.
 
-Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `reservations`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
+Die Feldergruppe stellt `reservations` ein einzelnes Feld vom Typ „Objekt“ bereit. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 
-![Struktur der Buchungsdetails](../../images/field-groups/reservation-details.png)
+![Struktur der Reservierungsdetails](../../images/field-groups/reservation-details.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `nonRefundableAmount` | [Währung](../../data-types/currency.md) | Die Höhe des Reservierungspreises, der als nicht erstattbar gekennzeichnet ist. |
+| `nonRefundableAmount` | [Währung](../../data-types/currency.md) | Der Betrag des Reservierungspreises, der als nicht erstattungsfähig gekennzeichnet ist. |
 | `transaction` | [Transaktion](../../data-types/transaction.md) | Beschreibt die Währungstransaktion für die Reservierung. |
-| `id` | Zeichenfolge | Eine eindeutige Kennung für die Reservierung. |
-| `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung abgebrochen wurde. |
-| `confirmationNumber` | Zeichenfolge | Die Bestätigungsnummer oder die Kennung für die Reservierung. |
+| `id` | String | Eine eindeutige Kennung für die Reservierung. |
+| `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung storniert wurde. |
+| `confirmationNumber` | String | Die Bestätigungsnummer oder Kennung für die Reservierung. |
 | `created` | Ganzzahl | Dieser Wert wird erfasst, wenn die Reservierung erstellt wurde. |
-| `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für den Kauf verwendet wird. |
-| `endDate` | DateTime | Das Enddatum für die Reservierung (Abbruch, Rückgabe oder Checkout). |
-| `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
+| `currencyCode` | String | Der ISO 4217-Währungscode, der für den Kauf verwendet wurde. |
+| `endDate` | DateTime | Das Endabgabe-, Rückgabe- oder Check-out-Datum für die Reservierung. |
+| `length` | Ganzzahl | Die Gesamtzahl der Tage für die Reservierung. |
 | `modification` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung geändert wurde. |
-| `modificationDate` | DateTime | Der Zeitpunkt der letzten Änderung der Reservierung. |
+| `modificationDate` | DateTime | Der Zeitpunkt, zu dem die Reservierung zuletzt geändert wurde. |
 | `numberOfAdults` | Ganzzahl | Die Anzahl der Erwachsenen, die mit der Reservierung verbunden sind. |
-| `numberOfChildren` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Kinder. |
-| `purpose` | Zeichenfolge | Der Zweck der Reservierung, in der Regel geschäftlich oder persönlich. |
-| `startDate` | DateTime | Das Startdatum für die Reservierung. |
-| `triptype` | Zeichenfolge | Gibt an, ob die Reservierung für eine Einweg-, Hin- und Rückfahrt oder für eine mehrstündige Reise gilt. |
+| `numberOfChildren` | Ganzzahl | Die Anzahl der Kinder, die mit der Reservierung verknüpft sind. |
+| `purpose` | String | Der Zweck der Reservierung, in der Regel entweder geschäftlich oder privat. |
+| `startDate` | DateTime | Das Start-, Abhol-, Ausgangs- oder Check-in-Datum für die Reservierung. |
+| `triptype` | String | Gibt an, ob die Reservierung für eine einfache Fahrt, eine Hin- und Rückfahrt oder eine Reise mit mehreren Städten gilt. |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## Branchenspezifische Reservierungsfeldgruppen
 
-Es gibt mehrere weitere Standardfeldgruppen, die das Schema [!UICONTROL Reservierungsdetails] für branchenspezifische Anwendungsfälle erweitern. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Es gibt mehrere andere Standardfeldgruppen, die das Schema [!UICONTROL Reservierungsdetails] für branchenspezifische Anwendungsfälle erweitern. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
 * [[!UICONTROL Restaurantreservierung]](./dining-reservation.md)
 * [[!UICONTROL Flugreservierung]](./flight-reservation.md)

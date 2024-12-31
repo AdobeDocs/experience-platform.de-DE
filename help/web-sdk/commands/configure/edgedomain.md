@@ -1,6 +1,6 @@
 ---
 title: edgeDomain
-description: Bestimmen Sie die Stammdomäne, an die Sie Daten senden möchten.
+description: Bestimmen Sie die Stamm-Domain, an die Sie Daten senden möchten.
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
 source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Mit der Eigenschaft `edgeDomain` können Sie die Domäne ändern, an die das Web SDK Daten sendet. Diese Eigenschaft wird häufig von Organisationen verwendet, die [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) verwenden. Die Daten werden an die eigene Domäne des Unternehmens gesendet. Anschließend leitet ein CNAME-Eintrag diese Daten an Adobe weiter.
+Mit der Eigenschaft `edgeDomain` können Sie die Domain ändern, an die die Web-SDK Daten sendet. Diese Eigenschaft wird häufig von Organisationen verwendet, die [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) verwenden. Daten werden an die unternehmenseigene Domain gesendet. Anschließend werden diese Daten von einem CNAME-Eintrag an Adobe weitergeleitet.
 
-Ihr Unternehmen bestimmt beim Einrichten von [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) den richtigen Wert für diese Eigenschaft. Eine Organisation verwendet zu diesem Zweck in der Regel eine dedizierte Subdomäne. Wenn Sie beispielsweise die Domäne `example.com` verwenden, können Sie Erstanbieter-Cookies für `data.example.com` einrichten.
+Ihr Unternehmen bestimmt den richtigen Wert für diese Eigenschaft beim Einrichten von [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de). Eine Organisation verwendet zu diesem Zweck in der Regel eine dedizierte Subdomain. Wenn Sie beispielsweise den Domain-`example.com` verwenden, können Sie Erstanbieter-Cookies in `data.example.com` einrichten.
 
-## Konfigurieren einer Edge-Domäne mithilfe der Web SDK-Tag-Erweiterung
+## Konfigurieren einer Edge-Domain mit der Tag-Erweiterung „Web SDK&quot;
 
-Legen Sie das Textfeld **[!UICONTROL Edge-Domäne]** fest, wenn [die Tag-Erweiterung konfigurieren](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Legen Sie das Textfeld **[!UICONTROL Edge Domain]** beim Konfigurieren [ Tag-Erweiterung ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Suchen Sie das Textfeld **[!UICONTROL Edge-Domäne]** und geben Sie dann den gewünschten Wert ein.
-1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
+1. Suchen Sie das Textfeld **[!UICONTROL Edge Domain]** und geben Sie dann den gewünschten Wert ein.
+1. Klicken Sie **[!UICONTROL Speichern]** und veröffentlichen Sie Ihre Änderungen.
 
-## Konfigurieren einer Edge-Domäne mithilfe der Web SDK JavaScript-Bibliothek
+## Konfigurieren einer Edge-Domain mit der Web SDK JavaScript-Bibliothek
 
-Legen Sie die Zeichenfolge `edgeDomain` fest, wenn Sie den Befehl `configure` ausführen. Wenn Sie diese Eigenschaft beim Konfigurieren des SDK weglassen, wird standardmäßig `edge.adobedc.net` verwendet. Legen Sie diesen Wert fest, wenn Sie die Domäne überschreiben möchten, an die das Web SDK Daten sendet.
+Legen Sie die `edgeDomain` beim Ausführen des `configure`-Befehls fest. Wenn Sie diese Eigenschaft beim Konfigurieren der SDK weglassen, wird sie standardmäßig auf `edge.adobedc.net` gesetzt. Legen Sie diesen Wert fest, wenn Sie die Domain überschreiben möchten, an die die Web-SDK-Daten sendet.
 
 ```js
 alloy("configure", {

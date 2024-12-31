@@ -45,7 +45,7 @@ Das virtuelle Self-Service-Portal von Tags ermöglicht es Entwicklern von Erweit
 
 Wir haben viele Kunden, die sich auch dafür entscheiden, ihre eigenen privaten Erweiterungen zu erstellen, die nur innerhalb ihres eigenen Unternehmens verwendet werden und die die gleichen Methoden zur Entwicklung von Erweiterungen verwenden.
 
-Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Erweiterungsentwicklung](./extension-dev/overview.md) .
+Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Entwicklung ](./extension-dev/overview.md) Erweiterungen“.
 
 ## Erfüllen Tags die Sicherheitsstandards meines Unternehmens?
 
@@ -73,7 +73,7 @@ Tags sind so konzipiert, dass Marketing- und Werbetechnologien mithilfe moderner
 
 ## Welche Browser werden von Tags unterstützt?
 
-Die unterstützten Browser finden Sie [hier](./extension-dev/browsers.md).
+Die unterstützten Browser ansehen [hier](./extension-dev/browsers.md).
 
 Die meisten Adobe-Kunden nutzen mittlerweile modernere Web-Plattformfunktionen in aktuellen Browsern, um bessere Benutzererlebnisse zu erstellen, einschließlich Single Page Applications und interaktiver Ajax-lastiger Websites und Seiten. Da die meisten Kunden zu moderneren Konzepten für ihre Sites wechseln, fordern sie eine Lösung wie Tags, die diese Ansätze ermöglicht.
 
@@ -83,14 +83,14 @@ Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neu
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren, finden Sie im Handbuch zu [Berechtigungen verwalten](../collection/permissions.md) .
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console[ um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren](../collection/permissions.md) finden Sie im Handbuch zum Verwalten von Berechtigungen .
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 
-Wenn Sie keine neuen Eigenschaften erstellen können, wenn Sie in der Benutzeroberfläche angemeldet sind, bedeutet dies, dass Ihr Konto nicht zu einem Produktprofil gehört, das über das Recht &quot;Eigenschaften verwalten&quot;verfügt.
+Wenn Sie bei der Benutzeroberfläche angemeldet sind und keine neuen Eigenschaften erstellen können, bedeutet dies, dass Ihr Konto zu keinem Produktprofil gehört, das über das Recht „Eigenschaften verwalten“ verfügt.
 
 Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht „Eigenschaften verwalten“ zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](../collection/permissions.md). Weitere Informationen zu den unterschiedlichen Rechten für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
 
 ## Was ist, wenn ich weitere Fragen habe?
 
-Wenn Sie weitere Fragen haben, können Sie auf der [Adobe Experience Platform Data Collection Community-Seite](https://adobe.com/go/launchme) auf Experience League fragen oder sich dem [Community Slack Workspace](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) für Entwickler und technische Implementierungsthemen anschließen.
+Wenn Sie weitere Fragen haben, können Sie diese auf der [Adobe Experience Platform-Datenerfassungs-Community](https://adobe.com/go/launchme)Seite auf Experience League stellen oder dem [Community-Slack-](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)&quot; für Entwickler und technische Implementierungsthemen beitreten.
