@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 86%
+source-wordcount: '288'
+ht-degree: 84%
 
 ---
 
@@ -71,6 +71,8 @@ ht-degree: 86%
       * [Konfigurieren eines Azure-Schlüsseltresors](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [Verwenden der API zum Einrichten von CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [Verwenden der Benutzeroberfläche zum Einrichten von CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * Key Management Service-{#key-management-service}
+      * [Schlüsselverwaltungsdienst](./governance-privacy-security/key-management-service/overview.md)
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)

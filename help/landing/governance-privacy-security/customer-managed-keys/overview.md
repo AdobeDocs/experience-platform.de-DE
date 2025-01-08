@@ -4,16 +4,20 @@ description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Ad
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 29%
+source-wordcount: '828'
+ht-degree: 26%
 
 ---
 
 # Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 
 In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
+
+>[!AVAILABILITY]
+>
+>Wenn Ihre Experience Platform-Implementierung auf Amazon Web Services (AWS) ausgeführt wird, haben Sie die Möglichkeit, den Key Management Service (KMS) für die Platform-Datenverschlüsselung zu verwenden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Informationen zur Erstellung und Verwaltung von Verschlüsselungsschlüsseln in AWS KMS finden Sie im [Handbuch zur AWS KMS-Datenverschlüsselung](../key-management-service/overview.md).
 
 >[!NOTE]
 >
