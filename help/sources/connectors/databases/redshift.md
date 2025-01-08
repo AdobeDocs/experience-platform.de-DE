@@ -3,10 +3,10 @@ title: Übersicht über den Amazon Redshift Source Connector
 description: Erfahren Sie, wie Sie Amazon Redshift mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: dbeeab9182ae67e5c9c691707faeddf04f4e94b2
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 58%
+source-wordcount: '308'
+ht-degree: 41%
 
 ---
 
@@ -24,7 +24,17 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Amazon Redshift] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
+## Einrichten einer [!DNL Amazon Redshift] für das Experience Platform auf Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../landing/multi-cloud.md).
+
+Fügen Sie die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzu, um Ihr [!DNL Amazon Redshift]-Konto mit Experience Platform auf Amazon Web Services (AWS) zu verbinden:
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
 
 ## Verbinden von [!DNL Amazon Redshift] mit Platform mithilfe von APIs
 
