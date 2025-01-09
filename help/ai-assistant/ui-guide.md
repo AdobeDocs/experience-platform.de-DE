@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem KI-Assistenten Experience Platform- und Real-time Customer Data Platform-Konzepte und Nutzungsinformationen zu Ihren Objekten navigieren und verstehen können.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ Der KI-Assistent aktualisiert die Benutzeroberfläche und stellt Links zur Dokum
 
 ![Ein Dropdown-Menü mit den Zitaten, die der KI-Assistent für Konzeptfragen bereitstellt.](./images/citations.png)
 
-Sie können auch die Vorschläge verwenden, die der KI-Assistent unter **[!UICONTROL Verwandte Vorschläge]** bereitstellt, um Themen im Zusammenhang mit Ihrer ursprünglichen Frage weiter zu untersuchen.
-
-![Eine Liste der Vorschläge des KI-Assistenten.](./images/related-suggestions.png)
-
 +++
 
 ### Betriebliche Erkenntnisse {#operational-insights}
@@ -127,9 +123,9 @@ Bei der Abfrage mit einer operativen Insights-Frage stellt der KI-Assistent eine
 
 +++
 
-### Automatisch vervollständigen {#use-auto-complete}
+### Entität für automatische Vervollständigung verwenden {#use-entity-auto-complete}
 
-Sie können die Funktion zur automatischen Vervollständigung verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung sind für die folgenden Domains verfügbar: Zielgruppen, Schemata, Datensätze, Quellen und Ziele.
+Sie können die Funktion zur automatischen Vervollständigung verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung sind für die folgenden Domains verfügbar: Zielgruppen, Schemata, Datensätze, Journey, Quellen und Ziele.
 
 +++Auswählen, um ein Beispiel für die automatische Vervollständigung anzuzeigen
 
@@ -176,6 +172,44 @@ Um die Auffindbarkeit anzuzeigen, wählen Sie das Glühbirnensymbol in der obere
 Wählen Sie als Nächstes eine Kategorie und dann eine Eingabeaufforderung aus der bereitgestellten Liste aus. Mithilfe dieser Funktion können Sie sich einen besseren Überblick über die Arten von Fragen verschaffen, die der KI-Assistent beantworten kann. Sie können auch die bereits vorhandenen Eingabeaufforderungen mit bestimmten Details aktualisieren, die sich auf Ihre Sandbox beziehen, indem Sie freien Text oder &quot;[&quot; ](#use-auto-complete).
 
 ![Der KI-Assistent fordert zur Entdeckung auf.](./images/prompt.png)
+
++++
+
+### Frage automatisch vervollständigen {#use-question-autocomplete}
+
+Mit der Funktion zur automatischen Vervollständigung von Fragen des KI-Assistenten können Sie eine Frage aus einer Liste von Empfehlungen des KI-Assistenten auswählen.
+
++++Auswählen, um ein Beispiel für die automatische Vervollständigung von Fragen anzuzeigen
+
+Um das Bedienfeld mit den vorgeschlagenen Fragen anzuzeigen, geben Sie mindestens sieben (7) Zeichen in das Eingabefeld ein. Wählen Sie anschließend aus dem angezeigten Menü die Frage aus, die für Sie relevant ist.
+
+![Das Popup-Fenster mit vorgeschlagenen Fragen aus dem KI-Assistenten.](./images/suggested_questions.png)
+
+Möglicherweise müssen Sie die Platzhalter in einigen Fällen aktualisieren, in denen eine vorgeschlagene Frage betriebliche Einblicke erfordert. Sie müssen beispielsweise den spezifischen Namen eines Datensatzes oder einer Zielgruppe hinzufügen, wenn der Vorschlag aus dem KI-Assistenten Platzhalter enthält.
+
+![Ein Vorschlag des KI-Assistenten, der Platzhalter enthält.](./images/placeholder.png)
+
+Platzhalter werden blau hervorgehoben. Wählen Sie den Platzhalter aus, um mit der Aktualisierung seines Werts zu beginnen. Um optimale Ergebnisse bei numerischen Platzhaltern zu erzielen, stellen Sie sicher, dass Sie Ziffern anstelle von Text verwenden. Sie können auch die Funktion zur automatischen Vervollständigung von Entitäten verwenden, um die Platzhalterwerte zu aktualisieren. Sie können keine Frage senden, die nicht ausgefüllte Platzhalter enthält.
+
+**HINWEIS**: Vorschläge sind standardmäßig aktiviert. Wählen Sie den Umschalter **[!UICONTROL Ideen vorschlagen]** aus, um die Funktion zu deaktivieren.
+
+![Ein Vorschlag des KI-Assistenten mit aktualisierten Platzhaltern.](./images/updated_placeholder.png)
+
++++
+
+### Verwandte Vorschläge verwenden {#use-related-suggestions}
+
+Sie können den Abschnitt mit den zugehörigen Vorschlägen in jeder Antwort des KI-Assistenten verwenden, um Ihr Gespräch fortzusetzen.
+
++++Auswählen, um ein Beispiel für zugehörige Vorschläge anzuzeigen
+
+Zugehörige Vorschläge werden mit jeder Antwort des KI-Assistenten zurückgegeben. Um Ihr Gespräch fortzusetzen, wählen Sie einen der Vorschläge im Abschnitt mit den entsprechenden Vorschlägen aus.
+
+![Eine Liste zugehöriger Vorschläge des KI-Assistenten.](./images/related_suggestions.png)
+
+Ähnlich wie bei Platzhaltern, die für die automatische Vervollständigung infrage kommen, müssen Sie Platzhalter, die in verknüpften Vorschlägen enthalten sind, aktualisieren, bevor Sie die Abfrage senden können.
+
+![Eine Abfrage aus zugehörigen Vorschlägen mit aktualisierten Platzhaltern.](./images/related_suggestions_placeholder.png)
 
 +++
 
