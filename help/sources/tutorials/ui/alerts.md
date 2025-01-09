@@ -3,18 +3,14 @@ keywords: Experience Platform;Startseite;beliebte Themen;Warnhinweise
 description: Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Warnhinweisen über die Benutzeroberfläche
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 18%
 
 ---
 
 # Abonnieren von Warnhinweisen für Datenflüsse zu Quellen über die Benutzeroberfläche
-
->[!NOTE]
->
->Warnhinweise werden in Nicht-Produktions-Sandboxes nicht unterstützt. Um Warnhinweise zu abonnieren, müssen Sie sicherstellen, dass Sie eine Produktions-Sandbox verwenden.
 
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
