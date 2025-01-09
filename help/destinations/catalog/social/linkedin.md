@@ -3,10 +3,10 @@ keywords: LinkedIn-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;LinkedIn;
 title: LinkedIn Matched Audiences-Verbindung
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf gehashten E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 37%
+source-wordcount: '1201'
+ht-degree: 34%
 
 ---
 
@@ -118,6 +118,22 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedI
 2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
    ![Authentifizierung bei LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Geben Sie Ihre LinkedIn-Anmeldeinformationen ein und wählen Sie **Anmelden** aus.
+
+### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
+
+LinkedIn-Token laufen alle 60 Tage ab. Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
+
+1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**
+2. (Optional) Verwenden Sie die verfügbaren Filter auf der Seite, um nur LinkedIn-Konten anzuzeigen.
+   ![Filtern, um nur LinkedIn-Konten anzuzeigen](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
+   ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut]** und authentifizieren Sie sich erneut mit Ihren LinkedIn-Anmeldeinformationen.
+   ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Ihre Authentifizierungsdaten werden aktualisiert und ihre Gültigkeitsdauer wird auf 60 Tage zurückgesetzt.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 

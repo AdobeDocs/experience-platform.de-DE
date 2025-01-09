@@ -2,10 +2,10 @@
 title: Pinterest Customer List-Verbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 44%
+source-wordcount: '828'
+ht-degree: 37%
 
 ---
 
@@ -72,6 +72,22 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Werbekonto-ID]**: Ihre Pinterest Advertiser-ID.
+
+### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
+
+Pinterest-Token laufen alle 30 Tage ab. Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
+
+1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**
+2. (Optional) Verwenden Sie die verfügbaren Filter auf der Seite, um nur Pinterest-Konten anzuzeigen.
+   ![Filtern, um nur Pinterest-Konten anzuzeigen](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
+   ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut]** und authentifizieren Sie sich erneut mit Ihren Pinterest-Anmeldeinformationen.
+   ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Ihre Authentifizierungsdaten werden aktualisiert und ihre Gültigkeitsdauer wird auf 30 Tage zurückgesetzt.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

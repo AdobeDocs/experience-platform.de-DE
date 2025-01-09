@@ -3,10 +3,10 @@ keywords: facebook-Verbindung;facebook-Verbindung;facebook-Ziele;facebook;instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 30%
+source-wordcount: '2091'
+ht-degree: 28%
 
 ---
 
@@ -151,6 +151,22 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Faceboo
 2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
    ![Der Schritt „Bei Facebook authentifizieren“ wird im Aktivierungs-Workflow angezeigt.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Geben Sie Ihre Facebook-Anmeldeinformationen ein und wählen Sie **Anmelden** aus.
+
+### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
+
+Facebook-Token laufen alle 60 Tage ab. Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
+
+1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**
+2. (Optional) Verwenden Sie die verfügbaren Filter auf der Seite, um nur Facebook-Konten anzuzeigen.
+   ![Filtern, um nur Facebook-Konten anzuzeigen](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
+   ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut]** und authentifizieren Sie sich erneut mit Ihren Facebook-Anmeldeinformationen.
+   ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Ihre Authentifizierungsdaten werden aktualisiert und ihre Gültigkeitsdauer wird auf 60 Tage zurückgesetzt.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
