@@ -3,10 +3,10 @@ title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 35%
+source-wordcount: '1968'
+ht-degree: 34%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 35%
 
 Platform erzwingt eine strikte sieben Tage lange Lebensdauer („time-to-live“, TTL) für alle Dateien, die in einen [!DNL Data Landing Zone]-Container hochgeladen werden. Alle Dateien werden nach sieben Tagen gelöscht.
 
-Der [!DNL Data Landing Zone]-Ziel-Connector ist für Kundinnen und Kunden verfügbar, die den Azure- oder Amazon Web Service-Cloud-Support verwenden. Der Authentifizierungsmechanismus unterscheidet sich je nach Cloud, in der das Ziel bereitgestellt wird, alle weiteren Informationen zum Ziel und zu dessen Anwendungsfällen sind identisch. Weitere Informationen zu den beiden verschiedenen Authentifizierungsmechanismen finden Sie in den Abschnitten [Authentifizieren bei der in Azure Blob bereitgestellten Data Landing Zone] und [Authentifizieren bei der von AWS bereitgestellten Data Landing Zone](#authenticate-dlz-aws).
+Der [!DNL Data Landing Zone]-Ziel-Connector ist für Kundinnen und Kunden verfügbar, die den Azure- oder Amazon Web Service-Cloud-Support verwenden. Der Authentifizierungsmechanismus unterscheidet sich je nach Cloud, in der das Ziel bereitgestellt wird, alle weiteren Informationen zum Ziel und zu dessen Anwendungsfällen sind identisch. Weitere Informationen zu den beiden verschiedenen Authentifizierungsmechanismen finden Sie in den Abschnitten [Authentifizieren bei der in Azure Blob bereitgestellten Data Landing Zone](#authenticate-dlz-azure) und [Authentifizieren bei der von AWS bereitgestellten Data Landing Zone](#authenticate-dlz-aws).
 
-![Diagramm, das zeigt, wie sich die Implementierung des Data Landing Zone-Ziels je nach Cloud-Unterstützung unterscheidet.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![Diagramm, das zeigt, wie sich die Implementierung des Data Landing Zone-Ziels je nach Cloud-Unterstützung unterscheidet.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Implementierung des Data Landing Zone-Ziels durch Cloud-Support"){zoomable="yes"}
 
 ## Verbinden mit dem [!UICONTROL Data Landing Zone]-Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azur
 
 [!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. SAS steht für [Shared Access Signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-Mit der SAS-basierten Authentifizierung können Sie sicher über eine öffentliche Internetverbindung auf Ihren [!DNL Data Landing Zone]-Container zugreifen. Für die Verwendung Ihres [!DNL Data Landing Zone]-Containers sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren.
+Um Ihre Daten über eine öffentliche Internetverbindung zu schützen, verwenden Sie die SAS-basierte Authentifizierung, um sicher auf Ihren [!DNL Data Landing Zone]-Container zuzugreifen. Für die Verwendung Ihres [!DNL Data Landing Zone]-Containers sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren.
 
 ### Verbinden des [!DNL Data Landing Zone] Containers mit [!DNL Azure Storage Explorer]
 
@@ -212,7 +212,7 @@ Da Ihr [!DNL Data Landing Zone]-Container jetzt mit [!DNL Azure Storage Explorer
 >
 >Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Führen Sie die folgenden Schritte aus, um Anmeldeinformationen für Ihre auf AWS bereitgestellte Data Landing Zone-Instanz zu erhalten. Verwenden Sie dann einen Client Ihrer Wahl, um eine Verbindung zu Ihrer Data Landing Zone-Instanz herzustellen.
+Führen Sie die folgenden Schritte aus, um Anmeldeinformationen für Ihre auf AWS bereitgestellte [!DNL Data Landing Zone]-Instanz zu erhalten. Verwenden Sie dann einen Client Ihrer Wahl, um eine Verbindung zu Ihrer [!DNL Data Landing Zone]-Instanz herzustellen.
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Abfrageparameter | Beschreibung |
 | --- | --- |
-| `dlz_destination` | Der `dlz_destination` ermöglicht es der API, einen Landing Zone-Ziel-Container von den anderen Containertypen zu unterscheiden, die Ihnen zur Verfügung stehen. |
+| `dlz_destination` | Fügen Sie den `dlz_destination` Abfrageparameter hinzu, um anzugeben, dass [!DNL Data Landing Zone] Container-Anmeldeinformationen vom Typ *Ziel* abgerufen werden sollen. Informationen zum Verbinden und Abrufen von Anmeldeinformationen für eine Data Landing Zone *Quelle* finden Sie in der [Quellendokumentation](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landing Zone zurüc
 | `credentials` | Dieses Objekt enthält die `awsAccessKeyId`, `awsSecretAccessKey` und `awsSessionToken`, die Experience Platform verwendet, um Dateien an Ihren bereitgestellten Data Landing Zone-Speicherort zu exportieren. |
 | `dlzPath` | Dieses Objekt enthält den Pfad im von Adobe bereitgestellten AWS-Speicherort, an dem exportierte Dateien abgelegt werden. |
 | `dlzProvider` | Gibt an, dass dies eine von Amazon S3 bereitgestellte Data Landing Zone ist. |
-| `expiryTime` | Gibt an, wann die Anmeldeinformationen im weiter oben stehenden Objekt ablaufen. Sie können diese aktualisieren, indem Sie den Aufruf erneut ausführen. |
+| `expiryTime` | Gibt an, wann die Anmeldeinformationen im `credentials` ablaufen. Um die Anmeldeinformationen zu aktualisieren, führen Sie die Anfrage erneut aus. |
 
 {style="table-layout:auto"}
 

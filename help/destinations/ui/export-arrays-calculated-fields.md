@@ -1,16 +1,16 @@
 ---
-title: Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenfolgen
+title: Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden, um Arrays von Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 7%
+source-wordcount: '1622'
+ht-degree: 6%
 
 ---
 
-# Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenfolgen{#use-calculated-fields-to-export-arrays-as-strings}
+# Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicher-Ziele {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Exportieren von Arrays über berechnete Felder ist im Allgemeinen verfügbar.
+>Die Funktion zum Exportieren von Arrays in Cloud-Speicher-Ziele ist allgemein verfügbar.
 
-Erfahren Sie, wie Sie Arrays über berechnete Felder aus Real-Time CDP in [Cloud-Speicherziele](/help/destinations/catalog/cloud-storage/overview.md) als Zeichenfolgen exportieren. Lesen Sie dieses Dokument, um die Anwendungsfälle zu verstehen, die durch diese Funktion aktiviert werden.
+Erfahren Sie, wie Sie Arrays aus Real-Time CDP in [Cloud-Speicherziele](/help/destinations/catalog/cloud-storage/overview.md) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen.
 
-Hier erhalten Sie ausführliche Informationen über berechnete Felder - was diese sind und warum sie wichtig sind. Lesen Sie die unten verlinkten Seiten, um eine Einführung in berechnete Felder in die Datenvorbereitung und weitere Informationen zu allen verfügbaren Funktionen zu erhalten:
+Arrays müssen derzeit mithilfe der `array_to_string`-Funktion als Zeichenfolgen exportiert werden.
+
+Um Arrays zu exportieren, müssen Sie die Funktion „Berechnete Felder“ im Zuordnungsschritt des Export-Workflows verwenden (es *denn, Sie exportieren [ einzelnen Elemente eines Arrays](#index-based-array-access)*. Ausführliche Informationen zu berechneten Feldern finden Sie auf den unten verlinkten Seiten. Dazu gehören eine Einführung in berechnete Felder in die Datenvorbereitung und weitere Informationen zu allen verfügbaren Funktionen:
 
 * [Handbuch zur Benutzeroberfläche und Übersicht](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funktionen zur Datenvorbereitung](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### Indexbasierter Array-Zugriff {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>Im Gegensatz zu den anderen auf dieser Seite beschriebenen Funktionen *Sie zum Exportieren einzelner Elemente eines Arrays* das Steuerelement **[!UICONTROL Berechnete Felder]** in der Benutzeroberfläche verwenden.
 
 Sie können auf einen Index eines Arrays zugreifen, um ein einzelnes Element aus dem Array zu exportieren. Beispiel: Wenn Sie ähnlich wie im obigen Beispiel für die Funktion `size_of` nur beim ersten Kauf eines bestimmten Produkts auf zugreifen und es exportieren möchten, können Sie `purchaseTime[0]` verwenden, um das erste Element des Zeitstempels zu exportieren, `purchaseTime[1]` das zweite Element des Zeitstempels zu exportieren, `purchaseTime[2]` das dritte Element des Zeitstempels zu exportieren usw.
 
