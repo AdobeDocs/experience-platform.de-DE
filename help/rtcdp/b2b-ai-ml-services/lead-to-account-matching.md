@@ -5,10 +5,10 @@ description: Eine Übersicht und weitere Informationen zur Lead-Konto-Matching-F
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 5%
+source-wordcount: '408'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ Account-Based Marketing ist eine zunehmend wichtige Strategie für B2B-Marketing
 - Weniger verschwendete Ressourcen
 - Ein kürzerer Verkaufszyklus
 
-Account-Based Marketing bietet die Möglichkeit, bekannte Personen und anonyme Web-Besucher mit Verkaufskonten zu verknüpfen. Dadurch können Marketing-Teams frühzeitig auf der Kunden-Journey mit potenziellen Leads aus den Zielkonten interagieren, um ihre Konversionschancen zu erhöhen. Ein Datensatz mit bekannten Personen enthält in der Regel die folgenden Informationen teilweise oder vollständig:
+Account-based Marketing bietet die Möglichkeit, bekannte Kunden mit Verkaufskonten zu verknüpfen. Dadurch können Marketing-Teams frühzeitig auf der Kunden-Journey mit potenziellen Leads aus den Zielkonten interagieren, um ihre Konversionschancen zu erhöhen. Ein Datensatz mit bekannten Personen enthält in der Regel die folgenden Informationen teilweise oder vollständig:
 
 - Personenname
 - E-Mail-Adresse
@@ -33,30 +33,6 @@ Account-Based Marketing bietet die Möglichkeit, bekannte Personen und anonyme W
 - Unternehmens-Website
 - Stellenbezeichnung
 - Standort
-
-Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Kontoprofilen verbinden. Anschließend können Sie Daten in einem B2B-Kontext wie Konten, Opportunities usw. segmentieren und ansprechen. Die Personenprofile können in die folgenden drei Kategorien unterteilt werden:
-
-- **Account-Personenprofil:** Das Personenprofil ist bereits mit mindestens einem Account-Profil über die Beziehung aus einer Datenquelle verknüpft. Dies bedeutet, dass mindestens ein Kontaktfragment vorhanden ist.
-
->[!NOTE]
->
-> Profile von Kontopersonen werden beim Ausführen von Lead-Konto-Zuordnungsaufträgen nicht zugeordnet.
-
-- **Bekanntes Personenprofil:** Das Personenprofil ist KEINEM Kontoprofil zugeordnet und mindestens eines der folgenden Personenprofilattribute hat einen Wert:
-
-   - E-Mail-Adresse
-   - Unternehmensname
-   - Unternehmens-Website
-
-- **Anonymes Personenprofil:** Das Personenprofil ist KEINEM Kontoprofil zugeordnet und keines der folgenden Personenprofilattribute hat einen Wert:
-
-   - E-Mail-Adresse
-   - Unternehmensname
-   - Unternehmens-Website
-
->[!NOTE]
->
-> Ein Personenprofil kann mit mehreren Kontoprofilen verknüpft sein. Der Lead-Konto-Zuordnungsprozess stimmt jedoch nur mit der besten Übereinstimmung überein. Wenn ein breiterer Satz von Übereinstimmungen erforderlich ist, koppeln Sie den Lead mit dem Konto, das mit der Funktion für zugehörige Konten übereinstimmt.
 
 ## Funktionsweise {#how-it-works}
 
