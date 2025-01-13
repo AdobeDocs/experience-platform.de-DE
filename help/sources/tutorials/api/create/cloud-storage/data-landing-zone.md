@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;
-solution: Experience Platform
 title: Verbinden der Data Landing Zone mit Adobe Experience Platform mithilfe der Flow Service-API
-type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit der Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 18%
+source-wordcount: '1375'
+ht-degree: 17%
 
 ---
 
@@ -29,9 +26,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
-
 Für dieses Tutorial müssen Sie auch das Handbuch [Erste Schritte mit Platform-APIs“ lesen](../../../../../landing/api-guide.md) um zu erfahren, wie Sie sich bei Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
+
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
 
 ## Abrufen einer verwendbaren Landing Zone
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt Informationen zu einer Landing Zone zurück, einschließlich der entsprechenden `containerName` und `containerTTL`.
+Je nach Anbieter gibt eine erfolgreiche Anfrage Folgendes zurück:
+
+>[!BEGINTABS]
+
+>[!TAB Antwort auf Azure]
 
 ```json
 {
@@ -76,6 +77,26 @@ Die folgende Antwort gibt Informationen zu einer Landing Zone zurück, einschlie
 | --- | --- |
 | `containerName` | Der Name der Landing Zone, die Sie abgerufen haben. |
 | `containerTTL` | Die Gültigkeitsdauer (in Tagen), die auf Ihre Daten in der Landing Zone angewendet wird. Alle innerhalb einer bestimmten Landing Zone werden nach sieben Tagen gelöscht. |
+
+
+>[!TAB Antwort auf AWS]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## [!DNL Data Landing Zone] abrufen
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt die Anmeldeinformationen für Ihre Data Landing Zone zurück, einschließlich Ihres aktuellen `SASToken`, `SASUri`, `storageAccountName` und Ablaufdatums.
+Je nach Anbieter gibt eine erfolgreiche Anfrage Folgendes zurück:
+
+>[!BEGINTABS]
+
+>[!TAB Antwort auf Azure]
 
 ```json
 {
@@ -117,10 +142,43 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Data Landing Zone z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `containerName` | Der Name Ihrer Landing Zone. |
-| `SASToken` | Das Shared Access Signature Token für Ihre Landing Zone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
-| `SASUri` | Der Signatur-URI für den gemeinsamen Zugriff für Ihre Landing Zone. Diese Zeichenfolge ist eine Kombination aus dem URI zur Landing Zone, für die Sie authentifiziert werden, und dem entsprechenden SAS-Token, |
-| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es weiterhin in Ihrer Anwendung zum Hochladen von Daten in die Data Landing Zone verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der Aufruf der GET-Anmeldeinformationen durchgeführt wird. |
+| `containerName` | Der Name Ihres [!DNL Data Landing Zone]. |
+| `SASToken` | Das Shared Access Signature Token für Ihre [!DNL Data Landing Zone]. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
+| `storageAccountName` | Der Name Ihres Speicherkontos. |
+| `SASUri` | Der Shared Access Signature-URI für Ihre [!DNL Data Landing Zone]. Diese Zeichenfolge ist eine Kombination aus dem URI zum [!DNL Data Landing Zone], für den Sie authentifiziert werden, und dem entsprechenden SAS-Token. |
+| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es weiterhin in Ihrer Anwendung zum Hochladen von Daten in die [!DNL Data Landing Zone] verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der Aufruf der GET-Anmeldeinformationen durchgeführt wird. |
+
+>[!TAB Antwort auf AWS]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `credentials.clientId` | Die Client-ID Ihres [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsAccessKeyId` | Die Zugriffsschlüssel-ID Ihres [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSecretAccessKey` | Der geheime Zugriffsschlüssel Ihrer [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSessionToken` | Ihr AWS-Sitzungs-Token. |
+| `dlzPath.bucketName` | Der Name Ihres AWS-Buckets. |
+| `dlzPath.dlzFolder` | Der [!DNL Data Landing Zone] Ordner, auf den Sie zugreifen. |
+| `dlzProvider` | Der [!DNL Data Landing Zone], den Sie verwenden. Für Amazon wird dies [!DNL Amazon S3]. |
+| `expiryTime` | Die Ablaufzeit in Unix-Zeit. |
+
+>[!ENDTABS]
 
 ### Abrufen der erforderlichen Felder mithilfe von APIs
 

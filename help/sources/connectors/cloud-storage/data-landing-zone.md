@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
-solution: Experience Platform
 title: Data Landing Zone Source
 description: Erfahren Sie, wie Sie die Data Landing Zone mit Adobe Experience Platform verbinden
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ecef17ed454c7b1f30543278bba6b0e3b70399da
+source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 33%
+source-wordcount: '1178'
+ht-degree: 24%
 
 ---
 
@@ -153,7 +151,149 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## [!DNL Data Landing Zone] mit [!DNL Platform] verbinden
+## Einrichten einer [!DNL Data Landing Zone] für das Experience Platform auf Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Data Landing Zone]-Konto für das Experience Platform auf Amazon Web Services (AWS) einrichten können.
+
+### Einrichten der AWS-CLI und Ausführen von Vorgängen
+
+- Lesen Sie das Handbuch unter [Installieren oder Aktualisieren auf die neueste Version der AWS-CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+
+### Konfigurieren von AWS CLI mit temporären Anmeldedaten
+
+Verwenden Sie den AWS-`configure`, um Ihre CLI mit Zugriffsschlüsseln und einem Sitzungs-Token einzurichten.
+
+```shell
+aws configure
+```
+
+Geben Sie nach Aufforderung die folgenden Werte ein:
+
+- AWS-Zugriffsschlüssel-ID: `{YOUR_ACCESS_KEY_ID}`
+- Geheimer AWS-Zugriffsschlüssel: `{YOUR_SECRET_ACCESS_KEY}`
+- Name der Standardregion: `{YOUR_REGION}` (z. B. `us-west-2`)
+- Standardausgabeformat: `json`
+
+Legen Sie als Nächstes das Sitzungs-Token fest:
+
+```shell
+aws configure set aws_session_token your-session-token
+```
+
+### Arbeiten mit Dateien in [!DNL Amazon S3]
+
+>[!BEGINTABS]
+
+>[!TAB Datei in Amazon S3 hochladen]
+
+Vorlage:
+
+```shell
+aws s3 cp local-file-path s3://bucketName/dlzFolder/remote-file-Name
+```
+
+Beispiel:
+
+```shell
+aws s3 cp example.txt s3://bucketName/dlzFolder/example.txt
+```
+
+
+>[!TAB Datei von Amazon S3 herunterladen]
+
+Vorlage:
+
+```shell
+aws s3 cp s3://bucketName/dlzFolder/remote-file local-file-path
+```
+
+Beispiel:
+
+```shell
+aws s3 cp s3://bucketName/dlzFolder/example.txt example.txt
+```
+
+>[!ENDTABS]
+
+### Verwenden Sie Ihre [!DNL Data Landing Zone] Anmeldedaten, um sich bei der AWS-Konsole anzumelden
+
+#### Extrahieren der Anmeldeinformationen
+
+Zunächst müssen Sie Folgendes abrufen:
+
+- `awsAccessKeyId`
+- `awsSecretAccessKey`
+- `awsSessionToken`
+
+#### Erstellen eines Anmelde-Tokens
+
+Verwenden Sie als Nächstes die extrahierten Anmeldeinformationen, um eine Sitzung zu erstellen und ein Anmelde-Token mit dem AWS Federation-Endpunkt zu generieren:
+
+```py
+import json
+import requests
+ 
+# Example DLZ response with credentials
+response_json = '''{
+    "credentials": {
+        "awsAccessKeyId": "your-access-key",
+        "awsSecretAccessKey": "your-secret-key",
+        "awsSessionToken": "your-session-token"
+    }
+}'''
+ 
+# Parse credentials
+response_data = json.loads(response_json)
+aws_access_key_id = response_data['credentials']['awsAccessKeyId']
+aws_secret_access_key = response_data['credentials']['awsSecretAccessKey']
+aws_session_token = response_data['credentials']['awsSessionToken']
+ 
+# Create session dictionary
+session = {
+    'sessionId': aws_access_key_id,
+    'sessionKey': aws_secret_access_key,
+    'sessionToken': aws_session_token
+}
+ 
+# Generate the sign-in token
+signin_token_url = "https://signin.aws.amazon.com/federation"
+signin_token_payload = {
+    "Action": "getSigninToken",
+    "Session": json.dumps(session)
+}
+signin_token_response = requests.post(signin_token_url, data=signin_token_payload)
+signin_token = signin_token_response.json()['SigninToken']
+```
+
+#### Erstellen der Anmelde-URL der AWS-Konsole
+
+Sobald Sie über ein Anmelde-Token verfügen, können Sie die URL erstellen, die Sie in der AWS-Konsole protokolliert und direkt auf den gewünschten [!DNL Amazon S3] verweist.
+
+```py
+from urllib.parse import quote
+ 
+# Define the S3 bucket and folder path you want to access
+bucket_name = "your-bucket-name"
+bucket_path = "your-bucket-folder"
+ 
+# Construct the destination URL
+destination_url = f"https://s3.console.aws.amazon.com/s3/buckets/{bucket_name}?prefix={bucket_path}/&tab=objects"
+ 
+# Create the final sign-in URL
+signin_url = f"https://signin.aws.amazon.com/federation?Action=login&Issuer=YourAppName&Destination={quote(destination_url)}&SigninToken={signin_token}"
+ 
+print(f"Sign-in URL: {signin_url}")
+```
+
+#### Zugriff auf AWS Console
+
+Navigieren Sie abschließend zur generierten URL, um sich mit Ihren [!DNL Data Landing Zone]-Anmeldeinformationen direkt bei der AWS-Konsole anzumelden. Dadurch erhalten Sie Zugriff auf einen bestimmten Ordner in einem [!DNL Amazon S3]. Die Anmelde-URL führt Sie direkt zu diesem Ordner, sodass Sie nur zulässige Daten sehen und verwalten können.
+
+## [!DNL Data Landing Zone] mit Experience Platform verbinden
 
 Die folgende Dokumentation enthält Informationen dazu, wie Sie Daten aus Ihrem [!DNL Data Landing Zone]-Container mithilfe von APIs oder der Benutzeroberfläche in Adobe Experience Platform importieren können.
 
