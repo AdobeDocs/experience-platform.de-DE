@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2908'
+source-wordcount: '2947'
 ht-degree: 20%
 
 ---
@@ -46,6 +46,14 @@ ht-degree: 20%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Prognostizierte Compute-Stunden"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um Ihre Compute-Stunden einzuschätzen oder zu reduzieren, navigieren Sie zu „Abfragen“ > „Protokoll“, um den Abfrageverlauf zu überprüfen. Wenn Sie nicht über die Berechtigung zum Zugriff auf den Arbeitsbereich „Abfragen“ verfügen, wenden Sie sich an Ihre bzw. Ihren Admin."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Arbeitsbereich „Abfrageprotokoll“"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Prognostizierte adressierbare Zielgruppe"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie für Sandboxes und Datensätze Ablaufzeiten für Datensätze oder pseudonyme Profildaten konfigurieren."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Platform-Instanz erfasst.
 
