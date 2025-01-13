@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1606'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die D
 
 | Feldeigenschaft | Beschreibung |
 | --- | --- |
-| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Name des Felds nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert wird verwendet, um das Feld im Code und in anderen nachgelagerten Anwendungen zu identifizieren und darauf <br><br> verweisen. Der Name sollte idealerweise in Binnenmajuskel-Schreibweise geschrieben werden. Sie kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, **darf jedoch nicht** mit einem Unterstrich beginnen.<ul><li>**Richtig**: `fieldName`</li><li>**Akzeptiert:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
+| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Name des Felds nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert wird verwendet, um das Feld im Code und in anderen nachgelagerten Anwendungen zu identifizieren und darauf <br><br> verweisen. Der Name sollte idealerweise in Binnenmajuskel-Schreibweise geschrieben werden. Es kann alphanumerische Zeichen oder Unterstriche enthalten, es **jedoch** mit einem Unterstrich beginnen.<ul><li>**Richtig**: `fieldName`</li><li>**Akzeptiert:** `field_name2`, `fieldName_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
 | [!UICONTROL Anzeigename] | Ein Anzeigename für das Feld. Dies ist der Name, der zur Darstellung des Felds auf der Arbeitsfläche des Schema-Editors verwendet wird. Der Feldname kann mithilfe des Umschalters für den Anzeigenamen in [ Anzeigenamen geändert ](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Typ] | Der Typ der Daten, die das Feld enthalten soll. Aus diesem Dropdown-Menü können Sie einen der [standardmäßigen Skalartypen](../../schema/field-constraints.md) die von XDM unterstützt werden, oder einen der Mehrfeld-[Datentypen](../resources/data-types.md) auswählen, die zuvor in der [!DNL Schema Registry] definiert wurden.<br>Hinweis: Wenn Sie den Datentyp Zuordnung auswählen, wird [!UICONTROL  Eigenschaft &quot;]&quot; angezeigt.<br><br>Sie können auch **[!UICONTROL Erweiterte Typsuche]** auswählen, um vorhandene Datentypen zu suchen und zu filtern und den gewünschten Typ leichter zu finden. |
 | [!UICONTROL Zuordnungs-Werttyp] | Dieser Wert ist erforderlich, wenn Sie [!UICONTROL Zuordnung] als Datentyp für das Feld auswählen. Verfügbare Werte für die Zuordnung sind [!UICONTROL Zeichenfolge] und [!UICONTROL Ganzzahl]. Wählen Sie einen Wert aus der Dropdown-Liste der verfügbaren Optionen aus.<br>Weitere Informationen zu [typspezifischen Feldeigenschaften](#type-specific-properties) finden Sie in der Übersicht zum Definieren von Feldern . |
