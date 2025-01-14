@@ -1,12 +1,12 @@
 ---
 keywords: Google Customer Match; Google Customer Match; Google Customer Match
 title: Google Customer Match-Verbindung
-description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
+description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Eigenschaften wie Search, Shopping und Gmail zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 18%
+source-wordcount: '2140'
+ht-degree: 17%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 18%
 ><br/>
 >Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions)-Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiter verwendet werden können.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie [!DNL Search], [!DNL Shopping], [!DNL Gmail] und [!DNL YouTube] zu erreichen und erneut mit ihnen zu interagieren.
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie [!DNL Search], [!DNL Shopping] und [!DNL Gmail] zu erreichen und erneut mit ihnen zu interagieren.
+
+>[!TIP]
+>
+>Um Kunden mit [!DNL YouTube] Inventar zu erreichen, verwenden Sie das Ziel [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), das die Google Audience Partner-API verwendet.
 
 ![Ziel von Google Customer Match in der Adobe Experience Platform-Benutzeroberfläche.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL Google Customer M
 Eine Sportbekleidungsmarke möchte bestehende Kunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebote und Artikel basierend auf ihren früheren Käufen und dem Navigationsverlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus dem eigenen CRM auf Experience Platform aufnehmen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können diese Zielgruppen an [!DNL Google Customer Match] gesendet und über [!DNL Search] und [!DNL Shopping] hinweg verwendet werden, wodurch die Werbeausgaben optimiert werden.
 
 ### Anwendungsfall #2
+
+>[!TIP]
+>
+>Um dieses Anwendungsbeispiel für [!DNL YouTube] Inventar auszuführen, verwenden Sie das neue Ziel [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), das die Google Audience Partner-API verwendet.
 
 Ein prominentes Technologieunternehmen brachte ein neues Telefon auf den Markt. Um dieses neue Telefonmodell zu bewerben, möchten sie das Bewusstsein für die neuen Funktionen und Möglichkeiten des Telefons auf Kunden lenken, die frühere Modelle ihres Telefons besitzen.
 
