@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verhaltens-API-Endpunkt
 description: Mit dem Endpunkt /behavior in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 23%
@@ -28,7 +28,7 @@ Mit dem `/behaviors`-Endpunkt in der [!DNL Schema Registry]-API können Sie verf
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ## Abrufen einer Liste von Verhaltensweisen {#list}
 

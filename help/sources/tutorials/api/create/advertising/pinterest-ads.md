@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 59%
@@ -596,7 +596,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

@@ -2,7 +2,7 @@
 title: Secrets-Endpunkt
 description: Hier erfahren Sie, wie Sie den Endpunkt /secrets in der Reactor-API aufrufen.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 89%
@@ -17,7 +17,7 @@ In diesem Handbuch erfahren Sie, wie Sie Aufrufe an den Endpunkt `/secrets` in d
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://developer.adobe.com/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von geheimen Daten für eine Eigenschaft {#list-property}
 

@@ -5,7 +5,7 @@ title: Trainieren und Bewerten eines Modells mit der Sensei-API für maschinelle
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 79%
@@ -20,7 +20,7 @@ ht-degree: 79%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen erstellen, dazu schulen und auswerten. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen erstellen, dazu schulen und auswerten. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Voraussetzungen
 

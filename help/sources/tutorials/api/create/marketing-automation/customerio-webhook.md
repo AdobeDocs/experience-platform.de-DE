@@ -3,7 +3,7 @@ title: Erstellen einer Quellverbindung und eines Datenflusses für Customer.io m
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Customer.io verbinden.
 badge: Beta
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 55%
@@ -93,7 +93,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

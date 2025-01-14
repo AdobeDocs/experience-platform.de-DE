@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 15%
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] ist ein vollständig ver
 
 **Bekannte Probleme**
 
-* In der [!DNL Service Gallery] gibt es derzeit keine barrierefreie Möglichkeit, einen vorhandenen Service zu löschen. In der Zwischenzeit verwenden Sie die [API-Referenz für maschinelles Lernen von Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) um einen vorhandenen Service über API-Aufrufe zu löschen.
+* In der [!DNL Service Gallery] gibt es derzeit keine barrierefreie Möglichkeit, einen vorhandenen Service zu löschen. In der Zwischenzeit verwenden Sie die [API-Referenz für maschinelles Lernen von Sensei](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) um einen vorhandenen Service über API-Aufrufe zu löschen.
 * Der [!DNL Service Gallery] verfügt nicht über Paginierungsunterstützung, um die Trainings- und Bewertungsdurchgänge eines Services zu filtern.
 * Bei der Konfiguration geplanter Trainings- oder Scoring-Läufe durch den [!DNL Service Gallery] verhindert das Festlegen der Häufigkeit auf Stündlich, dass der Zeitplan angewendet wird.
 

@@ -2,7 +2,7 @@
 title: Erstellen einer Source-Verbindung und eines Datenflusses für Mixpanel mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Mixpanel verbinden.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 61%
@@ -406,7 +406,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ## Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../../catalog/api/create-dataset.md).
 

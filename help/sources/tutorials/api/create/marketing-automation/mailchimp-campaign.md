@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine Mailchimp-Kampagne mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einer Mailchimp-Kampagne verbinden.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 84%
@@ -331,7 +331,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../../catalog/api/create-dataset.md).
 

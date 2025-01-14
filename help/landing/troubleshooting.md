@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 97%
@@ -213,7 +213,7 @@ Im Folgenden finden Sie eine Liste mit Handbüchern zur Fehlerbehebung und API-R
 | Zugangssteuerung | [Zugangssteuerungs-API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Handbuch zur Fehlerbehebung bei der Zugriffskontrolle](../access-control/troubleshooting-guide.md) |
 | Datenerfassung in Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Aufnahme](../ingestion/batch-ingestion/troubleshooting.md) |
 | Datenaufnahme in Adobe Experience Platform | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Adobe Experience Platform-Datenwissenschafts-Arbeitsbereich | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform-Datenwissenschafts-Arbeitsbereich | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
 | Data Governance in Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |
 | Query Service von Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] Handbuch zur Fehlerbehebung](../query-service/troubleshooting-guide.md) |

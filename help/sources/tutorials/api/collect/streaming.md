@@ -5,7 +5,7 @@ title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 44%
@@ -265,7 +265,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung a
 
 Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört.
 
-Um einen Zuordnungssatz zu erstellen, senden Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml), wobei Sie das Ziel-XDM-Schema `$id` und die Details der Zuordnungssätze, die Sie erstellen möchten, angeben.
+Um einen Zuordnungssatz zu erstellen, senden Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), wobei Sie das Ziel-XDM-Schema `$id` und die Details der Zuordnungssätze, die Sie erstellen möchten, angeben.
 
 **API-Format**
 

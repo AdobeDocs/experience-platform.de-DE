@@ -2,7 +2,7 @@
 title: Erstellen einer Quellverbindung und eines Datenflusses für SugarCRM-Konten und -Kontakte mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit SugarCRM-Konten und -Kontakten verbinden.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 54%
@@ -677,7 +677,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

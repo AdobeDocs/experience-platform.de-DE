@@ -6,10 +6,10 @@ user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte m
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -64,5 +64,5 @@ ht-degree: 100%
    * [Veröffentlichen eines Modells als Service (API)](models-recipes/publish-model-service-api.md)
    * [Planen von automatisiertem Training und Auswertung eines Service (Benutzeroberfläche)](models-recipes/schedule-models-ui.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [API-Referenz](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

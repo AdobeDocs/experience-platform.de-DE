@@ -3,7 +3,7 @@ title: Dokumentationsvorlage für Selbstbedienungs-Streaming-SDK-API
 description: Erfahren Sie, wie Sie Streaming-Daten aus einer Quelle mithilfe der Flow Service-API in Adobe Experience Platform übertragen.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 43%
@@ -117,7 +117,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

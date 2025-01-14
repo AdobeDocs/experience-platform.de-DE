@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine OneTrust-Integrationsquelle mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit OneTrust Integration verbinden.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1913'
 ht-degree: 61%
@@ -629,7 +629,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../../catalog/api/create-dataset.md).
 

@@ -3,7 +3,7 @@ title: Erste Schritte mit Selbstbedienungsquellen (Streaming-SDK)
 description: In diesem Dokument erhalten Sie eine Einführung in die erforderlichen Informationen, die Sie kennen sollten, bevor Sie versuchen, eine neue Quelle mithilfe von Selbstbedienungsquellen (Streaming-SDK) zu erstellen.
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 34%
@@ -16,7 +16,7 @@ ht-degree: 34%
 >
 >Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Mit Selbstbedienungsquellen (Streaming-SDK) können Sie Ihre eigene Quelle integrieren, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Mit Selbstbedienungsquellen (Streaming-SDK) können Sie Ihre eigene Quelle integrieren, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Allgemeine Vorgehensweise
 

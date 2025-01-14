@@ -5,7 +5,7 @@ title: Handbuch zur API für maschinelles Lernen in Sensei
 description: Mit der Sensei Machine Learning-API können Entwickler CRUD-Vorgänge für verschiedene Data Science Workspace-Ressourcen durchführen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 34%
@@ -22,7 +22,7 @@ ht-degree: 34%
 
 Die [!DNL Sensei Machine Learning]-API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von Services für maschinelles Lernen, von der Einführung von Algorithmen über Experimente bis hin zur Bereitstellung von Services.
 
-Dieses Entwicklerhandbuch enthält Schritte, die Ihnen bei der Verwendung der [Sensei-API für maschinelles Lernen helfen](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) und veranschaulicht API-Aufrufe zum Ausführen von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
+Dieses Entwicklerhandbuch enthält Schritte, die Ihnen bei der Verwendung der [Sensei-API für maschinelles Lernen helfen](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) und veranschaulicht API-Aufrufe zum Ausführen von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
 
 ## Erste Schritte
 

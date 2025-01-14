@@ -3,7 +3,7 @@ title: Aufnehmen von Zahlungsdaten von Ihrem - [!DNL Stripe]  auf das Experience
 description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto mithilfe der Flow Service-API auf Experience Platform aufnehmen
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2020'
 ht-degree: 44%
@@ -471,7 +471,7 @@ Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutoria
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../../catalog/api/create-dataset.md).
 

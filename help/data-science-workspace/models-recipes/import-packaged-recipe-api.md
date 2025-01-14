@@ -5,7 +5,7 @@ title: Importieren eines gepackten Rezepts mithilfe der Sensei-API für maschine
 type: Tutorial
 description: In diesem Tutorial wird die Sensei-API für maschinelles Lernen verwendet, um in der Benutzeroberfläche eine Engine zu erstellen, die auch als Rezept bezeichnet wird.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 26%
@@ -20,7 +20,7 @@ ht-degree: 26%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-In diesem Tutorial wird die [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) zum Erstellen einer [Engine](../api/engines.md) verwendet, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
+In diesem Tutorial wird die [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) zum Erstellen einer [Engine](../api/engines.md) verwendet, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
 
 Bevor Sie beginnen, sollten Sie beachten, dass Adobe Experience Platform [!DNL Data Science Workspace] verschiedene Begriffe verwendet, um auf ähnliche Elemente in der API und Benutzeroberfläche zu verweisen. Die API-Begriffe werden im Verlauf dieses Tutorials verwendet und in der folgenden Tabelle sind die entsprechenden Begriffe aufgeführt:
 
