@@ -5,16 +5,20 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Echtzeit-Kundenprofildaten zu entfernen. Dies erfordert die Verwendung der Profil-API zum Erstellen eines Profil-Systemauftrags oder einer Löschanfrage.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 61%
+source-wordcount: '1977'
+ht-degree: 36%
 
 ---
 
 # Auftrags-Endpunkt des Profilsystems (Löschanfragen)
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Platform] aufgenommene Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für das Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-Time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Daten zu entfernen. Dazu muss mithilfe der [!DNL Real-Time Customer Profile]-API ein [!DNL Profile] Systemauftrag (oder `delete request`) erstellt werden, der bei Bedarf auch geändert, überwacht oder entfernt werden kann.
+>[!IMPORTANT]
+>
+>Die folgenden Endpunkte können je nach Implementierung von Adobe Experience Platform auf Microsoft Azure und Amazon Web Services (AWS) unterschiedlich sein. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Platform] aufgenommene Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für das Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-Time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der [!DNL Real-Time Customer Profile]-API zum Erstellen eines [!DNL Profile] Systemauftrags oder „Löschanfrage“.
 
 >[!NOTE]
 >
@@ -24,7 +28,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfass
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Löschanfragen anzeigen
+## Löschanfragen anzeigen {#view}
 
 Bei einer Löschanfrage handelt es sich um einen langwierigen, asynchronen Prozess, d. h., Ihre Organisation führt möglicherweise mehrere Löschanfragen gleichzeitig aus. Um alle derzeit in Ihrer Organisation ausgeführten Löschanfragen anzuzeigen, können Sie eine GET-Anfrage an den `/system/jobs`-Endpunkt stellen.
 
@@ -32,32 +36,71 @@ Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in 
 
 **API-Format**
 
+>[!AVAILABILITY]
+>
+>Die folgenden Abfrageparameter sind **verfügbar** wenn Sie Platform in Microsoft Azure verwenden.
+>
+>Bei Verwendung dieses Endpunkts auf AWS werden die ersten 100 Systemaufträge in absteigender Reihenfolge und basierend auf ihrem Erstellungsdatum zurückgegeben.
+
 ```http
 GET /system/jobs
 GET /system/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschreibung |
-|---|---|
-| `start` | Versatz der Seite mit den zurückgegebenen Ergebnissen, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `start=4` |
-| `limit` | Schränkt die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: `limit=10` |
-| `page` | Gibt eine bestimmte Seite mit Ergebnissen zurück, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `page=2` |
-| `sort` | Sortiert Ergebnisse nach einem bestimmten Feld in aufsteigender (`asc`) oder absteigender (`desc`) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=batchId:asc` |
+| Parameter | Beschreibung | Beispiel |
+| --------- | ----------- | ------- |
+| `start` | Versetzt die zurückgegebene Ergebnisseite entsprechend der Erstellungszeit der Anfrage. | `start=4` |
+| `limit` | Anzahl der zurückgegebenen Ergebnisse begrenzen. | `limit=10` |
+| `page` | Gibt eine bestimmte Ergebnisseite zurück, je nach Erstellungszeit der Anfrage. | `page=2` |
+| `sort` | Sortiert Ergebnisse nach einem bestimmten Feld in aufsteigender (`asc`) oder absteigender (`desc`) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. | `sort=batchId:asc` |
 
 **Anfrage**
 
+>[!IMPORTANT]
+>
+>Die folgende Anfrage unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/system/jobs \
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>Sie **müssen** bei der Verwendung dieses Endpunkts mit AWS den `x-sandbox-id`-Anfrage-Header anstelle des `x-sandbox-name`-Anfrage-Headers verwenden.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
+
 **Antwort**
 
-Die Antwort enthält ein „untergeordnetes“ Array mit einem Objekt für jede Löschanfrage, das die Details dieser Anfrage enthält.
+>[!IMPORTANT]
+>
+>Die folgende Antwort unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
+Eine erfolgreiche Antwort enthält ein Array „children“ mit einem Objekt für jede Löschanfrage, das die Details dieser Anfrage enthält.
+
++++ Eine erfolgreiche Antwort zur Anzeige der Löschanfragen
 
 ```json
 {
@@ -90,13 +133,70 @@ Die Antwort enthält ein „untergeordnetes“ Array mit einem Objekt für jede 
 }
 ```
 
++++
+
 | Eigenschaft | Beschreibung |
-|---|---|
+| -------- | ----------- |
 | `_page.count` | Die Gesamtanzahl der Anfragen. Diese Antwort wurde aus Platzgründen abgeschnitten. |
 | `_page.next` | Wenn eine zusätzliche Ergebnisseite vorhanden ist, zeigen Sie die nächste Ergebnisseite an, indem Sie den ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den angegebenen `"next"`-Wert ersetzen. |
 | `jobType` | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer `"DELETE"` zurückgegeben. |
-| `status` | Der Status der Löschanfrage. Mögliche Werte sind `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `status` | Der Status der Löschanfrage. Zu den möglichen Werten gehören `"NEW"`, `"PROCESSING"`, `"COMPLETED"` und `"ERROR"`. |
 | `metrics` | Ein -Objekt, das die Anzahl der Datensätze enthält, die verarbeitet wurden (`"recordsProcessed"`), und die Zeit in Sekunden, die die Anfrage verarbeitet wurde oder wie lange die Anfrage dauerte (`"timeTakenInSec"`). |
+
+>[!TAB Amazon Web Services (AWS)]
+
+Eine erfolgreiche Antwort gibt ein -Array zurück, das ein -Objekt für jede der Systemanforderungen enthält.
+
++++ Eine erfolgreiche Antwort zur Anzeige der Systemanforderungen
+
+```json
+{
+    [
+        {
+            "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
+            "requestType": "DELETE_EE_BATCH",
+            "imsOrgId": "{ORG_ID}",
+            "sandbox": {
+                "sandboxName": "prod",
+                "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+            },
+            "status": "SUCCESS",
+            "properties": {
+                "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+                "datasetId": "66a92c5910df2d1767de13f3"
+            },
+            "createdAt": "2024-12-22T19:44:50.250006Z",
+            "updatedAt": "2024-12-22T19:52:13.380706Z"
+        },
+        {
+            "requestId": "38a835eb-b491-4864-902b-be07fa4d6a6d",
+            "requestType": "TRUNCATE_DATASET",
+            "imsOrgId": "{ORG_ID}",
+            "sandbox": {
+                "sandboxName": "prod",
+                "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+            },
+            "status": "SUCCESS",
+            "properties": {
+                "datasetId": "66a92c5910df2d1767de13f3"
+            },
+            "createdAt": "2024-12-22T19:44:50.250006Z",
+            "updatedAt": "2024-12-22T19:52:13.380706Z"
+        }        
+    ]
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `requestId` | Die ID des Systemvorgangs. |
+| `requestType` | Der Typ des Systemvorgangs. Zu den möglichen Werten gehören `BACKFILL_TTL`, `DELETE_EE_BATCH` und `TRUNCATE_DATASET`. |
+| `status` | Der Status des Systemvorgangs. Zu den möglichen Werten gehören `NEW`, `SUCCESS`, `ERROR`, `FAILED` und `IN-PROGRESS`. |
+| `properties` | Ein Objekt, das Batch- und/oder Datensatz-IDs des Systemauftrags enthält. |
+
++++
+
+>[!ENDTABS]
 
 ## Erstellen einer Löschanfrage {#create-a-delete-request}
 
@@ -114,6 +214,14 @@ POST /system/jobs
 
 **Anfrage**
 
+>[!IMPORTANT]
+>
+>Die folgende Anfrage unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -128,12 +236,47 @@ curl -X POST \
 ```
 
 | Eigenschaft | Beschreibung |
-|---|---|
-| `dataSetId` | **(Erforderlich)** Die Kennung des Datensatzes, den Sie löschen möchten. |
+| -------- | ----------- |
+| `dataSetId` | Die ID des Datensatzes, den Sie löschen möchten. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>Sie **müssen** bei der Verwendung dieses Endpunkts mit AWS den `x-sandbox-id`-Anfrage-Header anstelle des `x-sandbox-name`-Anfrage-Headers verwenden.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+        "dataSetId": "5c802d3cd83fc114b741c4b5"
+      }'
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `dataSetId` | Die ID des Datensatzes, den Sie löschen möchten. |
+
+>[!ENDTABS]
 
 **Antwort**
 
+>[!IMPORTANT]
+>
+>Die folgende Antwort unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `status` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Die `dataSetId` in der Antwort sollte mit der in der Anfrage gesendeten `dataSetId` übereinstimmen.
+
++++ Eine erfolgreiche Antwort zum Erstellen einer DELETE-Anfrage.
 
 ```json
 {
@@ -147,10 +290,48 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zur�
 }
 ```
 
++++
+
 | Eigenschaft | Beschreibung |
-|---|---|
+| -------- | ----------- |
 | `id` | Die eindeutige, vom System generierte und schreibgeschützte Kennung der Löschanfrage. |
 | `dataSetId` | Die Kennung des Datensatzes, wie in der POST-Anfrage angegeben. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Systemanfrage zurück.
+
++++ Eine erfolgreiche Antwort zum Erstellen einer DELETE-Anfrage.
+
+```json
+{
+    "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxName": "prod",
+        "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+    },
+    "status": "SUCCESS",
+    "properties": {
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T19:44:50.250006Z",
+    "updatedAt": "2024-12-22T19:52:13.380706Z"
+}
+```
+
++++
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `requestId` | Die ID des Systemvorgangs. |
+| `requestType` | Der Typ des Systemvorgangs. Zu den möglichen Werten gehören `BACKFILL_TTL`, `DELETE_EE_BATCH` und `TRUNCATE_DATASET`. |
+| `status` | Der Status des Systemvorgangs. Zu den möglichen Werten gehören `NEW`, `SUCCESS`, `ERROR`, `FAILED` und `IN-PROGRESS`. |
+| `properties` | Ein Objekt, das Batch- und/oder Datensatz-IDs des Systemauftrags enthält. |
+
+>[!ENDTABS]
 
 ### Batch löschen
 
@@ -170,6 +351,14 @@ POST /system/jobs
 
 **Anfrage**
 
+>[!IMPORTANT]
+>
+>Die folgende Anfrage unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -179,15 +368,53 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-       "batchId": "8d075b5a178e48389126b9289dcfd0ac"
+        "datasetId": "66a92c5910df2d1767de13f3",
+        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
       }'
 ```
 
 | Eigenschaft | Beschreibung |
-|---|---|
-| `batchId` | **(Erforderlich)** Die Kennung des Batches, den Sie löschen möchten. |
+| -------- | ----------- |
+| `datasetId` | Die ID des Datensatzes für den Batch, den Sie löschen möchten. |
+| `batchId` | Die ID des Stapels, den Sie löschen möchten. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>Sie **müssen** bei der Verwendung dieses Endpunkts mit AWS den `x-sandbox-id`-Anfrage-Header anstelle des `x-sandbox-name`-Anfrage-Headers verwenden.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+        "datasetId": "66a92c5910df2d1767de13f3",
+        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
+      }'
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `datasetId` | Die ID des Datensatzes für den Batch, den Sie löschen möchten. |
+| `batchId` | Die ID des Stapels, den Sie löschen möchten. |
+
+>[!ENDTABS]
+
 
 **Antwort**
+
+>[!IMPORTANT]
+>
+>Die folgende Antwort unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
 
 Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `"status"` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Der `"batchId"` Wert in der Antwort sollte mit dem in der Anfrage gesendeten `"batchId"` übereinstimmen.
 
@@ -195,6 +422,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zur�
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
     "imsOrgId": "{ORG_ID}",
+    "datasetId": "66a92c5910df2d1767de13f3",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "NEW",
@@ -204,9 +432,50 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zur�
 ```
 
 | Eigenschaft | Beschreibung |
-|---|---|
+| -------- | ----------- |
 | `id` | Die eindeutige, vom System generierte und schreibgeschützte Kennung der Löschanfrage. |
+| `datasetId` | Die ID des angegebenen Datensatzes. |
 | `batchId` | Die Kennung des Batches, wie in der POST-Anfrage angegeben. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Systemanfrage zurück.
+
++++ Eine erfolgreiche Antwort zum Erstellen einer DELETE-Anfrage.
+
+```json
+{
+    "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxName": "prod",
+        "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+    },
+    "status": "SUCCESS",
+    "properties": {
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T19:44:50.250006Z",
+    "updatedAt": "2024-12-22T19:52:13.380706Z"
+}
+```
+
++++
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `requestId` | Die ID des Systemvorgangs. |
+| `requestType` | Der Typ des Systemvorgangs. Zu den möglichen Werten gehören `BACKFILL_TTL`, `DELETE_EE_BATCH` und `TRUNCATE_DATASET`. |
+| `status` | Der Status des Systemvorgangs. Zu den möglichen Werten gehören `NEW`, `SUCCESS`, `ERROR`, `FAILED` und `IN-PROGRESS`. |
+| `properties` | Ein Objekt, das Batch- und/oder Datensatz-IDs des Systemauftrags enthält. |
+
+>[!ENDTABS]
+
+>[!AVAILABILITY]
+>
+>Die folgende Funktion ist **verfügbar** wenn Platform auf Microsoft Azure verwendet wird.
 
 Wenn Sie versuchen, eine Löschanfrage für einen Datensatz-Batch vom Typ Datensatz zu initiieren, tritt ein 400-Fehler auf, der in etwa wie folgt aussieht:
 
@@ -235,21 +504,53 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | Parameter | Beschreibung |
-|---|---|
-| `{DELETE_REQUEST_ID}` | **(Erforderlich)** Die Kennung der Löschanfrage, die Sie anzeigen möchten. |
+| --------- | ----------- |
+| `{DELETE_REQUEST_ID}` | Die ID der Löschanfrage, die Sie anzeigen möchten. |
 
 **Anfrage**
 
+>[!IMPORTANT]
+>
+>Die folgende Anfrage unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>Sie **müssen** bei der Verwendung dieses Endpunkts mit AWS den `x-sandbox-id`-Anfrage-Header anstelle des `x-sandbox-name`-Anfrage-Headers verwenden.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
+
+
 **Antwort**
+
+>[!IMPORTANT]
+>
+>Die folgende Antwort unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
 
 Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktualisierten Status. Die ID der Löschanfrage in der Antwort (der `"id"`) sollte mit der im Anfragepfad gesendeten ID übereinstimmen.
 
@@ -267,14 +568,54 @@ Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktual
 ```
 
 | Eigenschaften | Beschreibung |
-|---|---|
+| ---------- | ----------- |
 | `jobType` | Der Typ des erstellten Auftrags. In diesem Fall wird immer `"DELETE"` zurückgegeben. |
-| `status` | Der Status der Löschanfrage. Mögliche Werte: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `status` | Der Status der Löschanfrage. Zu den möglichen Werten gehören `NEW`, `PROCESSING`, `COMPLETED` und `ERROR`. |
 | `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Zeit in Sekunden enthält, die die Anfrage verarbeitet wurde, oder die Dauer der Anfrage (`"timeTakenInSec"`). |
+
+>[!TAB Amazon Web Services (AWS)]
+
+Eine erfolgreiche Antwort gibt die Details der angegebenen Systemanfrage zurück.
+
++++ Eine erfolgreiche Antwort für die Anzeige einer Löschanfrage.
+
+```json
+{
+    "requestId": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxName": "prod",
+        "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+    },
+    "status": "SUCCESS",
+    "properties": {
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T19:44:50.250006Z",
+    "updatedAt": "2024-12-22T19:52:13.380706Z"
+}
+```
+
++++
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `requestId` | Die ID des Systemvorgangs. |
+| `requestType` | Der Typ des Systemvorgangs. Zu den möglichen Werten gehören `BACKFILL_TTL`, `DELETE_EE_BATCH` und `TRUNCATE_DATASET`. |
+| `status` | Der Status des Systemvorgangs. Zu den möglichen Werten gehören `NEW`, `SUCCESS`, `ERROR`, `FAILED` und `IN-PROGRESS`. |
+| `properties` | Ein Objekt, das Batch- und/oder Datensatz-IDs des Systemauftrags enthält. |
+
+>[!ENDTABS]
 
 Sobald der Status der Löschanfrage `"COMPLETED"` ist, können Sie bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, über die Datenzugriffs-API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugreifen auf Datensätze und Batches mit der Data Access-API finden Sie in der [Dokumentation zu Data Access](../../data-access/home.md).
 
 ## Löschanfrage entfernen
+
+>[!AVAILABILITY]
+>
+>Dieser Endpunkt wird **nur** in der Azure-Instanz von Adobe Experience Platform unterstützt und **nicht** in der AWS-Instanz unterstützt.
 
 [!DNL Experience Platform] können Sie eine frühere Anfrage löschen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Löschvorgang nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um eine Löschanfrage zu entfernen, können Sie eine Löschanfrage an den `/system/jobs`-Endpunkt stellen und die Kennung der Löschanfrage, die Sie entfernen möchten, in den Anfragepfad einschließen.
 
@@ -290,6 +631,14 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 
 **Anfrage**
 
+>[!IMPORTANT]
+>
+>Die folgende Anfrage unterscheidet sich zwischen der Azure- und der AWS-Instanz.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
@@ -298,6 +647,24 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>Sie **müssen** bei der Verwendung dieses Endpunkts mit AWS den `x-sandbox-id`-Anfrage-Header anstelle des `x-sandbox-name`-Anfrage-Headers verwenden.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
+
 
 **Antwort**
 
