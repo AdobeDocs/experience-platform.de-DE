@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2472'
 ht-degree: 59%
 
 ---
@@ -67,7 +67,7 @@ Die folgenden Leitplanken bieten empfohlene Beschränkungen bei der Modellierung
 | JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird | 4 | Leistungs-Schutzmaßnahme | Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, ist 4. Dies bedeutet, dass in einem stark verschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Felder in einer Beziehung verwendet werden sollten. |
 | Array-Kardinalität in einem Profilfragment | &lt;=500 | Leistungs-Schutzmaßnahme | Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist &lt;=500. |
 | Array-Kardinalität in ExperienceEvent | &lt;=10 | Leistungs-Schutzmaßnahme | Die optimale Array-Kardinalität in ExperienceEvent (Zeitreihendaten) ist &lt;=10. |
-| Identitätsanzahl im Identitätsdiagramm eines einzelnen Profils | 50 | Vom System erzwungene Leitplanken | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil ist 50.** Alle Profile mit mehr als 50 Identitäten sind von der Segmentierung, dem Export und der Suche ausgeschlossen. |
+| Identitätsanzahl im Identitätsdiagramm eines einzelnen Profils | 50 | Vom System erzwungene Leitplanken | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil ist 50.** Alle Profile mit mehr als 50 Identitäten sind von der Segmentierung, dem Export und der Suche ausgeschlossen. Weitere Informationen finden Sie im Handbuch unter [Grundlagen zur Logik beim Löschen von Identitäten](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
