@@ -2,9 +2,9 @@
 title: Übersicht über den Salesforce Source Connector
 description: Erfahren Sie, wie Sie Salesforce mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 11%
 >[!IMPORTANT]
 >
 >Sie können jetzt die [!DNL Salesforce]-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../landing/multi-cloud.md).
-
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -50,6 +49,8 @@ Um die [!DNL Salesforce] als Teil von [!DNL B2B-CDP] zu verwenden, müssen Sie z
 
 Wenn eine Platform-Entwicklerkonsole und [!DNL Postman] eingerichtet sind, können Sie jetzt damit beginnen, die entsprechenden Umgebungswerte auf Ihre [!DNL Postman] anzuwenden.
 
++++Handbuch zur Variablentabelle anzeigen
+
 Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum Ausfüllen Ihrer [!DNL Postman]:
 
 | Variable | Beschreibung | Beispiel |
@@ -73,6 +74,8 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 | `has_msi` | Ein boolescher Wert, der angibt, ob Sie [!DNL Marketo Sales Insight] abonniert haben. | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### Skripte ausführen
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. Aktivieren Sie das Kästchen für [!DNL Enable OAuth Settings].
 5. Festlegen einer Callback-URL. Da dies nicht für JWT verwendet wird, können Sie `https://localhost` verwenden.
 6. Aktivieren Sie das Kästchen für [!DNL Use Digital Signatures].
-7. Laden Sie die zuvor erstellte Datei cert.perm hoch.
+7. Laden Sie die zuvor erstellte Datei cert.pem hoch.
 
 #### Erforderliche Berechtigungen hinzufügen
 

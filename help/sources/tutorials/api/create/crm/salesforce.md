@@ -1,19 +1,17 @@
 ---
-title: Erstellen einer Salesforce-Basisverbindung mithilfe der Flow Service-API
+title: Verbinden von Salesforce mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 36%
+source-wordcount: '1077'
+ht-degree: 24%
 
 ---
 
-# Erstellen einer [!DNL Salesforce]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Verbinden von [!DNL Salesforce] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
-
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Salesforce] mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Quellkonto mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -22,7 +20,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] mithilfe der [!DNL Flow Service]-API erfolgreich mit einem [!DNL Salesforce]-Konto verbinden zu können.
+### Verwenden von Platform-APIs
+
+Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+
+## Verbinden von [!DNL Salesforce] mit Experience Platform auf [!DNL Azure] {#azure}
+
+Lesen Sie die folgenden Schritte, um Informationen zum Verbinden Ihrer [!DNL Salesforce] mit Experience Platform auf [!DNL Azure] zu erhalten.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -61,15 +65,11 @@ Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie
 
 >[!ENDTABS]
 
-### Verwenden von Platform-APIs
-
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
-
-## Erstellen einer Basisverbindung
+### Erstellen einer Basisverbindung für [!DNL Salesforce] in Experience Platform auf [!DNL Azure]
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie Ihre [!DNL Salesforce] Authentifizierungsdaten im Anfragetext an.
+Um eine Basisverbindung zu erstellen und Ihr [!DNL Salesforce]-Konto mit Experience Platform auf [!DNL Azure] zu verbinden, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie im Anfragetext Ihre [!DNL Salesforce] Authentifizierungs-Anmeldeinformationen an.
 
 **API-Format**
 
@@ -77,11 +77,11 @@ Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `
 POST /connections
 ```
 
-**Anfrage**
-
 >[!BEGINTABS]
 
 >[!TAB Einfache Authentifizierung]
+
++++Anfrage
 
 Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mit einfacher Authentifizierung:
 
@@ -120,7 +120,24 @@ curl -X POST \
 | `auth.params.securityToken` | Das Ihrem [!DNL Salesforce]-Konto zugeordnete Sicherheits-Token. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce]-Verbindung: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
+}
+```
+
++++
+
 >[!TAB OAuth 2 Client-Anmeldedaten]
+
++++Anfrage
 
 Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mit OAuth 2-Client-Anmeldedaten:
 
@@ -159,9 +176,10 @@ curl -X POST \
 | `auth.params.apiVersion` | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce]-Verbindung: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
->[!ENDTABS]
++++
 
-**Antwort**
+
++++Antwort
 
 Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
 
@@ -171,6 +189,205 @@ Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen
     "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
+
+## Verbinden von [!DNL Salesforce] mit Experience Platform auf Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../../../landing/multi-cloud.md).
+
+Lesen Sie die folgenden Schritte, um Informationen zum Verbinden Ihrer [!DNL Salesforce] mit Experience Platform auf AWS zu erhalten.
+
+### Voraussetzungen
+
+Informationen zum Einrichten Ihres [!DNL Salesforce]-Kontos, um eine Verbindung zu Experience Platform auf AWS herstellen zu können, finden Sie in der [[!DNL Salesforce] Übersicht](../../../../connectors/crm/salesforce.md#aws).
+
+### Erstellen einer Basisverbindung für [!DNL Salesforce] auf Experience Platform auf AWS
+
+Um eine Basisverbindung zu erstellen und Ihr [!DNL Salesforce]-Konto mit Experience Platform auf AWS zu verbinden, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie die entsprechenden Werte für Ihre Anmeldeinformationen an.
+
+**API-Format**
+
+```http
+POST /connections
+```
+
+**Anfrage**
+
++++Auswählen, um die Anfrage anzuzeigen
+
+Die folgende Anfrage erstellt eine Basisverbindung für die [!DNL Salesforce] in Experience Platform auf AWS.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account on AWS",
+      "description": "ACME Salesforce account on AWS",
+      "auth": {
+          "specName": "OAuth2 JWT Token Credential",
+          "params":
+            "jwtToken": "{JWT_TOKEN},
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+Informationen zum Abrufen Ihrer [!DNL Salesforce]-`jwtToken` finden Sie im Handbuch unter [Einrichten einer - [!DNL Salesforce]  zum Herstellen einer Verbindung zu Experience Platform auf AWS](../../../../connectors/crm/salesforce.md#aws).
+
++++
+
+**Antwort**
+
++++Auswählen, um die Antwort anzuzeigen
+
+Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
+
+```json
+{
+    "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
+}
+```
+
++++
+
+### Verbindungsstatus überprüfen
+
+Um Ihren Verbindungsstatus zu überprüfen, stellen Sie eine GET-Anfrage an den `/connections`-Endpunkt und geben Sie die ID der Basisverbindung an, die im Erstellungsschritt generiert wurde.
+
+**API-Format**
+
+```http
+GET /connections
+```
+
+**Anfrage**
+
++++Auswählen, um die Anfrage anzuzeigen
+
+Die folgende Anfrage ruft Informationen zur Basisverbindungs-ID ab: `3e908d3f-c390-482b-9f44-43d3d4f2eb82`.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/3e908d3f-c390-482b-9f44-43d3d4f2eb82' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
+
+**Antwort**
+
+>[!BEGINTABS]
+
+>[!TAB Wird initialisiert]
+
++++Auswählen, um ein Beispiel für eine Antwort anzuzeigen
+
+Die folgende Antwort zeigt Informationen zur Basisverbindungs-ID an: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` im `initializing`.
+
+```json
+{
+  "items": [
+    {
+      "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+      "createdAt": 1736506325115,
+      "updatedAt": 1736506325717,
+      "createdBy": "acme@techacct.adobe.com",
+      "updatedBy": "acme@techacct.adobe.com",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}",
+      "name": "JWT Token Auth Authentication E2E-1736506322",
+      "description": "Base Connection for salesforce E2E",
+      "connectionSpec": {
+        "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+        "version": "1.0"
+      },
+      "state": "initializing",
+      "auth": {
+        "specName": "OAuth2 JWT Token Credential",
+        "params": {
+          "jwtToken": "{JWT_TOKEN}",
+          "clientId": "{CLIENT_ID}",
+          "clientSecret": "{CLIENT_SECRET}",
+          "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com"
+        }
+      }
+    }
+  }
+]
+```
+
++++
+
+>[!TAB Aktiviert]
+
++++Auswählen, um ein Beispiel für eine Antwort anzuzeigen
+
+Die folgende Antwort zeigt Informationen zur Basisverbindungs-ID an: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` im `enabled`.
+
+```json
+{
+  "items": [
+      {
+        "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+        "createdAt": 1736506325115,
+        "updatedAt": 1736506413299,
+        "createdBy": "acme@techacct.adobe.com",
+        "updatedBy": "acme@AdobeID",
+        "createdClient": "{CREATED_CLIENT}",
+        "updatedClient": "acme",
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "{SANDBOX_NAME}",
+        "imsOrgId": "{ORG_ID}",
+        "name": "JWT Token Auth Authentication E2E-1736506322",
+        "description": "Base Connection for salesforce E2E",
+        "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+        },
+        "state": "enabled",
+        "auth": {
+          "specName": "OAuth2 JWT Token Credential",
+          "params": {
+            "jwtToken": "{JWT_TOKEN}",
+            "clientId": "{CLIENT_ID}",
+            "clientSecret": "{CLIENT_SECRET}",
+            "instanceUrl": "https://adb8-dev-ed.develop.my.salesforce.com",
+            "orgId": "00DdL000001iPRxUAM"
+          }
+        },
+        "version": "\"6d27f305-40be-41c3-97d4-a701827c34df\"",
+        "etag": "\"6d27f305-40be-41c3-97d4-a701827c34df\""
+    }
+  ]
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 
