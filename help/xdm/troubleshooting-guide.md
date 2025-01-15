@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 81%
+source-wordcount: '2347'
+ht-degree: 82%
 
 ---
 
@@ -142,13 +142,7 @@ Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie 
 
 Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->Um ein profilaktiviertes Schema zu entfernen, benötigen Sie die Hilfe des XDM-Plattform-Supportteams und müssen die folgenden Schritte ausführen:
->
-> 1. Löschen Sie alle Datensätze, die mit dem Schema verknüpft sind (das für Profil aktiviert ist).
-> 2. Löschen des Schnappschusses zum Profilexport aus der Sandbox (hierfür ist die Hilfe des XDM-Plattform-Supportteams erforderlich)
-> 3. Löschen eines Schemas aus der Sandbox erzwingen (dies kann nur vom XDM-Plattform-Supportteam durchgeführt werden)
+Wenn Sie die Verwendung eines profilaktivierten Schemas nicht mehr wünschen, wird empfohlen, das Schema umzubenennen und **Nicht verwenden** oder **Inaktiv** einzuschließen.
 
 ## Schemaänderung und Einschränkungen
 
