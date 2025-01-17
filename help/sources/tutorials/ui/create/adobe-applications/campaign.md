@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Adobe Campaign Managed Cloud Services verbinden.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 46%
+source-wordcount: '1185'
+ht-degree: 45%
 
 ---
 
@@ -101,6 +101,8 @@ Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, d
 >[!IMPORTANT]
 >
 >Beim Zuordnen Ihrer Quellfelder zu XDM-Zielfeldern müssen Sie sicherstellen, dass Sie Ihr designiertes primäres Identitätsfeld dem entsprechenden XDM-Zielfeld zuordnen.
+>
+>Für jede Zielgruppe können Sie bis zu 20 Felder hinzufügen, die Adobe Campaign zugeordnet werden sollen. Sie können diese Beschränkung ändern, indem Sie den Wert der Option `NmsCdp_Aep_Sources_Max_Columns` im Ordner Administration > Plattform > Optionen des Campaign-Explorers aktualisieren.
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
