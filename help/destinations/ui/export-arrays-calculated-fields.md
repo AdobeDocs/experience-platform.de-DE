@@ -1,21 +1,21 @@
 ---
-title: Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicher-Ziele
+title: Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicherziele
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden, um Arrays von Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicher-Ziele {#export-arrays-cloud-storage}
+# Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicherziele {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Unterstützung von Export-Arrays"
->abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um einfache Arrays aus Ganzzahlen, Zeichenfolgen, Objektwerten oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicherziel zu exportieren. </p><p> Arrays müssen mithilfe der Funktion `array_to_string` als Zeichenfolgen exportiert werden. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen.</p>"
+>abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um einfache Arrays aus Ganzzahlen, Zeichenfolgen, Objektwerten oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicherziel zu exportieren.</p><p> Arrays müssen mithilfe der Funktion `array_to_string` als Zeichenfolgen exportiert werden. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#examples" text="Beispiele"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#known-limitations" text="Bekannte Einschränkungen"
 

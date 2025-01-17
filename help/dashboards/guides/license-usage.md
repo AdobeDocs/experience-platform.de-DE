@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
 source-wordcount: '2947'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -46,13 +46,13 @@ ht-degree: 20%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Prognostizierte Compute-Stunden"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um Ihre Compute-Stunden einzuschätzen oder zu reduzieren, navigieren Sie zu „Abfragen“ > „Protokoll“, um den Abfrageverlauf zu überprüfen. Wenn Sie nicht über die Berechtigung zum Zugriff auf den Arbeitsbereich „Abfragen“ verfügen, wenden Sie sich an Ihre bzw. Ihren Admin."
->additional-url="https://experience.adobe.com/#/platform/query/log" text="Arbeitsbereich „Abfrageprotokoll“"
+>additional-url="https://experience.adobe.com/de/#/platform/query/log" text="Arbeitsbereich „Abfrageprotokoll“"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="Prognostizierte adressierbare Zielgruppe"
->abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie für Sandboxes und Datensätze Ablaufzeiten für Datensätze oder pseudonyme Profildaten konfigurieren."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Gültigkeitsdauern von Erlebnisereignissen"
+>title="Prognostizierte ansprechbare Zielgruppe"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/event-expirations" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Platform-Instanz erfasst.
@@ -111,14 +111,14 @@ Die Tabellen zeigen die primäre Metrik für jedes Produkt an, da jedes Produkt 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Prognostizierte Nutzung"
->abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie für Sandboxes und Datensätze Ablaufzeiten für Datensätze oder pseudonyme Profildaten konfigurieren."
+>abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Prognostizierte Nutzung"
->abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie für Sandboxes und Datensätze Ablaufzeiten für Datensätze oder pseudonyme Profildaten konfigurieren."
+>abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 

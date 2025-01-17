@@ -84,7 +84,7 @@ Die untere Hälfte der Seite zeigt Informationen zur Anzahl der empfangenen, auf
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="Einträge mit Warnhinweisen"
->abstract="Einträge mit Warnhinweisen geben die Gesamtzahl der aufgenommenen Einträge mit Warnhinweisen für die Mapper-Transformation an. Alle Fehler bei der Mapper-Transformation werden als Warnhinweise protokolliert und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich erachtet, jedoch mit einem Warnhinweis versehen."
+>abstract="Einträge mit Warnhinweisen geben die Gesamtzahl der aufgenommenen Einträge mit Warnhinweisen für die Mapper-Transformation an. Alle Fehler bei der Mapper-Transformation werden als Warnhinweise protokolliert und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich erachtet, jedoch mit einem Warnhinweis versehen"
 >text="Learn more in documentation"
 
 Jede einzelne Datenflussausführung zeigt die folgenden Details:
