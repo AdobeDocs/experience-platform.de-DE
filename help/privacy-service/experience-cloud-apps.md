@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service- und Experience Cloud-Anwendungen
 description: Dieses Dokument bietet eine Referenz zum Konfigurieren verschiedener Experience Cloud-Anwendungen für datenschutzbezogene Vorgänge.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 46ca46460de9211c3e876454c986d030b964646e
+source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 14%
+source-wordcount: '900'
+ht-degree: 13%
 
 ---
 
@@ -42,6 +42,7 @@ Im Folgenden finden Sie eine Liste [!DNL Experience Cloud] Anwendungen, die in [
 | Adobe Journey Optimizer | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Auf Dokumentation zugreifen/sie löschen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass-Authentifizierung | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Auf Dokumentation zugreifen/sie löschen](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass ist nicht in der Lage, Daten zu übertragen, weshalb Opt-out-Kaufanfragen nicht anwendbar sind.</li></ul> |
 | Adobe Target | ✓ | K. A. | Alle mit der ID der betroffenen Person verknüpften Daten werden aus ihrem Besucherprofil gelöscht. Aggregierte oder anonymisierte Daten, die die Person nicht identifizieren oder anderweitig nicht miteinander in Verbindung stehen (z. B. Inhaltsdaten), gelten nicht für Löschanfragen. | <ul><li>[Auf Dokumentation zugreifen/sie löschen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=de)</li><li>[!DNL Target] ist nicht in der Lage, Daten zu übertragen, daher können Opt-out-Anfragen nicht angewendet werden.</li></ul> |
+| Commerce (Personalization) | ✓ | K. A. | Der Privacy Service löscht [!DNL Commerce] in Commerce SaaS-Services gespeicherten Daten zu Marketing-Zwecken, d. h. die Profile und Bestellungen der betroffenen Personen werden nicht mehr zur Verwendung in Kampagnen und Kunden-Journey an Adobe-Marketing-Anwendungen gesendet. Der Privacy Service löscht jedoch keine Daten in der [!DNL Commerce]-Anwendung, da er möglicherweise weiterhin für Transaktionsanforderungen von Händlern erforderlich ist. Händler sind für alle Datenlöschungs-/-zugriffsanfragen im [!DNL Commerce] verantwortlich. | <ul><li>[Zugriff/Löschen der Dokumentation für Commerce](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Auf Dokumentation zugreifen/sie löschen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] ist nicht in der Lage, Daten zu übertragen, daher können Opt-out-Anfragen nicht angewendet werden.</li></ul> |
 
 {style="table-layout:auto"}
@@ -54,7 +55,7 @@ Im Folgenden finden Sie eine Liste [!DNL Experience Cloud] Anwendungen, die nich
 | ------- | ----------- |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Ein Überblick darüber, wie Datenschutzadministratoren oder AEM-Administratoren DSGVO-Anfragen bearbeiten können. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Schritte für DSGVO-Zugriffs- und -Löschanfragen mit Livefyre. |
-| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Stellen Sie sicher, dass Ihre Magento Commerce-Installationen den Anforderungen bestimmter Datenschutzgesetze entsprechen. |
+| [Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | Stellen Sie sicher, dass Ihre Adobe Commerce-Installationen die Anforderungen bestimmter Datenschutzgesetze erfüllen. |
 | [Tags in Adobe Experience Platform](../tags/ui/client-side/consent.md) | Anleitung für Entwickler zur Verwendung von Erweiterungen und Rule Builder zum Definieren von Opt-in- und Opt-out-Lösungen. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Erfahren Sie, wie Workfront personenbezogene Daten erfasst und wie eine betroffene Person eine Datenschutzanfrage über ein Formular senden kann. |
 
