@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
+source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
 workflow-type: tm+mt
-source-wordcount: '3227'
-ht-degree: 68%
+source-wordcount: '3214'
+ht-degree: 57%
 
 ---
 
@@ -28,24 +28,24 @@ Da sich dieses Handbuch ausschließlich auf wichtige Überlegungen zum Schema-De
 Der empfohlene Ansatz zum Entwerfen Ihres Datenmodells für die Verwendung in Experience Platform kann wie folgt zusammengefasst werden:
 
 1. Machen Sie sich mit den geschäftlichen Anwendungsfällen für Ihre Daten vertraut.
-1. Identifizieren Sie die primären Datenquellen, die für diese Anwendungsfälle in [!DNL Platform] integriert werden sollten.
-1. Identifizieren Sie alle sekundären Datenquellen, die ebenfalls von Interesse sein könnten. Wenn beispielsweise derzeit nur eine der Geschäftseinheiten in Ihrem Unternehmen daran interessiert ist, ihre Daten nach [!DNL Platform] zu portieren, könnte eine ähnliche Geschäftseinheit in Zukunft auch daran interessiert sein, ähnliche Daten zu portieren. Die Berücksichtigung dieser sekundären Quellen hilft, das Datenmodell in Ihrem gesamten Unternehmen zu standardisieren.
+1. Identifizieren Sie die primären Datenquellen, die für diese Anwendungsfälle in Platform integriert werden sollten.
+1. Identifizieren Sie alle sekundären Datenquellen, die ebenfalls von Interesse sein könnten. Wenn beispielsweise derzeit nur eine der Geschäftseinheiten in Ihrem Unternehmen daran interessiert ist, ihre Daten nach Platform zu portieren, könnte eine ähnliche Geschäftseinheit in Zukunft auch daran interessiert sein, ähnliche Daten zu portieren. Die Berücksichtigung dieser sekundären Quellen hilft, das Datenmodell in Ihrem gesamten Unternehmen zu standardisieren.
 1. Erstellen Sie ein allgemeines Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) für die identifizierten Datenquellen.
-1. Konvertieren Sie das allgemeine ERD in ein [!DNL Platform]-orientiertes ERD (einschließlich Profilen, Erlebnisereignissen und Lookup-Entitäten).
+1. Konvertieren Sie das allgemeine ERD in ein plattformzentriertes ERD (einschließlich Profilen, Erlebnisereignissen und Lookup-Entitäten).
 
-Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle erforderlichen Datenquellen variieren von Organisation zu Organisation. Während sich die restlichen Abschnitte in diesem Dokument auf die letzteren Schritte der Organisation und Erstellung eines ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten für Ihre Entscheidungen Informationen darüber liefern, welche Datenquellen nach [!DNL Platform] migriert werden sollen.
+Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle erforderlichen Datenquellen variieren von Organisation zu Organisation. Während sich die restlichen Abschnitte in diesem Dokument auf die letzteren Schritte der Organisation und Erstellung eines ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten für Ihre Entscheidungen Informationen darüber liefern, welche Datenquellen nach Platform migriert werden sollen.
 
 ## Erstellen eines allgemeinen ERD {#create-an-erd}
 
-Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform] integrieren möchten, erstellen Sie ein allgemeines ERD, das Ihnen dabei hilft, Ihre Daten XDM-Schemata zuzuordnen.
+Nachdem Sie die Datenquellen ermittelt haben, die Sie in Platform integrieren möchten, erstellen Sie ein allgemeines ERD, das Ihnen dabei hilft, Ihre Daten XDM-Schemata zuzuordnen.
 
-Das folgende Beispiel stellt ein vereinfachtes ERD für eine Firma dar, die Daten in [!DNL Platform] integrieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, darunter Kundenkonten, Hotels, Adressen und mehrere häufige E-Commerce-Ereignisse.
+Das folgende Beispiel stellt ein vereinfachtes ERD für ein Unternehmen dar, das Daten in Platform integrieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, einschließlich Kundenkonten, Hotels und mehreren gängigen E-Commerce-Ereignissen.
 
 ![Ein relationales Entitätsdiagramm, das die wesentlichen Entitäten hervorhebt, die bei der Datenaufnahme in XDM-Klassen sortiert werden sollten.](../images/best-practices/erd.png)
 
 ## Sortieren von Entitäten in Profil-, Lookup- und Ereigniskategorien {#sort-entities}
 
-Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie in [!DNL Platform] integrieren möchten, müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
+Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie in Platform integrieren möchten, müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
 
 | Kategorie | Beschreibung |
 | --- | --- |
@@ -79,7 +79,7 @@ Wenn eine Entität Attribute enthält, die sich auf eine einzelne Kundin oder ei
 
 #### Tracking von Daten im Laufe der Zeit {#track-data}
 
-Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, handelt es sich höchstwahrscheinlich um eine Ereignisentität. Das Hinzufügen von Produktelementen zum Warenkorb kann beispielsweise in [!DNL Platform] als Ereignis vom Typ „In den Warenkorb legen“ verfolgt werden:
+Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, handelt es sich höchstwahrscheinlich um eine Ereignisentität. Das Hinzufügen von Produktelementen zum Warenkorb kann beispielsweise in Platform als Ereignis vom Typ „In den Warenkorb legen“ verfolgt werden:
 
 | Kunden-ID | Typ | Produkt-ID | Menge | Zeitstempel |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl 
 
 >[!CAUTION]
 >
->Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an [!DNL Platform] senden.
+>Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an Platform senden.
 
 #### Kardinalität {#cardinality}
 
@@ -127,9 +127,9 @@ In der folgenden Tabelle sind einige allgemeine Entitätsbeziehungen und die dar
 
 | Beziehung | Kardinalität | Entitätskategorien |
 | --- | --- | --- |
-| Kunden und Warenkorb-Kassengänge | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Warenkorb-Kassengänge verfügen, bei denen es sich um Ereignisse handelt, die im Laufe der Zeit verfolgt werden können. Kundinnen und Kunden wären daher eine Profilentität, Warenkorb-Kassengänge hingegen eine Ereignisentität. |
-| Kunden und Treuekonten | Eins zu eins | Eine Kundin oder ein Kunde kann nur über ein Treuekonto verfügen und ein Treuekonto kann nur zu einer Kundin oder einem Kunden gehören. Da es sich um eine Eins-zu-eins-Beziehung handelt, stellen sowohl Kunden als auch Treuekonten Profilentitäten dar. |
-| Kunden und Abonnements | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Abonnements verfügen. Da es dem Unternehmen nur um die aktuellen Abonnements einer Kundin oder eines Kunden geht, handelt es sich bei den Kunden um eine Profilentität, bei den Abonnements hingegen um eine Lookup-Entität. |
+| Kunden- und Warenkorb-Checkout | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Warenkorb-Kassengänge verfügen, bei denen es sich um Ereignisse handelt, die im Laufe der Zeit verfolgt werden können. Der Kunde wäre daher eine Profilentität, während der Warenkorb-Checkout eine Ereignisentität wäre. |
+| Kunden- und Treuekonto | Eins zu eins | Eine Kundin oder ein Kunde kann nur über ein Treuekonto verfügen und ein Treuekonto kann nur zu einer Kundin oder einem Kunden gehören. Da es sich um eine Eins-zu-eins-Beziehung handelt, stellen sowohl Kunden- als auch Treuekontenentitäten Profilentitäten dar. |
+| Kunde und Abonnement | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Abonnements verfügen. Da es dem Unternehmen nur um die aktuellen Abonnements einer Kundin oder eines Kunden geht, ist die Kundin oder der Kunde eine Profilentität, während das Abonnement eine Lookup-Entität ist. |
 
 {style="table-layout:auto"}
 
@@ -146,7 +146,7 @@ In diesem Szenario hat das Unternehmen zwei Möglichkeiten, die Abonnements eine
 
 #### Ansatz 1: Verwenden von Profilattributen {#profile-approach}
 
-Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Profilentität für Kundinnen und Kunden aufzunehmen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate` und `endDate`.
+Der erste Ansatz besteht darin, ein Array von `subscriptionID` in die Profilentität für den Kunden aufzunehmen.
 
 ![Das Kundenschema im Schema-Editor mit hervorgehobener Klasse und Struktur](../images/best-practices/profile-schema.png)
 
@@ -162,9 +162,9 @@ Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die P
 
 #### Ansatz 2: Verwenden von Ereignisentitäten {#event-approach}
 
-Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnements zu verwenden. Dazu müssen dieselben Abonnementfelder wie beim ersten Ansatz aufgenommen werden, wobei eine Abonnement-ID, eine Kunden-ID und ein Zeitstempel hinzugefügt werden, aus denen hervorgeht, wann das Abonnementereignis eingetreten ist.
+Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung eines Abonnementereignisses zu verwenden. Dazu gehören die Abonnement-ID zusammen mit einer Kunden-ID und einem Zeitstempel, der angibt, wann das Abonnementereignis aufgetreten ist.
 
-![Ein Diagramm des Schemas für Abonnementereignisse mit hervorgehobener XDM-Erlebnisereignisklasse und hervorgehobener Abonnementstruktur.](../images/best-practices/event-schema.png)
+![Ein Diagramm des Abonnementereignisschemas mit hervorgehobener XDM-Erlebnisereignisklasse und hervorgehobener Abonnementstruktur.](../images/best-practices/event-schema.png)
 
 **Vorteile**
 
@@ -192,7 +192,7 @@ Die Kategorie, in der eine Entität eingeordnet wurde, sollte die XDM-Klasse bes
 >
 >Während Ereignisentitäten fast immer durch separate Schemata dargestellt werden, können Entitäten in Profil- oder Lookup-Kategorien je nach Kardinalität in einem einzelnen XDM-Schema kombiniert werden.
 >
->Da beispielsweise die Entität „Kunden“ eine Eins-zu-eins-Beziehung zur Entität „Treuekonten“ hat, könnte das Schema für die Entität „Kunden“ auch ein `LoyaltyAccount`-Objekt mit den entsprechenden Treuefeldern für jede Kundin oder jeden Kunden enthalten. Bei einer Eins-zu-viele-Beziehung kann die Entität, die für „viele“ steht, je nach ihrer Komplexität durch ein separates Schema oder ein Array von Profilattributen dargestellt werden.
+>Da beispielsweise die Entität „Kunde“ eine Eins-zu-eins-Beziehung zur Entität „Treuekonto“ hat, könnte das Schema für die Entität „Kunde“ auch ein `LoyaltyAccount`-Objekt mit den entsprechenden Treuefeldern für jede Kundin oder jeden Kunden enthalten. Bei einer Eins-zu-viele-Beziehung kann die Entität, die für „viele“ steht, je nach ihrer Komplexität durch ein separates Schema oder ein Array von Profilattributen dargestellt werden.
 
 Die folgenden Abschnitte enthalten allgemeine Anleitungen zum Erstellen von Schemata basierend auf Ihrem ERD.
 
