@@ -2,7 +2,7 @@
 title: Erstellen von Zielgruppen mithilfe von SQL
 description: Erfahren Sie, wie Sie mit der SQL-Zielgruppenerweiterung in Adobe Experience Platform Data Distiller Zielgruppen mithilfe von SQL-Befehlen erstellen, verwalten und veröffentlichen können. Dieses Handbuch behandelt alle Aspekte des Zielgruppen-Lebenszyklus, einschließlich der Erstellung, Aktualisierung und Löschung von Profilen und der Verwendung datengesteuerter Zielgruppendefinitionen für dateibasierte Ziele.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ Verwenden Sie diese Parameter, um Ihre SQL-Zielgruppenerstellungsabfrage zu defi
 | `schema` | Optional. Definiert das XDM-Schema für den von der Abfrage erstellten Datensatz. |
 | `table_name` | Name der Tabelle und Zielgruppe. |
 | `primary_identity` | Gibt die primäre Identitätsspalte für die Zielgruppe an. |
-| `identity_namespace` | Namespace der Identität. Sie können einen vorhandenen Namespace verwenden oder einen neuen erstellen. Um verfügbare Namespaces anzuzeigen, verwenden Sie den Befehl `SHOW NAMESPACE` . Um einen neuen Namespace zu erstellen, verwenden Sie `CREATE NAMESPACE`. Beispiel: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | Namespace der Identität. Sie können einen vorhandenen Namespace verwenden oder einen neuen erstellen. Um verfügbare Namespaces anzuzeigen, verwenden Sie den Befehl `SHOW NAMESPACES` . Um einen neuen Namespace zu erstellen, verwenden Sie `CREATE NAMESPACE`. Beispiel: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | Eine SELECT-Anweisung, die die Audience definiert. Die Syntax der SELECT-Abfrage finden Sie im Abschnitt [SELECT](../sql/syntax.md#select-queries)Abfragen. |
 
 {style="table-layout:auto"}
