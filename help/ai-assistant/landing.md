@@ -3,7 +3,7 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
+source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Lesen Sie zunächst das Material unter den unten stehenden Links, um sich mit de
     <div><strong>Erweitern Sie Ihr </strong><br/>: Entdecken, beheben und erweitern Sie Ihr Wissen über Produkte, ohne Ihre Workflows zu unterbrechen.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>Besuchen Sie die Video-Wiedergabeliste des KI</strong><br/>AssistentenErfahren Sie mehr über die vielen verschiedenen Herausforderungen und Anwendungsfälle, die Sie mit dem KI-Assistenten bewältigen können.</div>
     </td>
   </tr>
