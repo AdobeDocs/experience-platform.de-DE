@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
+source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,22 @@ Lesen Sie zunächst das Material unter den unten stehenden Links, um sich mit de
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style"="width:100%;max-height:100%&quot;"></a>
     <div><strong>Datenobjekte verstehen</strong><br/> Abrufen von operativen Einblicken zu Ihren Datenobjekten, um einen besseren Überblick über deren Status, Nutzung und Auswirkungen auf die Herkunft zu erhalten.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style="width:100%;max-height:100%"></a>
     <div><strong>Erweitern Sie Ihr </strong><br/>: Entdecken, beheben und erweitern Sie Ihr Wissen über Produkte, ohne Ihre Workflows zu unterbrechen.</div>
+    </td>
+    <td>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <div><strong>Besuchen Sie die Video-Wiedergabeliste des KI</strong><br/>AssistentenErfahren Sie mehr über die vielen verschiedenen Herausforderungen und Anwendungsfälle, die Sie mit dem KI-Assistenten bewältigen können.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -152,6 +157,7 @@ Im Folgenden finden Sie Anwendungsbeispiele für KI-Assistenten:
 * [Beseitigen Sie die Zielgruppen und optimieren Sie Ihre Marketing-Abläufe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Überprüfen Sie Abhängigkeiten und minimieren Sie Risiken bei Datenaktualisierungen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Minimieren Sie das Risiko bei Datenaktualisierungen, indem Sie die Abhängigkeiten in Sekunden überprüfen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Neue Funktionen schneller entdecken und bereitstellen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB Zusätzliche Videoinhalte]
 
