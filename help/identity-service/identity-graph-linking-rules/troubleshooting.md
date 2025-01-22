@@ -2,9 +2,9 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme bei Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -149,12 +149,8 @@ Es gibt verschiedene Gründe dafür, warum Ihre Erlebnisereignisfragmente nicht 
 * [Im Profil ist möglicherweise ein Validierungsfehler aufgetreten](../../xdm/classes/experienceevent.md).
    * Beispielsweise muss ein Erlebnisereignis sowohl einen `_id` als auch einen `timestamp` enthalten.
    * Darüber hinaus muss die `_id` für jedes Ereignis (Datensatz) eindeutig sein.
-* Der Namespace mit der höchsten Priorität ist eine leere Zeichenfolge.
 
-Im Kontext der Namespace-Priorität lehnt das Profil Folgendes ab:
-
-* Jedes Ereignis, das zwei oder mehr Identitäten mit der höchsten Namespace-Priorität enthält. Wenn beispielsweise GAID nicht als eindeutiger Namespace markiert ist und zwei Identitäten sowohl mit einem GAID-Namespace als auch mit unterschiedlichen Identitätswerten eingingen, speichert das Profil keines der Ereignisse.
-* Jedes Ereignis, bei dem der Namespace mit der höchsten Priorität eine leere Zeichenfolge ist.
+Im Kontext der Namespace-Priorität lehnt das Profil jedes Ereignis ab, das zwei oder mehr Identitäten mit der höchsten Namespace-Priorität enthält. Wenn beispielsweise GAID nicht als eindeutiger Namespace markiert ist und zwei Identitäten sowohl mit einem GAID-Namespace als auch mit unterschiedlichen Identitätswerten eingingen, speichert das Profil keines der Ereignisse.
 
 **Schritte zur Fehlerbehebung**
 
@@ -175,16 +171,7 @@ Wenn Ihre Daten an den Data Lake, aber nicht an das Profil gesendet werden und S
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Sie können auch die folgende Abfrage ausführen, um zu überprüfen, ob die Aufnahme in das Profil nicht erfolgt, da der höchste Namespace eine leere Zeichenfolge hat:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-Diese beiden Abfragen gehen davon aus, dass:
+Diese Abfrage geht davon aus, dass:
 
 * Eine Identität wird von identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemata ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
 * Die CRMID wird über identityMap gesendet. Wenn die CRMID als Feld gesendet wird, entfernen Sie die `key='Email'` aus der WHERE-Klausel.

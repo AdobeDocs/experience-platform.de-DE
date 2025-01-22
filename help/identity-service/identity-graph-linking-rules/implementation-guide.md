@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die
 
 
 >[!ENDTABS]
-
-Senden Sie beim Senden von Ereignissen mit XDM-Erlebnisereignissen keine leere Zeichenfolge als Identitätswert. Wenn der Identitätswert des Namespace mit der höchsten Namespace-Priorität eine leere Zeichenfolge ist, wird der Datensatz im Echtzeit-Kundenprofil ignoriert. Dies gilt sowohl für identityMap als auch für als Identität markierte Felder.
-
-+++Auswählen, um ein Beispiel für eine Payload mit einer leeren Zeichenfolge anzuzeigen
-
-Das folgende Beispiel gibt einen Fehler zurück, da der Identitätswert für `Phone` als leere Zeichenfolge übermittelt wird.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 Sie müssen sicherstellen, dass Sie über eine vollständig qualifizierte Identität verfügen, wenn Sie Ereignisse mithilfe von XDM-Erlebnisereignissen senden.
 
