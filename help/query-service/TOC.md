@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 76%
+source-wordcount: '382'
+ht-degree: 73%
 
 ---
 
@@ -43,12 +43,14 @@ ht-degree: 76%
    - [Übersicht](advanced-statistics/overview.md)
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)
+   - [Funktionstransformation](advanced-statistics/feature-transformation.md)
 Implementieren von Modellen {#implement-models}
       - [Implementieren von Modellen](advanced-statistics/implement-models/implement-models.md)
       - [Regression](advanced-statistics/implement-models/regression.md)
       - [Klassifizierung](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
-   - [Funktionstransformation](advanced-statistics/feature-transformation.md)
+Beispiele {#examples}
+      - [Prognostizieren der Kundenabwanderung mithilfe der SQL-basierten logistischen Regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller Audiences-{#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mithilfe von SQL](data-distiller-audiences/overview.md)
 - Beispiele {#use-cases}
@@ -64,6 +66,7 @@ Implementieren von Modellen {#implement-models}
    - [Ungefähre Übereinstimmung](use-cases/fuzzy-match.md)
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
+   - [Prognostizieren der Kundenabwanderung mithilfe von SQL](use-cases/predict-customer-churn-stub.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
    - [Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung](use-cases/retrieve-similar-records.md)
    - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)

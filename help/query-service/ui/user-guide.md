@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 23%
+source-wordcount: '2807'
+ht-degree: 24%
 
 ---
 
@@ -217,12 +217,9 @@ Jeder Datensatz, der in [ausgewählten Datenbank](#database-dropdown) enthalten 
 
 Das im Objekt-Browser angezeigte Schema ist ein beobachtbares Schema. Das bedeutet, dass Sie damit Änderungen und Aktualisierungen in Echtzeit überwachen können, da Änderungen sofort sichtbar sind. Die beobachtbaren Schemata helfen, die Datensynchronisation sicherzustellen, und unterstützen bei Debugging- oder Analyseaufgaben.
 
-#### Aktuelle Einschränkungen {#current-limitations}
+#### Strombegrenzung {#current-limitation}
 
-Im Folgenden finden Sie eine Liste der aktuellen Einschränkungen:
-
-- Sequenzielle Abfrageausführung: Es kann immer nur eine Abfrage ausgeführt werden. Während eine Abfrage ausgeführt wird, können im linken Navigationsbereich keine zusätzlichen Tabellen geöffnet werden, da Abfragen sequenziell verarbeitet werden.
-- Zusätzliche Zeilen in Abfrageprotokollen: Sie können auf irrelevante Abfragen stoßen, die in den Protokollen als „TABELLEN ANZEIGEN“ gekennzeichnet sind. Diese werden in zukünftigen Versionen entfernt.
+Das System verarbeitet Abfragen sequenziell, d. h., es kann jeweils nur eine Abfrage ausgeführt werden. Während eine Abfrage ausgeführt wird, können im linken Navigationsbereich keine zusätzlichen Tabellen aufgerufen werden.
 
 #### Zugriff auf Tabellenmetadaten {#table-metadata}
 
