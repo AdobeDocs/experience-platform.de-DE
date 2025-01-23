@@ -2,16 +2,29 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 77%
+source-wordcount: '2413'
+ht-degree: 75%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.28.0 – Mittwoch, 23. Januar 2024
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem Überschreibungen des ID-Synchronisierungs-Containers ohne Aktivierung von Audience Manager nicht festgelegt werden konnten.
+- Es wurde ein Problem behoben, bei dem Überschreibungen der Datenstromkonfiguration beim Upgrade auf die neueste Version deaktiviert wurden.
+- Es wurde ein Problem behoben, bei dem Benutzer die Einstellungen für die automatische Klicksammlung von Target nicht speichern konnten.
+
+**Neue Funktionen**
+
+- Es wurde eine neue Funktion hinzugefügt, mit der Sie zwischen technischen Namen und Anzeigenamen im XDM-Objekt wechseln können.
+- Enthält [Version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) des Adobe Experience Platform Web SDK.
 
 ## Version 2.27.0 – Freitag, 31. Oktober 2024
 
