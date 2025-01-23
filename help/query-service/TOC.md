@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 73%
+source-wordcount: '397'
+ht-degree: 71%
 
 ---
 
@@ -50,6 +50,7 @@ Implementieren von Modellen {#implement-models}
       - [Klassifizierung](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
 Beispiele {#examples}
+      - [Bot-Filterung mithilfe von Statistiken und maschinellem Lernen](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prognostizieren der Kundenabwanderung mithilfe der SQL-basierten logistischen Regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller Audiences-{#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mithilfe von SQL](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ Beispiele {#examples}
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
    - [Bot-Filterung](use-cases/bot-filtering.md)
+   - [Bot-Filterung mithilfe von Statistiken und Einführung in maschinelles Lernen](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [Erstellen eines Trendberichts mit Ereignissen](use-cases/trended-report-of-events.md)
    - [Einverständnisanalyse](use-cases/consent-analysis.md)
    - [Kundenlebenszeitwert](use-cases/customer-lifetime-value.md)
