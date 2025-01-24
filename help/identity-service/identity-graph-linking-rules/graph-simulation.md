@@ -2,9 +2,9 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1484'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,6 @@ Viewer für simulierte Diagramme : Der Viewer für simulierte Diagramme zeigt da
 >id="platform_identities_graphsimulation"
 >title="Ereignisse hinzufügen"
 >abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 Wählen Sie zunächst **[!UICONTROL Ereignisse hinzufügen]** aus.
 
