@@ -2,10 +2,10 @@
 title: Verknüpfungslogik zum Identity Service
 description: Erfahren Sie, wie Identity Service unterschiedliche Identitäten verknüpft, um eine umfassende Ansicht eines Kunden zu erstellen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 1%
+source-wordcount: '968'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,12 @@ Eine Identität stellt eine reale Entität dar. Wenn eine Verbindung zwischen zw
 | Endbenutzer melden sich mit Google Chrome und dann mit Firefox an. | CRMID ist mit zwei verschiedenen ECIDs verknüpft. | Eine Person (CRMID) ist mit zwei Webbrowsern verknüpft (**Hinweis**: Jeder Browser verfügt über eine eigene ECID). |
 | Ein Datentechniker nimmt einen CRM-Datensatz auf, der zwei als Identität markierte Felder enthält: CRMID und E-Mail. | CRMID und E-Mail sind verknüpft. | Der E-Mail-Adresse ist eine Person (CRMID) zugeordnet. |
 
-## Grundlegendes zur Verknüpfungslogik von Identity Service
+## Grundlegendes zur Verknüpfungslogik von Identity Service {#identity-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Simuliertes Diagramm"
+>abstract="Identitäten werden verknüpft, wenn der Identity-Namespace und der Identitätswert übereinstimmen."
 
 Eine Identität besteht aus einem Identity-Namespace und einem Identitätswert.
 

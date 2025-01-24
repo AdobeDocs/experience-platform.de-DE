@@ -2,9 +2,9 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -22,6 +22,11 @@ Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus in Identity S
 In diesem Abschnitt finden Sie Informationen zu eindeutigen Namespaces und Namespace-Priorität. Diese beiden Konzepte dienen als Eingabeparameter, die für den Algorithmus zur Identitätsoptimierung erforderlich sind.
 
 ### Eindeutiger Namespace {#unique-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Algorithmuskonfiguration"
+>abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
 
 Ein eindeutiger Namespace bestimmt die Links, die entfernt werden, wenn das Diagramm reduziert wird.
 

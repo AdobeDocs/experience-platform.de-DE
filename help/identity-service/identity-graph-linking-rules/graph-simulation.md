@@ -2,10 +2,10 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -50,6 +50,12 @@ Viewer für simulierte Diagramme : Der Viewer für simulierte Diagramme zeigt da
 >[!ENDTABS]
 
 ## Ereignisse hinzufügen {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Ereignisse hinzufügen"
+>abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 Wählen Sie zunächst **[!UICONTROL Ereignisse hinzufügen]** aus.
 
@@ -126,6 +132,16 @@ Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) nebe
 ![Das ausgewählte Symbol „Ereignis löschen“](../images/graph-simulation/delete.png)
 
 ## Algorithmus konfigurieren {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Algorithmuskonfiguration"
+>abstract="Konfigurieren Sie den eindeutigen Namespace und die Namespace-Priorität für die aufgenommenen Identitäten."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Algorithmuskonfiguration"
+>abstract="Die Namespace-Priorität bestimmt, wie Links aus dem Identitätsdiagramm entfernt werden."
 
 >[!IMPORTANT]
 >
