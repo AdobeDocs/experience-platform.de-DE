@@ -2,14 +2,19 @@
 title: Veröffentlichungsablauf
 description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 97%
+source-wordcount: '1509'
+ht-degree: 96%
 
 ---
 
-# Veröffentlichungsablauf
+# Veröffentlichungsablauf {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Veröffentlichungsablauf"
+>abstract="Machen Sie sich mit den Stufen der Benutzerberechtigungen vertraut, die für den Publishing-Ablauf erforderlich sind, einschließlich der Rechte zum Entwickeln, Genehmigen und Publish."
 
 >[!NOTE]
 >

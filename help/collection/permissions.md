@@ -2,14 +2,19 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht über die Verwaltung von Berechtigungen und die Steuerung des Zugriffs auf Datenerfassungsfunktionen in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 28%
+source-wordcount: '1356'
+ht-degree: 27%
 
 ---
 
-# Berechtigungsverwaltung für die Datenerfassung in Experience Platform
+# Berechtigungsverwaltung für die Datenerfassung in Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Berechtigungen"
+>abstract="Machen Sie sich mit den wichtigsten Berechtigungen vertraut, die für die Arbeit mit Datenströmen, Schemata, Identitäten und Sandboxes in Adobe Experience Platform erforderlich sind."
 
 [Datenerfassung in Adobe Experience Platform](./home.md) besteht aus mehreren verschiedenen Technologien, die zusammenarbeiten, um Ihre Daten zu erfassen und zu übertragen. Der Zugriff auf diese Technologien wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert.
 
