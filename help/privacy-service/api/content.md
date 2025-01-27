@@ -2,20 +2,15 @@
 title: Content API-Endpunkt
 description: Erfahren Sie, wie Sie Ihre Zugriffsdaten mit der Privacy Service-API abrufen.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 6%
+source-wordcount: '669'
+ht-degree: 5%
 
 ---
 
 # Content-Endpunkt
-
->[!IMPORTANT]
->
->Der `/content`-Endpunkt befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
 
 Verwenden Sie den `/content`-Endpunkt zum sicheren Abrufen *Zugriffsinformationen* (die Informationen, auf die eine betroffene Person zu Recht zugreifen kann) für Ihre Kunden. Die in der Antwort auf eine `/jobs/{JOB_ID}` GET-Anfrage angegebene Download-URL verweist auf einen Adobe Service-Endpunkt. Sie können dann eine GET-Anfrage an `/jobs/:JOB_ID/content` stellen, um Ihre Kundendaten im JSON-Format zurückzugeben. Diese Zugriffsmethode implementiert mehrere Authentifizierungs- und Zugriffssteuerungsebenen, um die Sicherheit zu erhöhen.
 
