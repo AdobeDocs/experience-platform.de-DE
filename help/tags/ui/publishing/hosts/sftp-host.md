@@ -2,10 +2,10 @@
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
+source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 38%
+source-wordcount: '810'
+ht-degree: 39%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Mit Adobe Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesicherten SFTP-Server bereitstellen, den Sie hosten, sodass Sie besser steuern können, wie Ihre Builds gespeichert und verwaltet werden. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche einrichten.
+Mit Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesicherten SFTP-Server bereitstellen, den Sie hosten, sodass Sie besser steuern können, wie Ihre Builds gespeichert und verwaltet werden. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche einrichten.
 
 >[!NOTE]
 >
