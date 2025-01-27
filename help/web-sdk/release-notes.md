@@ -3,7 +3,7 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 70%
@@ -16,13 +16,13 @@ ht-degree: 70%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.25.0 – Mittwoch, 23. Januar 2024 {#2-25-0}
+## Version 2.25.0 – Freitag, 23. Januar 2025
 
 **Behoben und Verbesserungen**
 
 - Dem `setDebug`-Befehl wurde eine Optionsvalidierung hinzugefügt.
 - Es wurde eine Warnung hinzugefügt, die angezeigt wird, wenn eine `onBeforeLinkClickSend`-Funktion oder ein Download-Link-Qualifizierer konfiguriert wird, wenn die Klick-Sammlung deaktiviert ist.
-- Es wurde ein Problem behoben, bei dem gerenderte Vorschläge nicht in Anzeigebenachrichtigungen enthalten waren
+- Es wurde ein Problem behoben, bei dem gerenderte Vorschläge nicht in Anzeigebenachrichtigungen enthalten waren.
 
 **Neue Funktionen**
 
