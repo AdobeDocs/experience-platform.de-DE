@@ -2,7 +2,7 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -25,7 +25,7 @@ In diesem Abschnitt finden Sie Informationen zu eindeutigen Namespaces und Names
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="Algorithmuskonfiguration"
+>title="Eindeutiger Namespace"
 >abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
 
 Ein eindeutiger Namespace bestimmt die Links, die entfernt werden, wenn das Diagramm reduziert wird.

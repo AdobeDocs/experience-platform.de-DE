@@ -2,7 +2,7 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1484'
 ht-degree: 4%
@@ -53,8 +53,9 @@ Viewer für simulierte Diagramme : Der Viewer für simulierte Diagramme zeigt da
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Ereignisse hinzufügen"
+>title="Diagrammsimulation"
 >abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
+>text="Learn more in documentation"
 
 Wählen Sie zunächst **[!UICONTROL Ereignisse hinzufügen]** aus.
 
@@ -139,7 +140,7 @@ Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) nebe
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Algorithmuskonfiguration"
+>title="Namespace-Priorität"
 >abstract="Die Namespace-Priorität bestimmt, wie Links aus dem Identitätsdiagramm entfernt werden."
 
 >[!IMPORTANT]

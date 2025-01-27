@@ -2,7 +2,7 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 3%
@@ -37,7 +37,7 @@ In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfig
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Szenarien für die Diagrammreduzierung"
+>title="Szenarien zum Diagrammreduzieren"
 >abstract="Es gibt mehrere Gründe, warum Diagramme „reduziert“ werden oder mehrere Personenentitäten darstellen können."
 
 Es gibt Fälle, in denen sich ein Gerät mehrmals anmelden kann:
