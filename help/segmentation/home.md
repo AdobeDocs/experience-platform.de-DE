@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1679'
 ht-degree: 93%
 
 ---
@@ -55,10 +55,6 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 ### Komposition föderierter Zielgruppen {#fac}
 
 Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
-
->[!AVAILABILITY]
->
->Die Komposition föderierter Zielgruppen ist derzeit nur für eine Reihe von Organisationen verfügbar (begrenzte Verfügbarkeit). Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 ## Bewerten von Zielgruppen {#evaluate-segments}
 

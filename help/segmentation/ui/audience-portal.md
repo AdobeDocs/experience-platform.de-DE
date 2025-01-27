@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4569'
 ht-degree: 54%
 
 ---
@@ -25,7 +25,7 @@ In Audience Portal können Sie die folgenden Aufgaben ausführen:
 - [Erstellen einer Zielgruppe](#create-audience)
    - [Verwenden von Segment Builder zum Erstellen einer Zielgruppe](#segment-builder)
    - [Verwenden der Audience-Komposition zum Erstellen einer Audience](#audience-composition)
-   - [Erstellen einer Zielgruppe mithilfe von Daten aus Ihrem vorhandenen Data Warehouse mithilfe einer Federated Audience ](#fac)Komposition) (eingeschränkte Verfügbarkeit)
+   - [Verwenden Sie die Federated Audience-Komposition, um eine Audience mit Daten aus Ihrem vorhandenen Data Warehouse zu erstellen](#fac)
 - [Extern generierte Zielgruppen importieren](#import-audience)
 
 Um das Audience Portal zu öffnen, wählen Sie **[!UICONTROL Abschnitt Segmentierung]** Registerkarte Durchsuchen aus.
