@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Sandbox-UI
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
+source-git-commit: c63de71c248e6a41dbbadbe8089156ee3c2829cf
 workflow-type: tm+mt
-source-wordcount: '929'
-ht-degree: 80%
+source-wordcount: '1056'
+ht-degree: 52%
 
 ---
 
@@ -17,23 +17,23 @@ In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Ex
 
 ## Anzeigen von Sandboxes
 
-Klicken Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste auf die Option **[!UICONTROL Sandboxes]** und wählen Sie dann **[!UICONTROL Durchsuchen]** aus, um das [!UICONTROL Sandboxes]-Dashboard zu öffnen. Das Dashboard listet alle verfügbaren Sandboxes für Ihre Organisation auf, einschließlich des jeweiligen Typs (Produktion oder Entwicklung).
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Sandboxes]** im linken Navigationsbereich und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um das [!UICONTROL Sandboxes]-Dashboard zu öffnen. Das Dashboard listet alle verfügbaren Sandboxes für Ihre Organisation auf, einschließlich des jeweiligen Typs (Produktion oder Entwicklung).
 
-![view-sandboxes](../images/ui/view-sandboxes.png)
+![Das Sandbox-Dashboard mit ausgewählter Registerkarte Durchsuchen , auf der eine Liste der verfügbaren Sandboxes angezeigt wird.](../images/ui/view-sandboxes.png)
 
 ## Wechseln zwischen Sandboxes
 
 Der Sandbox-Indikator befindet sich in der oberen Kopfzeile der Platform-Benutzeroberfläche und zeigt den Titel der derzeit aktiven Sandbox, deren Region und deren Typ an.
 
-![sandbox-indicator](../images/ui/sandbox-indicator.png)
+![Das Sandbox-Dashboard mit hervorgehobenem Sandbox-Indikator.](../images/ui/sandbox-indicator.png)
 
-Um zwischen Sandboxes zu wechseln, klicken Sie auf den Sandbox-Indikator und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
+Um zwischen Sandboxes zu wechseln, wählen Sie den Sandbox-Indikator und dann die gewünschte Sandbox aus der Dropdown-Liste aus. Alternativ können Sie mit der Suchfunktion im Dropdown-Menü nach der gewünschten Sandbox suchen.
 
-![switcher-interface](../images/ui/switcher-interface.png)
+![Das Dropdown-Menü Sandbox-Anzeige wird mit einer Liste von Sandboxes angezeigt, auf die Sie Zugriff haben.](../images/ui/switcher-interface.png)
 
 Sobald eine Sandbox ausgewählt ist, wird der Bildschirm mit der ausgewählten Sandbox aktualisiert.
 
-![sandbox-switched](../images/ui/sandbox-switched.png)
+![Das Sandbox-Dashboard mit hervorgehobenem Indikator „Geänderte Sandbox“.](../images/ui/sandbox-switched.png)
 
 ## Erstellen einer neuen Sandbox {#create}
 
@@ -47,7 +47,7 @@ Sobald eine Sandbox ausgewählt ist, wird der Bildschirm mit der ausgewählten S
 >title="Sandbox-Titel"
 >abstract="Der Sandbox-Titel ist der Anzeigename, den die Sandbox in Menüs und Dropdown-Menüs in der Experience Platform-Benutzeroberfläche erhält."
 
->[!NOTE]
+>[!WARNING]
 >
 >Für die Erstellung einer neuen Sandbox müssen Sie sie einer Rolle in [[!UICONTROL Berechtigungen“ hinzufügen]](../../access-control/abac/ui/permissions.md) bevor Sie sie verwenden können. Informationen zum Bereitstellen einer Sandbox für eine Rolle finden Sie in der Dokumentation [Verwalten von Sandboxes für eine Rolle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
 
@@ -59,28 +59,26 @@ Um eine neue Sandbox zu erstellen, wählen Sie in der rechten oberen Bildschirme
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-Das Dialogfeld **[!UICONTROL Sandbox erstellen]** wird angezeigt. Wenn Sie eine Entwicklungs-Sandbox erstellen, wählen Sie im Dropdown-Feld **[!UICONTROL Entwicklung]** aus. Um eine neue Produktions-Sandbox zu erstellen, wählen Sie **[!UICONTROL Produktion]** aus.
+Das Dialogfeld **[!UICONTROL Sandbox erstellen]** wird angezeigt. Wählen Sie die **[!UICONTROL Typ]** und wählen Sie entweder den [!UICONTROL Entwicklung] oder [!UICONTROL Produktion]Sandbox-Typ.
 
-![sandbox-type](../images/ui/sandbox-type.png)
+![Das Dialogfeld „Sandbox erstellen“ mit hervorgehobener Auswahl des Sandbox-Typs.](../images/ui/sandbox-type.png)
 
-Geben Sie nach Auswahl des Typs Ihrer Sandbox einen Namen und einen Titel ein. Der Titel sollte verständlich und aussagekräftig sein, damit er leicht zu erkennen ist. Der Name der Sandbox ist eine in Kleinbuchstaben verfasste Kennung zur Verwendung in API-Aufrufen und sollte daher eindeutig und kurz sein. Der Sandbox-Name muss mit einem Buchstaben beginnen, er darf maximal 256 Zeichen lang sein und nur aus alphanumerischen Zeichen und Bindestrichen (-) bestehen.
+Geben Sie nach Auswahl des Typs im Feld **[!UICONTROL einen Namen für]** Sandbox ein. Der Name der Sandbox ist eine in Kleinbuchstaben verfasste Kennung zur Verwendung in API-Aufrufen und sollte daher eindeutig und kurz sein. Der Sandbox-Name muss mit einem Buchstaben beginnen, er darf maximal 256 Zeichen lang sein und nur aus alphanumerischen Zeichen und Bindestrichen (-) bestehen. Geben Sie als Nächstes einen Titel für Ihre Sandbox im Feld **[!UICONTROL Titel]** an. Der Titel sollte verständlich und aussagekräftig sein, damit er leicht zu erkennen ist.
 
 Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
-![sandbox-info](../images/ui/sandbox-info.png)
+![Das Dialogfeld „Sandbox erstellen“ mit hervorgehobenem Namen und Titel und hervorgehobener Option „Erstellen“.](../images/ui/sandbox-info.png)
 
 Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die neue Sandbox wird im Dashboard **[!UICONTROL Sandboxes]** mit dem Status „[!UICONTROL Wird erstellt]“ angezeigt. Bei neuen Sandboxes dauert es etwa 30 Minuten, bis sie vom System bereitgestellt werden. Danach ändert sich ihr Status in „[!UICONTROL Aktiv]“.
 
-![new-sandbox](../images/ui/new-sandbox.png)
+![Das Sandbox-Dashboard mit der hervorgehobenen neu erstellten Sandbox.](../images/ui/new-sandbox.png)
 
 ## Zurücksetzen einer Sandbox
 
 >[!WARNING]
 >
 >Im Folgenden finden Sie eine Liste von Ausnahmen, die verhindern können, dass die standardmäßige Produktions-Sandbox oder eine benutzerdefinierte Produktions-Sandbox sich zurücksetzen lässt:
->* Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das in der Sandbox gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Geräteübergreifende Analyse (Cross Device Analytics, CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird.
->* Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das in der Sandbox gehostete Identitätsdiagramm auch von Adobe Audience Manager für [Benutzerbasierte Ziele (People Based Destinations, PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
->* Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn sie Daten für CDA- und PBD-Funktionen enthält.
+>
 >* Eine benutzerdefinierte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nach einer Warnmeldung zurückgesetzt werden.
 >* Vor dem Zurücksetzen einer Sandbox müssen Sie Ihre Kompositionen manuell löschen, um sicherzustellen, dass die zugehörigen Zielgruppendaten ordnungsgemäß bereinigt werden.
 
@@ -88,9 +86,9 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die 
 
 Die Zielgruppenkomposition ist derzeit nicht in die Funktion zum Zurücksetzen der Sandbox integriert, sodass Zielgruppen vor dem Zurücksetzen der Sandbox manuell gelöscht werden müssen.
 
-Wählen Sie **[!UICONTROL linken Navigationsbereich]** Zielgruppen“ und dann **[!UICONTROL Kompositionen]** aus.
+Wählen Sie **[!UICONTROL Zielgruppen]** aus dem Abschnitt **[!UICONTROL Kunden]** im linken Navigationsbereich aus und wählen Sie dann die Registerkarte **[!UICONTROL Kompositionen]** aus.
 
-![Registerkarte [!UICONTROL Kompositionen] im Arbeitsbereich [!UICONTROL Zielgruppen].](../images/ui/audiences.png)
+![Das Zielgruppen-Dashboard mit ausgewählter und hervorgehobener Registerkarte „Kompositionen“.](../images/ui/audiences.png)
 
 Klicken Sie als Nächstes auf das Auslassungszeichen (`...`) neben der ersten Zielgruppe und dann auf **[!UICONTROL Löschen]**.
 
@@ -106,15 +104,15 @@ Beim Zurücksetzen einer Produktions- oder Entwicklungs-Sandbox werden alle mit 
 
 Wählen Sie in der Sandbox-Liste die Sandbox aus, die Sie zurücksetzen möchten. Wählen Sie im sich öffnenden Navigationsfeld rechts die Option **[!UICONTROL Sandbox zurücksetzen]** aus.
 
-![zurücksetzen](../images/ui/reset.png)
+![Das Sandbox-Dashboard mit der ausgewählten Sandbox und der hervorgehobenen Option „Sandbox zurücksetzen“.](../images/ui/reset.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![reset-warning](../images/ui/reset-warning.png)
+![Das Dialogfeld zum Zurücksetzen wird angezeigt, wobei die Option „Weiter“ hervorgehoben ist.](../images/ui/reset-warning.png)
 
 Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox im Dialogfeld ein und klicken Sie auf **[!UICONTROL Zurücksetzen]**.
 
-![reset-confirm](../images/ui/reset-confirm.png)
+![Das Dialogfeld „Zurücksetzen“ mit hervorgehobenem Feld „Name bestätigen“ und hervorgehobener Option „Zurücksetzen“.](../images/ui/reset-confirm.png)
 
 ## Sandbox löschen
 
@@ -126,16 +124,18 @@ Wenn Sie eine Produktions- oder Entwicklungs-Sandbox löschen, werden alle mit d
 
 Wählen Sie die Sandbox aus, die Sie aus der Sandbox-Liste löschen möchten. Klicken Sie im rechten Navigationsfeld, das sich öffnet, auf **[!UICONTROL Löschen]**.
 
-![löschen](../images/ui/delete.png)
+![Das Sandbox-Dashboard mit der ausgewählten Sandbox und der hervorgehobenen Option „Löschen“.](../images/ui/delete.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![delete-warning](../images/ui/delete-warning.png)
+![Das Dialogfeld „Löschen“ wird angezeigt, wobei die Option „Weiter“ hervorgehoben ist.](../images/ui/delete-warning.png)
 
 Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfeld ein und klicken Sie auf  **[!UICONTROL Weiter]**.
 
-![delete-confirm](../images/ui/delete-confirm.png)
+![Das Dialogfeld „Löschen“ mit hervorgehobenem Feld „Name bestätigen“ und hervorgehobener Option „Fortfahren“.](../images/ui/delete-confirm.png)
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie erfahren, wie Sie Sandboxes in der Benutzeroberfläche von Experience Platform verwalten können. Informationen zum Verwalten von Sandboxes mithilfe der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md).
+In diesem Dokument haben Sie erfahren, wie Sie Sandboxes in der Benutzeroberfläche von Experience Platform verwalten können. Nachdem Sie nun wissen, wie Sie Sandboxes verwalten, erfahren Sie, wie Sie mit dem Handbuch Sandbox-Tools [ die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren ](./sandbox-tooling.md) importieren können.
+
+Informationen zum Verwalten von Sandboxes mithilfe der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md).
