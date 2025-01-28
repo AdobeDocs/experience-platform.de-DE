@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 51%
 
 ---
@@ -439,25 +439,32 @@ Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung s
 
 * **Deterministische Auswahl**: Wenn mehrere Profile identische Deduplizierungsschlüssel und denselben Referenzzeitstempel haben, bestimmt die Deduplizierungslogik, welches Profil exportiert werden soll, indem die Werte anderer ausgewählter Spalten (ohne komplexe Typen wie Arrays, Zuordnungen oder Objekte) sortiert werden. Die sortierten Werte werden in lexikografischer Reihenfolge ausgewertet und das erste Profil wird ausgewählt.
 
-* **Beispielszenario**:\
-  Betrachten Sie die folgenden Daten, wobei der Deduplizierungsschlüssel die `Email` Spalte ist:\
-  |E-Mail*|first_name|last_name|timestamp|\
-  |—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **Beispielszenario**
 
-  Nach der Deduplizierung enthält die Exportdatei Folgendes:\
-  |E-Mail*|first_name|last_name|timestamp|\
-  |—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+Betrachten Sie die folgenden Daten, wobei der Deduplizierungsschlüssel die `Email` Spalte ist:
 
-  **Erläuterung**: `test1@test.com` verwenden beide Profile denselben Deduplizierungsschlüssel und denselben Zeitstempel. Der Algorithmus sortiert die `first_name` und `last_name` Spaltenwerte lexikografisch. Da die Vornamen identisch sind, wird die Verbindung mithilfe der Spalte `last_name` aufgelöst, wobei „Doe“ vor „Morris“ steht.
+| E-Mail* | first_name | last_name | Zeitstempel |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | freimütig | Smith | 2024-10-12T09:50 |
 
-* **Verbesserte Zuverlässigkeit**: Dieser aktualisierte Deduplizierungsprozess stellt sicher, dass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern, was die Konsistenz verbessert.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Exportieren von Arrays durch berechnete Felder {#export-arrays-calculated-fields}
+Nach der Deduplizierung enthält die Exportdatei Folgendes:
+
+| E-Mail* | first_name | last_name | Zeitstempel |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | freimütig | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Erläuterung**: `test1@test.com` verwenden beide Profile denselben Deduplizierungsschlüssel und denselben Zeitstempel. Der Algorithmus sortiert die `first_name` und `last_name` Spaltenwerte lexikografisch. Da die Vornamen identisch sind, wird die Verbindung mithilfe der Spalte `last_name` aufgelöst, wobei „Doe“ vor „Morris“ steht.
+
+**Verbesserte Zuverlässigkeit**: Dieser aktualisierte Deduplizierungsprozess stellt sicher, dass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern, was die Konsistenz verbessert.
+
+### Exportieren von Arrays über berechnete Felder {#export-arrays-calculated-fields}
 
 Ausgewählte Beta-Kundinnen und -Kunden können Array-Objekte von Experience Platform in Cloud-Speicher-Ziele exportieren. Lesen Sie mehr über [Exportieren von Arrays und berechneten Feldern](/help/destinations/ui/export-arrays-calculated-fields.md) und wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf die Funktion zu erhalten.
 
@@ -474,10 +481,10 @@ Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Fe
 
 >[!NOTE]
 >
-Bei Cloud-Speicher-Zielen werden der Zuordnung standardmäßig die folgenden Attribute hinzugefügt:
+>Bei Cloud-Speicher-Zielen werden der Zuordnung standardmäßig die folgenden Attribute hinzugefügt:
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist:
 
@@ -500,9 +507,9 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 
 >[!IMPORTANT]
 > 
-Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten [[!UICONTROL Zuordnungsschritt] sehen, ](#mapping) den in diesem Abschnitt beschriebenen **[!UICONTROL Attribute]**&quot; ersetzt.
+>Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten [[!UICONTROL Zuordnungsschritt] sehen, ](#mapping) den in diesem Abschnitt beschriebenen **[!UICONTROL Attribute]**&quot; ersetzt.
 >
-Dieser **[!UICONTROL Attribute auswählen]**-Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
+>Dieser **[!UICONTROL Attribute auswählen]**-Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
 
 Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie an das Ziel senden möchten.
 
@@ -522,15 +529,15 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
 >[!NOTE]
 >
-Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Abbildung mit vorausgefüllten empfohlenen Attributen im Zuordnungsschritt des Zielgruppenaktivierungs-Workflows.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
+>Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
 >
-![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows zeigt.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows zeigt.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist:
 * Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
@@ -538,14 +545,14 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 
 ## Auswählen von Anreicherungsattributen {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Ausschließen von Anreicherungsattributen"
-abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Ausschließen von Anreicherungsattributen"
+>abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
 
 >[!IMPORTANT]
 >
-Dieser Schritt wird nur angezeigt, wenn Sie im Schritt **[!UICONTROL Zielgruppenauswahl]** Zielgruppen [benutzerdefiniert hochladen](#select-audiences) ausgewählt haben.
+>Dieser Schritt wird nur angezeigt, wenn Sie im Schritt **[!UICONTROL Zielgruppenauswahl]** Zielgruppen [benutzerdefiniert hochladen](#select-audiences) ausgewählt haben.
 
 Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die als benutzerdefinierte **[!UICONTROL in Experience Platform aufgenommen]**. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
 
@@ -572,12 +579,12 @@ Wählen Sie **[!UICONTROL Weiter]** aus, um zum Schritt [Überprüfen](#review) 
 
 >[!NOTE]
 > 
-Wenn Datennutzungsbeschriftungen auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
+>Wenn Datennutzungsbeschriftungen auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
 >
-* Die Felder werden in der Zielgruppendefinition verwendet.
-* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
+>* Die Felder werden in der Zielgruppendefinition verwendet.
+>* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
 >
-Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbeschriftungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbeschriftungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
@@ -585,10 +592,10 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Aktuelle Einverständnisrichtlinien anzeigen"
-abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Aktuelle Einverständnisrichtlinien anzeigen"
+>abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
 Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
