@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
-ht-degree: 54%
+source-wordcount: '4395'
+ht-degree: 51%
 
 ---
 
@@ -431,14 +431,31 @@ Angenommen, die Deduplizierung würde anhand des zusammengesetzten Schlüssels `
 
 Adobe empfiehlt das Auswählen eines Identitäts-Namespace, z. B. einer [!DNL CRM ID] oder einer E-Mail-Adresse, als Deduplizierungsschlüssel, um sicherzustellen, dass alle Profildatensätze eindeutig identifiziert werden.
 
->[!NOTE]
-> 
->Wenn Datennutzungsbeschriftungen auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
->
->* Die Felder werden in der Zielgruppendefinition verwendet.
->* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
->
-> Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbeschriftungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+### Deduplizierungsverhalten für Profile mit demselben Zeitstempel {#deduplication-same-timestamp}
+
+Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+
+#### Wichtige Aspekte
+
+* **Deterministische Auswahl**: Wenn mehrere Profile identische Deduplizierungsschlüssel und denselben Referenzzeitstempel haben, bestimmt die Deduplizierungslogik, welches Profil exportiert werden soll, indem die Werte anderer ausgewählter Spalten (ohne komplexe Typen wie Arrays, Zuordnungen oder Objekte) sortiert werden. Die sortierten Werte werden in lexikografischer Reihenfolge ausgewertet und das erste Profil wird ausgewählt.
+
+* **Beispielszenario**:\
+  Betrachten Sie die folgenden Daten, wobei der Deduplizierungsschlüssel die `Email` Spalte ist:\
+  |E-Mail*|first_name|last_name|timestamp|\
+  |—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  Nach der Deduplizierung enthält die Exportdatei Folgendes:\
+  |E-Mail*|first_name|last_name|timestamp|\
+  |—|—|—|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  **Erläuterung**: `test1@test.com` verwenden beide Profile denselben Deduplizierungsschlüssel und denselben Zeitstempel. Der Algorithmus sortiert die `first_name` und `last_name` Spaltenwerte lexikografisch. Da die Vornamen identisch sind, wird die Verbindung mithilfe der Spalte `last_name` aufgelöst, wobei „Doe“ vor „Morris“ steht.
+
+* **Verbesserte Zuverlässigkeit**: Dieser aktualisierte Deduplizierungsprozess stellt sicher, dass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern, was die Konsistenz verbessert.
 
 ### [!BADGE Beta]{type=Informative} Exportieren von Arrays durch berechnete Felder {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ Wenn Sie externe Zielgruppen für Ihre Ziele aktivieren möchten, ohne Attribute
 Wählen Sie **[!UICONTROL Weiter]** aus, um zum Schritt [Überprüfen](#review) zu wechseln.
 
 ## Überprüfung {#review}
+
+>[!NOTE]
+> 
+Wenn Datennutzungsbeschriftungen auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
+>
+* Die Felder werden in der Zielgruppendefinition verwendet.
+* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
+>
+Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbeschriftungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
