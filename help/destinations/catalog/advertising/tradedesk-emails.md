@@ -1,30 +1,28 @@
 ---
-title: (Beta) The Trade Desk - CRM-Verbindung
+title: The Trade Desk - CRM-Verbindung
 description: Profile für Ihr Trade Desk-Konto aktivieren, um Zielgruppen-Targeting und -Unterdrückung auf der Grundlage von CRM-Daten durchzuführen.
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 18%
+source-wordcount: '1117'
+ht-degree: 17%
 
 ---
 
-# (Beta) Die [!DNL Trade Desk]-CRM-Verbindung
+# Die [!DNL Trade Desk] - CRM-Verbindung
 
 >[!IMPORTANT]
->
->[!DNL The Trade Desk - CRM] -Ziel in Platform befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
 >
 >Mit Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM]-Ziele im [Zielkatalog](/help/destinations/catalog/overview.md).
 >* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte das **[!DNL The Trade Desk - CRM (EU)]**-Ziel.
 >* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie das **[!DNL The Trade Desk - CRM (NAMER & APAC)]**-Ziel.
 >
->Beide Ziele in Experience Platform befinden sich derzeit in der Beta-Phase. Dieser Ziel-Connector und diese Dokumentationsseite werden vom *[!DNL Trade Desk]*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihren [!DNL Trade Desk], die Dokumentation und Funktionalität können sich ändern.
+>Dieser Ziel-Connector und diese Dokumentationsseite werden vom *[!DNL Trade Desk]*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihren [!DNL Trade Desk].
 
 ## Übersicht {#overview}
 
-Dieses Dokument soll Ihnen dabei helfen, Profile in Ihrem [!DNL Trade Desk]-Konto für das Targeting und die Unterdrückung von Zielgruppen basierend auf CRM-Daten zu aktivieren.
+Erfahren Sie, wie Sie Profile in Ihrem [!DNL Trade Desk]-Konto aktivieren können, um Zielgruppen-Targeting und -Unterdrückung auf der Grundlage von CRM-Daten durchzuführen.
 
 Dieser Connector sendet Daten an den [!DNL The Trade Desk] Erstanbieter-Endpunkt. Die Integration zwischen Adobe Experience Platform und [!DNL The Trade Desk] unterstützt nicht den Export von Daten an den [!DNL The Trade Desk] Drittanbieterendpunkt.
 
@@ -36,7 +34,9 @@ Dieser Connector sendet Daten an den [!DNL The Trade Desk] Erstanbieter-Endpunkt
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Zielgruppen für die [!DNL The Trade Desk] aktivieren können, müssen Sie sich an Ihren [!DNL The Trade Desk] Account Manager wenden, um den CRM-Onboarding-Vertrag zu unterzeichnen. [!DNL The Trade Desk] erteilen dann die Berechtigung und geben Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
+>[!IMPORTANT]
+>
+>Bevor Sie Zielgruppen für das Trade Desk aktivieren können, müssen Sie sich an Ihren [!DNL Trade Desk] Account Manager wenden, um den CRM-Onboarding-Vertrag zu unterzeichnen. [!DNL The Trade Desk] aktivieren die Verwendung von UID2/EUID und geben andere Details weiter, um Sie bei der Konfiguration Ihres Ziels zu unterstützen.
 
 ## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 

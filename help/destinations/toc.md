@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 84%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 84%
       * [PubMatic Connect-Verbindung](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Beta) The Trade Desk CRM-Verbindung ](./catalog/advertising/tradedesk-emails.md)
+      * [The Trade Desk CRM-Verbindung](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
    * Analyseziele {#analytics}
