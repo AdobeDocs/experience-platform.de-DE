@@ -2,14 +2,20 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 3%
 
 ---
 
-# Handbuch für die [!DNL Graph Simulation]-Benutzeroberfläche
+# Handbuch für die [!DNL Graph Simulation]-Benutzeroberfläche {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Diagrammsimulation"
+>abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Weitere Informationen"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Viewer für simulierte Diagramme : Der Viewer für simulierte Diagramme zeigt da
 >[!ENDTABS]
 
 ## Ereignisse hinzufügen {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Diagrammsimulation"
->abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
->text="Learn more in documentation"
 
 Wählen Sie zunächst **[!UICONTROL Ereignisse hinzufügen]** aus.
 
@@ -132,16 +132,6 @@ Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) nebe
 ![Das ausgewählte Symbol „Ereignis löschen“](../images/graph-simulation/delete.png)
 
 ## Algorithmus konfigurieren {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Algorithmuskonfiguration"
->abstract="Konfigurieren Sie den eindeutigen Namespace und die Namespace-Priorität für die aufgenommenen Identitäten."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Namespace-Priorität"
->abstract="Die Namespace-Priorität bestimmt, wie Links aus dem Identitätsdiagramm entfernt werden."
 
 >[!IMPORTANT]
 >

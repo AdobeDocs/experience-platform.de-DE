@@ -2,14 +2,20 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
 
-# Algorithmus zur Identitätsoptimierung
+# Algorithmus zur Identitätsoptimierung {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Eindeutiger Namespace"
+>abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="Weitere Informationen"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus in Identity S
 In diesem Abschnitt finden Sie Informationen zu eindeutigen Namespaces und Namespace-Priorität. Diese beiden Konzepte dienen als Eingabeparameter, die für den Algorithmus zur Identitätsoptimierung erforderlich sind.
 
 ### Eindeutiger Namespace {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Eindeutiger Namespace"
->abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
 
 Ein eindeutiger Namespace bestimmt die Links, die entfernt werden, wenn das Diagramm reduziert wird.
 

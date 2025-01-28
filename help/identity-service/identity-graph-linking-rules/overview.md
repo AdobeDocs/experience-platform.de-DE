@@ -2,9 +2,9 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
@@ -33,12 +33,13 @@ Die folgenden Dokumente sind für das Verständnis der Verknüpfungsregeln für 
 
 In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen berücksichtigen können.
 
-### Freigegebenes Gerät
+### Freigegebenes Gerät {#shared-device}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Szenarien zum Diagrammreduzieren"
 >abstract="Es gibt mehrere Gründe, warum Diagramme „reduziert“ werden oder mehrere Personenentitäten darstellen können."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Weitere Informationen"
 
 Es gibt Fälle, in denen sich ein Gerät mehrmals anmelden kann:
 

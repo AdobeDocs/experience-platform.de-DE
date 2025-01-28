@@ -2,14 +2,20 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
-# Namespace-Priorität
+# Namespace-Priorität {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Namespace-Priorität"
+>abstract="Die Namespace-Priorität bestimmt, wie Links aus dem Identitätsdiagramm entfernt werden."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Weitere Informationen"
 
 >[!AVAILABILITY]
 >
