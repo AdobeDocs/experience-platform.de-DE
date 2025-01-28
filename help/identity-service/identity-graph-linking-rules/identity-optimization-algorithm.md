@@ -2,9 +2,9 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_uniquenamespace"
 >title="Eindeutiger Namespace"
 >abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="Weitere Informationen"
 
 >[!AVAILABILITY]
 >

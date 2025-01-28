@@ -2,9 +2,9 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1458'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 3%
 >id="platform_identities_graphsimulation"
 >title="Diagrammsimulation"
 >abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
->additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Weitere Informationen"
 
 >[!AVAILABILITY]
 >
