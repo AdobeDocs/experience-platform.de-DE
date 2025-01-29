@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anwendungsdatentyp
 description: Erfahren Sie mehr über den Datentyp des Experience-Anwendungsdatenmodells (XDM).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '420'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL Application] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zu Interaktionen beschreibt, die von einer Anwendung generiert werden. Eine Anwendung bezieht sich auf ein Software-Erlebnis, z. B. eine Mobile- oder Desktop-Anwendung, die von einem Endbenutzer installiert, ausgeführt, geschlossen oder deinstalliert werden kann. Die Eigenschaften für diesen Datentyp sind nicht dazu gedacht, Agenten wie Chatbots, browserbasierte Plug-ins oder andere Erlebnisse zu beschreiben, die nicht für Programme gelten.
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![Anwendungsbild](../images/data-types/application.PNG){width=500}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

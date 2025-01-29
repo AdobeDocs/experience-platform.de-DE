@@ -6,10 +6,10 @@ title: Fehlerbehebung bei der Attributions-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Attributions-KI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 100%
+source-wordcount: '171'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Attributions
 
 Ladefehler im Inkognito-Modus von Google Chrome sind auf Aktualisierungen in den Sicherheitseinstellungen des Inkognito-Modus von Google Chrome zurückzuführen. An dem Problem wird aktiv mit Chrome gearbeitet, um experience.adobe.com als vertrauenswürdige Domain einzustufen.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![Fehlerbild](./images/faq/error.PNG){width=500}
 
 ### Empfohlene Fehlerbehebung
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datentyp des Zahlungspostens
 description: Erfahren Sie mehr über den Datentyp „Zahlungsposten-Experience-Datenmodell (XDM)“.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 20%
+source-wordcount: '144'
+ht-degree: 19%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 20%
 
 [!UICONTROL Zahlungsposten] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Zahlung beschreibt, die mit einer Bestellung verknüpft ist und die die Art der Zahlung, den Betrag und die zugehörige Währung definiert.
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+![Bild des Zahlungspostens](../images/data-types/payment-item.PNG){width=400}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

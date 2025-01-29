@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datentyp „Web-Seitendetails“
 description: Erfahren Sie mehr über die Web-Seitendetails zum Datentyp Experience-Datenmodell (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 Der Datentyp ist für vollständige Seitendetails und anfängliches Laden von Einzelseiten-Web-Anwendungen (SPA) vorgesehen. Informationen zu Interaktionen, die auf einer geladenen Seite stattfinden und keinen neuen Seitenladevorgang im Trigger haben, finden Sie unter [Web-Interaktion](./web-interaction.md) Datentyp .
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![Web-Seitendetails](../images/data-types/web-page-details.PNG){width="500"}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

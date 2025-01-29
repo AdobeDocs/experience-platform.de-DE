@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datentyp suchen
 description: Erfahren Sie mehr über den Datentyp „Experience-Datenmodell (XDM) suchen“.
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '164'
 ht-degree: 18%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 [!UICONTROL Suche] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![Suchbild](../images/data-types/search.PNG){width=500}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

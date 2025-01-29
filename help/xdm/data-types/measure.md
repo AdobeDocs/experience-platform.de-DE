@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Kennzahldatentyp
 description: Erfahren Sie mehr über den Datentyp Measure Experience Data Model (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL Measure] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen konkreten quantifizierbaren Datenpunkt einer bestimmten Metrik enthält. Eine Kennzahl besteht aus einer eindeutigen Kennung und einem Wert.
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![Bild messen](../images/data-types/measure.PNG){width=500}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

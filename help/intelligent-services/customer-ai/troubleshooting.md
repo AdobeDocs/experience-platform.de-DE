@@ -6,9 +6,9 @@ title: Fehlerbehebung bei der Kunden-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: d88f9691f7a2affc7737e1adab75fc441e3f7e4f
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1751'
 ht-degree: 31%
 
 ---
@@ -27,7 +27,7 @@ Falls **[!UICONTROL Fehlgeschlagen]** oder **[!UICONTROL Problem mit Training]**
 
 Ladefehler im Inkognito-Modus von Google Chrome sind auf Aktualisierungen in den Sicherheitseinstellungen des Inkognito-Modus von Google Chrome zurückzuführen. An dem Problem wird aktiv mit Chrome gearbeitet, um experience.adobe.com als vertrauenswürdige Domain einzustufen.
 
-<img src="./images/errors/error.PNG" width="500" /><br />
+![Fehlerbild](./images/errors/error.PNG){width=500}
 
 ### Empfohlene Fehlerbehebung
 
