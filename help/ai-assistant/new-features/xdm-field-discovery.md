@@ -5,14 +5,14 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
-source-git-commit: e2cb6dee0c255c8eaa3729cc7a09ae07a1f33dbc
+source-git-commit: 58cf5d90d70239a4b47c600bd3a7a37129b07dc3
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '356'
 ht-degree: 1%
 
 ---
 
-# XDM-Felderkennung für mit KI-Assistent
+# XDM-Felderkennung mit KI-Assistent
 
 >[!AVAILABILITY]
 >
