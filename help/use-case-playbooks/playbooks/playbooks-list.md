@@ -4,9 +4,9 @@ title: Verfügbare Playbooks für Anwendungsfälle für Real-time Customer Data 
 description: Eine Liste aller Playbooks in Real-time Customer Data Platform und Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,9 @@ Auf dieser Seite erhalten Sie einen Überblick über alle verfügbaren Playbooks
 
 | Playbook-Name | Beschreibung |
 | ------------- | ----------- |
-| Abgebrochenes Browsen: Ware - zur Aktivierung | Targeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Ware zum Warenkorb hinzugefügt haben |
-| Abgebrochenes Browsen: Produkt - zur Aktivierung | Targeting von Käufern nach dem Verlassen Ihrer Website oder Mobile App nach dem Hinzufügen der Produkte zum Warenkorb neu. |
-| Abgebrochenes Browsen: Reservierung - zur Aktivierung | Targeting von Gästen nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen einer neuen Reservierung zum Warenkorb neu. |
+| Abgebrochenes Browsen: Ware - zur Aktivierung | Targeting von Fans, nachdem sie nach dem Durchsuchen von Artikeln Ihre Website oder App verlassen haben. |
+| Abgebrochenes Browsen: Produkt - zur Aktivierung | Targeting von Käufern nach dem Verlassen Ihrer Website oder Mobile App nach dem Durchsuchen eines Produkts. |
+| Abgebrochenes Browsen: Reservierung - zur Aktivierung | Targeting von Gästen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine potenzielle Reservierung durchsucht haben. |
 | Transaktionsabbruch: Ware - zur Aktivierung | Targeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Sportartikel zum Warenkorb hinzugefügt haben. |
 | Transaktionsabbruch: Produkt - zur Aktivierung | Targeting von Kundinnen und Kunden nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen von Produkten zum Warenkorb neu. |
 | Transaktionsabbruch: Reservierung - zur Aktivierung | Targeting von Gästen nach dem Verlassen Ihrer Website oder App nach dem Hinzufügen einer neuen Reservierung zum Warenkorb neu. |
