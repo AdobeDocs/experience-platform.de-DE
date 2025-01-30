@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
+source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '851'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,14 @@ Weitere Informationen finden Sie in der Dokumentation unter [Überprüfen der An
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten eine effektivere Auswirkungsanalyse durchführen können, bevor Änderungen an Ihren Datenobjekten vorgenommen werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
+### Verwenden des KI-Assistenten für den Kunden-Support
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten für den Kunden-Support eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows verlassen zu müssen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
+Weitere Informationen finden Sie in der Dokumentation unter [Verwenden des KI-Assistenten für den Support](./new-features/customer-support.md).
 
 ## Anwendungsfallbibliothek für KI-Assistenten
 
