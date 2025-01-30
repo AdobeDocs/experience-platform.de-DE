@@ -2,10 +2,10 @@
 title: Adobe Target v2-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform vertraut.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 93%
+source-wordcount: '1351'
+ht-degree: 88%
 
 ---
 
@@ -73,9 +73,11 @@ Es ist keine Konfiguration erforderlich.
 
 Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target mit [Entscheidungsfindung auf dem Gerät](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=de) zu laden. Dadurch wird die at.js-Bibliothek mit aktiviertem On-Device Decisioning in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target mit On-Device Decisioning laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
 
-Es ist keine Konfiguration erforderlich.
+>[!IMPORTANT]
+>
+>Verwenden Sie eine Seitenladeanfrage mit der geräteinternen Entscheidungsfindung nur, wenn sie bereits konfiguriert ist. Durch Hinzufügen dieser Aktion zu Ihrer Regel wird die Größe Ihres endgültigen Launch-Bundles erhöht, da es die Entscheidungsregel-Engine auf dem Gerät enthält.
 
-### Hinzufügen von Parametern zu allen Anfragen
+### Hinzufügen von Parametern zu allen Anforderungen
 
 Dieser Aktionstyp ermöglicht das Hinzufügen von Parametern zu allen Target-Anfragen. Die Aktion „Target laden“ muss vorher verwendet werden.
 
