@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Sandbox-UI
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: c63de71c248e6a41dbbadbe8089156ee3c2829cf
+source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 52%
+source-wordcount: '1066'
+ht-degree: 51%
 
 ---
 
@@ -81,6 +81,7 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die 
 >
 >* Eine benutzerdefinierte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nach einer Warnmeldung zurückgesetzt werden.
 >* Vor dem Zurücksetzen einer Sandbox müssen Sie Ihre Kompositionen manuell löschen, um sicherzustellen, dass die zugehörigen Zielgruppendaten ordnungsgemäß bereinigt werden.
+>* Die Sandbox-ID ändert sich, nachdem das Zurücksetzen abgeschlossen ist.
 
 ### Audience-Kompositionen löschen
 
