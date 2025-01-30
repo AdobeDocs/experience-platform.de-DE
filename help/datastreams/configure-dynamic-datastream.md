@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,14 @@ Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie
 * Es muss *mindestens* Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
+
+## Überschreibungen der dynamischen Datenstromkonfigurationen im Vergleich zur Datenstromkonfiguration {#dynamic-versus-overrides}
+
+Dynamische Datenstromkonfigurationen und [Überschreibungen der Datenstromkonfiguration](overrides.md) schließen sich gegenseitig aus.
+
+Das bedeutet, dass Sie keine dynamischen Datenstromkonfigurationen zusammen mit Überschreibungen der Datenstromkonfiguration verwenden können. Sie müssen entweder das eine oder das andere wählen.
+
+Wenn Sie sowohl Überschreibungen der dynamischen Datenstromkonfigurationen als auch der Datenstromkonfiguration aktivieren, haben die Überschreibungen der Konfiguration Vorrang und die Regeln für die dynamische Datenstromkonfiguration werden ignoriert.
 
 ## Erstellen einer dynamischen Datenstromkonfiguration {#create-dynamic-configuration}
 
