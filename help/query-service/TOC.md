@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 71%
+source-wordcount: '402'
+ht-degree: 70%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 71%
 - Data Distiller {#data-distiller}
    - [Übersicht](data-distiller/overview.md)
    - [Lizenznutzung](data-distiller/license-usage.md)
+   - [Wichtigste Tipps zur Wertmaximierung](data-distiller/top-tips-to-maximize-value.md)
    - Abgeleitete Datensätze {#derived-datasets}
       - [Übersicht](data-distiller/derived-datasets/overview.md)
       - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -44,12 +45,12 @@ ht-degree: 71%
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)
    - [Funktionstransformation](advanced-statistics/feature-transformation.md)
-Implementieren von Modellen {#implement-models}
+   - Implementieren von Modellen {#implement-models}
       - [Implementieren von Modellen](advanced-statistics/implement-models/implement-models.md)
       - [Regression](advanced-statistics/implement-models/regression.md)
       - [Klassifizierung](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
-Beispiele {#examples}
+   - Beispiele {#examples}
       - [Bot-Filterung mithilfe von Statistiken und maschinellem Lernen](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prognostizieren der Kundenabwanderung mithilfe der SQL-basierten logistischen Regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller Audiences-{#data-distiller-audiences}
