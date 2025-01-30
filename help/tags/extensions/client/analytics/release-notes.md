@@ -2,10 +2,10 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 74%
+source-wordcount: '1524'
+ht-degree: 70%
 
 ---
 
@@ -16,6 +16,14 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 >[!NOTE]
 >
 >Die Analytics-Tag-Erweiterung wird oft als Reaktion auf Aktualisierungen der [AppMeasurement JavaScript Library aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Einzelheiten zu den unten genannten spezifischen Versionen finden ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) in den [AppMeasurement-Versionshinweisen.
+
+## 28. Oktober 2024
+
+**Adobe Analytics-Erweiterung 1.9.6**
+
+**Funktionen**:
+
+* Eine neue Funktion wurde hinzugefügt, mit der Benutzende eine JSON-Version der Aktion „Variablen festlegen[ anzeigen und ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) können. Die Adobe Web SDK-Erweiterung enthält auch eine Aktion zum [Ausfüllen einer Analytics-Variablen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) durch Bereitstellung von JSON. Durch Kopieren von JSON-Daten aus der AA-Erweiterung in die Web SDK-Erweiterung können migrierende Kunden einfach mehrere Einstellungen gleichzeitig übertragen, anstatt jede Variable manuell hinzuzufügen.
 
 ## 12. August 2024
 
