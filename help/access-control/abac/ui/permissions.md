@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 93%
+source-wordcount: '1476'
+ht-degree: 35%
 
 ---
 
@@ -26,7 +26,7 @@ Nach dem [Erstellen einer neuen Rolle](#create-a-new-role) werden Sie sofort zur
 
 Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
 
-![flac-filters](../../images/flac-ui/flac-filters.png)
+![Das Rollen-Dashboard in der Benutzeroberfläche „Berechtigungen“ mit hervorgehobenem Abschnitt „Rollen filtern“.](../../images/flac-ui/flac-filters.png)
 
 In der Benutzeroberfläche sind folgende Filter für Rollen verfügbar:
 
@@ -39,133 +39,151 @@ In der Benutzeroberfläche sind folgende Filter für Rollen verfügbar:
 
 Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
 
-![flac-clear-filters](../../images/flac-ui/flac-clear-filters.png)
+![Das Rollen -Dashboard in der Benutzeroberfläche „Berechtigungen“ mit dem hervorgehobenen „X“ und „Alle Auswahlen löschen“ in den ausgewählten Filtern.](../../images/flac-ui/flac-clear-filters.png)
 
 ## Rollendetails
 
-Wählen Sie auf der Registerkarte **[!UICONTROL Rollen]** die Rolle aus. Daraufhin wird die Detailseite der Rolle geöffnet.
+Wählen Sie auf der Registerkarte **[!UICONTROL Rollen]** die Rolle aus. Daraufhin wird das Dashboard [!UICONTROL Details] der Rolle geöffnet.
 
-![flac-details](../../images/flac-ui/flac-details.png)
+![Der Arbeitsbereich „Details“ für die ausgewählte Rolle wird mit hervorgehobenen Übersichtsinformationen angezeigt.](../../images/flac-ui/flac-details.png)
 
-Die Registerkarte „Details“ bietet einen Überblick über die Rolle. In dieser Übersicht werden der Rollenname, die Rollenbeschreibung, der Name des Benutzers, der die Rolle erstellt und geändert hat, der Zeitpunkt, zu dem die Rolle erstellt und geändert wurde, und die der Rolle zugewiesenen Berechtigungen angezeigt. Der Rollenname und die Rollenbeschreibung können bei Bedarf geändert werden.
+Das [!UICONTROL Details]-Dashboard bietet einen Überblick über die Rolle. In der Übersicht werden der Rollenname, die Beschreibung, der Ersteller und der letzte Modifikator sowie das Erstellungs- und Änderungsdatum angezeigt. Außerdem werden die mit der Rolle verbundenen Berechtigungen und die Liste der zugewiesenen Sandboxes angezeigt. Der Rollenname und die Beschreibung können bei Bedarf geändert werden.
 
 ## Verwalten von Beschriftungen für eine Rolle
 
-Wählen Sie die Registerkarte **[!UICONTROL Bezeichnungen]** aus, um die Seite mit den Rollenbezeichnungen zu öffnen, und wählen Sie **[!UICONTROL Beschriftungen hinzufügen]** aus, um der Rolle Beschriftungen zuzuweisen.
+Wählen Sie die Registerkarte **[!UICONTROL Bezeichnungen]** aus, um den Arbeitsbereich für Rollenbezeichnungen zu öffnen, und wählen Sie **[!UICONTROL Beschriftungen hinzufügen]** aus, um der Rolle Beschriftungen zuzuweisen.
 
-![flac-labels](../../images/flac-ui/flac-labels.png)
+![Der Arbeitsbereich Beschriftungen der Rolle wird angezeigt, wobei die Registerkarte Beschriftungen und die Schaltfläche Beschriftungen hinzufügen hervorgehoben sind.](../../images/flac-ui/flac-labels.png)
 
-Die Beschriftungen werden auf dieser Seite aufgelistet. In der Liste werden der Name der Beschriftung, der Anzeigename, die Kategorie und die Beschreibung angezeigt.
+Das **[!UICONTROL Anwenden von Zugriffs- und Data Governance]** Beschriftungen“ wird angezeigt, das eine Liste von Beschriftungen enthält. In der Liste werden der Name der Beschriftung, der Anzeigename, die Kategorie und die Beschreibung angezeigt.
 
 Wählen Sie in der Liste die Beschriftungen aus, die Sie der Rolle hinzufügen möchten, und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-![flac-add-labels](../../images/flac-ui/flac-add-labels.png)
+![Der Dialog „Zugriff anwenden“ und „Data Governance-Beschriftungen“ mit einer ausgewählten Beschriftung.](../../images/flac-ui/flac-add-labels.png)
 
 Hinzugefügte Beschriftungen werden auf der Registerkarte **[!UICONTROL Beschriftungen]** angezeigt.
 
-![flac-added-labels](../../images/flac-ui/flac-added-labels.png)
+![Der Arbeitsbereich „Beschriftungen“ der Rolle mit hervorgehobener hinzugefügter Beschriftung.](../../images/flac-ui/flac-added-labels.png)
 
-Um eine Beschriftung von einer Rolle zu entfernen, klicken Sie auf das **X** neben dem Namen der Beschriftung.
+Um eine Beschriftung von einer Rolle zu entfernen, wählen Sie die Beschriftung aus und klicken Sie dann auf **[!UICONTROL Beschriftungen entfernen]**.
 
-![flac-delete-labels](../../images/flac-ui/flac-delete-labels.png)
+![Der Arbeitsbereich „Beschriftungen“ der Rolle, wobei eine Rolle ausgewählt ist und die Option „Beschriftungen entfernen“ hervorgehoben ist.](../../images/flac-ui/flac-delete-labels.png)
 
-## Verwalten von Sandboxes für Rollen
+## Verwalten von Sandboxes für eine Rolle
 
-Wählen Sie die Registerkarte **[!UICONTROL Sandboxes]** aus, um die Seite mit den Rollen-Sandboxes zu öffnen. Hier sehen Sie eine Liste der Sandboxes, die der Rolle hinzugefügt wurden.
+Wählen Sie die **[!UICONTROL Details]** aus und navigieren Sie zum Abschnitt **[!UICONTROL Sandboxes]**. Wählen Sie **[!UICONTROL Alle anzeigen]** aus, um die vollständige Liste der der Rolle hinzugefügten Sandboxes anzuzeigen.
 
-![flac-sandboxes](../../images/flac-ui/flac-sandboxes.png)
+![Der Arbeitsbereich „Details“ der Rolle mit hervorgehobenem Abschnitt „Sandboxes“.](../../images/flac-ui/flac-sandboxes.png)
 
-Um einer Rolle weitere Sandboxes hinzuzufügen, wählen Sie **[!UICONTROL Bearbeiten]** aus.
+Um einer Rolle weitere Sandboxes hinzuzufügen, wählen Sie **[!UICONTROL Bearbeiten]** oben rechts in der Benutzeroberfläche aus.
 
-![flac-add-sandboxes](../../images/flac-ui/flac-add-sandboxes.png)
+![Der Arbeitsbereich „Details“ der Rolle mit hervorgehobener Option „Bearbeiten“.](../../images/flac-ui/flac-add-sandboxes.png)
 
-Im nächsten Bildschirm werden Sie aufgefordert, über die Dropdown-Liste auszuwählen, welche in Sandboxes vorhandenen Ressourcenberechtigungen in die Rolle aufgenommen werden sollen. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Speichern und beenden]**.
+Im nächsten Bildschirm werden Sie aufgefordert, über die Dropdown-Liste auszuwählen, welche Sandbox-Ressourcen in die Rolle aufgenommen werden sollen. Klicken Sie abschließend auf **[!UICONTROL Speichern]** und dann auf **[!UICONTROL Schließen]**.
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![Das Ressourcen-Dashboard der Rolle mit hervorgehobenem Dropdown-Menü „Sandbox-Ressourcen“.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Verwalten von Benutzenden für Rollen
+## Verwalten von Benutzern für eine Rolle
 
-Wählen Sie die Registerkarte **[!UICONTROL Benutzer]**, um die Benutzerseite für Rollen zu öffnen, und klicken Sie auf **[!UICONTROL Benutzer hinzufügen]**, um Benutzende der Rolle zuzuweisen.
+Wählen Sie die Registerkarte **[!UICONTROL Benutzer]** aus, um die Rollen [!UICONTROL Benutzer] zu öffnen, und klicken Sie dann auf **[!UICONTROL Benutzer hinzufügen]**, um der Rolle Benutzer zuzuweisen.
 
-![flac-users](../../images/flac-ui/flac-users.png)
+![Der Arbeitsbereich Benutzer der Rolle wird angezeigt, wobei die Registerkarte Benutzer und die Option Benutzer hinzufügen hervorgehoben sind.](../../images/flac-ui/flac-users.png)
 
-Wählen Sie die Benutzenden aus der Liste aus, die Sie der Rolle hinzufügen möchten. Alternativ können Sie in der Suchleiste nach dem Benutzer suchen, indem Sie dessen Namen oder E-Mail-Adresse eingeben. Klicken Sie dann auf **[!UICONTROL Speichern]**.
+Das **[!UICONTROL „Benutzer hinzufügen]** wird angezeigt. Wählen Sie die Benutzenden aus der Liste aus, die Sie der Rolle hinzufügen möchten. Alternativ können Sie in der Suchleiste nach dem Benutzer suchen, indem Sie dessen Namen oder E-Mail-Adresse eingeben. Klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-![flac-add-users](../../images/flac-ui/flac-add-users.png)
+![Das Dialogfeld „Benutzer hinzufügen“ mit ausgewähltem Benutzer und hervorgehobener Suchleiste und Speicheroption.](../../images/flac-ui/flac-add-users.png)
 
 Hinzugefügte Benutzer erscheinen auf der Registerkarte **[!UICONTROL Benutzer]**.
 
-![flac-added-users](../../images/flac-ui/flac-added-users.png)
+![Der Arbeitsbereich Benutzer der Rolle mit den zur Rolle hinzugefügten Benutzern.](../../images/flac-ui/flac-added-users.png)
 
 Um einen Benutzer aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen des Benutzers.
 
-![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+![Der Arbeitsbereich „Benutzer“ der Rolle, in dem ein Benutzer mit hervorgehobener Option „X“ angezeigt wird.](../../images/flac-ui/flac-remove-users.png)
 
 Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## Verwalten von API-Anmeldedaten für Rollen {#manage-api-credentials-for-role}
+## Verwalten von API-Anmeldeinformationen für eine Rolle {#manage-api-credentials-for-role}
 
-Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldedaten]** aus, um die Seite mit den Rollen-API-Anmeldedaten zu öffnen, und klicken Sie auf **[!UICONTROL API-Anmeldedaten hinzufügen]**, um der Rolle API-Anmeldedaten zuzuweisen.
+>[!IMPORTANT]
+>
+> Um API-Anmeldeinformationen in „Berechtigungen[!UICONTROL  verwenden ] verwalten zu können, müssen Benutzerinnen und Benutzer über Systemadministratorrechte verfügen.
 
-![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
+Um Experience Platform-APIs als Anwender oder Entwickler verwenden zu können, muss ein Systemadministrator zusätzlich zu den einer Rolle zugewiesenen Berechtigungen API-Anmeldeinformationen hinzufügen. Eine vollständige Anleitung zum Erstellen und Zuweisen von API-Anmeldeinformationen sowie die erforderlichen Berechtigungen finden Sie im schrittweisen Tutorial unter [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md#generate-credentials).
 
-Wählen Sie die API-Anmeldedaten aus der Liste aus, die Sie der Rolle hinzufügen möchten, und klicken Sie auf **[!UICONTROL Speichern]**.
+Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldeinformationen]** aus, um den Arbeitsbereich mit den Rollen-API-Anmeldeinformationen zu öffnen, und wählen Sie **[!UICONTROL API-Anmeldeinformationen hinzufügen]** aus, um der Rolle API-Anmeldeinformationen zuzuweisen.
 
-![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
+![Der Arbeitsbereich mit den API-Anmeldeinformationen der Rolle mit hervorgehobener Option „Anmeldeinformationen hinzufügen“.](../../images/flac-ui/flac-api-credentials.png)
 
-Hinzugefügte API-Anmeldedaten erscheinen auf der Registerkarte **[!UICONTROL API-Anmeldedaten]**.
+Das **[!UICONTROL API-Anmeldeinformationen hinzufügen]** wird angezeigt. Wählen Sie API-Anmeldeinformationen aus der Liste aus, um der Rolle hinzuzufügen, und wählen Sie dann **[!UICONTROL Speichern]**
 
-![flac-added-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
+![Das Dialogfeld „API-Anmeldeinformationen hinzufügen“ mit ausgewählten Anmeldeinformationen und hervorgehobener Option „Speichern“.](../../images/flac-ui/flac-add-api-credentials.png)
 
-Um API-Anmeldedaten aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen der API-Anmeldeinformation.
+Hinzugefügte API-Anmeldeinformationen erscheinen auf **[!UICONTROL Registerkarte]** API-Anmeldeinformationen“.
 
-![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
+![Der Arbeitsbereich mit den API-Anmeldeinformationen der Rolle mit den hinzugefügten Anmeldeinformationen wird angezeigt.](../../images/flac-ui/flac-added-api-credentials.png)
 
-Der Dialog **[!UICONTROL API-Anmeldedaten entfernen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
+Um API-Anmeldeinformationen aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen der API-Anmeldeinformationen.
 
-![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+![Der Arbeitsbereich mit den API-Anmeldeinformationen der Rolle, wobei die Option X zum Entfernen einer Anmeldeinformation hervorgehoben ist.](../../images/flac-ui/flac-remove-api-credentials.png)
+
+Das **[!UICONTROL API-Anmeldeinformationen entfernen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen. Wählen Sie **[!UICONTROL Bestätigen]** aus, um das Entfernen der ausgewählten Berechtigung abzuschließen.
+
+![Das Popup zum Entfernen von Anmeldeinformationen, in dem Sie aufgefordert werden zu bestätigen, dass das Entfernen der Anmeldeinformationen hervorgehoben ist.](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
 Sie werden zur Registerkarte **[!UICONTROL API-Anmeldedaten]** zurückgeleitet.
 
-## Verwalten von Benutzergruppen für Rollen
+## Verwalten von Benutzergruppen für eine Rolle
 
 Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen.
 
-Wählen Sie die Registerkarte **[!UICONTROL Benutzergruppen]** aus, um die Seite mit den Benutzergruppen für Rollen zu öffnen, und klicken Sie auf **[!UICONTROL Gruppen hinzufügen]**, um der Rolle Benutzergruppen zuzuweisen.
+Wählen Sie die **[!UICONTROL Benutzergruppen]** aus, um den Arbeitsbereich Benutzergruppen der Rolle zu öffnen, und wählen Sie dann **[!UICONTROL Gruppen hinzufügen]**, um der Rolle Benutzergruppen zuzuweisen.
 
-![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
+![Der Arbeitsbereich Benutzergruppen der Rolle mit der Option Gruppen hinzufügen ](../../images/flac-ui/flac-user-groups.png)
 
-Wählen Sie aus der Liste die Benutzergruppen aus, die Sie der Rolle hinzufügen möchten. Alternativ können Sie über die Suchleiste nach der Benutzergruppe suchen, indem Sie den Namen der Gruppe eingeben. Klicken Sie dann auf **[!UICONTROL Speichern]**.
+Das **[!UICONTROL Gruppen hinzufügen]** wird angezeigt. Wählen Sie aus der Liste die Benutzergruppen aus, die Sie der Rolle hinzufügen möchten. Alternativ können Sie über die Suchleiste nach der Benutzergruppe suchen, indem Sie den Namen der Gruppe eingeben. Klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-![flac-add-user-groups](../../images/flac-ui/flac-add-user-groups.png)
+![Das Dialogfeld „Gruppen hinzufügen“ mit einer ausgewählten Benutzergruppe und der hervorgehobenen Option „Suchen und Speichern“.](../../images/flac-ui/flac-add-user-groups.png)
 
 Hinzugefügte Benutzergruppe erscheinen auf der Registerkarte **[!UICONTROL Benutzergruppen]**.
 
-![flac-added-user-groups](../../images/flac-ui/flac-added-user-groups.png)
+![Der Arbeitsbereich Benutzergruppen der Rolle zeigt die Liste der hinzugefügten Benutzergruppen an.](../../images/flac-ui/flac-added-user-groups.png)
 
 Um eine Benutzergruppe aus einer Rolle zu entfernen, wählen Sie das Symbol **X** neben dem Namen der Benutzergruppe aus.
 
-![flac-remove-user-groups](../../images/flac-ui/flac-remove-user-groups.png)
+![Der Arbeitsbereich Benutzergruppen der Rolle, wobei die Option X zum Entfernen einer bestimmten Benutzergruppe hervorgehoben ist.](../../images/flac-ui/flac-remove-user-groups.png)
 
-Der Dialog **[!UICONTROL Benutzergruppe entfernen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
+Der **[!UICONTROL Benutzergruppe entfernen]** erscheint, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen. Klicken Sie **[!UICONTROL Bestätigen]**, um die ausgewählte Benutzergruppe zu entfernen.
 
-![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![Das Popup zum Entfernen einer Benutzergruppe wird angezeigt und hervorgehoben.](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
-## Hinzufügen von Benutzenden zum Experience Platform über eine Rolle
+## Benutzer zum Experience Platform hinzufügen
 
-Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]**
+Als Systemadministrator können Sie einem Benutzer Entwicklerzugriff gewähren, damit er in der Adobe Developer Console [Integrationen ](../../../landing/api-authentication.md#generate-credentials) kann.
 
-![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+Um eine Benutzer-Experience Platform hinzuzufügen, melden Sie sich bei der Admin Console [](https://adminconsole.adobe.com) an und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
 
-Der Dialog **[!UICONTROL Benutzer zu Ihrem Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse des Benutzers, den Vornamen (optional) und den Nachnamen (optional) ein.
+![Das Adobe Admin Console-Dashboard mit hervorgehobener Option „Benutzer hinzufügen“.](../../images/flac-ui/product-profile-add-users.png)
 
-Klicken Sie auf das Stiftsymbol, um Produkte und Benutzergruppen auszuwählen. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, dann **[!UICONTROL AEP-Default-All-Users]** aus und klicken Sie dann auf **[!UICONTROL Speichern]**.
+Das Dialogfeld **[!UICONTROL Benutzer zum Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse, den Vornamen (optional) und den Nachnamen (optional) des Benutzers ein. Wählen Sie dann **[!UICONTROL Produkte]** aus.
 
-![product-profile](../../images/flac-ui/product-profile.png)
+![Das Dialogfeld „Benutzer zum Team hinzufügen“ mit hervorgehobener Option „Benutzerfelder und Produkte“.](../../images/flac-ui/product-profile-add-users-to-your-team.png)
+
+Das **[!UICONTROL Produkte auswählen]** wird angezeigt. **[!UICONTROL Adobe Experience Platform]**.
+
+![Das Dialogfeld „Produkte auswählen“ mit hervorgehobener Option &quot;Adobe Experience Platform&quot;.](../../images/flac-ui/product-profile-select-product.png)
+
+Das **[!UICONTROL Produktprofile auswählen]** wird angezeigt. Wählen Sie **[!UICONTROL AEP-Default-All-Users]** und dann **[!UICONTROL Speichern]** aus.
+
+![Das Dialogfeld „Produktprofile auswählen“ mit hervorgehobener Option „AEP-Default-All-Users“ und „Apply“.](../../images/flac-ui/product-profile-select-product-profiles.png)
+
+Überprüfen Sie die Informationen und wählen Sie dann **[!UICONTROL Speichern]** aus, um den Benutzer hinzuzufügen.
+
+![Der Dialog Benutzer zu Ihrem Team hinzufügen mit den Benutzerinformationen und ausgewählten Auswahlen und der hervorgehobenen Option „Speichern“.](../../images/flac-ui/product-profile-save-user.png)
 
 ## Nächste Schritte
 
