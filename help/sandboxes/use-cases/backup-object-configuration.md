@@ -2,9 +2,9 @@
 title: Sichern von Objektkonfigurationen mithilfe von Sandbox-Tools
 description: Um Sandboxes sicher zurückzusetzen und Versionierungsunterstützung hinzuzufügen, sichern Sie Objektkonfigurationen (oder Metadaten) mithilfe von Sandbox-Toolingpaketen. Backup-Pakete verhindern den Verlust wichtiger Konfigurationen wie Schemata, Datensätze und Zielgruppen, insbesondere bei Entwicklungsiterationen.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Um Sandboxes sicher zurückzusetzen und Versionierungsunterstützung hinzuzufügen, sichern Sie Objektkonfigurationen (oder Metadaten) mithilfe von Sandbox-Toolingpaketen. Backup-Pakete verhindern den Verlust wichtiger Konfigurationen wie Schemata, Datensätze und Zielgruppen, insbesondere bei Entwicklungsiterationen.
 
-![Übersicht über die Vorteile der Sandbox-Tools](../images/use-cases/tooling-overview.png)
+![Übersicht über die Vorteile der Sandbox-Tools](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Gründe für diesen Anwendungsfall {#why-this-use-case}
 
@@ -63,9 +63,9 @@ Bevor Sie mit der Erstellung Ihres Backup-Pakets beginnen, sollten Sie den Anwen
 >
 > Wenn Sie erwägen, Ihre Sandbox zum Zurücksetzen zu sichern, beachten Sie die [Einschränkungen](../ui/user-guide.md#reset-a-sandbox) beim Zurücksetzen von Sandboxes.
 
-### Exportieren von ausgewählten Metadaten in ein Paket
+### Exportieren der ausgewählten Metadaten in ein Paket
 
-An dieser Stelle können Sie Ihre Sandbox mithilfe der Benutzeroberfläche der Sandbox-Tools sichern. In diesem Schritt wird sowohl das Sichern einer gesamten Sandbox als auch das Sichern bestimmter Objekte behandelt.
+An dieser Stelle können Sie Ihre Sandbox mithilfe der Benutzeroberfläche der Sandbox-Tools sichern. Dieser Schritt umfasst sowohl das Sichern einer gesamten Sandbox als auch das Sichern bestimmter Objekte.
 
 >[!NOTE]
 >
