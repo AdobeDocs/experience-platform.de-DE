@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 86%
+source-wordcount: '1005'
+ht-degree: 69%
 
 ---
 
 # Ablauf von Daten pseudonymer Profile
 
-In Adobe Experience Platform können Sie Ablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Datenablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 ## Pseudonymes Profil {#pseudonymous-profile}
 
@@ -38,7 +38,7 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zu Ablauf von Daten p
 
 ### Wie unterscheidet sich Ablauf von Daten pseudonymer Profile vom Ablauf von Erlebnisereignisdaten?
 
-Ablauf von Daten pseudonymer Profie und Ablauf von Erlebnisereignisdaten sind komplementäre Funktionen.
+Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten sind komplementäre Funktionen.
 
 #### Granularität
 
@@ -60,11 +60,11 @@ Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilkl
 
 ### Wie kann Ablauf von Daten pseudonymer Profile in Verbindung mit Ablauf von Erlebnisereignisdaten verwendet werden?
 
-Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können komplementär zueinander verwendet werden.
+Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können sich gegenseitig ergänzen.
 
-Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Wenn Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
+Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Sobald Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
 
-Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte von Daten Ihrer bekannten Benutzer festlegen und für Ablauf von Daten pseudonymer Profile eine wesentlich kürzere Dauer wählen, um die Auswirkungen von pseudonymen Profilen auf die Einhaltung Ihrer Platform-Lizenzverträge zu begrenzen.
+Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte Ihrer bekannten Benutzerdaten festlegen und den Ablauf von Daten pseudonymer Profile auf eine viel kürzere Dauer festlegen, um die Auswirkungen pseudonymer Profile auf die Einhaltung Ihrer Platform-Lizenzverträge zu begrenzen.
 
 ### Wann sollten Benutzer Ablauf von Daten pseudonymer Profile verwenden?
 
