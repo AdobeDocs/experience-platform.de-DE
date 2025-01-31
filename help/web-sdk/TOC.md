@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 52%
@@ -26,7 +26,7 @@ ht-degree: 52%
 * Befehle {#commands}
    * Konfigurieren von {#configure}
       * [Übersicht](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [Kontext](commands/configure/context.md)
