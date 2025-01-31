@@ -3,9 +3,9 @@ title: KI-Assistent für Kunden-Support
 description: Erfahren Sie, wie Sie mit dem KI-Assistenten die Fehlerbehebung und den Prozess der Einreichung von Support-Tickets optimieren können.
 badge: Alpha
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ Nachverfolgen des Status von Support-Problemen
    * „Was ist das Update für Ticket E-67890?“
 
 Um Zugriff auf den KI-Assistenten für den Kunden-Support zu erhalten, wenden Sie sich an Ihr Adobe-Account-Team.
+
+Weitere Informationen finden Sie im folgenden Video, um zu erfahren, wie Sie mit dem KI-Assistenten für den Kunden-Support eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows verlassen zu müssen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
