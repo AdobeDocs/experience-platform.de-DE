@@ -1,16 +1,16 @@
 ---
 title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 52%
+source-wordcount: '1837'
+ht-degree: 48%
 
 ---
 
-# (Beta) Amazon Ads-Verbindung {#amazon-ads}
+# Amazon Ads-Verbindung {#amazon-ads}
 
 ## Übersicht {#overview}
 
@@ -24,7 +24,7 @@ AMC vereint die einzigartigen Signale aus den von Amazon verwalteten und betrieb
 
 >[!IMPORTANT]
 >
->Dieser Ziel-Connector und diese Dokumentationsseite werden vom *[!DNL Amazon Ads]*-Team erstellt und gepflegt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
+>Dieser Ziel-Connector und diese Dokumentationsseite werden vom *[!DNL Amazon Ads]*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
 
 ## Anwendungsfälle {#use-cases}
 
@@ -85,8 +85,6 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Sie gelangen zur [!DNL Amazon Ads]-Verbindungsschnittstelle, über die Sie zunächst die Advertiser-Konten auswählen, mit denen Sie eine Verbindung herstellen möchten. Bei Verbindungsherstellung werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
 
-* **[!UICONTROL Bearer-Token]**: Füllen Sie das Bearer-Token aus, um sich beim Ziel zu authentifizieren.
-
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
@@ -101,9 +99,13 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Advertiser-Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
+>[!IMPORTANT]
+>
+>Die Aktualisierung für das **[!UICONTROL Amazon Ads Consent Signal]** soll am 7. Februar 2025 live gehen.
 
+* **[!UICONTROL Amazon Ads-Einverständnissignal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung in Amazon Ads abgelehnt.
 
-![Neues Ziel konfigurieren](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![Neues Ziel konfigurieren](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -124,7 +126,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Die [!DNL Amazon Ads]-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Telefonnummern zum Abgleichen von Identitäten. Der folgende Screenshot zeigt ein Beispiel für eine Übereinstimmung, die mit der [!DNL Amazon Ads]-Verbindung kompatibel ist:
 
-![Zuordnung von Adobe zu Amazon Ads](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Zuordnung von Adobe zu Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie den Identity-Namespace von `Email_LC_SHA256` als ein Quellfeld aus.
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
@@ -143,7 +145,7 @@ Nach dem Hochladen Ihrer Zielgruppe können Sie mithilfe der folgenden Schritte 
 
 Navigieren Sie zu **[!UICONTROL Advertiser-ID]** > **[!UICONTROL Zielgruppen]** > **[!UICONTROL Advertiser-Zielgruppen]**. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
 
-![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Für[!DNL Amazon Marketing Cloud]**
 
@@ -151,8 +153,7 @@ Suchen Sie im linken Schema-Browser Ihre Zielgruppe unter **[!UICONTROL Advertis
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Validierung der Erstellung von Amazon-Marketing Cloud-Zielgruppen](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![Validierung der Erstellung von Amazon-Marketing Cloud-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -172,6 +173,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
+| Februar 2025 | Es wurde die Anforderung hinzugefügt, **[!UICONTROL Amazon Ads-Einverständnissignal]** zum Exportieren von Datenflüssen hinzuzufügen, und das Ziel von der Beta-Version in „Allgemein verfügbar“ hochgestuft. |
 | Mai 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Zuordnungsoption zum Exportieren `countryCode` Parameters in Amazon Ads hinzugefügt. Verwenden Sie `countryCode` im [Zuordnungsschritt](#map) um die Übereinstimmungsraten Ihrer Identitäten mit Amazon zu verbessern. |
 | März 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Option zum Exportieren von Zielgruppen hinzugefügt, die in [!DNL Amazon Marketing Cloud] (AMC) verwendet werden sollen. |
 | Mai 2023 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details) hinzugefügt.</li><li>Dokumentation aktualisiert, um das Hinzufügen der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zum Auswählen der richtigen Advertiser-Region finden Sie in der [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |

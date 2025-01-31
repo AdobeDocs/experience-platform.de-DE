@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
+source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
 workflow-type: tm+mt
-source-wordcount: '1270'
-ht-degree: 84%
+source-wordcount: '1269'
+ht-degree: 83%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 84%
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
-      * [(Beta) Amazon Ads-Verbindung](./catalog/advertising/amazon-ads.md)
+      * [Amazon Ads-Verbindung](./catalog/advertising/amazon-ads.md)
       * [Awin Advertising Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
       * [Erweiterung für Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
