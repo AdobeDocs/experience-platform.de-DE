@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Erfahren Sie, wie Sie Experience Platform Web SDK so konfigurieren, dass Linkdaten automatisch erfasst werden.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Automatische Vorschläge und Interaktionen für das Klick-Tracking über die Tag-Erweiterung von Web SDK aktivieren {#tag-extension}
 
 1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
-2. Navigieren Sie **Datenerfassung** > **Tags**.
-3. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-4. Navigieren Sie zu **Erweiterungen** und wählen Sie dann **Konfigurieren** auf der Karte Adobe Experience Platform Web SDK aus.
-5. Scrollen Sie nach unten zum Abschnitt **[!UICONTROL Datenerfassung]** und aktivieren Sie dann das Kontrollkästchen **Vorschläge und Interaktions-Linktracking aktivieren**.
-6. Wählen **Speichern** und veröffentlichen Sie Ihre Änderungen.
+1. Navigieren Sie **Datenerfassung** > **Tags**.
+1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
+1. Navigieren Sie zu **Erweiterungen** und wählen Sie dann **Konfigurieren** auf der Karte Adobe Experience Platform Web SDK aus.
+1. Scrollen Sie nach unten zum Abschnitt **[!UICONTROL Datenerfassung]** und aktivieren Sie dann das Kontrollkästchen **Vorschläge und Interaktions-Linktracking aktivieren**.
+1. Wählen **Speichern** und veröffentlichen Sie Ihre Änderungen.
 
 ## Aktivieren des Trackings von automatischen Vorschlägen und Interaktionen von Links über die Web SDK JavaScript-Bibliothek {#library}
 
