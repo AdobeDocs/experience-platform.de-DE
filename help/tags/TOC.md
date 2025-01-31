@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 96%
 
 ---
@@ -206,9 +206,8 @@ ht-degree: 96%
       * [Vimeo-Wiedergabe](https://exchange.adobe.com/apps/ec/108937)
       * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] Wiedergabe](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Wiedergabe](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube]-Video-Tracking {#youtube}
          * [Übersicht](./extensions/client/youtube/overview.md)
          * [Versionshinweise](./extensions/client/youtube/release-notes.md)
