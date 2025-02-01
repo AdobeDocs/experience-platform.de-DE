@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie die Privacy Service-Benutzeroberfläche verwenden, um Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen zu koordinieren und zu überwachen.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 19%
+source-wordcount: '1786'
+ht-degree: 18%
 
 ---
 
@@ -159,29 +159,29 @@ Um mit der Verwendung des Anfrage-Builders zu beginnen **[!UICONTROL wählen Sie
 
 Das **[!UICONTROL Anfrage erstellen]** wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Datenschutzanfrage für den derzeit ausgewählten Regulierungstyp an.
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 Wählen Sie den **[!UICONTROL Vorgangstyp]** der Anfrage („Löschen“ oder „Zugriff„) und ein oder mehrere verfügbare Produkte aus der Liste aus.
 
 Privacy Service unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten: [!UICONTROL Zugriff] (Lesen) und/oder [!UICONTROL Löschen]. Sie können entweder eine Anfrage stellen, um alle im Produkt gespeicherten Informationen zu erhalten, die sich auf den Gegenstand der Anfrage beziehen, oder eine Löschung aller Informationen anfordern, die sich auf den Gegenstand der Anfrage beziehen.
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 Wählen **[!UICONTROL unter „Namespace]** Typ den entsprechenden Namespace-Typ für die Kunden-IDs aus, die an [!DNL Privacy Service] gesendet werden.
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 Wenn Sie den standardmäßigen Namespace-Typ verwenden, wählen Sie aus dem Dropdown-Menü (E-Mail, ECID oder AAID) einen Namespace aus und geben Sie dann die ID-Werte in das Textfeld rechts ein. Drücken Sie dann **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 Bei Verwendung des benutzerdefinierten Namespace-Typs müssen Sie den Namespace manuell eingeben, bevor Sie die unten stehenden ID-Werte angeben.
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 Das Dialogfeld verschwindet, und der neue Auftrag (oder die neuen Aufträge) werden im Widget Auftragsanfragen zusammen mit ihrem aktuellen Verarbeitungsstatus aufgeführt.
 
@@ -195,12 +195,12 @@ Wählen Sie den Pfeil neben **[!UICONTROL Anfrage erstellen]** unterhalb des Wid
 
 Das Dialogfeld **[!UICONTROL JSON hochladen]** wird angezeigt und bietet ein Fenster, in das Sie Ihre JSON-Datei per Drag-and-Drop ziehen können.
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-GDPR-Request.json herunterladen]** aus, um eine Vorlage herunterzuladen, die Sie entsprechend den von Ihren betroffenen Personen erfassten Werten ausfüllen können.
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfenster. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können weitere JSON-Dateien nach Bedarf hinzufügen, indem Sie sie per Drag-and-Drop in das Dialogfeld ziehen.

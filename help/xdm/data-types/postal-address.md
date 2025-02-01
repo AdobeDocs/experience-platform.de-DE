@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datentyp der Postanschrift
 description: Erfahren Sie mehr über den XDM-Datentyp „Anschrift“.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 35%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 35%
 
 [!UICONTROL Postanschrift] ist ein standardmäßiger XDM-Datentyp, der die Details einer Postanschrift beschreibt.
 
-<img src="../images/data-types/postal-address.png" width="450" /><br />
+![](../images/data-types/postal-address.png){width=450}
 
 | Eigenschaft | Beschreibung |
 | --- | --- |

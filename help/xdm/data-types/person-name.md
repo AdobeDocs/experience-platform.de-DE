@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datentyp des Personennamens
 description: Erfahren Sie mehr über den XDM-Datentyp „Personenname“.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Darüber hinaus bietet der Datentyp eine Reihe optionaler Eigenschaften, die in Situationen verwendet werden können, in denen nur ein Fragment des vollständigen Namens verwendet werden muss, z. B. bei der Erstellung einer formellen oder informellen Begrüßung.
 
-<img src="../images/data-types/person-name.png" width="500" /><br />
+![](../images/data-types/person-name.png){width=500}
 
 | Eigenschaft | Beschreibung |
 | --- | --- |

@@ -6,9 +6,9 @@ title: Fehlerbehebung bei der Kunden-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 31%
 
 ---
@@ -21,7 +21,7 @@ Die Kunden-KI zeigt Fehler an, wenn Modell-Training, -bewertung und -konfigurati
 
 Falls **[!UICONTROL Fehlgeschlagen]** oder **[!UICONTROL Problem mit Training]** angezeigt wird, können Sie den Status des Durchgangs auswählen, um einen Seitenbereich zu öffnen. Im Seitenbereich sind der **[!UICONTROL Status des letzten Durchgangs]** und **[!UICONTROL Details des letzten Durchgangs]** einsehbar. Der Abschnitt **[!UICONTROL Details des letzten Durchgangs]** enthält Informationen darüber, warum der Durchgang fehlgeschlagen ist. Falls die Kunden-KI keine Details zu Ihrem Fehler bereitstellen kann, wenden Sie sich an den Support unter Angabe des angegebenen Fehler-Codes.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Inkognito-Zugriff auf Kunden-KI in Chrome nicht möglich
 
@@ -39,7 +39,7 @@ Um dieses Problem zu umgehen, müssen Sie experience.adobe.com als Website hinzu
 
 Wenn der Fehler „[!UICONTROL Modellqualität ist schlecht. Es wird empfohlen, eine neue App mit der geänderten Konfiguration zu erstellen]“ angezeigt wird, befolgen Sie die unten empfohlenen Schritte zur Fehlerbehebung.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Empfohlene Fehlerbehebung
 

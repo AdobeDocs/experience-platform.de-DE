@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerätedatentyp
 description: Erfahren Sie mehr über den Geräte-XDM-Datentyp.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '307'
 ht-degree: 19%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 [!UICONTROL Device] ist ein standardmäßiger XDM-Datentyp, der ein identifiziertes Gerät beschreibt. Ein Gerät ist eine Anwendungs- oder Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies.
 
-<img src="../images/data-types/device.png" width="450" /><br />
+![](../images/data-types/device.png){width=450}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

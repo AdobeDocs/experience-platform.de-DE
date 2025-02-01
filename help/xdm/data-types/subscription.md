@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datentyp des Abonnements
 description: Erfahren Sie mehr über den Datentyp Abonnement-Experience-Datenmodell (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 29%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 [!UICONTROL Subscription] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der lizenzierte Berechtigungen für Software, Services oder Waren beschreibt, die basierend auf Zeit oder Nutzung genutzt werden.
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

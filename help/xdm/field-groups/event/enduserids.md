@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Schemafeldgruppe „Endbenutzer-ID-Details“
 description: Erfahren Sie mehr über die Schemafeldgruppe „Endbenutzer-ID-Details“.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 16%
+source-wordcount: '202'
+ht-degree: 15%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 16%
 
 [!UICONTROL Details zur Endbenutzer-ID] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), mit der die Identitätsinformationen einer Person in mehreren Adobe-Anwendungen beschrieben werden. Die Feldergruppe stellt ein `endUserIDs`-Objekt auf der Stammebene bereit, das selbst ein schreibgeschütztes `_experience` enthält, dessen Werte bei der Datenaufnahme automatisch aktualisiert werden.
 
-<img src="../../images/field-groups/enduserids.png" width="700" /><br />
+![](../../images/field-groups/enduserids.png){width=700}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |

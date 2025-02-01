@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Geo-Shape-Datentyp
 description: Erfahren Sie mehr über den XDM-Datentyp Geo-Form .
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '240'
 ht-degree: 31%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 [!UICONTROL Geo-Form] ist ein standardmäßiger XDM-Datentyp, der die Form eines geografischen Gebiets beschreibt. Dieser Datentyp basiert auf der öffentlichen Spezifikation, die in [schema.org](https://schema.org/GeoShape) dokumentiert ist.
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
