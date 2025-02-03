@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Eindeutiger Namespace"
->abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace haben. Wenn ein Diagramm versucht, diese Grenze zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links werden entfernt."
+>abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace aufweisen. Wenn ein Diagramm versucht, dieses Limit zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links entfernt."
 
 >[!AVAILABILITY]
 >

@@ -9,7 +9,7 @@ ht-degree: 2%
 
 ---
 
-# Verknüpfungslogik zum Identity Service {#identity-service-linking-logic}
+# Identity Service-Verknüpfungslogik {#identity-service-linking-logic}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"

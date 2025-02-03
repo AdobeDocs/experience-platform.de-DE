@@ -1,15 +1,15 @@
 ---
-title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
+title: Berechtigungsverwaltung zur Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht über die Verwaltung von Berechtigungen und die Steuerung des Zugriffs auf Datenerfassungsfunktionen in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1356'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
-# Berechtigungsverwaltung für die Datenerfassung in Experience Platform {#permission-management}
+# Berechtigungsverwaltung zur Datenerfassung in Experience Platform {#permission-management}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"

@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1436'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -29,12 +29,12 @@ Die folgenden Dokumente sind für das Verständnis der Verknüpfungsregeln für 
 * [Benutzeroberfläche für die Diagrammsimulation](./graph-simulation.md)
 * [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)
 
-## Szenarien für die Diagrammreduzierung {#graph-collapse-scenarios}
+## Szenarien zum Zusammenführen von Diagrammen {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Szenarien zum Diagrammreduzieren"
->abstract="Es gibt mehrere Gründe, warum Diagramme „reduziert“ werden oder mehrere Personenentitäten darstellen können."
+>title="Szenarien zum Zusammenführen von Diagrammen"
+>abstract="Es gibt mehrere Gründe, warum Diagramme zusammengeführt werden oder mehrere Personenentitäten darstellen können."
 
 In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen berücksichtigen können.
 

@@ -14,7 +14,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Diagrammsimulation"
->abstract="Diagramme simulieren, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
+>abstract="Simulieren Sie Diagramme, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus für die Identitätsoptimierung funktioniert."
 
 >[!AVAILABILITY]
 >
