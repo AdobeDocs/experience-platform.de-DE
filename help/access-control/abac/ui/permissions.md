@@ -3,14 +3,20 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1608'
 ht-degree: 35%
 
 ---
 
-# Verwalten der Berechtigungen für eine Rolle
+# Verwalten der Berechtigungen für eine Rolle {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Was sind Rollen?"
+>abstract="Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. Sie kategorisieren die Benutzer, die mit Ihrer Platform-Instanz interagieren, und sind die Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten von Rollen"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für de
 
 ![Das Rollen -Dashboard in der Benutzeroberfläche „Berechtigungen“ mit dem hervorgehobenen „X“ und „Alle Auswahlen löschen“ in den ausgewählten Filtern.](../../images/flac-ui/flac-clear-filters.png)
 
-## Rollendetails
+## Rollendetails {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Rollenübersicht"
+>abstract="Das Dialogfeld „Rollenübersicht“ zeigt die Details der Rolle an, einschließlich der Ressourcen und Sandboxes, auf die eine bestimmte Rolle zugreifen darf. Sie können Beschriftungen, Benutzer, Benutzergruppen und API-Anmeldeinformationen für die Rolle verwalten, indem Sie zur entsprechenden Registerkarte im Arbeitsbereich der Rolle navigieren."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Verwalten von Beschriftungen für eine Rolle"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Verwalten von Benutzern für eine Rolle"
 
 Wählen Sie auf der Registerkarte **[!UICONTROL Rollen]** die Rolle aus. Daraufhin wird das Dashboard [!UICONTROL Details] der Rolle geöffnet.
 

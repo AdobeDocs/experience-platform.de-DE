@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Kennzeichnungen verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Beschriftungen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
+source-git-commit: 71a2e91b6c23021aa11c19d84096d6b23f0de112
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 37%
+source-wordcount: '247'
+ht-degree: 47%
 
 ---
 
@@ -24,6 +24,12 @@ Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für die
 >id="platform_abac_labelusage"
 >title="Verwendung von Kennzeichnungen"
 >abstract="Sie können benutzerdefinierte Kennzeichnungen verwenden, um Data-Governance- und Zugriffssteuerungs-Konfigurationen auf Ihre Daten anzuwenden."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Erstellen neuer Kennzeichnungen"
+>abstract="Sie können eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren. Mithilfe benutzerdefinierter Kennzeichnungen können Sie auf Ihre Daten Konfigurationen für Data Governance und Zugriffssteuerung anwenden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
 
 >[!NOTE]
 >

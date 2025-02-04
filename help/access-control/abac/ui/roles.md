@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Rolle erstellen
 description: Dieses Dokument enthält Informationen zum Verwalten von Rollen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '618'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,14 @@ ht-degree: 15%
 
 Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
-## Erstellen einer neuen Rolle
+## Erstellen einer neuen Rolle {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Erstellen einer neuen Rolle"
+>abstract="Erstellen Sie neue Rollen, um Benutzende, die mit Ihrer Platform-Instanz interagieren, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die Kennzeichnung Regulated Health Data (RHD) auf diese Rolle anwenden, sodass Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und dieser Rolle den Zugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten einer Rolle"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Anwenden von Kennzeichnungen auf eine Rolle"
 
 Um eine neue Rolle zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Rollen]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Rolle erstellen]**.
 
