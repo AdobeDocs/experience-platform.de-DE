@@ -2,7 +2,7 @@
 title: Identitätsdaten in Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit der Adobe Experience Platform Web SDK abrufen und verwalten.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
+source-git-commit: 3724c43090e37d21384e9dfe45e60ee2eec68a81
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 1%
@@ -71,7 +71,7 @@ Um die Auswirkungen der Cookie-Lebensdauern wie oben beschrieben zu berücksicht
 Je nach Anwendungsfall gibt es zwei Möglichkeiten, auf die [!DNL ECID] zuzugreifen:
 
 * [Abrufen der  [!DNL ECID]  durch die Datenvorbereitung für ](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
-* [Abrufen der  [!DNL ECID] über den `getIdentity()`-Befehl](#retrieve-ecid-getidentity): Verwenden Sie diese Methode nur, wenn Sie die [!DNL ECID] Informationen Client-seitig benötigen.
+* [Abrufen der  [!DNL ECID]  über den `getIdentity()`-Befehl](#retrieve-ecid-getidentity): Verwenden Sie diese Methode nur, wenn Sie die [!DNL ECID] Informationen Client-seitig benötigen.
 
 ### Abrufen der [!DNL ECID] durch die Datenvorbereitung für die Datenerfassung {#retrieve-ecid-data-prep}
 
