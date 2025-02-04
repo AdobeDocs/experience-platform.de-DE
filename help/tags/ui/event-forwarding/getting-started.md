@@ -3,7 +3,7 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 84%
@@ -82,7 +82,7 @@ Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen 
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
-## Aktivieren der Ereignisweiterleitung
+## Aktivieren der Ereignisweiterleitung {#enable-event-forwarding}
 
 Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleitung und andere Adobe-Produkte zu senden.
 
