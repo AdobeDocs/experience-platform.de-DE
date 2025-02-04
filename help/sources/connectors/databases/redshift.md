@@ -3,10 +3,10 @@ title: Übersicht über den Amazon Redshift Source Connector
 description: Erfahren Sie, wie Sie Amazon Redshift mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 36%
+source-wordcount: '378'
+ht-degree: 34%
 
 ---
 
@@ -23,7 +23,11 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Datenbanktypen herstellen, z. B. relationale Datenbanken, NoSQL oder Data Warehouses. Die Unterstützung für Datenbankanbieter umfasst [!DNL Amazon Redshift].
 
-## IP-Adressen-Zulassungsliste
+## Einrichten der [!DNL Amazon Redshift] für das Experience Platform auf Azure {#azure}
+
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Amazon Redshift]-Konto für das Experience Platform in Azure einrichten können.
+
+### IP-Adressen-Zulassungsliste
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
@@ -41,7 +45,7 @@ Fügen Sie die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzu, um Ihr [!DN
 
 ## Verbinden von [!DNL Amazon Redshift] mit Platform mithilfe von APIs
 
-- [Erstellen einer Amazon Redshift-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/redshift.md)
+- [Verbinden von Amazon Redshift mit Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/redshift.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 

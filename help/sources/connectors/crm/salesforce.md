@@ -2,9 +2,9 @@
 title: Übersicht über den Salesforce Source Connector
 description: Erfahren Sie, wie Sie Salesforce mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 11%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Salesforce].
 
-## IP-Adressen-Zulassungsliste
+## Einrichten der [!DNL Salesforce] für das Experience Platform auf Azure {#azure}
+
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Konto für das Experience Platform in Azure einrichten können.
+
+### IP-Adressen-Zulassungsliste
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Feldzuordnung von [!DNL Salesforce] zu XDM
+### Feldzuordnung von [!DNL Salesforce] zu XDM
 
 Um eine Quellverbindung zwischen [!DNL Salesforce] und Platform herzustellen, müssen die [!DNL Salesforce] Quelldatenfelder den entsprechenden XDM-Zielfeldern zugeordnet werden, bevor sie in Platform aufgenommen werden.
 
@@ -38,7 +42,7 @@ Siehe die folgenden Informationen zu den Feldzuordnungsregeln zwischen [!DNL Sal
 - [Kampagnenmitglieder](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [Account-Kontaktbeziehung](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## Einrichten des [!DNL Salesforce] Namespace und des Dienstprogramms zur automatischen Schemaerstellung
+### Einrichten des [!DNL Salesforce] Namespace und des Dienstprogramms zur automatischen Schemaerstellung
 
 Um die [!DNL Salesforce] als Teil von [!DNL B2B-CDP] zu verwenden, müssen Sie zunächst ein [!DNL Postman]-Dienstprogramm einrichten, um Ihre [!DNL Salesforce] Namespaces und Schemata automatisch zu generieren. Die folgende Dokumentation enthält zusätzliche Informationen zum Einrichten des [!DNL Postman]:
 
@@ -271,7 +275,7 @@ Nachdem Sie die erforderliche Einrichtung für Ihr [!DNL Salesforce]-Konto abges
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Salesforce] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-- [Erstellen einer Salesforce-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/crm/salesforce.md)
+- [Verbinden von Salesforce mit Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/crm/salesforce.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
