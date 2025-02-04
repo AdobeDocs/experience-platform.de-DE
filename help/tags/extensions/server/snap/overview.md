@@ -1,0 +1,202 @@
+---
+title: Adobe Snapchat Conversions API-Erweiterungsintegration
+description: Mit dieser Adobe Experience Platform-Web-Ereignis-API können Sie Website-Interaktionen direkt mit Snapchat teilen.
+last-substantial-update: 2025-01-20T00:00:00Z
+source-git-commit: 6403c339b2407410e282a25a0382845214bb6a95
+workflow-type: tm+mt
+source-wordcount: '968'
+ht-degree: 4%
+
+---
+
+# Übersicht über die [!DNL Snapchat] Conversions-API-Erweiterung
+
+Die [!DNL Snap] Conversion API Extension ist eine sichere [Edge Network Server-API](/help/server-api/overview.md)-Schnittstelle, über die Sie Informationen direkt über Benutzeraktionen auf Ihren Websites mit [!DNL Snapchat] teilen können. Sie können die Regeln für die Ereignisweiterleitung nutzen, um Daten vom **[!DNL Adobe Experience Platform Edge Network]** an **[!DNL Snapchat]** zu senden, indem Sie die API-Erweiterung für die **[!DNL Snap]** verwenden.
+
+## Voraussetzungen für [!DNL Snapchat] {#prerequisites}
+
+Um die [!DNL Snapchat] Conversions-API verwenden zu können, müssen Sie über eine [Ereignisweiterleitungs-Eigenschaft](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) in der Adobe Experience Platform eingerichtet haben und über die [erforderlichen Berechtigungen](https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions) verfügen, um die Eigenschaft zu bearbeiten.
+
+Erstellen Sie [Datenstrom](/help/tags/ui/event-forwarding/getting-started.md) und fügen Sie ihm [Ereignisweiterleitungs-Service](/help/tags/ui/event-forwarding/getting-started#enable-event-forwarding) hinzu.
+
+Für die Verwendung ](https://business.snapchat.com/) Konversions-API ist ein **[!DNL Snapchat]** [Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
+
+Im Snapchat Ads Manager muss ein **[!DNL Snap Pixel]** (https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzeigen zu können. Die `Pixel ID` finden Sie im Abschnitt **[!UICONTROL Events Manager]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+
+Sie benötigen ein statisches, langlebiges API-Token. Informationen zum Abrufen [[!DNL Snapchat]  Tokens finden Sie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) der Dokumentation zur Konversions-API .
+
+## Installieren und Konfigurieren der [!DNL Snapchat] Web Events API-Erweiterung {#install}
+
+Um die Erweiterung zu installieren, navigieren Sie zu **[!UICONTROL Datenerfassung]**>**[!UICONTROL Ereignisweiterleitung]**. Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten.
+
+Nachdem Sie die gewünschte Eigenschaft ausgewählt haben, führen Sie die folgenden Schritte aus:
+
+1. Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Erweiterungen]** aus.
+2. Suchen Sie nach der **[!UICONTROL Snap Conversion API Extension]** und wählen Sie **[!UICONTROL Installieren]**.
+
+   ![Abbildung mit der Schaltfläche „Installieren“](../../../images/extensions/server/snap/install.png).
+
+3. Geben Sie im Konfigurationsbildschirm die folgenden Werte ein:
+
+* **[!UICONTROL Pixel-ID]**
+* **[!UICONTROL API-Token]**
+
+Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+
+![Bild mit Pixel-ID und API-Token-Schaltfläche](../../../images/extensions/server/snap/configure.png).
+<!-- 
+![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
+
+## Datenelemente erstellen {#create-data-elements}
+
+Um Datenpunkte als Parameter an die [!DNL Snapchat] Conversions-API-Erweiterung zu übergeben, müssen Sie [Datenelemente](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) für jeden Datenpunkt erstellen. Führen Sie folgende Schritte aus:
+
+1. Navigieren Sie **[!UICONTROL Bildschirm****Eigenschafteninformationen]** > **[!UICONTROL Datenelemente]** und wählen Sie dann **[!UICONTROL Datenelement hinzufügen]**.
+
+   ![Bild mit der Schaltfläche „Datenelement hinzufügen“](../../../images/extensions/server/snap/add_data_element.png).
+
+2. Geben Sie einen Namen für das Datenelement ein.
+
+3. Wählen Sie **[!UICONTROL Core]** als Erweiterung und **[!UICONTROL Path]** als Datenelementtyp aus.
+
+4. Wählen Sie aus dem Dropdown-Menü das entsprechende Element aus und füllen Sie das Feld [!UICONTROL Pfad] im rechten Bedienfeld aus, um auf die gewünschten Daten in Ihrem Schema zu verweisen.
+
+   ![Bild mit dem Bildschirm Datenelement erstellen](../../../images/extensions/server/snap/create_data_element.png).
+
+Wenn Sie beispielsweise ein Datenelement erstellen, das auf `snapClickId` im unten gezeigten Schema verweist:
+
+![Bild mit ](../../../images/extensions/server/snap/schema.png).
+
+Sie müssen das Datenelement konfigurieren, da `snapClickId` sich unter `_snap.inc.exchange` im XDM-Schema befindet.
+
+![Bild mit dem Bildschirm Datenelement bearbeiten](../../../images/extensions/server/snap/edit_data_element.png).
+
+Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forwarding/overview#data-elements.md) Dokumentation zu Ereignisweiterleitungs-Eigenschaften .
+
+## Erstellen von Regeln zum Senden von Konversionsereignissen an Snap {#create-snap-rules}
+
+[Regeln](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) werden zum Erstellen von Triggern für Erweiterungen in Platform verwendet. In diesem Abschnitt wird beschrieben, wie Sie in Ihrer Ereignisweiterleitungs-Eigenschaft Regeln erstellen, um Konversionsereignisse mithilfe der Conversions-API-Erweiterung an Snap zu senden.
+
+### Neue Regel erstellen
+
+1. Navigieren Sie zu Ihrer Ereignisweiterleitungs-Eigenschaft und wählen Sie **[!UICONTROL Regeln]** aus dem Menü Authoring aus. Klicken Sie dann auf **[!UICONTROL Neue Regel erstellen]**.
+
+   ![Bild mit Regeln im linken Navigationsbereich](../../../images/extensions/server/snap/create_new_rule.png).
+
+2. Benennen Sie die Regel und konfigurieren Sie eine Bedingung für das Auslösen des Snap-Ereignisses. Um beispielsweise ein `PURCHASE`-Ereignis zu senden, wenn ein Ereignis eine Bestellnummer enthält, legen Sie eine Bedingung fest, um zu überprüfen, ob die Benutzerinteraktion eine gültige Bestellnummer enthält.
+
+   ![Bild mit dem Konfigurationsbildschirm für Bedingungen](../../../images/extensions/server/snap/action_configuration.png).
+
+3. Fügen Sie nach dem Speichern der Bedingung eine Aktion hinzu, um die Snap Conversion API mit einem Trigger zu versehen. Im linken Bedienfeld:
+
+   * Legen Sie im Dropdown[!UICONTROL Menü ]Erweiterung“ die Option [!UICONTROL API-Erweiterung für Snap-Konversionen] fest.
+
+   * Legen Sie das Dropdown[!UICONTROL Menü „Aktionstyp] auf &quot;[!UICONTROL  Web-Konversionen melden“ ].
+
+   * Benennen Sie die Regel entsprechend.
+
+   ![Bild mit dem Aktionskonfigurationsbildschirm](../../../images/extensions/server/snap/action_configuration.png).
+
+4. Konfigurieren Sie [CAPI-Parameterwerte](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) die Sie für das Ereignis im Abschnitt **[!UICONTROL Datenbindungen]** im rechten Bedienfeld senden möchten. Die Felder in der Erweiterung werden wie unten dargestellt CAPI-Parametern zugeordnet. Weitere Informationen zu den einzelnen Parametern finden [ in der ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) zur Snapchat Conversions-API .
+
+| Datenbindungsfeld | Snap-API-Parameter |
+| --- | --- |
+| Ereignistyp (erforderlich) | `event_name` |
+| E-Mail | `em` |
+| Telefonnummer | `ph` |
+| Benutzeragent | `client_user_agent` |
+| IP-Adresse | `client_ip_address` |
+| Klick-ID | `sc_click_id` |
+| cookie1 | `so_cookie1` |
+| Vorname | `fn` |
+| Nachname | `ln` |
+| Geschlecht | `ge` |
+| Stadt | `ph` |
+| Land | `st` |
+| PLZ | `zp` |
+| Land | `country` |
+| Externe ID | `external_id` |
+| Partner-ID | `partner_id` |
+| Abonnement-ID | `subscription_id` |
+| Lead-ID | `lead_id` |
+| Artikel oder Kategorie | `content_category` |
+| Inhaltsname | `content_ids` |
+| Content-Typ | `content_name` |
+| Inhalt | `contents` |
+| Beschreibung | `description` |
+| Ereignis-Tag | `event_tag` |
+| Anzahl der Elemente | `num_items` |
+| Price | `value` |
+| Währung | `currency` |
+| Transaction ID | `order_id` (auch zur `event_id` anstelle von `client dedup idD`) |
+| Prognostizierter LTV | `predicted_ltv` |
+| Suchzeichenfolge | `search_string` |
+| Anmeldemethode | `sign_up_method` |
+| Client-Deduplizierungs-ID | `event_id` |
+| Eingeschränkte Datennutzung | `data_processing_options` |
+| Seiten-URL | `event_source_url` |
+
+### Erforderliche und optionale Felder
+
+* Erforderliche Felder:
+
+   * Für alle Ereignisse `event_source` &quot;`WEB`&quot; festgelegt.
+
+   * Mindestens eines der folgenden Felder oder Kombinationen ist für die Zuordnung erforderlich:
+
+      * E-Mail
+      * Telefonnummer
+      * IP-Adresse und Benutzeragent
+
+**Zusätzliche Hinweise:**
+
+* Für `Purchase` Ereignisse sind die Felder `Currency` und `Price` erforderlich.
+
+* Durch Aktivieren des **[!UICONTROL Testmodus]**-Kontrollkästchens werden Ereignisse als Testereignisse gesendet, die im Testereignis-Tool anstelle der Standardberichte angezeigt werden. Weitere Informationen finden Sie [ diesem Artikel ](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap&#39;s%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) Business Help Center .
+
+* Der `contents`-Parameter sollte eine JSON-Zeichenfolge sein, die mindestens eines der folgenden Felder enthält:
+
+   * `id`
+   * `item_category`
+   * `brand`
+   * `delivery_category`
+   * `item_price`
+   * `quantity`
+
+Beispiel:
+
+```json
+{
+  "id": "id1",
+  "brand": "brand1",
+  "delivery_category": "c1",
+  "item_price": 2.00,
+  "quantity": 2
+}
+```
+
+Um [benutzerdefinierte Konversionswerte und ROAS-Berichte“ ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) verwenden, schließen Sie relevante Parameter in das Feld `contents` ein. Beispiel: `brand`, `item_price`, `id`.
+
+Beispielkonfiguration für ein `Purchase`:
+
+[Bild mit Datenbindungen](../../../images/extensions/server/snap/data_bindings.png)
+
+Die optionalen Felder können wie folgt festgelegt werden:
+
+[Bild mit optionalen Feldern](../../../images/extensions/server/snap/optional_fields.png)
+
+Nachdem Sie den Namen, die Bedingung und die Aktion der Regel wie oben beschrieben festgelegt haben, speichern Sie die Regel und stellen Sie sicher, dass sie aktiviert ist.
+
+[Bild mit aktivierter Regel](../../../images/extensions/server/snap/enabled_rule.png)
+
+Sie können diese Änderungen jetzt in Ihrer Eigenschaft veröffentlichen. Weitere Informationen finden Sie in der Dokumentation [Publishing-](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview)).
+
+## Fehler beheben {#troubleshoot}
+
+Lesen Sie zur Fehlerbehebung und Optimierung Ihres Setups die [Empfehlungen für die Ereignisqualitätsbewertung](https://businesshelp.snapchat.com/s/article/event-quality-score), um sicherzustellen, dass Ihre Ereignisse die höchstmöglichen Übereinstimmungsraten und Leistungsergebnisse erzielen.
+
+Wenn Sie Probleme mit Ihrem **Event Quality Score** haben, erfahren Sie mehr über unsere Empfehlungen zur Verbesserung [hier](https://businesshelp.snapchat.com/s/article/esq-issues-recommendations?language=en_US).
+
+## Nächste Schritte {#next-steps}
+
+In diesem Handbuch wurde beschrieben, wie Sie Server-seitige Ereignisdaten mithilfe der **[!DNL Snap Conversions API]**-Erweiterung an **[!DNL Snap]** senden. Weitere Informationen zu den Funktionen für die Ereignisweiterleitung in Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
