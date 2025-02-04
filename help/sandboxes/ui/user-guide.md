@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Sandbox-UI
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
+source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 51%
+source-wordcount: '1115'
+ht-degree: 49%
 
 ---
 
@@ -82,6 +82,7 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die 
 >* Eine benutzerdefinierte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nach einer Warnmeldung zurückgesetzt werden.
 >* Vor dem Zurücksetzen einer Sandbox müssen Sie Ihre Kompositionen manuell löschen, um sicherzustellen, dass die zugehörigen Zielgruppendaten ordnungsgemäß bereinigt werden.
 >* Die Sandbox-ID ändert sich, nachdem das Zurücksetzen abgeschlossen ist.
+>* Für [Journey Optimizer B2B edition](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview) wird das Zurücksetzen **Sandbox derzeit nicht**. Das Zurücksetzen oder Löschen einer Sandbox, die Journey Optimizer B2B edition zugeordnet ist, kann zu dauerhaftem Datenverlust in Journey Optimizer B2B edition führen und könnte die Bereitstellung einer neuen Journey Optimizer B2B edition-Instanz erfordern.
 
 ### Audience-Kompositionen löschen
 
