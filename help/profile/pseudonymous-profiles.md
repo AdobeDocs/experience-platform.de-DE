@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
+source-git-commit: 208f327d35749c97ac77f337493d8759e8622dcd
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 69%
+source-wordcount: '1039'
+ht-degree: 67%
 
 ---
 
@@ -16,6 +16,12 @@ ht-degree: 69%
 In Adobe Experience Platform können Sie Datenablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 ## Pseudonymes Profil {#pseudonymous-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="Was ist ein pseudonymes Profil?"
+>abstract="Ein pseudonymes Profil ist ein Profil mit einem pseudonymen oder unbekannten Identity-Namespace oder einem Profil, das für einen bestimmten Zeitraum keine Aktivität ausgeführt hat."
+>text="Learn more in documentation"
 
 Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folgenden Bedingungen erfüllt:
 
