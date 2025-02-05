@@ -2,10 +2,10 @@
 title: Fragenleitfaden für KI-Assistenten
 description: In diesem Dokument erfahren Sie mehr über Beispielfragen, die Sie bei der Abfrage des KI-Assistenten verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 1%
+source-wordcount: '2105'
+ht-degree: 0%
 
 ---
 
@@ -115,6 +115,75 @@ In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwe
 | Kriterien oder Parameter auslassen. | Anzeigen von Datensätzen |
 
 {style="table-layout:auto"}
+
+## Datensatz-Beobachtbarkeit {#dataset-observability}
+
+Der KI-Assistent kann jetzt Fragen zu bestimmten Datensatzmetriken wie Speichergröße und Zeilenanzahl beantworten.
+
+* Welche sind meine größten Datensätze nach Größe?
+* Welches sind meine größten Datensätze nach Zeilen?
+* Wie viele Datensätze sind leer?
+* Welche Datensätze sind leer?
+
+Darüber hinaus können Sie ähnliche Absichten durch eine Reihe von verschiedenen Varianten zu den vier oben genannten Fragen vermitteln.
+
++++Auswählen, um akzeptierte Varianten von Fragen zur Datensatzbeobachtung anzuzeigen
+
+* Welche sind die fünf häufigsten Datensätze nach Größe?
+* Welcher Datensatz hat die größte Anzahl von Zeilen?
+* Wie viele Datensätze enthalten keine Daten?
+* Datensätze mit einer Größe >10 MB auflisten?
+* Datensätze mit Zeilen unter 10 auflisten.
+* Können Sie mir die Datensätze zeigen, die vollständig leer sind?
+* Welcher Datensatz ist gemessen an der Speichergröße der größte?
+* Was ist der kleinste Datensatz in Bezug auf die Zeilenanzahl?
+* Wie viele meiner Datensätze verfügen über Daten und wie viele sind leer?
+* Wie hoch ist die Zeilenanzahl für den Datensatz mit dem Namen {DATASET_NAME}?
+* Wie ist die Größe von {DATASET_NAME} im Vergleich zu meinen anderen Datensätzen?
+* Wie groß ist {DATASET_NAME}?
+* Wie viele Zeilen hat {DATASET_NAME}?
+* Wie groß und wie viele Zeilen sind {DATASET_NAME}?
+* Können die größten und kleinsten Datensätze nach Speichergröße aufgelistet werden?
+
++++
+
+Sie können Ihre Fragen zur Datenbeobachtbarkeit auch mit einem Qualifizierer verfeinern, um Ihre Abfrage nach einem bestimmten Zeitraum zu filtern:
+
+* Datensätze, die in den letzten (x) Tagen Batches erhalten
+* Datensätze erhalten in den letzten (x) Tagen keine Batches
+* Datensätze mit den meisten Daten, die in den letzten (x) Tagen aufgenommen wurden
+* Datensatzanzahl für einen bestimmten Datensatz in den letzten (x) Tagen
+
++++Auswählen, um akzeptierte Varianten von Fragen zur Datensatzbeobachtung anzuzeigen
+
+* Wie viele Datensätze haben in den letzten (x) Tagen Batches erhalten?
+* Welche Datensätze haben in den letzten (x) Tagen Batches erhalten?
+* Können Sie die Datensätze auflisten, die in den letzten (x) Tagen Daten aufgenommen haben?
+* Wie viele Datensätze haben in den vorherigen (x) Tagen neue Batches erhalten?
+* Welche Datensätze wurden in den letzten (x) Tagen mit neuen Daten aktualisiert?
+* Listet Datensätze auf, die innerhalb der letzten (x) Tage Batch-Aktivitäten hatten.
+* Wie viele Datensätze haben in den letzten (x) Tagen keine Batches erhalten?
+* Welche Datensätze haben in den letzten (x) Tagen keine Batches erhalten?
+* Können Sie Datensätze identifizieren, die in den letzten (x) Tagen keine Daten aufgenommen haben?
+* Wie viele Datensätze haben in den letzten (x) Tagen keine Aktualisierungen erhalten?
+* Welche Datensätze waren in den letzten (x) Tagen inaktiv?
+* Listet Datensätze auf, die in den letzten (x) Tagen keine neuen Batches erhalten haben.
+* Wann wurden die Daten zuletzt in den Datensatz (x) aufgenommen?
+* Was sind die 10 wichtigsten Datensätze, in die die meisten Daten in den letzten (x) Tagen aufgenommen wurden?
+* Welches sind die 10 beliebtesten Datensätze nach Datenvolumen, die in den letzten (x) Tagen aufgenommen wurden?
+* Welche 10 Datensätze hatten die größte Datenaufnahme in den letzten (x) Tagen?
+* Die 10 Datensätze mit der höchsten Datenaufnahme in den vorherigen (x) Tagen anzeigen.
+* Welche Datensätze werden von den Daten am häufigsten in den letzten (x) Tagen empfangen?
+* Listet die 10 beliebtesten Datensätze auf, die in den letzten (x) Tagen die meisten Daten aufgenommen haben.
+* Wie viele Datensätze wurden in den letzten (y) Tagen im Datensatz (x) empfangen?
+* Wie viele Datensätze hat Datensatz (X) in den letzten (Y) Tagen erhalten?
+* Wie viele Datensätze wurden in den letzten (y) Tagen für Datensatz (x) aufgenommen?
+* Kann die Anzahl der Datensätze angegeben werden, die in den letzten (y) Tagen zum Datensatz (x) hinzugefügt wurden?
+* Wie viele Daten hat Datensatz (X) in den letzten (Y) Tagen erhalten?
+* Wie viele Datensätze wurden in den vorherigen (y) Tagen für den Datensatz (x) aufgenommen?
+
++++
+
 
 ## Beispiele für nicht unterstützte Fragen {#unsupported-questions}
 
