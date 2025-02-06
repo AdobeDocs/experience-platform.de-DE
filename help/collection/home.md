@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 100%
 
 ---
@@ -51,10 +51,6 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
 
 ![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
-
->[!NOTE]
->
->Eine allgemeine Einführung in Platform Edge Network finden Sie in der folgenden [interaktiven Produkttour](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Ereignisweiterleitung
 
