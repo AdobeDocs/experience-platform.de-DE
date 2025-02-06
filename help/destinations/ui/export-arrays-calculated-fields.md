@@ -3,10 +3,10 @@ title: Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicherziele
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden, um Arrays von Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Fu
 ## Exportieren berechneter Felder {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Aktivieren des hierarchischen Ausgabeschemas"
+>abstract="<p> Schalten Sie diese Einstellung **ein** um, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren.</p><p>Wenn dieser Umschalter deaktiviert ist, können Sie die Option „Berechnete Felder“ beim Aktivieren von Zielgruppen verwenden, jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Aktivieren des hierarchischen Ausgabeschemas"
 >abstract="Aktivieren Sie diese Option, wenn Sie hierarchische Strukturen wie Arrays exportieren möchten."
@@ -79,7 +84,7 @@ Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Fu
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="„Berechnete Felder hinzufügen“ ist deaktiviert"
->abstract="Dieses Steuerelement ist deaktiviert, da Sie beim Herstellen einer Verbindung zum Ziel ausgewählt haben, flache Strukturen zu exportieren."
+>abstract="Dieses Steuerelement ist deaktiviert, weil Sie beim Einrichten dieser Zielverbindung den Umschalter **Exportieren von Arrays** Zuordnungen, Objekte ** ausgewählt haben. Um berechnete Felder und die darin verfügbaren Funktionen zu verwenden, richten Sie eine neue Zielverbindung mit dem Umschalter **Arrays, Karten, Objekte exportieren** ein *aus*."
 
 Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
