@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,15 @@ Sehen Sie sich das folgende Video an, um mehr über Produktkenntnisse im KI-Assi
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
 
-Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge)
+Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge).
+
+### Operative Erkenntnisse im KI-Assistenten
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre betrieblichen Einblicke abrufen und einen umfassenden Überblick über Ihre Datenobjekte erhalten können.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+Weitere Informationen finden Sie unter [operative Erkenntnisse im KI-Assistenten](home.md#operational-insights).
 
 ### Verwenden von KI-Assistenten-Produktwissen zur Verkürzung der Onboarding-Zeit
 
@@ -165,6 +173,7 @@ Im Folgenden finden Sie Anwendungsbeispiele für KI-Assistenten:
 * [Beseitigen Sie die Zielgruppen und optimieren Sie Ihre Marketing-Abläufe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Überprüfen Sie Abhängigkeiten und minimieren Sie Risiken bei Datenaktualisierungen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Neue Funktionen schneller entdecken und bereitstellen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [Revolutionieren Sie den Kunden-Support mit dem KI-Assistenten](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB Zusätzliche Videoinhalte]
 
