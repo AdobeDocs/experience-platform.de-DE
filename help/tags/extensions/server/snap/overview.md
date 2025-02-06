@@ -2,9 +2,10 @@
 title: Snapchat Conversions API-Erweiterung - Übersicht
 description: Verwenden Sie die Snapchat-Konvertierung, um Server-seitige Ereignisdaten an Snap zu senden.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 4%
 
 ---
@@ -24,7 +25,7 @@ Erstellen Sie [Datenstrom](/help/tags/ui/event-forwarding/getting-started.md) un
 
 Für die Verwendung ](https://business.snapchat.com/) Konversions-API ist ein **[!DNL Snapchat]** [Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
 
-Im Snapchat Ads Manager muss ein **[!DNL Snap Pixel]** (https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzeigen zu können. Die `Pixel ID` finden Sie im Abschnitt **[!UICONTROL Events Manager]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Im Snapchat Ads Manager muss ein [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzuzeigen. Die `Pixel ID` finden Sie im Abschnitt [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Sie benötigen ein statisches, langlebiges API-Token. Informationen zum Abrufen [[!DNL Snapchat]  Tokens finden Sie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) der Dokumentation zur Konversions-API .
 
@@ -190,7 +191,7 @@ Nachdem Sie den Namen, die Bedingung und die Aktion der Regel wie oben beschrieb
 
 ![Bild mit aktivierter Regel](../../../images/extensions/server/snap/enabled_rule.png)
 
-Sie können diese Änderungen jetzt in Ihrer Eigenschaft veröffentlichen. Weitere Informationen finden Sie in [ Dokumentation unter ](/help/tags/ui/publishing/overview.md)Publishing-Ablauf(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
+Sie können diese Änderungen jetzt in Ihrer Eigenschaft veröffentlichen. Weitere Informationen finden Sie in [ Dokumentation ](/help/tags/ui/publishing/overview.md) Veröffentlichungsablauf .
 
 ## Fehler beheben {#troubleshoot}
 
