@@ -2,10 +2,10 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
 source-wordcount: '1821'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -49,7 +49,7 @@ Der Profil-Store verwendet eine Microsoft Azure Cosmos DB-Infrastruktur und der 
 
 ### Leitplanken für Profile
 
-Experience Platform bietet eine Reihe von Schutzmaßnahmen, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Performance-Beeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profilleitplanken](guardrails.md).
+Experience Platform bietet eine Reihe von Schutzmaßnahmen, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dazu gehören weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profilleitplanken](guardrails.md).
 
 ### Profil-Dashboard {#profile-dashboard}
 

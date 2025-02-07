@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu berechneten Attributen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Da berechnete Attribute mithilfe von Erlebnisereignisfeldern erstellt werden und
 
 ## Gibt es Beschränkungen für die Anzahl der berechneten Attribute, die ich erstellen kann?
 
-Ja, die Anzahl der berechneten Attribute, die Sie erstellen können, ist begrenzt. Weitere Informationen entnehmen Sie bitte der Produktbeschreibung oder wenden Sie sich an das Adobe Account Team.
+Ja, die Anzahl der berechneten Attribute, die Sie erstellen können, ist begrenzt. Diese Beschränkung gilt nur für **aktive** berechnete Attribute. Weitere Informationen entnehmen Sie bitte der Produktbeschreibung oder wenden Sie sich an das Adobe Account Team.
 
 ## Gibt es nachgelagerte Auswirkungen auf die Deaktivierung eines berechneten Attributs?
 
