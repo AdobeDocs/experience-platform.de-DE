@@ -2,10 +2,10 @@
 title: Data Landing Zone Source
 description: Erfahren Sie, wie Sie die Data Landing Zone mit Adobe Experience Platform verbinden
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 22%
+source-wordcount: '1316'
+ht-degree: 21%
 
 ---
 
@@ -299,6 +299,12 @@ Navigieren Sie abschließend zur generierten URL, um sich mit Ihren [!DNL Data L
 
 ## [!DNL Data Landing Zone] mit Experience Platform verbinden
 
+>[!IMPORTANT]
+>
+>- Um eine Verbindung zur Quelle herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Quellen anzeigen]** und **[!UICONTROL Quellen verwalten]** . Weitere Informationen finden Sie unter [Zugriffskontrolle - Übersicht](../../../access-control/home.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>
+>- Private Links werden derzeit nicht unterstützt, wenn eine Verbindung zu Experience Platform über die [!DNL Data Landing Zone] hergestellt wird. Die einzigen unterstützten Methoden für den Zugriff sind die [hier](#manage-the-contents-of-your-data-landing-zone) aufgelisteten Methoden.
+
 Die folgende Dokumentation enthält Informationen dazu, wie Sie Daten aus Ihrem [!DNL Data Landing Zone]-Container mithilfe von APIs oder der Benutzeroberfläche in Adobe Experience Platform importieren können.
 
 ### Verwenden von APIs
@@ -310,8 +316,4 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie Daten aus Ihrem 
 
 - [Verbinden  [!DNL Data Landing Zone]  Platform über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Private Links werden derzeit nicht unterstützt, wenn eine Verbindung zu Experience Platform über die [!DNL Data Landing Zone] hergestellt wird. Die einzigen unterstützten Methoden für den Zugriff sind die [hier](#manage-the-contents-of-your-data-landing-zone) aufgelisteten Methoden.
 

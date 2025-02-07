@@ -2,10 +2,10 @@
 title: Verbinden der Data Landing Zone mit Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Quell-Connector für die Data Landing Zone erstellen.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 19%
+source-wordcount: '767'
+ht-degree: 20%
 
 ---
 
@@ -27,6 +27,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Dateien von [!DNL Data Landing Zone] nach Platform übertragen
+
+>[!IMPORTANT]
+>
+> Um eine Verbindung zur Quelle herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Quellen anzeigen]** und **[!UICONTROL Quellen verwalten]** . Lesen Sie die [Übersicht über die Zugriffssteuerung](../../../../../access-control/home.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
