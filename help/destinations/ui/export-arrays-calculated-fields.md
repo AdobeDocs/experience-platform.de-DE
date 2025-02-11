@@ -3,9 +3,9 @@ title: Exportieren von Array-Objekten aus Real-Time CDP in Cloud-Speicherziele
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden, um Arrays von Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1730'
 ht-degree: 6%
 
 ---
@@ -73,8 +73,8 @@ Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Fu
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Aktivieren des hierarchischen Ausgabeschemas"
->abstract="<p> Schalten Sie diese Einstellung **ein** um, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren.</p><p>Wenn dieser Umschalter deaktiviert ist, können Sie die Option „Berechnete Felder“ beim Aktivieren von Zielgruppen verwenden, jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren</p>"
+>title="Exportieren von Arrays, Zuordnungen und Objekten"
+>abstract="<p> Schalten Sie diese Einstellung <b>ein</b> um, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Ansicht Quellfeld des Zuordnungsschritts auswählen.</p><p>Mit diesem Umschalter <b>Aus</b> können Sie die Option Berechnete Felder verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anwenden. Sie können jedoch <i>nicht</i> Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren und müssen dafür ein separates Ziel konfigurieren.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"

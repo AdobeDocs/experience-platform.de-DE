@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
-ht-degree: 48%
+source-wordcount: '1819'
+ht-degree: 49%
 
 ---
 
@@ -98,10 +98,6 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 >Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht mehr ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen. Werbetreibende, die bereits eine Integration mit ADSP eingerichtet haben, um einen neuen Zielfluss erstellen zu können, wenn ihre Zielgruppen an AMC oder ein anderes ADSP-Konto gesendet werden sollen.
 
 * **[!UICONTROL Advertiser-Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
-
->[!IMPORTANT]
->
->Die Aktualisierung für das **[!UICONTROL Amazon Ads Consent Signal]** soll am 7. Februar 2025 live gehen.
 
 * **[!UICONTROL Amazon Ads-Einverständnissignal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung in Amazon Ads abgelehnt.
 
