@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 54%
 
 ---
@@ -233,6 +233,8 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Segmentieru
 >
 Bei der Auswahl von Zielgruppen für eine flexible Zielgruppenauswertung gelten die folgenden Bedingungen:
 >
+- Eine flexible Zielgruppenauswertung kann nur (**)** täglich verwendet werden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
+- Sie verfügen über **maximal** 50 flexible Zielgruppenauswertungsdurchgänge pro Jahr.
 - Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.
 - Alle Zielgruppen **müssen** mithilfe der Batch-Segmentierung ausgewertet werden.
 - Alle Zielgruppen **müssen** personenbasierte Zielgruppen sein.
