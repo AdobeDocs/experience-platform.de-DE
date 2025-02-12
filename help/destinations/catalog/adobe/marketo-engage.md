@@ -2,9 +2,9 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 26%
 
 ---
@@ -49,7 +49,7 @@ Das Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform erstell
 
 ### Unterstützte Attribute {#supported-attributes}
 
-Sie können Attribute vom Experience Platform einem beliebigen Attribut zuordnen, auf das Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die [API-Anfrage beschreiben](https://developers.marketo.com/rest-api/lead-database/leads/#describe) verwenden, um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
+Sie können Attribute aus Experience Platform jedem der Attribute zuordnen, auf die Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die [API-Anfrage beschreiben](https://developers.marketo.com/rest-api/lead-database/leads/#describe) verwenden, um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -57,7 +57,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -88,8 +88,8 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 >
 >Das Video spiegelt die aktuelle Funktion nicht vollständig wider. Die aktuellsten Informationen finden Sie in dem oben verlinkten Handbuch. Die folgenden Teile des Videos sind veraltet:
 > 
->* Die Zielkarte, die Sie auf der Experience Platform-Benutzeroberfläche verwenden sollten, ist **[!UICONTROL Marketo V2]**.
->* Das Video zeigt nicht das neue Auswahlfeld **[!UICONTROL Personenerstellung]** im Workflow Mit Ziel verbinden .
+>* Die Zielkarte, die Sie in der Experience Platform-Benutzeroberfläche verwenden sollten, ist **[!UICONTROL Marketo V2]**.
+>* Das Video zeigt nicht das neue Auswahlfeld **[!UICONTROL Personenerstellung]** im Workflow Mit Ziel verbinden . Um dieses Feld zu verwenden, müssen Sie während des Schritts zur Attributzuordnung sowohl den Vor- als auch den Nachnamen zuordnen.
 >* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Zusätzlich zu den Informationen zur Zielgruppenzugehörigkeit, die zum Zeitpunkt der Videoaufzeichnung unterstützt wurden, können Sie jetzt viele weitere Profilattributfelder zuordnen. Sie können auch Zielgruppenmitglieder, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind, nach Marketo exportieren. Diese werden dann den Listen hinzugefügt.
 >* Im Schritt **[!UICONTROL Zielgruppe planen]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Zuordnungs-ID“ hinzufügen]** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
