@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 80%
+source-wordcount: '2116'
+ht-degree: 78%
 
 ---
 
@@ -46,7 +46,7 @@ Wenn eine Zielgruppe zum ersten Mal aktiviert wird, prüft [!DNL Policy Service]
 
 >[!NOTE]
 >
->Wenn es Datennutzungskennzeichnungen gibt, die nur auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Kennzeichnungen auf Feldebene bei der Aktivierung nur unter folgenden Bedingungen:
+>Wenn es Datennutzungskennzeichnungen gibt, die nur auf bestimmte Felder angewendet wurden, wird die Durchsetzung dieser Kennzeichnungen auf Feldebene bei der Aktivierung nur durchgeführt, wenn mindestens eine der folgenden Bedingungen erfüllt ist:
 >
 >* Die Felder werden in der Zielgruppe verwendet.
 >* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
