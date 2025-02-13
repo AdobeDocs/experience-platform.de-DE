@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -49,7 +49,7 @@ Sie werden:
 
 ## Berechtigungen
 
-[!UICONTROL Berechtigungen] ist der Bereich des Experience Cloud, in dem Admins Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
+[!UICONTROL Berechtigungen] ist der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte innerhalb einer Produktanwendung zu verwalten.
 
 Über [!UICONTROL Berechtigungen] können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. [!UICONTROL Berechtigungen] ermöglichen Ihnen auch die Verwaltung der Bezeichnungen, Sandboxes und Benutzenden, die einer bestimmten Rolle zugeordnet sind.
 
@@ -66,7 +66,7 @@ Der Arbeitsbereich „Berechtigungen“ für die Platform-Benutzeroberfläche wi
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Was sind Kennzeichnungen?"
->abstract="Verwenden Sie Kennzeichnungen, um Datensätze und Felder entsprechend den für diese Daten geltenden Datennutzungs- und Zugriffsrichtlinien zu kategorisieren. Platform bietet mehrere Adobe-definierte <strong>Core</strong>-Datennutzungskennzeichnungen, die eine Vielzahl gängiger Einschränkungen für die Datenverwaltung abdecken. Beispielsweise können Sie mit <strong>S</strong>-Kennzeichnungen wie RHD (Regulated Health Data) Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugrffsrichtlinien kategorisieren. Platform bietet verschiedene, von Adobe definierte <strong>Kern</strong>-Kennzeichnungen für die Datennutzung, die eine Vielzahl gängiger Einschränkungen für Data Governance abdecken. Mit <strong>S</strong>-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data, regulierte Gesundheitsdaten) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren, und sind Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Zugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.

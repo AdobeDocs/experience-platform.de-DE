@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 35%
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 35%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Was sind Rollen?"
->abstract="Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. Sie kategorisieren die Benutzer, die mit Ihrer Platform-Instanz interagieren, und sind die Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können."
+>abstract="Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. Sie kategorisieren die Benutzenden, die mit Ihrer Platform-Instanz interagieren, und sind die Bausteine der Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten von Rollen"
 
 >[!IMPORTANT]
@@ -52,9 +52,9 @@ Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für de
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Rollenübersicht"
->abstract="Das Dialogfeld „Rollenübersicht“ zeigt die Details der Rolle an, einschließlich der Ressourcen und Sandboxes, auf die eine bestimmte Rolle zugreifen darf. Sie können Beschriftungen, Benutzer, Benutzergruppen und API-Anmeldeinformationen für die Rolle verwalten, indem Sie zur entsprechenden Registerkarte im Arbeitsbereich der Rolle navigieren."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Verwalten von Beschriftungen für eine Rolle"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Verwalten von Benutzern für eine Rolle"
+>abstract="Im Dialogfeld „Rollenübersicht“ werden Rollendetails angezeigt, wie etwa die Ressourcen und Sandboxes, auf die eine bestimmte Rolle zugreifen darf. Sie können Kennzeichnungen, Benutzende, Benutzergruppen und API-Anmeldeinformationen für die Rolle verwalten, indem Sie zur entsprechenden Registerkarte im Arbeitsbereich der Rolle navigieren."
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Verwalten von Beschriftungen für eine Rolle"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Verwalten der Benutzenden für eine Rolle"
 
 Wählen Sie auf der Registerkarte **[!UICONTROL Rollen]** die Rolle aus. Daraufhin wird das Dashboard [!UICONTROL Details] der Rolle geöffnet.
 
@@ -96,7 +96,7 @@ Im nächsten Bildschirm werden Sie aufgefordert, über die Dropdown-Liste auszuw
 
 ![Das Ressourcen-Dashboard der Rolle mit hervorgehobenem Dropdown-Menü „Sandbox-Ressourcen“.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Verwalten von Benutzern für eine Rolle
+## Verwalten der Benutzenden für eine Rolle
 
 Wählen Sie die Registerkarte **[!UICONTROL Benutzer]** aus, um die Rollen [!UICONTROL Benutzer] zu öffnen, und klicken Sie dann auf **[!UICONTROL Benutzer hinzufügen]**, um der Rolle Benutzer zuzuweisen.
 
@@ -124,7 +124,7 @@ Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer 
 >
 > Um API-Anmeldeinformationen in „Berechtigungen[!UICONTROL  verwenden ] verwalten zu können, müssen Benutzerinnen und Benutzer über Systemadministratorrechte verfügen.
 
-Um Experience Platform-APIs als Anwender oder Entwickler verwenden zu können, muss ein Systemadministrator zusätzlich zu den einer Rolle zugewiesenen Berechtigungen API-Anmeldeinformationen hinzufügen. Eine vollständige Anleitung zum Erstellen und Zuweisen von API-Anmeldeinformationen sowie die erforderlichen Berechtigungen finden Sie im schrittweisen Tutorial unter [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md#generate-credentials).
+Um Experience Platform-APIs als Benutzer oder Entwickler verwenden zu können, muss ein Systemadministrator zusätzlich zu den einer Rolle zugewiesenen Berechtigungen API-Anmeldeinformationen hinzufügen. Eine vollständige Anleitung zum Erstellen und Zuweisen von API-Anmeldeinformationen sowie die erforderlichen Berechtigungen finden Sie im schrittweisen Tutorial unter [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md#generate-credentials).
 
 Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldeinformationen]** aus, um den Arbeitsbereich mit den Rollen-API-Anmeldeinformationen zu öffnen, und wählen Sie **[!UICONTROL API-Anmeldeinformationen hinzufügen]** aus, um der Rolle API-Anmeldeinformationen zuzuweisen.
 
@@ -174,11 +174,11 @@ Der **[!UICONTROL Benutzergruppe entfernen]** erscheint, in dem Sie aufgefordert
 
 Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
-## Benutzer zum Experience Platform hinzufügen
+## Hinzufügen von Benutzern zu Experience Platform
 
 Als Systemadministrator können Sie einem Benutzer Entwicklerzugriff gewähren, damit er in der Adobe Developer Console [Integrationen ](../../../landing/api-authentication.md#generate-credentials) kann.
 
-Um eine Benutzer-Experience Platform hinzuzufügen, melden Sie sich bei der Admin Console [](https://adminconsole.adobe.com) an und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
+Um eine Benutzer-Experience Platform hinzuzufügen, melden Sie sich bei der [Admin Console an ](https://adminconsole.adobe.com) wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
 
 ![Das Adobe Admin Console-Dashboard mit hervorgehobener Option „Benutzer hinzufügen“.](../../images/flac-ui/product-profile-add-users.png)
 
