@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 71%
+source-wordcount: '143'
+ht-degree: 72%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 71%
    - [Benutzerdefinierten Namespace erstellen](api/create-custom-namespace.md)
    - [Native Kennung für eine Identität auflisten](api/list-native-id.md)
    - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Erkennung von gemeinsamen Geräten](shared-device-detection.md)
 - [Definieren von Identitätsfeldern in der Benutzeroberfläche](label-identities.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 64%
+source-wordcount: '1000'
+ht-degree: 60%
 
 ---
 
@@ -52,7 +52,7 @@ Die folgende Anfrage erstellt einen neuen Datenschutzvorgang gemäß der DSGVO f
 
 >[!TIP]
 >
->Beim Löschen eines benutzerdefinierten Namespace mithilfe der API müssen Sie das Identitätssymbol anstelle des Anzeigenamens als Namespace angeben.
+>Sie müssen beim Löschen von Identitäten mithilfe der DSGVO das Identitätssymbol als Namespace anstelle des Anzeigenamens angeben.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->Beim Löschen eines benutzerdefinierten Namespace mithilfe der Benutzeroberfläche müssen Sie das Identitätssymbol anstelle des Anzeigenamens als Namespace angeben. Darüber hinaus können Sie benutzerdefinierte Namespaces in der Benutzeroberfläche nicht löschen, wenn diese nicht für Produktions-Sandboxes vorgesehen sind.
+>Sie müssen beim Löschen von Identitäten mithilfe der DSGVO das Identitätssymbol als Namespace anstelle des Anzeigenamens angeben.
 
 Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL Identität]** unter **[!UICONTROL Produkte]**, um Vorgänge für Daten zu verarbeiten, die in [!DNL Identity Service] gespeichert sind.
 
