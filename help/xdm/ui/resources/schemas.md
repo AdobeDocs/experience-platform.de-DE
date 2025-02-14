@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;ui;Workspace;Schema;Schemata;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Schema;Schemata;
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche
-description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
+description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 3%
@@ -159,7 +159,7 @@ Der [!DNL Schema Editor] wird erneut mit den von den Feldergruppen bereitgestell
 
 >[!NOTE]
 >
-Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![ Schlosssymbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
 ![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ Um eine Klasse neu zuzuweisen, wählen **[!UICONTROL auf]** linken Seite der Arb
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Es wird ein Dialogfeld angezeigt, in dem eine Liste aller verfügbaren Klassen angezeigt wird, einschließlich der von Ihrem Unternehmen definierten Klassen (der Eigentümer ist &quot;[!UICONTROL Kunde]) sowie der Standardklassen, die vom Adobe definiert wurden.
+Es wird ein Dialogfeld mit einer Liste aller verfügbaren Klassen angezeigt, einschließlich der von Ihrem Unternehmen definierten Klassen (der Eigentümer ist &quot;[!UICONTROL Kunde]) sowie der von Adobe definierten Standardklassen.
 
 Wählen Sie eine Klasse aus der Liste aus, um ihre Beschreibung auf der rechten Seite des Dialogfelds anzuzeigen. Sie können auch **[!UICONTROL Vorschau der Klassenstruktur]** auswählen, um die mit der Klasse verknüpften Felder und Metadaten anzuzeigen. Wählen Sie **[!UICONTROL Klasse zuweisen]** aus, um fortzufahren.
 
