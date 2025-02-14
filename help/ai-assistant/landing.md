@@ -3,16 +3,16 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
 # KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 
-Der KI-Assistent in Adobe Experience Platform ist ein Gesprächstool, mit dem Sie Ihre Workflows mit Experience Platform-Anwendungen und -Services beschleunigen können. Verwenden Sie den KI-Assistenten, um Ihre Gesamtproduktivität zu steigern, Ihr Verständnis für Produktkenntnisse und betriebliche Erkenntnisse zu erweitern sowie Empfehlungen zu sammeln, die für Ihre Abfragen und geschäftlichen Anwendungsfälle relevant sind.
+Der KI-Assistent in Adobe Experience Platform ist ein Dialogtool, mit dem Sie Ihre Workflows mit Experience Platform-Programmen und -Services beschleunigen können. Verwenden Sie den KI-Assistenten, um Ihre Gesamtproduktivität zu steigern, Ihr Verständnis für Produktkenntnisse und betriebliche Erkenntnisse zu erweitern sowie Empfehlungen zu sammeln, die für Ihre Abfragen und geschäftlichen Anwendungsfälle relevant sind.
 
 Der KI-Assistent unterstützt Experience Platform, Real-Time CDP, Adobe Journey Optimizer und Customer Journey Analytics.
 
@@ -42,7 +42,6 @@ Lesen Sie zunächst das Material unter den unten stehenden Links, um sich mit de
     </tr>
 </table>
 
-
 ## Neue Funktionen
 
 Verschaffen Sie sich einen Überblick über die neuesten Verbesserungen im KI-Assistenten, einschließlich der Funktionen, die sich derzeit in der Alpha- oder Beta-Phase befinden.
@@ -69,7 +68,7 @@ Sie können die Funktionen zur Schätzung der natürlichen Sprache des KI-Assist
 
 ### XDM-Felder für die Zielgruppenerstellung
 
-Mithilfe des KI-Assistenten können Sie Experience-Datenmodell (XDM)-Felder identifizieren, mit denen Sie dann Zielgruppen in Experience Platform erstellen können.
+Mithilfe des KI-Assistenten können Sie Felder des Experience-Datenmodells (XDM) ermitteln, die Sie dann verwenden können, um Zielgruppen in Experience Platform zu erstellen.
 
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
@@ -82,6 +81,21 @@ Sie können den KI-Assistenten für den Kunden-Support verwenden, um eine nahtlo
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## Sicherheitsfunktionen des KI-Assistenten {#security}
+
+
+Sehen Sie sich das folgende Video an, um weitere Informationen zu den Sicherheitsfunktionen des KI-Assistenten zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**Lesen Sie das Sicherheits-Factsheet zum KI-Assistenten**
+
+Weitere Informationen zu AI Assistant finden Sie im [Sicherheitsfaktenblatt für AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 ## Videobibliothek
 
@@ -183,20 +197,6 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 * [KI-Assistent für Zielgruppen kennenlernen](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## Zusätzliche Ressourcen
-
->[!BEGINSHADEBOX]
-
-**Lesen Sie das Sicherheits-Factsheet zum KI-Assistenten**
-
-Weitere Informationen zu AI Assistant finden Sie im [Sicherheitsfaktenblatt für AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Sehen Sie sich das folgende Video an, um weitere Informationen zu den Sicherheitsfunktionen des KI-Assistenten zu erhalten:
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Klicken Sie auf die folgenden Links, um mehr über Anwendungsfälle, Funktionen und vieles mehr von KI-Assistenten zu erfahren.
 
