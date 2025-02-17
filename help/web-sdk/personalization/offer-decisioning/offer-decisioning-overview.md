@@ -1,22 +1,18 @@
 ---
-title: Verwenden von Offer decisioning mit Platform Web SDK
-description: Die Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
-keywords: offer decisioning;Entscheidungsfindung;Web SDK;Platform Web SDK;personalisierte Angebote;Angebote bereitstellen;Angebotsbereitstellung;Personalisierung von Angeboten;
+title: Verwenden von Offer Decisioning mit Platform Web SDK
+description: Die Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
+keywords: Offer Decisioning;Entscheidungsfindung;Web SDK;Platform Web SDK;personalisierte Angebote;Angebote bereitstellen;Angebotsbereitstellung;Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
+source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 12%
+source-wordcount: '791'
+ht-degree: 11%
 
 ---
 
-# Verwenden von Offer decisioning mit Platform Web SDK
+# Verwenden von Offer Decisioning mit Platform Web SDK
 
->[!NOTE]
->
->Ausgewählten Benutzern wird vorab Zugriff auf die Verwendung von Offer decisioning in Adobe Experience Platform Web SDK gewährt. Diese Funktion ist nicht für alle Organisationen verfügbar.
-
-Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder von APIs erstellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder von APIs erstellen.
 
 ## Voraussetzungen
 
@@ -26,9 +22,9 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitste
 
 ## Terminologie
 
-Beim Arbeiten mit Offer decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer Decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Entscheidungsumfänge:** Beim Offer decisioning sind Entscheidungsumfänge die Base64-codierten JSON-Zeichenfolgen, die die Aktivitäts- und Platzierungs-IDs enthalten, die der offer decisioning-Service zum Unterbreiten von Angeboten verwenden soll.
+* **Entscheidungsumfänge:** Für Offer Decisioning sind Entscheidungsumfänge die Base64-kodierten JSON-Zeichenfolgen, die die Aktivitäts- und Platzierungs-IDs enthalten, die der Offer Decisioning-Service zum Unterbreiten von Angeboten verwenden soll.
 
   *Entscheidungsumfang JSON:*
 
@@ -55,16 +51,16 @@ Beim Arbeiten mit Offer decisioning ist es wichtig, die folgende Terminologie zu
 
 * **Identität**: Weitere Informationen finden Sie in dieser Dokumentation, in der erläutert wird, wie [Platform Web SDK Identity Service verwendet](../../identity/overview.md).
 
-## Offer decisioning wird aktiviert
+## Aktivieren von Offer Decisioning
 
-Um das Offer decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
+Um Offer Decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
 
-1. Adobe Experience Platform in Ihrem [Datenstrom“ aktiviert ](/help/datastreams/overview.md) das Kontrollkästchen &quot;Offer decisioning&quot; aktivieren
+1. Adobe Experience Platform in Ihrem [Datenstrom“ aktiviert ](/help/datastreams/overview.md) das Kontrollkästchen &quot;Offer Decisioning&quot; aktiviert
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
 1. Befolgen Sie die Anweisungen zum [Installieren des SDK](/help/web-sdk/install/overview.md) (SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Weitere Informationen finden Sie [ Tags-Schnellstartanleitung ](/help/tags/quick-start/quick-start.md).
-1. Konfigurieren Sie den SDK für das Offer decisioning mit `personalization.decisionScopes`. Weitere Offer decisioning-spezifische Schritte sind unten aufgeführt.
+1. Konfigurieren Sie die SDK für Offer Decisioning mithilfe von `personalization.decisionScopes`. Weitere Offer Decisioning-spezifische Schritte sind unten aufgeführt.
 
    * Installieren des eigenständigen SDKS
 
@@ -332,4 +328,4 @@ Um das Offer decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
 
 ## Einschränkungen
 
-Einige Angebotsbeschränkungen werden derzeit nicht mit den Workflows für mobile Edge Networks unterstützt, z. B. die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Einige Angebotsbeschränkungen werden derzeit nicht mit den mobilen Edge Network-Workflows unterstützt, z. B. die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
