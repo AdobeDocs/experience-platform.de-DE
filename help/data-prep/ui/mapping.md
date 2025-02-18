@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei zu XDM zuordnen;CSV zu XDM zuordnen;UI-Handbuch;Mapper;Zuordnung;Mapping;Datenvorbereitung;Vorbereiten von Daten;
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
-description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorbereitungsfunktionen in der Platform-Benutzeroberfläche CSV-Dateien einem XDM-Schema zuordnen können.
+description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche mithilfe von Datenvorbereitungsfunktionen CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 90%
+source-wordcount: '1471'
+ht-degree: 36%
 
 ---
 
 # Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 
-In diesem Dokument erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche mithilfe von Datenvorbereitungsfunktionen CSV-Dateien einem XDM-Schema zuordnen können.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.md)-Zuordnungsfunktionen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um CSV-Dateien einem [Experience-Datenmodell (XDM)-Schema ](../../xdm/home.md).
 
 ## Erste Schritte
 
@@ -25,63 +25,22 @@ Für dieses Tutorial werden Kenntnisse der folgenden Platform-Komponenten benöt
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
-## Datenflussdetails
+## Zugriff auf die Zuordnungsschnittstelle in der Benutzeroberfläche
 
->[!TIP]
->
->Sie können auf Datenflussdetails zugreifen, indem Sie eine beliebige Quelle aus dem Quellkatalog auswählen. Weiterführende Informationen finden Sie in der [Quellenübersicht](../../sources/home.md).
+Sie können über zwei verschiedene Pfade auf die Zuordnungsschnittstelle in der Benutzeroberfläche zugreifen.
 
-Bevor Sie Ihre CSV-Daten einem XDM-Schema zuordnen können, müssen Sie zunächst die Details Ihres Datenflusses festlegen.
+1. Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Workflows]** im linken Navigationsbereich und dann **[!UICONTROL CSV zu XDM-Schema zuordnen]** aus. Geben Sie als Nächstes Ihre Datenflussdetails an und wählen Sie die Daten aus, die Sie aufnehmen möchten. Wenn Sie fertig sind, gelangen Sie zur Zuordnungsschnittstelle, über die Sie die Zuordnung zwischen Ihren Quelldaten und einem XDM-Schema konfigurieren können.
+2. Sie können auch über den Arbeitsbereich „Quellen“ auf die Zuordnungsschnittstelle zugreifen.
 
-Auf der Seite [!UICONTROL Datenflussdetails] können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Zieldatensatz oder einen neuen Zieldatensatz aufnehmen möchten. Ein vorhandener Datensatz enthält ein vordefiniertes Zielschema, dem Ihre Daten zugeordnet werden. Für einen neuen Datensatz müssen Sie ein vorhandenes Schema auswählen oder ein neues Schema erstellen, dem Ihre Daten zugeordnet werden sollen.
+## Zuordnen von CSV-Dateien zu einem XDM-Schema
 
-### Vorhandenen Zieldatensatz verwenden
+Verwenden Sie die Zuordnungsschnittstelle und das umfassende Toolset, das sie bereitstellt, um Datenfelder aus Ihrem Quellschema erfolgreich ihren entsprechenden XDM-Zielfeldern im Zielschema zuzuordnen.
 
-Um Ihre CSV-Daten in einen vorhandenen Datensatz einzufügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
-
-Wenn Sie einen Datensatz ausgewählt haben, geben Sie einen Namen für Ihren Datenfluss und eine optionale Beschreibung an.
-
-Während dieses Vorgangs können Sie auch die Optionen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Aufnahme] aktivieren. [!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../ingestion/batch-ingestion/partial.md).
-
-![existing-dataset](../images/ui/mapping/existing-dataset.png)
-
-### Verwenden eines neuen Zieldatensatzes
-
-Um Ihre CSV-Daten in einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus.
-
-Wenn Sie ein Schema ausgewählt haben, geben Sie einen Namen für Ihren Datenfluss und eine optionale Beschreibung an. Wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Aufnahme] an, sofern Sie sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
-
-![new-dataset](../images/ui/mapping/new-dataset.png)
-
-## Auswählen von Daten
-
-Der Schritt [!UICONTROL Auswählen von Daten] wird angezeigt und bietet Ihnen eine Schnittstelle zum Hochladen Ihrer lokalen Dateien und zur Vorschau ihrer Struktur und Inhalte. Wählen Sie **[!UICONTROL Dateien auswählen]** aus, um eine CSV-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die CSV-Datei, die Sie hochladen möchten, per Drag-and-Drop in das Bedienfeld [!UICONTROL Dateien per Drag-and-Drop verschieben] ziehen.
-
->[!TIP]
->
->Derzeit werden nur CSV-Dateien für den lokalen Datei-Upload unterstützt. Die maximale Dateigröße pro Datei beträgt 1 GB.
-
-![choose-files](../images/ui/mapping/choose-files.png)
-
-Nachdem Ihre Datei hochgeladen wurde, wird die Vorschau-Oberfläche aktualisiert, um Inhalt und Struktur der Datei anzuzeigen.
-
-![preview-sample-data](../images/ui/mapping/preview-sample-data.png)
-
-Je nach Datei können Sie Spaltentrennzeichen wie Tabulatoren, Kommas, senkrechte Striche oder ein benutzerdefiniertes Spaltentrennzeichen für die Quelldaten auswählen. Wählen Sie den Dropdown-Pfeil **[!UICONTROL Trennzeichen]** und dann das entsprechende Trennzeichen aus dem Menü aus.
-
-Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
-
-![Trennzeichen](../images/ui/mapping/delimiter.png)
-
-## Zuordnung
-
-Die Schnittstelle **[!UICONTROL Zuordnung]** bietet Ihnen ein umfassendes Tool zur Zuordnung von Quellfeldern aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema.
-
-![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
+![Die Zuordnungsschnittstelle in der Experience Platform-Benutzeroberfläche.](../images/ui/mapping/base_mapping.png)
 
 ### Grundlegendes zur Zuordnungsschnittstelle {#mapping-interface}
 
-Die Zuordnungsschnittstelle enthält ein Dashboard, das Informationen zum Zustand Ihrer Zuordnungsfelder im Rahmen des Aufnahme-Workflows enthält. Im Dashboard werden die folgenden Details zu Ihren Zuordnungsfeldern angezeigt:
+Im Dashboard oben in der Benutzeroberfläche finden Sie Informationen zum Zustand Ihrer Zuordnungsfelder im Kontext des Aufnahme-Workflows. Im Dashboard werden die folgenden Details zu Ihren Zuordnungsfeldern angezeigt:
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -90,38 +49,24 @@ Die Zuordnungsschnittstelle enthält ein Dashboard, das Informationen zum Zustan
 | [!UICONTROL Identitätsfelder] | Zeigt die Gesamtzahl der als Identität definierten Zuordnungsfelder an. Diese Zuordnungsfelder werden durch ein Fingerabdrucksymbol dargestellt. |
 | [!UICONTROL Fehler] | Zeigt die Anzahl fehlerhafter Zuordnungsfelder an. |
 
-![top-panel](../images/ui/mapping/top-panel.png)
+{style="table-layout:auto"}
 
-Die Zuordnungsschnittstelle bietet außerdem ein Bedienfeld mit Optionen, mithilfe derer Sie Ihre Zuordnungsfelder besser nutzen oder filtern können.
+Als Nächstes können Sie die in der Kopfzeile aufgelisteten Optionen verwenden, um besser zu interagieren oder durch Ihre Zuordnungsfelder zu filtern.
 
-![second-panel](../images/ui/mapping/second-panel.png)
-
-Um nach einem bestimmten Zuordnungssatz zu suchen, wählen Sie **[!UICONTROL Suchen in Quellfeldern]** und geben Sie den Namen der Quelldaten ein, die Sie isolieren möchten.
-
-![Suchen](../images/ui/mapping/search.png)
-
-Wählen Sie **[!UICONTROL Alle Quellfelder]** aus, um ein Dropdown-Menü mit Filteroptionen anzuzeigen, über das Sie Ihre Ansicht der Zuordnungsschnittstelle eingrenzen können.
-
-Die Filteroptionen sind:
-
-| Quellfelder | Beschreibung |
+| Option | Beschreibung |
 | --- | --- |
-| [!UICONTROL Alle Quellfelder] | Diese Option zeigt alle Quellfelder Ihres Quellschemas an. Diese Option wird standardmäßig angezeigt. |
-| [!UICONTROL Erforderliche Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die zum Durchführen der Zuordnung erforderlich sind. |
-| [!UICONTROL Identitätsfelder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die für die Identität gekennzeichnet sind. |
-| [!UICONTROL Zugeordnete Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die bereits zugeordnet wurden. |
-| [!UICONTROL Nicht zugeordnete Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die noch zugeordnet werden müssen. |
-| [!UICONTROL Felder mit Empfehlung] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die Zuordnungsempfehlungen enthalten. |
+| [!UICONTROL Quellfelder suchen] | Navigieren Sie mithilfe der Suchleiste zu einem bestimmten Quellfeld. |
+| [!UICONTROL Alle Felder] | Wählen Sie **[!UICONTROL Alle Felder]** aus, um ein Dropdown-Menü mit Optionen zum Filtern Ihrer Zuordnungen nach anzuzeigen. Zu den verfügbaren Filteroptionen gehören:<ul><li>**[!UICONTROL Erforderliche Felder]**: Filtert die Benutzeroberfläche so, dass nur die zum Abschließen des Workflows erforderlichen Felder angezeigt werden.</li><li> **[!UICONTROL Identitätsfelder]**: Filtert die Benutzeroberfläche so, dass nur als Identitäten markierte Felder angezeigt werden.</li><li>**[!UICONTROL Zugeordnete Felder]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die bereits zugeordnet wurden.</li><li>**[!UICONTROL Nicht zugeordnete Felder]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die noch zugeordnet werden müssen.</li><li>**[!UICONTROL Felder mit Fehlern]**: Filtert die Benutzeroberfläche so, dass nur Felder mit Fehlern angezeigt werden.</li></ul> |
+| [!UICONTROL Neuer Feldtyp] | Wählen Sie **[!UICONTROL Neuer Feldtyp]** aus, um entweder ein neues Feld oder ein berechnetes Feld hinzuzufügen. Weitere Informationen finden Sie im Abschnitt zum [ eines neuen Feldtyps](#add-a-new-field-type). |
+| [!UICONTROL Zuordnungen importieren] | Wählen Sie **[!UICONTROL Zuordnungen importieren]** aus, um Zuordnungen aus einer vorhandenen Datei oder einem Datenfluss zu importieren. Weitere Informationen finden Sie im Abschnitt zum [ von Zuordnungen](#import-mapping). |
+| [!UICONTROL Validieren] | Wählen Sie **[!UICONTROL Validieren]** aus, um Ihre Zuordnungen auf Fehler zu überprüfen. |
+| [!UICONTROL Vorlage herunterladen] | Wählen Sie **[!UICONTROL Vorlage herunterladen]** aus, um eine CSV-Datei Ihrer Zuordnungen zu exportieren und herunterzuladen. |
+| [!UICONTROL Vorschau der Daten] | Wählen Sie **[!UICONTROL Datenvorschau]** aus, um das Bedienfeld „Vorschau“ zu verwenden und die Struktur und den Inhalt Ihres Quelldatensatzes zu überprüfen. |
+| [!UICONTROL Alle löschen] | Wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Zuordnungen in der Benutzeroberfläche zu löschen. |
 
-Wählen Sie **[!UICONTROL Felder mit Fehlern]** aus, um alle Zuordnungsfelder mit Fehlern anzuzeigen.
+{style="table-layout:auto"}
 
-![Filter](../images/ui/mapping/filter.png)
-
-Eine isolierte Ansicht fehlerhafter Zuordnungsfelder wird angezeigt, sodass Sie Fehler mithilfe intelligenter Zuordnungsempfehlungen oder der manuellen Zuordnungsstruktur beheben können.
-
-![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
-
-### Hinzufügen eines neuen Feldtyps
+### Hinzufügen eines neuen Feldtyps {#add-a-new-field-type}
 
 Sie können ein neues Zuordnungsfeld oder ein berechnetes Feld hinzufügen, indem Sie im Menü **[!UICONTROL Neuer Feldtyp]** auswählen.
 
@@ -129,23 +74,19 @@ Sie können ein neues Zuordnungsfeld oder ein berechnetes Feld hinzufügen, inde
 
 Um ein neues Zuordnungsfeld hinzuzufügen, wählen Sie **[!UICONTROL Neuer Feldtyp]** und dann im angezeigten Dropdown-Menü **[!UICONTROL Neues Feld hinzufügen]** aus.
 
-![add-new-field](../images/ui/mapping/add-new-field.png)
+![Die Zuordnungsschnittstelle mit der ausgewählten Schaltfläche „Neues Feld hinzufügen“](../images/ui/mapping/add_new_field.png)
 
 Wählen Sie als Nächstes das Quellfeld aus, das Sie aus der angezeigten Quellschemastruktur hinzufügen möchten, und dann **[!UICONTROL Auswählen]**.
 
-![select-new-field](../images/ui/mapping/select-new-field.png)
+![Das Quellschema mit „Land“ als zusätzlichem neuen Feld ausgewählt.](../images/ui/mapping/source_field.png)
 
 Die Zuordnungsschnittstelle wird mit dem ausgewählten Quellfeld und einem leeren Zielfeld aktualisiert. Wählen Sie **[!UICONTROL Zielfeld zuordnen]**, um mit dem Zuordnen des neuen Quellfelds zum entsprechende XDM-Zielfeld zu beginnen.
 
-![map-target-field](../images/ui/mapping/map-target-field.png)
+![Die Zuordnungsschnittstelle mit einem neuen und nicht zugeordneten Quellfeld.](../images/ui/mapping/new_field_added.png)
 
 Eine interaktive Zielschemastruktur wird angezeigt, in der Sie manuell das Zielschema durchsuchen und das entsprechende XDM-Zielfeld für Ihr Quellfeld finden können.
 
-![manual-mapping](../images/ui/mapping/manual-mapping.png)
-
-Wenn Sie fertig sind, wählen Sie das Schemasymbol aus, um die Benutzeroberfläche für das Zielschema zu schließen.
-
-![schema-tree](../images/ui/mapping/schema-tree.png)
+![Die interaktive Zielschemastruktur mit einem ausgewählten neuen Zielfeld.](../images/ui/mapping/add_target_field.png)
 
 #### Berechnete Felder {#calculated-fields}
 
@@ -153,9 +94,9 @@ Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im
 
 Um ein berechnetes Feld zu erstellen, wählen Sie **[!UICONTROL Neuer Feldtyp]** und dann **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
-![add-calculated-field](../images/ui/mapping/add-calculated-field.png)
+![Die Zuordnungsschnittstelle mit der ausgewählten Schaltfläche „Berechnetes Feld hinzufügen“](../images/ui/mapping/new_calculated_field.png)
 
-Das Bedienfeld **[!UICONTROL Berechnetes Feld erstellen]** wird angezeigt. Das linke Dialogfeld enthält die Felder, Funktionen und Operatoren, die in berechneten Feldern unterstützt werden. Wählen Sie eine der Registerkarten aus, um Funktionen, Felder oder Operatoren zum Ausdruckseditor hinzuzufügen.
+Das **[!UICONTROL Berechnetes Feld erstellen]** wird angezeigt. Verwenden Sie die -Benutzeroberfläche, um Ihre berechneten Felder einzugeben, und verweisen Sie auf das Dialogfeld auf der linken Seite, um unterstützte Felder, Funktionen und Operatoren zu finden.
 
 | Tab | Beschreibung |
 | --- | ----------- |
@@ -163,83 +104,59 @@ Das Bedienfeld **[!UICONTROL Berechnetes Feld erstellen]** wird angezeigt. Das l
 | [!UICONTROL Feld] | Auf der Registerkarte „Felder“ werden die im Quellschema verfügbaren Felder und Attribute aufgelistet. |
 | [!UICONTROL Operator] | Auf der Registerkarte „Operatoren“ werden die zur Transformation der Daten verfügbaren Operatoren aufgelistet. |
 
-![Registerkarten](../images/ui/mapping/tabs.png)
+![Die Benutzeroberfläche für berechnete Felder](../images/ui/mapping/calculated_field.png)
 
 Mithilfe des Ausdruckseditors in der Mitte können Sie manuell Felder, Funktionen und Operatoren hinzufügen. Wählen Sie den Editor aus, um mit der Erstellung eines Ausdrucks zu beginnen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um fortzufahren.
 
-![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+### Zuordnung importieren {#import-mapping}
 
-### Zuordnung importieren {#import}
+Sie können die manuelle Konfigurationszeit für Ihren Datenaufnahmeprozess reduzieren und Fehler begrenzen, indem Sie die Funktion „Mapping importieren“ der Datenvorbereitung verwenden. Sie können Zuordnungen aus einem vorhandenen Fluss oder aus einer exportierten Datei importieren.
 
-Sie können die Zuordnung eines vorhandenen Datenflusses wiederverwenden, um die manuelle Konfigurationszeit Ihrer Datenaufnahme zu reduzieren und Fehler zu vermeiden. Wählen Sie **[!UICONTROL Zuordnung importieren]** aus, um eine vorhandene Zuordnung wiederzuverwenden.
+>[!BEGINTABS]
 
-![import-mapping](../images/ui/mapping/import-mapping.png)
+>[!TAB Zuordnung aus Fluss importieren]
 
-Das Fenster [!UICONTROL Zuordnung importieren] wird angezeigt, in dem eine Liste mit Datenflüssen zur Auswahl steht.
+Wenn Sie mehrere Datenflüsse haben, die auf ähnlichen Quelldateien und Zielschemata basieren, können Sie vorhandene Zuordnungen importieren und für neue Datenflüsse wiederverwenden.
 
-Wählen Sie das Vorschausymbol aus, um die Zuordnung des ausgewählten Datenflusses in der Vorschau anzuzeigen.
+Um eine Zuordnung aus einem vorhandenen Datenfluss zu importieren, wählen Sie **[!UICONTROL Zuordnungen importieren]** und dann **[!UICONTROL Zuordnung aus Fluss importieren]** aus.
 
-![list-mapping](../images/ui/mapping/list-mapping.png)
+![Die Zuordnungsschnittstelle mit der ausgewählten Option „Zuordnung importieren“ und „Zuordnung aus Fluss importieren“.](../images/ui/mapping/import_from_flow.png)
 
-Im Vorschaufenster können Sie die vorhandene Zuordnung überprüfen, bevor Sie sie in Ihren Datenfluss importieren. Nachdem Sie die Zuordnung überprüft haben, können Sie auf **[!UICONTROL Zurück]** klicken, um zur Liste der Datenflüsse zurückzukehren und einen anderen Satz der Zuordnung zu überprüfen. Alternativ können Sie **[!UICONTROL Auswählen]** auswählen, um fortzufahren.
+Verwenden Sie als Nächstes das Popup-Fenster, um den Datenfluss zu suchen, dessen Zuordnung Sie importieren möchten. In diesem Schritt können Sie auch die Suchfunktion verwenden, um einen bestimmten Datenfluss zu isolieren und seine Zuordnungen abzurufen. Wenn Sie fertig sind, wählen **[!UICONTROL Auswählen]**.
 
-![preview-mapping](../images/ui/mapping/preview-mapping.png)
+![Eine Liste der vorhandenen Datenflüsse, deren entsprechende Zuordnungen importiert werden können.](../images/ui/mapping/import_flow_window.png)
 
-Alternativ können Sie die zu importierende Zuordnung auch im Fenster Liste der Datenflüsse auswählen. Wählen Sie den Datenfluss aus, der die Zuordnung enthält, die Sie importieren möchten, und wählen Sie dann **[!UICONTROL Auswählen]**, um fortzufahren.
+>[!TAB Zuordnung aus Datei importieren]
 
-![select-mapping](../images/ui/mapping/select-mapping.png)
+In einigen Fällen müssen Sie möglicherweise eine große Anzahl von Zuordnungen für Ihre Daten implementieren. Sie können dies manuell mit der Zuordnungsschnittstelle tun. Sie können Ihre Zuordnungsvorlage aber auch exportieren und Ihre Zuordnungen in einer Offline-Tabelle konfigurieren, um Zeit zu sparen und Zeitüberschreitungen bei der Verwendung von Experience Platform zu vermeiden.
 
-Die Benutzeroberfläche wird mit der importierten Zuordnung aktualisiert.
+Um eine Zuordnung aus einer exportierten Datei zu importieren, wählen Sie **[!UICONTROL Zuordnungen importieren]** und dann **[!UICONTROL Zuordnung aus Datei importieren]** aus.
 
->[!NOTE]
->
->Alle vorhandenen Zuordnungssätze, die Sie erstellen, oder ML-Zuordnungsempfehlungen werden durch die Zuordnung ersetzt, die Sie aus einem vorhandenen Datenfluss importiert haben.
+![Die Zuordnungsschnittstelle mit der Auswahl „Zuordnung importieren“ und „Zuordnung aus Datei importieren“.](../images/ui/mapping/import_from_file.png)
 
-![mapping-imported](../images/ui/mapping/mapping-imported.png)
+Verwenden Sie als Nächstes [!UICONTROL  Fenster ]Vorlage hochladen“, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Anschließend können Sie Ihre Zuordnungen lokal auf Ihrem Gerät konfigurieren und eine beliebige Software verwenden, die die Bearbeitung von CSV-Dateitypen unterstützt. In diesem Schritt müssen Sie sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
 
-Wählen Sie **[!UICONTROL Vorschaudaten]** aus, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
+![Das Fenster „Vorlage hochladen“, in dem Optionen zum Herunterladen und Hochladen einer exportierten CSV-Datei der Zuordnungen angezeigt werden.](../images/ui/mapping/upload_template.png)
 
-![preview-data](../images/ui/mapping/preview-data.png)
++++Auswählen, um ein Beispiel für eine exportierte Zuordnungsdatei anzuzeigen
 
-Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da dies die wichtigste Information ist und sie bei der Validierung der Zuordnungsergebnisse erforderlich ist. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Schließen]** aus.
+![Die heruntergeladene CSV-Datei der Zuordnungsvorlage.](../images/ui/mapping/mapping_csv_file.png)
 
-![preview-screen](../images/ui/mapping/preview-screen.png)
++++
 
-Um alle Zuordnungsfelder zu entfernen, wählen Sie **[!UICONTROL Alle Zuordnungen löschen]** aus.
+Wenn Sie fertig sind, wählen **[!UICONTROL Datei hochladen]** und die aktualisierte CSV-Datei Ihrer Zuordnungen aus. Warten Sie einen kurzen Moment, bis das System verarbeitet wurde, und wählen Sie dann **[!UICONTROL Fertig]** aus.
 
-![clear-all](../images/ui/mapping/clear-all.png)
+![Das Fenster „Vorlage hochladen“ mit einer neuen hochgeladenen Datei.](../images/ui/mapping/upload_successful.png)
 
-### Verwenden der Benutzeroberfläche für Zuordnungen
+>[!ENDTABS]
 
-Platform bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen oder duplizierte Zuordnungsfelder korrigieren, um Fehler zu beheben.
+Nachdem Sie die Zuordnungen abgeschlossen haben, können Sie jetzt auf **[!UICONTROL Beenden]** klicken und mit dem nächsten Schritt fortfahren, um Ihren Datenfluss abzuschließen.
 
-![mapping-interface](../images/ui/mapping/mapping-interface.png)
-
-Wählen Sie das Glühbirnensymbol in dem Zielfeld aus, das Sie anpassen möchten.
-
-![mapping-recc](../images/ui/mapping/mapping-recc.png)
-
-Das Popup-Fenster [!UICONTROL Zuordnungsempfehlungen] wird mit einer Liste empfohlener Zielfelder angezeigt, die einem bestimmten Quellfeld zugeordnet werden können. Standardmäßig wird die erste Empfehlung automatisch angewendet.
-
-Manchmal ist mehr als eine Empfehlung für das Quellschema verfügbar. In diesem Fall zeigt die Zuordnungskarte die wichtigste Empfehlung an, gefolgt von einem Symbol, das die Anzahl der verfügbaren zusätzlichen Empfehlungen enthält. Durch Auswahl des Glühbirnensymbols wird eine Liste der zusätzlichen Empfehlungen angezeigt. Sie können eine der alternativen Empfehlungen auswählen, indem Sie das Kontrollkästchen neben der Empfehlung aktivieren, die Sie stattdessen zuordnen möchten.
-
-Hier können Sie das ausgewählte Zielfeld ändern, um einen Fehler zu beheben oder Ihren Anwendungsfall abzustimmen.
-
-Alternativ können Sie **[!UICONTROL Manuell auswählen]** auswählen, um die interaktive Zielschema-Zuordnungsstruktur manuell zu verwenden.
-
-![recc-panel](../images/ui/mapping/recc-panel.png)
-
-Die Zielschemazuordnungs-Benutzeroberfläche wird in derselben Ansicht wie die Zuordnungsfelder angezeigt, sodass Sie Zuordnungspaare im selben Bildschirm ändern können. Wählen Sie das Zielfeld aus, das Ihrem Anwendungsfall entspricht oder Ihre Fehler behebt.
-
-![select-target-field](../images/ui/mapping/select-target-field.png)
-
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Beenden]** aus, um fortzufahren.
-
-![Beenden](../images/ui/mapping/finish.png)
+![Die Zuordnungsschnittstelle mit einem vollständigen Satz von Zuordnungen.](../images/ui/mapping/completed_mappings.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie mithilfe der Zuordnungs-Benutzeroberfläche in der Platform-Benutzeroberfläche erfolgreich eine CSV-Datei einem Ziel-XDM-Schema zugeordnet. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Sie können jetzt mithilfe der Zuordnungsschnittstelle in der Experience Platform-Benutzeroberfläche erfolgreich eine CSV-Datei einem Ziel-XDM-Schema zuordnen. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Datenvorbereitung – Übersicht](../home.md)
 * [Quellen – Übersicht](../../sources/home.md)
