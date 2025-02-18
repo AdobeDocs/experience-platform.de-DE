@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3637'
+ht-degree: 11%
 
 ---
 
@@ -97,11 +97,11 @@ Jede einzelne Datenflussausführung zeigt die folgenden Details:
 
   >[!IMPORTANT]
   >
-  > Ab Oktober 2024 führt Adobe ein Update durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Experience Platform- und der Zielplattform-Berichterstellung sichergestellt.
+  > Ab Oktober 2024 führt Adobe ein Update ein, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und die Zielplattformen sichergestellt.
   >
   > Vor diesem Update umfasste **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen.
   > 
-  > Diese Verbesserung gilt derzeit für das [Google Customer Match-Ziel](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
+  > Diese Verbesserung gilt derzeit für das Ziel [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
   > Nach dieser Verbesserung kann es bei Benutzenden des [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen.
 
 
@@ -121,7 +121,12 @@ Auf der Detailseite wird auch eine Liste der fehlgeschlagenen Identitäten und d
 
 #### (Beta) Überwachung der Datenflussausführung auf Zielgruppenebene für Streaming-Ziele {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Sie können für jede Zielgruppe, die Teil des Datenflusses ist, Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene aufgeschlüsselt sind. Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für das [[!DNL Google Customer Match + Display & Video 360] Ziel](/help/destinations/catalog/advertising/google-customer-match-dv360.md) verfügbar.
+Sie können für jede Zielgruppe, die Teil des Datenflusses ist, Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene aufgeschlüsselt sind.
+
+Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für die folgenden Ziele verfügbar:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Überwachung auf Zielgruppenebene für Streaming-Ziele.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -205,7 +210,7 @@ Sie können auch im Monitoring-Dashboard umfangreiche Informationen zu einem bes
 
 >[!NOTE]
 >
->Die Zielüberwachungsfunktion wird derzeit für alle Ziele in Experience Platform-*(mit Ausnahme* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte ](/help/destinations/catalog/personalization/custom-personalization.md)) unterstützt.
+>Die Zielüberwachungsfunktion wird derzeit für alle Ziele in Experience Platform unterstützt *mit Ausnahme* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)- und [Custom Personalization](/help/destinations/catalog/personalization/custom-personalization.md)-Ziele.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"

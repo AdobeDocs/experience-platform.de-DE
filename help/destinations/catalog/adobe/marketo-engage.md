@@ -2,10 +2,10 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
+source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
 workflow-type: tm+mt
-source-wordcount: '903'
-ht-degree: 26%
+source-wordcount: '967'
+ht-degree: 24%
 
 ---
 
@@ -95,22 +95,13 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
-<!--
+## Ziel überwachen {#monitor-destination}
 
-## Connect to the destination {#connect}
+Nachdem Sie eine Verbindung zum Ziel hergestellt und einen Ziel-Datenfluss eingerichtet haben, können Sie die [Überwachungsfunktion](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP verwenden, um ausführliche Informationen über die Profildatensätze zu erhalten, die in jeder Datenflussausführung für Ihr Ziel aktiviert wurden.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
-
--->
+Die Überwachungsinformationen für die [!DNL Marketo Engage]-Verbindung enthalten Informationen auf Zielgruppenebene, die sich auf aktivierte, ausgeschlossene und fehlgeschlagene Identitäten in jedem Datenfluss und jeder Datenflussausführung beziehen. [Weitere Informationen](/help/dataflows/ui/monitor-destinations.md#segment-level-view) über die Funktion.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de).
 
-<!--
-
-## Activate audiences to this destination {#activate}
-
-See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
--->
