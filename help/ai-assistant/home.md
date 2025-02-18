@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform - Übersicht
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '927'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Das folgende Video soll Ihnen dabei helfen, KI-Assistent zu verstehen.
 
 Lesen Sie dieses Dokument, um mehr über den KI-Assistenten in Adobe Experience Platform zu erfahren.
 
-Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und betriebliche Erkenntnisse zu gewinnen. Der KI-Assistent unterstützt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und betriebliche Erkenntnisse zu gewinnen. Der KI-Assistent unterstützt Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 ![Die Benutzeroberfläche des KI-Assistenten mit dem ausgelösten erstmaligen Benutzererlebnis.](./images/ai-assistant-full.png)
 
@@ -43,13 +43,13 @@ Die [!DNL Knowledge Graph] besteht aus Unterdiagrammen, die bei jeder Übermittl
 
 * Betriebsbezogene Einblicke des Kunden.
 * Einblicke in den Betrieb von Kunden in verschiedenen Meta-Stores.
-* Dokumentation zum Experience League.
+* Dokumentation zu Experience League.
 
 Es gibt zwei Klassen von Fragen, die vor der Abfrage des KI-Assistenten zu berücksichtigen sind:
 
 ### Produktkenntnisse {#product-knowledge}
 
-Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Experience League-Dokumentation basieren. Fragen zum Produktwissen können in den folgenden Untergruppen genauer spezifiziert werden:
+Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentation zu Experience League basieren. Fragen zum Produktwissen können in den folgenden Untergruppen genauer spezifiziert werden:
 
 | Produktkenntnisse | Beispiele |
 | --- | --- |
@@ -64,10 +64,6 @@ Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent-P
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
-
->[!IMPORTANT]
->
->Antworten zu operativen Einblicken befinden sich in der Beta-Phase. Jeder Benutzer, der Zugriff auf die Berechtigung **Operative Insights anzeigen** hat, hat Zugriff auf Antworten zu operativen Insights.
 
 Operative Einblicke beziehen sich auf Antworten, die der KI-Assistent zu Ihren Metadatenobjekten (Attributen, Zielgruppen, Datenflüssen, Datensätzen, Zielen, Journey, Schemata und Quellen) generiert, einschließlich Zählungen, Suchen und Auswirkungen auf die Herkunft. Es werden keine Daten innerhalb der Sandbox betrachtet.
 
@@ -100,7 +96,7 @@ Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen
 
 Derzeit umfasst der KI-Assistent Folgendes:
 
-* [Produktkenntnisse](./home.md#product-knowledge): Der KI-Assistent beantwortet Fragen zu Produktkenntnissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer. Sie können auch Produktwissensthemen für das Customer Journey Analytics durchgehen, jedoch nur über die Customer Journey Analytics-Benutzeroberfläche.
+* [Produktkenntnisse](./home.md#product-knowledge): Der KI-Assistent beantwortet Fragen zu Produktkenntnissen für Experience Platform, Real-Time Customer Data Platform und Adobe Journey Optimizer. Sie können auch Produktwissensthemen für Customer Journey Analytics behandeln, jedoch nur über die Customer Journey Analytics-Benutzeroberfläche.
 * [Operative Einblicke](./home.md#operational-insights): Sie können dem KI-Assistenten Fragen zu operativen Einblicken in die folgenden Datenobjekte stellen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
 
 ## Nächste Schritte

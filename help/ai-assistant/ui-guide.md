@@ -1,10 +1,10 @@
 ---
 title: KI-Assistent in Adobe Experience Platform
-description: Erfahren Sie, wie Sie mit dem KI-Assistenten Experience Platform- und Real-time Customer Data Platform-Konzepte und Nutzungsinformationen zu Ihren Objekten navigieren und verstehen können.
+description: Erfahren Sie, wie Sie mit dem KI-Assistenten zu Experience Platform- und Real-Time Customer Data Platform-Konzepten navigieren und diese verstehen können, sowie Informationen zur Verwendung Ihrer Objekte.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie den KI-Assistenten in der Adobe Experience Platform-Benutzeroberfläche verwenden können.
 
-## Zugriff auf den KI-Assistenten über die Experience Platform-Benutzeroberfläche
+## Zugriff auf den KI-Assistenten in der Experience Platform-Benutzeroberfläche
 
-Um den KI-Assistenten zu starten, wählen Sie **[!UICONTROL KI-Assistenten]** in der oberen Kopfzeile der Experience Platform-Benutzeroberfläche aus.
+Um den KI-Assistenten zu starten, wählen **[!UICONTROL das Symbol „KI]** Assistent“ in der oberen Kopfzeile der Experience Platform-Benutzeroberfläche aus.
 
 ![Die Experience Platform-Startseite mit dem ausgewählten Symbol für den KI-Assistenten und der geöffneten Benutzeroberfläche des KI-Assistenten.](./images/ai-assistant-full-icon.png)
 
@@ -35,11 +35,11 @@ Stellen Sie sich einen Anwendungsfall vor, in dem Sie ein **Device Trade in Even
 
 Um zu beginnen, geben Sie Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel wird der KI-Assistent mit der Frage bereitgestellt: &quot;**Was ist das eventType-Feld in einem ExperienceEvent-Schema?**&quot;
 
-![KI-Assistent zum Experience Platform mit der folgenden Frage zur Abfrage vorbereitet: „Was ist das eventType-Feld in einem ExperienceEvent-Schema?](./images/question.png)
+![KI-Assistent für Experience Platform mit der folgenden Frage zur Abfrage vorbereitet: „Was ist das eventType-Feld in einem ExperienceEvent-Schema?](./images/question.png)
 
 Der KI-Assistent fragt dann seine Wissensdatenbank ab und berechnet eine Antwort. Nach einigen Augenblicken gibt der KI-Assistent eine Antwort und zugehörige Vorschläge zurück, die Sie als Folgeaufforderungen verwenden können.
 
-![KI-Assistent für das Experience Platform mit einer Antwort auf die vorherige Abfrage.](./images/answer.png)
+![KI-Assistent für Experience Platform mit einer Antwort auf die vorherige Abfrage.](./images/answer.png)
 
 Nachdem Sie eine Antwort vom KI-Assistenten erhalten haben, können Sie aus einer Reihe von Optionen auswählen, um zu entscheiden, wie Sie fortfahren möchten.
 
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird der KI-Assistent nach der folgenden Abfrage gefragt: 
 
 ![Eine Frage zu operativen Einblicken.](./images/op-insights-question.png)
 
-Der KI-Assistent antwortet dann mit einer Tabelle, in der Ihre Datenflüsse und die entsprechenden IDs aufgelistet sind. Um die gesamte Datentabelle anzuzeigen, klicken Sie auf das Symbol Erweitern oben rechts.
+Der KI-Assistent antwortet dann mit einer Tabelle, in der Ihre Datenflüsse und die entsprechenden IDs aufgelistet sind. Wählen Sie das Download-Symbol ![Download-Symbol](/help/images/icons/download.png), um die Tabelle als CSV-Datei herunterzuladen. Um die gesamte Tabelle anzuzeigen, klicken Sie auf das Symbol „Erweitern![ (Symbol „Erweitern](/help/images/icons/expand.png)).
 
 ![Eine Antwort auf operative Erkenntnisse](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Bei der Aufforderung mit einer Frage zu operativen Einblicken gibt der KI-Assist
 ![KI-Assistent mit einer Erläuterung, wie die Antwort berechnet wurde.](./images/answer-explained.png)
 
 Sie können auch Filter und Änderungen für Ihre Fragen angeben und den KI-Assistenten anweisen, seine Ergebnisse basierend auf den eingeschlossenen Filtern zu rendern. Sie können beispielsweise den KI-Assistenten bitten, Ihnen einen Trend der Anzahl der Segmentdefinitionen in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit null Gesamtprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
-
-**Hinweis:** Antworten zu operativen Einblicken befinden sich derzeit in der Beta-Phase. Wählen Sie in der Benutzeroberfläche des KI-Assistenten das QuickInfo-Symbol aus, um den Beta-Hinweis und einen Link zur Dokumentation anzuzeigen.
-
-![Quickinfo-Symbol des KI-Assistenten ausgewählt.](./images/op-insights-beta-note.png)
 
 +++
 
