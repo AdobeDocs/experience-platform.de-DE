@@ -1,12 +1,12 @@
 ---
 title: TikTok-Verbindung
-description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Pushen Sie die gewünschte Zielgruppe schnell und sicher mithilfe der Echtzeit-Integration der Adobe mit TikTok Ads Manager von Adobe Experience Platform zu TikTok.
+description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 39%
+source-wordcount: '1077'
+ht-degree: 38%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 ## Übersicht {#overview}
 
-Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Pushen Sie die gewünschte Zielgruppe schnell und sicher mithilfe der Echtzeit-Integration der Adobe mit TikTok Ads Manager von Adobe Experience Platform zu TikTok. Besuchen Sie das Business Help Center von [TikTok](https://ads.tiktok.com/help/article/audiences) um weitere Informationen zu erhalten.
+Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager. Besuchen Sie das Business Help Center von [TikTok](https://ads.tiktok.com/help/article/audiences) um weitere Informationen zu erhalten.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Eine Sportbekleidungsmarke möchte Bestandskunden über ihre Social-Media-Konten
 
 Sie benötigen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie im [TikTok-Hilfezentrum](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, für `Audience Management` auf Ihr Ad-Konto zuzugreifen. Diese Berechtigung kann erteilt werden, indem [Ihre Ads Manager-ID eingeben](#authenticate) in der Experience Platform-Benutzeroberfläche angezeigt wird und die Berechtigung erteilt wird, nachdem sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurde.
+Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, für `Audience Management` auf Ihr Ad-Konto zuzugreifen. Diese Berechtigung kann erteilt werden, indem [Ihre Ads Manager-ID eingeben](#authenticate) in der Experience Platform-Benutzeroberfläche und die Berechtigung erteilt wird, nachdem sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurde.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -44,6 +44,18 @@ TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+
+{style="table-layout:auto"}
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
+
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
+| [!DNL Federated Audience Composition] | ✓ | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -115,7 +127,7 @@ Auswählen der Zielfelder:
 
 ## Exportierte Daten {#exported-data}
 
-Überprüfen Sie Ihr [!DNL TikTok Ads Manager] (unter **Assets > Zielgruppen**), um festzustellen, ob Ihre Experience Platform-Zielgruppe erfolgreich exportiert wurde. Die Zielgruppe wird als Zielgruppentyp ausgefüllt: `Partner Audience`.
+Überprüfen Sie Ihr [!DNL TikTok Ads Manager] (unter **Assets > Zielgruppen**, um festzustellen, ob Ihre Experience Platform-Zielgruppe erfolgreich exportiert wurde. Die Zielgruppe wird als Zielgruppentyp ausgefüllt: `Partner Audience`.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

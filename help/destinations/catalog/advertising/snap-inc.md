@@ -1,10 +1,10 @@
 ---
 title: Snap Inc-Verbindung
-description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen von Experience Platform exportieren.
+description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen aus Experience Platform exportieren.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1063'
 ht-degree: 26%
 
 ---
@@ -59,13 +59,25 @@ Alle Kennungen, die an das Ziel *Snap Inc* gesendet werden, müssen im SHA-256-F
 
 {style="table-layout:auto"}
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
+
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
+| [!DNL Federated Audience Composition] | ✓ | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel *YOURDESTINATION“* werden. |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Snap Inc -Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -128,7 +140,7 @@ Nach der Aktivierung der Zielgruppen für *Ziel „Snap*&quot; werden die Zielgr
 
 ![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Bitte beachten Sie, dass beim ersten Aktivieren einer Adobe-Zielgruppe für Snap Inc diese zunächst als leere Zielgruppe angezeigt wird. Dies liegt daran, dass Adobe Experience Platform Mitgliedsdaten erst dann in Snap Inc. exportiert, wenn es die Zielgruppe bewertet. Weitere Informationen zur Auswertung von Zielgruppen im Experience Platform finden Sie unter [Segmentierungs-Service - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Beachten Sie, dass eine Adobe-Zielgruppe bei der ersten Aktivierung für Snap Inc zunächst als leere Zielgruppe angezeigt wird. Dies liegt daran, dass Adobe Experience Platform Mitgliedsdaten erst dann in Snap Inc. exportiert, wenn es die Zielgruppe bewertet. Weitere Informationen zur Auswertung von Zielgruppen in Experience Platform finden Sie unter [Segmentierungs-Service - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
