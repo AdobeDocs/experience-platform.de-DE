@@ -2,7 +2,7 @@
 title: Erstellen eines Exchange-Listeneintrags für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung dem öffentlichen Katalog in Adobe Experience Platform hinzufügen.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 71%
@@ -45,6 +45,7 @@ Wenn Sie bereits über ein Unternehmenskonto verfügen oder keinen Exchange-Eint
 1. Wählen Sie die Registerkarte **Neue Anwendung erstellen** und dann die Option **Neue App erstellen** für eine benutzerdefinierte Lösung, oder wählen Sie eine entsprechende Vorlage aus.
 1. Geben Sie die Informationen für Ihren Eintrag ein. Ausführliche Informationen zum App Manager finden Sie im vollständigen [Artikel](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Die Listeninformationen sollten sehr klar beschreiben, was die Erweiterung tut und warum sie nützlich ist. Die Liste dient als Marketing-Bereich für Ihre Mobile App. Werben Sie hier mit klaren Beschreibungen, Links zu Landingpages auf Ihrer Site, Links zu Hilfedokumenten oder Support-E-Mail-Adressen usw. für Ihre Erweiterung. Auch wenn der Platz in den Erweiterungsansichten begrenzt ist, bietet die Exchange-Liste eine Möglichkeit, sowohl Ihre Erweiterung als auch Ihr Unternehmen zu bewerben. Im Folgenden finden Sie Vorschläge zur Verbesserung der Bewerbung Ihrer Erweiterung:
    - **App-Symbol** - Stellen Sie sicher, dass das Symbol für den Exchange-Listeneintrag die entsprechenden Abmessungen (512 x 512 für PNG oder 1:1-Seitenverhältnis für JPG) hat.
+
      >[!NOTE]
      >
      >Dies ist ein anderes Dateiformat als das in Ihrem Erweiterungs-Code verwendete. Die Erweiterung selbst enthält eine SVG-Datei als [Symbol](../manifest.md).
@@ -55,7 +56,7 @@ Wenn Sie bereits über ein Unternehmenskonto verfügen oder keinen Exchange-Eint
    - **Tags**: Auf der ersten Seite der Bearbeitung Ihres Listeneintrags sollten Sie unbedingt das Wort „Launch“ in das Feld „Benutzerdefinierte Tags“ aufnehmen. Dadurch erscheint Ihr Listeneintrag bei der Suche nach Tags im Exchange-Marktplatz:
      ![](../images/getting-started/custom-tags.jpg)
    - **Sandboxes** – Ihr Zugriff auf Adobe-Lösungen erfolgt über ein Sandbox-Konto, über das Sie Zugriff auf eine voll funktionsfähige Version von Adobe Experience Platform haben. Diese Sandbox-Accounts werden angefordert, wenn Sie die Liste Ihrer Applikationen erstellen. Wählen Sie im Abschnitt **Verbindungen** die spezifischen Verbindungen aus, die für das von Ihnen erstellte Programm (Ihre Tag-Erweiterung) gelten. Wenn Sie auf **Speichern** klicken, wird bei Bedarf die Sandbox-Anfrage generiert.
-1. Reichen Sie Ihre Liste ein. Das Adobe Exchange-Team prüft Ihre Applikation und gibt Ihnen Feedback, wenn Updates erforderlich sind. Wenn Sie das Kontrollkästchen **Sofort veröffentlichen** aktivieren, wenn Sie Ihren Listeneintrag übermitteln, wird dieser sofort nach der Genehmigung veröffentlicht. Wenn Sie Ihr Programm zu einem späteren Zeitpunkt veröffentlichen möchten, lassen Sie das Kontrollkästchen deaktiviert. Wenn der Listeneintrag für Ihre Erweiterung genehmigt ist, wird auf der Seite mit den Listeneinträgen für Ihre Apps (Erweiterungen) neben der Schaltfläche eine blaue **Publish** angezeigt.
+1. Reichen Sie Ihre Liste ein. Das Adobe Exchange-Team prüft Ihre Applikation und gibt Ihnen Feedback, wenn Updates erforderlich sind. Wenn Sie das Kontrollkästchen **Sofort veröffentlichen** aktivieren, wenn Sie Ihren Listeneintrag übermitteln, wird dieser sofort nach der Genehmigung veröffentlicht. Wenn Sie Ihr Programm zu einem späteren Zeitpunkt veröffentlichen möchten, lassen Sie das Kontrollkästchen deaktiviert. Wenn der Listeneintrag für Ihre Erweiterung genehmigt ist, wird auf der Seite mit den Listeneinträgen für Ihre Mobile App (**) neben der** eine blaue Schaltfläche „Veröffentlichen“ angezeigt.
 
 ### Erstellen einer effektiven Liste
 

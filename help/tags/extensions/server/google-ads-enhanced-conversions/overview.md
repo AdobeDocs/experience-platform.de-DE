@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions-Erweiterung
 description: Erfahren Sie mehr über die Google Ads Enhanced Conversions-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -74,6 +74,7 @@ Es werden zusätzliche Steuerelemente angezeigt, mit denen Sie das [!DNL gtag] k
 1. **[!UICONTROL Ereignisname (Aktion)]**: Geben Sie `conversion` als Wert ein.
 1. Fügen Sie ein neues Feld hinzu, in dem der Schlüssel `transaction_id` ist und der Wert ein [Datenelement](../../../ui/managing-resources/data-elements.md) ist, das den Wert [Transaktions-ID](https://support.google.com/google-ads/answer/6386790) enthält.
 1. **[!UICONTROL Konversionsbezeichnung]**: Geben Sie die entsprechende Konversionsbezeichnung aus Ihrem [!DNL Google Ads] ein. Um diesen Wert zu finden, melden Sie sich bei Google Ads an und navigieren Sie zu **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. Die Bezeichnung für die Konversion finden Sie unter [!DNL Instructions].
+
    >[!IMPORTANT]
    >
    >Stellen Sie sicher, dass erweiterte Konvertierungen aktiviert sind, während Sie sich im Bereich Tag-Setup Ihres [!DNL Google Ads]-Kontos befinden. Überprüfen und akzeptieren Sie dazu die Nutzungsbedingungen und wählen Sie dann **[!DNL Turn on enhanced conversions]** und **[!DNL API]** als Implementierungsmethode aus.
@@ -142,4 +143,4 @@ Veröffentlichen Sie abschließend eine neue Ereignisweiterleitung [Build](../..
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Konversionsereignisse mithilfe der [!DNL Enhanced Conversions]-Erweiterung an [!DNL Google Ads] senden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Konversionsereignisse mithilfe der [!DNL Enhanced Conversions]-Erweiterung an [!DNL Google Ads] senden. Weitere Informationen zu den Funktionen für die Ereignisweiterleitung in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).

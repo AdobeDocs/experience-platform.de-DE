@@ -2,7 +2,7 @@
 title: Übersicht über die Splunk-Erweiterung
 description: Erfahren Sie mehr über die Splunk-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 98%
@@ -38,6 +38,7 @@ Sie müssen außerdem über die folgenden technischen Werte verfügen, um die Er
 
 * Ein [Event Collector-Token](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Token haben in der Regel das UUIDv4-Format wie folgt: `12345678-1234-1234-1234-1234567890AB`.
 * Die Adresse und der Port der Splunk-Plattforminstanz für Ihr Unternehmen. Die Adresse und der Port einer Plattforminstanz haben in der Regel das folgende Format: `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Splunk-Endpunkte, auf die in der Ereignisweiterleitung verwiesen wird, sollten nur Port `443` verwenden. Nicht standardmäßige Ports werden derzeit in Implementierungen der Ereignisweiterleitung nicht unterstützt.

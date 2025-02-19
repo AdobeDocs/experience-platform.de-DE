@@ -1,9 +1,9 @@
 ---
-keywords: facebook-Verbindung;facebook-Verbindung;facebook-Ziele;facebook;instagram;Messenger;facebook Messenger
+keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instagram;Messenger;Facebook Messenger
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 28%
@@ -54,7 +54,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -70,17 +70,20 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## Voraussetzungen für das facebook-Konto {#facebook-account-prerequisites}
+## Voraussetzungen für Facebook-Konten {#facebook-account-prerequisites}
 
 Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Ihr [!DNL Facebook]-Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, der das von Ihnen verwendete Werbekonto gehört.
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen [ Sie in der Dokumentation zu Facebook unter ](https://www.facebook.com/business/help/1717412048538897) zu Ihrem Business Manager hinzufügen .
+* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+
   >[!IMPORTANT]
   >
   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die [!DNL Adobe Experience Platform] erforderlich.
+
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, wo `accountID` Ihr [!DNL Facebook Ad Account ID] ist. Stellen Sie sicher, dass der Abschnitt `business_id=206617933627973` in der URL vorhanden ist, wenn Sie die Nutzungsbedingungen unterzeichnen.
+
   >[!IMPORTANT]
   >
   >Achten Sie beim Signieren der [!DNL Facebook Custom Audiences] Nutzungsbedingungen darauf, dasselbe Benutzerkonto zu verwenden, das Sie zur Authentifizierung in der Facebook-API verwendet haben.
@@ -104,9 +107,9 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
 ## Hash-Anforderungen für E-Mails {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in CLEAR in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
 
-Informationen zum Aufnehmen von E-Mail-Adressen im Experience Platform finden Sie [ „Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme“ und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
+Weitere Informationen zum Aufnehmen von E-Mail-Adressen in Experience Platform finden Sie unter [Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
@@ -127,7 +130,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 ## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie den `Extern_ID`-Namespace zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden Sie in der offiziellen Dokumentation ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) [Facebook .
+Bevor Sie den `Extern_ID`-Namespace zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden [ in der offiziellen ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) von Facebook.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -161,7 +164,7 @@ Facebook-Token laufen alle 60 Tage ab. Sobald das Token abgelaufen ist, funktion
    ![Filtern, um nur Facebook-Konten anzuzeigen](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
    ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut]** und authentifizieren Sie sich erneut mit Ihren Facebook-Anmeldeinformationen.
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut verbinden]** und authentifizieren Sie sich erneut mit Ihren Facebook-Anmeldeinformationen.
    ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -218,7 +221,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Im Schritt **[!UICONTROL Segmentzeitplan]** müssen Sie die [!UICONTROL Herkunft der Zielgruppe] angeben, wenn Sie Zielgruppen an [!DNL Facebook Custom Audiences] senden.
 
-![Die Dropdown-Liste „Herkunft der Zielgruppe“ wird im Facebook-Aktivierungsschritt angezeigt.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Dropdown-Liste „Herkunft der Zielgruppe“ im Schritt „Facebook-Aktivierung“ angezeigt.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -271,6 +274,6 @@ Dieser Fehler tritt auf, wenn Kundinnen und Kunden neu erstellte Konten verwende
 >
 >Akzeptieren Sie die [!DNL Facebook Custom Audience Terms of Service] unter `business ID 206617933627973`, wie in der URL-Vorlage im Abschnitt [Voraussetzungen für das Konto](#facebook-account-prerequisites) dargestellt.
 
-Wenn Sie die `400 Bad Request` Fehlermeldung erhalten, nachdem Sie die Schritte unter [Voraussetzungen für das Facebook](#facebook-account-prerequisites)Konto ausgeführt haben, warten Sie einige Tage, bis die [!DNL Facebook] Berechtigungen wirksam werden.
+Wenn Sie die `400 Bad Request` Fehlermeldung erhalten, nachdem Sie die Schritte unter [Voraussetzungen für das Facebook-](#facebook-account-prerequisites)Konto) ausgeführt haben, warten Sie einige Tage, bis die [!DNL Facebook]-Berechtigungen wirksam werden.
 
 
