@@ -2,30 +2,32 @@
 keywords: Experience Platform;Startseite;beliebte Themen;filter;filter;filter;daten filtern;datumsbereich
 solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfrageparametern
-description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamt-Performance verbessern.
+description: Verwenden Sie Abfrageparameter, um Antwortdaten in der Catalog Service-API zu filtern und nur die benötigten Informationen abzurufen. Wenden Sie Filter auf Ihre API-Aufrufe an, um die Auslastung zu reduzieren und die Leistung zu verbessern, sodass Daten schneller und effizienter abgerufen werden können.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 82%
+source-wordcount: '2339'
+ht-degree: 68%
 
 ---
 
 # Filtern [!DNL Catalog] Daten mithilfe von Abfrageparametern
 
-Mit der [!DNL Catalog Service]-API können Antwortdaten mithilfe von Abfrageparametern gefiltert werden. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die API entlasten und zur Verbesserung der Gesamtleistung beitragen.
+Um die Leistung zu verbessern und relevante Ergebnisse abzurufen, verwenden Sie Abfrageparameter zum Filtern [!DNL Catalog Service] API-Antwortdaten.
 
-In diesem Dokument werden die gängigsten Methoden zum Filtern von [!DNL Catalog] in der API beschrieben. Es wird empfohlen, dieses Dokument beim Lesen des [Catalog-Entwicklerhandbuch](getting-started.md) zu lesen, um mehr darüber zu erfahren, wie Sie mit der [!DNL Catalog]-API interagieren. Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] Übersicht](../home.md).
+Erfahren Sie mehr über gängige Filtermethoden für [!DNL Catalog] in der API. Verwenden Sie dieses Dokument zusammen mit dem [Katalog-Entwicklerhandbuch](getting-started.md) für weitere Informationen zu API-Interaktionen. Allgemeine [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] Übersicht](../home.md).
 
-## Zurückgegebene Objekte begrenzen
+## Zurückgegebene Objekte begrenzen {#limit-returned-objects}
 
-Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] werden automatisch entsprechend den konfigurierten Grenzwerten gemessen:
+Der `limit` Abfrageparameter beschränkt die Anzahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] Antworten folgen vordefinierten Grenzwerten:
 
-* Wenn kein `limit`-Parameter angegeben ist, beträgt die maximale Zahl von Objekten pro Antwort-Payload 20.
+* Wenn der `limit` nicht angegeben ist, beträgt die maximale Anzahl von Objekten pro Antwort 20.
 * Bei Datensatzabfragen beträgt die maximale Zahl der zurückgegebenen Datensätze 20, wenn `observableSchema` mit dem `properties`-Abfrageparameter angefragt wird.
-* Die globale Begrenzung für alle anderen Catalog-Abfragen beträgt 100 Objekte.
-* Ungültige `limit`-Parameter (einschließlich `limit=0`) führen zu Fehlerantworten der Stufe 400, in der richtige Bereiche angegeben werden.
-* Beschränkungen oder Verschiebungen, die als Abfrageparameter übergeben werden, haben Vorrang vor jenen, die als Kopfzeilen übergeben werden.
+* Für Benutzer-Token ist die Obergrenze 1.
+* Für Service-Token beträgt die Obergrenze 20.
+* Die globale Begrenzung für andere Katalogabfragen beträgt 100 Objekte.
+* Ungültige `limit` (einschließlich `limit=0`) führen zu Fehlerantworten auf 400-Ebene, die die richtigen Bereiche angeben.
+* Als Abfrageparameter übergebene Limits oder Offsets haben Vorrang vor denen in Kopfzeilen.
 
 **API-Format**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
+| `{OBJECT_TYPE}` | Der Typ [!DNL Catalog] abzurufenden Objekts. Gültige Objekte: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | Eine Ganzzahl, die die Anzahl der zurückzugebenden Objekte angibt (Bereich: 1-100). |
 
 **Anfrage**
 
@@ -73,7 +75,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die auf die 
 }
 ```
 
-## Angezeigte Eigenschaften beschränken
+## Angezeigte Eigenschaften beschränken {#limit-displayed-properties}
 
 Trotz Filterns der Zahl der zurückgegebenen Objekte mithilfe des `limit`-Parameters können die zurückgegebenen Objekte häufig mehr Daten enthalten, als Sie in Wahrheit benötigen. Um die Systemlast weiter zu verringern, sollten Sie Antworten so filtern, dass nur die Eigenschaften einbezogen werden, die Sie tatsächlich brauchen.
 
@@ -158,7 +160,7 @@ Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 >
 >In der `schemaRef`-Eigenschaft für jeden Datensatz gibt die Versionsnummer die neueste Nebenversion des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
 
-## Startindex von Antwortliste versetzen
+## Startindex von Antwortliste versetzen {#offset-starting-index}
 
 Der Abfrageparameter `start` versetzt die Antwortliste um eine angegebene Zahl vorwärts, wobei Zahlen bei 0 beginnen. Beispielsweise würde `start=2` die Antwort so versetzen, dass mit dem dritten aufgelisteten Objekt begonnen wird.
 
@@ -455,6 +457,10 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog], die nach dem `
 * [Verwenden einfacher Filter](#using-simple-filters): Filtern Sie danach, ob eine bestimmte Eigenschaft mit einem bestimmten Wert übereinstimmt.
 * [Verwenden des Eigenschaftsparameters](#using-the-property-parameter): Nutzen Sie bedingte Ausdrücke, um danach zu filtern, ob eine Eigenschaft vorhanden ist oder ob der Wert einer Eigenschaft mit einem anderen angegebenen Wert oder regulären Ausdruck übereinstimmt bzw. sich diesem nähert oder mit diesem vergleichbar ist.
 
+>[!NOTE]
+>
+>Jedes Attribut eines Catalog-Objekts kann zum Filtern von Ergebnissen in der Catalog Service-API verwendet werden.
+
 ### Verwenden einfacher Filter {#using-simple-filters}
 
 Mit einfachen Filtern können Sie Antworten anhand einzelner Eigenschaftswerte filtern. Ein einfacher Filter hat die Form `{PROPERTY_NAME}={VALUE}`.
@@ -524,6 +530,22 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
 
 Der Abfrageparameter `property` bietet bei eigenschaftsbasierter Filterung mehr Flexibilität als einfache Filter. Neben einer Filterung danach, ob eine Eigenschaft einen bestimmten Wert aufweist oder nicht, kann der `property`-Parameter auch andere Vergleichsoperatoren wie „größer als“ (`>`) und „kleiner als“ (`<`) sowie reguläre Ausdrücke verwenden, um anhand von Eigenschaftswerten zu filtern. Es kann auch nach dem Vorhandensein oder Nichtvorhandensein einer Eigenschaft gefiltert werden, unabhängig von ihrem Wert.
 
+Verwenden Sie ein kaufmännisches Und-Zeichen (`&`), um mehrere Filter zu kombinieren und Ihre Abfrage in einer einzigen Anfrage zu verfeinern. Wenn Sie nach mehreren Feldern filtern, wird standardmäßig eine `AND` angewendet.
+
+>[!NOTE]
+>
+>Wenn Sie mehrere `property` in einer einzigen Abfrage kombinieren, muss mindestens einer auf das `id`- oder `created` angewendet werden. Die folgende Abfrage gibt Objekte zurück, bei denen `id` `abc123` ist **AND** `name` nicht `test` ist:
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+Wenn Sie mehrere `property` für dasselbe Feld verwenden, wird nur der zuletzt angegebene Parameter wirksam.
+
+>[!IMPORTANT]
+>
+>Sie **nicht** einen einzelnen `property` verwenden, um mehrere Felder gleichzeitig zu filtern. Jedes Feld muss über einen eigenen `property` verfügen. Das folgende Beispiel (`property=id>abc,name==myDataset`) ist **nicht** zulässig, da es versucht, Bedingungen auf `id` und `name` innerhalb eines **einzelnen `property`-Parameters anzuwenden**.
+
 Der `property`-Parameter akzeptiert Eigenschaften von Objekten beliebiger Ebenen. `sampleKey` können zum Filtern mithilfe von `?properties=subItem.sampleKey` verwendet werden.
 
 ```json
@@ -562,6 +584,8 @@ Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedin
 | &lt;= | Gibt nur Objekte zurück, deren Eigenschaftswerte kleiner als ein angegebener Betrag sind (oder gleich). | `property=version<=1.0.0` |
 | > | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als ein angegebener Betrag sind (aber nicht gleich). | `property=version>1.0.0` |
 | >= | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als ein angegebener Betrag sind (oder gleich). | `property=version>=1.0.0` |
+| * | Ein Platzhalter gilt für jede Zeichenfolgeneigenschaft und entspricht jeder Zeichenfolge. Verwenden Sie `**`, um einem literalen Sternchen zu entgehen. | `property=name==te*st` |
+| und | Kombiniert mehrere `property` Parameter mit einer `AND` Beziehung zwischen ihnen. | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -619,12 +643,38 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
 }
 ```
 
-## Mehrere Filter kombinieren
+## Filtern von Arrays mit dem Eigenschaftsparameter {#filter-arrays}
 
-Mit einem kaufmännischen Und-Zeichen (`&`) können Sie mehrere Filter in einer Anfrage kombinieren. Wenn einer Anfrage zusätzliche Bedingungen hinzugefügt werden, wird eine UND-Beziehung angenommen.
+Verwenden Sie Gleichheits- und Ungleichheitsoperatoren, um bestimmte Werte beim Filtern von Ergebnissen basierend auf Array-Eigenschaften ein- oder auszuschließen.
+
+### Gleichheitsfilter {#equality-filters}
+
+Um ein Array-Feld nach mehreren Werten zu filtern, verwenden Sie separate Eigenschaftsparameter für jeden Wert. Verwenden Sie Gleichheitsfilter, um nur die Einträge in den Array-Daten zurückzugeben, die den angegebenen Werten entsprechen.
+
+>[!NOTE]
+>
+>Die Anforderung, beim Filtern mehrerer Felder `id` oder `created` einzuschließen, gilt **nicht** wenn mehrere Werte innerhalb eines Array-Felds gefiltert werden.
+
+Die folgende Beispielabfrage gibt nur Ergebnisse aus dem -Array zurück, das sowohl `val1` als auch `val2` enthält.
 
 **API-Format**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### Ungleichheitsfilter {#inequality-filters}
+
+Verwenden Sie Ungleichheitsoperatoren (`!=`) für ein Array-Feld, um Einträge in den Daten auszuschließen, bei denen das Array die angegebenen Werte enthält.
+
+**API-Format**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+Diese Abfrage gibt Dokumente zurück, bei denen arrayField keine `val1` oder `val2` enthält.
+
+### Einschränkungen beim Filter für Gleichheit und Ungleichheit {#equality-inequality-limitations}
+
+Sie können nicht in einer einzigen Abfrage sowohl Gleichheit (`=`) als auch Ungleichheit (`!=`) auf dasselbe Feld anwenden.
