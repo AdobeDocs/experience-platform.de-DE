@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Verwalten von Zugriffssteuerungsrichtlinien
 description: Dieses Dokument enthält Informationen zum Verwalten von Zugriffssteuerungsrichtlinien über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 11%
+source-wordcount: '684'
+ht-degree: 12%
 
 ---
 
@@ -184,7 +184,13 @@ Das **[!UICONTROL Entfernen]** wird angezeigt und Sie werden aufgefordert, Ihre 
 >
 >Die ausgewählte Sandbox wurde erfolgreich aus der Richtlinie entfernt.
 
-## Aktivieren von Richtlinien
+## Aktivieren von Richtlinien {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Was sind Richtlinien?"
+>abstract="Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Aktionen festzustellen. Jede Organisation verfügt über eine Standardrichtlinie, die Sie aktivieren müssen, um den Zugriff auf bestimmte Objekte anhand von Kennzeichnungen zu steuern. Auf Ressourcen angewendete Kennzeichnungen verweigern den Zugriff, es sei denn, Benutzer werden einer Rolle mit einer entsprechenden Kennzeichnung zugewiesen. Standardrichtlinien können nicht bearbeitet oder gelöscht werden, sie können jedoch aktiviert oder deaktiviert werden."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Verwalten von Kennzeichnungen"
 
 Um eine vorhandene Richtlinie zu aktivieren, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus.
 

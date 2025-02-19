@@ -3,19 +3,14 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1860'
 ht-degree: 82%
 
 ---
 
 # Attributbasierte Zugriffssteuerung – Übersicht {#attribute-based-access-control-overview}
-
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Zugriffsrichtlinie für die Verwendung von Kennzeichnungen"
->abstract=""
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
@@ -23,7 +18,7 @@ Verwenden Sie diese Funktion, um Schemafelder des Experience-Datenmodells (XDM) 
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen der Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie [ „Übersicht ](../../data-governance/home.md) Data Governance“.
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie [ „Übersicht ](../../data-governance/home.md) Data Governance“.
 
 Mit der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
@@ -79,7 +74,7 @@ Die Verwaltungs-Workflows für alle Experience Platform-gestützten Anwendungen,
 
 >[!IMPORTANT]
 >
->Ihre Rollen werden automatisch in die Benutzeroberfläche „Berechtigungen“ migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis auf Weiteres unverändert. Bitte **nicht** ändern Sie Ihre Rollen, nachdem dies für Ihre Organisation aktiviert wurde.
+>Ihre Rollen werden automatisch in die Benutzeroberfläche „Berechtigungen“ migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in Admin Console bleiben bis auf Weiteres unverändert. Bitte **nicht** ändern Sie Ihre Rollen, nachdem dies für Ihre Organisation aktiviert wurde.
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../home.md).
 

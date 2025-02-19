@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 41%
+source-wordcount: '1699'
+ht-degree: 39%
 
 ---
 
@@ -120,6 +120,12 @@ Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer 
 
 ## Verwalten von API-Anmeldeinformationen für eine Rolle {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="Was sind API-Anmeldeinformationen?"
+>abstract="API-Anmeldeinformationen werden Rollen zugewiesen, um Benutzern und Entwicklern Zugriff auf Platform-APIs zu gewähren. Mithilfe von Platform-APIs können Sie programmgesteuert grundlegende CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Daten/Entitäten, den Export von Daten, das Löschen nicht benötigter Daten oder Batches und mehr."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform-API-Handbuch"
+
 >[!IMPORTANT]
 >
 > Um API-Anmeldeinformationen in „Berechtigungen[!UICONTROL  verwenden ] verwalten zu können, müssen Benutzerinnen und Benutzer über Systemadministratorrechte verfügen.
@@ -148,7 +154,13 @@ Das **[!UICONTROL API-Anmeldeinformationen entfernen]** wird angezeigt, in dem S
 
 Sie werden zur Registerkarte **[!UICONTROL API-Anmeldedaten]** zurückgeleitet.
 
-## Verwalten von Benutzergruppen für eine Rolle
+## Verwalten von Benutzergruppen für eine Rolle {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="Was sind Benutzergruppen?"
+>abstract="Benutzergruppen sind Sammlungen mehrerer Benutzer, die Zugriff auf dieselben Funktionen haben. Der Zugriff auf Ressourcen innerhalb einer Organisation wird über Rollen verwaltet, die Benutzergruppen zugewiesen sind."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Verwalten von Rollen"
 
 Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen.
 

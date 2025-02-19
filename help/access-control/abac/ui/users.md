@@ -3,14 +3,20 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Benutzenden und Benutzergruppen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '285'
 ht-degree: 5%
 
 ---
 
-# Benutzer verwalten
+# Benutzer verwalten {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="Was sind Benutzer?"
+>abstract="Benutzer sind die Einzelpersonen, die Zugriff auf Experience Platform haben. Der Zugriff einzelner Benutzer auf die Ressourcen einer Organisation wird über Rollen verwaltet."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Verwalten von Rollen"
 
 Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen wurden, wählen Sie die Registerkarte **[!UICONTROL Benutzer]** aus.
 

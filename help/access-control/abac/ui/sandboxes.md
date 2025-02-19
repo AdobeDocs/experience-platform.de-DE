@@ -3,14 +3,20 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerungs-Sandboxes
 description: Dieses Dokument enthält Informationen zum Verwalten von Sandboxes über die Benutzeroberfläche für Berechtigungen in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 28%
+source-wordcount: '259'
+ht-degree: 24%
 
 ---
 
-# Verwalten von Sandboxes
+# Verwalten von Sandboxes {#mange-sandboxes}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="Was sind Sandboxes?"
+>abstract="Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Platform. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Der Zugriff auf Sandboxes wird über Rollen verwaltet."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Sandbox-Übersicht"
 
 Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../../sandboxes/home.md).
 
