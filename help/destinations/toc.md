@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 83%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 83%
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
       * [Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
-      * [(Beta) Marketo Engage-Personen-Synchronisationsverbindung](./catalog/adobe/marketo-engage-person-sync.md)
+      * [(Beta) Marketo Engage Person Sync-Verbindung](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
       * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
@@ -78,7 +78,7 @@ ht-degree: 83%
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
       * [Erweiterung für Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Branch-Erweiterung](./catalog/advertising/branch.md)
-      * [(Beta) Criteo-Verbindung](./catalog/advertising/criteo.md)
+      * [Criteo-Verbindung](./catalog/advertising/criteo.md)
       * [Demandbase-Verbindung](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)

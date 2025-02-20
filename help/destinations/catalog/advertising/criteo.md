@@ -3,20 +3,20 @@ keywords: Werbung; Kriterium;
 title: Criteo-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher über das offene Internet ein reichhaltigeres Erlebnis zu bieten. Mit dem weltweit größten Commerce-Datensatz und der erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint auf der Shopping-Journey personalisiert ist, um Kunden mit der richtigen Anzeige zum richtigen Zeitpunkt zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 25%
+source-wordcount: '1016'
+ht-degree: 24%
 
 ---
 
-# (Beta) Criteo-Verbindung
+# Criteo-Verbindung
 
 ## Übersicht {#overview}
 
 >[!IMPORTANT]
 >
->Dieser Ziel-Connector und diese Dokumentationsseite werden von Criteo erstellt und gepflegt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [hier](mailto:criteoTechnicalPartnerships@criteo.com).
+>Dieser Ziel-Connector und diese Dokumentationsseite werden von Criteo erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [hier](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher über das offene Internet ein reichhaltigeres Erlebnis zu bieten. Mit dem weltweit größten Commerce-Datensatz und der erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint auf der Shopping-Journey personalisiert ist, um Kunden mit der richtigen Anzeige zum richtigen Zeitpunkt zu erreichen.
 
@@ -57,11 +57,11 @@ Damit Sie besser verstehen können, wie Sie das [!DNL Criteo]-Ziel verwenden, k�
 
 ### Anwendungsfall 1: Traffic abrufen
 
-Präsentieren Sie Ihr Unternehmen mit relevanten Produktangeboten und flexiblen Kreativen. Mit intelligenten Produktempfehlungen werden Ihre Anzeigen automatisch die Produkte enthalten, die am wahrscheinlichsten zu Besuchen und Interaktionen von Triggern führen. Mit dem flexiblen Targeting können Sie Zielgruppen aus dem Commerce-Datensatz von Criteo oder aus Ihren eigenen Interessentenlisten und Adobe-CDP-Segmenten erstellen.
+Präsentieren Sie Ihr Unternehmen mit relevanten Produktangeboten und flexiblen Kreativen. Mit intelligenten Produktempfehlungen werden Ihre Anzeigen automatisch die Produkte enthalten, die am wahrscheinlichsten zu Besuchen und Interaktionen von Triggern führen. Flexibles Targeting ermöglicht es Ihnen, Zielgruppen aus dem Commerce-Datensatz von Criteo oder aus Ihren eigenen Interessentenlisten und Adobe CDP-Segmenten zu erstellen.
 
 ### Anwendungsfall 2 : Steigerung der Website-Konversionen
 
-Wenn Besucherinnen und Besucher Ihre Website verlassen, erinnern Sie sie mit Retargeting-Anzeigen, die Konversionen erhöhen, daran, dass sie Sonderangebote und hyperrelevante Angebote anzeigen, unabhängig davon, wo sie als Nächstes hingehen. Verbinden Sie Ihre Adobe-CDP-Zielgruppe, um bestehende Kundinnen und Kunden erneut anzusprechen oder Verbraucher anzusprechen, die Ihren treuesten Kundinnen und Kunden ähneln.
+Wenn Besucherinnen und Besucher Ihre Website verlassen, erinnern Sie sie mit Retargeting-Anzeigen, die Konversionen erhöhen, daran, dass sie Sonderangebote und hyperrelevante Angebote anzeigen, unabhängig davon, wo sie als Nächstes hingehen. Verbinden Sie Ihre Adobe CDP-Zielgruppe, um bestehende Kundinnen und Kunden erneut anzusprechen, oder richten Sie sie ähnlich wie Ihre treuesten Kundinnen und Kunden an.
 
 ## Mit Criteo verbinden {#connect}
 

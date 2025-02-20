@@ -3,10 +3,10 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) verbinden und pseudonyme Zielgruppen für diese Plattformen freigeben.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 48%
+source-wordcount: '272'
+ht-degree: 47%
 
 ---
 
@@ -20,7 +20,7 @@ Beim Herstellen einer Verbindung zu einem Werbeziel werden Ihre Zielgruppen als 
 
 ## Unterstützte Werbeziele {#supported-destinations}
 
-Experience Platform unterstützt derzeit die unten aufgeführten Werbeziele.
+Derzeit unterstützt Experience Platform die unten aufgeführten Werbeziele.
 
 Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien.
 
@@ -29,7 +29,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [(Beta) Acxiom-Zielgruppenverteilung](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud-Verbindung](adobe-advertising-cloud-connection.md)
 * [Amazon Ads-Verbindung](amazon-ads.md)
-* [(Beta) Criteo-Verbindung](criteo.md)
+* [Criteo-Verbindung](criteo.md)
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
 * [Google Ads-Verbindung](google-ads-destination.md)
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
