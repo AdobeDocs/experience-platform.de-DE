@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 80%
+source-wordcount: '2228'
+ht-degree: 70%
 
 ---
 
@@ -36,7 +36,17 @@ Die Arbeitsfläche für die Zielgruppenkomposition besteht aus vier verschiedene
 
 ## [!UICONTROL Zielgruppe] {#audience-block}
 
-Mit dem Block **[!UICONTROL Zielgruppe]** können Sie die Unterzielgruppen hinzufügen, aus denen Sie Ihre neue größere Zielgruppe erstellen möchten. Standardmäßig ist ein **[!UICONTROL Zielgruppen]**-Block oben auf der Arbeitsfläche für die Komposition enthalten.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Zielgruppen-Block"
+>abstract="Mit dem Block Zielgruppe können Sie die Unterzielgruppen festlegen, die Sie zum Erstellen Ihrer neuen Zielgruppe verwenden möchten."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Fusionieren von Typen"
+>abstract="Die Zusammenführungstypen bestimmen, wie die ausgewählten Unterzielgruppen kombiniert werden. Unterstützte Werte sind Vereinigung, Schnittmenge und Ausschließen von Überschneidungen."
+
+Mit **[!UICONTROL Blocktyp]** Zielgruppe“ können Sie die Unterzielgruppen hinzufügen, die Sie zum Erstellen Ihrer neuen größeren Zielgruppe verwenden möchten. Standardmäßig ist ein **[!UICONTROL Zielgruppen]**-Block oben auf der Arbeitsfläche für die Komposition enthalten.
 
 Wenn Sie den Block **[!UICONTROL Zielgruppen]** auswählen, zeigt die rechte Leiste Steuerelemente für die Kennzeichnung der Zielgruppe, das Hinzufügen von Zielgruppen zum Block sowie das Erstellen benutzerdefinierter Regeln für den Zielgruppenblock an.
 
@@ -88,6 +98,16 @@ Nachdem Sie eine benutzerdefinierte Regel hinzugefügt haben, wählen Sie **[!UI
 
 ## [!UICONTROL Ausschließen] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Block ausschließen"
+>abstract="Mit dem Block Ausschließen können Sie bestimmte Zielgruppen oder Attribute aus Ihrer Komposition ausschließen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="Typ des Ausschließens"
+>abstract="Sie können entweder Profile, die zu einer bestimmten Zielgruppe gehören (nach Zielgruppe ausschließen), ausschließen oder Profile basierend auf einem bestimmten Attribut (nach Attribut ausschließen)."
+
 Mit **[!UICONTROL Blocktyp]** Ausschließen“ können Sie eine bestimmte Unterzielgruppe oder Attribute aus Ihrer neuen größeren Zielgruppe ausschließen.
 
 Um einen Block **[!UICONTROL Ausschließen]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Ausschließen]** aus.
@@ -127,6 +147,26 @@ Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, 
 >Beim Ausschluss nach Attribut können Sie nur **einen)** Wert angeben. Die Verwendung eines beliebigen Trennzeichens, z. B. eines Kommas oder Semikolons, führt nur dazu, dass dieser exakte Wert ausgeschlossen wird. Wenn Sie beispielsweise den Wert auf `red, blue` setzen, wird der Begriff `red, blue` aus dem Attribut ausgeschlossen, **jedoch** der Begriff `red` oder `blue`.
 
 ## [!UICONTROL Anreichern] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Block anreichern"
+>abstract="Mit dem Block Anreichern können Sie Ihre Audience mit zusätzlichen Attributen aus Adobe Experience Platform-Datensätzen anreichern."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Anreicherungsdatensatz"
+>abstract="Der Anreicherungsdatensatz enthält die Daten, die Sie mit der Komposition verknüpfen möchten."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Anreicherungskriterien"
+>abstract="Zu den Anreicherungskriterien gehören der Source-Join-Schlüssel und der Join-Schlüssel des Anreicherungsdatensatzes. Diese beiden Schlüssel stimmen den Quelldatensatz und den Anreicherungsdatensatz überein."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Anreicherungsattribute"
+>abstract="Die Anreicherungsattribute sind die Attribute, die mit der Komposition verknüpft werden sollen."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rang] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Block „Rang“"
+>abstract="Mit dem Block Rang können Sie Profile nach einem bestimmten Attribut ordnen und in Ihre Komposition einschließen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Profil-Limit hinzufügen"
+>abstract="Mit dem Umschalter Profil-Limit hinzufügen können Sie eine maximale Anzahl von Profilen angeben, die als Teil des Ranking-Prozesses eingeschlossen werden sollen."
+
 Der Blocktyp **[!UICONTROL Rang]** ermöglicht es Ihnen, Profile anhand eines bestimmten Attributs zu bewerten und zu sortieren und diese bewerteten Profile in Ihre Komposition aufzunehmen.
 
 Um einen Block **[!UICONTROL Rang]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Rang]** aus.
@@ -231,6 +281,21 @@ Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränke
 ![Der Umschalter „Profil-Limit hinzufügen“ ist hervorgehoben, sodass Sie die Anzahl der zurückgegebenen Profile einschränken können.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Aufspaltung] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Block teilen"
+>abstract="Mit dem Block Aufspaltung können Sie Ihre Komposition in mehrere Pfade unterteilen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Split-Typ"
+>abstract="Sie können Ihre Komposition nach Prozent- oder Attributaufteilung aufteilen. Prozentuale Aufspaltung nach dem Zufallsprinzip Profile in mehrere Pfade aufteilt. Mit der Attributaufteilung können Profile anhand eines bestimmten Attributs aufgeteilt werden."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Andere Profile"
+>abstract="Mit dem Umschalter Andere Profile können Sie einen zusätzlichen Pfad mit den verbleibenden Profilen erstellen, die keiner der angegebenen Bedingungen für die anderen Pfade entsprechen."
 
 Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen. Bei der Aufteilung Ihrer Zielgruppe in Unterzielgruppen ist diese Aufteilung **nicht** persistent. Das bedeutet, dass sich die Profile bei jeder Bewertung in verschiedenen Unterzielgruppen befinden können.
 
@@ -272,13 +337,13 @@ Darüber hinaus können Sie den Umschalter **[!UICONTROL Andere Profile]** aktiv
 >
 >Beachten Sie beim Veröffentlichen Ihrer Zielgruppenkomposition, dass es bis zu 48 Stunden dauern kann, bis sie für die Verwendung in nachgelagerten Services wie einem Real-Time CDP-Ziel oder Adobe Journey Optimizer-Kanal ausgewertet und aktiviert wird.
 
-Nachdem Sie Ihre Komposition erstellt haben, können Sie sie speichern und veröffentlichen, indem Sie **[!UICONTROL Publish]** auswählen.
+Nachdem Sie Ihre Komposition erstellt haben, können Sie sie speichern und veröffentlichen, indem Sie **[!UICONTROL Veröffentlichen]** auswählen.
 
-![Die Schaltfläche &quot;Publish&quot; ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen.](../images/ui/audience-composition/publish.png)
+![Die Schaltfläche „Veröffentlichen“ ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen.](../images/ui/audience-composition/publish.png)
 
 Wenn bei der Erstellung der Zielgruppe Fehler auftreten, wird ein Warnhinweis angezeigt, über den Sie erfahren, wie Sie das Problem beheben können.
 
-![Die Schaltfläche &quot;Publish&quot; ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen.](../images/ui/audience-composition/audience-alert.png)
+![Die Schaltfläche „Veröffentlichen“ ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen.](../images/ui/audience-composition/audience-alert.png)
 
 ## Nächste Schritte
 
