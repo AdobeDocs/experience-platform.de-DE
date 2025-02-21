@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5a7f244b1a3872dc7cbf3821f2b26d3b90ff9ecc
+source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
 workflow-type: tm+mt
-source-wordcount: '1439'
-ht-degree: 14%
+source-wordcount: '1378'
+ht-degree: 15%
 
 ---
 
@@ -39,13 +39,14 @@ Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit de
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Allgemeine Verfügbarkeit von operativen Einblicken | Operative Einblicke in AI Assistant sind jetzt allgemein verfügbar. Operative Einblicke beziehen sich auf Antworten, die der KI-Assistent zu Ihren Metadatenobjekten (Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen) generiert, einschließlich Zählungen, Suchen und Auswirkungen auf die Herkunft. Operational Insights betrachtet keine Daten innerhalb der Sandbox. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche des KI-Assistenten](../../ai-assistant/ui-guide.md). |
 | Unterstützung für automatische Vervollständigung von Fragen | Wenn Sie eine Frage in den KI-Assistenten eingeben, können Sie jetzt aus einer Liste empfohlener Fragen auswählen, die der KI-Assistent bereitstellt. Verwenden Sie diese Funktion, um Ihre Workflows mit dem KI-Assistenten weiter zu beschleunigen. Weitere Informationen finden Sie im Handbuch unter [Verwenden der automatischen Vervollständigung von Fragen mit dem KI-Assistenten](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Unterstützung der Datensatzbeobachtbarkeit | Sie können jetzt den KI-Assistenten verwenden, um Fragen zu bestimmten Datensatzmetriken wie Speichergrößen und Zeilenanzahl zu beantworten. Datenbeobachtungsfragen unterstützen Kriterien, mit denen Sie Ihre Abfragen nach einem bestimmten Zeitraum filtern können. Weitere Informationen finden Sie im [Handbuch zum KI-Assistenten](../../ai-assistant/questions.md). |
 
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [KI-Assistent - Übersicht](../../ai-assistant/home.md).
+
+<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## Katalog-Service {#catalog-service}
 
