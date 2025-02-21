@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwa
 source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -44,7 +44,7 @@ So verwenden Sie berechnete Felder für Datenumwandlungen:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="„Berechnete Felder hinzufügen“ ist deaktiviert"
->abstract="Dieses Steuerelement ist deaktiviert, weil Sie beim Einrichten dieser Zielverbindung den Umschalter **Exportieren von Arrays** Zuordnungen, Objekte ** ausgewählt haben. Um berechnete Felder und die darin verfügbaren Funktionen zu verwenden, richten Sie eine neue Zielverbindung mit dem Umschalter **Arrays, Karten, Objekte exportieren** ein *aus*."
+>abstract="Dieses Steuerelement ist deaktiviert, weil Sie beim Einrichten dieser Zielverbindung den Umschalter zum **Exportieren von Arrays, Zuordnungen und Objekten** auf *ein* geschaltet haben. Um berechnete Felder und die darin verfügbaren Funktionen zu verwenden, richten Sie eine neue Zielverbindung ein, bei der der Umschalter zum **Exportieren von Arrays, Zuordnungen und Objekten** auf *aus* geschaltet ist."
 
 Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
