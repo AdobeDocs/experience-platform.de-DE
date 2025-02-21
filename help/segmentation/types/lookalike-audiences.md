@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Lookalike-Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von Lookalike-Zielgruppen neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2192'
 ht-degree: 10%
 
 ---
@@ -118,6 +118,7 @@ Im Abschnitt Lookalike-Zielgruppen wird eine Liste aller Lookalike-Zielgruppen a
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Einflussfaktoren"
 >abstract="Einflussfaktoren sind Attribute, Ereignisse und Zielgruppenmitgliedschaften, die wichtig sind, um die Ähnlichkeit eines Profils mit Mitgliedern der Basiszielgruppe zu erklären. Datennutzungskennzeichnungen und -richtlinien können verwendet werden, um bestimmte Daten davon auszuschließen, in Look-alike-Modellen als Einflussfaktoren betrachtet zu werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Ausschließen von Daten"
 
 Im Abschnitt Einflussfaktoren werden die 100 wichtigsten Faktoren angezeigt, die das Lookalike-Modell für die ausgewählte Basis-Audience beeinflussen. Diese Einflussfaktoren sind die Profilattribute, die Erlebnisereignisse und die Zielgruppenzugehörigkeiten, die für die Erklärung der Ähnlichkeiten in der Basis-Zielgruppe am wichtigsten sind. Wenn Sie die wichtigsten Einflussfaktoren verstehen, können Sie Ihre Marketing-Inhalte für diese Zielgruppe und jede Lookalike-Zielgruppe, die Sie daraus erstellen, besser personalisieren. Beachten Sie, dass nicht alle Einflussfaktoren, die das Look-alike-Modell beeinflussen, angezeigt werden.
 

@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
-ht-degree: 58%
+source-wordcount: '2523'
+ht-degree: 57%
 
 ---
 
@@ -118,7 +118,7 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
-| Zielgruppen pro Sandbox | 4.000 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 4000 **aktive** Zielgruppen verwendet werden. Sie können pro Organisation über mehr als 4.000 Sandboxes verfügen, sofern in jeder (individuellen) Sandbox **4.000** vorhanden sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Lesen Sie mehr über [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) mithilfe von Segment Builder. |
+| Zielgruppen pro Sandbox | 4.000 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 4000 **aktive** Zielgruppen verwendet werden. Pro Organisation können mehr als 4.000 Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **4.000** vorhanden sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Lesen Sie mehr über [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) mithilfe von Segment Builder. |
 | Edge-Zielgruppen pro Sandbox | 150 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 150 **aktive** Edge-Zielgruppen verwendet werden. Pro Organisation können mehr als 150 Edge-Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **150 Edge** Zielgruppen vorhanden sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/methods/edge-segmentation.md). |
 | Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in Adobe Experience Platform Edge Network eintreten. Die Segmentierung in Edge kann bis zu 350 Millisekunden dauern, um ein eingehendes Ereignis zu verarbeiten, nachdem es in die Adobe Experience Platform Edge Network gelangt ist. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/methods/edge-segmentation.md). |
 | Streaming-Zielgruppen pro Sandbox | 500 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 500 **aktive** Streaming-Zielgruppen verwendet werden. Pro Organisation können mehr als 500 Streaming-Zielgruppen verwendet werden, sofern in jeder **-Sandbox weniger als 500 Streaming** Zielgruppen vorhanden sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe v
 
 Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese nicht [!DNL XDM Individual Profile] Schemata werden als „Dimensionsentitäten“ (auch als „Lookup-Entitäten“ bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten ](../xdm/tutorials/relationship-ui.md).
+Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Schemata, die mit anderen XDM-Klassen als der Klasse „XDM Individual Profile“ modelliert werden, werden als „Dimensionsentitäten“ (auch „Lookup-Entitäten“ genannt) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten ](../xdm/tutorials/relationship-ui.md).
 
 Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehreren Entitäten unterstützen und vereinfachen. Sie müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz in den Speicher laden kann, um eine optimale Verarbeitung zu gewährleisten (schnelle Punktsuche).
 

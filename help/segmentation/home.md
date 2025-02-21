@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 93%
+source-wordcount: '1678'
+ht-degree: 92%
 
 ---
 
@@ -67,6 +67,7 @@ Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die 
 >id="platform_segments_evaluation_streaming"
 >title="Streaming-Auswertung"
 >abstract="Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Zielgruppen infolge von Benutzeraktivität aktualisiert."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit"
 
 Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
@@ -93,6 +94,7 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >id="platform_segments_evaluation_edge"
 >title="Edge-Auswertung"
 >abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge-Segmentierungshandbuch"
 
 Bei der Segmentierung in Edge werden Segmente in Platform sofort [auf der Edge Network](../landing/edge-and-hub-comparison.md) ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
