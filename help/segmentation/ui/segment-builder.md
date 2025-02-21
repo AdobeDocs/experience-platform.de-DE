@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 66%
 
 ---
@@ -242,6 +242,10 @@ Mit Zeitbeschränkungen können Sie Zeitbeschränkungen auf zeitbasierte Attribu
 >
 >Wenn Sie eine Segmentdefinition mit den Zeitbeschränkungen „Diesen Monat“ oder „Dieses Jahr“ vor Juni 2024 erstellt haben, müssen Sie Ihre Segmentdefinitionen erneut speichern. Vor Juni 2024 basierte „Dieser Monat“ auf 30 Tagen und „Dieses Jahr“ auf 365 Tagen.
 
+>[!NOTE]
+>
+>Sowohl [Zeitbeschränkung auf Jahresebene ignorieren](./ignore-year.md) als auch [Zeitbeschränkungen auf Regelebene](./segment-refactoring.md) wurden zuvor überarbeitet, wobei weitere Informationen in den verknüpften Übersichten verfügbar sind.
+
 Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 
 +++ Verfügbare Zeitbeschränkungen
@@ -394,7 +398,7 @@ Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durc
 
 Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](/help/images/icons/folder-search.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
 
-Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
+Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](../methods/streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](../methods/edge-segmentation.md#query-types).
 
 Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie sie fertig erstellt haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können **nicht** sie wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie im Popup **[!UICONTROL Speichern]** auswählen. Durch Abbrechen des Dialogfelds **die ursprüngliche** beibehalten.
 

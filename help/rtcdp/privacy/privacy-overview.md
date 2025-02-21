@@ -4,7 +4,7 @@ title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 86%
@@ -29,7 +29,7 @@ Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulat
 
 [!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die kundenseitigen Opt-out-Voreinstellungen werden von [!DNL Real-Time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzende ausgeschlossen werden, die sich mit boolescher Logik („AND NOT„) im Segmentprädikat von einer Zielgruppe abgemeldet haben.
 
-Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) in der Dokumentation zum Segmentierungs-Service in Adobe Experience Platform.
+Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-Anfragen](../../segmentation/tutorials/consents.md) in der Dokumentation zum Segmentierungs-Service in Adobe Experience Platform.
 
 ## IAB TCF 2.0-Unterstützung
 

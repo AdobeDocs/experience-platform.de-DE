@@ -1,25 +1,25 @@
 ---
-keywords: Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitplanken;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;RTCDP;CDP;B2B edition;Real-time Customer Data Platform;Real-time Customer Data Platform;Real-time CDP;B2B;CDP;
-title: Standard-Leitplanken für Real-time Customer Data Platform B2B edition
+keywords: Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitplanken;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;Real-time Customer Data Platform;Real-time CDP;B2B;CDP;
+title: Standard-Leitplanken für Real-Time Customer Data Platform B2B edition
 type: Documentation
-description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Adobe Real-time Customer Data Platform B2B edition modellieren können.
+description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Adobe Real-Time Customer Data Platform B2B edition modellieren können.
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 46%
 
 ---
 
-# Standard-Leitplanken für Real-time Customer Data Platform B2B edition
+# Standard-Leitplanken für Real-Time Customer Data Platform B2B edition
 
 >[!NOTE]
 >
->Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-Time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
-Mit Real-time Customer Data Platform B2B edition können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Insights und Kundenattributen in Form von Echtzeit-Kundenprofilen und Account-Profilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
+Mit Real-Time Customer Data Platform B2B edition können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Insights und Kundenattributen in Form von Echtzeit-Kundenprofilen und Account-Profilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 | Art der Leitplanke | Beschreibung |
 | -------------- | ----------- |
-| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
 | **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 >[!INFO]
@@ -52,7 +52,7 @@ Die folgenden Leitplanken bieten empfohlene Beschränkungen bei der Modellierung
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die von Real-time Customer Data Platform B2B edition aktiviert werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die von Real-Time Customer Data Platform B2B edition aktiviert werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
@@ -65,7 +65,7 @@ Die folgenden Leitplanken bieten empfohlene Beschränkungen bei der Modellierung
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die von Real-time Customer Data Platform B2B edition aktiviert werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die von Real-Time Customer Data Platform B2B edition aktiviert werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
@@ -86,7 +86,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-Time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
@@ -96,7 +96,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-Time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
@@ -110,7 +110,7 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Segmentierungsbeschränkungen stellen die von Real-time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+>Die in diesem Abschnitt beschriebenen Segmentierungsbeschränkungen stellen die von Real-Time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 
 ## Nächste Schritte
 
-Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
+Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-Time Customer Data Platform B2B edition aktivierten Änderungen dar. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-Time CDP B2B edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen für Adobe Experience Platform[ die in der Dokumentation zu Leitplanken für Echtzeit-Kundenprofildaten beschrieben ](../profile/guardrails.md).
 
 ## Anhang
 
@@ -136,9 +136,9 @@ Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe v
 
 ![Eine Infografik, die die Unterschiede zwischen Datensatzdaten und Zeitreihendaten aufzeigt.](../profile/images/guardrails/profile-entity.png)
 
-#### Entität der Dimension
+#### Dimension-Entität
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/multi-entity-segmentation.md).
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese nicht [!DNL XDM Individual Profile] Schemata werden als „Dimensionsentitäten“ (auch als „Lookup-Entitäten“ bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten ](../xdm/tutorials/relationship-ui.md).
 

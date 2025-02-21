@@ -3,7 +3,7 @@ title: Interessentenprofile
 description: Erfahren Sie, wie Sie Interessentenprofile erstellen und verwenden, um mithilfe von Drittanbieterinformationen Informationen über unbekannte Kunden zu sammeln.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 4%
@@ -62,4 +62,4 @@ Informationen dazu, wie Sie die Funktion für Interessentenprofile in Experience
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Interessentenprofile in Adobe Experience Platform verwendet werden können. Informationen zur Verwendung dieser Interessentenprofile in Audiences finden Sie im [Handbuch für Interessentenzielgruppen](../../segmentation/ui/prospect-audience.md).
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Interessentenprofile in Adobe Experience Platform verwendet werden können. Informationen zur Verwendung dieser Interessentenprofile in Audiences finden Sie im [Handbuch für Interessentenzielgruppen](../../segmentation/types/prospect-audiences.md).

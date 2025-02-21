@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 58%
@@ -41,7 +41,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 | Art der Leitplanke | Beschreibung |
 | -------------- | ----------- |
-| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
 | **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
@@ -119,12 +119,12 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
 | Zielgruppen pro Sandbox | 4.000 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 4000 **aktive** Zielgruppen verwendet werden. Sie können pro Organisation über mehr als 4.000 Sandboxes verfügen, sofern in jeder (individuellen) Sandbox **4.000** vorhanden sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Lesen Sie mehr über [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) mithilfe von Segment Builder. |
-| Edge-Zielgruppen pro Sandbox | 150 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 150 **aktive** Edge-Zielgruppen verwendet werden. Pro Organisation können mehr als 150 Edge-Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **150 Edge** Zielgruppen vorhanden sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
-| Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in das Adobe Experience Platform-Edge Network eintreten. Es kann bis zu 350 Millisekunden dauern, bis die Segmentierung in Edge ein eingehendes Ereignis verarbeitet, nachdem es in das Adobe Experience Platform-Edge Network gelangt ist. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
-| Streaming-Zielgruppen pro Sandbox | 500 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 500 **aktive** Streaming-Zielgruppen verwendet werden. Pro Organisation können mehr als 500 Streaming-Zielgruppen verwendet werden, sofern in jeder **-Sandbox weniger als 500 Streaming** Zielgruppen vorhanden sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
-| Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Streaming-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde. Es kann bis zu 5 Minuten dauern, bis ein Profil für die Segmentzugehörigkeit qualifiziert ist. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
+| Edge-Zielgruppen pro Sandbox | 150 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 150 **aktive** Edge-Zielgruppen verwendet werden. Pro Organisation können mehr als 150 Edge-Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **150 Edge** Zielgruppen vorhanden sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/methods/edge-segmentation.md). |
+| Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in Adobe Experience Platform Edge Network eintreten. Die Segmentierung in Edge kann bis zu 350 Millisekunden dauern, um ein eingehendes Ereignis zu verarbeiten, nachdem es in die Adobe Experience Platform Edge Network gelangt ist. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/methods/edge-segmentation.md). |
+| Streaming-Zielgruppen pro Sandbox | 500 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 500 **aktive** Streaming-Zielgruppen verwendet werden. Pro Organisation können mehr als 500 Streaming-Zielgruppen verwendet werden, sofern in jeder **-Sandbox weniger als 500 Streaming** Zielgruppen vorhanden sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/methods/streaming-segmentation.md). |
+| Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Streaming-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde. Es kann bis zu 5 Minuten dauern, bis ein Profil für die Segmentzugehörigkeit qualifiziert ist. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/methods/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 4000 **aktive** Batch-Zielgruppen verwendet werden. Pro Organisation können mehr als 4.000 Batch-Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **4.000 Batch** Zielgruppen vorhanden sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. |
-| Konto-Zielgruppen pro Sandbox | 50 | Vom System erzwungene Leitplanken | Sie können in einer Sandbox maximal 50 Konto-Zielgruppen erstellen. Nachdem Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird das Steuerelement **[!UICONTROL Zielgruppe erstellen]** beim Erstellen einer neuen Konto-Zielgruppe deaktiviert. Lesen Sie mehr über [Account-Zielgruppen](/help/segmentation/ui/account-audiences.md). |
+| Konto-Zielgruppen pro Sandbox | 50 | Vom System erzwungene Leitplanken | Sie können in einer Sandbox maximal 50 Konto-Zielgruppen erstellen. Nachdem Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird das Steuerelement **[!UICONTROL Zielgruppe erstellen]** beim Erstellen einer neuen Konto-Zielgruppe deaktiviert. Lesen Sie mehr über [Account-Zielgruppen](/help/segmentation/types/account-audiences.md). |
 | Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungs-Schutzmaßnahme | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Weitere Informationen zur [Audience-Komposition“ finden Sie im Handbuch zur Benutzeroberfläche](/help/segmentation/ui/audience-composition.md). |
 | Maximale Zielgruppengröße | 30 Prozent | Leistungs-Schutzmaßnahme | Die empfohlene maximale Mitgliedschaft einer Zielgruppe beträgt 30 % der Gesamtzahl der Profile im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mit mehreren großen Zielgruppen ist möglich, wirkt sich jedoch auf die Systemleistung aus. |
 
@@ -158,9 +158,9 @@ Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe v
 
 ![Eine Infografik, die die Unterschiede zwischen Datensatzdaten und Zeitreihendaten aufzeigt.](images/guardrails/profile-entity.png)
 
-#### Entität der Dimension
+#### Dimension-Entität
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/multi-entity-segmentation.md).
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese nicht [!DNL XDM Individual Profile] Schemata werden als „Dimensionsentitäten“ (auch als „Lookup-Entitäten“ bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten ](../xdm/tutorials/relationship-ui.md).
 
@@ -170,7 +170,7 @@ Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehre
 
 ### Profilfragmente
 
-In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente“ beziehen. Beim Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente“ beziehen. In Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 
@@ -182,10 +182,10 @@ Für Profil können mehrere Report Suites aktiviert werden, solange alle Datenko
 
 ## Nächste Schritte
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
-* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

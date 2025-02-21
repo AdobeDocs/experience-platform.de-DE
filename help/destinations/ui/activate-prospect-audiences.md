@@ -3,7 +3,7 @@ title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 25%
@@ -14,9 +14,9 @@ ht-degree: 25%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+>Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Weitere Informationen erhalten Sie vom Adobe-Support.
 
-In diesem Artikel wird der Workflow erläutert, der zum Exportieren [potenzieller Zielgruppen](/help/segmentation/ui/prospect-audience.md) aus Adobe Experience Platform an Ihr bevorzugtes Ziel erforderlich ist.
+In diesem Artikel wird der Workflow erläutert, der zum Exportieren [potenzieller Zielgruppen](/help/segmentation/types/prospect-audiences.md) aus Adobe Experience Platform an Ihr bevorzugtes Ziel erforderlich ist.
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -26,7 +26,7 @@ Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wä
 
 ## Voraussetzungen {#prerequisites}
 
-* Sie müssen zunächst [Interessentenprofile](/help/profile/ui/prospect-profile.md) aufnehmen und [Interessentenzielgruppen](/help/segmentation/ui/prospect-audience.md) erstellen, bevor Sie sie für nachgelagerte Ziele aktivieren können.
+* Sie müssen zunächst [Interessentenprofile](/help/profile/ui/prospect-profile.md) aufnehmen und [Interessentenzielgruppen](/help/segmentation/types/prospect-audiences.md) erstellen, bevor Sie sie für nachgelagerte Ziele aktivieren können.
 * Um potenzielle Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich eine Verbindung zu einem Ziel hergestellt haben. Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten. Lesen Sie das Tutorial zur Benutzeroberfläche [Herstellen einer Verbindung zu Zielen](./connect-destination.md), um weitere Informationen zu erhalten.
 
 ### Erforderliche Berechtigungen {#permissions}

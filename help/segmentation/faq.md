@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
-source-wordcount: '4235'
-ht-degree: 21%
+source-wordcount: '4830'
+ht-degree: 28%
 
 ---
 
@@ -51,7 +51,7 @@ Ja, die extern generierte Zielgruppe wird mit dem in Platform vorhandenen Profil
 
 ### Wie werden Voreinstellungen für das Kundeneinverständnis für extern generierte Zielgruppen berücksichtigt, die in das Zielgruppenportal importiert werden?{#consent}
 
-Da Kundendaten aus mehreren Kanälen erfasst werden, ermöglichen Identitätszuordnungen und Zusammenführungsrichtlinien die Konsolidierung dieser Daten in einem einzigen Echtzeit-Kundenprofil. Informationen zu den Voreinstellungen für das Einverständnis der Kundinnen und Kunden werden auf Profilebene gespeichert und ausgewertet.
+Wenn Kundendaten aus mehreren Kanälen erfasst werden, ermöglichen Identitätszuordnungen und Zusammenführungsrichtlinien die Konsolidierung dieser Daten in einem einzigen Echtzeit-Kundenprofil. Informationen zu den Voreinstellungen für das Einverständnis der Kundinnen und Kunden werden auf Profilebene gespeichert und ausgewertet.
 
 Nachgelagerte Ziele überprüfen jedes Profil vor der Aktivierung auf Einverständnisinformationen. Die Einverständnisinformationen jedes Profils werden mit den Einverständnisanforderungen für ein bestimmtes Ziel verglichen. Wenn das Profil die Anforderungen nicht erfüllt, wird dieses Profil nicht an ein Ziel gesendet.
 
@@ -180,7 +180,7 @@ Sobald sich eine Zielgruppe im Status „Veröffentlicht“ befindet **können S
 
 ### Wie setze ich eine Zielgruppe in den Status „Veröffentlicht“?
 
-Bei Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie den Status der Zielgruppe in „Veröffentlicht“ ändern, indem Sie in den entsprechenden Benutzeroberflächen &quot;[!UICONTROL Publish]&quot; auswählen.
+Bei Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe in den Status „Veröffentlicht“ versetzen, indem Sie [!UICONTROL Veröffentlichen] in den entsprechenden Benutzeroberflächen auswählen.
 
 Audiences, die extern erstellt werden, werden automatisch auf „Veröffentlicht“ gesetzt.
 
@@ -194,7 +194,7 @@ Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, 
 >
 >Der Status „erneut veröffentlicht“ entspricht dem Veröffentlichungsstatus für das Zielgruppenverhalten.
 
-Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe im inaktiven Status auswählen, das Schnellaktionsmenü im Zielgruppenportal öffnen und [!UICONTROL Publish} ].
+Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe im inaktiven Status auswählen, das Schnellaktionsmenü im Zielgruppen-Portal öffnen und [!UICONTROL Veröffentlichen] auswählen.
 
 ### Wie versetze ich eine Zielgruppe in den Status „Gelöscht“?
 
@@ -358,6 +358,16 @@ Im folgenden Abschnitt finden Sie Fragen zur Zielgruppenzugehörigkeit.
 
 Um die Zielgruppenmitgliedschaft eines Profils zu bestätigen, besuchen Sie die Seite mit den Profildetails des Profils, das Sie bestätigen möchten. Wählen Sie **[!UICONTROL Attribute]** gefolgt von **[!UICONTROL JSON anzeigen]** aus, und Sie können bestätigen, dass das `segmentMembership`-Objekt die ID der Zielgruppe enthält.
 
+### Kann die Zielgruppenzugehörigkeit zwischen idealer und tatsächlicher Zugehörigkeit variieren?
+
+Ja, die Zielgruppenzugehörigkeit kann zwischen idealer und tatsächlicher Zugehörigkeit wechseln, wenn eine Zielgruppe mithilfe der Streaming-Segmentierung **und** diese Zielgruppe auf einer Zielgruppe basiert, die mithilfe der Batch-Segmentierung bewertet wurde.
+
+Wenn beispielsweise Zielgruppe A auf Zielgruppe B basiert und Zielgruppe B mithilfe der Batch-Segmentierung ausgewertet wird, entfernt sich Zielgruppe A weiter von den tatsächlichen Daten, bis sie mit den Aktualisierungen von Zielgruppe B erneut synchronisiert wird, da Zielgruppe B nur alle 24 Stunden aktualisiert wird.
+
+## Batch-Segmentierung {#batch-segmentation}
+
+Im folgenden Abschnitt finden Sie Fragen zur Batch-Segmentierung.
+
 ### Wie löst die Batch-Segmentierung die Profilzugehörigkeit auf?
 
 Zielgruppen, die mithilfe der Batch-Segmentierung ausgewertet werden, werden täglich aufgelöst, wobei die Ergebnisse der Zielgruppenzugehörigkeit im `segmentMembership` des Profils aufgezeichnet werden. Die Profilsuche generiert zum Zeitpunkt der Suche eine neue Version des Profils, aktualisiert jedoch **nicht** die Ergebnisse der Batch-Segmentierung.
@@ -380,3 +390,44 @@ Es kann bis zu drei Stunden dauern, bis Streaming-Daten in Batch-Segmentierungs-
 
 Wenn beispielsweise ein Batch-Segmentierungsauftrag um 21 Uhr ausgeführt wird, enthält er garantiert Streaming-aufgenommene Daten **bis 18**. Das Streaming aufgenommener Daten, die nach 18 Uhr, aber vor 21 Uhr aufgenommen wurden **kann** werden.
 
+## Edge-Segmentierung {#edge-segmentation}
+
+Im folgenden Abschnitt finden Sie Fragen zur Edge-Segmentierung.
+
+### Wie lange dauert es, bis eine Segmentdefinition im Edge Network verfügbar ist?
+
+Es dauert bis zu einer Stunde, bis eine Segmentdefinition im Edge Network verfügbar ist.
+
+## Streaming-Segmentierung  {#streaming-segmentation}
+
+Im folgenden Abschnitt finden Sie Fragen zur Streaming-Segmentierung.
+
+### Tritt die „Nicht-Qualifizierung“ der Streaming-Segmentierung auch in Echtzeit auf?
+
+In den meisten Fällen geschieht die Aufhebung der Qualifizierung von Streaming-Segmentierungen in Echtzeit. Für Streaming-Segmente, die Segmente von Segmenten verwenden, wird die Qualifizierung jedoch **nicht** in Echtzeit aufgehoben, sondern erst nach 24 Stunden.
+
+### Mit welchen Daten arbeitet die Streaming-Segmentierung?
+
+Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streaming-Quelle aufgenommen wurden. Daten, die über eine Batch-basierte Quelle aufgenommen werden, werden jede Nacht ausgewertet, selbst wenn sie für die Streaming-Segmentierung geeignet sind. In das System gestreamte Ereignisse mit einem Zeitstempel, der älter als 24 Stunden ist, werden im nachfolgenden Batch-Vorgang verarbeitet.
+
+### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
+
+Eine Segmentdefinition wird – basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer – als Batch-, Streaming- oder Edge-Segmentierung definiert. Eine Liste der Segmente, die als Streaming-Segmentdefinitionen ausgewertet werden, finden Sie im [Abschnitt zu Abfragetypen von Streaming-Segmentierungen](#query-types).
+
+Bitte beachten Sie, dass eine Segmentdefinition, die **sowohl** einen `inSegment`-Ausdruck als auch eine direkte Einzelereigniskette enthält, nicht für die Streaming-Segmentierung infrage kommt. Wenn Sie möchten, dass diese Segmentdefinition für die Streaming-Segmentierung qualifiziert wird, sollten Sie die direkte Einzelereigniskette zu einem eigenen Segment machen.
+
+### Warum steigt die Anzahl der „insgesamt qualifizierten“ Segmente weiter an, während die Anzahl unter „Letzte X Tage“ im Abschnitt Segmentdefinitionsdetails bei null bleibt?
+
+Die Anzahl der insgesamt qualifizierten Segmente wird aus dem täglichen Segmentierungsauftrag abgerufen, der Zielgruppen enthält, die sich sowohl für Batch- als auch für Streaming-Segmente qualifizieren. Dieser Wert wird sowohl für Batch- als auch für Streaming-Segmente angezeigt.
+
+Die Zahl unter „Letzte X Tage“ umfasst **nur** Zielgruppen, die für Streaming-Segmentierung qualifiziert sind. Sie erhöht sich **nur** dann, wenn Sie Daten in das System gestreamt haben, und zählt dann für diese Streaming-Definition. Dieser Wert wird **nur** für Streaming-Segmente angezeigt. Daher **kann** dieser Wert für Batch-Segmente als 0 angezeigt werden.
+
+Wenn Sie also feststellen, dass die Zahl unter „Letzte X Tage“ null ist und das Liniendiagramm ebenfalls null zeigt, haben Sie **nicht** alle Profile in das System gestreamt, die für dieses Segment qualifiziert wären.
+
+### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
+
+Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
+
+### Gibt es Einschränkungen bei den Daten, die in gestreamt werden?
+
+Damit gestreamte Daten in der Streaming-Segmentierung verwendet werden können **muss** Abstand zwischen den in gestreamten Ereignissen bestehen. Wenn innerhalb derselben Sekunde zu viele Ereignisse gestreamt werden, behandelt Platform diese Ereignisse als von Bots generierte Daten und verwirft sie. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen den Ereignisdaten haben, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.

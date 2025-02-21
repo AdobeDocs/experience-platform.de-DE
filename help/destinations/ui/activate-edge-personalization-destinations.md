@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform für Personalisierungs-Anwendungsfälle der gleichen Seite und der nächsten Seite für Edge-Ziele aktivieren.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 ## Übersicht {#overview}
 
-Adobe Experience Platform verwendet [Edge-](../../segmentation/ui/edge-segmentation.md)) zusammen mit [Edge-Zielen](/help/destinations/destination-types.md#edge-personalization-destinations), damit Kundinnen und Kunden Zielgruppen in großem Umfang in Echtzeit erstellen und ansprechen können. Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und von der nächsten Seite konfigurieren.
+Adobe Experience Platform verwendet [Edge-](../../segmentation/methods/edge-segmentation.md)) zusammen mit [Edge-Zielen](/help/destinations/destination-types.md#edge-personalization-destinations), damit Kundinnen und Kunden Zielgruppen in großem Umfang in Echtzeit erstellen und ansprechen können. Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und von der nächsten Seite konfigurieren.
 
 Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)- und [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md)-Verbindungen.
 
@@ -31,7 +31,7 @@ Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/per
 > 
 > Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen für Adobe Experience Platform Edge-Ziele erforderlich ist. Bei Verwendung zusammen mit [Edge-](../../segmentation/ui/edge-segmentation.md)) und der optionalen [Profilattributzuordnung](#mapping) ermöglichen diese Ziele Anwendungsfälle für die Personalisierung der gleichen Seite und der nächsten Seite in Ihren Web- und Mobile-Eigenschaften.
+In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen für Adobe Experience Platform Edge-Ziele erforderlich ist. Bei Verwendung zusammen mit [Edge-](../../segmentation/methods/edge-segmentation.md)) und der optionalen [Profilattributzuordnung](#mapping) ermöglichen diese Ziele Anwendungsfälle für die Personalisierung der gleichen Seite und der nächsten Seite in Ihren Web- und Mobile-Eigenschaften.
 
 Einen kurzen Überblick über die Konfiguration der Adobe Target-Verbindung für die Edge-Personalisierung erhalten Sie im folgenden Video.
 
@@ -47,11 +47,11 @@ Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Ado
 
 ## Anwendungsfälle {#use-cases}
 
-Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartnerplattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. hauseigene CMS), um über das Ziel [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) ein tieferes Personalisierungserlebnis zu ermöglichen. All dies unter Nutzung der Datenerfassungs- und Segmentierungsfunktionen für Experience Platform-Edge Networks.
+Verwenden Sie Personalisierungslösungen von Adobe wie Adobe Target oder Ihre eigenen Personalisierungspartnerplattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. hauseigene CMS), um über das Ziel [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) ein tieferes Personalisierungserlebnis zu ermöglichen. All dies unter Verwendung der Datenerfassungs- und Segmentierungsfunktionen von Experience Platform Edge Network.
 
 Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgerichtete Werbung auf der Site.
 
-Um diese Anwendungsfälle zu ermöglichen, benötigen Kundinnen und Kunden eine schnelle, optimierte Möglichkeit, sowohl Zielgruppen- als auch Profilattributinformationen von Experience Platform abzurufen und diese Informationen entweder an die [Adobe Target](../catalog/personalization/adobe-target-connection.md)- oder [Custom Personalization](../catalog/personalization/custom-personalization.md)-Verbindungen in der Experience Platform-Benutzeroberfläche zu senden.
+Um diese Anwendungsfälle zu ermöglichen, benötigen Kundinnen und Kunden eine schnelle, optimierte Möglichkeit, sowohl Zielgruppen- als auch Profilattributinformationen von Experience Platform abzurufen und diese Informationen entweder an die [Adobe Target](../catalog/personalization/adobe-target-connection.md)- oder die [Custom Personalization](../catalog/personalization/custom-personalization.md)-Verbindungen in der Experience Platform-Benutzeroberfläche zu senden.
 
 ### Personalisierung derselben Seite {#same-page}
 
@@ -89,7 +89,7 @@ Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisu
 
 ### Erstellen einer [!DNL Active-On-Edge] Zusammenführungsrichtlinie {#create-merge-policy}
 
-Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellen. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge](../../segmentation/ui/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar sind.
+Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellen. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge](../../segmentation/methods/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar sind.
 
 >[!IMPORTANT]
 >
@@ -140,9 +140,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die beim Experience Platform durch den Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
-* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Schritt „Zielgruppen auswählen“ des Aktivierungs-Workflows mit mehreren hervorgehobenen Zielgruppen.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -150,7 +150,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert **[!UICONTROL Ziel „Benutzerdefinierte Personalization]** die Verwendung der [Edge Network-Server-](../../server-api/overview.md) beim Konfigurieren des Ziels für die attributbasierte Personalisierung. Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../server-api/authentication.md) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Benutzerdefiniertes Personalization]**-Ziel, dass Sie beim Konfigurieren des Ziels für ](../../server-api/overview.md) Attribut-basierte Personalisierung die [Edge Network-Server-API verwenden. Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../server-api/authentication.md) erfolgen.
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >

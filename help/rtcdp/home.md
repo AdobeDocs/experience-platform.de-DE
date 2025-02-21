@@ -4,7 +4,7 @@ description: Machen Sie sich mit Adobe Real-Time CDP vertraut und erfahren Sie, 
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Dokumentation zu Adobe [!DNL Real-Time CDP] {#rtcdp-documentation}
 
-Verwenden Sie Adobe Real-time Customer Data Platform (Real-Time CDP), um bekannte und anonyme Daten aus verschiedenen Unternehmensquellen zusammenzuführen, um Kundenprofile zu erstellen, mit denen in Echtzeit personalisierte Kundenerlebnisse auf allen Kanälen und Geräten bereitgestellt werden können. Weitere Informationen finden Sie in der Übersicht ](/help/rtcdp/overview.md) [Real-Time CDP .
+Verwenden Sie Adobe Real-Time Customer Data Platform (Real-Time CDP), um bekannte und anonyme Daten aus verschiedenen Unternehmensquellen zusammenzuführen, um Kundenprofile zu erstellen, mit denen in Echtzeit personalisierte Kundenerlebnisse auf allen Kanälen und Geräten bereitgestellt werden können. Weitere Informationen finden Sie in der Übersicht ](/help/rtcdp/overview.md) [Real-Time CDP .
 
 ## Neue Funktionen {#whats-new}
 
@@ -23,13 +23,13 @@ Verschaffen Sie sich einen Überblick über die neuesten Verbesserungen an Real-
 
 >[!TAB Komposition föderierter Zielgruppen]
 
-Die föderierte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für eine bessere Anwendung in verschiedenen Anwendungsfällen zu erstellen. Mit diesem neuen Ansatz können Sie als Adobe Real-time Customer Data Platform- und/oder Adobe Journey Optimizer-Anwender Datensätze direkt aus Ihrem bestehenden Data Warehouse zusammenführen, um Adobe Experience Platform-Zielgruppen und -Attribute in einem System zu erstellen und anzureichern.
+Die föderierte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für eine bessere Anwendung in verschiedenen Anwendungsfällen zu erstellen. Mit diesem neuen Ansatz können Sie als Adobe Real-Time Customer Data Platform- und/oder Adobe Journey Optimizer-Anwender Datensätze direkt aus Ihrem bestehenden Data Warehouse zusammenführen, um Adobe Experience Platform-Zielgruppen und -Attribute in einem System zu erstellen und anzureichern.
 
 [![Bild](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
 
 >[!TAB Anwendungsfall-Playbooks]
 
-Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
+Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-Time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
 
 [![Bild](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -136,15 +136,15 @@ Sehen Sie sich die unten stehenden Links zur Produktdokumentation an, um zu vers
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Cloud- und KI/ML-Funktionen</strong><br/>KI- und ML-Funktionen unterstützen Sie bei jedem Schritt in mehreren Dashboards. Zu den Highlights gehören die folgenden Bereiche. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">Lookalike-Zielgruppen</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Kunden-KI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Verwandte Konten</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Prädiktives Lead- und Konto-Scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-Konto-Abgleich</a>
+      <strong>Cloud- und KI/ML-Funktionen</strong><br/>KI- und ML-Funktionen unterstützen Sie bei jedem Schritt in mehreren Dashboards. Zu den Highlights gehören die folgenden Bereiche. <br/> <a href="/help/segmentation/types/account-audiences.md">Lookalike-Zielgruppen</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Kunden-KI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Verwandte Konten</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Prädiktives Lead- und Konto-Scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-Konto-Abgleich</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
-      <strong>Leitplanken und Best Practices</strong><br/> Erfahren Sie mehr über Best Practices und aktuelle Einschränkungen beim Arbeiten mit Daten in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Leitplanken</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Best Practices für die Berechtigung zur Datenverwaltung</a> - <a href="/help/xdm/schema/best-practices.md">Best Practices für die Datenmodellierung</a> - <a href="/help/privacy-service/best-practices.md">Best Practices für den Privacy Service </a> 
+      <strong>Leitplanken und Best Practices</strong><br/> Erfahren Sie mehr über Best Practices und aktuelle Einschränkungen beim Arbeiten mit Daten in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Leitplanken</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Best Practices für die Berechtigung zur Datenverwaltung</a> - <a href="/help/xdm/schema/best-practices.md">Best Practices für die Datenmodellierung</a> - <a href="/help/privacy-service/best-practices.md">Best Practices für Privacy Service</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
-      <strong>Entwickler</strong><br/>Verwenden Sie die verschiedenen APIs und SDKs von Real-Time CDP, um die Datenaufnahme einzurichten, Profile zu verwalten, Zielgruppen zu erstellen und vieles mehr. <br/><a href="/help/landing/api-authentication.md">API authentifizieren und erste Schritte damit</a> - <a href="https://developer.adobe.com/experience-platform-apis/">Vollständige API-Referenz</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK </a> - <a href="/help/sources/sources-sdk/overview.md">Quellen-SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">Mobile SDK</a>
+      <strong>Entwickler</strong><br/>Verwenden Sie die verschiedenen APIs und SDKs von Real-Time CDP, um die Datenaufnahme einzurichten, Profile zu verwalten, Zielgruppen zu erstellen und vieles mehr. <br/><a href="/help/landing/api-authentication.md">API authentifizieren und erste Schritte damit</a> - <a href="https://developer.adobe.com/experience-platform-apis/">Vollständige API-Referenz</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">Sources SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">Mobile SDK</a>
     </td>
   </tr>
 </table>
@@ -211,4 +211,4 @@ Klicken Sie auf die unten stehenden Links, um mehr über Real-Time CDP-Anwendung
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Bleiben Sie auf dem Laufenden, tragen Sie zur Community bei und steigern Sie Ihre Adobe Real-Time CDP-Erfahrung!</b><br/>Besuchen Sie die Real-time Customer Data Platform-Community, um die Funktionalität mit anderen Anwendern zu besprechen. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Treten Sie noch heute der Community bei!</a></td></tr></table>
+<b>Bleiben Sie auf dem Laufenden, tragen Sie zur Community bei und steigern Sie Ihre Adobe Real-Time CDP-Erfahrung!</b><br/>Besuchen Sie die Real-Time Customer Data Platform-Community, um die Funktionalität mit anderen Anwendern zu besprechen. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Treten Sie noch heute der Community bei!</a></td></tr></table>

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise August 2023
 description: Versionshinweise August 2023 für Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 43%
@@ -29,7 +29,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Real-time Customer Data Platform ([!DNL Real-Time CDP]) basiert auf Experience Platform und hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile mit intelligenter Entscheidungsfindung auf der gesamten Kunden-Journey zu aktivieren.
+Real-Time Customer Data Platform ([!DNL Real-Time CDP]) basiert auf Experience Platform und hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile mit intelligenter Entscheidungsfindung auf dem gesamten Kunden-Journey zu aktivieren.
 
 [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine personalisierte Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
 
@@ -82,7 +82,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Tags und Ereignisweiterleitung | [Experience Platform-Tags (China)](/help/tags/ui/publishing/premium-cdn.md) | Die neue Funktion Experience Platform-Tags (China) verbessert die Zuverlässigkeit und Latenz von Websites, was zu schnelleren Antwortzeiten für Kunden führt, die Tags auf Websites in China bereitstellen. Kunden können jetzt den JavaScript-Code in der Tags-Bibliothek verwenden, wenn sie Websites in China implementieren. Diese Funktion wurde auch zum Unified Provisioning Protocol (UPP) hinzugefügt, sodass die Produktbereitstellung nach dem Kauf automatisiert werden kann. |
+| Tags und Ereignisweiterleitung | [Experience Platform-Tags (China)](/help/tags/ui/publishing/premium-cdn.md) | Die neue Funktion &quot;Experience Platform Tags (China)“ verbessert die Zuverlässigkeit und Latenz von Websites, was zu schnelleren Antwortzeiten für Kunden führt, die Tags auf Websites in China bereitstellen. Kunden können jetzt den JavaScript-Code in der Tags-Bibliothek verwenden, wenn sie Websites in China implementieren. Diese Funktion wurde auch zum Unified Provisioning Protocol (UPP) hinzugefügt, sodass die Produktbereitstellung nach dem Kauf automatisiert werden kann. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Änderungen an den Beschränkungen für Identitätsdiagramme | Bis Ende September wird das Identitätsdiagramm auf 50 Identitäten pro Diagramm geändert, und die neueste Identität wird aufgenommen. Infolgedessen wird die älteste Identität basierend auf dem Aufnahmezeitstempel und dem Identitätstyp gelöscht, wobei Cookie-Identitätstypen zuerst gelöscht werden. Heute haben Identitätsdiagramme ein Limit von 150 Identitäten pro Diagramm, und sobald dieses Limit erreicht ist, werden Diagramme nicht mehr aktualisiert. Wenden Sie sich an Ihren Kundenbetreuer, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>Ein benutzerdefinierter Namespace, in dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>Ein benutzerdefinierter Namespace, in dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Das Adobe-Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md). |
+| Änderungen an den Beschränkungen für Identitätsdiagramme | Bis Ende September wird das Identitätsdiagramm auf 50 Identitäten pro Diagramm geändert, und die neueste Identität wird aufgenommen. Infolgedessen wird die älteste Identität basierend auf dem Aufnahmezeitstempel und dem Identitätstyp gelöscht, wobei Cookie-Identitätstypen zuerst gelöscht werden. Heute haben Identitätsdiagramme ein Limit von 150 Identitäten pro Diagramm, und sobald dieses Limit erreicht ist, werden Diagramme nicht mehr aktualisiert. Wenden Sie sich an Ihren Kundenbetreuer, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>Ein benutzerdefinierter Namespace, in dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>Ein benutzerdefinierter Namespace, in dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Adobe Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md). |
 
 Weitere Informationen finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md).
 
@@ -168,7 +168,7 @@ Weitere Informationen finden Sie unter [Identity Service - Übersicht](../../ide
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Lookalike-Zielgruppen (eingeschränkte Verfügbarkeit) | Lookalike-Zielgruppen bieten intelligente Einblicke in jede Ihrer Zielgruppen und nutzen auf maschinellem Lernen basierende Einblicke, um mit Ihren Marketing-Kampagnen hochwertige Kunden zu identifizieren und anzusprechen. Mit Lookalike-Zielgruppen können Sie erweiterte Zielgruppen erstellen, die Kundinnen und Kunden ähnlich Ihren hochleistungsfähigen Zielgruppen ansprechen oder Kundinnen und Kunden ähnlich wie zuvor konvertierte Zielgruppen ansprechen. Weitere Informationen zu Lookalike-Zielgruppen finden Sie unter [Lookalike-Zielgruppen - Übersicht](../../segmentation/ui/lookalike-audiences.md). |
+| Lookalike-Zielgruppen (eingeschränkte Verfügbarkeit) | Lookalike-Zielgruppen bieten intelligente Einblicke in jede Ihrer Zielgruppen und nutzen auf maschinellem Lernen basierende Einblicke, um mit Ihren Marketing-Kampagnen hochwertige Kunden zu identifizieren und anzusprechen. Mit Lookalike-Zielgruppen können Sie erweiterte Zielgruppen erstellen, die Kundinnen und Kunden ähnlich Ihren hochleistungsfähigen Zielgruppen ansprechen oder Kundinnen und Kunden ähnlich wie zuvor konvertierte Zielgruppen ansprechen. Weitere Informationen zu Lookalike-Zielgruppen finden Sie unter [Lookalike-Zielgruppen - Übersicht](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

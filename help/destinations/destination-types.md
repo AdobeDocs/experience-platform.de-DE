@@ -3,7 +3,7 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 54%
@@ -41,9 +41,9 @@ Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Pri
 
 >[!IMPORTANT]
 >
->Erweiterte Unternehmensziele oder Exportziele von Streaming-Profilen sind nur für [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html)-Kunden verfügbar.
+>Erweiterte Unternehmensziele oder Exportziele von Streaming-Profilen sind nur für [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html)-Kunden verfügbar.
 
-Verwenden Sie die erweiterten Data Connectors für Unternehmensziele, um Adobe Real-time Customer Data Platform-Profile nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
+Verwenden Sie die erweiterten Data Connectors für Unternehmensziele, um Adobe Real-Time Customer Data Platform-Profile nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
 
 Diese Ziele empfangen Zielgruppen- und Profildaten als Experience Platform-Datenströme.
 
@@ -59,7 +59,7 @@ Dateibasierte Ziele empfangen `.csv`-Dateien, die Profile und/oder Attribute ent
 
 ## Exportziele für Streaming-Zielgruppen {#streaming-destinations}
 
-Zielgruppenexport-Ziele erhalten Experience Platform-Zielgruppendaten. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
+Ziele von Zielgruppenexporten erhalten Experience Platform-Zielgruppendaten. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
 
 ## Edge-Personalisierungsziele {#edge-personalization-destinations}
 
@@ -75,13 +75,13 @@ Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen gef�
 
 ## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
-Sie können drei Arten von Zielgruppen vom Experience Platform in verschiedene Ziele exportieren:
+Sie können drei Arten von Zielgruppen aus Experience Platform in verschiedene Ziele exportieren:
 
 * Personen und Zielgruppen
 * Konto-Zielgruppen
 * Potenzielle Zielgruppen
 
-Erfahren Sie mehr über [verschiedene Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
+Erfahren Sie mehr über [verschiedene Zielgruppentypen](/help/segmentation/types/account-audiences.md#terminology).
 
 Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie für jedes Ziel exportieren können.
 

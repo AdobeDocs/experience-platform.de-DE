@@ -5,7 +5,7 @@ badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.
 badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 26%
@@ -16,9 +16,9 @@ ht-degree: 26%
 
 >[!AVAILABILITY]
 >
->>Die Funktion zum Aktivieren von Account-Zielgruppen für das Demandbase-Ziel ist für Unternehmen verfügbar, die die [Business-to](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-time Customer Data Platform erwerben.
+>>Die Funktion zum Aktivieren von Account-Zielgruppen für das Demandbase-Ziel ist für Unternehmen verfügbar, die die [Business-to](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-Time Customer Data Platform erwerben.
 
-Aktivieren Sie Profile für Ihre Demandbase-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf [Account-Zielgruppen](/help/segmentation/ui/account-audiences.md) .
+Aktivieren Sie Profile für Ihre Demandbase-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf [Account-Zielgruppen](/help/segmentation/types/account-audiences.md) .
 
 ## Anwendungsfall {#use-case}
 
@@ -34,7 +34,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ Anweisungen [ Aktivieren von Konto-Zielgruppen für ](/help/destinations/ui/acti
 ## Zusätzliche Hinweise und wichtige Hinweise {#additional-notes}
 
 * Wenn eine Konto-Zielgruppe mit demselben Namen zuvor für Demandbase aktiviert wurde, können Sie sie nicht über einen anderen Datenfluss zum Demandbase-Ziel erneut aktivieren.
-* Wenn Sie Zielgruppen in die Demandbase exportiert haben und die Exporte erfolgreich in Experience Platform ausgeführt wurden, aber nicht alle Daten die Demandbase erreichen, kann es zu API-Einschränkungen auf der Demandbase gekommen sein. Wenden Sie sich zur Klärung an sie.
+* Wenn Sie Zielgruppen in die Demandbase exportiert haben und die Exporte in Experience Platform erfolgreich sind, aber nicht alle Daten die Demandbase erreichen, kann es zu API-Einschränkungen auf der Demandbase gekommen sein. Wenden Sie sich zur Klärung an sie.

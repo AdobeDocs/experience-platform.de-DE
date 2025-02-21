@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie Konto-Zielgruppen für Ziele aktivieren
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 7%
@@ -16,13 +16,13 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Aktivieren von Account-Zielgruppen für Ziele ist für Unternehmen verfügbar, die die [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-time Customer Data Platform erwerben.
+>Die Funktion zum Aktivieren von Account-Zielgruppen für Ziele ist für Unternehmen verfügbar, die die [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-Time Customer Data Platform erwerben.
 
-In diesem Artikel wird der Workflow erläutert, der zum Exportieren [Account-Zielgruppen](/help/segmentation/ui/account-audiences.md) von Adobe Experience Platform an Ihr bevorzugtes Ziel erforderlich ist.
+In diesem Artikel wird der Workflow erläutert, der zum Exportieren [Account-Zielgruppen](/help/segmentation/types/account-audiences.md) von Adobe Experience Platform an Ihr bevorzugtes Ziel erforderlich ist.
 
 ## Unterstützte Ziele {#supported-destinations}
 
-Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie den Filter **[!UICONTROL Datentypen]** und wählen Sie **[!UICONTROL Konten]** aus, um die Ziele anzuzeigen, die die Aktivierung von Konto-Zielgruppen unterstützen. Derzeit ist der Export von Konto-Zielgruppen nur für bestimmte Cloud-Speicher-Ziele ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und das [Demandbase](/help/destinations/catalog/advertising/demandbase.md) und [(Unternehmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) Streaming-Ziel verfügbar.
+Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie den Filter **[!UICONTROL Datentypen]** und wählen Sie **[!UICONTROL Konten]** aus, um die Ziele anzuzeigen, die die Aktivierung von Konto-Zielgruppen unterstützen. Derzeit ist der Export von Konto-Zielgruppen nur für bestimmte Cloud-Speicher-Ziele ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und das [Demandbase](/help/destinations/catalog/advertising/demandbase.md) und [(Firmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) Streaming-Ziel verfügbar.
 
 ![Ziele, die Konto-Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ Sehen Sie sich das folgende Video an, um einen Überblick über das Erstellen un
 
 ## Voraussetzungen {#prerequisites}
 
-* Sie müssen zunächst [Account-Profile](/help/rtcdp/accounts/account-profile-overview.md) aufnehmen und [Account-Zielgruppen](/help/segmentation/ui/account-audiences.md) erstellen, bevor Sie sie für nachgelagerte Ziele aktivieren können.
+* Sie müssen zunächst [Account-Profile](/help/rtcdp/accounts/account-profile-overview.md) aufnehmen und [Account-Zielgruppen](/help/segmentation/types/account-audiences.md) erstellen, bevor Sie sie für nachgelagerte Ziele aktivieren können.
 * Um Konto-Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich eine Verbindung mit einem Ziel hergestellt haben. Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten. Lesen Sie das Tutorial zur Benutzeroberfläche [Herstellen einer Verbindung zu Zielen](./connect-destination.md), um weitere Informationen zu erhalten.
 
 ### Erforderliche Berechtigungen {#permissions}
@@ -77,7 +77,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Namen der Konto-Zielgruppen
 
 ## Planung und nächste Schritte
 
-Lesen Sie für den Rest des Aktivierungs-Workflows zum Exportieren von Konto-Zielgruppen das Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem [Schritt Zielgruppenexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) fort. Wenn Sie Konto-Zielgruppen für das Ziel **[!UICONTROL Unternehmen) von LinkedIn Matched Audiences“ aktivieren]** lesen Sie das Tutorial zum Aktivieren von Streaming-Zielen. Fahren Sie mit dem [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) fort.
+Lesen Sie für den Rest des Aktivierungs-Workflows zum Exportieren von Konto-Zielgruppen das Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem [Schritt Zielgruppenexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) fort. Wenn Sie Konto-Zielgruppen für das Ziel von **[!UICONTROL (Firmen) LinkedIn Matched Audiences aktivieren,]** Sie das Tutorial zum Aktivieren von Streaming-Zielen. Fahren Sie mit dem [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) fort.
 
 >[!NOTE]
 >
@@ -87,11 +87,11 @@ Lesen Sie für den Rest des Aktivierungs-Workflows zum Exportieren von Konto-Zie
 
 Beachten Sie die folgenden wichtigen Hinweise und bekannten Einschränkungen für die allgemeine Verfügbarkeit der Funktion zur Aktivierung von Account-Zielgruppen.
 
-### Erforderliche Zuordnungspaare im Zuordnungsschritt beim Aktivieren von Konto-Zielgruppen für das Ziel **[!UICONTROL Abgestimmte Zielgruppen von LinkedIn (Unternehmen]** {#required-mappings}
+### Erforderliche Zuordnungspaare im Zuordnungsschritt beim Aktivieren von Konto-Zielgruppen für das Ziel &quot;**[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** {#required-mappings}
 
 Beachten Sie beim Aktivieren von Konto-Zielgruppen für das Ziel &quot;**[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]**, dass die folgenden beiden Zuordnungspaare obligatorisch sind, um Daten erfolgreich zu exportieren:
 
-![Erforderliche Felder für die LinkedIn-Zuordnung.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![LinkedIn-Zuordnung: Erforderliche Felder.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Quellfeld | Zielfeld |
 |---------|----------|

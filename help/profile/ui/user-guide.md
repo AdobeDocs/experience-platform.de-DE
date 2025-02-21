@@ -3,7 +3,7 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 9%
@@ -24,7 +24,7 @@ Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschie
 
 ## [!UICONTROL Übersicht]
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Profile]** im linken Navigationsbereich aus, um die Registerkarte **[!UICONTROL Übersicht]** mit dem Profil-Dashboard zu öffnen.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Profile]** im linken Navigationsbereich aus, um die Registerkarte **[!UICONTROL Übersicht]** mit dem Profil-Dashboard zu öffnen.
 
 >[!NOTE]
 >
@@ -171,11 +171,11 @@ Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICO
 
 Auf **[!UICONTROL Registerkarte]** Zielgruppenzugehörigkeit“ wird eine Liste mit dem Namen und der Beschreibung der Zielgruppen angezeigt, zu denen das einzelne Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Zielgruppen geeignet ist oder von diesen abläuft. Die Gesamtzahl der Zielgruppen, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite der Registerkarte angezeigt.
 
-Weitere Informationen zur Segmentierung in Experience Platform finden Sie in der Dokumentation zum Segmentierungs-Service für Adobe-[Experience Platform](../../segmentation/home.md).
+Weitere Informationen zur Segmentierung in Experience Platform finden Sie in der Dokumentation [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ![Die Registerkarte „Zielgruppenmitgliedschaft“ ist hervorgehoben. Die Details zur Zielgruppenzugehörigkeit des Profils werden angezeigt.](../images/user-guide/audience-membership.png)
 
-Um die Zielgruppenzugehörigkeit der Profile anzuzeigen, die in der Edge verfügbar sind, wählen Sie **[!UICONTROL Edge]** in der Datenspeicherortauswahl aus. Weitere Informationen zur Edge-Segmentierung finden Sie im [Handbuch zur Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md).
+Um die Zielgruppenzugehörigkeit der Profile anzuzeigen, die in der Edge verfügbar sind, wählen Sie **[!UICONTROL Edge]** in der Datenspeicherortauswahl aus. Weitere Informationen zur Edge-Segmentierung finden Sie im [Handbuch zur Edge-Segmentierung](../../segmentation/methods/edge-segmentation.md).
 
 ![Die Datenspeicherortauswahl auf der Registerkarte für die Zielgruppenzugehörigkeit ist hervorgehoben.](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Weitere Informationen zu berechneten Attributen finden Sie unter [Berechnete Att
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs wissen Sie, wie Sie die Profildaten Ihres Unternehmens mithilfe der Experience Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Arbeiten mit Profildaten mithilfe von Experience Platform-APIs finden Sie [ Handbuch zur Echtzeit-Kundenprofil-API ](../api/overview.md).
+Durch das Lesen dieses Handbuchs wissen Sie, wie Sie die Profildaten Ihres Unternehmens mithilfe der Experience Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Arbeiten mit Profildaten mithilfe von Experience Platform-APIs finden Sie im [Handbuch zur Echtzeit-Kundenprofil-API](../api/overview.md).

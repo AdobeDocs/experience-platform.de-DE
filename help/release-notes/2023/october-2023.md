@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2023
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 36%
@@ -30,7 +30,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Nutzungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Metriken hinzugefügt. Mit den Metriken **[!UICONTROL Audience Activation]** und **[!UICONTROL Datenexportgröße]** können Sie bequem verfolgen, wie viele Daten Sie aus Platform in Bezug auf Ihre Lizenznutzungsberechtigungen exportiert haben. In der [Verfügbare Metriken](../../dashboards/guides/license-usage.md#available-metrics) finden Sie Beschreibungen zu diesen und anderen Lizenznutzungsmetriken. |
+| Nutzungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Metriken hinzugefügt. Die Metriken **[!UICONTROL Audience Activation-]** und **[!UICONTROL Datenexportgröße]** bieten eine praktische Möglichkeit, um zu verfolgen, wie viele Daten Sie aus Platform in Bezug auf Ihre Lizenznutzungsberechtigungen exportiert haben. In der [Verfügbare Metriken](../../dashboards/guides/license-usage.md#available-metrics) finden Sie Beschreibungen zu diesen und anderen Lizenznutzungsmetriken. |
 
 {style="table-layout:auto"}
 
@@ -45,7 +45,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
 | Erweiterungen | Verbesserung der [!DNL Meta] Conversions-API | Es gibt drei Verbesserungen bei der Erweiterung [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Ermöglicht die nahtlose Anmeldung, indem Sie Ihre Pixel-ID und Ihr Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht das Bereitstellen von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen, und das Verknüpfen der Aktion mit den bereitgestellten Anzeigen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Übergabe der LiveRamp-Ramp-ID im CIP-Feld, sodass keine personenbezogenen Daten direkt mit Partnern oder Meta geteilt werden müssen. </li></ul> |
-| Erweiterungen | [!DNL LinkedIn]-Konversions-API | Mit der [[!DNL LinkedIn] Conversions-](../../tags/extensions/server/linkedin/overview.md)) können Sie die Effektivität Ihrer LinkedIn-Marketing-Kampagnen bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
+| Erweiterungen | [!DNL LinkedIn]-Konversions-API | Mit der [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md)-Erweiterung können Sie die Effektivität Ihrer LinkedIn-Marketing-Kampagnen bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
 | Geheimnis | OAuth 2-Geheimnis [!DNL LinkedIn] | Das [[!DNL LinkedIn] OAuth 2-Geheimnis](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) ermöglicht es Ihnen, Server-zu-Server-Interaktionen an [!DNL LinkedIn] in der Ereignisweiterleitung zu senden. |
 | Ereignisweiterleitung | Aktualisierung für Tags und Ereignisweiterleitung | Um die Leistung [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) in Platform beizubehalten, werden nur die letzten erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds beibehalten. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass einige wenige starke API-Verwendungen die API-Leistung für andere nicht beeinträchtigen. |
 | Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) werden jetzt in der Bibliotheksausgabe sortiert, um mehr Konsistenz zwischen mehreren Builds und Bereitstellungen derselben Bibliothek sicherzustellen. |
@@ -70,7 +70,7 @@ Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Daten
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
 | (Beta) Unterstützung für Hash-Funktionen in berechneten Feldern | Zusätzlich zu den Funktionen für den [Export von Arrays](../../destinations/ui/export-arrays-calculated-fields.md) oder Elementen aus einem Array können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) verwenden, um Attribute in den exportierten Dateien zu hashen. Die unterstützten Hash-Funktionen sind: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (Eingeschränkte GA) Aktivieren von Konto-Zielgruppen für bestimmte Ziele | Real-Time CDP B2B-Kunden können jetzt [Account-Zielgruppen](../../segmentation/ui/account-audiences.md) für bestimmte Ziele aktivieren. Weitere Informationen zu dieser Funktion finden Sie im Tutorial [Aktivieren von Konto-Zielgruppen](/help/destinations/ui/activate-account-audiences.md). |
+| (Eingeschränkte GA) Aktivieren von Konto-Zielgruppen für bestimmte Ziele | Real-Time CDP B2B-Kunden können jetzt [Account-Zielgruppen](../../segmentation/types/account-audiences.md) für bestimmte Ziele aktivieren. Weitere Informationen zu dieser Funktion finden Sie im Tutorial [Aktivieren von Konto-Zielgruppen](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Account Audiences (begrenzte GA) | In Real-time Customer Data Platform B2B edition können Sie jetzt die Kontosegmentierung verwenden, um das Marketing-Segmentiererlebnis von personenbasierten Zielgruppen bis hin zu Account-basierten Zielgruppen vollständig zu vereinfachen und zu verfeinern. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md). |
+| Account Audiences (begrenzte GA) | In Real-Time Customer Data Platform B2B edition können Sie jetzt die Kontosegmentierung verwenden, um das Marketing-Segmentiererlebnis von personenbasierten Zielgruppen bis hin zu Account-basierten Zielgruppen vollständig zu vereinfachen und zu verfeinern. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/types/account-audiences.md). |
 
 Weitere Informationen zum Segmentierungs-Service finden Sie unter [Segmentierungs-Service - Übersicht](../../segmentation/home.md).
 

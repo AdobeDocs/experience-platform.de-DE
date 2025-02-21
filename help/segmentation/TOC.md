@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 94%
+source-wordcount: '200'
+ht-degree: 79%
 
 ---
 
@@ -22,14 +22,12 @@ ht-degree: 94%
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
    - [Zielgruppen](api/audiences.md)
-   - [Edge-Segmentierung](api/edge-segmentation.md)
    - [Exportaufträge](api/export-jobs.md)
    - [Vorschau und Schätzungen](api/previews-and-estimates.md)
    - [Zeitpläne](api/schedules.md)
    - [Segmentdefinitionen](api/segment-definitions.md)
    - [Segmentaufträge](api/segment-jobs.md)
    - [Segmentsuche](api/segment-search.md)
-   - [Streaming-Segmentierung ](api/streaming-segmentation.md)
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
@@ -37,19 +35,33 @@ ht-degree: 94%
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
-   - [Konto-Zielgruppen](ui/account-audiences.md)
-   - [Lookalike-Zielgruppen](ui/lookalike-audiences.md)
-   - [Potenzielle Zielgruppen](ui/prospect-audience.md)
-   - [Edge-Segmentierung](ui/edge-segmentation.md)
-   - [Streaming-Segmentierung ](ui/streaming-segmentation.md)
-   - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
    - [Aktualisierung der Jahreszeitbegrenzung ignorieren](ui/ignore-year.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Übersicht zu Segment Match](ui/segment-match/overview.md)
       - [Fehlerbehebung](ui/segment-match/troubleshooting.md)
-- [Berücksichtigung des Einverständnisses](consents.md)
-- [Segmentierung mit mehreren Entitäten](multi-entity-segmentation.md)
+- {#methods} der Segmentierungsmethoden
+   - [Übersicht](methods/overview.md)
+   - [Batch-Segmentierung](methods/batch-segmentation.md)
+   - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
+   - [Edge-Segmentierung](methods/edge-segmentation.md)
+- Zielgruppentypen {#types}
+   - [Übersicht](types/overview.md)
+   - [Personen und Zielgruppen](types/people-audiences.md)
+   - [Potenzielle Zielgruppen](types/prospect-audiences.md)
+   - [Konto-Zielgruppen](types/account-audiences.md)
+   - [Lookalike-Zielgruppen](types/lookalike-audiences.md)
+- Tutorials {#tutorials}
+   - [Erstellen einer Segmentdefinition](tutorials/create-a-segment.md)
+   - [Erstellen einer Segmentdefinition (Video)](video/create-segment.md)
+   - [Erstellen einer dynamischen Segmentdefinition (Video)](video/create-a-dynamic-segment.md)
+   - [Erstellen einer Segmentdefinition mit mehreren Entitäten (Video)](video/create-multi-entity-segments.md)
+   - [Segmentierung mit mehreren Entitäten](tutorials/multi-entity-segmentation.md)
+   - [Berücksichtigung des Einverständnisses](tutorials/consents.md)
+   - [Auswerten einer Segmentdefinition](tutorials/evaluate-a-segment.md)
+   - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
+   - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
+   - [Erzwingen der Datennutzungskonformität für Zielgruppen](tutorials/governance.md)
 - Profilabfragesprache {#pql}
    - [Übersicht](pql/overview.md)
    - [Boolesche Funktionen](pql/boolean-functions.md)
@@ -64,15 +76,6 @@ ht-degree: 94%
    - [Filterfunktionen](pql/filter-functions.md)
    - [Logische Quantoren](pql/logical-quantifiers.md)
    - [Sonstige Funktionen](pql/misc-functions.md)
-- Tutorials {#tutorials}
-   - [Erstellen eines Segments](tutorials/create-a-segment.md)
-   - [Erstellen eines Segments (Video)](video/create-segment.md)
-   - [Erstellen eines dynamischen Segments (Video)](video/create-a-dynamic-segment.md)
-   - [Erstellen eines Segments mit mehreren Entitäten (Video)](video/create-multi-entity-segments.md)
-   - [Auswerten eines Segments](tutorials/evaluate-a-segment.md)
-   - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
-   - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
-   - [Erzwingen der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
 - [Aktualisierung der Eignungskriterien](./eligibility-criteria-update.md)
 - [Häufig gestellte Fragen](./faq.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)

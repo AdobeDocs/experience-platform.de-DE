@@ -2,7 +2,7 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard zur Einverständnisanalyse erstellen, um zu verfolgen, wie sich das Einverständnis der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Einverständnisanalyse und -verfolgung
 
-In der heutigen Marketing-Landschaft müssen Sie die Voreinstellungen für das Kundeneinverständnis verstehen und respektieren. Adobe Real-time Customer Data Platform bietet Marketing-Experten die Möglichkeit, das Einverständnis der Kunden zu analysieren, um Vertrauen aufzubauen, Datenschutzbestimmungen einzuhalten und personalisierte Erlebnisse bereitzustellen.
+In der heutigen Marketing-Landschaft müssen Sie die Voreinstellungen für das Kundeneinverständnis verstehen und respektieren. Adobe Real-Time Customer Data Platform bietet Marketing-Experten die Möglichkeit, das Einverständnis der Kunden zu analysieren, um Vertrauen aufzubauen, Datenschutzbestimmungen einzuhalten und personalisierte Erlebnisse bereitzustellen.
 
 In diesem Dokument wird beschrieben, wie Sie ein Einverständnis-Dashboard für verschiedene Marketing-Anwendungsfälle für Real-Time CDP-Daten erstellen. Insbesondere wird beschrieben, wie Sie eine Zielgruppe mit den entsprechenden Attributen für Ihre Geschäftsanforderungen erstellen und diese Einblicke dann mithilfe vorkonfigurierter Widgets in der Adobe Experience Platform-Benutzeroberfläche nutzen können. Eine alternative Methode zum Erstellen eines eigenen benutzerdefinierten Widgets mit der benutzerdefinierten Dashboards-Funktion wird ebenfalls vorgestellt.
 
@@ -24,7 +24,7 @@ Die in diesem Handbuch behandelten Anwendungsfälle sind Einverständnistrends u
 
 ## Erstellen von einverstandenen Zielgruppen {#create-consent-audiences}
 
-Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts ]**der Ansicht**[!UICONTROL  Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
+Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-Time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts ]**der Ansicht**[!UICONTROL  Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
 
 ![Das [!UICONTROL Zielgruppen]-Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen] und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ Suchen Sie Ihre Einverständnisattribute in den verfügbaren Optionen. Wählen S
 
 >[!NOTE]
 >
->Wenn Sie Ihr Benutzereinverständnis in einem Attribut beibehalten haben, das sich von dem der Adobe empfohlenen Feldergruppe unterscheidet, müssen Sie diese Attribute anstelle der unten aufgeführten auswählen.
+>Wenn Sie Ihr Benutzereinverständnis in einem Attribut beibehalten haben, das sich von dem der von Adobe empfohlenen Feldergruppe unterscheidet, müssen Sie diese Attribute anstelle der unten aufgeführten auswählen.
 
-Weitere Informationen finden Sie in der Dokumentation [Handhabung des Einverständnisses in der Segmentierung](../../segmentation/consents.md#handling-consent-in-segmentation) .
+Weitere Informationen finden Sie in der Dokumentation [Handhabung des Einverständnisses in der Segmentierung](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) .
 
 ![Der Segment Builder mit dem hervorgehobenen [!UICONTROL Einverständnis und Voreinstellungen] -Attributordner.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -68,7 +68,7 @@ Nachdem Sie die erforderlichen Zielgruppen erstellt haben, werden sie auf der Re
 
 ## Insights nutzen {#consume-insights}
 
-Adobe hat verschiedene Einblicke erstellt, die automatisch für Sie in den Dashboards Profile, Zielgruppen und Ziele verfügbar sind. Jede Zielgruppe, die Sie erstellen, kann dann automatisch mit diesen vorkonfigurierten Einblicken verwendet werden. In der Dokumentation zu Standard-Widgets finden Sie eine Liste der Einblicke, die in den Dashboards [Profile](../guides/profiles.md#standard-widgets), [Zielgruppen](../guides/audiences.md#standard-widgets) und [Ziele](../guides/destinations.md) verfügbar sind.
+Adobe hat verschiedene Einblicke erstellt, die automatisch für Sie in den Dashboards „Profile“, „Zielgruppen“ und „Ziele“ verfügbar sind. Jede Zielgruppe, die Sie erstellen, kann dann automatisch mit diesen vorkonfigurierten Einblicken verwendet werden. In der Dokumentation zu Standard-Widgets finden Sie eine Liste der Einblicke, die in den Dashboards [Profile](../guides/profiles.md#standard-widgets), [Zielgruppen](../guides/audiences.md#standard-widgets) und [Ziele](../guides/destinations.md) verfügbar sind.
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
@@ -155,7 +155,7 @@ Die von Ihnen erstellten Einverständnis-Dashboards erfassen **nur die Verteilun
 
 >[!NOTE]
 >
->Für Kundinnen und Kunden von **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** spiegeln diese Dashboards **nicht)** Tracking von Einverständnisrichtlinien wider. Das verfügbare Tracking umfasst die Anzahl der erstellten, aktivierten Richtlinien und die Auswirkungen auf die Zielgruppenzugehörigkeit.
+>Für Kundinnen und Kunden von **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** spiegeln diese Dashboards **keine)** Verfolgung von Einverständnisrichtlinien wider. Das verfügbare Tracking umfasst die Anzahl der erstellten, aktivierten Richtlinien und die Auswirkungen auf die Zielgruppenzugehörigkeit.
 
 ## Nächste Schritte
 

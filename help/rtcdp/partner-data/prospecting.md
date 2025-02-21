@@ -3,7 +3,7 @@ title: Neue Kunden ohne Abhängigkeit von Drittanbieter-Cookies gewinnen und ans
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -24,7 +24,7 @@ Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre P
 
 Marken stehen gleichzeitig vor gewaltigen Herausforderungen bei der verantwortungsvollen Ausführung erstklassiger Anwendungsfälle zur Kundenakquise, ohne auf Drittanbieter-Cookies angewiesen zu sein, mit begrenzten Budgets und höherer Nachfrage nach Transparenz und Return on Ad-Spend.
 
-Adobe Real-time Customer Data Platform kann Marken dabei helfen, ihre von der Data Management Platform (DMP) unterstützten Anwendungsfälle sicher auf Alternativen ohne Cookies umzustellen, und zwar auf eine Weise, die die volle Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Audience Curation und Aktivierung in ein einziges System bringt. Und das alles ohne Kompromisse bei der Adobe, ohne unbeirrt auf eine verantwortungsvolle Nutzung der Daten über ein patentiertes Data Governance- und Einverständnissystem zu setzen.
+Adobe Real-Time Customer Data Platform kann Marken dabei helfen, ihre von der Data Management Platform (DMP) unterstützten Anwendungsfälle sicher auf Alternativen ohne Cookies umzustellen, und zwar auf eine Weise, die die volle Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Audience Curation und Aktivierung in ein einziges System bringt. Und das alles ohne Kompromisse bei Adobes unbeirrtem Fokus auf eine verantwortungsvolle Nutzung von Daten über ein patentiertes Data Governance- und Einverständnis-Framework.
 
 Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie eine Kampagne ausführen müssen, um potenzielle Kunden und Nutzerinnen für eine Karriere zu gewinnen.
 
@@ -71,7 +71,7 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, werden
 * [Datensätze](/help/catalog/datasets/overview.md)
 * [Quellen](/help/sources/home.md)
 * [Interessentenprofile](/help/profile/ui/prospect-profile.md)
-* [Potenzielle Zielgruppen](/help/segmentation/ui/prospect-audience.md)
+* [Potenzielle Zielgruppen](/help/segmentation/types/prospect-audiences.md)
 * [Ziele](/help/destinations/home.md)
 
 ### Lizenzieren der Details von Drittanbieterprofilen vom Partner {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ Beachten Sie, dass sich das Erlebnis des Erstellens von Zielgruppen für Interes
 * Nur Batch-Profilauswertung.
 * Das Erstellen von Zielgruppen basierend auf Zeitreihenereignissen wird nicht unterstützt.
 
-Weitere Informationen über [Zielgruppen potenzieller Kundinnen und Kunden](/help/segmentation/ui/prospect-audience.md).
+Weitere Informationen über [Zielgruppen potenzieller Kundinnen und Kunden](/help/segmentation/types/prospect-audiences.md).
 
 ### Aktivieren von Interessentenprofilen für Ziele {#activate-to-destinations}
 

@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie mit der B2B-Edition von Adobe Real-time Custo
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 54%
@@ -16,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Account-Profile sind nur für Kundinnen und Kunden von Adobe Real-time Customer Data Platform B2B edition verfügbar. Um mehr über Real-Time CDP und B2B edition zu erfahren, auch zu den verfügbaren Funktionen, lesen Sie zunächst die [Übersicht über Real-Time CDP und B2B edition](../b2b-overview.md).
+>Account-Profile sind nur für Kundinnen und Kunden von Adobe Real-Time Customer Data Platform B2B edition verfügbar. Um mehr über Real-Time CDP und B2B edition zu erfahren, auch zu den verfügbaren Funktionen, lesen Sie zunächst die [Übersicht über Real-Time CDP und B2B edition](../b2b-overview.md).
 
 Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. In dieser zentralen Ansicht eines Accounts werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen aktuell zur Speicherung von Account-Daten verwendet. Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Workflows finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md).
 
@@ -30,5 +30,5 @@ Mit Real-Time CDP, B2B edition können Sie die Experience Platform-Benutzeroberf
 
 Sie können Zielgruppen erstellen, die aus Account-Profilen bestehen, und sie dann für mehrere Ziele aktivieren, die im Real-Time CDP-Zielkatalog verfügbar sind. Weitere Informationen finden Sie unten:
 
-* [Konto-Zielgruppen](/help/segmentation/ui/account-audiences.md)
+* [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md)
 * [Konto-Zielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md)

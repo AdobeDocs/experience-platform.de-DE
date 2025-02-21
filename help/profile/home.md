@@ -2,7 +2,7 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 97%
@@ -135,7 +135,7 @@ Die Umsetzung von Data Governance erfolgt an mehreren Stellen. So wird etwa best
 
 ### Umgang mit Opt-out- und Datenschutzanfragen
 
-[!DNL Experience Platform] bietet Funktionalitäten für das Einsenden von Ausstiegsanfragen durch Ihre Kunden bezüglich der Nutzung und Speicherung ihrer Daten im [!DNL Real-Time Customer Profile]. Weitere Informationen hierzu finden Sie in der Dokumentation zum Thema [Berücksichtigen von Opt-out-Anfragen](../segmentation/consents.md).
+[!DNL Experience Platform] bietet Funktionalitäten für das Einsenden von Ausstiegsanfragen durch Ihre Kunden bezüglich der Nutzung und Speicherung ihrer Daten im [!DNL Real-Time Customer Profile]. Weitere Informationen hierzu finden Sie in der Dokumentation zum Thema [Berücksichtigen von Opt-out-Anfragen](../segmentation/tutorials/consents.md).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

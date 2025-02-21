@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 93%
 
 ---
@@ -67,7 +67,6 @@ Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die 
 >id="platform_segments_evaluation_streaming"
 >title="Streaming-Auswertung"
 >abstract="Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Zielgruppen infolge von Benutzeraktivität aktualisiert."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=de" text="Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit"
 
 Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
@@ -75,7 +74,7 @@ Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Strea
 
 Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Zielgruppen infolge von Benutzeraktivität aktualisiert. Nachdem eine Zielgruppe erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-Time Customer Profile] eingehende Daten angewendet. Ergänzungen und Entfernungen der Zielgruppe werden regelmäßig verarbeitet, sodass Ihre Zielgruppe auch weiterhin relevant ist.
 
-Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentation zur Streaming-Segmentierung](./api/streaming-segmentation.md).
+Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentation zur Streaming-Segmentierung](./methods/streaming-segmentation.md).
 
 ### Batch-Segmentierung {#batch}
 
@@ -94,11 +93,10 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >id="platform_segments_evaluation_edge"
 >title="Edge-Auswertung"
 >abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=de" text="Handbuch zur Benutzeroberfläche für Edge-Segmentierung"
 
-Bei der Segmentierung in Edge werden Segmente in Platform sofort ([ Edge Network) ausgewertet](../web-sdk/home.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Segmentierung in Edge werden Segmente in Platform sofort [auf der Edge Network](../landing/edge-and-hub-comparison.md) ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
-Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./ui/edge-segmentation.md).
+Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./methods/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./methods/edge-segmentation.md).
 
 ## Zugriff auf Segmentierungsergebnisse
 
@@ -165,7 +163,7 @@ Indem Sie dem Attribut „Bundesstaat des Kaufs“ eine Variable zuweisen, wird 
 
 ### Segmentierung mit mehreren Entitäten {#multi-entity}
 
-Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie die Daten von [!DNL Real-Time Customer Profile] mit zusätzlichen Daten erweitern, die auf Produkten, Geschäften oder anderen Nicht-Personen-Entitäten basieren und auch als „Dimensionsentitäten“ bezeichnet werden. Folglich kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als ob sie nativ im [!DNL Profile]-Datenspeicher enthalten wären. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Zielgruppen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](multi-entity-segmentation.md).
+Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie die Daten von [!DNL Real-Time Customer Profile] mit zusätzlichen Daten erweitern, die auf Produkten, Geschäften oder anderen Nicht-Personen-Entitäten basieren und auch als „Dimensionsentitäten“ bezeichnet werden. Folglich kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als ob sie nativ im [!DNL Profile]-Datenspeicher enthalten wären. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Zielgruppen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service]-Datentypen
 

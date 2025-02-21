@@ -3,7 +3,7 @@ title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe 
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -24,7 +24,7 @@ Erfahren Sie, wie Sie die partnergestützte Erkennung nutzen können, um den Bes
 
 Die Fragmentierung digitaler Erlebnisse, da Verbraucher auf unzählige Arten mit Marken interagieren, ist sehr real und wird immer schwieriger zu lösen. Die besten Strategien zur Kundeninteraktion für kohärente Erlebnisse, zielgerichtete Empfehlungen und maßgeschneiderte Interaktionen werden durch die Erkennung der Benutzer eingeschränkt.
 
-Hier kann die partnergestützte Echtzeit-Erkennung einen bedeutenden Unterschied machen. Adobe ermöglicht Identitätspartnern, sich in unsere ausgereiften Client-seitigen Datenerfassungs- und marktführenden Erlebnisoptimierungsangebote einzubinden, um die Messlatte für die Bereitstellung von Erlebnissen ab dem ersten Besuch effektiv zu erhöhen, ohne dass ein Vorgeschichte oder eine Authentifizierung erforderlich ist.
+Hier kann die partnergestützte Echtzeit-Erkennung einen bedeutenden Unterschied machen. Adobe ermöglicht es Identitätspartnern, sich in unsere ausgereiften Client-seitigen Datenerfassungs- und marktführenden Erlebnisoptimierungsangebote einzubinden, um die Messlatte für die Bereitstellung von Erlebnissen vom ersten Besuch an effektiv höher zu legen, ohne dass ein Vorgeschichte oder eine Authentifizierung erforderlich ist.
 
 Dies ist besonders für Vertikale mit niedrigen Authentifizierungsraten nützlich, wie Konsumgüter, Online-Einzelhandel und mehr.
 
@@ -56,7 +56,7 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
    * [Datennutzungskennzeichnungen](/help/data-governance/labels/overview.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
 * Personalisierung von Web-Eigenschaften
-   * [Edge-Segmentierung](/help/segmentation/ui/edge-segmentation.md)
+   * [Edge-Segmentierung](/help/segmentation/methods/edge-segmentation.md)
    * [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (oder eine von Ihnen ausgewählte Personalisierungsplattform. In diesem Anwendungsbeispiel wird Adobe Target als Personalisierungs-Engine hervorgehoben)
 
@@ -263,7 +263,7 @@ Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > *
 
 ![Ansicht der Navigation zu Audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Sie müssen Ihre Zielgruppe mit [Edge-Segmentierung](/help/segmentation/ui/edge-segmentation.md) einrichten, damit die Zielgruppenzugehörigkeit Ihrer Besucher in Echtzeit ausgewertet wird, wenn sie Ihre Web-Eigenschaft besuchen.
+Sie müssen Ihre Zielgruppe mit [Edge-Segmentierung](/help/segmentation/methods/edge-segmentation.md) einrichten, damit die Zielgruppenzugehörigkeit Ihrer Besucher in Echtzeit ausgewertet wird, wenn sie Ihre Web-Eigenschaft besuchen.
 
 Stellen Sie sicher, dass auch eine [„Active-On-Edge“-Zusammenführungsrichtlinie](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) für die Edge-Zielgruppen eingerichtet ist.
 
