@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 15%
+source-wordcount: '1481'
+ht-degree: 14%
 
 ---
 
@@ -74,7 +74,7 @@ Verwenden Sie die Datenvorbereitung zum Zuordnen, Transformieren und Validieren 
 
 Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../data-prep/home.md).
 
-## Ziele {#destinations}
+## Ziele (aktualisiert am 20. Februar) {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
@@ -97,6 +97,7 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 | Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse | Im Rahmen der [[!UICONTROL attributbasierten Zugriffssteuerung]](/help/access-control/abac/overview.md) in Real-Time CDP können Sie jetzt Zugriffsbeschriftungen auf [Ziel-Datenflüsse“ ](/help/dataflows/ui/monitor-destinations.md). Auf diese Weise können Sie sicherstellen, dass nur eine Teilmenge der Benutzenden in Ihrer Organisation Zugriff auf bestimmte Zieldatenflüsse erhält. <br> **Wichtig**: Bei der Suche nach Ziel-Datenflüssen mithilfe des Suchfelds oben in der Experience Platform-Benutzeroberfläche können die Ergebnisse Ziel-Datenflüsse enthalten, die aufgrund Ihrer Benutzerzugriffsbeschriftungen nicht angezeigt werden können. Dieses Verhalten wird in einer zukünftigen Aktualisierung korrigiert. |
 | [Reporting auf Zielgruppenebene](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) für die [Marketo Engage-Verbindung](/help/destinations/catalog/adobe/marketo-engage.md) | Sie können jetzt [Informationen anzeigen](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) über die aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene für jede Zielgruppe aufgeschlüsselt sind, die Teil der Datenflüsse für dieses Ziel ist. |
 | Unterstützung externer Zielgruppen für die [TikTok](/help/destinations/catalog/social/tiktok.md)- und [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)-Verbindungen | Sie können externe Zielgruppen für diese Ziele über [benutzerdefinierte Uploads](../../segmentation/ui/audience-portal.md#import-audience) und [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) aktivieren. |
+| Exportieren von Arrays, Zuordnungen und Objekten in Cloud-Speicher-Ziele | Durch Verwendung des neuen Umschalters **[!UICONTROL Exportieren von Arrays, Zuordnungen, Objekten]** beim Herstellen einer Verbindung zu einem Cloud-Speicher-Ziel können Sie neue komplexe Objekte in ausgewählte Ziele exportieren. [Weitere Informationen](/help/destinations/ui/export-arrays-calculated-fields.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
@@ -104,6 +105,9 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 
 - Ein Problem in den Destination SDK-Test-Tools wurde behoben. Bei einigen Kunden oder Partnern traten Probleme mit dem [Tool zur Profilerstellung](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) auf, da das Format nicht unterstützt wird, wenn das für die Profilerstellung verwendete Schema Datentypen mit einem `No format`-Selektor enthielt.
 - Ein Problem bei der Aktualisierung der `targetConnection` von Zielen mithilfe der Flow Service-API wurde behoben. In einigen Fällen verhält sich der PATCH-Vorgang ähnlich wie ein POST-Vorgang, wodurch vorhandene Datenflüsse beschädigt werden. Dieses Problem wurde jetzt behoben, und alle -Kunden können die Flow Service-API verwenden, um ihre `targetConnection` zu aktualisieren. [Weitere Informationen](/help/destinations/api/edit-destination.md#patch-target-connection).
+- Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Diese Version umfasst eine Aktualisierung des Deduplizierungsprozesses, sodass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern und die Konsistenz verbessert wird. [Weitere Informationen](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+
+Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../destinations/home.md).
 
 ## Quellen {#sources}
 
