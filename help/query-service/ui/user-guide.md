@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2745'
 ht-degree: 24%
 
 ---
 
 # Handbuch zur Benutzeroberfläche des Abfrage-Editors
-
->[!NOTE]
->
->Der alte Editor wurde am 24. Mai 2024 eingestellt. Es ist nicht mehr für die Verwendung verfügbar. Sie können jetzt den [erweiterten Abfrage-Editor](#enhanced-editor-toggle) verwenden, um Ihre Abfragen zu schreiben, zu validieren und auszuführen
 
 Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der [!DNL Experience Platform]-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in [!DNL Experience Platform].
 
@@ -42,10 +38,6 @@ Der Abfrage-Editor benötigt beim Öffnen einige Sekunden, um zu initialisieren 
 Vom Abfrage-Editor ausgeführte Abfragen werden interaktiv ausgeführt. Das bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder die Seite verlassen. Dasselbe gilt für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben durchgeführt werden.
 
 ## Abfrageerstellung mit dem erweiterten Abfrage-Editor {#query-authoring}
-
->[!NOTE]
->
->Der alte Editor wurde am 24. Mai 2024 eingestellt. Es ist nicht mehr für die Verwendung verfügbar. Sie können jetzt den erweiterten Abfrage-Editor verwenden, um Ihre Abfragen zu schreiben, zu validieren und auszuführen.
 
 Mit dem Abfrage-Editor können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle im Abfrage-Editor ausgeführten oder gespeicherten Abfragen stehen allen Benutzenden in Ihrer Organisation mit Zugriff auf den Abfrage-Service zur Verfügung.
 
@@ -101,11 +93,11 @@ Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Bestätige
 
 ### Ergebniszähler {#result-count}
 
-Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. Sie können die Anzahl der Zeilen auswählen, die gleichzeitig in der Abfrage-Editor-Konsole angezeigt werden. Um die Anzahl der in der Konsole angezeigten Zeilen zu ändern, wählen Sie die Dropdown-Liste **[!UICONTROL Ergebnisanzahl]** und aus den Optionen 50, 100, 150, 300 und 500 aus.
+Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. Sie können die Anzahl der Zeilen auswählen, die gleichzeitig in der Abfrage-Editor-Konsole angezeigt werden. Um die Anzahl der in der Konsole angezeigten Zeilen zu ändern, wählen Sie die Dropdown-Liste **[!UICONTROL Ergebnisanzahl]** und aus den Optionen 50, 100, 150, 300, 500 und 1000 aus.
 
 >[!NOTE]
 >
->Da die Platform-Benutzeroberfläche nur bis zu 500 Zeilen unterstützen kann, wird die Übergabe eines LIMIT-Werts über 500 ignoriert.
+>Da die Platform-Benutzeroberfläche bis zu 1.000 Zeilen unterstützen kann, wird die Übergabe eines LIMIT-Werts über 1.000 ignoriert.
 
 ![Der Abfrage-Editor mit hervorgehobenem Dropdown-Menü „Ergebnisanzahl“.](../images/ui/query-editor/result-count.png)
 
@@ -204,8 +196,8 @@ Wenn eine Abfrage geplant wurde, bietet die Registerkarte [!UICONTROL Geplante A
 
 >[!AVAILABILITY]
 >
-Die Datensatz-Navigationsleiste ist nur für Kunden von Data Distiller verfügbar. Ihre Platform-Benutzeroberfläche enthält möglicherweise nicht die linke Datensatz-Navigationsleiste. Andere Bilder in diesem Dokument spiegeln möglicherweise nicht die Datensatz-Navigationsleiste wider. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.<br>
-Der Objektbrowser ist derzeit nur in einer **eingeschränkten Version)**. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um frühzeitig Zugriff auf die Veröffentlichung zu erhalten.
+Die Datensatz-Navigationsleiste ist nur für Kunden von Data Distiller verfügbar. Ihre Platform-Benutzeroberfläche enthält möglicherweise nicht die linke Datensatz-Navigationsleiste. Andere Bilder in diesem Dokument spiegeln möglicherweise nicht die Datensatz-Navigationsleiste wider. Weitere Informationen erhalten Sie vom Adobe-Support.<br>
+Der Objektbrowser ist derzeit nur in einer **eingeschränkten Version)**. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um frühzeitigen Zugriff auf die Version zu erhalten.
 
 Verwenden Sie den Objekt-Browser, um Datensätze einfach zu suchen und zu filtern. Der Objekt-Browser reduziert die Zeit, die mit der Suche nach Tabellen und Datensätzen in großen Umgebungen mit zahlreichen Datensätzen verbracht wird. Durch den optimierten Zugriff auf relevante Daten und Metadaten können Sie sich mehr auf die Erstellung von Abfragen konzentrieren und weniger auf die Navigation.
 
@@ -249,7 +241,7 @@ Die Konsole zeigt nur Fehler an, die bei der Ausführung einer Abfrage aufgetret
 
 ### Abfrageergebnisse {#query-results}
 
-Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage an und zeigt je nach ausgewählter ([) Ergebnisanzahl zwischen 50 und 500 ](#result-count) an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
+Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage an, wobei je nach ausgewählter ([) Ergebnisanzahl zwischen 50 und 1000 Ergebniszeilen angezeigt ](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
 
 ![Auf der Registerkarte „Ergebnisse“ der Abfrage-Editor-Konsole werden die Ergebnisse einer Abfrageausführung angezeigt.](../images/ui/query-editor/query-results.png)
 
