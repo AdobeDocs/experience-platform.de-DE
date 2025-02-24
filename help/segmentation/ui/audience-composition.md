@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
-ht-degree: 70%
+source-wordcount: '2342'
+ht-degree: 66%
 
 ---
 
@@ -39,7 +39,7 @@ Die Arbeitsfläche für die Zielgruppenkomposition besteht aus vier verschiedene
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Zielgruppen-Block"
->abstract="Mit dem Block Zielgruppe können Sie die Unterzielgruppen festlegen, die Sie zum Erstellen Ihrer neuen Zielgruppe verwenden möchten."
+>abstract="Mit dem Block Zielgruppe können Sie die Unterzielgruppen hinzufügen, die Sie zum Erstellen Ihrer neuen Zielgruppe verwenden möchten."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ Ihre ausgewählten Zielgruppen werden jetzt in der rechten Leiste angezeigt, wen
 | [!UICONTROL Ausschließen von Überschneidungen] | Die Zielgruppen werden kombiniert, wobei nur die Zielgruppen hinzugefügt werden, die zu genau **einer, aber nicht zu allen** gehören. Dies entspricht einem XOR-Vorgang. |
 
 ### [!UICONTROL Regel erstellen] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Segment Builder"
+>abstract="Mit Segment Builder können Sie eine benutzerdefinierte Regel für Ihre Komposition hinzufügen."
 
 Um eine benutzerdefinierte Regel zum Zielgruppenblock hinzuzufügen, wählen Sie **[!UICONTROL Regel erstellen]**.
 
@@ -134,7 +139,12 @@ Eine Liste von Zielgruppen wird angezeigt. Wählen Sie **[!UICONTROL Hinzufügen
 
 ### Ausschließen nach Attribut {#exclude-attribute}
 
-Wenn Sie nach Attribut ausschließen, können Sie durch Auswahl des Symbols ![Filtern](/help/images/icons/project-edit.png) innerhalb des Abschnitts **[!UICONTROL Ausschlussregel]** festlegen, welche Attribute ausgeschlossen werden sollen.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Ausschließen nach Attribut"
+>abstract="Wenn Sie nach Attribut ausschließen, können Sie bestimmte Profile davon ausschließen, dass sie in Ihrer Komposition erscheinen, basierend auf den ausgewählten Attributen."
+
+Wenn Sie nach Attribut ausschließen, können Sie durch Auswahl des Symbols ![Filtern](/help/images/icons/project-edit.png) innerhalb des Abschnitts **[!UICONTROL Ausschlussregel]** auswählen, welche Attribute ausgeschlossen werden sollen. Durch das Ausschließen des Attributs können Sie jedes Profil, das dieses Attribut enthält, aus Ihrer resultierenden Audience ausschließen.
 
 ![Der Abschnitt „Attribut“ wird hervorgehoben und zeigt an, wo das auszuschließende Attribut ausgewählt werden soll.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Bei der Aufspaltung der Zielgruppe können Sie sie entweder nach Prozentsatz auf
 
 ### Aufspaltung nach Prozentsatz {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Aufspaltung nach Prozentsatz"
+>abstract="Sie können die Zielgruppe nach dem Zufallsprinzip in mehrere Zielgruppen aufteilen, basierend auf der Anzahl der bereitgestellten Pfade und Prozentsätze."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Persistente Aufspaltung"
+>abstract="Sie können die prozentuale Aufspaltung dauerhaft machen, indem Sie diese Option aktivieren und auswählen, in welchem Identity-Namespace die Aufspaltung bestehen bleiben soll."
+
 Bei der Aufteilung nach Prozentsatz werden die Zielgruppen nach dem Zufallsprinzip auf Grundlage der Anzahl der angegebenen Pfade und Prozentsätze aufgeteilt.
 
 Beispielsweise wären drei Pfade mit jeweils unterschiedlichen Prozentsätzen an Profilen möglich.
@@ -331,7 +351,12 @@ Darüber hinaus können Sie den Umschalter **[!UICONTROL Andere Profile]** aktiv
 
 ![Der Umschalter „Andere Profile“ ist hervorgehoben.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Veröffentlichen der Zielgruppe
+## Veröffentlichen der Zielgruppe {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Veröffentlichen Sie"
+>abstract="Sie können Ihre Komposition veröffentlichen, um die resultierende(n) Audience(s) in Adobe Experience Platform zu erstellen."
 
 >[!IMPORTANT]
 >
