@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 description: Zuordnen von Adobe Analytics-Feldern zu XDM-Feldern mithilfe des Analytics Source Connectors.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 73%
+source-wordcount: '2415'
+ht-degree: 72%
 
 ---
 
@@ -173,9 +173,9 @@ Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logi
 | `ip` | `environment.ipV4` | Zeichenfolge | IP-Adresse basierend auf der HTTP-Kopfzeile der Bildanforderung. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | Boolescher Wert | Die verwendete JavaScript-Version. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | Objekt | Die Experience Cloud-Besucher-ID. |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Boolescher Wert | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Boolescher Wert | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
 | `mcvisid_low` | `identityMap` | Objekt | Die Experience Cloud-Besucher-ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | Zeichenfolge | Trefferzusammenfügungs-ID. Die Analytics-Felder sdid_high und sdid_low sind die ergänzenden Daten-IDs, mit denen zwei (oder mehr) eingehende Treffer zusammengefügt werden. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | Zeichenfolge | Mobile Services – Beacon-Nähe. |
@@ -186,7 +186,9 @@ Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logi
 
 ## Erweiterte Zuordnungsfelder
 
-Ausgewählte Felder (so genannte „Post-Werte„) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Lookup-Tabellen angepasst hat. Die meisten Nachbearbeitungswerte haben ein vorverarbeitetes Gegenstück. Ihr Unternehmen kann entscheiden, ob Sie das vorverarbeitete Feld, das nachverarbeitete Feld oder beides verwenden möchten.
+Ausgewählte Felder (so genannte „Post-Werte„) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Lookup-Tabellen angepasst hat. Die meisten Nachbearbeitungswerte haben ein vorverarbeitetes Gegenstück.
+
+Der Analytics-Quell-Connector sendet vorverarbeitete Daten in einen Datensatz in Experience Platform. Sie können diese Daten mithilfe von Transformationen in ihre nachgeschalteten Gegenstücke umwandeln. Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
 Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
