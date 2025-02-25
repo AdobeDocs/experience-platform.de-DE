@@ -2,10 +2,10 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 
@@ -46,7 +46,7 @@ Um die Namespace-Priorität zu konfigurieren, wählen Sie im Menü Identitätsei
 
 ### Eindeutigen Namespace festlegen
 
-Um einen eindeutigen Namespace festzulegen, aktivieren Sie das Kontrollkästchen [!UICONTROL Eindeutig pro Diagramm], das diesem Namespace entspricht. Sie können mehr als einen eindeutigen Namespace für Ihre Identitätseinstellungen-Konfiguration auswählen.
+Um einen eindeutigen Namespace festzulegen, aktivieren Sie das Kontrollkästchen [!UICONTROL Eindeutig pro Diagramm], das diesem Namespace entspricht. Sie können bis zu drei eindeutige Namespaces für Ihre Identitätskonfigurationseinstellungen auswählen.
 
 ![Zwei Namespaces ausgewählt und als eindeutig definiert.](../images/rules/unique-namespace.png)
 
