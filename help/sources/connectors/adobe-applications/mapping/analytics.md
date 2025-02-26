@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 description: Zuordnen von Adobe Analytics-Feldern zu XDM-Feldern mithilfe des Analytics Source Connectors.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
+source-git-commit: ae8a54f8e9fafe782cb24e54e5b638d83d468e3a
 workflow-type: tm+mt
 source-wordcount: '2415'
 ht-degree: 72%
@@ -188,7 +188,7 @@ Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logi
 
 Ausgewählte Felder (so genannte „Post-Werte„) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Lookup-Tabellen angepasst hat. Die meisten Nachbearbeitungswerte haben ein vorverarbeitetes Gegenstück.
 
-Der Analytics-Quell-Connector sendet vorverarbeitete Daten in einen Datensatz in Experience Platform. Sie können diese Daten mithilfe von Transformationen in ihre nachgeschalteten Gegenstücke umwandeln. Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
+Der Analytics-Quell-Connector sendet vorverarbeitete Daten in einen Datensatz in Experience Platform. Sie können diese Daten mithilfe von Transformationen in ihre nachbearbeiteten Gegenstücke umwandeln. Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
 Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
