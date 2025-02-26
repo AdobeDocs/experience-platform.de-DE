@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 95%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 95%
    * [Bibliotheken](./ui/publishing/libraries.md)
    * [Self-Hosting von Bibliotheken](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliothek erneut veröffentlichen](./ui/publishing/republish.md)
-   * [Experience Platform-Tags (China)](./ui/publishing/premium-cdn.md)
+   * [Experience Platform Tags (China)](./ui/publishing/premium-cdn.md)
 * Client-seitige Informationen {#client-side}
    * [Übersicht](./ui/client-side/overview.md)
    * [Asynchrone Bereitstellung](./ui/client-side/asynchronous-deployment.md)
@@ -90,6 +90,8 @@ ht-degree: 95%
       * Adobe Client-Datenschicht {#client-data-layer}
          * [Übersicht](./extensions/client/client-data-layer/overview.md)
          * [Versionshinweise](./extensions/client/client-data-layer/release-notes.md)
+      * Adobe Content Analytics-{#contentanalytics}
+         * [Überblick](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Übersicht](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
