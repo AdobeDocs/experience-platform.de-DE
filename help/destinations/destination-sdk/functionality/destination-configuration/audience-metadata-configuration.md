@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Zielgruppen-Metadateneinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Zielgruppen-Metadaten
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 90%
+source-wordcount: '406'
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ Destination SDK bietet Tools, mit denen Sie Zielgruppen in Ihrer Zielplattform p
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Sie können die Vorlage für Zielgruppen-Metadaten über den Endpunkt `/authoring/audience-templates` konfigurieren. Nachdem Sie die Konfiguration der Zielgruppen-Metadaten erstellt haben, können Sie den Endpunkt `/authoring/destinations` zum Konfigurieren des Abschnitts `audienceMetadataConfig` verwenden. Dieser Abschnitt teilt Ihrem Ziel mit, welche Zielgruppenmetadaten Ihrer Zielgruppenvorlage zugeordnet werden sollen.
+Sie können die Vorlage für Zielgruppen-Metadaten über den Endpunkt `/authoring/audience-templates` konfigurieren. Nachdem Sie die Konfiguration der Zielgruppen-Metadaten erstellt haben, können Sie den Endpunkt `/authoring/destinations` verwenden, um die Abschnitte `segmentMappingConfig` und `audienceMetadataConfig` zu konfigurieren. Dieser Abschnitt teilt Ihrem Ziel mit, welche Zielgruppenmetadaten Ihrer Zielgruppenvorlage zugeordnet werden sollen.
 
 Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -44,10 +44,12 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 Beim Erstellen der Konfiguration für Ihre Zielgruppenmetadaten können Sie die in der folgenden Tabelle beschriebenen Parameter verwenden, um die Einstellungen für die Zielgruppenzuordnung zu konfigurieren.
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```

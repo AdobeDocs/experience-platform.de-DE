@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 55%
@@ -11,7 +11,7 @@ ht-degree: 55%
 
 # Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Auf dieser Seite wird beschrieben, wie Sie die Informationen in [Konfigurationsoptionen im Destination SDK](../functionality/configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten verwenden können, um ein [dateibasiertes Ziel](../../destination-types.md#file-based) zu konfigurieren. Die Schritte sind im Folgenden in der vorgegebenen Reihenfolge aufgeführt.
 
@@ -345,11 +345,13 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
             "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
         }
     ],
+    "segmentMappingConfig":{
+        "mapExperiencePlatformSegmentName":false,
+        "mapExperiencePlatformSegmentId":false,
+        "mapUserInput":false
+    },
     "audienceMetadataConfig":{
-    "mapExperiencePlatformSegmentName":false,
-    "mapExperiencePlatformSegmentId":false,
-    "mapUserInput":false,
-    "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+        "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
     },   
     "schemaConfig": {
         "profileRequired": true,
@@ -418,7 +420,7 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
 
 Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritten eingerichtet haben, können Sie das [Zieltest-Tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) verwenden, um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
 
-Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen im Experience Platform finden Sie in den beiden folgenden Ressourcen:
+Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden folgenden Ressourcen:
 
 * [Erstellen einer Audience - Dokumentationsseite](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Erstellen einer Zielgruppe - Videoanleitung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
@@ -439,10 +441,10 @@ Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielveröffentl
 
 Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](../overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](../docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) zu erstellen.
 
-## Schritt 8: Ziel zur Überprüfung der Adobe übermitteln {#submit-for-review}
+## Schritt 8: Übermitteln des Ziels zur Überprüfung durch Adobe {#submit-for-review}
 
 >[!NOTE]
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kundinnen und Kunden es verwenden können.
 
-Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar werden kann, müssen Sie das Ziel offiziell zur Überprüfung der Adobe übermitteln. Hier finden Sie vollständige Informationen zum [Einreichen eines in Destination SDK erstellten produktbezogenen Ziels zur Überprüfung](../guides/submit-destination.md).
+Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kundinnen und -Kunden sichtbar werden kann, müssen Sie das Ziel schließlich offiziell zur Überprüfung durch Adobe übermitteln. Hier finden Sie vollständige Informationen zum [Einreichen eines in Destination SDK erstellten produktbezogenen Ziels zur Überprüfung](../guides/submit-destination.md).
