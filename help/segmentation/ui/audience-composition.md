@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
 source-wordcount: '2342'
-ht-degree: 66%
+ht-degree: 76%
 
 ---
 
@@ -38,13 +38,13 @@ Die Arbeitsfläche für die Zielgruppenkomposition besteht aus vier verschiedene
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
->title="Zielgruppen-Block"
+>title="Block „Zielgruppe“"
 >abstract="Mit dem Block Zielgruppe können Sie die Unterzielgruppen hinzufügen, die Sie zum Erstellen Ihrer neuen Zielgruppe verwenden möchten."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="Fusionieren von Typen"
->abstract="Die Zusammenführungstypen bestimmen, wie die ausgewählten Unterzielgruppen kombiniert werden. Unterstützte Werte sind Vereinigung, Schnittmenge und Ausschließen von Überschneidungen."
+>abstract="Die Zusammenführungstypen bestimmen, wie die ausgewählten Unterzielgruppen kombiniert werden. Unterstützte Werte sind „Vereinigung“, „Schnittmenge“ und „Überschneidung ausschließen“."
 
 Mit **[!UICONTROL Blocktyp]** Zielgruppe“ können Sie die Unterzielgruppen hinzufügen, die Sie zum Erstellen Ihrer neuen größeren Zielgruppe verwenden möchten. Standardmäßig ist ein **[!UICONTROL Zielgruppen]**-Block oben auf der Arbeitsfläche für die Komposition enthalten.
 
@@ -105,13 +105,13 @@ Nachdem Sie eine benutzerdefinierte Regel hinzugefügt haben, wählen Sie **[!UI
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
->title="Block ausschließen"
->abstract="Mit dem Block Ausschließen können Sie bestimmte Zielgruppen oder Attribute aus Ihrer Komposition ausschließen."
+>title="Block „Ausschließen“"
+>abstract="Mit dem Block „Ausschließen“ können Sie bestimmte Zielgruppen oder Attribute aus Ihrer Komposition ausschließen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
 >title="Typ des Ausschließens"
->abstract="Sie können entweder Profile, die zu einer bestimmten Zielgruppe gehören (nach Zielgruppe ausschließen), ausschließen oder Profile basierend auf einem bestimmten Attribut (nach Attribut ausschließen)."
+>abstract="Sie können entweder Profile, die zu einer bestimmten Zielgruppe gehören, ausschließen (nach Zielgruppe ausschließen) oder Profile basierend auf einem bestimmten Attribut ausschließen (nach Attribut ausschließen)."
 
 Mit **[!UICONTROL Blocktyp]** Ausschließen“ können Sie eine bestimmte Unterzielgruppe oder Attribute aus Ihrer neuen größeren Zielgruppe ausschließen.
 
@@ -160,18 +160,18 @@ Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
->title="Block anreichern"
->abstract="Mit dem Block Anreichern können Sie Ihre Audience mit zusätzlichen Attributen aus Adobe Experience Platform-Datensätzen anreichern."
+>title="Block „Anreichern“"
+>abstract="Mit dem Block „Anreichern“ können Sie Ihre Zielgruppe mit zusätzlichen Attributen aus Adobe Experience Platform-Datensätzen anreichern. "
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="Anreicherungsdatensatz"
->abstract="Der Anreicherungsdatensatz enthält die Daten, die Sie mit der Komposition verknüpfen möchten."
+>abstract="Der Anreicherungsdatensatz enthält die Daten, die mit der Komposition verknüpft werden sollen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="Anreicherungskriterien"
->abstract="Zu den Anreicherungskriterien gehören der Source-Join-Schlüssel und der Join-Schlüssel des Anreicherungsdatensatzes. Diese beiden Schlüssel stimmen den Quelldatensatz und den Anreicherungsdatensatz überein."
+>abstract="Zu den Anreicherungskriterien gehören der Quell-Zusammenführungsschlüssel und der Zusammenführungsschlüssel für den Anreicherungsdatensatz. Diese beiden Schlüssel stimmen den Quelldatensatz und den Anreicherungsdatensatz ab."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
@@ -259,12 +259,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
 >title="Block „Rang“"
->abstract="Mit dem Block Rang können Sie Profile nach einem bestimmten Attribut ordnen und in Ihre Komposition einschließen."
+>abstract="Mithilfe des Blocks „Rang“ können Sie Profile nach einem bestimmten Attribut ordnen und in Ihre Komposition einfügen. "
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
 >title="Profil-Limit hinzufügen"
->abstract="Mit dem Umschalter Profil-Limit hinzufügen können Sie eine maximale Anzahl von Profilen angeben, die als Teil des Ranking-Prozesses eingeschlossen werden sollen."
+>abstract="Mit dem Umschalter „Profil-Limit hinzufügen“ können Sie eine maximale Anzahl von Profilen angeben, die als Teil des Rangfolge-Prozesses eingeschlossen werden sollen."
 
 Der Blocktyp **[!UICONTROL Rang]** ermöglicht es Ihnen, Profile anhand eines bestimmten Attributs zu bewerten und zu sortieren und diese bewerteten Profile in Ihre Komposition aufzunehmen.
 
@@ -294,18 +294,18 @@ Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränke
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
->title="Block teilen"
->abstract="Mit dem Block Aufspaltung können Sie Ihre Komposition in mehrere Pfade unterteilen."
+>title="Block „Aufspaltung“"
+>abstract="Der Block „Aufspaltung“ ermöglicht es Ihnen, Ihre Komposition in mehrere Pfade zu unterteilen. "
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="Split-Typ"
->abstract="Sie können Ihre Komposition nach Prozent- oder Attributaufteilung aufteilen. Prozentuale Aufspaltung nach dem Zufallsprinzip Profile in mehrere Pfade aufteilt. Mit der Attributaufteilung können Profile anhand eines bestimmten Attributs aufgeteilt werden."
+>abstract="Zur Aufspaltung Ihre Komposition stehen Ihnen die Optionen „Prozentuale Aufspaltung“ und „Attributaufspaltung“ zur Verfügung. Mit der prozentualen Aufspaltung werden Profile nach dem Zufallsprinzip in mehrere Pfade aufgespalten. Mit der Attributaufspaltung werden Profile anhand eines bestimmten Attributs aufgespalten."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Andere Profile"
->abstract="Mit dem Umschalter Andere Profile können Sie einen zusätzlichen Pfad mit den verbleibenden Profilen erstellen, die keiner der angegebenen Bedingungen für die anderen Pfade entsprechen."
+>abstract="Die Option „Sonstige Profile“ ermöglicht Ihnen, einen zusätzlichen Pfad mit den verbleibenden Profilen zu erstellen, die keiner der in den anderen Pfaden angegebenen Bedingungen entsprechen."
 
 Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen. Bei der Aufteilung Ihrer Zielgruppe in Unterzielgruppen ist diese Aufteilung **nicht** persistent. Das bedeutet, dass sich die Profile bei jeder Bewertung in verschiedenen Unterzielgruppen befinden können.
 

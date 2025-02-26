@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 39%
+ht-degree: 45%
 
 ---
 
@@ -123,8 +123,8 @@ Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="Was sind API-Anmeldeinformationen?"
->abstract="API-Anmeldeinformationen werden Rollen zugewiesen, um Benutzern und Entwicklern Zugriff auf Platform-APIs zu gewähren. Mithilfe von Platform-APIs können Sie programmgesteuert grundlegende CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Daten/Entitäten, den Export von Daten, das Löschen nicht benötigter Daten oder Batches und mehr."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform-API-Handbuch"
+>abstract="API-Anmeldeinformationen werden Rollen zugewiesen, um Benutzenden und Entwickelnden Zugriff auf Platform-APIs zu gewähren. Mithilfe von Platform-APIs können Sie programmgesteuert grundlegende CRUD-Vorgänge (Create, Read, Update, Delete: Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. berechnete Attribute konfigurieren, auf Daten/Entitäten zugreifen, Daten exportieren oder nicht benötigte Daten oder Batches löschen."
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/landing/platform-apis/api-guide" text="Handbuch zur Platform-API"
 
 >[!IMPORTANT]
 >
@@ -160,7 +160,7 @@ Sie werden zur Registerkarte **[!UICONTROL API-Anmeldedaten]** zurückgeleitet.
 >id="platform_permissions_usergroups_about"
 >title="Was sind Benutzergruppen?"
 >abstract="Benutzergruppen sind Sammlungen mehrerer Benutzer, die Zugriff auf dieselben Funktionen haben. Der Zugriff auf Ressourcen innerhalb einer Organisation wird über Rollen verwaltet, die Benutzergruppen zugewiesen sind."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Verwalten von Rollen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Verwalten von Rollen"
 
 Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen.
 
