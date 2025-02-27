@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 14%
+source-wordcount: '1645'
+ht-degree: 16%
 
 ---
 
@@ -24,6 +24,7 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
 - [Quellen](#sources)
+- [Segmentierungs-Service](#segmentation)
 - [Dokumentationsaktualisierungen](#documentation-updates)
    - [Edge Netzwerk- und Hub-Vergleich](#edge)
    - [Erweiterte Flow Service-API für Quellen](#flow-service)
@@ -107,6 +108,18 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 - Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Diese Version umfasst eine Aktualisierung des Deduplizierungsprozesses, sodass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern und die Konsistenz verbessert wird. [Weitere Informationen](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../destinations/home.md).
+
+## Segmentierungs-Service {#segmentation-service}
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Persistente Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 

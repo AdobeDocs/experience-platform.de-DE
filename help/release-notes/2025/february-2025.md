@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 14%
+source-wordcount: '1645'
+ht-degree: 16%
 
 ---
 
@@ -22,6 +23,7 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Katalog-Service](#catalog-service)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
+- [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 - [Dokumentationsaktualisierungen](#documentation-updates)
    - [Edge Netzwerk- und Hub-Vergleich](#edge)
@@ -107,6 +109,17 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 
 Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../destinations/home.md).
 
+## Segmentierungs-Service {#segmentation-service}
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Persistente Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 

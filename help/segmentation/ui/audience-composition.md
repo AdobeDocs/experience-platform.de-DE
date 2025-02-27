@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
-ht-degree: 76%
+source-wordcount: '2313'
+ht-degree: 75%
 
 ---
 
@@ -60,7 +60,7 @@ Wenn Sie den Block **[!UICONTROL Zielgruppen]** auswählen, zeigt die rechte Lei
 
 So fügen Sie Zielgruppen zum Zielgruppenblock hinzu. Wählen Sie **[!UICONTROL Zielgruppe hinzufügen]** aus.
 
-![Die Schaltfläche „Zielgruppe hinzufügen“ ist hervorgehoben.](../images/ui/audience-composition/add-audience.png)
+![Die Schaltfläche „Zielgruppe hinzufügen“ ist hervorgehoben.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Ihre ausgewählten Zielgruppen werden jetzt in der rechten Leiste angezeigt, wen
 
 Um eine benutzerdefinierte Regel zum Zielgruppenblock hinzuzufügen, wählen Sie **[!UICONTROL Regel erstellen]**.
 
-![Die Schaltfläche „Regel erstellen“ ist hervorgehoben.](../images/ui/audience-composition/build-rule.png)
+![Die Schaltfläche „Regel erstellen“ ist hervorgehoben.](../images/ui/audience-composition/select-build-rule.png)
 
 Der Segment Builder wird angezeigt. Sie können den Segment Builder verwenden, um eine benutzerdefinierte Regel für die Zielgruppe zu erstellen. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder.md).
 
@@ -196,7 +196,7 @@ Um den Datensatz auszuwählen, mit dem die Zielgruppe angereichert werden soll, 
 
 Das Popup-Fenster **[!UICONTROL Datensatz auswählen]** erscheint. Wählen Sie den Datensatz aus, den Sie zwecks Anreicherung hinzufügen möchten, gefolgt von **[!UICONTROL Auswählen]**, um den Datensatz für die Anreicherung hinzuzufügen.
 
-![Der gewählte Datensatz ist ausgewählt.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![Der gewählte Datensatz ist ausgewählt.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ Der Abschnitt **[!UICONTROL Anreicherungskriterien]** wird nun in der rechten Le
 
 Um den **[!UICONTROL Quell-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das ![Filter](/help/images/icons/project-edit.png)-Symbol aus.
 
-![Das Filter-Symbol für den [!UICONTROL Quell-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 Das Popup-Fenster **[!UICONTROL Profilattribut auswählen]** erscheint. Wählen Sie das Profilattribut aus, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]**, um dieses Attribut als Quell-Zusammenführungsschlüssel auszuwählen.
 
-![Das Attribut, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![Das Attribut, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/select-source-join-key.png)
 
 Um den **[!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das Symbol ![Filter](/help/images/icons/project-edit.png).
 
-![Das Filtersymbol für den [!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 Das Popup-Fenster **[!UICONTROL Anreicherungsattribute]** erscheint. Wählen Sie das Attribut aus, das Sie als Anreicherungsdatensatz-Zusammenführungsschlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]**, um dieses Attribut als Zusammenführungsschlüssel für den Anreicherungsdatensatz auszuwählen.
 
-![Das Attribut, das Sie als Anreicherungsdatensatz-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![Das Attribut, das Sie als Anreicherungsdatensatz-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Nachdem Sie nun Ihre beiden Zusammenführungsschlüssel hinzugefügt haben, erscheint der Abschnitt **[!UICONTROL Anreicherungsattribute]**. Jetzt können Sie das Attribut hinzufügen, mit dem Sie Ihre Zielgruppe erweitern möchten. Um diese Attribute hinzuzufügen, wählen Sie **[!UICONTROL Attribut hinzufügen]**.
 
-![Die Schaltfläche [!UICONTROL Attribut hinzufügen] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 Das Popup-Fenster **[!UICONTROL Anreicherungsattribute]** erscheint. Sie können die Attribute aus dem Datensatz auswählen, mit denen Sie Ihre Zielgruppe erweitern möchten, gefolgt von **[!UICONTROL Auswählen]**, um die Attribute zu Ihrer Zielgruppe hinzuzufügen.
 
-![Die Anreicherungsattribute, die Sie hinzufügen möchten, werden hervorgehoben.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Die Anreicherungsattribute, die Sie hinzufügen möchten, werden hervorgehoben.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Um festzulegen, nach welchem Attribut die Zielgruppen geordnet werden sollen, w�
 
 Eine Liste der Profilattribute wird angezeigt. In diesem Popup können Sie den Attributtyp auswählen, nach dem Sie Ihre Zielgruppe ordnen möchten. Wählen Sie **[!UICONTROL Auswählen]** aus, um ihn Ihrem Block „Rang“ hinzuzufügen. Bitte beachten Sie, dass die ausgewählten Attribute **nur** Zahlen sein können.
 
-![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute-rank.png)
+![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/rank-attribute.png)
 
 Nach Auswahl des Attributs können Sie die Reihenfolge auswählen, nach der geordnet werden soll. Dies geschieht entweder in aufsteigender (von niedrigster zu höchster) oder in absteigender (von höchster zu niedrigster) Reihenfolge.
 
 Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränken, indem Sie den Umschalter **[!UICONTROL Profil-Limit hinzufügen]** aktivieren. Wenn dieser Umschalter aktiviert ist, können Sie die maximale Anzahl von Profilen festlegen, die innerhalb des Felds **[!UICONTROL Enthaltene Profile]** zurückgegeben wird.
 
-![Der Umschalter „Profil-Limit hinzufügen“ ist hervorgehoben, sodass Sie die Anzahl der zurückgegebenen Profile einschränken können.](../images/ui/audience-composition/add-profile-limit.png)
+![Der Umschalter „Profil-Limit hinzufügen“ ist hervorgehoben, sodass Sie die Anzahl der zurückgegebenen Profile einschränken können.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Aufspaltung] {#split-block}
 
@@ -307,7 +301,7 @@ Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränke
 >title="Andere Profile"
 >abstract="Die Option „Sonstige Profile“ ermöglicht Ihnen, einen zusätzlichen Pfad mit den verbleibenden Profilen zu erstellen, die keiner der in den anderen Pfaden angegebenen Bedingungen entsprechen."
 
-Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen. Bei der Aufteilung Ihrer Zielgruppe in Unterzielgruppen ist diese Aufteilung **nicht** persistent. Das bedeutet, dass sich die Profile bei jeder Bewertung in verschiedenen Unterzielgruppen befinden können.
+Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen.
 
 Um einen Block **[!UICONTROL Aufspaltung]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Aufspaltung]** aus.
 
@@ -325,23 +319,25 @@ Bei der Aufspaltung der Zielgruppe können Sie sie entweder nach Prozentsatz auf
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Persistente Aufspaltung"
->abstract="Sie können die prozentuale Aufspaltung dauerhaft machen, indem Sie diese Option aktivieren und auswählen, in welchem Identity-Namespace die Aufspaltung bestehen bleiben soll."
+>abstract="Sie können die prozentuale Aufspaltung dauerhaft machen, indem Sie diese Option aktivieren und einen Identity-Namespace auswählen."
 
 Bei der Aufteilung nach Prozentsatz werden die Zielgruppen nach dem Zufallsprinzip auf Grundlage der Anzahl der angegebenen Pfade und Prozentsätze aufgeteilt.
 
-Beispielsweise wären drei Pfade mit jeweils unterschiedlichen Prozentsätzen an Profilen möglich.
+![Die prozentuale Aufspaltung ist hervorgehoben.](../images/ui/audience-composition/split-by-percentage.png)
 
-![Die Aufschlüsselung der Anzahl gespeicherter Zielgruppen und Prozentsätze wird angezeigt.](../images/ui/audience-composition/percentages.png)
+Alternativ können Sie auch eine Identität angeben, wodurch die prozentuale Aufspaltung persistent würde. Verfügbare Identitätstypen umfassen alle in Ihrer Organisation verfügbaren Identity-Namespaces.
+
+![Das Kontrollkästchen „Aufspaltung nach Identität“ ist hervorgehoben. Darüber hinaus ist das Dropdown-Menü hervorgehoben, in dem Sie mit einer Identität auswählen können, nach der aufgeteilt werden soll.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Aufspaltung nach Attribut {#split-attribute}
 
 Bei der Aufteilung nach Attribut werden die Zielgruppen anhand der bereitgestellten Attribute aufgeteilt. Um das Attribut auszuwählen, nach dem aufgeteilt werden soll, wählen Sie den Block **[!UICONTROL Aufspaltung]** und dann das Symbol ![Filtern](/help/images/icons/project-edit.png) aus.
 
-![Die Filterschaltfläche ist ausgewählt und zeigt an, wie nach Attribut gefiltert werden kann.](../images/ui/audience-composition/select-split-attribute.png)
+![Die Filterschaltfläche ist ausgewählt und zeigt an, wie nach Attribut gefiltert werden kann.](../images/ui/audience-composition/split-by-attribute.png)
 
 Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp und dann **[!UICONTROL Auswählen]** aus, um ihn zu Ihrem Block hinzuzufügen.
 
-![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute-exclude.png)
+![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute.png)
 
 Nach Auswahl des Attributs können Sie festlegen, welche Profile zu welcher Unterzielgruppe gehören werden, indem Sie die Werte im Feld **[!UICONTROL Werte]** hinzufügen.
 
