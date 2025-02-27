@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: Präzisere Bereitstellung personalisierter Erlebnisse zwischen Apps, im Web und über Domains hinweg.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 3%
@@ -77,7 +77,11 @@ Hängen Sie die Identität an die URL an.
 Führen Sie den `appendIdentityToUrl` Befehl mit einer URL als Parameter aus. Die Methode gibt eine URL zurück, an die die Kennung als Abfragezeichenfolge angehängt wird.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 Sie können einen Ereignis-Listener für alle auf der Seite empfangenen Klicks hinzufügen und überprüfen, ob die URL mit den gewünschten Domains übereinstimmt. Hängen Sie in diesem Fall die Identität an die URL an und leiten Sie den Benutzer weiter.
