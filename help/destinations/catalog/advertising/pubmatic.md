@@ -1,26 +1,37 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximiert den Kundenwert durch die Bereitstellung der programmatischen Digital Marketing Supply Chain der Zukunft. PubMatic Connect kombiniert Plattformtechnologie und dedizierten Service, um die Art und Weise, wie Inventar und Daten gepackt und transagiert werden, zu verbessern.
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 42%
+source-wordcount: '1056'
+ht-degree: 37%
 
 ---
 
+
 # PubMatic Connect-Ziel {#pubmatic-connect}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Nutzen Sie [!DNL PubMatic Connect], um den Kundenwert zu maximieren, indem Sie die programmatische Digital-Marketing-Lieferkette der Zukunft bereitstellen. [!DNL PubMatic Connect] kombiniert Plattformtechnologie und dedizierten Service, um die Art und Weise zu verbessern, wie Inventar und Daten gepackt und verarbeitet werden.
 
-Verwenden Sie dieses Ziel, um Zielgruppendaten an die [!DNL PubMatic Connect]-Plattform zu senden.
+Es sind zwei Ziele verfügbar, mit denen Sie Zielgruppendaten an die PubMatic Connect-Plattform senden können. Sie unterscheiden sich geringfügig in ihrer Funktionalität:
+
+1. PubMatic Connect
+
+   Während der ersten Aktivierung registriert dieses Ziel automatisch die Zielgruppen in der PubMatic-Plattform und verwendet die interne Adobe Experience Platform-ID für die Zuordnung.
+
+2. PubMatic Connect (benutzerdefinierte Zielgruppen-ID-Zuordnung)
+
+   Mit diesem Ziel können Sie während des Aktivierungs-Workflows manuell eine Zuordnungs-ID hinzufügen. Verwenden Sie dieses Ziel, wenn Daten an bestehende Zielgruppen der PubMatic-Plattform gesendet werden sollen oder wenn eine benutzerdefinierte &quot;Source-Zielgruppen-ID“ erforderlich ist.
+
+![Ansicht der beiden PubMatic-Connectoren im Zielkatalog nebeneinander.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL PubMatic]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `support@pubmatic.com`.
+> Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL PubMatic]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `support@pubmatic.com`.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -39,7 +50,7 @@ Wenden Sie sich an Ihren [!DNL PubMatic] Account Manager, um sicherzustellen, da
 [!DNL PubMatic Connect] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
@@ -51,8 +62,8 @@ Wenden Sie sich an Ihren [!DNL PubMatic] Account Manager, um sicherzustellen, da
 In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Ziel exportieren können.
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -62,7 +73,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im PubMatic Connect -Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -128,6 +139,12 @@ Auswählen der Zielfelder:
 - Wählen Sie die Nummer des [!DNL PubMatic UID] aus, die der im ersten Schritt ausgewählten Kennung entspricht.
 
 ![Zuordnen von Attributen und Identitäten](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### Zielgruppen-Planung
+
+Wenn Sie das Ziel PubMatic Connect (Custom Audience ID Mapping) verwenden, müssen Sie für jede Audience eine Mapping-ID angeben, die der &quot;Source Audience ID“ in der PubMatic-Plattform entspricht.
+
+![Zielgruppen-Planung](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
