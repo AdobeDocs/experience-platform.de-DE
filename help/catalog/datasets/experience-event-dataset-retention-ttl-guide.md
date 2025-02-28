@@ -1,9 +1,10 @@
 ---
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ TTL ist nützlich bei der Verwaltung zeitkritischer Daten, die im Laufe der Zeit
 - Verbessern Sie die Abfrageleistung, indem Sie irrelevante Daten minimieren.
 - Pflegen Sie die Datenhygiene, indem Sie nur relevante Informationen aufbewahren.
 - Optimieren Sie die Datenaufbewahrung zur Unterstützung von Geschäftszielen.
+
+>[!NOTE]
+>
+>Die Aufbewahrung von Erlebnisereignis-Datensätzen gilt für Ereignisdaten, die im Data Lake gespeichert sind. Wenn Sie die Datenspeicherung in Real-Time Customer Data Platform verwalten, sollten Sie [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) und [Ablauf pseudonymer Profile](../../profile/pseudonymous-profiles.md) zusammen mit den Einstellungen für die Datenspeicherung im Data Lake verwenden.
+>
+>TTL-Konfigurationen helfen Ihnen bei der Optimierung der Datenspeicherung basierend auf Berechtigungen. Während Profilspeicherdaten (die in Real-Time CDP verwendet werden) als veraltet betrachtet und nach 30 Tagen entfernt werden können, können dieselben Ereignisdaten im Data Lake für 12-13 Monate (oder länger basierend auf der Berechtigung) für Anwendungsfälle von Analytics und Data Distiller verfügbar bleiben.
 
 ### Branchenbeispiel {#industry-example}
 
@@ -121,7 +128,7 @@ Bei einer erfolgreichen Antwort wird die TTL-Konfiguration für den Datensatz zu
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ Eine erfolgreiche Antwort zeigt die TTL-Konfiguration für den Datensatz an. Es 
 | `extensions` | Ein Container für zusätzliche Metadaten im Zusammenhang mit dem Datensatz. |
 | `extensions.adobe_lakeHouse` | Gibt Einstellungen für die Speicherarchitektur an, einschließlich Ablaufkonfigurationen auf Zeilenebene |
 | `rowExpiration` | Das -Objekt enthält TTL-Einstellungen, die die Aufbewahrungsfrist für den Datensatz definieren. |
-| `rowExpiration.ttlValue` | Definiert die Dauer, bevor Datensätze im Datensatz automatisch entfernt werden. Verwendet das ISO-8601-Periodenformat (z. B. `P3M` für 3 Monate oder `P7D` für eine Woche). |
+| `rowExpiration.ttlValue` | Definiert die Dauer, bevor Datensätze im Datensatz automatisch entfernt werden. Verwendet das ISO-8601-Periodenformat (z. B. `P3M` für 3 Monate oder `P30D` für eine Woche). |
 | `rowExpiration.valueStatus` | Die Zeichenfolge gibt an, ob die TTL-Einstellung ein standardmäßiger Systemwert oder ein benutzerdefinierter Wert ist, der von einem Benutzer festgelegt wird. Mögliche Werte sind: `default`, `custom`. |
 | `rowExpiration.setBy` | Gibt an, wer die TTL-Einstellung zuletzt geändert hat. Mögliche Werte sind: `user` (manuell eingestellt) oder `service` (automatisch zugewiesen). |
 | `rowExpiration.updated` | Der Zeitstempel der letzten TTL-Aktualisierung. Dieser Wert gibt an, wann die TTL-Einstellung zuletzt geändert wurde. |
@@ -418,4 +425,3 @@ Nachdem Sie nun gelernt haben, wie Sie TTL-Einstellungen für den Ablauf auf Zei
 - Aufbewahrungsaufträge: Erfahren Sie mit dem [Handbuch zur Datenlebenszyklus-Benutzeroberfläche“, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und automatisieren ](../../hygiene/ui/dataset-expiration.md), oder überprüfen Sie die Konfigurationen zur Datensatzaufbewahrung und stellen Sie sicher, dass abgelaufene Datensätze gelöscht werden.
 - [API-Endpunkthandbuch zur Datensatzgültigkeit](../../hygiene/api/dataset-expiration.md): Erfahren Sie, wie Sie ganze Datensätze und nicht nur Zeilen löschen können. Erfahren Sie, wie Sie die Datensatzgültigkeit mithilfe der API planen, verwalten und automatisieren können, um eine effiziente Datenaufbewahrung zu gewährleisten.
 - [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md) Erfahren Sie, wie Sie Ihre Datenaufbewahrungsstrategie an umfassenderen Compliance-Anforderungen und Marketing-Nutzungsbeschränkungen ausrichten können.
-
