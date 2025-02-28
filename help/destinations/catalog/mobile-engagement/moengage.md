@@ -3,10 +3,10 @@ title: Moengage-Verbindung
 description: Moengage ist eine Plattform zur Kundeninteraktion, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 37%
+source-wordcount: '1036'
+ht-degree: 35%
 
 ---
 
@@ -143,7 +143,10 @@ Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die vorherigen Schritte.
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Moengage]-Ziel exportiert wurden, wechseln Sie zum Benutzerprofil in Ihrem [!DNL Moengage]. Daraufhin wird ein Benutzerattribut mit dem Namen „AEP-Segment“ angezeigt.
+Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Moengage]-Ziel exportiert wurden, wechseln Sie zum Benutzerprofil in Ihrem [!DNL Moengage]. Hier sollten Sie ein Benutzerattribut mit dem Namen `AEPSegments` finden, das automatisch erstellt wird, sowie die anderen benutzerdefinierten Attribute, die in den vorherigen Schritten in Adobe Experience Platform zugeordnet wurden.
+
+`AEPSegments` ist ein Attribut vom Typ Array in [!DNL Moengage]. Es werden alle Adobe-Zielgruppennamen aufgelistet, mit denen die Benutzerin bzw. der Benutzer in Experience Platform verknüpft ist.
+
 
 ![MoEngage-Zielzuordnung abgeschlossen](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
