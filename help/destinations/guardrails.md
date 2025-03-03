@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 48%
+source-wordcount: '1666'
+ht-degree: 49%
 
 ---
 
@@ -33,7 +33,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 | Art der Leitplanke | Beschreibung |
 |----------|---------|
-| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
 | **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungs-Schutzmaßnahme | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Performance sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
 | Maximale Anzahl von Zielen | 100 | Vom System erzwungene Leitplanken | Sie können maximal 100 Ziele erstellen, mit denen Sie (pro Sandbox) Daten verbinden *aktivieren*. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Vom System erzwungene Leitplanken | Derzeit ist es nur möglich, *Profilsatzattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). Sie müssen weiterhin die Funktion `array_to_string` verwenden, um das Array in der Zieldatei in eine Zeichenfolge zu reduzieren. [Weitere Informationen](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) über die Funktion. <br><br> Derzeit ist es **nicht** möglich, *Zuordnungsattribute“* Ziele zu exportieren. Die Ausnahme von dieser Regel ist die [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md), die sowohl bei Streaming- als auch bei dateibasierten Aktivierungen exportiert wird. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-calculated-fields.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ Datensatzexporte werden derzeit in einem &quot;**[!UICONTROL Full“- und dann e
 
 #### Datensatztypen {#dataset-types}
 
-Die Leitplanken für den Datensatzexport gelten für zwei Arten von Datensätzen, die von Experience Platform exportiert werden, wie unten beschrieben:
+Die Leitplanken für den Datensatzexport gelten für zwei Arten von Datensätzen, die aus Experience Platform exportiert werden, wie unten beschrieben:
 
 **Datensätze, die auf dem XDM-Erlebnisereignis-Schema basieren**
 Im Fall von Datensätzen, die auf dem XDM-Erlebnisereignis-Schema basieren, enthält das Datensatzschema eine Spalte der obersten Ebene *Zeitstempel*. Die Daten werden nur angehängt aufgenommen.
@@ -194,10 +194,10 @@ Details zu Drosselungsschwellwerten oder -beschränkungen für bestimmte Ziele. 
 
 ## Nächste Schritte
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
-* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
