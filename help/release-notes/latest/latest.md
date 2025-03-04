@@ -2,18 +2,14 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 16%
+source-wordcount: '1628'
+ht-degree: 17%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
-
->[!TIP]
->
->Diese Version enthält Verbesserungen am Add-on Federated Audience Composition . Weitere Informationen finden Sie in den [Versionshinweisen zur Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
 
 **Versionsdatum: Mittwoch, 18. Februar 2025**
 
@@ -23,6 +19,7 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Katalog-Service](#catalog-service)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
+- [Federated-Audience-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Quellen](#sources)
 - [Segmentierungs-Service](#segmentation)
 - [Dokumentationsaktualisierungen](#documentation-updates)
