@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2024
 description: Versionshinweise von Oktober 2024 für Adobe Experience Platform.
 exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
@@ -42,7 +42,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 ## Datenerfassung {#collection}
 
-Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Experience Platform-Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an die Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
 
 **Neue Funktionen**
 
@@ -62,8 +62,8 @@ Weitere Informationen finden Sie im Abschnitt [Übersicht über die Datenerfassu
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [Array-Exportunterstützung allgemein verfügbar](../../destinations/ui/export-arrays-calculated-fields.md) | Alle -Kunden können jetzt die Option **[!UICONTROL Berechnetes Feld hinzufügen]** beim Aktivieren von Zielgruppen *für dateibasierte Ziele* verwenden, um ganze Arrays oder Elemente von Arrays zu exportieren. Beachten Sie, dass Sie weiterhin die Funktion `array_to_string` verwenden müssen, um das Array in der Zieldatei in eine Zeichenfolge zu reduzieren. <br> ![Hinzufügen der berechneten Feldauswahl mit Funktionen und Feldern.](../2024/assets/october/array-export.gif "Fügen Sie ein berechnetes Feld mit einer Auswahl der Funktion array_to_string und dem Array „Organisations“ hinzu."){width="250" align="center" zoomable="yes"} |
-| [Verbesserungen der Berichtsgenauigkeit für Streaming-Ziele](/help/destinations/ui/export-datasets.md) | Ab Oktober 2024 führt Adobe ein Update durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Experience Platform- und der Zielplattform-Berichterstellung sichergestellt. <br> Vor diesem Update wurden bei **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche einbezogen. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen. <br> Diese Verbesserung gilt derzeit für das [Ziel von Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt. Nach dieser Verbesserung kann es bei Benutzenden des [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen. |
+| [Array-Exportunterstützung allgemein verfügbar](../../destinations/ui/export-arrays-maps-objects.md) | Alle -Kunden können jetzt die Option **[!UICONTROL Berechnetes Feld hinzufügen]** beim Aktivieren von Zielgruppen *für dateibasierte Ziele* verwenden, um ganze Arrays oder Elemente von Arrays zu exportieren. Beachten Sie, dass Sie weiterhin die Funktion `array_to_string` verwenden müssen, um das Array in der Zieldatei in eine Zeichenfolge zu reduzieren. <br> ![Hinzufügen der berechneten Feldauswahl mit Funktionen und Feldern.](../2024/assets/october/array-export.gif "Fügen Sie ein berechnetes Feld mit einer Auswahl der Funktion array_to_string und dem Array „Organisations“ hinzu."){width="250" align="center" zoomable="yes"} |
+| [Verbesserungen der Berichtsgenauigkeit für Streaming-Ziele](/help/destinations/ui/export-datasets.md) | Ab Oktober 2024 führt Adobe ein Update ein, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und die Zielplattformen sichergestellt. <br> Vor diesem Update wurden bei **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche einbezogen. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen. <br> Diese Verbesserung gilt derzeit für das [Ziel von Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt. Nach dieser Verbesserung kann es bei Benutzenden des [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen. |
 | Auswirkungen der flexiblen Zielgruppenauswertung auf [Batch-Zielgruppenaktivierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Wenn Sie [flexible Zielgruppenauswertung](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) für Zielgruppen ausführen, die bereits nach der Segmentauswertung aktiviert werden sollen, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenauswertungsauftrag abgeschlossen ist, unabhängig von vorherigen täglichen Aktivierungsaufträgen. <br> Dies kann dazu führen, dass Zielgruppen basierend auf Ihren Aktionen mehrmals täglich exportiert werden. |
 
 {style="table-layout:auto"}
@@ -78,7 +78,7 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung | Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf schnell neue Zielgruppen für zeitkritische Kommunikation erstellen. Weitere Informationen zu dieser neuen Funktion finden Sie in der [Audience Portal-Dokumentation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenauswertung | Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf schnell neue Zielgruppen für zeitkritische Kommunikation erstellen. Weitere Informationen zu dieser neuen Funktion finden Sie in der [Audience Portal-Dokumentation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 

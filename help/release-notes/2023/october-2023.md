@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2023
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 36%
@@ -69,7 +69,7 @@ Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Daten
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| (Beta) Unterstützung für Hash-Funktionen in berechneten Feldern | Zusätzlich zu den Funktionen für den [Export von Arrays](../../destinations/ui/export-arrays-calculated-fields.md) oder Elementen aus einem Array können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) verwenden, um Attribute in den exportierten Dateien zu hashen. Die unterstützten Hash-Funktionen sind: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Unterstützung für Hash-Funktionen in berechneten Feldern | Zusätzlich zu den Funktionen für den [Export von Arrays](../../destinations/ui/export-arrays-maps-objects.md) oder Elementen aus einem Array können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) verwenden, um Attribute in den exportierten Dateien zu hashen. Die unterstützten Hash-Funktionen sind: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
 | (Eingeschränkte GA) Aktivieren von Konto-Zielgruppen für bestimmte Ziele | Real-Time CDP B2B-Kunden können jetzt [Account-Zielgruppen](../../segmentation/types/account-audiences.md) für bestimmte Ziele aktivieren. Weitere Informationen zu dieser Funktion finden Sie im Tutorial [Aktivieren von Konto-Zielgruppen](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}

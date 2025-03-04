@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
+source-wordcount: '4374'
 ht-degree: 51%
 
 ---
@@ -63,9 +63,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die beim Experience Platform durch den Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
-* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Kontrollkästchen, die angezeigt werden, wenn eine oder mehrere zu aktivierende Zielgruppen ausgewählt werden.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -86,13 +86,13 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 [!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele [verschiedene Dateitypen](#supported-file-formats-export). Auf der **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren.
 
-Beim Experience Platform wird automatisch ein Standardzeitplan für jeden Dateiexport festgelegt. Sie können den Standardzeitplan Ihren Anforderungen entsprechend ändern, indem Sie auf das Stiftsymbol neben jedem Zeitplan klicken und einen benutzerdefinierten Zeitplan definieren.
+Experience Platform legt automatisch einen Standardzeitplan für jeden Dateiexport fest. Sie können den Standardzeitplan Ihren Anforderungen entsprechend ändern, indem Sie auf das Stiftsymbol neben jedem Zeitplan klicken und einen benutzerdefinierten Zeitplan definieren.
 
 ![Steuerung „Zeitplan bearbeiten“ im Schritt „Planung“ hervorgehoben.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
 Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen, indem Sie die Kontrollkästchen auf der linken Seite des Bildschirms aktivieren, und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]**. Der konfigurierte Zeitplan wird dann auf alle exportierten Dateien für die ausgewählten Zielgruppen angewendet.
 
-![Abbildung der Experience Platform-Benutzeroberfläche mit der Option „Zeitplan bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![Abbildung der Benutzeroberfläche von Experience Platform mit der Option „Zeitplan bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -142,7 +142,7 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export ei
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![Abbildung mit hervorgehobener Option „Nach der Segmentauswertung“ im Aktivierungsfluss für Batch-Ziele](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Mit dieser Option wird sichergestellt, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsauftrag vor dem Start des Aktivierungsauftrags abgeschlossen wurde.
+Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Diese Option stellt sicher, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsauftrag vor dem Start des Aktivierungsauftrags abgeschlossen wurde.
 
    ![Abbildung mit hervorgehobener Option „Geplant“ im Aktivierungsfluss für Batch-Ziele und Anzeige der Zeitauswahl](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -221,7 +221,7 @@ Zielname und Zielgruppen-ID können nicht aus Dateinamen entfernt werden. Zusät
 
 Um mehrere Dateinamen gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen, indem Sie die Kontrollkästchen auf der linken Seite des Bildschirms aktivieren, und wählen Sie dann **[!UICONTROL Dateinamen bearbeiten]**. Die von Ihnen konfigurierten Dateinamenoptionen werden dann für die ausgewählten Zielgruppen auf alle exportierten Dateien angewendet.
 
-![Abbildung der Experience Platform-Benutzeroberfläche mit der Option „Dateinamen bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![Abbildung der Benutzeroberfläche von Experience Platform mit der Option „Dateinamen bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Klicken Sie auf **[!UICONTROL Änderungen übernehmen]**, um Ihre Auswahl zu bestätigen.
 
@@ -270,7 +270,7 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 
    >[!NOTE]
    >
-   >Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Um Zugriff auf diese Funktion zu erhalten, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
+   >Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten.
 
    ![Aufzeichnung, in der die Zuordnungsfelder per Drag-and-Drop neu angeordnet werden.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -464,9 +464,9 @@ Nach der Deduplizierung enthält die Exportdatei Folgendes:
 
 **Verbesserte Zuverlässigkeit**: Dieser aktualisierte Deduplizierungsprozess stellt sicher, dass aufeinander folgende Ausführungen mit denselben Koordinaten immer dieselben Ergebnisse liefern, was die Konsistenz verbessert.
 
-### Exportieren von Arrays über berechnete Felder {#export-arrays-calculated-fields}
+### Durchführen von Datenumwandlungen über berechnete Felder {#calculated-fields}
 
-Ausgewählte Beta-Kundinnen und -Kunden können Array-Objekte von Experience Platform in Cloud-Speicher-Ziele exportieren. Lesen Sie mehr über [Exportieren von Arrays und berechneten Feldern](/help/destinations/ui/export-arrays-calculated-fields.md) und wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf die Funktion zu erhalten.
+Sie können das Steuerelement [Berechnete Felder](/help/destinations/ui/data-transformations-calculated-fields.md) verwenden, um verschiedene Datenumwandlungen der in dateibasierte Ziele exportierten Daten durchzuführen.
 
 ### Bekannte Einschränkungen {#known-limitations}
 
@@ -554,7 +554,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 >
 >Dieser Schritt wird nur angezeigt, wenn Sie im Schritt **[!UICONTROL Zielgruppenauswahl]** Zielgruppen [benutzerdefiniert hochladen](#select-audiences) ausgewählt haben.
 
-Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die als benutzerdefinierte **[!UICONTROL in Experience Platform aufgenommen]**. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
+Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL benutzerdefinierte Uploads“ aufgenommen]**. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
 
 ![UI-Bild, das den Auswahlschritt der Anreicherungsattribute anzeigt.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 

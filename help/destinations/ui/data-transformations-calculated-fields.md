@@ -2,10 +2,11 @@
 title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder in Cloud-Speicher-Ziele exportiert wurden
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 4%
+source-wordcount: '1595'
+ht-degree: 3%
 
 ---
 
@@ -15,8 +16,15 @@ ht-degree: 4%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Hinzufügen von berechneten Feldern"
 >abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um verschiedene Datenumwandlungen von Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden. Sie können beispielsweise Hashing auf Daten anwenden, Arrays zu Zeichenfolgen verketten und vieles mehr."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#examples" text="Beispiele"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#known-limitations" text="Bekannte Einschränkungen"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -31,7 +39,7 @@ Um verschiedene Umwandlungen an Daten durchzuführen, die in Cloud-Speicher-Ziel
 
 So verwenden Sie berechnete Felder für Datenumwandlungen:
 
-1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die Option **[!UICONTROL Arrays, Karten, Objekte exportieren]** [aus](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
+1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die Option **[!UICONTROL Arrays, Karten, Objekte exportieren]** [aus](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Führen Sie die [Aktivierungsschritte für Cloud-Speicher](/help/destinations/ui/activate-batch-profile-destinations.md)Ziele aus und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Arbeiten mit berechneten Feldern {#how-to-export-calculated-fields}
@@ -50,7 +58,7 @@ Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-
 
 >[!TIP]
 >
->Das **[!UICONTROL Berechnetes Feld hinzufügen]**-Steuerelement ist für Zielverbindungen deaktiviert, bei denen das **[!UICONTROL Exportieren von Arrays, Zuordnungen und]**&quot; deaktiviert wurde. [Weitere Informationen](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
+>Das **[!UICONTROL Berechnetes Feld hinzufügen]**-Steuerelement ist für Zielverbindungen deaktiviert, bei denen das **[!UICONTROL Exportieren von Arrays, Zuordnungen und]**&quot; deaktiviert wurde. [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Berechnetes Feld hinzufügen, das im Zuordnungsschritt des Batch-Aktivierungs-Workflows hervorgehoben ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
