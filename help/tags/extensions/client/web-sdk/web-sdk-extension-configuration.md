@@ -2,16 +2,16 @@
 title: Konfigurieren der Tag-Erweiterung „Web SDK"
 description: Erfahren Sie, wie Sie die Tag-Erweiterung "Experience Platform Web SDK" in der Tags-Benutzeroberfläche konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
+source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2874'
 ht-degree: 4%
 
 ---
 
 # Konfigurieren der Web SDK-Tag-Erweiterung
 
-Die [!DNL Web SDK] Tag-Erweiterung sendet Daten von Web-Eigenschaften über das Experience Platform-Edge Network an Adobe Experience Cloud.
+Die Tag-Erweiterung &quot;[!DNL Web SDK]&quot; sendet Daten von Web-Eigenschaften über die Edge Network von Experience Platform an Adobe Experience Cloud.
 
 Die Erweiterung ermöglicht es Ihnen, Daten in Platform zu streamen, Identitäten zu synchronisieren, Einverständnissignale von Kunden zu verarbeiten und automatisch Kontextdaten zu erfassen.
 
@@ -33,6 +33,39 @@ Nach Auswahl von **[!UICONTROL Installieren]** müssen Sie die Tag-Erweiterung f
 >
 >Die Tag-Erweiterung wird erst nach dem Speichern der Konfiguration installiert. In den nächsten Abschnitten erfahren Sie, wie Sie die Tag-Erweiterung konfigurieren.
 
+## Erstellen eines benutzerdefinierten Web-SDK-Builds {#custom-build}
+
+Die Web SDK-Bibliothek enthält mehrere Module für verschiedene Funktionen wie Personalisierung, Identitätsnachverfolgung, Linktracking und mehr. Je nach Anwendungsfällen benötigen Sie möglicherweise nur bestimmte Funktionen anstelle der gesamten Bibliothek. Wenn Sie einen benutzerdefinierten Web-SDK-Build erstellen, können Sie nur die benötigten Module auswählen, die Bibliotheksgröße reduzieren und die Leistung verbessern.
+
+Wenn Sie einen benutzerdefinierten Web-SDK-Build erstellen, wird der Build von allen Ihren Web-SDK-Instanzen verwendet.
+
+>[!IMPORTANT]
+>
+>Durch das Deaktivieren von Web SDK-Komponenten kann die bestehende Implementierung beschädigt werden. Jedes Mal, wenn Sie eine Komponente deaktivieren, sollten Sie Ihre Implementierung gründlich testen, um sicherzustellen, dass alle benötigten Funktionen erwartungsgemäß funktionieren.
+>Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten.
+
+Gehen Sie wie folgt vor, um einen benutzerdefinierten Web-SDK-Build mithilfe der Tag-Erweiterung „Web SDK&quot; zu erstellen.
+
+1. Erweitern Sie auf der Seite für die Konfiguration von Tag **[!UICONTROL Erweiterungen den Abschnitt]** Benutzerdefinierte Build-Komponenten“.
+1. Aktivieren oder deaktivieren Sie die Komponenten je nach Bedarf. Sie können aus den folgenden Komponenten auswählen:
+   * **[!UICONTROL Activity Collector]**: Diese Komponente ermöglicht die automatische Link-Erfassung und Activity Map-Verfolgung.
+   * **[!UICONTROL Audiences]**: Diese Komponenten ermöglichen die Integration von Audience Manager, einschließlich URL- und Cookie-basierter Ziele, und ID-Synchronisierungen.
+   * **[!UICONTROL Einverständnis]**: Diese Komponente ermöglicht Integrationen von Einverständnissen. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Einverständnis festlegen](action-types.md#set-consent) Aktionstyp
+   * **[!UICONTROL Kontext]**: Diese Komponente ermöglicht die automatische Erfassung von Kontextdaten.
+   * **[!UICONTROL Ereigniszusammenführung]**: _Veraltet_. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Ereignis-Zusammenführungskennung](action-types.md#data) Datenelement
+      * **[!UICONTROL Ereignis-Zusammenführungs-ID zurücksetzen]** Aktionstyp
+   * **[!UICONTROL Media Analytics Bridge]**: Diese Komponente ermöglicht Edge Network Streaming Media mithilfe der Media Analytics-Oberfläche. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Abrufen von Media Analytics Tracker](action-types.md#get-media-analytics-tracker) Aktionstyp
+   * **[!UICONTROL Personalization]**: Diese Komponente ermöglicht die Integration von Adobe Target und Adobe Journey Optimizer. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Aktionstyp „Vorschläge ](action-types.md)&quot;
+   * **[!UICONTROL Regel-Engine]**: Diese Komponente aktiviert die Adobe Journey Optimizer-Entscheidungsfindung auf dem Gerät. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Regelsätze auswerten](action-types.md#evaluate-rulesets) Aktionstyp
+      * [Regelsatzelemente abonnieren](event-types.md#subscribe-ruleset-items) Ereignistyp
+   * **[!UICONTROL Streaming-Medien]**: Diese Komponente aktiviert Edge Network Streaming-Medien. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
+      * [Medienereignis senden](action-types.md#send-media-event) Aktionstyp
+
 ## Instanzeinstellungen konfigurieren {#general}
 
 Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wohin die Daten weitergeleitet werden sollen und welche Konfigurationen auf dem Server verwendet werden sollen.
@@ -40,14 +73,14 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 ![Abbildung mit den allgemeinen Einstellungen der Tag-Erweiterung „Web SDK&quot; in der Tags-Benutzeroberfläche](assets/web-sdk-ext-general.png)
 
 * **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten an mehrere Organisationen mit einer Tag-Konfiguration zu senden. Der Instanzname ist standardmäßig auf `alloy` festgelegt. Sie können jedoch den Instanznamen in einen beliebigen gültigen JavaScript-Objektnamen ändern.
-* **[!UICONTROL IMS-Organisations-ID]**: Die ID der Organisation, an die die Daten auf Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, füllen Sie dieses Feld mit dem Wert der zweiten Organisation, an die Sie Daten senden möchten.
+* **[!UICONTROL IMS-Organisations-ID]**: Die ID der Organisation, an die die Daten mit Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, füllen Sie dieses Feld mit dem Wert der zweiten Organisation, an die Sie Daten senden möchten.
 * **[!UICONTROL Edge-Domain]**: Die Domain, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieter-Domain (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
 ## Konfigurieren von Datenstromeinstellungen {#datastreams}
 
 In diesem Abschnitt können Sie die Datenströme auswählen, die für jede der drei verfügbaren Umgebungen (Produktion, Staging und Entwicklung) verwendet werden sollen.
 
-Wenn eine Anfrage an das -Edge Network gesendet wird, wird eine Datenstrom-ID verwendet, um auf die Server-seitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
+Wenn eine Anfrage an die Edge Network gesendet wird, wird eine Datenstrom-ID verwendet, um auf die Server-seitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
 Informationen zum Konfigurieren eines [ finden ](../../../../datastreams/overview.md) im Handbuch zu Datenströmen .
 
@@ -115,7 +148,7 @@ Konfigurationseinstellungen für die Datenerfassung verwalten Ähnliche Einstell
 
 ![Bild mit den Datenerfassungseinstellungen der Web-SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Rückruf vor Ereignisversand]**: Eine Rückruffunktion zum Auswerten und Ändern der an Adobe gesendeten Payload. Verwenden Sie die Variable `content` innerhalb der Rückruffunktion, um die Payload zu ändern. Dieser Callback ist das Tag, das der [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der JavaScript-Bibliothek entspricht.
+* **[!UICONTROL Rückruf vor Ereignisversand]**: Eine Rückruffunktion zur Auswertung und Änderung der an Adobe gesendeten Payload. Verwenden Sie die Variable `content` innerhalb der Rückruffunktion, um die Payload zu ändern. Dieser Callback ist das Tag, das der [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der JavaScript-Bibliothek entspricht.
 * **[!UICONTROL Interne Link-Klicks erfassen]**: Ein Kontrollkästchen, das die Erfassung von Linktracking-Daten innerhalb Ihrer Site oder Eigenschaft ermöglicht. Wenn Sie dieses Kontrollkästchen aktivieren, werden Optionen für die Ereignisgruppierung angezeigt:
    * **[!UICONTROL Keine Ereignisgruppierung]**: Linktracking-Daten werden in separaten Ereignissen an Adobe gesendet. Link-Klicks, die in separaten Ereignissen gesendet werden, können die vertragliche Nutzung der an Adobe Experience Platform gesendeten Daten erhöhen.
    * **[!UICONTROL Ereignisgruppierung mit Sitzungsspeicher]**: Speichern von Linktracking-Daten im Sitzungsspeicher bis zum nächsten Seitenereignis. Auf der folgenden Seite werden die gespeicherten Linktracking-Daten und Seitenansichtsdaten gleichzeitig an Adobe gesendet. Adobe empfiehlt, diese Einstellung beim Tracking interner Links zu aktivieren.
@@ -159,7 +192,7 @@ Dies hilft Ihnen beim Auslösen anderer Datenstromverhaltensweisen als der stand
 Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](/help/datastreams/configure.md) definieren.
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web-SDK-Befehl oder mithilfe der Tag-Erweiterung „Web SDK&quot; an das Edge Network senden.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web-SDK-Befehl oder mithilfe der Tag-Erweiterung „Web SDK&quot; an Edge Network senden.
 
 Detaillierte Anweisungen [ Überschreiben von Datenstromkonfigurationen finden Sie ](/help/datastreams/overrides.md) der Dokumentation zu Datenstromkonfigurationen .
 
@@ -200,7 +233,7 @@ Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Ad
 ![UI-Bild der Web SDK-Tag-Erweiterung mit den Einstellungen für die Überschreibung des Adobe Audience Manager-Datenstroms.](assets/datastream-override-audience-manager.png)
 
 * **[!UICONTROL Aktiviert]**/**[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum Adobe Audience Manager-Service zu aktivieren oder zu deaktivieren.
-* **[!UICONTROL Synchronisierungs-Container für Drittanbieter-ID]**: Die ID für den Ziel-Synchronisierungs-Container für Drittanbieter-IDs im Audience Manager. Der Wert muss ein vorkonfigurierter sekundärer Container aus Ihrer Datenstromkonfiguration sein und überschreibt den primären Container.
+* **[!UICONTROL Synchronisierungs-Container für Drittanbieter-ID]**: Die ID für den Ziel-Synchronisierungs-Container für Drittanbieter-IDs in Audience Manager. Der Wert muss ein vorkonfigurierter sekundärer Container aus Ihrer Datenstromkonfiguration sein und überschreibt den primären Container.
 
 ### Adobe Experience Platform {#experience-platform}
 
@@ -210,18 +243,18 @@ Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Ad
 
 * **[!UICONTROL Aktiviert]**/**[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum Adobe Experience Platform-Service zu aktivieren oder zu deaktivieren.
 * **[!UICONTROL Ereignisdatensatz]**: Die ID für den Zielereignisdatensatz in der Adobe Experience Platform. Der Wert muss ein vorkonfigurierter sekundärer Datensatz aus Ihrer Datenstromkonfiguration sein.
-* **[!UICONTROL Offer decisioning]**: Verwenden Sie dieses Dropdown-Menü, um das Datenrouting an den [!DNL Offer Decisioning]-Service zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Offer Decisioning]**: Verwenden Sie dieses Dropdown-Menü, um das Datenrouting an den [!DNL Offer Decisioning]-Service zu aktivieren oder zu deaktivieren.
 * **[!UICONTROL Edge-]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum [!DNL Edge Segmentation]-Service zu aktivieren oder zu deaktivieren.
 * **[!UICONTROL Personalization-Ziele]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zu Personalisierungszielen zu aktivieren oder zu deaktivieren.
 * **[!UICONTROL Adobe Journey Optimizer]**: Verwenden Sie dieses Dropdown-Menü, um das Datenrouting an den [!DNL Adobe Journey Optimizer]-Service zu aktivieren oder zu deaktivieren.
 
-### Adobe-Server-seitige Ereignisweiterleitung {#ssf}
+### Serverseitige Ereignisweiterleitung für Adobe {#ssf}
 
-Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Server-seitigen Adobe-Ereignisweiterleitungs-Service zu überschreiben.
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Server-seitigen Ereignisweiterleitungs-Service von Adobe zu überschreiben.
 
-![Bild der Tag-Erweiterung der Web SDK in der Benutzeroberfläche mit den Überschreibungseinstellungen für den Adobe-Server-seitigen Ereignisweiterleitungs-Datenstrom.](assets/datastream-override-ssf.png)
+![Bild der Tag-Erweiterung der Web SDK-Benutzeroberfläche mit den Überschreibungseinstellungen für den Datenstrom der Server-seitigen Ereignisweiterleitung von Adobe.](assets/datastream-override-ssf.png)
 
-* **[!UICONTROL Aktiviert]**/**[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum Server-seitigen Adobe-Ereignisweiterleitungs-Service zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Aktiviert]**/**[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum Server-seitigen Ereignisweiterleitungs-Service von Adobe zu aktivieren oder zu deaktivieren.
 
 ### Adobe Target {#target}
 
@@ -233,6 +266,6 @@ Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Ad
 
 ## Konfigurieren der erweiterten Einstellungen
 
-Verwenden Sie das Feld **[!UICONTROL Edge]** Basispfad, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge Network verwendet wird. Dies sollte keine Aktualisierung erfordern, aber für den Fall, dass Sie an einer Beta- oder Alpha-Version teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
+Verwenden Sie das Feld **[!UICONTROL Edge]** Basispfad, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit Edge Network verwendet wird. Dies sollte keine Aktualisierung erfordern, aber für den Fall, dass Sie an einer Beta- oder Alpha-Version teilnehmen, bittet Adobe Sie möglicherweise, dieses Feld zu ändern.
 
 ![Bild, das die erweiterten Einstellungen mithilfe der Tag-Erweiterungs-Seite von Web SDK zeigt.](assets/advanced-settings.png)

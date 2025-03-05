@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 52%
+source-wordcount: '239'
+ht-degree: 50%
 
 ---
 
@@ -19,13 +19,14 @@ ht-degree: 52%
 * [Web SDK – Übersicht](home.md)
 * [Versionshinweise](release-notes.md)
 * Web SDK-{#install}
-   * [Übersicht](install/overview.md)
+   * [Überblick](install/overview.md)
    * [Installieren von Web SDK mithilfe der Tag-Erweiterung](install/extension.md)
    * [Installieren von Web SDK mithilfe der JavaScript-Bibliothek](install/library.md)
    * [Installieren von Web SDK mithilfe des NPM-Pakets](install/npm.md)
+   * [Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket](install/create-custom-build.md)
 * Befehle {#commands}
    * Konfigurieren von {#configure}
-      * [Übersicht](commands/configure/overview.md)
+      * [Überblick](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
@@ -45,7 +46,7 @@ ht-degree: 52%
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent-{#sendevent}
-      * [Übersicht](commands/sendevent/overview.md)
+      * [Überblick](commands/sendevent/overview.md)
       * [data](commands/sendevent/data.md)
       * [DokumentEntladen](commands/sendevent/documentunloading.md)
       * [Personalisierung](commands/sendevent/personalization.md)
@@ -100,7 +101,7 @@ ht-degree: 52%
       * [Integrieren ohne Tags](consent/iab-tcf/without-tags.md)
 
 * Anwendungsfälle {#use-cases}
-   * [Übersicht](use-cases/overview.md)
+   * [Überblick](use-cases/overview.md)
    * [Senden von Daten an Adobe Analytics mithilfe der Web-SDK](use-cases/adobe-analytics.md)
    * [User Agent Client-Hinweise](use-cases/client-hints.md)
    * [Erfassen von Commerce-Daten](use-cases/collect-commerce-data.md)
