@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 75%
+source-wordcount: '2580'
+ht-degree: 70%
 
 ---
 
@@ -13,11 +13,24 @@ ht-degree: 75%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Version 2.29.0 – Donnerstag, 5. März 2025
+
+**Neue Funktionen**
+
+- Sie können jetzt benutzerdefinierte Web-SDK-Builds erstellen und die benötigten Komponenten über die Benutzeroberfläche der Tag-Erweiterung auswählen. Dies kann zu kleineren Builds führen, indem nicht verwendete Komponenten ausgeschlossen werden. Weitere Informationen finden Sie in der Dokumentation [Erstellen eines benutzerdefinierten Web-SDK-Builds](web-sdk-extension-configuration.md#custom-build).
+- Enthält [Version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) des Adobe Experience Platform Web SDK.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Eine elegante Handhabung fehlender Datenelemente in Aktionen vom Typ [Variable aktualisieren](action-types.md#update-variable) wurde hinzugefügt. Zuvor wurde beim Bearbeiten einer Aktion „Variable aktualisieren“ mit einem fehlenden Datenelement eine Fehlermeldung angezeigt. Jetzt können Sie ein anderes Datenelement auswählen und alle Einstellungen für die Aktion „Variable aktualisieren“ werden weiterhin angewendet. Datenelemente können fehlen, wenn sie gelöscht oder eine Tags-Eigenschaft dupliziert wird.
+- Das Öffnen einer neuen Registerkarte mit der Aktion [Umleiten mit Identität](action-types.md#redirect-with-identity) wird nun unterstützt. Bei Verwendung der Aktion wird jetzt das `target` des Anker-Tags verwendet, wenn der Browser umgeleitet wird.
+- Es wurde ein Problem behoben, bei dem Adobe Audience Manager in Konfigurationsüberschreibungen nicht deaktiviert werden konnte.
+
 ## Version 2.28.0 – Freitag, 23. Januar 2025
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem Überschreibungen des ID-Synchronisierungs-Containers ohne Aktivierung von Audience Manager nicht festgelegt werden konnten.
+- Es wurde ein Problem behoben, bei dem Überschreibungen des ID-Synchronisierungs-Containers nicht festgelegt werden konnten, ohne Audience Manager zu aktivieren.
 - Es wurde ein Problem behoben, bei dem Überschreibungen der Datenstromkonfiguration beim Upgrade auf die neueste Version deaktiviert wurden.
 - Es wurde ein Problem behoben, bei dem Benutzer die Einstellungen für die automatische Klicksammlung von Target nicht speichern konnten.
 
@@ -30,7 +43,7 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 **Neue Funktionen**
 
-- [Datenstrom-Überschreibungen](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthalten jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Services.
+- [Datenstromüberschreibungen](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthalten jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Services.
 - Sie können jetzt [Datenstrom-Überschreibungen](../web-sdk/web-sdk-extension-configuration.md) für Mediensitzungen erstellen.
 
 Enthält Version 2.24.0 des Adobe Experience Platform Web SDK.
@@ -260,7 +273,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Weitere Informationen aus dem Edge Network sind im Ereignis „Versandereignis abgeschlossen“ verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
+- Weitere Informationen aus der Edge Network sind im Ereignis „Versandereignis abgeschlossen“ verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
 
 ## Version 2.7.3 – 7. September 2021
 
@@ -310,7 +323,7 @@ Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 - Ein Kontrollkästchen [ „Dokument wird ](/help/web-sdk/commands/sendevent/documentunloading.md)&quot; wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
-- Bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehls wurde Unterstützung für Adobe-Einverständnis 2.0-Standard hinzugefügt.
+- Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehls hinzugefügt.
 - In der Benutzeroberfläche für das XDM-Objekt-Datenelement wird jetzt eine passendere Fehlermeldung angezeigt, wenn das Zugriffstoken der Benutzenden ungültig ist oder nicht ordnungsgemäß bereitgestellt wurde.
 - Es wurde ein ursprungsübergreifender Fehler behoben (was sich nicht auf die Nutzung der Erweiterung auswirkt), der beim Anzeigen eines XDM-Objekt-Datenelements in der Developer Console für den Browser eingeblendet wurde.
 

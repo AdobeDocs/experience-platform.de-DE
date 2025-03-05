@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 70%
+source-wordcount: '2285'
+ht-degree: 66%
 
 ---
 
@@ -15,6 +15,18 @@ ht-degree: 70%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.26.0 – Donnerstag, 5. März 2025
+
+**Neue Funktionen**
+
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
+- Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem `getIdentity` Befehle nach dem Senden eines `collect`-Aufrufs die Identität nicht zurückgaben.
+- Es wurde ein Problem behoben, bei dem Personalisierungs-Umleitungen dazu führten, dass Inhalte flackerten, bevor die Umleitung stattfand.
 
 ## Version 2.25.0 – Freitag, 23. Januar 2025
 
@@ -45,8 +57,8 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 **Fehlerbehebungen und Verbesserungen**
 
 - Wenn mehrere In-App-Nachrichten zurückgegeben werden, wird nur die Nachricht mit der höchsten Priorität angezeigt. Die anderen werden als unterdrückt aufgezeichnet.
-- Leere Datenstrom-Überschreibungen werden nicht mehr an das Edge Network gesendet, wodurch potenzielle Konflikte mit Server-seitigen Routing-Konfigurationen reduziert werden.
-- Die folgenden Namen der Protokollnachrichten-Komponenten wurden umbenannt, um sie an andere Adobe-SDKs anzupassen:
+- Leere Datenstrom-Überschreibungen werden nicht mehr an die Edge Network gesendet, wodurch potenzielle Konflikte mit Server-seitigen Routing-Konfigurationen reduziert werden.
+- Die folgenden Namen der Protokollnachrichtenkomponenten wurden umbenannt, um sie an andere Adobe-SDKs anzupassen:
    - `DecisioningEngine` wurde in `RulesEngine` umbenannt
    - `LegacyMediaAnalytics` wurde in `MediaAnalyticsBridge` umbenannt
    - `Privacy` wurde in `Consent` umbenannt
@@ -232,7 +244,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 - Die Ansichtsänderungsereignisse für Einzelseitenanwendungen wurden optimiert. Die Anzeigebenachrichtigung ist jetzt beim Rendern personalisierter Erlebnisse im Ansichtsänderungsereignis enthalten.
 - Die Konsolenwarnung wurde entfernt, wenn `eventType` nicht vorhanden ist.
 - Es wurde ein Problem behoben, bei dem die `propositions`-Eigenschaft nur von einem `sendEvent`-Befehl zurückgegeben wurde, wenn Erlebnisse aus dem Cache angefordert oder abgerufen wurden. Die `propositions`-Eigenschaft wird jetzt immer als Array definiert.
-- Es wurde ein Problem behoben, bei dem ausgeblendete Container nicht angezeigt wurden, wenn ein Fehler vom Edge Network zurückgegeben wurde.
+- Es wurde ein Problem behoben, bei dem ausgeblendete Container nicht angezeigt wurden, wenn ein Fehler von der Edge Network zurückgegeben wurde.
 - Es wurde ein Problem behoben, bei dem die Interaktionsereignisse in Adobe Target nicht gezählt wurden. Dieses Problem wurde behoben, indem der Ansichtsname unter web.webPageDetails.viewName zu XDM hinzugefügt wurde.
 - Es wurden fehlerhafte Dokumentationslinks in Konsolenmeldungen behoben.
 
@@ -244,7 +256,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-- Zusätzliche Informationen aus dem Edge Network werden im Rückgabewert von `sendEvent` verfügbar gemacht, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
+- Zusätzliche Informationen aus der Edge Network werden im Rückgabewert von `sendEvent` verfügbar gemacht, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta eingeführt werden.
 
 ## Version 2.6.4 – 7. September 2021
 
@@ -281,7 +293,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
 - Der Befehl [`getIdentity`](/help/web-sdk/commands/getidentity.md) gibt jetzt die ID der Edge-Region zusammen mit der Identität zurück.
 - Die vom Server empfangenen Warnungen und Fehler wurden verbessert und werden nun auf besser geeignete Weise gehandhabt.
-- Es wurde Unterstützung für Adobe-Einverständnis 2.0-Standard für den [`setConsent`](/help/web-sdk/commands/setconsent.md) hinzugefügt.
+- Es wurde Unterstützung für Adobe Consent 2.0 Standard für den [`setConsent`](/help/web-sdk/commands/setconsent.md) hinzugefügt.
 - Die Einverständisvoreinstellungen werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, dem Platform Web SDK und dem Platform Edge Network zu ermöglichen. Wenn Sie Einverständnisvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, `setConsent` bei jedem Laden der Seite aufzurufen.
 - Es wurden zwei [Überwachungs-Hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected`, hinzugefügt.
 - Fehlerbehebung: Die Benachrichtigungsereignisse für Personalisierungsinteraktionen enthielten doppelte Informationen über dieselbe Aktivität, wenn Benutzende zu einer neuen Singe-Page-App-Ansicht navigiert haben, zur ursprünglichen Ansicht zurückgekehrt sind und dann auf ein für die Konversion qualifiziertes Element geklickt haben.
