@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;aufgenommene Daten;Streaming;Übersicht;Streaming-Aufnahme;Latenz;Streaming-Latenz;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;aufgenommene Daten;Streaming;Übersicht;Streaming-Aufnahme;Latenz;Streaming-Latenz
 solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
 description: Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 14%
@@ -35,7 +35,7 @@ Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätz
 
 Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [!DNL Identity Service] finden Sie im [Handbuch zum Konfigurieren eines Datensatzes](../../profile/tutorials/dataset-configuration.md).
 
-## Wie hoch ist die erwartete Latenz für die Streaming-Aufnahme auf Experience Platform?
+## Wie hoch ist die erwartete Latenz für die Streaming-Aufnahme in Experience Platform?
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ In der folgenden Tabelle finden Sie Anleitungen zu den Beschränkungen der Anfra
 | RPS-Grenzwert | Anmerkungen |
 | --- | --- |
 | 1.000 Anfragen pro Sekunde | Diese können bei Verwendung `/collection/batch` Endpunkts mehrere Nachrichten enthalten. |
-| Einzelne Nachrichten pro Sekunde 10000 | Die Nachrichten können bei Verwendung des `/collection/batch`-Endpunkts in weniger Anfragen gruppiert werden. |
+| Einzelne Nachrichten pro Sekunde 10000 | Die Nachrichten können bei Verwendung des `/collection/`-Endpunkts in weniger Anfragen gruppiert werden. |
 
 >[!IMPORTANT]
 >
