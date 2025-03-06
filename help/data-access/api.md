@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Datenzugriffs-API
 description: Die Datenzugriffs-API unterstützt Adobe Experience Platform, indem sie Entwicklerinnen und Entwicklern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit aufgenommener Datensätze innerhalb von Experience Platform konzentriert.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 9%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.name` | Der Name der Datei (z. B. `profiles.csv`). |
+| `data.name` | Der Name der Datei (z. B. `profiles.parquet`). |
 | `data.length` | Die Größe der Datei (in Byte). |
 | `data._links.self.href` | Die URL zum Herunterladen der Datei. |
 
@@ -201,7 +201,7 @@ Wenn ein Verzeichnis zurückgegeben wird, enthält es ein Array aller Dateien im
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.name` | Der Name der Datei (z. B. `profiles.csv`). |
+| `data.name` | Der Name der Datei (z. B. `profiles.parquet`). |
 | `data._links.self.href` | Die URL zum Herunterladen der Datei. |
 
 ## Zugriff auf den Inhalt einer Datei {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{FILE_ID}` | Die ID der Datei in einem Datensatz. |
-| `{FILE_NAME}` | Der vollständige Dateiname (z. B. `profiles.csv`). |
+| `{FILE_NAME}` | Der vollständige Dateiname (z. B. `profiles.parquet`). |
 
 **Antwort**
 
