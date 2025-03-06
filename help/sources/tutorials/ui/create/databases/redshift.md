@@ -1,22 +1,22 @@
 ---
-title: Erstellen einer Amazon Redshift Source-Verbindung über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Amazon Redshift-Quellverbindung erstellen.
+title: Verbinden von AWS Redshift mit Experience Platform über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie ein AWS Redshift-Konto mithilfe der Quellen-Benutzeroberfläche mit Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
+source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 41%
+source-wordcount: '715'
+ht-degree: 23%
 
 ---
 
-# Verbinden Ihres [!DNL Amazon Redshift]-Kontos mithilfe des Arbeitsbereichs Quellen
+# Verbinden von [!DNL AWS Redshift] mit Experience Platform über die Benutzeroberfläche
 
 >[!IMPORTANT]
 >
->Die [!DNL Amazon Redshift] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL AWS Redshift] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Amazon Redshift]-Konto (im Folgenden als &quot;[!DNL Redshift]&quot; bezeichnet) über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL AWS Redshift]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
@@ -27,52 +27,71 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Redshift]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/databases.md) fortfahren.
+Wenn Sie bereits über eine gültige [!DNL AWS Redshift]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/databases.md) fortfahren.
 
-### Sammeln erforderlicher Anmeldedaten
+## Navigieren im Quellkatalog
 
-Um auf Ihr [!DNL Redshift]-Konto auf Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-| **Anmeldedaten** | **Beschreibung** |
-| -------------- | --------------- |
-| Server | Der mit Ihrem [!DNL Redshift]-Konto verknüpfte Server. |
-| Port | Der TCP-Port, den ein [!DNL Redshift]-Server verwendet, um auf Client-Verbindungen zu warten. |
-| Benutzername | Der Benutzername, der Ihrem [!DNL Redshift]-Konto zugeordnet ist. |
-| Kennwort | Das mit Ihrem [!DNL Redshift]-Konto verknüpfte Kennwort. |
-| Datenbank | Die [!DNL Redshift] Datenbank, auf die Sie zugreifen. |
+Wählen Sie **[!DNL AWS Redshift]** unter der Kategorie *[!UICONTROL Datenbanken]* und dann **[!UICONTROL Einrichten]**.
 
-Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL Redshift] Dokument](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
-
-Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Redshift]-Konto mit Experience Platform zu verknüpfen.
-
-## Verbinden Ihres [!DNL Redshift]-Kontos
-
->[!NOTE]
+>[!TIP]
 >
->Der Standardcodierungsstandard für [!DNL Redshift] ist Unicode. Dies kann nicht geändert werden.
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+![Der Quellkatalog mit der ausgewählten AWS Redshift-Quellkarte.](../../../../images/tutorials/create/redshift/catalog.png)
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+## Vorhandenes Konto verwenden {#existing}
 
-Wählen Sie unter der **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Amazon Redshift]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]** aus, um einen neuen [!DNL Redshift]-Connector zu erstellen.
+Anschließend werden Sie zum Authentifizierungsschritt des Quell-Workflows weitergeleitet. Hier können Sie entweder ein vorhandenes Konto verwenden oder ein neues Konto erstellen.
 
-![](../../../../images/tutorials/create/redshift/catalog.png)
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL AWS Redshift] aus dem Kontoverzeichnis und dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
-Die **[!UICONTROL Mit Amazon Redshift verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+![Das Kontoverzeichnis im Quell-Workflow, in dem vorhandene Konten aufgelistet sind.](../../../../images/tutorials/create/redshift/existing.png)
 
-### Neues Konto
+## Neues Konto erstellen {#create}
 
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Eingabeformular einen Namen, eine optionale Beschreibung und Ihre [!DNL Redshift] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen **[!UICONTROL Verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
+Wenn Sie noch kein -Konto haben, müssen Sie ein neues Konto erstellen, indem Sie die Authentifizierungsdaten angeben, die Ihrer Quelle entsprechen.
 
-![](../../../../images/tutorials/create/redshift/new.png)
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen an und fügen Sie optional eine Beschreibung für Ihr Konto hinzu.
 
-### Vorhandenes Konto
+### Verbindung zu Experience Platform auf Azure herstellen {#azure}
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Redshift] Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um Ihr [!DNL AWS Redshift]-Konto mit Experience Platform auf Azure zu verbinden, geben Sie Ihre Authentifizierungsdaten im Eingabeformular ein und wählen Sie **Mit Quelle [!UICONTROL verbinden] aus**.
 
-![](../../../../images/tutorials/create/redshift/existing.png)
+![Die neue Kontoschnittstelle zum Verbinden von AWS Redshift mit Experience Platform auf Azure.](../../../../images/tutorials/create/redshift/new.png)
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Server | Der Server-Name Ihrer [!DNL AWS Redshift]. |
+| Port | Der TCP-Port, den ein [!DNL AWS Redshift]-Server verwendet, um auf Client-Verbindungen zu warten. |
+| Benutzername | Der Benutzername des Kontos, dem Sie Zugriff gewähren möchten. |
+| Kennwort | Das Kennwort, das dem Benutzerkonto entspricht. |
+| Datenbank | Die [!DNL AWS Redshift], aus der Daten abgerufen werden sollen. |
+
+Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL AWS Redshift] Dokument](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
+
+### Verbinden mit Experience Platform auf AWS {#aws}
+
+>[!AVAILABILITY]
+>
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf AWS Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
+
+Um ein neues [!DNL AWS Redshift] zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, geben Sie die erforderlichen Anmeldeinformationen für die Authentifizierung ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus.
+
+![Die neue Kontoschnittstelle zum Verbinden von AWS Redshift mit Experience Platform auf AWS.](../../../../images/tutorials/create/redshift/aws-auth.png)
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Server | Der Server-Name Ihrer [!DNL AWS Redshift]. |
+| Port | Der TCP-Port, den ein [!DNL AWS Redshift]-Server verwendet, um auf Client-Verbindungen zu warten. |
+| Benutzername | Der Benutzername des Kontos, dem Sie Zugriff gewähren möchten. |
+| Kennwort | Das Kennwort, das dem Benutzerkonto entspricht. |
+| Datenbank | Die [!DNL AWS Redshift], aus der Daten abgerufen werden sollen. |
+| Schema | Der Name des Schemas, das Ihrer [!DNL AWS Redshift]-Datenbank zugeordnet ist. Sie müssen sicherstellen, dass der Benutzer, dem Sie Datenbankzugriff gewähren möchten, auch Zugriff auf dieses Schema hat. |
+
+Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL AWS Redshift] Dokument](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Redshift]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten auf Experience Platform zu übertragen](../../dataflow/databases.md).
+In diesem Tutorial haben Sie eine Verbindung zwischen Ihrer [!DNL AWS Redshift] und Experience Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Daten aus Ihrer Datenbank in Experience Platform aufzunehmen](../../dataflow/databases.md).
