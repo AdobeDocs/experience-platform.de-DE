@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 28%
 
 ---
@@ -83,7 +83,7 @@ Die organisationsspezifische standardmäßige Zusammenführungsrichtlinie wird b
 
 ### Wo kann ich extern generierte Zielgruppen für aktivieren?
 
-Eine extern generierte Zielgruppe kann jedem Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen verwendet werden.
+Eine extern generierte Zielgruppe kann jedem Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen und Journey-Kampagnen verwendet werden.
 
 ### Kann ich eine extern generierte Zielgruppe löschen?
 
@@ -308,10 +308,10 @@ Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folg
 
 Zusätzlich gelten die folgenden Einschränkungen (?) Anwenden bei Verwendung dieser Blöcke:
 
-- Block teilen
+- Block „Aufspaltung“
    - Dieser Block unterstützt nur **String**-Datentypen. Der Block Aufspaltung unterstützt **nicht** das Datum oder den booleschen Datentyp.
    - Darüber hinaus unterstützt dieser Block **nicht** Anreicherungsattribute.
-- Block ausschließen
+- Block „Ausschließen“
    - Dieser Block unterstützt **nicht** das Datum oder den booleschen Datentyp.
 - Block „Rang“
    - Dieser Block unterstützt **Anreicherungsattribute**.
