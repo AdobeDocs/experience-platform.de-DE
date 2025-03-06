@@ -3,10 +3,10 @@ title: Verbinden von AWS Redshift mit Experience Platform über die Benutzerober
 description: Erfahren Sie, wie Sie ein AWS Redshift-Konto mithilfe der Quellen-Benutzeroberfläche mit Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 23%
+source-wordcount: '718'
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 23%
 >
 >Die [!DNL AWS Redshift] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL AWS Redshift]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL AWS Redshift]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
