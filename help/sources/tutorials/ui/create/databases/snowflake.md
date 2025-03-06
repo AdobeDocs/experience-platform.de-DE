@@ -1,41 +1,75 @@
 ---
-title: Erstellen einer Snowflake Source-Verbindung über die Benutzeroberfläche
+title: Verbinden von Snowflake mit Experience Platform über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Adobe Experience Platform eine Snowflake-Quellverbindung erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 16%
+source-wordcount: '1149'
+ht-degree: 8%
 
 ---
 
-# Erstellen eines Quell-Connectors für [!DNL Snowflake] in der Benutzeroberfläche
+# Verbinden von [!DNL Snowflake] mit Experience Platform über die Benutzeroberfläche
 
 >[!IMPORTANT]
 >
->Die [!DNL Snowflake] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Snowflake] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Snowflake]-Quell-Connectors mithilfe der Benutzeroberfläche von Adobe Experience Platform.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Snowflake]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Sammeln erforderlicher Anmeldedaten
+>[!NOTE]
+>
+>Sie müssen das `PREVENT_UNLOAD_TO_INLINE_URL`-Flag auf `FALSE` setzen, um das Entladen von Daten aus Ihrer [!DNL Snowflake] in Experience Platform zu ermöglichen.
 
-Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL Snowflake] zu authentifizieren.
+## Navigieren im Quellkatalog {#navigate}
+
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+
+Wählen Sie **[!DNL Snowflake]** unter der Kategorie *[!UICONTROL Datenbanken]* und dann **[!UICONTROL Einrichten]**.
+
+>[!TIP]
+>
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+
+![Der Quellkatalog mit der ausgewählten Snowflake-Karte..](../../../../images/tutorials/create/snowflake/catalog.png)
+
+## Vorhandenes Konto verwenden {#existing}
+
+Anschließend werden Sie zum Authentifizierungsschritt des Quell-Workflows weitergeleitet. Hier können Sie entweder ein vorhandenes Konto verwenden oder ein neues Konto erstellen.
+
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Snowflake] Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+
+![Die vorhandene Kontoschnittstelle im Quell-Workflow.](../../../../images/tutorials/create/snowflake/existing.png)
+
+## Neues Konto erstellen {#create}
+
+Wenn Sie noch kein -Konto haben, müssen Sie ein neues Konto erstellen, indem Sie die Authentifizierungsdaten angeben, die Ihrer Quelle entsprechen.
+
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen an und fügen Sie optional eine Beschreibung für Ihr Konto hinzu.
+
+### Verbindung zu Experience Platform auf Azure herstellen {#azure}
+
+Sie können Ihr [!DNL Snowflake]-Konto mit Experience Platform auf Azure verbinden, indem Sie entweder die Authentifizierung mit dem Kontoschlüssel oder die Schlüsselpaar-Authentifizierung verwenden.
 
 >[!BEGINTABS]
 
 >[!TAB Authentifizierung mit Kontoschlüssel]
 
+Um die Kontoschlüsselauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Kontoschlüsselauthentifizierung]**, geben Sie Ihre Verbindungszeichenfolge im Eingabeformular ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
+
+![Die Benutzeroberfläche zur Authentifizierung des Kontoschlüssels.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
+
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
+| --- | --- |
 | Konto | Ein Kontoname identifiziert ein Konto innerhalb Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto über verschiedene [!DNL Snowflake] hinweg eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Anleitungen finden Sie im Handbuch [Abrufen  [!DNL Snowflake]  Kontokennung](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) . Weiterführende Informationen dazu finden Sie im [[!DNL Snowflake] entsprechenden Handbuch](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Warehouse | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
 | Datenbank | Die [!DNL Snowflake]-Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
@@ -46,64 +80,44 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL
 
 >[!TAB Schlüsselpaar-Authentifizierung]
 
-Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann die folgenden Werte angeben, wenn Sie ein Konto für Ihre [!DNL Snowflake] erstellen.
+Um die Schlüsselpaar-Authentifizierung zu verwenden, wählen Sie **[!UICONTROL Schlüsselpaar-Authentifizierung]** aus, geben Sie Werte für Ihr Konto, Ihren Benutzernamen, Ihren privaten Schlüssel, die Passphrase für den privaten Schlüssel, Ihre Datenbank und Ihr Warehouse ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus.
+
+![Die Authentifizierungsschnittstelle für das Konto-Schlüsselpaar.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+
+Bei der Schlüsselpaar-Authentifizierung müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann die folgenden Werte angeben, wenn Sie ein Konto für Ihre [!DNL Snowflake] erstellen.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | Konto | Ein Kontoname identifiziert ein Konto innerhalb Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto über verschiedene [!DNL Snowflake] hinweg eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Anleitungen finden Sie im Handbuch [Abrufen  [!DNL Snowflake]  Kontokennung](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) . Weiterführende Informationen dazu finden Sie im [[!DNL Snowflake] entsprechenden Handbuch](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Benutzername | Der Benutzername Ihres [!DNL Snowflake]. |
-| Privater Schlüssel | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich gegen Experience Platform authentifizieren. Weitere Informationen finden Sie im Handbuch unter [Abrufen  [!DNL Snowflake]  privaten ](../../../../connectors/databases/snowflake.md)Schlüssels). |
+| Privater Schlüssel | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich bei Experience Platform authentifizieren. Weitere Informationen finden Sie im Handbuch unter [Abrufen  [!DNL Snowflake]  privaten ](../../../../connectors/databases/snowflake.md)Schlüssels). |
 | Passphrase für privaten Schlüssel | Die Passphrase für den privaten Schlüssel ist eine zusätzliche Sicherheitsebene, die Sie bei der Authentifizierung mit einem verschlüsselten privaten Schlüssel verwenden müssen. Sie müssen die Passphrase nicht angeben, wenn Sie einen unverschlüsselten privaten Schlüssel verwenden. |
-| Datenbank | Die [!DNL Snowflake], die die Daten enthält, die auf Experience Platform aufgenommen werden sollen. |
+| Datenbank | Die [!DNL Snowflake], die die Daten enthält, die in Experience Platform aufgenommen werden sollen. |
 | Warehouse | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
 
-Weitere Informationen zu diesen Werten finden Sie [diesem Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Weitere Informationen zu diesen Werten finden Sie in [diesem Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
 
->[!NOTE]
+### Verbinden mit Experience Platform auf AWS {#aws}
+
+>[!AVAILABILITY]
 >
->Sie müssen das `PREVENT_UNLOAD_TO_INLINE_URL`-Flag auf `FALSE` setzen, um das Entladen von Daten aus Ihrer [!DNL Snowflake] auf Experience Platform zuzulassen.
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
 
-## Snowflake-Konto verbinden
+Um ein neues [!DNL Snowflake]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen Anmeldeinformationen zur Authentifizierung an.
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen.
+![Der Schritt „Neues Konto“ im Quell-Workflow, mit dem Sie Snowflake mit Experience Platform in AWS verbinden können.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
-
-Wählen Sie unter [!UICONTROL  Kategorie ] die Option **[!UICONTROL Snowflake]** und dann **[!UICONTROL Daten hinzufügen]** aus.
-
-![Der Quellkatalog mit hervorgehobenen [!DNL Snowflake].](../../../../images/tutorials/create/snowflake/catalog.png)
-
-Die **[!UICONTROL Mit Snowflake verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
-
-### Vorhandenes Konto
-
-Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Snowflake] Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
-
-![Die vorhandene Kontoschnittstelle im Quell-Workflow.](../../../../images/tutorials/create/snowflake/existing.png)
-
-### Neues Konto
-
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihr neues [!DNL Snowflake]-Konto an.
-
-![Die neue Kontoschnittstelle im Quell-Workflow.](../../../../images/tutorials/create/snowflake/new.png)
-
->[!BEGINTABS]
-
->[!TAB Authentifizierung mit Kontoschlüssel]
-
-Um die Authentifizierung mit dem Kontoschlüssel zu verwenden, geben Sie Ihre Verbindungszeichenfolge in das Eingabeformular ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
-
-![Die Benutzeroberfläche zur Authentifizierung des Kontoschlüssels.](../../../../images/tutorials/create/snowflake/connection-string.png)
-
->[!TAB Schlüsselpaar-Authentifizierung]
-
-Um die Schlüsselpaar-Authentifizierung zu verwenden, geben Sie Werte für Ihr Konto, Ihren Benutzernamen, Ihren privaten Schlüssel, die Passphrase für den privaten Schlüssel, Ihre Datenbank und Ihr Warehouse an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
-
-![Die Authentifizierungsschnittstelle für das Konto-Schlüsselpaar.](../../../../images/tutorials/create/snowflake/key-pair.png)
-
->[!ENDTABS]
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Host | Die Host-URL, mit der sich Ihr [!DNL Snowflake]-Konto verbindet. |
+| Port | Die Port-Nummer, die von [!DNL Snowflake] verwendet wird, wenn eine Verbindung zu einem Server über das Internet hergestellt wird. |
+| Benutzername | Der Benutzername, der Ihrem [!DNL Snowflake]-Konto zugeordnet ist. |
+| Kennwort | Das mit Ihrem [!DNL Snowflake]-Konto verknüpfte Kennwort. |
+| Datenbank | Die [!DNL Snowflake] Datenbank, aus der die Daten abgerufen werden. |
+| Schema | Der Name des Schemas, das Ihrer [!DNL Snowflake]-Datenbank zugeordnet ist. Sie müssen sicherstellen, dass der Benutzer, dem Sie Datenbankzugriff gewähren möchten, auch Zugriff auf dieses Schema hat. |
+| Warehouse | Das [!DNL Snowflake] Warehouse, das Sie verwenden. |
 
 ### Vorschau der Beispieldaten überspringen {#skip-preview-of-sample-data}
 
