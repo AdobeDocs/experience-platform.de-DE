@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Deskriptoren
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 40%
+source-wordcount: '2192'
+ht-degree: 38%
 
 ---
 
@@ -211,11 +211,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [ (Erstellen (POST) eines Deskriptors](#create) desselben Typs.
+Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [ (POST) eines Deskriptors](#create) desselben Typs.
 
 >[!IMPORTANT]
 >
->Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen muss jeder Deskriptortyp seine eigenen spezifischen Felder in PUT-Anfrage-Payloads senden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
+>Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen ist es erforderlich, dass für jeden Deskriptortyp eigene spezifische Felder in den Payloads von PUT-Anfragen gesendet werden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
 
 Im folgenden Beispiel wird ein Identitätsdeskriptor aktualisiert, um auf einen anderen `xdm:sourceProperty` (`mobile phone`) zu verweisen und die `xdm:namespace` in `Phone` zu ändern.
 
@@ -248,7 +248,7 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 201 (Erstellt) und die `@
 }
 ```
 
-Wenn Sie eine [Suchanfrage (GET)) ](#lookup), um den Deskriptor anzuzeigen, werden die Felder nun aktualisiert, um die in der PUT-Anfrage gesendeten Änderungen widerzuspiegeln.
+Wenn Sie eine [Suchanfrage (GET) ](#lookup), um den Deskriptor anzuzeigen, werden die Felder jetzt aktualisiert, damit die in der PUT-Anfrage gesendeten Änderungen widergespiegelt werden.
 
 ## Löschen eines Deskriptors {#delete}
 
@@ -364,12 +364,12 @@ Mit Deskriptoren für benutzerfreundliche Namen können Benutzende die `title`-,
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, deren Details Sie ändern möchten. Der Pfad sollte mit einem Schrägstrich (`/`) beginnen und nicht mit einem Schrägstrich enden. Fügen Sie keine `properties` in den Pfad ein (verwenden Sie beispielsweise `/personalEmail/address` statt `/properties/personalEmail/properties/address`). |
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, in Großschreibung des ersten Buchstaben jedes Worts geschrieben. |
 | `xdm:description` | Zusammen mit dem Titel kann eine optionale Beschreibung hinzugefügt werden. |
-| `meta:enum` | Wenn das durch `xdm:sourceProperty` angegebene Feld ein Zeichenfolgenfeld ist, kann `meta:enum` verwendet werden, um in der Segmentierungs-Benutzeroberfläche vorgeschlagene Werte für das Feld hinzuzufügen. Beachten Sie, dass `meta:enum` keine Auflistung deklariert und keine Datenvalidierung für das XDM-Feld bereitstellt.<br><br>Dies sollte nur für Kern-XDM-Felder verwendet werden, die durch Adobe definiert sind. Wenn die Quelleigenschaft ein benutzerdefiniertes Feld ist, das von Ihrem Unternehmen definiert wurde, sollten Sie stattdessen die `meta:enum`-Eigenschaft des Felds direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds bearbeiten. |
+| `meta:enum` | Wenn das durch `xdm:sourceProperty` angegebene Feld ein Zeichenfolgenfeld ist, kann `meta:enum` verwendet werden, um in der Segmentierungs-Benutzeroberfläche vorgeschlagene Werte für das Feld hinzuzufügen. Beachten Sie, dass `meta:enum` keine Auflistung deklariert und keine Datenvalidierung für das XDM-Feld bereitstellt.<br><br>Dies sollte nur für von Adobe definierte XDM-Kernfelder verwendet werden. Wenn die Quelleigenschaft ein benutzerdefiniertes Feld ist, das von Ihrer Organisation definiert wurde, sollten Sie stattdessen die `meta:enum`-Eigenschaft des Felds direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds bearbeiten. |
 | `meta:excludeMetaEnum` | Wenn das durch `xdm:sourceProperty` angegebene Feld ein Zeichenfolgenfeld ist, das vorhandene vorgeschlagene Werte unter einem `meta:enum` Feld bereitgestellt hat, können Sie dieses Objekt in einen Deskriptor für benutzerfreundliche Namen aufnehmen, um einige oder alle diese Werte aus der Segmentierung auszuschließen. Schlüssel und Wert jedes Eintrags müssen mit denen übereinstimmen, die in der ursprünglichen `meta:enum` des Felds enthalten sind, damit der Eintrag ausgeschlossen wird. |
 
 {style="table-layout:auto"}
 
-#### Beziehungsdeskriptor
+#### Beziehungsdeskriptor {#relationship-descriptor}
 
 Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Schemata. Sie werden in die Eigenschaften eingegeben, die in `sourceProperty` und `destinationProperty` beschrieben werden. Weiterführende Informationen finden Sie in der Anleitung zum [Definieren einer Beziehung zwischen zwei Schemata](../tutorials/relationship-api.md).
 
@@ -389,13 +389,49 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. Für einen Beziehungsdeskriptor muss dieser Wert auf `xdm:descriptorOneToOne` gesetzt werden. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für einen Beziehungsdeskriptor muss dieser Wert auf `xdm:descriptorOneToOne` festgelegt werden, es sei denn, Sie haben Zugriff auf Real-Time CDP B2B edition. Mit B2B edition haben Sie die Möglichkeit, `xdm:descriptorOneToOne` oder [`xdm:descriptorRelationship`](#b2b-relationship-descriptor) zu verwenden. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
-| `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
+| `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit &quot;/&quot; beginnen und nicht mit &quot;/&quot; enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
 | `xdm:destinationSchema` | Der `$id`-URI des Referenzschemas, mit dem dieser Deskriptor eine Beziehung definiert. |
 | `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
-| `xdm:destinationProperty` | Optionaler Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
+| `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
+
+{style="table-layout:auto"}
+
+##### B2B-Beziehungsdeskriptor {#B2B-relationship-descriptor}
+
+Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Beziehungen zwischen Schemata ein, die Viele-zu-Eins-Beziehungen ermöglicht. Diese neue Beziehung muss den `@type: xdm:descriptorRelationship` aufweisen, und die Payload muss mehr Felder als die `@type: xdm:descriptorOneToOne` enthalten. Weitere Informationen finden Sie im Tutorial [Definieren einer Schemabeziehung für ](../tutorials/relationship-b2b.md)B2B edition&quot;.
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für uns mit den folgenden Feldern muss der Wert auf `xdm:descriptorRelationship` gesetzt werden. Weitere Informationen zu zusätzlichen Typen finden Sie [ Abschnitt ](#relationship-descriptor)Beziehungsdeskriptoren“. |
+| `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
+| `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
+| `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit &quot;/&quot; beginnen und nicht mit &quot;/&quot; enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
+| `xdm:destinationSchema` | Der `$id`-URI des Referenzschemas, mit dem dieser Deskriptor eine Beziehung definiert. |
+| `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
+| `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema, das die primäre ID des Schemas sein muss. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
+| `xdm:destinationNamespace` | Der Namespace der primären ID aus dem Referenzschema. |
+| `xdm:destinationToSourceTitle` | Der Anzeigename der Beziehung vom Referenzschema zum Quellschema. |
+| `xdm:sourceToDestinationTitle` | Der Anzeigename der Beziehung vom Quellschema zum Referenzschema. |
+| `xdm:cardinality` | Die Verknüpfungsbeziehung zwischen den Schemas. Dieser Wert sollte auf `M:1` gesetzt werden und sich auf eine Viele-zu-eins-Beziehung beziehen. |
 
 {style="table-layout:auto"}
 
