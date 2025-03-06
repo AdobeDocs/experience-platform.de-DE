@@ -114,7 +114,7 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Persistente Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
+| Dauerhafte Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 

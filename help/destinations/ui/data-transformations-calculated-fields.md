@@ -1,21 +1,21 @@
 ---
-title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder in Cloud-Speicher-Ziele exportiert wurden
+title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder in Cloud-Speicherziele exportiert wurden
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
-# Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder in Cloud-Speicher-Ziele exportiert wurden {#data-transformation-calculated-fields}
+# Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder in Cloud-Speicherziele exportiert wurden {#data-transformation-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Hinzufügen von berechneten Feldern"
->abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um verschiedene Datenumwandlungen von Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden. Sie können beispielsweise Hashing auf Daten anwenden, Arrays zu Zeichenfolgen verketten und vieles mehr."
+>abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um verschiedene Datenumwandlungen an Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden. Sie können beispielsweise Hashing auf Daten anwenden, Arrays zu Zeichenfolgen verketten und vieles mehr."
 
 <!--
 
@@ -47,7 +47,7 @@ So verwenden Sie berechnete Felder für Datenumwandlungen:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Aktivieren des hierarchischen Ausgabeschemas"
->abstract="Schalten Sie diese Einstellung ein, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren."
+>abstract="Schalten Sie diese Einstellung ein, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. "
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
