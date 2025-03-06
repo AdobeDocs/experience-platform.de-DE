@@ -3,9 +3,9 @@ keywords: Experience Platform;Abfrage;Abfrage-Service;Fehlerbehebung;Leitplanken
 title: Leitplanken für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Abfrage-Service-Daten, die Sie bei der Optimierung der Verwendung Ihrer Abfrage unterstützen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der 
 
 * **Batch-Abfragen**: Zum Ausführen von `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT` Abfragen zum Bereinigen, Gestalten, Bearbeiten und Anreichern von Daten. Die Ergebnisse dieser Abfragen **werden** Data Lake gespeichert. Die Metrik zur Messung der Nutzung dieser Funktion ist die Anzahl der Rechenstunden.
 
-* **Query Service-Benutzer**: Abfrage-Service-Benutzer, die in Ihrer aktuellen Lizenz für Customer Journey Analytics, Adobe Real-time Customer Data Platform und/oder Adobe Journey Optimizer bereitgestellt werden, können auch mit Data Distiller verwendet werden. Query Service-Benutzer werden von den -Funktionen gemeinsam genutzt.
+* **Abfrage-Service-Benutzer**: Abfrage-Service-Benutzer, die in Ihrer aktuellen Lizenz für Customer Journey Analytics, Adobe Real-Time Customer Data Platform und/oder Adobe Journey Optimizer bereitgestellt werden, können auch mit Data Distiller verwendet werden. Query Service-Benutzer werden von den -Funktionen gemeinsam genutzt.
 
 * **Ad-hoc-**: Ad-hoc-Benutzer sind diejenigen, die Ad-hoc-Abfragen ausführen.
 
@@ -35,15 +35,13 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der 
 
 * **Reporting-API**: Eine API für Datenabruf-Aufrufe (intern oder extern). Erweiterte Berichtsdatenmodelle werden von den nativen Berichtsdatenmodellen in Adobe Experience Platform abgeleitet, z. B. vom Real-Time CDP Dashboards -Datenmodell.
 
-Die folgende Abbildung fasst zusammen, wie die Abfrage-Service-Funktionen derzeit verpackt und lizenziert werden:
-
 ## Schutzmechanismen-Typen
 
 In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 | Art der Leitplanke | Beschreibung |
 |----------|---------|
-| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
+| **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
 | **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
@@ -101,10 +99,10 @@ In der folgenden Dokumentation finden Sie weitere Informationen zum Abfrage-Serv
 * [Abfrage-Service-API](./api/getting-started.md)
 * [Benutzeroberfläche von Query Service](./ui/overview.md)
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
-* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

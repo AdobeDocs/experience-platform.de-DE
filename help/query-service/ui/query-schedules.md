@@ -2,9 +2,9 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 14%
 
 ---
@@ -119,10 +119,6 @@ Einen Überblick über Warnhinweise in Adobe Experience Platform, einschließlic
 
 ### Festlegen von Parametern für eine geplante parametrisierte Abfrage {#set-parameters}
 
->[!IMPORTANT]
->
->Die Funktion der parametrisierten Abfrage-Benutzeroberfläche ist derzeit nur in einer **Version verfügbar** nicht für alle Kundinnen und Kunden. Wenn Sie keinen Zugriff auf parametrisierte Abfragen haben, fahren Sie mit dem Abschnitt [Löschen oder Deaktivieren eines ](#delete-schedule)) fort.
-
 Wenn Sie eine geplante Abfrage für eine parametrisierte Abfrage erstellen, müssen Sie jetzt die Parameterwerte für diese Abfrageausführungen festlegen.
 
 ![Der Abschnitt „Zeitplandetails“ des Workflows für die Zeitplanerstellung mit hervorgehobenem Abschnitt „Abfrageparameter“.](../images/ui/query-schedules/scheduled-query-parameter.png)
@@ -147,7 +143,7 @@ Verfolgen Sie die auf der Abfrageausführungsebene verbrauchten Rechenstunden f�
 
 >[!AVAILABILITY]
 >
->Die Funktion „Stunden berechnen“ ist nur für Benutzer verfügbar, die die [Data Distiller SKU](../data-distiller/overview.md) erworben haben. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+>Die Funktion „Stunden berechnen“ ist nur für Benutzer verfügbar, die die [Data Distiller SKU](../data-distiller/overview.md) erworben haben. Weitere Informationen erhalten Sie vom Adobe-Support.
 
 ![Der Detailabschnitt des Arbeitsbereichs Geplante Abfragen mit einer Liste von Abfrageausführungen, die für eine geplante Abfrage hervorgehoben sind.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 

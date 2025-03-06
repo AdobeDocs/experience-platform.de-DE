@@ -2,18 +2,14 @@
 title: Abfrageprotokolle
 description: Abfrageprotokolle werden automatisch bei jeder Ausführung einer Abfrage generiert und stehen über die Benutzeroberfläche zur Fehlerbehebung zur Verfügung. In diesem Dokument wird beschrieben, wie Sie den Abschnitt Query Service-Protokolle der Benutzeroberfläche verwenden und darin navigieren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 3%
 
 ---
 
 # Abfrageprotokolle
-
->[!IMPORTANT]
->
->Bestimmte Funktionen für Abfrageprotokolle befinden sich derzeit in einer eingeschränkten Version und stehen nicht allen Kundinnen und Kunden zur Verfügung. Ohne Bearbeitungssymbol wird Ihre Benutzeroberfläche möglicherweise etwas anders angezeigt. Außerdem kann der Prozess der Auswahl eines Abfragenamens dazu führen, dass zum Abfrage-Editor anstelle der Ansicht [!UICONTROL Details zum Abfrageprotokoll] navigiert wird.
 
 Adobe Experience Platform führt ein Protokoll aller Abfrageereignisse, die sowohl über die API als auch über die Benutzeroberfläche auftreten. Diese Informationen sind in der Benutzeroberfläche des Abfrage-Service auf der Registerkarte [!UICONTROL Protokolle] verfügbar.
 
@@ -52,10 +48,6 @@ Im Bedienfeld Protokolldetails können Sie eine Vielzahl von Aktionen ausführen
 >Die Option [!UICONTROL Als CTAS ausführen] ist nur für eine SELECT-Abfrage verfügbar.
 
 ![Der Arbeitsbereich „Abfrageprotokoll“ mit einer ausgewählten Zeile, „Als CTAS ausführen“, „Abfrage löschen“ und dem hervorgehobenen Symbol „SQL kopieren“.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Bestimmte Funktionen für Abfrageprotokolle befinden sich derzeit in einer eingeschränkten Version und stehen nicht allen Kundinnen und Kunden zur Verfügung.
 
 Sie können auch einen Namen für die Abfragevorlage aus der Spalte [!UICONTROL Name] auswählen, um direkt zur Ansicht [!UICONTROL Details zum Abfrageprotokoll] zu navigieren.
 

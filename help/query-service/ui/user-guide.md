@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
-ht-degree: 24%
+source-wordcount: '2682'
+ht-degree: 25%
 
 ---
 
@@ -192,12 +192,7 @@ Wenn eine Abfrage geplant wurde, bietet die Registerkarte [!UICONTROL Geplante A
 >
 >Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in Query Service verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
 
-### [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Objektbrowser {#object-browser}
-
->[!AVAILABILITY]
->
-Die Datensatz-Navigationsleiste ist nur für Kunden von Data Distiller verfügbar. Ihre Platform-Benutzeroberfläche enthält möglicherweise nicht die linke Datensatz-Navigationsleiste. Andere Bilder in diesem Dokument spiegeln möglicherweise nicht die Datensatz-Navigationsleiste wider. Weitere Informationen erhalten Sie vom Adobe-Support.<br>
-Der Objektbrowser ist derzeit nur in einer **eingeschränkten Version)**. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um frühzeitigen Zugriff auf die Version zu erhalten.
+### Objektbrowser {#object-browser}
 
 Verwenden Sie den Objekt-Browser, um Datensätze einfach zu suchen und zu filtern. Der Objekt-Browser reduziert die Zeit, die mit der Suche nach Tabellen und Datensätzen in großen Umgebungen mit zahlreichen Datensätzen verbracht wird. Durch den optimierten Zugriff auf relevante Daten und Metadaten können Sie sich mehr auf die Erstellung von Abfragen konzentrieren und weniger auf die Navigation.
 
@@ -221,7 +216,7 @@ Zusätzlich zu den Schnellsuchen können Sie jetzt auch einfach auf die Metadate
 
 #### Untergeordnete Tabellen durchsuchen
 
-Um untergeordnete oder verknüpfte Tabellen zu untersuchen, klicken Sie in der Liste auf den Dropdown-Pfeil neben einem Tabellennamen. Dadurch wird die Tabelle erweitert, sodass alle verknüpften untergeordneten Tabellen angezeigt werden. Außerdem erhalten Sie eine klare Übersicht über die Datenstruktur und können komplexere Abfragekonstruktionen erstellen. Das Symbol neben dem Feldnamen gibt den Datentyp der Spalte an, to helfen Ihnen bei der Identifizierung bei komplexen Abfragen.
+Um untergeordnete oder verknüpfte Tabellen zu untersuchen, klicken Sie in der Liste auf den Dropdown-Pfeil neben einem Tabellennamen. Dadurch wird die Tabelle erweitert, sodass alle verknüpften untergeordneten Tabellen angezeigt werden. Außerdem erhalten Sie eine klare Übersicht über die Datenstruktur und können komplexere Abfragekonstruktionen erstellen. Das Symbol neben dem Feldnamen gibt den Datentyp der Spalte an, damit Sie sie bei komplexen Abfragen identifizieren können.
 
 ![Der Abfrage-Editor mit der gefilterten Tabellenliste wird angezeigt.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von Query Service. D
 
 >[!NOTE]
 >
-Die Konsole zeigt nur Fehler an, die bei der Ausführung einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Abfragevalidierung angezeigt, die vor der Ausführung einer Abfrage auftreten.
+>Die Konsole zeigt nur Fehler an, die bei der Ausführung einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Abfragevalidierung angezeigt, die vor der Ausführung einer Abfrage auftreten.
 
 ### Abfrageergebnisse {#query-results}
 
@@ -257,7 +252,7 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 
 >[!NOTE]
 >
-Die im Video dargestellte Benutzeroberfläche ist veraltet, aber die im Workflow verwendete Logik bleibt gleich.
+>Die im Video dargestellte Benutzeroberfläche ist veraltet, aber die im Workflow verwendete Logik bleibt gleich.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

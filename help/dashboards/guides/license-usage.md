@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
+source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
 workflow-type: tm+mt
-source-wordcount: '2947'
-ht-degree: 21%
+source-wordcount: '3125'
+ht-degree: 25%
 
 ---
 
@@ -32,40 +32,75 @@ ht-degree: 21%
 >id="platform_dashboards_licenseUsage"
 >title="Lizenznutzungs-Dashboard"
 >abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Lizenznutzungs-Dashboard"
 >abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Prognostizierte Compute-Stunden"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um Ihre Compute-Stunden einzuschätzen oder zu reduzieren, navigieren Sie zu „Abfragen“ > „Protokoll“, um den Abfrageverlauf zu überprüfen. Wenn Sie nicht über die Berechtigung zum Zugriff auf den Arbeitsbereich „Abfragen“ verfügen, wenden Sie sich an Ihre bzw. Ihren Admin."
->additional-url="https://experience.adobe.com/de/#/platform/query/log" text="Arbeitsbereich „Abfrageprotokoll“"
+>additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Arbeitsbereich „Abfrageprotokoll“"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Prognostizierte ansprechbare Zielgruppe"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/event-expirations" text="Gültigkeitsdauern von Erlebnisereignissen"
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
+>title="Prognostizierte kontaktierbare Profile"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
+>title="Prognostiziertes Profil für Geschäftsperson"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_corehours"
+>title="Prognostizierte Kernstunden"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
+>title="Voraussichtliches Gesamtdatenvolumen"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
+>title="Prognostizierte CJA-Zeilen verfügbar"
+>abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Platform-Instanz erfasst.
 
-Lizenznutzungsberichte bieten ein hohes Maß an Granularität gegenüber Ihren Lizenznutzungsmetriken. Das Dashboard enthält Nutzungsmetriken für jedes gekaufte Produkt (und die zugehörigen Add-ons), die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Lizenznutzungsberichte bieten ein hohes Maß an Granularität gegenüber Ihren Lizenznutzungsmetriken. Das Dashboard enthält Nutzungsmetriken für jedes gekaufte Produkt (und die zugehörigen Add-ons), die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Programme können mit Nutzungsmetriken verfolgt werden: Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Platform-Benutzeroberfläche erhalten Sie im Handbuch zur [Experience Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Benutzeroberfläche von [Experience Platform](../../landing/ui-guide.md).
 
 ## [!UICONTROL Lizenznutzung] Dashboard-Daten
 
-Das Dashboard [!UICONTROL Lizenznutzung] zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens zum Experience Platform in allen zugehörigen Sandboxes.
+Das Dashboard [!UICONTROL Lizenznutzung] zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform in jeder zugehörigen Sandbox.
 
 Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme angezeigt wurden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -112,15 +147,15 @@ Die Tabellen zeigen die primäre Metrik für jedes Produkt an, da jedes Produkt 
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Prognostizierte Nutzung"
 >abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Prognostizierte Nutzung"
 >abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 Proaktive Verwaltung und Optimierung Ihrer Lizenzressourcen auf der Grundlage aufschlussreicher Nutzungsprognosen. Die Spalte [!UICONTROL Prognostizierte Nutzung] sagt die zukünftige Lizenznutzung auf Sandbox-Ebene, über alle Produktions- und Entwicklungs-Sandboxes hinweg, für alle Ihre gekauften Produkte genau voraus. Diese Warnfunktion bietet eine Prognose der Lizenznutzung für einen Zeitraum von sechs Wochen in der Zukunft, basierend auf Ihrer Nutzung bis zum 15. dieses Kalendermonats. Prognosen werden mit einer unteren und einer oberen Grenze bereitgestellt.
 
@@ -226,16 +261,16 @@ Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metr
 | [!UICONTROL Addressable Audience] | Die Summe aus Ihrer Berechtigung für Geschäftszielgruppen und der Berechtigung für Privatkunden-Zielgruppen. Eine Verbraucherzielgruppe wird als die Anzahl der Personenprofile definiert, die im Kundenauftrag als „Verbraucherzielgruppe“ gekennzeichnet sind. Eine Business-Audience wird als die Anzahl der Geschäftspersonenprofile definiert, die im Auftrag als „Business-Audience“ identifiziert werden. |
 | [!UICONTROL Ad-hoc-Query Service-Benutzerpakete] | Ein Add-on zur Erhöhung Ihrer Berechtigung für autorisierte gleichzeitige Abfrage-Service-Benutzer um fünf zusätzliche gleichzeitige Abfrage-Service-Benutzer und eine zusätzliche gleichzeitig ausgeführte Ad-hoc-Abfrage pro Paket. Es können mehrere zusätzliche Ad Hoc Query-Benutzerpakete lizenziert werden. |
 | [!UICONTROL Durchschnittliche Profilreichhaltigkeit] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profil-Service gespeichert sind, dividiert durch die fünffache Anzahl der Profile autorisierter Geschäftspersonen. [!UICONTROL Durchschnittliche Profilreichhaltigkeit] ist eine gemeinsam genutzte Funktion. |
-| [!UICONTROL CJA-Zeilen verfügbar] | Die täglichen durchschnittlichen Datenzeilen, die innerhalb von Customer Journey Analytics für die Analyse verfügbar sind. |
+| [!UICONTROL CJA-Zeilen verfügbar] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics für die Analyse verfügbar sind. |
 | [!UICONTROL Berechnete Attribute] | Die Gesamtzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut umgewandelt werden und in ein Personenprofil oder ein Geschäftspersonenprofil aufgenommen werden können. |
 | [!UICONTROL Privatkunden-Zielgruppe] | Die Anzahl der Personenprofile, die im Kundenauftrag als „Consumer Audience“ identifiziert wurden. |
 | [!UICONTROL Größe des Datenexports] | Die Datenmenge, die durch Datensatzaktivierungen in einem Jahr gesendet wird. |
-| [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr in eine Nicht-Adobe-Lösung (direkt oder indirekt) exportiert werden können. |
+| [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr (direkt oder indirekt) in eine Nicht-Adobe-Lösung exportiert werden können. |
 | [!UICONTROL Data Lake Storage] | Die verwendete Menge des Analytics-Datenspeichers in Adobe Experience Platform. |
 | [!UICONTROL Ansprechbare Zielgruppe] | Diese Metrik bezieht sich auf die Zielgruppe von kontaktierbaren Profilen. Ein ansprechbares Profil ist ein Eintrag mit Informationen, die einen Kontakt repräsentieren und im Profil-Service dargestellt werden. Diese Einträge sind Profile, mit denen Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Versand-, Experimentierungs- oder Orchestrierungsfunktionen von Journey Optimizer interagiert haben. |
 | [!UICONTROL Lookalike-Zielgruppen] | Die Anzahl der Zielgruppen, die durch Modellierung einer bestehenden Privatkunden-Zielgruppe generiert werden, um Personenprofile zu identifizieren, die der bestehenden Privatkunden-Zielgruppe ähnlich sind. |
-| [!UICONTROL Anzahl der AMM-Modelle] | Eine Zählung des maschinellen Lernmodells (in Adobe Mix Modeler integriert), mit dem ein bestimmtes Ergebnis basierend auf Ihren Investitionen gemessen und/oder vorhergesagt wird. |
-| [!UICONTROL Anzahl der Sandboxes] | Die Anzahl der logischen Trennungen innerhalb Ihrer Instanz eines Adobe-On-Demand-Service, der auf Adobe Experience Platform zugreift und Daten und Vorgänge isoliert. |
+| [!UICONTROL Anzahl der AMM-Modelle] | Eine Zählung des in Adobe Mix Modeler integrierten maschinellen Lernmodells, mit dem ein bestimmtes Ergebnis basierend auf Ihren Investitionen gemessen und/oder vorhergesagt wird. |
+| [!UICONTROL Anzahl der Sandboxes] | Die Anzahl der logischen Trennungen innerhalb Ihrer Instanz jedes Adobe On-Demand-Service, der auf Adobe Experience Platform zugreift und Daten und Vorgänge isoliert. |
 | [!UICONTROL Reichhaltigkeit des Profils - Anzahl der Packungen] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes zusätzliche Reichweitenpaket für Profile. |
 | [!UICONTROL Query Service Compute Hours] | Ein Maß für die Zeit, die die Abfrage-Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
 | [!UICONTROL Streaming-Segmentierung: Anzahl der Packs] | Die Packs aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service eintreten. Die Segmentzugehörigkeit wird anhand der Profilattribute der aktuellen Person und des Werts des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Die Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
@@ -253,7 +288,7 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 | --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD-STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 10M</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 10M</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD-PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
