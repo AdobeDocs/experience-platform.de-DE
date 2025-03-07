@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 97%
+source-wordcount: '1047'
+ht-degree: 96%
 
 ---
 
@@ -116,7 +116,7 @@ ht-degree: 97%
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
       - [Square-Connector](connectors/payments/square.md)
-      - [Stripe-Anschluss](connectors/payments/stripe.md)
+      - [Stripe-Connector](connectors/payments/stripe.md)
    - Protokolle {#protocols}
       - [Generic OData-Connector](connectors/protocols/odata.md)
       - [Generic REST-API-Connector](connectors/protocols/generic-rest.md)
@@ -306,6 +306,8 @@ ht-degree: 97%
       - {#data-partner} für Daten- und Identitätspartner
          - [Acxiom-Datenaufnahme](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Datenimport aus Acxiom Prospecting](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Identitätsauflösung für Unternehmen von Merkury](tutorials/ui/create/data-partners/merkury.md)
       - E-Commerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
