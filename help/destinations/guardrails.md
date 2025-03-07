@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 49%
+source-wordcount: '1718'
+ht-degree: 47%
 
 ---
 
@@ -76,6 +76,7 @@ Die folgenden Leitplanken gelten für die Aktivierung über [Batch-Ziele (dateib
 | Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Vom System erzwungene Leitplanken | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
 | Maximale Anzahl von Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 100 Zielgruppen zu Batch-Ziel-Datenflüssen hinzuzufügen. |
 | Maximale Anzahl der zu aktivierenden Zeilen (Datensätze) pro Datei | 5 Millionen | Vom System erzwungene Leitplanken | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
+| Maximale Anzahl benutzerdefinierter Upload-Zielgruppen, die in einem Datenfluss aktiviert werden sollen | 10 | Vom System erzwungene Leitplanken | Beim Aktivieren [benutzerdefinierter Upload-](/help/segmentation/ui/audience-portal.md#import-audience)) für Batch-dateibasierte Ziele gibt es eine Beschränkung von 10 solcher Zielgruppen, die Sie in einem Datenfluss aktivieren können. Lesen Sie mehr über den Workflow zum [Aktivieren benutzerdefinierter Upload-Zielgruppen für Batch-dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 

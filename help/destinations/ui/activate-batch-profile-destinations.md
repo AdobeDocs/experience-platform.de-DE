@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 51%
 
 ---
@@ -64,18 +64,18 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 * **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience). Die Auswahl von Zielgruppen aus **[!UICONTROL benutzerdefinierten Uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
+
+>[!IMPORTANT]
+>
+>Beim Aktivieren benutzerdefinierter Upload-Zielgruppen für Batch-dateibasierte Ziele gibt es eine Beschränkung von 10 solcher Zielgruppen, die Sie in einem Datenfluss aktivieren können.
 
 ![Kontrollkästchen, die angezeigt werden, wenn eine oder mehrere zu aktivierende Zielgruppen ausgewählt werden.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Die Auswahl von Zielgruppen aus **[!UICONTROL benutzerdefinierten Uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
-
->[!TIP]
->
->Sie können Zielgruppen aus vorhandenen Aktivierungsflüssen von der Seite „Aktivierungsdaten **[!UICONTROL entfernen]**. Weitere Informationen finden Sie [dedizierte ](../ui/destination-details-page.md#bulk-remove)).
+>Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Aktivierungsdaten]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus ](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
