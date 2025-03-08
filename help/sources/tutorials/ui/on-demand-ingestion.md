@@ -2,9 +2,9 @@
 title: On-Demand-Aufnahme für Datenflüsse von Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Datenflüsse bei Bedarf für Ihre Quellverbindungen mithilfe der Experience Platform-Benutzeroberfläche erstellen.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
+source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '549'
 ht-degree: 10%
 
 ---
@@ -29,7 +29,7 @@ Flussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein 
 >
 >Um eine Flussausführung zu erstellen, müssen Sie zunächst über die Fluss-ID eines Datenflusses verfügen, der für die einmalige Aufnahme geplant ist.
 
-Dieses Dokument setzt Grundkenntnisse der folgenden Komponenten von Experience Platform voraus:
+Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Datenflüsse](../../../dataflows/home.md): Ein Datenfluss ist eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in Identity Service, in Echtzeit-Kundenprofile und in Ziele.
@@ -57,7 +57,7 @@ Wählen Sie **[!UICONTROL Zeitplan]** aus und gewähren Sie etwas Zeit für Ihre
 
 ![Das Zeitplankonfigurationsfenster für die On-Demand-Aufnahme.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Wählen Sie Ihren Datenflussnamen aus, um Ihre Datenflussaktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflussausführungen, die verarbeitet wurden. Wählen Sie eine Datenflussausführung aus und wählen Sie dann in **[!UICONTROL rechten Leiste die Option]** Wiederholen), um die Aufnahme für eine ausgewählte Datenflussausführungsiteration erneut zu versuchen.
+Wählen Sie Ihren Datenflussnamen aus, um Ihre Datenflussaktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflussausführungen, die verarbeitet wurden. Sie können einzelne Iterationen Ihrer Datenflussausführungen erneut ausführen, unabhängig davon, ob sie fehlgeschlagen oder erfolgreich waren. Bei fehlgeschlagenen Ausführungsiterationen können Sie mit **[!UICONTROL Wiederholen]** den Durchlauf erneut starten, nachdem Sie etwaige Fehler, die während des Erstellungsprozesses aufgetreten sind, diagnostiziert und behoben haben.
 
 ![Eine Liste verarbeiteter Flussausführungen für einen ausgewählten Datenfluss.](../../images/tutorials/on-demand/processed.png)
 
