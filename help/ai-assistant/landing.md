@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
+source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -82,98 +82,339 @@ Sie können den KI-Assistenten für den Kunden-Support verwenden, um eine nahtlo
 
 >[!ENDTABS]
 
-## Sicherheitsfunktionen des KI-Assistenten {#security}
+<!-- ## Security features of AI Assistant {#security}
 
 
-Sehen Sie sich das folgende Video an, um weitere Informationen zu den Sicherheitsfunktionen des KI-Assistenten zu erhalten:
+Watch the following video for more information on the security features of AI Assistant:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 >[!BEGINSHADEBOX]
 
-**Lesen Sie das Sicherheits-Factsheet zum KI-Assistenten**
+**Read the AI Assistant security fact sheet**
 
-Weitere Informationen zu AI Assistant finden Sie im [Sicherheitsfaktenblatt für AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
->[!ENDSHADEBOX]
+>[!ENDSHADEBOX] -->
 
 ## Videobibliothek
 
 Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und Anwendungsfälle des KI-Assistenten weiter zu vertiefen:
 
-### KI-Assistent kennenlernen
+### Grundlagen zu
 
-Sehen Sie sich das folgende Video an, um einen Überblick über den KI-Assistenten zu erhalten.
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Get to know AI Assistant">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3429845?learn=on" title="KI-Assistent kennenlernen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="KI-Assistent kennenlernen"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3429845?learn=on" target="_blank" rel="referrer" title="KI-Assistent kennenlernen">KI-Assistent kennenlernen</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um eine Einführung in den KI-Assistenten in Adobe Experience Platform zu erhalten und zu erfahren, wie Sie damit die Produktivität steigern, Workflows beschleunigen und das Produktverständnis verbessern können.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3429845?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="landing.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI Assistant security overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="Sicherheitsübersicht für den KI-Assistenten" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Sicherheitsübersicht für den KI-Assistenten"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="Sicherheitsübersicht für den KI-Assistenten">Sicherheitsübersicht für den KI-Assistenten</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um einen umfassenden Überblick über die Sicherheitsfunktionen und -prozesse des KI-Assistenten zu erhalten. Weitere Informationen zur Sicherheitsarchitektur von AI Assistant finden Sie im Sicherheitsdatenblatt des KI-Assistenten .</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI Assistant product knowledge">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3441024?learn=on" title="KI-Assistent - Produktkenntnisse" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1732633205780" alt="KI-Assistent - Produktkenntnisse"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="KI-Assistent - Produktkenntnisse">KI-Assistent - Produktkenntnisse</a>
+                    </p>
+                    <p class="is-size-6">Im KI-Assistenten bezieht sich Produktwissen auf Konzepte und Themen, die auf der Dokumentation zu Experience League basieren. In diesem Video erfahren Sie, wie Sie mit dem KI-Assistenten Ihr Produktwissen einsetzen können, um Ihre Aufgaben zu erledigen, ohne Ihre Workflows zu verlassen. </p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                    <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI Assistant operational insights">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3444031?learn=on&enablevpops" title="KI-Assistent - operative Erkenntnisse" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1732633205785" alt="KI-Assistent - operative Erkenntnisse"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="KI-Assistent - operative Erkenntnisse">KI-Assistent - operative Erkenntnisse</a>
+                    </p>
+                    <p class="is-size-6">Operative Einblicke beziehen sich auf die Antworten, die der KI-Assistent bei Abfragen zu den Metadaten Ihrer Objekte generiert. Sehen Sie sich dieses Video an, um zu erfahren, wie Sie mit operativen Einblicken Nutzung, Herkunft und Hygiene-Einblicke zu den Datenobjekten in Ihrer Organisation ermitteln können.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./ui-guide.md#operational-insights" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Get access to AI Assistant">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="Zugriff auf den KI-Assistenten" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="Zugriff auf den KI-Assistenten"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="Zugriff auf den KI-Assistenten">Zugriff auf den KI-Assistenten</a>
+                    </p>
+                    <p class="is-size-6">In diesem Video erfahren Sie, wie Sie über die [!DNL Permissions] auf den KI-Assistenten zugreifen können.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
+### Anwendungsfallbibliothek
 
-Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche des KI-Assistenten](ui-guide.md).
-
-### Zugriff auf den KI-Assistenten
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf den KI-Assistenten für Ihre Organisationen und Benutzer konfigurieren.
-
->[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
-
-Weitere Informationen finden Sie im [Handbuch zum Zugriff auf den KI-Assistenten](access.md).
-
-### Grundlegendes zu Produktwissen im KI-Assistenten
-
-Sehen Sie sich das folgende Video an, um mehr über Produktkenntnisse im KI-Assistenten zu erfahren.
-
->[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
-
-Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge).
-
-### Operative Erkenntnisse im KI-Assistenten
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre betrieblichen Einblicke abrufen und einen umfassenden Überblick über Ihre Datenobjekte erhalten können.
-
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
-
-Weitere Informationen finden Sie unter [operative Erkenntnisse im KI-Assistenten](home.md#operational-insights).
-
-### Verwenden von KI-Assistenten-Produktwissen zur Verkürzung der Onboarding-Zeit
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit Ihrem Produktwissen im KI-Assistenten die Onboarding-Zeit verkürzen können.
-
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
-
-Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge)
-
-### Verwenden Sie den KI-Assistenten, um Ihre Zielgruppen zu überladen
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre Zielgruppe entrümpeln und Ihre Marketing-Vorgänge optimieren können.
-
->[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-### Verwenden des Bedienfelds „Auffindbarkeit“, um Ihnen den Einstieg zu erleichtern
-
-Sehen Sie sich das folgende Video an, um mehr über das Bedienfeld „Auffindbarkeit“ im KI-Assistenten und darüber zu erfahren, wie Sie es verwenden können, um mit dem KI-Assistenten zu beginnen
-
->[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-### KI-Assistenten zur Validierung von Antworten verwenden
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Antworten überprüfen und validieren können.
-
->[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
-
-Weitere Informationen finden Sie in der Dokumentation unter [Überprüfen der Antworten des KI-Assistenten](ui-guide.md#verify-operational-insights-responses).
-
-### Verwenden des KI-Assistenten für die Wirkungsanalyse
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten eine effektivere Auswirkungsanalyse durchführen können, bevor Änderungen an Ihren Datenobjekten vorgenommen werden.
-
->[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
-
-### Verwenden des KI-Assistenten für den Kunden-Support
-
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten für den Kunden-Support eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows verlassen zu müssen.
-
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
-
-Weitere Informationen finden Sie in der Dokumentation unter [Verwenden des KI-Assistenten für den Support](./new-features/customer-support.md).
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Reduce onboarding time">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="Verkürzung der Onboarding-Zeit" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="Verkürzung der Onboarding-Zeit"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="Verkürzung der Onboarding-Zeit">Verkürzung der Onboarding-Zeit</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um zu erfahren, wie Sie mit Ihrem Produktwissen im KI-Assistenten die Onboarding-Zeit verkürzen können.</p>
+                </div>
+                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="De-clutter your audiences">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3435532?learn=on" title="Aufräumen der Zielgruppen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1732633205785" alt="Aufräumen der Zielgruppen"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="Aufräumen der Zielgruppen">Zielgruppen entrümpeln</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre Zielgruppe entrümpeln und Ihre Marketing-Vorgänge optimieren können.</p>
+                </div>
+                  <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>  
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Use the discoverability panel to get started">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3440962/?learn=on" title="Verwenden Sie das Bedienfeld „Auffindbarkeit“, um zu beginnen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1732633205780" alt="Verwenden Sie das Bedienfeld „Auffindbarkeit“, um zu beginnen"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="Verwenden Sie das Bedienfeld „Auffindbarkeit“, um zu beginnen">Verwenden Sie das Bedienfeld „Auffindbarkeit“, um zu beginnen</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um mehr über das Bedienfeld „Auffindbarkeit“ im KI-Assistenten und darüber zu erfahren, wie Sie es verwenden können, um mit dem KI-Assistenten zu beginnen.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Verify and validate AI responses">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3441738/?learn=on" title="Überprüfen und Validieren von KI-Antworten" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1732633205785" alt="Überprüfen und Validieren von KI-Antworten"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="Überprüfen und Validieren von KI-Antworten">Überprüfen und Validieren von KI-Antworten</a>
+                    </p>
+                    <p class="is-size-6">In diesem Video erfahren Sie, wie Sie mit dem KI-Assistenten Antworten überprüfen und validieren können.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Execute more effective lineage and impact analysis">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3441680/?learn=on" title="Ausführen einer effektiveren Analyse von Herkunft und Auswirkungen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1732633205780" alt="Ausführen einer effektiveren Analyse von Herkunft und Auswirkungen"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="Ausführen einer effektiveren Analyse von Herkunft und Auswirkungen">Effektivere Analyse von Herkunft und Auswirkungen</a>
+                    </p>
+                    <p class="is-size-6">In diesem Video erfahren Sie, wie Sie mit dem KI-Assistenten eine effektivere Auswirkungsanalyse durchführen können, bevor Änderungen an Ihren Datenobjekten vorgenommen werden.</p>
+                </div>
+                <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Use AI Assistant for customer support">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="Verwenden des KI-Assistenten für den Kunden-Support" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="Verwenden des KI-Assistenten für den Kunden-Support"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Verwenden des KI-Assistenten für den Kunden-Support">Verwenden des KI-Assistenten für den Kunden-Support</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um zu erfahren, wie Sie mit dem KI-Assistenten für den Kunden-Support eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows zu verlassen.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 ## Anwendungsfallbibliothek für KI-Assistenten
 
@@ -195,6 +436,7 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 
 * [Entfesseln Sie die Leistungsfähigkeit des KI-Assistenten](https://www.youtube.com/watch?v=J48CNmcV7wc)
 * [KI-Assistent für Zielgruppen kennenlernen](https://www.youtube.com/live/DYsyii7ldck)
+* [Operative Einblicke mit dem KI-Assistenten entsperren](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 
