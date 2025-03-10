@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Adobe Campaign Managed Cloud Services verbinden.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 45%
+source-wordcount: '1233'
+ht-degree: 43%
 
 ---
 
@@ -30,7 +30,7 @@ Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste 
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Adobe]** Anwendungen} **[!UICONTROL Adobe Campaign Managed Cloud Services]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie **[!UICONTROL Adobe]** die Option **[!UICONTROL Adobe Campaign Managed Cloud Services]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Der Quellkatalog, in dem die Adobe Campaign Managed Cloud Services-Karte angezeigt wird.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -136,6 +136,12 @@ Die Seite Datensatzaktivität wird angezeigt. Von hier aus können Sie Informati
 Auf dieser Seite finden Sie auch eine Schnittstelle zum Aktualisieren der Metadatenbeschreibung Ihres Datenflusses, zum Aktivieren der partiellen Aufnahme und der Fehlerdiagnose sowie zum Hinzufügen neuer Daten zu Ihrem Datensatz.
 
 ![Eine Benutzeroberfläche mit Diagrammen, die die Aufnahmerate eines ausgewählten Datensatzes darstellen.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>Alte Ereignisprotokolle können nicht mit der Adobe Campaign Managed Cloud Services-Quelle aufgestockt werden. Wenn eine Aufstockung erforderlich ist, verwenden Sie einen benutzerdefinierten Workflow oder eine benutzerdefinierte Implementierung, um Daten in Amazon S3 oder Azure Blob oder aus Amazon S3 oder Azure Blob in einen Adobe Experience Platform-Datensatz zu exportieren.
+
 
 ## Nächste Schritte
 
