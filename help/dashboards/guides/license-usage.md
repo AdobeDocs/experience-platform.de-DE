@@ -32,14 +32,14 @@ ht-degree: 25%
 >id="platform_dashboards_licenseUsage"
 >title="Lizenznutzungs-Dashboard"
 >abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Ablauffristen für Datensätze"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Lizenznutzungs-Dashboard"
 >abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Ablauffristen für Datensätze"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
@@ -57,14 +57,14 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
->title="Prognostizierte kontaktierbare Profile"
+>title="Prognostizierte ansprechbare Profile"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
->title="Prognostiziertes Profil für Geschäftsperson"
+>title="Prognostiziertes Geschäftspersonenprofil"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
@@ -78,14 +78,14 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
->title="Voraussichtliches Gesamtdatenvolumen"
+>title="Prognostiziertes Gesamtdatenvolumen"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
->title="Prognostizierte CJA-Zeilen verfügbar"
+>title="Prognostizierte verfügbare CJA-Zeilen"
 >abstract="Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
@@ -147,14 +147,14 @@ Die Tabellen zeigen die primäre Metrik für jedes Produkt an, da jedes Produkt 
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Prognostizierte Nutzung"
 >abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Ablauffristen für Datensätze"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Prognostizierte Nutzung"
 >abstract="Die Prognosen basieren auf der Nutzung der letzten sechs bis sieben Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung durch Ihr Unternehmen zu verstehen und sicherzustellen, dass die Nutzung nicht über den Umfang der Lizenz Ihres Unternehmens mit Adobe hinausgeht. Um die Nutzung zu reduzieren, können Sie die Datenablaufzeiten für Datensätze oder Pseudonymprofile für Sandboxes und Datensätze konfigurieren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Ablauffristen für Datensätze"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
 Proaktive Verwaltung und Optimierung Ihrer Lizenzressourcen auf der Grundlage aufschlussreicher Nutzungsprognosen. Die Spalte [!UICONTROL Prognostizierte Nutzung] sagt die zukünftige Lizenznutzung auf Sandbox-Ebene, über alle Produktions- und Entwicklungs-Sandboxes hinweg, für alle Ihre gekauften Produkte genau voraus. Diese Warnfunktion bietet eine Prognose der Lizenznutzung für einen Zeitraum von sechs Wochen in der Zukunft, basierend auf Ihrer Nutzung bis zum 15. dieses Kalendermonats. Prognosen werden mit einer unteren und einer oberen Grenze bereitgestellt.

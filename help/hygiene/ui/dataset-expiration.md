@@ -9,7 +9,7 @@ ht-degree: 49%
 
 ---
 
-# Automatisierte Datensatzablauffristen {#dataset-expiration}
+# Automatisierte Ablauffristen für Datensätze {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -26,7 +26,7 @@ In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platf
 
 >[!NOTE]
 >
->Die Datensatzgültigkeit löscht derzeit keine Daten aus dem Adobe Experience Platform-Edge Network. Es ist jedoch nicht möglich, dass Daten nach Ablauf des Datensatzes im Edge Network verbleiben. Dies liegt daran, dass sich die 15-tägige Service-Lizenzvereinbarung für die Datensatzgültigkeit mit dem 14-tägigen Zeitraum überschneidet, in dem Daten im Edge Network vorhanden sind, bevor sie verworfen werden.
+>Die Datensatzgültigkeit löscht derzeit keine Daten aus der Adobe Experience Platform Edge Network. Es ist jedoch nicht möglich, dass Daten nach Ablauf des Datensatzes innerhalb der Edge Network bleiben. Dies liegt daran, dass sich die 15-tägige Service-Lizenzvereinbarung für die Datensatzgültigkeit mit dem 14-tägigen Zeitraum überschneidet, in dem Daten innerhalb von Edge Network vorhanden sind, bevor sie verworfen werden.
 
 Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den [Datensatzgültigkeits-Endpunkt](../api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](../api/workorder.md). Sie können auch Datensatzgültigkeiten und [Löschungen von Datensätzen](./record-delete.md) über die Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
 
@@ -45,7 +45,7 @@ Um eine Anfrage zu erstellen, wählen **[!UICONTROL auf der Hauptseite]** Arbeit
 
 >[!IMPORTANT]
 >
->Für Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer stehen 20 geplante Arbeitsaufträge zur Gültigkeit von Datensätzen aus. Benutzende von Healthcare Shield und Privacy and Security Shield haben 50 geplante Arbeitsaufträge zur Gültigkeit von Datensätzen. Das bedeutet, dass Sie 20 oder 50 Datensätze gleichzeitig löschen können.<br>Wenn Sie beispielsweise 20 geplante Datensatzgültigkeiten haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Gültigkeiten festlegen, bis dieser Datensatz gelöscht wurde.
+>Für Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer stehen 20 Arbeitsaufträge zur Gültigkeit von Datensätzen aus. Benutzende von Healthcare Shield und Privacy and Security Shield haben 50 geplante Arbeitsaufträge zur Gültigkeit von Datensätzen. Das bedeutet, dass Sie 20 oder 50 Datensätze gleichzeitig löschen können.<br>Wenn Sie beispielsweise 20 geplante Datensatzgültigkeiten haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Gültigkeiten festlegen, bis dieser Datensatz gelöscht wurde.
 
 ![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] mit [!UICONTROL  hervorgehobenen ]Anfrage erstellen“](../images/ui/ttl/create-request-button.png)
 
