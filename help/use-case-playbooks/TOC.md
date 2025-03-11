@@ -5,10 +5,10 @@ breadcrumb-title: Adobe Experience Platform – Playbooks für Anwendungsfälle
 user-guide-description: Verwenden Sie die Playbooks in Adobe Experience Platform, um Assets zu generieren und erste Schritte mit verschiedenen Marketing-Anwendungsfällen auszuführen.
 feature: Playbooks
 role: User
-source-git-commit: 2563e343270051642afc1eaa7af54d12483a1ce1
+source-git-commit: 875d3b97faeed03317309aae22bc975946d09f14
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 68%
+source-wordcount: '82'
+ht-degree: 60%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 68%
 
 * Playbooks {#playbooks}
    * [Übersicht](/help/use-case-playbooks/playbooks/overview.md)
+   * [Anwendungsfälle für Kundenerlebnisse nutzen, um Geschäftsziele zu erreichen](/help/use-case-playbooks/playbooks/business-use-case-framework.md)
    * [Navigieren zu Playbooks für Anwendungsfälle](/help/use-case-playbooks/playbooks/navigate.md)
    * [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md)
    * [Playbooks für verfügbare Anwendungsfälle](/help/use-case-playbooks/playbooks/playbooks-list.md)
