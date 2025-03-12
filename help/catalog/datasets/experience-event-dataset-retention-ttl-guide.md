@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
+source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '2336'
 ht-degree: 1%
 
 ---
@@ -416,6 +416,20 @@ Berichte zur historischen Datensatznutzung sind derzeit nicht verfügbar.
 
 +++Antwort
 Nein, nach Anwendung einer Aufbewahrungsrichtlinie werden alle Daten, die älter als die Aufbewahrungsfrist sind, dauerhaft gelöscht und können nicht wiederhergestellt werden.
++++
+
+### Was ist das Minimum an TTL, das ich für einen Data-Lake-Erlebnisereignis-Datensatz konfigurieren kann?
+
++++Antwort
+Die TTL für einen Data-Lake-Erlebnisereignis-Datensatz beträgt mindestens 30 Tage. Der Data Lake dient während der ersten Aufnahme und Verarbeitung als Verarbeitungs-Backup- und Wiederherstellungssystem. Daher müssen Daten mindestens 30 Tage nach der Aufnahme im Data Lake verbleiben, bevor sie abgelaufen sein können.
++++
+
+### Was passiert, wenn ich einige Data-Lake-Felder länger aufbewahren muss, als meine TTL-Richtlinie es zulässt?
+
++++Antwort
+Verwenden Sie Data Distiller, um bestimmte Felder über die TTL Ihres Datensatzes hinaus beizubehalten und gleichzeitig Ihre Nutzungsbeschränkungen zu einzuhalten. Erstellen Sie einen Auftrag, der regelmäßig nur die erforderlichen Felder in einen abgeleiteten Datensatz schreibt. Dieser Workflow gewährleistet die Einhaltung einer kürzeren TTL bei gleichzeitiger Beibehaltung kritischer Daten für die erweiterte Verwendung.
+
+Weitere Informationen finden Sie im Handbuch [Erstellen abgeleiteter Datensätze mit SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).
 +++
 
 ## Nächste Schritte {#next-steps}
