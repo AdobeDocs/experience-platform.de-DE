@@ -2,9 +2,9 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
+source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -34,9 +34,9 @@ Lesen Sie die folgenden Dokumente, bevor Sie mit Identitätseinstellungen arbeit
 
 Um auf die Identitätseinstellungen zuzugreifen, navigieren Sie in der Benutzeroberfläche von Adobe Experience Platform zum Arbeitsbereich Identity Service und wählen Sie **[!UICONTROL Einstellungen]** aus.
 
-![Die Schaltfläche Identitätseinstellungen ist ausgewählt.](../images/rules/identities-ui.png)
+![Die Benutzeroberfläche des Identitäts-Dashboards mit der ausgewählten Schaltfläche „Einstellungen“](../images/rules/dashboard.png)
 
-Die Seite mit den Identitätseinstellungen ist in zwei Abschnitte unterteilt: [!UICONTROL Personen-]) und [!UICONTROL Geräte- oder Cookie-]. Personen-Namespaces sind Bezeichner für einzelne Personen. Dabei kann es sich um geräteübergreifende IDs, E-Mail-Adressen und Telefonnummern handeln. Geräte- oder Cookie-Namespaces sind Bezeichner für Geräte und Webbrowser und können keine höhere Priorität als Personen-Namespaces erhalten. Sie können auch nicht festlegen, dass ein Geräte- oder Cookie-Namespace ein eindeutiger Namespace ist.
+Die Seite mit den Identitätseinstellungen ist in zwei Abschnitte unterteilt: [!UICONTROL Personen-]) und [!UICONTROL Geräte- oder Cookie-]. Personen-Namespaces sind Bezeichner für einzelne Personen. Dabei kann es sich um geräteübergreifende IDs, E-Mail-Adressen und Telefonnummern handeln. Geräte- oder Cookie-Namespaces sind Bezeichner für Geräte und Webbrowser und können keine höhere Priorität als Personen-Namespaces erhalten. Sie können auch keinen Geräte- oder Cookie-Namespace als eindeutigen Namespace festlegen.
 
 ### Namespace-Priorität konfigurieren
 
@@ -46,19 +46,25 @@ Um die Namespace-Priorität zu konfigurieren, wählen Sie im Menü Identitätsei
 
 ### Eindeutigen Namespace festlegen
 
-Um einen eindeutigen Namespace festzulegen, aktivieren Sie das Kontrollkästchen [!UICONTROL Eindeutig pro Diagramm], das diesem Namespace entspricht. Sie können bis zu drei eindeutige Namespaces für Ihre Identitätskonfigurationseinstellungen auswählen.
-
-![Zwei Namespaces ausgewählt und als eindeutig definiert.](../images/rules/unique-namespace.png)
+Um einen eindeutigen Namespace festzulegen, aktivieren Sie das Kontrollkästchen [!UICONTROL Eindeutig pro Diagramm], das diesem Namespace entspricht. Sie können (**bis zu drei eindeutige Namespaces) für** Konfiguration Ihrer Identitätseinstellungen auswählen.
 
 Sobald Ihre eindeutigen Namespaces eingerichtet sind, können Diagramme nicht mehr mehrere Identitäten haben, die einen eindeutigen Namespace enthalten. Wenn Sie beispielsweise CRMID als eindeutigen Namespace angegeben haben, kann ein Diagramm nur eine Identität mit dem CRMID-Namespace haben. Weitere Informationen finden Sie unter [Übersicht über den Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md#unique-namespace).
 
-Wenn Sie mit den Konfigurationen fertig sind, klicken Sie auf **[!UICONTROL Weiter]**. Wenn eine Bestätigungsmeldung angezeigt wird, verwenden Sie diese Möglichkeit, um zu überprüfen, ob Ihre Konfigurationen korrekt sind, und wählen Sie dann **[!UICONTROL Beenden]**.
+Wenn Sie mit den Konfigurationen fertig sind, klicken Sie auf **[!UICONTROL Weiter]** um fortzufahren.
 
-![Die Validierungsseite mit hervorgehobener Option „Beenden“.](../images/rules/finish.png)
+![Zwei Namespaces ausgewählt und als eindeutig definiert.](../images/rules/unique-namespace.png)
 
-Es wird eine Warnmeldung angezeigt, die darauf hinweist, dass vorhandene Diagramme nur dann vom Diagrammalgorithmus betroffen sind, wenn die Diagramme aktualisiert werden (**Speichern Ihrer Einstellungen** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird. Darüber hinaus erhalten Sie eine Benachrichtigung, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
+Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schritt fortfahren:
 
-![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/confirm-settings.png)
+1. Die ausgewählten eindeutigen Namespaces.
+2. Das Vorhandensein einer Identität mit dem höchsten priorisierten eindeutigen Namespace in jedem bekannten Profil.
+3. Die Reihenfolge der Namespace-Priorität.
+
+![Ein Bestätigungsfenster mit ausgewählter Schaltfläche „Bestätigen“.](../images/rules/confirmation.png)
+
+Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorhandene Diagramme nur vom Diagrammalgorithmus betroffen sind **nur wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird. Darüber hinaus erhalten Sie eine Benachrichtigung, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
+
+![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
 
 ## Nächste Schritte
 
