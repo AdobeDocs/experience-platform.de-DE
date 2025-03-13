@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: KI-Assistent für Anwendungsfälle - Erstellen und Freigeben eigener Playbooks.
+title: Erfahren Sie, wie Sie mit dem KI-Assistenten Ihre eigenen Playbooks erstellen und freigeben können.
 description: So erstellen Sie eigene Playbooks für Anwendungsfälle und geben diese frei.
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
 
-
 # Erstellen und Freigeben eigener Playbooks
 
-Mit dem **Playbook Authoring Framework**, das auf dem KI-Assistenten von Adobe basiert, können Sie Playbooks in Adobe Experience Platform effizient erstellen, verwalten und freigeben.
+Mit dem [!DNL Playbook Authoring Framework], der von AI Assistant in Adobe Experience Platform unterstützt wird, können Sie Playbooks in Adobe Experience Platform effizient erstellen, verwalten und freigeben.
 
 Das Framework folgt einem dreistufigen Prozess:
 
@@ -23,35 +23,33 @@ Das Framework folgt einem dreistufigen Prozess:
 
 3. **Playbook-Verteilung**: Freigeben von Playbooks über verschiedene Organisationen hinweg. So kann beispielsweise das deutsche Martech Center of Excellence von ACME ein „goldenes“ Playbook erstellen und es an regionale Organisationen in Thailand, Australien usw. verteilen. um den Marketing-Anwendungsfall zu standardisieren.
 
-## Erstellen eines Playbooks mit dem KI-Assistenten von Adobe
+## Playbook erstellen
+
+Sie können ein Playbook auf zwei Arten erstellen: entweder mithilfe des KI-Assistenten oder manuell. In den folgenden Abschnitten erfahren Sie mehr darüber.
 
 ### Playbook - Übersicht
 
-Sie können ein Playbook auf zwei Arten erstellen: entweder mithilfe des KI-Assistenten von Adobe oder manuell.
+Führen Sie die folgenden Schritte aus, um ein Playbook mit dem KI-Assistenten zu erstellen:
 
-Gehen Sie wie folgt vor, um mit dem KI-Assistenten von Adobe ein Playbook zu erstellen:
-
-1. Wählen Sie im linken Navigationsbereich die Option **Playbooks**.
+Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Playbooks]**.
 
 ![ „Playbooks“ im linken Navigationsbereich der Benutzeroberfläche hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Wählen Sie **Neues Playbook** und dann **Playbook mit KI-Assistenten erstellen** aus.
+Wählen Sie **[!UICONTROL Neues Playbook]** und dann **Playbook mit KI-Assistenten erstellen** aus.
 
-![Schaltfläche „Neues Playbook“ auswählen.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![Die Playbook-Oberfläche mit der Auswahl „Playbook mit KI-Assistenten generieren“.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![Auswahl der Schaltfläche „Playbook mit KI-Assistenten generieren“ hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. Beschreiben Sie im Feld Eingabeaufforderung den Anwendungsfall.
+Beschreiben Sie im Feld Eingabeaufforderung den Anwendungsfall.
 
 **Beispiel**: „Wenden Sie sich an ACME-Kunden, die Laufschuhe durchsucht, den Kauf jedoch nicht abgeschlossen haben.“
 
-![Wählen Sie die Schaltfläche „Playbook mit KI-Assistenten generieren“.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Die Playbook-Oberfläche mit hervorgehobenem Webformularbereich.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Wählen Sie **Generieren** aus, um die Playbook-Metadaten zu erstellen.
+Wählen Sie **[!UICONTROL Generieren]** aus, um die Playbook-Metadaten zu erstellen.
 
 ![Der Eingabeaufforderungsbereich mit der hervorgehobenen Schaltfläche „Playbook generieren“.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Klicken Sie nach der Generierung **[!UICONTROL Bearbeiten]**, um den generierten Titel, die Beschreibung und die Metadaten nach Bedarf zu ändern.
+Klicken Sie nach der Generierung **[!UICONTROL Bearbeiten]**, um den generierten Titel, die Beschreibung und die Metadaten nach Bedarf zu ändern.
 
 ![Das generierte Playbook mit der hervorgehobenen Schaltfläche „Bearbeiten“.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ Um sicherzustellen, dass die Dateningenieure über alle erforderlichen Details z
 * **Zielgruppe**
 * **Marketing-Kanal**
 
-![Abschnitt „Playbook-Details“ mit hervorgehobener Schaltfläche „Bearbeiten“.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![Der Abschnitt mit den Playbook-Details mit der hervorgehobenen Schaltfläche „Bearbeiten“.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Nachdem die Metadaten generiert wurden, klicken Sie auf die Schaltfläche **Journey-Map bearbeiten**, um die Schritte in der Journey-Map nach Bedarf anzupassen.
+Nachdem die Metadaten generiert wurden, wählen Sie **[!UICONTROL Journey-Map bearbeiten]** aus, um die Schritte in der Journey-Map nach Bedarf anzupassen.
 
 ![Bearbeiten der Journey-Zuordnungs-Schaltfläche.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Bearbeiten Sie die Journey-Zuordnung, sobald Sie die Playbook-Metadaten erfasst haben.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Verknüpfen Sie dann das Playbook mit technischen Assets.
-
-Um ein Playbook manuell zu erstellen, wählen Sie **Playbook manuell erstellen**.
+Verknüpfen Sie dann das Playbook mit technischen Assets. Um ein Playbook manuell zu erstellen, wählen Sie **[!UICONTROL Playbook manuell erstellen]**.
 
 ![Playbook manuell erstellen](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -83,9 +79,9 @@ Unabhängig davon, ob Sie ein Playbook manuell oder mit dem KI-Assistenten erste
 
 >[!NOTE]
 >
-> Die Unterstützung für Real-Time Customer Data Platform wird in einer zukünftigen Version hinzugefügt.
+> Die Unterstützung für Real-Time CDP wird in einer zukünftigen Version hinzugefügt.
 
-![ Registerkarte „Technische Assets“ und die Schaltfläche „Erforderliches Produkt hinzufügen“ sind hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![Die Registerkarte „Technische Assets“ und die Schaltfläche „Erforderliches Produkt hinzufügen“ sind hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Wählen Sie **[!UICONTROL Asset auswählen]**, um dieses Playbook mit einer Journey zu verknüpfen, wie in der Abbildung unten dargestellt. Wählen Sie dann **Playbook veröffentlichen**, um das Playbook abzuschließen.
 
@@ -162,4 +158,4 @@ Wenn ein Playbook für unangemessene oder anstößige Inhalte markiert wird, wir
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie mit dem KI-Assistenten von Adobe Playbooks erstellen und veröffentlichen können, erfahren Sie, wie Sie mit den verfügbaren Playbooks beginnen und aus der „Playbooks[Liste“ das richtige für Ihren Anwendungsfall ](/help/use-case-playbooks/playbooks/choose.md).
+Nachdem Sie nun wissen, wie Sie mit dem KI-Assistenten Playbooks erstellen und veröffentlichen, erfahren Sie, wie Sie mit den verfügbaren Playbooks beginnen und das richtige für Ihren Anwendungsfall aus der [Playbooks-Liste](/help/use-case-playbooks/playbooks/choose.md) auswählen.
