@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können,
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 37%
+source-wordcount: '1466'
+ht-degree: 36%
 
 ---
 
@@ -83,11 +83,13 @@ Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugri
 >title="Anweisungen"
 >abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
-Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** der Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
+Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** in der Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
 ![Das Audits-Dashboard, in dem Audits im linken Menü hervorgehoben sind.](../../images/audit-logs/audits.png)
 
-Auditprotokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
+Auditprotokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
+
+Die Methode zum Anfordern von Auditprotokollen ändert den zulässigen Zeitraum und die Anzahl der Datensätze, auf die Sie Zugriff haben. [Protokolle exportieren](#export-audit-logs) ermöglicht es Ihnen, 365 Tage (in 90-tägigen Intervallen) auf maximal 1.000 Datensätze zurückzugehen, wobei als [Aktivitätsprotokoll-Benutzeroberfläche](#filter-audit-logs) in Experience Platform die letzten 90 Tage bis zu maximal 1.000 Datensätze angezeigt werden.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
@@ -95,12 +97,11 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 
 ### Auditprotokolle filtern
 
+Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
+
 >[!NOTE]
 >
->Da es sich um eine neue Funktion handelt, gehen die angezeigten Daten nur auf März 2022 zurück. Je nach ausgewählter Ressource können frühere Daten ab Januar 2022 verfügbar sein.
-
-
-Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt.
+>Die Benutzeroberfläche von Experience Platform zeigt nur die letzten 90 Tage bis zu maximal 1.000 Datensätze an, unabhängig von den angewendeten Filtern. Wenn Sie Protokolle benötigen, die darüber hinausgehen (bis zu einem Maximum von 365 Tagen), müssen Sie [Ihre Auditprotokolle exportieren](#export-audit-logs).
 
 ![Das Audits-Dashboard mit hervorgehobenem gefiltertem Aktivitätsprotokoll.](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen z
 
 ![Das Audits-Dashboard mit hervorgehobenem gefiltertem Aktivitätsprotokoll.](../../images/audit-logs/filtered.png)
 
-### Auditprotokolle exportieren
+### Auditprotokolle exportieren {#export-audit-logs}
 
 Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]** aus.
+
+>[!NOTE]
+>
+>Protokolle können in Intervallen von 90 Tagen bis zu 365 Tagen in der Vergangenheit angefordert werden. Die maximale Anzahl von Protokollen, die während eines einzelnen Exports zurückgegeben werden können, beträgt jedoch 10.000.
 
 ![Das Audits-Dashboard mit hervorgehobenem [!UICONTROL Protokoll herunterladen].](../../images/audit-logs/download.png)
 
@@ -168,6 +173,6 @@ Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admi
 
 In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Platform verwalten. Weitere Informationen zum Überwachen von Platform-Aktivitäten finden Sie in der Dokumentation zu [Observability Insights](../../../observability/home.md) und [Überwachen der Datenaufnahme](../../../ingestion/quality/monitor-data-ingestion.md).
 
-Sehen Sie sich das folgende Video an, um Auditprotokolle in Experience Platform besser zu verstehen:
+Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
