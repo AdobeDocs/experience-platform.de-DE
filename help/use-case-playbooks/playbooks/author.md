@@ -4,14 +4,15 @@ title: Erfahren Sie, wie Sie mit dem KI-Assistenten Ihre eigenen Playbooks erste
 description: So erstellen Sie eigene Playbooks für Anwendungsfälle und geben diese frei.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
+source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1113'
 ht-degree: 1%
 
 ---
 
-# Erstellen und Freigeben eigener Playbooks
+
+# Erstellen und Freigeben eigener Playbooks (Beta)
 
 Mit dem [!DNL Playbook Authoring Framework], der von AI Assistant in Adobe Experience Platform unterstützt wird, können Sie Playbooks in Adobe Experience Platform effizient erstellen, verwalten und freigeben.
 
