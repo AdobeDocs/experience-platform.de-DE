@@ -2,7 +2,7 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 52%
@@ -114,7 +114,7 @@ Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, da
 | Status | Beschreibung |
 | ------ | ----------- |
 | [!UICONTROL Realisiert] | Die Anzahl der Profile **die sich in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags für die Zielgruppe qualifiziert haben. |
-| [!UICONTROL Bestehend] | Die Anzahl der Profile, **in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags in der Zielgruppe verblieben sind. Dieses Feld ist **berechnet** und wird im `segmentMembership` nicht angezeigt. |
+| [!UICONTROL Bestehend] | Die Anzahl der Profile, **in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags in der Zielgruppe verblieben sind. Dieses Feld ist **berechnet** und wird im [`segmentMembership` nicht ](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Verlassen] | Die Anzahl der Profile, **die** in den letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags verlassen haben. |
 
 Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten ändern. Sie können dies tun, indem Sie den Bereich zwischen die Spalten ziehen oder indem Sie das ![Pfeilsymbol](/help/images/icons/chevron-down.png) der Spalte auswählen, deren Größe Sie ändern möchten, gefolgt von **[!UICONTROL Spaltengröße ändern]**.
