@@ -2,12 +2,12 @@
 keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste auf die Zulassungsliste setzte, Streaming-Ziele
 title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
-description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten von Experience Platform sicher in Ihren HTTP-REST-API-Endpunkt, Amazon Kinesis oder Ihre Azure Event Hubs-Instanz zu exportieren.
+description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Ihren HTTP-REST-API-Endpunkt, Amazon Kinesis oder Ihre Azure Event Hubs-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 9%
+source-wordcount: '307'
+ht-degree: 8%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobe empfiehlt, ein Lesezeichen für diese Seite zu setzen und sie alle drei Monate erneut aufzurufen, um nach den neuesten IP-Adressen zu suchen. Adobe bietet keine Benachrichtigung über neue IP-Bereiche.
+> * Adobe empfiehlt, ein Lesezeichen für diese Seite zu erstellen und sie alle drei Monate erneut aufzurufen, um nach den neuesten IP-Adressen zu suchen. Adobe bietet keine Benachrichtigung über neue IP-Bereiche.
 > * Die Liste der hier dokumentierten IPs *gilt nicht* für Ziele, die Sie mit [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) erstellen.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 
@@ -26,9 +26,9 @@ Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Ausgehender Traffic von Experience Platform an diese Ziele durchläuft immer die auf dieser Seite aufgelisteten IPs.
+Der von Experience Platform an diese Ziele ausgehende Traffic durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
-Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten von Experience Platform sicher in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis] oder Ihre [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Sicherheits- und Compliance-Standards des Unternehmens eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
+Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis] oder Ihre [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Sicherheits- und Compliance-Standards des Unternehmens eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen.
 
@@ -57,6 +57,12 @@ Adobe auf die Zulassungsliste setzen empfiehlt, die folgenden IP-Bereiche zu ein
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6: Kunden aus den USA und Amerika, die mit AWS arbeiten {#aws}
+
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht ](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .[
+
+`66.117.18.0/24`
 
 ## NLD2: EMEA-Kunden {#emea}
 
