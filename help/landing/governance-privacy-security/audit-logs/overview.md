@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können,
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 36%
@@ -89,7 +89,7 @@ Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im
 
 Auditprotokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
 
-Die Methode zum Anfordern von Auditprotokollen ändert den zulässigen Zeitraum und die Anzahl der Datensätze, auf die Sie Zugriff haben. [Protokolle exportieren](#export-audit-logs) ermöglicht es Ihnen, 365 Tage (in 90-tägigen Intervallen) auf maximal 1.000 Datensätze zurückzugehen, wobei als [Aktivitätsprotokoll-Benutzeroberfläche](#filter-audit-logs) in Experience Platform die letzten 90 Tage bis zu maximal 1.000 Datensätze angezeigt werden.
+Die Methode zum Anfordern von Auditprotokollen ändert den zulässigen Zeitraum und die Anzahl der Datensätze, auf die Sie Zugriff haben. [Protokolle exportieren](#export-audit-logs) ermöglicht es Ihnen, 365 Tage (in 90-tägigen Intervallen) auf maximal 10.000 Datensätze zurückzugehen, wobei in der [Aktivitätsprotokoll-Benutzeroberfläche](#filter-audit-logs) in Experience Platform die letzten 90 Tage bis zu maximal 1.000 Datensätze angezeigt werden.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
