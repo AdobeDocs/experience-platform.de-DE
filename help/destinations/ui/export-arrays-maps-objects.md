@@ -3,10 +3,10 @@ title: Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP in Clo
 type: Tutorial
 description: Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud-Speicher-Ziele exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Exportieren von Arrays in Cloud-Speicher-Ziele ist allgemein für die folgenden Ziele verfügbar: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>Die Funktion zum Exportieren von Arrays und anderen komplexen Objekten in Cloud-Speicher-Ziele ist allgemein für die folgenden Ziele verfügbar: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Erfahren Sie, wie Sie Arrays aus Real-Time CDP in [Cloud-Speicherziele](/help/destinations/catalog/cloud-storage/overview.md) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen.
+Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele ](/help/destinations/catalog/cloud-storage/overview.md). Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen.
 
 Auf dieser Seite finden Sie alle Informationen zum Exportieren von Arrays, Karten und anderen Objekttypen aus Experience Platform.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-Siehe weiter unten [ausführliche Beispiele](#examples) wie Sie verschiedene Funktionen verwenden können, um auf Elemente von Arrays zuzugreifen, Arrays umzuwandeln und zu filtern, Array-Elemente in eine Zeichenfolge zu verknüpfen und vieles mehr.
 
 Zusätzlich zu Arrays können Sie auch Zuordnungen und Objekte aus Experience Platform in Ihr gewünschtes Cloud-Speicher-Ziel exportieren. Lesen Sie mehr über [Karten](/help/xdm/ui/fields/map.md) und [Objekte](/help/xdm/ui/fields/object.md) in Experience Platform.
 
