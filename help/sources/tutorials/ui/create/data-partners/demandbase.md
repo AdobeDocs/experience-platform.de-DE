@@ -3,10 +3,11 @@ title: Verbinden von Demandbase Intent mit Experience Platform über die Benutze
 description: Erfahren Sie, wie Sie Demandbase Intent mit Experience Platform verbinden
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 28%
+ht-degree: 53%
 
 ---
 
@@ -43,13 +44,13 @@ Wählen Sie **[!DNL Demandbase Intent]** unter der Kategorie *[!UICONTROL B2B]* 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="Domain-Quelle"
->abstract="Während Adobe die Website XDM accountOrganization.website verwendet, gibt es möglicherweise Kunden, die benutzerdefinierte Felder für ihre jeweiligen Websites verwenden. Daher müssen Sie sicherstellen, dass Ihre Domain-Quelle das Domain-/Website-Feld ist, das Ihre Demandbase-Kontoeinträge mit Experience Platform-Konten abgleicht."
+>abstract="Während Adobe das XDM accountOrganization.website verwendet, gibt es möglicherweise Kundinnen oder Kunden, die benutzerdefinierte Felder für ihre jeweiligen Websites verwenden. Daher müssen Sie sicherstellen, dass Ihre Domain-Quelle das Domain-/Website-Feld ist, das Ihre Demandbase-Kontoeinträge mit den Experience Platform-Konten abgleicht."
 
-## Datenfluss planen {#schedule-dataflow}
+## Planen des Datenflusses {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
->title="Planen des Datenflusses"
->abstract="Demandbase reduziert Daten einmal wöchentlich am Montagmorgen um 17:00 Uhr UTC. Daher müssen Sie Ihre Aufnahmestartzeit nach 17:00 Uhr UTC konfigurieren. Darüber hinaus müssen Sie die Aufnahmezeit mit Demandbase bestätigen, da sie ihren Zeitplan ändern können, wenn Dateien in Adobe abgelegt werden."
+>title="Planen Ihres Datenflusses"
+>abstract="Demandbase liefert Daten einmal wöchentlich am Montagmorgen um 17:00 Uhr UTC. Daher müssen Sie Ihre Aufnahmestartzeit nach 17:00 Uhr UTC konfigurieren. Darüber hinaus müssen Sie die Aufnahmezeit mit Demandbase abstimmen, da sich der Demandbase-Zeitplan zur Auslieferung von Dateien an Adobe ändern kann."
 
 ## Datenfluss überprüfen {#review-dataflow}

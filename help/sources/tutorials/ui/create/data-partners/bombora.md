@@ -3,10 +3,11 @@ title: Verbinden des Bombora Intent mit Experience Platform über die Benutzerob
 description: Erfahren Sie, wie Sie Bombora Intent mit Experience Platform verbinden
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 28%
+ht-degree: 53%
 
 ---
 
@@ -43,14 +44,14 @@ Wählen Sie **[!DNL Bombora Intent]** unter der Kategorie *[!UICONTROL B2B]* und
 >[!CONTEXTUALHELP]
 >id="platform_sources_bombora_domain"
 >title="Domain-Quelle"
->abstract="Während Adobe die Website XDM accountOrganization.website verwendet, gibt es möglicherweise Kunden, die benutzerdefinierte Felder für ihre jeweiligen Websites verwenden. Daher müssen Sie sicherstellen, dass Ihre Domain-Quelle das Domain-/Website-Feld ist, das Ihre Bombora-Kontoeinträge mit den Experience Platform-Konten abgleicht."
+>abstract="Während Adobe das XDM accountOrganization.website verwendet, gibt es möglicherweise Kundinnen oder Kunden, die benutzerdefinierte Felder für ihre jeweiligen Websites verwenden. Daher müssen Sie sicherstellen, dass Ihre Domain-Quelle das Domain-/Website-Feld ist, das Ihre Bombora-Kontoeinträge mit den Experience Platform-Konten abgleicht."
 
-## Datenfluss planen {#schedule-dataflow}
+## Planen des Datenflusses {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_bombora_schedule"
->title="Planen des Datenflusses"
->abstract="Bombora lässt Daten einmal wöchentlich am Montagmorgen um 17:00 Uhr UTC fallen. Daher müssen Sie Ihre Aufnahmestartzeit nach 17:00 Uhr UTC konfigurieren. Darüber hinaus müssen Sie die Aufnahmezeit mit Bombora bestätigen, da dieser ihren Zeitplan ändern kann, wenn Dateien auf Adobe abgelegt werden."
+>title="Planen Ihres Datenflusses"
+>abstract="Bombora liefert Daten einmal wöchentlich am Montagmorgen um 17:00 Uhr UTC. Daher müssen Sie Ihre Aufnahmestartzeit nach 17:00 Uhr UTC konfigurieren. Darüber hinaus müssen Sie die Aufnahmezeit mit Bombora abstimmen, da sich der Bombora-Zeitplan zur Auslieferung von Dateien an Adobe ändern kann."
 
 
 ## Datenfluss überprüfen {#review-dataflow}
