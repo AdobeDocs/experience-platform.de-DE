@@ -2,7 +2,7 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Jede Kundenimplementierung ist einzigartig und auf die Ziele einer bestimmten Organisation zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der Praxis sind:
 
@@ -82,7 +82,7 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
 * Nachdem Sie die Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
    * Dies liegt daran, dass Erlebnisereignisse dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten, und die Namespace-Priorität stellt sicher, dass dem Erlebnisereignis der wichtigste Namespace zugeordnet ist.
 * Daher werden die folgenden Konfigurationen **vom Echtzeit-Kundenprofil nicht mehr verwendet**:
-   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe der Web SDK-, Mobile SDK- oder Edge Network Server-API (Identity-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Services außerhalb des Echtzeit-Kundenprofils wie Data Lake Storage oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
+   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe der Web SDK, Mobile SDK oder Edge Network Server-API (Identity-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Services außerhalb des Echtzeit-Kundenprofils wie Data Lake Storage oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
    * Alle Felder, die in einem XDM-Erlebnisereignis-Klassenschema als primäre Identität gekennzeichnet sind.
    * Standardeinstellungen für die primäre Identität im Adobe Analytics-Quell-Connector (ECID oder AAID).
 * Dagegen bestimmt **Namespace-Priorität nicht die primäre Identität für Profildatensätze**.
@@ -162,7 +162,7 @@ Wenn die Identitätseinstellungen aktiviert sind, verwenden berechnete Attribute
 
 Die Datenaufnahme im Data Lake berücksichtigt weiterhin die primären Identitätseinstellungen, die in [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) und Schemata konfiguriert sind.
 
-Data Lake bestimmt keine primäre Identität basierend auf der Namespace-Priorität. Adobe Customer Journey Analytics verwendet beispielsweise auch dann Werte in der Identitätszuordnung, wenn die Namespace-Priorität aktiviert ist (z. B. beim Hinzufügen eines Datensatzes zu einer neuen Verbindung), da das Customer Journey Analytics die Daten aus dem Data Lake verwendet.
+Data Lake bestimmt keine primäre Identität basierend auf der Namespace-Priorität. Adobe Customer Journey Analytics verwendet beispielsweise auch dann Werte in der Identitätszuordnung, wenn die Namespace-Priorität aktiviert ist (z. B. beim Hinzufügen eines Datensatzes zu einer neuen Verbindung), da Customer Journey Analytics deren Daten aus dem Data Lake verwendet.
 
 ### Experience-Datenmodell (XDM)-Schemata
 
@@ -179,7 +179,7 @@ Bei der Auswahl Ihrer Daten müssen Sie einen Namespace angeben, mit dem die Ere
 
 Diese Konfiguration führt dazu, dass Scores nur anhand authentifizierter Ereignisse berechnet werden.
 
-Weitere Informationen finden Sie in den Dokumenten zu [Attribution AI ](../../intelligent-services/attribution-ai/overview.md) und [Kunden-KI](../../intelligent-services/customer-ai/overview.md).
+Weitere Informationen finden Sie in den Dokumenten zu [Attributions-KI](../../intelligent-services/attribution-ai/overview.md) und [Kunden-KI](../../intelligent-services/customer-ai/overview.md).
 
 ### Partnerdefinierte Ziele
 

@@ -2,10 +2,10 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 4%
+source-wordcount: '601'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>* Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>
+>* Ihr Konto muss über die Berechtigung **Identitätsdiagramm anzeigen** verfügen, um auf Identitätseinstellungen in der Benutzeroberfläche zugreifen zu können. Weitere Informationen finden Sie im [Handbuch zu Berechtigungen in der attributbasierten Zugriffssteuerung](../../access-control/abac/ui/permissions.md).
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 

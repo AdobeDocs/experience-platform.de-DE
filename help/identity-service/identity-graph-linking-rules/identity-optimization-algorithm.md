@@ -2,7 +2,7 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus in Identity Service, der sicherstellt, dass ein Identitätsdiagramm für eine einzelne Person repräsentativ ist, und daher das unerwünschte Zusammenführen von Identitäten im Echtzeit-Kundenprofil verhindert.
 

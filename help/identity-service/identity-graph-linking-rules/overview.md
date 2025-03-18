@@ -2,7 +2,7 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
 

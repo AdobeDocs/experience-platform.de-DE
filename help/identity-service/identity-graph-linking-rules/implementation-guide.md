@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Lesen Sie dieses Dokument für eine schrittweise Anleitung, die Sie bei der Implementierung Ihrer Daten mit Adobe Experience Platform Identity Service befolgen können.
 
@@ -26,7 +26,7 @@ Schrittweise Anleitung:
 4. [Verwenden Sie die Benutzeroberfläche „Identitätseinstellungen“, um Ihre eindeutigen Namespaces festzulegen und Prioritätsreihenfolgen für Ihre Namespaces zu konfigurieren](#identity-settings)
 5. [Erstellen eines Experience-Datenmodell (XDM)-Schemas](#schema)
 6. [Erstellen eines Datensatzes](#dataset)
-7. [Aufnehmen von Daten auf Experience Platform](#ingest)
+7. [Aufnehmen von Daten in Experience Platform](#ingest)
 
 ## Voraussetzungen für die Implementierung {#prerequisites-for-implementation}
 
@@ -60,7 +60,7 @@ Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create
 
 ### XDM-Erlebnisereignisse
 
-Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung enthalten, z. B. CRMID.
+Stellen Sie während des Vorab-Implementierungsprozesses sicher, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung enthalten, z. B. CRMID.
 
 >[!BEGINTABS]
 
@@ -120,20 +120,22 @@ Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die
 
 >[!ENDTABS]
 
-Sie müssen sicherstellen, dass Sie über eine vollständig qualifizierte Identität verfügen, wenn Sie Ereignisse mithilfe von XDM-Erlebnisereignissen senden.
+Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
 
-+++Wählen Sie diese Option aus, um ein Beispiel für ein Ereignis mit einer vollqualifizierten Identität anzuzeigen.
+* (Empfohlen) Authentifizierte Ereignisse mit einer Personenkennung.
+* (Nicht empfohlen) Authentifizierte Ereignisse mit zwei Personenkennungen.
+* (Nicht empfohlen) Authentifizierte Ereignisse ohne Personenkennungen.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Wenn Ihr System zwei Personen-IDs sendet, kann die Implementierung die Anforderung an einen Ein-Personen-Namespace nicht erfüllen. Wenn die identityMap in Ihrer WebSDK-Implementierung beispielsweise eine CRMID, eine Kunden-ID und einen ECID-Namespace enthält, werden zwei Personen, die ein Gerät gemeinsam nutzen, möglicherweise fälschlicherweise verschiedenen Namespaces zugeordnet.
+
+Innerhalb von Identity Service kann diese Implementierung wie folgt aussehen:
+
+* `timestamp1` = John meldet sich an -> System erfasst `CRMID: John, ECID: 111`.
+* `timestamp2` = Jane meldet sich an -> System erfasst `customerID: Jane, ECID: 111`.
+
++++So kann die Implementierung in der Diagrammsimulation aussehen
+
+![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png)
 
 +++
 
@@ -190,7 +192,7 @@ Zu diesem Zeitpunkt sollten Sie über Folgendes verfügen:
 * Mindestens ein XDM-Schema. (Abhängig von Ihren Daten und Ihrem spezifischen Anwendungsfall müssen Sie möglicherweise sowohl Profil- als auch Erlebnisereignis-Schemas erstellen.)
 * Ein Datensatz, der auf Ihrem Schema basiert.
 
-Sobald Sie alle oben aufgeführten Elemente haben, können Sie mit der Aufnahme Ihrer Daten auf Experience Platform beginnen. Die Datenaufnahme kann auf verschiedene Weise durchgeführt werden. Sie können die folgenden Services verwenden, um Ihre Daten auf Experience Platform zu bringen:
+Sobald alle oben aufgeführten Elemente vorhanden sind, können Sie mit der Aufnahme Ihrer Daten in Experience Platform beginnen. Die Datenaufnahme kann auf verschiedene Weise durchgeführt werden. Sie können die folgenden Services verwenden, um Ihre Daten in Experience Platform zu übertragen:
 
 * [Batch- und Streaming-Aufnahme](../../ingestion/home.md)
 * [Datenerfassung in Experience Platform](../../collection/home.md)

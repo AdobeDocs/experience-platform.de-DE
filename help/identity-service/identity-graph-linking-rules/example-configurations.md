@@ -2,7 +2,7 @@
 title: Beispiele für Diagrammkonfigurationen
 description: Erfahren Sie mehr über gängige Diagrammszenarien, die bei der Arbeit mit Regeln zur Identitätsdiagramm-Verknüpfung und Identitätsdaten auftreten können.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 >[!NOTE]
 >

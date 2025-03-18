@@ -2,7 +2,7 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme bei Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team , um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Beim Testen und Validieren von Regeln zur Identitätsdiagramm-Verknüpfung können Probleme im Zusammenhang mit der Datenaufnahme und dem Verhalten im Diagramm auftreten. Lesen Sie dieses Dokument, um zu erfahren, wie Sie einige häufige Probleme beheben können, die beim Arbeiten mit Regeln zur Identitätsdiagramm-Verknüpfung auftreten können.
 
@@ -26,7 +26,7 @@ Die folgende Abbildung zeigt eine vereinfachte Darstellung des Datenflusses in A
 Beachten Sie die folgenden Faktoren:
 
 * Für Streaming-Daten beginnen Echtzeit-Kundenprofil, Identity Service und Data Lake mit der Verarbeitung der Daten, wenn die Daten gesendet werden. Die Latenz für den Abschluss der Datenverarbeitung hängt jedoch vom Service ab. Normalerweise dauert die Verarbeitung von Data Lake im Vergleich zu Profil und Identität länger.
-   * Wenn die Daten beim Ausführen einer Abfrage für einen Datensatz auch nach einigen Stunden nicht angezeigt werden, ist es wahrscheinlich, dass die Daten nicht in Experience Platform aufgenommen wurden.
+   * Wenn die Daten beim Ausführen einer Abfrage für einen Datensatz auch nach einigen Stunden nicht angezeigt werden, sind die Daten wahrscheinlich nicht in Experience Platform aufgenommen worden.
 * Bei Batch-Daten fließen alle Daten zuerst in den Data Lake, dann werden die Daten an Profil und Identität weitergegeben, wenn der Datensatz für Profil und Identität aktiviert ist.
 * Bei Problemen im Zusammenhang mit der Aufnahme ist es wichtig, dass das Problem auf Service-Ebene isoliert wird, um genaues Debugging und Fehlerbehebung zu ermöglichen. Es gibt drei mögliche Problemtypen, die berücksichtigt werden müssen:
 
@@ -40,7 +40,7 @@ Beachten Sie die folgenden Faktoren:
 
 >[!NOTE]
 >
->* In diesem Abschnitt wird davon ausgegangen, dass die Daten erfolgreich in den Data Lake aufgenommen wurden und dass keine Syntax- oder anderen Fehler aufgetreten sind, die die Aufnahme der Daten in den Experience Platform verhindert hätten.
+>* In diesem Abschnitt wird davon ausgegangen, dass die Daten erfolgreich in den Data Lake aufgenommen wurden und dass keine Syntax- oder anderen Fehler aufgetreten sind, die die Aufnahme der Daten in Experience Platform verhindert hätten.
 >
 >* In den Beispielen wird ECID als Cookie-Namespace und CRMID als Personen-Namespace verwendet.
 
@@ -128,7 +128,7 @@ Suchen Sie nach dem Ausführen Ihrer Abfrage den Ereignisdatensatz, von dem Sie 
 Die Namespace-Priorität spielt eine wichtige Rolle bei der Bestimmung der primären Identität durch Ereignisfragmente.
 
 * Nachdem Sie Ihre [Identitätseinstellungen“ für ](./identity-settings-ui.md) Sandbox konfiguriert und gespeichert haben, verwendet das Profil [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Fall von identityMap verwendet das Profil dann nicht mehr das `primary=true`-Flag.
-* Während das Profil nicht mehr auf dieses Flag verweist, können andere Services auf dem Experience Platform weiterhin das `primary=true`-Flag verwenden.
+* Das Profil verweist zwar nicht mehr auf dieses Flag, andere Services in Experience Platform verwenden jedoch möglicherweise weiterhin das `primary=true`-Flag.
 
 Damit [authentifizierte Benutzerereignisse](implementation-guide.md#ingest-your-data) mit dem Personen-Namespace verknüpft werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
 
@@ -192,7 +192,7 @@ Der Algorithmus zur Identitätsoptimierung berücksichtigt [die zuletzt eingeric
 >
 >* Ein einzelner Datensatz wird verwendet (dadurch werden nicht mehrere Datensätze abgefragt).
 >
->* Die Daten werden aufgrund des Löschens durch [Advanced Data Lifecycle Management](../../hygiene/home.md), [Privacy Service ](../../privacy-service/home.md) oder andere Services, die den Löschvorgang durchführen, nicht aus dem Data Lake gelöscht.
+>* Die Daten werden aufgrund des Löschens durch [Advanced Data Lifecycle Management](../../hygiene/home.md), [Privacy Service](../../privacy-service/home.md) oder andere Services, die den Löschvorgang durchführen, nicht aus dem Data Lake gelöscht.
 
 Zunächst müssen Sie die folgenden Informationen erfassen:
 
@@ -250,7 +250,7 @@ WHERE identitymap['ECID'][0].id ='identity_value'
 ORDER BY timestamp desc 
 ```
 
-**Hinweis**: In diesem Beispiel wird davon ausgegangen, dass `eVar10` als Identität markiert ist. Für Ihre Konfigurationen müssen Sie die eVar basierend auf der Implementierung Ihres eigenen Unternehmens ändern.
+**Hinweis**: In diesem Beispiel wird davon ausgegangen, dass `eVar10` als Identität markiert ist. Für Ihre -Konfigurationen müssen Sie die eVar basierend auf der Implementierung Ihres eigenen Unternehmens ändern.
 
 >[!ENDTABS]
 
