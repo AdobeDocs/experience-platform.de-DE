@@ -2,7 +2,7 @@
 title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ Das Ergebnis sieht ähnlich wie in der folgenden Abbildung aus, hat jedoch eine 
 Mit den berechneten RFM-Scores können Kunden in die folgenden sechs Prioritätssegmente kategorisiert werden:
 
 1. `Core`: Beste Kunden mit hoher Neuigkeit, Häufigkeit und Geldwert (Neuigkeit = 1, Häufigkeit = 1, Geldwert = 1).
-2. `Loyal`: Häufige Kunden, die zwar konsistent sind, aber nicht die höchsten Ausgaben aufweisen (Häufigkeit = 1).
-3. `Whales`: Höchste Ausgaben, unabhängig von Neuigkeit und Häufigkeit (monetär = 1).
-4. `Promising`: Häufige, aber niedrigere Ausgaben (Häufigkeit = 1, 2, 3; Geldwert = 2, 3, 4).
-5. `Rookies`: Neue Kunden mit niedriger Häufigkeit (Neuigkeit = 1, Häufigkeit = 4).
-6. `Slipping`: Zuvor treue Kunden mit verminderter Aktivität (Neuigkeit = 2, 3, 4; Häufigkeit = 4).
+1. `Loyal`: Häufige Kunden, die zwar konsistent sind, aber nicht die höchsten Ausgaben aufweisen (Häufigkeit = 1).
+1. `Whales`: Höchste Ausgaben, unabhängig von Neuigkeit und Häufigkeit (monetär = 1).
+1. `Promising`: Häufige, aber niedrigere Ausgaben (Häufigkeit = 1, 2, 3; Geldwert = 2, 3, 4).
+1. `Rookies`: Neue Kunden mit niedriger Häufigkeit (Neuigkeit = 1, Häufigkeit = 4).
+1. `Slipping`: Zuvor treue Kunden mit verminderter Aktivität (Neuigkeit = 2, 3, 4; Häufigkeit = 4).
 
 Um den Zugriff und die Wiederverwendung zu optimieren, erstellen Sie ein `VIEW`, in dem die RFM-Segmente, Bewertungen und Werte gespeichert werden.
 
