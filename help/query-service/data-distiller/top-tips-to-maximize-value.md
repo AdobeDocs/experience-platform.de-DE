@@ -2,9 +2,9 @@
 title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ Da der Abfrage-Editor die sequenzielle Ausführung unterstützt, können Sie die
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### Einfügen einer Zielgruppe {#insert-an-audience}
+#### Erstellen eines leeren Zielgruppen-Datensatzes {#create-empty-audience-dataset}
 
-Um Profile zu einer bestehenden Audience hinzuzufügen, verwenden Sie den Befehl `INSERT INTO` . Auf diese Weise können Sie einzelne Profile oder ganze Zielgruppen zu einem vorhandenen Zielgruppen-Datensatz hinzufügen.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Hinzufügen von Profilen zu einer Audience {#add-profiles-to-audience}
-
-Verwenden Sie die folgenden SQL-Befehle, um eine Zielgruppe zu erstellen und aufzufüllen:
+Erstellen Sie vor dem Hinzufügen von Profilen einen leeren Datensatz, um Audience-Datensätze zu speichern.
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Einfügen von Profilen in eine bestehende Audience {#insert-an-audience}
+
+Um Profile zu einer bestehenden Audience hinzuzufügen, verwenden Sie den Befehl INSERT INTO . Auf diese Weise können Sie einzelne Profile oder ganze Zielgruppensegmente zu einem vorhandenen Zielgruppendatensatz hinzufügen.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Löschen einer Zielgruppe {#delete-an-audience}
 
-Um eine vorhandene Zielgruppe zu löschen, verwenden Sie den Befehl `DROP AUDIENCE` . Wenn die Zielgruppe nicht vorhanden ist, tritt eine Ausnahme auf, es sei denn, `IF EXISTS` wird angegeben.
-
-Verwenden Sie den folgenden SQL-Befehl, um eine Zielgruppe zu löschen:
+Um eine vorhandene Zielgruppe zu löschen, verwenden Sie den Befehl ZIELGRUPPE ABLEGEN . Wenn die Zielgruppe nicht vorhanden ist, tritt eine Ausnahme auf, es sei denn, IF EXISTS wurde angegeben.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
