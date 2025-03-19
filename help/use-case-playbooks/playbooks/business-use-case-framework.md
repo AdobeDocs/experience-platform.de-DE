@@ -3,9 +3,10 @@ title: Anwendungsfälle für Kundenerlebnisse nutzen, um Geschäftsziele zu erre
 description: Entdecken Sie ein praktisches Framework, um Ihre Geschäftsziele mit echten Kundenerlebnissen zu verbinden. Verwenden Sie die enthaltenen Arbeitsblätter, um Anwendungsfälle innerhalb von Adobe Experience Platform effektiv zu strategisieren, zu verfeinern und anzuwenden.
 hide: true
 hidefromtoc: true
-source-git-commit: d8cfbbf7482a6501a58dfde8c8c25ee8d46b06d8
+exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -20,3 +21,5 @@ Entdecken Sie ein praktisches Framework, um Ihre Geschäftsziele mit echten Kund
 - Förderung der Zusammenarbeit zwischen Teams, um effektive Anwendungsfallergebnisse zu erzielen.
 - Wenden Sie ein Reifegrad-Framework an, um Anwendungsfälle zu entwickeln, die eine größere Geschäftswirkung haben.
 - Verwenden Sie Adobe Experience Platform, um die Wertschöpfung zu beschleunigen.
+
+Laden Sie diese [PDF-](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) herunter, um einen strukturierten Ansatz zur Definition, Bewertung und Weiterentwicklung von Anwendungsfällen für Kundenerlebnisse zu erkunden. Erfahren Sie, wie Sie Geschäftsziele mit messbaren Auswirkungen in Einklang bringen, Daten für die Personalisierung nutzen und Anwendungsfälle in Adobe Experience Platform effektiv aktivieren können.

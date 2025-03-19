@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 70%
+source-wordcount: '400'
+ht-degree: 71%
 
 ---
 
@@ -23,25 +23,25 @@ ht-degree: 70%
 - Data Distiller {#data-distiller}
    - [Übersicht](data-distiller/overview.md)
    - [Lizenznutzung](data-distiller/license-usage.md)
-   - [Wichtigste Tipps zur Wertmaximierung](data-distiller/top-tips-to-maximize-value.md)
    - Abgeleitete Datensätze {#derived-datasets}
-      - [Übersicht](data-distiller/derived-datasets/overview.md)
+      - [Überblick](data-distiller/derived-datasets/overview.md)
       - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Erstellen von dezilbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - SQL Insights für erweiterte App-Reporting-{#sql-insights}
-      - [Übersicht](data-distiller/sql-insights/overview.md)
+      - [Überblick](data-distiller/sql-insights/overview.md)
       - [Abfrage pro Modus](data-distiller/sql-insights/query-pro-mode.md)
       - [Beschleunigte Abfragen senden](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/sql-insights/reporting-insights-data-model.md)
    - KI/ML-Funktions-Pipelines {#ml-feature-pipelines}
-      - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
+      - [Überblick](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinden mit Jupyter-Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Explorative Datenanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [Engineering-Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportieren von Daten in ML-Umgebungen](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow zur Anreicherung von KI/ML-Daten](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Sitzung zum Summit 2025](data-distiller/top-tips-to-maximize-value.md)
 - Data Distiller-Statistiken und {#advanced-statistics} für maschinelles Lernen
-   - [Übersicht](advanced-statistics/overview.md)
+   - [Überblick](advanced-statistics/overview.md)
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)
    - [Funktionstransformation](advanced-statistics/feature-transformation.md)
@@ -56,7 +56,7 @@ ht-degree: 70%
 - Data Distiller Audiences-{#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mithilfe von SQL](data-distiller-audiences/overview.md)
 - Beispiele {#use-cases}
-   - [Übersicht](use-cases/overview.md)
+   - [Überblick](use-cases/overview.md)
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
    - [Bot-Filterung](use-cases/bot-filtering.md)

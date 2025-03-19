@@ -1,17 +1,15 @@
 ---
-title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller
+title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller
+# Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 
 Diese Seite enthält den Beispieldatensatz, damit Sie das anwenden können, was Sie in der Adobe Summit-Sitzung „OS656 - Top-Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller&quot; gelernt haben. Sie erfahren, wie Sie Implementierungen von Adobe Real-Time Customer Data Platform und Journey Optimizer beschleunigen können, indem Sie Echtzeit-Kundenprofildaten anreichern. Diese Anreicherung nutzt tiefe Einblicke in Kundenverhaltensmuster, um Zielgruppen für die Bereitstellung und Optimierung von Erlebnissen zu erstellen.
 
@@ -53,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um eine CSV-Datei in Adobe Experience Pl
 
 #### Erstellen eines Datensatzes aus einer CSV-Datei {#create-a-dataset}
 
-Navigieren Sie in der Experience Platform-Benutzeroberfläche in der linken Navigationsleiste zu **[!UICONTROL Workflows]** und wählen Sie **[!UICONTROL Datensatz aus CSV-Datei erstellen]** aus den verfügbaren Optionen aus. Eine neue Seitenleiste wird auf der rechten Seite des Bildschirms angezeigt. Klicken Sie auf **[!UICONTROL Starten]**.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste und anschließend **[!UICONTROL Datensatz erstellen]**. Wählen Sie dann **[!UICONTROL Datensatz aus CSV-Datei erstellen]** aus den verfügbaren Optionen aus.
 
 Das [!UICONTROL Datensatz konfigurieren] wird angezeigt. Geben **[!UICONTROL im Feld]** den Datensatznamen als „luma_web_data“ ein und wählen Sie **[!UICONTROL Weiter]**.
 
@@ -135,7 +133,7 @@ Die folgenden Abfragen zeigen, wie Sie stornierte Bestellungen identifizieren un
 Diese erste Abfrage wählt alle Kauf-IDs ungleich null aus, die mit einer Stornierung verbunden sind, und aggregiert sie mithilfe von `GROUP BY`. Die resultierenden Kauf-IDs müssen aus dem Datensatz ausgeschlossen werden.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ Die Ergebnisse sehen wie in der Abbildung unten aus.
 Um die Abfrageeffizienz und Wiederverwendbarkeit zu verbessern, erstellen Sie ein `VIEW` zum Speichern der aggregierten RFM-Werte.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ Das Ergebnis ähnelt dem folgenden Bild, jedoch mit einer anderen ID.
 Führen Sie wiederum als Best Practice eine einfache Erkundungsabfrage aus, um die Daten in der Ansicht zu überprüfen. Verwenden Sie die folgende Anweisung.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 Der folgende Screenshot zeigt ein Beispielergebnis der Abfrage mit den berechneten RFM-Werten für die einzelnen Benutzenden. Das Ergebnis entspricht der Ansicht-ID aus der `CREATE VIEW`.
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 Die Ergebnisse sehen wie auf den folgenden Bildern aus.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+Das Ergebnis sieht ähnlich wie in der folgenden Abbildung aus, hat jedoch eine andere Ansicht-ID.
+
+![Der Dialog mit den Abfrageergebnissen für die Ansicht &#39;rfm_scores&#39;.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### RFM-Segmente modellieren {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ Die folgenden Screenshots zeigen ein Beispielergebnis der `SELECT * FROM rfm_mod
 
 ### Schritt 4: Verwenden Sie SQL, um RFM-Daten per Batch in das Echtzeit-Kundenprofil aufzunehmen {#sql-batch-ingest-rfm-data}
 
-Der Batch nimmt RFM-angereicherte Kundendaten in das Echtzeit-Kundenprofil auf. Erstellen Sie zunächst einen profilaktivierten Datensatz und fügen Sie die umgewandelten Daten mithilfe von SQL ein.
+Nehmen Sie als Nächstes per Batch RFM-angereicherte Kundendaten in das Echtzeit-Kundenprofil auf. Erstellen Sie zunächst einen profilaktivierten Datensatz und fügen Sie die umgewandelten Daten mithilfe von SQL ein.
 
 #### Erstellen eines abgeleiteten Datensatzes zum Speichern von RFM-Attributen {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ In dieser SQL-Anweisung:
 >
 >Weitere Informationen zum Definieren von Identitätsfeldern und zum Arbeiten mit Identity-Namespaces finden Sie in der [Identity Service-Dokumentation](../../identity-service/home.md) oder im Handbuch [Definieren eines Identitätsfelds in der Adobe Experience Platform-Benutzeroberfläche](../../xdm/ui/fields/identity.md).
 
-Die folgende SQL erstellt eine profilaktivierte Tabelle zum Speichern von RFM-Attributen
+Da der Abfrage-Editor die sequenzielle Ausführung unterstützt, können Sie die Abfragen zur Tabellenerstellung und zur Dateneinfügung in eine einzige Sitzung einbeziehen. Die folgende SQL erstellt zunächst eine profilaktivierte Tabelle zum Speichern von RFM-Attributen. Anschließend werden mit RFM angereicherte Kundendaten aus `rfm_model_segment` in die `adls_rfm_profile` eingefügt, wobei jeder Datensatz unter Ihrem mandantenspezifischen Namespace strukturiert wird, der für die Echtzeit-Kundenprofilaufnahme erforderlich ist.
+
+Da der Abfrage-Editor die sequenzielle Ausführung unterstützt, können Sie die Tabellenerstellung und die Dateneinfügeabfragen in einer einzigen Sitzung ausführen. Die folgende SQL erstellt zunächst eine profilaktivierte Tabelle zum Speichern von RFM-Attributen. Anschließend werden mit RFM angereicherte Kundendaten aus `rfm_model_segment` in die `adls_rfm_profile` eingefügt, um sicherzustellen, dass jeder Datensatz ordnungsgemäß unter Ihrem mandantenspezifischen Namespace (`_{TENANT_ID}`) strukturiert ist. Dieser Namespace ist für die Aufnahme von Echtzeit-Kundenprofilen und eine genaue Identitätsauflösung unerlässlich.
+
+>[!IMPORTANT]
+>
+>Ersetzen Sie `_{TENANT_ID}` durch den Mandanten-Namespace Ihres Unternehmens. Dieser Namespace ist für Ihre Organisation eindeutig und stellt sicher, dass alle erfassten Daten korrekt in Adobe Experience Platform zugewiesen werden.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,15 +447,20 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 Das Ergebnis dieser Abfrage ähnelt früheren Datensatzerstellungen in diesem Playbook, jedoch mit einer anderen ID.
 
-Navigieren Sie nach dem Erstellen des Datensatzes zu Datensätze > Durchsuchen > `adls_rfm_profile` , um sicherzustellen, dass der Datensatz leer ist.
+Navigieren Sie nach dem Erstellen des Datensatzes zu **[!UICONTROL Datensätze]** > **[!UICONTROL Durchsuchen]** > `adls_rfm_profile`, um sicherzustellen, dass der Datensatz leer ist.
 
 ![Der Arbeitsbereich „Datensätze“ mit den Details des Datensatzes „adls_rfm_profile“ wird angezeigt und der Umschalter „Profil aktiviert“ ist hervorgehoben.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-Sie können auch zu **[!UICONTROL Schemas]** > **[!UICONTROL Durchsuchen]** > `adls_rfm_profile` navigieren, um das Schema-Diagramm XDM-Kontaktprofil Ihres neu erstellten Datensatzes und dessen benutzerdefinierte Feldergruppen anzuzeigen.
+Sie können auch zu **[!UICONTROL Schemas]** > **[!UICONTROL Durchsuchen]** > `adls_rfm_profile` navigieren, um das Schema-Diagramm XDM-Kontaktprofil Ihres neu erstellten Datensatzes und seiner benutzerdefinierten Feldergruppen anzuzeigen.
 
 ![Der XDM-Arbeitsbereich mit dem Diagramm „adls_rfm_profile“ wird auf der Arbeitsfläche des Schemas angezeigt.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -464,7 +477,7 @@ Stellen Sie sicher, dass die Feldreihenfolge in der `SELECT` Abfrage der `INSERT
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ Weitere Informationen zum Planen von Abfragen finden Sie in der [Dokumentation z
 
 Die [!UICONTROL Zeitplandetails] wird angezeigt. Geben Sie von hier aus die folgenden Details ein, um den Zeitplan zu konfigurieren:
 
-- **[!UICONTROL Ausführungsfrequenz]**: **jährlich**
-- **[!UICONTROL Tag der]**: **30. April**
-- **[!UICONTROL Ausführungszeit planen]**: **11 Uhr UTC**
-- **[!UICONTROL Planzeitraum]**: **1. April - 31. Mai 2024**
+- **[!UICONTROL Ausführungsfrequenz]**: **wöchentlich**
+- **[!UICONTROL Tag der Ausführung]**: **Montag und Dienstag**
+- **[!UICONTROL Ausführungszeit planen]**: **10:10 UTC**
+- **[!UICONTROL Planzeitraum]**: **17. März - 30. April 2025**
 
 Klicken Sie **[!UICONTROL Speichern]**, um den Zeitplan zu bestätigen.
 
@@ -518,11 +531,11 @@ Wählen Sie den Ansatz aus, der am besten zu Ihrem Workflow passt.
 
 Verwenden Sie den Befehl `CREATE AUDIENCE AS SELECT` , um eine neue Audience zu definieren. Die erstellte Zielgruppe wird in einem Datensatz gespeichert und im Arbeitsbereich **[!UICONTROL Zielgruppen]** unter &quot;**[!UICONTROL Distiller]** registriert.
 
-Audiences, die mit der SQL-Erweiterung erstellt wurden, werden automatisch unter der [!UICONTROL Data Distiller] im Arbeitsbereich [!UICONTROL Audiences] registriert. In der [!UICONTROL Audiences]-Benutzeroberfläche können Sie Ihre Audiences nach Bedarf anzeigen, verwalten und aktivieren.
+Audiences, die mit der SQL-Erweiterung erstellt wurden, werden automatisch unter der [!UICONTROL Data Distiller] im Arbeitsbereich [!UICONTROL Audiences] registriert. Im [Zielgruppenportal](../../segmentation/ui/audience-portal.md) können Sie Ihre Zielgruppen nach Bedarf anzeigen, verwalten und aktivieren.
 
-![Der Arbeitsbereich Zielgruppen , in dem verfügbare Zielgruppen angezeigt werden.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![Das Zielgruppen-Portal mit den verfügbaren Zielgruppen.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![Der Arbeitsbereich Zielgruppen , in dem die verfügbaren Zielgruppen angezeigt werden, wobei die Filter-Seitenleiste und die Daten-Distiller ausgewählt sind.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![Das Zielgruppenportal, in dem verfügbare Zielgruppen mit der Filter-Seitenleiste und Data Distiller ausgewählt sind.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 Weitere Informationen zu SQL-Audiences finden Sie in der [Data Distiller Audiences-Dokumentation](../data-distiller-audiences/overview.md). Informationen zum Verwalten von Zielgruppen in der Benutzeroberfläche finden Sie in der [Zielgruppen-Portal - Übersicht](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -534,19 +547,19 @@ Verwenden Sie zum Erstellen einer Zielgruppe die folgenden SQL-Befehle:
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### Einfügen einer Zielgruppe {#insert-an-audience}
 
-Um Profile zu einer bestehenden Audience hinzuzufügen, verwenden Sie den Befehl `INSERT INTO` . Auf diese Weise können Sie einzelne Profile oder ganze Zielgruppensegmente zu einem vorhandenen Zielgruppendatensatz hinzufügen.
+Um Profile zu einer bestehenden Audience hinzuzufügen, verwenden Sie den Befehl `INSERT INTO` . Auf diese Weise können Sie einzelne Profile oder ganze Zielgruppen zu einem vorhandenen Zielgruppen-Datensatz hinzufügen.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### Hinzufügen von Profilen zu einer Audience {#add-profiles-to-audience}
