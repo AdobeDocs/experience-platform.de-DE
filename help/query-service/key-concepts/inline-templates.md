@@ -2,7 +2,7 @@
 title: Inline-Vorlagen
 description: Erfahren Sie, wie Sie mehrere Bedingungen in zahlreichen Abfragen mit Inline-Vorlagen wiederverwenden können.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 100%
@@ -42,7 +42,7 @@ Beim Ausführen der Abfrage ersetzt Query Service den Vorlagennamen ab dem Hash-
 
 Sie können Vorlagen verwenden, um eine oder mehrere Bedingungen zu speichern. Es muss sich nicht um eine vollständige Abfrage handeln. Wenn Ihre Vorlage eine gültige Abfrage enthält, können Sie die Abfrage ausführen, indem Sie einfach den Vorlagennamen mit einem vorangestellten Hash-Symbol aufrufen. Wenn Sie beispielsweise `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` als Vorlage mit dem Namen `JUNE_2023_LOYALTY_MEMBERS` gespeichert haben, wird mit dem Befehl  `#JUNE_2023_LOYALTY_MEMBERS;` die in der Vorlage enthaltene gültige Abfrage ausgeführt.
 
->
+>[!NOTE]
 >
 >In der Adobe Experience Platform-Benutzeroberfläche werden Inline-Vorlagen in Form parametrisierter Abfragen nur auf übergeordneter Ebene unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Die untergeordnete Vorlage muss eine statische Vorlage sein und darf keine dynamischen Parameter aufweisen. Weitere Informationen finden Sie in der [Dokumentation zu parametrisierten Abfragen](../ui/parameterized-queries.md).
 

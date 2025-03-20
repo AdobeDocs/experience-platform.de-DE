@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Query Service und Data Distiller
 description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 83%
 
 ---
@@ -84,17 +84,6 @@ In Batch-Abfragen wird das Aktualisieren einer Zeile im Datensatz nicht unterst�
 
 +++Antwort 
 Nr. Es gibt keine Begrenzung der Datengröße, aber es gibt eine Zeitbeschränkung von 10 Minuten für Abfragen aus einer interaktiven Sitzung. Wenn die Abfrage als Batch-CTAS ausgeführt wird, gilt keine Zeitbeschränkung auf 10 Minuten. Weitere Informationen finden Sie in den Leitlinien zur [interaktiven Ausführung von Abfragen](./best-practices/writing-queries.md#interactive-query-execution).
-+++
-
-### Wie umgehe ich die Begrenzung der Anzahl der ausgegebenen Zeilen aus einer SELECT-Abfrage?
-
-+++Antwort
-Wenden Sie „LIMIT 0“ in der Abfrage an, um die Beschränkung für die Ausgabezeilen zu umgehen. Beispiel:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### Wie kann ich verhindern, dass meine Abfragen nach 10 Minuten ablaufen?
