@@ -2,9 +2,9 @@
 title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3658'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Mithilfe der Fallstudie zu Luma analysieren Sie die Verhaltensdaten der Benutzer
 ## Voraussetzung
 
 Um diesen Anwendungsfall ausführen zu können, muss Ihre Adobe Experience Platform-Instanz für [Data Distiller](./overview.md) lizenziert sein. Weitere Informationen erhalten Sie vom Adobe-Support.
+
+Außerdem müssen Sie die Mandanten **ID Ihrer Organisation kennen,** für die Ausführung von Abfragen erforderlich ist. Ihre Mandanten-ID ist der erste Teil der URL, wenn Sie sich bei Experience Platform anmelden. Sie wird unmittelbar nach dem @-Symbol angezeigt.
+
+Beispielsweise in der folgenden URL:
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+Die Mandanten-ID ist `pfreportingonprod`.
 
 ## Überblick über das RFM-Modell {#rfm-overview}
 
