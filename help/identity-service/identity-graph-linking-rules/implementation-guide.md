@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,12 @@ Bei einem eindeutigen Namespace (in diesem Fall eine CRMID anstelle von zwei unt
 
 Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) zum Aufnehmen von Daten verwenden, müssen Sie Ihren ECIDs eine höhere Priorität als der Adobe Analytics ID (AAID) einräumen, da Identity Service AAID blockiert. Durch Priorisierung von ECID können Sie das Echtzeit-Kundenprofil anweisen, nicht authentifizierte Ereignisse in ECID anstatt in AAID zu speichern.
 
-### XDM-Erlebnisereignisse
+### XDM-Erlebnisereignisse {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="Stellen Sie sicher, dass Sie über eine Personenkennung verfügen"
+>abstract="Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID."
 
 Stellen Sie während des Vorab-Implementierungsprozesses sicher, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung enthalten, z. B. CRMID.
 
