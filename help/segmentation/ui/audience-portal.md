@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
+source-wordcount: '4561'
 ht-degree: 52%
 
 ---
@@ -221,11 +221,6 @@ Wenn Sie Massenaktionen auf Zielgruppen anwenden, gelten die folgenden Bedingung
 - Wenn Sie einen Filter auswählen, werden die ausgewählten Zielgruppen **zurückgesetzt**.
 
 #### [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexible Begrenzungen für Zielgruppenbewertung"
-abstract="Sie können bis zu 20 Zielgruppen in einem einzigen flexiblen Auswertungsdurchlauf auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b>nicht</b> gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können."
 
 Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Segmentierungsauftrag ausführen. Wählen Sie die Zielgruppen aus, die ausgewertet werden sollen, und wählen Sie **[!UICONTROL Zielgruppen auswerten]**.
 

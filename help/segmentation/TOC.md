@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 79%
+source-wordcount: '203'
+ht-degree: 78%
 
 ---
 
@@ -41,12 +41,13 @@ ht-degree: 79%
       - [Übersicht zu Segment Match](ui/segment-match/overview.md)
       - [Fehlerbehebung](ui/segment-match/troubleshooting.md)
 - {#methods} der Segmentierungsmethoden
-   - [Übersicht](methods/overview.md)
+   - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
    - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
    - [Edge-Segmentierung](methods/edge-segmentation.md)
+   - [Flexible Zielgruppenauswertung](methods/flexible-audience-evaluation.md)
 - Zielgruppentypen {#types}
-   - [Übersicht](types/overview.md)
+   - [Überblick](types/overview.md)
    - [Personen und Zielgruppen](types/people-audiences.md)
    - [Potenzielle Zielgruppen](types/prospect-audiences.md)
    - [Konto-Zielgruppen](types/account-audiences.md)
