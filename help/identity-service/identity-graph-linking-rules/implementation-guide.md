@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create
 >title="Stellen Sie sicher, dass Sie über eine Personenkennung verfügen"
 >abstract="Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID."
 
-Stellen Sie während des Vorab-Implementierungsprozesses sicher, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung enthalten, z. B. CRMID.
+Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
+
+* (Empfohlen) Authentifizierte Ereignisse mit einer Personenkennung.
+* (Nicht empfohlen) Authentifizierte Ereignisse mit zwei Personenkennungen.
+* (Nicht empfohlen) Authentifizierte Ereignisse ohne Personenkennungen.
+
 
 >[!BEGINTABS]
 
->[!TAB Authentifizierte Ereignisse mit Personenkennung]
+>[!TAB Authentifizierte Ereignisse mit einer Personenkennung]
 
 ```json
 {
@@ -98,8 +103,57 @@ Stellen Sie während des Vorab-Implementierungsprozesses sicher, dass die authen
 }
 ```
 
->[!TAB Authentifizierte Ereignisse ohne Personenkennung]
+>[!TAB Authentifizierte Ereignisse mit zwei Personenkennungen]
 
+Wenn Ihr System zwei Personen-IDs sendet, kann die Implementierung die Anforderung an einen Ein-Personen-Namespace nicht erfüllen. Wenn beispielsweise die identityMap in Ihrer WebSDK-Implementierung eine CRMID, eine customerID und einen ECID-Namespace enthält, gibt es keine Garantie, dass jedes einzelne Ereignis sowohl CRMID als auch customerID enthält.
+
+Idealerweise sollten Sie eine Payload ähnlich der folgenden senden:
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+Beachten Sie jedoch, dass Sie zwar zwei Personenkennungen senden können, es jedoch keine Garantie dafür gibt, dass ein unerwünschtes Diagrammausblenden aufgrund von Implementierungs- oder Datenfehlern verhindert wird. Betrachten Sie das folgende Szenario:
+
+* `timestamp1` = John meldet sich an -> System erfasst `CRMID: John, ECID: 111`. `customerID: John` ist jedoch nicht in dieser Ereignis-Payload vorhanden.
+* `timestamp2` = Jane meldet sich an -> System erfasst `customerID: Jane, ECID: 111`. `CRMID: Jane` ist jedoch nicht in dieser Ereignis-Payload vorhanden.
+
+Daher empfiehlt es sich, mit Ihren authentifizierten Ereignissen nur eine Personenkennung zu senden.
+
+In der Diagrammsimulation kann diese Aufnahme wie folgt aussehen:
+
+![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png)
+
+>[!TAB Authentifizierte Ereignisse ohne Personenkennungen]
 
 ```json
 {
@@ -122,27 +176,7 @@ Stellen Sie während des Vorab-Implementierungsprozesses sicher, dass die authen
 }
 ```
 
-
 >[!ENDTABS]
-
-Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
-
-* (Empfohlen) Authentifizierte Ereignisse mit einer Personenkennung.
-* (Nicht empfohlen) Authentifizierte Ereignisse mit zwei Personenkennungen.
-* (Nicht empfohlen) Authentifizierte Ereignisse ohne Personenkennungen.
-
-Wenn Ihr System zwei Personen-IDs sendet, kann die Implementierung die Anforderung an einen Ein-Personen-Namespace nicht erfüllen. Wenn die identityMap in Ihrer WebSDK-Implementierung beispielsweise eine CRMID, eine Kunden-ID und einen ECID-Namespace enthält, werden zwei Personen, die ein Gerät gemeinsam nutzen, möglicherweise fälschlicherweise verschiedenen Namespaces zugeordnet.
-
-Innerhalb von Identity Service kann diese Implementierung wie folgt aussehen:
-
-* `timestamp1` = John meldet sich an -> System erfasst `CRMID: John, ECID: 111`.
-* `timestamp2` = Jane meldet sich an -> System erfasst `customerID: Jane, ECID: 111`.
-
-+++So kann die Implementierung in der Diagrammsimulation aussehen
-
-![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png)
-
-+++
 
 ## Berechtigungen festlegen {#set-permissions}
 

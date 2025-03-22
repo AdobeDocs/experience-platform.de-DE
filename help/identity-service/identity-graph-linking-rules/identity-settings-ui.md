@@ -2,9 +2,9 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
->
->* Ihr Konto muss über die Berechtigung **Identitätsdiagramm anzeigen** verfügen, um auf Identitätseinstellungen in der Benutzeroberfläche zugreifen zu können. Weitere Informationen finden Sie im [Handbuch zu Berechtigungen in der attributbasierten Zugriffssteuerung](../../access-control/abac/ui/permissions.md).
+>Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 
@@ -31,6 +29,15 @@ Lesen Sie die folgenden Dokumente, bevor Sie mit Identitätseinstellungen arbeit
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Namespace-Priorität](./namespace-priority.md)
 * [Diagrammsimulation](./graph-simulation.md)
+
+### Berechtigungen festlegen {#set-permissions}
+
+Als Nächstes müssen Sie sicherstellen, dass Ihr Konto mit den folgenden Berechtigungen ausgestattet ist:
+
+* **[!UICONTROL Identitätseinstellungen anzeigen]**: Wenden Sie diese Berechtigung an, um eindeutige Namespaces und die Namespace-Priorität auf der Seite zum Durchsuchen von Identitäts-Namespaces anzeigen zu können.
+* **[!UICONTROL Identitätseinstellungen bearbeiten]**: Wenden Sie diese Berechtigung an, um Ihre Identitätseinstellungen bearbeiten und speichern zu können.
+
+Wenden Sie sich an Ihren Administrator, wenn Sie diese Berechtigungen nicht haben. Weitere Informationen finden Sie im [Handbuch zu Berechtigungen](../../access-control/abac/ui/permissions.md).
 
 ## Konfigurieren der Identitätseinstellungen
 
