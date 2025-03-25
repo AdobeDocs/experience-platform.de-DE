@@ -1,27 +1,29 @@
 ---
 description: Erfahren Sie mehr über die IP-Adressen, die Sie Ihrer Zulassungsliste hinzufügen müssen, um Adobe Experience Platform-Quellen erfolgreich verwenden zu können.
-title: ZULASSUNGSLISTE der IP-Adressen für Quellen
+title: AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse der Quellen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 30%
+source-wordcount: '242'
+ht-degree: 11%
 
 ---
 
-# IP-Adressen-Zulassungsliste
+# Zulassungsliste von IP-Adressen
 
-Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie den Traffic für den Datenübertragungs-Service fließen lassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen.
+Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie den Traffic für den Datenübertragungs-Service fließen lassen. Die folgenden IP-Adressen müssen einer -Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
-## ZULASSUNGSLISTE der IP-Adressen für Batch-Quellen {#batch}
+## IP-Adressen-Zulassungsliste für Quellen, die eine Verbindung zu Experience Platform in [!DNL Azure] herstellen {#azure}
 
-Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um den Traffic für den Datenübertragungs-Service für Batch-Quellen fließen zu lassen.
+### Batch-Quellen in Experience Platform auf [!DNL Azure] {#batch}
+
+Sie müssen die folgenden IP-Adressen zu Ihrer -Zulassungsliste hinzufügen, um den Traffic für den Datenübertragungs-Service für Batch-Quellen fließen zu lassen.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: Nordamerika]
 
-### VA7: Nordamerika
+#### VA7: Nordamerika
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB AUS5: Australien]
 
-### AUS5: Australien
+#### AUS5: Australien
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB CAN2: Kanada]
 
-### CAN2: Kanada
+#### CAN2: Kanada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB IND2: Indien]
 
-### IND2: Indien
+#### IND2: Indien
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,7 +104,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!ENDTABS]
 
-## ZULASSUNGSLISTE von IP-Adressen für Streaming-Quellen {#streaming}
+### Streamen von Quellen auf Experience Platform auf [!DNL Azure] {#streaming}
 
 Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um den Traffic für den Datenübertragungs-Service für Streaming-Quellen wie [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) und [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) fließen zu lassen.
 
@@ -110,7 +112,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB VA7: Nordamerika]
 
-### VA7: Nordamerika
+#### VA7: Nordamerika
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB AUS5: Australien]
 
-### AUS5: Australien
+#### AUS5: Australien
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB CAN2: Kanada]
 
-### CAN2: Kanada
+#### CAN2: Kanada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB GBR9: Vereinigtes Königreich]
 
-### GBR9: Vereinigtes Königreich
+#### GBR9: Vereinigtes Königreich
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 >[!TAB IND2: Indien]
 
-### IND2: Indien
+#### IND2: Indien
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## IP-Adressen, an die eine Quellverbindung zu Experience Platform auf [!DNL Amazon Web Services] (AWS) auf die Zulassungsliste gesetzt werden soll {#aws}
+
+Sie müssen die folgende IP-Adresse zu Ihrer Zulassungsliste hinzufügen, um Ihre Quelle mit Experience Platform in AWS zu verbinden:
+
+- `66.117.18.0/24`

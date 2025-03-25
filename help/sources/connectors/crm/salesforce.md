@@ -2,9 +2,9 @@
 title: Übersicht über den Salesforce Source Connector
 description: Erfahren Sie, wie Sie Salesforce mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1581'
 ht-degree: 11%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Sie können jetzt die [!DNL Salesforce]-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../landing/multi-cloud.md).
+>Sie können jetzt die [!DNL Salesforce]-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Salesforce].
 
-## Einrichten der [!DNL Salesforce] für das Experience Platform auf Azure {#azure}
+## Einrichten der [!DNL Salesforce] für Experience Platform auf Azure {#azure}
 
-Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Konto für das Experience Platform in Azure einrichten können.
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Salesforce] für Experience Platform auf Azure einrichten können.
 
 ### IP-Adressen-Zulassungsliste
 
@@ -59,14 +59,14 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 
 | Variable | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Eine eindeutige Kennung, die zum Generieren Ihres `{ACCESS_TOKEN}` verwendet wird. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `{CLIENT_SECRET}`&quot;. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Das JSON Web Token (JWT) ist eine Authentifizierungsberechtigung, die zum Generieren Ihres {ACCESS_TOKEN} verwendet wird. Informationen zum Generieren [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `{JWT_TOKEN}`-APIs“ . | `{JWT_TOKEN}` |
-| `API_KEY` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `{API_KEY}`&quot;. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Das zum Abschließen von Aufrufen an Experience Platform-APIs erforderliche Autorisierungs-Token. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `{ACCESS_TOKEN}`&quot;. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Eine eindeutige Kennung, die zum Generieren Ihres `{ACCESS_TOKEN}` verwendet wird. Informationen zum Abrufen Ihrer `{CLIENT_SECRET}` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | Das JSON Web Token (JWT) ist eine Authentifizierungsberechtigung, die zum Generieren Ihres {ACCESS_TOKEN} verwendet wird. Weitere Informationen zum Generieren [ Experience Platform-APIs finden Sie ](../../../landing/api-authentication.md) Tutorial zum Authentifizieren und Zugreifen auf `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
+| `API_KEY` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer `{API_KEY}` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `{ACCESS_TOKEN}` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `ent_dataservices_sdk` festgelegt. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | Der `global`-Container enthält alle von standardmäßigen Adobe- und Experience Platform-Partnern bereitgestellten Klassen, Schemafeldgruppen, Datentypen und Schemata. In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `global` festgelegt. | `global` |
+| `CONTAINER_ID` | Der `global`-Container enthält alle standardmäßigen von Adobe und Experience Platform bereitgestellten Partnerklassen, Schemafeldgruppen, Datentypen und Schemata. In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `global` festgelegt. | `global` |
 | `PRIVATE_KEY` | Eine Berechtigung, die zum Authentifizieren Ihrer [!DNL Postman] bei Experience Platform-APIs verwendet wird. Anweisungen zum Abrufen Ihrer {PRIVATE_KEY} finden Sie im Tutorial zum Einrichten [ Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md)Einrichten der Entwicklerkonsole und . | `{PRIVATE_KEY}` |
-| `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung für die Integration mit Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung, die zur Integration mit Adobe I/O verwendet wird. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Das Identity Management-System (IMS) stellt das Framework für die Authentifizierung für Adobe-Services bereit. In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `ims-na1.adobelogin.com` festgelegt. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer `{ORG_ID}` finden [ im Tutorial zum Einrichten  [!DNL Postman]](../../../landing/postman.md) Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Der Name der virtuellen Sandbox-Partition, die Sie verwenden. | `prod` |
@@ -95,27 +95,25 @@ Die [!DNL Runner] wird angezeigt. Stellen Sie von hier aus sicher, dass alle Kon
 
 Bei einer erfolgreichen Anfrage werden die B2B-Namespaces und -Schemas gemäß den Beta-Spezifikationen erstellt.
 
-## Einrichten einer [!DNL Salesforce] für das Experience Platform auf Amazon Web Services {#aws}
+## Einrichten der [!DNL Salesforce] für Experience Platform auf Amazon Web Services {#aws}
 
 >[!AVAILABILITY]
 >
->Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../landing/multi-cloud.md).
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
 
-Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Konto für das Experience Platform auf Amazon Web Services (AWS) einrichten können.
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie Ihr [!DNL Salesforce] für Experience Platform auf Amazon Web Services (AWS) einrichten können.
 
 ### Voraussetzungen
 
-Um Ihr [!DNL Salesforce]-Konto mit Experience Platform in einer AWS-Region zu verbinden, benötigen Sie Folgendes:
+Um in einer AWS-Region Ihr [!DNL Salesforce]-Konto mit Experience Platform zu verbinden, benötigen Sie Folgendes:
 
 - Ein [!DNL Salesforce] Konto mit API-Zugriff.
 - Ein [!DNL Salesforce Connected App], mit dem Sie dann den OAuth-Fluss JWT_BEARER aktivieren können.
 - Die erforderlichen Berechtigungen in [!DNL Salesforce] für den Zugriff auf Daten.
 
-Sie müssen außerdem die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um Ihr [!DNL Salesforce]-Konto mit Experience Platform auf Amazon Web Services (AWS) zu verbinden:
+### AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse für die Verbindung mit AWS
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform in AWS verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform auf AWS](../../ip-address-allow-list.md) .
 
 ### Erstellen eines [!DNL Salesforce Connected App]
 
@@ -147,8 +145,8 @@ Nachdem Sie Ihre Berechtigungen hinzugefügt haben, stellen Sie sicher, dass Sie
 
 Wählen Sie als Nächstes **[!DNL Save]**, **[!DNL Continue]** und dann **[!DNL Manage Customer Details]** aus. Verwenden Sie das Bedienfeld Verbraucherdetails , um Folgendes abzurufen:
 
-- **Kundenschlüssel**: Dieser Kundenschlüssel wird später bei der Authentifizierung Ihres [!DNL Salesforce]-Kontos beim Experience Platform als Ihre Client-ID verwendet.
-- **Consumer Secret**: Dieses Consumer Secret wird später bei der Authentifizierung Ihres [!DNL Salesforce]-Kontos für Experience Platform als Ihre Client-ID verwendet.
+- **Kundenschlüssel**: Dieser Kundenschlüssel wird später bei der Authentifizierung Ihres [!DNL Salesforce] bei Experience Platform als Ihre Client-ID verwendet.
+- **Consumer Secret**: Dieses Consumer Secret wird später bei der Authentifizierung Ihres [!DNL Salesforce]-Kontos bei Experience Platform als Client-ID verwendet.
 
 ### Autorisieren des [!DNL Salesforce] Benutzers für die verbundene App
 
@@ -269,7 +267,7 @@ public class Main {
 
 ## Nächste Schritte
 
-Nachdem Sie die erforderliche Einrichtung für Ihr [!DNL Salesforce]-Konto abgeschlossen haben, können Sie mit dem Verbinden Ihres [!DNL Salesforce]-Kontos mit dem Experience Platform fortfahren und Ihre CRM-Daten aufnehmen. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Nachdem Sie die Voraussetzungen für Ihr [!DNL Salesforce]-Konto eingerichtet haben, können Sie mit dem Verbinden Ihres [!DNL Salesforce]-Kontos mit Experience Platform fortfahren und Ihre CRM-Daten aufnehmen. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
 ### Verbinden von [!DNL Salesforce] mit Platform mithilfe von APIs
 
