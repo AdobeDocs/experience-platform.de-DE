@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 96%
+source-wordcount: '1059'
+ht-degree: 95%
 
 ---
 
@@ -236,6 +236,7 @@ ht-degree: 96%
    - [Löschen von Datenflüssen](tutorials/api/delete-dataflows.md)
    - [Aufnehmen verschlüsselter Daten](tutorials/api/encrypt-data.md)
    - [Speichern eines Datenflusses als Entwurf](tutorials/api/draft.md)
+   - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/api/labels.md)
 - Tutorials zur Benutzeroberfläche {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
       - Adobe-Programme {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 96%
    - [Löschen von Datenflüssen](tutorials/ui/delete.md)
    - [Abonnieren von Warnmeldungen für Quellen](tutorials/ui/alerts.md)
    - [Speichern eines Datenflusses als Entwurf](tutorials/ui/draft.md)
+   - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/ui/labels.md)
 - Selbstbedienungsquellen (Batch-SDK) {#sdk}
    - [Übersicht](sources-sdk/overview.md)
    - Konfigurieren Ihrer Verbindungsspezifikation {#config}
