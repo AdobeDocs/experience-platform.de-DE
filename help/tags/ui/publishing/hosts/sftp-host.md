@@ -2,10 +2,10 @@
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 39%
+source-wordcount: '875'
+ht-degree: 36%
 
 ---
 
@@ -19,7 +19,7 @@ Mit Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesich
 
 >[!NOTE]
 >
->Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [Adobe](./managed-by-adobe-host.md)verwalteten Hosts.
+>Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [von Adobe verwalteten ](./managed-by-adobe-host.md).
 >
 >Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie im [Handbuch zum Self-Hosting](./self-hosting-libraries.md).
 
@@ -36,6 +36,22 @@ Auf Ihrem SFTP-Server muss ein öffentliches/privates Schlüsselpaar installiert
 Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln [ öffentlichen Schlüsseln finden Sie ](../../../api/guides/encrypting-values.md) Abschnitt zum Verschlüsseln von Werten im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
 
 ### Zulassungsliste Platform-IP-Adressen
+
+>[!IMPORTANT]
+>
+> Am 23. Juni 2025 aktualisiert Adobe Launch externe IP-Adressen, die zur Unterstützung der SFTP-Host-Typ- und Callback-API-Funktionen verwendet werden. Um eine dieser Funktionen weiterhin zu verwenden, stellen Sie sicher, dass Ihre Firewall-Regeln Traffic von den neuen IP-Adressen zulassen.
+>
+> Um den unterbrechungsfreien Zugriff aufrechtzuerhalten, empfehlen wir, die neuen IP-Adressen jetzt hinzuzufügen und die alten nach dem 23. Juni 2025 zu entfernen.
+>
+>**Alte IP-Adressen:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Neue IP-Adressen:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die innerhalb Ihrer Unternehmens-Firewall verwendet werden, damit Platform Ihren SFTP-Server erreichen und eine Verbindung zu ihm herstellen kann. Diese IP-Adressen lauten:
 
