@@ -3,20 +3,28 @@ keywords: Luftschiffattribute;Luftschiffziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting in Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 31%
+source-wordcount: '1150'
+ht-degree: 28%
 
 ---
 
 # [!DNL Airship Attributes]-Verbindung {#airship-attributes-destination}
 
-## Übersicht {#overview}
+>[!IMPORTANT]
+>
+>* Ab dem 25. März 2025 werden im Zielkatalog zwei [!DNL Airship Attributes] nebeneinander angezeigt. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der vorhandene [!DNL Airship Attributes]-Ziel-Connector wurde in **[!UICONTROL (veraltet) Airship Attributes]** umbenannt und eine neue Karte mit dem Namen **[!UICONTROL Airship Attributes]** ist jetzt für Sie verfügbar.
+>* Verwenden Sie die **[!UICONTROL Airship Attributes]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum Ziel &quot;**[!UICONTROL (veraltet) Airship Attributes]** haben, werden diese automatisch aktualisiert, sodass keine Aktion von Ihnen erforderlich ist.
+>* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
+>   * Flussspezifikations-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * Verbindungsspezifikations-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
+## Überblick {#overview}
 
 [!DNL Airship] ist die führende Plattform für Kundeninteraktion, mit der Sie Ihren Benutzern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitstellen können.
 
-Diese Integration übergibt Adobe-Profildaten als „Attribute[ zum ](https://docs.airship.com/guides/audience/attributes/) oder Auslösen in [!DNL Airship].
+Durch diese Integration werden Adobe-Profildaten zum Targeting oder [ als ](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
 
 Weitere Informationen zu [!DNL Airship] finden Sie unter [Airship Docs](https://docs.airship.com).
 
@@ -41,7 +49,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -69,11 +77,11 @@ Navigieren Sie **[!UICONTROL Einstellungen]**&quot; **[!UICONTROL APIs und Integ
 
 Klicken Sie **[!UICONTROL Token erstellen]**.
 
-Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. &quot;Adobe-Zielattribute“, und wählen Sie „Alle Zugriffsrechte“ für die Rolle aus.
+Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. „Ziel der Adobe-Attribute“, und wählen Sie „Zugriff auf alle“ für die Rolle aus.
 
 Klicken Sie **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
@@ -131,7 +139,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 Für Kennungen, die einem Kanal, d. h. einem Gerät, zugeordnet werden sollen, ordnen Sie sie dem entsprechenden Kanal basierend auf der Quelle zu. Die folgenden Bilder zeigen, wie zwei Zuordnungen erstellt werden:
 
 * IDFA iOS Advertising-ID für einen [!DNL Airship] iOS-Kanal
-* Adobe `fullName` Attributs in [!DNL Airship] Attribut „Vollständiger Name“
+* Adobe `fullName` Attribut [!DNL Airship] Attribut „Vollständiger Name“ an
 
 >[!NOTE]
 >
