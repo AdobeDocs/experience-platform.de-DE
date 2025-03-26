@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
+source-wordcount: '3620'
 ht-degree: 11%
 
 ---
@@ -97,12 +97,12 @@ Jede einzelne Datenflussausführung zeigt die folgenden Details:
 
   >[!IMPORTANT]
   >
-  > Ab Oktober 2024 führt Adobe ein Update ein, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und die Zielplattformen sichergestellt.
+  > Ab März 2025 führt Adobe eine Aktualisierung ein, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen den Berichten in Experience Platform und den Zielplattformen sichergestellt.
   >
   > Vor diesem Update umfasste **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen.
   > 
-  > Diese Verbesserung gilt derzeit für das Ziel [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
-  > Nach dieser Verbesserung kann es bei Benutzenden des [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen.
+  > Diese Verbesserung gilt für alle Streaming-Ziele.
+  > Nach dieser Verbesserung kann es bei Benutzenden von Streaming-Zielen zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen.
 
 
 - **[!UICONTROL Aktivierungsrate]**: Der Prozentsatz der empfangenen Identitäten, die erfolgreich aktiviert wurden. Die folgende Formel zeigt, wie dieser Wert berechnet wird:

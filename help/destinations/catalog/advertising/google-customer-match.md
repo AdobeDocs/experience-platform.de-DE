@@ -3,10 +3,10 @@ keywords: Google Customer Match; Google Customer Match; Google Customer Match
 title: Google Customer Match-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Eigenschaften wie Search, Shopping und Gmail zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
+source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
 workflow-type: tm+mt
-source-wordcount: '2140'
-ht-degree: 17%
+source-wordcount: '2046'
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 17%
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
 ><br/>
->Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Ihnen Adobe die notwendigen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+>Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
 ><br/>
 >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
 ><br/>
@@ -30,13 +30,13 @@ ht-degree: 17%
 
 ![Ziel von Google Customer Match in der Adobe Experience Platform-Benutzeroberfläche.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Google Customer Match]-Ziel verwenden, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit dieser Funktion bewältigen können.
 
 ### Anwendungsfall #1
 
-Eine Sportbekleidungsmarke möchte bestehende Kunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebote und Artikel basierend auf ihren früheren Käufen und dem Navigationsverlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus dem eigenen CRM auf Experience Platform aufnehmen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können diese Zielgruppen an [!DNL Google Customer Match] gesendet und über [!DNL Search] und [!DNL Shopping] hinweg verwendet werden, wodurch die Werbeausgaben optimiert werden.
+Eine Sportbekleidungsmarke möchte bestehende Kunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebote und Artikel basierend auf ihren früheren Käufen und dem Navigationsverlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus dem eigenen CRM in Experience Platform aufnehmen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können diese Zielgruppen an [!DNL Google Customer Match] gesendet und über [!DNL Search] und [!DNL Shopping] hinweg verwendet werden, wodurch die Werbeausgaben optimiert werden.
 
 ### Anwendungsfall #2
 
@@ -46,11 +46,11 @@ Eine Sportbekleidungsmarke möchte bestehende Kunden über [!DNL Google Search] 
 
 Ein prominentes Technologieunternehmen brachte ein neues Telefon auf den Markt. Um dieses neue Telefonmodell zu bewerben, möchten sie das Bewusstsein für die neuen Funktionen und Möglichkeiten des Telefons auf Kunden lenken, die frühere Modelle ihres Telefons besitzen.
 
-Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in die Experience Platform hoch, wobei sie die E-Mail-Adressen als Kennungen verwenden. Zielgruppen werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Dann werden die Zielgruppen an [!DNL Google Customer Match] gesendet, damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden auf [!DNL YouTube] ansprechen kann.
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch, wobei sie die E-Mail-Adressen als Kennungen verwenden. Zielgruppen werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Dann werden die Zielgruppen an [!DNL Google Customer Match] gesendet, damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden auf [!DNL YouTube] ansprechen kann.
 
 ## Data Governance für [!DNL Google Customer Match] Ziele {#data-governance}
 
-Einige Ziele in Experience Platform haben bestimmte Regeln und Verpflichtungen für Daten, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, sich über die Beschränkungen und Verpflichtungen, die mit Ihren Daten einhergehen, sowie über die Verwendung dieser Daten in Adobe Experience Platform und der Zielplattform zu informieren. Adobe Experience Platform bietet Data-Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Weitere Informationen](../../../data-governance/labels/overview.md) über Data Governance-Tools und -Richtlinien.
+Für einige Ziele in Experience Platform gelten bestimmte Regeln und Verpflichtungen für Daten, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, sich über die Beschränkungen und Verpflichtungen, die mit Ihren Daten einhergehen, sowie über die Verwendung dieser Daten in Adobe Experience Platform und der Zielplattform zu informieren. Adobe Experience Platform bietet Data-Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Weitere Informationen](../../../data-governance/labels/overview.md) über Data Governance-Tools und -Richtlinien.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -72,7 +72,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -90,13 +90,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Voraussetzungen für [!DNL Google Customer Match] Konto {#google-account-prerequisites}
 
-Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, lesen Sie sich die Richtlinie von Google zur Verwendung von [!DNL Customer Match] durch, die in der [Dokumentation zum Google-Support beschrieben ](https://support.google.com/google-ads/answer/6299717).
+Bevor Sie ein [!DNL Google Customer Match] Ziel in Experience Platform einrichten, stellen Sie sicher, dass Sie die Richtlinie von Google zur Verwendung von [!DNL Customer Match] lesen und befolgen, die in der [Dokumentation zum Google-Support beschrieben ](https://support.google.com/google-ads/answer/6299717).
 
 Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu {](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)}Google Ads .[
 
 ### Zulassungsliste {#allowlist}
 
-Bevor Sie das [!DNL Google Customer Match]-Ziel in Experience Platform erstellen, stellen Sie sicher, dass Ihr [!DNL Google Ads]-Konto mit der [[!DNL Google Customer Match] Richtlinie](https://support.google.com/google-ads/answer/6299717/customer-match-policy) übereinstimmt.
+Bevor Sie das [!DNL Google Customer Match]-Ziel in Experience Platform erstellen, stellen Sie sicher, dass Ihr [!DNL Google Ads]-Konto mit der [[!DNL Google Customer Match] Richtlinie“ ](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Kunden mit konformen Konten werden automatisch von Google auf die Zulassungsliste gesetzt.
 
@@ -119,7 +119,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer
 
 ### Hash-Anforderungen für E-Mails {#hashing-requirements}
 
-Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in CLEAR in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
 
 Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivierungsbeschränkungen finden Sie in den folgenden Abschnitten der Dokumentation zu Google:
 
@@ -129,7 +129,7 @@ Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivieru
 * [[!DNL Customer Match] mit IDs für Mobilgeräte](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Informationen zum Aufnehmen von E-Mail-Adressen im Experience Platform finden Sie [ „Übersicht über die Batch](../../../ingestion/batch-ingestion/overview.md)Aufnahme“ und [Streaming-Aufnahme - Übersicht](../../../ingestion/streaming-ingestion/overview.md).
+Weitere Informationen zum Aufnehmen von E-Mail-Adressen in Experience Platform finden Sie unter [Übersicht über die Batch](../../../ingestion/batch-ingestion/overview.md)Aufnahme und [Streaming-Aufnahme - Übersicht](../../../ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen Sie sicher, dass Sie die Anforderungen von Google erfüllen, die in den obigen Links beschrieben werden.
 
@@ -227,16 +227,6 @@ Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehash
 ## Ziel überwachen {#monitor-destination}
 
 Nachdem Sie eine Verbindung zum Ziel hergestellt und einen Ziel-Datenfluss eingerichtet haben, können Sie die [Überwachungsfunktion](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP verwenden, um ausführliche Informationen über die Profildatensätze zu erhalten, die in jeder Datenflussausführung für Ihr Ziel aktiviert wurden.
-
->[!IMPORTANT]
->
-> Ab Oktober 2024 führt Adobe ein Update durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen der Experience Platform- und der Zielplattform-Berichterstellung sichergestellt.
->
-> Vor diesem Update umfasste **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen.
->
-> Diese Verbesserung gilt derzeit für das [Google Customer Match-Ziel](google-customer-match.md) wird aber schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
-> Nach dieser Verbesserung kann es bei Benutzenden dieses Ziels zu einem erwarteten Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** kommen.
-
 
 ## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 
