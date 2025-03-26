@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 67%
    * [Administration – Übersicht](administration/admin-overview.md)
 * Zielgruppen und {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
-   * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
+   * [Audience Builder-Handbuch](segmentation/audience-builder.md)
    * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
    * [Kunden-KI](segmentation/customer-ai.md)
 * Datensätze {#datasets}

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 66%
@@ -322,7 +322,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 
 +++
 
-## Container
+## Container {#containers}
 
 Segmentregeln werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
 

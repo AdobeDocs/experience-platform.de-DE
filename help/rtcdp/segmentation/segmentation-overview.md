@@ -1,13 +1,13 @@
 ---
 keywords: Segmentierung;Segmentierung rtcdp;Real-time Customer Data Platform-Segmentierung
 title: Segmentierungs-Service in Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Experience Platform-Services und -Funktionen. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Merkmalen aufteilen.
+description: Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Services und Funktionen von Experience Platform. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Merkmalen aufteilen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 78%
+ht-degree: 75%
 
 ---
 
@@ -21,9 +21,9 @@ Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele Services und
 
 Bei der Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe verschiedener Segmentdefinitionen können Sie sich auf Ihre verschiedenen Zielgruppen konzentrieren und ein individuelleres Marketing-Erlebnis bieten.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform] können Sie mühelos Segmentdefinitionen erstellen und darauf zugreifen sowie verschiedene Bausteine verwenden, um Ihre Zielgruppen weiter zu charakterisieren. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
+[!DNL Platform] können Sie mühelos Segmentdefinitionen erstellen und darauf zugreifen sowie verschiedene Bausteine verwenden, um Ihre Zielgruppen weiter zu charakterisieren. Weitere Informationen zur Verwendung von Audience Builder finden Sie im [Audience Builder-Handbuch](./audience-builder.md).
 
 ## Kunden-KI
 
