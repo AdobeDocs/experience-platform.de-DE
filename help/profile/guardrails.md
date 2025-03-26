@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
-ht-degree: 57%
+source-wordcount: '2611'
+ht-degree: 55%
 
 ---
 
@@ -127,6 +127,9 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 | Konto-Zielgruppen pro Sandbox | 50 | Vom System erzwungene Leitplanken | Sie können in einer Sandbox maximal 50 Konto-Zielgruppen erstellen. Nachdem Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird das Steuerelement **[!UICONTROL Zielgruppe erstellen]** beim Erstellen einer neuen Konto-Zielgruppe deaktiviert. Lesen Sie mehr über [Account-Zielgruppen](/help/segmentation/types/account-audiences.md). |
 | Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungs-Schutzmaßnahme | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Weitere Informationen zur [Audience-Komposition“ finden Sie im Handbuch zur Benutzeroberfläche](/help/segmentation/ui/audience-composition.md). |
 | Maximale Zielgruppengröße | 30 Prozent | Leistungs-Schutzmaßnahme | Die empfohlene maximale Mitgliedschaft einer Zielgruppe beträgt 30 % der Gesamtzahl der Profile im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mit mehreren großen Zielgruppen ist möglich, wirkt sich jedoch auf die Systemleistung aus. |
+| Flexible Auswertungsdurchgänge für Zielgruppen | 50 pro Jahr (Produktions-Sandbox)<br/>100 pro Jahr (Entwicklungs-Sandbox) | Vom System erzwungene Leitplanken | Sie haben pro Jahr maximal 50 flexible Zielgruppenauswertungsdurchgänge pro (Produktions-)**Sandbox**. Sie haben pro Jahr maximal 100 flexible Zielgruppenauswertungsdurchgänge pro Sandbox **Entwicklung**. |
+| Flexible Auswertungsdurchgänge für Zielgruppen | 2 pro Tag | Vom System erzwungene Leitplanken | Sie haben maximal 2 Ausführungen pro Tag pro Sandbox. |
+| Zielgruppen pro flexibler Ausführung der Zielgruppenevaluierung | 20 | Vom System erzwungene Leitplanken | Pro Ausführung der flexiblen Zielgruppenauswertung können maximal 20 Zielgruppen erstellt werden. |
 
 {style="table-layout:auto"}
 

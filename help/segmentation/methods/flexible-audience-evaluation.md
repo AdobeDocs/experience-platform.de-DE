@@ -2,12 +2,10 @@
 title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 8%
+source-wordcount: '996'
+ht-degree: 7%
 
 ---
 
@@ -32,6 +30,10 @@ Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgend
 - Alle Zielgruppen **müssen** mithilfe der Batch-Segmentierung ausgewertet werden.
 - Alle Zielgruppen **müssen** personenbasierte Zielgruppen sein.
 - Pro flexibler Zielgruppenauswertungsausführung können nur maximal 20 Zielgruppen ausgewählt werden.
+
+>[!NOTE]
+>
+>Sie *können* zusätzliche flexible Auswertungsdurchgänge für Zielgruppen pro Jahr erwerben. Weitere Informationen erhalten Sie bei der Adobe-Kundenunterstützung.
 
 ## Zugriff {#access}
 
@@ -308,11 +310,17 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 >[!NOTE]
 >
->Wenn Sie eine flexible Zielgruppenbewertung ausführen, müssen Sie sicherstellen, dass die Häufigkeit auf „Nach **[!UICONTROL Segmentbewertung“]** ist. Bei der Ausführung einer flexiblen Zielgruppenauswertung für Zielgruppen, für die bereits eine Aktivierung festgelegt ist [nach der Segmentevaluierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden Zielgruppen unabhängig von vorherigen täglichen Aktivierungsvorgängen sofort nach Abschluss des flexiblen Zielgruppenauswertungsauftrags aktiviert.
+>Der Status des Segmentauftrags kann im Monitoring-Dashboard als „In Warteschlange“ gemeldet werden. Sie können den aktuellen Status des Segmentauftrags anzeigen, indem Sie eine GET-Anfrage an den `/segment/jobs`-Endpunkt senden und im Anfragepfad die ID des Segmentauftrags angeben. Weitere Informationen zur Verwendung dieses Endpunkts finden Sie auf der Registerkarte API .
+>
+>Wenn Sie eine flexible Zielgruppenbewertung ausführen und möchten, dass die Auswertung die Zielgruppe für ein Ziel aktiviert, müssen Sie sicherstellen, dass die Häufigkeit auf „Nach **[!UICONTROL Segmentbewertung“]** ist. Bei der Ausführung einer flexiblen Zielgruppenauswertung für Zielgruppen, für die bereits eine Aktivierung festgelegt ist [nach der Segmentevaluierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden Zielgruppen unabhängig von vorherigen täglichen Aktivierungsvorgängen sofort nach Abschluss des flexiblen Zielgruppenauswertungsauftrags aktiviert.
 
 >[!ENDTABS]
 
-## Nächste Schritte {#next-steps}
+## Video {#video}
+
+Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielgruppenbewertung zugreifen und diese verwenden können.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Häufig gestellte Fragen {#faq}
 

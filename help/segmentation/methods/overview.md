@@ -1,13 +1,13 @@
 ---
 title: Methoden zur Zielgruppenauswertung
 description: Erfahren Sie mehr über die verschiedenen Auswertungsmethoden, die in Adobe Experience Platform verfügbar sind.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 6%
+source-wordcount: '241'
+ht-degree: 5%
 
 ---
-
 
 # Methoden zur Zielgruppenauswertung
 
@@ -18,6 +18,10 @@ Adobe Experience Platform bietet eine Vielzahl von Auswertungsmethoden zur Segme
 Die Batch-Segmentierung ist eine Auswertungsmethode für die Segmentierung, mit der Sie Profildaten gleichzeitig verschieben können, um Ihre entsprechenden Zielgruppen zu erstellen. Mithilfe der Batch-Segmentierung können Sie detaillierte und umfangreiche Zielgruppen erstellen, um große Profilgruppen anzusprechen.
 
 Weitere Informationen zur Batch-Segmentierung finden Sie in der [Übersicht zur Batch-Segmentierung](./batch-segmentation.md).
+
+### Flexible Zielgruppenauswertung
+
+Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segmentierungsauftrag ausführen. Weitere Informationen finden Sie im [Handbuch zur flexiblen Zielgruppenbewertung](./flexible-audience-evaluation.md).
 
 ## Streaming-Segmentierung 
 
