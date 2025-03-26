@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
+source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1061'
 ht-degree: 95%
 
 ---
@@ -95,6 +95,7 @@ ht-degree: 95%
    - {#data-partner} für Daten- und Identitätspartner
       - [Acxiom-Datenaufnahme](connectors/data-partners/acxiom-data-ingestion.md)
       - [Datenimport aus Acxiom Prospecting](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Identitätsauflösung für Unternehmen von Merkury](connectors/data-partners/merkury.md)
    - E-Commerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
