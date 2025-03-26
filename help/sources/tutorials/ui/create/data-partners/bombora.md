@@ -2,9 +2,9 @@
 title: Verbinden des Bombora Intent mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Bombora Intent mit Experience Platform verbinden
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: 9f6f84d16c30c1e32184007ebc2a401db5f8b9ac
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '955'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B edition wurde speziell für Marketing-Fachleute entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+
+### Voraussetzungen
+
+Informationen [[!DNL Bombora Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/data-partners/bombora.md) „Übersicht“.
 
 ## Navigieren im Quellkatalog
 

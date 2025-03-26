@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 73%
+source-wordcount: '1552'
+ht-degree: 72%
 
 ---
 
@@ -28,7 +28,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 
 ## Erweiterte Unternehmensquellen {#advanced-enterprise-sources}
 
-Die folgenden Quellen stehen nur [Kunden von Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) zur Verfügung.
+Die folgenden Quellen stehen nur [Kunden von Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) zur Verfügung.
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE batch]{type=Informative}
@@ -39,9 +39,9 @@ Die folgenden Quellen stehen nur [Kunden von Adobe Real-time Customer Data Platf
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE batch]{type=Informative}
 
-## Adobe- und Partnerquellen {#adobe-and-partner-built-sources}
+## Von Adobe und Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
-Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und ](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) durch Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
+Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und ](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
 
 Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
@@ -144,10 +144,12 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 
 ### Daten- und Identitätspartner {#data-partner}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Experience Platform unterstützt die Aufnahme von Daten aus einem Daten- und Identitätspartner. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE batch]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE batch]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE batch]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE batch]{type=Informative}
 
 ### E-Commerce {#ecommerce}

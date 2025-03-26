@@ -2,10 +2,11 @@
 title: Bombora Intent
 description: Erfahren Sie mehr über die Bombora Intent-Quelle auf Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: c558ed7c5ce5fcb26d98a47ad7b7c1461192dc9b
+exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
+source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 13%
+source-wordcount: '1605'
+ht-degree: 10%
 
 ---
 
@@ -39,9 +40,9 @@ Mit nativen Anzeigenplattformen können Sie sicherstellen, dass Ihre Inhalte Ent
 
 Lesen Sie die folgenden Abschnitte für erforderliche Schritte, bevor Sie [!DNL Bombora] mit Experience Platform verbinden.
 
-### IP-Adressen-Zulassungsliste
+### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
