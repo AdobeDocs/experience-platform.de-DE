@@ -1,22 +1,36 @@
 ---
-title: Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP in Cloud-Speicher-Ziele
+title: Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP
 type: Tutorial
 description: Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud-Speicher-Ziele exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP in Cloud-Speicher-Ziele {#export-arrays-cloud-storage}
+# Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Exportieren von Arrays und anderen komplexen Objekten in Cloud-Speicher-Ziele ist allgemein für die folgenden Ziele verfügbar: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>Die Funktion zum Exportieren von Arrays und anderen komplexen Objekten in Cloud-Speicher-Ziele ist allgemein für die folgenden Ziele verfügbar: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
+>
+>Darüber hinaus können Sie Felder vom Typ Zuordnung an die folgenden Ziele exportieren: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
-Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele ](/help/destinations/catalog/cloud-storage/overview.md). Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen.
+
+Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele ](/help/destinations/catalog/cloud-storage/overview.md). Darüber hinaus können Sie Felder vom Typ „Zuordnung“ in [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) und eingeschränkte [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen. In der folgenden Tabelle finden Sie die verfügbaren Funktionen pro Zieltyp.
+
+| Zieltyp | Möglichkeit zum Exportieren von Arrays, Karten und anderen benutzerdefinierten Objekten |
+|---|---|
+| Von Adobe erstellte Cloud-Speicher-Ziele (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Ja, wobei der Umschalter „Export von Arrays, Zuordnungen und Objekten aktivieren“ beim Einrichten einer Zielverbindung aktiviert ist. |
+| Dateibasierte E-Mail-Marketing-Ziele (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Nein |
+| Bestehende benutzerdefinierte, von Partnern erstellte Cloud-Speicher-Ziele (benutzerdefinierte dateibasierte Ziele, die über Destination SDK erstellt wurden) | Nein |
+| Unternehmensziele (Amazon Kinesis, Azure Event Hubs, HTTP-API) | Teilweise. Im Zuordnungsschritt des Aktivierungs-Workflows können Sie Objekte vom Typ Zuordnung auswählen und exportieren. |
+| Streaming-Ziele (z. B. Facebook, Braze, Google Customer Match und mehr) | Nein |
+| Edge-Personalisierungsziele (Adobe Target) | Teilweise. Im Zuordnungsschritt des Aktivierungs-Workflows können Sie Objekte vom Typ Zuordnung auswählen und exportieren. |
+
+{style="table-layout:auto"}
 
 Auf dieser Seite finden Sie alle Informationen zum Exportieren von Arrays, Karten und anderen Objekttypen aus Experience Platform.
 
@@ -24,9 +38,9 @@ Auf dieser Seite finden Sie alle Informationen zum Exportieren von Arrays, Karte
 
 Die wichtigsten Informationen zur Funktionalität finden Sie in diesem Abschnitt und weiter unten in den anderen Abschnitten des Dokuments, um detaillierte Informationen zu erhalten.
 
-* Die Fähigkeit zum Exportieren von Arrays, Zuordnungen und Objekten hängt von Ihrer Auswahl des Umschalters **Exportieren von Arrays, Zuordnungen,**) ab. Lesen Sie mehr darüber [weiter unten auf der Seite](#export-arrays-maps-objects-toggle).
-* Sie können Arrays, Zuordnungen und Objekte nur in `JSON`- und `Parquet`-Dateien in Cloud-Speicher-Ziele exportieren. Personen und Zielgruppen potenzieller Kunden werden unterstützt, Konto-Zielgruppen jedoch nicht.
-* Sie *können* Arrays, Zuordnungen und Objekte in CSV-Dateien exportieren, jedoch nur mithilfe der Funktion „Berechnete Felder“ und indem Sie sie mithilfe der Funktion &quot;`array_to_string`&quot; zu einer Zeichenfolge verketten.
+* Bei Cloud-Speicher-Zielen hängt die Möglichkeit zum Exportieren von Arrays, Zuordnungen und Objekten von Ihrer Auswahl des Umschalters **Arrays, Zuordnungen, Objekte exportieren** ab. Lesen Sie mehr darüber [weiter unten auf der Seite](#export-arrays-maps-objects-toggle).
+* Sie können Arrays, Zuordnungen und Objekte in `JSON`- und `Parquet`-Dateien in Cloud-Speicher-Ziele exportieren. Bei Unternehmens- und Edge-Personalisierungszielen ist der exportierte Datentyp `JSON`. Personen und Zielgruppen potenzieller Kunden werden unterstützt, Konto-Zielgruppen jedoch nicht.
+* Bei dateibasierten Cloud-Speicher-Zielen *können* Arrays, Zuordnungen und Objekte in CSV-Dateien exportieren, jedoch nur unter Verwendung der Funktion „Berechnete Felder“ und Verketten dieser Felder in einer Zeichenfolge mithilfe der `array_to_string`-Funktion.
 
 ## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ Zusätzlich zu Arrays können Sie auch Zuordnungen und Objekte aus Experience Pl
 
 [Verbinden](/help/destinations/ui/connect-destination.md) mit dem gewünschten Cloud-Speicher-Ziel, schreiten Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Beim Herstellen einer Verbindung zum gewünschten Cloud-Ziel müssen Sie den Umschalter **[!UICONTROL Arrays exportieren, Karten, Objekte]**. Weitere Informationen finden Sie im folgenden Abschnitt.
 
+>[!NOTE]
+>
+>Für Unternehmens- und Edge-Personalisierungsziele ist die Exportunterstützung für Felder vom Typ Zuordnung verfügbar, ohne dass ein **[!UICONTROL Exportieren von Arrays, Karten, Objekten]** ausgewählt werden muss. Dieser Umschalter ist beim Herstellen einer Verbindung mit diesen Zieltypen nicht verfügbar oder erforderlich.
+
 ## Umschalter zum Exportieren von Arrays, Zuordnungen und Objekten {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ Zusätzlich zu Arrays können Sie auch Zuordnungen und Objekte aus Experience Pl
 >title="Exportieren von Arrays, Zuordnungen und Objekten"
 >abstract="<p> Schalten Sie diese Einstellung auf <b>ein</b>, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Quellfeldansicht des Zuordnungsschritts auswählen. Wenn der Umschalter aktiviert ist, können Sie die Option „Berechnete Felder“ im Zuordnungsschritt nicht verwenden.</p><p>Wenn dieser Umschalter auf <b>aus</b> steht, können Sie die Option „Berechnete Felder“ verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anzuwenden. Allerdings können Sie Arrays, Zuordnungen und Objekte <i>nicht</i> in JSON- oder Parquet-Dateien exportieren, sondern müssen dafür ein separates Ziel konfigurieren.</p>"
 
-Beim Herstellen einer Verbindung zu einem Cloud-Speicher-Ziel können Sie die **[!UICONTROL Exportieren von Arrays, Karten, Objekten]** ein- oder ausschalten.
+Beim Herstellen einer Verbindung zu einem dateibasierten Cloud-Speicher-Ziel können Sie die Optionen **[!UICONTROL Exportieren von Arrays, Karten, Objekten]** ein- oder ausschalten.
 
 ![Exportieren Sie Arrays, Karten, Objekte ein- oder ausschalten und markieren Sie das Pop-up.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
