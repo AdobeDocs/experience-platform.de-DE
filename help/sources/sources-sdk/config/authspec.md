@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Authentifizierungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '770'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,8 @@ Selbstbedienungsquellen (Batch-SDK) unterstützen OAuth 2-Aktualisierungs-Codes 
 ### OAuth 2-Aktualisierungs-Code
 
 Ein OAuth 2-Aktualisierungs-Code ermöglicht den sicheren Zugriff auf eine Anwendung, indem er ein temporäres Zugriffstoken und ein Aktualisierungstoken generiert. Mit dem Zugriffs-Token können Sie sicher auf Ihre Ressourcen zugreifen, ohne andere Anmeldeinformationen angeben zu müssen, während Sie mit dem Aktualisierungs-Token ein neues Zugriffs-Token generieren können, sobald das Zugriffs-Token abläuft.
+
++++Beispiel für einen OAuth 2-Aktualisierungs-Code anzeigen
 
 ```json
 {
@@ -132,10 +134,13 @@ Ein OAuth 2-Aktualisierungs-Code ermöglicht den sicheren Zugriff auf eine Anwen
 
 {style="table-layout:auto"}
 
++++
 
 ### Einfache Authentifizierung
 
 Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie über eine Kombination aus Ihrem Kontonamen und Ihrem Kontokennwort auf Ihre Anwendung zugreifen können.
+
++++ Beispiel für einfache Authentifizierung anzeigen
 
 ```json
 {
@@ -175,13 +180,109 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie über e
 | `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |
 | `authSpec.spec.properties.username` | Der mit Ihrem Programm verknüpfte Benutzername für das Konto. |
 | `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |
-| `authSpec.spec.required` | Gibt die Felder an, die als obligatorische Werte für die Eingabe in Platform erforderlich sind. | `username` |
+| `authSpec.spec.required` | Gibt die Felder an, die als obligatorische Werte für die Eingabe in Experience Platform erforderlich sind. | `username` |
 
 {style="table-layout:auto"}
 
-## Beispiel einer Authentifizierungsspezifikation
++++
+
+### API-Schlüsselauthentifizierung {#api-key-authentication}
+
+Die API-Schlüsselauthentifizierung ist eine sichere Methode für den Zugriff auf APIs, indem in Anfragen ein API-Schlüssel und andere relevante Authentifizierungsparameter bereitgestellt werden. Abhängig von Ihren spezifischen API-Informationen können Sie den API-Schlüssel als Teil der Anfragekopfzeile, der Abfrageparameter oder des Hauptteils senden.
+
+Die folgenden Parameter sind normalerweise bei der Verwendung der API-Schlüsselauthentifizierung erforderlich:
+
+| Parameter | Typ | Erforderlich | Beschreibung |
+| --- | --- | --- | --- |
+| `host` | string | Nein | Die Ressourcen-URL. |
+| `authKey1` | Zeichenfolge | Ja | Der erste für den API-Zugriff erforderliche Authentifizierungsschlüssel. Sie wird normalerweise im Anfrage-Header oder in Abfrageparametern gesendet. |
+| `authKey2` | Zeichenfolge | Optional | Ein zweiter Authentifizierungsschlüssel. Bei Bedarf wird dieser Schlüssel häufig zur weiteren Validierung von Anfragen verwendet. |
+| `authKeyN` | Zeichenfolge | Optional | Eine zusätzliche Authentifizierungsvariable, die bei Bedarf verwendet werden kann, aber die API. |
+
+{style="table-layout:auto"}
+
++++API-Schlüsselauthentifizierung anzeigen
+
+```json
+{
+  "name": "API Key Authentication",
+  "type": "KeyBased",
+  "spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Define authentication parameters required for API access",
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Enter resource URL host path"
+      },
+      "authKey1": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 1",
+        "description": "Primary authentication key for accessing the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key1"
+        }
+      },
+      "authKey2": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 2",
+        "description": "Secondary authentication key, if required",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key2"
+        }
+      },
+      ..
+      ..
+      "authKeyN": {
+        "type": "string",
+        "format": "password",
+        "title": "Additional Authentication Key",
+        "description": "Additional authentication keys as needed by the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-KeyN"
+        }
+      }
+    },
+    "required": [
+      "authKey1"
+    ]
+  }
+}
+```
+
++++
+
+### Authentifizierungsverhalten
+
+Sie können den `restAttributes`-Parameter verwenden, um zu definieren, wie der API-Schlüssel in die Anfrage aufgenommen werden soll. Im folgenden Beispiel zeigt das Attribut `headerParamName` an, dass die `X-Auth-Key1` als Kopfzeile gesendet werden soll.
+
+```json
+  "restAttributes": {
+      "headerParamName": "X-Auth-Key1"
+  }
+```
+
+Jeder Authentifizierungsschlüssel (z. B. `authKey1`, `authKey2` usw.) kann mit `restAttributes` verknüpft werden, um anzugeben, wie sie als Anfragen gesendet werden.
+
+Wenn `authKey1` `"headerParamName": "X-Auth-Key1"` hat. Das bedeutet, dass der Anfrage-Header `X-Auth-Key:{YOUR_AUTH_KEY1}` enthalten sollte. Außerdem müssen der Schlüsselname und die `headerParamName` nicht unbedingt identisch sein. z. B.:
+
+* Der `authKey1` kann `headerParamName: X-Custom-Auth-Key` haben. Das bedeutet, dass der Anfrage-Header `X-Custom-Auth-Key` anstelle von `authKey1` verwendet.
+* Umgekehrt können `authKey1` `headerParamName: authKey1` haben. Das bedeutet, dass der Name des Anfrage-Headers unverändert bleibt.
+
+**Beispiel-API-Format**
+
+```http
+GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
+```
+
+## Beispiel-Authentifizierungsspezifikation
 
 Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungsspezifikation unter Verwendung einer [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+
++++Beispiel-Authentifizierungsspezifikation anzeigen
 
 ```json
   "authSpec": [
@@ -234,6 +335,8 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
     }
   ],
 ```
+
++++
 
 ## Nächste Schritte
 
