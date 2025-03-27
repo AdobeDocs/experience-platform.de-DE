@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 82%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 82%
       * [Branch-Erweiterung](./catalog/advertising/branch.md)
       * [Criteo-Verbindung](./catalog/advertising/criteo.md)
       * [Demandbase-Verbindung](./catalog/advertising/demandbase.md)
+      * [Demandbase People-Verbindung](./catalog/advertising/demandbase-people.md)
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)

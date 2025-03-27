@@ -3,10 +3,10 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) verbinden und pseudonyme Zielgruppen für diese Plattformen freigeben.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: b193a7458e4e6e02a748dcac0bbf5550b2979899
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 47%
+source-wordcount: '279'
+ht-degree: 46%
 
 ---
 
@@ -31,6 +31,8 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Amazon Ads-Verbindung](amazon-ads.md)
 * [Bombora-Verbindung](bombora.md)
 * [Criteo-Verbindung](criteo.md)
+* [Demandbase-Verbindung](demandbase.md)
+* [Demandbase People-Verbindung](demandbase-people.md)
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
 * [Google Ads-Verbindung](google-ads-destination.md)
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
