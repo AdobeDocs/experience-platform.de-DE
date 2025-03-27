@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## Videobibliothek
+## Grundlagen zu
 
-Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und Anwendungsfälle des KI-Assistenten weiter zu vertiefen:
-
-### Grundlagen zu
+Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden Aspekte des KI-Assistenten zu erfahren.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und A
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### Anwendungsfallbibliothek
+## Anwendungsfallbibliothek
+
+In den folgenden Videos erfahren Sie mehr über die Anwendungsfälle des KI-Assistenten.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und A
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Anwendungsfallbibliothek für KI-Assistenten
+## Weitere Anwendungsfälle
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 * [Operative Einblicke mit dem KI-Assistenten entsperren](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### Steigern Sie Ihre Produktivität mit dem KI-Assistenten
+
+Im Folgenden finden Sie eine praktische Anleitung zur Produktivitätssteigerung mit dem KI-Assistenten.
+
+* [Steigern Sie Ihre Produktivität mit dem KI-Assistenten](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## Nächste Schritte
 
 Klicken Sie auf die folgenden Links, um mehr über Anwendungsfälle, Funktionen und vieles mehr von KI-Assistenten zu erfahren.
 
