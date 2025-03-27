@@ -2,10 +2,10 @@
 title: Erstellen einer Microsoft Dynamics-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Platform mithilfe der Flow Service-API mit einem Microsoft Dynamics-Konto verbinden.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 23%
+source-wordcount: '1330'
+ht-degree: 20%
 
 ---
 
@@ -264,6 +264,44 @@ Eine erfolgreiche Antwort gibt die [!DNL Dynamics] Tabellen und Ansichten des Or
 
 +++
 
+### Verwenden des Primärschlüssels zur Optimierung der Datenexploration
+
+>[!NOTE]
+>
+>Nicht-Lookup-Attribute können nur bei Verwendung des Primärschlüssel-Ansatzes zur Optimierung verwendet werden.
+
+Sie können Ihre Erkundungsabfragen optimieren, indem Sie `primaryKey` als Teil Ihrer Abfrageparameter bereitstellen. Sie müssen den Primärschlüssel der [!DNL Dynamics] angeben, wenn Sie `primaryKey` als Abfrageparameter angeben.
+
+**API-Format**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| Abfrageparameter | Beschreibung |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | Die ID der Basisverbindung. Verwenden Sie diese ID, um den Inhalt und die Struktur Ihrer Quelle zu untersuchen. |
+| `preview` | Ein boolescher Wert, der die Datenvorschau ermöglicht. |
+| `{OBJECT}` | Das [!DNL Dynamics] Objekt, das Sie untersuchen möchten. |
+| `{OBJECT_TYPE}` | Der Typ des Objekts. |
+| `previewCount` | Eine Einschränkung, die die zurückgegebene Vorschau auf eine bestimmte Anzahl von Datensätzen beschränkt. |
+| `{PRIMARY_KEY}` | Der Primärschlüssel der Tabelle, die Sie für die Vorschau abrufen. |
+
+**Anfrage**
+
++++Anfragebeispiel auswählen, um es anzuzeigen
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## Überprüfen der Tabellenstruktur
 
@@ -581,6 +619,74 @@ Bei einer erfolgreichen Antwort werden die neu generierte Quellverbindungs-ID un
 ```
 
 +++
+
+### Verwenden des Primärschlüssels zur Optimierung des Datenflusses
+
+Sie können Ihren [!DNL Dynamics] Datenfluss auch optimieren, indem Sie den Primärschlüssel als Teil der Parameter Ihres Anfragetexts angeben.
+
+**API-Format**
+
+```http
+POST /sourceConnections
+```
+
+**Anfrage**
+
+Die folgende Anfrage erstellt eine [!DNL Dynamics]-Quellverbindung, während der Primärschlüssel als `contactid` angegeben wird.
+
++++Anfragebeispiel auswählen, um es anzuzeigen
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `baseConnectionId` | Die ID der Basisverbindung. |
+| `data.format` | Das Format der Daten. |
+| `params.tableName` | Der Name der Tabelle in [!DNL Dynamics]. |
+| `params.primaryKey` | Der Primärschlüssel der Tabelle, die die Abfragen optimiert. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die der [!DNL Dynamics] entspricht. |
+
++++
+
+**Antwort**
+
+Bei einer erfolgreichen Antwort werden die neu generierte Quellverbindungs-ID und das entsprechende eTag zurückgegeben.
+
++++Auswählen, um ein Beispiel für eine Antwort anzuzeigen
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## Nächste Schritte
 
