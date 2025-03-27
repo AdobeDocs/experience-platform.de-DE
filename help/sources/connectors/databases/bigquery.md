@@ -3,10 +3,10 @@ title: Übersicht über den Google BigQuery Source Connector
 description: Erfahren Sie, wie Sie Google BigQuery mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 25%
+source-wordcount: '582'
+ht-degree: 4%
 
 ---
 
@@ -14,23 +14,21 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Die [!DNL Google BigQuery] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Google BigQuery] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
-
-Lesen Sie dieses Dokument über die erforderlichen Schritte, die Sie durchführen müssen, um Ihr [!DNL Google BigQuery]-Konto erfolgreich mit Experience Platform zu verbinden.
+Lesen Sie dieses Dokument über die erforderlichen Schritte, die Sie ausführen müssen, um Ihr [!DNL Google BigQuery]-Konto erfolgreich mit Adobe Experience Platform über Azure oder Amazon Web Services (AWS) zu verbinden.
 
 ## Voraussetzungen {#prerequisites}
 
-Im folgenden Abschnitt finden Sie weitere Informationen zur erforderlichen Einrichtung, bevor Sie eine [!DNL Google BigQuery] Quellverbindung erstellen können.
+Lesen Sie die folgenden Abschnitte für die erforderliche Einrichtung, die Sie durchführen müssen, bevor Sie Ihr [!DNL Google BigQuery]-Konto mit Experience Platform verbinden können.
 
-### IP-Adressen-Zulassungsliste
+### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform über Azure oder Amazon Web Services (AWS) verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform auf Azure und AWS](../../ip-address-allow-list.md) .
 
-### [!DNL Google BigQuery] erstellen {#credentials}
+### Bei Experience Platform auf Azure authentifizieren {#azure}
 
-Um [!DNL Google BigQuery] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Anmeldeinformationen generieren:
+Sie müssen die folgenden Anmeldeinformationen angeben, um Ihr [!DNL Google BigQuery]-Konto mit Experience Platform auf Azure zu verbinden.
 
 >[!BEGINTABS]
 
@@ -57,16 +55,26 @@ Um sich mit der Service-Authentifizierung zu authentifizieren, geben Sie die ent
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | `projectId` | Die ID der [!DNL Google BigQuery], für die Sie eine Abfrage durchführen möchten. |
-| `keyFileContent` | Die Schlüsseldatei, die zum Authentifizieren des Service-Kontos verwendet wird. Sie können diesen Wert aus dem [[!DNL Google Cloud service accounts] Dashboard](https://console.cloud.google.com) abrufen. Der Inhalt der Schlüsseldatei liegt im JSON-Format vor. Sie müssen dies bei der Authentifizierung auf Experience Platform in [!DNL Base64] kodieren. |
+| `keyFileContent` | Die Schlüsseldatei, die zum Authentifizieren des Service-Kontos verwendet wird. Sie können diesen Wert aus dem [[!DNL Google Cloud service accounts] Dashboard](https://console.cloud.google.com) abrufen. Der Inhalt der Schlüsseldatei liegt im JSON-Format vor. Sie müssen dies bei der Authentifizierung bei Experience Platform in [!DNL Base64] kodieren. |
 | `largeResultsDataSetId` | (Optional) Die vorab erstellte [!DNL Google BigQuery]-Datensatz-ID, die erforderlich ist, um Unterstützung für große Ergebnismengen zu ermöglichen. |
 
 Weitere Informationen zur Verwendung von Dienstkonten in [!DNL Google BigQuery] finden Sie im Handbuch unter [Verwendung von Dienstkonten in [!DNL Google BigQuery]](https://cloud.google.com/bigquery/docs/use-service-accounts).
 
 >[!ENDTABS]
 
-## Verbinden von [!DNL Google BigQuery] mit Platform
+### Authentifizierung bei Experience Platform auf AWS {#aws}
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google BigQuery] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
+Sie müssen die folgenden Anmeldeinformationen angeben, um Ihr [!DNL Google BigQuery]-Konto mit Experience Platform auf AWS zu verbinden.
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| `projectId` | Die ID der [!DNL Google BigQuery], für die Sie eine Abfrage durchführen möchten. |
+| `keyFileContent` | Die Schlüsseldatei, die zum Authentifizieren des Service-Kontos verwendet wird. Sie können diesen Wert aus dem [[!DNL Google Cloud service accounts] Dashboard](https://console.cloud.google.com) abrufen. Der Inhalt der Schlüsseldatei liegt im JSON-Format vor. Sie müssen dies bei der Authentifizierung bei Experience Platform in [!DNL Base64] kodieren. |
+| `datasetId` | Die [!DNL Google BigQuery] Datensatz-ID. Diese ID stellt dar, wo sich Ihre Datentabellen befinden. |
+
+## Verbinden von [!DNL Google BigQuery] mit Experience Platform
+
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Google BigQuery] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 
