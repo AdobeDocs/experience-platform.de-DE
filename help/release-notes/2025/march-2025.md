@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2025
 description: Versionshinweise März 2025 für Adobe Experience Platform.
-source-git-commit: f0efd73830eac85936cb134ebb40dcd0f79aec52
+exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 22%
+source-wordcount: '1227'
+ht-degree: 21%
 
 ---
 
@@ -44,6 +45,8 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 | Ziel | Beschreibung |
 | --- | --- |
+| [Demandbase People-Verbindung](/help/destinations/catalog/advertising/demandbase-people.md) | Verwenden Sie die [!DNL Demandbase People] Verbindung, um Profile für Ihre Demandbase-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung zu aktivieren. |
+| [Bombora-Kontoverbindung](/help/destinations/catalog/advertising/bombora.md) | Verwenden Sie die [!DNL Bombora] Verbindung, um Profile für Ihre Bombora-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung zu aktivieren, basierend auf [Account-Zielgruppen](/help/segmentation/types/account-audiences.md). |
 | [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md) Upgrade | Ab dem 25. März 2025 werden im Zielkatalog zwei **[!UICONTROL Airship-Attribute]**-Karten nebeneinander angezeigt. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der bestehende **[!UICONTROL Airship Attributes]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Airship Attributes umbenannt]** und Ihnen steht jetzt eine neue Karte mit dem Namen **[!UICONTROL Airship Attributes]** zur Verfügung. <br> Verwenden Sie die **[!UICONTROL Airship Attributes]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum [!DNL (Deprecated) Airship Attributes] Ziel haben, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist. <br> Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren: <ul><li> Flussspezifikations-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Verbindungsspezifikations-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
