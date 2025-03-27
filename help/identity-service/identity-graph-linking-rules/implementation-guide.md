@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -67,10 +67,9 @@ Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create
 
 Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
 
-* (Empfohlen) Authentifizierte Ereignisse mit einer Personenkennung.
-* (Nicht empfohlen) Authentifizierte Ereignisse mit zwei Personenkennungen.
-* (Nicht empfohlen) Authentifizierte Ereignisse ohne Personenkennungen.
-
+* (Empfohlen) Authentifizierte Ereignisse mit einer eindeutigen Personenkennung.
+* (Nicht empfohlen) Authentifizierte Ereignisse mit zwei eindeutigen Personenkennungen. Wenn Sie mehr als eine eindeutige Personenkennung haben, kann es zu einem unerwünschten Reduzieren des Diagramms kommen.
+* (Nicht empfohlen) Authentifizierte Ereignisse ohne eindeutige Personenkennungen. Wenn Sie keine eindeutigen Personenkennungen haben, werden nicht authentifizierte und authentifizierte Ereignisse in der ECID gespeichert.
 
 >[!BEGINTABS]
 
