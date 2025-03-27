@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Schemafeldgruppe „Einverständnis und Voreinstellungen“
 description: Erfahren Sie mehr über die Schemafeldgruppe „Einverständnis und Voreinstellungen“.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Anweisungen zum Zuweisen von Feldergruppen zu Feldern [ Sie im Tutorial ](https:
 
 ## Umgang mit Einverständnis- und Voreinstellungsänderungen
 
-Wenn ein Kunde sein Einverständnis oder seine Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mithilfe der [Adobe Experience Platform Web SDK durchgesetzt ](../../../web-sdk/commands/setconsent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss diese sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten Seite, die er besucht, keine Personalisierung vorhanden sein.
+Wenn ein Kunde sein Einverständnis oder seine Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mithilfe der [Adobe Experience Platform Web SDK durchgesetzt ](../../../web-sdk/commands/setconsent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss diese sofort eingestellt werden. Wenn sich ein Kunde gegen die Personalisierung entscheidet, sollte auf der nächsten geladenen Seite keine Personalisierung vorhanden sein.
 
 ## Nächste Schritte
 
