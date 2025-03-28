@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 17%
+source-wordcount: '3408'
+ht-degree: 16%
 
 ---
 
@@ -144,11 +144,11 @@ Einen allgemeinen Überblick über die Platform-Benutzeroberfläche erhalten Sie
 
 Das Dashboard [!UICONTROL Lizenznutzung] zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform in jeder zugehörigen Sandbox.
 
-Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme angezeigt wurden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
+Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme aufgetreten sind. Es handelt sich nicht um eine Annäherung oder Stichprobe, aber das Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
+>Die meisten Metriken im Dashboard werden täglich aktualisiert, basierend auf einer Momentaufnahme Ihrer Platform-Instanz. [!UICONTROL Verfügbare CJA-]: bildet eine Ausnahme und wird monatlich aktualisiert. Mit „Packs“ gekennzeichnete Metriken wie [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] und [!UICONTROL Streaming Segmentation No of Packs] spiegeln Lizenzberechtigungen für Add-on-Angebote wider und verfolgen die laufende Nutzung nicht. Änderungen, die nach der Momentaufnahme vorgenommen werden, sind erst sichtbar, wenn die nächste Momentaufnahme erstellt wird.
 
 ## Genauere Informationen zum Lizenznutzungs-Dashboard {#explore}
 
