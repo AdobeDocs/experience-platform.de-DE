@@ -3,9 +3,9 @@ title: API-Endpunkt für Zielgruppen
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experienc
 
 ## Abrufen einer Liste von Zielgruppen {#list}
 
-Sie können eine Liste aller Zielgruppen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/audiences`-Endpunkt senden.
+Sie können eine Liste aller Zielgruppen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/audiences`-Endpunkt stellen.
 
 **API-Format**
 
@@ -422,7 +422,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Informationen zur an
 
 +++
 
-## Aktualisieren einer Audience {#put}
+## Überschreiben einer Zielgruppe {#put}
 
 Sie können eine bestimmte Zielgruppe aktualisieren (überschreiben), indem Sie eine PUT-Anfrage an den `/audiences`-Endpunkt senden und im Anfragepfad die ID der Zielgruppe angeben, die Sie aktualisieren möchten.
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
 | `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe von Platform oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `expression` | Ein -Objekt, das den PQL-Ausdruck der Zielgruppe enthält. |
 | `lifecycleState` | Der Status der Zielgruppe. Zu den möglichen Werten gehören `draft`, `published` und `inactive`. `draft` gibt an, wann die Zielgruppe erstellt wird, `published` wann die Zielgruppe veröffentlicht wird, und `inactive`, wann die Zielgruppe nicht mehr aktiv ist. |
 | `datasetId` | Die ID des Datensatzes, der die Zielgruppendaten enthält. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
@@ -496,6 +502,81 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu akt
     "description": "Last 30 days",
     "type": "SegmentDefinition",
     "lifecycleState": "published",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
+## Aktualisieren einer Audience {#patch}
+
+Sie können eine bestimmte Zielgruppe aktualisieren, indem Sie eine PATCH-Anfrage an den `/audiences`-Endpunkt senden und im Anfragepfad die ID der Zielgruppe angeben, die Sie aktualisieren möchten.
+
+**API-Format**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie aktualisieren möchten. Beachten Sie, dass es sich hierbei um das `id` Feld handelt **nicht** das `audienceId`. |
+
+**Anfrage**
+
++++ Eine Beispielanfrage zum Aktualisieren einer Zielgruppe.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `op` | Der Typ des ausgeführten PATCH-Vorgangs. Für diesen Endpunkt ist dieser Wert **immer** `/add`. |
+| `path` | Der Pfad des zu aktualisierenden Felds. Systemgenerierte Felder wie `id`, `audienceId` und `namespace` **können** bearbeitet werden. |
+| `value` | Der neue Wert, der der in `path` angegebenen Eigenschaft zugewiesen ist. |
+
++++
+
+**Antwort**
+
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der aktualisierten Zielgruppe zurückgegeben.
+
++++Beispielantwort beim Patchen eines Felds in einer Zielgruppe.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
@@ -542,7 +623,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 ohne Meldung zurück.
 
 ## Abrufen mehrerer Zielgruppen {#bulk-get}
 
-Sie können mehrere Zielgruppen abrufen, indem Sie eine POST-Anfrage an den `/audiences/bulk-get`-Endpunkt stellen und die IDs der Zielgruppen angeben, die Sie abrufen möchten.
+Sie können mehrere Zielgruppen abrufen, indem Sie eine POST-Anfrage an den `/audiences/bulk-get`-Endpunkt senden und die IDs der Zielgruppen angeben, die Sie abrufen möchten.
 
 **API-Format**
 
