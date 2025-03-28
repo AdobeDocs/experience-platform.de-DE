@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Datensatz-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform beim Arbeiten mit Datensätzen häufig durchgeführte Aktionen ausführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
 workflow-type: tm+mt
-source-wordcount: '3801'
-ht-degree: 14%
+source-wordcount: '4105'
+ht-degree: 12%
 
 ---
 
@@ -55,7 +55,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 >abstract="Mit der Datalake-Aufbewahrung werden Regeln festgelegt, wie lange Daten gespeichert werden und wann sie in verschiedenen Diensten gelöscht werden sollen. Dies gewährleistet die Einhaltung von Vorschriften, die Verwaltung von Speicherkosten und die Aufrechterhaltung der Datenqualität."
 
 
-Wählen Sie in der [!DNL Experience Platform]-Benutzeroberfläche **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um das Dashboard **[!UICONTROL Datensätze]** zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+Wählen Sie in der [!DNL Experience Platform]-Benutzeroberfläche **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um das Dashboard **[!UICONTROL Datensätze]** zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Aufnahmedurchgangs.
 
 ![Die Platform-Benutzeroberfläche mit dem hervorgehobenen Element „Datensätze“ in der linken Navigationsleiste.](../images/datasets/user-guide/browse-datasets.png)
 
@@ -92,7 +92,7 @@ Sie können einen Datensatz auch löschen oder einen Datensatz zur Verwendung mi
 
 Die Benutzeroberfläche „Datensätze“ bietet jetzt eine Sammlung von Inline-Aktionen für jeden verfügbaren Datensatz. Klicken Sie auf die Auslassungszeichen (…) eines Datensatzes, den Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Aktionen gehören:
 
-* [[!UICONTROL Vorschau des ]](#preview))
+* [[!UICONTROL Vorschau des Datensatzes]](#preview)
 * [[!UICONTROL Verwalten von Daten und Zugreifen auf Kennzeichnungen]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Einheitliches Profil aktivieren]](#enable-profile)
 * [[!UICONTROL Tags verwalten]](#manage-tags)
@@ -104,7 +104,7 @@ Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweilig
 
 ### Vorschau für Datensatz anzeigen {#preview}
 
-Sie können eine Vorschau der Datensatzbeispieldaten sowohl über die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] als auch über die Ansicht [!UICONTROL Datensatzaktivität] anzeigen. Klicken Sie auf [!UICONTROL  Registerkarte ]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus der Liste der verfügbaren Optionen aus. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen angezeigt, dass die Vorschau nicht verfügbar ist.
+Sie können eine Vorschau der Datensatzbeispieldaten sowohl über die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] als auch über die Ansicht [!UICONTROL Datensatzaktivität] anzeigen. Klicken Sie auf [!UICONTROL  Registerkarte ]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus der Liste der verfügbaren Optionen aus. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit hervorgehobenen Auslassungszeichen und der Option „Datensatz in der Vorschau“ für den ausgewählten Datensatz.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -127,7 +127,7 @@ Für robustere Methoden für den Zugriff auf Ihre Daten bietet [!DNL Experience 
 
 ### Data Governance in einem Datensatz verwalten und durchsetzen {#manage-and-enforce-data-governance}
 
-Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] auswählen. Wählen Sie aus dem Dropdown-Menü die Auslassungszeichen (…) neben dem Datensatznamen, den Sie verwalten möchten, **[!UICONTROL Daten verwalten und auf]** zugreifen) aus.
+Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] auswählen. Wählen Sie aus dem Dropdown-Menü die Auslassungszeichen (…) neben dem Datensatznamen aus, den Sie verwalten möchten **[!UICONTROL gefolgt von]** Daten verwalten und Zugriffsbeschriftungen“.
 
 Mit Datennutzungskennzeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Kennzeichnungen finden Sie [Übersicht zu Data ](../../data-governance/home.md)) oder im [Benutzerhandbuch zu Datennutzungskennzeichnungen](../../data-governance/labels/overview.md) mit Anweisungen zum Anwenden von Kennzeichnungen auf Schemata zur Übertragung auf Datensätze.
 
@@ -168,7 +168,7 @@ Das [!UICONTROL Tags verwalten] kann auch vorhandene Tags aus einem Datensatz en
 
 Nachdem ein Tag zu einem Datensatz hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Weitere Informationen finden Sie im Abschnitt [ Filtern von Datensätzen nach ](#enable-profile) .
 
-Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird beschrieben, wie Benutzende mit entsprechenden Berechtigungen vordefinierte Tags erstellen, Tags Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge für Tags und Tag-Kategorien in der Platform-Benutzeroberfläche durchführen können.
+Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird erläutert, wie Benutzende mit den entsprechenden Berechtigungen vordefinierte Tags erstellen, Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge in der Platform-Benutzeroberfläche verwalten können.
 
 ### (Beta) Festlegen der Richtlinie zur Datenaufbewahrung {#data-retention-policy}
 
@@ -176,44 +176,76 @@ Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfac
 > 
 >Die Einstellungen zur Datenaufbewahrung befinden sich derzeit in der Beta-Phase und stehen nur in einer **Version** ausgewählten Organisationen zur Verfügung. Ihre Benutzeroberfläche entspricht möglicherweise nicht der unten beschriebenen Funktion.
 
-Verwalten Sie Richtlinien zur Datensatzgültigkeit und -aufbewahrung auf Datensatzebene auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Datensätze]. Mit dieser Funktion können Sie Aufbewahrungsrichtlinien für Daten konfigurieren, die bereits in den Data Lake und Profil-Services aufgenommen wurden. Das Ablaufdatum basiert auf dem Zeitpunkt der Datenaufnahme in Platform und Ihren Aufbewahrungsregeln.
+Verwalten Sie die Einstellungen für die Datensatzgültigkeit und -beibehaltung mithilfe des Inline-Aktionsmenüs auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Datensätze]. Mit dieser Funktion können Sie konfigurieren, wie lange Daten im Data Lake und Profilspeicher aufbewahrt werden. Das Ablaufdatum basiert auf dem Zeitpunkt der Datenaufnahme in Platform und Ihrer konfigurierten Aufbewahrungsfrist.
 
-Um das Dialogfeld [!UICONTROL Datenaufbewahrung festlegen] zu öffnen, wählen Sie die Auslassungszeichen neben dem Datensatz und anschließend **[!UICONTROL Datenaufbewahrungsrichtlinie festlegen]** aus dem Dropdown-Menü aus.
+>[!TIP]
+>
+>Der Data Lake speichert unbearbeitete Rohdaten wie Ereignisprotokolle, Clickstream-Daten und massenweise aufgenommene Datensätze für die Analyse und Verarbeitung. Der Profilspeicher enthält kundenidentifizierbare Daten, einschließlich identitätszugehöriger Ereignisse und Attributinformationen, um die Echtzeit-Personalisierung und -Aktivierung zu unterstützen.
+
+Um Ihre Aufbewahrungsfrist zu konfigurieren, wählen Sie aus dem Dropdown-Menü die Auslassungspunkte neben dem Datensatz **[!UICONTROL Datenaufbewahrungsrichtlinie festlegen]** aus.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit hervorgehobenen Auslassungszeichen und der Option „Richtlinie zur Datenaufbewahrung festlegen“.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-Das [!UICONTROL Dialogfeld „Datenaufbewahrung festlegen] wird angezeigt. Das Dialogfeld zeigt die Lizenznutzungsmetriken auf Sandbox-Ebene , Details auf Datensatzebene und Data Lake-Einstellungen. Diese Metriken zeigen Ihre Nutzung im Vergleich zu Ihren Berechtigungen an. Zu den Datensatzdetails gehören der Datensatzname, der Typ, der Profilaktivierungsstatus und die aktuelle Data-Lake-Speichernutzung.
+Das [!UICONTROL Dialogfeld „Datensatzaufbewahrung festlegen] wird angezeigt. Das Dialogfeld zeigt Lizenznutzungsmetriken auf Sandbox-Ebene, Details auf Datensatzebene und aktuelle Einstellungen zur Datenaufbewahrung an. Diese Metriken zeigen Ihre Nutzung im Vergleich zu Ihren Berechtigungen und helfen Ihnen bei der Bewertung datensatzspezifischer Speicher- und Aufbewahrungskonfigurationen. Zu den Metriken gehören Datensatzname, Typ, Profilaktivierungsstatus sowie die Nutzung von Data Lake und Profilspeicher.
 
 >[!NOTE]
 >
->Die lizenzierte Data-Lake-Speicher-Metrik auf Sandbox-Ebene befindet sich noch in der Entwicklung und ist nicht verfügbar.
+>Lizenzierte Data-Lake-Speicher-Metriken auf Sandbox-Ebene sind noch in Entwicklung und werden möglicherweise nicht angezeigt. Eine vollständige Aufschlüsselung der Metriken zur Lizenznutzung finden Sie im Dashboard Lizenznutzung . In der Dokumentation finden Sie Beschreibungen zu diesen Metriken.
+<!-- replace this screenshot with a dataset that enabled unified profile so user can see the Profile TTL settings -->
+![Dialogfeld „Datensatzaufbewahrung festlegen“](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-![Dialogfeld „Datenaufbewahrung festlegen“](../images/datasets/user-guide/set-data-retention-dialog.png)
-
-Vor der Konfiguration der Datensatzaufbewahrungsrichtlinie zeigt das Dialogfeld empfohlene Aufbewahrungseinstellungen an. Ein Monat ist die standardmäßige empfohlene Aufbewahrungsfrist. Um die standardmäßige Aufbewahrungsrichtlinie anzupassen, wählen Sie die Zahl aus, aktualisieren Sie sie und wählen Sie dann den gewünschten Zeitraum (Tage, Monate, Jahre). Sie können Ihre Aufbewahrungseinstellungen für den Data Lake und den Profil-Service unabhängig voneinander konfigurieren.
+Konfigurieren Sie Ihre bevorzugte Aufbewahrungsfrist im Dialogfeld Datenaufbewahrungseinstellungen . Geben Sie eine Zahl ein und wählen Sie eine Zeiteinheit (Tage, Monate oder Jahre) aus dem Dropdown-Menü aus. Sie können separate Aufbewahrungseinstellungen für den Data Lake und den Profil-Service konfigurieren.
 
 >[!NOTE]
 > 
->Die Datenaufbewahrungsdauer für den Data Lake beträgt mindestens 30 Tage. Die Mindestaufbewahrungsdauer für den Profil-Service beträgt einen Tag.
+>Die Mindestaufbewahrungsdauer für den Data Lake beträgt 30 Tage. Die Mindestaufbewahrungsdauer für den Profil-Service beträgt einen Tag.
 
-![Das Dialogfeld „Datenaufbewahrung festlegen“ mit Hervorhebung der Dropdown-Liste „Dauer“ und „Speichern“.](../images/datasets/user-guide/time-unit-dropdown.png)
+Um die Transparenz und Überwachung zu unterstützen, werden Zeitstempel für die Ausführungen des **letzten** und **nächsten** Datenaufbewahrungsauftrags bereitgestellt. Die Zeitstempel helfen zu verstehen, wann die letzte Datenbereinigung stattgefunden hat und wann die nächste geplant ist.
 
-Weitere Informationen zu den Regeln[ die Datumsbereiche für den Datensatzablauf definieren, sowie Best ](../catalog-faq.md) zur Konfiguration Ihrer Datenspeicherungsrichtlinie finden Sie auf der Seite „Häufig gestellte Fragen“.
+#### Speicherwirkungseinblicke {#storage-impact-insights}
+
+Um eine visuelle Prognose der Speicherauswirkungen verschiedener Aufbewahrungsrichtlinien zu öffnen, wählen Sie **[!UICONTROL Verteilung von Erlebnisereignisdaten anzeigen]**.
+
+Das Diagramm zeigt die Verteilung von Erlebnisereignissen über verschiedene Aufbewahrungszeiträume für den aktuell ausgewählten Datensatz an. Bewegen Sie den Mauszeiger über die einzelnen Balken, um die genaue Anzahl der Datensätze anzuzeigen, die entfernt werden, wenn die ausgewählte Aufbewahrungsfrist angewendet wird.
+
+Sie können die visuelle Prognose verwenden, um die Auswirkungen verschiedener Aufbewahrungsfristen zu bewerten und fundierte Geschäftsentscheidungen zu treffen. Wenn Sie beispielsweise eine Aufbewahrungsfrist von 30 Tagen auswählen und das Diagramm zeigt, dass 60 % Ihrer Daten gelöscht werden, können Sie die Aufbewahrungsfrist verlängern, um weitere Daten für die Analyse beizubehalten.
+
+>[!NOTE]
+>
+>Das Verteilungsdiagramm für Erlebnisereignisse ist datensatzspezifisch und spiegelt nur die Daten des ausgewählten Datensatzes wider.
+
+![Das Dialogfeld Datenaufbewahrung festlegen mit dem Diagramm zur Verteilung von Erlebnisereignissen wird angezeigt.](../images/datasets/user-guide/visual-forecast.png)
+
+Wenn Sie mit der Konfiguration zufrieden sind, klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Einstellungen zu bestätigen.
+
+>[!IMPORTANT]
+>
+>Sobald die Datenspeicherungsregeln angewendet werden, werden alle Daten, die älter als die durch den Gültigkeitswert definierte Anzahl von Tagen sind, dauerhaft gelöscht und können nicht wiederhergestellt werden.
+
+Nachdem Sie Ihre Aufbewahrungseinstellungen konfiguriert haben, verwenden Sie die Monitoring-Benutzeroberfläche, um zu bestätigen, dass Ihre Änderungen vom System ausgeführt wurden. Die Monitoring-Benutzeroberfläche bietet eine zentralisierte Ansicht der Datenaufbewahrungsaktivität für alle Datensätze. Dort können Sie die Ausführung von Aufträgen verfolgen, überprüfen, wie viele Daten gelöscht wurden, und sicherstellen, dass Ihre Aufbewahrungsrichtlinien erwartungsgemäß funktionieren. Diese Sichtbarkeit unterstützt Governance, Compliance und effizientes Data Lifecycle Management.
+
+Informationen dazu, wie Sie mit dem Überwachungs-Dashboard Quelldatenflüsse in der Experience Platform-Benutzeroberfläche verfolgen können, finden Sie in der Dokumentation [Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md) .
+
+<!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
+
+Weitere Informationen zu den Regeln, die Datumsbereiche für Datensatzgültigkeiten definieren, und Best Practices für die Konfiguration Ihrer Datenspeicherungsrichtlinie finden Sie auf der Seite [Häufig gestellte Fragen](../catalog-faq.md).
 
 #### (Beta) Verbesserte Sichtbarkeit von Aufbewahrungsfristen und Speichermetriken {#retention-and-storage-metrics}
 
-Vier neue Spalten stehen Beta-Benutzern zur Verfügung, die einen besseren Einblick in Ihr Daten-Management bieten **[!UICONTROL (Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** und **[!UICONTROL Profile Retention]**. Diese Metriken zeigen, wie viel Speicher Ihre Daten verbrauchen und wie lange sie aufbewahrt werden, sowohl im Data Lake als auch in Profil-Services. Diese Details helfen Ihnen bei der Optimierung von Aufbewahrungs-Policys, der Verfolgung der Nutzung anhand von Berechtigungen und der Sicherstellung der Einhaltung von Organisations- und Regulierungsstandards. Diese erhöhte Transparenz ermöglicht es Ihnen, fundierte Entscheidungen zu treffen, Kosten zu verwalten, die Governance zu optimieren und Ihre Datenlandschaft zu verstehen.
+Für Beta-Benutzer stehen vier neue Spalten zur Verfügung, um einen besseren Einblick in Ihr Daten-Management zu **[!UICONTROL :]** Data Lake Storage **[!UICONTROL , Data Lake Retention]**, **[!UICONTROL Profile Storage]** und **[!UICONTROL Profile Retention]**. Diese Metriken zeigen, wie viel Speicher Ihre Daten verbrauchen und wie lange sie aufbewahrt werden, sowohl im Data Lake als auch im Profil-Service.
 
-![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit hervorgehobenen vier neuen Spalten für Speicherung und Aufbewahrung.](../images/datasets/user-guide/storage-and-retention-columns.png)
+Diese erhöhte Transparenz ermöglicht fundierte Entscheidungen und ein effektiveres Management der Speicherkosten. Sortieren Sie Datensätze nach Speichergröße, um die größten Datensätze in Ihrer aktuellen Sandbox zu identifizieren. Diese Einblicke unterstützen auch eine bessere Governance und helfen Ihnen, den Lebenszyklus Ihrer Daten und die Nutzung Ihrer Berechtigungen zu verstehen.
 
-Die folgende Tabelle bietet einen Überblick über die neuen Aufbewahrungs- und Speichermetriken, die in der Beta-Version verfügbar sind. Darin wird der Zweck jeder Spalte beschrieben und erläutert, wie er bei der Verwaltung der Datenspeicherung und -speicherung in der Platform-Benutzeroberfläche hilft.
+![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit hervorgehobenen vier neuen Spalten für Speicherung und Aufbewahrung.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+Die folgende Tabelle bietet einen Überblick über die neuen Aufbewahrungs- und Speichermetriken, die in der Beta-Version verfügbar sind. Darin wird der Zweck jeder Spalte und die Unterstützung für die Verwaltung der Datenaufbewahrung und -speicherung beschrieben.
 
 | Spaltentitel | Beschreibung |
 |---|---|
-| [!UICONTROL Data Lake-Aufbewahrung] | Zeigt die aktuelle Aufbewahrungsdauer für jeden Datensatz an. Dieser Wert kann in den Aufbewahrungseinstellungen jedes Datensatzes geändert werden. Die Data-Lake-Aufbewahrungsrichtlinie legt Regeln fest, wie lange Daten gespeichert werden und wann sie in verschiedenen Services gelöscht werden sollen. |
-| [!UICONTROL Data Lake Storage] | Zeigt die aktuelle Speicherverwendung für jeden Datensatz im Data Lake an. Mit dieser Metrik können Sie verfolgen, wie viel Speicherplatz die einzelnen Datensätze belegen. So können Sie Speicherbeschränkungen verwalten und die Nutzung optimieren. |
-| [!UICONTROL Profilspeicher] | Zeigt die aktuelle Speicherverwendung für jeden Datensatz in Profil-Services an. Verwenden Sie diese Informationen, um den Speicherverbrauch zu überwachen und sicherzustellen, dass er mit Ihren Datenverwaltungszielen übereinstimmt. |
-| [!UICONTROL Profilaufbewahrung] | Gibt die Aufbewahrungsdauer für jeden Profildatensatz an. Dieser Wert kann in den Aufbewahrungseinstellungen des Datensatzes angepasst werden, sodass Sie steuern können, wie lange Profildaten vor dem Löschen gespeichert werden. |
+| [!UICONTROL Data Lake-Aufbewahrung] | Der aktuelle Aufbewahrungszeitraum für jeden Datensatz im Data Lake. Dieser Wert kann konfiguriert werden und bestimmt, wie lange Daten vor dem Löschen aufbewahrt werden. |
+| [!UICONTROL Data Lake Storage] | Die aktuelle Speicherverwendung für jeden Datensatz im Data Lake. Mit dieser Metrik können Sie Speicherbeschränkungen verwalten und die Nutzung optimieren. |
+| [!UICONTROL Profilspeicher] | Die aktuelle Speicherverwendung für jeden Datensatz im Profil-Service. Hilft bei der Überwachung der Speichernutzung und der Unterstützung von Datenverwaltungsentscheidungen. |
+| [!UICONTROL Profilaufbewahrung] | Die aktuelle Aufbewahrungsfrist für Profildatensätze. Sie können diesen Wert aktualisieren, um zu steuern, wie lange Profildaten aufbewahrt werden. |
 
 {style="table-layout:auto"}
 
