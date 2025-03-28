@@ -2,15 +2,19 @@
 title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 7%
+source-wordcount: '1049'
+ht-degree: 6%
 
 ---
 
-
 # Handbuch zur flexiblen Zielgruppenbewertung
+
+>[!AVAILABILITY]
+>
+>Eine flexible Zielgruppenauswertung ist **nur** Instanzen von Experience Platform verfügbar, die auf [!DNL Microsoft Azure] ausgeführt werden. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../landing/multi-cloud.md).
 
 Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segmentierungsauftrag ausführen. Mit einer flexiblen Zielgruppenauswertung können Sie Ad-hoc-Kampagnenstarts, Just-in-time-Nachrichten oder andere zeitkritische Aktivitäten ausführen.
 
@@ -33,7 +37,7 @@ Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgend
 
 >[!NOTE]
 >
->Sie *können* zusätzliche flexible Auswertungsdurchgänge für Zielgruppen pro Jahr erwerben. Weitere Informationen erhalten Sie bei der Adobe-Kundenunterstützung.
+>Sie können zusätzliche flexible Auswertungsläufe für Zielgruppen pro Jahr erwerben. Weitere Informationen erhalten Sie bei der Adobe-Kundenunterstützung.
 
 ## Zugriff {#access}
 
@@ -326,6 +330,14 @@ Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielg
 
 Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur flexiblen Zielgruppenbewertung.
 
+### Wie schnell kann ich eine Zielgruppe mithilfe einer flexiblen Zielgruppenauswertung aktivieren?
+
++++ Antwort
+
+Sie können eine Zielgruppe sofort nach ihrer Erstellung mit einer flexiblen Zielgruppenauswertung aktivieren.
+
++++
+
 ### Kann ich die Planung mit flexibler Zielgruppenbewertung ausführen?
 
 +++ Antwort
@@ -373,4 +385,3 @@ Für die flexible Zielgruppenbewertung werden nur Zielgruppen mit der Herkunft d
 Flexible Ausführungen zur Zielgruppenauswertung, die entweder mit der API oder der Benutzeroberfläche erstellt wurden, zählen bis zum maximalen Limit. Der tägliche Batch-Segmentierungsauftrag, der nächtlich ausgeführt wird, trägt jedoch **nicht** zu diesem Limit bei.
 
 +++
-
