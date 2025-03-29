@@ -2,10 +2,11 @@
 title: Demandbase Intent
 description: Erfahren Sie mehr über die Demandbase Intent-Quelle in Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
+source-git-commit: 78aae71ff48fc710aaaabf4ef71f6e50d2a8c12e
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 10%
+source-wordcount: '1465'
+ht-degree: 11%
 
 ---
 
@@ -84,7 +85,7 @@ Das [!DNL Demandbase]-Schema heißt **Company Intent Weekly**. Es handelt sich d
 
 ## Verbinden Ihres [!DNL Demandbase]-Kontos mit Experience Platform über die Benutzeroberfläche
 
-Nachdem Sie die erforderliche Einrichtung für [!DNL Demandbase] abgeschlossen haben, können Sie jetzt mit dem Abschnitt [Verbinden Ihres [!DNL Demandbase]-Kontos mit Experience Platform über die Benutzeroberfläche] fortfahren. Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, lesen Sie das Tutorial [Verbinden Ihres  [!DNL Demandbase] -Kontos mit Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md), um Ihre Integration zu starten.
+Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, lesen Sie das Tutorial [Verbinden Ihres - [!DNL Demandbase]  mit Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md), um Ihre Integration zu starten.
 
 ## Häufig gestellte Fragen {#faq}
 
