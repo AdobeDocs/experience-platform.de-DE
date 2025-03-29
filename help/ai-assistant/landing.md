@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 >[!ENDTABS]
 
 ### Steigern Sie Ihre Produktivität mit dem KI-Assistenten
+
+>[!NOTE]
+>
+>Diese Arbeitsmappe wurde zuletzt am 31. März 2025 aktualisiert. Seither haben sich einige Funktionen möglicherweise weiterentwickelt oder erweitert. Darüber hinaus wird möglicherweise noch frühzeitig auf einige Funktionen zugegriffen, auf die in diesem Handbuch verwiesen wird. Wenn Sie auf etwas stoßen, das noch nicht in Ihrer Umgebung verfügbar ist, und Sie daran interessiert sind, es zu erkunden, wenden Sie sich bitte an Ihr Adobe-Account-Team, um frühzeitigen Zugriff anzufordern.
 
 Im Folgenden finden Sie eine praktische Anleitung zur Produktivitätssteigerung mit dem KI-Assistenten.
 

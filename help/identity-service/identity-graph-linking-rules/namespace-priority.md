@@ -2,7 +2,7 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Ku
 
 ![Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität](../images/namespace-priority/application-scope.png)
 
-### Identity Service: Algorithmus zur Identitätsoptimierung
+## Identity Service: Algorithmus zur Identitätsoptimierung
 
 Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wichtige Rolle dabei, sicherzustellen, dass die richtigen Links entfernt werden, wenn Szenarien zum Reduzieren von Diagrammen auftreten. Weitere Informationen finden Sie unter [Übersicht über den Identitätsoptimierungsalgorithmus](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Echtzeit-Kundenprofil: Primäre Identitätsbestimmung für Erlebnisereignisse
+## Echtzeit-Kundenprofil: Primäre Identitätsbestimmung für Erlebnisereignisse
 
 * Nachdem Sie die Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
    * Dies liegt daran, dass Erlebnisereignisse dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten, und die Namespace-Priorität stellt sicher, dass dem Erlebnisereignis der wichtigste Namespace zugeordnet ist.
@@ -122,7 +122,7 @@ Angesichts der oben beschriebenen Konfigurationen werden Benutzeraktionen und di
 
 {style="table-layout:auto"}
 
-### Segmentierungs-Service: Speichern von Metadaten für die Segmentzugehörigkeit
+## Segmentierungs-Service: Speichern von Metadaten für die Segmentzugehörigkeit
 
 ![Ein Diagramm zum Speicher der Segmentzugehörigkeit](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Angenommen, es gibt zwei Profile:
 
 Wenn John und Jane ein Gerät teilen, wird die ECID (Webbrowser) von einer Person auf eine andere übertragen. Dies hat jedoch keinen Einfluss auf die Segmentzugehörigkeitsinformationen, die für John und Jane gespeichert sind.
 
-Wenn die Segmentqualifikationskriterien ausschließlich auf anonymen Ereignissen basieren, die für die ECID gespeichert wurden, ist Jane für dieses Segment qualifiziert
+Wenn die Segmentqualifikationskriterien ausschließlich auf anonymen Ereignissen basieren, die für die ECID gespeichert wurden, ist Jane für dieses Segment qualifiziert.
 
 ## Auswirkungen auf andere Experience Platform-Services {#implications}
 
