@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise März 2025
 description: Versionshinweise März 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1250'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 
    - [Dashboards](#dashboards)
    - [Ziele](#destinations)
+   - [Komposition föderierter Zielgruppen](#federated-audience-composition)
    - [Segmentierungs-Service](#segmentation-service)
    - [Quellen](#sources)
 
@@ -62,6 +63,10 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 {style="table-layout:auto"}
 
 Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../destinations/home.md).
+
+## Komposition föderierter Zielgruppen {#federated-audience-composition}
+
+Informationen zu den neuesten Aktualisierungen für die Federated-Audience-Komposition finden Sie [ den ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) Versionshinweisen hier.
 
 ## Segmentierungs-Service {#segmentation-service}
 
