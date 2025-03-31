@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;Feldergruppe;Feldergruppe;Feldergruppen;Feldergruppen;Datentyp;Datentypen;Datentypen;Datentyp;Schema-Design;Datentyp;Datentyp;Datentyp;Datentyp;Datentyp;Schemata;Schemata;Schema-Design;Zuordnung;Zuordnung;
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;Feldergruppe;Feldergruppe;Feldergruppen;Feldergruppen;Datentyp;Datentypen;Datentypen;Datentyp;Schemadesign;Datentyp;Datentyp;Datentyp;Datentyp;Datentyp;Datentyp;Schemas;Schemadesign;Zuordnung;Zuordnung;
 solution: Experience Platform
 title: Begrenzungen für XDM-Feldtypen
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und für die Definition Ihrer eigenen Feldtypen in der API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 7%
@@ -130,7 +130,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Boolesch]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{„type“: „string“}</pre>
+{„type“: „boolean“}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
