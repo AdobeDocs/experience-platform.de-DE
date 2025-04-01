@@ -5,22 +5,22 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Übersicht über Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules-overview}
+# Überblick über die Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Verknüpfungsregeln für Identitätsdiagramme"
->abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen."
+>abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und präzisere Personalisierung für Ihre Benutzenden ermöglichen."
 
 >[!AVAILABILITY]
 >
 >Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
-Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
+Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und präzisere Personalisierung für Ihre Benutzenden ermöglichen.
 
 Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung von Regeln zur Verknüpfung von Identitätsdiagrammen zu erhalten:
 

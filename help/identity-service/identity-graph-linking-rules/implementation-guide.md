@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
 source-wordcount: '1819'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -62,10 +62,10 @@ Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="Stellen Sie sicher, dass Sie über eine Personenkennung verfügen"
->abstract="Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID."
+>title="Sicherstellen, dass Sie über eine Personenkennung verfügen"
+>abstract="Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID."
 
-Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
+Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine **einzelne** Personenkennung enthalten, z. B. eine CRMID.
 
 * (Empfohlen) Authentifizierte Ereignisse mit einer eindeutigen Personenkennung.
 * (Nicht empfohlen) Authentifizierte Ereignisse mit zwei eindeutigen Personenkennungen. Wenn Sie mehr als eine eindeutige Personenkennung haben, kann es zu einem unerwünschten Reduzieren des Diagramms kommen.
@@ -290,7 +290,7 @@ Dieses Beispiel zeigt auch, dass Tom und Summer sich in verschiedenen Personenen
 
 Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
 
-* [Übersicht über Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
