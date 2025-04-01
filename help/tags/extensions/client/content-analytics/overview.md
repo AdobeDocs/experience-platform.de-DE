@@ -1,12 +1,10 @@
 ---
 title: Adobe Content Analytics-Erweiterung - Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung "Adobe Content Analytics" in Adobe Experience Platform vertraut.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -79,6 +77,7 @@ Im Abschnitt **[!UICONTROL Erlebniserfassung und -definition]** können Sie **[!
 1. Optional. Geben Sie die Parameter an, wie Inhalte auf Ihrer Website gerendert werden. Bei den Parametern handelt es sich um keine oder mehrere Kombinationen aus einem **[!UICONTROL regulären Domänenausdruck]** und **[!UICONTROL Abfrageparametern]**.
    1. Geben Sie einen **[!UICONTROL Regulären Ausdruck der Domain]** ein, z. B. `^(?!.*\b(store|help|admin)\b)`.
    1. Geben Sie eine kommagetrennte Liste von **[!UICONTROL Abfrageparametern]** an, z. B. `outdoors, patio, kitchen`.
+Verwenden Sie ![Schließen](./assets/CrossSize300.svg), um einzelne Parameter zu löschen, oder **[!UICONTROL Alle löschen]**, um alle Parameter zu löschen.
 1. Wählen **[!UICONTROL Entfernen]** aus, wenn Sie eine Kombination aus regulären Domain-Ausdrücken und Abfrageparametern entfernen möchten.
 1. Wählen **[!UICONTROL Regex hinzufügen]** aus, wenn Sie eine weitere Kombination aus einem regulären Ausdruck und Abfrageparametern hinzufügen möchten.
 
