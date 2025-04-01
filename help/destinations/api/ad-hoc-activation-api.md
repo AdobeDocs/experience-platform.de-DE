@@ -5,7 +5,7 @@ title: Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow für die Aktivierung von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung stattfinden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 12%
@@ -16,11 +16,11 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->Nach Abschluss der Beta-Phase ist die [!DNL ad-hoc activation API] jetzt allgemein für alle Experience Platform-Kunden verfügbar. In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten Zielgruppenexportvorgangs-](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
+>Nach Abschluss der Beta-Phase ist die [!DNL ad-hoc activation API] jetzt allgemein für alle Experience Platform-Kunden verfügbar (GA). In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten Zielgruppenexportvorgangs-](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
 >
 >Weitere Informationen finden [ in diesem Tutorial unter „Ausführen ](#activation-job) Ad-hoc-Aktivierungsauftrags“ weiter unten.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppen programmgesteuert und schnell für Ziele aktivieren, wenn eine sofortige Aktivierung erforderlich ist.
 
@@ -30,23 +30,21 @@ Das folgende Diagramm zeigt den durchgängigen Workflow zur Aktivierung von Ziel
 
 ![Ad-hoc-Aktivierung](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 ### Flash-Verkäufe oder -Promotions
 
-Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte die Kunden kurzfristig benachrichtigen. Über die Experience Platform-Ad-hoc-Aktivierungs-API kann das Marketing-Team Zielgruppen bei Bedarf exportieren und schnell Werbe-E-Mails an den Kundenstamm senden.
+Ein Online-retailer bereitet einen begrenzten Flash-Verkauf vor und möchte die Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API von Experience Platform kann das Marketing-Team Zielgruppen bei Bedarf exportieren und schnell Werbe-E-Mails an den Kundenstamm senden.
 
 ### Aktuelle Ereignisse oder aktuelle Nachrichten
 
-Ein Hotel erwartet in den nächsten Tagen ungünstiges Wetter und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Experience Platform-Ad-hoc-Aktivierungs-API verwenden, um Zielgruppen bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
+Ein Hotel erwartet in den nächsten Tagen ungünstiges Wetter und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API von Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
 
 ### Integrationstests
 
-IT-Manager können die Experience Platform-Ad-hoc-Aktivierungs-API verwenden, um Zielgruppen bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
+IT-Manager können die Ad-hoc-Aktivierungs-API von Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
 
-## Leitplanken {#guardrails}
+## Leitlinien {#guardrails}
 
 Beachten Sie die folgenden Leitplanken bei der Verwendung der Ad-hoc-Aktivierungs-API.
 
@@ -126,7 +124,7 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge alle 24 Stunde
 
 >[!IMPORTANT]
 >
->Beachten Sie die folgende einmalige Einschränkung: Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass ab dem Zeitpunkt der ersten Aktivierung der Zielgruppe gemäß dem Zeitplan, den Sie unter [Schritt 3: Aktivierungsfluss erstellen in der Platform-Benutzeroberfläche) festgelegt haben, mindestens 20 Minuten vergangen ](#activation-flow).
+>Beachten Sie die folgende einmalige Einschränkung: Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass seit dem Zeitpunkt, zu dem die Zielgruppe zum ersten Mal gemäß dem Zeitplan aktiviert wurde, mindestens eine Stunde vergangen ist ([ 3. Schritt - Aktivierungsfluss erstellen in der Platform-Benutzeroberfläche](#activation-flow).
 
 Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppenexportauftrag für Ihre Zielgruppen abgeschlossen ist. Informationen [ Überwachen des Status ](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise den Status **[!UICONTROL Verarbeitung läuft]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
 

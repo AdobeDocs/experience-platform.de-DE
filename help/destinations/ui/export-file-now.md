@@ -3,7 +3,7 @@ title: Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experienc
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien über die Experience Platform-Benutzeroberfläche bei Bedarf in Batch-Ziele exportieren können.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 16%
@@ -63,7 +63,7 @@ Um Dateien On-Demand in Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
 Beachten Sie bei der Verwendung des Steuerelements **[!UICONTROL Datei jetzt exportieren]** die folgenden Überlegungen:
 
 * **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdatenfluss sich mit dem aktuellen Datum überschneidet. Dazu gehören Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz **[!UICONTROL einmal]**) oder bei denen das Enddatum noch nicht überschritten ist.
-* Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwendet wird.
+* Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens **Stunde** bevor Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwenden.
 * Wenn Sie die Zusammenführungsrichtlinie einer Zielgruppe ändern oder eine Zielgruppe erstellen, die eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwenden.
 
 ## Fehlermeldungen in der Benutzeroberfläche {#ui-error-messages}
@@ -77,5 +77,5 @@ Wenn Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwenden, k
 
 ## Verwandte Informationen {#related-information}
 
-* [Aktivieren von Zielgruppen für Batch-Ziele bei Bedarf mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
+* [Aktivieren von Zielgruppen für Batch-Ziele nach Bedarf mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)
