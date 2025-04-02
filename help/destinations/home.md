@@ -2,10 +2,10 @@
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 63%
+source-wordcount: '1359'
+ht-degree: 57%
 
 ---
 
@@ -84,13 +84,21 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../access-control/abac/overview.md#destinations).
 
+## Profilentfernung aus Zielen {#profile-removal}
+
+Wenn ein Profil aus einer Zielgruppe entfernt wird, die für ein Ziel aktiviert ist, wird dieses Profil auch aus der entsprechenden Zielgruppe in der Zielplattform entfernt. Wenn beispielsweise ein Profil aus einer Zielgruppe entfernt wird, die zuvor für LinkedIn aktiviert wurde, wird dieses Profil aus der zugehörigen (LinkedIn[!UICONTROL abgeglichenen Zielgruppe entfernt].
+
+Das Entfernen von Profilen aus Zielen - auch als Nicht-Segmentierung bezeichnet - erfolgt in derselben Kadenz wie die Segmentierung. Sobald ein Profil aus einer Zielgruppe in Experience Platform entfernt wird, spiegelt der nächste geplante Datenfluss zum Ziel diese Änderung wider und entfernt das Profil aus der Zielgruppe.
+
+Die tatsächliche Geschwindigkeit, mit der die Profilentfernung in der Zielplattform wirksam wird, kann je nach Aufnahme- und Verarbeitungsverhalten des Ziels variieren.
+
 ## Zielüberwachung {#destinations-monitoring}
 
 Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
 
 ![Beispiel für die Zielüberwachungsseite.](./assets/overview/monitoring-page-example.png)
 
-Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen *Abschnitt „Datenexport validieren*, der angibt, wie Sie in der Zielplattform feststellen können, ob Daten erfolgreich von Experience Platform importiert wurden. Sehen Sie sich ein Beispiel für diesen Abschnitt für das [Amazon Ads-Ziel an](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen *Abschnitt „Datenexport validieren*, der angibt, wie Sie in der Zielplattform feststellen können, ob Daten erfolgreich aus Experience Platform importiert wurden. Sehen Sie sich ein Beispiel für diesen Abschnitt für das [Amazon Ads-Ziel an](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Data-Governance-Einschränkungen beim Aktivieren von Daten für Ziele {#data-governance}
 
