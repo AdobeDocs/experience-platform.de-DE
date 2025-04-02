@@ -3,10 +3,10 @@ title: ZULASSUNGSLISTE von IP-Adressen für dateibasierte Cloud-Speicher-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Cloud-Speicher-Ziele zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 6%
+source-wordcount: '299'
+ht-degree: 5%
 
 ---
 
@@ -40,14 +40,14 @@ Adobe empfiehlt, die folgenden IP-Bereiche zu einer -Zulassungsliste hinzuzufüg
 ## Für alle Kunden erforderlich {#all-customers}
 
 * `52.247.108.70`
-<!-- 
-## US customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## US-Kunden, die mit AWS arbeiten {#aws}
+
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht ](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .[
 
 >[!NOTE]
 >
->This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+>Dieser IP-Bereich wird nicht für Kundinnen und Kunden unterstützt, die mit AWS dateibasierte Ziele zum Exportieren von Daten in Amazon S3 verwenden.
 
 * `66.117.18.0/24`
 
