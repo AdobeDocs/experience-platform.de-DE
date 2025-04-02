@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2080'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ Dieses Handbuch enthält Antworten auf Fragen, die häufig zum Adobe Experience 
 
 Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, die es Ihnen ermöglicht, mit den verschiedenen Services in Adobe Experience Cloud zu interagieren.
 
-Web SDK sendet Daten lösungsunabhängig (XDM) an das Experience Platform-Edge Network, das die Daten dann lösungsspezifischen Formaten und Zielen zuordnet und in Echtzeit sendet.
+Web SDK sendet Daten lösungsunabhängig (XDM) an Experience Platform Edge Network, das die Daten dann lösungsspezifischen Formaten und Zielen zuordnet und in Echtzeit sendet.
 
-Im folgenden Video finden Sie weitere Informationen zur Web-SDK: [Treffen Sie Alloy.js und Taggen Sie nie wieder für eine eVar oder Mbox](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
+Im folgenden Video finden Sie weitere Informationen zur Web-SDK: [Lernen Sie Alloy.js kennen und Taggen Sie nie wieder für eine eVar oder Mbox](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
 ## Wie unterscheidet sich Adobe Experience Platform Web SDK von früheren Lösungen?
 
-### Vor dem Experience Platform von Web SDK
+### Vor Experience Platform Web SDK
 
 Derzeit müssen Sie basierend auf jeder einzelnen Lösung verschiedene JavaScript-Bibliotheken bereitstellen.
 
@@ -45,7 +45,7 @@ Außerdem gibt es derzeit keine JavaScript-Bibliothek, die Daten direkt an Adobe
 
 ### Mit Experience Platform Web SDK
 
-Der neue Web SDK sendet Daten für die folgenden Lösungen an ein einziges Ziel (Experience Platform-Edge Network) und löst die oben genannten häufigsten Lösungsanwendungsfälle.
+Das neue Web-SDK sendet Daten für die folgenden Lösungen an ein einzelnes Ziel (Experience Platform Edge Network) und löst die oben genannten häufigsten Lösungsanwendungsfälle.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -61,19 +61,19 @@ Adobe Experience Platform Web SDK kann auch Daten direkt an Adobe Experience Pla
 
 **Leistung:** Die Web-SDK ist kleiner als alle aktuellen Adobe-Bibliotheken und bietet deutlich schnellere Seitenladevorgänge.
 
-**Einfachheit:** Die Kombination aus XDM, Web SDK, Tags, Edge Network, Adobe Experience Cloud-Lösungen und Adobe Experience Platform schafft eine leicht verständliche und leicht zu befolgende Datenerfassungsgeschichte.
+**Einfachheit:** Die Kombination aus XDM, Web SDK, Tags, Edge Network, Adobe Experience Cloud-Lösungen und Adobe Experience Platform schafft eine leicht verständliche und leicht nachvollziehbare Datenerfassungsgeschichte.
 
 * **XDM:** Das lösungsunabhängige Schema, das Sie zum Senden von Daten an Adobe verwenden. Keine weiteren Tags für eVars oder Mboxes.
-* **Web SDK:** Erleichtert das Senden und Empfangen von Daten an das Adobe Experience Platform-Edge Network.
+* **Web SDK:** Erleichtert das Senden und Empfangen von Daten an Adobe Experience Platform Edge Network.
 * **Tags:** Vereinfacht die Bereitstellung und Konfiguration der Web-SDK (und aller anderen JavaScript-Tags) auf einer Site.
 * **Edge Network:** Leiten Sie die Daten einfach in dem benötigten Format an Adobe Experience Platform und die Lösungen weiter.
 * **Adobe Experience Platform- und Adobe-Lösungen:** Ihr Wertversprechen aktivieren.
 
 **Kontrolle** Da alle Daten einen einzigen und verbundenen Datenstrom verwenden, können Sie logisch verfolgen und steuern, wie die Daten bei jeder Millisekunde ihres Journey, zu und von Anwendungen aussehen.
 
-**Modern und zukunftsbereit:** Der Web SDK und seine Anbindung an das Edge Network haben Adobe in die Lage versetzt, den Umgang von Adobe mit der Datenerfassung, Personalisierung, Einverständniserklärung und der Zukunft von Drittanbieter-Cookies erheblich zu modernisieren. (Erstanbieter-Domain wird aktiviert, die von Adobe verwaltet wird.)
+**Modern und zukunftsbereit:** Die Web-SDK und ihre Verbindung zur Edge Network haben Adobe in die Lage versetzt, den Umgang von Adobe mit der Datenerfassung, Personalisierung, Einverständniserklärung und der Zukunft von Drittanbieter-Cookies erheblich zu modernisieren. (Erstanbieter-Domain wird von Adobe verwaltet.)
 
-**Time-to-Value:** Adobe hat hart daran gearbeitet (und wird es auch weiterhin tun), die Bereitstellung des Web-SDK über Tags und die Zuordnung Client-seitiger Daten zu XDM so einfach wie möglich zu gestalten. Danach können alle anderen Adobe-Lösungen und Adobe Experience Platform-Services Server-seitig ein- oder ausgeschaltet werden. Wenn Sie dies beispielsweise für Adobe Analytics verwenden und Target oder Experience Platform aktivieren möchten, können Sie einfach einen Umschalter in der Datenstromkonfiguration umschalten und diese Anwendungsfälle aufleuchten lassen.
+**Time-to-Value:** Adobe hat hart daran gearbeitet (und wird es auch weiterhin tun), die Bereitstellung des Web-SDK über Tags und die Zuordnung Client-seitiger Daten zu XDM so einfach wie möglich zu gestalten. Danach können alle anderen Adobe-Lösungen und Adobe Experience Platform-Services Server-seitig aktiviert oder deaktiviert werden. Wenn Sie dies beispielsweise für Adobe Analytics verwenden und Target oder Experience Platform aktivieren möchten, können Sie einfach einen Umschalter in der Datenstromkonfiguration umschalten und diese Anwendungsfälle aufleuchten lassen.
 
 ## Was ist [!DNL alloy.js]?
 
@@ -81,7 +81,10 @@ Adobe Experience Platform Web SDK kann auch Daten direkt an Adobe Experience Pla
 
 ## Müssen Kunden Adobe Experience Platform kaufen, um die [!DNL Web SDK] nutzen zu können?
 
-Nein. Jeder Kunde von Adobe Digital Experience kann die Adobe Experience Platform Web SDK kostenlos nutzen. Kunden, die die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas, Datensätze, Identity-Namespaces und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
+Nein. Jeder Kunde von Adobe Digital Experience kann die Adobe Experience Platform Web SDK kostenlos nutzen.
+
+* Kunden, die *nicht* Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
+* Kunden, die Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas, Datensätze, Identitäts-Namespaces und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
 
 Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in der Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
@@ -103,7 +106,7 @@ Web SDK ist derzeit öffentlich verfügbar und kann zum Senden von Daten an Adob
 
 Die SDK ist kostenlos und wird von Adobe kostenlos gehostet. Bei Bedarf können Sie es kostenlos herunterladen und auf Ihren eigenen Servern hosten.
 
-Web SDK erfordert Zugriff auf [Datenstromkonfigurationen](../datastreams/overview.md) und den Experience Platform [XDM Schema Builder](../xdm/tutorials/create-schema-ui.md), damit Adobe-Server eingehende Daten aus SDK ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihr Adobe-Account-Team, um den Anfrageprozess zu starten.
+Web SDK erfordert Zugriff auf [Datenstromkonfigurationen](../datastreams/overview.md) und den Experience Platform [XDM Schema Builder](../xdm/tutorials/create-schema-ui.md), damit die Adobe-Server eingehende Daten aus SDK ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihr Adobe-Accountteam, um den Anfrageprozess zu starten.
 
 ## Welche Anwendungsfälle werden derzeit vom Web SDK unterstützt?
 
@@ -113,7 +116,7 @@ Web SDK entwickelt sich schnell weiter. Weitere Anwendungsfälle werden derzeit 
 
 Es kommt darauf an. Adobe Experience Platform Web SDK kann in zwei verschiedenen Stilen bereitgestellt werden. Weitere Einzelheiten werden in einem künftigen Migrationsdokument aufgeführt.
 
-* **Nur ein weiteres Tag:** Wenn die Website bereits für Lösungen getaggt ist und Sie sie nicht erneut taggen können, aber Daten zum Experience Platform an Adobe Experience Platform Edge Network für Anwendungsfälle oder die bevorstehenden Funktionen zur Ereignisweiterleitung senden möchten (siehe unten), können Sie das `alloy.js` Tag zur Website hinzufügen, wo es als „nur ein weiteres Tag“ funktioniert.
+* **Nur ein weiteres Tag:** Wenn die Website bereits für Lösungen getaggt ist und Sie sie nicht erneut taggen können, aber Daten für Experience Platform-Anwendungsfälle oder die bevorstehenden Funktionen zur Ereignisweiterleitung (siehe unten) an Adobe Experience Platform Edge Network senden möchten, können Sie das `alloy.js` Tag zur Website hinzufügen, wo es als „nur ein weiteres Tag“ funktioniert.
 
 * **Einziges Tag:** Wenn Sie die Web-SDK für eine Experience Cloud-Lösung verwenden möchten, müssen Sie sie für _alle_ Lösungen auf dieser Seite verwenden. Wenn Ihre Site beispielsweise bereits für Adobe Analytics getaggt ist und Sie sie für Target verwenden möchten, müssen Sie sie sowohl für beide als auch für alle anderen in der Zukunft verwenden.
 
@@ -125,7 +128,7 @@ Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigrat
 
 ## Worin unterscheidet sich Web SDK von Tags?
 
-* **Tags in Experience Platform** verwalten Sie den Gerätecode. Verwenden Sie sie, um den Code einfacher bereitzustellen. Sie sind frei und mächtig.
+* **Tags in Experience Platform** verwalten den Geräte-Code. Verwenden Sie sie, um den Code einfacher bereitzustellen. Sie sind frei und mächtig.
 
 * **Adobe Experience Platform Web SDK** ist der offizielle Name des neuen Codes, der von Tags für Adobe-Anwendungsfälle bereitgestellt wird. Es ist auch frei und mächtig.
 
@@ -145,7 +148,7 @@ Allerdings:
 
 ## Was ist Ereignisweiterleitung?
 
-Wenn Sie unsere SDKs verwenden und XDM an das -Edge Network senden, können Sie mit diesen neuen Funktionen für die Ereignisweiterleitung neue Server-seitige Erweiterungen installieren und diese Daten allen Elementen über unser Edge-Netzwerk zuordnen und an beliebige Stellen senden. Betrachten Sie dies als „Datenerfassung als Service“. Diese ist gegen Aufpreis verfügbar und wird als Teil von Adobe Experience Platform gebündelt.
+Wenn Sie unsere SDKs verwenden und XDM an die Edge Network senden, können Sie mit diesen neuen Funktionen für die Ereignisweiterleitung neue Server-seitige Erweiterungen installieren und diese Daten allen Elementen über unser Edge-Netzwerk zuordnen und an beliebige Stellen senden. Betrachten Sie dies als „Datenerfassung als Service“. Diese ist gegen Aufpreis verfügbar und wird als Teil von Adobe Experience Platform gebündelt.
 
 ## Was ist eine CNAME- oder Erstanbieter-Domain und warum ist sie wichtig?
 
@@ -160,14 +163,14 @@ Ja, derzeit verwendet Web SDK je nach Implementierung zwischen ein und sieben Co
 | **kndct_orgid_identity** | 34128000 | 395 Tage | Im Identitäts-Cookie werden die ECID sowie andere Informationen im Zusammenhang mit der ECID gespeichert. |
 | **kndctr_orgid_consent_check** | 7200 | 2 Stunden | Dieses sitzungsbasierte Cookie weist den Server an, die Einverständnisvoreinstellungen Server-seitig zu suchen. |
 | **kndctr_orgid_consent** | 15552000 | 180 Tage | Dieses Cookie speichert die Einverständnisvoreinstellungen des Benutzers für die Website. |
-| **kndctr_orgid_cluster** | 1800 | 30 Minuten | Dieses Cookie speichert die Edge Network-Region, die die Anfragen des aktuellen Benutzers bedient. Die Region wird im URL-Pfad verwendet, damit das Edge Network die Anfrage an die richtige Region weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten, sodass, wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, die Anfrage an die nächstgelegene Region weitergeleitet werden kann. |
+| **kndctr_orgid_cluster** | 1800 | 30 Minuten | Dieses Cookie speichert die Edge Network-Region, die die Anfragen des aktuellen Benutzers verarbeitet. Die Region wird im URL-Pfad verwendet, damit der Edge Network die Anfrage an die richtige Region weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten, sodass, wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, die Anfrage an die nächstgelegene Region weitergeleitet werden kann. |
 | **mbox** | 63072000 | 2 Jahre | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dadurch kann das Target[mbox-Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) von der Web-SDK festgelegt werden. |
 | **mboxEdgeCluster** | 1800 | 30 Minuten | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dieses Cookie ermöglicht es der Web SDK, at.js den richtigen Edge-Cluster zu übermitteln, damit die Zielprofile synchron bleiben, während Benutzende auf einer Site navigieren. |
 | **AMCV_##@AdobeOrg** | 34128000 | 395 Tage | Dieses Cookie wird nur angezeigt, wenn die ID-Migration auf der Adobe Experience Platform Web SDK aktiviert ist. Dieses Cookie hilft bei der Umstellung auf Web SDK, während einige Teile der Website noch visitor.js verwenden. Weitere Informationen finden Sie unter [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) . |
 
-Bei Verwendung der Web-SDK setzt das Edge Network eines oder mehrere der oben genannten Cookies. Das Edge Network setzt alle Cookies mit den Attributen `secure` und `sameSite="none"`.
+Bei Verwendung der Web-SDK setzt die Edge Network eines oder mehrere der oben genannten Cookies. Edge Network setzt alle Cookies mit den Attributen `secure` und `sameSite="none"` .
 
-Wenn Sie derzeit sowohl sichere als auch nicht sichere Abschnitte auf Ihrer Website haben, kann dies die Benutzeridentifizierung beeinträchtigen. Wenn ein(e) Benutzende(r) von einem sicheren Abschnitt der Site zu einem nicht sicheren Abschnitt navigiert, generiert das Edge Network mit der Anfrage einen neuen `ECID`.
+Wenn Sie derzeit sowohl sichere als auch nicht sichere Abschnitte auf Ihrer Website haben, kann dies die Benutzeridentifizierung beeinträchtigen. Wenn ein(e) Benutzende(r) von einem sicheren Abschnitt der Site zu einem nicht sicheren Abschnitt navigiert, generiert Edge Network mit der Anfrage einen neuen `ECID`.
 
 ## Welche Browser unterstützt Adobe Experience Platform Web SDK?
 
