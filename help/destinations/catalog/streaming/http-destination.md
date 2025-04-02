@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 72%
+source-wordcount: '2701'
+ht-degree: 71%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -158,6 +158,10 @@ Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen für OAuth 2]** wählen, um sich mit Ihrem HTTP-Endpunkt zu verbinden, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Authentifizierung über Client-Anmeldeinformationen eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+>[!WARNING]
+> 
+>Bei Verwendung der [!UICONTROL OAuth 2 Client-Anmeldeinformationen] -Authentifizierung kann [!UICONTROL Zugriffstoken-URL] maximal einen Abfrageparameter aufweisen. Das Hinzufügen einer [!UICONTROL Zugriffstoken-URL] mit mehr Abfrageparametern kann zu Problemen beim Herstellen einer Verbindung zu Ihrem Endpunkt führen.
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
