@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Berücksichtigung des Einverständnisses in Segmentdefinitionen
 description: Erfahren Sie, wie Sie die Voreinstellungen für das Kundeneinverständnis zur Erfassung und Freigabe personenbezogener Daten bei Segmentierungsvorgängen berücksichtigen.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 0%
+source-wordcount: '680'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Wenn ein Kunde sein Einverständnis zur Freigabe seiner personenbezogenen Daten 
 
 Die Berücksichtigung der Werte des Kundeneinverständnisses setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Services voraus. Bevor Sie mit diesem Tutorial beginnen, stellen Sie sicher, dass Sie mit den folgenden Services vertraut sind:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von Platform organisiert werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile].
 
@@ -75,7 +75,7 @@ Da die Einverständniswerte **[!UICONTROL Datenerfassung]** und **[!UICONTROL Da
 
 Durch Befolgen dieses Tutorials sollten Sie jetzt besser verstehen, wie Sie das Einverständnis und die Voreinstellungen von Kunden beim Erstellen von Segmentdefinitionen in Experience Platform berücksichtigen können.
 
-Weitere Informationen zur Verwaltung des Einverständnisses in Platform finden Sie in der folgenden Dokumentation:
+Weitere Informationen zur Verwaltung des Einverständnisses in Experience Platform finden Sie in der folgenden Dokumentation:
 
 * [Einverständnisverarbeitung mit dem Adobe-Standard](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Einverständnisverarbeitung mit dem IAB TCF 2.0-Standard](../../landing/governance-privacy-security/consent/iab/overview.md)

@@ -5,9 +5,9 @@ description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1732'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der verschiedenen [!DNL Adobe Experi
 
 - [Segmentierungs-](../home.md): Ermöglicht das Erstellen von Zielgruppen aus Echtzeit-Kundenprofildaten.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
+- [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
 - [Streaming-Aufnahme](../../ingestion/streaming-ingestion/overview.md): Wie Experience Platform Daten von Client- und Server-seitigen Geräten in Echtzeit aufnimmt und speichert.
 
@@ -44,7 +44,7 @@ Segmentdefinitionen enthalten Informationen wie den Namen, die Beschreibung, den
 
 ## Erstellen eines Identity-Namespace für die externe Zielgruppe
 
-Der erste Schritt zur Verwendung externer Zielgruppen besteht darin, einen Identity-Namespace zu erstellen. Mit Identity-Namespaces kann Platform verknüpfen, woher eine Zielgruppe stammt.
+Der erste Schritt zur Verwendung externer Zielgruppen besteht darin, einen Identity-Namespace zu erstellen. Mit Identity-Namespaces kann Experience Platform verknüpfen, woher eine Zielgruppe stammt.
 
 Um einen Identity-Namespace zu erstellen, befolgen Sie die Anweisungen im [Handbuch zum Identity-Namespace](../../identity-service/features/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identity-Namespace die Quelldetails zum Identity-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] als **[!UICONTROL Nicht-Personen-Kennung]**.
 
@@ -70,7 +70,7 @@ Nachdem Sie das Feld `_id` als primäre Identität markiert haben, wählen Sie d
 
 ![Der Umschalter zum Aktivieren des Schemas für das Profil ist im Schema-Editor hervorgehoben.](../images/tutorials/external-audiences/schema-profile.png)
 
-Jetzt ist dieses Schema für das Profil aktiviert, wobei die primäre Kennung dem von Ihnen erstellten Nicht-Personen-Identity-Namespace zugewiesen ist. Dies bedeutet, dass Segmentmetadaten, die mit diesem Schema in Platform importiert wurden, in Profile aufgenommen werden, ohne mit anderen personenbezogenen Profildaten zusammengeführt zu werden.
+Jetzt ist dieses Schema für das Profil aktiviert, wobei die primäre Kennung dem von Ihnen erstellten Nicht-Personen-Identity-Namespace zugewiesen ist. Das bedeutet, dass Segmentmetadaten, die mit diesem Schema in Experience Platform importiert wurden, in das Profil aufgenommen werden, ohne mit anderen personenbezogenen Profildaten zusammengeführt zu werden.
 
 ## Erstellen eines Datensatzes für das Schema
 
@@ -86,7 +86,7 @@ Nachdem Sie den Datensatz erstellt haben, befolgen Sie die Anweisungen im [Benut
 
 ## Zielgruppendaten einrichten und importieren
 
-Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung aufnehmen.
+Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Experience Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung aufnehmen.
 
 ### Aufnehmen von Daten über eine Batch-Verbindung
 
@@ -102,7 +102,7 @@ Nachdem Sie Ihre Streaming-Verbindung erstellt haben, haben Sie Zugriff auf Ihre
 
 ## Zielgruppen-Metadatenstruktur
 
-Nachdem Sie eine Verbindung erstellt haben, können Sie Ihre Daten jetzt in Platform aufnehmen.
+Nachdem Sie eine Verbindung erstellt haben, können Sie Ihre Daten jetzt in Experience Platform aufnehmen.
 
 Nachfolgend finden Sie ein Beispiel für die Metadaten der Payload der externen Zielgruppe:
 
@@ -163,7 +163,7 @@ Da Sie nun externe Zielgruppen in Ihren Segmenten verwenden können, können Sie
 
 ## Anhang
 
-Zusätzlich zur Verwendung importierter externer Zielgruppen-Metadaten und deren Verwendung zum Erstellen von Segmenten können Sie auch externe Segmentzugehörigkeiten in Platform importieren.
+Zusätzlich zur Verwendung importierter externer Zielgruppen-Metadaten und deren Verwendung zum Erstellen von Segmenten können Sie auch externe Segmentzugehörigkeiten in Experience Platform importieren.
 
 ### Einrichten eines externen Zielschemas für die Segmentzugehörigkeit
 
@@ -193,7 +193,7 @@ Nachdem Sie den Datensatz erstellt haben, befolgen Sie die Anweisungen im [Benut
 
 ## Einrichten und Importieren von Daten zur externen Zielgruppenzugehörigkeit
 
-Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung aufnehmen.
+Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Experience Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung aufnehmen.
 
 ### Aufnehmen von Daten über eine Batch-Verbindung
 
@@ -209,7 +209,7 @@ Nachdem Sie Ihre Streaming-Verbindung erstellt haben, haben Sie Zugriff auf Ihre
 
 ## Struktur der Segmentzugehörigkeit
 
-Nachdem Sie eine Verbindung erstellt haben, können Sie Ihre Daten jetzt in Platform aufnehmen.
+Nachdem Sie eine Verbindung erstellt haben, können Sie Ihre Daten jetzt in Experience Platform aufnehmen.
 
 Nachfolgend finden Sie ein Beispiel für die Payload der externen Zielgruppenzugehörigkeit:
 

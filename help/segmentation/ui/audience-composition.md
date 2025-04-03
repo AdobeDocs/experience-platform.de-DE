@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2344'
-ht-degree: 78%
+source-wordcount: '2345'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 78%
 >- Verwalten von Profilen
 >- Verwalten von Zusammenführungsrichtlinien
 >
->Weitere Informationen zu Berechtigungen in Platform finden Sie unter [Zugriffssteuerung - Übersicht](../../access-control/home.md#permissions).
+>Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
@@ -361,7 +361,7 @@ Darüber hinaus können Sie den Umschalter **[!UICONTROL Andere Profile]** aktiv
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
->title="Veröffentlichen Sie"
+>title="Veröffentlichen"
 >abstract="Sie können die Komposition veröffentlichen, um die resultierende(n) Zielgruppe(n) in Adobe Experience Platform zu erstellen."
 
 >[!IMPORTANT]

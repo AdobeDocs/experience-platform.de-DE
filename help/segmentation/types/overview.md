@@ -1,13 +1,13 @@
 ---
 title: Zielgruppentypen
 description: Erfahren Sie mehr über die verschiedenen Arten von Zielgruppen, die Sie in Adobe Experience Platform erstellen können.
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
-
 
 # Zielgruppentypen
 
@@ -19,7 +19,7 @@ Eine Personen-Zielgruppe ist eine Zielgruppe, die mit Profildaten **Kunden** ers
 
 Ausführlichere Informationen zu Personen-Zielgruppen finden Sie in der [Personen-Zielgruppe - Übersicht](./people-audiences.md).
 
-## [!BADGE B2C Edition] Lookalike-Zielgruppe
+## Lookalike]Zielgruppe von [!BADGE B2C Edition
 
 Eine Lookalike-Zielgruppe ist eine Zielgruppe, die durch Analyse einer hochwertigen Zielgruppe mit einem Lookalike-Modell für maschinelles Lernen erstellt wird. Das Look-alike-Modell kann eine Zielgruppe erstellen, die dem Ähnlichkeitsschwellenwert der analysierten hochwertigen Zielgruppe entspricht.
 
@@ -39,4 +39,4 @@ Weitere Informationen zu Zielgruppen potenzieller Kundinnen und Kunden finden Si
 
 ## Nächste Schritte
 
-Nach dem Lesen dieser Übersicht haben Sie jetzt ein besseres Verständnis für die verschiedenen Typen of In Platform verfügbare Zielgruppen. Um mehr über die verschiedenen Auswertungsmethoden zu erfahren, lesen Sie bitte [Übersicht über die Auswertungsmethode](../methods/overview.md).
+Nach dem Lesen dieser Übersicht haben Sie jetzt ein besseres Verständnis für die verschiedenen Typen of Auf Experience Platform verfügbare Zielgruppen. Um mehr über die verschiedenen Auswertungsmethoden zu erfahren, lesen Sie bitte [Übersicht über die Auswertungsmethode](../methods/overview.md).

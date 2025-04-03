@@ -1,15 +1,15 @@
 ---
 title: Edge-Segmentierungshandbuch
-description: Erfahren Sie, wie Sie mit der Edge-Segmentierung Zielgruppen in Platform sofort am Edge auswerten können, um Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite zu ermöglichen.
+description: Erfahren Sie, wie Sie mit der Edge-Segmentierung Zielgruppen in Experience Platform sofort am Edge auswerten können, um Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 25%
+source-wordcount: '1154'
+ht-degree: 26%
 
 ---
 
-# Edge-Segmentierungshandbuch
+# Handbuch zur Edge-Segmentierung
 
 Bei der Segmentierung in Edge werden Segmentdefinitionen in Adobe Experience Platform sofort ([ Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
@@ -302,7 +302,7 @@ Gehen Sie in den verfügbaren Filtern zu **Aktualisierungshäufigkeit** und wäh
 
 ![Die Aktualisierungshäufigkeit von Edge ist ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Edge-Segmentierung ausgewertet werden.](../images/methods/edge/filter-edge.png)
 
-Weitere Informationen zum Anzeigen von Zielgruppen in Platform finden Sie im [Handbuch für Zielgruppen-Portal](../ui/audience-portal.md).
+Weitere Informationen zum Anzeigen von Zielgruppen in Experience Platform finden Sie im [Handbuch für Zielgruppenportale](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

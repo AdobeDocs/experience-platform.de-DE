@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Konto-Zielgruppen erstellen und verwenden, um
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 23%
 
 ---
@@ -53,7 +53,7 @@ Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite [!UIC
 
 ![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] auf der Seite zum Durchsuchen von Kontozielgruppen ist hervorgehoben.](../images/types/account/select-create-audience.png)
 
-Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attribute] können Sie sowohl von Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
+Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attribute] können Sie sowohl von Experience Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
 ![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ Die [!UICONTROL Ziel aktivieren] wird angezeigt. Weitere Informationen zum Aktiv
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie Sie Ihre Konto-Zielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Arten von Zielgruppen in Platform finden Sie in der [Übersicht über Zielgruppentypen](./overview.md).
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie Sie Ihre Konto-Zielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Typen von Zielgruppen in Experience Platform finden Sie in der [Übersicht über Zielgruppentypen](./overview.md).
 
 ## Anhang {#appendix}
 

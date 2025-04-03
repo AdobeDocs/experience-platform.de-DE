@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 55%
 
 ---
@@ -26,6 +26,7 @@ In Audience Portal können Sie die folgenden Aufgaben ausführen:
    - [Verwenden von Segment Builder zum Erstellen einer Zielgruppe](#segment-builder)
    - [Verwenden der Audience-Komposition zum Erstellen einer Audience](#audience-composition)
    - [Verwenden Sie die Federated Audience-Komposition, um eine Audience mit Daten aus Ihrem vorhandenen Data Warehouse zu erstellen](#fac)
+   - [Verwenden von Data Distiller zum Erstellen einer Zielgruppe](#data-distiller)
 - [Extern generierte Zielgruppen importieren](#import-audience)
 
 Um das Audience Portal zu öffnen, wählen Sie **[!UICONTROL Abschnitt Segmentierung]** Registerkarte Durchsuchen aus.
@@ -57,7 +58,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | [!UICONTROL Vorlage] | Segmentierungs-Service | Öffnet Segment Builder zur Bearbeitung Ihrer Audience. Beachten Sie, dass Sie Ihre Zielgruppe, die über die API erstellt wurde **mit** Segment Builder bearbeiten können. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
 | [!UICONTROL Komposition öffnen] | Zielgruppenkomposition | Öffnet die Audience-Komposition, um Ihre Audience anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md). |
 | [!UICONTROL Für Ziel aktivieren] | Segmentierungs-Service | Aktiviert die Zielgruppe für ein Ziel. Ausführlichere Informationen zur Aktivierung einer Zielgruppe für ein Ziel finden Sie in der [Übersicht zur Aktivierung](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Für Partner freigeben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Gibt Ihre Zielgruppe für andere Platform-Benutzer frei. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
+| [!UICONTROL Für Partner freigeben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Gibt Ihre Zielgruppe für andere Experience Platform-Benutzer frei. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
 | [!UICONTROL Tags verwalten] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die benutzerdefinierten Tags, die zur Audience gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
 | [!UICONTROL In Ordner verschieben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
 | [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. Weitere Informationen zu dieser Funktion finden Sie in den [Häufig gestellte Fragen zur Segmentierung](../faq.md#copy). |
@@ -89,7 +90,7 @@ Das Tortendiagramm wird angezeigt, in dem die Zielgruppen nach Zielgruppenbewert
 
 ![Das Tortendiagramm für die Zielgruppenbewertung ist hervorgehoben, wobei die Auswertungszeit für die Batch-Segmentierung ebenfalls angezeigt wird.](../images/ui/audience-portal/evaluation-summary.png)
 
-### Customize {#customize}
+### Anpassen {#customize}
 
 Sie können zusätzliche Felder zu Audience Portal hinzufügen, indem Sie ![das Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
 
@@ -274,7 +275,7 @@ Wenn Sie **[!UICONTROL Eigenschaften bearbeiten]** auswählen, können Sie die g
 
 ### Zielgruppe insgesamt {#audience-total}
 
-Für von Platform generierte Zielgruppen und Kompositionen wird im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
+Für von Experience Platform generierte Zielgruppen und Kompositionen wird im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** wer
 | Anzahl der Profile | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
 | Datensatzname | Der Name des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können den Datensatznamen auswählen, um weitere Informationen zum Datensatz zu erhalten. Weitere Informationen zu Datensätzen finden Sie im [Handbuch zur Datensatz-Benutzeroberfläche](../../catalog/datasets/user-guide.md). |
 | Datensatz-Batch | Die ID des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können die ID des Stapels auswählen, um weitere Informationen über den Stapel zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Datenaufnahme bei der Überwachung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Profil-Batch | Die ID des Batches, der die Profile in Platform erstellt hat. Sie können die ID des Stapels auswählen, um weitere Informationen über den Stapel zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Datenaufnahme bei der Überwachung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profil-Batch | Die ID des Batches, der die Profile in Experience Platform erstellt hat. Sie können die ID des Stapels auswählen, um weitere Informationen über den Stapel zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Datenaufnahme bei der Überwachung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schema | Der Name des Schemas, zu dem die Zielgruppe gehört. Sie können den Namen des Schemas auswählen, um Informationen zur Struktur des Schemas anzuzeigen und Datennutzungskennzeichnungen anzuwenden. Weitere Informationen finden Sie im [Handbuch zum Verwalten von Datennutzungsbeschriftungen für ein Schema](../../xdm/tutorials/labels.md). |
 | Aufgenommene Einträge | Die Anzahl der in den Datensatz aufgenommenen Datensätze. |
 | Fehlgeschlagene Einträge | Die Anzahl der Datensätze, die nicht in den Datensatz aufgenommen werden konnten. |
@@ -385,9 +386,17 @@ Wenn Sie **[!UICONTROL Regel erstellen]** auswählen, gelangen Sie zum Segment B
 
 ### Komposition föderierter Zielgruppen {#fac}
 
-Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
+Sie können die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern.
+
+Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
 ![Eine Liste von Zielgruppen, die in der Federated-Audience-Komposition für Ihre Organisation erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+Sie können die SQL-Erweiterung von Data Distiller verwenden, um Zielgruppen aus dem Data Lake zu erstellen. Diese Daten enthalten vorhandene Dimensionsentitäten wie Kundenattribute oder Produktinformationen.
+
+Weitere Informationen zu Data Distiller finden Sie im Handbuch [Erstellen von Zielgruppen mithilfe von SQL](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importieren einer Zielgruppe {#import-audience}
 
@@ -446,7 +455,7 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 >
 >Wenn Ihre extern generierte Zielgruppe außerdem sensible und/oder gesundheitsbezogene Informationen enthält, **müssen** die erforderlichen Datennutzungskennzeichnungen vor der Aktivierung auf ein beliebiges Ziel anwenden. Da Variablen von extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten **nicht** Einverständnisdaten in Ihre CSV-Datei einschließen.
 >
->Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen finden Sie in der Dokumentation unter [ von Kennzeichnungen](../../access-control/abac/ui/labels.md). Um mehr über Datennutzungskennzeichnungen in Platform im Allgemeinen zu erfahren, lesen Sie [Datennutzungskennzeichnungen - Übersicht](../../data-governance/labels/overview.md). Informationen zur Funktionsweise des Einverständnisses in extern generierten Zielgruppen finden Sie in den [Häufig gestellte Fragen zu Zielgruppen](../faq.md#consent).
+>Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen finden Sie in der Dokumentation unter [ von Kennzeichnungen](../../access-control/abac/ui/labels.md). Um mehr über Datennutzungskennzeichnungen in Experience Platform im Allgemeinen zu erfahren, lesen Sie [Datennutzungskennzeichnungen - Übersicht](../../data-governance/labels/overview.md). Informationen zur Funktionsweise des Einverständnisses in extern generierten Zielgruppen finden Sie in den [Häufig gestellte Fragen zu Zielgruppen](../faq.md#consent).
 
 ## Nächste Schritte
 

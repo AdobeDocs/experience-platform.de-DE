@@ -2,9 +2,9 @@
 title: Methoden zur Zielgruppenauswertung
 description: Erfahren Sie mehr über die verschiedenen Auswertungsmethoden, die in Adobe Experience Platform verfügbar sind.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segme
 
 ## Streaming-Segmentierung 
 
-Die Streaming-Segmentierung ist eine Auswertungsmethode für die Segmentierung, mit der Sie Zielgruppen nahezu in Echtzeit bewerten und sich dabei auf die Relevanz der Daten konzentrieren können. Sie können die Streaming-Segmentierung verwenden, um Streaming-Daten beim Eintreffen in Platform schnell zu segmentieren.
+Die Streaming-Segmentierung ist eine Auswertungsmethode für die Segmentierung, mit der Sie Zielgruppen nahezu in Echtzeit bewerten und sich dabei auf die Relevanz der Daten konzentrieren können. Sie können die Streaming-Segmentierung verwenden, um Streaming-Daten beim Eintreffen in Experience Platform schnell zu segmentieren.
 
 Weitere Informationen zur Streaming-Segmentierung finden Sie unter [Streaming-Segmentierung - Übersicht](./streaming-segmentation.md).
 

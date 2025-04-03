@@ -2,16 +2,16 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4832'
-ht-degree: 28%
+source-wordcount: '4842'
+ht-degree: 27%
 
 ---
 
 # Häufig gestellte Fragen
 
-Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie anhand von Segmentdefinitionen oder anderen Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Zielgruppen werden zentral auf Platform konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu Zielgruppen und Segmentierung.
+Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie anhand von Segmentdefinitionen oder anderen Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Zielgruppen werden zentral in Experience Platform konfiguriert und gepflegt und stehen jeder Adobe-Lösung zur Verfügung. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu Zielgruppen und Segmentierung.
 
 ## Zielgruppen-Portal
 
@@ -35,7 +35,7 @@ Um extern generierte Zielgruppen hochzuladen, benötigen Sie die Berechtigungen 
 
 Wenn Sie eine extern generierte Zielgruppe hochladen, wird ein Datensatz erstellt und im Datensatzinventar sichtbar. Der Name des Datensatzes entspricht **Namen** extern generierten Zielgruppe, die Sie hochgeladen haben.
 
-### Woraus besteht eine extern generierte Zielgruppe, und was passiert mit diesen Daten, wenn sie in Platform importiert werden?
+### Woraus besteht eine extern generierte Zielgruppe, und was passiert mit diesen Daten, wenn sie in Experience Platform importiert werden?
 
 Während des Workflows Externe Zielgruppe importieren müssen Sie angeben, welche Spalte in der CSV-Datei der **Primären Identität entspricht**. Ein Beispiel für eine primäre Identität ist eine E-Mail-Adresse, eine ECID oder ein organisationsspezifischer benutzerdefinierter Identity-Namespace.
 
@@ -45,9 +45,9 @@ Alle anderen Daten innerhalb der extern generierten Zielgruppe werden als **Payl
 
 Während die extern generierte Zielgruppe beim Erstellen von Zielgruppen mit Segment Builder referenziert werden kann, **einzelne Profilattribute**.
 
-### Kann ich extern generierte Zielgruppendaten mit einem vorhandenen Profil in Platform abstimmen?
+### Kann ich extern generierte Zielgruppendaten mit einem in Experience Platform vorhandenen Profil abstimmen?
 
-Ja, die extern generierte Zielgruppe wird mit dem in Platform vorhandenen Profil zusammengeführt, wenn die primären Kennungen übereinstimmen. Die Abstimmung dieser Daten kann bis zu 24 Stunden dauern. Wenn noch keine Profildaten vorhanden sind, wird bei der Aufnahme der Daten ein neues Profil erstellt.
+Ja, die extern generierte Zielgruppe wird mit dem in Experience Platform vorhandenen Profil zusammengeführt, wenn die primären Kennungen übereinstimmen. Die Abstimmung dieser Daten kann bis zu 24 Stunden dauern. Wenn noch keine Profildaten vorhanden sind, wird bei der Aufnahme der Daten ein neues Profil erstellt.
 
 ### Wie werden Voreinstellungen für das Kundeneinverständnis für extern generierte Zielgruppen berücksichtigt, die in das Zielgruppenportal importiert werden?{#consent}
 
@@ -135,7 +135,7 @@ Im folgenden Diagramm werden die verschiedenen Lebenszyklusstatus, was sie darst
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Entwurf | Eine Zielgruppe im Status **Entwurf** ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für die Verwendung in anderen Services bereit ist. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Ausgewertet, um genaue Veröffentlichungszahlen zu erhalten. | Ja, aber nicht empfohlen. | Ja |
 | Veröffentlicht | Eine Zielgruppe im Status **Veröffentlicht** ist eine Zielgruppe, die für alle nachgelagerten Services verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mithilfe von Batch-, Streaming- oder Edge-Segmentierung bewertet. | Ja | Ja |
-| Inaktiv | Eine Zielgruppe im Status **Inaktiv** ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie ist zwar noch in Platform vorhanden, **jedoch erst** verwendet werden können, wenn sie als Entwurf oder veröffentlicht gekennzeichnet ist. | Nein, kann aber angezeigt werden. | Nein | Nein | Nicht mehr aktualisiert. | Von Platform nicht mehr ausgewertet oder aktualisiert. | Nein | Ja |
+| Inaktiv | Eine Zielgruppe im Status **Inaktiv** ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie ist zwar noch in Experience Platform vorhanden, **jedoch** verwendet werden können, bis sie als Entwurf oder veröffentlicht gekennzeichnet ist. | Nein, kann aber angezeigt werden. | Nein | Nein | Nicht mehr aktualisiert. | Von Experience Platform nicht mehr ausgewertet oder aktualisiert. | Nein | Ja |
 | Gelöscht | Eine Zielgruppe im Status **Gelöscht** ist eine Zielgruppe, die gelöscht wurde. Die tatsächliche Löschung der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein | Nein |
 
 ### In welchen Status kann ich meine Zielgruppen bearbeiten?
@@ -272,7 +272,7 @@ Im folgenden Abschnitt finden Sie Fragen zur Audience-Komposition.
 
 ### Wann sollte ich die Zielgruppenkomposition anstelle von Segment Builder verwenden?
 
-Sowohl Audience-Komposition als auch Segment Builder spielen beim Erstellen von Audiences in Platform eine wichtige Rolle.
+Sowohl Zielgruppenkomposition als auch Segment Builder spielen beim Erstellen von Zielgruppen in Experience Platform eine wichtige Rolle.
 
 Segment Builder eignet sich besser für die Erstellung **Zielgruppe (** Erstellen einer Zielgruppe von Grund auf), während die Komposition von Zielgruppen besser für die **(Kuratierung und Personalisierung** (Erstellung neuer Zielgruppen basierend auf einer bestehenden Zielgruppe) geeignet ist.
 
@@ -376,9 +376,9 @@ Wenn also Änderungen am Profil vorgenommen werden, z. B. das Zusammenführen zw
 
 Nehmen wir beispielsweise an, Sie haben zwei sich gegenseitig ausschließende Zielgruppen erstellt: Zielgruppe A ist für Menschen, die in Washington leben, und Zielgruppe B ist für Menschen, die **nicht** in Washington leben. Es gibt zwei Profile - Profil 1 für eine Person, die in Washington lebt, und Profil 2 für eine Person, die in Oregon lebt.
 
-Wenn der Batch-Segmentierungs-Auswertungsauftrag ausgeführt wird, geht Profil 1 zu Zielgruppe A, während Profil 2 zu Zielgruppe B. Später, aber vor der Ausführung des Batch-Segmentierungs-Auswertungsauftrags am nächsten Tag, tritt ein Ereignis in Platform ein, das die beiden Profile miteinander in Einklang bringt. Daher wird ein einzelnes zusammengeführtes Profil erstellt, das die Profile 1 und 2 enthält.
+Wenn der Batch-Segmentierungs-Auswertungsauftrag ausgeführt wird, wird Profil 1 an Zielgruppe A und Profil 2 an Zielgruppe B gesendet. Später, aber vor der Ausführung des Batch-Segmentierungs-Auswertungsauftrags am nächsten Tag, tritt ein Ereignis, das die beiden Profile miteinander in Einklang bringt, in Experience Platform ein. Daher wird ein einzelnes zusammengeführtes Profil erstellt, das die Profile 1 und 2 enthält.
 
-Bis zum Ausführen des nächsten Batch-Segmentauswertungsauftrags weist das neue zusammengeführte Profil eine Zielgruppenzugehörigkeit in (**)** Profil 1 und Profil 2 auf. Als Ergebnis bedeutet dies, dass es Mitglied von **beiden)** Audience A und Audience B ist, trotz der Tatsache, dass diese Audiences widersprüchliche Definitionen aufweisen. Für den Endbenutzer ist dies die **exakt gleiche Situation** wie vor der Verbindung der Profile, da immer nur eine Person beteiligt war und Platform einfach **nicht** genügend Informationen hatte, um die beiden Profile miteinander zu verbinden.
+Bis zum Ausführen des nächsten Batch-Segmentauswertungsauftrags weist das neue zusammengeführte Profil eine Zielgruppenzugehörigkeit in (**)** Profil 1 und Profil 2 auf. Als Ergebnis bedeutet dies, dass es Mitglied von **beiden)** Audience A und Audience B ist, trotz der Tatsache, dass diese Audiences widersprüchliche Definitionen aufweisen. Für den Endbenutzer ist dies die **exakt gleiche Situation** wie vor der Verbindung der Profile, da immer nur eine Person beteiligt war und Experience Platform einfach **nicht** genügend Informationen hatte, um die beiden Profile miteinander zu verbinden.
 
 Wenn Sie die Profilsuche verwenden, um das neu erstellte Profil abzurufen, und sich die Zielgruppenzugehörigkeit ansehen, wird angezeigt, dass es Mitglied von **beiden** Zielgruppe A und Zielgruppe B ist, obwohl diese beiden Zielgruppen widersprüchliche Definitionen aufweisen. Sobald der tägliche Batch-Segmentierungs-Auswertungsauftrag ausgeführt wird, wird die Zielgruppenzugehörigkeit aktualisiert, um diesen aktualisierten Status der Profildaten widerzuspiegeln.
 
@@ -430,4 +430,4 @@ Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
 
 ### Gibt es Einschränkungen bei den Daten, die in gestreamt werden?
 
-Damit gestreamte Daten in der Streaming-Segmentierung verwendet werden können **muss** Abstand zwischen den in gestreamten Ereignissen bestehen. Wenn innerhalb derselben Sekunde zu viele Ereignisse gestreamt werden, behandelt Platform diese Ereignisse als von Bots generierte Daten und verwirft sie. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen den Ereignisdaten haben, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
+Damit gestreamte Daten in der Streaming-Segmentierung verwendet werden können **muss** Abstand zwischen den in gestreamten Ereignissen bestehen. Wenn innerhalb derselben Sekunde zu viele Ereignisse gestreamt werden, behandelt Experience Platform diese Ereignisse als von Bots generierte Daten und verwirft sie. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen den Ereignisdaten haben, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.

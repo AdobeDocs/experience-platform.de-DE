@@ -1,13 +1,13 @@
 ---
 title: Handbuch zur Stapelsegmentierung
 description: Erfahren Sie mehr über die Batch-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Batch-Segmentierung ausgewerteten Zielgruppe und der Ansicht Ihrer mit der Batch-Segmentierung erstellten Zielgruppen.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 10%
 
 ---
-
 
 # Handbuch zur Stapelsegmentierung
 
@@ -279,7 +279,7 @@ Gehen Sie in den verfügbaren Filtern zu **[!UICONTROL Aktualisierungshäufigkei
 
 ![Die Häufigkeit der Batch-Aktualisierung wird ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Batch-Segmentierung ausgewertet werden.](../images/methods/batch/filter-batch.png)
 
-Weitere Informationen zum Anzeigen von Zielgruppen in Platform finden Sie im [Handbuch für Zielgruppen-Portal](../ui/audience-portal.md).
+Weitere Informationen zum Anzeigen von Zielgruppen in Experience Platform finden Sie im [Handbuch für Zielgruppenportale](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

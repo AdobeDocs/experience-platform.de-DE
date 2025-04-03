@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 32%
+source-wordcount: '1256'
+ht-degree: 31%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 Streaming-Segmentierung bedeutet, dass Zielgruppen in Adobe Experience Platform nahezu in Echtzeit ausgewertet werden können, während der Schwerpunkt auf die Relevanz der Daten gelegt wird.
 
-Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Zielgruppen-Qualifizierung, wenn Streaming-Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Auf diese Weise können Sie Daten auswerten, während sie an Platform übergeben werden, sodass die Zielgruppenzugehörigkeit automatisch auf dem neuesten Stand gehalten wird.
+Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Zielgruppen-Qualifizierung, wenn Streaming-Daten in Experience Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Auf diese Weise können Sie Daten auswerten, während sie an Experience Platform übergeben werden, sodass die Zielgruppenzugehörigkeit automatisch auf dem neuesten Stand gehalten wird.
 
 ## Mögliche Abfragetypen {#query-types}
 
@@ -312,7 +312,7 @@ Gehen Sie in den verfügbaren Filtern zu **[!UICONTROL Aktualisierungshäufigkei
 
 ![Die Aktualisierungshäufigkeit für Streaming ist ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Streaming-Segmentierung bewertet werden.](../images/methods/streaming/filter-streaming.png)
 
-Weitere Informationen zum Anzeigen von Zielgruppen in Platform finden Sie im [Handbuch für Zielgruppen-Portal](../ui/audience-portal.md).
+Weitere Informationen zum Anzeigen von Zielgruppen in Experience Platform finden Sie im [Handbuch für Zielgruppenportale](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

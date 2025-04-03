@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Lookalike-Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von Lookalike-Zielgruppen neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ Bevor Sie mit Lookalike-Zielgruppen beginnen, sollten Sie die folgenden Konzepte
 
 Um Lookalike-Einblicke zu verwenden, muss **Basis-Zielgruppe** folgenden Eignungskriterien erfüllen:
 
-- Die Basis-Zielgruppe **muss** in Platform erstellt werden.
+- Die Basis-Zielgruppe **muss** in Experience Platform erstellt werden.
    - Extern generierte Zielgruppen sind **nicht** für Lookalike-Einblicke geeignet.
 - Die Basis **Zielgruppe muss** der Standard-Zusammenführungsrichtlinie entsprechen.
 - Die Basis **Zielgruppe darf** Felder verwenden, die durch Data Governance eingeschränkt sind.

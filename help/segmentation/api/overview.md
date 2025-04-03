@@ -3,9 +3,9 @@ title: Handbuch zur Segmentierungs-Service-API
 description: Mit der Segmentierungs-Service-API können Entwicklerinnen und Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ Informationen zum Anzeigen aller verfügbaren Endpunkte und CRUD-Vorgänge finde
 
 ## Zielgruppen
 
-Zielgruppen sind eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese können entweder mithilfe von Platform oder aus externen Quellen generiert werden. Sie können den `/audiences`-Endpunkt verwenden, um alle Zielgruppen abzurufen, eine neue Zielgruppe zu erstellen, Details zu einer bestimmten Zielgruppe abzurufen, eine bestimmte Zielgruppe zu aktualisieren oder eine bestimmte Zielgruppe zu löschen.
+Zielgruppen sind eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese können entweder mithilfe von Experience Platform oder aus externen Quellen generiert werden. Sie können den `/audiences`-Endpunkt verwenden, um alle Zielgruppen abzurufen, eine neue Zielgruppe zu erstellen, Details zu einer bestimmten Zielgruppe abzurufen, eine bestimmte Zielgruppe zu aktualisieren oder eine bestimmte Zielgruppe zu löschen.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch für Zielgruppen-Endpunkte](./audiences.md).
 
@@ -62,4 +62,4 @@ Die Segmentsuche wird verwendet, um Felder aus verschiedenen Datenquellen zu suc
 
 ## Nächste Schritte
 
-Für die ersten Schritte mit der [!DNL Segmentation Service]-API finden Sie in den verschiedenen Endpunkthandbüchern ausführliche Schritte, wie Sie Aufrufe an die verschiedenen Endpunkte des Services durchführen. Weitere Informationen zum Arbeiten mit Segmenten über die [!DNL Platform]-Benutzeroberfläche finden Sie im [Segmentierungs-Benutzerhandbuch](../ui/overview.md).
+Für die ersten Schritte mit der [!DNL Segmentation Service]-API finden Sie in den verschiedenen Endpunkthandbüchern ausführliche Schritte, wie Sie Aufrufe an die verschiedenen Endpunkte des Services durchführen. Weitere Informationen zum Arbeiten mit Segmenten über die [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Segmentierungs-Benutzerhandbuch](../ui/overview.md).

@@ -3,9 +3,9 @@ title: API-Endpunkt für Zielgruppen
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 6%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Der Name der Zielgruppe. |
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
-| `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe von Platform oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe von Platform oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Experience Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Experience Platform generiert wurde. |
 | `expression` | Ein -Objekt, das den PQL-Ausdruck der Zielgruppe enthält. |
 | `lifecycleState` | Der Status der Zielgruppe. Zu den möglichen Werten gehören `draft`, `published` und `inactive`. `draft` gibt an, wann die Zielgruppe erstellt wird, `published` wann die Zielgruppe veröffentlicht wird, und `inactive`, wann die Zielgruppe nicht mehr aktiv ist. |
 | `datasetId` | Die ID des Datensatzes, der die Zielgruppendaten enthält. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu aktualisierten Zielgruppe zurückgegeben. Beachten Sie, dass die Details Ihrer Zielgruppe unterschiedlich sein können, je nachdem, ob es sich um eine Platform-generierte Zielgruppe oder eine extern generierte Zielgruppe handelt.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu aktualisierten Zielgruppe zurückgegeben. Beachten Sie, dass die Details Ihrer Zielgruppe unterschiedlich sein können, je nachdem, ob es sich um eine von Experience Platform generierte Zielgruppe oder eine extern generierte Zielgruppe handelt.
 
 +++Beispielantwort beim Aktualisieren einer gesamten Zielgruppe.
 
@@ -490,7 +490,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu akt
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der aktualisierten 
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

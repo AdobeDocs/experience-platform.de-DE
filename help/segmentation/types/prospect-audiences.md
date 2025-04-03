@@ -3,10 +3,10 @@ title: Potenzielle Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von potenziellen Zielgruppen unbekannte Kundinnen und Kunden mithilfe von Drittanbieterinformationen ansprechen können.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 79%
+source-wordcount: '393'
+ht-degree: 72%
 
 ---
 
@@ -56,7 +56,7 @@ Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch
 
 ## Vorgeschlagene Anwendungsfälle {#use-cases}
 
-Informationen dazu, wie Sie die potenzielle Zielgruppen-Funktionen in Experience Platform mit anderen Platform-Funktionen verwenden können, finden Sie in der folgenden Anwendungsfalldokumentation:
+Informationen dazu, wie Sie die Funktion „Interessente Zielgruppen“ in Experience Platform in Kombination mit anderen Experience Platform-Funktionen verwenden können, finden Sie in der Dokumentation zum folgenden Anwendungsfall:
 
 - [Engagieren und Akquirieren neuer Kundinnen und Kunden über die Interessentenfunktion](../../rtcdp/partner-data/prospecting.md)
 

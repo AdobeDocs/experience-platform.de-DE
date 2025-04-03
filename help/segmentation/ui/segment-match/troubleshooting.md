@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;segmentierung;Segmentierung;Segment Match;segment match
 solution: Experience Platform
 title: Häufig gestellte Fragen zu Segment Match
-description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
+description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Experience Platform-Benutzende Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise austauschen können.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 100%
+source-wordcount: '415'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ Es werden keine Kunden- oder Segmentdaten über Sandboxes hinweg verschoben, um 
 
 Dies ist ein unidirektionaler Prozess, d. h., die ursprünglichen, vorab gehashten Kennungen werden weder offengelegt noch kann für sie ein Reverse Engineering durchgeführt werden.
 
-Diese Datenstrukturen verfügen über eindeutige Eigenschaften, die es dem Engineering ermöglichen, Vereinigungs- und Schnittstellenvorgänge zwischen ihnen durchzuführen, selbst wenn die codierten Informationen stark komprimiert oder gehasht sind. Durch diese Vorgänge kann [!DNL Segment Match] die geschätzte Schnittmenge aus zwei Datenstrukturen abrufen, die aus IDs aus zwei verschiedenen Sandboxes bestehen, ohne die tatsächlichen Werte vergleichen zu müssen. Da [!DNL Segment Match] nur die Datenstrukturen verwendet, verlassen die IDs nie die Profilspeicher ihrer jeweiligen Organisationen für Schätzzwecke. Dies ermöglicht es Adobe, die Datenschutz- und Sicherheitsanforderungen der Kundinnen und Kunden zu erfüllen und gleichzeitig hochgenaue Schätzwerkzeuge als Grundlage von Vereinbarungen über die Datenzusammenarbeit anzubieten.
+Diese Datenstrukturen verfügen über eindeutige Eigenschaften, die es dem Engineering ermöglichen, Vereinigungs- und Schnittstellenvorgänge zwischen ihnen durchzuführen, selbst wenn die codierten Informationen stark komprimiert oder gehasht sind. Durch diese Vorgänge kann [!DNL Segment Match] die geschätzte Schnittmenge aus zwei Datenstrukturen abrufen, die aus IDs aus zwei verschiedenen Sandboxes bestehen, ohne die tatsächlichen Werte vergleichen zu müssen. Da [!DNL Segment Match] nur die Datenstrukturen verwendet, verlassen die IDs nie die Profilspeicher ihrer jeweiligen Organisationen für Schätzzwecke. Auf diese Weise kann Adobe die Datenschutz- und Sicherheitsanforderungen der Kunden erfüllen und gleichzeitig hochgenaue Schätzwerkzeuge als Grundlage für Datenzusammenarbeitsvereinbarungen bereitstellen.
 
 ## Welcher Prozess bildet die Grundlage zur Angabe der Identitäten, die die freigegebenen Segment-IDs erhalten?
 

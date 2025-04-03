@@ -2,18 +2,18 @@
 keywords: Experience Platform;Startseite;beliebte Themen;segmentierung;Segmentierung;Segment Match;segment match
 solution: Experience Platform
 title: Übersicht zu Segment Match
-description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
+description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Experience Platform-Benutzende Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 98%
+source-wordcount: '1978'
+ht-degree: 88%
 
 ---
 
 # [!DNL Segment Match] – Übersicht
 
-Adobe Experience Platform Segment Match ist ein Service zur Segmentfreigabe, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können. [!DNL Segment Match] verwendet Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs.
+Adobe Experience Platform Segment Match ist ein Service zur Segmentfreigabe, mit dem zwei oder mehr Experience Platform-Benutzende Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise austauschen können. [!DNL Segment Match] verwendet Experience Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs.
 
 Mit [!DNL Segment Match] können Sie:
 
@@ -44,7 +44,7 @@ Folgende Namespaces werden unterstützt:
 
 | Namespace | Beschreibung |
 | --------- | ----------- |
-| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung: durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) und [Datenvorbereitung](../../../data-prep/functions.md#hashing). |
+| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Experience Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung: durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) und [Datenvorbereitung](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164) | Ein Namespace, der unformatierte Telefonnummern darstellt, die mit dem SHA256- und E.164-Format gehasht werden müssen. |
 | ECID | Ein Namespace, der einen Experience Cloud ID (ECID)-Wert darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
@@ -64,7 +64,7 @@ Weitere Informationen zum `share`, das zum Festlegen des Einverständniswerts f�
 
 Als letzte Voraussetzung müssen Sie eine neue Datennutzungskennzeichnung konfigurieren, um die Datenfreigabe zu verhindern. Mithilfe von Datennutzungskennzeichnungen können Sie verwalten, welche Daten über [!DNL Segment Match] freigegeben werden dürfen.
 
-Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
+Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Experience Platform mit einer Beschriftung zu versehen.
 
 [!DNL Segment Match] verwendet die C11-Kennzeichnung, eine [!DNL Segment Match]-spezifische Kennzeichnung von Verträgen, die Sie manuell zu allen Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie aus dem [!DNL Segment Match]-Partnerfreigabeprozess ausgeschlossen werden. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Kennzeichnung entsprechend hinzugefügt haben, wird die Kennzeichnung automatisch vom [!DNL Segment Match]-Workflow durchgesetzt. [!DNL Segment Match] aktiviert automatisch die Kernrichtlinie [!UICONTROL Datenfreigabe beschränken]. Spezifische Anweisungen zum Anwenden von Datennutzungskennzeichnungen auf Datensätze finden Sie im Tutorial zum [Verwalten von Datennutzungskennzeichnungen in der Benutzeroberfläche](../../../data-governance/labels/user-guide.md).
 
@@ -87,7 +87,7 @@ Nachdem Sie Ihre Identitätsdaten und Namespaces, die Einverständniskonfigurati
 
 ### Verwalten von Partnern
 
-Wählen Sie im linken Navigationsbereich der Platform-Benutzeroberfläche die Option **[!UICONTROL Segmente]** und dann in der oberen Zeile **[!UICONTROL Feeds]** aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Segmente]** im linken Navigationsbereich und wählen Sie dann **[!UICONTROL Feeds]** in der oberen Kopfzeile.
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ Die Seite [!UICONTROL Feeds] enthält eine Liste der Feeds, die von Partnern emp
 
 ![manage-partners.png](./images/manage-partners.png)
 
-Eine Verbindung zwischen zwei Partnern ist ein „bidirektionaler Handshake“, der als Self-Service-Methode dient, mit der Benutzende ihre Platform-Organisationen auf Sandbox-Ebene miteinander verbinden können. Die Verbindung ist erforderlich, um Platform darüber zu informieren, dass eine Vereinbarung getroffen wurde, und das Teilen von Services zwischen Ihnen und Ihren Partnern durch Platform zu ermöglichen.
+Eine Verbindung zwischen zwei Partnern ist ein „bidirektionaler Handshake“, der als Self-Service-Methode dient, mit der Benutzende ihre Experience Platform-Organisationen auf Sandbox-Ebene miteinander verbinden können. Die Verbindung ist erforderlich, um Experience Platform darüber zu informieren, dass eine Vereinbarung getroffen wurde und dass Experience Platform die gemeinsame Nutzung von Services zwischen Ihnen und Ihren Partnern erleichtern kann.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Um einen Partner über seine [!UICONTROL Verbindungs-ID] zu verbinden, geben Sie
 >abstract="Eingeschränkte Marketing-Anwendungsfälle helfen Ihren Partnern dabei, sicherzustellen, dass freigegebene Segmente gemäß Ihren Data-Governance-Beschränkungen ordnungsgemäß verwendet werden."
 >text="Learn more in documentation"
 
-Bei einem **Feed** handelt es sich um eine Gruppierung von Daten (Segmenten), die Regeln, wie diese Daten bereitgestellt oder verwendet werden können, und die Konfigurationen, die bestimmen, wie Ihre Daten mit den Daten Ihrer Partner abgeglichen werden. Ein Feed kann unabhängig verwaltet und mit anderen Platform-Benutzenden über [!DNL Segment Match] ausgetauscht werden.
+Bei einem **Feed** handelt es sich um eine Gruppierung von Daten (Segmenten), die Regeln, wie diese Daten bereitgestellt oder verwendet werden können, und die Konfigurationen, die bestimmen, wie Ihre Daten mit den Daten Ihrer Partner abgeglichen werden. Ein Feed kann unabhängig verwaltet und mit anderen Experience Platform-Benutzenden über [!DNL Segment Match] ausgetauscht werden.
 
 Um einen neuen Feed zu erstellen, wählen Sie aus dem Dashboard [!UICONTROL Feeds] die Option **[!UICONTROL Feed erstellen]** aus.
 

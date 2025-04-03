@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
-description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
+description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die er im Experience Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 93%
+source-wordcount: '1679'
+ht-degree: 84%
 
 ---
 
 # [!DNL Segmentation Service] – Übersicht
 
-Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie anhand von Segmentdefinitionen oder anderen Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie anhand von Segmentdefinitionen oder anderen Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Zielgruppen werden zentral auf [!DNL Experience Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
 
 Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und die Rolle, die er in Adobe Experience Platform spielt.
 
@@ -20,7 +20,7 @@ Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und di
 
 Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument verwendet werden:
 
-- **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (plattformgenerierte Zielgruppe) oder aus externen Quellen (extern generierte Zielgruppe) erstellt werden.
+- **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (von Experience Platform generierte Zielgruppe) oder aus externen Quellen (extern generierte Zielgruppe) generiert werden.
 - **Segmentdefinition**: Der Regelsatz, den Adobe Experience Platform verwendet, um wichtige Merkmale oder Verhaltensweisen einer Zielgruppe zu beschreiben.
 - **Segmentieren**: Der Vorgang der Aufteilung von Profilen in Zielgruppen.
 
@@ -28,15 +28,15 @@ Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument v
 
 Bei der Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Beispielsweise könnten Sie für eine E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Ihre Schuhe zu kaufen?“ eine Zielgruppe bestehend aus allen Anwendern zusammenstellen, die in den letzten 30 Tagen nach Laufschuhen gesucht, den Kauf jedoch nicht abgeschlossen haben.
 
-Nachdem eine Zielgruppe konzeptionell definiert wurde, wird sie in [!DNL Experience Platform] erstellt. Normalerweise werden Zielgruppen vom Marketer oder der Zielgruppenspezialistin bzw. dem -spezialisten erstellt, in manchen Unternehmen kann diese Tätigkeit aber auch durch die Marketing-Abteilung in Zusammenarbeit mit Datenanalystinnen bzw. -analysten erfolgen. Nach Überprüfung der gesendeten Daten an [!DNL Platform], kann die Datenanalystin bzw. der Datenanalyst die Zielgruppe auf zwei Arten erstellen: entweder durch Erstellen einer Segmentdefinition, durch Auswahl der Felder und Werte, die zum Erstellen der Regeln oder Bedingungen der Zielgruppe verwendet werden, oder durch Zusammenstellen einer Zielgruppe mithilfe der Zielgruppenkomposition.
+Nachdem eine Zielgruppe konzeptionell definiert wurde, wird sie in [!DNL Experience Platform] erstellt. Normalerweise werden Zielgruppen vom Marketer oder der Zielgruppenspezialistin bzw. dem -spezialisten erstellt, in manchen Unternehmen kann diese Tätigkeit aber auch durch die Marketing-Abteilung in Zusammenarbeit mit Datenanalystinnen bzw. -analysten erfolgen. Nach Überprüfung der gesendeten Daten an [!DNL Experience Platform], kann die Datenanalystin bzw. der Datenanalyst die Zielgruppe auf zwei Arten erstellen: entweder durch Erstellen einer Segmentdefinition, durch Auswahl der Felder und Werte, die zum Erstellen der Regeln oder Bedingungen der Zielgruppe verwendet werden, oder durch Zusammenstellen einer Zielgruppe mithilfe der Zielgruppenkomposition.
 
 ## Erstellen von Zielgruppen
 
-Zielgruppen können in der Adobe Experience Platform auf zwei verschiedene Arten erstellt werden: entweder direkt als Zielgruppen oder über von der Plattform abgeleitete Segmentdefinitionen.
+Sie können Zielgruppen in Adobe Experience Platform auf verschiedene Weise erstellen, einschließlich durch Kompositionen, Segmentdefinitionen, Federated Data Distiller und Data Platform.
 
 ### Zielgruppenkomposition
 
-Beim direkten Erstellen einer Zielgruppe in Platform können Sie die Zielgruppenkomposition verwenden. Informationen zur Verwendung der Zielgruppenkomposition zur Erstellung einer Zielgruppe finden Sie im [Handbuch zur Zielgruppenkomposition](./ui/audience-composition.md).
+Beim direkten Erstellen einer Zielgruppe in Experience Platform können Sie die Zielgruppenkomposition verwenden. Informationen zur Verwendung der Zielgruppenkomposition zur Erstellung einer Zielgruppe finden Sie im [Handbuch zur Zielgruppenkomposition](./ui/audience-composition.md).
 
 ### Segmentdefinitionen
 
@@ -61,7 +61,7 @@ Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Auswertungsmethoden"
->abstract="Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
+>abstract="Experience Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die 
 >abstract="Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Zielgruppen infolge von Benutzeraktivität aktualisiert."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/methods/streaming-segmentation" text="Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit"
 
-Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
+Experience Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
 ### Streaming-Segmentierung  {#streaming}
 
@@ -93,12 +93,12 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-Auswertung"
->abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
+>abstract="Bei der Segmentierung in Edge werden Segmente in Experience Platform sofort in Edge Network ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/methods/edge-segmentation" text="Handbuch zur Edge-Segmentierung"
 
-Bei der Segmentierung in Edge werden Segmente in Platform sofort [auf der Edge Network](../landing/edge-and-hub-comparison.md) ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Segmentierung in Edge werden Segmente in Experience Platform sofort ([ Edge Network) ausgewertet](../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
-Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./methods/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./methods/edge-segmentation.md).
+Weitere Informationen zur Edge-Segmentierung finden Sie in der [Übersicht zur Edge-Segmentierung](./methods/edge-segmentation.md).
 
 ## Zugriff auf Segmentierungsergebnisse
 
@@ -122,7 +122,7 @@ Wenn Sie eine neue Segmentdefinition erstellen, müssen Sie einen Namen angeben.
 
 Zusammenführungsrichtlinien sind Regeln, die von [!DNL Profile] verwendet werden, um zu bestimmen, wie Daten priorisiert und unter bestimmten Bedingungen zu einer vereinigten Ansicht kombiniert werden.
 
-Wenn keine Zusammenführungsrichtlinie definiert ist, wird die Standard-Zusammenführungsrichtlinie von [!DNL Platform] verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Zusammenführungsrichtlinie verwenden möchten, können Sie eine eigene erstellen und diese als Standard für Ihr Unternehmen festlegen.
+Wenn keine Zusammenführungsrichtlinie definiert ist, wird die Standard-Zusammenführungsrichtlinie von [!DNL Experience Platform] verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Zusammenführungsrichtlinie verwenden möchten, können Sie eine eigene erstellen und diese als Standard für Ihr Unternehmen festlegen.
 
 Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
 
@@ -137,6 +137,7 @@ Zusätzlich zu Name und Zusammenführungsrichtlinie bietet [!DNL Segment Builder
 ## Erweiterte Segmentierungsfunktionen
 
 Segmentdefinitionen können so konfiguriert werden, dass sie kontinuierlich eine Zielgruppe generieren, indem die [Streaming-Datenaufnahme](../ingestion/streaming-ingestion/overview.md) mit einer der folgenden erweiterten Segmentierungsfunktionen kombiniert wird:
+
 - [Sequenzielle Segmentierung](#sequential)
 - [Dynamische Segmentierung](#dynamic)
 - [Segmentierung mit mehreren Entitäten](#multi-entity)
