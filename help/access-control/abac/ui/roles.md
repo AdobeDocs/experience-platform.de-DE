@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Rolle erstellen
 description: Dieses Dokument enthält Informationen zum Verwalten von Rollen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 30%
+source-wordcount: '619'
+ht-degree: 28%
 
 ---
 
@@ -19,7 +19,7 @@ Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ress
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Erstellen einer neuen Rolle"
->abstract="Erstellen Sie neue Rollen, um Benutzende, die mit Ihrer Platform-Instanz interagieren, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und auf diese Rolle die Kennzeichnung „RHD“ (Regulated Health Data, regulierte Gesundheitsdaten) anwenden, sodass Ihr internes Marketing-Team auf PHI-Daten (Protected Health Information, geschützte Gesundheitsinformationen) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und ihr diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
+>abstract="Erstellen Sie neue Rollen, um Benutzende, die mit Ihrer Experience Platform-Instanz interagieren, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und auf diese Rolle die Kennzeichnung „RHD“ (Regulated Health Data, regulierte Gesundheitsdaten) anwenden, sodass Ihr internes Marketing-Team auf PHI-Daten (Protected Health Information, geschützte Gesundheitsinformationen) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und ihr diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten einer Rolle"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Anwenden von Kennzeichnungen auf eine Rolle"
 

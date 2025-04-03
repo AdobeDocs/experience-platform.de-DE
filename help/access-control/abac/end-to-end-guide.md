@@ -4,31 +4,31 @@ title: End-to-End-Handbuch zur attributbasierten Zugriffssteuerung
 description: Dieses Dokument enthält eine durchgängige Anleitung zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 13%
+source-wordcount: '1603'
+ht-degree: 10%
 
 ---
 
 # End-to-End-Handbuch zur attributbasierten Zugriffssteuerung
 
-Verwenden Sie die attributbasierte Zugriffssteuerung auf Adobe Experience Platform, um sich selbst und anderen datenschutzbewussten Kunden mit mehreren Marken mehr Flexibilität bei der Verwaltung des Benutzerzugriffs zu geben. Der Zugriff auf einzelne Objekte, z. B. Schemafelder und Zielgruppen, kann mit Richtlinien gewährt werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+Verwenden Sie die attributbasierte Zugriffssteuerung auf Adobe Experience Platform, um sich selbst und anderen datenschutzbewussten Kunden mit mehreren Marken mehr Flexibilität bei der Verwaltung des Benutzerzugriffs zu geben. Der Zugriff auf einzelne Objekte, z. B. Schemafelder und Zielgruppen, kann mit Richtlinien gewährt werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Experience Platform-Benutzenden in Ihrem Unternehmen den Zugriff auf einzelne Objekte gewähren oder sperren.
 
 Mit dieser Funktion können Sie Schemafelder, Zielgruppen usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. Sie können dieselben Beschriftungen auf Journey, Angebote und andere Objekte in Adobe Journey Optimizer anwenden. Parallel dazu können Admins Zugriffsrichtlinien für XDM-Schemafelder (Experience-Datenmodell) definieren und besser verwalten, welche Benutzenden oder Gruppen (interne, externe oder Drittanbieter-Benutzende) auf diese Felder zugreifen können.
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf den Anwendungsfall von Richtlinien zur Zugriffssteuerung. Wenn Sie Richtlinien einrichten möchten, um die **Verwendung** von Daten zu steuern und nicht darauf, welche Platform-Benutzer Zugriff haben, lesen Sie stattdessen das End-to-End-Handbuch [Data Governance](../../data-governance/e2e.md).
+>Dieses Dokument konzentriert sich auf den Anwendungsfall von Richtlinien zur Zugriffssteuerung. Wenn Sie Richtlinien einrichten möchten, um die **Verwendung** von Daten zu steuern und nicht darauf, welche Experience Platform-Benutzenden Zugriff haben, lesen Sie stattdessen das End-to-End-Handbuch [Data Governance](../../data-governance/e2e.md).
 
 ## Erste Schritte
 
-Für dieses Tutorial werden Kenntnisse der folgenden Platform-Komponenten benötigt:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Experience Platform-Komponenten voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Die Segmentierungsmaschine, die in [!DNL Platform] verwendet wird, um Zielgruppensegmente aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Die Segmentierungsmaschine, die in [!DNL Experience Platform] verwendet wird, um Zielgruppensegmente aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
 
 ### Anwendungsfall - Übersicht
 
@@ -55,21 +55,21 @@ Sie werden:
 
 Wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten, wenn Sie keine Administratorrechte haben.
 
-Sobald Sie über Administratorrechte verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldeinformationen an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für Ihr Unternehmen angezeigt, für das Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie andere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation. Wählen Sie **[!UICONTROL Berechtigungen]** aus, um den Arbeitsbereich für Ihre Platform-Integration zu öffnen.
+Sobald Sie über Administratorrechte verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldeinformationen an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für Ihr Unternehmen angezeigt, für das Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie andere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation. Wählen Sie **[!UICONTROL Berechtigungen]** aus, um den Arbeitsbereich für Ihre Experience Platform-Integration zu öffnen.
 
 ![Bild mit dem in Adobe Experience Cloud ausgewählten Berechtigungsprodukt](../images/flac-ui/flac-select-product.png)
 
-Der Arbeitsbereich „Berechtigungen“ für die Platform-Benutzeroberfläche wird auf der Seite **[!UICONTROL Übersicht]** angezeigt.
+Der Arbeitsbereich Berechtigungen für die Experience Platform-Benutzeroberfläche wird auf der Seite **[!UICONTROL Übersicht]** angezeigt.
 
 ## Anwenden von Kennzeichnungen auf eine Rolle {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Was sind Kennzeichnungen?"
->abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugrffsrichtlinien kategorisieren. Platform bietet verschiedene, von Adobe definierte <strong>Kern</strong>-Kennzeichnungen für die Datennutzung, die eine Vielzahl gängiger Einschränkungen für Data Governance abdecken. Mit <strong>S</strong>-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data, regulierte Gesundheitsdaten) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugrffsrichtlinien kategorisieren. Adobe Experience Platform bietet mehrere von Adobe definierte <strong>Core</strong>-Datennutzungskennzeichnungen, die eine Vielzahl gängiger Einschränkungen für die Datenverwaltung abdecken. Mit <strong>S</strong>-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data, regulierte Gesundheitsdaten) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
-Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren, und sind Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Zugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.
+Rollen sind Möglichkeiten, die Typen von Benutzenden zu kategorisieren, die mit Ihrer Experience Platform-Instanz interagieren, und sind Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Zugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.
 
 Wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Rollen]** und dann **[!UICONTROL ACME Business Group]** aus.
 
@@ -144,7 +144,7 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
 ## Aktivieren der Zugriffssteuerungsrichtlinie {#policy}
 
-Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Kennzeichnungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. In diesem Beispiel wird Benutzenden, die sich nicht in einer Rolle mit den entsprechenden Kennzeichnungen im Schemafeld befinden, der Zugriff auf Schemafelder und Zielgruppen in allen Sandboxes verweigert.
+Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Kennzeichnungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Experience Platform-Ressourcen haben. In diesem Beispiel wird Benutzenden, die sich nicht in einer Rolle mit den entsprechenden Kennzeichnungen im Schemafeld befinden, der Zugriff auf Schemafelder und Zielgruppen in allen Sandboxes verweigert.
 
 Um die Zugriffssteuerungsrichtlinie zu aktivieren, wählen Sie in der linken ] die Option [!UICONTROL Berechtigungen und dann **[!UICONTROL Richtlinien]** aus.
 
@@ -192,7 +192,7 @@ Es wird eine Bestätigung der Richtlinienaktivierung empfangen und Sie werden zu
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

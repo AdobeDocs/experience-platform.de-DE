@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 92%
+source-wordcount: '1552'
+ht-degree: 87%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 92%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Steuern der Datennutzung in Platform"
+>title="Datennutzung in Experience Platform steuern"
 >abstract="<h2>Beschreibung</h2><p>Mit dem Data-Governance-Framework in Experience Platform können Sie Attribute und Schemata anhand von Datennutzungsbeschränkungen kennzeichnen und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform].
@@ -61,11 +61,11 @@ Es wird ein Dialogfeld angezeigt, in dem Sie Datennutzungskennzeichnungen auf Sc
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Anweisungen"
->abstract="<ol><li>Wählen Sie im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=de">Datensätze</a> und dann den Datensatz aus, den Sie beschränken möchten.</li><li>Wählen Sie in der Ansicht „Datensatzdetails“ die Registerkarte <b>Data Governance</b> aus.</li><li>Wählen Sie die Datensatzfelder aus, die Sie beschränken möchten, und wählen Sie dann <b>Governance-Kennzeichnungen bearbeiten</b> aus, um die Daten anhand von Nutzungsbeschränkungen zu kennzeichnen.</li><li>Wählen Sie nach der Kennzeichnung Ihrer Daten im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und dann die Option <b>Richtlinie erstellen</b> aus.</li><li>Erstellen Sie eine <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#create-governance-policy">Data Governance-Richtlinie</a> und wählen Sie dann die Datennutzungskennzeichnungen aus, auf die die Richtlinie angewendet werden soll.</li><li>Wählen Sie die Marketing-Aktion(en) aus, die die Richtlinie für alle Daten mit diesen Kennzeichnungen verweigern soll. Nachdem die Richtlinie erstellt wurde, wählen Sie sie aus der Liste aus und aktivieren Sie sie mithilfe des Umschalters in der rechten Leiste.</li><li>Für jede aktivierte Richtlinie verhindert Platform, dass Daten mit den angegebenen Kennzeichnungen für die definierten Marketing-Aktionen verwendet werden. Diese Durchsetzung erfolgt automatisch, wenn Sie versuchen, gekennzeichnete Daten für ein Ziel mit zugehörigen Marketing-Aktionen zu aktivieren (Anwendungsfälle).</li></ol>"
+>abstract="<ol><li>Wählen Sie im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=de">Datensätze</a> und dann den Datensatz aus, den Sie beschränken möchten.</li><li>Wählen Sie in der Ansicht „Datensatzdetails“ die Registerkarte <b>Data Governance</b> aus.</li><li>Wählen Sie die Datensatzfelder aus, die Sie beschränken möchten, und wählen Sie dann <b>Governance-Kennzeichnungen bearbeiten</b> aus, um die Daten anhand von Nutzungsbeschränkungen zu kennzeichnen.</li><li>Wählen Sie nach der Kennzeichnung Ihrer Daten im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und dann die Option <b>Richtlinie erstellen</b> aus.</li><li>Erstellen Sie eine <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#create-governance-policy">Data Governance-Richtlinie</a> und wählen Sie dann die Datennutzungskennzeichnungen aus, auf die die Richtlinie angewendet werden soll.</li><li>Wählen Sie die Marketing-Aktion(en) aus, die die Richtlinie für alle Daten mit diesen Kennzeichnungen verweigern soll. Nachdem die Richtlinie erstellt wurde, wählen Sie sie aus der Liste aus und aktivieren Sie sie mithilfe des Umschalters in der rechten Leiste.</li><li>Für jede aktivierte Richtlinie verhindert Experience Platform, dass Daten mit den angegebenen Kennzeichnungen für die definierte(n) Marketing-Aktion(en) verwendet werden. Diese Durchsetzung erfolgt automatisch, wenn Sie versuchen, gekennzeichnete Daten für ein Ziel mit zugehörigen Marketing-Aktionen zu aktivieren (Anwendungsfälle).</li></ol>"
 
 >[!IMPORTANT]
 >
->Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Kennzeichnungen von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf der Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Kennzeichnungen von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
 
 Kennzeichnungen können über die Registerkarte **[!UICONTROL Data Governance]** des Arbeitsbereichs **[!UICONTROL Datensätze]** auf den kompletten Datensatz angewendet werden. Der Arbeitsbereich ermöglicht Ihnen das Verwalten von Datennutzungskennzeichnungen auf Datensatzebene.
 
@@ -120,7 +120,7 @@ Der Umschalter **[!UICONTROL Übernommene Kennzeichnung anzeigen]** ist standard
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Erstellen von Kennzeichnungen"
->abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform stellt Ihnen eine Reihe von Standardkennzeichnungen zur Verfügung, aber Sie können auch benutzerdefinierte Kennzeichnungen erstellen, die speziell auf Ihre Organisation zugeschnitten sind."
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Experience Platform bietet einen Standardsatz von Kennzeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Kennzeichnungen erstellen, die speziell auf Ihr Unternehmen zugeschnitten sind."
 
 Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 

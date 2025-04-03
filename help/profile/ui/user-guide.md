@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2219'
 ht-degree: 9%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 9%
 Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Services voraus, die mit der Verwaltung von [!DNL Real-Time Customer Profiles] zusammenhängen. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 * [[!DNL Real-Time Customer Profile] Übersicht](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Platform] aufgenommen werden.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Experience Platform] aufgenommen werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
 ## [!UICONTROL Übersicht]
 
@@ -28,7 +28,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Pro
 
 >[!NOTE]
 >
->Wenn Ihre Organisation Platform erst seit kurzem nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Profile] nicht sichtbar. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -56,7 +56,7 @@ Zusätzlich zu diesen Metriken finden Sie in diesem Abschnitt ein Datum und eine
 
 Die Anzahl der Profile zeigt die Gesamtanzahl der Profile an, über die Ihre Organisation in Experience Platform verfügt, nachdem die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation Profilfragmente zusammengeführt hat, um für jeden Kunden ein einzelnes Profil zu erstellen. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
 
-Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Profile, die nur Zeitreihen-(Ereignis-)Daten enthalten, z. B. Adobe Analytics-Profile. Die Profilanzahl wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl der Profile in Platform anzugeben.
+Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Profile, die nur Zeitreihen-(Ereignis-)Daten enthalten, z. B. Adobe Analytics-Profile. Die Profilanzahl wird regelmäßig aktualisiert, um eine aktuelle Gesamtzahl von Profilen in Experience Platform bereitzustellen.
 
 #### Profilzählungs-Metrik aktualisieren
 
@@ -96,7 +96,7 @@ Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTR
 
 ![Beispielprofile, die mit der Zusammenführungsrichtlinie übereinstimmen, werden angezeigt.](../images/user-guide/sample-profiles.png)
 
-Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Experience Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ### Durchsuchen nach [!UICONTROL Identität] {#browse-identity}
 
@@ -131,7 +131,7 @@ Nachdem Sie einen Wert eingegeben haben, wählen Sie **[!UICONTROL Anzeigen]** u
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entität nicht gefunden"
->abstract="Das bedeutet, dass die angeforderte Entität von Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
+>abstract="Dies bedeutet, dass Experience Platform die angeforderte Entität nicht finden konnte. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 Nach Auswahl einer **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen.
 
@@ -149,7 +149,7 @@ Um zusätzliche Informationen zum jeweiligen Kundenprofil anzuzeigen, wählen Si
 
 Die **[!UICONTROL Attribute]** bietet eine Listenansicht, in der alle Attribute zusammengefasst sind, die sich auf ein einzelnes Profil beziehen, nachdem die angegebene Zusammenführungsrichtlinie angewendet wurde.
 
-Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie auf &quot;**[!UICONTROL anzeigen“]**. Dies ist hilfreich für alle Benutzer, die besser verstehen möchten, wie die Profilattribute in Platform aufgenommen werden.
+Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie auf &quot;**[!UICONTROL anzeigen“]**. Dies ist hilfreich für alle Benutzenden, die besser verstehen möchten, wie die Profilattribute in Experience Platform aufgenommen werden.
 
 ![Die Registerkarte Attribute ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
 
@@ -163,7 +163,7 @@ Weitere Informationen zu Edge-Profilen finden Sie in der [Dokumentation zu Edge-
 
 Die Registerkarte **[!UICONTROL Ereignisse]** enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Wenn Sie **[!UICONTROL Alle anzeigen]** für ein einzelnes Ereignis auswählen, werden zusätzliche Felder und Werte als Teil des Ereignisses erfasst.
 
-Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL JSON anzeigen“]**. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Platform erfasst werden.
+Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL JSON anzeigen“]**. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Experience Platform erfasst werden.
 
 ![Die Registerkarte Ereignisse ist hervorgehoben. Die Profilereignisse werden angezeigt.](../images/user-guide/events.png)
 
@@ -201,7 +201,7 @@ Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTR
 
 ![Die Registerkarte „Berechnete Attribute“ ist hervorgehoben.](../images/user-guide/computed-attributes.png)
 
-Weitere Informationen zu berechneten Attributen finden Sie unter [Berechnete Attribute - Übersicht](../computed-attributes/overview.md). Weitere Informationen zur Verwendung berechneter Attribute in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche für berechnete Attribute](../computed-attributes/ui.md).
+Weitere Informationen zu berechneten Attributen finden Sie unter [Berechnete Attribute - Übersicht](../computed-attributes/overview.md). Weitere Informationen zur Verwendung berechneter Attribute in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche für berechnete Attribute](../computed-attributes/ui.md).
 
 ## Nächste Schritte
 

@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können,
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 36%
+source-wordcount: '1476'
+ht-degree: 30%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Häufigste Aktionen"
->abstract="Dieses Widget zeigt die häufigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie in der linken Navigationsleiste **Audits**."
+>abstract="Dieses Widget zeigt die häufigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Am häufigsten anwesende Benutzende"
->abstract="Dieses Widget zeigt die Benutzenden an, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie in der linken Navigationsleiste **Audits**."
+>abstract="Dieses Widget zeigt die Benutzenden an, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Überwachen von Benutzeraktivitäten in Platform"
->abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Platform-Dienste und -Funktionen in Form von Audit-Protokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Audit-Protokolle können die Fehlerbehebung in Platform erleichtern und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
+>title="Überwachen von Benutzeraktivitäten in Experience Platform"
+>abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Experience Platform-Services und -Funktionen in Form von Auditprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Audit-Protokolle können bei der Fehlerbehebung in Experience Platform helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
 
-Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Services und Funktionen in Form von „Audit-Protokollen“ zu überprüfen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung in Platform helfen kann und Ihrem Unternehmen dabei hilft, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
+Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Services und Funktionen in Form von „Audit-Protokollen“ zu überprüfen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung in Experience Platform helfen kann und Ihrem Unternehmen dabei hilft, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
 In einem Auditprotokoll wird festgehalten **wer** welche **ausgeführt** und **wann**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute angeben, die für den Aktionstyp relevant sind.
 
@@ -36,7 +36,7 @@ In einem Auditprotokoll wird festgehalten **wer** welche **ausgeführt** und **w
 >
 > Die Metadaten für die Aktionen **Benutzer hinzufügen** und **Benutzer entfernen** innerhalb der **Rolle**-Ressource enthalten nicht die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat. Stattdessen wird in den Protokollen die vom System generierte E-Mail-ID (system@adobe.com) angezeigt.
 
-In diesem Dokument werden Audit-Protokolle in Platform behandelt, einschließlich ihrer Anzeige und Verwaltung in der Benutzeroberfläche oder API.
+In diesem Dokument werden Auditprotokolle in Experience Platform behandelt, einschließlich ihrer Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
 ## Von Audit-Protokollen erfasste Ereignistypen {#category}
 
@@ -74,7 +74,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle erfasst. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
 
-Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Benutzeraktivitätsprotokoll anzeigen]** (in der Kategorie [!UICONTROL Data Governance] ). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../access-control/home.md).
+Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Benutzeraktivitätsprotokoll anzeigen]** (in der Kategorie [!UICONTROL Data Governance] ). Informationen zum Verwalten individueller Berechtigungen für Experience Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../access-control/home.md).
 
 ## Verwalten von Audit-Protokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugri
 >title="Anweisungen"
 >abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
-Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** in der Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
+Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** in der Experience Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
 ![Das Audits-Dashboard, in dem Audits im linken Menü hervorgehoben sind.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admi
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Platform verwalten. Weitere Informationen zum Überwachen von Platform-Aktivitäten finden Sie in der Dokumentation zu [Observability Insights](../../../observability/home.md) und [Überwachen der Datenaufnahme](../../../ingestion/quality/monitor-data-ingestion.md).
+In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Platform verwalten. Weitere Informationen zum Überwachen von Experience Platform-Aktivitäten finden Sie in der Dokumentation unter [Observability Insights](../../../observability/home.md) und [Überwachen der Datenaufnahme](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 

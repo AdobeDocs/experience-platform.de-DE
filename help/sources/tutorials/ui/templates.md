@@ -3,10 +3,10 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 44%
+source-wordcount: '2250'
+ht-degree: 39%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Vorlagen für Quellen in der Platform-Benutzeroberfläche"
+>title="Vorlagen für Quellen in der Experience Platform-Benutzeroberfläche"
 >abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemata, Datensätze, Identitäten, Zuordnungsregeln, Identity-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets aktualisieren, um sie an Anwendungsfälle anzupassen."
 
 >[!IMPORTANT]
@@ -35,17 +35,17 @@ Mit Vorlagen können Sie:
 * Fehler minimieren, die während der manuellen Datenerfassung auftreten können.
 * automatisch generierte Assets zu jedem Zeitpunkt entsprechend Ihren Anwendungsfällen aktualisieren.
 
-Das folgende Tutorial enthält Schritte zur Verwendung von Vorlagen in der Platform-Benutzeroberfläche.
+Das folgende Tutorial enthält Schritte zur Verwendung von Vorlagen in der Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-## Vorlagen in der Platform-Benutzeroberfläche verwenden {#use-templates-in-the-platform-ui}
+## Verwenden von Vorlagen in der Experience Platform-Benutzeroberfläche {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,11 +53,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche die Option]** Quellen“ in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellenkatalog anzuzeigen, der auf Experience Platform verfügbar ist.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellkatalog anzuzeigen, der in Experience Platform verfügbar ist.
 
 Verwenden Sie das Menü *[!UICONTROL Kategorien]*, um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Gehen Sie zur Kategorie [!UICONTROL Adobe-Anwendungen], um die [!DNL Marketo Engage]-Quellkarte anzuzeigen, und wählen Sie dann [!UICONTROL Daten hinzufügen] aus, um zu beginnen.
+Gehen Sie zur Kategorie [!UICONTROL Adobe], um die [!DNL Marketo Engage] anzuzeigen, und klicken Sie dann auf [!UICONTROL Daten hinzufügen] um zu beginnen.
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
@@ -237,7 +237,7 @@ Sie können die Ansicht des Schema-Editors verwenden, um am automatisch erstellt
 >
 >![Eine Liste der vorhandenen Datenflüsse im Datenflusskatalog des Arbeitsbereichs „Quellen“.](../../images/tutorials/templates/dataflows.png)
 
-### Publish - Datenfluss
+### Veröffentlichen des Datenflusses
 
 Beginnen Sie den Veröffentlichungsprozess, indem Sie den Quell-Workflow durchlaufen. Nachdem Sie [!UICONTROL Datenfluss aktualisieren] ausgewählt haben, gelangen Sie zum Schritt *[!UICONTROL Daten hinzufügen]* des Workflows. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
@@ -267,8 +267,8 @@ In diesem Tutorial haben Sie jetzt Datenflüsse sowie Assets wie Schemata, Daten
 
 Vorlagen werden von Adobe Experience Platform-Warnhinweisen unterstützt. Sie können im Benachrichtigungsbereich Aktualisierungen zum Status Ihrer Assets erhalten und zur Überprüfungsseite zurückkehren.
 
-Klicken Sie auf das Benachrichtigungssymbol in der oberen Kopfzeile der Platform-Benutzeroberfläche und wählen Sie die Statuswarnung aus, um die Assets anzuzeigen, die Sie überprüfen möchten.
+Wählen Sie das Benachrichtigungssymbol in der oberen Kopfzeile der Experience Platform-Benutzeroberfläche und wählen Sie dann die Statuswarnung aus, um die Assets anzuzeigen, die Sie überprüfen möchten.
 
-![Der Benachrichtigungsbereich in der Platform-Benutzeroberfläche mit einer hervorgehobenen Benachrichtigung, die einen fehlgeschlagenen Datenfluss meldet.](../../images/tutorials/templates/notifications.png)
+![Der Benachrichtigungsbereich in der Experience Platform-Benutzeroberfläche mit einer hervorgehobenen Benachrichtigung, die einen fehlgeschlagenen Datenfluss meldet.](../../images/tutorials/templates/notifications.png)
 
-Sie können die Warnhinweiseinstellungen Ihrer Vorlagen aktualisieren, um sowohl E-Mail- als auch In-Platform-Benachrichtigungen zum Status Ihrer Datenflüsse zu erhalten. Weitere Informationen zum Konfigurieren von Warnhinweisen finden Sie im Handbuch [Abonnieren von Warnhinweisen für Datenflüsse zu Quellen](../ui/alerts.md).
+Sie können die Warnhinweiseinstellungen Ihrer Vorlagen aktualisieren, um sowohl E-Mail- als auch In-Experience Platform-Benachrichtigungen zum Status Ihrer Datenflüsse zu erhalten. Weitere Informationen zum Konfigurieren von Warnhinweisen finden Sie im Handbuch [Abonnieren von Warnhinweisen für Datenflüsse zu Quellen](../ui/alerts.md).

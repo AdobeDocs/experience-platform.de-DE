@@ -2,16 +2,16 @@
 title: Erstellen einer Mixpanel-Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Mixpanel-Quellverbindung erstellen.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 40%
+source-wordcount: '805'
+ht-degree: 33%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Mixpanel] in der Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Mixpanel]-Quellverbindung mithilfe der Benutzeroberfläche von Adobe Experience Platform Platform beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Mixpanel]-Quellverbindung mithilfe der Benutzeroberfläche von Adobe Experience Platform Experience Platform beschrieben.
 
 ## Erste Schritte
 
@@ -24,7 +24,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zwischen [!DNL Mixpanel] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL Mixpanel] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Weitere Informationen zum Authentifizieren Ihrer [!DNL Mixpanel] finden Sie unte
 
 ## Verbinden Ihres [!DNL Mixpanel]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -64,12 +64,12 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Festlegen der Zeitzone für die Mixpanel-Aufnahme"
->abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Platform die angegebene Projektzeitzone verwendet, um von Mixpanel relevante Daten aufzunehmen. Mixpanel passt seine Zeitzone an Ihre Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher festgehalten wird."
+>abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Experience Platform die angegebene Projektzeitzone verwendet, um relevante Daten aus Mixpanel aufzunehmen. Mixpanel passt seine Zeitzone an Ihre Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher festgehalten wird."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=de#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Geben Sie nach der Authentifizierung Ihrer Quelle Ihre Projekt-ID und Zeitzone an und wählen Sie **[!UICONTROL Auswählen]**.
 
-Die Zeitzone, die Sie vor der Aufnahme Ihrer [!DNL Mixpanel] in Platform angeben, muss mit der Zeitzoneneinstellung Ihres [!DNL Mixpanel] Profils übereinstimmen. Alle Änderungen an der Zeitzone Ihrer Daten werden nur auf neue Ereignisse angewendet, und alte Ereignisse verbleiben in der Zeitzone, die Sie zuvor festgelegt haben. [!DNL Mixpanel] berücksichtigt die Sommerzeit und passt Ihren Aufnahmezeitstempel entsprechend an. Weitere Informationen dazu, wie sich Zeitzonen auf Ihre Daten auswirken, finden Sie im [!DNL Mixpanel] Handbuch unter [Verwalten von Zeitzonen für Projekte](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+Die Zeitzone, die Sie vor der Aufnahme Ihrer [!DNL Mixpanel] in Experience Platform festlegen, muss mit der Zeitzoneneinstellung Ihres [!DNL Mixpanel] Profils übereinstimmen. Alle Änderungen an der Zeitzone Ihrer Daten werden nur auf neue Ereignisse angewendet, und alte Ereignisse verbleiben in der Zeitzone, die Sie zuvor festgelegt haben. [!DNL Mixpanel] berücksichtigt die Sommerzeit und passt Ihren Aufnahmezeitstempel entsprechend an. Weitere Informationen dazu, wie sich Zeitzonen auf Ihre Daten auswirken, finden Sie im [!DNL Mixpanel] Handbuch unter [Verwalten von Zeitzonen für Projekte](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
 Nach einigen Augenblicken wird die rechte Benutzeroberfläche in ein Vorschaufenster aktualisiert, sodass Sie Ihr Schema überprüfen können, bevor Sie einen Datenfluss erstellen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -77,7 +77,7 @@ Nach einigen Augenblicken wird die rechte Benutzeroberfläche in ein Vorschaufen
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Mixpanel]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Analytics-Daten in Platform zu importieren](../../dataflow/analytics.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Mixpanel]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Analysedaten in Experience Platform zu importieren](../../dataflow/analytics.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -85,9 +85,9 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verw
 
 ### Validierung {#validation}
 
-Im Folgenden werden die Schritte beschrieben, die Sie unternehmen können, um zu überprüfen, ob Sie Ihre [!DNL Mixpanel] erfolgreich verbunden haben und ob [!DNL Mixpanel] Ereignisse in Platform aufgenommen werden.
+Im Folgenden werden die Schritte beschrieben, die Sie unternehmen können, um zu überprüfen, ob Sie Ihre [!DNL Mixpanel] erfolgreich verbunden haben und ob [!DNL Mixpanel] Ereignisse in Experience Platform aufgenommen werden.
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Der [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Der [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

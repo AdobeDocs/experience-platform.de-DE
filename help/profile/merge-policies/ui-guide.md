@@ -3,17 +3,17 @@ title: Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 type: Documentation
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Adobe Experience Platform mit Zusammenführungsrichtlinien arbeiten.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2455'
-ht-degree: 78%
+source-wordcount: '2458'
+ht-degree: 76%
 
 ---
 
 
 # Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, [!DNL Platform] mit denen bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, [!DNL Experience Platform] mit denen bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 
@@ -24,15 +24,15 @@ Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Plat
 Dieses Handbuch setzt ein Verständnis mehrerer wichtiger [!DNL Experience Platform] Funktionen voraus. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
 * [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Platform] aufgenommen werden.
-* [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Experience Platform] aufgenommen werden.
+* [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien anzeigen {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Zusammenführungsrichtlinie nicht gefunden"
->abstract="Das bedeutet, dass die angeforderte Zusammenführungsrichtlinie von Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Zusammenführungsrichtlinien-ID in der URL aufgeführt ist.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Zusammenführungsrichtlinie verfügen, auf die Sie zugreifen möchten.</li></ul>"
+>abstract="Dies bedeutet, dass Experience Platform die angeforderte Zusammenführungsrichtlinie nicht finden konnte. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Zusammenführungsrichtlinien-ID in der URL aufgeführt ist.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Zusammenführungsrichtlinie verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 In der [!DNL Experience Platform] Benutzeroberfläche können Sie mit Zusammenführungsrichtlinien beginnen, indem Sie im linken Navigationsbereich **[!UICONTROL Profile]** auswählen und dann die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]** auswählen.
 
@@ -77,7 +77,7 @@ Beim Erstellen oder Bearbeiten einer Zusammenführungsrichtlinie können Sie das
 
 ![Die Schaltfläche „Vereinigungsschema anzeigen“ ist im Workflow „Neue Zusammenführungsrichtlinie“ hervorgehoben.](../images/merge-policies/view-union-schema.png)
 
-Dadurch wird das Dialogfeld [!UICONTROL Vereinigungsschema anzeigen] geöffnet, in dem alle beitragenden Schemata, Identitäten und Beziehungen angezeigt werden, die mit dem Vereinigungsschema verknüpft sind. Sie können das Dialogfeld verwenden, um das Vereinigungsschema auf die gleiche Weise zu untersuchen, wie Sie dies tun, indem Sie auf die Registerkarte [!UICONTROL Vereinigungsschema] im Abschnitt [!UICONTROL Profile] der Platform-Benutzeroberfläche zugreifen.
+Dadurch wird das Dialogfeld [!UICONTROL Vereinigungsschema anzeigen] geöffnet, in dem alle beitragenden Schemata, Identitäten und Beziehungen angezeigt werden, die mit dem Vereinigungsschema verknüpft sind. Sie können das Dialogfeld verwenden, um das Vereinigungsschema auf die gleiche Weise zu untersuchen, wie Sie dies tun, indem Sie auf die Registerkarte [!UICONTROL Vereinigungsschema] im Abschnitt [!UICONTROL Profile] der Experience Platform-Benutzeroberfläche zugreifen.
 
 Detaillierte Informationen zu Vereinigungsschemata, einschließlich der Interaktion mit ihnen im [!UICONTROL Vereinigungsschema]-Tab oder im Dialogfeld [!UICONTROL Vereinigungsschema anzeigen], das im Workflow für Zusammenführungsrichtlinien angezeigt wird, finden Sie im Handbuch [Vereinigungs-Schema-Benutzeroberfläche](../ui/union-schema.md).
 
@@ -207,7 +207,7 @@ Nachdem Sie die erforderlichen Änderungen vorgenommen haben, überprüfen Sie I
 
 ## Verstöße gegen Data Governance-Richtlinien
 
-Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform] ausführen dürfen oder nicht.
+Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Experience Platform] ausführen dürfen oder nicht.
 
 Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen einer Zielgruppe verwendet wurde, die für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine **[!UICONTROL Verletzung der Data Governance]** Richtlinie erkannt) erhalten.
 
@@ -217,4 +217,4 @@ Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Si
 
 ## Nächste Schritte
 
-Nachdem Sie Zusammenführungsrichtlinien für Ihre Organisation erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [ Erstellen und Verwenden von Audiences mithilfe der [!DNL Experience Platform]-Benutzeroberfläche und von APIs finden Sie in der ](../../segmentation/home.md)Segmentierungsübersicht) .
+Nachdem Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [ Erstellen und Verwenden von Audiences mithilfe der [!DNL Experience Platform]-Benutzeroberfläche und von APIs finden Sie in der ](../../segmentation/home.md)Segmentierungsübersicht) .

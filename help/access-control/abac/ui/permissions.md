@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 45%
+source-wordcount: '1703'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Was sind Rollen?"
->abstract="Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. Sie kategorisieren die Benutzenden, die mit Ihrer Platform-Instanz interagieren, und sind die Bausteine der Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können."
+>abstract="Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. Sie kategorisieren die Benutzenden, die mit Ihrer Experience Platform-Instanz interagieren, und sind die Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten von Rollen"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="Was sind API-Anmeldeinformationen?"
->abstract="API-Anmeldeinformationen werden Rollen zugewiesen, um Benutzenden und Entwickelnden Zugriff auf Platform-APIs zu gewähren. Mithilfe von Platform-APIs können Sie programmgesteuert grundlegende CRUD-Vorgänge (Create, Read, Update, Delete: Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. berechnete Attribute konfigurieren, auf Daten/Entitäten zugreifen, Daten exportieren oder nicht benötigte Daten oder Batches löschen."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/landing/platform-apis/api-guide" text="Handbuch zur Platform-API"
+>abstract="API-Anmeldeinformationen werden Rollen zugewiesen, um Benutzenden und Entwicklern Zugriff auf Experience Platform-APIs zu gewähren. Mithilfe von Experience Platform-APIs können Sie programmgesteuert grundlegende CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Daten/Entitäten, den Export von Daten, das Löschen nicht benötigter Daten oder Batches und mehr."
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform-API-Handbuch"
 
 >[!IMPORTANT]
 >
@@ -204,7 +204,7 @@ Das **[!UICONTROL Produkte auswählen]** wird angezeigt. **[!UICONTROL Adobe Exp
 
 Das **[!UICONTROL Produktprofile auswählen]** wird angezeigt. Wählen Sie **[!UICONTROL AEP-Default-All-Users]** und dann **[!UICONTROL Speichern]** aus.
 
-![Das Dialogfeld „Produktprofile auswählen“ mit hervorgehobener Option „AEP-Default-All-Users“ und „Apply“.](../../images/flac-ui/product-profile-select-product-profiles.png)
+![Das Dialogfeld „Produktprofile auswählen“ mit hervorgehobener Option &quot;AEP-Default-All-Users“ und „Apply“.](../../images/flac-ui/product-profile-select-product-profiles.png)
 
 Überprüfen Sie die Informationen und wählen Sie dann **[!UICONTROL Speichern]** aus, um den Benutzer hinzuzufügen.
 
