@@ -2,10 +2,10 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4356'
-ht-degree: 55%
+source-wordcount: '4371'
+ht-degree: 54%
 
 ---
 
@@ -98,7 +98,7 @@ Sie können zusätzliche Felder zu Audience Portal hinzufügen, indem Sie ![das 
 | ----- | ----------- |
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
 | [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
-| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind: Segmentierungsdienst, Benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
+| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Zu den möglichen Werten gehören [Segmentierungs](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller) und [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Verlagerung von Zielgruppen in verschiedene Lebenszyklusstatus, finden [ im Abschnitt „Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] und [!UICONTROL Nicht geplant]. |
 | [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
