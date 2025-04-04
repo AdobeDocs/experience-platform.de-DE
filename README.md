@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # Bereitstellen von Inhalten
@@ -30,20 +30,6 @@ Kleinere Korrekturen oder Erläuterungen, die Sie für Dokumentation und Codebei
 ### Umfangreiche Änderungen oder neue Artikel von Community-Mitgliedern
 
 Wenn Sie Mitglied der Adobe-Community sind und einen Artikel erstellen oder umfangreiche Änderungen einreichen möchten, klicken Sie auf die Registerkarte **Probleme** im GitHub-Repository, um ein Problem zu senden. Durch diese Übermittlung beginnt eine Konversation mit dem Dokumentationsteam. Sie müssen mit dem Autor (oder anderen Adobe-Mitarbeitern) zusammenarbeiten, um neue Inhalte zu veröffentlichen.
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Umfassende Änderungen oder neue Artikel von Adobe-Mitarbeitern
-
-Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen dazu finden Sie im [Handbuch zur internen Zusammenarbeit](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Kontakt zum Dokumentations-Team von Experience Platform
-
-Wie bereits erwähnt, können Mitglieder der Adobe-Community ein Thema einreichen, das dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Adobe-Mitarbeiter sind, können Sie ein Thema einreichen oder sich direkt an das Dokumentations-Team von Experience Platform wenden. Den leitenden Autor für einen bestimmten Experience Platform-Bereich finden Sie im Dokumentations-Wiki zu [Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Werkzeuge und Einrichtung
 
