@@ -2,16 +2,16 @@
 title: Anwendungsfall für dezilbasierte abgeleitete Datensätze
 description: In diesem Handbuch werden die Schritte veranschaulicht, die zur Verwendung des Abfrage-Service zum Erstellen dezilbasierter abgeleiteter Datensätze für die Verwendung mit Ihren Profildaten erforderlich sind.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 2%
 
 ---
 
 # Anwendungsfall für dezilbasierte abgeleitete Datensätze
 
-Abgeleitete Datensätze ermöglichen komplizierte Anwendungsfälle zur Analyse von Daten aus dem Data Lake, die mit anderen nachgelagerten Platform-Services verwendet oder in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können.
+Abgeleitete Datensätze ermöglichen komplizierte Anwendungsfälle zur Analyse von Daten aus dem Data Lake, die mit anderen nachgelagerten Experience Platform-Services verwendet oder in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können.
 
 Dieses Anwendungsbeispiel zeigt, wie dezilbasierte abgeleitete Datensätze für die Verwendung mit Ihren Echtzeit-Kundenprofildaten erstellt werden. Anhand eines Szenarios mit einer Fluggesellschaft als Beispiel wird in diesem Handbuch beschrieben, wie Sie einen Datensatz erstellen, der kategoriale Dezile verwendet, um Zielgruppen basierend auf Rangattributen zu segmentieren und zu erstellen.
 

@@ -2,16 +2,16 @@
 title: Adobe Commerce-Ziel-Connector
 description: Erfahren Sie, wie Händler mit Adobe Commerce und Real-Time CDP das Einkaufserlebnis personalisieren können, indem sie hochrelevante Site-Inhalte und Sonderangebote bereitstellen, die auf in Real-Time CDP erstellte und verwaltete Zielgruppen zugeschnitten sind.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 53%
+source-wordcount: '697'
+ht-degree: 52%
 
 ---
 
 # Adobe Commerce-Verbindung {#adobe-commerce}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Mit dem [!DNL Adobe Commerce]-Ziel-Connector können Sie eine oder mehrere Real-Time CDP-Zielgruppen auswählen, die Sie in Ihrem [!DNL Adobe Commerce] aktivieren, um Ihren Kunden ein dynamisches, personalisiertes Erlebnis zu bieten. Innerhalb von [!DNL Adobe Commerce] können Sie dann diese Real-Time CDP-Zielgruppen auswählen, um einzigartige Angebote im Warenkorb zu personalisieren, wie beispielsweise „Kaufen Sie zwei, erhalten Sie eins gratis“. Sie können auch Hero-Banner anzeigen und die Produktpreise durch Werbeangebote ändern, die alle an Adobe Real-Time CDP-Zielgruppen angepasst sind.
 
@@ -41,7 +41,7 @@ Nachdem Sie die Voraussetzungen erfüllt haben, stellen Sie eine Verbindung mit 
 
 So stellen Sie eine Verbindung mit dem Ziel [!DNL Adobe Commerce] her:
 
-1. Gehen Sie in der [Platform-Oberfläche](https://experience.adobe.com/platform/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+1. Experience Platform Wechseln Sie in der ](https://experience.adobe.com/platform/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 1. Wählen Sie **[!UICONTROL Personalisierung]** aus.
 1. Wählen Sie das Adobe Commerce-Ziel aus, um es zu markieren, und wählen Sie dann **[!UICONTROL Einrichten]** aus.
 1. Führen Sie die im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschriebenen Schritte aus.
@@ -71,7 +71,7 @@ Anweisungen [ Aktivieren von Zielgruppen für das [!DNL Commerce]-Ziel finden Si
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 
-Nachdem Sie das [!DNL Commerce]-Ziel in Experience Platform konfiguriert haben, müssen Sie die [!DNL Audience Activation]-Erweiterung in [!DNL Commerce] installieren und den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
+Nachdem Sie das [!DNL Commerce] Ziel in Experience Platform konfiguriert haben, müssen Sie die [!DNL Audience Activation] in [!DNL Commerce] installieren und den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
 
 ## Validieren von Zielgruppen-Aktivierung in Commerce {#exported-data}
 

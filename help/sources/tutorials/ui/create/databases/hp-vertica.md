@@ -5,7 +5,7 @@ title: Erstellen einer HP Vertica Source-Verbindung über die Benutzeroberfläch
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine HP Vertica-Quellverbindung erstellen.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 32%
@@ -18,7 +18,7 @@ ht-degree: 32%
 >
 > Der HP [!DNL Vertica] Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Erstellen eines HP [!DNL Vertica]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Erstellen eines HP [!DNL Vertica]-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -43,7 +43,7 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem HP- [!DNL Verti
 
 ## Verbinden Ihres HP [!DNL Vertica]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HP [!DNL Vertica]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HP [!DNL Vertica]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das HP [!DNL Vertica]-Konto, 
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem HP [!DNL Vertica]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem HP [!DNL Vertica]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

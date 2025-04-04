@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise April 2024
 description: Versionshinweise April 2024 für Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1899'
 ht-degree: 25%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 >[!TIP]
 >
->Verwenden Sie das [Adobe Experience Platform-Glossar](/help/landing/glossary.md) um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um anzufordern, dass neue Begriffe dem Glossar hinzugefügt werden.
+>Verwenden Sie das [Adobe Experience Platform-Glossar](/help/landing/glossary.md) um sich mit der in Real-Time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um anzufordern, dass neue Begriffe dem Glossar hinzugefügt werden.
 
 Aktualisierungen vorhandener Funktionen in Experience Platform:
 
@@ -37,7 +37,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Real-time Customer Data Platform B2B-Einblicke | Informieren Sie sich anhand der vorkonfigurierten [Real-Time CDP B2B-Dateneinblicke zu Accounts und Opportunities](../../dashboards/insights/account-profiles.md) damit Sie Ihre Daten besser verstehen und in Ihre Geschäftsentscheidungen einfließen können. Sie können auch [eigene Einblicke mithilfe des Real-Time CDP B2B-Datenmodells erstellen](../../dashboards/data-models/cdp-insights-data-model-b2c.md) um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
+| Real-Time Customer Data Platform B2B-Einblicke | Informieren Sie sich anhand der vorkonfigurierten [Real-Time CDP B2B-Dateneinblicke zu Accounts und Opportunities](../../dashboards/insights/account-profiles.md) damit Sie Ihre Daten besser verstehen und in Ihre Geschäftsentscheidungen einfließen können. Sie können auch [eigene Einblicke mithilfe des Real-Time CDP B2B-Datenmodells erstellen](../../dashboards/data-models/cdp-insights-data-model-b2c.md) um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
 
 {style="table-layout:auto"}
 
@@ -45,7 +45,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 ## Datenerfassung {#data-collection}
 
-Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Experience Platform-Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an die Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -55,9 +55,9 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Datenströme | [Edge Network-Bot-Erkennung](../../datastreams/bot-detection.md) | Traffic, der von nicht-menschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Web-Scraptern, Spinnen, skriptgesteuerten Scannern, kann es schwieriger machen, Ereignisse zu identifizieren, die von menschlichen Besuchern stammen. Dieser Traffic kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen. <br>Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../../server-api/overview.md) als von bekannten Spiders und Bots generiert wurden. Durch die Konfiguration der Bot-Erkennung für Ihre Datenströme können Sie bestimmte IP-Adressen, IP-Bereiche und Anfrage-Header identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten. <br> Identifizierung des Bot-Traffics kann eine genauere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer Mobile App ermöglichen. |
 | Mobile SDK | Hauptversion | Neue Hauptversionen der Mobile SDK wurden für die folgenden Plattformen veröffentlicht: iOS Mobile Core 5.x und kompatible iOS Extensions, Android Mobile Core 3.x und kompatible Android Extensions, React Native Core 6.x und kompatible React Native Extensions, Flutter Core 4.x und kompatible Flutter Extensions. Diese Versionen bieten mehrere neue Funktionen und Verbesserungen, einschließlich der Unterstützung in Android SDK für Jetpack Compose, Unterstützung für Adobe Journey Optimizer Code-basierte Erlebnisse und allgemeine Verfügbarkeit der Adobe Journey Optimizer Messaging-Erweiterung für Flutter. Weitere Versionshinweise finden Sie unter [Versionshinweise zu Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | Datenschutz    | Aufgrund der Richtlinienaktualisierung von Apple, die am 1. Mai 2024 beginnt, müssen Entwicklerinnen und Entwickler neue Datenschutzfunktionen implementieren, um an App Store übermitteln zu können. Alle Adobe-Kunden, die die mobile SDK verwenden, müssen ein Upgrade auf Version 5.x der SDK durchführen, wenn sie nach dem 1. Mai die App Store-Genehmigung erhalten möchten. |
-| Roku SDK | Roku SDK | Die erste Hauptversion des Roku SDK wurde veröffentlicht, mit Unterstützung für die Streaming-Medien für das Platform-Edge Network. |
+| Roku SDK | Roku SDK | Die erste Hauptversion des Roku SDK wurde veröffentlicht, mit Unterstützung für die Streaming-Medien für den Experience Platform Edge Network. |
 | Tags und Ereignisweiterleitung | Produktinterne Anleitung | Experience Platform [Tags](../../tags/home.md) und [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) bieten eine neue Reihe von Erlebnissen, die Ihnen dabei helfen, schnell loszulegen und eine schnelle Wertschöpfungszeit zu erzielen. Zu diesen Erlebnissen gehören neue Onboarding-Bildschirme, produktinterne Tutorials und QuickInfos. <br>![Ereignisweiterleitung mit hervorgehobener produktinterner Anleitung.](../2024/assets/april/event-forwarding.png "Der Schemaeditor mit den hervorgehobenen Feldern Typ und Zuordnungswerttyp."){width="100" zoomable="yes"}<br> |
-| Web SDK | Vereinfachte Web-SDK-Einführung für Audience Manager-Kunden | Mehrere Web-SDK-Updates vereinfachen jetzt die Einführung von Web SDK ohne Verwendung des Experience-Datenmodells (XDM) für Experience Cloud-Lösungen wie Audience Manager, Analytics und Target. In den folgenden Handbüchern erfahren Sie mehr über die Einführung von Audience Manager Web SDK: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Aktualisieren der Datenerfassungsbibliothek für den Audience Manager von der Audience Manager-Tag-Erweiterung zur Web SDK-Tag-Erweiterung</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für den Audience Manager von der AppMeasurement JavaScript-Bibliothek zur Web SDK JavaScript-Bibliothek.</li></ul> |
+| Web SDK | Vereinfachte Web-SDK-Einführung für Audience Manager-Kunden | Mehrere Web-SDK-Updates vereinfachen jetzt die Übernahme von Web SDK ohne Verwendung des Experience-Datenmodells (XDM) für Experience Cloud-Lösungen wie Audience Manager, Analytics und Target. Weitere Informationen zur Verwendung von Audience Manager Web SDK erhalten Sie in den folgenden Handbüchern: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für Audience Manager von der Audience Manager-Tag-Erweiterung auf die Web-Tag-Erweiterung für SDK</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für Audience Manager von der AppMeasurement JavaScript-Bibliothek auf die Web SDK JavaScript-Bibliothek.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service �
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -144,7 +144,7 @@ Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../s
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Experience Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
 
 **Aktualisierte Funktion**
 
@@ -166,8 +166,8 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 
 | Neue Quellen | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Verwenden Sie die [[!DNL PathFactory] Quelle](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md), um Ihre Besucher-, Sitzungs- und Seitenansichtsdaten von [!DNL PathFactory] auf Experience Platform zu integrieren. Informationen zu den ersten [[!DNL PathFactory]  finden ](../../sources/connectors/marketing-automation/pathfactory.md) im Abschnitt „Übersicht“. |
-| [!DNL Teradata Vantage] | Verwenden Sie die [[!DNL Teradata Vantage] Quelle](../../sources/tutorials/ui/create/databases/teradata-vantage.md), um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform aufzunehmen. Informationen zu den ersten [[!DNL Teradata Vantage]  finden ](../../sources/connectors/databases/teradata-vantage.md) im Abschnitt „Übersicht“. |
+| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Verwenden Sie die [[!DNL PathFactory] Quelle](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md), um Ihre Besucher-, Sitzungs- und Seitenansichtsdaten aus [!DNL PathFactory] in Experience Platform zu integrieren. Informationen zu den ersten [[!DNL PathFactory]  finden ](../../sources/connectors/marketing-automation/pathfactory.md) im Abschnitt „Übersicht“. |
+| [!DNL Teradata Vantage] | Verwenden Sie die [[!DNL Teradata Vantage] Quelle](../../sources/tutorials/ui/create/databases/teradata-vantage.md) um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform aufzunehmen. Informationen zu den ersten [[!DNL Teradata Vantage]  finden ](../../sources/connectors/databases/teradata-vantage.md) im Abschnitt „Übersicht“. |
 
 {style="table-layout:auto"}
 
@@ -176,7 +176,7 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 | Funktion | Beschreibung |
 | --- | --- |
 | Aktualisierungen der IP-Adressen für die Zulassungsauflistung in VA7 | Die folgenden IP-Adressen wurden der Liste der IP-Adressen hinzugefügt, die Ihrer Zulassungsliste für VA7 (Nordamerika) hinzugefügt werden sollen: <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Eine umfassende Liste der IP-Adressen, die Sie Ihrer Zulassungsliste hinzufügen können, finden Sie im Dokument [Zulassungsliste von IP-Adressen](../../sources/ip-address-allow-list.md). |
-| Unterstützung neuer Authentifizierungstypen mit der [!DNL Azure Event Hubs] | Sie können jetzt Ihre [!DNL Event Hubs] mit Experience Platform verbinden, entweder mit [!DNL Azure Active Directory Authentication] oder [!DNL Scoped Azure Active Directory Authentication]. Lesen Sie das Handbuch unter [Verbinden [!DNL Event Hubs] mit Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md), um weitere Informationen zu erhalten. |
+| Unterstützung neuer Authentifizierungstypen mit der [!DNL Azure Event Hubs] | Sie können Ihre [!DNL Event Hubs] jetzt entweder über [!DNL Azure Active Directory Authentication] oder [!DNL Scoped Azure Active Directory Authentication] mit Experience Platform verbinden. Lesen Sie das Handbuch unter [Verbinden [!DNL Event Hubs] mit Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md), um weitere Informationen zu erhalten. |
 | Aktualisierungen [!DNL Data Landing Zone] Abrufen von Anmeldeinformationen | Sie können jetzt die rechte Leiste im Arbeitsbereich „Quellen“ verwenden, um Ihre [!DNL Data Landing Zone] abzurufen. Sie können jetzt auch die rechte Leiste verwenden, um Ihre Anmeldeinformationen zu aktualisieren. Weitere Informationen finden [[!DNL Data Landing Zone]  im ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) zur Benutzeroberfläche . |
 
 {style="table-layout:auto"}

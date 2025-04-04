@@ -2,9 +2,9 @@
 title: Berechtigungsverwaltung zur Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht über die Verwaltung von Berechtigungen und die Steuerung des Zugriffs auf Datenerfassungsfunktionen in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1358'
 ht-degree: 30%
 
 ---
@@ -55,13 +55,13 @@ Berechtigungen unter Adobe Experience Platform-Datenerfassung steuern den Zugrif
 | Plattformen | Web | Gewährt Zugriff auf [Web-Eigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigenschaftsrechten. |
 | Plattformen | Mobile | Gewährt Zugriff auf [Mobile-Eigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigenschaftsrechten. |
 | Plattformen | Edge | Gewährt Zugriff auf [Edge-Eigenschaften für die Ereignisweiterleitung](../tags/ui/event-forwarding/getting-started.md) in Kombination mit anderen Eigenschaftsrechten. |
-| Properties | (Nicht angegeben) | Je nach den Eigenschaften, die im Rahmen Ihres Unternehmens erstellt wurden, können Sie den Zugriff auf jede dieser Eigenschaften über diese Berechtigungskategorie in Admin Console steuern.<br><br>Die zugewiesenen Eigenschaftsrechte eines Benutzers gelten nur für die Eigenschaften, auf die ihm über diese Berechtigungskategorie Zugriff gewährt wurde. |
+| Properties | (Nicht angegeben) | Je nach den Eigenschaften, die im Rahmen Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Eigenschaften über diese Berechtigungskategorie in Admin Console steuern.<br><br>Die zugewiesenen Eigenschaftsrechte eines Benutzers gelten nur für die Eigenschaften, auf die ihm über diese Berechtigungskategorie Zugriff gewährt wurde. |
 | Eigenschaftsrechte | Genehmigen | Ermöglicht die Genehmigung eines Bibliotheks-Builds als Teil des [Publishing-Flusses](../tags/ui/publishing/publishing-flow.md). |
 | Eigenschaftsrechte | Entwickeln | Ermöglicht die Entwicklung eines Bibliotheks-Builds als Teil des [Publishing-Flusses](../tags/ui/publishing/publishing-flow.md). |
 | Eigenschaftsrechte | Eigenschaft bearbeiten | Ermöglicht die Bearbeitung der Basiskonfiguration für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
 | Eigenschaftsrechte | Umgebungen verwalten | Ermöglicht die Verwaltung der [Umgebungen](../tags/ui/publishing/environments.md) für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
 | Eigenschaftsrechte | Erweiterungen verwalten | Ermöglicht die Verwaltung der [Erweiterungen](../tags/ui/managing-resources/extensions/overview.md) für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
-| Eigenschaftsrechte | Veröffentlichen Sie | Ermöglicht die Veröffentlichung eines Bibliotheks-Builds im Rahmen des [Publishing-Flusses](../tags/ui/publishing/publishing-flow.md). |
+| Eigenschaftsrechte | Veröffentlichen | Ermöglicht die Veröffentlichung eines Bibliotheks-Builds im Rahmen des [Publishing-Flusses](../tags/ui/publishing/publishing-flow.md). |
 | Unternehmensrechte | Entwickeln von Erweiterungen | Ermöglicht das Erstellen und Ändern von Erweiterungspaketen, die Ihrer Organisation gehören, einschließlich privater Versionen und Anfragen zur öffentlichen Freigabe. |
 | Unternehmensrechte | Mobile-App-Konfigurationen verwalten | Diese Berechtigung gilt nur, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Auf diese Weise können Sie die Apps verwalten, die Adobe Experience Cloud bekannt sind, zusammen mit den erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple-Push-Benachrichtigungs-Service erforderlich sind. |
 | Unternehmensrechte | Eigenschaften verwalten | Ermöglicht das Erstellen und Verwalten von Tags (Web-Eigenschaft), Ereignisweiterleitung (Edge-Eigenschaft) und mobilen Eigenschaften. |
@@ -87,7 +87,7 @@ Anweisungen zum Verwalten der entsprechenden Berechtigungen für die einzelnen P
 >
 >Zum Verwalten der Berechtigungen für eine Rolle benötigen Sie Administratorrechte. Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator.
 
-Experience Cloud Im Abschnitt **[!UICONTROL Berechtigungen]** können Sie Benutzerrollen und Richtlinien definieren, um den Zugriff auf Funktionen und Objekte innerhalb einer Produktanwendung zu verwalten.
+Im Abschnitt **[!UICONTROL Berechtigungen]** von Experience Cloud können Sie Benutzerrollen und Richtlinien definieren, um den Zugriff auf Funktionen und Objekte innerhalb einer Produktanwendung zu verwalten.
 
 Über [!UICONTROL Berechtigungen] können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
 
@@ -95,19 +95,19 @@ Experience Cloud Im Abschnitt **[!UICONTROL Berechtigungen]** können Sie Benutz
 
 Um auf Datenerfassungsfunktionen zuzugreifen, müssen Sie alle Berechtigungen in den Kategorien **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]** und **[!UICONTROL Datenerfassung]**.
 
-![Bild, das die Datenerfassungs-Produktkarte in der Admin Console zeigt](./images/permissions/platform-permission-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](./images/permissions/platform-permission-card.png)
 
-Detaillierte Anweisungen [ Verwalten von Platform-Berechtigungen finden Sie ](../access-control/ui/overview.md) Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
+Detaillierte Anweisungen [ Verwalten von Experience Platform-Berechtigungen finden ](../access-control/ui/overview.md) im Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
 
 >[!NOTE]
 >
->Abhängig von den Produkt-SKUs, auf die Ihr Unternehmen Zugriff hat, verfügen Sie möglicherweise nicht über alle Platform-Berechtigungen.
+>Abhängig von den Produkt-SKUs, auf die Ihr Unternehmen Zugriff hat, verfügen Sie möglicherweise nicht über alle Experience Platform-Berechtigungen.
 
 ### Verwalten von Berechtigungen unter der Adobe Experience Platform-Datenerfassung {#manage-collection}
 
 Um diese Berechtigungen zu verwalten, melden Sie sich bei Admin Console an und wählen **[!UICONTROL Produkte]** in der oberen Navigationsleiste und dann **[!UICONTROL Adobe Experience Platform-Datenerfassung]** aus.
 
-![Bild, das die Datenerfassungs-Produktkarte in der Admin Console zeigt](./images/permissions/data-collection-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](./images/permissions/data-collection-card.png)
 
 #### Auswählen oder Erstellen eines Produktprofils
 
@@ -147,4 +147,4 @@ Weitere Informationen zur Verwaltung von Benutzern für ein Produktprofil finden
 
 ## Nächste Schritte
 
-In diesem Handbuch wurden die verfügbaren Berechtigungen für die Datenerfassung und deren Verwaltung durch Admin Console behandelt. Weitere Informationen zur Verwaltung von Berechtigungen für andere Funktionen der Adobe Experience Platform finden Sie in der [Dokumentation zur Zugriffssteuerung](../access-control/home.md).
+In diesem Handbuch wurden die verfügbaren Berechtigungen für die Datenerfassung und deren Verwaltung über Admin Console behandelt. Weitere Informationen zur Verwaltung von Berechtigungen für andere Funktionen der Adobe Experience Platform finden Sie in der [Dokumentation zur Zugriffssteuerung](../access-control/home.md).

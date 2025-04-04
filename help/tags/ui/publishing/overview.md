@@ -2,10 +2,10 @@
 title: Veröffentlichungsübersicht
 description: Erfahren Sie mehr über die Veröffentlichung von Änderungen an Ihren Tag-Management-Code-Bibliotheken in Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 100%
+source-wordcount: '610'
+ht-degree: 95%
 
 ---
 
@@ -33,7 +33,7 @@ Neben dem Publishing-Ablauf müssen Sie einige andere Komponenten und Beziehunge
 | --- | --- |
 | Bibliotheken | Eine Bibliothek ist eine Reihe von Anweisungen dafür, wie Erweiterungen, Datenelemente und Regeln miteinander und mit Ihrer Website interagieren. Wenn eine Bibliothek für die Bereitstellung in einer Umgebung kompiliert wird, wird sie zu einem Build.<br><br>Weitere Informationen zum Erstellen, Verwalten und Aktivieren von Bibliotheken in der UI finden Sie in der Übersicht zu [Bibliotheken](./libraries.md). |
 | Builds | Ein Build ist eine kompilierte Bibliothek. Wenn ein Build in einer Umgebung bereitgestellt wird, stellt er den eigentlichen Satz von Dateien bereit, der den Code enthält, der an den Browser jedes Benutzers geliefert wird, wenn dieser Ihre Website aufruft.<br><br>Weitere Informationen zu Inhalt und Format der Builds finden Sie in der Übersicht zu [Builds](./builds.md). |
-| Umgebungen | Eine Tag-Umgebung ist ein Satz von Implementierungsanweisungen, der Platform mitteilt, in welchem Format der Build vorliegen soll und wo er bereitgestellt werden soll.<br><br>Weitere Informationen zu den verschiedenen Umgebungstypen, zur Installation und Konfiguration vorhandener Umgebungen und zum Erstellen neuer Umgebungen finden Sie in der Übersicht zu [Umgebungen](./environments.md). |
+| Umgebungen | Eine Tag-Umgebung ist eine Reihe von Bereitstellungsanweisungen, die Experience Platform mitteilen, in welchem Format der Build vorliegen soll und wo er bereitgestellt werden soll.<br><br>Weitere Informationen zu den verschiedenen Umgebungstypen, zur Installation und Konfiguration vorhandener Umgebungen und zum Erstellen neuer Umgebungen finden Sie in der Übersicht zu [Umgebungen](./environments.md). |
 | Hosts | Ein Host stellt die Verbindungsdetails für eine Umgebung dar, die einen Build für Ihre Website bereitstellen soll. Sie können festlegen, dass Adobe das Hosting Ihres Builds verwaltet, oder Informationen für Ihre eigenen Hostserver bereitstellen.<br><br>Weitere Informationen zu den einzelnen Hosting-Optionen finden Sie in der Übersicht zu [Hosts](./hosts/hosts-overview.md). |
 | Client-seitiger Code | Der Client-seitige Code ist der Satz von Skripten, den Sie im Quell-Code Ihrer Site oder Anwendung platzieren und der jedem Client-Gerät mitteilt, wo der Build abgerufen werden soll. Der Code wird an eine Umgebung angehängt und kann sich ändern, wenn Sie Ihre Umgebungskonfiguration ändern.<br><br>Weitere Informationen finden Sie im Abschnitt [Einbettungs-Codes](./environments.md#embed-code) in der Übersicht zu Umgebungen. |
 

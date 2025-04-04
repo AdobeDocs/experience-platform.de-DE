@@ -2,10 +2,10 @@
 title: Erstellen einer SugarCRM-Ereignis-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine SugarCRM-Ereignis-Quellverbindung erstellen.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 43%
+source-wordcount: '660'
+ht-degree: 35%
 
 ---
 
@@ -26,7 +26,7 @@ Wenn Sie bereits über ein gültiges [!DNL SugarCRM]-Konto verfügen, können Si
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zwischen [!DNL SugarCRM Events] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL SugarCRM Events] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -34,25 +34,25 @@ Um eine Verbindung zwischen [!DNL SugarCRM Events] und Platform herzustellen, m�
 | `Username` | Benutzername Ihres SugarCRM-Entwicklerkontos. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Ihr SugarCRM-Entwicklerkonto-Passwort. | `123456789` |
 
-### Erstellen eines Platform-Schemas für [!DNL SugarCRM]
+### Erstellen eines Experience Platform-Schemas für [!DNL SugarCRM]
 
-Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Platform Schemas .
+Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
-![Screenshot der Platform-Benutzeroberfläche mit einem Beispielschema für SugarCRM-Ereignisse](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit einem Beispielschema für SugarCRM-Ereignisse](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->Stellen Sie beim Zuordnen des Schemas sicher, dass Sie auch die für Platform erforderlichen obligatorischen `event_id` und `timestamp` Felder zuordnen.
+>Stellen Sie beim Zuordnen des Schemas sicher, dass Sie auch die erforderlichen `event_id`- und `timestamp` für Experience Platform zuordnen.
 
 ## Verbinden Ihres [!DNL SugarCRM Events]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *CRM*-Kategorie **[!UICONTROL SugarCRM-Ereignisse]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
 
-![Screenshot der Platform-Benutzeroberfläche für den Katalog mit der Karte „SugarCRM-Ereignisse“](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für Katalog mit Karte „SugarCRM-Ereignisse“](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
 Die **[!UICONTROL Verbinden eines SugarCRM-]**-Kontos“ wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -60,23 +60,23 @@ Die **[!UICONTROL Verbinden eines SugarCRM-]**-Kontos“ wird angezeigt. Auf die
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL SugarCRM Events]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Screenshot der Platform-Benutzeroberfläche für Verbinden eines SugarCRM-Ereigniskontos mit einem vorhandenen Konto](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für „Connect SugarCRM Events“-Konto mit einem bestehenden Konto](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### Neues Konto
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Screenshot der Platform-Benutzeroberfläche für das Verbinden des SugarCRM-Ereigniskontos mit einem neuen Konto](../../../../images/tutorials/create/sugarcrm-events/new.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für „Connect SugarCRM Events“-Konto mit einem neuen Konto](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SugarCRM Events]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](../../dataflow/crm.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SugarCRM Events]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/crm.md).
 
 ## Zusätzliche Ressourcen
 
 Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verwendung der [!DNL SugarCRM] verweisen können.
 
-### Leitplanken {#guardrails}
+### Leitlinien {#guardrails}
 
 Die [!DNL SugarCRM] API-Einschränkungsraten sind 90 Aufrufe pro Minute oder 2.000 Aufrufe pro Tag, je nachdem, was zuerst eintritt. Diese Einschränkung wurde jedoch umgangen, indem der Verbindungsspezifikation ein Parameter hinzugefügt wurde, der die Anfragezeit verzögert, sodass das Ratenlimit nie erreicht wird.
 
@@ -84,7 +84,7 @@ Die [!DNL SugarCRM] API-Einschränkungsraten sind 90 Aufrufe pro Minute oder 2.0
 
 Um zu überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL SugarCRM Events] Daten aufgenommen werden, führen Sie die folgenden Schritte aus:
 
-* Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datenflüsse anzeigen]** neben dem Menü [!DNL SugarCRM Events] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die aufgenommenen Daten zu überprüfen.
+* Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL SugarCRM Events] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die aufgenommenen Daten zu überprüfen.
 
 * Je nach Objekttyp, mit dem Sie arbeiten, können Sie die aggregierten Daten mit den Zahlen vergleichen, die auf der Seite &quot;[!DNL SugarMarket]-Ereignisse“ unten sichtbar sind:
 

@@ -2,10 +2,10 @@
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360 (zuvor DoubleClick Bid Manager) ist ein Tool zur Ausführung von Retargeting- und Audience-orientierten digitalen Kampagnen in den Inventarquellen Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 55%
+source-wordcount: '1158'
+ht-degree: 52%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 55%
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
 ><br/>
->Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Ihnen Adobe die notwendigen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+>Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
 ><br/>
 >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
 ><br/>
@@ -32,7 +32,7 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Display & Video 36
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud-ID-Service in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon Google-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud ID-Service in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor bereits Google-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -54,7 +54,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!NOTE]
 >
->Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Display & Video 360]-Ziel in Platform einrichten. Stellen Sie sicher, dass der unten beschriebene Zulassungsauflistungsprozess von [!DNL Google] abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Display & Video 360]-Ziel in Experience Platform einrichten. Stellen Sie sicher, dass der unten beschriebene Zulassungsauflistungsprozess von [!DNL Google] abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 >Die Ausnahme für diese Regel betrifft [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)-Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
-Bevor Sie das [!DNL Google Display & Video 360]-Ziel in Platform erstellen, müssen Sie sich an Google wenden und darum bitten, dass Adobe in die Liste der zulässigen Datenanbieter aufgenommen wird und Ihr Konto der Zulassungsliste hinzugefügt wird. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Bevor Sie das [!DNL Google Display & Video 360]-Ziel in Experience Platform erstellen, müssen Sie sich an Google wenden und darum bitten, dass Adobe in die Liste der zulässigen Datenanbieter aufgenommen wird und Ihr Konto der Zulassungsliste hinzugefügt wird. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
 * **Konto-ID**: Dies ist die Konto-ID von Adobe bei Google. Konto-ID: 87933855.
 * **Kunden-ID**: Dies ist die Kundenkonto-ID von Adobe bei Google. Kunden-ID: 89690775.
@@ -104,7 +104,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 >[!NOTE]
 >
->Wenn Sie ein [!DNL Google Display & Video 360] einrichten, wenden Sie sich an Ihren [!DNL Google Account Manager] oder Adobe-Support-Mitarbeiter, um zu erfahren, welchen Kontotyp Sie haben.
+>Wenden Sie sich beim Einrichten eines [!DNL Google Display & Video 360]-Ziels an Ihren [!DNL Google Account Manager] oder Adobe-Support-Mitarbeiter, um zu erfahren, welchen Kontotyp Sie haben.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

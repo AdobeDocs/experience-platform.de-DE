@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 23%
@@ -48,7 +48,7 @@ Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tuto
 
 ## Segmentierungs-Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
+Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Experience Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
@@ -62,7 +62,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmenti
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -70,7 +70,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung der SSH-Authentifizierung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] verbinden, indem Sie RSA/DSA Open SSH-Schlüssel verwenden. Weitere Informationen finden Sie [ „SFTP](../../sources/connectors/cloud-storage/sftp.md)Übersicht“. |
+| Unterstützung der SSH-Authentifizierung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Experience Platform] verbinden, indem Sie RSA/DSA Open SSH-Schlüssel verwenden. Weitere Informationen finden Sie [ „SFTP](../../sources/connectors/cloud-storage/sftp.md)Übersicht“. |
 | UX-Verbesserungen | Sie können Ihren Datensatz während der Datenaufnahme für die [!DNL Profile] aktivieren. Weitere Informationen finden Sie [ Tutorial zum ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)Cloud-Datenspeicherungs-Workflow) . |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
@@ -85,7 +85,7 @@ Die „Time to Value“ erstreckt sich über Personas hinweg. Dateningenieure k�
 
 #### Schema
 
-Aktualisiert die Benutzerfreundlichkeit und den Workflow und bietet vordefinierte Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schemakompositionen. Zeigt die Datenherkunft für die Kombination einzelner Datenmodelle, die als „Vereinigungsschema“ dargestellt werden, und bietet Einblicke in die Struktur und die Inhaltsstoffe des Echtzeit-Kundenprofils.
+Aktualisiert die Benutzerfreundlichkeit und den Workflow und bietet vordefinierte Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schemakompositionen. Zeigt die Datenherkunft für die Kombination von einzelnen Datenmodellen, die als „Vereinigungsschema“ dargestellt werden, wobei insight in die Struktur und die Inhaltsstoffe für das Echtzeit-Kundenprofil bereitgestellt wird.
 
 - Upgrade des Schema-Workflows
    - Verwenden Sie Tastaturbefehle für den häufigsten Typ von XDM-Schemata mit automatisierten Einstellungen im Schema-Editor und Schemafeldgruppenempfehlungen basierend auf Ihren Zielen
@@ -113,6 +113,6 @@ Ein marketerfreundlicher Profil-Viewer mit Anpassung hilft Ihnen, die Kompositio
 
 #### Überwachung
 
-Stellt Transparenz des Datenflusses sicher und gibt Einblicke in den Zustand des Datenverkehrs in das System von den Quell-Connectoren aus, wodurch mehr Self-Service und schnellere Reaktionsfähigkeit für die Fehlerbehebung bereitgestellt werden.
+Stellt die Transparenz des Datenflusses sicher und gibt insight Informationen zum Zustand des Datenverkehrs, der von den Quell-Connectoren in das System fließt, wodurch mehr Self-Service und schnellere Reaktionsfähigkeit für die Fehlerbehebung bereitgestellt werden.
 
 - Überwachen Sie alle Flussausführungen und sehen Sie eine detaillierte Ansicht jedes Durchgangs, einschließlich Abschlussstatus, Ausführungsdauer, Liste der verarbeiteten Dateien, Fehler und ausführbaren Diagnosen

@@ -4,7 +4,7 @@ title: Löschen von Zielen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgelistet
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -13,13 +13,13 @@ ht-degree: 32%
 
 # Löschen von Zielen {#delete-destinations}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie bestehende Verbindungen zu Zielen löschen.
 
 Durch das Löschen eines Ziels werden alle vorhandenen Datenflüsse zu diesem Ziel entfernt. Alle Zielgruppen, die für die zu löschenden Ziele aktiviert sind, werden nicht zugeordnet, bevor der Datenfluss gelöscht wird.
 
-Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Platform]-[!DNL UI] zu löschen. Sie haben folgende Möglichkeiten:
+Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Experience Platform]-[!DNL UI] zu löschen. Sie haben folgende Möglichkeiten:
 
 * [Löschen von Zielen auf der Registerkarte [!UICONTROL Durchsuchen]](#delete-browse-tab)
 * [Löschen von Zielen auf der Seite mit den Zieldetails](#delete-destination-details-page)
@@ -77,4 +77,4 @@ Gehen Sie wie folgt vor, um ein Ziel von der Seite mit den Zieldetails zu lösch
 
    >[!NOTE]
    >
-   >Je nach Server-Last kann es einige Minuten dauern, bis [!DNL Platform] das Ziel löscht.
+   >Je nach Server-Last kann es einige Minuten dauern, bis [!DNL Experience Platform] das Ziel löscht.

@@ -3,10 +3,10 @@ title: Authentifizierung und Zugriff auf die Privacy Service-API
 description: Erfahren Sie, wie Sie sich bei der Privacy Service-API authentifizieren und wie Sie Beispiel-API-Aufrufe in der Dokumentation interpretieren.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 18%
+source-wordcount: '852'
+ht-degree: 21%
 
 ---
 
@@ -16,9 +16,9 @@ Dieses Handbuch bietet eine Einführung in die wichtigsten Konzepte, die Sie ken
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt Grundkenntnisse des [Privacy Service ](../home.md) und dessen Verwaltung von Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen voraus.
+Dieses Handbuch setzt ein Grundverständnis von [Privacy Service](../home.md) voraus und erläutert, wie Sie damit Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen verwalten können.
 
-Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für den Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen hat. Privacy Service Weitere Informationen finden Sie im Handbuch [Verwalten ](../permissions.md) Benutzerberechtigungen“.
+Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen hat. Weitere Informationen finden Sie im Handbuch [Verwalten ](../permissions.md) Privacy Service-Berechtigungen“.
 
 ## Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-required-headers}
 
@@ -42,13 +42,13 @@ Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL Zum Proj
 
 #### Privacy Service-API auswählen {#select-privacy-service-api}
 
-Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Experience Cloud]** aus, um die Liste der verfügbaren APIs einzugrenzen, und wählen Sie dann die Karte für **[!UICONTROL Privacy Service-API]** aus, bevor Sie **[!UICONTROL Weiter]** auswählen.
+Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Experience Cloud]** aus, um die Liste der verfügbaren APIs einzugrenzen, und wählen Sie dann die Karte für **[!UICONTROL Privacy Service API]** aus, bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
 ![Die Privacy Service-API-Karte, die aus der Liste der verfügbaren APIs ausgewählt wird](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]**, um in einem separaten Browserfenster zur vollständigen [Privacy Service-API-Referenzdokumentation zu navigieren](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+>Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]**, um in einem separaten Browserfenster zur vollständigen [Privacy Service API-Referenzdokumentation zu navigieren](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Wählen Sie als Nächstes den Authentifizierungstyp aus, um Zugriffstoken zu generieren und auf die Privacy Service-API zuzugreifen.
 
@@ -64,13 +64,13 @@ Der letzte Konfigurationsschritt besteht darin, die Produktprofile auszuwählen,
 
 >[!NOTE]
 >
-Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu {0](../permissions.md)Privacy Service-Berechtigungen}.[
+Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu [Privacy Service](../permissions.md)Berechtigungen.
 
 Klicken Sie abschließend auf **[!UICONTROL Konfigurierte API speichern]**.
 
 ![Vor dem Speichern der Konfiguration wird ein einzelnes Produktprofil aus der Liste ausgewählt](../images/api/getting-started/select-product-profiles.png)
 
-Nachdem die API zum Projekt hinzugefügt wurde, zeigt die Seite **[!UICONTROL Privacy Service-API]** für das Projekt die folgenden Anmeldeinformationen an, die für alle Aufrufe an Privacy Service-APIs erforderlich sind:
+Nachdem die API zum Projekt hinzugefügt wurde, werden auf der Seite **[!UICONTROL Privacy Service-API]** für das Projekt die folgenden Anmeldeinformationen angezeigt, die für alle Aufrufe an Privacy Service-APIs erforderlich sind:
 
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
@@ -96,11 +96,11 @@ Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren d
 
 #### Token-Generierung automatisieren {#auto-token}
 
-Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwendung von Postman zum Authentifizieren und Testen von API](/help/landing/api-authentication.md#use-postman)Aufrufen im Experience Platform-API-Authentifizierungshandbuch.
+Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwendung von Postman zum Authentifizieren und Testen von API](/help/landing/api-authentication.md#use-postman)Aufrufen im Authentifizierungshandbuch zur Experience Platform-API.
 
 ## Lesen von Beispiel-API-Aufrufen {#read-sample-api-calls}
 
-Jedes Endpunkt-Handbuch enthält Beispiel-API-Aufrufe, um zu demonstrieren, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie [ Abschnitt zum Lesen von Beispiel](../../landing/api-guide.md#sample-api)API-Aufrufen in den Ersten Schritten für Platform-APIs.
+Jedes Endpunkt-Handbuch enthält Beispiel-API-Aufrufe, um zu demonstrieren, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) in den Ersten Schritten für Experience Platform-APIs.
 
 ## Nächste Schritte {#next-steps}
 

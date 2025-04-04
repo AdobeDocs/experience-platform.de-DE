@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem Details zu einer Zielveröffentlichungsanfrage über Adobe Experience Platform Destination SDK abgerufen werden.
 title: Abrufen einer Zielveröffentlichungsanfrage
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 100%
+source-wordcount: '837'
+ht-degree: 98%
 
 ---
 
@@ -183,4 +183,4 @@ Wenn Sie eine `DESTINATION_ID` im API-Aufruf übergeben haben, gibt die Antwort 
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.

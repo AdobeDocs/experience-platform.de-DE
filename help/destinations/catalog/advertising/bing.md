@@ -3,10 +3,10 @@ keywords: Werbung; Bing;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting- und zielgruppenorientierte digitale Kampagnen für das gesamte Microsoft Advertising-Netzwerk ausführen, einschließlich Display-Werbung, Suche und nativer Kampagnen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 52%
+source-wordcount: '688'
+ht-degree: 49%
 
 ---
 
@@ -20,7 +20,7 @@ Das [!DNL Microsoft Bing]-Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. 
 
 Um Profildaten an [!DNL Microsoft Bing] zu senden, müssen Sie zunächst eine Verbindung mit dem Ziel herstellen.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Als Marketing-Experte möchte ich in der Lage sein, Zielgruppen aus [!DNL Microsoft Advertising IDs] zu verwenden, um Benutzende per Display- oder Suchwerbung über [!DNL Microsoft Advertising] Kanäle hinweg anzusprechen.
 
@@ -40,7 +40,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -62,7 +62,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud-ID-Service in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Microsoft Bing] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
 
 Beim Konfigurieren des -Ziels müssen Sie die folgenden Informationen angeben:
 

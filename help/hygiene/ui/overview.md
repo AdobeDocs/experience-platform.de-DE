@@ -2,10 +2,10 @@
 title: Handbuch zur Datenlebenszyklus-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform Datenlebenszyklusaufgaben verwalten.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 53%
+source-wordcount: '227'
+ht-degree: 52%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 53%
 
 Der **[!UICONTROL Datenlebenszyklus]**-Arbeitsbereich in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen die Erstellung und Überwachung verschiedener Aufgaben zur Verwaltung des Datenlebenszyklus, einschließlich des Löschens von Datensätzen und der Planung von Datensatzgültigkeiten.
 
-In diesem Handbuch wird beschrieben, wie Sie Datenlebenszyklusaufgaben in der Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
+In diesem Handbuch wird beschrieben, wie Sie Datenlebenszyklusaufgaben in der Experience Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
 
 Um auf den Arbeitsbereich zuzugreifen, wählen Sie **Datenlebenszyklus** in der linken Navigationsleiste aus.
 
-![Der [!UICONTROL Datenlebenszyklus]-Arbeitsbereich in der Platform-Benutzeroberfläche, wobei [!UICONTROL Datenlebenszyklus] in der linken Navigation hervorgehoben ist.](../images/ui/overview/home.png)
+![Der [!UICONTROL Datenlebenszyklus]-Arbeitsbereich in der Experience Platform-Benutzeroberfläche mit [!UICONTROL Datenlebenszyklus] im linken Navigationsbereich.](../images/ui/overview/home.png)
 
 Hier können Sie bestehende Arbeitsaufträge einsehen und neue Datenlebenszyklusvorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
 

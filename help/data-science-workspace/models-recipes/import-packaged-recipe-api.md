@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Gepacktes Rezept importieren;Data Science Workspace;beliebte Themen;Rezepte;API;Sensei Machine Learning;Engine erstellen
+keywords: Experience Platform;Gepacktes Rezept importieren;Datenwissenschafts-Workspace;beliebte Themen;Rezepte;API;Sensei Machine Learning;Engine erstellen
 solution: Experience Platform
 title: Importieren eines gepackten Rezepts mithilfe der Sensei-API für maschinelles Lernen
 type: Tutorial
 description: In diesem Tutorial wird die Sensei-API für maschinelles Lernen verwendet, um in der Benutzeroberfläche eine Engine zu erstellen, die auch als Rezept bezeichnet wird.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 26%
@@ -41,7 +41,7 @@ Für dieses Tutorial ist eine gepackte Recipe File in Form einer Docker-URL erfo
 
 - `{DOCKER_URL}`: Eine URL-Adresse zu einem Docker-Image eines Intelligent Service.
 
-Für dieses Tutorial müssen Sie das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um [!DNL Platform] APIs erfolgreich aufrufen zu können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für dieses Tutorial müssen Sie das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um [!DNL Experience Platform] APIs erfolgreich aufrufen zu können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.
 - `{ORG_ID}`: Ihre Unternehmensanmeldeinformationen wurden in Ihrer eindeutigen Adobe Experience Platform-Integration gefunden.
@@ -176,7 +176,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine [!DNL Python]. Die `executionType`- und `type` ändern sich je nach der angegebenen POST.
+Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine [!DNL Python]. Die `executionType`- und `type`-Schlüssel ändern sich je nach dem bereitgestellten POST-Test.
 
 ```json
 {

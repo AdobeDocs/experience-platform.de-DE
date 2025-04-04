@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 98%
+source-wordcount: '719'
+ht-degree: 87%
 
 ---
 
@@ -49,13 +49,13 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Observability Insights {#observability}
 
-Mit Observability Insights können Sie Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.
+Mit Observability Insights können Sie Experience Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Warnhinweise | Sie können jetzt wichtige Warnhinweise zu Arbeitsabläufen abonnieren, die auf Platform ausgeführt werden. Nach dem Abonnieren bestimmter Warnhinweisregeln erhalten Sie in der Benutzeroberfläche Benachrichtigungen und E-Mails, wenn ein wichtiges Lebenszyklusereignis auftritt (z. B. bei erfolgreicher Datenerfassung) oder wenn Probleme auftreten, die Ihre Aufmerksamkeit erfordern (z. B. ein Fehler bei der Aufnahme oder ein länger als erwartet dauernder Segmentauftrag). Weiterführende Informationen finden Sie in der [Übersicht zu Warnhinweisen](../../observability/alerts/overview.md). |
+| Warnhinweise | Sie können jetzt wichtige Warnhinweise zu Workflows abonnieren, die auf Experience Platform ausgeführt werden. Nach dem Abonnieren bestimmter Warnhinweisregeln erhalten Sie in der Benutzeroberfläche Benachrichtigungen und E-Mails, wenn ein wichtiges Lebenszyklusereignis auftritt (z. B. bei erfolgreicher Datenerfassung) oder wenn Probleme auftreten, die Ihre Aufmerksamkeit erfordern (z. B. ein Fehler bei der Aufnahme oder ein länger als erwartet dauernder Segmentauftrag). Weiterführende Informationen finden Sie in der [Übersicht zu Warnhinweisen](../../observability/alerts/overview.md). |
 
 Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Observability Insights](../../observability/home.md).
 
@@ -71,12 +71,12 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Quell-Connector für den Upload lokaler Dateien | Die Kategorie der Dateiaufnahme wurde in ein lokales System umbenannt, sodass Sie lokale Dateien über den Connector zum Upload lokaler Dateien direkt in Platform übertragen können. Die über diesen Connector erfassten Daten können über das Monitoring-Dashboard überwacht werden. Weitere Informationen finden Sie in der [Übersicht über die Quelle für den Upload lokaler Dateien](../../sources/connectors/local-system/local-file-upload.md). |
+| Quell-Connector für den Upload lokaler Dateien | Die Dateiaufnahme-Kategorie wurde in ein lokales System umbenannt, sodass Sie lokale Dateien über den lokalen Datei-Upload-Connector direkt in Experience Platform importieren können. Die über diesen Connector erfassten Daten können über das Monitoring-Dashboard überwacht werden. Weitere Informationen finden Sie in der [Übersicht über die Quelle für den Upload lokaler Dateien](../../sources/connectors/local-system/local-file-upload.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

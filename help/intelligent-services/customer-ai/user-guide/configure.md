@@ -5,9 +5,9 @@ feature: Customer AI
 title: Konfigurieren einer Kunden-KI-Instanz
 description: KI-/ML-Services bieten Kunden-KI als benutzerfreundlichen Adobe Sensei-Service, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ KI-/ML-Services bieten Kunden-KI als benutzerfreundlichen Adobe Sensei-Service, 
 
 ## Instanz erstellen {#set-up-your-instance}
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Services]** in der linken Navigationsleiste aus. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Kunden-KI **[!UICONTROL Öffnen]** aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Services]** im linken Navigationsbereich aus. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Kunden-KI **[!UICONTROL Öffnen]** aus.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Be
 
 - **[!UICONTROL Bearbeiten]**: Wenn Sie **[!UICONTROL Bearbeiten]** auswählen, können Sie eine vorhandene Service-Instanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
 - **[!UICONTROL Klonen]**: Wenn Sie **[!UICONTROL Klonen]** auswählen, wird die aktuell ausgewählte Dienstinstanz-Einrichtung kopiert. Anschließend können Sie den Workflow ändern, um kleinere Anpassungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
-- **[!UICONTROL Löschen]**: Sie können eine Service-Instanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Scores, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
+- **[!UICONTROL Löschen]**: Sie können eine Service-Instanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Experience Platform gelöscht. Scores, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
 - **[!UICONTROL Datenquelle]**: Ein Link zu dem von dieser Instanz verwendeten Datensatz. Wenn mehrere Datensätze verwendet werden, wird durch Auswahl des Hyperlink-Texts das Popover für die Datensatzvorschau geöffnet.
 - **[!UICONTROL Details des letzten Durchgangs]**: Wird nur angezeigt, wenn ein Durchgang fehlschlägt. Hier werden Informationen darüber angezeigt, warum der Durchlauf fehlgeschlagen ist, z. B. Fehlercodes.
 - **[!UICONTROL Score-Definition]**: Ein kurzer Überblick über das Ziel, das Sie für diese Instanz konfiguriert haben.

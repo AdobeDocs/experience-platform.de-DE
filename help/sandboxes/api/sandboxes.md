@@ -5,16 +5,16 @@ title: Sandbox-Management-API - Endpunkt
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 45%
+source-wordcount: '1477'
+ht-degree: 44%
 
 ---
 
 # Sandbox-Management-Endpunkt
 
-Sandboxes in Adobe Experience Platform bieten isolierte Entwicklungsumgebungen, mit denen Sie Funktionen testen, Experimente durchführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionsumgebung zu beeinträchtigen. Mit dem `/sandboxes`-Endpunkt in der [!DNL Sandbox]-API können Sie Sandboxes in Platform programmgesteuert verwalten.
+Sandboxes in Adobe Experience Platform bieten isolierte Entwicklungsumgebungen, mit denen Sie Funktionen testen, Experimente durchführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionsumgebung zu beeinträchtigen. Mit dem `/sandboxes`-Endpunkt in der [!DNL Sandbox]-API können Sie Sandboxes in Experience Platform programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -228,7 +228,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Die Kennung, die in zukünftigen Anfragen für den Zugriff auf die Sandbox verwendet wird. Dieser Wert muss eindeutig sein; Best Practice ist, ihn so beschreibend wie möglich zu gestalten. Dieser Wert darf keine Leerzeichen oder Sonderzeichen enthalten. |
-| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Platform-Benutzeroberfläche verwendet wird. |
+| `title` | Ein für Menschen lesbarer Name, der zu Anzeigezwecken in der Benutzeroberfläche von Experience Platform verwendet wird. |
 | `type` | Der Typ der zu erstellenden Sandbox. Für eine Nicht-Produktions-Sandbox muss dieser Wert `development` werden. |
 
 **Antwort**
@@ -281,7 +281,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Die Kennung, die in zukünftigen Anfragen für den Zugriff auf die Sandbox verwendet wird. Dieser Wert muss eindeutig sein; Best Practice ist, ihn so beschreibend wie möglich zu gestalten. Dieser Wert darf keine Leerzeichen oder Sonderzeichen enthalten. |
-| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Platform-Benutzeroberfläche verwendet wird. |
+| `title` | Ein für Menschen lesbarer Name, der zu Anzeigezwecken in der Benutzeroberfläche von Experience Platform verwendet wird. |
 | `type` | Der Typ der zu erstellenden Sandbox. Für eine Produktions-Sandbox muss dieser Wert `production` werden. |
 
 **Antwort**
@@ -304,7 +304,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück un
 
 ## Aktualisieren einer Sandbox {#put}
 
-Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH-Anfrage stellen, die die `name` der Sandbox im Anfragepfad und die Eigenschaft enthält, die in der Anfrage-Payload aktualisiert werden soll.
+Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH-Anfrage stellen, die die `name` der Sandbox im Anfragepfad und die zu aktualisierende Eigenschaft in der Anfrage-Payload enthält.
 
 >[!NOTE]
 >

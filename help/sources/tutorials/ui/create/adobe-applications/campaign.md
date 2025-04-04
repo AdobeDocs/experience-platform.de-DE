@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Kampagne;Kampagnenverwaltete Services
-title: Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Adobe Campaign Managed Cloud Services verbinden.
+title: Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
+description: Erfahren Sie, wie Sie Adobe Experience Platform über die Experience Platform-Benutzeroberfläche mit Adobe Campaign Managed Cloud Services verbinden.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 43%
+source-wordcount: '1246'
+ht-degree: 37%
 
 ---
 
-# Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
+# Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
 
 In diesem Tutorial erfahren Sie, wie Sie eine Quellverbindung erstellen, um Ihre Adobe Campaign Managed Cloud Services-Daten an Adobe Experience Platform zu übertragen.
 
@@ -18,15 +18,15 @@ In diesem Tutorial erfahren Sie, wie Sie eine Quellverbindung erstellen, um Ihre
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-## Adobe Campaign Managed Cloud Services mit Platform verbinden
+## Adobe Campaign Managed Cloud Services mit Experience Platform verbinden
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
@@ -60,7 +60,7 @@ Der Schritt [!UICONTROL Daten auswählen] wird angezeigt und bietet Ihnen eine S
 | --- | --- |
 | Adobe Campaign-Instanz | Der Name der von Ihnen verwendeten Adobe Campaign-Umgebungsinstanz. |
 | Zielgruppenzuordnung | Die technischen Objekte, die von Campaign zum Versand von Nachrichten verwendet werden und alle technischen Einstellungen enthalten, die für den Versand erforderlich sind. |
-| Schemaname | Der Name der Schemaentität, die Sie an Platform übermitteln. Zu den Optionen gehören Versandlog und Trackinglog. |
+| Schemaname | Der Name der Schemaentität, die Sie an Experience Platform senden. Zu den Optionen gehören Versandlog und Trackinglog. |
 
 ![Eine Benutzeroberfläche, auf der Sie Ihre Adobe Campaign-Instanz, das Zielgruppen-Mapping und den Schemanamen konfigurieren können.](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -96,7 +96,7 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Auf dieser Seite finden Sie auch eine Schnittstelle zum Aktualisieren der Metada
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Ihre Versandlogs und Trackinglog-Daten von Campaign v8 in Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Ihre Versandlogs und Trackinglog-Daten von Campaign v8 in Experience Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)

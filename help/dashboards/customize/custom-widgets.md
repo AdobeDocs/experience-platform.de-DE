@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Erstellen benutzerdefinierter Widgets für Dashboards
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen benutzerdefinierter Widgets zur Verwendung in Adobe Experience Platform-Dashboards.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 90%
+source-wordcount: '979'
+ht-degree: 79%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 90%
 
 In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen und damit interagieren. Sie können bestimmte Dashboards auch aktualisieren, indem Sie Ihrer Dashboard-Ansicht neue Widgets hinzufügen. Zusätzlich zu den von Adobe bereitgestellten Standard-Widgets können Sie auch benutzerdefinierte Widgets erstellen und diese in Ihrem gesamten Unternehmen freigeben.
 
-Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen und Hinzufügen benutzerdefinierter Widgets zu den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
+Dieses Handbuch enthält schrittweise Anweisungen zum Erstellen und Hinzufügen benutzerdefinierter Widgets zu den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Experience Platform-Benutzeroberfläche.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Um ausgeblendete Widgets anzuzeigen, wählen Sie **[!UICONTROL Ausgeblendete Wid
 
 >[!WARNING]
 >
->Durch das Ausblenden eines Widgets in der Bibliothek wird das Widget nicht aus den Dashboards einzelner Benutzer entfernt. Sollte ein Widget nicht mehr in Ihrer Organisation verwendet werden, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da sie das Widget aus ihren Dashboards entfernen müssen.
+>Durch das Ausblenden eines Widgets in der Bibliothek wird das Widget nicht aus den Dashboards einzelner Benutzer entfernt. Sollte ein Widget nicht mehr in Ihrer Organisation verwendet werden, stellen Sie sicher, dass Sie dies allen Experience Platform-Benutzern direkt mitteilen, da sie das Widget aus ihren Dashboards entfernen müssen.
 
 ![Die Registerkarte Benutzerdefiniert des Arbeitsbereichs Widget-Bibliothek mit den Widget-Dropdown-Menüoptionen und der hervorgehobenen Option „Ausgeblendete Widgets anzeigen“.](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die B
 
 >[!WARNING]
 >
->Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget aus der Widget-Bibliothek auswählen und hinzufügen müssen.
+>Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Experience Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget aus der Widget-Bibliothek auswählen und hinzufügen müssen.
 
 ![Das Dialogfeld Widget bearbeiten.](../images/customization/edit-widget.png)
 

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API eine Test-Nachrichtenumwandlungsvorlage für Ihr Ziel generieren.
 title: Erstellen einer Beispiel-Nachrichtenumwandlungsvorlage
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 100%
+source-wordcount: '377'
+ht-degree: 96%
 
 ---
 
@@ -132,7 +132,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Ziel-Server-Vorlage mit [konfigurier
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

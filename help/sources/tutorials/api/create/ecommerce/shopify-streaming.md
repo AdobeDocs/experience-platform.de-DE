@@ -3,10 +3,10 @@ title: Erstellen einer Streaming-Source-Verbindung und eines Datenflusses für S
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Quellverbindung und einen Datenfluss für Shopify-Daten erstellen.
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 51%
+source-wordcount: '1432'
+ht-degree: 42%
 
 ---
 
@@ -22,20 +22,20 @@ Das folgende Tutorial enthält Schritte zum Erstellen einer Streaming-Quellverbi
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-## Streamen [!DNL Shopify] Daten an Platform mithilfe der Flow Service-API
+## Streamen von [!DNL Shopify] an Experience Platform mithilfe der Flow Service-API
 
-Im Folgenden werden die Schritte beschrieben, die Sie durchführen müssen, um eine Quellverbindung und einen Datenfluss zu erstellen und Ihre [!DNL Shopify] an Platform zu streamen.
+Im Folgenden werden die Schritte beschrieben, die Sie durchführen müssen, um eine Quellverbindung und einen Datenfluss zu erstellen und Ihre [!DNL Shopify] an Experience Platform zu streamen.
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Erstellen Sie eine Quellverbindung, indem Sie eine Quellanfrage an die [!DNL Flow Service]-API richten und dabei die Verbindungsspezifikations-ID Ihrer POST, Details wie Name und Beschreibung und das Format Ihrer Daten angeben.
+Erstellen Sie eine Quellverbindung, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API stellen und dabei die Verbindungsspezifikations-ID Ihrer Quelle, Details wie Name und Beschreibung und das Format Ihrer Daten angeben.
 
 **API-Format**
 
@@ -89,7 +89,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -152,7 +152,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die dem Data Lake entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der [!DNL Shopify]-Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der [!DNL Shopify], die Sie an Experience Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -232,7 +232,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL Shopify] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Shopify] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -288,7 +288,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -671,4 +671,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

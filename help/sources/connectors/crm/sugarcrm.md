@@ -3,18 +3,18 @@ title: SugarCRM Source - Übersicht
 description: Erfahren Sie, wie Sie SugarCRM mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 44%
+source-wordcount: '363'
+ht-degree: 28%
 
 ---
 
 # [!DNL SugarCRM]
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus CRM-Anwendungen von Drittanbietern. Unterstützung für CRM-Anbieter umfasst [!DNL SugarCRM].
+Experience Platform unterstützt die Aufnahme von Daten aus einem CRM-Programm eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL SugarCRM].
 
 [[!DNL SugarCRM]](https://www.sugarcrm.com/) ist ein CRM-System (Customer Relationship Management). Zu den Funktionen von [!DNL SugarCRM] gehören Sales-Force-Automatisierung, Marketing-Kampagnen, Kunden-Support, Zusammenarbeit, mobiles CRM, Social CRM und Reporting.
 
@@ -38,15 +38,15 @@ Bevor Sie eine [!DNL SugarCRM]-Quellverbindung erstellen können, müssen Sie zu
 
 * Ein eindeutiger API-Benutzername und ein eindeutiges Konto, getrennt von jedem Benutzerkonto, das mit dem Marketing- oder Verkaufsprozess verknüpft ist. Diese eindeutige Kombination aus Benutzername und Konto muss über API-Zugriffsberechtigungen verfügen. Weitere Informationen zum Einrichten eines Kontos finden Sie in der [[!DNL SugarMarket RESTFUL API]](https://market.apidocs.sugarcrm.com/#intro).
 
-## Verbinden von [!DNL SugarCRM Accounts & Contacts] mit Platform
+## Verbinden von [!DNL SugarCRM Accounts & Contacts] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um [!DNL SugarCRM Accounts & Contacts] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
-* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  über die Benutzeroberfläche in Platform zu ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
 * [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 
-## Verbinden von [!DNL SugarCRM Events] mit Platform
+## Verbinden von [!DNL SugarCRM Events] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um [!DNL SugarCRM Events] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/ui/create/crm/sugarcrm-events.md).
-* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  über die Benutzeroberfläche in Platform zu ](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  mithilfe von APIs in Experience Platform zu ](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Erstellen eines Datenflusses für eine CRM-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)

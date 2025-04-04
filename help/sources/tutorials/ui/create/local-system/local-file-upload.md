@@ -3,31 +3,31 @@ keywords: Experience Platform;Startseite;beliebte Themen;lokales System;Datei-Up
 solution: Experience Platform
 title: Erstellen eines Source-Connectors für den Upload lokaler Dateien über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien an Platform zu übertragen
+description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien an Experience Platform zu übertragen
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 69%
+source-wordcount: '777'
+ht-degree: 68%
 
 ---
 
 # Erstellen eines Quell-Connectors für den Upload lokaler Dateien über die Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen eines Quell-Connectors für den Upload lokaler Dateien beschrieben, um lokale Dateien über die Benutzeroberfläche in Platform aufzunehmen.
+In diesem Tutorial werden Schritte zum Erstellen eines Quell-Connectors für den Upload lokaler Dateien beschrieben, um lokale Dateien über die Benutzeroberfläche in Experience Platform aufzunehmen.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Customer-Experience-Daten von Platform strukturiert werden.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-## Hochladen lokaler Dateien in Platform
+## Hochladen lokaler Dateien in Experience Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, für die Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, für die Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -91,4 +91,4 @@ Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten, die
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in Platform aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).
+In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in Experience Platform aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Experience Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).

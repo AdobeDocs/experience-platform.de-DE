@@ -3,9 +3,9 @@ keywords: Luftschiffattribute;Luftschiffziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting in Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1153'
 ht-degree: 28%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 28%
 
 ## Überblick {#overview}
 
-[!DNL Airship] ist die führende Plattform für Kundeninteraktion, mit der Sie Ihren Benutzern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitstellen können.
+[!DNL Airship] ist die führende Experience Platform für Kundeninteraktion und hilft Ihnen, Ihren Anwendern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitzustellen.
 
 Durch diese Integration werden Adobe-Profildaten zum Targeting oder [ als ](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
 
@@ -67,7 +67,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Attribute aktivieren {#enable-attributes}
 
-Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] Attributen und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach miteinander in Platform zugeordnet werden.
+Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach in Experience Platform zugeordnet werden.
 
 [!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [ finden Sie unter „Einrichten und Verwalten ](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
 
@@ -91,7 +91,7 @@ Nutzen Sie die in Adobe Experience Platform erfassten Profildaten für die Perso
 
 ### Anwendungsfall #2
 
-Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship] Profile weiter anzureichern und mit SDK oder [!DNL Airship] Prognosedaten zu kombinieren. Ein Einzelhändler kann beispielsweise eine Zielgruppe mit Treuestatus- und Standortdaten (Attribute aus Platform) erstellen und Daten [!DNL Airship], die voraussichtlich abwandern werden, um hochgradig zielgerichtete Nachrichten an Benutzer mit dem Treuestatus „Gold“ zu senden, die in Las Vegas (NV) leben und eine hohe Abwanderungswahrscheinlichkeit haben.
+Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship] Profile weiter anzureichern und mit SDK oder [!DNL Airship] Prognosedaten zu kombinieren. Beispielsweise kann eine retailer eine Zielgruppe mit Treuestatus- und Standortdaten (Attribute aus Experience Platform) erstellen und Daten abwandern, [!DNL Airship] hochgradig zielgerichtete Nachrichten an Benutzende mit dem Treuestatus Gold zu senden, die in Las Vegas (NV) leben und häufig abwandern.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

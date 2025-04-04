@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL mit Query Service verbinden
 description: PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer zur Verfügung steht. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 11%
@@ -19,7 +19,7 @@ PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von [!DNL Pos
 >
 > In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL PSQL] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL PSQL] finden Sie in der [offiziellen [!DNL PSQL] Dokumentation](https://www.postgresql.org/docs/current/app-psql.html).
 
-Nachdem Sie PSQL auf Ihrem Computer installiert haben, können Sie PSQL mit dem Abfrage-Service verbinden. Kehren Sie zur [!DNL Platform]-Benutzeroberfläche zurück und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]** aus.
+Nachdem Sie PSQL auf Ihrem Computer installiert haben, können Sie PSQL mit dem Abfrage-Service verbinden. Kehren Sie zur [!DNL Experience Platform]-Benutzeroberfläche zurück und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]** aus.
 
 Wählen Sie im Abschnitt **[!UICONTROL PSQL]** Befehl das Symbol **[!UICONTROL In Zwischenablage kopieren]** (![Kopiersymbol](/help/images/icons/copy.png)) aus, um die Befehlszeichenfolge zu kopieren.
 

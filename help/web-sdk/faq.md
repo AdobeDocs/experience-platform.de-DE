@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Derzeit müssen Sie basierend auf jeder einzelnen Lösung verschiedene JavaScrip
 * Keine dieser Bibliotheken wurde für die Zusammenarbeit errichtet.
 * In lösungsübergreifenden und Adobe Experience Platform-Anwendungsfällen müssen diese unterschiedlichen Bibliotheken voneinander abhängig sein, was zu Reibungen bei der Bereitstellung führt.
 
-Obwohl Tags in Platform die Bereitstellung und Verwaltung dieser Bibliotheken so einfach wie möglich machen, bestehen weiterhin Probleme mit:
+Obwohl Tags in Experience Platform die Bereitstellung und Verwaltung dieser Bibliotheken so einfach wie möglich machen, bestehen weiterhin Probleme mit:
 
 * Bibliotheksgröße (zu viel Adobe-Code auf einer Seite)
 * Leistung (Websites benötigen zu lange, um geladen zu werden)
@@ -124,7 +124,7 @@ Anders ausgedrückt: Wenn Sie sich entscheiden, Adobe Experience Platform Web SD
 
 ## Kann ich die ECIDs migrieren, wenn ich mit der Verwendung von Web SDK beginne, damit meine Website-Besucher nicht als neue Besucher angezeigt werden?
 
-Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der [Dokumentation zu Platform Web SDK Identity](/help/web-sdk/identity/overview.md#id-migration).
+Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity ](/help/web-sdk/identity/overview.md#id-migration) der Anleitung zur ID-Migration.[
 
 ## Worin unterscheidet sich Web SDK von Tags?
 

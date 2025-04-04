@@ -3,10 +3,10 @@ keywords: Experience Platform;Abfrage-Service;Abfrage-Service;verschachtelte Dat
 title: Reduzieren verschachtelter Datenstrukturen für die Verwendung mit BI-Tools
 description: In diesem Dokument wird erläutert, wie Sie XDM-Schemata für alle Tabellen und Ansichten während einer Sitzung reduzieren, wenn Sie BI-Tools von Drittanbieterfirmen mit dem Abfrage-Service verwenden.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 100%
+source-wordcount: '858'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Die Nutzung der `FLATTEN`-Einstellung setzt ein Praxisverständnis der folgenden
 
    * [Erstellen eines Ad-hoc-Schemas](../../xdm/tutorials/ad-hoc.md): Ein XDM-Schema mit Feldern, die gemäß ihrem Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen sind, wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schemata werden in verschiedenen Datenaufnahme-Workflows in Experience Platform und zur Erstellung bestimmter Quellverbindungen verwendet.
 
-* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 * [Verschachtelte Datenstrukturen](./nested-data-structures.md): Dieses Dokument enthält Beispiele zum Erstellen, Verarbeiten oder Transformieren von Datensätzen mit komplexen Datentypen, einschließlich verschachtelter Datenstrukturen.
 

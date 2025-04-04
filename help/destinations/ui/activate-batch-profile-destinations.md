@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4452'
-ht-degree: 51%
+source-wordcount: '4454'
+ht-degree: 50%
 
 ---
 
@@ -64,7 +64,7 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 * **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience). Die Auswahl von Zielgruppen aus **[!UICONTROL benutzerdefinierten Uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience). Die Auswahl von Zielgruppen aus **[!UICONTROL benutzerdefinierten Uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export ei
 
 2. Verwenden Sie den Umschalter **[!UICONTROL Zeit]**, um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder zu einem bestimmten, geplanten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
 
-   Verwenden Sie die Option **[!UICONTROL Nach der Segmentauswertung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Diese Option stellt sicher, dass bei der Ausführung des Aktivierungsvorgangs die aktuellsten Profile an Ihr Ziel exportiert werden. Abhängig von Ihren Aktionen kann dies dazu führen, dass eine Zielgruppe mehrmals am Tag exportiert wird.
+   Verwenden Sie die Option **[!UICONTROL Nach der Segmentevaluierung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Experience Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Diese Option stellt sicher, dass bei der Ausführung des Aktivierungsvorgangs die aktuellsten Profile an Ihr Ziel exportiert werden. Abhängig von Ihren Aktionen kann dies dazu führen, dass eine Zielgruppe mehrmals am Tag exportiert wird.
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 
 Ein obligatorisches Attribut ist ein vom Benutzer aktiviertes Kontrollkästchen, mit dem sichergestellt wird, dass alle Profildatensätze das ausgewählte Attribut enthalten. Beispiel: alle exportierten Profile enthalten eine E-Mail-Adresse.
 
-Sie können Attribute als obligatorisch markieren, um sicherzustellen, dass [!DNL Platform] nur die Profile exportiert, die das spezifische Attribut enthalten. Dies kann daher als eine zusätzliche Form des Filterns verwendet werden. Das Kennzeichnen eines Attributs als obligatorisch ist **nicht** erforderlich.
+Sie können Attribute als obligatorisch markieren, um sicherzustellen, dass [!DNL Experience Platform] nur die Profile exportiert, die das spezifische Attribut enthalten. Dies kann daher als eine zusätzliche Form des Filterns verwendet werden. Das Kennzeichnen eines Attributs als obligatorisch ist **nicht** erforderlich.
 
 Wenn kein obligatorisches Attribut ausgewählt wird, werden alle qualifizierten Profile unabhängig von ihren Attributen exportiert.
 
@@ -310,7 +310,7 @@ Ein Deduplizierungsschlüssel ist ein benutzerdefinierter Primärschlüssel, der
 
 Deduplizierungsschlüssel verhindern die Möglichkeit, mehrere Datensätze desselben Profils in einer Exportdatei zu haben.
 
-Es gibt drei Möglichkeiten, Deduplizierungsschlüssel in [!DNL Platform] zu verwenden:
+Es gibt drei Möglichkeiten, Deduplizierungsschlüssel in [!DNL Experience Platform] zu verwenden:
 
 * Verwenden eines einzelnen Identitäts-Namespace als [!UICONTROL Deduplizierungsschlüssel]
 * Verwenden eines einzelnen Profilattributs aus einem [!DNL XDM]-Profil als [!UICONTROL Deduplizierungsschlüssel]

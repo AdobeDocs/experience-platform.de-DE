@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Quellspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 43%
+source-wordcount: '2090'
+ht-degree: 38%
 
 ---
 
@@ -233,21 +233,21 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | `sourceSpec.attributes.uiAttributes` | Zeigt Informationen zu der UI-spezifischen Quelle an. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Ein boolesches Attribut, das anzeigt, ob die Quelle mehr Kunden-Feedback benötigt, das ihre Funktionalität erweitert. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definiert die Kategorie der Quelle. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Definiert das Symbol, das für das Rendering der Quelle in der Platform-Benutzeroberfläche verwendet wird. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Definiert das Symbol, das zum Rendern der Quelle in der Experience Platform-Benutzeroberfläche verwendet wird. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Zeigt eine kurze Beschreibung der Quelle an. |
-| `sourceSpec.attributes.uiAttributes.label` | Zeigt den Titel an, der für das Rendering der Quelle in der Platform-Benutzeroberfläche verwendet werden soll. |
+| `sourceSpec.attributes.uiAttributes.label` | Zeigt den Titel an, der für das Rendering der Quelle in der Experience Platform-Benutzeroberfläche verwendet werden soll. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Enthält Informationen zum URL-Ressourcenpfad, zur Methode und zu den unterstützten Abfrageparametern. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Definiert den Ressourcenpfad, aus dem die Daten abgerufen werden sollen. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definiert die HTTP-Methode, die verwendet werden soll, um die Anfrage zum Abrufen von Daten an die Ressource zu senden. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definiert die unterstützten Abfrageparameter, mit denen die Quell-URL angehängt werden kann, wenn eine Anfrage zum Abrufen von Daten gesendet wird. **Hinweis**: Jeder vom Benutzer bereitgestellte Parameterwert muss als Platzhalter formatiert sein. Beispiel: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wird wie folgt an die Quell-URL angehängt: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definiert Kopfzeilen, die beim Abrufen von Daten in der HTTP-Anfrage an die Quell-URL bereitgestellt werden müssen. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Dieses Attribut kann so konfiguriert werden, dass der HTTP-Text über eine POST-Anfrage gesendet wird. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und muss auf ein bestimmtes Array verweisen. | Im Abschnitt [Zusätzliche Ressourcen](#content-path) finden Sie ein Beispiel für die in einem Inhaltspfad enthaltene Ressource. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Pfad, der auf die Sammlungsdatensätze verweist, die in Platform erfasst werden sollen. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Experience Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und muss auf ein bestimmtes Array verweisen. | Im Abschnitt [Zusätzliche Ressourcen](#content-path) finden Sie ein Beispiel für die in einem Inhaltspfad enthaltene Ressource. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Der Pfad, der auf die in Experience Platform aufzunehmenden Sammlungsdatensätze verweist. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Diese Eigenschaft ermöglicht es, in der im Inhaltspfad identifizierten Ressource bestimmte Elemente zu identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Diese Eigenschaft ermöglicht es, den Wert des Attributnamens, den Sie in `contentPath` angegeben haben, zu überschreiben. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Diese Eigenschaft ermöglicht es, zwei Arrays zu vereinfachen und Ressourcendaten in die Platform-Ressource zu überführen. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Mit dieser Eigenschaft können Sie zwei Arrays reduzieren und Ressourcendaten in Experience Platform-Ressourcen umwandeln. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Pfad, der auf die Sammlungsdatensätze verweist, die Sie reduzieren möchten. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Diese Eigenschaft ermöglicht es, in der im Entitätspfad identifizierten Ressource bestimmte Elemente zu identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
@@ -509,7 +509,7 @@ Mit dem `PAGE` Paginierungstyp können Sie die Rückgabedaten nach der Anzahl de
 
 >[!TAB Kein]
 
-Der `NONE` Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Quellen, die den Paginierungstyp von `NONE` verwenden, geben einfach alle abrufbaren Datensätze zurück, wenn eine GET-Anfrage gestellt wird.
+Der `NONE` Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Quellen, die den Paginierungstyp von `NONE` verwenden, geben einfach alle abrufbaren Datensätze zurück, wenn eine GET-Anfrage erfolgt.
 
 ```json
 "paginationParams": {
@@ -659,4 +659,4 @@ Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes Schema, das Si
 
 ## Nächste Schritte
 
-Wenn Ihre Quellspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Erkundungsspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument [Konfigurieren von Erkundungsspezifikationen](./explorespec.md) .
+Wenn Ihre Quellspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Erkundungsspezifikationen für die Quelle fortfahren, die Sie in Experience Platform integrieren möchten. Weitere Informationen finden Sie im Dokument [Konfigurieren von Erkundungsspezifikationen](./explorespec.md) .

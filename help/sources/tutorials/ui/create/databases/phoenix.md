@@ -1,21 +1,21 @@
 ---
-title: Verbinden Sie Ihr Phoenix-Konto über die Experience Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie über die Benutzeroberfläche eine Verbindung mit Ihrem Phoenix-Konto herstellen und Daten aus Ihrer Phoenix-Datenbank auf Experience Platform übertragen.
+title: Verbinden Ihres Phoenix-Kontos über die Benutzeroberfläche von Experience Platform
+description: Erfahren Sie, wie Sie über die Benutzeroberfläche eine Verbindung mit Ihrem Phoenix-Konto herstellen und Daten aus Ihrer Phoenix-Datenbank in Experience Platform übertragen.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 21%
 
 ---
 
-# Verbinden Ihres [!DNL Phoenix]-Kontos mit dem Experience Platform über die Benutzeroberfläche
+# Verbinden Ihres [!DNL Phoenix]-Kontos mit Experience Platform über die Benutzeroberfläche
 
 >[!WARNING]
 >
 >Die [!DNL Phoenix] wird Ende Juni 2025 eingestellt.
 
-In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Phoenix]-Konto verbinden und Daten aus Ihrer [!DNL Phoenix]-Datenbank auf Experience Platform übertragen.
+In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Phoenix]-Konto verbinden und Daten aus Ihrer [!DNL Phoenix]-Datenbank in Experience Platform übertragen.
 
 ## Erste Schritte
 
@@ -30,7 +30,7 @@ Wenn Sie bereits über ein authentifiziertes [!DNL Phoenix]-Konto verfügen, kö
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Phoenix]-Konto auf Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL Phoenix]-Konto in Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -43,11 +43,11 @@ Um auf Ihr [!DNL Phoenix]-Konto auf Experience Platform zugreifen zu können, m�
 
 Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL Phoenix] Dokument](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Phoenix]-Konto mit Experience Platform zu verbinden.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Phoenix]-Konto mit Experience Platform zu verbinden.
 
 ## Verbinden Ihres [!DNL Phoenix]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich „Quellen“ zuzugreifen. Der *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ aus, um auf den Arbeitsbereich Quellen zuzugreifen. Der *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie eine bestimmte Quelle mithilfe der Suchoption finden.
 
@@ -83,4 +83,4 @@ Um ein neues Konto zu verwenden, wählen Sie [!UICONTROL Neues Konto] und geben 
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Phoenix]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten auf Experience Platform zu übertragen](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Phoenix]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/databases.md).

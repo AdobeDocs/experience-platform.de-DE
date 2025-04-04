@@ -6,9 +6,9 @@ description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 850a4ae82fda22a761a28ac9059d7dea57c9662a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2508'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 # Authentifizieren und Zugreifen auf Experience Platform-APIs
 
-Dieses Dokument enthält eine schrittweise Anleitung zum Erhalten von Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, um Aufrufe an Experience Platform-APIs durchzuführen. Am Ende dieses Tutorials haben Sie die folgenden Anmeldeinformationen generiert oder gesammelt, die als Kopfzeilen in allen Platform-API-Aufrufen erforderlich sind:
+Dieses Dokument enthält eine Schritt-für-Schritt-Anleitung, wie Sie Zugriff auf ein Adobe Experience Platform-Entwicklerkonto erhalten, um Aufrufe an Experience Platform-APIs durchzuführen. Am Ende dieses Tutorials haben Sie die folgenden Anmeldeinformationen generiert oder gesammelt, die als Kopfzeilen in allen Experience Platform-API-Aufrufen erforderlich sind:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -24,11 +24,11 @@ Dieses Dokument enthält eine schrittweise Anleitung zum Erhalten von Zugriff au
 
 >[!TIP]
 >
->Zusätzlich zu den drei oben genannten Anmeldeinformationen benötigen viele Platform-APIs auch eine gültige `{SANDBOX_NAME}` als Kopfzeile. Weitere Informationen zu Sandboxes und der Dokumentation [Sandbox-Management-Endpunkt](../sandboxes/home.md) finden Sie in der [Sandbox-Übersicht](/help/sandboxes/api/sandboxes.md#list) mit Informationen zur Auflistung der für Ihre Organisation verfügbaren Sandboxes.
+>Zusätzlich zu den drei oben genannten Anmeldeinformationen benötigen viele Experience Platform-APIs auch eine gültige `{SANDBOX_NAME}` als Kopfzeile. Weitere Informationen zu Sandboxes und der Dokumentation [Sandbox-Management-Endpunkt](../sandboxes/home.md) finden Sie in der [Sandbox-Übersicht](/help/sandboxes/api/sandboxes.md#list) mit Informationen zur Auflistung der für Ihre Organisation verfügbaren Sandboxes.
 
 Um die Sicherheit Ihrer Programme und Benutzer zu gewährleisten, müssen alle Anfragen an Experience Platform-APIs mithilfe von Standards wie OAuth authentifiziert und autorisiert werden.
 
-In diesem Tutorial wird beschrieben, wie Sie die erforderlichen Anmeldeinformationen sammeln, um Platform-API-Aufrufe zu authentifizieren, wie im folgenden Flussdiagramm beschrieben. Die meisten erforderlichen Anmeldeinformationen können bei der einmaligen Ersteinrichtung erfasst werden. Das Zugriffs-Token muss jedoch alle 24 Stunden aktualisiert werden.
+In diesem Tutorial wird beschrieben, wie Sie die erforderlichen Anmeldeinformationen sammeln, um Experience Platform-API-Aufrufe zu authentifizieren, wie im folgenden Flussdiagramm beschrieben. Die meisten erforderlichen Anmeldeinformationen können bei der einmaligen Ersteinrichtung erfasst werden. Das Zugriffs-Token muss jedoch alle 24 Stunden aktualisiert werden.
 
 ![Die Anforderungen an den Authentifizierungsfluss für die einmalige Ersteinrichtung und jede nachfolgende Sitzung.](./images/api-authentication/authentication-flowchart.png)
 
@@ -37,8 +37,8 @@ In diesem Tutorial wird beschrieben, wie Sie die erforderlichen Anmeldeinformati
 Um Experience Platform-APIs erfolgreich aufrufen zu können, benötigen Sie Folgendes:
 
 * Ein Unternehmen mit Zugriff auf Adobe Experience Platform.
-* Ein Admin Console-Administrator, der Sie als Entwicklungsperson und Benutzende für ein Produktprofil hinzufügen kann.
-* Ein Experience Platform-Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungen gewähren kann, um Lese- oder Schreibvorgänge für verschiedene Teile des Experience Platform über APIs durchzuführen.
+* Ein Admin Console-Administrator, der Sie als Entwickler und Benutzende für ein Produktprofil hinzufügen kann.
+* Ein Experience Platform-Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungen gewähren kann, um Lese- oder Schreibvorgänge über APIs für verschiedene Teile von Experience Platform durchzuführen.
 
 Sie müssen auch über eine Adobe ID verfügen, um dieses Tutorial abzuschließen. Wenn Sie keine Adobe ID haben, können Sie wie folgt eine erstellen:
 
@@ -52,13 +52,13 @@ Bevor Sie Integrationen in Adobe Developer Console erstellen können, muss Ihr K
 
 ### Erhalten von Entwicklerzugriff {#gain-developer-access}
 
-Wenden Sie sich an einen Entwicklungs-Administrator in Ihrer Admin Console, um Sie als Entwicklerin bzw. Entwickler zu einem Experience Platform-Produktprofil hinzuzufügen. Admin Console Spezifische Anweisungen zum Verwalten des Entwicklerzugriffs [ Produktprofile finden Sie in der Dokumentation zur ](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) .
+Wenden Sie sich an einen Admin Console-Administrator in Ihrer Organisation, um Sie als Entwicklungsperson einem Experience Platform-Produktprofil hinzuzufügen. Admin Console Spezifische Anweisungen zum Verwalten des [ für Produktprofile finden Sie in der Dokumentation zu ](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Sobald Sie als Entwickler zugewiesen sind, können Sie mit der Erstellung von Integrationen in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) beginnen. Diese Integrationen sind eine Pipeline von externen Apps und Services zu Adobe-APIs.
 
 ### Erhalten von Benutzerzugriff {#gain-user-access}
 
-Ihr Admin Console-Administrator muss Sie auch als Benutzerin bzw. Benutzer demselben Produktprofil hinzufügen. Beim Benutzerzugriff können Sie in der Benutzeroberfläche das Ergebnis der von Ihnen durchgeführten API-Vorgänge sehen.
+Ihr Admin Console-Administrator muss Sie ebenfalls als Benutzende demselben Produktprofil hinzufügen. Beim Benutzerzugriff können Sie in der Benutzeroberfläche das Ergebnis der von Ihnen durchgeführten API-Vorgänge sehen.
 
 Weitere Informationen finden Sie [ Handbuch unter „Verwalten von Benutzergruppen ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) Admin Console&quot;.
 
@@ -68,11 +68,11 @@ Weitere Informationen finden Sie [ Handbuch unter „Verwalten von Benutzergrupp
 >
 >Wenn Sie diesem Dokument aus dem [Privacy Service-API-Handbuch](../privacy-service/api/getting-started.md) folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die für [!DNL Privacy Service] eindeutigen Zugriffsberechtigungen zu generieren.
 
-Nachdem Sie über Admin Console Entwickler- und Benutzerzugriff auf Platform erhalten haben, besteht der nächste Schritt darin, Ihre `{ORG_ID}`- und `{API_KEY}`-Anmeldeinformationen in Adobe Developer Console zu generieren. Diese Anmeldeinformationen müssen nur einmal generiert werden und können in zukünftigen Platform-API-Aufrufen wiederverwendet werden.
+Nachdem Sie über Admin Console Entwickler- und Benutzerzugriff auf Experience Platform erhalten haben, besteht der nächste Schritt darin, Ihre `{ORG_ID}`- und `{API_KEY}`-Anmeldeinformationen in Adobe Developer Console zu generieren. Diese Anmeldeinformationen müssen nur einmal generiert werden und können in zukünftigen Experience Platform-API-Aufrufen wiederverwendet werden.
 
 >[!TIP]
 >
->Anstatt zu Developer Console zu wechseln, können Sie alle Authentifizierungsdaten, die Sie für die Arbeit mit Platform-APIs benötigen, direkt über die API-Referenzdokumentationsseiten abrufen. [Weitere Informationen](#get-credentials-functionality) über die Funktion.
+>Anstatt zu Developer Console zu wechseln, können Sie alle Authentifizierungsdaten, die Sie für die Arbeit mit Experience Platform-APIs benötigen, direkt über die API-Referenzdokumentationsseiten abrufen. [Weitere Informationen](#get-credentials-functionality) über die Funktion.
 
 ### Experience Platform zu einem Projekt hinzufügen {#add-platform-to-project}
 
@@ -86,13 +86,13 @@ Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL API hinz
 
 ![Developer Console-Bildschirm mit hervorgehobener Option „API hinzufügen“](./images/api-authentication/add-api.png)
 
-Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie das Produktsymbol für **[!UICONTROL Adobe Experience Platform]** und dann **[!UICONTROL Experience Platform API]** aus, bevor Sie **[!UICONTROL Weiter]** auswählen.
+Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie das Produktsymbol für **[!UICONTROL Adobe Experience Platform]** und dann **[!UICONTROL Experience Platform API]** aus, bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
 ![Wählen Sie Experience Platform-API im Bildschirm API hinzufügen aus.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]** aus, um in einem separaten Browserfenster zur vollständigen [Experience Platform-API-Referenzdokumentation zu ](https://developer.adobe.com/experience-platform-apis/).
+>Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]**, um in einem separaten Browserfenster zur vollständigen [Experience Platform API-Referenzdokumentation zu navigieren](https://developer.adobe.com/experience-platform-apis/).
 
 ### Wählen Sie den Authentifizierungstyp [!UICONTROL OAuth Server-zu-Server] aus {#select-oauth-server-to-server}
 
@@ -100,17 +100,17 @@ Wählen Sie als Nächstes den **[!UICONTROL OAuth Server-zu-Server]**-Authentifi
 
 >[!IMPORTANT]
 >
->Die **[!UICONTROL OAuth Server-zu-Server]**-Methode ist die einzige Token-Erzeugungsmethode, die in Zukunft unterstützt wird. Die zuvor unterstützte Methode **[!UICONTROL Service Account (JWT]** ist veraltet und kann nicht für neue Integrationen ausgewählt werden. Während bestehende Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 30. Juni 2025 weiterhin funktionieren, empfiehlt Adobe dringend, bestehende Integrationen vor diesem Datum zu der neuen [!UICONTROL OAuth Server-to-Server]-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](#jwt).
+>Die **[!UICONTROL OAuth Server-zu-Server]**-Methode ist die einzige Token-Erzeugungsmethode, die in Zukunft unterstützt wird. Die zuvor unterstützte Methode **[!UICONTROL Service Account (JWT]** ist veraltet und kann nicht für neue Integrationen ausgewählt werden. Während bestehende Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 30. Juni 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen [!UICONTROL OAuth Server-to-Server]-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](#jwt).
 
 ![Wählen Sie die OAuth-Server-zu-Server-Authentifizierungsmethode für die Experience Platform-API aus.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Auswählen der Produktprofile für Ihre Integration {#select-product-profiles}
 
-Wählen Sie auf dem **[!UICONTROL API konfigurieren]** die Option **[!UICONTROL AEP-Default-All-Users]** zusammen mit allen zusätzlichen Produktprofilen aus, auf die Sie Zugriff erhalten möchten.
+Wählen Sie auf dem **[!UICONTROL API konfigurieren]** die Option **[!UICONTROL AEP-Default-All-Users]** sowie alle weiteren Produktprofile aus, auf die Sie Zugriff erhalten möchten.
 
 >[!IMPORTANT]
 >
-Um Zugriff auf bestimmte Funktionen in Platform zu erhalten, benötigen Sie außerdem einen Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen gewährt. Weitere Informationen finden Sie im Abschnitt [Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen](#get-abac-permissions).
+Um Zugriff auf bestimmte Funktionen in Experience Platform zu erhalten, benötigen Sie außerdem einen Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen gewährt. Weitere Informationen finden Sie im Abschnitt [Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen](#get-abac-permissions).
 
 ![Produktprofile für Ihre Integration auswählen.](./images/api-authentication/select-product-profiles.png)
 
@@ -143,7 +143,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## Erstellen eines Zugriffs-Tokens {#generate-access-token}
 
-Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in Platform-API-Aufrufen zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Platform-APIs weiterhin verwenden zu können. Wählen Sie **[!UICONTROL Zugriffs-Token generieren]** aus, wodurch Ihr Zugriffs-Token generiert wird, wie unten dargestellt.
+Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in Experience Platform-API-Aufrufen zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Experience Platform-APIs weiterhin verwenden zu können. Wählen Sie **[!UICONTROL Zugriffs-Token generieren]** aus, wodurch Ihr Zugriffs-Token generiert wird, wie unten dargestellt.
 
 ![Erfahren Sie, wie Sie ein Zugriffs-Token generieren](././images/api-authentication/generate-access-token.png)
 
@@ -153,17 +153,17 @@ Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Toke
 
 ## Authentifizierungsdaten direkt in der API-Referenzdokumentation erstellen und abrufen {#get-credentials-functionality}
 
-Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten erhalten, ohne zu [!UICONTROL Developer Console] wechseln zu müssen. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten aus erhalten, ohne zu [!UICONTROL Developer Console wechseln zu ]. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
 ![Funktion „Anmeldeinformationen abrufen“ oben auf einer API-Referenzseite hervorgehoben.](././images/api-authentication/get-credentials-highlighted.png)
 
-Um Anmeldeinformationen zum Aufrufen von Platform-APIs zu erhalten, navigieren Sie zu einer beliebigen Experience Platform-API-Referenzseite und wählen **[!UICONTROL Anmelden]** oben auf der Seite aus. Melden Sie sich mit Ihrem **[!UICONTROL Persönlichen Konto]** oder **[!UICONTROL Firmen- oder Schulkonto]** an.
+Um Anmeldeinformationen zum Aufrufen von Experience Platform-APIs zu erhalten, navigieren Sie zu einer beliebigen Experience Platform-API-Referenzseite und wählen **[!UICONTROL Anmelden]** oben auf der Seite aus. Melden Sie sich mit Ihrem **[!UICONTROL Persönlichen Konto]** oder **[!UICONTROL Firmen- oder Schulkonto]** an.
 
-Wählen Sie nach der Anmeldung **[!UICONTROL Neue Anmeldedaten erstellen]** aus, um einen neuen Satz von Anmeldedaten für den Zugriff auf Platform-APIs zu erstellen.
+Wählen Sie nach der Anmeldung **[!UICONTROL Neue Anmeldedaten erstellen]** aus, um einen neuen Satz von Anmeldedaten für den Zugriff auf Experience Platform-APIs zu erstellen.
 
-![Erstellen neuer Anmeldeinformationen für den Zugriff auf Platform-APIs.](././images/api-authentication/create-credentials.gif)
+![Erstellen neuer Anmeldeinformationen für den Zugriff auf Experience Platform-APIs.](././images/api-authentication/create-credentials.gif)
 
-Verwenden Sie als Nächstes die Dropdown-Auswahl, um das Fenster mit den Anmeldedaten zu öffnen, ein Zugriffstoken zu generieren und Ihren API-Schlüssel und Ihre Organisations-ID abzurufen. Kopieren Sie die Anmeldeinformationen in die [**[!UICONTROL Probieren Sie es aus]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) Blöcke auf den API-Referenzseiten, um mit der Arbeit mit Platform-APIs zu beginnen.
+Verwenden Sie als Nächstes die Dropdown-Auswahl, um das Fenster mit den Anmeldedaten zu öffnen, ein Zugriffstoken zu generieren und Ihren API-Schlüssel und Ihre Organisations-ID abzurufen. Kopieren Sie die Anmeldeinformationen in die [**[!UICONTROL Probieren Sie es aus]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) Blöcke auf den API-Referenzseiten, um mit der Arbeit mit Experience Platform-APIs zu beginnen.
 
 ![Verwenden Sie den Dropdown-Selektor, um Anmeldeinformationen anzuzeigen und ein Zugriffs-Token zu generieren.](././images/api-authentication/view-copy-credentials.gif)
 
@@ -175,7 +175,7 @@ Der Anmeldedaten-Block „Seitenanfang“ wird weiterhin angezeigt, wenn Sie zwi
 
 >[!WARNING]
 >
-Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Beim Adobe müssen Sie außerdem Ihre bestehenden Integrationen bis zum 30. Juni 2025 zur OAuth-Methode migrieren, damit Ihre Integrationen weiterhin funktionieren. Lesen Sie die folgende wichtige Dokumentation:
+Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Adobe erfordert außerdem, dass Sie Ihre vorhandenen Integrationen bis zum 30. Juni 2025 zur OAuth-Methode migrieren, damit Ihre Integrationen weiterhin funktionieren. Lesen Sie die folgende wichtige Dokumentation:
 > 
 * [Migrationshandbuch für Ihre Programme von JWT zu OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Implementierungshandbuch für neue und alte Programme mit OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -183,7 +183,7 @@ Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. 
 
 +++ Anzeigen veralteter Informationen
 
-Der nächste Schritt besteht darin, ein JSON Web Token (JWT) basierend auf Ihren Kontoanmeldeinformationen zu generieren. Dieser Wert wird verwendet, um Ihre `{ACCESS_TOKEN}` Anmeldedaten für die Verwendung in Platform-API-Aufrufen zu generieren, die alle 24 Stunden neu generiert werden müssen.
+Der nächste Schritt besteht darin, ein JSON Web Token (JWT) basierend auf Ihren Kontoanmeldeinformationen zu generieren. Dieser Wert wird verwendet, um Ihre `{ACCESS_TOKEN}` Anmeldedaten für die Verwendung in Experience Platform-API-Aufrufen zu generieren, die alle 24 Stunden neu generiert werden müssen.
 
 >[!IMPORTANT]
 >
@@ -195,7 +195,7 @@ Wählen Sie **[!UICONTROL linken Navigationsbereich Dienstkonto (]**) und dann *
 
 ![](././images/api-authentication/generate-jwt.png)
 
-Fügen Sie in das Textfeld unter **[!UICONTROL Benutzerdefiniertes JWT generieren]** den Inhalt des privaten Schlüssels ein, den Sie zuvor beim Hinzufügen der Platform-API zu Ihrem Service-Konto generiert haben. Wählen Sie dann **[!UICONTROL Token generieren]** aus.
+Fügen Sie in das Textfeld unter **[!UICONTROL Benutzerdefiniertes JWT generieren]** den Inhalt des privaten Schlüssels ein, den Sie zuvor beim Hinzufügen der Experience Platform-API zu Ihrem Service-Konto generiert haben. Wählen Sie dann **[!UICONTROL Token generieren]** aus.
 
 ![](././images/api-authentication/paste-key.png)
 
@@ -205,7 +205,7 @@ Die Seite wird aktualisiert und zeigt das generierte JWT zusammen mit einem cURL
 
 **Erstellen eines Zugriffstokens**
 
-Nachdem Sie ein JWT generiert haben, können Sie es in einem API-Aufruf verwenden, um Ihre `{ACCESS_TOKEN}` zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Platform-APIs weiterhin verwenden zu können.
+Nachdem Sie ein JWT generiert haben, können Sie es in einem API-Aufruf verwenden, um Ihre `{ACCESS_TOKEN}` zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Experience Platform-APIs weiterhin verwenden zu können.
 
 **Anfrage**
 
@@ -242,8 +242,8 @@ Sie können denselben API-Schlüssel, denselben geheimen Client-Schlüssel und d
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `token_type` | Der Typ of Token wird zurückgegeben. Bei Zugriffs-Token ist dieser Wert immer `bearer`. |
-| `access_token` | Die generierte `{ACCESS_TOKEN}`. Dieser Wert, dem das Wort `Bearer` vorangestellt ist, ist als `Authentication` für alle Platform-API-Aufrufe erforderlich. |
-| `expires_in` | Die Anzahl der Millisekunden, die bis zum Ablauf des Zugriffstokens verbleiben. Sobald dieser Wert 0 erreicht, muss ein neues Zugriffstoken generiert werden, um Platform-APIs weiterhin verwenden zu können. |
+| `access_token` | Die generierte `{ACCESS_TOKEN}`. Dieser Wert, dem das Wort `Bearer` vorangestellt ist, ist als `Authentication` für alle Experience Platform-API-Aufrufe erforderlich. |
+| `expires_in` | Die Anzahl der Millisekunden, die bis zum Ablauf des Zugriffstokens verbleiben. Sobald dieser Wert 0 erreicht, muss ein neues Zugriffstoken generiert werden, um Experience Platform-APIs weiterhin verwenden zu können. |
 
 +++
 
@@ -294,19 +294,19 @@ Der obige Aufruf reicht zwar aus, um Ihre Zugriffsberechtigungen zu testen, doch
 
 ## Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen {#get-abac-permissions}
 
-Um auf mehrere Ressourcen in Experience Platform zuzugreifen oder sie zu ändern, benötigen Sie die entsprechenden Zugriffssteuerungsberechtigungen. Systemadministratoren können Ihnen die [erforderlichen Berechtigungen“ ](/help/access-control/ui/permissions.md). Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Um auf mehrere Ressourcen in Experience Platform zugreifen oder diese ändern zu können, benötigen Sie die entsprechenden Zugriffssteuerungsberechtigungen. Systemadministratoren können Ihnen die [erforderlichen Berechtigungen“ ](/help/access-control/ui/permissions.md). Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
-Detaillierte Informationen dazu, wie ein Systemadministrator bzw. eine Systemadministratorin die erforderlichen Berechtigungen für den Zugriff auf Platform-Ressourcen über die API gewähren kann, finden Sie im folgenden Video-Tutorial:
+Detaillierte Informationen dazu, wie ein Systemadministrator bzw. eine Systemadministratorin die erforderlichen Berechtigungen für den Zugriff auf Experience Platform-Ressourcen über die API gewähren kann, finden Sie im folgenden Video-Tutorial:
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
 ## Verwenden von Postman zum Authentifizieren und Testen von API-Aufrufen {#use-postman}
 
-[Postman](https://www.postman.com/) ist ein beliebtes Tool, mit dem Entwickler RESTful-APIs untersuchen und testen können. Sie können Experience Platform Postman-Sammlungen und -Umgebungen verwenden, um Ihre Arbeit mit Experience Platform-APIs zu beschleunigen. Lesen Sie mehr über [Verwendung von Postman im Experience Platform](/help/landing/postman.md) und die ersten Schritte mit Sammlungen und Umgebungen.
+[Postman](https://www.postman.com/) ist ein beliebtes Tool, mit dem Entwickler RESTful-APIs untersuchen und testen können. Sie können Experience Platform Postman-Sammlungen und -Umgebungen verwenden, um Ihre Arbeit mit Experience Platform-APIs zu beschleunigen. Lesen Sie mehr über [Verwendung von Postman in Experience Platform](/help/landing/postman.md) und die ersten Schritte mit Sammlungen und Umgebungen.
 
-Detaillierte Informationen zur Verwendung von Postman mit Experience Platform-Sammlungen und Umgebungen finden Sie in den folgenden Video-Tutorials:
+Detaillierte Informationen zur Verwendung von Postman mit Experience Platform-Sammlungen und -Umgebungen finden Sie in den folgenden Video-Tutorials:
 
-**Laden Sie eine Postman-Umgebung herunter und importieren Sie sie, um sie mit Experience Platform-APIs zu verwenden**
+**Herunterladen und Importieren einer Postman-Umgebung zur Verwendung mit Experience Platform-APIs**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
@@ -316,12 +316,12 @@ Laden Sie die Postman-Sammlung für den [Identity Management](https://github.com
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
-**Herunterladen von Experience Platform-API-Postman-Sammlungen und Interaktion mit den APIs**
+**Herunterladen von Postman-Sammlungen der Experience Platform-API und Interaktion mit den APIs**
 
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
-This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
+This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
 -->
 
 ## Systemadministratoren: Gewähren von Entwickler- und API-Zugriffskontrolle mit Experience Platform-Berechtigungen {#grant-developer-and-api-access-control}
@@ -334,7 +334,7 @@ Nur Systemadministratoren können API-Anmeldeinformationen in Berechtigungen anz
 
 ### Hinzufügen von Entwicklern zum Produktprofil {#add-developers-to-product-profile}
 
-Navigieren Sie zur Admin Console [](https://adminconsole.adobe.com/) und melden Sie sich mit Ihrer Adobe ID an.
+Navigieren Sie zur [Admin Console](https://adminconsole.adobe.com/) und melden Sie sich mit Ihrer Adobe ID an.
 
 Wählen **[!UICONTROL in]** Navigationsleiste „Produkte“ und dann **[!UICONTROL Adobe Experience Platform]** aus der Liste der Produkte aus.
 
@@ -342,7 +342,7 @@ Wählen **[!UICONTROL in]** Navigationsleiste „Produkte“ und dann **[!UICONT
 
 Wählen Sie auf der **[!UICONTROL Produktprofile]** die Option **[!UICONTROL AEP-Default-All-Users]** aus. Alternativ können Sie über die Suchleiste nach dem Produktprofil suchen, indem Sie den Namen eingeben.
 
-![Die Seite mit den Produktprofilen mit der Suchleiste und dem hervorgehobenen Produkt „AEP-Default-All-Users“.](././images/api-authentication/select-product-profile.png)
+![Die Seite mit den Produktprofilen mit der Suchleiste und dem hervorgehobenen Produkt &quot;AEP-Default-All-Users“.](././images/api-authentication/select-product-profile.png)
 
 Wählen Sie die Registerkarte **[!UICONTROL Entwickler]** und dann **[!UICONTROL Entwickler hinzufügen]** aus.
 
@@ -360,9 +360,9 @@ Der Entwickler wurde erfolgreich hinzugefügt und wird auf der Registerkarte **[
 
 >[!NOTE]
 >
-Nur ein Systemadministrator kann in der Experience Platform-Benutzeroberfläche Rollen -APIs zuweisen.
+Nur ein Systemadministrator kann in der Experience Platform-Benutzeroberfläche APIs zu Rollen zuweisen.
 
-Um Experience Platform-APIs verwenden und Vorgänge damit durchführen zu können, muss ein Systemadministrator die API-Anmeldeinformationen zusätzlich zu den einer Rolle zugewiesenen Berechtigungen hinzufügen. Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
+Um Experience Platform-APIs verwenden und Vorgänge damit durchführen zu können, muss ein Systemadministrator die API-Anmeldeinformationen zusätzlich zu den jeweiligen Berechtigungen einer Rolle hinzufügen. Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
 Eine exemplarische Vorgehensweise der oben beschriebenen Schritte zum Hinzufügen von Entwicklern zu Produktprofilen und zum Zuweisen von APIs zu Rollen ist ebenfalls im folgenden Video-Tutorial verfügbar:
 
@@ -374,10 +374,10 @@ Weitere Informationen zu den ersten Schritten mit Experience Platform-APIs finde
 
 * Seite [Experience Platform-APIs authentifizieren und aufrufen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=de) Video-Tutorials
 * [Identity Management Service Postman Collection](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) zum Generieren von Zugriffstoken
-* [Experience Platform-API für Postman-Sammlungen](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* [Experience Platform API Postman-Sammlungen](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für Platform-APIs gesammelt und erfolgreich getestet. Sie können jetzt den Beispiel-API-Aufrufen folgen, die in der ([) bereitgestellt ](../landing/documentation/overview.md).
+Durch das Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für Experience Platform-APIs gesammelt und erfolgreich getestet. Sie können jetzt den Beispiel-API-Aufrufen folgen, die in der ([) bereitgestellt ](../landing/documentation/overview.md).
 
-Zusätzlich zu den Authentifizierungswerten, die Sie in diesem Tutorial gesammelt haben, benötigen viele Platform-APIs auch eine gültige `{SANDBOX_NAME}` als Kopfzeile. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../sandboxes/home.md).
+Zusätzlich zu den Authentifizierungswerten, die Sie in diesem Tutorial gesammelt haben, benötigen viele Experience Platform-APIs auch eine gültige `{SANDBOX_NAME}` als Kopfzeile. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../sandboxes/home.md).

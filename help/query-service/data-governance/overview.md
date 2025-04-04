@@ -1,10 +1,10 @@
 ---
 title: Data Governance in Query Service
-description: In diesem Überblick werden die wichtigsten Elemente der Data Governance in Experience Platform Query Service behandelt.
+description: In dieser Übersicht werden die wichtigsten Elemente der Data Governance in Experience Platform Query Service behandelt.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3142'
 ht-degree: 1%
 
 ---
@@ -25,16 +25,16 @@ Die folgenden Kategorien sind bei der Einhaltung von Datenkonformitätsvorschrif
 1. Datenschutz   
 1. Datenhygiene
 
-In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und gezeigt, wie die Einhaltung der Datenrichtlinien bei der Verwendung von Abfrage-Service erleichtert werden kann. In der [Governance, Datenschutz und Sicherheit - Überblick](../../landing/governance-privacy-security/overview.md) finden Sie weitere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und die Einhaltung von Vorschriften sicherstellen können.
+In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und gezeigt, wie die Einhaltung der Datenrichtlinien bei der Verwendung von Abfrage-Service erleichtert werden kann. In der [Governance, Datenschutz und Sicherheit - Übersicht](../../landing/governance-privacy-security/overview.md) finden Sie weitere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und die Einhaltung von Vorschriften sicherstellen können.
 
 ## Sicherheit {#security}
 
-Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Gewährleistung eines sicheren Zugriffs während ihres gesamten Lebenszyklus. Der sichere Zugriff wird beim Experience Platform durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffssteuerung und attributbasierte Zugriffssteuerung gewährleistet. Anmeldeinformationen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in der gesamten Plattform sicherzustellen.
+Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Gewährleistung eines sicheren Zugriffs während ihres gesamten Lebenszyklus. Der sichere Zugriff in Experience Platform wird durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffssteuerung und attributbasierte Zugriffssteuerung gewährleistet. Anmeldeinformationen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in Experience Platform sicherzustellen.
 
 Die Sicherheit in Bezug auf den Abfrage-Service ist in die folgenden Kategorien unterteilt:
 
 * [Zugriffssteuerung](#access-control): Der Zugriff wird über Rollen und Berechtigungen gesteuert, einschließlich Berechtigungen auf Datensatz- und Spaltenebene.
-* Datensicherung über [Konnektivität](#connectivity): Daten werden über Platform und externe Clients gesichert, indem eine begrenzte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen hergestellt wird.
+* Datensicherung über [Konnektivität](#connectivity): Daten werden über Experience Platform und externe Clients gesichert, indem eine eingeschränkte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen hergestellt wird.
 * Datensicherung durch [Verschlüsselung und kundenverwaltete Schlüssel (CMK)](#encryption-and-customer-managed-keys): Der Zugriff wird durch Verschlüsselung gesteuert, wenn sich die Daten im Ruhezustand befinden.
 
 ### Zugangssteuerung {#access-control}
@@ -103,7 +103,7 @@ Der Benutzerzugriff auf einzelne Spalten kann dann durch die angehängten Datenn
 
 ### Konnektivität {#connectivity}
 
-Auf den Abfrage-Service kann über die Platform-Benutzeroberfläche oder durch Herstellen einer Verbindung mit externen kompatiblen Clients zugegriffen werden. Der Zugriff auf alle verfügbaren Fronts wird durch einen Satz von Anmeldeinformationen gesteuert.
+Auf den Abfrage-Service kann über die Benutzeroberfläche von Experience Platform oder durch Herstellen einer Verbindung mit externen kompatiblen Clients zugegriffen werden. Der Zugriff auf alle verfügbaren Fronts wird durch einen Satz von Anmeldeinformationen gesteuert.
 
 #### Konnektivität über externe Clients
 
@@ -127,7 +127,7 @@ Sobald der vorausgesetzte Workflow abgeschlossen ist, können autorisierte Benut
 
 #### SSL-Datenverschlüsselung
 
-Zur Erhöhung der Sicherheit bietet der Abfrage-Service native Unterstützung für SSL-Verbindungen zur Verschlüsselung der Client/Server-Kommunikation. Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
+Zur Erhöhung der Sicherheit bietet der Abfrage-Service native Unterstützung für SSL-Verbindungen zur Verschlüsselung der Client/Server-Kommunikation. Experience Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
 
 Weitere Informationen, einschließlich der Verwendung [ SSL-Parameterwerts `verify-full`, finden Sie im Handbuch zu verfügbaren SSL](../clients/ssl-modes.md)Optionen für Clientverbindungen von Drittanbietern zum Abfrage-Service .
 
@@ -144,13 +144,13 @@ Daten in Übertragung sind immer HTTPS-kompatibel. Wenn sich die Daten im Data L
 
 Der Abfrage-Service zeichnet Benutzeraktivitäten auf und kategorisiert diese Aktivitäten in verschiedene Protokolltypen. Die Protokolle geben Informationen darüber **wer** welche **ausgeführt** wann **.**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute angeben, die für den Aktionstyp relevant sind.
 
-Jede der Protokollkategorien kann von einem Platform-Benutzer nach Bedarf angefordert werden. Dieser Abschnitt enthält Details zum Typ der für den Abfrage-Service erfassten Informationen und dazu, wo auf diese Informationen zugegriffen werden kann.
+Jede der Protokollkategorien kann von einem Experience Platform-Benutzer nach Bedarf angefordert werden. Dieser Abschnitt enthält Details zum Typ der für den Abfrage-Service erfassten Informationen und dazu, wo auf diese Informationen zugegriffen werden kann.
 
 ### Abfrageprotokolle {#query-logs}
 
 Die Benutzeroberfläche für Abfrageprotokolle ermöglicht es Ihnen, Ausführungsdetails für alle Abfragen zu überwachen und zu überprüfen, die entweder über den Abfrage-Editor oder die Abfrage-Service-API ausgeführt wurden. Dies bringt Transparenz in die Aktivitäten des Abfrage-Service, sodass Sie die Metadaten auf (**)** Abfragen überprüfen können, die im gesamten Abfrage-Service ausgeführt wurden. Sie enthält alle Arten von Abfragen, unabhängig davon, ob es sich um eine explorative, Batch- oder geplante Abfrage handelt.
 
-Auf Abfrageprotokolle kann entweder über die Platform-Benutzeroberfläche auf der Registerkarte [!UICONTROL Protokolle] des Arbeitsbereichs [!UICONTROL Abfragen] zugegriffen werden.
+Auf Abfrageprotokolle kann entweder über die Experience Platform-Benutzeroberfläche auf der Registerkarte [!UICONTROL Protokolle] des Arbeitsbereichs [!UICONTROL Abfragen] zugegriffen werden.
 
 ![Die Registerkarte „Abfrageprotokoll“ mit hervorgehobenem Detailbereich.](../images/data-governance/overview/queries-log.png)
 
@@ -158,7 +158,7 @@ Auf Abfrageprotokolle kann entweder über die Platform-Benutzeroberfläche auf d
 
 Auditprotokolle enthalten detailliertere Informationen als Abfrageprotokolle und ermöglichen es Ihnen, Protokolle nach Attributen wie Benutzer, Datum, Art der Abfrage usw. zu filtern. Über die in der Benutzeroberfläche des Abfrageprotokolls verfügbaren Details hinaus werden in Audit-Protokollen Details zu einzelnen Benutzern sowie deren Sitzungsdaten oder Konnektivität zu einem Drittanbieter-Client gespeichert.
 
-Durch die Bereitstellung einer genauen Aufzeichnung von Benutzeraktionen kann ein Audit-Protokoll bei der Fehlerbehebung helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen. Auditprotokolle zeichnen alle Platform-Aktivitäten auf. Mithilfe von Auditprotokollen können Sie Benutzeraktionen in Bezug auf die Ausführung von Abfragen, Vorlagen und geplante Abfragen überprüfen, um die Transparenz und Sichtbarkeit der von Benutzern in Query Service durchgeführten Aktionen zu erhöhen.
+Durch die Bereitstellung einer genauen Aufzeichnung von Benutzeraktionen kann ein Audit-Protokoll bei der Fehlerbehebung helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen. Auditprotokolle zeichnen alle Experience Platform-Aktivitäten auf. Mithilfe von Auditprotokollen können Sie Benutzeraktionen in Bezug auf die Ausführung von Abfragen, Vorlagen und geplante Abfragen überprüfen, um die Transparenz und Sichtbarkeit der von Benutzern in Query Service durchgeführten Aktionen zu erhöhen.
 
 Die folgende Tabelle zeigt die von Audit-Protokollen erfassten Abfragekategorien und die aufgezeichneten Aktionstypen:
 
@@ -178,7 +178,7 @@ Weitere Informationen darüber[ wie Auditprotokolle Ihrem Unternehmen helfen kö
 
 ## Datennutzung {#data-usage}
 
-Das Data Governance-Framework in Platform bietet eine einheitliche Möglichkeit, Daten in allen Adobe-Lösungen, -Services und -Plattformen verantwortungsvoll zu nutzen. Sie koordiniert den systemischen Ansatz zur Erfassung, Kommunikation und Verwendung von Metadaten in Adobe Experience Cloud. Dies wiederum hilft Datenverantwortlichen dabei, Daten entsprechend den erforderlichen Marketing-Aktionen und den Einschränkungen zu kennzeichnen, die für diese Daten aus diesen beabsichtigten Marketing-Aktionen gelten. In der Übersicht zu [Datennutzungskennzeichnungen](../../data-governance/labels/overview.md) finden Sie weitere Informationen darüber, wie Sie mit Data Governance Datennutzungskennzeichnungen auf Datensätze und Felder anwenden können.
+Das Data Governance-Framework in Experience Platform bietet eine einheitliche Möglichkeit, Daten in allen Adobe-Lösungen, -Services und -Plattformen verantwortungsvoll zu verwenden. Sie koordiniert den systemischen Ansatz zur Erfassung, Kommunikation und Verwendung von Metadaten in Adobe Experience Cloud. Dies wiederum hilft Datenverantwortlichen dabei, Daten entsprechend den erforderlichen Marketing-Aktionen und den Einschränkungen zu kennzeichnen, die für diese Daten aus diesen beabsichtigten Marketing-Aktionen gelten. In der Übersicht zu [Datennutzungskennzeichnungen](../../data-governance/labels/overview.md) finden Sie weitere Informationen darüber, wie Sie mit Data Governance Datennutzungskennzeichnungen auf Datensätze und Felder anwenden können.
 
 Es ist Best Practice, in jeder Phase des Journey der Daten auf die Einhaltung der Datenrichtlinien hinzuarbeiten. Zu diesem Zweck sollten abgeleitete Datensätze, die Ad-hoc-Schemata verwenden, im Rahmen des Data Governance-Frameworks entsprechend gekennzeichnet werden. Es gibt zwei Arten von abgeleiteten Datensätzen, die vom Abfrage-Service gebildet werden: Datensätze, die ein Standardschema verwenden, und Datensätze, die ein Ad-hoc-Schema verwenden.
 
@@ -186,27 +186,27 @@ Es ist Best Practice, in jeder Phase des Journey der Daten auf die Einhaltung de
 >
 >Datensätze, die mit dem Abfrage-Service erstellt werden, werden als „abgeleitete Datensätze“ bezeichnet.
 
-Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in ](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Platform-Benutzeroberfläche“.
+Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Experience Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in ](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Experience Platform-Benutzeroberfläche“.
 
 Nachdem Sie auf das Schema zugegriffen haben, können Sie [Kennzeichnungen auf einzelne Felder anwenden](../../xdm/tutorials/labels.md). Sobald ein Schema gekennzeichnet wurde, erben alle Datensätze, die von diesem Schema abgeleitet sind, diese Kennzeichnungen. Von hier aus können Sie Datennutzungsrichtlinien einrichten, die verhindern können, dass Daten mit bestimmten Beschriftungen für bestimmte Ziele aktiviert werden. Weitere Informationen finden Sie in der Übersicht zu [Datennutzungsrichtlinien](../../data-governance/policies/overview.md).
 
 ## Datenschutz    {#privacy}
 
-[Privacy Service](../../privacy-service/home.md) hilft Ihnen bei der Verwaltung von Kundenanfragen zum Zugriff auf und zur Löschung ihrer Daten gemäß den gesetzlichen Datenschutzbestimmungen. Dies erfolgt, indem nach bereits vorhandenen Kennungen gesucht wird und je nach angefordertem Datenschutzauftrag entweder auf diese Daten zugreift oder sie löscht. Die Daten müssen ordnungsgemäß gekennzeichnet werden, damit der Service feststellen kann, welche Felder während der Datenschutzaufträge aufgerufen oder gelöscht werden sollen. Daten, die Gegenstand von Datenschutzanfragen sind, müssen Informationen zur Kundenidentität enthalten, um die unterschiedlichen Datenelemente mit der Person zu verknüpfen, für die die Datenschutzanfrage gilt. Query Service kann die von ihm verwendeten Daten mit einer eindeutigen Kennung anreichern, um Datenschutzaufträge zu erfüllen.
+[Privacy Service](../../privacy-service/home.md) unterstützt Sie bei der Verwaltung von Kundenanfragen zum Zugriff auf und zur Löschung ihrer Daten gemäß den gesetzlichen Datenschutzbestimmungen. Dies erfolgt, indem nach bereits vorhandenen Kennungen gesucht wird und je nach angefordertem Datenschutzauftrag entweder auf diese Daten zugreift oder sie löscht. Die Daten müssen ordnungsgemäß gekennzeichnet werden, damit der Service feststellen kann, welche Felder während der Datenschutzaufträge aufgerufen oder gelöscht werden sollen. Daten, die Gegenstand von Datenschutzanfragen sind, müssen Informationen zur Kundenidentität enthalten, um die unterschiedlichen Datenelemente mit der Person zu verknüpfen, für die die Datenschutzanfrage gilt. Query Service kann die von ihm verwendeten Daten mit einer eindeutigen Kennung anreichern, um Datenschutzaufträge zu erfüllen.
 
 Datenschutzanfragen können an den Data Lake oder den Profildatenspeicher gesendet werden. Aus dem Data Lake gelöschte Datensätze führen nicht zum Löschen von Profilen, die aus diesen Datensätzen erstellt wurden. Ein Datenschutzauftrag zum Löschen personenbezogener Daten aus dem Data Lake löscht auch nicht sein Profil, sodass alle Informationen (die diese Profil-ID enthalten), die nach Abschluss des Datenschutzauftrags aufgenommen werden, dieses Profil wie gewohnt aktualisieren. Dies bekräftigt die Notwendigkeit, in Ad-hoc-Schemata verwendete Daten ordnungsgemäß zu identifizieren.
 
-Weitere Informationen finden Sie in der Privacy Service[Dokumentation zu Identitätsdaten für Datenschutzanfragen](../../privacy-service/identity-data.md) und wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
+Weitere Informationen finden Sie in der Privacy Service[Dokumentation zu Identitätsdaten für Datenschutzanfragen und ](../../privacy-service/identity-data.md), wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 
 Die Funktionen des Abfrage-Service für die Data Governance vereinfachen und optimieren den Prozess der Datenkategorisierung und die Einhaltung von Datennutzungsbestimmungen. Nachdem die Daten identifiziert wurden, können Sie mit dem Abfrage-Service die primäre Identität für alle Ausgabedatensätze zuweisen. Sie **müssen** Identitäten zum Datensatz hinzufügen, um Datenschutzanfragen zu erleichtern und auf die Einhaltung von Datenschutzbestimmungen hinzuarbeiten.
 
-Schemadatenfelder können über die Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden, und Query Service ermöglicht es Ihnen auch, die primären Identitäten mithilfe des SQL-Befehls „ALTER TABLE“ [ markieren](../sql/syntax.md#alter-table). Das Festlegen einer Identität mit dem `ALTER TABLE`-Befehl ist insbesondere dann nützlich, wenn Datensätze mithilfe von SQL und nicht direkt aus einem Schema über die Platform-Benutzeroberfläche erstellt werden. In der Dokumentation finden Sie Anweisungen zum [ von Identitätsfeldern in der Benutzeroberfläche bei ](../../xdm/ui/fields/identity.md) Verwendung von Standardschemata.
+Schemadatenfelder können über die Experience Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Darüber hinaus ermöglicht Ihnen der Abfrage-Service, die [ mithilfe des SQL-Befehls „ALTER TABLE“ zu ](../sql/syntax.md#alter-table). Das Festlegen einer Identität mit dem Befehl `ALTER TABLE` ist besonders dann hilfreich, wenn Datensätze mithilfe von SQL und nicht direkt aus einem Schema über die Experience Platform-Benutzeroberfläche erstellt werden. In der Dokumentation finden Sie Anweisungen zum [ von Identitätsfeldern in der Benutzeroberfläche bei ](../../xdm/ui/fields/identity.md) Verwendung von Standardschemata.
 
 ## Datenhygiene {#data-hygiene}
 
-„Datenhygiene“ bezieht sich auf den Prozess der Reparatur oder Entfernung von Daten, die veraltet, ungenau, falsch formatiert, dupliziert oder unvollständig sind. Diese Prozesse stellen sicher, dass Datensätze systemübergreifend korrekt und konsistent sind. Es ist wichtig, eine angemessene Datenhygiene bei jedem Schritt des Journey der Daten und sogar vom ersten Datenspeicherort sicherzustellen. Beim Experience Platform-Abfrage-Service ist dies entweder der Data Lake oder der beschleunigte Speicher.
+„Datenhygiene“ bezieht sich auf den Prozess der Reparatur oder Entfernung von Daten, die veraltet, ungenau, falsch formatiert, dupliziert oder unvollständig sind. Diese Prozesse stellen sicher, dass Datensätze systemübergreifend korrekt und konsistent sind. Es ist wichtig, eine angemessene Datenhygiene bei jedem Schritt des Journey der Daten und sogar vom ersten Datenspeicherort sicherzustellen. Im Abfrage-Service von Experience Platform ist dies entweder der Data Lake oder der beschleunigte Speicher.
 
-Sie können einem abgeleiteten Datensatz eine Identität zuweisen, um die Datenverwaltung im Anschluss an die zentralisierten Datenhygiene-Services von Platform zu ermöglichen.
+Sie können einem abgeleiteten Datensatz eine Identität zuweisen, um die Datenverwaltung im Anschluss an die zentralisierten Datenhygiene-Services von Experience Platform zu ermöglichen.
 
 Wenn Sie dagegen einen aggregierten Datensatz im beschleunigten Speicher erstellen, können die aggregierten Daten nicht zur Ableitung der Originaldaten verwendet werden. Durch diese Datenaggregation entfällt die Notwendigkeit, Anfragen zur Datenhygiene zu stellen.
 

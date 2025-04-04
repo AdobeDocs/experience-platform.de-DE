@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2254'
-ht-degree: 96%
+source-wordcount: '2257'
+ht-degree: 93%
 
 ---
 
@@ -72,7 +72,7 @@ Diese Kennzeichnung wird verwendet, um die Verwendung von Interessentendaten zu 
 
 | Kennzeichnung | Definition |
 | --- | --- |
-| **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter für Daten ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung geschlossen hat, die Ihnen den Zugriff auf, die Verwendung, die Anzeige und die Übermittlung der Daten von Drittanbietern in Verbindung mit Platform gestattet. |
+| **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung getroffen hat, die Sie zum Zugriff auf, zur Verwendung, zur Anzeige und zur Übermittlung der Daten des Drittanbieters in Verbindung mit Experience Platform autorisiert. |
 | **Anreicherung durch Dritte** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
 | **Drittanbieter-Prospektion** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zusätzlich zum Trichter für die Kundenakquise an neue Kunden verwendet werden. |
 
@@ -150,8 +150,8 @@ Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zus
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match ermöglicht es Ihnen, Platform-generierte Zielgruppen mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilierung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
+Mit Adobe Experience Platform Segment Match können Sie aus Experience Platform generierte Zielgruppen mit Datenschutz- und Einverständnisvoreinstellungen abgleichen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke ermöglicht. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
 
 #### C12 {#c12}
 
-Daten mit dieser Kennzeichnung können in keiner Weise aus Platform exportiert werden. Felder mit einer C12-Kennzeichnung sind von CSV-Downloads, der API-Nutzung und von Aktivierungs-Workflows ausgeschlossen.
+Daten mit dieser Kennzeichnung können in keiner Weise aus Experience Platform exportiert werden. Felder mit einer C12-Kennzeichnung sind von CSV-Downloads, der API-Nutzung und von Aktivierungs-Workflows ausgeschlossen.

@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1119'
-ht-degree: 60%
+source-wordcount: '1121'
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 60%
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
 ><br/>
->Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Ihnen Adobe die notwendigen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+>Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
 ><br/>
 >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
 ><br/>
@@ -30,7 +30,7 @@ ht-degree: 60%
 Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager]-Ziele gelten:
 
 * Aktivierte Zielgruppen werden in der [!DNL Google]-Plattform programmgesteuert erstellt.
-* [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Zielgruppen-Zahlen in Google, um die Integration zu validieren und die Zielgruppen-Größe zu verstehen.
+* [!DNL Experience Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Zielgruppen-Zahlen in Google, um die Integration zu validieren und die Zielgruppen-Größe zu verstehen.
 * Nachdem Sie eine Zielgruppe einem [!DNL Google Ad Manager] Ziel zugeordnet haben, wird der Zielgruppenname sofort in der [!DNL Google Ad Manager]-Benutzeroberfläche angezeigt.
 * Es dauert 24-48 Stunden, bis die Segmentpopulation in [!DNL Google Ad Manager] angezeigt wird. Darüber hinaus müssen Zielgruppen über eine Zielgruppengröße von mindestens 50 Profilen verfügen, damit sie in [!DNL Google Ad Manager] angezeigt werden. Zielgruppen mit einer Größe von weniger als 50 Profilen werden nicht in [!DNL Google Ad Manager] ausgefüllt.
 
@@ -56,7 +56,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -74,13 +74,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Voraussetzungen {#prerequisites}
 
-Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im ID-Service von Experience Cloud noch nicht aktiviert haben (mit Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL Google]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im ID-Service von Experience Cloud noch nicht aktiviert haben (mit Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Google] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
 
 ### Zulassungsauflistung {#allow-listing}
 
-Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad Manager]-Ziel in Platform einrichten. Stellen Sie sicher, dass Sie den unten beschriebenen Zulassungsauflistungsprozess abschließen, bevor Sie Ihr Ziel erstellen.
+Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad Manager]-Ziel in Experience Platform einrichten. Stellen Sie sicher, dass Sie den unten beschriebenen Zulassungsauflistungsprozess abschließen, bevor Sie Ihr Ziel erstellen.
 
-1. Führen Sie die in der Dokumentation zu [Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=de) beschriebenen Schritte aus, um Adobe als verknüpfte Daten-Management-Plattform (DMP) hinzuzufügen.
+1. Führen Sie die in der Dokumentation zu Google Ad Manager [beschriebenen Schritte aus](https://support.google.com/admanager/answer/3289669?hl=de) um Adobe als verknüpfte Datenverwaltungsplattform (DMP) hinzuzufügen.
 2. Wechseln Sie in der [!DNL Google Ad Manager] zu **[!UICONTROL Admin]** > **[!UICONTROL Globale Einstellungen]** > **[!UICONTROL Netzwerkeinstellungen]** und aktivieren Sie den **[!UICONTROL API-Zugriff]**-Regler.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
@@ -106,7 +106,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
-* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option, damit der Zielgruppenname in Google Ad Manager die Zielgruppen-ID von Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
+* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option, damit der Zielgruppenname in Google Ad Manager die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Google Ad Manag
 
 Falls bei der Verwendung dieses Ziels Fehler auftreten und Sie sich entweder an Adobe oder Google wenden müssen, halten Sie die folgenden IDs bereit.
 
-Dies sind Google-Konto-IDs der Adobe:
+Dies sind die Google-Konto-IDs von Adobe:
 
 * **[!UICONTROL Konto-ID]**: 87933855
 * **[!UICONTROL Kunden-ID]**: 89690775

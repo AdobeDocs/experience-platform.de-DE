@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Mit der Schema Registry-API können Entwicklerinnen und Entwickler alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1144'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Die [!DNL Schema Registry] wird verwendet, um auf die Schemabibliothek in Adobe Experience Platform zuzugreifen und eine Benutzeroberfläche und RESTful-API bereitzustellen, von der aus auf alle verfügbaren Bibliotheksressourcen zugegriffen werden kann.
 
-Die Schema Registry-API bietet mehrere Endpunkte, mit denen Sie alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen, die Ihnen in Platform zur Verfügung stehen, programmgesteuert verwalten können. Dazu gehören auch die von Adobe, [!DNL Experience Platform] und Anbietern definierten Anwendungen, die Sie verwenden.
+Die Schema Registry-API bietet mehrere Endpunkte, mit denen Sie alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen, die Ihnen in Experience Platform zur Verfügung stehen, programmgesteuert verwalten können. Dazu gehören auch die von Adobe, [!DNL Experience Platform] und Anbietern definierten Anwendungen, die Sie verwenden.
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
@@ -27,7 +27,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [
 
 ## Schemata
 
-XDM-Schemata stellen die Struktur und das Format von Daten dar, die in Platform aufgenommen werden, und validieren diese. Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Sie können Schemas mithilfe des `/schemas`-Endpunkts erstellen, anzeigen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu Schemas-Endpunkten](./schemas.md).
+XDM-Schemata stellen die Struktur und das Format von Daten dar, die in Experience Platform aufgenommen werden, und validieren diese. Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Sie können Schemas mithilfe des `/schemas`-Endpunkts erstellen, anzeigen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu Schemas-Endpunkten](./schemas.md).
 
 Eine schrittweise Anleitung zum manuellen Erstellen eines vollständigen Schemas in der Schema Registry-API, einschließlich des Erstellens und Hinzufügens von Feldergruppen und Datentypen, finden Sie im [API-Tutorial zur Schemaerstellung](../tutorials/create-schema-api.md).
 
@@ -59,7 +59,7 @@ Deskriptoren sind Metadatensätze, die bestimmten Feldern innerhalb eines Schema
 
 ## Vereinigungen
 
-Platform ermöglicht es Ihnen zwar, Schemas für bestimmte Anwendungsfälle zu erstellen, aber auch, eine „Vereinigung“ von Schemas zu erstellen, die zu einer bestimmten Klasse gehören. Ein Vereinigungsschema aggregiert die Felder aller Schemata, die dieselbe Klasse haben, in einer einzigen Darstellung. Wenn Sie ein Schema für die Verwendung mit [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, wird dieses Schema in die Vereinigung für seine bestimmte Klasse aufgenommen. Vereinigungsschemata können daher nicht direkt bearbeitet werden und können nur durch das Ein- oder Ausschließen von Schemata zur Verwendung im Profil beeinflusst werden.
+Experience Platform ermöglicht es Ihnen zwar, Schemata für bestimmte Anwendungsfälle zu erstellen, aber auch, eine „Vereinigung“ von Schemata zu erstellen, die zu einer bestimmten Klasse gehören. Ein Vereinigungsschema aggregiert die Felder aller Schemata, die dieselbe Klasse haben, in einer einzigen Darstellung. Wenn Sie ein Schema für die Verwendung mit [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, wird dieses Schema in die Vereinigung für seine bestimmte Klasse aufgenommen. Vereinigungsschemata können daher nicht direkt bearbeitet werden und können nur durch das Ein- oder Ausschließen von Schemata zur Verwendung im Profil beeinflusst werden.
 
 Informationen zum Anzeigen von Vereinigungen in der Schema Registry-API finden Sie im [Handbuch zum Vereinigungsendpunkt](./unions.md).
 

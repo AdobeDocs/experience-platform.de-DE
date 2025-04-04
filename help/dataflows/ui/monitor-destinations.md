@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3626'
 ht-degree: 11%
 
 ---
 
 # Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 
-Verwenden Sie die verschiedenen Ziele im Experience Platform-Katalog, um Ihre Daten von Platform für unzählige externe Partner zu aktivieren. Platform erleichtert die Verfolgung des Datenflusses zu Ihren Zielen, indem es für Transparenz bei Datenflüssen sorgt.
+Verwenden Sie die verschiedenen Ziele im Experience Platform-Katalog, um Ihre Daten von Experience Platform für unzählige externe Partner zu aktivieren. Experience Platform erleichtert die Verfolgung des Datenflusses zu Ihren Zielen, indem es für Transparenz bei Datenflüssen sorgt.
 
 Das Überwachungs-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses, einschließlich des Ziels, für das die Daten aktiviert werden, des Datentyps, den Sie anzeigen, der exportierten Daten pro Datenflussausführung und vieles mehr.
 
@@ -23,14 +23,14 @@ Dieses Tutorial enthält Anweisungen dazu, wie Sie Datenflüsse entweder direkt 
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
+- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
-- [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten von Platform aus für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+- [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten aus Experience Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Überwachen von Datenflüssen im Arbeitsbereich Ziele {#monitor-dataflows-in-the-destinations-workspace}
 
-Navigieren Sie im **[!UICONTROL Ziele]** in der Platform-Benutzeroberfläche zur Registerkarte **[!UICONTROL Durchsuchen]** und wählen Sie den Namen eines Ziels aus, das Sie anzeigen möchten.
+Navigieren Sie im **[!UICONTROL Ziele]** in der Experience Platform-Benutzeroberfläche zur Registerkarte **[!UICONTROL Durchsuchen]** und wählen Sie den Namen eines Ziels aus, das Sie anzeigen möchten.
 
 ![Zielansicht auswählen, wobei eine Zielverbindung hervorgehoben ist](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -349,4 +349,4 @@ Wenn **[!UICONTROL Zielgruppen]** ausgewählt ist, wird eine Liste der Zielgrupp
 
 ## Nächste Schritte {#next-steps}
 
-Durch Befolgen dieses Handbuchs wissen Sie jetzt, wie Sie Datenflüsse für Batch- und Streaming-Ziele überwachen können, einschließlich aller relevanten Informationen wie Verarbeitungszeit, Aktivierungsrate und Status. Weitere Informationen zu Datenflüssen in Platform finden Sie in der [Datenflüsse - Übersicht](../home.md). Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../../destinations/home.md).
+Durch Befolgen dieses Handbuchs wissen Sie jetzt, wie Sie Datenflüsse für Batch- und Streaming-Ziele überwachen können, einschließlich aller relevanten Informationen wie Verarbeitungszeit, Aktivierungsrate und Status. Weitere Informationen zu Datenflüssen in Experience Platform finden Sie unter [Datenflüsse - Übersicht](../home.md). Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../../destinations/home.md).

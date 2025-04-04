@@ -4,16 +4,16 @@ title: API-Endpunkt für Musterstatus der Vorschau (Profilvorschau)
 description: Der Endpunkt für den Vorschaubeispielstatus der Echtzeit-Kundenprofil-API ermöglicht Ihnen die Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten, die Auflistung der Profilverteilung nach Datensatz und Identität und die Erstellung von Berichten mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugeordneten Profilen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2906'
+source-wordcount: '2909'
 ht-degree: 5%
 
 ---
 
 # Musterstatus-Endpunkt für Vorschau (Profilvorschau)
 
-Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen aufnehmen, um ein robustes, einheitliches Profil für jeden einzelnen Ihrer Kunden zu erstellen. Bei der Aufnahme von Daten in Platform wird ein Beispielvorgang ausgeführt, um die Profilanzahl und andere Metriken zu aktualisieren, die sich auf das Echtzeit-Kundenprofil beziehen.
+Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen aufnehmen, um ein robustes, einheitliches Profil für jeden einzelnen Ihrer Kunden zu erstellen. Bei der Aufnahme von Daten in Experience Platform wird ein Beispielvorgang ausgeführt, um die Profilanzahl und andere Metriken zu aktualisieren, die sich auf Echtzeit-Kundenprofildaten beziehen.
 
 Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus`-Endpunkt, der Teil der Echtzeit-Kundenprofil-API ist, angezeigt werden. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen sowohl nach Datensatz als auch nach Identity-Namespace aufzulisten und mehrere Berichte zu generieren, um einen Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten. Dieses Handbuch führt Sie durch die Schritte, die zum Anzeigen dieser Metriken mithilfe des `/previewsamplestatus`-API-Endpunkts erforderlich sind.
 
@@ -31,13 +31,13 @@ Dieses Handbuch verweist sowohl auf „Profilfragmente“ als auch auf „zusamm
 
 Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer einzigen Ansicht dieses Kunden zusammengefügt wurden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen wahrscheinlich über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind.
 
-Wenn Profilfragmente in Platform aufgenommen werden, werden sie zusammengeführt (auf der Grundlage einer Zusammenführungsrichtlinie), um ein einziges Profil für diesen Kunden zu erstellen. Daher ist die Gesamtzahl der Profilfragmente wahrscheinlich immer höher als die Gesamtzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
+Wenn Profilfragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt (auf der Grundlage einer Zusammenführungsrichtlinie), um ein einziges Profil für diesen Kunden zu erstellen. Daher ist die Gesamtzahl der Profilfragmente wahrscheinlich immer höher als die Gesamtzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
 
 Um mehr über Profile und ihre Rolle in Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 ## Wie der Beispielvorgang ausgelöst wird
 
-Wenn Daten, die für das Echtzeit-Kundenprofil aktiviert sind, in [!DNL Platform] aufgenommen werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie die Stichprobe ausgelöst wird, hängt von der Art der Aufnahme ab, die verwendet wird:
+Wenn Daten, die für das Echtzeit-Kundenprofil aktiviert sind, in [!DNL Experience Platform] aufgenommen werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie die Stichprobe ausgelöst wird, hängt von der Art der Aufnahme ab, die verwendet wird:
 
 * Bei **Streaming-Daten** Workflows wird stündlich überprüft, ob der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht wurde. Ist dies der Fall, wird automatisch ein Beispielvorgang ausgelöst, um die Anzahl zu aktualisieren.
 * Bei **Batch-Aufnahme** wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht wird. Mit der Profil-API können Sie den neuesten erfolgreichen Beispielvorgang in der Vorschau anzeigen sowie die Profilverteilung nach Datensatz und Identity-Namespace auflisten.
@@ -46,11 +46,11 @@ Die Metriken Profilanzahl und Profile nach Namespace sind auch im Abschnitt [!UI
 
 ## Status der letzten Stichprobe anzeigen {#view-last-sample-status}
 
-Sie können eine GET-Anfrage an den `/previewsamplestatus`-Endpunkt ausführen, um die Details für den letzten erfolgreichen Beispielvorgang anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile in der Stichprobe sowie die Metrik zur Profilanzahl oder die Gesamtzahl der Profile, die Ihr Unternehmen im Experience Platform hat.
+Sie können eine GET-Anfrage an den `/previewsamplestatus`-Endpunkt ausführen, um die Details für den letzten erfolgreichen Beispielvorgang anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile in der Stichprobe sowie die Metrik zur Profilanzahl oder die Gesamtzahl der Profile, die Ihr Unternehmen in Experience Platform hat.
 
 Die Profilanzahl wird nach dem Zusammenführen von Profilfragmenten generiert, um für jeden einzelnen Kunden ein einziges Profil zu bilden. Mit anderen Worten: Wenn Profilfragmente zusammengeführt werden, geben sie die Anzahl „1“ des Profils zurück, da sie alle mit derselben Person verbunden sind.
 
-Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Profile, die nur Zeitreihen-(Ereignis-)Daten enthalten, z. B. Adobe Analytics-Profile. Der Beispielvorgang wird regelmäßig aktualisiert, während Profildaten aufgenommen werden, um eine aktuelle Gesamtzahl der Profile in Platform bereitzustellen.
+Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Profile, die nur Zeitreihen-(Ereignis-)Daten enthalten, z. B. Adobe Analytics-Profile. Der Beispielvorgang wird regelmäßig aktualisiert, während Profildaten aufgenommen werden, um eine aktuelle Gesamtzahl von Profilen in Experience Platform bereitzustellen.
 
 **API-Format**
 
@@ -75,7 +75,7 @@ Die Antwort enthält die Details für den letzten erfolgreichen Beispielvorgang,
 
 >[!NOTE]
 >
->In dieser Beispielantwort sind `numRowsToRead` und `totalRows` identisch. Je nach der Anzahl der Profile, die Ihr Unternehmen im Experience Platform hat, kann dies der Fall sein. Im Allgemeinen sind diese beiden Zahlen jedoch unterschiedlich, wobei `numRowsToRead` die kleinere Zahl ist, da sie die Stichprobe als Teilmenge der Gesamtzahl der Profile darstellt (`totalRows`).
+>In dieser Beispielantwort sind `numRowsToRead` und `totalRows` identisch. Je nach der Anzahl der Profile in Experience Platform kann dies der Fall sein. Im Allgemeinen sind diese beiden Zahlen jedoch unterschiedlich, wobei `numRowsToRead` die kleinere Zahl ist, da sie die Stichprobe als Teilmenge der Gesamtzahl der Profile darstellt (`totalRows`).
 
 ```json
 {
@@ -114,7 +114,7 @@ Die Antwort enthält die Details für den letzten erfolgreichen Beispielvorgang,
 
 ## Auflisten der Profilverteilung nach Datensatz
 
-Um die Profilverteilung nach Datensatz anzuzeigen, können Sie eine GET-Anfrage an den `/previewsamplestatus/report/dataset`-Endpunkt senden.
+Um die Profilverteilung nach Datensatz anzuzeigen, können Sie eine GET-Anfrage an den `/previewsamplestatus/report/dataset`-Endpunkt ausführen.
 
 **API-Format**
 
@@ -299,7 +299,7 @@ Die Antwort enthält ein `data`-Array mit einzelnen Objekten, die die Details f�
 | `fullIDsFragmentCount` | Die Gesamtzahl der Profilfragmente im Namespace. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile im Namespace. |
 | `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der gesamten zusammengeführten Profile (der `totalRows` wie im [letzten Beispielstatus) ](#view-last-sample-status) Dezimalformat angegeben. |
-| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces mithilfe der [Adobe Experience Platform Identity Service-API ](../../identity-service/api/list-namespaces.md) und wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identitätssymbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
+| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces mithilfe der [Adobe Experience Platform Identity Service-](../../identity-service/api/list-namespaces.md) zu finden und wird in der Experience Platform-Benutzeroberfläche auch [!UICONTROL Identitätssymbol] genannt. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
 | `value` | Der `id` für den Namespace. Dies können Sie beim Arbeiten mit Namespaces mithilfe der [Identity Service-API](../../identity-service/api/list-namespaces.md) feststellen. |
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
@@ -445,7 +445,7 @@ Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) und der Bericht zu
 | Eigenschaft | Beschreibung |
 |---|---|
 | `data` | Das `data`-Objekt enthält kommagetrennte Listen mit eindeutigen Kombinationen von Identitäts-Namespace-Codes und der jeweiligen Profilanzahl. |
-| Namespace-Codes | Die `code` ist eine Kurzform für jeden Identity-Namespace-Namen. Eine Zuordnung jeder `code` zu ihrer `name` finden Sie mithilfe der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Die `code` wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identitätssymbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
+| Namespace-Codes | Die `code` ist eine Kurzform für jeden Identity-Namespace-Namen. Eine Zuordnung jeder `code` zu ihrer `name` finden Sie mithilfe der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Experience Platform Die `code` wird in der Benutzeroberfläche von [!UICONTROL  auch als ]Identitätssymbol“ bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ### Interpretieren des Identity-Namespace-Überschneidungsberichts
@@ -559,7 +559,7 @@ Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) sowie der Bericht 
 
 ### Interpretieren des Berichts Nicht zugeordnete Profile
 
-Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugeordnete und inaktive Profile Ihre Organisation in ihrem Profilspeicher hat.
+Die Ergebnisse des Berichts können insight Aufschluss darüber geben, wie viele nicht zugeordnete und inaktive Profile Ihr Unternehmen in seinem Profilspeicher hat.
 
 Siehe folgenden Auszug aus dem `data`:
 

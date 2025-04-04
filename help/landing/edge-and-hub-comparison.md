@@ -2,21 +2,21 @@
 solution: Experience Platform
 title: Vergleich von Edge Network und Hub
 description: Erfahren Sie mehr über die verschiedenen Verarbeitungspfade, die für die Verwendung in Adobe Experience Platform verfügbar sind.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '713'
 ht-degree: 6%
 
 ---
 
-
 # Vergleich von Edge Network und Hub
 
-Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Experience Platform können Sie Kundendaten und Inhalte aus beliebigen Systemen zentral zusammenführen und standardisieren. Zusätzlich können Sie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern. Platform bietet daher mehrere Möglichkeiten zur Verarbeitung Ihrer Daten, sodass Sie Ihre Daten optimal auswerten können.
+Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Experience Platform können Sie Kundendaten und Inhalte aus beliebigen Systemen zentral zusammenführen und standardisieren. Zusätzlich können Sie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern. Experience Platform bietet daher mehrere Möglichkeiten zur Verarbeitung Ihrer Daten, sodass Sie Ihre Daten optimal auswerten können.
 
 ## Servertypen
 
-In Platform können Daten auf zwei verschiedenen Pfaden verarbeitet werden: Adobe Experience Platform Hub für Batch- und Streaming-Workflows und Edge Network für Echtzeit-Erlebnisse.
+In Experience Platform können Daten auf zwei verschiedenen Pfaden verarbeitet werden: Adobe Experience Platform Hub für Batch- und Streaming-Workflows und Edge Network für Echtzeit-Erlebnisse.
 
 ### Adobe Experience Platform Hub
 

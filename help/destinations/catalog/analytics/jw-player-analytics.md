@@ -3,28 +3,28 @@ keywords: JW-Player;JW-Player;JW-Player;JW-Erweiterung;JW-Erweiterung
 title: JW Player Analytics (Beta)-Erweiterung
 description: Die JW Player Analytics (Beta)-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 32bdb2db-5c1b-4184-b6d3-b07dc4d0b324
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 84%
+source-wordcount: '475'
+ht-degree: 71%
 
 ---
 
 # [!DNL JW Player Analytics] (Beta)-Erweiterung {#jw-player-analytics-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Diese Erweiterung installiert den [!DNL JW Player], um [!DNL JW Player] Ereignisse mit Adobe Video Analytics zu verbinden. Nutzen Sie die Vorteile von Adobe Video Analytics, um detaillierte Einblicke in die Videoanzeigegewohnheiten Ihrer Kunden zu gewinnen.
 
 [!DNL JW Player Analytics] (Beta) ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![JW Analytics-Erweiterung](../../assets/catalog/analytics/jw-analytics/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die [!DNL JW Player Analytics] (Beta)-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Weitere Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [JW Player Analytics (Beta)-Erweiterung](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [JW Player Analytics (Beta)-Erweiterung](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 
@@ -58,6 +58,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Auch wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Platform-Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Experience Platform-Benutzeroberfläche weiterhin &quot;**[!UICONTROL &quot;]** die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

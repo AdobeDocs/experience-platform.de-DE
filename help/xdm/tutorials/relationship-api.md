@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Schema;Schema;Schemata;Beziehung;Beziehung;Beziehungsdeskriptor;Beziehungsdeskriptor;Referenzidentität;Referenzidentität;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Schema;Schema;Schemas;Schemas;Beziehung;Beziehung;Beziehungsdeskriptor;Beziehungsdeskriptor;Referenzidentität;Referenzidentität;
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry-API
 description: Dieses Dokument enthält ein Tutorial zum Definieren einer Eins-zu-eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe der Schema Registry-API definiert wurden.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 27%
@@ -30,7 +30,7 @@ Dieses Tutorial erfordert ein Grundverständnis von [!DNL Experience Data Model]
 * [XDM-System in Experience Platform](../home.md): Ein Überblick über XDM und seine Implementierung in [!DNL Experience Platform].
    * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemata.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Schema Registry]-API benötigen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den [!DNL Accept]-Header und seine möglichen Werte).
 
@@ -348,7 +348,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 
 Auf Schemafelder muss ein Referenz-Identitätsdeskriptor angewendet werden, wenn sie als Verweis auf ein anderes Schema in einer Beziehung verwendet werden. Da das `favoriteHotel` Feld in &quot;[!DNL Loyalty Members]&quot; auf das `hotelId` Feld in &quot;[!DNL Hotels]&quot; verweist, muss `favoriteHotel` ein Referenz-Identitätsdeskriptor zugewiesen werden.
 
-Erstellen Sie einen Referenzdeskriptor für das Quellschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt stellen.
+Erstellen Sie einen Referenzdeskriptor für das Quellschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
 
 **API-Format**
 

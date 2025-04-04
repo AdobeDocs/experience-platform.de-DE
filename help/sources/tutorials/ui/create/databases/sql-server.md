@@ -2,10 +2,10 @@
 title: Erstellen einer Microsoft SQL Server-Source-Verbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Microsoft SQL Server-Quellverbindung erstellen.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 45%
+source-wordcount: '466'
+ht-degree: 42%
 
 ---
 
@@ -26,7 +26,7 @@ Wenn Sie bereits über eine gültige [!DNL SQL Server]-Verbindung verfügen, kö
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zu [!DNL SQL Server] auf [!DNL Platform] herzustellen, müssen Sie die folgende Verbindungseigenschaft angeben:
+Um eine Verbindung zu [!DNL SQL Server] auf [!DNL Experience Platform] herzustellen, müssen Sie die folgende Verbindungseigenschaft angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL SQL Serve
 
 ## Verbinden Ihres [!DNL SQL Server]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *Kategorie* die Option **[!DNL Microsoft SQL Server]** und dann **[!UICONTROL Einrichten]** aus.
 
@@ -70,4 +70,4 @@ Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SQL Server]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SQL Server]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

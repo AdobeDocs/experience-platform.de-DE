@@ -5,7 +5,7 @@ title: Erstellen einer MySQL-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine MySQL-Quellverbindung erstellen.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 37%
@@ -29,7 +29,7 @@ Wenn Sie bereits über eine [!DNL MySQL] Verbindung verfügen, können Sie den R
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL MySQL]-Konto in [!DNL Platform] zugreifen zu können, müssen Sie den folgenden Wert angeben:
+Um auf Ihr [!DNL MySQL]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie den folgenden Wert angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -37,7 +37,7 @@ Um auf Ihr [!DNL MySQL]-Konto in [!DNL Platform] zugreifen zu können, müssen S
 
 ## Verbinden Ihres [!DNL MySQL]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL MySQL]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL MySQL]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -61,4 +61,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL MySQL] Konto, mit d
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem MySQL-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem MySQL-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

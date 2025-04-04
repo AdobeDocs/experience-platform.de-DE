@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2022
 description: Versionshinweise März 2022 für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 98%
+source-wordcount: '1182'
+ht-degree: 84%
 
 ---
 
@@ -39,7 +39,7 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
+Weiterführende Informationen zu Auditprotokollen in Experience Platform finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Verwandte Konten in Real-Time CDP B2B Edition {#related-accounts}
 
@@ -59,7 +59,7 @@ Weitere Informationen zu Real-Time CDP B2B Edition finden Sie in der [Übersicht
 
 ## Warnhinweise {#alerts}
 
-Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
 
 **Aktualisierte Funktionen**
 
@@ -69,7 +69,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warnhinweise – Übersicht](../../observability/alerts/overview.md).
+Weitere Informationen zu Warnhinweisen in Experience Platform finden Sie im Abschnitt [Warnhinweise - Übersicht](../../observability/alerts/overview.md).
 
 ## Dashboards {#dashboards}
 
@@ -104,11 +104,11 @@ Im Dashboard „Ziele“ finden Sie eine Momentaufnahme der Ziele, die Ihr Unter
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Abschnitt [Ziele-Dashboards – Übersicht](../../dashboards/guides/destinations.md).
+Weitere Informationen zu Ziel-Dashboards in Experience Platform finden Sie unter [Ziele-Dashboards - Übersicht](../../dashboards/guides/destinations.md).
 
 ## Datenerfassung {#data-collection}
 
-Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
+Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe oder andere Ziele weitergegeben werden können.
 
 **Neue Funktionen**
 
@@ -117,7 +117,7 @@ Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kunden
 | Globale Datenstromeinstellungen | Sie können jetzt beim Konfigurieren eines Datenstroms mehrere neue globale Einstellungen konfigurieren: Ort, First-Party-ID-Cookie und Third-Party-ID-Synchronisierung. Weitere Informationen dazu finden Sie im Handbuch zur Datenstrom-Benutzeroberfläche im Abschnitt [Konfigurieren eines Datenstroms](../../datastreams/overview.md#create). |
 | [Edge Network Server-API](../../server-api/overview.md) | Mit der Server-API können Kunden mithilfe eines neuen, authentifizierten Endpunkts mit dem Experience Platform Edge Network interagieren, wodurch eine Vielzahl von Datenerfassungs-, Personalisierungs-, Werbungs- und Marketing-Anwendungsfällen ermöglicht wird. |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Experience Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
 
 ## Abfrage-Service {#query-service}
 
@@ -135,7 +135,7 @@ Weitere Informationen zu den verfügbaren Funktionen finden Sie im Abschnitt [Qu
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Services herstellen, Zeiten für Aufnahmedurchgänge festlegen und den Durchsatz der Datenaufnahme verwalten.
 
@@ -143,8 +143,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Quellen für die B2B-Nutzung jetzt verfügbar | Sie können jetzt alle verfügbaren Quellen in Platform für B2B-Anwendungsfälle verwenden. Eine vollständige Liste der verfügbaren Quellen finden Sie im [Quellkatalog](../../sources/home.md). |
-| Allgemeine Verfügbarkeit der neuen [!DNL Oracle Eloqua]-Quelle | Sie können jetzt die [!DNL Oracle Eloqua]-Quelle verwenden, um Daten aus Ihrer [!DNL Oracle Eloqua]-Instanz (Konto, Kampagne, Kontakte) nahtlos in Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Oracle Eloqua] -Quellverbindung](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
+| Neue Quellen für die B2B-Nutzung jetzt verfügbar | Sie können jetzt alle verfügbaren Quellen in Experience Platform für B2B-Anwendungsfälle verwenden. Eine vollständige Liste der verfügbaren Quellen finden Sie im [Quellkatalog](../../sources/home.md). |
+| Allgemeine Verfügbarkeit der neuen [!DNL Oracle Eloqua]-Quelle | Sie können jetzt die [!DNL Oracle Eloqua] verwenden, um Daten aus Ihrer [!DNL Oracle Eloqua]-Instanz (Konto, Kampagne, Kontakte) nahtlos in Experience Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Oracle Eloqua] -Quellverbindung](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
 | API-Verbesserungen für [!DNL Data Landing Zone] | Die [!DNL Data Landing Zone]-Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der [!DNL Flow Service]-API. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Data Landing Zone] -Quellverbindung](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}

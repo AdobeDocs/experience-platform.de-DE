@@ -5,10 +5,10 @@ breadcrumb-title: Data Governance-Handbuch
 user-guide-description: Setzen Sie Datennutzungsbeschränkungen durch die Verwendung von Kennzeichnungen, Marketing-Aktionen und Governance-Richtlinien durch.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 93%
+source-wordcount: '100'
+ht-degree: 94%
 
 ---
 
@@ -42,4 +42,4 @@ ht-degree: 93%
    * [Marketing-Aktionen](api/marketing-actions.md)
    * [Auswertung](api/evaluation.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+* [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

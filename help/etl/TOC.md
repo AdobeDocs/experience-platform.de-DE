@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform ETL-Anleitung
 breadcrumb-title: ETL-Anleitung
-user-guide-description: Erfahren Sie mehr über die allgemeinen Schritte zum Erstellen sicherer Hochleistungs-Connectoren für die Dateneingabe in die Plattform.
+user-guide-description: Erfahren Sie mehr über die allgemeinen Schritte zum Erstellen sicherer Hochleistungs-Connectoren für die Datenaufnahme in Experience Platform.
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 100%
+source-wordcount: '42'
+ht-degree: 64%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 100%
 - [Entwickeln von ETL-Integrationen](home.md)
 - [ETL-Umwandlung](transformations.md)
 - [ETL-Workflow](workflow.md)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+- [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

@@ -5,10 +5,10 @@ title: Sandbox-API-Handbuch
 description: Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 24%
+source-wordcount: '328'
+ht-degree: 30%
 
 ---
 
@@ -28,7 +28,7 @@ Eine Sandbox ist eine virtuelle Partition innerhalb einer einzigen Instanz von A
 
 ## Sandbox-Typen
 
-Derzeit werden Produktions- und Entwicklungs-Sandboxes als Sandbox-Typen auf Experience Platform unterstützt. Mit einer Standardlizenz für Platform erhalten Sie insgesamt fünf Sandboxes, die Sie als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Informationen [ Anzeigen unterstützter Sandbox-Typen für Ihre Organisation in der API finden ](./types.md) im Handbuch zum Sandbox--Typ .
+Derzeit werden in Experience Platform Produktions- und Entwicklungs-Sandboxes als Sandbox-Typen unterstützt. Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Informationen [ Anzeigen unterstützter Sandbox-Typen für Ihre Organisation in der API finden ](./types.md) im Handbuch zum Sandbox--Typ .
 
 ## Nächste Schritte
 

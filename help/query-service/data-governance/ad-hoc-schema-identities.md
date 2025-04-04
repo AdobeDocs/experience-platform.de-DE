@@ -2,9 +2,9 @@
 title: Festlegen Primärer Identitäten in einem Ad-hoc-Datensatz
 description: Mit Adobe Experience Platform Query Service können Sie eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder direkt über den SQL-Befehl ALTER TABLE festlegen. In diesem Dokument wird erläutert, wie Sie mit dem Befehl ALTER TABLE eine primäre Identität oder eine sekundäre Identität festlegen können.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Das Kennzeichnen von Datensatzspalten als primäre oder sekundäre Identität er
 
 ## Hinzufügen von Einschränkungen {#add-constraints}
 
-Mit dem Befehl `ALTER TABLE` können Sie eine Datensatzspalte als Identität einer Person beschriften und diese Kennzeichnung dann als primäre Identität verwenden, indem Sie die zugehörigen Metadaten mithilfe von SQL aktualisieren. Dies ist besonders nützlich, wenn Datensätze über SQL und nicht direkt über die Platform-Benutzeroberfläche aus einem Schema erstellt werden. Mit dem Befehl können Sie sicherstellen, dass Ihre Datenvorgänge in Platform mit den Datennutzungsrichtlinien konform sind.
+Mit dem Befehl `ALTER TABLE` können Sie eine Datensatzspalte als Identität einer Person beschriften und diese Kennzeichnung dann als primäre Identität verwenden, indem Sie die zugehörigen Metadaten mithilfe von SQL aktualisieren. Dies ist besonders nützlich, wenn Datensätze über SQL und nicht direkt über die Experience Platform-Benutzeroberfläche aus einem Schema erstellt werden. Mit dem Befehl können Sie sicherstellen, dass Ihre Datenvorgänge in Experience Platform mit Datennutzungsrichtlinien konform sind.
 
 **Beispiele**
 

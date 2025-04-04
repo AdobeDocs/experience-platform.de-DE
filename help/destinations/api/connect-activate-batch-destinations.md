@@ -5,10 +5,10 @@ title: Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-
 description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Erstellen eines Batch-Cloud-Speichers oder E-Mail-Marketing-Ziels in Experience Platform und zum Aktivieren von Daten
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3411'
-ht-degree: 74%
+source-wordcount: '3416'
+ht-degree: 72%
 
 ---
 
@@ -34,7 +34,7 @@ In diesem Tutorial wird für alle Beispiele das Ziel [!DNL Adobe Campaign] verwe
 
 ![Übersicht - Schritte zum Erstellen eines Ziels und Aktivieren von Zielgruppen](../assets/api/email-marketing/overview.png)
 
-Wenn Sie die Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md).
+Wenn Sie die Experience Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md) .
 
 ## Erste Schritte {#get-started}
 
@@ -42,9 +42,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): Mit [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen in [!DNL Adobe Experience Platform] erstellen.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen sollten, um Daten für Batch-Ziele in Platform zu aktivieren.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Batch-Ziele in Experience Platform zu aktivieren.
 
 ### Sammeln erforderlicher Anmeldedaten {#gather-required-credentials}
 
@@ -65,13 +65,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Experience Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -1040,7 +1040,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `startDate` | Wählen Sie das Datum aus, an dem die Zielgruppe Profile in Ihr Ziel exportieren soll. |
 | `frequency` | Obligatorisch. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
-| `triggerType` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn Sie den `"DAILY_FULL_EXPORT"` im `frequency` auswählen. <br>. <br> <ul><li>Wählen Sie `"AFTER_SEGMENT_EVAL"` aus, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Wählen Sie `"SCHEDULED"` aus, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass täglich zur gleichen Zeit Experience Platform-Profildaten exportiert werden. Die exportierten Profile sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsvorgang vor dem Start des Aktivierungsvorgangs abgeschlossen wurde. Wenn Sie diese Option auswählen, müssen Sie auch eine `startTime` hinzufügen, um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
+| `triggerType` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn Sie den `"DAILY_FULL_EXPORT"` im `frequency` auswählen. <br>. <br> <ul><li>Wählen Sie `"AFTER_SEGMENT_EVAL"` aus, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Experience Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Wählen Sie `"SCHEDULED"` aus, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, entsprechen jedoch möglicherweise nicht dem neuesten Stand. Dies hängt davon ab, ob der Batch-Segmentierungsvorgang vor dem Start des Aktivierungsvorgangs abgeschlossen wurde. Wenn Sie diese Option auswählen, müssen Sie auch eine `startTime` hinzufügen, um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
 | `endDate` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Zielgruppenmitglieder nicht mehr in das Ziel exportiert werden. |
 | `startTime` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. Wählen Sie den Zeitpunkt aus, zu dem Dateien mit Mitgliedern der Zielgruppe generiert und an Ihr Ziel exportiert werden sollen. |
 
@@ -1240,11 +1240,11 @@ Die zurückgegebene Antwort sollte im `transformations` die Zielgruppen und Prof
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten dateibasierten E-Mail-Marketing-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Datendateien zu exportieren. Ausgehende Daten können jetzt im Ziel für E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle genutzt werden. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
+In diesem Tutorial haben Sie Experience Platform erfolgreich mit einem Ihrer bevorzugten dateibasierten E-Mail-Marketing-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Datendateien zu exportieren. Ausgehende Daten können jetzt im Ziel für E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle genutzt werden. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

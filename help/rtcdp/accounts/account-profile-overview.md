@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie mit der B2B-Edition von Adobe Real-time Custo
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 54%
+source-wordcount: '306'
+ht-degree: 47%
 
 ---
 
@@ -24,7 +24,7 @@ Durch die Zusammenführung von Account-Daten aus verschiedenen Quellen können S
 
 ## Account-Profil-Viewer
 
-Mit Real-Time CDP, B2B edition können Sie die Experience Platform-Benutzeroberfläche verwenden, um Account-Profile anzuzeigen und mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle oder durch die Eingabe von Quelldetails nach bestimmten Accounts zu suchen. Weitere Informationen zum Anzeigen von Account-Profilen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche bei Account-Profilen](account-profile-ui-guide.md).
+Mit Real-Time CDP, B2B edition können Sie die Experience Platform-Benutzeroberfläche verwenden, um Account-Profile anzuzeigen und mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle oder durch die Eingabe von Quelldetails nach bestimmten Accounts zu suchen. Weitere Informationen zum Anzeigen von Account-Profilen in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche des Account-Profils](account-profile-ui-guide.md).
 
 ## Kontozielgruppen erstellen und aktivieren
 

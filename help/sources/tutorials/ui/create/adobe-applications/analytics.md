@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2672'
-ht-degree: 41%
+source-wordcount: '2676'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 * [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ### Wichtige Terminologie
 
@@ -39,7 +39,7 @@ Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dok
 >* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake durchführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
 >* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss läuft kontinuierlich.
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
@@ -115,7 +115,7 @@ Die Seite [!UICONTROL Adobe Analytics ExperienceEvent-Vorlagenfeldergruppe] biet
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform erkennt Ihre Zuordnungssätze automatisch für Konflikte mit benutzerfreundlichen Namen. Wenn keine Konflikte mit Ihren Zuordnungssätzen auftreten, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Experience Platform erkennt Ihre Zuordnungssätze automatisch für Konflikte mit benutzerfreundlichen Namen. Wenn keine Konflikte mit Ihren Zuordnungssätzen auftreten, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![Zuordnung](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -187,7 +187,7 @@ Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten abgesc
 * Wenn Sie Datenvorbereitungs-Konfigurationen während der Ersteinrichtung eines [!DNL Analytics] verwenden, werden diese Änderungen auch auf die automatische 13-monatige Aufstockung angewendet.
    * Dies ist jedoch nicht der Fall für die Filterung, da die Filterung nur für Live-Daten reserviert ist.
 * Die Datenvorbereitung wird sowohl auf Streaming- als auch auf Batch-Aufnahmepfade angewendet. Wenn Sie eine vorhandene Datenvorbereitungskonfiguration ändern, werden diese Änderungen auf neue eingehende Daten über Streaming- und Batch-Erfassungswege hinweg angewendet.
-   * Datenvorbereitungskonfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform erfasst wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
+   * Datenvorbereitungskonfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform aufgenommen wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
 * Standardattribute von Analytics werden immer automatisch zugeordnet. Daher können Sie keine Umwandlungen auf Standardattribute anwenden.
    * Sie können jedoch Standardattribute herausfiltern, solange sie nicht in Identity Service oder Profil erforderlich sind.
 * Zum Filtern von erforderlichen Feldern und Identitätsfeldern kann keine Filterung auf Spaltenebene verwendet werden.
@@ -311,7 +311,7 @@ Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenz
 
 >[!NOTE]
 >
->Auf der Seite „Datensatzaktivität“ werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig vom Adobe verwaltet wird. Sie können den Datenfluss überwachen, indem Sie sich die Metriken um die aufgenommenen Datensätze ansehen.
+>Auf der Seite „Datensatzaktivität“ werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können den Datenfluss überwachen, indem Sie sich die Metriken um die aufgenommenen Datensätze ansehen.
 
 ## Löschen des Datenflusses {#delete-dataflow}
 
@@ -322,7 +322,7 @@ Um Ihren Analytics-Datenfluss zu löschen, wählen **[!UICONTROL Datenflüsse]**
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Nach der Erstellung der Verbindung wird der Datenfluss automatisch erstellt, um die eingehenden Daten zu enthalten und einen Datensatz mit Ihrem ausgewählten Schema zu füllen. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und aufgenommen. Wenn die anfängliche Aufnahme abgeschlossen ist, werden die [!DNL Analytics]-Daten von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und dem Segmentierungs-Service verwendet. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Nach der Erstellung der Verbindung wird der Datenfluss automatisch erstellt, um die eingehenden Daten zu enthalten und einen Datensatz mit Ihrem ausgewählten Schema zu füllen. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und aufgenommen. Wenn die anfängliche Aufnahme abgeschlossen ist, [!DNL Analytics] Sie die Daten und können sie von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und Segmentierungs-Service verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ Das folgende Video soll Ihnen helfen, das Aufnehmen von Daten mithilfe des Adobe
 
 >[!WARNING]
 >
-> Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+> Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zu Azure Data Lake Storage Gen2 herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '958'
 ht-degree: 55%
 
 ---
@@ -18,7 +18,7 @@ Auf dieser Seite erfahren Sie, wie Sie eine ausgehende Live-Verbindung zu Ihrem 
 
 ## Herstellen einer Verbindung zu Ihrem [!DNL ADLS Gen2] über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL ADLS Gen2]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
+* Um über die Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL ADLS Gen2]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
 * Um programmgesteuert eine Verbindung zu Ihrem [!DNL ADLS Gen2]-Speicherort herzustellen, lesen Sie das Tutorial [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
@@ -27,7 +27,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -47,14 +47,14 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* Erfahren Sie[ wie Datensätze über die Platform-Benutzeroberfläche exportiert ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform ](/help/destinations/ui/export-datasets.md).
 * So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
-Beim Exportieren *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
+Beim Exportieren *Zielgruppendaten* erstellt Experience Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
-Beim Exportieren *Datensätze* erstellt Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

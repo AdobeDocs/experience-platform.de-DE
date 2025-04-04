@@ -2,9 +2,9 @@
 title: Schemafeldgruppe „XDM-Geschäftspersonenkomponenten“
 description: Erfahren Sie mehr über die Schemafeldgruppe „XDM-Geschäftspersonenkomponenten“.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '515'
 ht-degree: 4%
 
 ---
@@ -21,8 +21,8 @@ Die Feldergruppe stellt ein `personComponents`-Feld auf Stammebene bereit, das e
 >
 >Sie müssen die Aufnahmemuster befolgen, wie in der [Quellendokumentation“ ](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
 >
->Beispielsweise wird jedes Objekt des `personComponents`-Arrays während standardmäßiger Aufnahmemuster einzeln übermittelt und dann von Platform zum Array hinzugefügt. Wenn Sie der Geschäftspersonenkomponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
->Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [ Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
+>Beispielsweise wird jedes Objekt des `personComponents`-Arrays während standardmäßiger Aufnahmemuster einzeln übermittelt und dann von Experience Platform zum Array hinzugefügt. Wenn Sie der Geschäftspersonenkomponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
+>Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [ Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-Time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
 >
 >Informationen [ empfohlenen Workflows für B2B-Daten ](../../../rtcdp/b2b-tutorial.md) Sie im End-to-End-Tutorial .
 

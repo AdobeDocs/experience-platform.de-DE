@@ -3,28 +3,28 @@ keywords: Target-Erweiterung;Target;Target v2;Target v2-Erweiterung
 title: Adobe Target v2-Erweiterung
 description: Die Adobe Target v2-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: d1d5ebbc-9093-42b0-8d88-58779df3ec89
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 69%
+source-wordcount: '486'
+ht-degree: 61%
 
 ---
 
 # Adobe Target v2-Erweiterung {#adobe-target-v2-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Adobe Target ist die Adobe Experience Cloud-Lösung, die Ihnen all das bietet, was Sie zur Anpassung und Personalisierung Ihrer Kundenerlebnisse benötigen, sodass Sie Umsätze auf Ihren Web- und mobilen Sites, in Mobile Apps, Social Media und anderen digitalen Kanälen maximieren können.
 
 Adobe Target v2 ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe Target v2-Erweiterung](../../assets/catalog/personalization/adobe-target-v2/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 Installieren der Adobe Target v2-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

@@ -5,10 +5,10 @@ title: Produkt-API-Endpunkt
 description: Mit dem Endpunkt /products in der attributbasierten Zugriffssteuerungs-API können Sie Produkte in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 25%
+source-wordcount: '514'
+ht-degree: 21%
 
 ---
 
@@ -26,7 +26,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der attributbasierten Zu
 
 ## Abrufen einer Liste mit zulässigen Produkten {#list}
 
-Sie können eine Liste mit zulässigen Produkten abrufen, indem Sie eine GET-Anfrage an den `/products`-Endpunkt senden.
+Sie können eine Liste benannter Produkte abrufen, indem Sie eine GET-Anfrage an den `/products`-Endpunkt stellen.
 
 **API-Format**
 
@@ -240,6 +240,6 @@ Eine erfolgreiche Antwort gibt die Berechtigungssätze zurück, die mit der von 
 | `id` | Die entsprechende ID des abgefragten Berechtigungssatzes. |
 | `name` | Der entsprechende Name des abgefragten Berechtigungssatzes. |
 | `category` | Die verfügbare Berechtigungskategorie. |
-| `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
+| `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Experience Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
 | `permissions.resource` | Das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht. Bei Ressourcen kann es sich um Dateien, Anwendungen, Server oder sogar APIs handeln. |
 | `permissions.actions` | Die Aktion, die ein Subjekt für eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit` und `delete` |

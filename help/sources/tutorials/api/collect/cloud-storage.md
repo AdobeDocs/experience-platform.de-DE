@@ -3,18 +3,18 @@ keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Cloud-Speicherquellen mithilfe der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Einbringen dieser Daten in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 69%
+source-wordcount: '1756'
+ht-degree: 59%
 
 ---
 
 # Erstellen eines Datenflusses für Cloud-Speicherquellen mit der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Speicherquelle und zum Übertragen dieser Daten in Platform mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) behandelt.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Speicherquelle und zum Übertragen dieser Daten in Experience Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 >[!NOTE]
 >
@@ -29,15 +29,15 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten in Form von Batch-Dateien in Experience Platform aufnehmen.
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `sourceConnections`-Endpunkt [!DNL Flow Service] -API stellen und dabei Ihre Basisverbindungs-ID, den Pfad zur aufzunehmenden Quelldatei und die entsprechende Verbindungsspezifikations-ID angeben.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `sourceConnections`-Endpunkt [!DNL Flow Service] -API stellen und dabei Ihre Basisverbindungs-ID, den Pfad zur Quelldatei, die Sie aufnehmen möchten, und die entsprechende Verbindungsspezifikations-ID Ihrer Quelle angeben.
 
 Beim Erstellen einer Quellverbindung müssen Sie auch einen -Aufzählungswert für das Datenformatattribut definieren.
 
@@ -93,10 +93,10 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `baseConnectionId` | Die ID der Basisverbindung Ihrer Cloud-Speicherquelle. |
-| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON` und `parquet`. |
+| `data.format` | Das Format der Daten, die an Experience Platform übermittelt werden sollen. Folgende Werte werden unterstützt: `delimited`, `JSON` und `parquet`. |
 | `data.properties` | (Optional) Eine Reihe von Eigenschaften, die Sie beim Erstellen einer Quellverbindung auf Ihre Daten anwenden können. |
 | `data.properties.columnDelimiter` | (Optional) Ein einzelnes Zeichen als Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Wert angegeben wird, wird ein Komma (`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter`-Eigenschaft kann nur beim Aufnehmen von durch Trennzeichen getrennten Dateien verwendet werden. |
-| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Die unterstützten Kodierungstypen sind: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der `encoding`-Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardcodierung `UTF-8` aufgenommen. |
+| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Experience Platform verwendet werden soll. Die unterstützten Kodierungstypen sind: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der `encoding`-Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardcodierung `UTF-8` aufgenommen. |
 | `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Aufnahme definiert. Die unterstützten komprimierten Dateitypen sind: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die `compressionType`-Eigenschaft kann nur verwendet werden, wenn durch Trennzeichen getrennte oder JSON-Dateien aufgenommen werden. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen gesamten Ordner.  **Hinweis**: Sie können ein Sternchen anstelle des Dateinamens verwenden, um die Aufnahme eines gesamten Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten `/acme/summerCampaign/` auf. |
 | `params.type` | Der Dateityp der aufgenommenen Quelldatendatei. Verwenden Sie den Typ `file`, um eine einzelne Datei aufzunehmen, und den Typ `folder`, um einen ganzen Ordner aufzunehmen. |
@@ -115,7 +115,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Verwenden regulärer Ausdrücke, um einen bestimmten Satz von Dateien für die Aufnahme auszuwählen {#regex}
 
-Sie können reguläre Ausdrücke verwenden, um beim Erstellen einer Quellverbindung einen bestimmten Satz von Dateien aus Ihrer Quelle in Platform aufzunehmen.
+Sie können reguläre Ausdrücke verwenden, um beim Erstellen einer Quellverbindung einen bestimmten Satz von Dateien aus Ihrer Quelle in Experience Platform aufzunehmen.
 
 **API-Format**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -348,7 +348,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ## Abrufen von Datenflussspezifikationen {#specs}
 
-Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von Cloud-Speicherdaten zuständig sind.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Experience Platform verantwortlich. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von Cloud-Speicherdaten zuständig sind.
 
 **API-Format**
 
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform sorgt. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die Details der Datenflussspezifikation zurück, die für die Übermittlung von Daten aus Ihrer Quelle an Experience Platform verantwortlich ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
 
 ```json
 {
@@ -624,8 +624,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -680,7 +680,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus Ihrem Cloud-Speicherplatz planmäßig zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus Ihrem Cloud-Speicherplatz planmäßig zu erfassen. Eingehende Daten können jetzt von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

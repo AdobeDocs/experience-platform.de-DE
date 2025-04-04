@@ -3,10 +3,10 @@ title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 34%
+source-wordcount: '1978'
+ht-degree: 32%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 34%
 >Diese Dokumentationsseite verweist auf das [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *Quelle* im Quellkatalog. Weitere Informationen finden Sie in der Dokumentation [[!DNL Data Landing Zone] Quelle](/help/sources/connectors/cloud-storage/data-landing-zone.md) .
 
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte Cloud-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien aus Platform zu exportieren. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Platform sowie die zugehörigen Programme wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte Cloud-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien aus Experience Platform zu exportieren. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Experience Platform-Produkt- und -Services-Lizenz bereitgestellt werden. Alle Kundinnen und Kunden von Experience Platform und seinen Programmen wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox.
 
-Platform erzwingt eine strikte sieben Tage lange Lebensdauer („time-to-live“, TTL) für alle Dateien, die in einen [!DNL Data Landing Zone]-Container hochgeladen werden. Alle Dateien werden nach sieben Tagen gelöscht.
+Experience Platform erzwingt eine strikte sieben Tage lange Lebensdauer („time-to-live“, TTL) für alle Dateien, die in einen [!DNL Data Landing Zone]-Container hochgeladen werden. Alle Dateien werden nach sieben Tagen gelöscht.
 
 Der [!DNL Data Landing Zone]-Ziel-Connector ist für Kundinnen und Kunden verfügbar, die den Azure- oder Amazon Web Service-Cloud-Support verwenden. Der Authentifizierungsmechanismus unterscheidet sich je nach Cloud, in der das Ziel bereitgestellt wird, alle weiteren Informationen zum Ziel und zu dessen Anwendungsfällen sind identisch. Weitere Informationen zu den beiden verschiedenen Authentifizierungsmechanismen finden Sie in den Abschnitten [Authentifizieren bei der in Azure Blob bereitgestellten Data Landing Zone](#authenticate-dlz-azure) und [Authentifizieren bei der von AWS bereitgestellten Data Landing Zone](#authenticate-dlz-aws).
 
@@ -29,7 +29,7 @@ Der [!DNL Data Landing Zone]-Ziel-Connector ist für Kundinnen und Kunden verfü
 
 ## Verbinden mit dem [!UICONTROL Data Landing Zone]-Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
+* Um über die Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
 * Um programmgesteuert eine Verbindung zu Ihrem [!UICONTROL Data Landing Zone]-Speicherort herzustellen, lesen Sie das Tutorial [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
@@ -38,7 +38,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -58,20 +58,20 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* Erfahren Sie[ wie Datensätze über die Platform-Benutzeroberfläche exportiert ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform ](/help/destinations/ui/export-datasets.md).
 * So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
-Beim Exportieren *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
+Beim Exportieren *Zielgruppendaten* erstellt Experience Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
-Beim Exportieren *Datensätze* erstellt Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
 
 ## Authentifizierung bei der in Azure Blob bereitgestellten Data Landing Zone {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Microsoft Azure ausgeführt werden. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Microsoft Azure ausgeführt werden. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder die Befehlszeilenschnittstelle verwenden.
 
@@ -97,7 +97,7 @@ Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie einen **Anzei
 
 ### Abrufen der Anmeldeinformationen für Ihre [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone]-Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldeinformationen wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md).
+Sie müssen die Experience Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone]-Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldeinformationen wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md).
 
 **API-Format**
 
@@ -210,7 +210,7 @@ Da Ihr [!DNL Data Landing Zone]-Container jetzt mit [!DNL Azure Storage Explorer
 
 >[!AVAILABILITY]
 >
->Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Führen Sie die folgenden Schritte aus, um Anmeldeinformationen für Ihre auf AWS bereitgestellte [!DNL Data Landing Zone]-Instanz zu erhalten. Verwenden Sie dann einen Client Ihrer Wahl, um eine Verbindung zu Ihrer [!DNL Data Landing Zone]-Instanz herzustellen.
 
@@ -218,7 +218,7 @@ Führen Sie die folgenden Schritte aus, um Anmeldeinformationen für Ihre auf AW
 
 ### Abrufen der Anmeldeinformationen für Ihre [!DNL Data Landing Zone] {#retrieve-dlz-credentials-aws}
 
-Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone]-Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldeinformationen wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md).
+Sie müssen die Experience Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone]-Anmeldedaten abzurufen. Der API-Aufruf zum Abrufen Ihrer Anmeldeinformationen wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Handbuch [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md).
 
 **API-Format**
 
@@ -267,7 +267,7 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landing Zone zurüc
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `credentials` | Dieses Objekt enthält die `awsAccessKeyId`, `awsSecretAccessKey` und `awsSessionToken`, die Experience Platform verwendet, um Dateien an Ihren bereitgestellten Data Landing Zone-Speicherort zu exportieren. |
+| `credentials` | Dieses Objekt enthält die `awsAccessKeyId`, `awsSecretAccessKey` und `awsSessionToken`, die Experience Platform zum Exportieren von Dateien an den von Ihnen bereitgestellten Data Landing Zone-Speicherort verwendet. |
 | `dlzPath` | Dieses Objekt enthält den Pfad im von Adobe bereitgestellten AWS-Speicherort, an dem exportierte Dateien abgelegt werden. |
 | `dlzProvider` | Gibt an, dass dies eine von Amazon S3 bereitgestellte Data Landing Zone ist. |
 | `expiryTime` | Gibt an, wann die Anmeldeinformationen im `credentials` ablaufen. Um die Anmeldeinformationen zu aktualisieren, führen Sie die Anfrage erneut aus. |

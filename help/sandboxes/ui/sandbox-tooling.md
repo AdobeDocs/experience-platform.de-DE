@@ -2,9 +2,9 @@
 title: Sandbox-Tools
 description: Nahtloser Export und Import von Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2486'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind [!DNL Adobe Real-Time Customer Data Platform] Obje
 | --- | --- | --- |
 | Customer Data Platform | Quellen | Die Anmeldeinformationen für das Quellkonto werden aus Sicherheitsgründen nicht in der Ziel-Sandbox repliziert und müssen manuell aktualisiert werden. Der Quelldatenfluss wird standardmäßig in den Entwurfsstatus kopiert. |
 | Customer Data Platform | Zielgruppen | Es wird nur **[!UICONTROL Typ]** Kundenzielgruppe **[!UICONTROL (]**) unterstützt. Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert. Das System wählt beim Überprüfen der Abhängigkeiten von Zusammenführungsrichtlinien automatisch die standardmäßige Zusammenführungsrichtlinie in der Ziel-Sandbox mit derselben XDM-Klasse aus. |
-| Customer Data Platform | Identitäten | Das System dedupliziert beim Erstellen von Adobe-Standard-Identitäts-Namespaces in der Ziel-Sandbox automatisch. Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für das einheitliche Profil aktiviert werden. |
+| Customer Data Platform | Identitäten | Das System dedupliziert beim Erstellen von Identitäts-Namespaces für Adobe Standard automatisch in der Ziel-Sandbox. Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für das einheitliche Profil aktiviert werden. |
 | Customer Data Platform | Schemata | Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert. Der Benutzer hat die Flexibilität, Schemas zu importieren, ohne die Option Einheitliches Profil aktiviert zu haben. Die Edge-Fall-Schemabeziehungen sind nicht im Paket enthalten. |
 | Customer Data Platform | Datensätze | Datensätze werden kopiert, wobei die Einstellung „Einheitliches Profil“ standardmäßig deaktiviert ist. |
 | Customer Data Platform | Einverständnis- und Governance-Richtlinien | Hinzufügen benutzerdefinierter Richtlinien, die von einem Benutzer erstellt wurden, zu einem Paket und Verschieben der Richtlinien über Sandboxes hinweg. |
@@ -60,6 +60,7 @@ In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt
 | [!DNL Adobe Journey Optimizer] | Journey | Wenn Sie eine ganze Journey zu einem Package hinzufügen, kopiert die Mehrzahl der Objekte, von denen die Journey abhängig ist, einschließlich Zielgruppen, Schemata, Ereignissen und Aktionen. |
 | [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen ermöglichen die einfache Wiederverwendung benutzerdefinierter Inhalte in Journey Optimizer-Kampagnen und -Journey. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Ein Fragment kann als abhängiges Objekt des Journey-Objekts kopiert werden. Fragmente sind wiederverwendbare Komponenten, die in einer oder mehreren Journey Optimizer-Kampagnen und -Journey-Umgebungen referenziert werden können. |
+| [!DNL Adobe Journey Optimizer] | Kampagnen | Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Entscheidungselemente, Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) . |
 
 Oberflächen (z. B. Voreinstellungen) werden nicht kopiert. Das System wählt basierend auf dem Nachrichtentyp und dem Namen der Oberfläche automatisch die bestmögliche Übereinstimmung für die Ziel-Sandbox aus. Wenn keine Oberflächen in der Ziel-Sandbox gefunden werden, schlägt die Kopie der Oberfläche fehl, wodurch die Nachrichtenkopie fehlschlägt, da für eine Nachricht eine Oberfläche zur Einrichtung verfügbar sein muss. In diesem Fall muss mindestens eine Oberfläche für den richtigen Kanal der Nachricht erstellt werden, damit die Kopie funktioniert.
 
@@ -114,13 +115,13 @@ Das **[!UICONTROL Zu Paket hinzufügen]** wird angezeigt. Wählen Sie die Option
 
 ![[!UICONTROL Zum Paket hinzufügen] zeigt ein ausgewähltes Paket aus dem Dropdown-Menü an.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-Die Liste der dem Paket hinzugefügten Objekte wird aufgelistet. Um das Paket zu veröffentlichen und es für den Import in Sandboxes verfügbar zu machen, wählen Sie **[!UICONTROL Publish]** aus.
+Die Liste der dem Paket hinzugefügten Objekte wird aufgelistet. Um das Paket zu veröffentlichen und es für den Import in Sandboxes verfügbar zu machen, wählen Sie &quot;**[!UICONTROL &quot;]**.
 
-![Liste der Objekte im Paket, wobei die Option [!UICONTROL Publish] hervorgehoben wird.](../images/ui/sandbox-tooling/publish-package.png)
+![Liste der Objekte im Paket, Hervorhebung der Option [!UICONTROL Veröffentlichen].](../images/ui/sandbox-tooling/publish-package.png)
 
-Wählen Sie **[!UICONTROL Publish]** aus, um die Veröffentlichung des Pakets zu bestätigen.
+Wählen **[!UICONTROL Veröffentlichen]** aus, um die Veröffentlichung des Pakets zu bestätigen.
 
-![Bestätigungsdialogfeld für Publish-Paket, wobei die Option [!UICONTROL Publish] hervorgehoben wird.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Bestätigungsdialogfeld „Paket veröffentlichen“ mit hervorgehobener Option [!UICONTROL Veröffentlichen].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -191,7 +192,7 @@ Wählen Sie **[!UICONTROL Gesamte Sandbox]** für [!UICONTROL Pakettyp] im Dialo
 
 ![Das Dialogfeld [!UICONTROL Paket erstellen] mit ausgefüllten Feldern und Hervorhebung [!UICONTROL Erstellen].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-Das Paket wurde erfolgreich erstellt. Wählen Sie **[!UICONTROL Publish]** aus, um das Paket zu veröffentlichen.
+Das Paket wurde erfolgreich erstellt. Wählen Sie **[!UICONTROL Veröffentlichen]** aus, um das Paket zu veröffentlichen.
 
 ![Liste der Sandbox-Pakete mit Hervorhebung des neuen veröffentlichten Pakets.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
@@ -251,7 +252,7 @@ Das **[!UICONTROL Importzusammenfassung]** zeigt eine Aufschlüsselung der Impor
 
 ![Das Dialogfeld [!UICONTROL Importdetails] mit einer detaillierten Aufschlüsselung der Importe.](../images/ui/sandbox-tooling/import-details.png)
 
-Wenn der Import abgeschlossen ist, wird in der Platform-Benutzeroberfläche eine Benachrichtigung empfangen. Sie können auf diese Benachrichtigungen über das Warnhinweissymbol zugreifen. Wenn ein Vorgang nicht erfolgreich war, können Sie von hier aus zur Fehlerbehebung navigieren.
+Nach Abschluss des Imports erhalten Sie eine Benachrichtigung über den Import in der Experience Platform-Benutzeroberfläche. Sie können auf diese Benachrichtigungen über das Warnhinweissymbol zugreifen. Wenn ein Vorgang nicht erfolgreich war, können Sie von hier aus zur Fehlerbehebung navigieren.
 
 ## Video-Tutorial
 

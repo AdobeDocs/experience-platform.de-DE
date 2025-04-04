@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme
 
-In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform. Antworten zu Fragen und Informationen zur Fehlerbehebung bei anderen [!DNL Platform]-Services, einschließlich solcher, die für alle [!DNL Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../../landing/troubleshooting.md).
+In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform. Antworten zu Fragen und Informationen zur Fehlerbehebung bei anderen [!DNL Experience Platform]-Services, einschließlich solcher, die für alle [!DNL Experience Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] stellt RESTful-APIs bereit, mit denen Sie Daten in [!DNL Experience Platform] aufnehmen können. Die erfassten Daten dienen zur nahezu echtzeitbasierten Aktualisierung einzelner Kundenprofile, sodass Sie kanalübergreifend für personalisierte, relevante Erlebnisse sorgen können. Weiterführende Informationen zu dem Service und zu den verschiedenen Erfassungsmethoden finden Sie in der [Datenerfassung – Übersicht](../home.md). Anweisungen zur Verwendung von Streaming-Erfassungs-APIs finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).
 
@@ -33,9 +33,9 @@ Die Streaming-Erfassung unterstützt zwei Validierungsmodi: synchron und asynchr
 
 Weiterführende Informationen zur synchronen und asynchronen Validierung finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md). Anweisungen zum Anzeigen von Batches, die die Validierung nicht bestehen, finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Kann ich die Payload einer Anfrage validieren, bevor ich sie an [!DNL Platform] sende?
+### Kann ich die Payload einer Anfrage validieren, bevor ich sie an [!DNL Experience Platform] sende?
 
-Payloads von Anfragen können erst ausgewertet werden, nachdem sie an [!DNL Platform] gesendet wurden. Bei Nutzung der synchronen Validierung geben gültige Payloads ausgefüllte JSON-Objekte zurück, während ungültige Payloads Fehlermeldungen zurückgeben. Bei der asynchronen Validierung erkennt und sendet der Service falsch formatierte Daten an den [!DNL Data Lake], wo sie später zur genaueren Analyse abgerufen werden können. Weiterführende Informationen dazu finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md).
+Payloads von Anfragen können erst ausgewertet werden, nachdem sie an [!DNL Experience Platform] gesendet wurden. Bei Nutzung der synchronen Validierung geben gültige Payloads ausgefüllte JSON-Objekte zurück, während ungültige Payloads Fehlermeldungen zurückgeben. Bei der asynchronen Validierung erkennt und sendet der Service falsch formatierte Daten an den [!DNL Data Lake], wo sie später zur genaueren Analyse abgerufen werden können. Weiterführende Informationen dazu finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md).
 
 ### Was geschieht, wenn eine synchrone Validierung an einem Edgeserver angefordert wird, der sie nicht unterstützt?
 
@@ -43,7 +43,7 @@ Wenn synchrone Validierung am angeforderten Ort nicht unterstützt wird, wird ei
 
 ### Wie stelle ich sicher, dass Daten nur aus vertrauenswürdigen Quellen erfasst werden?
 
-[!DNL Experience Platform] unterstützt eine sichere Datenerfassung. Wenn die authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre Organisations-ID als Anfragekopfzeilen senden. Weiterführende Informationen zum Senden authentifizierter Daten an [!DNL Platform] finden Sie im Handbuch zur [Erfassung authentifizierter Daten](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] unterstützt eine sichere Datenerfassung. Wenn die authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre Organisations-ID als Anfragekopfzeilen senden. Weiterführende Informationen zum Senden authentifizierter Daten an [!DNL Experience Platform] finden Sie im Handbuch zur [Erfassung authentifizierter Daten](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Wie ist die Latenz beim Streaming von Daten an [!DNL Real-Time Customer Profile]?
 
@@ -51,15 +51,15 @@ Streaming-Ereignisse werden in der Regel nach weniger als 60 Sekunden in [!DNL R
 
 ### Kann ich in eine API-Anfrage mehrere Nachrichten einschließen?
 
-Sie können in einer Anfrage-Payload mehrere Nachrichten gruppieren und an [!DNL Platform] streamen. Bei richtiger Verwendung stellt das Gruppieren mehrerer Nachrichten in einer Anfrage eine hervorragende Möglichkeit zur Optimierung Ihrer Datenvorgänge dar. Lesen Sie das Tutorial zum [Senden mehrerer Nachrichten in einer Anfrage](../tutorials/streaming-multiple-messages.md), um mehr zu erfahren.
+Sie können in einer Anfrage-Payload mehrere Nachrichten gruppieren und an [!DNL Experience Platform] streamen. Bei richtiger Verwendung stellt das Gruppieren mehrerer Nachrichten in einer Anfrage eine hervorragende Möglichkeit zur Optimierung Ihrer Datenvorgänge dar. Lesen Sie das Tutorial zum [Senden mehrerer Nachrichten in einer Anfrage](../tutorials/streaming-multiple-messages.md), um mehr zu erfahren.
 
 ### Wie weiß ich, ob meine gesendeten Daten empfangen werden?
 
-Alle Daten, die (erfolgreich oder nicht) an [!DNL Platform] gesendet werden, werden als Batch-Dateien gespeichert, bevor sie in Datensätzen persistiert werden. Der Verarbeitungsstatus von Batches erscheint in dem Datensatz, an den sie gesendet wurden.
+Alle Daten, die (erfolgreich oder nicht) an [!DNL Experience Platform] gesendet werden, werden als Batch-Dateien gespeichert, bevor sie in Datensätzen persistiert werden. Der Verarbeitungsstatus von Batches erscheint in dem Datensatz, an den sie gesendet wurden.
 
 Sie können überprüfen, ob Daten erfolgreich erfasst wurden, indem Sie die Datensatzaktivität mit der [Benutzeroberfläche von Experience Platform](https://platform.adobe.com) überprüfen. Klicken Sie dazu im linken Navigationsbereich auf **[!UICONTROL Datensätze]**, um eine Liste der Datensätze anzuzeigen. Wählen Sie in der angezeigten Liste den Datensatz aus, an den Sie streamen, um die zugehörige Seite **[!UICONTROL Datensatzaktivität]** zu öffnen und alle Batches anzuzeigen, die in einem bestimmten Zeitraum gesendet wurden. Weiterführende Informationen zum Verwenden von [!DNL Experience Platform] zur Überwachung von Datenströmen finden Sie im Handbuch zur [Überwachung von Streaming-Datenströmen](../quality/monitor-data-ingestion.md).
 
-Wenn Ihre Daten nicht aufgenommen werden konnten und Sie sie aus [!DNL Platform] wiederherstellen möchten, können Sie die fehlgeschlagenen Batches abrufen, indem Sie ihre IDs an die [!DNL Data Access API] senden. Weiterführende Informationen finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
+Wenn Ihre Daten nicht aufgenommen werden konnten und Sie sie aus [!DNL Experience Platform] wiederherstellen möchten, können Sie die fehlgeschlagenen Batches abrufen, indem Sie ihre IDs an die [!DNL Data Access API] senden. Weiterführende Informationen finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
 ### Warum sind meine Streaming-Daten im Data Lake nicht verfügbar?
 

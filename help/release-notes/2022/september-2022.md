@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2762'
-ht-degree: 99%
+source-wordcount: '2774'
+ht-degree: 89%
 
 ---
 
@@ -35,14 +35,14 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 >
 >Die attributbasierte Zugriffssteuerung wird ab Oktober 2022 aktiviert. Wenn Sie ein frühzeitiger Anwendender sein möchten, wenden Sie sich an den Adobe-Support-Mitarbeiter.
 
-Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Experience Platform-Benutzenden in Ihrem Unternehmen den Zugriff auf einzelne Objekte gewähren oder sperren.
 
-Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Administratorinnen Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Durch attributbasierte Zugriffssteuerung können Admins Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Experience Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 | Funktion | Beschreibung |
 | --- | --- |
 | Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder und Segmente des Experience-Datenmodells (XDM) mit Kennzeichnungen versehen, die unterschiedliche Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administrierende die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder und Segmente zu definieren. Damit kann der Zugriff durch Benutzende oder Benutzergruppen (interne, externe oder Drittparteien) besser verwaltet werden. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
-| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
+| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Experience Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
@@ -84,7 +84,7 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Audit-Protokollen in Platform verfolgt werden, finden Sie in der [Übersicht zu Audit-Protokollen](../../landing/governance-privacy-security/audit-logs/overview.md).
+Weiterführende Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Audit-Protokollen in Experience Platform verfolgt werden, finden Sie im Abschnitt [Übersicht über Audit-Protokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -107,7 +107,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Integration der linken Navigation in der Platform-Benutzeroberfläche | Alle Funktionen, die bisher ausschließlich in der Benutzeroberfläche für die Datenerfassung enthalten waren (einschließlich Tags, Ereignisweiterleitung und Datenströme), sind jetzt auch über die linke Navigationsleiste von Experience Platform unter der Kategorie **[!UICONTROL Datenerfassung]** verfügbar Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln. |
+| Integration der linken Navigation in der Experience Platform-Benutzeroberfläche | Alle Funktionen, die bisher ausschließlich in der Benutzeroberfläche für die Datenerfassung enthalten waren (einschließlich Tags, Ereignisweiterleitung und Datenströme), sind jetzt auch über die linke Navigationsleiste von Experience Platform unter der Kategorie **[!UICONTROL Datenerfassung]** verfügbar Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Experience Platform zwischen Benutzeroberflächen zu wechseln. |
 | Benutzerattribution in Tags und Ereignisweiterleitung | Bei der Auflistung verfügbarer [!UICONTROL Eigenschaften] in Tags und bei der Ereignisweiterleitung wird jetzt für jede aufgelistete Eigenschaft angezeigt, wann sie zuletzt aktualisiert wurde und von welchem Benutzenden die Aktualisierung vorgenommen wurde. |
 | [[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an die [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [User-Agent Client Hints in Web SDK](/help/web-sdk/use-cases/client-hints.md) | Web SDK unterstützt jetzt [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt. |
@@ -116,7 +116,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Experience Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -155,7 +155,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzeroberflächenunterstützung für Auflistungen und empfohlene Werte | Zusätzlich zu den Auflistungen, die die Datenvalidierung ermöglichen, können Sie jetzt [vorgeschlagene Werte für standardmäßige oder benutzerdefinierte Zeichenfolgenfelder hinzufügen oder entfernen](../../xdm/ui/fields/enum.md). Damit verfügen Platform-Benutzer über eine benutzerfreundliche Liste von Werten, aus denen sie beim Erstellen von Segmenten auswählen können. |
+| Benutzeroberflächenunterstützung für Auflistungen und empfohlene Werte | Zusätzlich zu den Auflistungen, die die Datenvalidierung ermöglichen, können Sie jetzt [vorgeschlagene Werte hinzufügen oder entfernen](../../xdm/ui/fields/enum.md) für standardmäßige oder benutzerdefinierte Zeichenfolgenfelder verwenden, sodass Experience Platform-Benutzende beim Erstellen von Segmenten über eine benutzerfreundliche Liste von Werten verfügen. |
 
 **Neue XDM-Komponenten**
 
@@ -190,7 +190,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -214,7 +214,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Warnhinweis-Abonnement-API | Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
+| Warnhinweis-Abonnement-API | Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Experience Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
 | Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/key-concepts/dataset-samples.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
@@ -223,7 +223,7 @@ Weitere Informationen erhalten Sie in der [Dokumentation zu Abfrage-Warnhinweise
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -231,7 +231,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Auswirkungen der Audience Manager-Segmentpopulation auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
+| Auswirkungen der Audience Manager-Segmentpopulation auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Experience Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
 | Unterstützung für Adobe Campaign Managed Cloud Service | Verwenden Sie die Adobe Campaign Managed Cloud Service-Quelle, um Ihre Versand- und Trackinglog-Daten von Adobe Campaign v8.4 nach Experience Platform zu übertragen. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Campaign Managed Cloud Service-Quellverbindung über die Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/campaign.md). |
 | API-Unterstützung für On-Demand-Aufnahme bei Batch-Quellen | Verwenden Sie die On-Demand-Aufnahme, um mit der [!DNL Flow Service]-API für einen bestimmten Datenfluss Ad-hoc-Flussausführungen zu erstellen. Die erstellten Flussausführungen müssen auf eine einmalige Aufnahme eingestellt sein. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md). |
 | API-Unterstützung für die Wiederholung fehlgeschlagener Datenflussausführungen für Batch-Quellen | Verwenden Sie den Vorgang `re-trigger`, um Ihren fehlgeschlagenen Datenfluss über die API erneut zu versuchen. Weitere Informationen finden Sie im Handbuch unter [Wiederholen fehlgeschlagener Datenflussausführungen mithilfe der API](../../sources/tutorials/api/retry-flows.md). |

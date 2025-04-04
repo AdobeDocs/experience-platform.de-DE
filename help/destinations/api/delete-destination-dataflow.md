@@ -5,9 +5,9 @@ title: Löschen eines Ziel-Datenflusses mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Datenflüsse zu Batch- und Streaming-Zielen löschen.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 49%
 
 ---
@@ -25,7 +25,7 @@ Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gült
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um einen Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich löschen zu können.
 
@@ -35,13 +35,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -84,7 +84,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Kein Inhalt) und leeren Text
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

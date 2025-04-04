@@ -2,9 +2,9 @@
 title: Verbinden von Jupyter Notebook mit dem Abfrage-Service
 description: Erfahren Sie, wie Sie Jupyter Notebook mit dem Abfrage-Service von Adobe Experience Platform verbinden.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ In diesem Dokument werden die Schritte beschrieben, die zum Verbinden von [!DNL 
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf [!DNL Jupyter Notebook] haben und mit dessen Benutzeroberfläche vertraut sein. Informationen zum Herunterladen von [!DNL Jupyter Notebook] oder weitere Informationen finden Sie unter [Official [!DNL Jupyter Notebook] Documentation](https://jupyter.org/).
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Jupyter Notebook] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] in der Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Jupyter Notebook] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
 
 >[!TIP]
 >
@@ -40,13 +40,13 @@ Geben Sie in der ersten Zeile des [!DNL Notebook]-Editors den folgenden Wert ein
 
 Importieren Sie als Nächstes einen [!DNL PostgreSQL] Datenbankadapter für [!DNL Python]. Geben Sie den Wert ein: `import psycopg2`und wählen Sie **[!DNL Run]** aus. Es gibt keine Erfolgsmeldung für diesen Prozess. Wenn keine Fehlermeldung angezeigt wird, fahren Sie mit dem nächsten Schritt fort.
 
-Sie müssen jetzt Ihre Adobe Experience Platform-Anmeldeinformationen angeben, indem Sie den Wert eingeben: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Ihre Anmeldeinformationen für die Verbindung finden Sie [!UICONTROL  Abschnitt ]Abfragen“ auf der Registerkarte [!UICONTROL Anmeldeinformationen] der Platform-Benutzeroberfläche. Detaillierte Anweisungen finden Sie in der Dokumentation [ Suchen der ](../ui/credentials.md) Ihres Unternehmens .
+Sie müssen jetzt Ihre Adobe Experience Platform-Anmeldeinformationen angeben, indem Sie den Wert eingeben: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Ihre Anmeldeinformationen für die Verbindung finden Sie [!UICONTROL  Abschnitt ]Abfragen“ auf der Registerkarte [!UICONTROL Anmeldeinformationen] der Experience Platform-Benutzeroberfläche. Detaillierte Anweisungen finden Sie in der Dokumentation [ Suchen der ](../ui/credentials.md) Ihres Unternehmens .
 
 Die Verwendung nicht ablaufender Anmeldeinformationen wird empfohlen, wenn Sie Drittanbieter-Clients verwenden, um sich die wiederholte Eingabe Ihrer Details zu ersparen. In der Dokumentation finden [ Anweisungen zum Generieren und Verwenden nicht ablaufender Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials).
 
 >[!IMPORTANT]
 >
->Beim Kopieren von Anmeldeinformationen aus der Platform-Benutzeroberfläche ist keine zusätzliche Formatierung der Anmeldeinformationen erforderlich. Sie können in einer Zeile angegeben werden, wobei ein einziges Leerzeichen zwischen den Eigenschaften und Werten besteht. Die Anmeldeinformationen werden in Anführungszeichen eingeschlossen und **nicht** durch Kommas getrennt.
+>Beim Kopieren von Anmeldeinformationen aus der Experience Platform-Benutzeroberfläche ist keine zusätzliche Formatierung der Anmeldeinformationen erforderlich. Sie können in einer Zeile angegeben werden, wobei ein einziges Leerzeichen zwischen den Eigenschaften und Werten besteht. Die Anmeldeinformationen werden in Anführungszeichen eingeschlossen und **nicht** durch Kommas getrennt.
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

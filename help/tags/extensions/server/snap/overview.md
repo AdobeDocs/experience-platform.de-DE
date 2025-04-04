@@ -3,16 +3,16 @@ title: Snapchat Conversions API-Erweiterung - Übersicht
 description: Verwenden Sie die Snapchat-Konvertierung, um Server-seitige Ereignisdaten an Snap zu senden.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 4%
 
 ---
 
 # [!DNL Snapchat] Conversions-API-Erweiterung - Übersicht
 
-Die [!DNL Snap] Conversion API Extension ist eine sichere [Edge Network Server-API](/help/server-api/overview.md)-Schnittstelle, über die Sie Informationen direkt über Benutzeraktionen auf Ihren Websites mit [!DNL Snapchat] teilen können. Sie können die Regeln für die Ereignisweiterleitung nutzen, um Daten vom **[!DNL Adobe Experience Platform Edge Network]** an **[!DNL Snapchat]** zu senden, indem Sie die API-Erweiterung für die **[!DNL Snap]** verwenden.
+Die [!DNL Snap] Conversion API-Erweiterung ist eine sichere [Edge Network Server-API](/help/server-api/overview.md)-Schnittstelle, über die Sie Informationen direkt über Benutzeraktionen auf Ihren Websites mit [!DNL Snapchat] teilen können. Sie können die Regeln für die Ereignisweiterleitung nutzen, um Daten vom **[!DNL Adobe Experience Platform Edge Network]** an **[!DNL Snapchat]** zu senden, indem Sie die API-Erweiterung für die **[!DNL Snap]** verwenden.
 
 ## Voraussetzungen für [!DNL Snapchat] {#prerequisites}
 
@@ -79,7 +79,7 @@ Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forw
 
 ## Erstellen von Regeln zum Senden von Konversionsereignissen an Snap {#create-snap-rules}
 
-[Regeln](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) werden zum Erstellen von Triggern für Erweiterungen in Platform verwendet. In diesem Abschnitt wird beschrieben, wie Sie in Ihrer Ereignisweiterleitungs-Eigenschaft Regeln erstellen, um Konversionsereignisse mithilfe der Conversions-API-Erweiterung an Snap zu senden.
+[Regeln](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) werden zum Erstellen von Triggern für Erweiterungen in Experience Platform verwendet. In diesem Abschnitt wird beschrieben, wie Sie in Ihrer Ereignisweiterleitungs-Eigenschaft Regeln erstellen, um Konversionsereignisse mithilfe der Conversions-API-Erweiterung an Snap zu senden.
 
 ### Neue Regel erstellen
 
@@ -201,4 +201,4 @@ Wenn Sie Probleme mit Ihrem **Event Quality Score** haben, erfahren Sie mehr üb
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Server-seitige Ereignisdaten mithilfe der **[!DNL Snap Conversions API]**-Erweiterung an **[!DNL Snap]** senden. Weitere Informationen zu den Funktionen für die Ereignisweiterleitung in Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Server-seitige Ereignisdaten mithilfe der **[!DNL Snap Conversions API]**-Erweiterung an **[!DNL Snap]** senden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).

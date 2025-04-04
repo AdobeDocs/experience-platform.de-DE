@@ -2,10 +2,10 @@
 title: Erstellen einer HTTP-API-Streaming-Verbindung über die Benutzeroberfläche
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 28%
+source-wordcount: '1003'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Aufbauen einer Streaming-Verbindung
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -66,7 +66,7 @@ Wenn Ihre Daten hochgeladen wurden, können Sie die rechte Seite der Benutzerobe
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der Schritt [!UICONTROL Zuordnung] wird angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz bereit.
+Der [!UICONTROL Zuordnungsschritt] wird angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Experience Platform-Datensatz bereit.
 
 Die [!DNL HTTP API] unterstützt die Aufnahme von JSON-Dateien. JSON-Dateien müssen nicht manuell konfiguriert werden, wenn sie als XDM-kompatibel gekennzeichnet sind. Andernfalls müssen Sie die Zuordnung explizit konfigurieren.
 
@@ -141,4 +141,4 @@ Bei der Erstellung der Verbindung wird die Seite mit den Quelldetails angezeigt.
 
 In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie mit dem Streaming-Endpunkt auf eine Vielzahl von [!DNL Data Ingestion]-APIs zugreifen können. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../../../api/create/streaming/http.md).
 
-Um zu erfahren, wie Sie Daten an Platform streamen, lesen Sie entweder das Tutorial [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
+Um zu erfahren, wie Sie Daten an Experience Platform streamen, lesen Sie entweder das Tutorial [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).

@@ -2,9 +2,9 @@
 title: Sortieren und Filtern von Antworten in der Flow Service-API
 description: In diesem Tutorial wird die Syntax für das Sortieren und Filtern mithilfe von Abfrageparametern in der Flow Service-API behandelt, einschließlich einiger erweiterter Anwendungsfälle.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Sie können auch einen Sortierparameter mit einem Filterparameter kombinieren, i
 GET /flows?property=state==enabled&orderby=createdAt
 ```
 
-## Filter
+## Filterung
 
 Sie können Antworten mithilfe eines `property` mit einem Schlüssel-Wert-Ausdruck filtern. Beispielsweise gibt `?property=id==12345` nur Ressourcen zurück, deren `id` genau `12345` entspricht.
 
@@ -195,9 +195,9 @@ Je nach abgerufener Flow Service-Entität können verschiedene Eigenschaften zum
 
 {style="table-layout:auto"}
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
-In diesem Abschnitt finden Sie einige spezifische Beispiele für die Verwendung von Filtern und Sortieren zur Rückgabe von Informationen zu bestimmten Connectoren oder zur Unterstützung bei der Fehlerbehebung. Wenn es weitere Anwendungsfälle gibt, die von Adobe hinzugefügt werden sollen, verwenden Sie bitte die **[!UICONTROL Detaillierte Feedback-Optionen]** auf der Seite, um eine Anfrage zu senden.
+In diesem Abschnitt finden Sie einige spezifische Beispiele für die Verwendung von Filtern und Sortieren zur Rückgabe von Informationen zu bestimmten Connectoren oder zur Unterstützung bei der Fehlerbehebung. Wenn es zusätzliche Anwendungsfälle gibt, die Adobe hinzufügen soll, verwenden Sie bitte die **[!UICONTROL Detaillierte Feedback-Optionen]** auf der Seite, um eine Anfrage zu senden.
 
 **Filtern, um Verbindungen nur zu einem bestimmten Ziel zurückzugeben**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie die Abfrageparameter `orderby` und `property` verwenden, um Antworten in der Flow Service-API zu sortieren und zu filtern. Eine schrittweise Anleitung zur Verwendung der API für gängige Workflows in Platform finden Sie in den API-Tutorials in der Dokumentation [Quellen](../../sources/home.md) und [Ziele](../../destinations/home.md).
+In diesem Handbuch wurde beschrieben, wie Sie die Abfrageparameter `orderby` und `property` verwenden, um Antworten in der Flow Service-API zu sortieren und zu filtern. Eine schrittweise Anleitung zur Verwendung der API für gängige Workflows in Experience Platform finden Sie in den API-Tutorials in der Dokumentation [Quellen](../../sources/home.md) und [Ziele](../../destinations/home.md).

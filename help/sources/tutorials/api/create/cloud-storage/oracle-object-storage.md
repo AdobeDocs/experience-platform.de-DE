@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Oracle-Objektspeicher;oracle-Objektspeicher
+keywords: Experience Platform;Startseite;beliebte Themen;Oracle Object Storage;Oracle Object Storage
 solution: Experience Platform
-title: Erstellen einer Oracle-Objektspeicher-Basisverbindung mithilfe der Flow Service-API
+title: Erstellen einer Oracle Object Storage Base-Verbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Oracle-Objektspeicher verbinden.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 50%
+source-wordcount: '549'
+ht-degree: 31%
 
 ---
 
@@ -22,8 +22,8 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Oracle Object Storage] herstellen zu können.
 
@@ -40,15 +40,15 @@ Um [!DNL Flow Service] mit [!DNL Oracle Object Storage] zu verbinden, müssen Si
 | `folderPath` | Der Pfad des zulässigen Ordners ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Oracle Object Storage] ist: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch zur Authentifizierung beim [Oracle-Objektspeicher](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Weitere Informationen zum Abrufen dieser Werte finden Sie im [Authentifizierungshandbuch für den Oracle-Objektspeicher](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Oracle Object Storage]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 

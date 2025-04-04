@@ -2,16 +2,16 @@
 title: Verwalten von Datennutzungsbeschriftungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Datennutzungsbeschriftungen zu Schemafeldern des Experience-Datenmodells (XDM) hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '770'
 ht-degree: 10%
 
 ---
 
 # Verwalten von Datennutzungskennzeichnungen für ein Schema
 
-Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell(XDM)-Schemata eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Aus diesem Grund ermöglicht Ihnen Platform, die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungskennzeichnungen“ ](../../data-governance/labels/overview.md) beschränken.
+Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell(XDM)-Schemata eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Aus diesem Grund ermöglicht Ihnen Experience Platform, die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungskennzeichnungen“ ](../../data-governance/labels/overview.md) beschränken.
 
 Eine Kennzeichnung, die auf ein Schemafeld angewendet wird, gibt die Nutzungsrichtlinien an, die für die in diesem bestimmten Feld enthaltenen Daten gelten.
 
@@ -19,15 +19,15 @@ Kennzeichnungen können auf einzelne Schemata und Felder innerhalb dieser Schema
 
 Darüber hinaus wird jede Feldbezeichnung, die Sie in einem Schema hinzufügen, an alle anderen Schemata übertragen, die dasselbe Feld aus einer freigegebenen Klasse oder Feldergruppe verwenden. Dadurch wird sichergestellt, dass die Nutzungsregeln für ähnliche Felder in Ihrem gesamten Datenmodell konsistent sind.
 
-In diesem Tutorial werden die Schritte zum Hinzufügen von Kennzeichnungen zu einem Schema mithilfe des Schema-Editors in der Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden die Schritte zum Hinzufügen von Kennzeichnungen zu einem Schema mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-   * [Schema-Editor](../ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Bietet die Infrastruktur zum Durchsetzen von Datennutzungsbeschränkungen für Platform-Vorgänge mithilfe von Richtlinien, die definieren, welche Marketing-Aktionen für gekennzeichnete Daten ausgeführt werden können (oder nicht).
+   * [Schema-Editor](../ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Experience Platform-Benutzeroberfläche erstellen und verwalten.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Bietet die Infrastruktur zum Durchsetzen von Datennutzungsbeschränkungen für Experience Platform-Vorgänge mithilfe von Richtlinien, die definieren, welche Marketing-Aktionen für gekennzeichnete Daten ausgeführt werden können (oder nicht).
 
 ## Auswählen eines Schemas oder Felds, dem Beschriftungen hinzugefügt werden sollen {#select-schema-field}
 

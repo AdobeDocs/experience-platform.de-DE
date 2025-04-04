@@ -2,16 +2,16 @@
 title: LiveRamp - Verteilungsanschluss
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Verteilungs-Connector Zielgruppen orchestrieren und aktivieren können, die zuvor in LiveRamp integriert wurden, um nachgelagerte Werbeziele zu erreichen.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2722'
-ht-degree: 45%
+source-wordcount: '2744'
+ht-degree: 44%
 
 ---
 
 # [!DNL LiveRamp - Distribution]-Verbindung
 
-Mit der [!DNL LiveRamp - Distribution]-Verbindung können Sie Zielgruppen von Experience Platform für Premium-Publisher über mobile, Web-, Display- und vernetzte TV-Medien aktivieren.
+Mit der [!DNL LiveRamp - Distribution] können Sie Zielgruppen von Experience Platform für Premium-Publisher über mobile, Web-, Display- und vernetzte TV-Medien aktivieren.
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Mit der [!DNL LiveRamp - Distribution]-Verbindung können Sie Zielgruppen von Ex
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL LiveRamp - Distribution]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
-Das Marketing-Team eines Sportbekleidungseinzelhändlers verwendete die Verbindung [LiveRamp - Onboarding](liveramp-onboarding.md), um Zielgruppen von Experience Platform an ihr LiveRamp-Konto zu senden.
+Das Marketing-Team einer Sportbekleidung in retailer verwendete die Verbindung [LiveRamp - Onboarding](liveramp-onboarding.md), um Zielgruppen aus Experience Platform an ihr LiveRamp-Konto zu senden.
 
 Trigger Über die [!DNL LiveRamp - Distribution]-Verbindung können sie jetzt die Aktivierung der integrierten Zielgruppen in die [unterstützten Ziele“ ](#supported-destinations). Dann können sie Benutzer auf mobilen, offenen Web-, Social- und [!DNL CTV]-Plattformen ansprechen.
 
@@ -73,7 +73,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**.
 
-![Platform-UI-Bild, das den Bildschirm für die Zielverbindung anzeigt.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![Bild der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Zielverbindung.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
 * **[!UICONTROL LiveRamp-Organisations-ID]**: Die Organisations-ID Ihres LiveRamp-Kontos (in _von LiveRamp bereitgestellten Anmeldedaten als owner_org_ aufgeführt).
 * **[!UICONTROL Password]**: Ihr LiveRamp-Kontokennwort (in _von LiveRamp bereitgestellten Anmeldedaten als secret_key_ aufgeführt).
@@ -84,13 +84,13 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Geben Sie nach erfolgreicher Verbindung mit Ihrem LiveRamp-Konto die erforderlichen Informationen ein, um eine Verbindung mit dem Ziel herzustellen, für das Sie Zielgruppen aktivieren möchten.
 
-![Platform-UI-Bild mit dem Bildschirm mit den Zieldetails.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+![Bild der Experience Platform-Benutzeroberfläche mit dem Bildschirm mit den Zieldetails.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie den bevorzugten Namen für Ihre Zielverbindung ein.
 
 >[!NOTE]
 >
->Beim Benennen Ihres Ziels empfiehlt Adobe, folgendes Format zu verwenden: `LiveRamp - Downstream Destination Name`. Dieses Benennungsmuster hilft Ihnen, Ihre Ziele auf der Registerkarte [Durchsuchen](../../ui/destinations-workspace.md#browse) des Arbeitsbereichs Ziele schnell zu identifizieren.
+>Adobe empfiehlt, beim Benennen Ihres Ziels folgendes Format zu verwenden: `LiveRamp - Downstream Destination Name`. Dieses Benennungsmuster hilft Ihnen, Ihre Ziele auf der Registerkarte [Durchsuchen](../../ui/destinations-workspace.md#browse) des Arbeitsbereichs Ziele schnell zu identifizieren.
 ><br>
 >Beispiel: `LiveRamp - Roku`.
 
@@ -114,7 +114,7 @@ Detaillierte Anleitungen zum Konfigurieren der einzelnen Ziele finden Sie in den
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das 4C Insights-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das 4C Insights-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
 * **[!UICONTROL 4C-Markenprofil-ID]**: Geben Sie die numerische ID ein, die Ihrem 4C-Markenprofil zugeordnet ist. Wenn Sie diese ID nicht haben, wenden Sie sich an den 4C-Kundendienst.
 
@@ -127,7 +127,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Acast-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Acast-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -140,7 +140,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Ampersand-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Ampersand-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
 * **[!UICONTROL Ihr Firmenname]**: Ihr Firmenname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -153,7 +153,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Captify-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Captify-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -166,7 +166,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Cardlytics-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Cardlytics-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -191,7 +191,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Disney-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Disney-Ziel.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL Advertiser-Daten-Ziel-]**: Geben Sie ein, `I AGREE` die Bestätigung und Zustimmung zu den Disney Advertiser-Daten-Bedingungen zu bestätigen.
 * **[!UICONTROL Kundenname]**: Geben Sie Ihren Firmennamen so ein, wie er dem Zielpartner angezeigt werden soll.
@@ -206,7 +206,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das iHeartMedia-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das iHeartMedia-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -219,7 +219,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den Kundendatenfeldern für das Exchange-Indexziel.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Exchange-Indexziel.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
 * **[!UICONTROL Kontoname]**: Ihr Index Exchange Client-Kontoname. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -232,7 +232,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Magnite CTV-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Magnite CTV-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
 * **[!UICONTROL Client]**: Ihr Client-Name, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -250,7 +250,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Magnite DV+-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Magnite DV+-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
 * **[!UICONTROL Partner-ID]**: Die Rubicon-Projektpartner-ID, die dem Herausgeber zugeordnet ist, dem das Segment/die Daten gehören. Wenden Sie sich an Ihren Rubicon Project-Support-Kontakt, wenn Sie sich nicht sicher sind, welchen Wert Sie verwenden sollten.
 * **[!UICONTROL Seat ID]**: Magnite DV+ Seat ID von Ihrem Magnite Account Manager
@@ -279,7 +279,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Nexxen-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Nexxen-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
 * **[!UICONTROL Tariftyp]**: Der Tariftyp gibt an, wie die Datennutzung in Rechnung gestellt werden soll. Alle Raten von 0,00 $ sollten eine Pauschalgebühr sein. Vergewissern Sie sich bei der Nexxen-Kundenbetreuung, wenn Sie sich nicht sicher sind, welcher Ratentyp verwendet werden sollte.
 * **[!UICONTROL Markt-ID]**: Geben Sie die numerische Markt-ID ein, unter der der Nexxen-Datenvertrag erstellt werden soll. Geben Sie „-1“ ein, wenn Sie die „AlwaysOn“-Syndizierung auf allen Märkten der Nexxen-Plattform durchführen.
@@ -295,7 +295,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das One Fox-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das One Fox-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
 * **[!UICONTROL Client]**: Der Name Ihres Unternehmens-/Verteilungskontos, wie er dem Partner angezeigt werden soll. Verwenden Sie standardmäßig Ihren Firmennamen. Wenden Sie sich an Ihre Partner-Kundenbetreuung, wenn Sie nicht sicher sind, welchen Namen Sie verwenden möchten. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -308,7 +308,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Pandora-Ziel zeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Pandora-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
 * **[!UICONTROL Kontoname]**: Der Name Ihres Pandora-Kontos. Wenden Sie sich an Ihren Pandora-Support-Kontakt, wenn Sie sich nicht sicher sind, welchen Kontonamen Sie haben. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -326,7 +326,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die Kundendatenfelder für das Reddit-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den Kundendatenfeldern für das Reddit-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
 * **[!UICONTROL Reddit Advertiser ID]**: Ihre Reddit Advertiser ID. Muss mit „t2_“ oder „a2_“ beginnen. Wenden Sie sich an Ihren Reddit-Support-Kontakt, wenn Sie Ihre Advertiser-ID nicht kennen.
 * **[!UICONTROL Reddit Advertiser Name]**: Ihr Reddit Advertiser-Name. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
@@ -345,7 +345,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild, das die unterstützten Kennungen für das Roku-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das Roku-Ziel.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
 
 * **[!UICONTROL E-Mail-Adresse des Roku]** Kontos: Geben Sie die mit Ihrem Roku-Konto verknüpfte E-Mail-Adresse ein.
 * **[!UICONTROL E-Mail-Adresse des Roku-Kontobeauftragten]**: Geben Sie die E-Mail-Adresse Ihres Roku-Kontobeauftragten ein. Um mehrere Adressen einzugeben, trennen Sie sie durch Kommas.
@@ -359,7 +359,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den unterstützten Kennungen für das Spotify-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das Spotify-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -377,7 +377,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den unterstützten Kennungen für das Taboola-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das Taboola-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account Manager E-Mail]** Adresse: Die E-Mail-Adresse Ihres Taboola Account Managers.
 * **[!UICONTROL Segmenttyp]**: Der Segmenttyp. Derzeit werden nur Erstanbietersegmente unterstützt.
@@ -391,7 +391,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den unterstützten Kennungen für das TargetSpot-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das TargetSpot-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
@@ -404,7 +404,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den unterstützten Kennungen für das TargetSpot-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das TargetSpot-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
 
 * **[!UICONTROL Teads-ID]**: Ihre Teads-ID
 
@@ -417,7 +417,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
-![Platform-UI-Bild mit den unterstützten Kennungen für das Web-Discovery-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+![Bild der Experience Platform-Benutzeroberfläche mit den unterstützten Kennungen für das Web-Discovery-Ziel.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
 * **[!UICONTROL Kundenname]**: Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 

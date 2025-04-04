@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;Square;Square
 title: Erstellen einer Square-Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Square-Quellverbindung erstellen.
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 56%
+source-wordcount: '458'
+ht-degree: 44%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Square] in der Benutzeroberfläche
 
-In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Square]-Quell-Connectors mithilfe der Platform-Benutzeroberfläche.
+In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Square]-Quell-Connectors mithilfe der Benutzeroberfläche von Experience Platform.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Square] Platform-Konto zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL Square]-Konto Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -37,11 +37,11 @@ Um auf Ihr [!DNL Square] Platform-Konto zugreifen zu können, müssen Sie die fo
 
 Weitere Informationen zu diesen Anmeldeinformationen und deren Abruf finden Sie unter [[!DNL Square] Dokumentation zu OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
-Nachdem Sie die erforderlichen Anmeldedaten zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Square]-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Square]-Konto mit Experience Platform zu verknüpfen.
 
-## Verbinden Sie Ihr [!DNL Square]-Konto
+## Verbinden Ihres [!DNL Square]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -65,4 +65,4 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Square]-Konto und Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Zahlungsdaten in Platform zu importieren](../../dataflow/payments.md).
+In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Square]-Konto und Experience Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Zahlungsdaten in Experience Platform zu importieren](../../dataflow/payments.md).

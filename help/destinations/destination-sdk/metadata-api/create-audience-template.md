@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, der zum Erstellen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK verwendet wird.
 title: Erstellen einer Zielgruppenvorlage
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
-ht-degree: 91%
+source-wordcount: '623'
+ht-degree: 88%
 
 ---
 
@@ -281,7 +281,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

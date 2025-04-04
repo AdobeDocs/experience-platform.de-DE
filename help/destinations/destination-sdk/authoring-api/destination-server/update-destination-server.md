@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Ziel-Server-Konfiguration
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 100%
+source-wordcount: '1103'
+ht-degree: 96%
 
 ---
 
@@ -98,7 +98,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Es gibt die Optionen `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Platform-Kundinnen und -Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Experience Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style="table-layout:auto"}
@@ -752,7 +752,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu
 
 ## Umgang mit API-Fehlern {#error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

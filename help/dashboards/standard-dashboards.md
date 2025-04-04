@@ -2,9 +2,9 @@
 title: Standard-Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um Schlüsselmetriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Erstellen eines benutzerdefinierten Dashboards
 
-Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum Dashboard-Inventar. Wählen **[!UICONTROL Dashboards]** aus der linken Navigation der Platform-Benutzeroberfläche und anschließend **[!UICONTROL Dashboard erstellen]**.
+Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum Dashboard-Inventar. Wählen **[!UICONTROL Dashboards]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus und klicken Sie dann auf **[!UICONTROL Dashboard erstellen]**.
 
 ![Das Dashboard-Inventar mit Dashboards im linken Navigationsbereich und hervorgehobener Option „Dashboard erstellen“.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Der Widget-Composer-Arbeitsbereich wird angezeigt. Wählen Sie als Nächstes **[
 
 #### Datenmodell auswählen {#select-data-model}
 
-Das [!UICONTROL Datenmodell auswählen] wird angezeigt. Wählen Sie ein Datenmodell aus der linken Spalte aus, um eine Vorschauliste aller verfügbaren Tabellen anzuzeigen. Das vorkonfigurierte Datenmodell für Real-time Customer Data Platform heißt [!UICONTROL CDPInsights].
+Das [!UICONTROL Datenmodell auswählen] wird angezeigt. Wählen Sie ein Datenmodell aus der linken Spalte aus, um eine Vorschauliste aller verfügbaren Tabellen anzuzeigen. Das vorkonfigurierte Datenmodell für Real-Time Customer Data Platform heißt [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Widgets können in diesem Arbeitsbereich neu angeordnet werden und ihre Größe 
 
 ![Das benutzerdefinierte Dashboard mit einem benutzerdefinierten Widget und der hervorgehobenen Schaltfläche „Speichern“.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Um sicherzustellen, dass jede Abfrage für ein Adobe Real-time Customer Data Platform-Insights-Dashboard über ausreichend Ressourcen verfügt, um effizient ausgeführt zu werden, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Slots für gleichzeitige Nutzung zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten, sodass jeweils vier Slots für gleichzeitige Abfragen verfügbar sind. Abfragen werden basierend auf Parallelitätsslots in eine Warteschlange eingereiht und warten Sie dann in der Warteschlange, bis ausreichend Parallelitätsslots verfügbar sind.
+Um sicherzustellen, dass jede Abfrage für ein Adobe Real-Time Customer Data Platform-Insights-Dashboard über ausreichend Ressourcen verfügt, um effizient ausgeführt zu werden, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Slots für gleichzeitige Nutzung zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten, sodass jeweils vier Slots für gleichzeitige Abfragen verfügbar sind. Abfragen werden basierend auf Parallelitätsslots in eine Warteschlange eingereiht und warten Sie dann in der Warteschlange, bis ausreichend Parallelitätsslots verfügbar sind.
 
 ### Bearbeiten, Duplizieren oder Löschen eines Widgets {#duplicate}
 
@@ -172,7 +172,7 @@ Wählen Sie als Nächstes die Auslassungszeichen oben rechts im Widget aus, die 
 
 >[!NOTE]
 >
->Durch die Duplizierung können Sie die Attribute eines Insights anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Wenn Sie ein Widget duplizieren, wird es in Ihrem benutzerdefinierten Dashboard angezeigt. Sie können dann die Auslassungszeichen für Ihr neues Widget auswählen und dann **[!UICONTROL Bearbeiten]**, um Ihre Einblicke anzupassen.
+>Durch Duplizierung können Sie die Attribute einer insight anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Wenn Sie ein Widget duplizieren, wird es in Ihrem benutzerdefinierten Dashboard angezeigt. Sie können dann die Auslassungszeichen für Ihr neues Widget auswählen und dann **[!UICONTROL Bearbeiten]**, um Ihre insight anzupassen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

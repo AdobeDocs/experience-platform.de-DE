@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schemaregistrierung;Kompatibilität;Kompatibilitätsmodus;Kompatibilitätsmodus;Feldtyp;Feldtypen;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schemaregistrierung;Kompatibilität;Kompatibilitätsmodus;Kompatibilitätsmodus;Feldtyp;Feldtypen;
 solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 28%
@@ -35,7 +35,7 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 
 {style="table-layout:auto"}
 
-### Filter {#filtering}
+### Filterung {#filtering}
 
 Sie können die Ergebnisse mithilfe des `property`-Parameters filtern, mit dem ein bestimmter Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen angewendet wird. Zu den unterstützten Operatoren gehören:
 
@@ -57,9 +57,9 @@ Sie können die Ergebnisse mithilfe des `property`-Parameters filtern, mit dem e
 
 ## Kompatibilitätsmodus {#compatibility}
 
-[!DNL Experience Data Model] (XDM) ist eine öffentlich dokumentierte Spezifikation, die vom Adobe gesteuert wird, um die Interoperabilität, Ausdruckskraft und Leistungsfähigkeit digitaler Erlebnisse zu verbessern. Adobe verwaltet den Quell-Code und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemata verwendet werden.
+[!DNL Experience Data Model] (XDM) ist eine öffentlich dokumentierte Spezifikation, die von Adobe unterstützt wird, um die Interoperabilität, Ausdruckskraft und Leistungsfähigkeit digitaler Erlebnisse zu verbessern. Adobe verwaltet den Quell-Code und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemata verwendet werden.
 
-Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. Was Sie in [!DNL Experience Platform] sehen, wird als Kompatibilitätsmodus bezeichnet und bietet eine einfache Zuordnung zwischen standardmäßigem XDM und der Art und Weise, wie es in [!DNL Platform] verwendet wird.
+Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. Was Sie in [!DNL Experience Platform] sehen, wird als Kompatibilitätsmodus bezeichnet und bietet eine einfache Zuordnung zwischen standardmäßigem XDM und der Art und Weise, wie es in [!DNL Experience Platform] verwendet wird.
 
 ### Funktionsweise des Kompatibilitätsmodus
 
@@ -132,6 +132,6 @@ Adobe Experience Platform ist für die Verwendung mit mehreren Lösungen und Die
 
 Die meisten [!DNL Experience Platform]-Services, einschließlich [!DNL Catalog], [!DNL Data Lake] und [!DNL Real-Time Customer Profile], verwenden [!DNL Compatibility Mode] anstelle von Standard-XDM. Die [!DNL Schema Registry]-API verwendet auch [!DNL Compatibility Mode]. Die Beispiele in diesem Dokument werden alle mit [!DNL Compatibility Mode] angezeigt.
 
-Es lohnt sich, zu wissen, dass eine Zuordnung zwischen standardmäßigem XDM und der Art und Weise, wie es in [!DNL Experience Platform] operationalisiert wird, stattfindet. Dies sollte jedoch keine Auswirkungen auf Ihre Verwendung von [!DNL Platform]-Services haben.
+Es lohnt sich, zu wissen, dass eine Zuordnung zwischen standardmäßigem XDM und der Art und Weise, wie es in [!DNL Experience Platform] operationalisiert wird, stattfindet. Dies sollte jedoch keine Auswirkungen auf Ihre Verwendung von [!DNL Experience Platform]-Services haben.
 
 Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es um die Interaktion mit Ressourcen über die [!DNL Schema Registry] geht, bieten die API-Beispiele in diesem Dokument die Best Practices, die Sie kennen und befolgen sollten.

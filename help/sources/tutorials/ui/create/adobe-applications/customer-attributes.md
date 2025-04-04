@@ -5,10 +5,10 @@ title: Erstellen einer Source-Verbindung für Kundenattribute über die Benutzer
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung über die Benutzeroberfläche erstellen, um Kundenattributprofildaten in Adobe Experience Platform zu importieren.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 36%
+source-wordcount: '620'
+ht-degree: 33%
 
 ---
 
@@ -26,11 +26,11 @@ In diesem Tutorial werden Schritte zum Erstellen einer -Quellverbindung über di
 >
 >Wenn Sie bereits eine Quellverbindung für Kundenattribut-Profildaten hergestellt haben, ist die Option zum Herstellen einer Verbindung mit der Quelle deaktiviert.
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie eine Verbindung herstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie eine Verbindung herstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Adobe]Programme} die Option **[!UICONTROL Kundenattribute]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der ] [!UICONTROL Adobe-Programme **[!UICONTROL die Option „Kundenattribute]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
@@ -42,7 +42,7 @@ Der Bildschirm [!UICONTROL Daten hinzufügen] listet alle verfügbaren Datenquel
 >
 >Feldergruppen, Schemata und Datensätze werden im Rahmen der Flussbereitstellung vorkonfiguriert erstellt. Sie bleiben unverändert und müssen bei Bedarf manuell gelöscht werden.
 
-Die Schemaentwicklung wird von der Kundenattributquelle nicht unterstützt. Wenn das Eingabeschema einer Datenquelle für Kundenattribute geändert wird, wird es mit Platform nicht mehr kompatibel. Als Problemumgehung können Sie einen vorhandenen Datenfluss mit Kundenattributen zusammen mit dem zugehörigen Datensatz, Schema und der Feldergruppe löschen und dann einen neuen mit dem aktualisierten Schema und der aktualisierten Datenquelle erstellen.
+Die Schemaentwicklung wird von der Kundenattributquelle nicht unterstützt. Wenn die Schemaeingabe einer Datenquelle für Kundenattribute geändert wird, wird sie mit Experience Platform inkompatibel. Als Problemumgehung können Sie einen vorhandenen Datenfluss mit Kundenattributen zusammen mit dem zugehörigen Datensatz, Schema und der Feldergruppe löschen und dann einen neuen mit dem aktualisierten Schema und der aktualisierten Datenquelle erstellen.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ Der Schritt [!UICONTROL Überprüfung] wird angezeigt, sodass Sie Ihren neuen Da
 
 ## Nächste Schritte
 
-Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Wenn die anfängliche Aufnahme abgeschlossen ist, können Kundenattribut-Profildaten von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Segmentation Service] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Wenn die anfängliche Aufnahme abgeschlossen ist, können Kundenattributprofildaten von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Segmentation Service] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)

@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
-ht-degree: 16%
+source-wordcount: '4279'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 Adobe Experience Platform bietet mehrere vordefinierte Warnhinweisregeln, die Sie für Ihr Unternehmen aktivieren können. In diesem Dokument werden die Einzelheiten dieser von Adobe bereitgestellten Warnhinweisregeln behandelt. Allgemeine Informationen zu Warnhinweisen in Experience Platform finden Sie in der [Übersicht zu Warnhinweisen](./overview.md).
 
-Wenn Sie [Warnhinweisregeln in der Platform-Benutzeroberfläche anzeigen](./ui.md), können Sie jede Regel einzeln abonnieren. Beim Abonnieren von Warnhinweisen über [E/A-Ereignisbenachrichtigungen](./subscribe.md) sind Warnhinweisregeln jedoch in verschiedene Abonnementpakete unterteilt. In den unten stehenden Tabellen wird jede Regel mit dem zugehörigen E/A-Ereignis-Abonnementnamen angezeigt.
+Wenn [Warnhinweisregeln in der Experience Platform-Benutzeroberfläche anzeigen](./ui.md) können Sie jede Regel einzeln abonnieren. Beim Abonnieren von Warnhinweisen über [E/A-Ereignisbenachrichtigungen](./subscribe.md) sind Warnhinweisregeln jedoch in verschiedene Abonnementpakete unterteilt. In den unten stehenden Tabellen wird jede Regel mit dem zugehörigen E/A-Ereignis-Abonnementnamen angezeigt.
 
 ## Quellen {#sources}
 
@@ -36,7 +36,7 @@ Wenn Sie den folgenden Warnhinweistyp bereits abonniert haben, erhalten Sie kein
 
 | E/A-Ereignis-Abonnement | Warnhinweisregel | Beschreibung |
 | --- | --- | --- |
-| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Mangelnde Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten in Platform aufgenommen werden. |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Mangelnde Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten in Experience Platform aufgenommen werden. |
 
 {style="table-layout:auto"}
 

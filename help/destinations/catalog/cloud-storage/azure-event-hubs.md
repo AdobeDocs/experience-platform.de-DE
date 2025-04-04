@@ -4,9 +4,9 @@ title: Azure Event Hubs-Verbindung
 description: Stellen Sie eine ausgehende Echtzeit-Verbindung zu Ihrem - [!DNL Azure Event Hubs]  her, um Daten von Experience Platform zu streamen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2088'
 ht-degree: 51%
 
 ---
@@ -25,7 +25,7 @@ Sie können eine ausgehende Echtzeit-Verbindung zu Ihrem [!DNL Azure Event Hubs]
 
 * Weitere Informationen zu [!DNL Azure Event Hubs] finden Sie in der [Dokumentation zu Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Informationen zum programmgesteuerten Herstellen einer Verbindung zu [!DNL Azure Event Hubs] finden Sie im [Tutorial zur Streaming-Ziele-API](../../api/streaming-destinations.md).
-* Informationen zum Verbinden von mit [!DNL Azure Event Hubs] über die Platform-Benutzeroberfläche finden Sie in den folgenden Abschnitten.
+* Informationen zum Verbinden von mit [!DNL Azure Event Hubs] über die Benutzeroberfläche von Experience Platform finden Sie in den folgenden Abschnitten.
 
 ![AWS Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
@@ -41,7 +41,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
-Um die Sicherheits- und Compliance-Anforderungen von Kundinnen und Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das [!DNL Azure Event Hubs]-Ziel auf die Zulassungsliste gesetzt werden können. Siehe [Zulassungsliste von IP-Adressen für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md), um die vollständige Liste der IP-Adressen in der Zulassungsliste einzusehen.
+Um die Sicherheits- und Compliance-Anforderungen von Kundinnen und Kunden zu erfüllen, stellt Experience Platform auf die Zulassungsliste setzen eine Liste mit statischen IPs bereit, die Sie für das [!DNL Azure Event Hubs]-Ziel auswählen können. Siehe [Zulassungsliste von IP-Adressen für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md), um die vollständige Liste der IP-Adressen in der Zulassungsliste einzusehen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -131,7 +131,7 @@ Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/
 
 ## Profilexportverhalten {#profile-export-behavior}
 
-Experience Platform optimiert das Verhalten beim Profilexport für Ihr [!DNL Azure Event Hubs] Ziel, sodass nur Daten an Ihr Ziel exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppen-Qualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten beim Profilexport für Ihr [!DNL Azure Event Hubs] Ziel, sodass nur Daten an Ihr Ziel exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.

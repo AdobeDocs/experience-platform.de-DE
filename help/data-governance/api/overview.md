@@ -5,10 +5,10 @@ title: Handbuch zur Richtlinien-Service-API
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 100%
+source-wordcount: '545'
+ht-degree: 86%
 
 ---
 
@@ -22,7 +22,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!
 
 ## Beschriftungen
 
-Wenden Sie Datennutzungskennzeichnungen auf Schemata an, um Datensätze und Felder anhand der für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Kennzeichnung zu versehen. Sie können Kennzeichnungen mit dem Endpunkt `/labels` erstellen, ansehen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Kennzeichnungsendpunkt-Handbuch](./labels.md).
+Wenden Sie Datennutzungskennzeichnungen auf Schemata an, um Datensätze und Felder anhand der für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Experience Platform] mit einer Kennzeichnung zu versehen. Sie können Kennzeichnungen mit dem Endpunkt `/labels` erstellen, ansehen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Kennzeichnungsendpunkt-Handbuch](./labels.md).
 
 ## Marketing-Aktionen
 
@@ -34,7 +34,7 @@ Data-Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen be
 
 >[!NOTE]
 >
->Data-Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Benutzende von Platform in Ihrer Organisation zugreifen können. Weitere Informationen finden Sie im Handbuch zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
+>Data-Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Experience Platform-Benutzende in Ihrem Unternehmen zugreifen können. Weitere Informationen finden Sie im Handbuch zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 Eine Data-Governance-Richtlinie ist durch Folgendes definiert:
 
@@ -45,7 +45,7 @@ Informationen zum Verwalten von Richtlinien in der API finden Sie im [Handbuch z
 
 ## Auswertung
 
-Sobald Datennutzungskennzeichnungen auf Platform-Schemata angewendet und Datennutzungsrichtlinien entsprechend für Marketing-Aktionen definiert wurden, können Sie diese Richtlinien mithilfe von Data-Governance-Funktionen durchsetzen und Datenvorgänge verhindern, bei denen die Richtlinien verletzt werden.
+Sobald Datennutzungskennzeichnungen auf Experience Platform-Schemata angewendet und somit Datennutzungsrichtlinien für Marketing-Aktionen mit diesen Kennzeichnungen definiert wurden, können Sie die Richtlinien mithilfe von Data Governance-Funktionen durchsetzen und Datenvorgänge verhindern, bei denen Richtlinien verletzt werden.
 
 Die [!DNL Policy Service]-API stellt Endpunkte bereit, mit denen Sie Marketing-Aktionen für Datensätze oder beliebige Kombinationen von Datennutzungskennzeichnungen testen können, um festzustellen, ob Richtlinien verletzt werden. Je nach API-Antwort können Sie dann Protokolle in Ihrer Erlebnisanwendung einrichten, um die Einhaltung von Datennutzungsrichtlinien richtig durchzusetzen. Weiterführende Informationen dazu finden Sie im [Handbuch zu Auswertungsendpunkten](./evaluation.md).
 

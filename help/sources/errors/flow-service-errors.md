@@ -2,16 +2,16 @@
 title: Flow Service-Fehlermeldungen
 description: Erfahren Sie mehr über die Fehlermeldungen, die bei Verwendung des Flow Service für Quellen auftreten können.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1667'
-ht-degree: 100%
+source-wordcount: '1668'
+ht-degree: 98%
 
 ---
 
 # Flow Service-Fehlermeldungen
 
-Flow Service wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
+Flow Service wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Experience Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
 
 Dieses Dokument enthält einen Katalog mit Fehlermeldungen, Beschreibungen und empfohlenen Lösungen zum Flow Service.
 

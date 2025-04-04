@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 73%
+source-wordcount: '1430'
+ht-degree: 72%
 
 ---
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform verarbeitet Datenschutzanfragen für alle [Sandboxes](../sandboxes/home.md), die zu Ihrer Organisation gehören. Daher wird jede `x-sandbox-name`-Kopfzeile, die in der Anfrage enthalten ist, vom System ignoriert.
+>Experience Platform verarbeitet Datenschutzanfragen für alle [Sandboxes](../sandboxes/home.md) die zu Ihrer Organisation gehören. Daher wird jede `x-sandbox-name`-Kopfzeile, die in der Anfrage enthalten ist, vom System ignoriert.
 
 ## Verarbeitung von Löschanfragen
 
-Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses 7-Tage-Fensters werden die Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung.
+Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Experience Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses 7-Tage-Fensters werden die Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung.
 
 Wenn Sie in die Datenschutzanfrage auch `ProfileService` oder `identity` aufgenommen haben, werden deren zugehörige Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt [Verarbeitung von Löschanfragen für ](../profile/privacy.md#delete)).
 

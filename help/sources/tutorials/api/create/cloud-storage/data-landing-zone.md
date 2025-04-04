@@ -2,10 +2,10 @@
 title: Verbinden der Data Landing Zone mit Adobe Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit der Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 16%
+source-wordcount: '1419'
+ht-degree: 13%
 
 ---
 
@@ -23,10 +23,10 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Data Lan
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Für dieses Tutorial müssen Sie auch das Handbuch [Erste Schritte mit Platform-APIs“ lesen](../../../../../landing/api-guide.md) um zu erfahren, wie Sie sich bei Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
+Für dieses Tutorial müssen Sie auch das Handbuch unter [Erste Schritte mit Experience Platform-APIs](../../../../../landing/api-guide.md) lesen, um zu erfahren, wie Sie sich bei Experience Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
 
@@ -150,7 +150,7 @@ Je nach Anbieter gibt eine erfolgreiche Anfrage Folgendes zurück:
 | `SASToken` | Das Shared Access Signature Token für Ihre [!DNL Data Landing Zone]. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
 | `storageAccountName` | Der Name Ihres Speicherkontos. |
 | `SASUri` | Der Shared Access Signature-URI für Ihre [!DNL Data Landing Zone]. Diese Zeichenfolge ist eine Kombination aus dem URI zum [!DNL Data Landing Zone], für den Sie authentifiziert werden, und dem entsprechenden SAS-Token. |
-| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es weiterhin in Ihrer Anwendung zum Hochladen von Daten in die [!DNL Data Landing Zone] verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der Aufruf der GET-Anmeldeinformationen durchgeführt wird. |
+| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es weiterhin in Ihrer Anwendung zum Hochladen von Daten in die [!DNL Data Landing Zone] verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der Aufruf der GET-Anmeldeinformationen ausgeführt wird. |
 
 >[!TAB Antwort auf AWS]
 
@@ -656,8 +656,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihrer [!DNL Data Landing Zone]-Quellverbindung. |
-| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. |
-| `params.path` | Der Pfad zur Datei, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der Daten, die an Experience Platform übermittelt werden sollen. |
+| `params.path` | Der Pfad zur Datei, die Sie an Experience Platform übermitteln möchten. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die [!DNL Data Landing Zone] entspricht. Diese feste ID lautet: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Antwort**
@@ -673,4 +673,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone]-Anmeldeinformationen abgerufen, die Dateistruktur untersucht, um die Datei zu finden, die Sie in Platform importieren möchten, und eine Quellverbindung erstellt, um mit dem Übertragen Ihrer Daten an Platform zu beginnen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mithilfe der - [!DNL Flow Service]  in Platform zu ](../../collect/cloud-storage.md).
+In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone]-Anmeldeinformationen abgerufen, die Dateistruktur untersucht, um die Datei zu finden, die Sie in Experience Platform importieren möchten, und eine Quellverbindung erstellt, um mit dem Übertragen Ihrer Daten an Experience Platform zu beginnen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mithilfe der -API  [!DNL Flow Service]  Experience Platform zu ](../../collect/cloud-storage.md).

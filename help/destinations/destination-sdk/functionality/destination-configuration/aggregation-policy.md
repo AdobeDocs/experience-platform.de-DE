@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 96%
+source-wordcount: '1007'
+ht-degree: 94%
 
 ---
 
@@ -60,7 +60,7 @@ Die folgende Beispielkonfiguration zeigt eine Konfiguration einer Aggregation na
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `aggregationType` | Zeichenfolge | Gibt den Typ der Aggregationsrichtlinie an, die Ihr Ziel verwenden soll. Unterstützte Aggregationstypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. <br><br>Geben Sie hier die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine bestmögliche Aggregation ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Platform eine beliebige Anzahl von Profilen senden, solange es weniger als 100 sind. <br><br> Wenn Ihr Server nicht mehrere Benutzerinnen oder Benutzer pro Anfrage akzeptiert, setzen Sie diesen Wert auf `1`. |
+| `bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. <br><br>Geben Sie hier die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine bestmögliche Aggregation ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Experience Platform bei einem Aufruf eine beliebige Anzahl von Profilen senden, die kleiner als 100 ist. <br><br> Wenn Ihr Server nicht mehrere Benutzerinnen oder Benutzer pro Anfrage akzeptiert, setzen Sie diesen Wert auf `1`. |
 | `bestEffortAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Namespace nur eine Identität pro Aufruf akzeptiert. |
 
 {style="table-layout:auto"}

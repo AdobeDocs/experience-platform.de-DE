@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Attribute der Benutzeroberfläche, wie z. B. den Dokumentations-Link, die Kategorie der Zielkarte sowie den Verbindungstyp und die Häufigkeit der Zielverbindungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Benutzeroberflächenattribute
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 85%
+source-wordcount: '802'
+ht-degree: 83%
 
 ---
 
@@ -21,7 +21,7 @@ Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte In
 Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md), werden im Abschnitt `uiAttributes` die folgenden visuellen Eigenschaften Ihrer Zielkarte definiert:
 
 * Die URL Ihrer Zieldokumentationsseite im [Zielkatalog](../../../catalog/overview.md).
-* Die Kategorie, unter der Ihr Ziel in der Platform-Benutzeroberfläche angezeigt wird.
+* Die Kategorie, unter der Ihr Ziel in der Experience Platform-Benutzeroberfläche angezeigt wird.
 * Die Häufigkeit des Datenexports für Ihr Ziel.
 * Der Zielverbindungstyp, z. B. Amazon S3, Azure Blob usw.
 * Die URL, unter der das Symbol gehostet wird, das auf der Zielkatalogkarte angezeigt werden soll.
@@ -116,7 +116,7 @@ Um ein Logo zu Ihrer Zielkarte hinzuzufügen, müssen Sie das gewünschte Bild m
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Artikels sollten Sie besser verstehen, welche Benutzeroberflächenattribute Sie für Ihr Ziel konfigurieren können und wo die Benutzerinnen und Benutzer sie in der Platform-Benutzeroberfläche sehen.
+Nach dem Lesen dieses Artikels sollten Sie besser verstehen, welche Benutzeroberflächenattribute Sie für Ihr Ziel konfigurieren können und wo die Benutzerinnen und Benutzer sie in der Experience Platform-Benutzeroberfläche sehen.
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 

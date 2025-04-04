@@ -2,9 +2,9 @@
 title: Verbinden von GitHub-Copilot und Visual Studio Code mit dem Abfrage-Service
 description: Erfahren Sie, wie Sie GitHub Copilot und Visual Studio Code mit dem Abfrage-Service von Adobe Experience Platform verbinden.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1378'
 ht-degree: 2%
 
 ---
@@ -23,11 +23,11 @@ In diesem Dokument werden die Schritte beschrieben, die zum Verbinden von [!DNL 
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf ein GitHub-Konto haben und sich für [!DNL GitHub Copilot] angemeldet haben. Sie können [sich über die GitHub-Website anmelden](https://github.com/github-copilot/signup). Sie benötigen auch [!DNL VS Code]. Sie können [Download [!DNL VS Code]  von ihrer offiziellen Website](https://code.visualstudio.com/download).
 
-Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für das Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Anmeldeinformationen] des Arbeitsbereichs [!UICONTROL Abfragen] in der Platform-Benutzeroberfläche. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[ wie Sie diese Werte in der Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
+Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Anmeldeinformationen] des Arbeitsbereichs [!UICONTROL Abfragen] in der Experience Platform-Benutzeroberfläche. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[ wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
 
 ### Erforderliche [!DNL Visual Studio Code] {#required-extensions}
 
-Die folgenden [!DNL Visual Studio Code]-Erweiterungen sind erforderlich, um Ihre Platform SQL-Datenbanken direkt im Code-Editor effektiv zu verwalten und abzufragen. Laden Sie diese Erweiterungen herunter und installieren Sie sie.
+Die folgenden [!DNL Visual Studio Code] sind erforderlich, um Ihre Experience Platform SQL-Datenbanken direkt im Code-Editor effektiv zu verwalten und abzufragen. Laden Sie diese Erweiterungen herunter und installieren Sie sie.
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Verwenden Sie die Erweiterung „SQLTools“, um mehrere SQL-Datenbanken zu verwalten und abzufragen. Es enthält Funktionen wie einen Abfrage-Runner, SQL-Formatierer und Verbindungs-Explorer mit Unterstützung für zusätzliche Treiber, um die Entwicklerproduktivität zu steigern. Weitere Einzelheiten finden Sie in der Übersicht zu Visual Studio Marketplace .
 - [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): Mit dieser Erweiterung können Sie PostgreSQL- und CockroachDB-Datenbanken direkt in Ihrem Code-Editor verbinden, abfragen und verwalten.
@@ -49,17 +49,17 @@ Der **[!DNL Connection Assistant]** wird angezeigt. Wählen Sie den **[!DNL Post
 
 ### Einstellungen der Eingangsverbindung {#input-connection-settings}
 
-Die [!DNL Connection Settings] wird angezeigt. Geben Sie die Anmeldeinformationen für die Platform-Verbindung in die entsprechenden Felder der [!DNL Connection Assistant] SQLTools ein. Die erforderlichen Werte werden in der folgenden Tabelle erläutert.
+Die [!DNL Connection Settings] wird angezeigt. Geben Sie Ihre Experience Platform-Anmeldedaten in die entsprechenden Felder der [!DNL Connection Assistant] SQLTools ein. Die erforderlichen Werte werden in der folgenden Tabelle erläutert.
 
 | Eigenschaft | Beschreibung |
 | --- |--- |
 | [!DNL Connection name] | Geben Sie eine &quot;[!DNL Connection name]&quot; wie `Prod_MySQL_Server` an, die beschreibend ist und ihren Zweck klar angibt (z. B. eine Produktionsumgebung für einen MySQL-Server). Zu den Best Practices gehören:<br><ul><li>Befolgen Sie die Namenskonventionen Ihrer Organisation, um sicherzustellen, dass sie innerhalb des Systems eindeutig sind.</li><li>Halten Sie sie kurz, um Klarheit zu schaffen und Verwechslungen mit anderen Verbindungen zu vermeiden.</li><li>Fügen Sie relevante Details zur Funktion oder Umgebung der Verbindung in den Namen ein.</li></ul> |
-| [!DNL Connect using] | Verwenden Sie die Option **[!DNL Server and Port]** , um die Adresse des Servers (Host-Name) und die Port-Nummer anzugeben, um eine direkte Verbindung zu Platform herzustellen |
-| [!DNL Server address] | Geben Sie den **[!UICONTROL Host]**-Wert ein, der in Ihren Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `acmeprod.platform-query.adobe.io`. |
-| [!DNL Port] | Dieser Wert wird normalerweise für Platform-Services `80`. |
-| [!DNL Database] | Geben Sie den **[!UICONTROL Datenbank]**-Wert ein, der in Ihren Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `prod:all`. |
-| [!DNL Username] | Diese Eigenschaft verweist auf Ihre Organisations-ID. Geben Sie den **[!UICONTROL Benutzernamen]** ein, der in Ihren Platform Postgres-Anmeldeinformationen angegeben ist. |
-| [!DNL Password] | Diese Eigenschaft ist Ihr Zugriffstoken. Geben Sie den **[!UICONTROL Passwort]**-Wert ein, der in Ihren Platform Postgres-Anmeldeinformationen angegeben ist. |
+| [!DNL Connect using] | Verwenden Sie die Option **[!DNL Server and Port]** , um die Serveradresse (Host-Name) und die Portnummer anzugeben, um eine Direktverbindung zu Experience Platform herzustellen |
+| [!DNL Server address] | Geben Sie den **[!UICONTROL Host]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `acmeprod.platform-query.adobe.io`. |
+| [!DNL Port] | Dieser Wert wird normalerweise für Experience Platform-Services `80`. |
+| [!DNL Database] | Geben Sie den **[!UICONTROL Datenbank]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `prod:all`. |
+| [!DNL Username] | Diese Eigenschaft verweist auf Ihre Organisations-ID. Geben Sie den **[!UICONTROL Benutzernamen]** ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist. |
+| [!DNL Password] | Diese Eigenschaft ist Ihr Zugriffstoken. Geben Sie den **[!UICONTROL Passwort]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist. |
 
 ![Der Arbeitsbereich des Verbindungsassistenten mit mehreren hervorgehobenen Einstellungen.](../images/clients/github-copilot/connection-settings.png)
 
@@ -91,7 +91,7 @@ Ihr [!DNL VS Code] Arbeitsbereich wird mit einem Vorschlag aus [!DNL GitHub Copi
 
 ## [!DNL GitHub Copilot] Schnellanleitung
 
-Sobald die Verbindung mit Ihrer Platform-Instanz hergestellt wurde, können Sie [!DNL Copilot] als KI-Codierungs-Assistenten verwenden, damit Sie Code schneller und zuverlässiger schreiben können. In diesem Abschnitt werden die wichtigsten Funktionen und deren Verwendung beschrieben.
+Sobald die Verbindung mit Ihrer Experience Platform-Instanz hergestellt wurde, können Sie [!DNL Copilot] als KI-Codierungs-Assistenten verwenden, damit Sie Code schneller und zuverlässiger schreiben können. In diesem Abschnitt werden die wichtigsten Funktionen und deren Verwendung beschrieben.
 
 ## Erste Schritte mit [!DNL GitHub Copilot] {#get-started-with-copilot}
 
@@ -151,4 +151,4 @@ Sie können auch auf den Chatverlauf zugreifen, indem Sie das Verlaufssymbol (![
 
 ## Nächste Schritte
 
-Sie können jetzt Ihre Platform-Datenbanken effizient direkt über Ihren Code-Editor abfragen und die KI-gestützten Code-Vorschläge von [!DNL GitHub Copilot] verwenden, um das Schreiben und Optimieren von SQL-Abfragen zu optimieren. Weiterführende Informationen zum Schreiben und Ausführen von Abfragen finden Sie in der [Anleitung zur Ausführung von Abfragen](../best-practices/writing-queries.md).
+Sie können jetzt Ihre Experience Platform-Datenbanken effizient direkt über Ihren Code-Editor abfragen und die KI-basierten Code-Vorschläge von [!DNL GitHub Copilot] verwenden, um das Schreiben und Optimieren von SQL-Abfragen zu optimieren. Weiterführende Informationen zum Schreiben und Ausführen von Abfragen finden Sie in der [Anleitung zur Ausführung von Abfragen](../best-practices/writing-queries.md).

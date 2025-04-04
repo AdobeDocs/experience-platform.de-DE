@@ -2,10 +2,10 @@
 title: Web-Erweiterungsfluss
 description: Hier erfahren Sie, wie Web-Erweiterungskomponenten in Adobe Experience Platform zur Laufzeit miteinander interagieren.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '272'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Wie bereits beschrieben, verfügt in Web-Erweiterungen jedes Ereignis, jede Bedingung, jede Aktion und jeder Datenelementtyp über eine Ansicht, die den Benutzern das Ändern von Einstellungen ermöglicht, und über ein Bibliotheksmodul, in dem diese benutzerdefinierten Einstellungen verwendet werden.
 
-Wie das folgende Übersichtsdiagramm zeigt, wird die Ereignistypansicht der Erweiterung in einem iframe innerhalb des in Adobe Experience Platform integrierten Programms angezeigt. Der Benutzer verwendet dann die Ansicht, um Einstellungen zu ändern, die dann innerhalb von Platform gespeichert werden. Beim Erstellen der Tag-Laufzeitbibliothek werden sowohl das Ereignistyp-Bibliotheksmodul der Erweiterung als auch die benutzerdefinierten Einstellungen in die Laufzeitbibliothek aufgenommen. Zur Laufzeit injiziert Platform die benutzerdefinierten Einstellungen in das Bibliotheksmodul.
+Wie das folgende Übersichtsdiagramm zeigt, wird die Ereignistypansicht der Erweiterung in einem iframe innerhalb des in Adobe Experience Platform integrierten Programms angezeigt. Der/die Benutzende verwendet dann die Ansicht, um Einstellungen zu ändern, die dann in Experience Platform gespeichert werden. Beim Erstellen der Tag-Laufzeitbibliothek werden sowohl das Ereignistyp-Bibliotheksmodul der Erweiterung als auch die benutzerdefinierten Einstellungen in die Laufzeitbibliothek aufgenommen. Zur Laufzeit injiziert Experience Platform die benutzerdefinierten Einstellungen in das Bibliotheksmodul.
 
 ![Flussdiagramm der Erweiterung](../images/flow/web/extension-flow.png)
 

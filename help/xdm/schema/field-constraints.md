@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Begrenzungen für XDM-Feldtypen
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und für die Definition Ihrer eigenen Feldtypen in der API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ XDM basiert auf dem JSON-Schema und daher übernehmen XDM-Felder beim Definieren
 
 >[!NOTE]
 >
->Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Platform-APIs finden ](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
+>Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Experience Platform-APIs finden ](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
 
 In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
 

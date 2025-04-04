@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;iab;tcf;Einverständnis;
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;individuelles Profil;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;iab;tcf;Einverständnis;
 solution: Experience Platform
 title: IAB TCF 2.0-Einverständnis-Feldergruppe für Profilschemata
 description: Erfahren Sie mehr über die Feldergruppe des IAB TCF 2.0-Einverständnisschemas für die Klasse „XDM Individual Profile“.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Wie das Beispiel zeigt, entspricht jeder Schlüssel auf Stammebene von `xdm:iden
 
 Für jeden Identitätswert muss eine `identityIABConsent`-Eigenschaft angegeben werden, die den TCF-Einverständniswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem [[!UICONTROL Einverständniszeichenfolge“ ] Datentyp ](../../data-types/consent-string.md).
 
-Weitere Informationen zum Anwendungsfall [ Feldergruppe finden Sie im Handbuch ](../../../landing/governance-privacy-security/consent/iab/overview.md) IAB TCF 2.0-Unterstützung in Platform . Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
+Weitere Informationen zum Anwendungsfall [ Feldergruppe finden Sie im Handbuch ](../../../landing/governance-privacy-security/consent/iab/overview.md) IAB TCF 2.0-Unterstützung in Experience Platform . Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

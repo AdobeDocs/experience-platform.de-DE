@@ -2,9 +2,9 @@
 title: Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus
 description: Mit dem erweiterten Daten-Lifecycle-Management können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 34%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 34%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Diese Aktivitäten können mithilfe des Arbeitsbereichs [[!UICONTROL Datenlebens
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den [Datensatzgültigkeits-Endpunkt](./api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](./api/workorder.md). Sie können das Löschen von [Datensatzgültigkeiten](./ui/dataset-expiration.md) und [Datensätzen](./ui/record-delete.md) auch über die Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation . Beachten Sie, dass der Datenlebenszyklus das Löschen von Batches nicht unterstützt.
+>Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den [Datensatzgültigkeits-Endpunkt](./api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](./api/workorder.md). Sie können das Löschen von [Datensatzgültigkeiten](./ui/dataset-expiration.md) und [Datensätzen](./ui/record-delete.md) auch über die Experience Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation . Beachten Sie, dass der Datenlebenszyklus das Löschen von Batches nicht unterstützt.
 
 ## [!UICONTROL Datenlebenszyklus]-Benutzeroberfläche - Arbeitsbereich {#ui}
 
-Der [!UICONTROL Datenlebenszyklus]-Arbeitsbereich in der Platform-Benutzeroberfläche ermöglicht die Konfiguration und Planung von Datenlebenszyklusvorgängen, um sicherzustellen, dass Ihre Datensätze wie vorgesehen gepflegt werden.
+Der [!UICONTROL Datenlebenszyklus]-Arbeitsbereich in der Experience Platform-Benutzeroberfläche ermöglicht Ihnen die Konfiguration und Planung von Datenlebenszyklusvorgängen, um sicherzustellen, dass Ihre Datensätze wie vorgesehen gepflegt werden.
 
 Ausführliche Anweisungen zum Verwalten von Datenlebenszyklusaufgaben in der Benutzeroberfläche finden Sie im [Handbuch zur Datenlebenszyklus-Benutzeroberfläche](./ui/overview.md).
 
@@ -58,7 +58,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 >[!IMPORTANT]
 >
->Löschungen von Datensätzen in Amazon Web Services (AWS) haben eine Latenz von etwa drei Stunden, bevor Änderungen vollständig angewendet werden. Dazu gehören bis zu zwei Stunden, bis der Datensatz zum Löschen gekennzeichnet ist, gefolgt von einer zusätzlichen Stunde, bevor er vollständig aus dem System gelöscht wird. Löschanfragen für Platform-Instanzen, die Azure Data Lake verwenden, führen dagegen zu sofortigen Änderungen in allen Unternehmensfunktionen.
+>Löschungen von Datensätzen in Amazon Web Services (AWS) haben eine Latenz von etwa drei Stunden, bevor Änderungen vollständig angewendet werden. Dazu gehören bis zu zwei Stunden, bis der Datensatz zum Löschen gekennzeichnet ist, gefolgt von einer zusätzlichen Stunde, bevor er vollständig aus dem System gelöscht wird. Löschanfragen für Experience Platform-Instanzen, die Azure Data Lake verwenden, führen dagegen zu sofortigen Änderungen in allen Geschäftsfunktionen.
 >
 >Für AWS-Benutzende kann sich diese Verzögerung auf die Batch-Segmentierung, Streaming-Segmentierung, Vorschau, Schätzungen, Exporte und den Datenzugriff auswirken. Diese Latenz betrifft nur Kundinnen und Kunden, die AWS verwenden, da Azure Data Lake-Benutzende sofort aktualisiert werden. Bei AWS-Benutzern kann es bis zu drei Stunden dauern, bis Löschanfragen vollständig durch alle betroffenen Systeme übertragen werden. Passen Sie Ihre Erwartungen entsprechend an.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die Datenlebenszyklusfunktionen von Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Datenlebenszyklus-Aufträgen finden Sie im [Data Hygiene API-Handbuch](./api/overview.md)
+Dieses Dokument bietet einen Überblick über die Datenlebenszyklusfunktionen von Experience Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Datenlebenszyklus-Aufträgen finden Sie im [Data Hygiene API-Handbuch](./api/overview.md)

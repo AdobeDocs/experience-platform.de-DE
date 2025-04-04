@@ -3,10 +3,10 @@ keywords: Insights;Kunden-KI;Kunden-KI-Insights;AAI-Query-Service;Kunden-KI-Abfr
 title: Kundenseitig verwaltete Schlüssel in Kunden-KI.
 description: Erfahren Sie, wie Sie kundenseitig verwaltete Schlüssel für Kunden-KI einrichten.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 88%
+source-wordcount: '164'
+ht-degree: 75%
 
 ---
 
@@ -20,4 +20,4 @@ Führen Sie die in der Dokumentation zu [kundenseitig verwalteten Schlüsseln in
 >
 >[!DNL Customer Managed Keys] sind derzeit nur für Organisationen verfügbar, die das Add-on-Angebot [!DNL Healthcare Shield or Privacy & Security Shield] erworben haben.
 
-Alle von Platform verwendeten Daten werden während der Übertragung und im Ruhezustand verschlüsselt, um Ihre Daten sicher zu halten – mit oder ohne CMK. Informationen zur Adobe Experience Platform-Verschlüsselung finden Sie in der Dokumentation zur [Datenverschlüsselung](../../../landing/governance-privacy-security/encryption.md).
+Alle von Experience Platform verwendeten Daten werden während der Übertragung und im Ruhezustand verschlüsselt, um Ihre Daten sicher zu halten, mit oder ohne CMK. Informationen zur Adobe Experience Platform-Verschlüsselung finden Sie in der Dokumentation zur [Datenverschlüsselung](../../../landing/governance-privacy-security/encryption.md).

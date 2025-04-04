@@ -2,10 +2,10 @@
 title: Authentifizieren von und Zugreifen auf die Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsanmeldedaten.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 51%
+source-wordcount: '912'
+ht-degree: 54%
 
 ---
 
@@ -43,7 +43,7 @@ Nachdem Sie ein Projekt erstellt haben, wählen Sie **API hinzufügen** im Bilds
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Der Bildschirm **API hinzufügen** wird angezeigt. Wählen Sie **Experience Platform Launch-API** aus der Liste der verfügbaren APIs aus, bevor Sie auf **Weiter** klicken.
+Der Bildschirm **API hinzufügen** wird angezeigt. Wählen Sie **Experience Platform Launch-**) aus der Liste der verfügbaren APIs aus, bevor Sie auf **Weiter** klicken.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
@@ -51,7 +51,7 @@ Wählen Sie als Nächstes den Authentifizierungstyp aus, um Zugriffstoken zu gen
 
 >[!IMPORTANT]
 >
->Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]**-Methode aus, da dies in Zukunft die einzige unterstützte Methode ist. Die Methode **[!UICONTROL Service-Konto (JWT]** ist veraltet. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen OAuth-Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) im Tutorial zur Platform-API-Authentifizierung.
+>Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]**-Methode aus, da dies in Zukunft die einzige unterstützte Methode ist. Die Methode **[!UICONTROL Service-Konto (JWT]** ist veraltet. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen OAuth-Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) im Tutorial zur Experience Platform-API-Authentifizierung.
 
 Klicken Sie auf **Weiter**, um fortzufahren.
 
@@ -78,7 +78,7 @@ Nachdem die API zum Projekt hinzugefügt wurde, werden auf der Seite **[!UICONTR
 
 ### Erstellen eines Zugriffs-Tokens {#generate-access-token}
 
-Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in Platform-API-Aufrufen zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Platform-APIs weiterhin verwenden zu können.
+Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in Experience Platform-API-Aufrufen zu generieren. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um Experience Platform-APIs weiterhin verwenden zu können.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren d
 
 #### Token-Generierung automatisieren {#auto-token}
 
-Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwendung von Postman zum Authentifizieren und Testen von API](/help/landing/api-authentication.md#use-postman)Aufrufen im Experience Platform-API-Authentifizierungshandbuch.
+Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwendung von Postman zum Authentifizieren und Testen von API](/help/landing/api-authentication.md#use-postman)Aufrufen im Authentifizierungshandbuch zur Experience Platform-API.
 
 ## API-Testanmeldeinformationen {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Sobald Sie sich vergewissert haben, dass Ihre Zugriffsanmeldedaten funktionieren
 
 ## Lesen von Beispiel-API-Aufrufen {#read-sample-api-calls}
 
-Jedes Endpunkt-Handbuch enthält Beispiel-API-Aufrufe, um zu demonstrieren, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie [ Abschnitt zum Lesen von Beispiel](../../landing/api-guide.md#sample-api)API-Aufrufen in den Ersten Schritten für Platform-APIs.
+Jedes Endpunkt-Handbuch enthält Beispiel-API-Aufrufe, um zu demonstrieren, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) in den Ersten Schritten für Experience Platform-APIs.
 
 ## Nächste Schritte {#next-steps}
 

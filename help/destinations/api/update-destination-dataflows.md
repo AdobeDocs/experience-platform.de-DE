@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;Aktualisieren von Ziel-Datenflüssen
+keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;Ziel-Datenflüsse aktualisieren
 solution: Experience Platform
 title: Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder mithilfe der Flow Service-API Zielgruppen und Attribute hinzufügen und entfernen.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
-ht-degree: 33%
+source-wordcount: '2410'
+ht-degree: 30%
 
 ---
 
 # Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 
-In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder Zielgruppen und Attribute mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) hinzufügen und entfernen. Informationen zum Bearbeiten von Ziel-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche finden Sie unter [Bearbeiten von Aktivierungsflüssen](/help/destinations/ui/edit-activation.md).
+In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder Zielgruppen und Attribute mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) hinzufügen und entfernen. Informationen zur Bearbeitung von Ziel-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche finden Sie unter [Bearbeiten von Aktivierungsflüssen](/help/destinations/ui/edit-activation.md).
 
 ## Erste Schritte {#get-started}
 
@@ -27,7 +27,7 @@ Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gült
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich aktualisieren zu können.
 
@@ -37,13 +37,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an Experience Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `exportMode` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `startDate` | Wählen Sie das Datum aus, an dem die Zielgruppe Profile in Ihr Ziel exportieren soll. |
 | `frequency` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
-| `triggerType` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn Sie den `"DAILY_FULL_EXPORT"` im `frequency` auswählen. <br>. <br> <ul><li>Wählen Sie `"AFTER_SEGMENT_EVAL"` aus, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Wählen Sie `"SCHEDULED"` aus, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass täglich zur gleichen Zeit Experience Platform-Profildaten exportiert werden. Die exportierten Profile sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsvorgang vor dem Start des Aktivierungsvorgangs abgeschlossen wurde. Wenn Sie diese Option auswählen, müssen Sie auch eine `startTime` hinzufügen, um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
+| `triggerType` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn Sie den `"DAILY_FULL_EXPORT"` im `frequency` auswählen. <br>. <br> <ul><li>Wählen Sie `"AFTER_SEGMENT_EVAL"` aus, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Experience Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Wählen Sie `"SCHEDULED"` aus, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, entsprechen jedoch möglicherweise nicht dem neuesten Stand. Dies hängt davon ab, ob der Batch-Segmentierungsvorgang vor dem Start des Aktivierungsvorgangs abgeschlossen wurde. Wenn Sie diese Option auswählen, müssen Sie auch eine `startTime` hinzufügen, um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
 | `endDate` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Zielgruppenmitglieder nicht mehr in das Ziel exportiert werden. |
 | `startTime` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. Wählen Sie den Zeitpunkt aus, zu dem Dateien mit Mitgliedern der Zielgruppe generiert und an Ihr Ziel exportiert werden sollen. |
 
@@ -644,7 +644,7 @@ In den folgenden Beispielen finden Sie weitere Beispiele für Zielgruppenkompone
 
 ## Aktualisieren des Exportmodus einer Zielgruppe von „Geplant“ in „Nach Zielgruppenbewertung“ {#update-export-mode}
 
-+++ Klicken Sie hier, um ein Beispiel zu sehen, bei dem ein Zielgruppenexport nicht mehr jeden Tag zum angegebenen Zeitpunkt aktiviert wird, sondern jeden Tag nach Abschluss des Platform-Batch-Segmentierungsvorgangs.
++++ Klicken Sie hier, um ein Beispiel zu sehen, bei dem ein Zielgruppenexport nicht mehr jeden Tag zum angegebenen Zeitpunkt aktiviert wird, sondern jeden Tag nach Abschluss des Experience Platform-Batch-Segmentierungsvorgangs.
 
 Die Zielgruppe wird täglich um 16:00 Uhr UTC exportiert.
 
@@ -801,7 +801,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Entfernen eines Profilattributs aus einem Datenfluss {#remove-profile-attribute}
 
-Um ein Profilattribut aus einem vorhandenen Ziel-Datenfluss zu entfernen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Fluss-ID, die Version und den Indexselektor des Profilattributs an, das Sie entfernen möchten. Die Indizierung beginnt bei `0`. Beispielsweise entfernt die weiter unten stehende Beispielanfrage das fünfte Profilattribut aus dem Datenfluss.
+Um ein Profilattribut aus einem vorhandenen Ziel-Datenfluss zu entfernen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Fluss-ID, Version und den Indexselektor des Profilattributs an, das Sie entfernen möchten. Die Indizierung beginnt bei `0`. Beispielsweise entfernt die weiter unten stehende Beispielanfrage das fünfte Profilattribut aus dem Datenfluss.
 
 
 **API-Format**
@@ -855,7 +855,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

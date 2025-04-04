@@ -2,10 +2,10 @@
 title: Erste Schritte mit der Sandbox-Tooling-API
 description: Verwenden Sie die Sandbox-Tooling-API , um Artefakte zu untersuchen und einen Schnappschuss der Sandbox-Konfigurationen zwischen Sandboxes zu exportieren und zu importieren. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 70%
+source-wordcount: '312'
+ht-degree: 63%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ## Sammeln von Werten für erforderliche Kopfzeilen {#headers}
 
-Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für dieses Handbuch müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um Experience Platform-APIs erfolgreich aufrufen zu können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

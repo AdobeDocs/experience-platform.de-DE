@@ -4,9 +4,9 @@ description: Verwenden Sie Cloud-basierte Notebooks für maschinelle Lernumgebun
 hide: true
 hidefromtoc: true
 exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Bevor Sie mit diesem Handbuch fortfahren, führen Sie die Schritte aus, die unte
 
 Der End-to-End-Workflow kann basierend auf den Services, die zur Implementierung des Workflows verwendet werden, in drei große Phasen unterteilt werden.
 
-- Die anfängliche Untersuchung und Vorbereitung von Platform-Daten beruht auf Platform-Services.
+- Die anfängliche Untersuchung und Vorbereitung von Experience Platform-Daten beruht auf Experience Platform-Services.
 - Das Modell-Training und die Bewertung nutzt Tools in Ihrer Cloud-basierten ML-Umgebung. Zu den gängigen Optionen für ML-Plattformen gehören: Databricks ML, AWS Sagemaker, DataRobot usw.
-- Die erneute Aufnahme von Scores in Platform und die auf diesen Scores basierende Erstellung und Aktivierung von Code-basierten Zielgruppen würden wiederum auf Platform-Services angewiesen sein.
+- Die erneute Aufnahme von Scores in Experience Platform und die auf diesen Scores basierende Erstellung und Aktivierung von Code-basierten Zielgruppen würden wiederum auf Experience Platform-Services angewiesen sein.
 
-Alle diese Phasen können jedoch in einem oder mehreren Notebooks aus Ihrer ML-Umgebung ausgeführt werden, ohne dass der Benutzer den Kontext zwischen Platform und seinen Cloud-basierten ML-Tools wechseln muss.
+Alle diese Phasen können jedoch in einem oder mehreren Notebooks aus Ihrer ML-Umgebung ausgeführt werden, ohne dass der Anwender den Kontext zwischen Experience Platform und seinen Cloud-basierten ML-Tools wechseln muss.
 
-Die typischen Schritte dieses durchgängigen Flusses wurden in eine Reihe modularer Notebooks unterteilt, die zusammengenommen die Schritte eines typischen Projekts für maschinelles Lernen mit Platform-Daten zeigen. Dies erleichtert die Verwendung der Notebooks als Referenz für die Implementierung spezifischer Aktivitäten und die Auswahl und Anpassung von Code aus den entsprechenden Notebooks, um einen realen Anwendungsfall zu implementieren. In der Praxis kann ein Datenwissenschaftler ein einzelnes Notebook vorbereiten, das die End-to-End-Pipeline für sein ML-Projekt implementiert. Alternativ kann ein Datenwissenschaftler den Beispiel-Code einfach anpassen, um Platform-Daten abzufragen und in seiner ML-Umgebung verfügbar zu machen, bevor das Projekt weiterhin UI-basierte Funktionen in seiner ML-Plattform verwendet.
+Die typischen Schritte dieses durchgängigen Arbeitsablaufs sind in eine Reihe modularer Notebooks unterteilt, die zusammengenommen die Schritte eines typischen maschinellen Lernprojekts mit Experience Platform-Daten darstellen. Dies erleichtert die Verwendung der Notebooks als Referenz für die Implementierung spezifischer Aktivitäten und die Auswahl und Anpassung von Code aus den entsprechenden Notebooks, um einen realen Anwendungsfall zu implementieren. In der Praxis kann ein Datenwissenschaftler ein einzelnes Notebook vorbereiten, das die End-to-End-Pipeline für sein ML-Projekt implementiert. Alternativ dazu kann ein Datenwissenschaftler den Beispielcode einfach anpassen, um Experience Platform-Daten abzufragen und in seiner ML-Umgebung verfügbar zu machen, bevor das Projekt weiterhin UI-basierte Funktionen in seiner ML-Plattform verwendet.
 
 Die im verknüpften Repository enthaltenen Beispiel-Notebooks werden nachfolgend kurz beschrieben. Eine ausführliche Dokumentation zu jedem Notebook ist mit dem Code in den Notebooks selbst durchsetzt.
 
@@ -46,11 +46,11 @@ Die im verknüpften Repository enthaltenen Beispiel-Notebooks werden nachfolgend
 
 ### Synthetische Daten generieren {#generate-synthetic-data}
 
-Dieses Notebook bietet Code zum Generieren von Datensätzen mit synthetischen Profilen und Erlebnisereignissen in Ihrer Plattform, der zur Veranschaulichung des XML-Workflows verwendet wird.
+Dieses Notebook enthält Code zum Generieren von Datensätzen mit synthetischen Profilen und Erlebnisereignissen in Ihrer Experience Platform, die zur Veranschaulichung des CMLE-Workflows verwendet werden.
 
 ### EDA und Feature mit Query Service {#eda-and-featurization-with-query-service}
 
-Dieses Notebook enthält Beispiele für die explorative Analyse von Platform-Datensätzen, die interaktive Abfragen über den Platform-Abfrage-Service verwenden. Darauf folgen Beispiele für Featureabfragen zum Erstellen eines Trainings-Datensatzes für das Beispiel-Neigungs-Modell.
+Dieses Notebook enthält Beispiele für die explorative Analyse von Experience Platform-Datensätzen, die interaktive Abfragen über den Abfrage-Service von Experience Platform verwenden. Darauf folgen Beispiele für Featureabfragen zum Erstellen eines Trainings-Datensatzes für das Beispiel-Neigungs-Modell.
 
 ### Exportieren von Schulungsdaten {#export-training-data}
 
@@ -62,7 +62,7 @@ Dieses Notebook veranschaulicht das Trainieren eines Tendenzmodells. Es setzt vo
 
 ### Bewerten des Tendenzmodells
 
-Dieses Notebook veranschaulicht die Bewertung des trainierten Tendenzmodells, um einen Datensatz mit Tendenzwerten für jedes Platform-Kundenprofil zu erstellen.
+Dieses Notebook veranschaulicht die Bewertung des trainierten Tendenzmodells, um einen Datensatz mit Tendenzwerten für jedes Experience Platform-Kundenprofil zu erstellen.
 
 ### Scores in AEP aufnehmen
 
@@ -70,4 +70,4 @@ Dieses kurze Notebook veranschaulicht die Aufnahme des Datensatzes mit Tendenz-S
 
 ### Erstellen und Aktivieren von Zielgruppen aus Code
 
-Dieses Notebook zeigt, wie Benutzende aus den Bewertungen Zielgruppen erstellen und diese Zielgruppen über Platform-Apps aus ihrem Notebook-Code aktivieren können.
+Dieses Notebook zeigt, wie Benutzende aus den Bewertungen Zielgruppen erstellen und diese Zielgruppen über Experience Platform-Apps aus ihrem Notebook-Code aktivieren können.

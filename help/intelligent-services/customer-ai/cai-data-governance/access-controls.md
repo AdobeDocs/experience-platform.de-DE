@@ -5,10 +5,10 @@ feature: Customer AI
 title: Zugriffskontrolle für Kundinnen- und Kunden-KI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle für Kundinnen- und Kunden-KI.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 98%
+source-wordcount: '520'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 98%
 
 Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 
-Mithilfe der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff der Benutzenden sowohl auf sensible persönliche Daten (Sensitive Personal Data, SPD) als auch auf personenbezogene Daten (PII) für alle Platform-Workflows und -Ressourcen steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Durch attributbasierte Zugriffssteuerung können Admins Ihres Unternehmens den Zugriff der Benutzenden sowohl auf sensible persönliche Daten (Sensitive Personal Data, SPD) als auch auf personenbezogene Daten (PII) für alle Experience Platform-Workflows und -Ressourcen steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 Aufgrund der attributbasierten Zugriffskontrolle hätten einige Felder und Funktionen Zugriffsbeschränkungen und wären für bestimmte Kundinnen- und Kunden-KI-Service-Modelle nicht verfügbar. Beispiele sind „Identität“, „Bewertungsdefinition“ und „Klon“.
 
@@ -46,4 +46,4 @@ Weitere Informationen finden Sie in der Dokumentation [Zuweisen von Berechtigung
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](../overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.
+Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](../overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Experience Platform] nutzen.

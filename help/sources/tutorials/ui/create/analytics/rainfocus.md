@@ -1,16 +1,16 @@
 ---
-title: Verbinden Ihres RainFocus-Kontos mit dem Experience Platform über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie Ihr RainFocus-Konto über die Benutzeroberfläche mit dem Experience Platform verbinden.
+title: Verbinden Ihres RainFocus-Kontos mit Experience Platform über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie Ihr RainFocus-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 26%
 
 ---
 
-# Verbinden Ihres [!DNL RainFocus]-Kontos mit dem Experience Platform über die Benutzeroberfläche
+# Verbinden Ihres [!DNL RainFocus]-Kontos mit Experience Platform über die Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -41,9 +41,9 @@ Bevor Sie Ihr [!DNL RainFocus]-Konto mit Experience Platform verbinden können, 
 
 Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, können Sie mit den unten beschriebenen Schritten fortfahren.
 
-## RainFocus-Konto mit Experience Platform verbinden
+## Verbinden Ihres RainFocus-Kontos mit Experience Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich „Quellen“ zuzugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich „Quellen“ zuzugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -53,7 +53,7 @@ Wählen Sie unter *[!UICONTROL Kategorie]* die Option **[!UICONTROL RainFocus Ex
 
 ## Daten auswählen
 
-Der Schritt Daten auswählen wird angezeigt und bietet Ihnen eine Schnittstelle zur Auswahl der Daten, die Sie zum Experience Platform bringen.
+Der Schritt Daten auswählen wird angezeigt und bietet Ihnen eine Schnittstelle zur Auswahl der Daten, die Sie an Experience Platform übermitteln.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Teil der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer JSON-Datei anzeigen.
@@ -117,7 +117,7 @@ Sobald Ihr Datenfluss abgeschlossen ist und Sie Ihre Streaming-Endpunkt-URL abge
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung für Ihre [!DNL RainFocus] hergestellt, sodass Sie Ihre Ereignis-Management- und Analysedaten auf Experience Platform streamen können.
+In diesem Tutorial haben Sie eine Verbindung für Ihre [!DNL RainFocus] hergestellt, sodass Sie Ihre Ereignis-Management- und Analysedaten an Experience Platform streamen können.
 
 ## Zusätzliche Ressourcen
 

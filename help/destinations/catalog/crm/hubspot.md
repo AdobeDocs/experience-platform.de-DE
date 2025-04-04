@@ -3,10 +3,10 @@ title: HubSpot-Verbindung
 description: Mit dem HubSpot-Ziel können Sie Kontakteinträge in Ihrem HubSpot-Konto verwalten.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 36%
+source-wordcount: '1557'
+ht-degree: 35%
 
 ---
 
@@ -26,7 +26,7 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL HubSpot]-Ziel ver
 
 ## Voraussetzungen {#prerequisites}
 
-In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie für das Einrichten in Experience Platform und [!DNL HubSpot] benötigen, sowie Informationen, die Sie vor der Arbeit mit dem [!DNL HubSpot]-Ziel sammeln müssen.
+In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experience Platform und [!DNL HubSpot] einrichten müssen, sowie Informationen, die Sie vor der Arbeit mit dem [!DNL HubSpot]-Ziel sammeln müssen.
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
@@ -36,11 +36,11 @@ Weitere Informationen finden Sie in der Experience Platform[Dokumentation für d
 
 ### Voraussetzungen für das [!DNL HubSpot] Ziel {#prerequisites-destination}
 
-Beachten Sie die folgenden Voraussetzungen, um Daten von Platform in Ihr [!DNL HubSpot]-Konto zu exportieren:
+Beachten Sie die folgenden Voraussetzungen, um Daten aus Experience Platform in Ihr [!DNL HubSpot]-Konto zu exportieren:
 
 #### Sie müssen über ein [!DNL HubSpot] Konto verfügen {#prerequisites-account}
 
-Um Daten von Platform in Ihr [!DNL Hubspot]-Konto zu exportieren, benötigen Sie ein [!DNL HubSpot]-Konto. Wenn Sie noch kein solches Konto haben, besuchen Sie die Seite [HubSpot-Konto einrichten](https://knowledge.hubspot.com/get-started/set-up-your-account) und befolgen Sie die Anweisungen zur Registrierung und Erstellung Ihres Kontos.
+Um Daten aus Experience Platform in Ihr [!DNL Hubspot]-Konto zu exportieren, benötigen Sie ein [!DNL HubSpot]. Wenn Sie noch kein solches Konto haben, besuchen Sie die Seite [HubSpot-Konto einrichten](https://knowledge.hubspot.com/get-started/set-up-your-account) und befolgen Sie die Anweisungen zur Registrierung und Erstellung Ihres Kontos.
 
 #### Abrufen des Zugriffstokens für die [!DNL HubSpot] private App {#gather-credentials}
 
@@ -58,7 +58,7 @@ Wenn Sie keine private App haben, befolgen Sie die Dokumentation unter [Erstelle
 | --- | --- | --- |
 | `Bearer token` | Die `Access token` Ihrer [!DNL HubSpot] privaten App. <br>Um Ihre [!DNL HubSpot] abzurufen, `Access token` Sie der [!DNL HubSpot]-Dokumentation, um [API-Aufrufe mit dem Zugriffstoken Ihrer App durchzuführen](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token). | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
 
-## Leitplanken {#guardrails}
+## Leitlinien {#guardrails}
 
 [!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[ Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
@@ -90,7 +90,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Darüber hinaus wird in [!DNL HubSpot] für jede der ausgewählten Zielgruppen eine neue Eigenschaft unter Verwendung des Zielgruppennamen erstellt, deren Wert mit dem entsprechenden Zielgruppenstatus aus Platform geändert wird.</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Darüber hinaus wird in [!DNL HubSpot] für jede der ausgewählten Zielgruppen eine neue Eigenschaft unter Verwendung des Zielgruppennamen erstellt, deren Wert mit dem entsprechenden Zielgruppenstatus aus Experience Platform übereinstimmt.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -111,14 +111,14 @@ Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Absch
 * **[!UICONTROL Bearer-Token]**: Das Zugriffstoken für Ihre [!DNL HubSpot] private App.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
-![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
-![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/crm/hubspot/destination-details.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -139,7 +139,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL HubSpot] Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL HubSpot] Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL HubSpot]-Zielfeldern korrekt zuzuordnen:
 
@@ -147,28 +147,28 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL HubSpot]-Zielfeldern korre
 
 Die `Email` Identität ist eine obligatorische Zuordnung für dieses Ziel. Gehen Sie wie folgt vor, um sie zuzuordnen:
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)![
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** den **[!UICONTROL Identity-Namespace]** und wählen Sie eine Identität aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von E-Mail als Quellattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Quellattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Option **[!UICONTROL Attribute auswählen]** und wählen Sie `email` aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von E-Mail als Zielattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Zielattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Quellfeld | Zielfeld | Obligatorisch |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Ja |
 
 Nachfolgend finden Sie ein Beispiel mit der Identitätszuordnung:
-![Beispiel-Screenshot der Platform-Benutzeroberfläche mit E-Mail-Identitätszuordnung.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit E-Mail-Identitätszuordnung.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### Zuordnung **optional** Attribute
 
 Um weitere Attribute hinzuzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL HubSpot]-Konto aktualisieren möchten, wiederholen Sie die folgenden Schritte:
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)![
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von Vorname als Quellattribut.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+   Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl des Vornamens als Quellattribut.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie aus der Liste der Attribute aus, die automatisch aus Ihrem [!DNL HubSpot]-Konto ausgefüllt werden. Das Ziel verwendet die [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties)-API, um diese Informationen abzurufen. Sowohl [!DNL HubSpot] [Standardeigenschaften](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als auch alle benutzerdefinierten Eigenschaften werden zur Auswahl als Zielfelder abgerufen.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von Vorname als Zielattribut.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl des Vornamens als Zielattribut.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 Nachfolgend finden Sie einige verfügbare Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Hubspot]:
 
@@ -181,7 +181,7 @@ Nachfolgend finden Sie einige verfügbare Zuordnungen zwischen Ihrem XDM-Profils
 | `xdm: workAddress.country` | `Attribute: country` |
 
 Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Attributzuordnungen:
-![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 

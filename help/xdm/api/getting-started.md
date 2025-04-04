@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte mit der Schema Registry-API
 description: In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Schema Registry-API durchführen.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1364'
 ht-degree: 42%
 
 ---
@@ -22,7 +22,7 @@ Die Verwendung des Entwicklerhandbuchs setzt Grundkenntnisse der folgenden Kompo
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemata.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 XDM verwendet JSON-Schemaformatierung, um die Struktur der aufgenommenen Kundenerlebnisdaten zu beschreiben und zu validieren. Es wird daher dringend empfohlen, die [offizielle JSON-Schema-Dokumentation](https://json-schema.org/) zu lesen, um diese zugrunde liegende Technologie besser zu verstehen.
 
@@ -32,21 +32,21 @@ In der Dokumentation der [!DNL Schema Registry]-API wird anhand von Beispielen f
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Dokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Dokumentation](../../sandboxes/home.md).
 
-Alle Lookup(GET)-Anfragen an den [!DNL Schema Registry] erfordern eine zusätzliche `Accept`-Kopfzeile, deren Wert das Format der von der API zurückgegebenen Informationen bestimmt. Weitere Informationen finden Sie unten im Abschnitt [Accept-Kopfzeile](#accept).
+Alle Suchanfragen (GET) an den [!DNL Schema Registry] erfordern eine zusätzliche `Accept`-Kopfzeile, deren Wert das Format der von der API zurückgegebenen Informationen bestimmt. Weitere Informationen finden Sie unten im Abschnitt [Accept-Kopfzeile](#accept).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -158,7 +158,7 @@ Aufrufe der [!DNL Schema Registry]-API erfordern die Verwendung eines `CONTAINER
 
 ### Globaler Container
 
-Der `global`-Container enthält alle standardmäßigen Adobe- und [!DNL Experience Platform] von Partnerklassen, Schemafeldgruppen, Datentypen und Schemata. Sie können nur Listen- und Suchanfragen (GET) an den `global`-Container richten.
+Der `global`-Container enthält alle standardmäßigen von Adobe und [!DNL Experience Platform] von Partnern bereitgestellten Klassen, Schemafeldgruppen, Datentypen und Schemata. Sie können nur Listen- und Suchanfragen (GET) für den `global`-Container ausführen.
 
 Ein Beispiel für einen Aufruf, der den `global`-Container verwendet, würde wie folgt aussehen:
 
@@ -197,7 +197,7 @@ Aufrufe der [!DNL Schema Registry]-API unterstützen entweder den URL-kodierten 
 
 ## Accept-Kopfzeile {#accept}
 
-Bei der Durchführung von Listen- und Lookup-Vorgängen (GET) in der [!DNL Schema Registry]-API ist eine `Accept`-Kopfzeile erforderlich, um das Format der von der API zurückgegebenen Daten zu bestimmen. Beim Suchen nach bestimmten Ressourcen muss auch eine Versionsnummer in die `Accept`-Kopfzeile aufgenommen werden.
+Bei der Durchführung von Listen- und Suchvorgängen (GET) in der [!DNL Schema Registry]-API ist eine `Accept` erforderlich, um das Format der von der API zurückgegebenen Daten zu bestimmen. Beim Suchen nach bestimmten Ressourcen muss auch eine Versionsnummer in die `Accept`-Kopfzeile aufgenommen werden.
 
 In der folgenden Tabelle sind kompatible `Accept`-Header-Werte aufgeführt, einschließlich solcher mit Versionsnummern, zusammen mit Beschreibungen dazu, was die API bei ihrer Verwendung zurückgeben wird.
 
@@ -216,13 +216,13 @@ In der folgenden Tabelle sind kompatible `Accept`-Header-Werte aufgeführt, eins
 
 >[!NOTE]
 >
->Platform unterstützt derzeit nur eine Hauptversion für jedes Schema (`1`). Daher muss bei Suchanfragen immer der Wert für `version` `1` werden, damit die neueste Nebenversion des Schemas zurückgegeben wird. Weitere Informationen zur Schemaversionierung finden Sie im folgenden Unterabschnitt .
+>Experience Platform unterstützt derzeit nur eine Hauptversion für jedes Schema (`1`). Daher muss bei Suchanfragen immer der Wert für `version` `1` werden, damit die neueste Nebenversion des Schemas zurückgegeben wird. Weitere Informationen zur Schemaversionierung finden Sie im folgenden Unterabschnitt .
 
 ### Schemaversionierung {#versioning}
 
-Schemaversionen werden von `Accept`-Kopfzeilen in der Schema Registry-API und in `schemaRef.contentType` Eigenschaften in nachgelagerten Platform-Service-API-Payloads referenziert.
+Schemaversionen werden von `Accept`-Kopfzeilen in der Schema Registry-API und in `schemaRef.contentType` Eigenschaften in nachgelagerten Payloads der Experience Platform-Service-API referenziert.
 
-Derzeit unterstützt Platform für jedes Schema nur eine Hauptversion (`1`). Gemäß den [Regeln der Schemaentwicklung](../schema/composition.md#evolution) muss jede Aktualisierung eines Schemas zerstörungsfrei sein, d. h., neue Nebenversionen eines Schemas (`1.2`, `1.3` usw.) sind immer abwärtskompatibel mit vorherigen Nebenversionen. Daher gibt die Schemaregistrierung bei der Angabe von `version=1` immer die **neueste** Hauptversion `1` eines Schemas zurück, was bedeutet, dass frühere Nebenversionen nicht zurückgegeben werden.
+Derzeit unterstützt Experience Platform für jedes Schema nur eine Hauptversion (`1`). Gemäß den [Regeln der Schemaentwicklung](../schema/composition.md#evolution) muss jede Aktualisierung eines Schemas zerstörungsfrei sein, d. h., neue Nebenversionen eines Schemas (`1.2`, `1.3` usw.) sind immer abwärtskompatibel mit vorherigen Nebenversionen. Daher gibt die Schemaregistrierung bei der Angabe von `version=1` immer die **neueste** Hauptversion `1` eines Schemas zurück, was bedeutet, dass frühere Nebenversionen nicht zurückgegeben werden.
 
 >[!NOTE]
 >

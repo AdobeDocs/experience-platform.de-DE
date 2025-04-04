@@ -4,32 +4,32 @@ description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Ad
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c1a28a4b1ce066a87bb7b34b2524800f9d8f1ca0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 9%
+source-wordcount: '1111'
+ht-degree: 6%
 
 ---
 
 # Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 
-In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
+In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Experience Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform unterstützt kundenseitig verwaltete Schlüssel (CMK) für Microsoft Azure und Amazon Web Services (AWS). Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Wenn Ihre Implementierung auf AWS ausgeführt wird, haben Sie die Möglichkeit, den Key Management Service (KMS) für die Platform-Datenverschlüsselung zu verwenden. Weitere Informationen zur unterstützten Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform unterstützt kundenseitig verwaltete Schlüssel (CMK) für Microsoft Azure und Amazon Web Services (AWS). Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Wenn Ihre Implementierung auf AWS ausgeführt wird, haben Sie die Möglichkeit, den Key Management Service (KMS) für die Experience Platform-Datenverschlüsselung zu verwenden. Weitere Informationen zur unterstützten Infrastruktur finden Sie in der [Übersicht über die Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >Informationen zur Erstellung und Verwaltung von Verschlüsselungsschlüsseln in AWS KMS finden Sie im [Handbuch zur AWS KMS-Datenverschlüsselung](./aws/configure-kms.md). Informationen zu Azure-Implementierungen finden Sie im [Konfigurationshandbuch für Azure Key Vault](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
->Bei [!DNL Azure] gehosteten Platform-Instanzen werden Kundenprofildaten, die in der [!DNL Azure Data Lake] von Platform und im [!DNL Azure Cosmos DB] gespeichert sind, nach der Aktivierung ausschließlich mit CMK verschlüsselt. Der Widerruf von Schlüsseln in primären Datenspeichern kann zwischen **einigen Minuten bis 24 Stunden** und **bis zu 7 Tage** bei vorübergehenden oder sekundären Datenspeichern dauern. Weitere Informationen finden Sie im Abschnitt [Auswirkungen der Sperrung des Schlüsselzugriffs](#revoke-access).
+>Bei [!DNL Azure] gehosteten Experience Platform-Instanzen werden Kundenprofildaten, die in der [!DNL Azure Data Lake] von Experience Platform und im [!DNL Azure Cosmos DB] gespeichert sind, nach der Aktivierung ausschließlich mit CMK verschlüsselt. Der Widerruf von Schlüsseln in primären Datenspeichern kann zwischen **einigen Minuten bis 24 Stunden** und **bis zu 7 Tage** bei vorübergehenden oder sekundären Datenspeichern dauern. Weitere Informationen finden Sie im Abschnitt [Auswirkungen der Sperrung des Schlüsselzugriffs](#revoke-access).
 
-Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivierung der Funktion Customer Managed Keys (CMK) in Platform in [!DNL Azure] und AWS sowie über die erforderlichen Informationen zum Durchführen dieser Schritte.
+Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivierung der CMK-Funktion (Customer Managed Keys) in Experience Platform in [!DNL Azure] und AWS sowie über die erforderlichen Informationen zum Durchführen dieser Schritte.
 
 >[!NOTE]
 >
->Customer Journey Analytics-Kunden erhalten die Anweisungen in der [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=de).
+>Customer Journey Analytics-Kunden sollten die Anweisungen in der [Dokumentation zu Customer Journey Analytics befolgen](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=de).
 
 ## Voraussetzungen
 
@@ -58,7 +58,7 @@ Für von AWS gehostete Implementierungen konfigurieren Sie Ihre AWS-Umgebung wie
 
 ## Prozesszusammenfassung {#process-summary}
 
-Vom Kunden verwaltete Schlüssel (CMK) sind über die Angebote von Adobe Healthcare Shield und Privacy and Security Shield verfügbar. Auf Azure wird CMK sowohl für Healthcare Shield als auch für Privacy and Security Shield unterstützt. Auf AWS wird CMK nur für Privacy und Security Shield unterstützt und ist nicht für Healthcare Shield verfügbar. Sobald Ihr Unternehmen eine Lizenz für eines dieser Angebote erworben hat, können Sie den einmaligen Einrichtungsprozess zur Aktivierung von CMK starten.
+Vom Kunden verwaltete Schlüssel (CMK) sind über die Adobe-Angebote Healthcare Shield und Privacy and Security Shield verfügbar. Auf Azure wird CMK sowohl für Healthcare Shield als auch für Privacy and Security Shield unterstützt. Auf AWS wird CMK nur für Privacy und Security Shield unterstützt und ist nicht für Healthcare Shield verfügbar. Sobald Ihr Unternehmen eine Lizenz für eines dieser Angebote erworben hat, können Sie den einmaligen Einrichtungsprozess zur Aktivierung von CMK starten.
 
 >[!WARNING]
 >
@@ -68,28 +68,28 @@ Der Prozess sieht folgendermaßen aus:
 
 ### Für Azure {#azure-process-summary}
 
-1. [Konfigurieren Sie  [!DNL Azure] Schlüsseltresor](./azure/azure-key-vault-config.md) basierend auf den Richtlinien Ihrer Organisation und [generieren Sie dann einen ](./azure/azure-key-vault-config.md#generate-a-key), um ihn für Adobe freizugeben.
+1. [Konfigurieren Sie  [!DNL Azure]  Schlüsseltresor](./azure/azure-key-vault-config.md) basierend auf den Richtlinien Ihrer Organisation und [generieren Sie dann einen ](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben wird.
 1. Richten Sie die CMK-App mit Ihrem [!DNL Azure]-Mandanten entweder über [API-Aufrufe](./azure/api-set-up.md#register-app) oder über die [UI](./azure/ui-set-up.md#register-app) ein.
 1. Senden Sie Ihre Verschlüsselungsschlüssel-ID an Adobe und starten Sie den Aktivierungsprozess für die Funktion, entweder [ der Benutzeroberfläche ](./azure/ui-set-up.md#send-to-adobe) mit einem [API-Aufruf](./azure/api-set-up.md#send-to-adobe).
 1. Überprüfen Sie den Status der Konfiguration, um zu überprüfen, ob CMK aktiviert wurde, entweder [in der ](./azure/ui-set-up.md#check-status) oder mit einem [API-Aufruf](./azure/api-set-up.md#check-status).
 
-Sobald der Einrichtungsprozess für von Azure gehostete Platform-Instanzen abgeschlossen ist, werden alle Daten in allen Sandboxes, die in Platform integriert sind, mit Ihrer [!DNL Azure] verschlüsselt. Zur Verwendung von CMK nutzen Sie die [!DNL Microsoft Azure]-Funktionen, die Teil des [öffentlichen Vorschauprogramms](https://azure.microsoft.com/de-de/support/legal/preview-supplemental-terms/) sein können.
+Sobald der Einrichtungsprozess für die von Azure gehosteten Experience Platform-Instanzen abgeschlossen ist, werden alle Daten in allen Sandboxes, die in Experience Platform integriert sind, mit Ihrer [!DNL Azure] verschlüsselt. Zur Verwendung von CMK nutzen Sie die [!DNL Microsoft Azure]-Funktionen, die Teil des [öffentlichen Vorschauprogramms](https://azure.microsoft.com/de-de/support/legal/preview-supplemental-terms/) sein können.
 
 ### Für AWS {#aws-process-summary}
 
 1. [Richten Sie AWS KMS ein](./aws/configure-kms.md) indem Sie einen Verschlüsselungsschlüssel konfigurieren, der für Adobe freigegeben werden soll.
 2. Befolgen Sie die für AWS spezifischen Anweisungen im [UI-Einrichtungshandbuch](./aws/ui-set-up.md).
-3. Überprüfen Sie die Einrichtung, um sicherzustellen, dass Platform-Daten mit dem von AWS gehosteten Schlüssel verschlüsselt werden.
+3. Überprüfen Sie die Einrichtung, um sicherzustellen, dass Experience Platform-Daten mit dem von AWS gehosteten Schlüssel verschlüsselt werden.
 
 <!--  Pending: or [API setup guide]() -->
 
-Sobald der Einrichtungsprozess für in AWS gehostete Platform-Instanzen abgeschlossen ist, werden alle Daten in allen Sandboxes, die in Platform integriert sind, mit Ihrer AWS Key Management Service (KMS)-Konfiguration verschlüsselt. Um CMK in AWS zu verwenden, verwenden Sie den AWS-Schlüsselverwaltungsdienst, um Ihre Verschlüsselungsschlüssel entsprechend den Sicherheitsanforderungen Ihres Unternehmens zu erstellen und zu verwalten.
+Sobald der Einrichtungsprozess für von AWS gehostete Experience Platform-Instanzen abgeschlossen ist, werden alle Daten aus allen Sandboxes, die in Experience Platform integriert sind, mit Ihrer AWS Key Management Service (KMS)-Konfiguration verschlüsselt. Um CMK in AWS zu verwenden, verwenden Sie den AWS-Schlüsselverwaltungsdienst, um Ihre Verschlüsselungsschlüssel entsprechend den Sicherheitsanforderungen Ihres Unternehmens zu erstellen und zu verwalten.
 
 ## Auswirkungen der Sperrung des Schlüsselzugriffs {#revoke-access}
 
-Das Widerrufen oder Deaktivieren des Zugriffs auf den Schlüsseltresor, den Schlüssel oder die CMK-App in Azure oder den Verschlüsselungsschlüssel in AWS kann zu erheblichen Unterbrechungen führen, darunter auch zu grundlegenden Änderungen an den Vorgängen Ihrer Plattform. Sobald Schlüssel deaktiviert sind, können Daten in Platform nicht mehr aufgerufen werden und nachgelagerte Vorgänge, die auf diese Daten angewiesen sind, funktionieren nicht mehr. Es ist wichtig, die nachgelagerten Auswirkungen vollständig zu verstehen, bevor Sie Änderungen an Ihren wichtigsten Konfigurationen vornehmen.
+Das Widerrufen oder Deaktivieren des Zugriffs auf den Schlüsseltresor, den Schlüssel oder die CMK-App in Azure oder den Verschlüsselungsschlüssel in AWS kann zu erheblichen Unterbrechungen führen, darunter auch zu grundlegenden Änderungen an den Vorgängen Ihrer Experience Platform. Sobald -Schlüssel deaktiviert sind, können Daten in Experience Platform nicht mehr aufgerufen werden und nachgelagerte Vorgänge, die auf diese Daten angewiesen sind, funktionieren nicht mehr. Es ist wichtig, die nachgelagerten Auswirkungen vollständig zu verstehen, bevor Sie Änderungen an Ihren wichtigsten Konfigurationen vornehmen.
 
-Um den Platform-Zugriff auf Ihre Daten in [!DNL Azure] zu widerrufen, entfernen Sie die mit der Anwendung verknüpfte Benutzerrolle aus dem Schlüsseltresor. Bei AWS können Sie den Schlüssel deaktivieren oder die Richtlinienanweisung aktualisieren. Detaillierte Anweisungen zum AWS-Prozess finden Sie im Abschnitt [Sperren von Schlüsseln](./aws/ui-set-up.md#key-revocation).
+Um Experience Platform den Zugriff auf Ihre Daten in [!DNL Azure] zu entziehen, entfernen Sie die mit der Anwendung verknüpfte Benutzerrolle aus dem Schlüsseltresor. Bei AWS können Sie den Schlüssel deaktivieren oder die Richtlinienanweisung aktualisieren. Detaillierte Anweisungen zum AWS-Prozess finden Sie im Abschnitt [Sperren von Schlüsseln](./aws/ui-set-up.md#key-revocation).
 
 
 ### Zeitleisten für die Übertragung {#propagation-timelines}
@@ -115,5 +115,5 @@ Beispielsweise zeigt das Profil-Dashboard bis zu sieben Tage lang Daten aus sein
 
 So starten Sie den Prozess:
 
-- Für Azure: Beginnen Sie mit dem [Konfigurieren eines  [!DNL Azure] -Schlüsseltresors](./azure/azure-key-vault-config.md) und [Generieren eines Verschlüsselungsschlüssels](./azure/azure-key-vault-config.md#generate-a-key) für die Freigabe mit Adobe.
+- Für Azure: Beginnen Sie mit dem [Konfigurieren eines  [!DNL Azure] -Schlüsseltresors](./azure/azure-key-vault-config.md) und [Generieren eines ](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben werden soll.
 - Für AWS: [Richten Sie AWS KMS ein](./aws/configure-kms.md) und stellen Sie sicher, dass die richtigen IAM- und KMS-Konfigurationen vorliegen, bevor Sie mit den Handbüchern zur Benutzeroberfläche oder zur API-Einrichtung fortfahren.

@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance die vollständigen Details Ihrer Testergebnisse anzeigen können. Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei der Verwendung der Flow Service-API zur Überwachung von Datenflüssen erhalten würden.
 title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 100%
+source-wordcount: '547'
+ht-degree: 92%
 
 ---
 
@@ -33,7 +33,7 @@ Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sic
 
 * Sie haben ein vorhandenes dateibasiertes Ziel, das über das Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md) sehen.
 * Sie haben in der Experience Platform-Benutzeroberfläche mindestens einen Aktivierungsfluss für Ihr Ziel erstellt.
-* Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
+* Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Experience Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
 
   ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
 * Sie haben zuvor die [Zielkonfiguration getestet](file-based-destination-testing-api.md)und eine gültige API-Antwort erhalten, die eine `results`-Eigenschaft enthält. Sie werden diesen `results`-Wert verwenden, um Ihr Ziel weiter zu testen.
@@ -213,7 +213,7 @@ Die Antwort enthält die vollständigen Details des Aktivierungsflusses. Sie kö
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

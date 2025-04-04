@@ -2,10 +2,10 @@
 title: On-Demand-Aufnahme für Datenflüsse von Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Datenflüsse bei Bedarf für Ihre Quellverbindungen mithilfe der Experience Platform-Benutzeroberfläche erstellen.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 10%
+source-wordcount: '552'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +31,9 @@ Flussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein 
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Datenflüsse](../../../dataflows/home.md): Ein Datenfluss ist eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in Identity Service, in Echtzeit-Kundenprofile und in Ziele.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Datenflüsse](../../../dataflows/home.md): Ein Datenfluss ist eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in Identity Service, in Echtzeit-Kundenprofile und in Ziele.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Erstellen eines Datenflusses bei Bedarf {#create-a-dataflow-on-demand}
 

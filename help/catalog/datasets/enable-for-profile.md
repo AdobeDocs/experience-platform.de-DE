@@ -4,10 +4,10 @@ title: Aktivieren eines Datensatzes für Profil und Identity Service mithilfe vo
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit dem Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 94%
+source-wordcount: '1070'
+ht-degree: 92%
 
 ---
 
@@ -24,14 +24,14 @@ In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes für die Ve
 
 ## Erste Schritte
 
-Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Platform]-Services:
+Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Experience Platform]-Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert das [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in [!DNL Platform] aufgenommen werden.
+- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert das [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in [!DNL Experience Platform] aufgenommen werden.
 - [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze für das [!DNL Real-Time Customer Profile] und [!DNL Identity Service] erstellen und konfigurieren können.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -47,7 +47,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type`-Kopfzeile erforderlich. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Konfigurieren eines für Profil und Identität aktivierten Datensatzes {#create-a-dataset-enabled-for-profile-and-identity}
 

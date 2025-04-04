@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 32%
+source-wordcount: '433'
+ht-degree: 28%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Donnerstag, 9. Dezember 2020**
+**Veröffentlichungsdatum: 9. Dezember 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 
@@ -27,7 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Dataflows] {#dataflows}
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in den Identity Service und Profil-Service sowie in Ziele.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in den Identity Service und Profil-Service sowie in Ziele.
 
 **Wichtigste Funktion**
 
@@ -51,7 +51,7 @@ Weitere Informationen zum Adobe Experience Platform Intelligence-Paket-Add-on fi
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

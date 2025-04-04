@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwenden der GitHub-Web-Oberfläche zum Erstellen einer Seite mit der Quellendokumentation
 description: In diesem Dokument wird beschrieben, wie Sie mit der GitHub-Web-Oberfläche eine Dokumentation erstellen und eine Pull Request (PR) senden können.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ In diesem Dokument wird beschrieben, wie Sie mit der GitHub-Web-Oberfläche eine
 
 >[!TIP]
 >
->Die folgenden Dokumente aus dem Handbuch zum Beitragen zur Adobe können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Die folgenden Dokumente aus dem Adobe Contributing Guide können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Einrichten der GitHub-Umgebung
 
@@ -45,7 +45,7 @@ Ein Ordner mit vorhandenen CRM-Quellen wird angezeigt. Um Dokumentation für ein
 
 ![create-new-file](../assets/create-new-file.png)
 
-Benennen Sie Ihre Quelldatei `YOURSOURCE.md` wobei IHRE QUELLE der Name Ihrer Quelle in Platform ist. Wenn Ihr Unternehmen beispielsweise ACME CRM ist, sollte Ihr Dateiname `acme-crm.md` sein.
+Benennen Sie Ihre Quelldatei `YOURSOURCE.md` wobei IHRE QUELLE der Name Ihrer Quelle in Experience Platform ist. Wenn Ihr Unternehmen beispielsweise ACME CRM ist, sollte Ihr Dateiname `acme-crm.md` sein.
 
 ![git-interface](../assets/git-interface.png)
 
@@ -63,7 +63,7 @@ Wenn Sie fertig sind, übertragen Sie die Datei in Ihrer Verzweigung.
 
 ## Reichen Sie Ihre Dokumentation zur Überprüfung ein
 
-Sobald die Datei übertragen wurde, können Sie eine Pull Request (PR) öffnen, um Ihre Arbeitsverzweigung mit der Hauptverzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist, und wählen Sie dann **Vergleichs- und Pull-Anfrage**.
+Sobald für Ihre Datei ein Commit ausgeführt wurde, können Sie eine Pull-Anfrage (PR) öffnen, um Ihre Arbeitsverzweigung mit der Hauptverzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist, und wählen Sie dann **Vergleichs- und Pull-Anfrage**.
 
 ![compare-pr](../assets/compare-pr.png)
 
@@ -71,7 +71,7 @@ Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. F�
 
 >[!TIP]
 >
->Lassen Sie das **Bearbeitungen von Betreuern zulassen** aktiviert, um sicherzustellen, dass das Adobe-Dokumentations-Team Änderungen am PR vornehmen kann.
+>Lassen Sie das **Bearbeitung durch Betreuer zulassen** aktiviert, um sicherzustellen, dass das Dokumentations-Team von Adobe Änderungen am PR vornehmen kann.
 
 ![create-pr](../assets/create-pr.png)
 

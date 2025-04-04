@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Azure Data Explorer;Azure Data Explorer;Data Explorer;Data Explorer
+keywords: Experience Platform;Startseite;beliebte Themen;Azure Data Explorer;Azure Data Explorer;Daten-Explorer;Data Explorer
 solution: Experience Platform
 title: Erstellen einer Azure Data Explorer Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Azure Data Explorer-Quellverbindung erstellen.
 exl-id: 561bf948-fc92-4401-8631-e2a408667507
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 41%
@@ -14,7 +14,7 @@ ht-degree: 41%
 
 # Erstellen einer [!DNL Azure Data Explorer]-Quellverbindung über die Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Azure Data Explorer]-Quell-Connectors (im Folgenden als &quot;[!DNL Data Explorer]&quot; bezeichnet) über die [!DNL Platform]-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Azure Data Explorer]-Quell-Connectors (im Folgenden als &quot;[!DNL Data Explorer]&quot; bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Wenn Sie bereits über eine gültige [!DNL Data Explorer]-Verbindung verfügen, 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Data Explorer]-Konto in [!DNL Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL Data Explorer]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -43,17 +43,17 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL Data Expl
 
 ## Verbinden Ihres [!DNL Azure Data Explorer]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Data Explorer]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Data Explorer]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, für die Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter **[!UICONTROL Kategorie]** die Option **[!UICONTROL Azure Data Explorer]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]**, um einen neuen Data Explorer-Connector zu erstellen.
+Wählen Sie unter **[!UICONTROL Kategorie]** die Option **[!UICONTROL Azure Data Explorer]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]** aus, um einen neuen Data Explorer-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-Die Seite **[!UICONTROL Mit Azure-Data Explorer verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Verbindung zu Azure Data Explorer herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 
@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Data Explorer] Kont
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Data Explorer]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Data Explorer]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

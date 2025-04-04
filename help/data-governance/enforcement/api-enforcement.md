@@ -5,10 +5,10 @@ title: Durchsetzen von Datennutzungsrichtlinien mithilfe der Policy Service-API
 type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 100%
+source-wordcount: '999'
+ht-degree: 98%
 
 ---
 
@@ -26,10 +26,10 @@ In diesem Dokument wird beschrieben, wie Sie mit der [!DNL Policy Service]-API i
 
 Dieses Tutorial setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Durchsetzen von Datennutzungsrichtlinien eine Rolle spielen:
 
-* [Data Governance](../home.md): Das Framework, mit dem [!DNL Platform] die Einhaltung der Datennutzungsrichtlinien durchsetzt.
+* [Data Governance](../home.md): Das Framework, mit dem [!DNL Experience Platform] die Einhaltung der Datennutzungsrichtlinien durchsetzt.
    * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf Datensätze (und/oder einzelne Felder in diesen Datensätzen) angewendet und geben Einschränkungen für die Verwendungsmöglichkeiten dieser Daten an.
    * [Datennutzungsrichtlinien](../policies/overview.md): Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die für bestimmte Sätze von Datennutzungskennzeichnungen zulässig bzw. eingeschränkt sind.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Policy Service]-API benötigen, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
@@ -376,4 +376,4 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Da
 
 Indem Sie dieses Dokuments lesen, haben Sie bei der Ausführung einer Marketing-Aktion für einen Datensatz oder eine Reihe von Datennutzungskennzeichnungen erfolgreich geprüft, ob Richtlinien verletzt wurden. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
 
-Informationen dazu, wie Platform automatisch die Richtliniendurchsetzung für aktivierte Segmente bereitstellt, finden Sie im Handbuch [Automatische Durchsetzung](./auto-enforcement.md).
+Informationen dazu, wie Experience Platform automatisch die Richtliniendurchsetzung für aktivierte Segmente bereitstellt, finden Sie im Handbuch [Automatische Durchsetzung](./auto-enforcement.md).

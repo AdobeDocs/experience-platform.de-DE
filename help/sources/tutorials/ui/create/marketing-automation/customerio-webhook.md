@@ -3,9 +3,9 @@ title: Erstellen einer Customer.io-Source-Verbindung und eines Datenflusses in d
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Customer.io-Quellverbindung erstellen.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1225'
 ht-degree: 20%
 
 ---
@@ -53,25 +53,25 @@ Bevor Sie eine [!DNL Customer.io] Quellverbindung erstellen, benötigen Sie ein 
 }
 ```
 
-### Erstellen eines Platform-Schemas für [!DNL Customer.io] {#create-platform-schema}
+### Erstellen eines Experience Platform-Schemas für [!DNL Customer.io] {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie ein Platform-Schema für Ihre Quelle erstellen. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Platform Schemas .
+Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
-![Screenshot der Platform-Benutzeroberfläche mit einem Beispielschema für Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit einem Beispielschema für Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Verbinden Ihres [!DNL Customer.io]-Kontos {#connect-account}
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche die Option]** Quellen“ in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellenkatalog anzuzeigen, der auf Experience Platform verfügbar ist.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellkatalog anzuzeigen, der in Experience Platform verfügbar ist.
 
 Verwenden Sie das Menü *[!UICONTROL Kategorien]*, um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
 Gehen Sie zur Kategorie [!UICONTROL Marketing], um die [!DNL Customer.io] anzuzeigen. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]** aus.
 
-![Screenshot der Platform-Benutzeroberfläche für den Katalog mit der Karte Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für den Katalog mit der Karte Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Daten auswählen {#select-data}
 
-Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Platform übermitteln möchten.
+Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Experience Platform übermitteln möchten.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Teil der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer JSON-Datei anzeigen.
@@ -98,7 +98,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Alle unten aufgeführten Zuordnungen sind obligatorisch und sollten eingerichtet werden, bevor Sie mit der Phase [!UICONTROL Überprüfung] fortfahren.
 
@@ -156,17 +156,17 @@ Geben Sie in der [!DNL Customer.io]-Benutzeroberfläche Ihre [Webhook-URL](#get-
 
 >[!TIP]
 >
->Sie können eine Vielzahl verschiedener Ereignisse für Ihren Reporting-Webhook abonnieren. Die Nachricht jedes Ereignisses wird in Platform aufgenommen, wenn die Kriterien für den Trigger eines [!DNL Customer.io] Aktionsereignisses erfüllt sind. Weitere Informationen zu den verschiedenen Ereignissen finden Sie in der [[!DNL Customer.io] Ereignisdokumentation](https://customer.io/docs/webhooks/#events).
+>Sie können eine Vielzahl verschiedener Ereignisse für Ihren Reporting-Webhook abonnieren. Die Nachricht jedes Ereignisses wird in Experience Platform aufgenommen, wenn die Kriterien für den Trigger eines [!DNL Customer.io] Aktionsereignisses erfüllt sind. Weitere Informationen zu den verschiedenen Ereignissen finden Sie in der [[!DNL Customer.io] Ereignisdokumentation](https://customer.io/docs/webhooks/#events).
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert, um Ihre [!DNL Customer.io]-Daten auf Experience Platform zu übertragen. Informationen zum Überwachen der aufgenommenen Daten finden Sie im Handbuch unter [Überwachen von Streaming-Datenflüssen mithilfe der Platform-Benutzeroberfläche](../../monitor-streaming.md).
+In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert, um Ihre [!DNL Customer.io]-Daten in Experience Platform zu übertragen. Informationen zum Überwachen der aufgenommenen Daten finden Sie im Handbuch unter [Überwachen von Streaming-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche](../../monitor-streaming.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verwendung der [!DNL Customer.io] verweisen können.
 
-### Leitplanken {#guardrails}
+### Leitlinien {#guardrails}
 
 Informationen zu Leitplanken finden Sie auf der Seite [[!DNL Customer.io] Zeitüberschreitungen und Fehler](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
@@ -178,6 +178,6 @@ Um zu überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL Custo
 
 ![Screenshot der Benutzeroberfläche von Customer.io mit Aktivitätsprotokollen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datenflüsse anzeigen]** neben dem Menü [!DNL Customer.io] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die Daten zu überprüfen, die für die Ereignisse aufgenommen wurden, die Sie in [!DNL Customer.io] ausgewählt haben.
+* Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Customer.io] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die Daten zu überprüfen, die für die Ereignisse aufgenommen wurden, die Sie in [!DNL Customer.io] ausgewählt haben.
 
-![Screenshot der Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

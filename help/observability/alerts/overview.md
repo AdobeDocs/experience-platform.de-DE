@@ -4,10 +4,10 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 89%
+source-wordcount: '804'
+ht-degree: 69%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 89%
 
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
-Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für sie angemeldet haben, Warnhinweise zusenden. Diese Nachrichten können sich über einen vordefinierten Zeitraum wiederholen, bis der Warnhinweis behoben wurde.
+Wenn bestimmte Bedingungen in Ihren Experience Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Experience Platform allen Benutzenden in Ihrem Unternehmen, die sich dafür angemeldet haben, Warnhinweise zusenden. Diese Nachrichten können sich über einen vordefinierten Zeitraum wiederholen, bis der Warnhinweis behoben wurde.
 
 Dieses Dokument bietet eine Übersicht zu Warnhinweisen in Adobe Experience Platform, einschließlich der Struktur zum Definieren von Warnhinweisregeln.
 
 ## Einmalige Warnhinweise im Vergleich zu sich wiederholenden Warnhinweisen
 
-Warnhinweise von Platform können einmalig gesendet werden oder in einem vordefinierten Intervall so lange wiederholt werden, bis sie aufgelöst werden. Die Anwendungsfälle dieser einzelnen Optionen sollen sich wie folgt unterscheiden:
+Experience Platform-Warnhinweise können einmal gesendet werden oder in einem vordefinierten Intervall so lange wiederholt werden, bis sie aufgelöst werden. Die Anwendungsfälle dieser einzelnen Optionen sollen sich wie folgt unterscheiden:
 
 | Einmaliger Warnhinweis | Sich wiederholender Warnhinweis |
 | --- | --- |
@@ -54,19 +54,19 @@ Ein Warnhinweis kann in die folgenden Komponenten unterteilt werden:
 Warnhinweise können über zwei Kanäle empfangen und verwaltet werden:
 
 * [Adobe I/O-Ereignisse](#events)
-* [Platform-Benutzeroberfläche](#ui)
+* [Experience Platform-Benutzeroberfläche](#ui)
 
 ### I/O-Ereignisse {#events}
 
-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in Adobe Developer Console registrieren. Spezifische Schritte finden Sie im Handbuch [Abonnieren von Adobe I/O Event-Benachrichtigungen](./subscribe.md).
+Warnhinweise können an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Spezifische Schritte finden Sie im Handbuch [Abonnieren von Adobe I/O Event-Benachrichtigungen](./subscribe.md).
 
-### Platform-Benutzeroberfläche {#ui}
+### Experience Platform-Benutzeroberfläche {#ui}
 
-Über die Platform-Benutzeroberfläche können Sie die empfangenen Warnhinweise anzeigen und Warnhinweisregeln verwalten. Das folgende Video bietet eine Einführung in diese Funktionen.
+Die Benutzeroberfläche von Experience Platform ermöglicht die Anzeige empfangener Warnhinweise und die Verwaltung von Warnhinweisregeln. Das folgende Video bietet eine Einführung in diese Funktionen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Sie die folgenden Zugangssteuerungsberechtigungen über die Adobe Admin Console aktiviert haben:
+Um mit Warnhinweisen in der Experience Platform-Benutzeroberfläche zu arbeiten, müssen Sie die folgenden Zugriffssteuerungsberechtigungen über Adobe Admin Console aktiviert haben:
 
 | Berechtigung | Beschreibung |
 | --- | --- |
@@ -81,7 +81,7 @@ Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Si
 
 >[!NOTE]
 >
->Weitere Informationen zum Verwalten von Berechtigungen in Platform finden Sie in der [Dokumentation zur Zugangssteuerung](../../access-control/ui/overview.md).
+>Weitere Informationen zum Verwalten von Berechtigungen in Experience Platform finden Sie in der [Dokumentation zur Zugriffssteuerung](../../access-control/ui/overview.md).
 
 Mit der Berechtigung „Warnhinweise anzeigen“ können Sie erhaltene Warnhinweise anzeigen, indem Sie oben rechts das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) auswählen.
 
@@ -95,4 +95,4 @@ Darüber hinaus ermöglicht die Registerkarte [!UICONTROL Warnhinweise] in der B
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wurden Sie mit Platform-Warnhinweisen und ihrer Rolle im Platform-Ökosystem vertraut gemacht. Lesen Sie die Prozessdokumentation, auf die in dieser Übersicht verlinkt wird, um zu erfahren, wie Sie Warnhinweise empfangen und verwalten können.
+Durch das Lesen dieses Dokuments haben Sie sich mit Experience Platform-Warnhinweisen und ihrer Rolle im Experience Platform-Ökosystem vertraut gemacht. Lesen Sie die Prozessdokumentation, auf die in dieser Übersicht verlinkt wird, um zu erfahren, wie Sie Warnhinweise empfangen und verwalten können.

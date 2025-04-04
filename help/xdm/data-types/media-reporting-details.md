@@ -2,9 +2,9 @@
 title: Datentyp „Media Reporting Details“
 description: Erfahren Sie mehr über den Datentyp Experience-Datenmodell (XDM) für Details zur Medienberichterstattung.
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Die unten genannten Felder werden nicht direkt zum Erstellen von Anfragen verwendet. Stattdessen wird die Sammlung von Feldern, die an Adobe Experience Platform oder Adobe Analytics gesendet werden, aus Ihren Anfragedaten zusammengestellt, und Metriken werden dann von der Server-Infrastruktur integriert oder verarbeitet. Während Platform verschiedene Typen Ihrer Benutzerereignisse erfasst, konzentrieren sich die an Sie zurückgegebenen Berichte auf bestimmte Ereignisse wie `media.sessionStart`, `media.adStart` und `media.sessionComplete`. Das bedeutet, dass Sie während der Erfassung zwar 12 Ereignistypen übertragen, Ihre Berichte jedoch nur Aufschlüsselungen auf der Grundlage der fünf unten aufgeführten Ereignisse anzeigen.
+>Die unten genannten Felder werden nicht direkt zum Erstellen von Anfragen verwendet. Stattdessen wird die Sammlung von Feldern, die an Adobe Experience Platform oder Adobe Analytics gesendet werden, aus Ihren Anfragedaten zusammengestellt, und Metriken werden dann von der Server-Infrastruktur integriert oder verarbeitet. Während Experience Platform verschiedene Arten von Benutzerereignissen erfasst, konzentrieren sich die an Sie zurückgegebenen Berichte auf bestimmte Ereignisse wie `media.sessionStart`, `media.adStart` und `media.sessionComplete`. Das bedeutet, dass Sie während der Erfassung zwar 12 Ereignistypen übertragen, Ihre Berichte jedoch nur Aufschlüsselungen auf der Grundlage der fünf unten aufgeführten Ereignisse anzeigen.
 
 +++Wählen Sie diese Option aus, um ein Diagramm des Datentyps [!UICONTROL Media Reporting-]&quot; anzuzeigen.
 ![Abbildung des Datentyps [!UICONTROL Details zur Medienberichterstattung].](../images/data-types/media-reporting-details.png)

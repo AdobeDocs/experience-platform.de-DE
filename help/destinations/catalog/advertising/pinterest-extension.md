@@ -2,10 +2,10 @@
 title: Pinterest Conversion Tracking-Erweiterung
 description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
-source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 95%
+source-wordcount: '457'
+ht-degree: 82%
 
 ---
 
@@ -17,13 +17,13 @@ Verfolgen Sie Besucheraktionen auf Ihrer Website nach Ansichten Ihrer Promoted P
 
 [!DNL Pinterest Conversion Tracking] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Pinterest Conversion Tracking-Erweiterung](../../assets/catalog/advertising/pinterest/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -31,7 +31,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die [!DNL Pinterest Conversion Tracking]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -57,6 +57,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Auch wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Platform-Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Experience Platform-Benutzeroberfläche weiterhin &quot;**[!UICONTROL &quot;]** die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

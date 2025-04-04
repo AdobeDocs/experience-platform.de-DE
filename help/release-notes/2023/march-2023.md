@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 83%
+source-wordcount: '2081'
+ht-degree: 81%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview?lang=de#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
 | Neuer Schnellstart-Workflow für das Mobile SDK (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht die schnelle Implementierung des Mobile SDK und die Validierung einfacher Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten. |
 | [!DNL Braze]-Erweiterung zur Ereignisweiterleitung | Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Braze]-APIs für die Benutzernachverfolgung an [!DNL Braze] gesendet werden. |
-| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html)-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform-Edge Network zu erfassen und über die [!DNL Epsilon]-API an [!DNL Epsilon] zu senden. |
+| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html)-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen in der Adobe Experience Platform Edge Network zu erfassen und über die [!DNL Epsilon]-Ereignis-API an [!DNL Epsilon] zu senden. |
 | [!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)-Erweiterung ermöglicht es, die Ereignisweiterleitung zu nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an Mixpanel zu senden. |
 
 {style="table-layout:auto"}
@@ -135,7 +135,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- | --- |
 | Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Inhaltskomponentendetails“ ] |
 | Feldergruppe | [[!UICONTROL AJO-Entitäts-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO-Entitäts-Tags zu [!UICONTROL AJO-Entitätsfeldern] hinzugefügt, die einer Journey oder Kampagne entsprechen |
-| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die gemeinsamen Felder des Schrittereignisses [[!UICONTROL Journey Orchestration hinzugefügt]](https://github.com/adobe/xdm/pull/1671/files) |
+| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die gemeinsamen Felder für [[!UICONTROL Journey Orchestration-Schrittereignisse hinzugefügt]](https://github.com/adobe/xdm/pull/1671/files) |
 | Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte“ ]](https://github.com/adobe/xdm/pull/1670/files). |
 | Feldergruppe | [!UICONTROL Workfront-Änderungsereignis] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
 | Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Der [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den für den Artikel erstatteten Betrag anzugeben, falls vorhanden. |
@@ -147,7 +147,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
@@ -193,7 +193,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersic
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

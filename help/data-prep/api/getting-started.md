@@ -3,10 +3,10 @@ keywords: Experience Platform;Datenvorbereitung;Datenvorbereitungs-API;Fehlerbeh
 title: Erste Schritte mit der Datenvorbereitungs-API
 description: Erfahren Sie mehr über die wichtigsten Konzepte und grundlegenden Funktionen, die Sie benötigen, um die Datenvorbereitungs-API-Endpunkte zum Ausführen grundlegender CRUD-Vorgänge für die Verwendung mit Mapper verwenden zu können.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 100%
+source-wordcount: '187'
+ht-degree: 82%
 
 ---
 
@@ -20,7 +20,7 @@ Dieses Entwicklerhandbuch setzt ein grundlegendes Verständnis der verschiedenen
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): Die Methoden, mit denen Daten an [!DNL Experience Platform] gesendet werden können.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 
-Lesen Sie für erfolgreiche Aufrufe an [!DNL Data Prep]-API-Endpunkte das Handbuch für [Erste Schritte mit Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
+Lesen Sie für erfolgreiche Aufrufe an [!DNL Data Prep] API-Endpunkte das Handbuch [Erste Schritte mit Experience Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
 
 ## Nächste Schritte
 

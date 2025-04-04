@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Profile überwachen;Datenflüsse überwachen;Datenflüsse;Profil;Echtzeit-Kundenprofil;
-description: Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Profilen mithilfe der Experience Platform-Benutzeroberfläche überwachen können.
+description: Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Profilen mithilfe der Benutzeroberfläche von Experience Platform überwachen können.
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 14%
+source-wordcount: '1077'
+ht-degree: 12%
 
 ---
 
@@ -21,10 +21,10 @@ Das Überwachungs-Dashboard bietet eine visuelle Darstellung der Datenaktivität
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
+- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Überwachen des Profil-Dashboards {#profile-metrics}
 

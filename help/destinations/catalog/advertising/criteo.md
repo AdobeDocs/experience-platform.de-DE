@@ -3,16 +3,16 @@ keywords: Werbung; Kriterium;
 title: Criteo-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher über das offene Internet ein reichhaltigeres Erlebnis zu bieten. Mit dem weltweit größten Commerce-Datensatz und der erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint auf der Shopping-Journey personalisiert ist, um Kunden mit der richtigen Anzeige zum richtigen Zeitpunkt zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1017'
 ht-degree: 24%
 
 ---
 
 # Criteo-Verbindung
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Criteo unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 | --- | --- | --- |
-| `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl Nur-Text- als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option [!UICONTROL Umwandlung anwenden], damit Platform die Daten bei Aktivierung automatisch hasht. |
+| `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl Nur-Text- als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option [!UICONTROL Umwandlung anwenden], damit Experience Platform die Daten bei Aktivierung automatisch hasht. |
 | `gum_id` | Cookie-Kennung für Criteo [!DNL GUM] | [!DNL GUM IDs] ermöglichen es Kunden, eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzeridentifizierung ([!DNL UID]) von Criteo zu pflegen. Wenn der Kennungstyp `gum_id` ist, muss auch ein zusätzlicher Parameter, der [!DNL GUM Caller ID], enthalten sein. Wenden Sie sich an Ihr Criteo-Account-Team, um die entsprechenden [!DNL GUM Caller ID] zu erhalten oder um bei Bedarf weitere Informationen zu dieser [!DNL GUM ID]-Synchronisierung zu erhalten. |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
@@ -51,7 +51,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Criteo]-Ziel verwendet werden. |
 | Exporthäufigkeit | Streaming | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](../../destination-types.md#streaming-destinations). |
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie Sie das [!DNL Criteo]-Ziel verwenden, können Adobe Experience Platform-Kundinnen und -Kunden [!DNL Criteo] folgende Ziele erreichen:
 

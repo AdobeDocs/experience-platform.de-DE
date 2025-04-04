@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine Mailchimp-Kampagne mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einer Mailchimp-Kampagne verbinden.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1925'
-ht-degree: 84%
+source-wordcount: '1934'
+ht-degree: 75%
 
 ---
 
 # Erstellen eines Datenflusses für [!DNL Mailchimp Campaign] mithilfe der Flow Service-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Campaign]-Daten mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übermitteln.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Campaign] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Voraussetzungen
 
@@ -21,9 +21,9 @@ Bevor Sie eine Verbindung von [!DNL Mailchimp] zu Adobe Experience Platform mit 
 
 ## Erstellen einer Basisverbindung {#base-connection}
 
-Nachdem Sie Ihre [!DNL Mailchimp]-Authentifizierungs-Anmeldedaten abgerufen haben, können Sie jetzt mit dem Erstellen des Datenflusses beginnen, um [!DNL Mailchimp Campaign]-Daten in Platform zu bringen. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
+Nachdem Sie Ihre [!DNL Mailchimp] Authentifizierungsdaten abgerufen haben, können Sie jetzt mit dem Erstellen des Datenflusses beginnen, um [!DNL Mailchimp Campaign] Daten in Experience Platform zu übertragen. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 [!DNL Mailchimp] unterstützt sowohl einfache Authentifizierung als auch OAuth 2-Aktualisierungs-Code. In den folgenden Beispielen finden Sie Anleitungen zum Authentifizieren mit beiden Authentifizierungstypen.
 
@@ -72,7 +72,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Platform verbinden. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Experience Platform verbinden. |
 | `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldedaten beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldedaten nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 | `auth.params.password` | Das Passwort, das Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
@@ -132,7 +132,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Sie Ihre Quelle mit der [!DNL Flow Service]-API registriert haben. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldedaten beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldedaten nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | `auth.params.accessToken` | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
@@ -323,7 +323,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -384,7 +384,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Spezifikations-ID der Verbindung, die [!DNL Data Lake] entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der [!DNL Mailchimp]-Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der [!DNL Mailchimp], die Sie an Experience Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -471,7 +471,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um [!DNL Mailchimp]-Daten an Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um [!DNL Mailchimp] Daten an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -563,4 +563,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

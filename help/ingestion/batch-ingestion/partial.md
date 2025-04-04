@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Batch-Aufnahme; Batch-Aufnahme; partielle Aufnahme; partielle Aufnahme; Fehler abrufen; Fehler abrufen; partielle Batch-Aufnahme; partielle Batch-Aufnahme; partielle Aufnahme; partielle Aufnahme; Aufnahme;
+keywords: Experience Platform;Startseite;beliebte Themen;Batch-Aufnahme;Batch-Aufnahme;partielle Aufnahme;partielle Aufnahme;Fehler abrufen;Fehler abrufen;partielle Batch-Aufnahme;partielle Batch-Aufnahme;partielle Aufnahme;Aufnahme;Aufnahme;
 solution: Experience Platform
 title: Übersicht über die partielle Batch-Aufnahme
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 45%
@@ -21,10 +21,10 @@ Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfas
 
 Diese Anleitung setzt grundlegende Kenntnisse zu den verschiedenen Adobe Experience Platform-Diensten voraus, die mit der partiellen Batch-Erfassung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [Batch-Aufnahme](./overview.md): Die Methode, die [!DNL Platform] Daten aus Datendateien wie CSV und Parquet aufnimmt und speichert.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+- [Batch-Aufnahme](./overview.md): Die Methode, die [!DNL Experience Platform] Daten aus Datendateien wie CSV und Parquet aufnimmt und speichert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Experience Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -32,19 +32,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Aktivieren eines Batches für die partielle Batch-Aufnahme in der API {#enable-api}
 
@@ -65,7 +65,7 @@ Um einen neuen Batch zu erstellen, befolgen Sie die Schritte im [Entwicklerhandb
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Eine Markierung, mit der [!DNL Platform] detaillierte Fehlermeldungen über Ihren Batch generieren können. |
+| `enableErrorDiagnostics` | Eine Markierung, mit der [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihren Batch generieren können. |
 | `partialIngestionPercent` | Der Prozentsatz der akzeptablen Fehler, bevor der gesamte Batch fehlschlägt. In diesem Beispiel können also maximal 5 % des Batches Fehler sein, bevor er fehlschlägt. |
 
 
@@ -75,7 +75,7 @@ Um einen neuen Batch zu erstellen, befolgen Sie die Schritte im [Entwicklerhandb
 >
 >In diesem Abschnitt wird beschrieben, wie Sie einen Batch für die partielle Batch-Aufnahme über die Benutzeroberfläche aktivieren. Wenn Sie bereits einen Batch für die partielle Batch-Aufnahme mithilfe der API aktiviert haben, können Sie mit dem nächsten Abschnitt fortfahren.
 
-Um einen Batch für die partielle Aufnahme über die [!DNL Platform]-Benutzeroberfläche zu aktivieren, können Sie einen neuen Batch über Quellverbindungen erstellen, einen neuen Batch in einem vorhandenen Datensatz erstellen oder einen neuen Batch über den &quot;[!UICONTROL CSV-XDM-Fluss zuordnen] erstellen.
+Um einen Batch für die partielle Aufnahme über die [!DNL Experience Platform]-Benutzeroberfläche zu aktivieren, können Sie einen neuen Batch über Quellverbindungen erstellen, einen neuen Batch in einem vorhandenen Datensatz erstellen oder einen neuen Batch über den &quot;[!UICONTROL CSV-XDM-Fluss zuordnen] erstellen.
 
 ### Erstellen einer neuen Quellverbindung {#new-source}
 
@@ -85,7 +85,7 @@ Um eine neue Quellverbindung zu erstellen, führen Sie die in der [Quellen - Üb
 
 Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -99,7 +99,7 @@ Um einen vorhandenen Datensatz zu verwenden, wählen Sie zunächst einen Datensa
 
 Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -115,7 +115,7 @@ Um den Fluss &quot;[!UICONTROL CSV zu XDM-Schema zuordnen] zu verwenden, führen
 
 Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 

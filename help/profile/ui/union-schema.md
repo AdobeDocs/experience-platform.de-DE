@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Unified Profile;Unified Profile;Unified Profile;rtcp;Profil aktivieren;Profil aktivieren;Vereinigungsschema;UNION PROFILE;Vereinigungsprofil
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Einheitliches Profil;Einheitliches Profil;Vereinigtes Profil;rtcp;Profil aktivieren;Profil aktivieren;Vereinigungsschema;VEREINIGUNGSPROFIL;Vereinigungsprofil
 title: Handbuch zur Vereinigungsschema-Benutzeroberfläche
 type: Documentation
-description: In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Platform-Benutzeroberfläche.
+description: In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Experience Platform-Benutzeroberfläche.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
 
 # Handbuch [!UICONTROL Vereinigungsschema] Benutzeroberfläche
 
-In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Platform-Benutzeroberfläche.
+In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
 Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Services voraus, die mit der Verwaltung von Echtzeit-Kundenprofildaten verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Platform] aufgenommen werden.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Experience Platform] aufgenommen werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
 ## Grundlagen zu Vereinigungsschemata
 
@@ -33,7 +33,7 @@ Das Arbeiten mit Vereinigungsschemata erfordert ein tiefes Verständnis von XDM-
 
 ## Vereinigungsschemata anzeigen
 
-Um in der Platform-Benutzeroberfläche zu den Vereinigungsschemata zu navigieren, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Profile“ und dann die Registerkarte **[!UICONTROL Vereinigungsschema]** aus. Die Registerkarte [!UICONTROL Vereinigungsschema] wird geöffnet, um das Vereinigungsschema für die aktuell ausgewählte Klasse anzuzeigen.
+Um in der Experience Platform-Benutzeroberfläche zu den Vereinigungsschemata zu navigieren, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Profile“ und dann die Registerkarte **[!UICONTROL Vereinigungsschema]** aus. Die Registerkarte [!UICONTROL Vereinigungsschema] wird geöffnet, um das Vereinigungsschema für die aktuell ausgewählte Klasse anzuzeigen.
 
 ![Die Seite „Vereinigungsschema“ wird angezeigt, wobei die Registerkarte „Profil“ und „Vereinigungsschema“ hervorgehoben sind.](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ Weitere Informationen zu Datensätzen, einschließlich der Anzeige von Datensatz
 
 ## Beitragende Schemata anzeigen
 
-Sie können auch anzeigen, welche spezifischen Schemata zum Vereinigungsschema beitragen, indem Sie &quot;**[!UICONTROL beitragenden Schemata“]**, um die Liste der Schemata zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemas, die Ihr Unternehmen in Platform erstellt hat, kann es sich um eine kurze Liste mit einem einzelnen Schema oder eine lange Liste mit vielen Schemas handeln.
+Sie können auch anzeigen, welche spezifischen Schemata zum Vereinigungsschema beitragen, indem Sie &quot;**[!UICONTROL beitragenden Schemata“]**, um die Liste der Schemata zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemata, die Ihr Unternehmen in Experience Platform erstellt hat, kann es sich um eine kurze Liste mit einem einzigen Schema oder eine lange Liste mit vielen Schemata handeln.
 
 ![Die Liste der Schemata, die zum Vereinigungsschema beitragen, ist hervorgehoben.](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ Wenn Sie ein Beziehungsfeld in der Liste auswählen, wird das angezeigte Schema 
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Vereinigungsschemata mithilfe der [!DNL Experience Platform]-Benutzeroberfläche anzeigen und darin navigieren können. Um weitere Informationen zu Schemata zu erhalten, einschließlich ihrer Verwendung in Platform, lesen Sie zunächst die [Übersicht über das XDM-System](../../xdm/home.md).
+Durch das Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Vereinigungsschemata mithilfe der [!DNL Experience Platform]-Benutzeroberfläche anzeigen und darin navigieren können. Um weitere Informationen zu Schemata zu erhalten, einschließlich ihrer Verwendung in Experience Platform, lesen Sie zunächst die [Übersicht über das XDM-System](../../xdm/home.md).

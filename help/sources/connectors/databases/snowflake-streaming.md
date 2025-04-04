@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 17%
+source-wordcount: '820'
+ht-degree: 12%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 17%
 >
 >* Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Sie können jetzt die [!DNL Snowflake] Streaming-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](../../../landing/multi-cloud.md).
+>* Sie können jetzt die [!DNL Snowflake] Streaming-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform unterstützt das Streaming von Daten aus einer [!DNL Snowflake].
 
@@ -32,13 +32,13 @@ Durch Verwendung von [!DNL Kafka Connect] verfolgt die [!DNL Snowflake]-Streamin
 
 ## Voraussetzungen
 
-Im folgenden Abschnitt werden die erforderlichen Schritte beschrieben, die ausgeführt werden müssen, bevor Sie Daten aus Ihrer [!DNL Snowflake] auf Experience Platform streamen können:
+Im folgenden Abschnitt werden die erforderlichen Schritte beschrieben, die ausgeführt werden müssen, bevor Sie Daten aus Ihrer [!DNL Snowflake] an Experience Platform streamen können:
 
 ### Zulassungsliste der IP-Adressen aktualisieren
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Amazon Redshift] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Amazon Redshift] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -47,8 +47,8 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Snowflake] herstellen kann, 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | `account` | Die vollständige Kontokennung (Kontoname oder Konto-Locator) Ihres [!DNL Snowflake] Kontos, an die das Suffix `snowflakecomputing.com` angehängt ist. Die Kontokennung kann in verschiedenen Formaten vorliegen: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (z. B. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (z. B. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (z. B. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Weitere Informationen finden Sie im [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
-| `database` | Die [!DNL Snowflake]-Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
+| `warehouse` | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Experience Platform einzeln aufgerufen werden. |
+| `database` | Die [!DNL Snowflake]-Datenbank enthält die Daten, die Sie mit der Experience Platform verknüpfen möchten. |
 | `username` | Der Benutzername für das [!DNL Snowflake]. |
 | `password` | Das Kennwort für das [!DNL Snowflake] Benutzerkonto. |
 | `role` | (Optional) Eine benutzerdefinierte Rolle, die für einen Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn kein Wert angegeben wird, ist dieser Standardwert `public`. |
@@ -87,7 +87,7 @@ Weitere Informationen zur Rollen- und Berechtigungsverwaltung finden Sie in der 
 
 ## Nächste Schritte
 
-Im folgenden Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake]-Streaming-Quelle mithilfe der -API mit dem Experience Platform verbinden:
+In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake]-Streaming-Quelle mithilfe der -API mit Experience Platform verbinden:
 
-* [Streamen von Daten aus einer Datenbank  [!DNL Snowflake]  Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Streamen von Daten aus einer  [!DNL Snowflake]  auf Experience Platform mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus einer  [!DNL Snowflake]  an Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus  [!DNL Snowflake]  Datenbank an Experience Platform mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutz
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 17%
+source-wordcount: '1003'
+ht-degree: 16%
 
 ---
 
@@ -45,9 +45,9 @@ Wenn Sie bereits über eine [!DNL Braze] Verbindung verfügen, können Sie den R
 
 >[!TIP]
 >
->Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[ Ihres Kontos mit Experience Platform verbinden](#connect) fortfahren.
+>Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[ Ihres Kontos mit Experience Platform&quot; ](#connect).
 
-Verwenden Sie in der Platform-Benutzeroberfläche die linke Navigation und wählen Sie dann **[!UICONTROL Schemata]** aus, um auf den Arbeitsbereich [!UICONTROL Schemata] zuzugreifen. Wählen Sie anschließend **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL Erlebnisereignis]** aus. Um fortzufahren, klicken Sie auf **[!UICONTROL Weiter]**.
+Verwenden Sie in der Benutzeroberfläche von Experience Platform den linken Navigationsbereich und wählen Sie dann **[!UICONTROL Schemata]**, um auf den Arbeitsbereich [!UICONTROL Schemata] zuzugreifen. Wählen Sie anschließend **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL Erlebnisereignis]** aus. Um fortzufahren, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![Ein abgeschlossenes Schema.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -57,11 +57,11 @@ Weitere Informationen zu Schemata finden Sie im Handbuch zu [Erstellen von Schem
 
 ## Verbinden Ihres [!DNL Braze] mit Experience Platform {#connect}
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter der Kategorie *Marketing* die Option **[!UICONTROL Braze-Ströme]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Quelle für Braze-Ströme.](../../../../images/tutorials/create/braze/catalog.png)
+![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Quelle „Braze-Ströme“.](../../../../images/tutorials/create/braze/catalog.png)
 
 Laden Sie als Nächstes die bereitgestellte Beispieldatei [Braze-Ströme“ ](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Diese Datei enthält alle möglichen Felder, die Braze im Rahmen eines Ereignisses senden könnte.
 
@@ -84,7 +84,7 @@ Nachdem das neue berechnete Feld hinzugefügt wurde, wählen Sie **[!UICONTROL Z
 
 >[!IMPORTANT]
 >
->Braze-Zeitstempel werden nicht in Millisekunden, sondern in Sekunden ausgedrückt. Damit die Zeitstempel im Experience Platform genau wiedergegeben werden, müssen Sie berechnete Felder in Millisekunden erstellen. Eine Berechnung von „time * 1000“ wird korrekt in Millisekunden konvertiert, passend für die Zuordnung zu einem Zeitstempelfeld innerhalb von Experience Platform.
+>Braze-Zeitstempel werden nicht in Millisekunden, sondern in Sekunden ausgedrückt. Damit die Zeitstempel in Experience Platform genau wiedergegeben werden, müssen Sie berechnete Felder in Millisekunden erstellen. Die Berechnung „Zeit * 1000“ wird korrekt in Millisekunden konvertiert, sodass sie einem Zeitstempelfeld in Experience Platform zugeordnet werden kann.
 >
 >![Erstellen eines berechneten Felds für Zeitstempel ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
@@ -111,4 +111,4 @@ Navigieren Sie in der [!DNL Braze Dashboard] zu Partnerintegrationen **->Datenex
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Braze]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten zur Marketing-Automatisierung in zu importieren [!DNL Platform]](../../dataflow/marketing-automation.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Braze]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten zur Marketing-Automatisierung in zu importieren [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

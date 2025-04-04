@@ -5,10 +5,10 @@ feature: Customer AI
 title: Data Governance in Kunden-KI
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 97%
+source-wordcount: '280'
+ht-degree: 79%
 
 ---
 
@@ -18,9 +18,9 @@ Alle Einstellungen in Bezug auf die Data Governance in Kunden-KI werden von Adob
 
 ## Data Governance {#governance}
 
-Die Integration zwischen Kunden-KI und Adobe Experience Platform Data Governance bietet Ihnen die Möglichkeit, Ihre Daten über Platform während ihrer gesamten Journey zu steuern und zu erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
+Die Integration zwischen Kunden-KI und Adobe Experience Platform Data Governance bietet Ihnen die Möglichkeit, Ihre Daten über Experience Platform während ihres gesamten Journey zu kontrollieren und zu erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
 
-Datennutzungskennzeichnungen und -richtlinien, die für von Platform genutzte Datensätze erstellt wurden, können im Kunden-KI-Datenansichts-Workflow angezeigt werden. Diese Kennzeichnungen stoppen oder warnen Benutzende, die gekennzeichnete Felder verwenden.
+Datennutzungsbeschriftungen und -richtlinien, die für von Experience Platform genutzte Datensätze erstellt wurden, können im Kunden-KI-Konfigurations-Workflow angezeigt werden. Diese Kennzeichnungen stoppen oder warnen Benutzende, die gekennzeichnete Felder verwenden.
 
 Diese Integration ermöglicht ein effizienteres Compliance-Management. Datenverantwortliche in Ihrem Unternehmen können Richtlinien festlegen, um die Nutzung zu beschränken. So können Sie Daten verwenden, die den von Datenverantwortlichen definierten Richtlinien entsprechen. Weitere Informationen finden Sie in der Dokumentation zu [Kennzeichnungen und Richtlinien](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=de).
 

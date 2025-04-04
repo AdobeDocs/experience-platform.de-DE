@@ -4,10 +4,10 @@ title: Handbuch zur Fehlerbehebung beim Echtzeit-Kundenprofil
 type: Documentation
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Behebung gängiger Fehler beim Arbeiten mit Profildaten mit Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 100%
+source-wordcount: '968'
+ht-degree: 91%
 
 ---
 
@@ -25,15 +25,15 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 Das Profil akzeptiert **Datensatz**- und **Zeitreihendaten**, sofern die betreffenden Daten mindestens einen Identitätswert enthalten, der die Daten mit einer eindeutigen Person verknüpft.
 
-Wie alle Platform-Services ist es für das Profil erforderlich, dass seine Daten semantisch unter einem Experience-Datenmodell(XDM)-Schema strukturiert sind. Dieses Schema muss wiederum eine **primäre Identität** aufweisen, die für die Profilverwendung definiert und aktiviert ist.
+Wie alle Experience Platform-Services erfordert auch das Profil, dass seine Daten semantisch unter einem Experience-Datenmodell (XDM)-Schema strukturiert sind. Dieses Schema muss wiederum eine **primäre Identität** aufweisen, die für die Profilverwendung definiert und aktiviert ist.
 
 Wenn Sie mit XDM nicht vertraut sind, sollten Sie sich zunächst die [XDM-Übersicht](../xdm/home.md) durchlesen, um mehr zu erfahren. Anschließend finden Sie im XDM-Benutzerhandbuch Anweisungen zum [Festlegen von Identitätsfeldern](../xdm/tutorials/create-schema-ui.md#identity-field) und [Aktivieren eines Schemas für Profil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Wo werden Profildaten gespeichert?
 
-Das Echtzeit-Kundenprofil unterhält einen eigenen Datenspeicher (der als „Profilspeicher“ bezeichnet wird), welcher vom Data Lake, der andere aufgenommene Platform-Daten enthält, getrennt ist.
+Das Echtzeit-Kundenprofil unterhält einen eigenen Datenspeicher (der als „Profilspeicher“ bezeichnet wird), der vom Data Lake, der andere aufgenommene Experience Platform-Daten enthält, getrennt ist.
 
-### Wenn ich bereits Daten in Platform aufgenommen habe, kann ich sie dann im Profilspeicher verfügbar machen?
+### Wenn ich bereits Daten in Experience Platform aufgenommen habe, kann ich sie dann im Profilspeicher verfügbar machen?
 
 Wenn Daten in einen Nicht-Profil-Datensatz aufgenommen wurden, müssen Sie diese Daten erneut in einen profilaktivierten Datensatz aufnehmen, um sie im Profilspeicher verfügbar zu machen. Es ist möglich, einen vorhandenen Datensatz für das Profil zu aktivieren. Daten, die vor dieser Konfiguration aufgenommen wurden, werden jedoch nach wie vor nicht im Profilspeicher angezeigt.
 
@@ -57,7 +57,7 @@ Sie können auch eine Liste Ihrer Zielgruppen auf der Registerkarte **[!UICONTRO
 
 ## Fehler-Codes
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei der Arbeit mit der Echtzeit-Kundenprofil-API auftreten können. Wenn der aufgetretene Fehler hier nicht aufgeführt ist, finden Sie ihn stattdessen möglicherweise im allgemeinen [Handbuch zur Fehlerbehebung bei Platform](../landing/troubleshooting.md).
+Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei der Arbeit mit der Echtzeit-Kundenprofil-API auftreten können. Wenn der aufgetretene Fehler hier nicht aufgeführt ist, finden Sie ihn stattdessen möglicherweise im allgemeinen [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
 ### Schema des berechneten Attributs für angegebenen Pfad wurde nicht gefunden
 

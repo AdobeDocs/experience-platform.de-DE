@@ -2,10 +2,10 @@
 title: Anleitung für Reporting-Insights des abfragebeschleunigten Speichers
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 82%
+source-wordcount: '1037'
+ht-degree: 77%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 82%
 
 Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmens-Performance beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
 
-Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-Time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und aktiviert die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
+Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und ermöglicht die Real-Time CDP insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zu benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md).
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell in der Experience Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zu benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md).
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die [](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Experience Platform-Daten enthalten. Bitte beachten Sie die [](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
@@ -33,7 +33,7 @@ Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglich
 
 ![Ein Entitäts-Relations-Diagramm (ERD) des Zielgruppen-Insight-Benutzermodells.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` Dimensionstabelle/der Datensatz ordnet die externe ID einem Ziel und einer Audience in Platform zu.
+In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` Dimensionstabelle/der Datensatz ordnet die externe ID einem Ziel und einer Audience in Experience Platform zu.
 
 ## Erstellen eines Modells für Reporting-Insights mit Data Distiller
 

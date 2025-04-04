@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verbinden von Power BI mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Abfrage-Service von Adobe Experience Platform beschrieben.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 96%
+source-wordcount: '1014'
+ht-degree: 89%
 
 ---
 
@@ -23,7 +23,7 @@ Für dieses Handbuch müssen Sie bereits Zugriff auf die [!DNL Power BI] Desktop
 >
 > Die [!DNL Power BI] Desktop-Anwendung ist **nur** auf Windows-Geräten verfügbar.
 
-Um die erforderlichen Anmeldedaten zum Verbinden von [!DNL Power BI] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Bitte wenden Sie sich an die Administratorin oder den Administrator Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Power BI] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Bitte wenden Sie sich an die Administratorin oder den Administrator Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
 
 ## Verbinden von [!DNL Power BI] mit dem Abfrage-Service {#connect-power-bi}
 
@@ -31,11 +31,11 @@ Um [!DNL Power BI] mit dem Abfrage-Service zu verbinden, öffnen Sie [!DNL Power
 
 Das [!DNL PostgreSQL]-Datenbankdialogfeld wird angezeigt, über das Werte für Ihren Server und Ihre Datenbank angefordert werden. Zusätzliche Anweisungen zum [Verbinden mit einer PostgreSQL-Datenbank über Power Query Desktop](https://learn.microsoft.com/de-de/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) finden Sie in der offiziellen [!DNL PowerBI]-Dokumentation.
 
-Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldedaten übernommen. Um Ihre Anmeldedaten zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldedaten]** aus. Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldedaten finden können, stehen im [Handbuch zu Anmeldedaten](../ui/credentials.md).
+Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldedaten übernommen. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Experience Platform-Benutzeroberfläche an und wählen **[!UICONTROL Abfragen]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldedaten finden können, stehen im [Handbuch zu Anmeldedaten](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
->Als Power BI- oder Tableau-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen des Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden (Verbinden [ BI-Tools mit dem Customer Journey Analytics) finden Sie in der Dokumentation ](../ui/credentials.md#connect-to-customer-journey-analytics) Anmeldedaten .
+>Als Power BI- oder Tableau-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen für den Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics finden [ in der Dokumentation zu Anmeldeinformationen ](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![Der Experience Platform-Arbeitsbereich „Abfragen“, auf dem die Registerkarte „Anmeldedaten“ und Anmeldedaten mit ihrem Ablaufdatum hervorgehoben sind.](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -75,7 +75,7 @@ Um eine Tabelle zu importieren, geben Sie die Server- und Datenbankdetails [wie 
 
 ### Importieren von Tabellen mit benutzerdefinierten SQL-Abfragen
 
-[!DNL Power BI] und andere Drittanbieter-Tools wie [!DNL Tableau] erlauben es Benutzenden derzeit nicht, verschachtelte Objekte wie XDM-Objekte in Platform zu importieren. Deshalb ermöglicht Ihnen [!DNL Power BI] die Verwendung von benutzerdefinierten SQL-Abfragen, um auf diese verschachtelten Felder zuzugreifen und eine reduzierte Ansicht der Daten zu erstellen. [!DNL Power BI] lädt dann diese reduzierte Ansicht der zuvor verschachtelten Daten als normale Tabelle.
+[!DNL Power BI] und andere Drittanbieter-Tools wie [!DNL Tableau] erlauben es Benutzenden derzeit nicht, verschachtelte Objekte wie XDM-Objekte in Experience Platform zu importieren. Deshalb ermöglicht Ihnen [!DNL Power BI] die Verwendung von benutzerdefinierten SQL-Abfragen, um auf diese verschachtelten Felder zuzugreifen und eine reduzierte Ansicht der Daten zu erstellen. [!DNL Power BI] lädt dann diese reduzierte Ansicht der zuvor verschachtelten Daten als normale Tabelle.
 
 Wählen Sie im Dialogfeld [!DNL PostgreSQL database] die Option **[!DNL Advanced options]** aus, um eine benutzerdefinierte SQL-Abfrage im Abschnitt **[!DNL SQL statement]** einzugeben. Diese benutzerdefinierte Abfrage sollte verwendet werden, um Ihre JSON-Name-Wert-Paare in ein Tabellenformat zu reduzieren. Die offizielle Dokumentation enthält auch Informationen zum [Verbinden von PowerBI mit einer SQL-Anweisung in den erweiterten Optionen](https://learn.microsoft.com/de-de/power-query/connectors/postgresql#connect-using-advanced-options).
 

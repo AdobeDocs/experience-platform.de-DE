@@ -2,10 +2,10 @@
 title: Bibliothek erneut veröffentlichen
 description: Erfahren Sie, wie Sie eine frühere Tag-Bibliothek in Adobe Experience Platform erneut veröffentlichen.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 96%
+source-wordcount: '651'
+ht-degree: 81%
 
 ---
 
@@ -37,7 +37,7 @@ Wenn Sie eine Entwicklungs- oder Staging-Umgebung erstellen, wird der alte Build
 
 Deshalb können diese fünf letzten Builds in Ihrer Produktionsumgebung abgerufen werden.
 
-Wenn Sie eine ältere Bibliothek erneut veröffentlichen, aktualisiert Platform den Umgebungs-Link, damit er auf einen dieser älteren Builds verweist, die noch nicht bereinigt wurden. Platform stellt außerdem eine Bereinigungsanfrage an den CDN-Edge-Knoten-Cache, um darauf hinzuweisen, dass die Bibliothek aktualisiert wurde und eine neue Kopie von der Quelle abgerufen werden sollte.
+Wenn Sie eine ältere Bibliothek erneut veröffentlichen, aktualisiert Experience Platform den Umgebungs-Link, damit er auf einen dieser älteren Builds verweist, die noch nicht bereinigt wurden.  Experience Platform sendet auch eine Bereinigungsanfrage an den CDN-Edge-Knoten-Cache, um darauf hinzuweisen, dass die Bibliothek aktualisiert wurde und eine neue Kopie von der Quelle abgerufen werden sollte.
 
 Beim erneuten Veröffentlichen einer älteren Bibliothek passiert Folgendes:
 
@@ -47,7 +47,7 @@ Beim erneuten Veröffentlichen einer älteren Bibliothek passiert Folgendes:
 
 Wenn Sie einen Rollback durchführen, weil es ein Problem mit einer Regel gibt, achten Sie auf die jeweiligen Gegebenheiten. Die Regelrevision, die mittlerweile in der Produktionsumgebung vorhanden ist, könnte z. B. drei Revisionen alt sein. Wenn Sie diese Regel in der Benutzeroberfläche anzeigen, um das Problem zu beheben, wird sie weiterhin mit den zuletzt gespeicherten Änderungen angezeigt und nicht mit den Änderungen, die sich derzeit in der Produktion befinden.
 
-Deshalb informiert Platform Sie darüber, dass eine Eigenschaft erneut veröffentlicht wurde, um Sie daran zu erinnern, dass das, was Sie in der Datenerfassungs-Benutzeroberfläche sehen, eine frühere Version ist. Diese Benachrichtigung kann geschlossen werden und wird einmal pro Browser-Sitzung angezeigt, wenn Sie die Eigenschaft zum ersten Mal anzeigen.
+Aus diesem Grund werden Sie von Experience Platform darüber informiert, dass eine Eigenschaft erneut veröffentlicht wurde, um Sie daran zu erinnern, dass das, was Sie in der Datenerfassungs-Benutzeroberfläche sehen, eine frühere Version ist. Diese Benachrichtigung kann geschlossen werden und wird einmal pro Browser-Sitzung angezeigt, wenn Sie die Eigenschaft zum ersten Mal anzeigen.
 
 ### So veröffentlichen Sie eine ältere Bibliothek erneut
 

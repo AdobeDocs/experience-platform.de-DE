@@ -1,17 +1,17 @@
 ---
 title: Überblick über das Adobe Experience Platform Web Software Development Kit (SDK)
-description: Erfahren Sie, wie Sie mit Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
+description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Web SDK Experience Platform-Funktionen in Ihre Website integrieren können.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 2bf9c7ada9fd223df92b5cc9b1415f20705c2042
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Web SDK {#overview}
 
-Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, die es Adobe Experience Cloud-Kunden ermöglicht, über das Adobe Experience Platform-Edge Network mit ihren Services zu interagieren.
+Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, die es Adobe Experience Cloud-Kunden ermöglicht, über Adobe Experience Platform Edge Network mit ihren Services zu interagieren.
 
 Sie können Web SDK auf zwei Arten implementieren:
 
@@ -24,13 +24,13 @@ Dieses Handbuch enthält Anweisungen für die Interaktion mit Experience Cloud-L
 
 
 
-Das Experience Platform Web SDK ist Teil des Adobe Experience Platform-Edge Networks, das Folgendes umfasst:
+Experience Platform Web SDK ist Teil von Adobe Experience Platform Edge Network, das Folgendes umfasst:
 
-* **[Experience Platform Web SDK](#overview)**: Eine JavaScript-Bibliothek und Tag-Erweiterung zur Vereinfachung der Bereitstellung der Adobe-Technologie.
+* **[Experience Platform Web SDK](#overview)**: Eine JavaScript-Bibliothek und Tag-Erweiterung zur Vereinfachung der Bereitstellung von Adobe-Technologie.
 * **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**: Eine Erweiterung von Mobile SDK v5 für die neue Bereitstellungsmethode.
-* **[Edge Network-](../server-api/overview.md)**: Eine Server-seitige API für Datenerfassungs-, Personalisierungs-, Werbe- und Marketing-Anwendungsfälle. Sie können sie auf Servern, IoT-Geräten, Set-Top-Boxen und anderen Geräten verwenden.
+* **[Edge Network-API](../server-api/overview.md)**: Eine Server-seitige API für Datenerfassungs-, Personalisierungs-, Werbe- und Marketing-Anwendungsfälle. Sie können sie auf Servern, IoT-Geräten, Set-Top-Boxen und anderen Geräten verwenden.
 
-Das Edge Network bietet Datenerfassung mit niedriger Latenz, Plug-in-Datenverarbeitung und schnelle Datenaktivierung über alle adressierbaren Kanäle hinweg. Sie bietet eine einzige konsolidierte SDK für Web-, Mobil- und Server-seitige Kanäle, die Daten an eine gemeinsame Adobe-Domain (`adobedc.net`) sendet und eine einzige Payload für die Daten- und Erlebnisbereitstellung empfängt.
+Der Edge Network bietet Datenerfassung mit niedriger Latenz, Plug-in-Datenverarbeitung und schnelle Datenaktivierung über alle adressierbaren Kanäle hinweg. Sie bietet eine einzige konsolidierte SDK für Web-, Mobil- und Server-seitige Kanäle, die Daten an eine gemeinsame Adobe-Domain (`adobedc.net`) sendet und eine einzige Payload für die Daten- und Erlebnisbereitstellung empfängt.
 
 Auf der Serverseite vereinfachen ein einheitliches Edge-Gateway und ein gemeinsames Plattform-Service-Framework die Bereitstellung neuer Funktionen und bieten gleichzeitig die folgenden Vorteile:
 
@@ -41,7 +41,7 @@ Auf der Serverseite vereinfachen ein einheitliches Edge-Gateway und ein gemeinsa
 * Erhöhung der Innovationsgeschwindigkeit;
 * Schaffung nachhaltiger Wettbewerbsvorteile für Adobe-Kunden.
 
-Mit einem konsolidierten Edge-System können Sie Werbe-, Marketing- und Personalisierungskampagnen auf allen Kanälen verwalten. Es reduziert die Gesamtbetriebskosten und unterstützt verschiedene Datentypen, sodass Sie Ihr Datenmodell für die Verwendung mit mehreren Experience Cloud-Produkten zuordnen können.
+Mit einem konsolidierten Edge-System können Sie Werbe-, Marketing- und Personalisierungskampagnen auf allen Kanälen verwalten. Dies reduziert die Gesamtbetriebskosten und unterstützt verschiedene Datentypen, sodass Sie Ihr Datenmodell für die Verwendung mit mehreren Experience Cloud-Produkten zuordnen können.
 
 ## Videoüberblick {#video}
 

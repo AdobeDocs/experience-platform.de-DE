@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 19%
 
 ---
@@ -51,9 +51,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die beim Experience Platform durch den Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
-* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
+* Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Mehrere Zielgruppen, die im Schritt „Zielgruppen auswählen“ hervorgehoben sind.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -125,7 +125,7 @@ Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filt
 
      ![Dropdown-Liste „Zuordnungs-ID“ hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Bei einigen Zielen müssen Sie [!DNL Platform] Zielgruppen manuell ihrem Gegenstück im Ziel zuordnen. Wählen Sie dazu jede Zielgruppe aus und geben Sie dann die entsprechende Zielgruppen-ID aus der Zielplattform im Feld **[!UICONTROL Zuordnungs-ID]** ein. Wenn Ihr Ziel dieses Feld nicht enthält, überspringen Sie diesen Schritt.
+   * Bei einigen Zielen müssen Sie [!DNL Experience Platform] Zielgruppen manuell ihrem Gegenstück im Ziel zuordnen. Wählen Sie dazu jede Zielgruppe aus und geben Sie dann die entsprechende Zielgruppen-ID aus der Zielplattform im Feld **[!UICONTROL Zuordnungs-ID]** ein. Wenn Ihr Ziel dieses Feld nicht enthält, überspringen Sie diesen Schritt.
 
      ![Herkunft des Zielgruppen-Dropdown hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 

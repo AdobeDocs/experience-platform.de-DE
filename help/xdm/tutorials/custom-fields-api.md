@@ -2,9 +2,9 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren können.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 2%
 
 ---
@@ -368,7 +368,7 @@ Stellen Sie sicher, dass Sie Felder vom Typ Zuordnung nur verwenden, wenn dies u
 * Die Reaktionszeit von [Adobe Experience Platform Query Service](../../query-service/home.md) wird für 100 Millionen Datensätze von drei auf zehn Sekunden reduziert.
 * Die Karten müssen weniger als 16 Schlüssel haben, da sonst eine weitere Beeinträchtigung droht.
 
-Die Platform-Benutzeroberfläche verfügt auch über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt.
+Die Benutzeroberfläche von Experience Platform weist auch Einschränkungen hinsichtlich der Extraktion der Schlüssel von Feldern vom Typ Zuordnung auf. Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt.
 
 ## Nächste Schritte
 

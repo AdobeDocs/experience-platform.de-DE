@@ -3,17 +3,17 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform für Personalisierungs-Anwendungsfälle der gleichen Seite und der nächsten Seite für Edge-Ziele aktivieren.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
-ht-degree: 15%
+source-wordcount: '1961'
+ht-degree: 14%
 
 ---
 
 
 # Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Adobe Experience Platform verwendet [Edge-](../../segmentation/methods/edge-segmentation.md)) zusammen mit [Edge-Zielen](/help/destinations/destination-types.md#edge-personalization-destinations), damit Kundinnen und Kunden Zielgruppen in großem Umfang in Echtzeit erstellen und ansprechen können. Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und von der nächsten Seite konfigurieren.
 
@@ -45,7 +45,7 @@ Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Ado
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Verwenden Sie Personalisierungslösungen von Adobe wie Adobe Target oder Ihre eigenen Personalisierungspartnerplattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. hauseigene CMS), um über das Ziel [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) ein tieferes Personalisierungserlebnis zu ermöglichen. All dies unter Verwendung der Datenerfassungs- und Segmentierungsfunktionen von Experience Platform Edge Network.
 
@@ -85,7 +85,7 @@ Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experie
 
 ![Datenstromkonfiguration mit hervorgehobener Edge-Segmentierung und hervorgehobenen Personalization-Zielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zum Platform Web SDK](../../datastreams/configure.md#aep).
+Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zu Experience Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Erstellen einer [!DNL Active-On-Edge] Zusammenführungsrichtlinie {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On
 
 Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
-### Erstellen einer neuen Zielgruppe in Platform {#create-audience}
+### Erstellen einer neuen Zielgruppe in Experience Platform {#create-audience}
 
-Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellt haben, müssen Sie eine neue Zielgruppe in Platform erstellen.
+Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellt haben, müssen Sie eine neue Zielgruppe in Experience Platform erstellen.
 
 Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [ Sie ](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
 
@@ -141,7 +141,7 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 * **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Schritt „Zielgruppen auswählen“ des Aktivierungs-Workflows mit mehreren hervorgehobenen Zielgruppen.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

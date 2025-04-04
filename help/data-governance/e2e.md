@@ -2,10 +2,10 @@
 title: Data Governance – End-to-End-Handbuch
 description: Befolgen Sie den vollständigen Prozess zur Durchsetzung von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 100%
+source-wordcount: '1885'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Um zu steuern, welche Marketing-Aktionen für bestimmte Datensätze und Felder i
 
 Sobald Sie die Konfiguration Ihrer Kennzeichnungen, Governance-Richtlinien und Marketing-Aktionen abgeschlossen haben, können Sie die [Durchsetzung Ihrer Richtlinien testen](#test), um sicherzustellen, dass sie wie erwartet funktionieren.
 
-Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durchsetzung einer Data-Governance-Richtlinie in der Platform-Benutzeroberfläche. Weitere Informationen zu den in diesem Handbuch verwendeten Funktionen finden Sie in der Übersichtsdokumentation zu den folgenden Themen:
+Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durchsetzung einer Data-Governance-Richtlinie in der Experience Platform-Benutzeroberfläche. Weitere Informationen zu den in diesem Handbuch verwendeten Funktionen finden Sie in der Übersichtsdokumentation zu den folgenden Themen:
 
 * [Data Governance in Adobe Experience Platform](./home.md)
 * [Datennutzungskennzeichnungen](./labels/overview.md)
@@ -28,13 +28,13 @@ Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durc
 
 >[!NOTE]
 >
->In diesem Handbuch wird beschrieben, wie Sie Richtlinien für die Verwendung oder Aktivierung von Daten in Experience Platform einrichten und durchsetzen. Wenn Sie den **Zugriff** auf die Daten selbst für bestimmte Platform-Benutzende innerhalb Ihrer Organisation einschränken möchten, lesen Sie stattdessen das End-to-End-Handbuch zur [attributbasierten Zugriffssteuerung](../access-control/abac/end-to-end-guide.md). Die attributbasierte Zugriffssteuerung verwendet ebenfalls Beschriftungen und Kennzeichnungen, allerdings für einen anderen Anwendungsfall als Data Governance.
+>In diesem Handbuch wird beschrieben, wie Sie Richtlinien für die Verwendung oder Aktivierung von Daten in Experience Platform einrichten und durchsetzen. Wenn Sie den **auf** Daten selbst für bestimmte Experience Platform-Benutzende in Ihrer Organisation beschränken möchten, lesen Sie stattdessen das End-to-End-Handbuch [attributbasierten Zugriffssteuerung](../access-control/abac/end-to-end-guide.md). Die attributbasierte Zugriffssteuerung verwendet ebenfalls Beschriftungen und Kennzeichnungen, allerdings für einen anderen Anwendungsfall als Data Governance.
 
 ## Anwenden von Kennzeichnungen {#labels}
 
 >[!IMPORTANT]
 >
->Kennzeichnungen können nicht mehr auf einzelne Felder auf Datensatzebene angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Sie können jedoch weiterhin einen kompletten Datensatz kennzeichnen. Alle Kennzeichnungen, die zuvor auf einzelne Datensatzfelder angewendet wurden, werden bis zum 31. Mai 2024 weiterhin von der Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](#migrate-labels).
+>Kennzeichnungen können nicht mehr auf einzelne Felder auf Datensatzebene angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Sie können jedoch weiterhin einen kompletten Datensatz kennzeichnen. Alle Kennzeichnungen, die zuvor auf einzelne Datensatzfelder angewendet wurden, werden noch bis zum 31. Mai 2024 über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](#migrate-labels).
 
 Sie können [auf ein Schema Kennzeichnungen anwenden](#schema-labels), sodass alle auf diesem Schema basierenden Datensätze dieselben Kennzeichnungen übernehmen. Auf diese Weise können Sie die Kennzeichnungen für Data Governance, Einverständnis und Zugriffssteuerung zentral an einem Ort verwalten. Indem Datennutzungsbeschränkungen auf Schemaebene durchgesetzt werden, wird dieser Effekt an alle auf diesem Schema basierenden nachgeordneten Datensätze weitergegeben. Auf Schemafeldebene angewendete Kennzeichnungen unterstützen Data-Governance-Anwendungsfälle und sind im Arbeitsbereich „Datensätze“ auf der Registerkarte [!UICONTROL Data Governance] unter der Spalte [!UICONTROL Feldname] als schreibgeschützte Kennzeichnungen zu finden.
 

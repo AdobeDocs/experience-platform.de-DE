@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 54%
+source-wordcount: '806'
+ht-degree: 52%
 
 ---
 
@@ -96,7 +96,7 @@ Weitere Informationen zum [Exportieren von Datensätzen](/help/destinations/ui/e
 
 ## Erweiterungen {#extensions}
 
-Platform nutzt die Leistungsfähigkeit und Flexibilität des Tag-Managements, sodass Sie Tag-Erweiterungen in der Benutzeroberfläche konfigurieren können.
+Experience Platform nutzt die Leistungsfähigkeit und Flexibilität des Tag-Managements, sodass Sie Tag-Erweiterungen in der Benutzeroberfläche konfigurieren können.
 
 >[!TIP]
 >

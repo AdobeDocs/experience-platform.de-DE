@@ -5,7 +5,7 @@ type: Documentation
 description: Mit dem Echtzeit-Kundenprofil können Sie in Adobe Experience Platform eine zentrale Ansicht einzelner Kunden erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 9%
@@ -30,7 +30,7 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Real-Time C
 
 ## Erstellen von Exportvorgängen
 
-Der Export [!DNL Profile] Daten erfordert zunächst das Erstellen eines Datensatzes, in den die Daten exportiert werden, und dann das Initiieren eines neuen Exportvorgangs. Beide Schritte können mithilfe von Experience Platform-APIs durchgeführt werden, wobei Erstere die Catalog Service-API und Letztere die Echtzeit-Kundenprofil-API verwenden. Detaillierte Anweisungen zum Durchführen der einzelnen Schritte finden Sie in den folgenden Abschnitten.
+Der Export [!DNL Profile] Daten erfordert zunächst das Erstellen eines Datensatzes, in den die Daten exportiert werden, und dann das Initiieren eines neuen Exportvorgangs. Beide Schritte können mit Experience Platform-APIs durchgeführt werden, wobei Erstere die Catalog Service-API und Letztere die Echtzeit-Kundenprofil-API verwenden. Detaillierte Anweisungen zum Durchführen der einzelnen Schritte finden Sie in den folgenden Abschnitten.
 
 ### Erstellen eines Zieldatensatzes
 
@@ -38,7 +38,7 @@ Beim Exportieren [!DNL Profile] Daten muss zunächst ein Zieldatensatz erstellt 
 
 Eine der wichtigsten Überlegungen betrifft das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Beispielanfrage). Um Profildaten zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile] Vereinigungsschema (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse haben. In diesem Fall ist dies die [!DNL XDM Individual Profile]. Weitere Informationen zu Vereinigungsansichtsschemata finden Sie im Abschnitt [Vereinigung“ im Handbuch mit den Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
 
-In den Schritten, die in diesem Tutorial folgen, wird beschrieben, wie Sie mithilfe der [!DNL Catalog]-API einen Datensatz erstellen, der auf das [!DNL XDM Individual Profile]-Vereinigungsschema verweist. Sie können auch die [!DNL Platform]-Benutzeroberfläche verwenden, um einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem Benutzeroberflächen-Tutorial zum Exportieren von ](../../segmentation/tutorials/create-dataset-export-segment.md) beschrieben, können aber auch hier angewendet werden. Nach Abschluss des Vorgangs können Sie zu diesem Tutorial zurückkehren, um mit den Schritten zum [ eines neuen Exportvorgangs ](#initiate).
+In den Schritten, die in diesem Tutorial folgen, wird beschrieben, wie Sie mithilfe der [!DNL Catalog]-API einen Datensatz erstellen, der auf das [!DNL XDM Individual Profile]-Vereinigungsschema verweist. Sie können auch die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem Benutzeroberflächen-Tutorial zum Exportieren von ](../../segmentation/tutorials/create-dataset-export-segment.md) beschrieben, können aber auch hier angewendet werden. Nach Abschluss des Vorgangs können Sie zu diesem Tutorial zurückkehren, um mit den Schritten zum [ eines neuen Exportvorgangs ](#initiate).
 
 Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [ eines neuen Exportvorgangs ](#initiate).
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## Abbrechen von Exportvorgängen
 
-Beim Experience Platform können Sie einen vorhandenen Exportvorgang abbrechen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Exportvorgang nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um einen Exportvorgang abzubrechen, können Sie eine DELETE-Anfrage an den `/export/jobs`-Endpunkt senden und die `id` des Exportvorgangs, den Sie abbrechen möchten, in den Anfragepfad aufnehmen.
+Mit Experience Platform können Sie einen vorhandenen Exportvorgang abbrechen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Exportvorgang nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um einen Exportvorgang abzubrechen, können Sie eine DELETE-Anfrage an den `/export/jobs`-Endpunkt senden und die `id` des Exportvorgangs, den Sie abbrechen möchten, in den Anfragepfad aufnehmen.
 
 **API-Format**
 
@@ -428,7 +428,7 @@ Eine erfolgreiche Löschanfrage gibt den HTTP-Status 204 (Kein Inhalt) und einen
 
 ## Nächste Schritte
 
-Sobald der Export erfolgreich abgeschlossen wurde, sind Ihre Daten im Data Lake als Experience Platform verfügbar. Anschließend können Sie die [Datenzugriffs-API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um mithilfe der mit dem Export verknüpften `batchId` auf die Daten zuzugreifen. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Sobald der Export erfolgreich abgeschlossen wurde, sind Ihre Daten im Data Lake in Experience Platform verfügbar. Anschließend können Sie die [Datenzugriffs-API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um mithilfe der mit dem Export verknüpften `batchId` auf die Daten zuzugreifen. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugreifen auf und Herunterladen von Batch-Dateien mit der Datenzugriffs-API finden Sie im [Datenzugriffs-Tutorial](../../data-access/tutorials/dataset-data.md).
 

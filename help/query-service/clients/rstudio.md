@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudio mit dem Abfrage-Service verbinden
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 11%
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >In der [[!DNL Query Service] SSL-](./ssl-modes.md) erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zum Abfrage-Service von Adobe Experience Platform und darüber, wie Sie eine Verbindung mit `verify-full` SSL-Modus herstellen.
 
-Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [ zu Anmeldeinformationen ](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [ zu Anmeldeinformationen ](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Experience Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 Eine Meldung in der Konsolenausgabe bestätigt die Verbindung zum Abfrage-Service.
 

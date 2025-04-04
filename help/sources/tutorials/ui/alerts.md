@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Warnhinweise
 description: Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Warnhinweisen über die Benutzeroberfläche
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '825'
 ht-degree: 18%
 
 ---
@@ -22,9 +22,9 @@ In diesem Dokument wird beschrieben, wie Sie Warnhinweise für Ihre Quellen-Date
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Observability](../../../observability/home.md): [!DNL Observability Insights] ermöglicht Ihnen die Überwachung von Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen.
-   * [Warnhinweise](../../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich dafür angemeldet haben, Warnhinweise senden.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Observability](../../../observability/home.md): [!DNL Observability Insights] ermöglicht Ihnen die Überwachung von Experience Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen.
+   * [Warnhinweise](../../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Experience Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Experience Platform allen Benutzenden in Ihrem Unternehmen, die sich dafür angemeldet haben, Warnhinweise zusenden.
 
 ## Abonnieren von Warnhinweisen in der Benutzeroberfläche {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!IMPORTANT]
 >
->Sie müssen sofortige E-Mail-Benachrichtigungen für Ihr Platform-Konto aktivieren, um E-Mail-basierte Warnhinweise für Ihre Datenflüsse zu erhalten.
+>Sie müssen sofortige E-Mail-Benachrichtigungen für Ihr Experience Platform-Konto aktivieren, um E-Mail-basierte Warnhinweise für Ihre Datenflüsse zu erhalten.
 
 Sie können Warnhinweise für Ihre Datenflüsse während des Schritts [!UICONTROL Datenflussdetails] des Workflows Quellen im Arbeitsbereich Quellen aktivieren.
 
@@ -51,7 +51,7 @@ Die verfügbaren Warnhinweise für Datenflüsse aus Quellen sind:
 | Warnhinweise | Beschreibung |
 | --- | --- |
 | Anfang der Ausführung eines Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Ihr Quelldatenfluss gestartet wurde. |
-| Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Daten aus Ihrer Quelle erfolgreich in Platform aufgenommen wurden. |
+| Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Daten aus Ihrer Quelle erfolgreich in Experience Platform aufgenommen wurden. |
 | Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis sendet Ihnen eine Meldung, wenn in Ihrem Datenfluss ein Fehler auftritt. |
 
 Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie dann **[!UICONTROL Weiter]**, um Ihren Datenfluss zu überprüfen und abzuschließen.
@@ -76,7 +76,7 @@ Sobald Ihr Datenfluss ausgeführt wird, können Sie Warnhinweise über die Benut
 
 ### In der Benutzeroberfläche
 
-Warnhinweise werden in der Benutzeroberfläche durch ein Benachrichtigungssymbol in der oberen Kopfzeile der Platform-Benutzeroberfläche dargestellt. Wählen Sie das Benachrichtigungssymbol aus, um spezifische Warnmeldungen zu Ihren Datenflüssen anzuzeigen.
+Warnhinweise werden in der Benutzeroberfläche durch ein Benachrichtigungssymbol in der oberen Kopfzeile der Experience Platform-Benutzeroberfläche dargestellt. Wählen Sie das Benachrichtigungssymbol aus, um spezifische Warnmeldungen zu Ihren Datenflüssen anzuzeigen.
 
 ![Benachrichtigung](../../images/tutorials/alerts/notification.png)
 

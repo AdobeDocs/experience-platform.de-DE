@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;attributbasierte Zugriffssteuerung;attributbasierte Zugriffssteuerung
+keywords: Experience Platform;Startseite;beliebte Themen;api;attributbasierte Zugriffssteuerung;attributbasierte Zugriffssteuerung
 solution: Experience Platform
 title: Handbuch für die attributbasierte Zugriffssteuerung in der API
 description: Mit der attributbasierten Zugriffssteuerungs-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 30%
+source-wordcount: '451'
+ht-degree: 34%
 
 ---
 
@@ -20,13 +20,13 @@ Die attributbasierte Zugriffssteuerungs-API wird verwendet, um auf Rollen, Produ
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen der Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Anweisungen zur programmgesteuerten Nutzung dieser Funktionen finden [ im ](../../../data-governance/api/overview.md) zur Policy Service-API .
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Experience Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Anweisungen zur programmgesteuerten Nutzung dieser Funktionen finden [ im ](../../../data-governance/api/overview.md) zur Policy Service-API .
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
 ## Rollen
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. Weitere Informationen [ Arbeiten mit Rollen in der API finden ](./roles.md) im Handbuch zum roles-Endpunkt .
+Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. Weitere Informationen [ Arbeiten mit Rollen in der API finden ](./roles.md) im Handbuch zum roles-Endpunkt .
 
 ## Richtlinien
 

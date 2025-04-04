@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schemaregistrierung;Verhalten;Verhalten;
+keywords: Experience Platform;Startseite;beliebte Themen;api;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schemaregistrierung;Verhalten;Verhalten;
 solution: Experience Platform
 title: Verhaltens-API-Endpunkt
 description: Mit dem Endpunkt /behavior in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 23%
 
 ---
 
 # Verhaltensendpunkt
 
-Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das alle Schemas, die diese Klasse verwenden, erben. Für fast alle Anwendungsfälle in Platform stehen zwei Verhaltensweisen zur Verfügung:
+Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das alle Schemas, die diese Klasse verwenden, erben. Für fast alle Anwendungsfälle in Experience Platform stehen zwei Verhaltensweisen zur Verfügung:
 
 * **[!UICONTROL Datensatz]**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
 * **[!UICONTROL Zeitreihe]**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 
 >[!NOTE]
 >
->Es gibt einige Anwendungsfälle in Platform, in denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen aufweist. In diesen Fällen ist ein drittes „Ad-hoc“-Verhalten verfügbar. Weitere Informationen finden Sie im Tutorial [Erstellen eines Ad](../tutorials/ad-hoc.md)hoc-Schemas“.
+>Es gibt einige Anwendungsfälle in Experience Platform, in denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen aufweist. In diesen Fällen ist ein drittes „Ad-hoc“-Verhalten verfügbar. Weitere Informationen finden Sie im Tutorial [Erstellen eines Ad](../tutorials/ad-hoc.md)hoc-Schemas“.
 >
 >Weitere allgemeine Informationen zu Datenverhalten im Hinblick darauf, wie es die Schemakomposition beeinflusst, finden Sie im Handbuch zu den [Grundlagen der Schemakomposition](../schema/composition.md).
 

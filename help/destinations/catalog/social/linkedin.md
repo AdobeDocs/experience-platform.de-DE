@@ -1,9 +1,9 @@
 ---
 keywords: LinkedIn-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;LinkedIn;
 title: LinkedIn Matched Audiences-Verbindung
-description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf gehashten E-Mails.
+description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 34%
@@ -18,7 +18,7 @@ Aktivieren Sie Profile für Ihre [!DNL LinkedIn] Kampagnen zum Zielgruppen-Targe
 
 ![LinkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
 
-## Anwendungsfälle
+## Anwendungsszenarien
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL LinkedIn Matched Audiences]-Ziel verwenden, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit dieser Funktion geeignet ist.
 
@@ -32,7 +32,7 @@ Ein Software-Unternehmen organisiert eine Konferenz und möchte mit den Teilnehm
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -42,7 +42,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -58,11 +58,11 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## Voraussetzungen für das linkedIn-Konto {#LinkedIn-account-prerequisites}
+## Voraussetzungen für LinkedIn-Konto {#LinkedIn-account-prerequisites}
 
 Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto über die [!DNL Creative Manager] Berechtigungsstufe oder höher verfügt.
 
-Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Advertising-Konten](https://www.linkedin.com/help/lms/answer/5753) in der Dokumentation zu LinkedIn.
+Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Advertising-Konten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 
 ## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 
@@ -72,9 +72,9 @@ Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie
 
 ## Hash-Anforderungen für E-Mails {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in CLEAR in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Experience Platform].
 
-Informationen zum Aufnehmen von E-Mail-Adressen im Experience Platform finden Sie [ „Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme“ und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
+Weitere Informationen zum Aufnehmen von E-Mail-Adressen in Experience Platform finden Sie unter [Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
@@ -87,10 +87,10 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 >[!NOTE]
 >
->Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
+>Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
 > Attributquelldaten werden nicht automatisch gehasht.
 > 
-> Wenn Ihr [ ungehashte Attribute enthält, aktivieren Sie im Schritt „Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+> Wenn Ihr [ ungehashte Attribute enthält, aktivieren Sie im Schritt „Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
 > 
 > Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
 
@@ -117,7 +117,7 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedI
 1. Suchen Sie das [!DNL LinkedIn Matched Audiences] im Zielkatalog und wählen Sie **[!UICONTROL Einrichten]**.
 2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
    ![Authentifizierung bei LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
-3. Geben Sie Ihre LinkedIn-Anmeldeinformationen ein und wählen Sie **Anmelden** aus.
+3. Geben Sie Ihre LinkedIn-Anmeldedaten ein und wählen Sie **Anmelden** aus.
 
 ### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
 
@@ -128,7 +128,7 @@ LinkedIn-Token laufen alle 60 Tage ab. Sobald das Token abgelaufen ist, funktion
    ![Filtern, um nur LinkedIn-Konten anzuzeigen](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
    ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut]** und authentifizieren Sie sich erneut mit Ihren LinkedIn-Anmeldeinformationen.
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut verbinden]** und authentifizieren Sie sich erneut mit Ihren LinkedIn-Anmeldeinformationen.
    ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]

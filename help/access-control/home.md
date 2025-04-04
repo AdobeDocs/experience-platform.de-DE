@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 33%
 
 ---
@@ -202,7 +202,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Governance] | [!UICONTROL Verwalten von Nutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
 | [!DNL Data Governance] | [!UICONTROL Verwalten von Datennutzungsrichtlinien] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datennutzungsrichtlinien. |
 | [!DNL Data Governance] | [!UICONTROL Anzeigen von Datennutzungsrichtlinien] | Schreibgeschützter Zugriff auf Datennutzungsrichtlinien Ihres Unternehmens. |
-| [!DNL Data Governance] | [!UICONTROL Anzeigen des Benutzer-Aktivitätspotokolls] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Administratorprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Platform-Aktivitäten. |
+| [!DNL Data Governance] | [!UICONTROL Anzeigen des Benutzer-Aktivitätspotokolls] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Auditprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Experience Platform-Aktivitäten. |
 | [!DNL Data Governance] | [!UICONTROL Datenschutzkonsole anzeigen] | Schreibgeschützter Zugriff auf Datenschutzkonsolen. |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
@@ -281,7 +281,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Profile Management] | [!UICONTROL Profileinstellungen verwalten] | Zugriff auf das Lesen und Bearbeiten aller Profileinstellungen. |
 | [!DNL Prospects] | [!UICONTROL Interessenten anzeigen] | Schreibgeschützter Zugriff auf Schemas, Profile, Zielgruppen und das Akkordeon potenzieller Kunden. |
 | [!DNL Prospects] | [!UICONTROL Interessenten verwalten] | Möglichkeit zum Erstellen und Verwalten von Interessentenschemata, Profilen und Audiences. Schreibgeschützter Zugriff auf das Akkordeon des potenziellen Kunden. |
-| [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
+| [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Experience Platform-Daten. |
 | [!DNL Query Service] | [!UICONTROL Verwalten der Integration des Abfrage-Service] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldedaten für den Zugriff auf den Abfrage-Service. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragesitzungen] | Möglichkeit, vorhandene Sitzungen zu entfernen. |
 | [!DNL Query Service] | [!UICONTROL Zulassungsliste verwalten] | Möglichkeit, IP-Einschränkungen für Ihre Organisation zu verwalten. |

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Einblicke;Kunden-KI;beliebte Themen;Kunden-KI-Einblicke
+keywords: Experience Platform;Insights;Kunden-KI;beliebte Themen;Kunden-KI-Insights
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Einblicke gewinnen mit Kunden-KI
 description: Dieses Dokument dient als Anleitung für die Interaktion mit Einblicken in Service-Instanzen in der Benutzeroberfläche der Intelligent Services-Kunden-KI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 6%
 
 ---
@@ -164,7 +164,7 @@ Segment Builder wird zum Definieren eines Segments verwendet. Bei Auswahl von **
 
 ![Segmentausfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL linken Navigationsbereich]** Segmente“ aus. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Experience Platform-Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL linken Navigationsbereich]** Segmente“ aus. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2023
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2265'
-ht-degree: 31%
+source-wordcount: '2269'
+ht-degree: 28%
 
 ---
 
@@ -37,7 +37,7 @@ Berechnete Attribute ermöglichen es, Ereignisdaten über eine intuitive Benutze
 
 ## Warnhinweise {#alerts}
 
-Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -103,7 +103,7 @@ Experience Platform bietet eine Reihe von Funktionen zur Datenhygiene, mit denen
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zu den Datenhygiene-Funktionen von Platform finden Sie in der [Übersicht zur Datenhygiene](../../hygiene/home.md).
+Weitere Informationen zu den Datenhygiene-Funktionen von Experience Platform finden Sie im Abschnitt [Übersicht zur Datenhygiene](../../hygiene/home.md).
 
 ## Ziele {#destinations}
 
@@ -180,7 +180,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md)
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
@@ -214,7 +214,7 @@ Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service �
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Experience Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
 
 **Neue oder aktualisierte Funktionen**
 

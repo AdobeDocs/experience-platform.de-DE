@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Query Service – Übersicht
 description: Erfahren Sie mehr über die Rolle des Abfrage-Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 20%
 
 ---
 
 # Query Service – Übersicht
 
-Adobe Experience Platform nimmt Daten aus einer Vielzahl von Quellen auf. Eine große Herausforderung für Marketing-Experten besteht darin, diese Daten zu nutzen, um Einblicke in ihre Kunden zu gewinnen. Um Daten in Platform abzufragen, können Sie standardmäßige SQL- und Adobe Experience Platform-Abfrage-Services verwenden. Sie können den Abfrage-Service verwenden, um einen beliebigen Datensatz im Data Lake zu verbinden und die Abfrageergebnisse als neuen Datensatz zu erfassen, der bei Reporting und maschinellem Lernen oder zur Aufnahme in [!DNL Real-Time Customer Profile] verwendet werden kann. Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
+Adobe Experience Platform nimmt Daten aus einer Vielzahl von Quellen auf. Eine große Herausforderung für Marketing-Experten besteht darin, diese Daten zu nutzen, um Einblicke in ihre Kunden zu gewinnen. Um Daten in Experience Platform abzufragen, können Sie standardmäßige SQL- und Adobe Experience Platform-Abfrage-Services verwenden. Sie können den Abfrage-Service verwenden, um einen beliebigen Datensatz im Data Lake zu verbinden und die Abfrageergebnisse als neuen Datensatz zu erfassen, der bei Reporting und maschinellem Lernen oder zur Aufnahme in [!DNL Real-Time Customer Profile] verwendet werden kann. Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 
 Sie können Query Service verwenden, um die Kunden-Journey online und offline zu verbinden und die Omni-Channel-Attribution für Ihre Marke zu verstehen. Das folgende Video zeigt, wie ein Experience-Unternehmen den Abfrage-Service verwenden kann, um wichtige Anwendungsfälle zu beheben, und wie der Abfrage-Service funktioniert.
 
@@ -34,7 +34,7 @@ Um schnell mit den Funktionen von Query Service zu beginnen, sollten Sie die fol
 
 ## Query Service und Experience Platform-Dienste {#experience-platform-services}
 
-Query Service interagiert mit mehreren Experience Platform-Services und kann mit diesen verwendet werden. Um die Funktionen des Abfrage-Service optimal zu nutzen, sollten Sie sich mit diesen Services vertraut machen und auch damit, wie sie mit dem Abfrage-Service interagieren. Die [Experience Platform-Dokumentations-Landingpage](https://experienceleague.adobe.com/docs/experience-platform.html?lang=de) enthält Zusammenfassungen und Links zu den Funktionen der Plattform.
+Query Service interagiert mit mehreren Experience Platform-Services und kann mit diesen verwendet werden. Um die Funktionen des Abfrage-Service optimal zu nutzen, sollten Sie sich mit diesen Services vertraut machen und auch damit, wie sie mit dem Abfrage-Service interagieren. Die Landingpage zur [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=de)Dokumentation enthält Zusammenfassungen und Links zu den Funktionen der Plattform.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lerne
 
 Verwenden Sie den Segmentierungs-Service von Adobe Experience Platform, um Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften zu unterteilen. Diese Zielgruppen können dann ausgewertet werden, um eine bessere Analyse der Daten Ihres Echtzeit-Kundenprofils zu ermöglichen. Sie können Query Service verwenden, um Abfragen zu diesen Zielgruppendaten im Data Lake auszuführen und die Analyse bereitzustellen. PQL Weitere Informationen [ Analyse von Zielgruppen finden Sie ](../segmentation/home.md) der Übersicht zum Segmentierungs Service und im Handbuch zu [[!DNL Profile Query Language] (](../segmentation/pql/overview.md)) .
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Query Service bietet einen flexiblen Ansatz für Ihre Datenverarbeitung, der vielen Zwecken dient. Sie kann unter anderem die Segmentierung durch Marketing-Experten erleichtern und dazu beitragen, nachvollziehbare Zielgruppen und aussagekräftige geschäftliche Einblicke zu generieren. Die folgenden Anwendungsfälle bieten detailliertere Beispiele für die Leistungsfähigkeit des Abfrage-Service.
 
@@ -54,7 +54,7 @@ Dieses [Beispiel für den Abbruch von Durchsuchen-Vorgängen konzentriert sich a
 
 ## Generieren von Insights mit benutzerdefinierten Dashboards {#custom-dashboards}
 
-Mit Adobe Experience Platform können Sie alle gespeicherten Datensätze aufnehmen, speichern, strukturieren und abrufen — einschließlich Verhaltensdaten, CRM-Daten und Verkaufsdaten. Mithilfe von [!DNL Experience Platform's Query Service] können Sie Abfragen zu diesen Datensätzen durchführen, spezifische Fragen zur Geschäftstätigkeit beantworten und dann nützliche Einblicke gewinnen. Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um Schlüsselmetriken mit [benutzerdefinierten Dashboards“ ](../dashboards/standard-dashboards.md) visualisieren. Sie können sogar [Ihre eigenen Real-Time CDP-Berichte](../dashboards/data-models/cdp-insights-data-model-b2c.md) für Ihre Marketing- und KPI-Anwendungsfälle anpassen, indem Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden.
+Mit Adobe Experience Platform können Sie alle gespeicherten Datensätze aufnehmen, speichern, strukturieren und abrufen — einschließlich Verhaltensdaten, CRM-Daten und Verkaufsdaten. Mithilfe von [!DNL Experience Platform's Query Service] können Sie Abfragen zu diesen Datensätzen durchführen, spezifische Fragen zur Geschäftstätigkeit beantworten und dann nützliche Einblicke gewinnen. Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um Schlüsselmetriken mit [benutzerdefinierten Dashboards“ ](../dashboards/standard-dashboards.md) visualisieren. Sie können sogar [Ihre eigenen Real-Time CDP-Berichte](../dashboards/data-models/cdp-insights-data-model-b2c.md) für Ihre Marketing- und KPI-Anwendungsfälle anpassen, indem Sie SQL-Abfragen mit den Real-Time Customer Data Platform Insights-Datenmodellen verwenden.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

@@ -1,22 +1,23 @@
 ---
-title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für AWS mithilfe der Platform-Benutzeroberfläche
+title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mit AWS mithilfe der Experience Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Amazon Resource Name (ARN) einrichten und Ihre Verschlüsselungsschlüssel-ID an Adobe Experience Platform senden.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für AWS mithilfe der Platform-Benutzeroberfläche
+# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mit AWS mithilfe der Experience Platform-Benutzeroberfläche
 
-Verwenden Sie dieses Handbuch, um kundenseitig verwaltete Schlüssel (CMK) für auf AWS gehostete Platform-Instanzen über die Platform-Benutzeroberfläche zu aktivieren.
+Verwenden Sie dieses Handbuch, um kundenseitig verwaltete Schlüssel (CMK) für auf AWS gehostete Experience Platform-Instanzen über die Experience Platform-Benutzeroberfläche zu aktivieren.
 
 >[!IMPORTANT]
 >
 >Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie die Einrichtung abgeschlossen haben, die im Dokument [Konfigurieren von AWS KMS für CMK“ beschrieben ](./configure-kms.md).
 
-## Aktualisieren Sie die AWS-Schlüsselrichtlinie, um den Schlüssel mit Experience Platform zu integrieren
+## Aktualisieren Sie die AWS-Schlüsselrichtlinie, um den Schlüssel in Experience Platform zu integrieren
 
 Um Ihren AWS-Schlüssel mit Experience Platform zu integrieren, müssen Sie die JSON-Datei im **[!DNL Key Policy]** Abschnitt des KMS-Arbeitsbereichs bearbeiten. Eine Standardschlüsselrichtlinie sieht ähnlich wie die unten stehende JSON aus.
 
@@ -40,11 +41,11 @@ Um Ihren AWS-Schlüssel mit Experience Platform zu integrieren, müssen Sie die 
 }
 ```
 
-Im obigen Beispiel können alle Ressourcen (`"Resource": "*"`) innerhalb desselben Kontos (`Principal.AWS`) auf den Schlüssel zugreifen. Diese Richtlinie ermöglicht es den Diensten im Konto, Verschlüsselungs- und Entschlüsselungsvorgänge durchzuführen, die auf das angegebene Konto beschränkt sind. Um Ihrem Platform-Einzelmandantenkonto Zugriff auf diesen Schlüssel zu gewähren, fügen Sie der AWS-Standardrichtlinie neue Anweisungen hinzu. Sie können die erforderliche JSON-Richtlinie über die Platform-Benutzeroberfläche abrufen und auf Ihren AWS-KMS-Schlüssel anwenden, um eine sichere Verbindung mit Adobe Experience Platform herzustellen.
+Im obigen Beispiel können alle Ressourcen (`"Resource": "*"`) innerhalb desselben Kontos (`Principal.AWS`) auf den Schlüssel zugreifen. Diese Richtlinie ermöglicht es den Diensten im Konto, Verschlüsselungs- und Entschlüsselungsvorgänge durchzuführen, die auf das angegebene Konto beschränkt sind. Um Ihrem Experience Platform-Einzelmandantenkonto Zugriff auf diesen Schlüssel zu gewähren, fügen Sie der standardmäßigen AWS-Richtlinie neue Anweisungen hinzu. Sie können die erforderliche JSON-Richtlinie über die Experience Platform-Benutzeroberfläche abrufen und auf Ihren AWS-KMS-Schlüssel anwenden, um eine sichere Verbindung mit Adobe Experience Platform herzustellen.
 
-Gehen Sie in der Platform-Benutzeroberfläche zum Abschnitt **[!UICONTROL Administration]** in der linken Navigationsleiste und wählen Sie **[!UICONTROL Verschlüsselung]**. Wählen [!UICONTROL  Arbeitsbereich „Verschlüsselungskonfiguration] auf der Karte **[!UICONTROL Kundenseitig [!UICONTROL  Schlüssel] die Option]** Konfigurieren“ aus.
+Wechseln Sie in der Experience Platform-Benutzeroberfläche zum Abschnitt **[!UICONTROL Administration]** in der linken Navigationsleiste und wählen Sie **[!UICONTROL Verschlüsselung]**. Wählen [!UICONTROL  Arbeitsbereich „Verschlüsselungskonfiguration] auf der Karte **[!UICONTROL Kundenseitig [!UICONTROL  Schlüssel] die Option]** Konfigurieren“ aus.
 
-![Der Arbeitsbereich „Platform-Verschlüsselungskonfiguration“ mit hervorgehobener Option „Konfigurieren“ auf der Karte „Kundenseitig verwaltete Schlüssel“.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![Der Arbeitsbereich &quot;Experience Platform-Verschlüsselungskonfiguration“ mit hervorgehobener Option „Konfigurieren“ auf der Karte „Kundenseitig verwaltete Schlüssel“.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 Die [!UICONTROL Konfiguration Kundenseitig verwalteter Schlüssel] wird angezeigt. Kopieren Sie das `statement`-Objekt aus der CMK-KMS-Richtlinie, die in der Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] [!UICONTROL  angezeigt ].
 
@@ -159,9 +160,9 @@ Wählen Sie **[!DNL Finish]** aus, um die aktualisierte Richtlinie zu bestätige
 
 Der aktualisierte [!DNL Customer Managed Keys]-Arbeitsbereich des AWS-[!DNL Key Management Service] wird angezeigt.
 
-### Hinzufügen von AWS-Verschlüsselungsschlüsseldetails zu Platform
+### Hinzufügen von AWS-Verschlüsselungsschlüsseldetails zu Experience Platform
 
-Um die Verschlüsselung zu aktivieren, fügen Sie als Nächstes den Amazon Resource Name (ARN) des Schlüssels zu Ihrer Platform [!UICONTROL Konfiguration Kundenverwaltete Schlüssel] hinzu. Wählen Sie im Abschnitt [!DNL Customer Managed Keys] von AWS den Alias Ihres neuen Schlüssels aus der Liste im [!DNL Key Management Service] aus.
+Um die Verschlüsselung zu aktivieren, fügen Sie als Nächstes den Amazon Resource Name (ARN) des Schlüssels zu Ihrer Experience Platform-Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] hinzu. Wählen Sie im Abschnitt [!DNL Customer Managed Keys] von AWS den Alias Ihres neuen Schlüssels aus der Liste im [!DNL Key Management Service] aus.
 
 ![Der Arbeitsbereich „Kundenseitig verwaltete AWS KMS-Schlüssel“ mit hervorgehobenem neuen Schlüsselalias.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ Wählen Sie das Kopiersymbol aus, um Ihren ARN zu kopieren. Ein Bestätigungsdia
 
 ![Die wichtigsten Details Ihres kundenseitig verwalteten AWS KMS-Schlüssels mit hervorgehobener ARN-Kennzeichnung.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Navigieren Sie jetzt zurück zur Benutzeroberfläche [!UICONTROL Konfiguration kundenverwalteter Schlüssel] von Platform. Fügen Sie **[!UICONTROL Abschnitt „Details zum AWS]** Verschlüsselungsschlüssel hinzufügen“ einen **[!UICONTROL Konfigurationsnamen]** und den **[!UICONTROL KMS-Schlüssel ARN]** hinzu, den Sie aus der AWS-Benutzeroberfläche kopiert haben.
+Navigieren Sie jetzt zurück zur Experience Platform-Benutzeroberfläche [!UICONTROL Konfiguration kundenverwalteter Schlüssel]. Fügen Sie **[!UICONTROL Abschnitt „Details zum AWS]** Verschlüsselungsschlüssel hinzufügen“ einen **[!UICONTROL Konfigurationsnamen]** und den **[!UICONTROL KMS-Schlüssel ARN]** hinzu, den Sie aus der AWS-Benutzeroberfläche kopiert haben.
 
-![Der Arbeitsbereich „Platform-Verschlüsselungskonfiguration“ mit Konfigurationsnamen und KMS-Schlüssel-ARN, die im Abschnitt „Details zum AWS-Verschlüsselungsschlüssel hinzufügen“ hervorgehoben sind.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![Der Arbeitsbereich &quot;Experience Platform-Verschlüsselungskonfiguration“ mit Konfigurationsnamen und KMS-Schlüssel-ARN, die im Abschnitt „Details zum AWS-Verschlüsselungsschlüssel hinzufügen“ hervorgehoben sind.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Wählen Sie als Nächstes **[!UICONTROL SPEICHERN]**, um den Konfigurationsnamen und den KMS-Schlüssel ARN zu übermitteln und mit der Validierung des Schlüssels zu beginnen.
 
-![Der Arbeitsbereich „Platform-Verschlüsselungskonfiguration“ mit hervorgehobener Option „Speichern“.](../../../images/governance-privacy-security/key-management-service/save.png)
+![Der Arbeitsbereich &quot;Experience Platform-Verschlüsselungskonfiguration“ mit hervorgehobener Option „Speichern“.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 Sie kehren zum Arbeitsbereich [!UICONTROL Verschlüsselungskonfigurationen] zurück. Der Status der Verschlüsselungskonfiguration wird unten auf der Karte **[!UICONTROL Kundenseitig verwaltete Schlüssel]** angezeigt.
 
-![Der Arbeitsbereich „Verschlüsselungskonfigurationen“ in der Platform-Benutzeroberfläche mit hervorgehobener Option „Verarbeitung“ auf der Karte „Kundenseitig verwaltete Schlüssel“.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![Der Arbeitsbereich „Verschlüsselungskonfigurationen“ in der Experience Platform-Benutzeroberfläche mit hervorgehobener Option „Verarbeitung läuft“ auf der Karte „Kundenseitig verwaltete Schlüssel“.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Sobald der Schlüssel validiert wurde, werden die Schlüsseltresorkennungen zum Data Lake und zu den Profildatenspeichern für alle Sandboxes hinzugefügt.
 
@@ -198,7 +199,7 @@ Sobald der Schlüssel validiert wurde, werden die Schlüsseltresorkennungen zum 
 
 Im Folgenden finden Sie wichtige Überlegungen zum Sperren von Schlüsseln:
 
-- Durch Widerrufen oder Deaktivieren des Schlüssels sind Ihre Platform-Daten nicht mehr zugänglich. Diese Aktion ist irreversibel und sollte mit Vorsicht durchgeführt werden.
+- Durch Widerrufen oder Deaktivieren des Schlüssels sind Ihre Experience Platform-Daten nicht mehr zugänglich. Diese Aktion ist irreversibel und sollte mit Vorsicht durchgeführt werden.
 - Berücksichtigen Sie die Übertragungszeitpläne, wenn der Zugriff auf Verschlüsselungsschlüssel widerrufen wird. Auf Primäre Datenspeicher kann innerhalb weniger Minuten bis zu 24 Stunden nicht mehr zugegriffen werden. Zwischengespeicherte oder vorübergehende Datenspeicher sind innerhalb von sieben Tagen nicht mehr zugänglich.
 
 Um einen Schlüssel zu widerrufen, navigieren Sie zum AWS KMS-Arbeitsbereich. Im Abschnitt **[!DNL Customer managed keys]** werden alle verfügbaren Schlüssel für Ihr AWS-Konto angezeigt. Wählen Sie den Alias Ihres Schlüssels aus der Liste aus.
@@ -209,7 +210,7 @@ Die Details Ihres Schlüssels werden angezeigt. Um die Taste zu deaktivieren, w�
 
 ![Die Details Ihres AWS-Schlüssels in der AWS KMS-Benutzeroberfläche mit hervorgehobenen Schlüsselaktionen und „Deaktivieren“.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!DNL Disable key]** aus, um Ihre Auswahl zu bestätigen. Die Auswirkungen der Deaktivierung des Schlüssels sollten in Platform-Anwendungen und der Benutzeroberfläche innerhalb von etwa fünf Minuten widergespiegelt werden.
+Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!DNL Disable key]** aus, um Ihre Auswahl zu bestätigen. Die Auswirkungen der Deaktivierung des Schlüssels sollten in Experience Platform-Programmen und in der Benutzeroberfläche innerhalb von etwa fünf Minuten widergespiegelt werden.
 
 >[!NOTE]
 >
@@ -221,7 +222,7 @@ Wenn Ihr Schlüssel in anderen Services verwendet wird, können Sie den Zugriff 
 
 ![Der Detailabschnitt des AWS-Schlüssels mit hervorgehobener Option „Bearbeiten“ im Abschnitt „Schlüsselrichtlinie“.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-Die Seite **[!DNL Edit key policy]** wird angezeigt. Markieren und löschen Sie die Richtlinienanweisung, die aus der Platform-Benutzeroberfläche kopiert wurde, um die Berechtigungen für die App „Kundenseitig verwaltete Schlüssel“ zu entfernen. Wählen Sie dann **[!DNL Save changes]** aus, um den Vorgang abzuschließen.
+Die Seite **[!DNL Edit key policy]** wird angezeigt. Markieren und löschen Sie die Richtlinienanweisung, die aus der Experience Platform-Benutzeroberfläche kopiert wurde, um die Berechtigungen für die App „Kundenseitig verwaltete Schlüssel“ zu entfernen. Wählen Sie dann **[!DNL Save changes]** aus, um den Vorgang abzuschließen.
 
 ![Der Arbeitsbereich „Schlüsselrichtlinie bearbeiten“ auf AWS mit Hervorhebung der Anweisungen „JSON-Objekt“ und „Änderungen speichern“.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

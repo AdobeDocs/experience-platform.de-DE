@@ -5,7 +5,7 @@ title: Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema
 type: Tutorial
 description: In diesem Tutorial wird beschrieben, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine CSV-Datei einem vorhandenen XDM-Schema zuordnen.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 92%
@@ -18,14 +18,14 @@ ht-degree: 92%
 >
 >In diesem Dokument wird beschrieben, wie Sie eine CSV-Datei einem vorhandenen XDM-Schema zuordnen. Informationen zur Verwendung des Tools für KI-generierte Schemaempfehlungen (derzeit in der Beta-Phase) finden Sie im Dokument [Zuordnen einer CSV-Datei mithilfe von Machine-Learning-Empfehlungen](./recommendations.md).
 
-Um CSV-Daten in [!DNL Adobe Experience Platform] aufzunehmen, müssen die Daten einem [!DNL Experience Data Model] (XDM)-Schema zugeordnet sein. In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe der [!DNL Platform]-Benutzeroberfläche einem XDM-Schema zuordnen.
+Um CSV-Daten in [!DNL Adobe Experience Platform] aufzunehmen, müssen die Daten einem [!DNL Experience Data Model] (XDM)-Schema zugeordnet sein. In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe der [!DNL Experience Platform]-Benutzeroberfläche einem XDM-Schema zuordnen.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Platform] voraus.
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Experience Platform] voraus.
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
-- [Batch-Aufnahme](../../batch-ingestion/overview.md): Die Methode, mit der [!DNL Platform] Daten aus Datendateien, die vom Benutzer bereitgestellt werden, aufnimmt.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
+- [Batch-Aufnahme](../../batch-ingestion/overview.md): Die Methode, mit der [!DNL Experience Platform] Daten aus Datendateien, die vom Benutzer bereitgestellt werden, aufnimmt.
 - [Adobe Experience Platform-Datenvorbereitung](../../batch-ingestion/overview.md): Eine Reihe von Funktionen, mit denen Sie aufgenommene Daten entsprechend zu XDM-Schemata zuordnen und transformieren können. Die Dokumentation [Funktionen zur Datenvorbereitung](../../../data-prep/functions.md) ist besonders für die Schemazuordnung relevant.
 
 Für dieses Tutorial müssen Sie außerdem bereits einen Datensatz erstellt haben, in den Sie Ihre CSV-Daten aufnehmen können. Anweisungen zum Erstellen eines Datensatzes in der Benutzeroberfläche finden Sie im [Tutorial zur Datenaufnahme](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ Nach dem Hochladen der Datei wird der Abschnitt **[!UICONTROL Beispieldaten]** a
 
 Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt. Die Spalten der CSV-Datei werden unter **[!UICONTROL Quellfeld]** aufgeführt, mit den entsprechenden XDM-Schemafeldern, die unter **[!UICONTROL Zielfeld]** aufgeführt sind.
 
-[!DNL Platform] bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
+[!DNL Experience Platform] bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ Nachdem Ihre CSV-Datei erstellt und zugeordnet wurde, können Sie die Daten übe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Platform] aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
+In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Experience Platform] aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Experience Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
 
 >[!TIP]
 >

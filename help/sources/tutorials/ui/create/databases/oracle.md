@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Oracle DB;oracle DB
+keywords: Experience Platform;Startseite;beliebte Themen;Oracle DB;Oracle DB
 solution: Experience Platform
-title: Erstellen einer Oracle-DB-Source-Verbindung über die Benutzeroberfläche
+title: Erstellen einer Oracle DB Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle-DB-Quellverbindung erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle DB-Quellverbindung erstellen.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 42%
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 # Erstellen einer [!DNL Oracle DB]-Quellverbindung über die Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Oracle DB]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Oracle DB]-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -29,18 +29,18 @@ Wenn Sie bereits über eine gültige [!DNL Oracle DB]-Verbindung verfügen, kön
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Oracle DB]-Konto in [!DNL Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL Oracle DB]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `connectionString` | Die Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit [!DNL Oracle DB] verwendet wird. Das [!DNL Oracle DB]-Verbindungszeichenfolgenmuster ist: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die zum Erstellen einer Verbindung erforderliche eindeutige Kennung. Die Verbindungsspezifikations-ID für [!DNL Oracle DB] ist `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ## Verbinden Ihres [!DNL Oracle DB]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle DB]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle DB]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -50,7 +50,7 @@ Wählen Sie unter der **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Orac
 
 ![Katalog](../../../../images/tutorials/create/oracle/catalog.png)
 
-Die **[!UICONTROL Verbindung mit Oracle DB herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Verbindung zu Oracle DB herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 
@@ -66,4 +66,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Oracle DB] Konto, m
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle DB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle DB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

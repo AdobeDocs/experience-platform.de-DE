@@ -2,18 +2,18 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1939'
-ht-degree: 95%
+source-wordcount: '1949'
+ht-degree: 85%
 
 ---
 
 # Konfiguration des Partnerschemas
 
-Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Wenn Daten in Platform aufgenommen werden, werden sie nach einem XDM-Schema strukturiert. Weitere Informationen zum Schemaaufbaumodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen des Schemaaufbaus](../../../../xdm/schema/composition.md).
+Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Wenn Daten in Experience Platform aufgenommen werden, werden sie nach einem XDM-Schema strukturiert. Weitere Informationen zum Schemaaufbaumodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen des Schemaaufbaus](../../../../xdm/schema/composition.md).
 
-Beim Erstellen eines Ziels mit Destination SDK können Sie Ihr eigenes Partnerschema definieren, das von Ihrer Zielplattform verwendet werden soll. Dadurch können Benutzerinnen und Benutzer Profilattribute von Platform bestimmten Feldern zuordnen, die von Ihrer Zielplattform erkannt werden, und zwar alles in der Platform-Benutzeroberfläche.
+Beim Erstellen eines Ziels mit Destination SDK können Sie Ihr eigenes Partnerschema definieren, das von Ihrer Zielplattform verwendet werden soll. Dadurch können Benutzerinnen und Benutzer Profilattribute von Experience Platform bestimmten Feldern zuordnen, die von Ihrer Zielplattform erkannt werden, und zwar alles in der Experience Platform-Benutzeroberfläche.
 
 Beim Konfigurieren des Partnerschemas für Ihr Ziel können Sie die von Ihrer Zielplattform unterstützte Feldzuordnung anpassen, z. B.:
 
@@ -21,14 +21,14 @@ Beim Konfigurieren des Partnerschemas für Ihr Ziel können Sie die von Ihrer Zi
 * Dynamische Partnerschemata erstellen, die von Experience Platform dynamisch aufgerufen werden können, um eine Liste aller unterstützten Attribute in Ihrem Ziel abzurufen.
 * Erforderliche Feldzuordnungen definieren, die für Ihre Zielplattform erforderlich sind.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden der -Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Die Schemaeinstellungen können über den Endpunkt `/authoring/destinations` konfiguriert werden. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
 * [Erstellen einer Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aktualisieren einer Zielkonfiguration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In diesem Artikel werden alle unterstützten Schemakonfigurationsoptionen beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, was Kundinnen und Kunden in der Platform-Benutzeroberfläche sehen werden..
+In diesem Artikel werden alle unterstützten Schemakonfigurationsoptionen beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, was Kundinnen und Kunden in der Experience Platform-Benutzeroberfläche sehen werden.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ Destination SDK unterstützt mehrere Schemakonfigurationen:
 
 * Statische Schemata werden durch das Array `profileFields` im Abschnitt `schemaConfig` definiert. In einem statischen Schema definieren Sie jedes Zielattribut, das in der Experience Platform-Benutzeroberfläche angezeigt werden sollte, im Array `profileFields`. Wenn Sie Ihr Schema aktualisieren müssen, müssen Sie [die Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Dynamische Schemata verwenden einen zusätzlichen Typ von Ziel-Server, den sogenannten [dynamischen Schema-Server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), um basierend auf Ihrer eigenen API dynamisch die unterstützten Zielattribute abzurufen und Schemata zu genieren. Dynamische Schemata verwenden nicht das Array `profileFields`. Wenn Sie Ihr Schema aktualisieren müssen, müssen Sie [die Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md). Stattdessen ruft der dynamische Schema-Server das aktualisierte Schema von Ihrer API ab.
-* Innerhalb der Schemakonfiguration haben Sie die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche anzeigen können. Sie können sie jedoch beim Einrichten einer Verbindung zu Ihrem Ziel nicht ändern. Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse immer an das Ziel gesendet wird.
+* Innerhalb der Schemakonfiguration haben Sie die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzerinnen und Benutzer in der Experience Platform-Benutzeroberfläche anzeigen können. Sie können sie jedoch beim Einrichten einer Verbindung zu Ihrem Ziel nicht ändern. Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse immer an das Ziel gesendet wird.
 
 Der Abschnitt `schemaConfig` verwendet mehrere Konfigurationsparameter, je nach dem benötigten Schematyp, wie in den folgenden Abschnitten dargestellt.
 
@@ -105,7 +105,7 @@ Um ein statisches Schema mit Profilattributen zu erstellen, definieren Sie die Z
 | `profileRequired` | Boolesch | Optional | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer in der Lage sein sollen, Profilattribute von Experience Platform benutzerdefinierten Attributen auf Ihrer Zielplattform zuzuordnen. |
 | `segmentRequired` | Boolesch | Erforderlich | Dieser Parameter ist für Destination SDK erforderlich und sollte immer auf `true` festgelegt werden. |
 | `identityRequired` | Boolesch | Erforderlich | Legen Sie ihn auf `true` fest, wenn Benutzerinnen und Benutzer in der Lage sein sollen, [Identitätstypen](identity-namespace-configuration.md) von Experience Platform den Attributen zuzuordnen, die Sie im Array `profileFields` definiert haben. |
-| `segmentNamespaceAllowList` | Array | Optional | Definiert spezifische Zielgruppen-Namespaces, aus denen Benutzende Zielgruppen dem Ziel zuordnen können. Mit diesem Parameter können Plattform-Benutzende so eingeschränkt werden, dass sie Zielgruppen nur aus den Zielgruppen-Namespaces exportieren können, die zuvor im Array definiert werden. Dieser Parameter kann nicht zusammen mit `segmentNamespaceDenyList` verwendet werden.<br> <br> Beispiel: `"segmentNamespaceAllowList": ["AudienceManager"]` ermöglicht es Benutzenden, nur Zielgruppen aus dem `AudienceManager`-Namespace an dieses Ziel zuzuordnen. <br> <br> Damit Benutzende alle Zielgruppen in das Ziel exportieren können, müssen diese Parameter ignoriert werden. <br> <br> Wenn `segmentNamespaceAllowList` und `segmentNamespaceDenyList` in der Konfiguration fehlen, können Benutzende nur Zielgruppen exportieren, die aus dem [Segmentierungs-Service](../../../../segmentation/home.md) stammen. |
+| `segmentNamespaceAllowList` | Array | Optional | Definiert spezifische Zielgruppen-Namespaces, aus denen Benutzende Zielgruppen dem Ziel zuordnen können. Verwenden Sie diesen Parameter, um Experience Platform-Benutzende darauf zu beschränken, Zielgruppen nur aus den Zielgruppen-Namespaces zu exportieren, die Sie im Array definieren. Dieser Parameter kann nicht zusammen mit `segmentNamespaceDenyList` verwendet werden.<br> <br> Beispiel: `"segmentNamespaceAllowList": ["AudienceManager"]` ermöglicht es Benutzenden, nur Zielgruppen aus dem `AudienceManager`-Namespace an dieses Ziel zuzuordnen. <br> <br> Damit Benutzende alle Zielgruppen in das Ziel exportieren können, müssen diese Parameter ignoriert werden. <br> <br> Wenn `segmentNamespaceAllowList` und `segmentNamespaceDenyList` in der Konfiguration fehlen, können Benutzende nur Zielgruppen exportieren, die aus dem [Segmentierungs-Service](../../../../segmentation/home.md) stammen. |
 | `segmentNamespaceDenyList` | Array | Optional | Beschränkt Benutzende von der Zuordnung von Zielgruppen zum Ziel aus den im Array definierten Zielgruppen-Namespaces. Kann nicht zusammen mit `segmentNamespaceAllowed` verwendet werden. <br> <br> Beispiel: `"segmentNamespaceDenyList": ["AudienceManager"]` blockiert Benutzende bei der Zuordnung von Zielgruppen aus dem `AudienceManager`-Namespace an dieses Ziel. <br> <br> Damit Benutzende alle Zielgruppen in das Ziel exportieren können, müssen diese Parameter ignoriert werden. <br> <br> Wenn sowohl `segmentNamespaceAllowed` als auch `segmentNamespaceDenyList` in der Konfiguration fehlen, können Benutzende nur Zielgruppen exportieren, die aus dem [Segmentierungs-Service](../../../../segmentation/home.md) stammen. <br> <br> Um den Export aller Zielgruppen unabhängig von ihrer Herkunft zu ermöglichen, muss `"segmentNamespaceDenyList":[]` festgelegt werden. |
 
 {style="table-layout:auto"}
@@ -148,7 +148,7 @@ In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch de
 
 | Parameter | Typ | Erforderlich/Optional | Beschreibung |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie die `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kundinnen und -Kunden über eine der [hier](customer-authentication.md) beschriebenen Authentifizierungsmethoden bei Ihrem System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldedaten-Objekt ](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldedaten-API erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Experience Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Experience Platform-Kundinnen und -Kunden über eine der [hier) beschriebenen Authentifizierungsmethoden bei ](customer-authentication.md) System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Experience Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldedaten-Objekt ](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldedaten-API erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `dynamicEnum.destinationServerId` | Zeichenfolge | Erforderlich | Die `instanceId` des dynamischen Schema-Servers. Dieser Ziel-Server enthält den API-Endpunkt, den Experience Platform aufruft, um das dynamische Schema abzurufen. |
 | `dynamicEnum.value` | Zeichenfolge | Erforderlich | Der Name des dynamischen Schemas, wie in der Konfiguration des dynamischen Schema-Servers definiert. |
 | `dynamicEnum.responseFormat` | Zeichenfolge | Erforderlich | Die Einstellung ist immer `SCHEMA`, wenn ein dynamisches Schema definiert wird. |
@@ -160,7 +160,7 @@ In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch de
 
 ## Erforderliche Zuordnungen {#required-mappings}
 
-Innerhalb der Schemakonfiguration haben Sie neben Ihrem statischen oder dynamischen Schema die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche anzeigen können. Sie können sie jedoch beim Einrichten einer Verbindung zu Ihrem Ziel nicht ändern.
+Innerhalb der Schemakonfiguration haben Sie neben Ihrem statischen oder dynamischen Schema die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzerinnen und Benutzer in der Experience Platform-Benutzeroberfläche anzeigen können. Sie können sie jedoch beim Einrichten einer Verbindung zu Ihrem Ziel nicht ändern.
 
 Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse immer an das Ziel gesendet wird.
 
@@ -203,7 +203,7 @@ Das folgende Beispiel zeigt die erforderlichen Quell- und Zielzuordnungen. Wenn 
 
 {style="table-layout:auto"}
 
-Daher werden die Abschnitte **[!UICONTROL Quellfeld]** und **[!UICONTROL Zielfeld]** in der Platform-Benutzeroberfläche ausgegraut.
+Daher werden die Abschnitte **[!UICONTROL Source-Feld]** und **[!UICONTROL Target]** in der Experience Platform-Benutzeroberfläche ausgegraut.
 
 ![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ Das folgende Beispiel zeigt eine erforderliche Zielzuordnung. Wenn nur das Zielf
 
 {style="table-layout:auto"}
 
-Daher wird das **[!UICONTROL Zielfeld]** in der Platform-Benutzeroberfläche ausgegraut, während der Abschnitt **[!UICONTROL Quellfeld]** aktiv ist und Benutzende damit interagieren können. Die Optionen **[!UICONTROL Obligatorischer Schlüssel]** und **[!UICONTROL Deduplizierungsschlüssel]** sind aktiviert und können von Benutzenden geändert werden.
+Daher wird der Abschnitt **[!UICONTROL Zielfeld]** in der Experience Platform-Benutzeroberfläche ausgegraut, während der Abschnitt **[!UICONTROL Source]** aktiv ist und Benutzende damit interagieren können. Die Optionen **[!UICONTROL Obligatorischer Schlüssel]** und **[!UICONTROL Deduplizierungsschlüssel]** sind aktiviert und können von Benutzenden geändert werden.
 
 ![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

@@ -2,10 +2,10 @@
 title: Adobe Media Analytics for Audio and Video-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform vertraut.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 98%
+source-wordcount: '950'
+ht-degree: 96%
 
 ---
 
@@ -178,7 +178,7 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
 >[!NOTE]
 >
->**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [Platform](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
+>**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [Experience Platform](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
 
 
 <!--

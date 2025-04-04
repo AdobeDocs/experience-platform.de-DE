@@ -4,10 +4,10 @@ title: Handbuch zur Warnhinweis-Benutzeroberfläche
 description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 36%
+source-wordcount: '798'
+ht-degree: 34%
 
 ---
 
@@ -71,7 +71,7 @@ Sie haben Benutzer erfolgreich zu Ihrer Benachrichtigungsliste für Warnhinweise
 
 Warnhinweise können direkt an Ihre E-Mail gesendet werden.
 
-Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im oberen Menüband auf der rechten Seite aus, um Benachrichtigungen und Ankündigungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](/help/images/icons/settings.png)) aus, um die Seite mit den Experience Cloud-Voreinstellungen aufzurufen.
+Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im oberen Menüband auf der rechten Seite aus, um Benachrichtigungen und Ankündigungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](/help/images/icons/settings.png)) aus, um auf die Seite mit den Experience Cloud-Voreinstellungen zuzugreifen.
 
 ![Eine Liste von Warnhinweisen, die das Glockensymbol und das Zahnradsymbol hervorheben.](../images/alerts/ui/edit-preferences.png)
 
@@ -125,4 +125,4 @@ Wenn Sie einen aufgelisteten Warnhinweis auswählen, werden weitere Details in d
 
 ## Nächste Schritte
 
-Dieses Dokument bietet eine Übersicht darüber, wie Warnhinweise in der Platform-Benutzeroberfläche angezeigt und verwaltet werden. Weitere Informationen zu den Funktionen dieses Services finden Sie in der Übersicht zu [Observability Insights](../home.md).
+Dieses Dokument bietet einen Überblick darüber, wie Warnhinweise in der Experience Platform-Benutzeroberfläche angezeigt und verwaltet werden. Weitere Informationen zu den Funktionen dieses Services finden Sie in der Übersicht zu [Observability Insights](../home.md).

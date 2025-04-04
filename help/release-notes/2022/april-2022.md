@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2670'
-ht-degree: 98%
+source-wordcount: '2679'
+ht-degree: 92%
 
 ---
 
@@ -26,9 +26,9 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform bietet mehrere Dashboards, mit denen Sie wichtige Informationen über die Daten Ihrer Organisation sehen können, die bei täglichen Schnappschüssen erfasst werden.
+Experience Platform bietet mehrere Dashboards, in denen basierend auf täglichen Schnappschüssen wichtige Informationen zu den Unternehmensdaten dargestellt werden.
 
-Dashboards bieten vordefinierte Berichtsoptionen zu den Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow von Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
+Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in Experience Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
 
 Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
 
@@ -61,9 +61,9 @@ Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../..
 
 ## Datenflüsse {#dataflows}
 
-In Platform werden Daten aus vielen verschiedenen Quellen erfasst, innerhalb des Systems analysiert und für eine Vielzahl von Zielen aktiviert. Platform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
+In Experience Platform werden Daten aus vielen verschiedenen Quellen aufgenommen, innerhalb des Systems analysiert und für eine Vielzahl von Zielen aktiviert. Experience Platform erleichtert die Verfolgung dieses potenziell nichtlinearen Datenflusses, indem es für Transparenz bei Datenflüssen sorgt.
 
-Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platform bewegen. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie vom Identity Service und Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
+Datenflüsse sind eine Darstellung von Aufträgen, die Daten durch Experience Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie vom Identity Service und Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
 
 **Neue Funktionen**
 
@@ -169,7 +169,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -214,7 +214,7 @@ Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -222,8 +222,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die Quelle [!DNL OneTrust Integration] verwenden, um Einverständnis- und Voreinstellungsdaten von Ihrem [!DNL OneTrust]-Konto in Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL OneTrust Integration] -Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md). |
-| Unterstützung für [!DNL Square] | Sie können jetzt die Quelle [!DNL Square] verwenden, um Zahlungsdaten von Ihrem [!DNL Square]-Konto in Platform aufzunehmen. |
+| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] verwenden, um Einverständnis- und Voreinstellungsdaten von Ihrem [!DNL OneTrust]-Konto in Experience Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL OneTrust Integration] -Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md). |
+| Unterstützung für [!DNL Square] | Sie können jetzt die [!DNL Square] verwenden, um Zahlungsdaten von Ihrem [!DNL Square]-Konto in Experience Platform aufzunehmen. |
 | Unterstützung für das Löschen von Kundenattribut-Datenflüssen | Sie können jetzt Datenflüsse löschen, die mit dem Kundenattribut-Quell-Connector erstellt wurden. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

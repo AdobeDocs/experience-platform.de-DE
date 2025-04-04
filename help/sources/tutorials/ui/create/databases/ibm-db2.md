@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;DB2;db2;IBM DB2;IBM db2
+keywords: Experience Platform;Startseite;beliebte Themen;DB2;db2;IBM DB2;IBM DB2
 solution: Experience Platform
 title: Erstellen einer IBM DB2 Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine IBM DB2-Quellverbindung erstellen.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 29%
@@ -18,7 +18,7 @@ ht-degree: 29%
 >
 > Der IBM DB2-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Erstellen eines IBM DB2-Quell-Connectors (im Folgenden als „DB2“ bezeichnet) über die [!DNL Platform]-Benutzeroberfläche beschrieben.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Erstellen eines IBM DB2-Quell-Connectors (im Folgenden als „DB2“ bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -46,7 +46,7 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem DB2-Dokument](h
 
 ## IBM DB2-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr DB2-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr DB2-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -72,4 +72,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das DB2-Konto, mit dem Sie ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem DB2-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem DB2-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

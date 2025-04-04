@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;API;Erste Schritte
 solution: Experience Platform
 title: Handbuch der Zugangssteuerungs-APIs
-description: Mit der Zugangssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
+description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Experience Platform-Funktionen mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
 role: Developer
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 97%
+source-wordcount: '379'
+ht-degree: 91%
 
 ---
 
@@ -31,19 +31,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 

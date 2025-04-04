@@ -2,9 +2,9 @@
 title: Parametrisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 13%
 
 ---
@@ -20,7 +20,7 @@ Query Service unterstützt die Verwendung parametrisierter Abfragen im Abfrage-E
 
 ## Voraussetzungen
 
-Bevor Sie mit diesem Handbuch fortfahren, lesen Sie das [Handbuch zur Benutzeroberfläche des Abfrage-Editors](./user-guide.md). Das Handbuch zum Abfrage-Editor enthält detaillierte Informationen zum Schreiben, Validieren und Ausführen von Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche.
+Bevor Sie mit diesem Handbuch fortfahren, lesen Sie das [Handbuch zur Benutzeroberfläche des Abfrage-Editors](./user-guide.md). Das Handbuch zum Abfrage-Editor enthält detaillierte Informationen zum Schreiben, Validieren und Ausführen von Abfragen für Kundenerlebnisdaten in der Benutzeroberfläche von Experience Platform.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ Parameterwerte werden gespeichert, wenn Sie eine parametrisierte Abfrage planen.
 
 Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche parametrisieren und in geplanten Abfrageausführungen verwenden können. In dem Dokument wurde auch hervorgehoben, wie die Protokolle auf die in Abfrageausführungen verwendeten Parameterwerte überprüft werden können.
 
-Als Nächstes wird empfohlen, das Handbuch unter [Überwachen geplanter Abfragen](./monitor-queries.md) zu lesen, um über die Platform-Benutzeroberfläche einen besseren Überblick über den Status aller Abfrageaufträge zu erhalten.
+Als Nächstes wird empfohlen, das Handbuch unter [Überwachen geplanter Abfragen](./monitor-queries.md) zu lesen, um über die Experience Platform-Benutzeroberfläche einen besseren Überblick über den Status aller Abfrageaufträge zu erhalten.

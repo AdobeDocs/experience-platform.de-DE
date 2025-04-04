@@ -4,16 +4,16 @@ title: Navigieren zu Playbooks für Anwendungsfälle
 description: Erfahren Sie, wie Sie durch eine Galerie mit Playbooks navigieren und beginnen Sie mit einer inspirierenden Sandbox.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
 # Navigieren zu Playbooks für Anwendungsfälle
 
-Playbooks für Anwendungsfälle sind für alle Adobe Experience Platform-Kunden kostenlos verfügbar. Um auf eine umfangreiche Sammlung von Anwendungsfall-Playbooks in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus.
+Playbooks für Anwendungsfälle sind für alle Adobe Experience Platform-Kunden kostenlos verfügbar. Um in der Benutzeroberfläche von Experience Platform auf eine umfangreiche Sammlung von Playbooks für Anwendungsfälle zuzugreifen, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Playbooks“ aus.
 
 ![Anwendungsfall Playbook-Galerie.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
@@ -71,4 +71,4 @@ Vergewissern Sie sich, dass die Kanalkonfigurationen entweder über die Experien
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie dieses Dokument gelesen haben, sollten Sie wissen, wie Sie eine inspirierende Sandbox einrichten und mit verschiedenen Möglichkeiten für den Zugriff auf Anwendungsfall-Playbooks in Platform vertraut sein. Lesen Sie als nächsten Schritt, wie Sie [ richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md)wählen“.
+Nachdem Sie dieses Dokument gelesen haben, sollten Sie wissen, wie Sie eine inspirierende Sandbox einrichten und mit verschiedenen Möglichkeiten für den Zugriff auf Anwendungsfall-Playbooks in Experience Platform vertraut sein. Lesen Sie als nächsten Schritt, wie Sie [ richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md)wählen“.

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 100%
+source-wordcount: '479'
+ht-degree: 70%
 
 ---
 
@@ -34,21 +34,21 @@ Die Datenerfassung konzentriert sich auf die Auffindbarkeit und Zugänglichkeit 
 * [Experience Platform Assurance](../assurance/home.md)
 
 
-Dieses Handbuch bietet eine allgemeine Einführung in die Datenerfassung und dazu, wie damit Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und nicht von Adobe stammende Anwendungen gesendet werden.
+Dieses Handbuch bietet eine allgemeine Einführung in die Datenerfassung und dazu, wie damit Daten über Experience Platform Edge Network an Adobe Experience Cloud-Produkte und nicht von Adobe stammende Anwendungen gesendet werden.
 
 ## Tags, Web SDK und Mobile SDK
 
-Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Raw-Code oder mithilfe von [Tags](../tags/home.md) über die Datenerfassungsoberfläche oder die Adobe Experience Platform-Benutzeroberfläche implementiert werden.
+Experience Platform Web SDK und Experience Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Raw-Code oder mithilfe von [Tags](../tags/home.md) über die Datenerfassungsoberfläche oder die Adobe Experience Platform-Benutzeroberfläche implementiert werden.
 
-Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von Client-seitigen Geräten bis Platform Edge Network zu einem einzigen Stream zusammengefasst.
+Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von Client-seitigen Geräten bis Experience Platform Edge Network in einem einzigen Stream zusammengefasst.
 
 ![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
 
-## Platform Edge Network und Datenströme {#edge}
+## Experience Platform Edge Network und Datenströme {#edge}
 
-Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
+Experience Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in großem Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
 
-Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
+Darüber hinaus sind Datenströme in verschiedene Experience Platform-Funktionen integriert, mit denen sichergestellt werden kann, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
 
 ![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
 

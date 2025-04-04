@@ -4,18 +4,18 @@ description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK integrieren
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1322'
 ht-degree: 2%
 
 ---
 
-# Integrieren von Platform Web SDK zur Verarbeitung von Kundeneinverständnisdaten
+# Integrieren von Experience Platform Web SDK zur Verarbeitung von Kundeneinverständnisdaten
 
 Mit der Adobe Experience Platform Web SDK können Sie Einverständnissignale von Kundinnen und Kunden abrufen, die von Einverständnisverwaltungsplattformen (CMPs) generiert wurden, und sie an Adobe Experience Platform senden, wenn ein Einverständnisänderungsereignis auftritt.
 
-**Der SDK stellt standardmäßig keine Schnittstelle zu CMPs bereit**. Es liegt an Ihnen zu bestimmen, wie Sie die SDK in Ihre Website integrieren, auf Einverständnisänderungen in der CMP zu warten und den entsprechenden Befehl aufzurufen. Dieses Dokument enthält allgemeine Anleitungen zum Integrieren Ihres CMP mit Platform Web SDK.
+**Der SDK stellt standardmäßig keine Schnittstelle zu CMPs bereit**. Es liegt an Ihnen zu bestimmen, wie Sie die SDK in Ihre Website integrieren, auf Einverständnisänderungen in der CMP zu warten und den entsprechenden Befehl aufzurufen. Dieses Dokument enthält allgemeine Anleitungen zum Integrieren Ihres CMP mit Experience Platform Web SDK.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -38,7 +38,7 @@ Die Installationsschritte in diesem Handbuch erfordern ein grundlegendes Verstä
 
 ## Einrichten eines Datenstroms
 
-Damit SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenstrom konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche **[!UICONTROL Datenströme]** in der linken Navigationsleiste.
+Damit SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenstrom konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich]** Datenströme“ aus.
 
 Nachdem Sie einen neuen Datenstrom erstellt oder einen vorhandenen ausgewählt haben, um ihn zu bearbeiten, klicken Sie auf die Umschaltfläche neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie als Nächstes die unten aufgeführten Werte, um das Formular auszufüllen.
 
@@ -46,15 +46,15 @@ Nachdem Sie einen neuen Datenstrom erstellt oder einen vorhandenen ausgewählt h
 
 | Datenstromfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox), ](../../../sandboxes/home.md) die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
-| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mithilfe der SDK senden möchten. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um einen Platform-Datenstrom zu erstellen, aber beachten Sie, dass Einverständnisdaten, die über Ereignisse gesendet werden, in nachgelagerten Erzwingungs-Workflows nicht berücksichtigt werden. |
+| [!UICONTROL Sandbox] | Der Name der Experience Platform [Sandbox](../../../sandboxes/home.md) die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
+| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mithilfe der SDK senden möchten. Sie müssen zwar einen Ereignisdatensatz bereitstellen, um einen Experience Platform-Datenstrom zu erstellen, aber beachten Sie, dass Einverständnisdaten, die über Ereignisse gesendet werden, in nachgelagerten Erzwingungs-Workflows nicht berücksichtigt werden. |
 | [!UICONTROL Profildatensatz] | Der [!DNL Profile] Datensatz mit Feldern für das Kundeneinverständnis, die Sie [früher“ ](#prerequisites). |
 
 Wenn Sie fertig sind **[!UICONTROL wählen Sie unten]** Bildschirm „Speichern“ aus und folgen Sie weiteren Eingabeaufforderungen, um die Konfiguration abzuschließen.
 
-## Installieren und Konfigurieren von Platform Web SDK
+## Installieren und Konfigurieren der Experience Platform Web SDK
 
-Nachdem Sie einen Datenstrom wie im vorherigen Abschnitt beschrieben erstellt haben, müssen Sie dann die Platform Web SDK-Erweiterung konfigurieren, die Sie schließlich auf Ihrer Site bereitstellen. Wenn Sie die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert haben, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich und dann die Registerkarte **[!UICONTROL Katalog]** aus. Wählen Sie dann **[!UICONTROL Installieren]** unter der Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen aus.
+Nachdem Sie einen Datenstrom wie im vorherigen Abschnitt beschrieben erstellt haben, müssen Sie dann die Experience Platform Web SDK-Erweiterung konfigurieren, die Sie schließlich auf Ihrer Site bereitstellen. Wenn Sie die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert haben, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich und dann die Registerkarte **[!UICONTROL Katalog]** aus. Wählen Sie dann **[!UICONTROL Installieren]** unter der Experience Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen aus.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -96,7 +96,7 @@ Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in I
 
 ## Erstellen von Befehlen zur Einverständnisänderung {#commands}
 
-Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit dem Befehl Platform Web SDK `setConsent` beginnen, Einverständnisdaten an Platform zu senden.
+Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit dem Befehl Experience Platform Web SDK `setConsent` Einverständnisdaten an Experience Platform senden.
 
 Der Befehl `setConsent` führt zwei Aktionen aus:
 
@@ -114,7 +114,7 @@ Es gibt zwei Szenarien, in denen `setConsent` auf Ihrer Site aufgerufen werden s
 
 Der [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehl erwartet ein Payload-Objekt, das eine einzige Eigenschaft vom Typ Array enthält: `consent`. Das `consent`-Array muss mindestens ein Objekt enthalten, das die erforderlichen Einverständnisfelder für den Adobe-Standard bereitstellt.
 
-Die erforderlichen Einverständnisfelder für den Adobe-Standard werden im folgenden Beispiel `setConsent` Aufruf gezeigt:
+Die erforderlichen Einverständnisfelder für den Adobe-Standard werden im folgenden Beispiel `setConsent` -Aufruf gezeigt:
 
 ```js
 alloy("setConsent", {
@@ -143,7 +143,7 @@ alloy("setConsent", {
 
 | Payload-Eigenschaft | Beschreibung |
 | --- | --- |
-| `standard` | Der verwendete Einverständnisstandard. Für den Adobe-Standard muss dieser Wert auf `Adobe` gesetzt werden. |
+| `standard` | Der verwendete Einverständnisstandard. Für den Adobe-Standard muss dieser Wert auf `Adobe` festgelegt werden. |
 | `version` | Die Versionsnummer des Einverständnisstandards, die unter `standard` angegeben ist. Dieser Wert muss für die Einverständnisverarbeitung nach Adobe-Standard auf `2.0` gesetzt werden. |
 | `value` | Die aktualisierten Einverständnisinformationen des Kunden, bereitgestellt als XDM-Objekt, das der Struktur der Einverständnisfelder des profilaktivierten Datensatzes entspricht. |
 
@@ -182,7 +182,7 @@ var setConsent = function () {
     }
   };
 
-  // Pass the XDM object to the Platform Web SDK
+  // Pass the XDM object to the Experience Platform Web SDK
   alloy("setConsent", {
     consent: [{
       standard: "Adobe",
@@ -195,13 +195,13 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [ unter ](/help/web-sdk/commands/command-responses.md).
+Alle [!DNL Experience Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [ unter ](/help/web-sdk/commands/command-responses.md).
 
-Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach ](../../../profile/ui/user-guide.md#browse-identity)).
+Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Experience Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach ](../../../profile/ui/user-guide.md#browse-identity)).
 
 ## Nächste Schritte
 
-In diesem Handbuch haben Sie die Platform Web SDK-Erweiterung so konfiguriert, dass Einverständnisdaten an Experience Platform gesendet werden. Anleitungen zum Testen Ihrer Implementierung finden Sie in der Dokumentation zum Einverständnisstandard, den Sie implementieren:
+In diesem Handbuch haben Sie die Experience Platform Web SDK-Erweiterung konfiguriert, um Einverständnisdaten an Experience Platform zu senden. Anleitungen zum Testen Ihrer Implementierung finden Sie in der Dokumentation zum Einverständnisstandard, den Sie implementieren:
 
-* [Adobe-Standard](./adobe/overview.md#test)
+* [Adobe Standard](./adobe/overview.md#test)
 * [TCF 2.0-Standard](./iab/overview.md#test)

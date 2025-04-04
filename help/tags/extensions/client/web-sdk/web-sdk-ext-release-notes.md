@@ -2,16 +2,16 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 70%
+source-wordcount: '2583'
+ht-degree: 68%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
-In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Version 2.29.0 – Donnerstag, 5. März 2025
 
@@ -337,7 +337,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 ## Version 2.2.0 – 1. Oktober 2020
 
-- Wenn Kundinnen oder Kunden versuchten, ein XDM-Objekt aus Sandbox-Schemata zu erstellen, traten Authentifizierungsprobleme auf. Die API, die Platform aufruft, ist jetzt über Umgebungen informiert, sodass Benutzenden nur die Schemata präsentiert werden, auf die sie zum Bearbeiten zugreifen können.
+- Wenn Kundinnen oder Kunden versuchten, ein XDM-Objekt aus Sandbox-Schemata zu erstellen, traten Authentifizierungsprobleme auf. Die API, die Experience Platform aufruft, ist jetzt über Umgebungen informiert, sodass Benutzenden nur die Schemata präsentiert werden, auf die sie Zugriff haben, um sie zu bearbeiten.
 - Bei Verwendung des Datenelements `identityMap` werden die Namespaces jetzt vorab in einer Dropdown-Liste ausgefüllt, sodass Sie dies nicht manuell tun müssen.
 - Die Benutzeroberfläche für das Datenelement `xdmObject` wurde überarbeitet. In der neuen Benutzeroberfläche können Sie sehen, welche Felder ausgefüllt wurden, ohne jedes Element im Objekt eingeben zu müssen.
 
@@ -353,7 +353,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 - Unterstützung für das Überschreiben der Datensatz-ID in der Aktion `sendEvent`.
 - Neues Datenelement vom Typ `IdentityMap`. Über dieses kann der Eintrag `identityMap` im nun aktivierten XDM-Objektdatenelement sowie in der Aktion `setConsent` ausgefüllt werden.
 - Unterstützung für das Übergeben einer Identitätszuordnung bzw. „identityMap“ in der Aktion `setConsent`.
-- Es wurde Unterstützung für das Auswählen einer Platform-Sandbox im XDM-Objekt-Datenelement hinzugefügt.
+- Unterstützung für die Auswahl einer Experience Platform-Sandbox im XDM-Objekt-Datenelement.
 
 ## Version 1.0.0 – 26. Mai 2020
 

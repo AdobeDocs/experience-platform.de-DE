@@ -4,9 +4,9 @@ title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen es Ihnen, Ihre E-Mail-Marketing-Aktivitäten zu verwalten, z. B. zum Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 60%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
 
 ## Verbinden mit einem neuen E-Mail-Marketing-Ziel {#connect-destination}
 
-Um Zielgruppen an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss Experience Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
 
 ## Best Practices beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele {#best-practices}
 

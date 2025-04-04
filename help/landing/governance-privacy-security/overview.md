@@ -5,10 +5,10 @@ title: Governance, Datenschutz und Sicherheit - Übersicht
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 21%
+source-wordcount: '869'
+ht-degree: 22%
 
 ---
 
@@ -26,25 +26,25 @@ Die Dienste können in drei Bereiche unterteilt werden:
 
 ## Data Governance {#governance}
 
-Data Governance ist ein wesentliches Konzept, das mit allen Funktionen von Experience Platform verflochten ist. Data Governance stellt Ihre Fähigkeit dar, Ihre Daten während ihres gesamten Journey über Platform zu steuern und zu erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
+Data Governance ist ein wesentliches Konzept, das mit allen Funktionen in Experience Platform verknüpft ist. Data Governance stellt Ihre Fähigkeit dar, Ihre Daten während ihres gesamten Journey über Experience Platform zu kontrollieren und zu erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
 
 ### Data Governance in Adobe Experience Platform {#data-governance}
 
-Als Platform-Service können Sie mit Adobe Experience Platform Data Governance Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, einschließlich Datennutzungskennzeichnungen, Datennutzungsrichtlinien, Richtliniendurchsetzung und Datenherkunft.
+Als Experience Platform-Service können Sie mit Adobe Experience Platform Data Governance Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Datennutzungskennzeichnungen, Datennutzungsrichtlinien, der Durchsetzung von Richtlinien und der Datenherkunft.
 
 Weitere Informationen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md).
 
 ### Katalog und Datensätze {#catalog}
 
-Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
+Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 
 Katalog organisiert aufgenommene Daten in Datensätze, wobei jeder Datensatz Metadaten enthält, die zur Kennzeichnung und Kategorisierung der darin enthaltenen Daten verwendet werden können.
 
-Weitere Informationen zu [ Service finden Sie ](../../catalog/home.md) der Übersicht zum Katalog-Service . Informationen zum Verwalten von Datensätzen im Experience Platform finden Sie unter [Datensätze - Übersicht](../../catalog/datasets/overview.md).
+Weitere Informationen zu [ Service finden Sie ](../../catalog/home.md) der Übersicht zum Katalog-Service . Informationen zum Verwalten von Datensätzen in Experience Platform finden Sie unter [Datensätze - Übersicht](../../catalog/datasets/overview.md).
 
 ## Datenschutz    {#privacy}
 
-Datenschutz ist ein wichtiges Thema für Ihr Unternehmen, Ihre Gesetzgeber und Ihre Kunden. Da personenbezogene Daten von Ihren Kunden im Mittelpunkt fast aller Experience Platform-Workflows stehen, bietet Platform Services zur Unterstützung dieser Initiativen.
+Datenschutz ist ein wichtiges Thema für Ihr Unternehmen, Ihre Gesetzgeber und Ihre Kunden. Da personenbezogene Daten von Ihren Kunden im Mittelpunkt fast aller Experience Platform-Workflows stehen, bietet Experience Platform Services zur Unterstützung dieser Initiativen.
 
 ### Adobe Experience Platform Privacy Service {#privacy-service}
 
@@ -56,23 +56,23 @@ Weitere Informationen finden Sie in der Übersicht ](../../privacy-service/home.
 
 ### Einverständnisverarbeitung {#consent}
 
-Viele gesetzliche Datenschutzbestimmungen haben Anforderungen für aktive und spezifische Einverständnisse bei der Datenerfassung, Personalisierung und anderen Marketing-Anwendungsfällen eingeführt. Um diese Anforderungen zu erfüllen, können Sie mit dem Experience Platform Einverständnisinformationen in individuellen Kundenprofilen erfassen und diese Voreinstellungen als bestimmenden Faktor dafür verwenden, wie die Daten jedes Kunden in nachgelagerten Platform-Workflows verwendet werden.
+Viele gesetzliche Datenschutzbestimmungen haben Anforderungen für aktive und spezifische Einverständnisse bei der Datenerfassung, Personalisierung und anderen Marketing-Anwendungsfällen eingeführt. Um diese Anforderungen zu erfüllen, können Sie mit Experience Platform Einverständnisinformationen in individuellen Kundenprofilen erfassen und diese Voreinstellungen als bestimmenden Faktor dafür verwenden, wie die Daten jedes Kunden in nachgelagerten Experience Platform-Workflows verwendet werden.
 
-Informationen zum Verarbeiten von Kundeneinverständnis- und Präferenzdaten mit dem Adobe-Standard finden Sie in der Übersicht zu [Einverständnisverarbeitung in Experience Platform](./consent/adobe/overview.md).
+Informationen zur Verarbeitung von Einverständnis- und Präferenzdaten von Kunden mit dem Adobe-Standard finden Sie in der Übersicht zur [Einverständnisverarbeitung in Experience Platform](./consent/adobe/overview.md).
 
-Informationen zur Verarbeitung von Kundeneinverständnisdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 finden Sie in der Übersicht zur [IAB TCF 2.0-Unterstützung in Platform](./consent/iab/overview.md).
+Informationen zur Verarbeitung von Kundeneinverständnisdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 finden Sie in der Übersicht zur [IAB TCF 2.0-Unterstützung in Experience Platform](./consent/iab/overview.md).
 
 ## Sicherheit {#security}
 
-Die Integrität und Sicherheit Ihrer Daten ist für Ihr Unternehmen unverzichtbar, und dieses Risiko erfordert branchenführende Sicherheitsfunktionen. Um dieser Herausforderung gerecht zu werden, bietet Platform verschiedene Tools, mit denen Sie Ihre Datenvorgänge schützen können.
+Die Integrität und Sicherheit Ihrer Daten ist für Ihr Unternehmen unverzichtbar, und dieses Risiko erfordert branchenführende Sicherheitsfunktionen. Um dieser Herausforderung gerecht zu werden, bietet Experience Platform verschiedene Tools, mit denen Sie Ihre Datenvorgänge schützen können.
 
 ### Datenverschlüsselung
 
-Alle Platform-Daten werden während der Übertragung und im Ruhezustand verschlüsselt. Weitere Informationen finden Sie im Dokument [Datenverschlüsselung in ](./encryption.md)).
+Alle Experience Platform-Daten werden während der Übertragung und im Ruhezustand verschlüsselt. Weitere Informationen finden Sie im Dokument über [Datenverschlüsselung in Experience Platform](./encryption.md).
 
 ### Zugangssteuerung {#access-control}
 
-Experience Platform verwendet Adobe Admin Console, um rollenbasierte Zugriffssteuerung für verschiedene Platform-Funktionen bereitzustellen. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
+Experience Platform verwendet Adobe Admin Console, um rollenbasierte Zugriffssteuerung für verschiedene Experience Platform-Funktionen bereitzustellen. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 
 Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../../access-control/home.md).
 
@@ -80,10 +80,10 @@ Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übers
 
 Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
-Um dem Bedarf an Entwicklungsflexibilität gerecht zu werden, bietet Experience Platform Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Ihre Programme für digitale Erlebnisse basierend auf Ihrem eigenen Entwicklungslebenszyklus weiterentwickeln können.
+Um dem Bedarf an Entwicklungsflexibilität gerecht zu werden, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Ihre Programme für digitale Erlebnisse basierend auf Ihrem eigenen Entwicklungslebenszyklus weiterentwickeln können.
 
 Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die verschiedenen Platform-Services und -Tools, die mit Data Governance, Datenschutz und Sicherheit zusammenhängen. Weitere Informationen zu diesen Funktionen finden Sie in der Dokumentation, auf die an mehreren Stellen in diesem Handbuch verwiesen wird.
+Dieses Dokument bietet einen Überblick über die verschiedenen Experience Platform-Services und -Tools, die mit Data Governance, Datenschutz und Sicherheit zusammenhängen. Weitere Informationen zu diesen Funktionen finden Sie in der Dokumentation, auf die an mehreren Stellen in diesem Handbuch verwiesen wird.

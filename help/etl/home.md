@@ -2,18 +2,18 @@
 keywords: Experience Platform;Startseite;beliebte Themen;ETL;etl;etl-Integrationen;ETL-Integrationen
 solution: Experience Platform
 title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
-description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
+description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von leistungsstarken, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Experience Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '3978'
 ht-degree: 98%
 
 ---
 
 # Entwickeln von ETL-Integrationen für Adobe Experience Platform
 
-Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von leistungsstarken, sicheren Connectoren für [!DNL Experience Platform] und für die Aufnahme von Daten in [!DNL Platform] erläutert.
+Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von leistungsstarken, sicheren Connectoren für [!DNL Experience Platform] und für die Aufnahme von Daten in [!DNL Experience Platform] erläutert.
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
@@ -40,7 +40,7 @@ An der Integration mit ETL-Connectoren ist eine Vielzahl der Komponenten von Exp
 - **Adobe Identity Management System (IMS)**: Bietet ein Framework für die Authentifizierung bei Adobe-Services.
 - **IMS-Organisation**: Eine Unternehmens-Entität, die Produkte und Services besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann.
 - **IMS-Anwender**: Die Mitglieder einer IMS-Organisation. Organisation und Anwender stehen in einer m:n-Beziehung zueinander.
-- **[!DNL Sandbox]**: Eine virtuelle Partition einer einzelnen [!DNL Platform]-Instanz, in der Programme für digitale Erlebnisse entwickelt und weiterentwickelt werden können.
+- **[!DNL Sandbox]**: Eine virtuelle Partition einer einzelnen [!DNL Experience Platform]-Instanz, in der Programme für digitale Erlebnisse entwickelt und weiterentwickelt werden können.
 - **Datenerkennung**: Erfasst die Metadaten von aufgenommenen und umgewandelten Daten in [!DNL Experience Platform].
 - **[!DNL Data Access]**: Bietet eine Schnittstelle für Anwender, über die sie auf ihre Daten in [!DNL Experience Platform] zugreifen können.
 - **[!DNL Data Ingestion]**: Überträgt Daten an [!DNL Experience Platform] mit [!DNL Data Ingestion]-APIs.
@@ -56,19 +56,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -78,7 +78,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Zunächst meldet sich ein ETL-Anwender bei der Benutzeroberfläche von [!DNL Experience Platform] an und erstellt Datensätze für die Aufnahme mit einem Standard-Connector oder einem Push-Service-Connector.
 
-In der Benutzeroberfläche erstellt der Anwender den Ausgabedatensatz, indem er ein Datensatzschema auswählt. Die Auswahl des Schemas hängt davon ab, welcher Datentyp (Datensatz- oder Zeitreihendaten) in [!DNL Platform] aufgenommen wird. In der Benutzeroberfläche können alle verfügbaren Schemata einschließlich des vom Schema unterstützten Verhaltenstyps über die Registerkarte „Schemata“ eingesehen werden.
+In der Benutzeroberfläche erstellt der Anwender den Ausgabedatensatz, indem er ein Datensatzschema auswählt. Die Auswahl des Schemas hängt davon ab, welcher Datentyp (Datensatz- oder Zeitreihendaten) in [!DNL Experience Platform] aufgenommen wird. In der Benutzeroberfläche können alle verfügbaren Schemata einschließlich des vom Schema unterstützten Verhaltenstyps über die Registerkarte „Schemata“ eingesehen werden.
 
 Beginnt der Anwender im ETL-Tool mit der Konzeptionierung, wird seine Zuordnung nach Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldedaten) umgewandelt. Es wird hier davon ausgegangen, dass für das ETL-Tool bereits [!DNL Experience Platform]-Connectoren installiert wurden. (Auf den entsprechenden Prozess wird in diesem Integrationshandbuch nicht eingegangen.)
 
@@ -759,7 +759,7 @@ Wenn Momentaufnahmen-Profile verwendet werden, muss das ETL-Tool die Daten aus d
 
 Die Wiederholung von Batches und erneute Datenverarbeitung sind unter Umständen erforderlich, wenn ein Client feststellt, dass die in den letzten „n“ Tagen mittels ETL verarbeiteten Daten nicht wie erwartet aufgetreten sind oder möglicherweise die Quelldaten selbst nicht korrekt waren.
 
-Dies erfolgt, indem die Datenadministratoren des Clients unter Verwendung der [!DNL Platform]-Benutzeroberfläche die Batches mit den beschädigten Daten entfernen. Dann muss der ETL-Prozess wahrscheinlich erneut ausgeführt und somit mit korrekten Daten ausgefüllt werden. Wenn die Quelle selbst beschädigte Daten aufwies, muss der Data Engineer/Datenadministrator die Quell-Batches berichtigen und die Datenaufnahme erneut durchführen (entweder in Adobe Experience Platform oder mittels ETL-Connectoren).
+Dies erfolgt, indem die Datenadministratoren des Clients unter Verwendung der [!DNL Experience Platform]-Benutzeroberfläche die Batches mit den beschädigten Daten entfernen. Dann muss der ETL-Prozess wahrscheinlich erneut ausgeführt und somit mit korrekten Daten ausgefüllt werden. Wenn die Quelle selbst beschädigte Daten aufwies, muss der Data Engineer/Datenadministrator die Quell-Batches berichtigen und die Datenaufnahme erneut durchführen (entweder in Adobe Experience Platform oder mittels ETL-Connectoren).
 
 Je nach Typ der zu generierenden Daten kann der Data Engineer einen einzelnen Batch oder alle Batches aus spezifischen Datensätzen entfernen. Die Daten werden gemäß den Richtlinien von [!DNL Experience Platform] entfernt/archiviert.
 
@@ -781,7 +781,7 @@ Bei Quell-Batches hängt die Entscheidung ebenfalls von der Präferenz des Clien
 
 Der Prozess der Rückstellung wird angewendet, wenn Eingabedaten noch nicht vollständig genug sind, um an nachgelagerte Prozesse übergeben zu werden, jedoch in Zukunft nützlich sein könnten. Clients legen ihre individuelle Toleranz hinsichtlich des Daten-Windowing für den zukünftigen Abgleich gegenüber den Verarbeitungskosten fest, um über ihre Entscheidung zu informieren, Daten beiseite zu legen und sie bei der nächsten Umwandlung neu zu verarbeiten. Dies geschieht in der Hoffnung, sie zu einem späteren Zeitpunkt innerhalb des Aufbewahrungsfensters anreichern und abstimmen/zusammenführen zu können. Dieser Zyklus dauert so lange an, bis die Zeile entweder ausreichend verarbeitet oder als veraltet gilt. Im letzteren Fall ist sie dann keine weitere Investition mehr wert. Bei jeder Iteration werden zurückgestellte Daten generiert, die ein Superset aller zurückgestellten Daten der vorherigen Iterationen darstellen.
 
-Adobe Experience Platform erkennt derzeit keine zeitversetzten Daten. Daher müssen Client-Implementierungen anhand manueller ETL- und Datensatz-Konfigurationen einen weiteren Datensatz in [!DNL Platform] erstellen, der den Quelldatensatz spiegelt. Dieser kann dann zur Aufbewahrung zeitversetzter Daten verwendet werden. In diesem Fall sind zurückgestellte Daten Momentaufnahmen-Daten ähnlich: Bei jeder Ausführung der ETL-Umwandlung werden die Quelldaten mit verzögerten Daten zusammengeführt und zur Verarbeitung übergeben.
+Adobe Experience Platform erkennt derzeit keine zeitversetzten Daten. Daher müssen Client-Implementierungen anhand manueller ETL- und Datensatz-Konfigurationen einen weiteren Datensatz in [!DNL Experience Platform] erstellen, der den Quelldatensatz spiegelt. Dieser kann dann zur Aufbewahrung zeitversetzter Daten verwendet werden. In diesem Fall sind zurückgestellte Daten Momentaufnahmen-Daten ähnlich: Bei jeder Ausführung der ETL-Umwandlung werden die Quelldaten mit verzögerten Daten zusammengeführt und zur Verarbeitung übergeben.
 
 ## Änderungsprotokoll
 

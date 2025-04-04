@@ -5,10 +5,10 @@ title: Anzeigen von Datensatzdaten mithilfe der Datenzugriffs-API
 type: Tutorial
 description: Erfahren Sie, wie Sie in einem Datensatz gespeicherte Daten mithilfe der Datenzugriffs-API in Adobe Experience Platform finden, darauf zugreifen und sie herunterladen können. In diesem Dokument werden einige der einzigartigen Funktionen der Datenzugriffs-API vorgestellt, wie Paging und partielle Downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 14%
+source-wordcount: '1365'
+ht-degree: 13%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mithilfe der [!DNL
 
 Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [ im Tutorial ](../../catalog/datasets/create.md) Datensatzerstellung .
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -28,19 +28,19 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 

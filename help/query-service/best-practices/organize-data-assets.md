@@ -2,9 +2,9 @@
 title: Best Practices für die Organisation von Daten-Assets in Query Service
 description: In diesem Dokument wird eine logische Möglichkeit zur Organisation von Daten für eine einfache Verwendung mit dem Abfrage-Service beschrieben.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Dieses Dokument enthält Anleitungen zu Best Practices für die Organisation von Datenelementen, einschließlich Datensätzen, Ansichten und temporären Tabellen, zur Verwendung mit dem Abfrage-Service von Adobe Experience Platform. Es wird beschrieben, wie Sie Ihre Daten strukturieren und wie Sie auf diese Informationen zugreifen, sie aktualisieren und löschen können.
 
-Es ist wichtig, Ihre Daten-Assets innerhalb der Platform-[!DNL Data Lake] logisch zu organisieren, wenn sie wachsen. Query Service erweitert SQL-Konstrukte, mit denen Sie Datenelemente innerhalb einer Sandbox logisch gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass sie physisch verschoben werden müssen.
+Es ist wichtig, Ihre Datenelemente beim Wachstum innerhalb der Experience Platform-[!DNL Data Lake] logisch zu organisieren. Query Service erweitert SQL-Konstrukte, mit denen Sie Datenelemente innerhalb einer Sandbox logisch gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass sie physisch verschoben werden müssen.
 
 ## Erste Schritte
 

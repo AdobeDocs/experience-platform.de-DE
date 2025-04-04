@@ -1,18 +1,18 @@
 ---
-description: Erfahren Sie, wie Sie Datenflüsse während der Segmentierung mithilfe der Experience Platform-Benutzeroberfläche überwachen können.
+description: Erfahren Sie, wie Sie Datenflüsse während der Segmentierung mithilfe der Benutzeroberfläche von Experience Platform überwachen können.
 title: Überwachen von Datenflüssen für Zielgruppen in der Benutzeroberfläche
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 7%
 
 ---
 
 # Überwachen von Datenflüssen für Zielgruppen in der Benutzeroberfläche
 
-Mit dem Segmentierungs-Service können Sie über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen erstellen. Platform bietet Datenflüsse, mit denen dieser Datenfluss von Quellen zu Zielen transparent verfolgt werden kann.
+Mit dem Segmentierungs-Service können Sie über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen erstellen. Experience Platform bietet Datenflüsse, mit denen dieser Datenfluss von Quellen zu Zielen transparent verfolgt werden kann.
 
 Verwenden Sie das Monitoring-Dashboard, um eine visuelle Darstellung der Datenaktivität in einer Audience zu erhalten, einschließlich des Status der Segmentierung Ihrer Daten. Lesen Sie das Tutorial für Anweisungen dazu, wie Sie mit dem Monitoring-Dashboard die Segmentierung Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können, sodass Sie den Status von Zielgruppenaktivierungs-, Auswertungs- und Exportvorgängen verfolgen können.
 
@@ -20,13 +20,13 @@ Verwenden Sie das Monitoring-Dashboard, um eine visuelle Darstellung der Datenak
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
+- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 - [Segmentierung](../../segmentation/home.md): Mit der Segmentierung können Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten erstellen.
    - [Aktivierungsaufträge](../../destinations/ui/activation-overview.md): Ein Aktivierungsauftrag wird verwendet, um Ihre Audience für ein bestimmtes Ziel zu aktivieren.
    - [Auswertungsaufträge](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Ein Auswertungsauftrag ist ein asynchroner Prozess, der die Zielgruppe auswertet.
    - [Exportvorgänge](../../segmentation/api/export-jobs.md): Ein Exportvorgang ist ein asynchroner Prozess, der zum Beibehalten von Zielgruppenmitgliedern in Datensätzen verwendet wird.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Dashboard zur Überwachung von Zielgruppen {#monitoring-audiences-dashboard}
 

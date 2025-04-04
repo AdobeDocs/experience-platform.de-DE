@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 60%
+source-wordcount: '1221'
+ht-degree: 56%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 60%
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
 ><br/>
->Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Ihnen Adobe die notwendigen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+>Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
 ><br/>
 >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
 ><br/>
@@ -54,7 +54,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -74,13 +74,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ### Zulassungsauflistung {#allow-listing}
 
-Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad Manager 360]-Ziel in Platform einrichten. Stellen Sie sicher, dass Sie den unten beschriebenen Zulassungsauflistungsprozess abschließen, bevor Sie Ihr Ziel erstellen.
+Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad Manager 360]-Ziel in Experience Platform einrichten. Stellen Sie sicher, dass Sie den unten beschriebenen Zulassungsauflistungsprozess abschließen, bevor Sie Ihr Ziel erstellen.
 
 >[!NOTE]
 >
->Die Ausnahme für diese Regel gilt für bestehende [Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
+>Die Ausnahme von dieser Regel betrifft bestehende [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)-Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
-1. Führen Sie die in der Dokumentation zu [Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=de) beschriebenen Schritte aus, um Adobe als verknüpfte Daten-Management-Plattform (DMP) hinzuzufügen.
+1. Führen Sie die in der Dokumentation zu Google Ad Manager [beschriebenen Schritte aus](https://support.google.com/admanager/answer/3289669?hl=de) um Adobe als verknüpfte Datenverwaltungsplattform (DMP) hinzuzufügen.
 2. Wechseln Sie in der [!DNL Google Ad Manager] zu **[!UICONTROL Admin]** > **[!UICONTROL Globale Einstellungen]** > **[!UICONTROL Netzwerkeinstellungen]** und aktivieren Sie den **[!UICONTROL API-Zugriff]**-Regler.
 
 
@@ -96,8 +96,8 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL Zugriffsschlüssel-ID]**: Eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird.
-* **[!UICONTROL Geheimer Zugriffsschlüssel]**: Eine mit Base64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird.
+* **[!UICONTROL Zugriffsschlüssel-ID]**: Eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres [!DNL Google Cloud Storage] bei Experience Platform verwendet wird.
+* **[!UICONTROL Geheimer Zugriffsschlüssel]**: Eine mit Base64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihres [!DNL Google Cloud Storage] bei Experience Platform verwendet wird.
 
 Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel für Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und Ihres geheimen Zugriffsschlüssels finden Sie in der [[!DNL Google Cloud Storage] Übersicht zu Quellen](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -118,7 +118,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach [!DNL Google] eine Option aus:
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
-* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID von Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
+* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -139,8 +139,8 @@ Im Schritt zur Identitätszuordnung sehen Sie die folgenden vorausgefüllten Zuo
 
 | Vorausgefüllte Zuordnung | Beschreibung |
 |---------|----------|
-| `ECID` -> `ppid` | Dies ist die einzige vorausgefüllte Zuordnung, die von Benutzenden bearbeitet werden kann. Sie können beliebige Attribute oder Identitäts-Namespaces aus Platform auswählen und sie `ppid` zuordnen. |
-| `metadata.segment.alias` -> `list_id` | Ordnet Experience Platform-Zielgruppennamen den Zielgruppen-IDs in der Google-Plattform zu. |
+| `ECID` -> `ppid` | Dies ist die einzige vorausgefüllte Zuordnung, die von Benutzenden bearbeitet werden kann. Sie können beliebige Attribute oder Identity-Namespaces aus Experience Platform auswählen und sie `ppid` zuordnen. |
+| `metadata.segment.alias` -> `list_id` | Ordnet den Experience Platform-Zielgruppennamen den Zielgruppen-IDs in der Google-Plattform zu. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Teilt der Google-Plattform mit, wann disqualifizierte Benutzende aus Segmenten entfernt werden sollen. |
 
 Diese Zuordnungen sind erforderlich für [!DNL Google Ad Manager 360] und werden von Adobe Experience Platform automatisch für alle [!DNL Google Ad Manager 360]-Verbindungen erstellt.
@@ -155,7 +155,7 @@ Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie I
 
 Falls bei der Verwendung dieses Ziels Fehler auftreten und Sie sich entweder an Adobe oder Google wenden müssen, halten Sie die folgenden IDs bereit.
 
-Dies sind Google-Konto-IDs der Adobe:
+Dies sind die Google-Konto-IDs von Adobe:
 
 * **[!UICONTROL Konto-ID]**: 87933855
 * **[!UICONTROL Kunden-ID]**: 89690775

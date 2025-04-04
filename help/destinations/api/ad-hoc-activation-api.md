@@ -5,10 +5,10 @@ title: Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow für die Aktivierung von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung stattfinden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 12%
+source-wordcount: '1623'
+ht-degree: 8%
 
 ---
 
@@ -26,7 +26,7 @@ Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppen programmg
 
 Verwenden Sie die Ad-hoc-Aktivierungs-API, um vollständige Dateien in Ihr gewünschtes Dateiempfangssystem zu exportieren. Die Ad-hoc-Zielgruppenaktivierung wird nur von [Batch-dateibasierten Zielen](../destination-types.md#file-based) unterstützt.
 
-Das folgende Diagramm zeigt den durchgängigen Workflow zur Aktivierung von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die in Platform alle 24 Stunden stattfinden.
+Die folgende Abbildung zeigt den kompletten Workflow zum Aktivieren von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die alle 24 Stunden in Experience Platform stattfinden.
 
 ![Ad-hoc-Aktivierung](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -66,13 +66,13 @@ Bevor Sie die Adobe Experience Platform-APIs aufrufen können, stellen Sie siche
 
 ## Schritt 2: Sammeln von Anmeldeinformationen {#credentials}
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an Platform-APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an Experience Platform-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -84,13 +84,13 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche {#activation-flow}
+## Schritt 3: Erstellen eines Aktivierungsflusses in der Experience Platform-Benutzeroberfläche {#activation-flow}
 
-Bevor Sie Zielgruppen über die Ad-hoc-Aktivierungs-API aktivieren können, müssen Sie zunächst einen Aktivierungsfluss für das ausgewählte Ziel in der Platform-Benutzeroberfläche konfiguriert haben.
+Bevor Sie Zielgruppen über die Ad-hoc-Aktivierungs-API aktivieren können, muss zunächst in der Experience Platform-Benutzeroberfläche ein Aktivierungsfluss für das ausgewählte Ziel konfiguriert worden sein.
 
 Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Zielgruppen, die Konfiguration eines Zeitplans und die Aktivierung. Sie können die Benutzeroberfläche oder API verwenden, um einen Aktivierungsfluss zu erstellen:
 
-* [Verwenden der Platform-Benutzeroberfläche, um einen Aktivierungsfluss zu Batch-Profil-Exportzielen zu erstellen](../ui/activate-batch-profile-destinations.md)
+* [Verwenden der Experience Platform-Benutzeroberfläche zum Erstellen eines Aktivierungsflusses zu Batch-Profil-Exportzielen](../ui/activate-batch-profile-destinations.md)
 * [Verwenden Sie die Flow Service-API, um eine Verbindung zu Batch-Profil-Exportzielen herzustellen und Daten zu aktivieren](../api/connect-activate-batch-destinations.md)
 
 ## Schritt 4: Abrufen der neuesten Zielgruppen-Exportvorgangs-ID (in Version 2 nicht erforderlich) {#segment-export-id}
@@ -124,7 +124,7 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge alle 24 Stunde
 
 >[!IMPORTANT]
 >
->Beachten Sie die folgende einmalige Einschränkung: Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass seit dem Zeitpunkt, zu dem die Zielgruppe zum ersten Mal gemäß dem Zeitplan aktiviert wurde, mindestens eine Stunde vergangen ist ([ 3. Schritt - Aktivierungsfluss erstellen in der Platform-Benutzeroberfläche](#activation-flow).
+>Beachten Sie die folgende einmalige Einschränkung: Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass seit dem Zeitpunkt, zu dem die Zielgruppe zum ersten Mal gemäß dem Zeitplan aktiviert wurde, mindestens eine Stunde vergangen ist ([ 3. Schritt - Aktivierungsfluss erstellen in der Experience Platform-Benutzeroberfläche](#activation-flow).
 
 Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppenexportauftrag für Ihre Zielgruppen abgeschlossen ist. Informationen [ Überwachen des Status ](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise den Status **[!UICONTROL Verarbeitung läuft]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
 
@@ -164,8 +164,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. Sie können die Ad-hoc-API zum Exportieren von Platform-generierten Zielgruppen sowie von externen (benutzerdefinierten) Zielgruppen verwenden. Verwenden Sie beim Aktivieren externer Zielgruppen die systemgenerierte ID anstelle der Zielgruppen-ID. Die systemgenerierte ID finden Sie in der Ansicht „Zielgruppenzusammenfassung“ in der Benutzeroberfläche „Zielgruppen“. <br> ![Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll."){width="100" zoomable="yes"} <br> ![Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll."){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. Mit der Ad-hoc-API können Sie Experience Platform-generierte Zielgruppen sowie externe (benutzerdefinierte Upload-)Zielgruppen exportieren. Verwenden Sie beim Aktivieren externer Zielgruppen die systemgenerierte ID anstelle der Zielgruppen-ID. Die systemgenerierte ID finden Sie in der Ansicht „Zielgruppenzusammenfassung“ in der Benutzeroberfläche „Zielgruppen“. <br> ![Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll."){width="100" zoomable="yes"} <br> ![Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -205,7 +205,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. |
 | <ul><li>`exportId1`</li></ul> | Die ID, die in der Antwort des [Zielgruppenexport“-](../../segmentation/api/export-jobs.md#retrieve-list) zurückgegeben wird. Unter [Schritt 4: Abrufen der neuesten Zielgruppen-Exportvorgangs-](#segment-export-id)) finden Sie Anweisungen, wie Sie diese ID finden. |
 
@@ -237,7 +237,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ### API-Fehler-Codes und Meldungen, die spezifisch für die Ad-hoc-Aktivierungs-API sind {#specific-error-messages}
 

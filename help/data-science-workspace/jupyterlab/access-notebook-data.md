@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datenzugriff in JupyterLab-Notebooks
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3343'
+source-wordcount: '3346'
 ht-degree: 23%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 23%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Daten aus einem Datensatz in einem Notebook lesen können. Derzeit unterstützt JupyterLab in Adobe Experience Platform Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Die Unterstützung für die Paginierung von Daten ist jedoch auf [!DNL Python]- und R-Notebooks beschränkt. In diesem Handbuch wird beschrieben, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
+Jeder unterstützte Kernel bietet integrierte Funktionen, mit denen Sie Experience Platform-Daten aus einem Datensatz innerhalb eines Notebooks lesen können. Derzeit unterstützt JupyterLab in Adobe Experience Platform Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Die Unterstützung für die Paginierung von Daten ist jedoch auf [!DNL Python]- und R-Notebooks beschränkt. In diesem Handbuch wird beschrieben, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
 
 ## Erste Schritte
 
@@ -49,14 +49,14 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Sie sollten in der Lage sein, maximal 2 Millionen Zeilen (ca. 6,1 GB Daten auf der Festplatte) von XDM-Daten in weniger als 22 Minuten zu lesen. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Größe auf der Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
 | SDK (in Sekunden) | 20,3 | 86,8 | 63 | 659 | 1315 |
 
 **Ad-hoc-Schema:** Sie sollten in der Lage sein, maximal 5 Millionen Zeilen (ca. 5,6 GB Daten auf der Festplatte) von Nicht-XDM (Ad-hoc)-Daten in weniger als 14 Minuten zu lesen. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M | 5m |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M | 5m |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Größe auf der Festplatte (in MB) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
 | SDK (in Sekunden) | 7,27 | 9,04 | 27,3 | 180 | 346 | 487 | 819 |
@@ -65,14 +65,14 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Sie sollten maximal 1 Million XDM-Datenzeilen (3 GB-Daten auf der Festplatte) in weniger als 13 Minuten lesen können.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Größe auf der Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 |
 | R-Kernel (in Sekunden) | 14,03 | 69,6 | 86,8 | 775 |
 
 **Ad-hoc-Schema:** Sie sollten in der Lage sein, maximal 3 Millionen Zeilen mit Ad-hoc-Daten (293 MB Daten auf der Festplatte) in etwa 10 Minuten zu lesen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Größe auf der Festplatte (in MB) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
 | R SDK (in s) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
@@ -81,7 +81,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in der Lage sein, maximal 5 Millionen Zeilen (ca. 13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 20 Minuten zu lesen. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (ca. 1,31 TB Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe auf der Festplatte | 2,93MB | 4,38MB | 29,02 | 2,69GB | 5,39GB | 8,09GB | 13,42GB | 26,82GB | 134,24GB | 268,39GB | 1,31 TB |
 | SDK (interaktiver Modus) | 33er | 32,4 s | 55,1 s | 253,5 s | 489,2 s | 729,6 s | 1 206,8 s | – | – | – | – |
@@ -89,7 +89,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie in der Lage sein, maximal 5 Millionen Zeilen (ca. 5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten zu lesen. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 18 Minuten zu lesen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. | 1b |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. | 1b |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Größe auf Festplatte | 1,12MB | 11,24MB | 109,48MB | 2,69GB | 2,14GB | 3,21GB | 5,36GB | 10,71GB | 53,58GB | 107,52GB | 535,88GB | 1,05 TB |
 | Interaktiver SDK-Modus (in Sekunden) | 28,2 s | 18,6s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | – | – | – | – | – |
@@ -99,7 +99,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in der Lage sein, maximal 5 Millionen Zeilen (ca. 13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 18 Minuten zu lesen. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (ca. 1,31 TB Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe auf Festplatte | 2,93MB | 4,38MB | 29,02 | 2,69GB | 5,39GB | 8,09GB | 13,42GB | 26,82GB | 134,24GB | 268,39GB | 1,31 TB |
 | Interaktiver SDK-Modus (in Sekunden) | 37,9 s | 22,7 s | 45,6 s | 231,7 s | 444,7 s | 660,6 s | 1100er | – | – | – | – |
@@ -107,7 +107,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie in der Lage sein, maximal 5 Millionen Zeilen (ca. 5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten zu lesen. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 16 Minuten zu lesen.
 
-| Anzahl Zeilen | 1K | 10 K | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. | 1b |
+| Anzahl Zeilen | 1.000 | 10.000 | 100.000 | 1 Mio. | 2 M | 3 M | 5m | 10 M | 50 M | 100 M | 500 Mio. | 1b |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Größe auf Festplatte | 1,12MB | 11,24MB | 109,48MB | 2,69GB | 2,14GB | 3,21GB | 5,36GB | 10,71GB | 53,58GB | 107,52GB | 535,88GB | 1,05 TB |
 | Interaktiver SDK-Modus (in Sekunden) | 35,7 s | 31s | 19,5 s | 25,3 s | 23er | 33,2 s | 25,5 s | – | – | – | – | – |
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Abfragen von Daten mit [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] on [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook für den Datenzugriff über den [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=de). Der Zugriff auf Daten über den [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Bearbeitung großer Datensätze nützlich sein. Beachten Sie, dass Datenabfragen mit dem [!DNL Query Service] ein Limit bei der Verarbeitungszeit von 10 Minuten aufweisen.
+[!DNL JupyterLab] on [!DNL Experience Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook für den Datenzugriff über den [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=de). Der Zugriff auf Daten über den [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Bearbeitung großer Datensätze nützlich sein. Beachten Sie, dass Datenabfragen mit dem [!DNL Query Service] ein Limit bei der Verarbeitungszeit von 10 Minuten aufweisen.
 
 Bevor Sie den [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie Grundlagenkenntnisse zur [[!DNL Query Service] -SQL-Syntax](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=de) besitzen.
 
@@ -488,7 +488,7 @@ val spark = SparkSession
 
 ### Datensatz lesen {#read-scala-dataset}
 
-In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen und zurückzugeben, sodass Sie keine Variablen wie `var userToken` definieren müssen. Im folgenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte zum Lesen eines Datensatzes abzurufen und zurückzugeben.
+In Scala können Sie `clientContext` importieren, um Experience Platform-Werte abzurufen und zurückzugeben, sodass Sie keine Variablen wie `var userToken` definieren müssen. Im folgenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte zum Lesen eines Datensatzes abzurufen und zurückzugeben.
 
 >[!IMPORTANT]
 >
@@ -543,7 +543,7 @@ Und
 
 ### Schreiben in einen Datensatz {#scala-write-dataset}
 
-In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen und zurückzugeben, sodass Sie keine Variablen wie `var userToken` definieren müssen. Im folgenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte zum Schreiben in einen Datensatz zu definieren und zurückzugeben.
+In Scala können Sie `clientContext` importieren, um Experience Platform-Werte abzurufen und zurückzugeben, sodass Sie keine Variablen wie `var userToken` definieren müssen. Im folgenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte zum Schreiben in einen Datensatz zu definieren und zurückzugeben.
 
 >[!IMPORTANT]
 >

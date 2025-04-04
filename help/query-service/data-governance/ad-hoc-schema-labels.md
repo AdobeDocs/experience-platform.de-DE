@@ -2,9 +2,9 @@
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemata
 description: Eine Anleitung zum Beschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über den Abfrage-Service von Adobe Experience Platform generiert wurden.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 7%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 7%
 
 Alle Daten, die in Adobe Experience Platform importiert werden, sind in Experience-Datenmodell (XDM)-Schemata gekapselt und können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Vorschriften definiert werden.
 
-Durch das Ausführen einer CTAS-Abfrage über den Abfrage-Service, wenn kein Schema angegeben ist, wird automatisch ein Ad-hoc-Schema generiert. Häufig ist es erforderlich, die Verwendung bestimmter Felder oder Datensätze von Ad-hoc-Schemata einzuschränken, um den Zugriff auf sensible personenbezogene Daten und persönlich identifizierbare Informationen zu steuern. Adobe Experience Platform erleichtert diese Zugriffssteuerung, indem Sie Schemafelder über die Platform-Benutzeroberfläche mithilfe der attributbasierten Zugriffssteuerungsfunktion beschriften können.
+Durch das Ausführen einer CTAS-Abfrage über den Abfrage-Service, wenn kein Schema angegeben ist, wird automatisch ein Ad-hoc-Schema generiert. Häufig ist es erforderlich, die Verwendung bestimmter Felder oder Datensätze von Ad-hoc-Schemata einzuschränken, um den Zugriff auf sensible personenbezogene Daten und persönlich identifizierbare Informationen zu steuern. Adobe Experience Platform erleichtert diese Zugriffssteuerung, indem Sie Schemafelder über die Experience Platform-Benutzeroberfläche mithilfe der attributbasierten Zugriffssteuerungsfunktion beschriften können.
 
-Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Es empfiehlt sich jedoch, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
+Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Es empfiehlt sich jedoch, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Experience Platform mit einer Beschriftung zu versehen.
 
 Die schemabasierte Beschriftung ist eine wichtige Komponente der attributbasierten Zugriffssteuerung, um den Zugriff für Benutzende oder Benutzergruppen besser zu verwalten. Mit Adobe Experience Platform können Sie den Zugriff auf Felder eines Ad-hoc-Schemas einschränken, indem Sie Kennzeichnungen erstellen und anwenden.
 
@@ -26,7 +26,7 @@ Dieses Dokument enthält ein Tutorial zum Verwalten des Zugriffs auf vertraulich
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Experience-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Experience Platform-Benutzeroberfläche erstellen und verwalten.
 * [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie, wie Sie mit [!DNL Data Governance] Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen können.
 * [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Beschriftung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
@@ -34,15 +34,15 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Nachdem Ihre Abfrage ausgeführt und Ergebnisse generiert wurden, wird automatisch ein Ad-hoc-Schema generiert und zum Schema-Inventar hinzugefügt.
 
-Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zur Registerkarte [!UICONTROL Schemata] Dashboard durchsuchen , indem Sie [!UICONTROL Schemata] in der linken Leiste der Platform-Benutzeroberfläche auswählen. Das Schema-Inventar wird angezeigt.
+Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zur Registerkarte [!UICONTROL Schemata] Dashboard durchsuchen , indem Sie [!UICONTROL Schemata] in der linken Leiste der Experience Platform-Benutzeroberfläche auswählen. Das Schema-Inventar wird angezeigt.
 
 >[!NOTE]
 >
 >Ad-hoc-Schemata werden standardmäßig nicht im Schema-Inventar angezeigt.
 
-## Erkunden von Ad-hoc-Schemas im Schemabestand der Platform-Benutzeroberfläche {#discover-ad-hoc-schemas}
+## Erkunden von Ad-hoc-Schemata im Schemabestand der Experience Platform-Benutzeroberfläche {#discover-ad-hoc-schemas}
 
-Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![.](/help/images/icons/filter.png)) links neben dem Suchfeld aus und wählen Sie dann in der ] Leiste, die angezeigt wird, die Option **[!UICONTROL Ad-hoc-Schemata anzeigen aus.
+Um die Anzeige von Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![.](/help/images/icons/filter.png)) links neben dem Suchfeld aus und wählen Sie dann in der ] Leiste, die angezeigt wird, die Option **[!UICONTROL Ad-hoc-Schemata anzeigen aus.
 
 ![Die Filteroptionen für das Schema-Dashboard in der linken Leiste mit aktiviertem Umschalter „Ad-hoc-Schema anzeigen“](../images/data-governance/adhoc-schema-toggle.png)
 

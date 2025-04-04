@@ -4,9 +4,9 @@ type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppendaten in Adobe Experience Platform aktivieren, indem Sie Zielgruppen an Ziele senden, die auf Streaming-Profilen basieren.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 23%
 
 ---
@@ -57,9 +57,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die beim Experience Platform durch den Segmentierungs-Service generiert werden. Weitere Informationen finden [ in der ](../../segmentation/ui/audience-portal.md) zum Audience Portal .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
-* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden [ in der ](../../segmentation/ui/audience-portal.md) zum Audience Portal .
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
+* Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Abbildung mit hervorgehobenen Kontrollkästchen im Schritt „Zielgruppen auswählen“ des Aktivierungs-Workflows.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
@@ -89,7 +89,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-[Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an die drei Unternehmensziele unterstützt - Amazon Kinesis, Azure Event Hubs und HTTP-API.
+[Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht für Exporte an die drei Unternehmensziele unterstützt - Amazon Kinesis, Azure Event Hubs und HTTP-API.
 
 Das bedeutet, dass Profile, die der Zielgruppenbestimmung nicht zugestimmt haben *in* Exporte an diese drei Ziele einbezogen werden.
 

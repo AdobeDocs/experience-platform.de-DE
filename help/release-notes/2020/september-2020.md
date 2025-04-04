@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '866'
 ht-degree: 38%
 
 ---
@@ -40,7 +40,7 @@ Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Gover
 
 ## Ziele {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
 
 **Neue Funktionen**
 
@@ -58,7 +58,7 @@ Mit [!DNL Observability Insights] können Sie Aktivitäten in Adobe Experience P
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Adobe I/O-Ereignisbenachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O-Ereignisse zum Erstellen von Ereignisbenachrichtigungen für mehrere Experience Platform-Services. Benachrichtigungs-Payloads werden an einen konfigurierten Webhook gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. |
+| Adobe I/O-Ereignisbenachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O Events zum Erstellen von Ereignisbenachrichtigungen für mehrere Experience Platform-Services. Benachrichtigungs-Payloads werden an einen konfigurierten Webhook gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. |
 
 Weitere Informationen [[!DNL Observability Insights]  Service finden ](../../observability/home.md) in der Übersicht .
 
@@ -72,7 +72,7 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 | ------- | ----------- |
 | Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können jetzt im Rahmen der [!DNL Lei Geral de Proteção de Dados] (LGPD)-Verordnung erstellt werden. Diese Aufträge werden unter dem Regulierungs-Code `lgpd_bra` verfolgt. |
 
-Weitere Informationen zu dem Service finden Sie ](../../privacy-service/home.md) der Übersicht zum [Privacy Service .
+Weitere Informationen zu dem Service finden Sie in ](../../privacy-service/home.md) [Übersicht über Privacy Service .
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -80,13 +80,13 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Profilansicht | Der Profil-Viewer in der Platform-Benutzeroberfläche wurde zu einem Dashboard mit vollständiger Anpassung aktualisiert. Der Benutzer hat jetzt die Möglichkeit, die folgenden Aufgaben auszuführen: <ul><li>Aktualisieren Sie die ausgewählten Standard- und benutzerdefinierten Attribute im Widget „Grundlegende Informationen“.</li><li>Erstellen, Bearbeiten und Entfernen benutzerdefinierter Widgets</li><li>Größe von Widgets ändern und neu anordnen</li></ul> |
+| Profilansicht | Der Profil-Viewer in der Experience Platform-Benutzeroberfläche wurde zu einem Dashboard mit vollständiger Anpassung aktualisiert. Der Benutzer hat jetzt die Möglichkeit, die folgenden Aufgaben auszuführen: <ul><li>Aktualisieren Sie die ausgewählten Standard- und benutzerdefinierten Attribute im Widget „Grundlegende Informationen“.</li><li>Erstellen, Bearbeiten und Entfernen benutzerdefinierter Widgets</li><li>Größe von Widgets ändern und neu anordnen</li></ul> |
 
 Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
+Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Experience Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
@@ -101,7 +101,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmenti
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -109,7 +109,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Automatische Zuordnung | [!DNL Platform] bietet intelligente Empfehlungen für die automatische Zuordnung während des Workflows der Datenaufnahme, basierend auf einem vom Benutzer ausgewählten Zielschema oder Datensatz. Sie können flexible automatische Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. |
+| Automatische Zuordnung | [!DNL Experience Platform] bietet intelligente Empfehlungen für die automatische Zuordnung während des Workflows der Datenaufnahme, basierend auf einem vom Benutzer ausgewählten Zielschema oder Datensatz. Sie können flexible automatische Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. |
 | UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu erleichtern. Weitere Informationen finden [ im Dokument ](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

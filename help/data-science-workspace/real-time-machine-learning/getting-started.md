@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte beim maschinellem Lernen in Echtzeit
 description: Im folgenden Dokument werden die Schritte beschrieben, die zum Erstellen eines Modells für maschinelles Lernen in Echtzeit in Adobe Experience Platform erforderlich sind.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 89%
+source-wordcount: '462'
+ht-degree: 83%
 
 ---
 
@@ -31,12 +31,12 @@ Die Handbücher für maschinelles Lernen in Echtzeit erfordern ein grundlegendes
 
 - **DSL:** Domain-spezifische Sprache (Domain Specific Language).
 - **Edge:** Der Service zur Bewertung für maschinelles Lernen in Echtzeit kann auf Edge-Clustern ausgeführt werden, die näher zu Ihren Aktivierungen und Anwendungen sind.
-- **Hub:** Auf der aktuellen Alpha-Version wird der Service zur Bewertung für maschinelles Lernen in Echtzeit auf dem Adobe Experience Platform Hub ausgeführt. Das Edge Network befindet sich in der Entwicklung.
+- **Hub:** Auf der aktuellen Alpha-Version wird der Service zur Bewertung für maschinelles Lernen in Echtzeit auf dem Adobe Experience Platform Hub ausgeführt. Edge Network befindet sich in der Entwicklung.
 - **Knoten:** Ein Knoten ist die Grundeinheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Verknüpfungen mit anderen Knoten verkettet werden, um ein Diagramm zu bilden, das für eine ML-Pipeline steht. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang an Eingabedaten dar, beispielsweise eine Umwandlung von Daten oder Schemata oder eine Schlussfolgerung durch maschinelles Lernen. Der Knoten gibt den transformierten oder abgeleiteten Wert an den oder die nächsten Knoten aus.
 
 ## Datensätze in Adobe Experience Platform
 
-Um maschinelles Lernen in Echtzeit verwenden zu können, müssen Sie Zugriff auf einen Datensatz haben. Sie haben die Möglichkeit, einen externen Datensatz zu verwenden und ihn in Ihre [!DNL JupyterLab]-Umgebung hochzuladen oder in Platform einen neuen Datensatz zu erstellen, falls Sie dies noch nicht getan haben.
+Um maschinelles Lernen in Echtzeit verwenden zu können, müssen Sie Zugriff auf einen Datensatz haben. Sie haben die Möglichkeit, einen externen Datensatz zu verwenden und ihn in Ihre [!DNL JupyterLab]-Umgebung hochzuladen oder in Experience Platform einen neuen Datensatz zu erstellen, falls Sie dies noch nicht getan haben.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Weitere Informationen zur Verwendung eines externen Datensatzes, z. B. zum Hochl
 
 ### Erstellen eines neuen Datensatzes
 
-Um einen neuen Datensatz zum maschinellen Lernen in Echtzeit zu erstellen, benötigen Sie ein Datenschema für Ihren Datensatz. Als Nächstes müssen Sie Daten mithilfe des von Ihnen erstellten Schemas aufnehmen. Verwenden Sie die folgenden Tutorials, um einen Datensatz für [!DNL Platform] zu erstellen und aufzufüllen:
+Um einen neuen Datensatz zum maschinellen Lernen in Echtzeit zu erstellen, benötigen Sie ein Datenschema für Ihren Datensatz. Als Nächstes müssen Sie Daten mithilfe des von Ihnen erstellten Schemas aufnehmen. Verwenden Sie die folgenden Tutorials, um einen Datensatz für [!DNL Experience Platform] zu erstellen und aufzufüllen:
 
 - [Erstellen und Auffüllen eines Datensatzes in der API](../../catalog/datasets/create.md)
 - [Erstellen und Auffüllen eines Datensatzes in der Benutzeroberfläche](../../ingestion/tutorials/ingest-batch-data.md)

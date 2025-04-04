@@ -1,9 +1,9 @@
 ---
 title: Audience Analysis-Ziel
-description: Zeigen Sie Zielgruppen, für die sich Kundinnen und Kunden im Customer Journey Analytics qualifizieren, an.
+description: Zeigen Sie Zielgruppen an, für die sich Kundinnen und Kunden in Customer Journey Analytics qualifizieren.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 38%
@@ -12,31 +12,31 @@ ht-degree: 38%
 
 # Audience Analysis-Ziel
 
-Mit [!UICONTROL  Ziel „Zielgruppenanalyse] können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de) anreichern. Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)-Berichten verfügbar.
+Mit [!UICONTROL  Ziel „Zielgruppenanalyse] können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de). Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)-Berichten verfügbar.
 
 >[!AVAILABILITY]
 >
->Dieses Ziel befindet sich in einer eingeschränkten Testphase. Wenn Sie an der Verwendung dieses Ziels interessiert sind, wenden Sie sich an Ihr Adobe-Account-Team.
+>Dieses Ziel befindet sich in einer eingeschränkten Testphase. Wenn Sie an der Verwendung dieses Ziels interessiert sind, wenden Sie sich an Ihr Adobe Account Team.
 
 ## Voraussetzungen
 
 Vor der Verwendung dieses Ziels ist Folgendes erforderlich:
 
-* Sie müssen für die Verwendung des Zielgruppenanalyseziels bereitgestellt werden. Wenn Sie noch nicht für die Verwendung dieses Ziels bereitgestellt wurden, wenden Sie sich an Ihr Adobe-Konto-Team.
-* Sie müssen für die Verwendung von Customer Journey Analytics vorgesehen sein.
+* Sie müssen für die Verwendung des Zielgruppenanalyseziels bereitgestellt werden. Wenn Sie noch nicht für die Verwendung dieses Ziels bereitgestellt wurden, wenden Sie sich an Ihr Adobe-Accountteam.
+* Sie müssen für die Verwendung von Customer Journey Analytics bereitgestellt werden.
 * Mindestens eine Zielgruppe muss in Adobe Experience Platform erstellt worden sein.
 
 ## Unterstützte Identitäten
 
-Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md). Normalerweise wird eine Experience Cloud-ID (ECID) verwendet.
+Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md). Normalerweise wird eine Experience Cloud ID (ECID) verwendet.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style="table-layout:auto"}
@@ -47,7 +47,7 @@ Bei der Verwendung dieses Ziels werden die folgenden Typen von Zielgruppen unter
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}

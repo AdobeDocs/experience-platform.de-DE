@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung im Datenwissenschafts-Arbeitsbereich
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Datenwissenschafts-Arbeitsbereich von Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 98%
@@ -19,7 +19,7 @@ ht-degree: 98%
 >
 >Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Data Science Workspace]. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei [!DNL Platform]-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Data Science Workspace]. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei [!DNL Experience Platform]-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
 
 ## Abfragestatus von JupyterLab Notebook bleibt im Ausführungsstatus stecken
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Erste Schritte;Attributions-KI;beliebte Themen;Attributions-KI-Eingabe;Attributions-KI-Ausgabe;
 feature: Attribution AI
-title: Eingabe und Ausgabe in Attribution AI
-description: Im folgenden Dokument werden die verschiedenen Eingaben und Ausgaben beschrieben, die in Attribution AI verwendet werden.
+title: Eingabe und Ausgabe in Attributions-KI
+description: Im folgenden Dokument werden die verschiedenen Eingaben und Ausgaben beschrieben, die in Attributions-KI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2467'
-ht-degree: 5%
+source-wordcount: '2474'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Attribution AI analysiert die folgenden Datensätze, um algorithmische Scores zu
 - Datensätze von Erlebnisereignissen (EE) im Allgemeinen aus dem Adobe Experience Platform-Schema
 - Datensätze für Customer Experience Events (CEE)
 
-Sie können jetzt mehrere Datensätze aus verschiedenen Quellen hinzufügen, die auf der **Identitätszuordnung** (Feld) basieren, wenn jeder Datensatz denselben Identitätstyp (Namespace), z. B. eine ECID, aufweist. Nachdem Sie eine Identität und einen Namespace-ID ausgewählt haben, werden Metriken zur Vollständigkeit der Spalte angezeigt, die das Volumen der zuzuordnenden Daten angeben. Weitere Informationen zum Hinzufügen mehrerer Datensätze finden Sie im [Attribution AI-Benutzerhandbuch](./user-guide.md#identity).
+Sie können jetzt mehrere Datensätze aus verschiedenen Quellen hinzufügen, die auf der **Identitätszuordnung** (Feld) basieren, wenn jeder Datensatz denselben Identitätstyp (Namespace), z. B. eine ECID, aufweist. Nachdem Sie eine Identität und einen Namespace-ID ausgewählt haben, werden Metriken zur Vollständigkeit der Spalte angezeigt, die das Volumen der zuzuordnenden Daten angeben. Weitere Informationen zum Hinzufügen mehrerer Datensätze finden Sie im [Benutzerhandbuch für Attributions-KI](./user-guide.md#identity).
 
 Die Kanalinformationen werden nicht immer standardmäßig zugeordnet. In einigen Fällen können Sie, wenn das Feld mediaChannel (leer) leer ist, erst dann „fortfahren“, wenn Sie ein Feld dem mediaChannel zuordnen, da es sich um eine erforderliche Spalte handelt. Wenn der Kanal im Datensatz erkannt wird, wird er standardmäßig mediaChannel zugeordnet. Die anderen Spalten wie **Medientyp** und **Medienaktion** sind weiterhin optional.
 
@@ -31,11 +31,11 @@ Nachdem Sie das Kanalfeld zugeordnet haben, fahren Sie mit dem Schritt „Ereign
 
 >[!IMPORTANT]
 >
->Die Aufstockung von Daten durch den Adobe Analytics-Quell-Connector kann bis zu vier Wochen dauern. Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Attribution AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie den Abschnitt [Verlaufsdaten](#data-requirements), um sich zu vergewissern, dass Sie über genügend Daten verfügen, um genaue algorithmische Scores zu berechnen.
+>Die Aufstockung von Daten durch den Adobe Analytics-Quell-Connector kann bis zu vier Wochen dauern. Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Attributions-KI erforderliche Mindestlänge von Daten aufweist. Lesen Sie den Abschnitt [Verlaufsdaten](#data-requirements), um sich zu vergewissern, dass Sie über genügend Daten verfügen, um genaue algorithmische Scores zu berechnen.
 
 Weitere Informationen zum Einrichten des [!DNL Consumer Experience Event]-Schemas (CEE) finden Sie im Handbuch [Intelligent Services-](../data-preparation.md)). Weitere Informationen zum Zuordnen von Adobe Analytics-Daten finden Sie in der [Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/analytics.md).
 
-Nicht alle Spalten im [!DNL Consumer Experience Event] (CEE)-Schema sind für Attribution AI obligatorisch.
+Nicht alle Spalten im [!DNL Consumer Experience Event] (CEE)-Schema sind für Attributions-KI obligatorisch.
 
 Sie können die Touchpoints mithilfe der unten empfohlenen Felder im Schema oder im ausgewählten Datensatz konfigurieren.
 
@@ -51,7 +51,7 @@ Sie können die Touchpoints mithilfe der unten empfohlenen Felder im Schema oder
 | Marketing.campaigngroup | Kontaktpunkt |
 | Commerce | Konversion |
 
-Normalerweise wird die Attribution in Konversionsspalten wie Bestellung, Käufe und Checkouts unter „Commerce“ ausgeführt. Die Spalten für „Kanal“ und „Marketing“ werden verwendet, um Touchpoints für Attribution AI zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Einblicke wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzubeziehen. Darüber hinaus sind Sie nicht auf die obigen Spalten beschränkt. Sie können jede andere empfohlene oder benutzerdefinierte Spalte als Konversions- oder Touchpoint-Definition einbeziehen.
+Normalerweise wird die Attribution in Konversionsspalten wie Bestellung, Käufe und Checkouts unter „Commerce“ ausgeführt. Die Spalten für „Kanal“ und „Marketing“ werden verwendet, um Touchpoints für Attributions-KI zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Einblicke wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzubeziehen. Darüber hinaus sind Sie nicht auf die obigen Spalten beschränkt. Sie können jede andere empfohlene oder benutzerdefinierte Spalte als Konversions- oder Touchpoint-Definition einbeziehen.
 
 Erlebnisereignis (EE)-Datensätze müssen nicht explizit Kanal- und Marketing-Mixins enthalten, solange die für die Konfiguration eines Touchpoints relevanten Kanal- oder Kampagneninformationen in einem der Mixin- oder Pass-Through-Felder vorhanden sind.
 
@@ -63,11 +63,11 @@ Erlebnisereignis (EE)-Datensätze müssen nicht explizit Kanal- und Marketing-Mi
 
 >[!IMPORTANT]
 >
-> Die Mindestmenge an Daten, die für das Funktionieren des Attribution AIS erforderlich ist, beträgt:
+> Die Mindestmenge an Daten, die erforderlich ist, damit Attribution AI funktioniert, beträgt:
 > - Sie müssen mindestens 3 Monate (90 Tage) an Daten bereitstellen, um ein gutes Modell auszuführen.
 > - Sie benötigen mindestens 1000 Konversionen.
 
-Attribution AI benötigt historische Daten als Eingabe für das Modell-Training. Die benötigte Datendauer wird hauptsächlich durch zwei Schlüsselfaktoren bestimmt: Trainings-Fenster und Lookback-Fenster. Eingaben mit kürzeren Trainings-Fenstern reagieren stärker auf aktuelle Trends, während längere Trainings-Fenster dazu beitragen, stabilere und genauere Modelle zu erstellen. Es ist wichtig, das Ziel mit historischen Daten zu modellieren, die Ihre Geschäftsziele am besten widerspiegeln.
+Attributions-KI erfordert historische Daten als Eingabe für das Modell-Training. Die benötigte Datendauer wird hauptsächlich durch zwei Schlüsselfaktoren bestimmt: Trainings-Fenster und Lookback-Fenster. Eingaben mit kürzeren Trainings-Fenstern reagieren stärker auf aktuelle Trends, während längere Trainings-Fenster dazu beitragen, stabilere und genauere Modelle zu erstellen. Es ist wichtig, das Ziel mit historischen Daten zu modellieren, die Ihre Geschäftsziele am besten widerspiegeln.
 
 Die [Konfiguration des Trainingsfensters](./user-guide.md#training-window) filtert Konversionsereignisse, die für das Modell-Training einbezogen werden sollen, basierend auf der Intervallzeit. Derzeit ist das Mindestfenster für Schulungen 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) stellt einen Zeitrahmen bereit, der angibt, wie viele Tage vor dem Konversionsereignis-Touchpoints, die mit diesem Konversionsereignis verbunden sind, eingeschlossen werden sollen. Diese beiden Konzepte zusammen bestimmen die Menge der Eingabedaten (gemessen durch Tage), die für eine Anwendung erforderlich ist.
 
@@ -98,7 +98,7 @@ Attribution AI gibt Folgendes aus:
 
 ### Granulare Rohwerte {#raw-granular-scores}
 
-Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Punktspalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [ Dokument „Scores in Attribution AI herunterladen](./download-scores.md).
+Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Score-Spalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [ Dokument „Herunterladen von Scores in Attributions-KI](./download-scores.md) .
 
 >[!NOTE]
 >
@@ -144,7 +144,7 @@ In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe „Rohbewe
 
 ### Anzeigen von Rohwertpfaden (Benutzeroberfläche) {#raw-score-path}
 
-Sie können den Pfad zu Ihren Rohwertungen in der Benutzeroberfläche anzeigen. Wählen Sie zunächst **[!UICONTROL Schemas]** in der Platform-Benutzeroberfläche aus und suchen Sie dann auf der Registerkarte **[!UICONTROL Durchsuchen]** nach Ihrem Schema für Attributions-KI-Bewertungen.
+Sie können den Pfad zu Ihren Rohwertungen in der Benutzeroberfläche anzeigen. Wählen Sie zunächst **[!UICONTROL Schemata]** in der Experience Platform-Benutzeroberfläche aus und suchen Sie dann auf der Registerkarte **[!UICONTROL Durchsuchen]** nach Ihrem Attributions-KI-Bewertungsschema.
 
 ![Wählen Sie Ihr Schema](./images/input-output/schemas_browse.png)
 
@@ -154,13 +154,13 @@ Wählen Sie anschließend ein Feld im Fenster **[!UICONTROL Struktur]** der Benu
 
 ### Aggregierte Attributionsbewertungen {#aggregated-attribution-scores}
 
-Aggregierte Scores können über die Platform-Benutzeroberfläche im CSV-Format heruntergeladen werden, wenn der Datumsbereich weniger als 30 Tage beträgt.
+Aggregierte Scores können über die Experience Platform-Benutzeroberfläche im CSV-Format heruntergeladen werden, wenn der Datumsbereich weniger als 30 Tage beträgt.
 
-Attribution AI unterstützt zwei Kategorien von Attributionsbewertungen: algorithmische und regelbasierte.
+Attribution AI unterstützt zwei Kategorien von Attributionsbewertungen, algorithmische und regelbasierte Bewertungen.
 
 Attribution AI erzeugt zwei verschiedene Arten von algorithmischen Scores, inkrementelle und beeinflusste. Ein beeinflusster Wert ist der Anteil der Konversion, für den jeder Marketing-Touchpoint verantwortlich ist. Ein inkrementeller Score ist der Betrag der marginalen Auswirkungen, die direkt durch den Marketing-Touchpoint verursacht werden. Der Hauptunterschied zwischen dem inkrementellen Score und dem beeinflussten Score besteht darin, dass der inkrementelle Score den Basiseffekt berücksichtigt. Es wird nicht davon ausgegangen, dass eine Konversion allein durch die vorangehenden Marketing-Touchpoints verursacht wird.
 
-Im Folgenden finden Sie einen kurzen Blick auf ein Beispiel einer Attribution AI-Schemaausgabe in der Adobe Experience Platform-Benutzeroberfläche:
+Im Folgenden finden Sie einen kurzen Blick auf ein Beispiel einer Attributions-KI-Schemaausgabe in der Adobe Experience Platform-Benutzeroberfläche:
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -178,7 +178,7 @@ Weitere Informationen zu den einzelnen Attributionsbewertungen finden Sie in der
 
 **Referenz zur Rohbewertung (Attributionsbewertungen)**
 
-Die nachstehende Tabelle ordnet die Attributionsbewertungen den Rohbewertungen zu. Wenn Sie Ihre Rohdaten herunterladen möchten, lesen Sie die Dokumentation [Scores in Attribution AI herunterladen](./download-scores.md).
+Die nachstehende Tabelle ordnet die Attributionsbewertungen den Rohbewertungen zu. Wenn Sie Ihre Rohdaten herunterladen möchten, lesen Sie die Dokumentation [Herunterladen von Scores in Attribution AI](./download-scores.md).
 
 | Attributionsbewertungen | Referenzspalte der Rohbewertung |
 | --- | --- |
@@ -192,7 +192,7 @@ Die nachstehende Tabelle ordnet die Attributionsbewertungen den Rohbewertungen z
 
 ### Aggregierte Scores {#aggregated-scores}
 
-Aggregierte Scores können über die Platform-Benutzeroberfläche im CSV-Format heruntergeladen werden, wenn der Datumsbereich weniger als 30 Tage beträgt. Weitere Informationen zu den einzelnen Aggregatspalten finden Sie in der nachstehenden Tabelle.
+Aggregierte Scores können über die Experience Platform-Benutzeroberfläche im CSV-Format heruntergeladen werden, wenn der Datumsbereich weniger als 30 Tage beträgt. Weitere Informationen zu den einzelnen Aggregatspalten finden Sie in der nachstehenden Tabelle.
 
 | Spaltenname | Beschränkung | nullable | Beschreibung |
 | --- | --- | --- | --- |
@@ -213,7 +213,7 @@ Aggregierte Scores können über die Platform-Benutzeroberfläche im CSV-Format 
 
 **Referenz zur Rohbewertung (aggregiert)**
 
-Die folgende Tabelle ordnet die aggregierten Scores den Rohbewertungen zu. Wenn Sie Ihre Rohdaten herunterladen möchten, lesen Sie die Dokumentation [Scores in Attribution AI herunterladen](./download-scores.md). Um die Pfade der Rohwertbewertung in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt [Anzeigen von Rohwertwertpfaden](#raw-score-path) in diesem Dokument.
+Die folgende Tabelle ordnet die aggregierten Scores den Rohbewertungen zu. Wenn Sie Ihre Rohdaten herunterladen möchten, lesen Sie die Dokumentation [Herunterladen von Scores in Attribution AI](./download-scores.md). Um die Pfade der Rohwertbewertung in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt [Anzeigen von Rohwertwertpfaden](#raw-score-path) in diesem Dokument.
 
 | Spaltenname | Referenzspalte der Rohbewertung |
 | --- | --- |
@@ -234,10 +234,10 @@ Die folgende Tabelle ordnet die aggregierten Scores den Rohbewertungen zu. Wenn 
 
 >[!IMPORTANT]
 >
-> - Das Attribution AI verwendet nur aktualisierte Daten für die Fortbildung und Bewertung. Ebenso verzichtet Kunden-KI auf die Verwendung der gelöschten Daten, wenn Sie eine Löschung von Daten anfordern.
-> - Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Privatkundinnen und -kunden Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.
-> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [ in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI verwendet nur aktualisierte Daten für die Weiterbildung und Bewertung. Ebenso verzichtet Kunden-KI auf die Verwendung der gelöschten Daten, wenn Sie eine Löschung von Daten anfordern.
+> - Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.
+> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [ in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Ihre Daten vorbereitet und alle Ihre Anmeldedaten und Schemata eingerichtet haben, folgen Sie zunächst dem [Attribution AI-Benutzerhandbuch](./user-guide.md). Dieses Handbuch führt Sie durch die Erstellung einer Instanz für Attribution AI.
+Nachdem Sie Ihre Daten vorbereitet und alle Ihre Anmeldedaten und Schemata eingerichtet haben, folgen Sie zunächst dem [Benutzerhandbuch zur Attributions-KI](./user-guide.md). Dieses Handbuch führt Sie durch die Erstellung einer Instanz für Attributions-KI.

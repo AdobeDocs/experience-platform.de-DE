@@ -2,9 +2,9 @@
 title: Dashboard für Kontoprofile
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Dieses Dokument bietet einen Überblick über die Funktionen im Dashboard [!UICO
 
 ## Erste Schritte
 
-Sie müssen über eine Berechtigung für [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) verfügen, um auf das B2B-Dashboard [!UICONTROL Kontoprofile] zugreifen zu können.
+Sie müssen über eine Berechtigung für [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) verfügen, um auf das B2B-Dashboard [!UICONTROL Kontoprofile] zugreifen zu können.
 
 ## Kontoprofildaten {#data}
 
@@ -31,9 +31,9 @@ Die Profildaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum 
 
 ## Erkunden des Dashboards [!UICONTROL Kontoprofile] {#explore}
 
-Um zum Dashboard [!UICONTROL Kontoprofile] in der Platform-Benutzeroberfläche zu navigieren, wählen Sie **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigationsbereich aus.
+Um zum Dashboard [!UICONTROL Kontoprofile] in der Experience Platform-Benutzeroberfläche zu navigieren, wählen Sie **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigationsbereich aus.
 
-![Die Platform-Benutzeroberfläche mit Account-Profilen im linken Navigationsbereich ist hervorgehoben und die Registerkarte „Übersicht“ wird angezeigt.](../images/account-profiles/account-profiles-dashboard.png)
+![Die Benutzeroberfläche von Experience Platform mit Account-Profilen im linken Navigationsbereich wurde hervorgehoben und die Registerkarte „Übersicht“ wurde angezeigt.](../images/account-profiles/account-profiles-dashboard.png)
 
 Im Dashboard [!UICONTROL Kontoprofile] können Sie entweder [die in Ihre Organisation aufgenommenen Kontoprofile durchsuchen](#browse-account-profiles) oder [die gesamten Kontoprofildaten mithilfe von Widgets auf einen Blick anzeigen](#standard-widgets).
 
@@ -61,7 +61,7 @@ Wählen Sie [!UICONTROL Profil-ID] aus den Ergebnissen auf der Registerkarte [!U
 
 ![Die Registerkarte zum Durchsuchen von Account-Profilen mit den angezeigten Ergebnissen und der hervorgehobenen Profil-ID.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des jeweiligen Kontos zu erstellen. Weitere Informationen zu den Funktionen [ Kontoprofilanzeige in der Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)Benutzeroberfläche finden Sie in der Dokumentation unter „Durchsuchen von Kontoprofilen in Adobe Real-time Customer Data Platform&quot;.
+Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des jeweiligen Kontos zu erstellen. Weitere Informationen zu den Funktionen [ Kontoprofilanzeige in der Experience Platform-Benutzeroberfläche finden ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) in der Dokumentation unter „Durchsuchen von Kontoprofilen in Adobe Real-Time Customer Data Platform&quot;.
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -103,7 +103,7 @@ Das [!UICONTROL Account-Profile hinzugefügt] verwendet ein Liniendiagramm, um d
 
 >[!NOTE]
 >
->Die [!UICONTROL Kunden pro Konto - Übersicht] Einblicke und ihre Drill-Through-Diagramme ([!UICONTROL Kunden pro Kontodetails], [!UICONTROL Vertriebschancen pro Konto - Übersicht], [!UICONTROL Vertriebschancen pro Kontodetail]) sind von keinen globalen Datumsfiltern betroffen, die Sie möglicherweise festgelegt haben.
+>Die [!UICONTROL Kunden pro Konto - Übersicht] insight und seine Drill-Through-Diagramme ([!UICONTROL Kunden pro Kontodetails], [!UICONTROL Vertriebschancen pro Konto - Übersicht], [!UICONTROL Vertriebschancen pro Kontodetail]) sind von keinen globalen Datumsfiltern betroffen, die Sie möglicherweise festgelegt haben.
 
 Das Diagramm [!UICONTROL Kunden pro Konto - Übersicht] bietet eine Zusammenfassung der Konten basierend auf ihren Kundentypen. Es wird eine vierzeilige Tabelle angezeigt, die Konten als mit direkten oder indirekten Kunden oder als Konten ohne Kunden kategorisiert. Sie enthält die Gesamtzahl der Konten für jede Kategorie. Das Diagramm hilft bei der Identifizierung der Verteilung von Konten, die direkte und indirekte Kunden haben.
 
@@ -129,7 +129,7 @@ Um zwischen dem Drill-Through und dem Kontoprofil-Dashboard zu wechseln, wählen
 
 ![Die Drill-Through-Ansicht im Dashboard „Kontoprofile“ mit hervorgehobenem Dropdown-Menü „Navigation“.](../images/account-profiles/navigation-dropdown.png)
 
-Weitere Informationen zu Drill-Throughs in der Platform-Benutzeroberfläche finden Sie unter [Drill-Through-Handbuch](../sql-insights-query-pro-mode/drill-through.md).
+Weitere Informationen zu Drill-Throughs in der Experience Platform-Benutzeroberfläche finden Sie unter [Drill-Through-Handbuch](../sql-insights-query-pro-mode/drill-through.md).
 
 #### [!UICONTROL Kunden pro Kontodetails] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Das Widget [!UICONTROL Neue Opportunitys nach ]) zeigt die Gesamtzahl Ihrer Oppo
 
 >[!NOTE]
 >
->Der Fehler [!UICONTROL Keine Daten gefunden] oder [!UICONTROL Laden nicht möglich] wird verursacht, wenn die Brückentabelle „Opportunity-Person“ nicht in Ihrem Schema verwendet wird. Wenn Ihr Einblick einen dieser Fehler anzeigt, überprüfen Sie Ihr Vereinigungsschema und stellen Sie sicher, dass die Feldergruppe „Opportunity-Person“ Daten aufnimmt.
+>Der Fehler [!UICONTROL Keine Daten gefunden] oder [!UICONTROL Laden nicht möglich] wird verursacht, wenn die Brückentabelle „Opportunity-Person“ nicht in Ihrem Schema verwendet wird. Wenn Ihre insight einen dieser Fehler anzeigt, überprüfen Sie Ihr Vereinigungsschema und stellen Sie sicher, dass die Feldergruppe „Opportunity-Person“ Daten aufnimmt.
 
 ![Das Widget „Neue Chancen nach Rolle der Person“.](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,7 +233,7 @@ Das Dropdown-Menü innerhalb des Widgets ermöglicht die Auswahl des Kontobewert
 
 Wenn ein Widget angezeigt wird *[!UICONTROL kann nicht geladen werden. Erneut versuchen.]* liegt daran, dass keine Daten für die B2B-Entität verfügbar sind. Beispielsweise zeigt das unten angezeigte Widget [!UICONTROL Neue Opportunities nach Personengruppe] die Meldung &quot;[!UICONTROL  kann nicht geladen werden. Erneut versuchen.]&quot;, da diese Sandbox keine Opportunity-Daten hat.
 
-![Der Fehler „Insight kann nicht geladen werden“.](../images/account-profiles/unable-to-load.png)
+![Fehler &quot;insight kann nicht geladen werden“](../images/account-profiles/unable-to-load.png)
 
 Um das Problem zu beheben, müssen Sie B2B-Entitätsdaten, z. B *Opportunity-*, in die Sandbox aufnehmen. Nach 48 Stunden werden die Daten in den Widgets angezeigt.
 

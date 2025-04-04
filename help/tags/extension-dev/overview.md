@@ -2,10 +2,10 @@
 title: Überblick zum Entwickeln von Erweiterungen
 description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 95%
+source-wordcount: '938'
+ht-degree: 91%
 
 ---
 
@@ -37,13 +37,13 @@ Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsor
 
 ### Ansichten 
 
-Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb ](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
+Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb ](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Experience Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
 
 Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weitere Informationen finden Sie im Abschnitt [Erweiterungskonfigurationen](#configuration).
 
 Es gibt keine Einschränkungen hinsichtlich der Verwendung von Bibliotheken in Ihren Ansichten. Mit anderen Worten: Sie können jQuery, Underscore, React, Angular, Bootstrap oder andere verwenden. Es wird jedoch dennoch empfohlen, Ihre Erweiterung so zu gestalten, dass sie ein ähnliches Erscheinungsbild wie die Benutzeroberfläche hat.
 
-Es wird empfohlen, alle ansichtsbezogenen Dateien (HTML, CSS, JavaScript) in einem einzigen Unterverzeichnis abzulegen, das von den Bibliotheksmoduldateien getrennt ist. In `extension.json` können Sie beschreiben, wo sich dieser Unterordner für die Ansichten befindet. Platform bedient dann dieses Unterverzeichnis (und nur dieses Unterverzeichnis) von seinen Webservern aus.
+Es wird empfohlen, alle ansichtsbezogenen Dateien (HTML, CSS, JavaScript) in einem einzigen Unterverzeichnis abzulegen, das von den Bibliotheksmoduldateien getrennt ist. In `extension.json` können Sie beschreiben, wo sich dieser Unterordner für die Ansichten befindet. Experience Platform bedient dann dieses Unterverzeichnis (und nur dieses Unterverzeichnis) von seinen Webservern aus.
 
 ## Bibliothekskomponenten {#components}
 
@@ -93,4 +93,4 @@ Weitere Informationen finden Sie im Handbuch zu [Erweiterungskonfigurationen](./
 
 ## Übermitteln von Erweiterungen
 
-Nachdem Sie die Erweiterung fertig erstellt haben, können Sie sie zur Auflistung im Erweiterungskatalog in Platform übermitteln. Weiterführende Informationen dazu finden Sie unter [Übermittlungsprozess von Erweiterungen – Überblick](./submit/overview.md).
+Nachdem Sie die Erweiterung fertig erstellt haben, können Sie sie zur Auflistung im Erweiterungskatalog in Experience Platform übermitteln. Weiterführende Informationen dazu finden Sie unter [Übermittlungsprozess von Erweiterungen – Überblick](./submit/overview.md).

@@ -2,10 +2,10 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 75%
+source-wordcount: '1309'
+ht-degree: 73%
 
 ---
 
@@ -23,7 +23,7 @@ Abhängig von Ihrer API-Konfiguration müssen Sie möglicherweise den Endpunkt f
 
 ## Anwendungsfälle, die durch die Verwaltung von Zielgruppen-Metadaten unterstützt werden {#use-cases}
 
-Dank der Unterstützung von Zielgruppen-Metadaten im Destination SDK können Sie bei der Konfiguration Ihres Experience Platform-Ziels den Benutzerinnen und Benutzern von Platform eine von mehreren Optionen bieten, wenn sie Zielgruppen Ihrem Ziel zuordnen und aktivieren. Sie können die Optionen, die den Benutzerinnen und Benutzern zur Verfügung stehen, über die Parameter im Abschnitt [Zielgruppen-Metadatenkonfiguration](../functionality/destination-configuration/audience-metadata-configuration.md) der Zielkonfiguration steuern.
+Dank der Unterstützung von Zielgruppen-Metadaten in Destination SDK können Sie bei der Konfiguration Ihres Experience Platform-Ziels Experience Platform-Benutzern eine von mehreren Optionen bieten, wenn sie Zielgruppen Ihrem Ziel zuordnen und aktivieren. Sie können die Optionen, die den Benutzerinnen und Benutzern zur Verfügung stehen, über die Parameter im Abschnitt [Zielgruppen-Metadatenkonfiguration](../functionality/destination-configuration/audience-metadata-configuration.md) der Zielkonfiguration steuern.
 
 ### Anwendungsfall 1: Sie verfügen über eine Drittanbieter-API, und Benutzerinnen und Benutzer müssen keine Zuordnungs-IDs angeben
 

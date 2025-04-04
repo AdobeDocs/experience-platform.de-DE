@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Aktualisieren der Details des Source-Verbindungskontos in der Benutzeroberfläche
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 16%
+source-wordcount: '454'
+ht-degree: 5%
 
 ---
 
@@ -22,12 +22,12 @@ In diesem Tutorial finden Sie Schritte zum Aktualisieren der Details und Anmelde
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-- [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+- [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Aktualisieren von Konten
 
-Melden Sie sich bei der [Experience Platform-](https://platform.adobe.com) an und wählen Sie dann **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie **[!UICONTROL Konten]** in der oberen Kopfzeile aus, um vorhandene Konten anzuzeigen.
+Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie **[!UICONTROL Konten]** in der oberen Kopfzeile aus, um vorhandene Konten anzuzeigen.
 
 ![Katalog](../../images/tutorials/update/catalog.png)
 

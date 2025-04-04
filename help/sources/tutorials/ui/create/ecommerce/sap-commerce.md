@@ -3,10 +3,10 @@ title: Erstellen einer SAP Commerce-Quellverbindung über die Benutzeroberfläch
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Commerce-Quellverbindung für SAP erstellen.
 badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 32%
+source-wordcount: '976'
+ht-degree: 28%
 
 ---
 
@@ -42,9 +42,9 @@ Um [!DNL SAP Commerce] mit Experience Platform zu verbinden, müssen Sie Werte f
 
 Weitere Informationen finden Sie in der [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Erstellen eines Platform-Schemas {#create-platform-schema}
+### Erstellen eines Experience Platform-Schemas {#create-platform-schema}
 
-Bevor Sie eine [!DNL SAP Commerce] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema für Ihre Quelle erstellen. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Platform Schemas .
+Bevor Sie eine [!DNL SAP Commerce] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Erweitern Sie den folgenden Abschnitt, um ein Beispielschema anzuzeigen.
 
@@ -143,13 +143,13 @@ Erweitern Sie den folgenden Abschnitt, um ein Beispielschema anzuzeigen.
 
 ## Verbinden Ihres [!DNL SAP Commerce]-Kontos {#connect-account}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *eCommerce*-Kategorie die Option **[!UICONTROL SAP Commerce]** und dann **[!UICONTROL Daten hinzufügen]**.
 
-![Screenshot der Platform-Benutzeroberfläche für den Katalog mit der SAP Commerce-Karte](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für den Katalog mit der SAP Commerce-Karte](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 Die **[!UICONTROL Verbinden des SAP Commerce-Kontos]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -157,17 +157,17 @@ Die **[!UICONTROL Verbinden des SAP Commerce-Kontos]** wird angezeigt. Auf diese
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL SAP Commerce]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des SAP Commerce-Kontos mit einem bestehenden Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![Screenshot der Experience Platform-Benutzeroberfläche zum Verbinden des SAP Commerce-Kontos mit einem bestehenden Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Neues Konto {#new-account}
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Screenshot der Platform-Benutzeroberfläche zur Verbindung des SAP Commerce-Kontos mit einem neuen Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![Screenshot der Experience Platform-Benutzeroberfläche zum Verbinden des SAP Commerce-Kontos mit einem neuen Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Daten auswählen {#select-data}
 
-Schließlich müssen Sie den Objekttyp auswählen, den Sie in Platform aufnehmen möchten.
+Schließlich müssen Sie den Objekttyp auswählen, den Sie in Experience Platform aufnehmen möchten.
 
 | Objekttyp | Beschreibung |
 | --- | --- |
@@ -180,19 +180,19 @@ Schließlich müssen Sie den Objekttyp auswählen, den Sie in Platform aufnehmen
 
 Um Kundendaten aufzunehmen, wählen Sie **[!UICONTROL Kunden]** als Objekttyp aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![Screenshot der Platform-Benutzeroberfläche für SAP Commerce mit Konfiguration mit ausgewählter Option „Kunden“](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für SAP Commerce mit Konfiguration mit ausgewählter Option „Kunden“](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Kontakte]
 
 Um Kontaktdaten aufzunehmen, wählen Sie **[!UICONTROL Kontakte]** als Objekttyp aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![Screenshot der Platform-Benutzeroberfläche für SAP Commerce mit Konfiguration mit ausgewählter Option „Kontakte“](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für SAP Commerce mit Konfiguration mit ausgewählter Option „Kontakte“](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Nächste Schritte {#next-steps}
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SAP Commerce]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](../../dataflow/ecommerce.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SAP Commerce]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/ecommerce.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -200,7 +200,7 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verw
 
 ### Zuordnung {#mapping}
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die Zuordnungskonfigurationen für Ihren Datenfluss unterscheiden sich je nach Schema und Objekttyp, den Sie aufnehmen möchten.
 

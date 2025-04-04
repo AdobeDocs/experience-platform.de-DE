@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Dokumentationsvorlage für Self-Service
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit YOURSOURCE verbinden.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2072'
-ht-degree: 56%
+source-wordcount: '2083'
+ht-degree: 51%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 56%
 
 *Aktualisieren Sie zunächst die Metadaten (Titel und Beschreibung) oben auf der Seite. Alle Instanzen von DNL auf dieser Seite ignorieren. Dieses Tag hilft unseren maschinellen Übersetzungsprozessen dabei, die Seite korrekt in die verschiedenen Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation nach dem Absenden Tags hinzu.*
 
-## Übersicht
+## Überblick
 
 *Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es für Kunden bietet. Fügen Sie einen Link zu Ihrer Startseite der Produktdokumentation für weitere Informationen hinzu.*
 
@@ -45,13 +45,13 @@ Um eine Verbindung zwischen *YOURSOURCE* und Experience Platform herzustellen, m
 
 Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumentation zur *YOURSOURCE*-Authentifizierung . *Fügen Sie hier einen Link zur Authentifizierungsdokumentation Ihrer Plattform hinzu*.
 
-## Verbinden von *YOURSOURCE* mit Platform mithilfe der [!DNL Flow Service]-API
+## Verbinden von *YOURSOURCE* mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer *YOURSOURCE*-Quellverbindung und zum Erstellen eines Datenflusses, um *YOURSOURCE*-Daten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übertragen.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer *YOURSOURCE*-Quellverbindung und zum Erstellen eines Datenflusses, um *YOURSOURCE*-Daten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Experience Platform zu übertragen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre *YOURSOURCE*-Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -75,7 +75,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "{YOURSOURCE} base connection",
-        "description": "{YOURSOURCE} base connection to authenticate to Platform",
+        "description": "{YOURSOURCE} base connection to authenticate to Experience Platform",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
             "version": "1.0"
@@ -96,7 +96,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.` | Enthält die zum Authentifizieren Ihrer Quelle erforderlichen Anmeldeinformationen. |
 
 **Antwort**
@@ -113,7 +113,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 ### Durchsuchen der Quelle {#explore}
 
 Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner untersuchen, indem Sie GET-Anfragen ausführen.
-Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Platform] importieren möchten:
+Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Experience Platform] importieren möchten:
 
 **API-Format**
 
@@ -129,9 +129,9 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `list_id` in base64 kodieren. Im folgenden Beispiel entspricht `"list_id": "10c097ca71"` in base64 kodierte `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Experience Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `list_id` in base64 kodieren. Im folgenden Beispiel entspricht `"list_id": "10c097ca71"` in base64 kodierte `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
 
 
 **Anfrage**
@@ -295,7 +295,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -352,7 +352,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Spezifikations-ID der Verbindung, die [!DNL Data Lake] entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der *YOURSOURCE*-Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der *YOURSOURCE*-Daten, die Sie an Experience Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -445,7 +445,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von *YOURSOURCE* an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von *YOURSOURCE* nach Experience Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -509,7 +509,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -550,4 +550,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

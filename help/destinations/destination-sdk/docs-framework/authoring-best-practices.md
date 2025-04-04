@@ -2,10 +2,10 @@
 title: Best Practices für die Inhaltserstellung
 description: Erfahren Sie, welche Regeln und Tipps Sie beim Verfassen Ihrer Zieldokumentationsseite befolgen sollten, um sicherzustellen, dass sie den Qualitätsstandards der Adobe Experience Platform-Dokumentation entspricht.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 98%
+source-wordcount: '502'
+ht-degree: 90%
 
 ---
 
@@ -37,14 +37,14 @@ Befolgen Sie die bereitgestellte Dokumentationsvorlage und bearbeiten Sie nicht 
 
 ## Branding-Richtlinien {#branding}
 
-* Die Abkürzung AEP ist kein anerkannter Begriff für die Öffentlichkeit. Verwenden Sie vorzugsweise „Adobe Experience Platform“, danach „Experience Platform“ und dann „Platform“.
+* Die Abkürzung AEP ist kein anerkannter Begriff für die Öffentlichkeit. Bitte verwenden Sie zuerst Adobe Experience Platform, dann Experience Platform, dann Experience Platform.
    * **Verwenden Sie nicht**: Bevor Sie Daten aus AEP an Ihr Ziel exportieren können, sollten Sie diese Voraussetzungen unbedingt lesen und erfüllen.
    * **Verwenden Sie**: Bevor Sie Daten aus Adobe Experience Platform nach YourDestination exportieren können, sollten Sie diese Voraussetzungen unbedingt lesen und erfüllen.
 
 ## Bilder und Screenshots {#images-and-screenshots}
 
 * Informationen zum [Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images)finden Sie im Mitarbeiter-Handbuch.
-* Stellen Sie bei der Verwendung von Screenshots sicher, dass Ihr Screenshot den gesamten Bildschirm der Platform-Benutzeroberfläche erfasst.
+* Stellen Sie bei der Verwendung von Screenshots sicher, dass Ihr Screenshot den gesamten Bildschirm der Experience Platform-Benutzeroberfläche erfasst.
 * Wenn Sie Bilder markieren, um ein bestimmtes Steuerelement oder eine bestimmte Beschriftung auf der Seite hervorzuheben, versuchen Sie, dem gleichen Markierungsstil zu folgen, den das Dokumentations-Team von Experience Platform verwendet. Beachten Sie, wie in [diesem Screenshot](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency) „profilbasiert“ hervorgehoben wird.
 * Verwenden Sie Bilder im `png`-Format.
 * Verwenden Sie keine nummerierten Screenshots als Dateinamen. Bilddateinamen sollten beschreibend sein.
@@ -52,7 +52,7 @@ Befolgen Sie die bereitgestellte Dokumentationsvorlage und bearbeiten Sie nicht 
    * **Verwenden Sie**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
 * Verwenden Sie ALT-Text für alle Bilder, die Sie zur Dokumentation hinzufügen, und verwenden Sie eine korrekte Grammatik im ALT-Text.
    * **Verwenden Sie nicht**: Details zur Zielverbindung
-   * **Verwenden Sie**: Bild der Platform-Benutzeroberfläche mit ausgefüllten Details zur Zielverbindung.
+   * **Verwenden**: Bild der Experience Platform-Benutzeroberfläche mit ausgefüllten Details zur Zielverbindung.
 
 ## Prozess {#process}
 

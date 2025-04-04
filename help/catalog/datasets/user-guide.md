@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Datensatz-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform beim Arbeiten mit Datensätzen häufig durchgeführte Aktionen ausführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 12%
 
 ---
@@ -22,7 +22,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 * [Datensätze](overview.md): Das Speicher- und Verwaltungskonstrukt für die Datenpersistenz in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
-   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schemata mithilfe der [!DNL Schema Editor] in der [!DNL Platform]-Benutzeroberfläche erstellen.
+   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schemata mithilfe der [!DNL Schema Editor] in der [!DNL Experience Platform]-Benutzeroberfläche erstellen.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Stellen Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien bezüglich der Verwendung von Kundendaten sicher.
 
@@ -57,7 +57,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 
 Wählen Sie in der [!DNL Experience Platform]-Benutzeroberfläche **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um das Dashboard **[!UICONTROL Datensätze]** zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Aufnahmedurchgangs.
 
-![Die Platform-Benutzeroberfläche mit dem hervorgehobenen Element „Datensätze“ in der linken Navigationsleiste.](../images/datasets/user-guide/browse-datasets.png)
+![Die Experience Platform-Benutzeroberfläche mit dem hervorgehobenen Element „Datensätze“ in der linken Navigationsleiste.](../images/datasets/user-guide/browse-datasets.png)
 
 Wählen Sie auf der Registerkarte [!UICONTROL Durchsuchen] den Namen eines Datensatzes aus, um auf seinen **[!UICONTROL Datensatzaktivität]**-Bildschirm zuzugreifen und Details zum ausgewählten Datensatz anzuzeigen. Die Registerkarte „Aktivität“ enthält ein Diagramm, das die Rate der konsumierten Nachrichten sowie eine Liste erfolgreicher und fehlgeschlagener Batches visuell darstellt.
 
@@ -168,7 +168,7 @@ Das [!UICONTROL Tags verwalten] kann auch vorhandene Tags aus einem Datensatz en
 
 Nachdem ein Tag zu einem Datensatz hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Weitere Informationen finden Sie im Abschnitt [ Filtern von Datensätzen nach ](#enable-profile) .
 
-Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird erläutert, wie Benutzende mit den entsprechenden Berechtigungen vordefinierte Tags erstellen, Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge in der Platform-Benutzeroberfläche verwalten können.
+Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird erläutert, wie Benutzende mit den entsprechenden Berechtigungen vordefinierte Tags erstellen, Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge in der Benutzeroberfläche von Experience Platform verwalten können.
 
 ### (Beta) Festlegen der Richtlinie zur Datenaufbewahrung {#data-retention-policy}
 
@@ -176,7 +176,7 @@ Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfac
 > 
 >Die Einstellungen zur Datenaufbewahrung befinden sich derzeit in der Beta-Phase und stehen nur in einer **Version** ausgewählten Organisationen zur Verfügung. Ihre Benutzeroberfläche entspricht möglicherweise nicht der unten beschriebenen Funktion.
 
-Verwalten Sie die Einstellungen für die Datensatzgültigkeit und -beibehaltung mithilfe des Inline-Aktionsmenüs auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Datensätze]. Mit dieser Funktion können Sie konfigurieren, wie lange Daten im Data Lake und Profilspeicher aufbewahrt werden. Das Ablaufdatum basiert auf dem Zeitpunkt der Datenaufnahme in Platform und Ihrer konfigurierten Aufbewahrungsfrist.
+Verwalten Sie die Einstellungen für die Datensatzgültigkeit und -beibehaltung mithilfe des Inline-Aktionsmenüs auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Datensätze]. Mit dieser Funktion können Sie konfigurieren, wie lange Daten im Data Lake und Profilspeicher aufbewahrt werden. Das Ablaufdatum basiert auf dem Zeitpunkt der Datenaufnahme in Experience Platform und Ihrer konfigurierten Aufbewahrungsfrist.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Wenn Sie den Stapel löschen möchten, wählen Sie **[!UICONTROL Stapel löschen
 
 ## Nächste Schritte
 
-Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen häufiger Aktionen beim Arbeiten mit Datensätzen in der [!DNL Experience Platform]-Benutzeroberfläche. Anweisungen zum Ausführen allgemeiner [!DNL Platform]-Workflows mit Datensätzen finden Sie in den folgenden Tutorials:
+Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen häufiger Aktionen beim Arbeiten mit Datensätzen in der [!DNL Experience Platform]-Benutzeroberfläche. Anweisungen zum Ausführen allgemeiner [!DNL Experience Platform]-Workflows mit Datensätzen finden Sie in den folgenden Tutorials:
 
 * [Erstellen eines Datensatzes mithilfe von APIs](create.md)
 * [Abfragen von Datensatzdaten mithilfe der Datenzugriffs-API](../../data-access/home.md)

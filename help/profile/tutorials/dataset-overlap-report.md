@@ -4,9 +4,9 @@ title: Erstellen des Berichts zur Datensatzüberschneidung
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberschneidung mithilfe der Echtzeit-Kundenprofil-API erforderlich sind.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Beric
 
 ## Erste Schritte
 
-Um Adobe Experience Platform-APIs verwenden zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen, um die Werte zu erfassen, die Sie für die erforderlichen Kopfzeilen benötigen. Weitere Informationen zu Experience Platform-APIs finden Sie in der Dokumentation [Erste Schritte mit Platform-APIs](../../landing/api-guide.md).
+Um Adobe Experience Platform-APIs verwenden zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen, um die Werte zu erfassen, die Sie für die erforderlichen Kopfzeilen benötigen. Weitere Informationen zu Experience Platform-APIs finden Sie in der Dokumentation [Erste Schritte mit Experience Platform-APIs](../../landing/api-guide.md).
 
 Die erforderlichen Kopfzeilen für alle API-Aufrufe in diesem Tutorial sind:
 
@@ -74,7 +74,7 @@ Postman ist eine kollaborative Plattform für die API-Entwicklung und nützlich 
 
 Um den Bericht zur Datensatzüberschneidung mit Postman anzufordern, führen Sie die folgenden Schritte aus:
 
-* Wählen Sie mithilfe des Dropdown-Menüs GET als Anfragetyp aus.
+* Wählen Sie in der Dropdown-Liste GET als Anfragetyp aus.
 * Geben Sie die erforderlichen Kopfzeilen in die Spalte `KEY` ein:
    * `Authorization`
    * `x-api-key`

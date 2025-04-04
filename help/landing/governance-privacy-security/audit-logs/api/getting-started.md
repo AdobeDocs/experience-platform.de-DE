@@ -4,10 +4,10 @@ description: Mit der Audit-Abfrage-API können Sie Metrikdaten für verschiedene
 role: Developer
 feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 40%
+source-wordcount: '391'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ Mit der Audit-Abfrage-API können Sie Benutzeraktivitäten auf verschiedene Serv
 
 ## Voraussetzungen
 
-Um Audit-Ereignisse verwalten zu können, muss Ihnen die Zugriffssteuerungsberechtigung **[!UICONTROL Benutzer-Aktivitätsprotokoll anzeigen]** gewährt worden sein (in der Kategorie [!UICONTROL Data Governance]). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../../access-control/home.md).
+Um Audit-Ereignisse verwalten zu können, muss Ihnen die Zugriffssteuerungsberechtigung **[!UICONTROL Benutzer-Aktivitätsprotokoll anzeigen]** gewährt worden sein (in der Kategorie [!UICONTROL Data Governance]). Informationen zum Verwalten individueller Berechtigungen für Experience Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -27,13 +27,13 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für dieses Handbuch müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um Experience Platform-APIs erfolgreich aufrufen zu können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

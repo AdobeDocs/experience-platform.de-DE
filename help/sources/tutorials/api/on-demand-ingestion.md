@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Flussausführung für die On-Demand-Aufnahme erstellen
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 13%
+source-wordcount: '801'
+ht-degree: 10%
 
 ---
 
@@ -26,16 +26,16 @@ In diesem Tutorial werden die Schritte zur Verwendung der On-Demand-Aufnahme und
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Erstellen einer Flussausführung für eine tabellenbasierte Quelle
 
-Um einen Fluss für eine tabellenbasierte POST zu erstellen, stellen Sie eine Flussanfrage an die [!DNL Flow Service]-API. Geben Sie dabei die ID des Flusses an, für den Sie die Ausführung erstellen möchten, sowie Werte für Startzeit, Endzeit und Deltaspalte.
+Um einen Fluss für eine tabellenbasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service]-API. Geben Sie dabei die ID des Flusses an, für den Sie die Ausführung erstellen möchten, sowie Werte für Startzeit, Endzeit und Delta-Spalte.
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 ## Erstellen einer Flussausführung für eine dateibasierte Quelle
 
-Um einen Fluss für eine dateibasierte POST zu erstellen, stellen Sie eine Flussanfrage an die [!DNL Flow Service]-API. Geben Sie dabei die ID des Flusses an, für den Sie den Durchlauf erstellen möchten, sowie die Werte für Startzeit und Endzeit.
+Um einen Fluss für eine dateibasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service]-API. Geben Sie dabei die ID des Flusses an, für den Sie den Durchlauf erstellen möchten, sowie die Werte für Startzeit und Endzeit.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 ## Überwachen von Flussausführungen
 
-Nachdem Ihr Flussvorgang erstellt wurde, können Sie die Daten überwachen, die darin aufgenommen werden, um Informationen zu Flussausführungen, Abschlussstatus und Fehlern anzuzeigen. Informationen zum Überwachen Ihrer Datenflüsse mithilfe der API finden Sie im Tutorial [Überwachen von Datenflüssen in der API](./monitor.md). Informationen zum Überwachen Ihrer Flussausführungen mit der Platform-Benutzeroberfläche finden Sie im Handbuch [Überwachen von Quelldatenflüssen mithilfe des Überwachungs-Dashboards](../../../dataflows/ui/monitor-sources.md).
+Nachdem Ihr Flussvorgang erstellt wurde, können Sie die Daten überwachen, die darin aufgenommen werden, um Informationen zu Flussausführungen, Abschlussstatus und Fehlern anzuzeigen. Informationen zum Überwachen Ihrer Datenflüsse mithilfe der API finden Sie im Tutorial [Überwachen von Datenflüssen in der API](./monitor.md). Informationen zum Überwachen Ihrer Flussausführungen mit der Experience Platform-Benutzeroberfläche finden Sie im Handbuch [Überwachen von Quelldatenflüssen mithilfe des Überwachungs-Dashboards](../../../dataflows/ui/monitor-sources.md).

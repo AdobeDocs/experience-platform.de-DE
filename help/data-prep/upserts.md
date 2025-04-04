@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;Daten
 title: Senden von partiellen Zeilenaktualisierungen an das Echtzeit-Kundenprofil mithilfe der Datenvorbereitung
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 5%
+source-wordcount: '1361'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 Verwenden Sie das Streaming von Upserts in [!DNL Data Prep], um partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen.
 
-Durch das Streamen von Upserts können Sie das Format Ihrer Daten beibehalten, während Sie diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anforderungen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben können Sie mit [!DNL Data Prep] eine einzige API-Payload senden und die Daten an [!DNL Real-Time Customer Profile] PATCH- und [!DNL Identity Service] CREATE-Anfragen übersetzen.
+Durch das Streamen von Upserts können Sie das Format Ihrer Daten beibehalten, während Sie diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anfragen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben können Sie mit [!DNL Data Prep] eine einzige API-Payload senden und die Daten sowohl an [!DNL Real-Time Customer Profile] PATCH- als auch [!DNL Identity Service] CREATE-Anfragen übersetzen.
 
 [!DNL Data Prep] verwendet Header-Parameter, um zwischen Einfügungen und Upserts zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen eine Kopfzeile haben. Sie können Upserts mit oder ohne Identitätsdeskriptoren verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt „Konfigurieren [ Identitätsdatensatzes“ beschrieben ](#configure-the-identity-dataset). Wenn Sie Upserts ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt [Streamen von Upserts ohne ](#payload-without-identity-configuration)&quot;.
 
@@ -39,7 +39,7 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
 * [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [Echtzeit-Kundenprofil](../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
 ## Streamen von Upserts in [!DNL Data Prep] verwenden {#streaming-upserts-in-data-prep}
 

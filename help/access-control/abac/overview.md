@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 82%
+source-wordcount: '1874'
+ht-degree: 70%
 
 ---
 
@@ -18,9 +18,9 @@ Verwenden Sie diese Funktion, um Schemafelder des Experience-Datenmodells (XDM) 
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie [ „Übersicht ](../../data-governance/home.md) Data Governance“.
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Experience Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie [ „Übersicht ](../../data-governance/home.md) Data Governance“.
 
-Mit der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Durch attributbasierte Zugriffssteuerung können Admins Ihres Unternehmens den Zugriff der Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Experience Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 Das folgende Video soll Ihnen dabei helfen, die attributbasierte Zugriffssteuerung zu verstehen, und beschreibt, wie Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
@@ -32,13 +32,13 @@ Die attributbasierte Zugriffssteuerung umfasst die folgenden Komponenten:
 
 | Terminologie | Definition |
 | --- | --- |
-| Attribute | Attribute sind die Bezeichner, die die Korrelation zwischen einem Benutzer und den Platform-Ressourcen angeben, auf die er Zugriff hat. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten. |
-| Beschriftungen | Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen. |
-| Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
+| Attribute | Attribute sind die Bezeichner, die die Korrelation zwischen einem Benutzer und den Experience Platform-Ressourcen angeben, auf die er Zugriff hat. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten. |
+| Beschriftungen | Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Experience Platform mit einer Beschriftung zu versehen. |
+| Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Experience Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
 | Berechtigungssätze | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | Richtlinien | Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Aktionen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. |
 | Ressource | Eine Ressource ist das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht. Ressourcen können Segmente oder Schemafelder sein. |
-| Rollen | Rollen sind Möglichkeiten, die Typen von Benutzenden zu kategorisieren, die mit Ihrer Platform-Instanz interagieren, und stellen Bausteine von Richtlinien zur Zugriffssteuerung dar. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können. |
+| Rollen | Rollen sind Möglichkeiten, die Typen von Benutzenden zu kategorisieren, die mit Ihrer Experience Platform-Instanz interagieren, und sind Bausteine von Richtlinien zur Zugriffssteuerung. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können. |
 | Betreff | Ein Subjekt ist der Benutzer, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. |
 | Benutzergruppen | Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen. |
 
@@ -54,15 +54,15 @@ Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerroll
 
 ## Attributbasierte Zugriffssteuerung – API
 
-Mit der API der attributbasierten Zugriffssteuerung können Sie Rollen, Richtlinien und Produkte innerhalb von Platform mithilfe von APIs programmgesteuert verwalten. Weitere Informationen finden Sie im Handbuch zum [Verwenden der API zum Verwalten attributbasierter Zugriffssteuerungskonfigurationen](api/overview.md).
+Mit der attributbasierten Zugriffssteuerungs-API können Sie Rollen, Richtlinien und Produkte innerhalb von Experience Platform mithilfe von APIs programmgesteuert verwalten. Weitere Informationen finden Sie im Handbuch zum [Verwenden der API zum Verwalten attributbasierter Zugriffssteuerungskonfigurationen](api/overview.md).
 
 ## Attributbasierte Zugriffssteuerung in Adobe Experience Platform
 
-Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte Zugriffskontrolle in andere Komponenten von Platform integriert wird:
+Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte Zugriffssteuerung in andere Komponenten von Experience Platform integriert wird:
 
 ### Zugangssteuerung
 
-Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Rollen, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald für Ihr Unternehmen die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrem Unternehmen zu verwalten.
+Experience Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Rollen, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf eine Vielzahl von Experience Platform-Funktionen, einschließlich Datenmodellierung, Profilverwaltung und Sandbox-Administration. Sobald für Ihr Unternehmen die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrem Unternehmen zu verwalten.
 
 Es gibt nur eine begrenzte Verfügbarkeit der attributbasierten Zugriffssteuerung für Kunden, die Healthcare und/oder Privacy Shields erwerben. Zu den Features dieser Funktion gehören:
 
@@ -80,7 +80,7 @@ Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [
 
 ### Ziele {#destinations}
 
-[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
 Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgendes verwenden:
 
@@ -109,7 +109,7 @@ Weitere Informationen zu [!DNL Identity Service] finden Sie in der [[!DNL Identi
 
 ### Echtzeit-Kundenprofil
 
-Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus verschiedenen Kanälen, darunter Online-, Offline-, CRM- und Drittanbieter-Datenquellen, miteinander kombiniert. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Sicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
+Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus verschiedenen Kanälen, darunter Online-, Offline-, CRM- und Drittanbieter-Datenquellen, miteinander kombiniert. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Sicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgendes verwenden:
 
@@ -133,7 +133,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [[!DNL Se
 
 ### XDM
 
-Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu dient, die Leistung digitaler Erlebnisse zu verbessern. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Services in Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu dient, die Leistung digitaler Erlebnisse zu verbessern. Es bietet allgemeine Strukturen und Definitionen für Anwendungen, die mit Services auf Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 Mit der attributbasierten Zugriffssteuerung können Sie Folgendes durchführen:
 

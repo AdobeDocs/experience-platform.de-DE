@@ -1,8 +1,8 @@
 ---
-title: Twitter Custom Audiences-Verbindung
-description: Sprechen Sie Ihre bestehenden Follower und Kunden in Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
+title: Verbindung mit benutzerdefinierten Twitter-Zielgruppen
+description: Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 44%
@@ -29,7 +29,7 @@ Bevor Sie Ihr [!DNL Twitter Custom Audiences]-Ziel konfigurieren, sollten Sie di
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google Advertising ID (GAID) und Apple ID for Advertisers (IDFA) werden in Adobe Experience Platform unterstützt. Ordnen Sie diese Namespaces und/oder Attribute aus Ihrem Quellschema im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) des Zielaktivierungs-Workflows entsprechend zu. |
-| E-Mail | E-Mail-Adresse(n) für den Benutzer | Bitte ordnen Sie Ihre Nur-Text-E-Mail-Adressen und Ihre SHA256-Hash-E-Mail-Adressen diesem Feld zu. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit die Daten bei Aktivierung automatisch gehasht [!DNL Platform]. Wenn Sie Ihre Kunden-E-Mail-Adressen hashen, bevor Sie sie auf Adobe Experience Platform hochladen, beachten Sie, dass diese Identitäten mit SHA256 ohne Salz gehasht werden müssen. |
+| E-Mail | E-Mail-Adresse(n) für den Benutzer | Bitte ordnen Sie Ihre Nur-Text-E-Mail-Adressen und Ihre SHA256-Hash-E-Mail-Adressen diesem Feld zu. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. Wenn Sie Ihre Kunden-E-Mail-Adressen hashen, bevor Sie sie auf Adobe Experience Platform hochladen, beachten Sie, dass diese Identitäten mit SHA256 ohne Salz gehasht werden müssen. |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL Twitter Custom Au
 
 ### Anwendungsfall 1
 
-Sprechen Sie Ihre bestehenden Follower und Kunden in Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Audiences wie [!DNL List Custom Audiences] in Twitter aktivieren.
+Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen [!DNL List Custom Audiences] in Twitter aktivieren.
 
 ## Mit Ziel verbinden {#connect}
 

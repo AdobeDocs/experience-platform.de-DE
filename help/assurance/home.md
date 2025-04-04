@@ -2,9 +2,9 @@
 title: Überblick über Adobe Experience Platform Assurance
 description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Mobile Apps untersuchen, testen, simulieren und überprüfen.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '809'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ Ab dem 15. Oktober 2022 ist Assurance allgemein für alle Adobe Experience Cloud
 
 ### Was ändert sich?
 
-Am 15. Oktober wird der Zugriff auf Assurance über die Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch“, ](./user-access.md) sicherzustellen, dass Sie weiterhin unterbrechungsfreien Zugriff haben.
+Am 15. Oktober wird der Zugriff auf Assurance über Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch“, ](./user-access.md) sicherzustellen, dass Sie weiterhin unterbrechungsfreien Zugriff haben.
 
 Für bestehende Assurance-Integrationen, -Sitzungen und -Ereignisse werden keine weiteren Änderungen oder Unterbrechungen erwartet. Der Zugriff auf Assurance kann über [https://griffon.adobe.com](https://griffon.adobe.com) fortgesetzt werden **oder** Sie können (und ein Lesezeichen) [https://experience.adobe.com/assurance verwenden](https://experience.adobe.com/assurance).
 
@@ -43,7 +43,7 @@ Beginnen Sie in Eile mit wenigen Codezeilen. Bei mobilen Apps unterstützt Assur
 
 ### Unkomplizierte Verbindung
 
-Mit Assurance ist die Verbindung Ihrer App mit Platform einfach und zuverlässig. Sie müssen keine Netzwerk-Proxys ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) und andere Netzwerkgymnastiken verwenden - die Verbindung Ihrer App mit Assurance ist so einfach wie das Scannen eines QR-Codes oder das Tippen auf eine Schaltfläche.
+Mit Assurance ist die Verbindung Ihrer App mit Experience Platform einfach und zuverlässig. Sie müssen keine Netzwerk-Proxys ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) und andere Netzwerkgymnastiken verwenden - die Verbindung Ihrer App mit Assurance ist so einfach wie das Scannen eines QR-Codes oder das Tippen auf eine Schaltfläche.
 
 ![](./images/index/no-hassle-connection.png)
 

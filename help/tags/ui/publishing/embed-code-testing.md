@@ -1,11 +1,11 @@
 ---
 title: Testen von Einbettungs-Codes mit Adobe Experience Platform Debugger
-description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
+description: Erfahren Sie, wie Sie mit Experience Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 92%
+source-wordcount: '500'
+ht-degree: 58%
 
 ---
 
@@ -21,23 +21,23 @@ Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platfor
 
 Dieses Tutorial setzt Grundkenntnisse der Verwendung von Umgebungen und Einbettungs-Codes für Tags voraus. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
 
-Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger“ installiert sein. Der Platform-Debugger ist für den Chrome-Browser verfügbar. Verwenden Sie den folgenden Link, um die Erweiterung zu installieren, bevor Sie mit dem Tutorial beginnen:
+Für dieses Tutorial müssen Sie außerdem die Browser-Erweiterung Experience Platform Debugger installiert haben. Experience Platform Debugger ist für den Chrome-Browser verfügbar. Verwenden Sie den folgenden Link, um die Erweiterung zu installieren, bevor Sie mit dem Tutorial beginnen:
 
-* [Platform Debugger für Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Experience Platform Debugger für Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-## Öffnen von Platform Debugger auf Ihrer Website
+## Öffnen Sie Experience Platform Debugger auf Ihrer Website
 
-Navigieren Sie mit dem Browser Ihrer Wahl zu Ihrer Website und öffnen Sie die Platform Debugger-Erweiterung. Die Site, mit der Platform Debugger derzeit verbunden ist, wird unten im Fenster angezeigt. Wenn auf Ihrer Website derzeit Tags ausgeführt werden, werden sie auf der Registerkarte [!UICONTROL Zusammenfassung] aufgeführt.
+Navigieren Sie mit einem beliebigen Browser zu Ihrer Website und öffnen Sie die Experience Platform Debugger-Erweiterung. Die Site, mit der Experience Platform Debugger derzeit verbunden ist, wird unten im Fenster angezeigt. Wenn auf Ihrer Website derzeit Tags ausgeführt werden, werden sie auf der Registerkarte [!UICONTROL Zusammenfassung] aufgeführt.
 
 ![](./images/embed-code-testing/summary.png)
 
 >[!NOTE]
 >
->Falls Platform Debugger zunächst keine Verbindung herstellt, müssen Sie möglicherweise den Browsertab, der Ihre Website anzeigt, neu laden, bevor Sie es erneut versuchen.
+>Wenn Experience Platform Debugger zunächst keine Verbindung herstellt, müssen Sie möglicherweise die Browser-Registerkarte neu laden, auf der Ihre Website angezeigt wird, bevor Sie es erneut versuchen.
 
 ## Einbettungs-Codes ersetzen
 
-Sobald Platform Debugger mit Ihrer Site verbunden ist, wählen Sie **[!UICONTROL Launch]** im linken Navigationsbereich aus. Hier finden Sie Informationen zum derzeit auf Ihrer Site ausgeführten Bibliotheks-Build einschließlich der Umgebung und der zugehörigen Erweiterungen. Wählen Sie hier **[!UICONTROL Konfiguration]** aus, um die Steuerelemente zum Verwalten von Einbettungs-Codes anzuzeigen.
+Sobald Experience Platform Debugger mit Ihrer Site verbunden ist, wählen Sie **[!UICONTROL Launch]** im linken Navigationsbereich aus. Hier finden Sie Informationen zum derzeit auf Ihrer Site ausgeführten Bibliotheks-Build einschließlich der Umgebung und der zugehörigen Erweiterungen. Wählen Sie hier **[!UICONTROL Konfiguration]** aus, um die Steuerelemente zum Verwalten von Einbettungs-Codes anzuzeigen.
 
 ![](./images/embed-code-testing/launch-tab.png)
 
@@ -45,7 +45,7 @@ Unter [!UICONTROL Seiteneinbettungs-Code] wird der Einbettungs-Code angezeigt, d
 
 ![](./images/embed-code-testing/replace.png)
 
-Dann wird ein Popup angezeigt, in dem Sie aufgefordert werden, einen Einbettungs-Code anzugeben, der den aktuellen Code ersetzen soll. Beachten Sie, dass das Ersetzen des Einbettungs-Codes mit Platform Debugger den bereitgestellten Einbettungs-Code auf Ihrer Site nicht ändert. Stattdessen wird nur der lokal ausgeführte Einbettungscode ersetzt, um Ihnen das Testen und Debugging der Implementierung zu ermöglichen.
+Dann wird ein Popup angezeigt, in dem Sie aufgefordert werden, einen Einbettungs-Code anzugeben, der den aktuellen Code ersetzen soll. Beachten Sie, dass durch Ersetzen des Einbettungs-Codes mit Experience Platform Debugger der auf Ihrer Site bereitgestellte Einbettungs-Code nicht geändert wird. Stattdessen wird nur der lokal ausgeführte Einbettungscode ersetzt, um Ihnen das Testen und Debugging der Implementierung zu ermöglichen.
 
 Fügen Sie den Einbettungs-Code, den Sie testen möchten, in das bereitgestellte Textfeld ein und wählen Sie dann **[!UICONTROL Übernehmen]**.
 
@@ -57,4 +57,4 @@ Der Tab **[!UICONTROL Konfiguration]** wird wieder angezeigt und zeigt an, dass 
 
 ## Nächste Schritte
 
-In diesem Tutorial wurde beschrieben, wie Sie mit Platform Debugger zu Testzwecken zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen finden Sie in der [Dokumentation zum Platform Debugger](../../../debugger/home.md).
+In diesem Tutorial wurde beschrieben, wie Sie mit Experience Platform Debugger zu Testzwecken lokal zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen von finden ](../../../debugger/home.md) in der Dokumentation zum Experience Platform-Debugger [.

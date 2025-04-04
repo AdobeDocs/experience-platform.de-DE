@@ -1,16 +1,16 @@
 ---
-title: Verwenden von Adobe Journey Optimizer mit Platform Web SDK
-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK mithilfe von Adobe Journey Optimizer personalisierte Inhalte rendern können
+title: Verwenden von Adobe Journey Optimizer mit dem Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit Experience Platform Web SDK personalisierte Inhalte mithilfe von Adobe Journey Optimizer rendern können
 keywords: AJO;AJO Web;Adobe Journey Optimizer;renderDecisions;Oberflächen;Entscheidungen;Vorschläge;Umfang;Schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '391'
 ht-degree: 2%
 
 ---
 
-# Verwenden von [!DNL Adobe Journey Optimizer] mit dem [!DNL Platform Web SDK]
+# Verwenden von [!DNL Adobe Journey Optimizer] mit dem [!DNL Experience Platform Web SDK]
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] können personalisierte Erlebnisse bereitstellen und rendern, die in [!DNL Adobe Journey Optimizer] für den Web-Kanal verwaltet werden. Sie können einen WYSIWYG-Editor, [!DNL Adobe Journey Optimizer] [Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) oder eine nicht visuelle Schnittstelle, den [Code-basierten Erlebniskanal](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) verwenden, um Ihre [!DNL Journey Optimizer Web] Kampagnen und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
@@ -42,7 +42,7 @@ Gehen Sie wie folgt vor, um mit der Verwendung von [!DNL Adobe Journey Optimizer
    })
    ```
 
-3. Geben Sie optional zusätzliche Oberflächen in Ihren Ereignissen an. Standardmäßig generiert Web SDK automatisch die Web-Oberfläche für die aktuelle Web-Seite und nimmt sie in die Anfrage an das Edge Network auf. Bei Bedarf können zusätzliche Oberflächen in die Anfrage eingeschlossen werden, indem Sie diese in der `personalization.surfaces`-Option des `sendEvent`-Befehls oder in der entsprechenden **[!UICONTROL Oberflächen]** [[!UICONTROL Ereignis senden]-](../../../tags/extensions/client/web-sdk/action-types.md#send-event) der Web SDK-Erweiterung angeben.
+3. Geben Sie optional zusätzliche Oberflächen in Ihren Ereignissen an. Standardmäßig generiert die Web-SDK automatisch die Web-Oberfläche für die aktuelle Web-Seite und nimmt sie in die Anfrage an die Edge Network auf. Bei Bedarf können zusätzliche Oberflächen in die Anfrage eingeschlossen werden, indem Sie diese in der `personalization.surfaces`-Option des `sendEvent`-Befehls oder in der entsprechenden **[!UICONTROL Oberflächen]** [[!UICONTROL Ereignis senden]-](../../../tags/extensions/client/web-sdk/action-types.md#send-event) der Web SDK-Erweiterung angeben.
 
    ```javascript
    alloy("sendEvent", {

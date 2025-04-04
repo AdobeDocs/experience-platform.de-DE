@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Sandbox-UI
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 49%
+source-wordcount: '1116'
+ht-degree: 46%
 
 ---
 
@@ -17,13 +17,13 @@ In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Ex
 
 ## Anzeigen von Sandboxes
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Sandboxes]** im linken Navigationsbereich und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um das [!UICONTROL Sandboxes]-Dashboard zu öffnen. Das Dashboard listet alle verfügbaren Sandboxes für Ihre Organisation auf, einschließlich des jeweiligen Typs (Produktion oder Entwicklung).
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Sandboxes]** im linken Navigationsbereich und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um das Dashboard [!UICONTROL Sandboxes] zu öffnen. Das Dashboard listet alle verfügbaren Sandboxes für Ihre Organisation auf, einschließlich des jeweiligen Typs (Produktion oder Entwicklung).
 
 ![Das Sandbox-Dashboard mit ausgewählter Registerkarte Durchsuchen , auf der eine Liste der verfügbaren Sandboxes angezeigt wird.](../images/ui/view-sandboxes.png)
 
 ## Wechseln zwischen Sandboxes
 
-Der Sandbox-Indikator befindet sich in der oberen Kopfzeile der Platform-Benutzeroberfläche und zeigt den Titel der derzeit aktiven Sandbox, deren Region und deren Typ an.
+Der Sandbox-Indikator befindet sich in der oberen Kopfzeile der Experience Platform-Benutzeroberfläche und zeigt den Titel der derzeit aktiven Sandbox, deren Region und deren Typ an.
 
 ![Das Sandbox-Dashboard mit hervorgehobenem Sandbox-Indikator.](../images/ui/sandbox-indicator.png)
 

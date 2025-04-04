@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden Experience-Datenmodell(XDM)-Schemata, um dies zu erreichen.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2827'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 Damit [!DNL Intelligent Services] Einblicke aus Ihren Marketing-Ereignisdaten gewinnen können, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. [!DNL Intelligent Services] nutzen [!DNL Experience Data Model] (XDM)-Schemata, um dies zu erreichen. Insbesondere müssen alle Datensätze, die in [!DNL Intelligent Services] verwendet werden, dem Consumer ExperienceEvent (CEE)-XDM-Schema entsprechen oder den Adobe Analytics-Connector verwenden. Darüber hinaus unterstützt Kunden-KI den Adobe Audience Manager-Connector.
 
-Dieses Dokument enthält allgemeine Anleitungen zum Zuordnen Ihrer Marketing-Ereignisdaten aus mehreren Kanälen zum CEE-Schema und enthält Informationen zu wichtigen Feldern innerhalb des Schemas, damit Sie ermitteln können, wie Sie Ihre Daten effektiv ihrer Struktur zuordnen können. Wenn Sie Adobe Analytics-Daten verwenden möchten, lesen Sie bitte den Abschnitt zur [Vorbereitung von Adobe Analytics-Daten](#analytics-data). Wenn Sie Adobe Audience Manager-Daten verwenden möchten (nur Kunden-KI), lesen Sie bitte den Abschnitt [Adobe Audience Manger-Datenvorbereitung](#AAM-data).
+Dieses Dokument enthält allgemeine Anleitungen zum Zuordnen Ihrer Marketing-Ereignisdaten aus mehreren Kanälen zum CEE-Schema und enthält Informationen zu wichtigen Feldern innerhalb des Schemas, damit Sie ermitteln können, wie Sie Ihre Daten effektiv ihrer Struktur zuordnen können. Wenn Sie Adobe Analytics-Daten verwenden möchten, lesen Sie bitte den Abschnitt zur [Vorbereitung von Adobe Analytics-Daten](#analytics-data). Wenn Sie Adobe Audience Manager-Daten verwenden möchten (nur Kunden-KI), lesen Sie bitte den Abschnitt zur [Vorbereitung von Adobe Audience Manager-Daten](#AAM-data).
 
 ## Datenanforderungen
 
 [!DNL Intelligent Services] benötigen je nach erstelltem Ziel unterschiedliche Mengen historischer Daten. Unabhängig davon müssen die Daten, die Sie für **alle**-[!DNL Intelligent Services] vorbereiten, sowohl positive als auch negative Journey/Ereignisse enthalten. Sowohl negative als auch positive Ereignisse verbessern die Modellgenauigkeit und -genauigkeit.
 
-Wenn Sie beispielsweise Kunden-KI verwenden, um die Kauftendenz eines Produkts vorherzusagen, benötigt das Modell für Kunden-KI sowohl Beispiele für erfolgreiche Kaufpfade als auch Beispiele für nicht erfolgreiche Pfade. Dies liegt daran, dass Kunden-KI bei der Modellschulung untersucht, welche Ereignisse und Journey zu einem Kauf führen. Dies umfasst auch die Aktionen, die von Kunden durchgeführt wurden, die nicht gekauft haben, z. B. eine Person, die ihren Journey gestoppt hat, als sie einen Artikel zum Warenkorb hinzufügte. Diese Kunden weisen möglicherweise ähnliche Verhaltensweisen auf. Kunden-KI kann jedoch Einblicke bieten und die wichtigsten Unterschiede und Faktoren aufschlüsseln, die zu einem höheren Neigungs-Score führen. In ähnlicher Weise erfordert Attribution AI sowohl Ereignistypen als auch Journey, um Metriken wie Touchpoint-Effektivität, Top-Konversionspfade und Aufschlüsselungen nach Touchpoint-Position anzuzeigen.
+Wenn Sie beispielsweise Kunden-KI verwenden, um die Kauftendenz eines Produkts vorherzusagen, benötigt das Modell für Kunden-KI sowohl Beispiele für erfolgreiche Kaufpfade als auch Beispiele für nicht erfolgreiche Pfade. Dies liegt daran, dass Kunden-KI bei der Modellschulung untersucht, welche Ereignisse und Journey zu einem Kauf führen. Dies umfasst auch die Aktionen, die von Kunden durchgeführt wurden, die nicht gekauft haben, z. B. eine Person, die ihren Journey gestoppt hat, als sie einen Artikel zum Warenkorb hinzufügte. Diese Kunden weisen möglicherweise ähnliche Verhaltensweisen auf. Kunden-KI kann jedoch Einblicke bieten und die wichtigsten Unterschiede und Faktoren aufschlüsseln, die zu einem höheren Neigungs-Score führen. Entsprechend erfordert Attributions-KI sowohl Ereignistypen als auch Journey, um Metriken wie Touchpoint-Effektivität, Top-Konversionspfade und Aufschlüsselungen nach Touchpoint-Position anzuzeigen.
 
-Weitere Beispiele und Informationen zu historischen Datenanforderungen finden Sie im Abschnitt [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI ](./attribution-ai/input-output.md#data-requirements) Historische Datenanforderungen in der Eingabe-/Ausgabedokumentation.
+Weitere Beispiele und Informationen zu historischen Datenanforderungen finden Sie im Abschnitt [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attributions-KI](./attribution-ai/input-output.md#data-requirements) Historische Datenanforderungen in der Eingabe-/Ausgabedokumentation.
 
 ### Richtlinien für das Zusammenfügen von Daten
 
@@ -37,13 +37,13 @@ Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Plat
 
 ### Vorbereitung externer Daten
 
-Wenn Ihre Daten außerhalb von Experience Platform gespeichert werden, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem „Consumer ExperienceEvent[Schema ](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Consumer ExperienceEvent-Schema erstellen und [Ihre Daten in Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
+Wenn Ihre Daten außerhalb von Experience Platform gespeichert sind, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem „Consumer ExperienceEvent[Schema ](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Consumer ExperienceEvent-Schema erstellen und [Ihre Daten in Experience Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
 
-Je nach gewünschter [!DNL Intelligent Service] können verschiedene Felder erforderlich sein. Beachten Sie, dass es sich als Best Practice empfiehlt, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie im Handbuch zu den Datenanforderungen für {](./attribution-ai/input-output.md)}Attribution AI [ oder ](./customer-ai/data-requirements.md)Kunden-KI).[
+Je nach gewünschter [!DNL Intelligent Service] können verschiedene Felder erforderlich sein. Beachten Sie, dass es sich als Best Practice empfiehlt, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie im Handbuch [Attributions-KI](./attribution-ai/input-output.md) oder [Kunden-KI](./customer-ai/data-requirements.md) Datenanforderungen .
 
 ### Datenvorbereitung in Adobe Analytics {#analytics-data}
 
-Kunden-KI und Attribution AI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector) ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+Kunden-KI und Attributions-KI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector) ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
 Sobald der Quell-Connector Ihre Daten in Experience Platform streamt, können Sie Adobe Analytics als Datenquelle und anschließend während der Konfiguration Ihrer Instanz einen Datensatz auswählen. Alle erforderlichen Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
 
@@ -65,13 +65,13 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Die Aufstockung von Daten durch den Adobe Analytics-Connector dauert bis zu vier Wochen. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Kunden oder Attribution AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die Abschnitte zu historischen Daten in [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI ](./attribution-ai/input-output.md#data-requirements) und stellen Sie sicher, dass Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Die Aufstockung von Daten durch den Adobe Analytics-Connector dauert bis zu vier Wochen. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Kunden- oder Attributions-KI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die Abschnitte zu historischen Daten in [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attributions-KI](./attribution-ai/input-output.md#data-requirements) und stellen Sie sicher, dass Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
 ### Datenvorbereitung in Adobe Audience Manager (nur Kunden-KI) {#AAM-data}
 
 Kunden-KI unterstützt nativ Adobe Audience Manager-Daten. Um Audience Manager-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Audience Manager-Quell-Connector einzurichten](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
-Nachdem der Quell-Connector Ihre Daten in Experience Platform gestreamt hat, können Sie Adobe Audience Manager als Datenquelle und anschließend während Ihrer Kunden-KI-Konfiguration einen Datensatz auswählen. Alle Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
+Sobald der Quell-Connector Ihre Daten in Experience Platform streamt, können Sie Adobe Audience Manager als Datenquelle und anschließend während der Konfiguration Ihrer Kunden-KI einen Datensatz auswählen. Alle Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
 
 >[!IMPORTANT]
 >
@@ -79,7 +79,7 @@ Nachdem der Quell-Connector Ihre Daten in Experience Platform gestreamt hat, kö
 
 ### [!DNL Experience Platform]
 
-Wenn Ihre Daten bereits in [!DNL Platform] gespeichert sind und nicht über Adobe Analytics oder Adobe Audience Manager (nur Kunden-KI) gestreamt werden, führen Sie die folgenden Schritte aus. Es wird dennoch empfohlen, das CEE-Schema zu verstehen.
+Wenn Ihre Daten bereits in [!DNL Experience Platform] gespeichert sind und nicht über Adobe Analytics oder Adobe Audience Manager (nur Kunden-KI) gestreamt werden, führen Sie die folgenden Schritte aus. Es wird dennoch empfohlen, das CEE-Schema zu verstehen.
 
 1. Überprüfen Sie die Struktur des Schemas [Consumer ExperienceEvent](#cee-schema) und stellen Sie fest, ob Ihre Daten dessen Feldern zugeordnet werden können.
 2. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und in [!DNL Intelligent Services] aufzunehmen, oder [führen Sie die Schritte in diesem Handbuch aus](#mapping) wenn Sie die Daten selbst zuordnen möchten.
@@ -108,7 +108,7 @@ Die Verwendung aller Schlüsselfelder wird zwar dringend empfohlen, es gibt jedo
 
 * [Ein primäres Identitätsfeld](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (nur für Attribution AI erforderlich)
+* [xdm:channel](#channel) (nur für Attributions-KI obligatorisch)
 
 #### Primäre Identität {#identity}
 
@@ -118,7 +118,7 @@ Sie müssen basierend auf der Quelle und der Art Ihrer Daten das Feld ermitteln,
 
 >[!NOTE]
 >
->Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
+>Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 * „E-Mail“
 * „Telefon“
@@ -156,7 +156,7 @@ Dieses Feld stellt den Zeitpunkt dar, zu dem das Ereignis aufgetreten ist. Diese
 
 >[!NOTE]
 >
->Dieses Feld ist nur bei Verwendung von Attribution AI erforderlich.
+>Dieses Feld ist nur bei Verwendung von Attributions-KI erforderlich.
 
 Dieses Feld stellt den Marketing-Kanal für das ExperienceEvent dar. Das Feld enthält Informationen zum Kanaltyp, Medientyp und Standorttyp.
 
@@ -321,7 +321,7 @@ Wenn Sie über ein [!DNL Adobe Experience Platform]-Abonnement verfügen und die
 
 >[!NOTE]
 >
->Für die folgenden Schritte ist ein Abonnement von Experience Platform erforderlich. Wenn Sie keinen Zugriff auf Platform haben, fahren Sie mit dem Abschnitt [nächsten Schritte](#next-steps) fort.
+>Für die folgenden Schritte ist ein Abonnement von Experience Platform erforderlich. Wenn Sie keinen Zugriff auf Experience Platform haben, fahren Sie mit dem Abschnitt [nächsten Schritte](#next-steps) fort.
 
 In diesem Abschnitt wird der Workflow für die Zuordnung und Aufnahme von Daten in Experience Platform zur Verwendung in [!DNL Intelligent Services] beschrieben, einschließlich Links zu Tutorials mit detaillierten Schritten.
 
@@ -343,7 +343,7 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie einen neuen D
 * [Erstellen eines Datensatzes in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (befolgen Sie den Workflow zur Verwendung eines vorhandenen Schemas)
 * [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
-Nachdem der Datensatz erstellt wurde, können Sie ihn in der Platform-Benutzeroberfläche im Arbeitsbereich **[!UICONTROL Datensätze]** finden.
+Nachdem der Datensatz erstellt wurde, können Sie ihn in der Experience Platform-Benutzeroberfläche im Arbeitsbereich **[!UICONTROL Datensätze]** finden.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -355,11 +355,11 @@ Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächst
 
 #### Zuordnen und Aufnehmen von Daten {#ingest}
 
-Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Platform aufnehmen. Anweisungen dazu, wie Sie [ der Benutzeroberfläche durchführen, finden Sie im Tutorial ](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
+Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Experience Platform aufnehmen. Anweisungen dazu, wie Sie [ der Benutzeroberfläche durchführen, finden Sie im Tutorial ](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
 Sobald ein Datensatz ausgefüllt wurde, kann derselbe Datensatz zum Aufnehmen zusätzlicher Datendateien verwendet werden.
 
-Wenn Ihre Daten in einem unterstützten Drittanbieterprogramm gespeichert sind, können Sie auch einen [Quell-Connector](../sources/home.md) erstellen, um Ihre Marketing-Ereignisdaten in Echtzeit in [!DNL Platform] aufzunehmen.
+Wenn Ihre Daten in einem unterstützten Drittanbieterprogramm gespeichert sind, können Sie auch einen [Quell-Connector](../sources/home.md) erstellen, um Ihre Marketing-Ereignisdaten in Echtzeit in [!DNL Experience Platform] aufzunehmen.
 
 ## Nächste Schritte {#next-steps}
 

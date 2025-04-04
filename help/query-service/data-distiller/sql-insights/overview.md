@@ -2,10 +2,10 @@
 title: SQL Insights
 description: Erfahren Sie mehr über die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zur Entwicklung eines SQL-Insights-Dashboards mit Data Distiller. Erfahren Sie, wie die SQL Insights-Funktion in Data Distiller die Transparenz verbessern und operative Einblicke in verschiedene Dimensionen wie Profile, Audiences, Kampagnen, Journey, Berechtigungen und Einverständnis erhalten kann.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 5%
+source-wordcount: '943'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,11 @@ In diesem Dokument werden die Anwendungsfälle, wesentlichen Funktionen und erfo
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen [ diese Funktion finden Sie in der ](../../../dashboards/standard-dashboards.md) zu benutzerdefinierten Dashboards .
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell in der Experience Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen [ diese Funktion finden Sie in der ](../../../dashboards/standard-dashboards.md) zu benutzerdefinierten Dashboards .
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe die [Packaging](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Kundendienst von Adobe, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Experience Platform-Daten enthalten. Siehe die [Packaging](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Adobe-Kundendienst, um weitere Informationen zu erhalten.
 
 ## Anwendungsfälle für SQL Insights {#use-cases}
 
@@ -72,7 +72,7 @@ Gehen Sie wie folgt vor, um in Data Distiller ein SQL Insights-Dashboard zu entw
 1. **Ad-hoc-Abfrage-Exploration:** Führen Sie zunächst Ad-hoc-`SELECT`-Abfragen aus, um Rohdaten im Data Lake zu untersuchen. Dies ermöglicht eine spontane explorative Datenanalyse zum Experimentieren und Validieren von Daten, bei denen die Ergebnisse der Abfragen nicht im Data Lake gespeichert werden.
 1. **Nutzung von Batch-Abfragen:** Verwenden Sie Batch-Abfragen, um [geplante Aufträge zu erstellen](../../api/scheduled-queries.md#create-a-new-scheduled-query) um Insights-Aggregattabellen zu generieren und so einen systematischen und automatisierten Ansatz für die Datenverarbeitung sicherzustellen. Batch-Abfragen führen `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT` Abfragen aus, um Daten zu bereinigen, zu formen, zu bearbeiten und anzureichern. Die Ergebnisse dieser Abfragen werden im Data Lake gespeichert.
 1. **Laden aggregierter Insights:** Laden der generierten aggregierten Insights in den beschleunigten Speicher und Verwenden von SQL zum Testen von Abfragen sowie zum Sicherstellen der Genauigkeit und Effizienz des Datenabrufs. Weitere Informationen zum [Erstellen statusloser Abfragen an den beschleunigten Speicher](../../api/accelerated-queries.md) finden Sie in der Dokumentation.
-1. **Zugriff und Integration:** Greifen Sie nahtlos auf die Erkenntnisse zu, die im beschleunigten Speicher gespeichert sind, indem Sie sie mit Adobe Experience Platform [benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md) oder anderen bevorzugten Business Intelligence-Tools (BI) integrieren. Diese Integrationen mit Drittanbieter-Clients ermöglichen Benutzern ein einheitliches und intuitives Benutzererlebnis.
+1. **Zugriff und Integration:** Greifen Sie nahtlos auf die im beschleunigten Speicher gespeicherten Einblicke zu, indem Sie sie mit Adobe Experience Platform [benutzerdefinierten Dashboards) ](../../../dashboards/standard-dashboards.md) anderen bevorzugten Business Intelligence (BI)-Tools integrieren. Diese Integrationen mit Drittanbieter-Clients ermöglichen Benutzern ein einheitliches und intuitives Benutzererlebnis.
 
 ![Eine Infografik, die die vier Schritte zum Erstellen von SQL Insights in Data Distiller veranschaulicht.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

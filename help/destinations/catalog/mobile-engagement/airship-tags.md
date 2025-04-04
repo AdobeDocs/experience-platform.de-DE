@@ -3,9 +3,9 @@ keywords: Airship Tags;Airship Destination
 title: Airship Tags-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für das Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 32%
 
 ---
@@ -42,7 +42,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -60,13 +60,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Tag-Gruppen
 
-Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, mit leichten Unterschieden in der Implementierung. Diese Integration ordnet den Status der Benutzermitgliedschaft [ einem Experience Platform-Segment dem ](../../../xdm/field-groups/profile/segmentation.md) oder Nicht-Vorhandensein eines [!DNL Airship]-Tags zu. Beispiel: In einer Platform-Zielgruppe, in der sich der `xdm:status` in &quot;`realized`&quot; ändert, wird das Tag dem [!DNL Airship]-Kanal oder dem benannten Benutzer hinzugefügt, dem dieses Profil zugeordnet ist. Wenn sich die `xdm:status` in `exited` ändert, wird das Tag entfernt.
+Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, mit leichten Unterschieden in der Implementierung. Diese Integration ordnet den Status der [ eines Benutzers in einem Experience Platform](../../../xdm/field-groups/profile/segmentation.md)Segment dem Vorhandensein oder Nichtvorhandensein eines [!DNL Airship]-Tags zu. In einer Experience Platform-Zielgruppe, in der sich der `xdm:status` in &quot;`realized`&quot; ändert, wird das Tag beispielsweise dem [!DNL Airship]-Kanal oder dem benannten Benutzer hinzugefügt, dem dieses Profil zugeordnet ist. Wenn sich die `xdm:status` in `exited` ändert, wird das Tag entfernt.
 
 Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] namens `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Wählen Sie beim Erstellen Ihrer neuen Tag **Gruppe „Nicht**&quot; das Optionsfeld aus, auf dem &quot;[!DNL Allow these tags to be set only from your server]&quot; steht. Dadurch schlägt die Adobe-Tag-Integration fehl.
+>Wählen Sie beim Erstellen Ihrer neuen Tag **Gruppe „Nicht**&quot; das Optionsfeld aus, auf dem &quot;[!DNL Allow these tags to be set only from your server]&quot; steht. Dadurch schlägt die Adobe Tags-Integration fehl.
 
 Anweisungen [ Erstellen der Tag](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)Gruppe finden Sie unter „Verwalten von Tag-Gruppen“.
 
@@ -76,11 +76,11 @@ Navigieren Sie **[!UICONTROL Einstellungen]**&quot; **[!UICONTROL APIs und Integ
 
 Klicken Sie **[!UICONTROL Token erstellen]**.
 
-Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. &quot;Adobe-Tags-Ziel“, und wählen Sie „Alle Zugriffe“ für die Rolle aus.
+Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. &quot;Adobe Tags-Ziel“, und wählen Sie „Zugriff auf alle“ für die Rolle aus.
 
 Klicken Sie **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
 
-## Anwendungsfälle
+## Anwendungsszenarien
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Tags]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
@@ -92,7 +92,7 @@ Einzelhändler oder Unterhaltungsplattformen können Benutzerprofile für ihre T
 
 Trigger von Eins-zu-eins-Nachrichten in Echtzeit, wenn Benutzende in bestimmte Zielgruppen in Adobe Experience Platform fallen oder aus ihnen herausfallen.
 
-Ein Einzelhändler richtet in Platform beispielsweise eine markenspezifische Zielgruppe für Jeans ein. Dieser Einzelhändler kann jetzt eine Mobile-Nachricht als Trigger senden, sobald jemand seine Jeans-Präferenz auf eine bestimmte Marke festlegt.
+Beispiel: Ein retailer richtet eine markenspezifische Zielgruppe für Jeans in Experience Platform ein. Dass retailer jetzt eine Mobile-Nachricht als Trigger verwenden kann, sobald jemand seine Jeans-Präferenz auf eine bestimmte Marke festlegt.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

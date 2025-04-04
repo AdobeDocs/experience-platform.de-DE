@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 80%
+source-wordcount: '843'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +25,7 @@ In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der 
 
 Beim ersten Zugriff auf den Arbeitsbereich **[!UICONTROL Datenlebenszyklus]** in der Benutzeroberfläche wird eine Liste der vorhandenen Arbeitsaufträge mit allgemeinen Details angezeigt.
 
-![Bild, das den Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
+![Bild, das den Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Experience Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
 
 In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Verbraucher]** aus, um eine Liste der Aufgaben zum Löschen von Datensätzen anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der geplanten Datensatzgültigkeiten anzuzeigen.
 
@@ -97,7 +97,7 @@ Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standa
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
+In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Experience Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
 
 * [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
 * [Löschen von Datensätzen verwalten](./record-delete.md)

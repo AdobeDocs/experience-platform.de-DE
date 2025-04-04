@@ -1,19 +1,19 @@
 ---
 title: (API) Oracle Eloqua-Verbindung
-description: Das (API) Oracle Eloqua -Ziel ermöglicht es Ihnen, Ihre Kontodaten zu exportieren und innerhalb von Oracle Eloqua für Ihre Geschäftsanforderungen zu aktivieren.
+description: Mit dem (API) Oracle Eloqua -Ziel können Sie Ihre Kontodaten exportieren und in Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 30%
+source-wordcount: '2044'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL (API) Oracle Eloqua]-Verbindung
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ermöglicht es Marketing-Experten, Kampagnen zu planen und auszuführen und dabei ein personalisiertes Kundenerlebnis für ihre potenziellen Kunden zu liefern. Dank der integrierten Lead-Verwaltung und der einfachen Kampagnenerstellung können Marketing-Fachleute die richtige Zielgruppe zur richtigen Zeit auf der Journey ihres Käufers ansprechen. Außerdem kann die Lösung elegant skaliert werden, um Zielgruppen über verschiedene Kanäle wie E-Mail, Display-Suche, Video und Mobilgeräte zu erreichen. Vertriebsteams können mehr Angebote schneller abschließen und so den Marketing-ROI durch Echtzeit-Einblicke erhöhen.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ermöglicht es Marketing-Experten, Kampagnen zu planen und auszuführen und dabei ein personalisiertes Kundenerlebnis für ihre potenziellen Kunden zu liefern. Dank der integrierten Lead-Verwaltung und der einfachen Kampagnenerstellung können Marketing-Fachleute die richtige Zielgruppe zur richtigen Zeit auf der Journey ihres Käufers ansprechen. Außerdem kann die Lösung elegant skaliert werden, um Zielgruppen über verschiedene Kanäle wie E-Mail, Display-Suche, Video und Mobilgeräte zu erreichen. Vertriebsteams können mehr Angebote schneller abschließen und so den Marketing-ROI durch Echtzeit-insight steigern.
 
 Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den Vorgang [Aktualisieren eines ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) aus der [!DNL Oracle Eloqua] REST-API, mit dem Sie **einer Zielgruppe** Identitäten in [!DNL Oracle Eloqua] aktualisieren können.
 
@@ -29,11 +29,11 @@ Die Marketing-Abteilung einer Online-Plattform möchte eine E-Mail-basierte Mark
 
 Vor der Aktivierung der Daten für das [!DNL Oracle Eloqua]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
-Weitere Informationen finden Sie in der Experience Platform[Dokumentation zur Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitung zu Zielgruppenstatus benötigen.
+Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
 ### Voraussetzungen für [!DNL Oracle Eloqua] {#prerequisites-destination}
 
-Um Daten von Platform in Ihr [!DNL Oracle Eloqua]-Konto zu exportieren, benötigen Sie ein [!DNL Oracle Eloqua]-Konto.
+Um Daten aus Experience Platform in Ihr [!DNL Oracle Eloqua]-Konto zu exportieren, benötigen Sie ein [!DNL Oracle Eloqua].
 
 Darüber hinaus benötigen Sie mindestens die *„Erweiterte Benutzer - Marketing-Berechtigungen“* für Ihre [!DNL Oracle Eloqua]. Eine Anleitung finden Sie im Abschnitt *Sicherheitsgruppen* auf der Seite [Gesicherter ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)&quot;. Der Zugriff ist für das Ziel erforderlich, um beim Aufrufen der [!DNL Oracle Eloqua]-API programmgesteuert [Ihre Basis-](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) zu bestimmen).
 
@@ -50,15 +50,15 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Oracle Eloqua]-Ziel
 
 Eine Anleitung finden Sie [ Abschnitt „Anmelden  [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing)&quot;.
 
-## Leitplanken {#guardrails}
+## Leitlinien {#guardrails}
 
 >[!NOTE]
 >
 >* [!DNL Oracle Eloqua] benutzerdefinierten Kontaktfelder werden automatisch mit den Namen der Zielgruppen erstellt, die im Schritt **[!UICONTROL Segmente auswählen]** ausgewählt wurden.
 
 * [!DNL Oracle Eloqua] ist auf maximal 250 benutzerdefinierte Kontaktfelder beschränkt.
-* Stellen Sie vor dem Export neuer Zielgruppen sicher, dass diese Grenze nicht überschritten wird, sowohl von Platform-Zielgruppen als auch von der Anzahl vorhandener Zielgruppen in [!DNL Oracle Eloqua].
-* Wenn dieser Grenzwert überschritten wird, tritt beim Experience Platform ein Fehler auf. Der Grund dafür ist, dass die [!DNL Oracle Eloqua]-API die Anfrage nicht validieren kann und mit der Fehlermeldung - *400: Es gab einen Validierungsfehler* - , der das Problem beschreibt.
+* Stellen Sie vor dem Exportieren neuer Zielgruppen sicher, dass diese Grenze nicht überschritten wird, sowohl von Experience Platform als auch von der Anzahl vorhandener Zielgruppen in [!DNL Oracle Eloqua].
+* Wenn diese Grenze überschritten wird, tritt in Experience Platform ein Fehler auf. Der Grund dafür ist, dass die [!DNL Oracle Eloqua]-API die Anfrage nicht validieren kann und mit der Fehlermeldung - *400: Es gab einen Validierungsfehler* - , der das Problem beschreibt.
 * Wenn Sie das oben angegebene Limit erreicht haben, müssen Sie vorhandene Zuordnungen aus Ihrem Ziel entfernen und die entsprechenden benutzerdefinierten Kontaktfelder in Ihrem [!DNL Oracle Eloqua]-Konto löschen, bevor Sie weitere Segmente exportieren können.
 
 * Weitere Informationen zu zusätzlichen [[!DNL Oracle Eloqua]  finden Sie auf ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) Seite „Kontaktfelder erstellen“.
@@ -77,7 +77,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Platform wird der entsprechende [!DNL Oracle Eloqua] Segmentstatus mit dem Zielgruppenstatus in Platform aktualisiert.</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Experience Platform wird der entsprechende [!DNL Oracle Eloqua] Segmentstatus mit dem Zielgruppenstatus aus Experience Platform aktualisiert.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Absch
 * **[!UICONTROL Benutzername]**: Eine verkettete Zeichenfolge, die aus dem Namen Ihres [!DNL Oracle Eloqua] Unternehmens und dem [!DNL Oracle Eloqua] Benutzernamen besteht.<br>Der verkettete Wert hat die Form von `{COMPANY_NAME}\{USERNAME}`.<br> Hinweis: Verwenden Sie keine Klammern oder Leerzeichen und behalten Sie die `\` bei. <br>Wenn Ihr [!DNL Oracle Eloqua] Firmenname beispielsweise `MyCompany` und [!DNL Oracle Eloqua] Benutzername `Username` ist, wird der verkettete Wert, den Sie im Feld **[!UICONTROL Benutzername]** verwenden, `MyCompany\Username`.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
-![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
@@ -118,7 +118,7 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Sta
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
-![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -141,7 +141,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Oracle Eloqua]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Oracle Eloqua]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Oracle Eloqua]-Zielfeldern zuzuordnen:
 
@@ -165,7 +165,7 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Oracle Eloqua]-Zielfeldern
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Nachfolgend finden Sie ein Beispiel mit den oben genannten Zuordnungen:
-     ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -201,14 +201,14 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 
 1. Wählen Sie **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** aus und navigieren Sie zur Liste der Ziele.
 1. Wählen Sie als Nächstes das Ziel aus, wechseln Sie zur Registerkarte **[!UICONTROL Aktivierungsdaten]** und wählen Sie dann einen Zielgruppennamen aus.
-   ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Daten zur Aktivierung von Zielen.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+   Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Daten zur Aktivierung von Zielen.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)![
 
 1. Überwachen Sie die Zielgruppenzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der Anzahl innerhalb des Segments entspricht.
-   ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)![
 
 1. Melden Sie sich bei der [!DNL Oracle Eloqua]-Website an und navigieren Sie dann zur Seite **[!UICONTROL Kontaktübersicht]**, um zu überprüfen, ob die Profile aus der Audience hinzugefügt wurden. Um den Zielgruppenstatus anzuzeigen, gehen Sie zu einer Seite **[!UICONTROL Kontaktdetails]** und überprüfen Sie, ob das Kontaktfeld mit dem ausgewählten Zielgruppennamen als Präfix erstellt wurde.
 
-Screenshot der Benutzeroberfläche von ![Oracle Eloqua, der die Seite mit den Kontaktdetails mit dem benutzerdefinierten Kontaktfeld zeigt, das mit dem Zielgruppennamen erstellt wurde.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+Screenshot der Benutzeroberfläche von Oracle Eloqua ![mit der Kontaktdetailseite mit einem benutzerdefinierten Kontaktfeld, das mit dem Zielgruppennamen erstellt wurde.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -217,7 +217,7 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 ## Fehler und Fehlerbehebung {#errors-and-troubleshooting}
 
 Beim Erstellen des Ziels erhalten Sie möglicherweise eine der folgenden Fehlermeldungen: `400: There was a validation error` oder `400 BAD_REQUEST`. Dies geschieht, wenn Sie das Limit von 250 benutzerdefinierten Kontaktfeldern überschreiten, wie im Abschnitt [Leitplanken](#guardrails) beschrieben. Um diesen Fehler zu beheben, stellen Sie sicher, dass Sie das Limit für benutzerdefinierte Kontaktfelder in [!DNL Oracle Eloqua] nicht überschreiten.
-![Screenshot der Platform-Benutzeroberfläche mit Fehler.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Fehlermeldung.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 Auf den Seiten [[!DNL Oracle Eloqua] HTTP-Status](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html)Codes und [[!DNL Oracle Eloqua] Validierungsfehler](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) finden Sie eine umfassende Liste von Status- und Fehler-Codes mit Erläuterungen.
 
@@ -226,7 +226,7 @@ Auf den Seiten [[!DNL Oracle Eloqua] HTTP-Status](https://docs.oracle.com/en/clo
 Weitere Informationen finden Sie in der [!DNL Oracle Eloqua]:
 
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [REST-API für das Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [REST-API für Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Änderungsprotokoll
 

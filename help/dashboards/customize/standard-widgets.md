@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Standard-Dashboard-Widgets
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zu Ihren Adobe Experience Platform-Dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 82%
+source-wordcount: '438'
+ht-degree: 81%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 82%
 
 In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen und damit interagieren. Sie können bestimmte Dashboards auch aktualisieren, indem Sie Ihrer Dashboard-Ansicht neue Widgets hinzufügen. Adobe bietet eine Auswahl an Standard-Widgets, die Sie Ihren Dashboards hinzufügen können.
 
-Die [[!UICONTROL Profile]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) und [[!UICONTROL Ziele]](../guides/destinations.md#default-widgets)-Dashboards verfügen jeweils über einen Standard-Widget-Ladevorgang, wenn eine neue Platform-Instanz erstellt wird. Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der [!UICONTROL Profile], [!UICONTROL Zielgruppen] und [!UICONTROL Ziele]-Dashboards in der Platform-Benutzeroberfläche.
+Die [[!UICONTROL Profile]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) und [[!UICONTROL Ziele]](../guides/destinations.md#default-widgets)-Dashboards verfügen jeweils über einen Standard-Widget-Ladevorgang, wenn eine neue Experience Platform-Instanz erstellt wird. Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der [!UICONTROL Profile], [!UICONTROL Zielgruppen] und [!UICONTROL Ziele]-Dashboards in der Experience Platform-Benutzeroberfläche.
 
 >[!NOTE]
 >

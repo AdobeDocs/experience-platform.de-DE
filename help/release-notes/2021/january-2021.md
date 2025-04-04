@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 93%
+source-wordcount: '720'
+ht-degree: 86%
 
 ---
 
@@ -68,7 +68,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 ## [!DNL Sources] {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -76,7 +76,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Verbesserungen am Quell-Connector von Adobe Audience Manager | Sie können jetzt in Audience Manager einzelne First-Party-Segmente zur Aufnahme in Platform filtern und auswählen sowie First-Party-Merkmale herausfiltern. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Audience Manager-Quell-Connectors](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Verbesserungen am Quell-Connector von Adobe Audience Manager | Sie können jetzt in Audience Manager einzelne First-Party-Segmente zur Aufnahme in Experience Platform filtern und auswählen sowie First-Party-Eigenschaften herausfiltern. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Audience Manager-Quell-Connectors](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Verbesserungen am [!DNL Google BigQuery]-Quell-Connector | Mit dem [!DNL BigQuery]-Quell-Connector können Sie jetzt Dateien mit mehr als 10 GB in einem Durchgang aufnehmen. Informationen dazu finden Sie in der [[!DNL BigQuery] Übersicht zum Quell-Connector](../../sources/connectors/databases/bigquery.md). |
 | Unterstützung komplexer Datentypen für die Cloud-Datenspeicherung | Sie können jetzt komplexe Datentypen, wie z. B. Arrays in JSON-Dateien, aufnehmen, wenn Sie einen Cloud-Quell-Connector verwenden. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherungs-Datenflusses [in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) oder [mit der  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Unterstützung der Authentifizierung über einen Schlüssel für die [!DNL Microsoft Dynamics]-Quelle | Alternativ zur kennwortbasierten Authentifizierung können Sie sich jetzt mit einem Schlüssel bei Ihrem [!DNL Dynamics]-Konto authentifizieren. Weitere Informationen dazu finden Sie in der [[!DNL Dynamics] Übersicht zum Quell-Connector](../../sources/connectors/crm/ms-dynamics.md). |

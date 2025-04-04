@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zur Zugriffssteuerung
 user-guide-description: Verwenden Sie Produktprofile in Adobe Admin Console, um Benutzerberechtigungen zu verwalten. Erfahren Sie, wie Sie Benutzende zu Produkten und Sandboxes zuweisen.
 feature: Access Control
 role: Admin
-source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '132'
 ht-degree: 85%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 85%
 
 * [Zugangssteuerung – Übersicht](home.md)
 * Attributbasierte {#abac}
-   * [Übersicht](abac/overview.md)
+   * [Überblick](abac/overview.md)
    * [End-to-End-Handbuch](abac/end-to-end-guide.md)
    * [Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse](/help/access-control/abac/apply-access-labels-destinations.md)
    * Berechtigungen {#permissions-ui}
@@ -29,7 +29,7 @@ ht-degree: 85%
       * [Sandboxes](abac/ui/sandboxes.md)
       * [Benutzende](abac/ui/users.md)
    * Berechtigungs-Manager-{#permissions-manager}
-      * [Übersicht](abac/permission-manager/overview.md)
+      * [Überblick](abac/permission-manager/overview.md)
       * [Berechtigungen](abac/permission-manager/permissions.md)
    * Attributbasierte Zugriffssteuerung - API-{#abac-api}
       * [Übersicht](abac/api/overview.md)
@@ -50,4 +50,4 @@ ht-degree: 85%
    * [Anzeigen effektiver Richtlinien](api/effective-policies.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+* [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

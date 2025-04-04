@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2023
 description: Versionshinweise Januar 2023 für Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -189,7 +189,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 | ------- | ----------- |
 | Massenwertimport in Segment Builder | Segment Builder unterstützt jetzt den Import mehrerer Werte, entweder durch Hochladen einer CSV- oder TSV-Datei oder durch manuelles Einfügen durch Kommas getrennter Werte. Weitere Informationen finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Ablauf der Zugehörigkeit zu einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenzugehörigkeiten 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie das `validUntil`-Feld während der Aufnahme von Zielgruppendaten. |
-| Beenden der Segmentzugehörigkeit durch die Plattform | Jede Segmentzugehörigkeit, die sich basierend auf dem `lastQualificationTime`-Feld für mehr als 30 Tage im `Exited`-Status befindet, wird gelöscht. |
+| Ablauf der Segmentzugehörigkeit durch Experience Platform | Jede Segmentzugehörigkeit, die sich basierend auf dem `lastQualificationTime`-Feld für mehr als 30 Tage im `Exited`-Status befindet, wird gelöscht. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersic
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

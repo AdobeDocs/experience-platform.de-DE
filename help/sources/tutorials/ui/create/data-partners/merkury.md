@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutz
 last-substantial-update: 2023-12=12
 badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2143'
-ht-degree: 29%
+source-wordcount: '2146'
+ht-degree: 28%
 
 ---
 
@@ -30,7 +30,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihren Bucket auf Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
+Um auf Ihren Bucket in Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -42,7 +42,7 @@ Weitere Informationen zum Einrichten für [!DNL Merkury] und zu anderen Vorausse
 
 ## Verbinden Ihres Merkury-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -79,7 +79,7 @@ Sie können die folgenden Dateiformate mit der [!DNL Merkury] aufnehmen:
 
 ## Daten hinzufügen
 
-Nach der Erstellung Ihres [!DNL Merkury]-Kontos wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der Ihnen eine Oberfläche bietet, um Ihre [!DNL Merkury]-Dateihierarchie zu untersuchen und den Ordner oder die spezifische Datei auszuwählen, die Sie zum Experience Platform bringen möchten.
+Nach der Erstellung Ihres [!DNL Merkury] Kontos wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, in dem Sie Ihre [!DNL Merkury] Dateihierarchie untersuchen und den Ordner oder die spezifische Datei auswählen können, die Sie in Experience Platform importieren möchten.
 
 * Der linke Teil der Benutzeroberfläche ist ein Verzeichnis-Browser, der die [!DNL Merkury]-Dateihierarchie anzeigt.
 * Im rechten Bereich der Benutzeroberfläche können Sie bis zu 100 Datenzeilen aus einem kompatiblen Ordner oder einer kompatiblen Datei in der Vorschau anzeigen.
@@ -121,7 +121,7 @@ Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien er
 
 Wählen [!UICONTROL  im Schritt ]Daten auswählen“ eine komprimierte Datei für die Aufnahme und dann den entsprechenden Dateityp aus und geben Sie an, ob er XDM-kompatibel ist oder nicht. Wählen Sie anschließend **[!UICONTROL Komprimierungstyp]** und wählen Sie dann den entsprechenden komprimierten Dateityp für Ihre Quelldaten aus.
 
-Um eine bestimmte Datei in Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
+Um eine bestimmte Datei in Experience Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
 
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -167,7 +167,7 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -216,7 +216,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten aus Ihrer [!DNL Merkury] auf Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten aus Ihrer [!DNL Merkury] in Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
 
 ### Überwachen Ihres Datenflusses
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 60%
+source-wordcount: '1005'
+ht-degree: 59%
 
 ---
 
@@ -18,7 +18,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen an Platform Data Lake oder [!DNL Real-Time Customer Profile] beabsichtigen, finden Sie zusätzlich zu diesem Tutorial weitere Informationen im Handbuch [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und im Handbuch [Verarbeitung von Datenschutzanfragen für ](../profile/privacy.md)).
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen an Experience Platform Data Lake oder [!DNL Real-Time Customer Profile] beabsichtigen, finden Sie zusätzlich zu diesem Tutorial weitere Informationen im Handbuch [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und im Handbuch [Verarbeitung von Datenschutzanfragen für ](../profile/privacy.md)).
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -104,16 +104,16 @@ Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!U
 
 ## Verarbeitung von Löschanfragen
 
-Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verknüpften Sandboxes.
+Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Experience Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verknüpften Sandboxes.
 
 Je nachdem, ob Sie in Ihrer Datenschutzanfrage für Identity Service (`identity`) auch das Echtzeit-Kundenprofil (`ProfileService`) und den Data Lake (`aepDataLake`) als Produkte einbezogen haben, werden verschiedene Datensätze, die sich auf die Identität beziehen, zu möglicherweise unterschiedlichen Zeiten aus dem System entfernt:
 
 | Enthaltene Produkte | Effekte |
 | --- | --- |
-| Nur `identity` | Die angegebene Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt weiterhin bestehen, wird jedoch nicht aktualisiert, da neue Daten aufgenommen werden, da die Identitätszuordnungen jetzt entfernt wurden. Die mit dem Profil verknüpften Daten verbleiben ebenfalls im Data Lake. |
-| `identity` und `ProfileService` | Die angegebene Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Die mit dem Profil verknüpften Daten verbleiben im Data Lake. |
-| `identity` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt weiterhin bestehen, wird jedoch nicht aktualisiert, da neue Daten aufgenommen werden, da die Identitätszuordnungen jetzt entfernt wurden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
-| `identity`, `ProfileService` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
+| Nur `identity` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt weiterhin bestehen, wird jedoch nicht aktualisiert, da neue Daten aufgenommen werden, da die Identitätszuordnungen jetzt entfernt wurden. Die mit dem Profil verknüpften Daten verbleiben ebenfalls im Data Lake. |
+| `identity` und `ProfileService` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Die mit dem Profil verknüpften Daten verbleiben im Data Lake. |
+| `identity` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt weiterhin bestehen, wird jedoch nicht aktualisiert, da neue Daten aufgenommen werden, da die Identitätszuordnungen jetzt entfernt wurden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
+| `identity`, `ProfileService` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 
 Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden ](../privacy-service/home.md#monitor) in der Dokumentation .
 

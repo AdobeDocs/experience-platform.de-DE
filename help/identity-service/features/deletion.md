@@ -2,10 +2,10 @@
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 95%
+source-wordcount: '1201'
+ht-degree: 91%
 
 ---
 
@@ -37,7 +37,7 @@ Die folgenden Abschnitte beschreiben die Mechanismen, die Sie für Anfragen zum 
 
 ### Löschen einzelner Identitäten in Privacy Service
 
-Der Privacy Service verarbeitet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten, wie in Datenschutzvorschriften wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) definiert. Mit Privacy Service können Sie Auftragsanfragen über die API oder die Benutzeroberfläche senden. Wenn Experience Platform von Privacy Service eine Löschanfrage erhält, sendet Platform eine Bestätigung an Privacy Service, dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verbundenen Sandboxes. Weiterführende Informationen finden Sie im Handbuch zum [Verarbeiten von Datenschutzanfragen in Identity Service](../privacy.md).
+Der Privacy Service verarbeitet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten, wie in Datenschutzvorschriften wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) definiert. Mit Privacy Service können Sie Auftragsanfragen über die API oder die Benutzeroberfläche senden. Wenn Experience Platform eine DELETE-Anfrage von Privacy Service erhält, sendet Experience Platform eine Bestätigung an Privacy Service, dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verbundenen Sandboxes. Weiterführende Informationen finden Sie im Handbuch zum [Verarbeiten von Datenschutzanfragen in Identity Service](../privacy.md).
 
 Die nachstehende Tabelle enthält eine Aufschlüsselung der Löschvorgänge für einzelne Identitäten in Privacy Service:
 
@@ -56,7 +56,7 @@ Die folgenden Abschnitte beschreiben die Mechanismen, die zum Löschen von Daten
 
 ### Löschen von Datensätzen im Katalog-Service
 
-Sie können den Katalog-Service verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen zum Löschen von Datensätzen mit dem Katalog-Service finden Sie im Handbuch zum [Löschen von Objekten mithilfe der Katalog-Service-API](../../catalog/api/delete-object.md). Sie können auch die Platform-Benutzeroberfläche verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#delete-a-dataset).
+Sie können den Katalog-Service verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen zum Löschen von Datensätzen mit dem Katalog-Service finden Sie im Handbuch zum [Löschen von Objekten mithilfe der Katalog-Service-API](../../catalog/api/delete-object.md). Alternativ können Sie die Experience Platform-Benutzeroberfläche verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Datensatzablauf im Rahmen der Datenhygiene
 
@@ -66,7 +66,7 @@ Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen de
 
 | Löschen von Datensätzen | Katalog-Service | Datenhygiene |
 | --- | --- | --- |
-| Akzeptierte Anwendungsfälle | Löschen vollständiger Datensätze und ihrer zugehörigen Identitätsdaten in Platform. | Verwaltung der in Experience Platform gespeicherten Daten. |
+| Akzeptierte Anwendungsfälle | Löschen vollständiger Datensätze und der zugehörigen Identitätsdaten in Experience Platform. | Verwaltung der in Experience Platform gespeicherten Daten. |
 | Geschätzte Latenz | Tage | Tage |
 | Betroffene Services | Beim Löschen von Datensätzen durch den Katalog-Service werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. | Durch das Löschen von Datensätzen im Rahmen der Datenhygiene werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. |
 | Löschmuster | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz. | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz basierend auf dem Ablaufzeitplan. |
@@ -97,7 +97,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

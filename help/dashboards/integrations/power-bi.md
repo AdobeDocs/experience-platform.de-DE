@@ -1,25 +1,25 @@
 ---
-title: Power BI-Berichtsvorlagen für Platform-Dashboards
+title: Power BI-Berichtsvorlagen für Experience Platform-Dashboards
 description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience Platform-Daten zu analysieren.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 91%
+source-wordcount: '1482'
+ht-degree: 75%
 
 ---
 
 # Power BI-Berichtsvorlagen für Dashboards
 
-Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Anmeldeinformationen für Ihr Unternehmen in Platform benötigen.
+Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Anmeldeinformationen für Ihr Unternehmen in Experience Platform benötigen.
 
-In diesem Dokument erfahren Sie, wie Sie Adobe Experience Platform mit der Power BI-Anwendung verbinden und mithilfe von Berichtsvorlagen wichtige, aus Platform-Daten gewonnene Einblicke mit externen Benutzern teilen können.
+Dieses Dokument enthält Anweisungen dazu, wie Sie Adobe Experience Platform mit dem Power BI-Programm verbinden und Berichtsvorlagen verwenden, um wichtige Experience Platform-Dateneinblicke mit externen Benutzern zu teilen.
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über [Schemakomposition](../../xdm/schema/composition.md) beim Experience Platform haben und darüber, wie Attribute über das „Vereinigungsschema[ in das Echtzeit-Kundenprofil ](../../xdm/schema/composition.md#union) werden.
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform haben und darüber, wie Attribute über das „Vereinigungsschema[ in das Echtzeit-Kundenprofil eingefügt ](../../xdm/schema/composition.md#union).
 
-Um die Power BI-Anwendungsintegration installieren zu können, müssen die Benutzer zunächst die folgenden Platform-Berechtigungen erhalten haben:
+Um die Power BI-Anwendungsintegration installieren zu können, müssen Benutzende zunächst die folgenden Experience Platform-Berechtigungen erhalten haben:
 
 - Verwalten von Abfragen
 - Verwalten von Sandboxes
@@ -32,11 +32,11 @@ Außerdem benötigen Sie ein Power BI-Konto, um diesem Tutorial zu folgen. Um ei
 
 >[!NOTE]
 >
->Damit die Registerkarte „Dashboards“ im linken Navigationsbereich der Platform-Benutzeroberfläche angezeigt wird und die Dashboard-Inventaransicht sichtbar ist, müssen Sie als Teil Ihrer Platform-Lizenz Zugriff auf eines der Profil-, Segmentierungs- oder Ziel-Dashboards haben.
+>Damit die Registerkarte „Dashboards“ im linken Navigationsbereich der Benutzeroberfläche von Experience Platform angezeigt wird und die Ansicht „Dashboard-Inventar“ sichtbar ist, müssen Sie als Teil Ihrer Experience Platform-Lizenz Zugriff auf eines der Profil-, Segmentierungs- oder Ziel-Dashboards haben.
 
 ## Installieren der Power BI-Anwendungsintegration
 
-Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Dashboards]** aus, um den [!UICONTROL Dashboards]-Arbeitsbereich zu öffnen. Die Registerkarte [!UICONTROL Durchsuchen] zeigt eine Liste der derzeit verfügbaren Dashboard-Ansichten an. Weitere Informationen zum Anzeigen verfügbarer Dashboards finden Sie unter [Inventardokumentation](../inventory.md).
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Dashboards]** im linken Navigationsbereich aus, um den Arbeitsbereich [!UICONTROL Dashboards] zu öffnen. Die Registerkarte [!UICONTROL Durchsuchen] zeigt eine Liste der derzeit verfügbaren Dashboard-Ansichten an. Weitere Informationen zum Anzeigen verfügbarer Dashboards finden Sie unter [Inventardokumentation](../inventory.md).
 
 Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Integrationen]** aus. Die Seite der Power BI-Anwendungsintegration wird angezeigt. Wählen Sie nun **[!UICONTROL Installieren]** aus, um die Installation zu starten.
 
@@ -76,7 +76,7 @@ Wählen Sie **[!UICONTROL Datei für Anmeldedaten hochladen]** und dann im angez
 
 ![Power BI-Anmeldedaten-Bildschirm mit hervorgehobener Schaltfläche „Datei für Anmeldedaten hochladen“.](../images/power-bi/upload-credential-file.png)
 
-Nachdem Sie die nicht ablaufenden Anmeldedaten angegeben haben, werden sie automatisch von Platform überprüft. Nach erfolgreicher Überprüfung wird eine Bestätigungsmeldung angezeigt. Wählen Sie **[!UICONTROL Nächste]** aus, um die Einverständniserklärung für das Power BI-Programm zu lesen.
+Nachdem Sie die nicht ablaufenden Anmeldeinformationen angegeben haben, werden sie automatisch von Experience Platform validiert. Nach erfolgreicher Überprüfung wird eine Bestätigungsmeldung angezeigt. Wählen Sie **[!UICONTROL Nächste]** aus, um die Einverständniserklärung für das Power BI-Programm zu lesen.
 
 ![Bildschirm für die erfolgreiche Prüfung nicht ablaufender Anmeldedaten mit hervorgehobener Schaltfläche „Weiter“.](../images/power-bi/successfully-uploaded-credential-file.png)
 
@@ -86,7 +86,7 @@ Die Einverständnisanzeige erscheint. Wählen Sie **[!UICONTROL Einverständnise
 
 ![Die Anzeige „Einverständnis erteilen“ mit der hervorgehobenen Schaltfläche „Einverständniserklärung überprüfen“.](../images/power-bi/provide-consent-display.png)
 
-Wählen Sie **[!UICONTROL Akzeptieren]** aus, um Power BI Zugriff auf Ihre Platform-Daten und deren Verwendung zu gewähren.
+Wählen Sie **[!UICONTROL Akzeptieren]** aus, um Power BI Zugriff auf Ihre Experience Platform-Daten und deren Verwendung zu gewähren.
 
 ![Berechtigungsanfrage für Power BI-Anwendung.](../images/power-bi/permissions.png)
 
@@ -94,7 +94,7 @@ Wählen Sie **[!UICONTROL Akzeptieren]** aus, um Power BI Zugriff auf Ihre Platf
 >
 >Wenn Sie den Installationsprozess zu einem beliebigen Zeitpunkt beenden, bevor Sie Ihr Einverständnis erteilen, wird die Power BI-Anwendungsintegration nicht im Dashboard-Inventar installiert.
 
-Nachdem Sie Ihr Einverständnis gegeben haben, wird die Berichtsvorlage automatisch im Rahmen des Installationsprozesses in die Power BI-Umgebung installiert. Power BI verwendet dann die nicht ablaufenden Anmeldedaten, um auf Platform zuzugreifen, alle SQL-Abfragen nacheinander auszuführen und die Berichtsvorlage mit den zurückgegebenen Daten zu füllen.
+Nachdem Sie Ihr Einverständnis gegeben haben, wird die Berichtsvorlage automatisch im Rahmen des Installationsprozesses in die Power BI-Umgebung installiert. Power BI verwendet dann die nicht ablaufenden Anmeldeinformationen, um auf Experience Platform zuzugreifen, alle SQL-Abfragen nacheinander auszuführen und die Berichtsvorlage mit den zurückgegebenen Daten zu füllen.
 
 Wählen Sie **[!UICONTROL Beenden]** aus, um zum Dashboard-Inventar zurückzukehren.
 
@@ -118,7 +118,7 @@ Die Standard-Widgets der Profile, Segmente und Ziele sind standardmäßig in den
 >
 >Die Bearbeitungsberechtigungen für ein Dashboard müssen aktiviert sein, damit dieses Dashboard in der Power BI-Umgebung installiert werden kann.
 
-![Power BI-Vorlagenbericht mit standardmäßigen Platform-Profil-Widgets.](../images/power-bi/profile-report-template.png)
+![Power BI-Vorlagenbericht mit standardmäßigen Experience Platform-Profil-Widgets.](../images/power-bi/profile-report-template.png)
 
 Nachdem ein Dashboard in Power BI installiert wurde, werden Berichtsvorlagen standardmäßig allen Benutzern angezeigt. Wenn Sie den Zugriff auf Berichtsvorlagen beschränken möchten, deaktivieren Sie den Zugriff für die betreffenden Benutzer in der Power BI-Umgebung.
 
@@ -136,7 +136,7 @@ Benutzerdefinierte Widgets werden mithilfe der Widget-Bibliothek erstellt. Allge
 
 >[!IMPORTANT]
 >
->Neu erstellte benutzerdefinierte Widgets werden **nicht** automatisch zwischen Adobe Experience Platform-Dashboards und den Power BI-Berichtsvorlagen synchronisiert. Alle benutzerdefinierten Widgets, die in der Platform-Benutzeroberfläche erstellt werden, müssen in der Power BI-Umgebung manuell neu erstellt werden.
+>Neu erstellte benutzerdefinierte Widgets werden **nicht** automatisch zwischen Adobe Experience Platform-Dashboards und den Power BI-Berichtsvorlagen synchronisiert. Alle benutzerdefinierten Widgets, die in der Experience Platform-Benutzeroberfläche erstellt wurden, müssen in der Power BI-Umgebung manuell neu erstellt werden.
 
 ### Benutzerdefiniertes Widget in der Power BI-Umgebung neu erstellen
 
@@ -148,7 +148,7 @@ Um das Dashboard zu löschen, gehen Sie zum Dashboard-Inventar und wählen Sie d
 
 >[!NOTE]
 >
->Nur der Benutzer, der das Power BI-Dashboard installiert hat, kann die Integration aus der Platform-Benutzeroberfläche löschen.
+>Nur der Benutzer, der das Power BI-Dashboard installiert hat, kann die Integration aus der Experience Platform-Benutzeroberfläche löschen.
 
 ![Die Registerkarte „Durchsuchen“ vom Bildschirm des Dashboards-Inventars wird mit der hervorgehobenen Schaltfläche „Durchsuchen“ und dem hervorgehobenen Symbol „Löschen“ angezeigt.](../images/power-bi/delete-power-bi-dashboard.png)
 
@@ -156,8 +156,8 @@ Ein Bestätigungs-Pop-over wird angezeigt. Wählen Sie **[!UICONTROL Löschen]**
 
 >[!IMPORTANT]
 >
->Durch das Löschen des Power BI-Dashboards aus der Platform-Benutzeroberfläche werden **nicht** die in Ihrer Power BI-Umgebung verfügbaren Berichtsvorlagen gelöscht. Wenn Sie die in den Power BI-Berichtsvorlagen enthaltenen Informationen vollständig löschen möchten, müssen Sie sich bei Ihrem Power BI-Konto anmelden und die Berichtsvorlagen aus dieser Umgebung löschen. Nach dem Löschen kann ein Benutzer mithilfe der oben beschriebenen Installationsanweisungen das Power BI-Dashboard neu installieren.
+>Durch das Löschen des Power BI-Dashboards aus der Experience Platform **Benutzeroberfläche** die in Ihrer Power BI-Umgebung verfügbaren Berichtsvorlagen nicht gelöscht. Wenn Sie die in den Power BI-Berichtsvorlagen enthaltenen Informationen vollständig löschen möchten, müssen Sie sich bei Ihrem Power BI-Konto anmelden und die Berichtsvorlagen aus dieser Umgebung löschen. Nach dem Löschen kann ein Benutzer mithilfe der oben beschriebenen Installationsanweisungen das Power BI-Dashboard neu installieren.
 
 ## Nächste Schritte
 
-Mithilfe dieses Dokuments erhalten Sie ein besseres Verständnis dafür, wie Power BI-Berichtsvorlagen in Platform integriert werden können, um ansprechende, aus Ihren Profil-, Segment- oder Ziel-Dashboards gewonnene Einblicke für andere freizugeben. Weitere Information über das Anpassen Ihrer Dashboards finden Sie unter [Übersicht über die Dashboard-Anpassung](../customize/overview.md).
+Durch dieses Dokument erhalten Sie ein besseres Verständnis dafür, wie Power BI-Berichtsvorlagen in Experience Platform integriert werden können, um ansprechende Dateneinblicke aus Ihren Profil-, Segment- oder Ziel-Dashboards freizugeben. Weitere Information über das Anpassen Ihrer Dashboards finden Sie unter [Übersicht über die Dashboard-Anpassung](../customize/overview.md).

@@ -5,16 +5,16 @@ title: Aufnehmen von Daten in Experience Platform
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 51%
 
 ---
 
 # Daten in Adobe Experience Platform erfassen
 
-Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in [!DNL Platform] importieren. Beispiele für aufzunehmende Daten sind Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten, die einem bekannten [!DNL Experience Data Model]-Schema (XDM) in der Schemaregistrierung entsprechen.
+Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in [!DNL Experience Platform] importieren. Beispiele für aufzunehmende Daten sind Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten, die einem bekannten [!DNL Experience Data Model]-Schema (XDM) in der Schemaregistrierung entsprechen.
 
 ## Erste Schritte
 
@@ -80,7 +80,7 @@ Auf der Registerkarte Info befindet sich auch ein **[!UICONTROL Profil]**-Umscha
 
 ## Datensatz für [!DNL Real-Time Customer Profile] aktivieren
 
-Datensätze werden für die Aufnahme von Daten in [!DNL Experience Platform] verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzufügen. Diese zusammengesetzten Informationen werden als [!DNL Real-Time Customer Profile] bezeichnet. Damit [!DNL Platform] wissen, welche Informationen im [!DNL Real-Time Profile] enthalten sein sollen, können Datensätze mit dem Umschalter **[!UICONTROL Profil]** für die Aufnahme markiert werden.
+Datensätze werden für die Aufnahme von Daten in [!DNL Experience Platform] verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzufügen. Diese zusammengesetzten Informationen werden als [!DNL Real-Time Customer Profile] bezeichnet. Damit [!DNL Experience Platform] wissen, welche Informationen im [!DNL Real-Time Profile] enthalten sein sollen, können Datensätze mit dem Umschalter **[!UICONTROL Profil]** für die Aufnahme markiert werden.
 
 Standardmäßig ist der Umschalter deaktiviert. Wenn Sie [!DNL Profile] aktivieren, werden alle in den Datensatz aufgenommenen Daten verwendet, um eine Person zu identifizieren und ihre [!DNL Real-Time Profile] zusammenzufügen.
 
@@ -106,13 +106,13 @@ Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICO
 
 >[!NOTE]
 >
->Platform unterstützt zwei Dateitypen für die Datenaufnahme: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 1 GB pro Datei beträgt.
+>Experience Platform unterstützt zwei Dateitypen für die Datenaufnahme: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 1 GB pro Datei beträgt.
 
 ![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Datei hochladen {#upload-file}
 
-Wenn Sie eine Parquet- oder JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop ziehen (oder durchsuchen und auswählen), beginnt [!DNL Platform] sofort mit der Verarbeitung der Datei und ein Dialogfeld **[!UICONTROL Hochladen]** wird auf der Registerkarte **[!UICONTROL Daten hinzufügen]** angezeigt, das den Fortschritt des Datei-Uploads anzeigt.
+Wenn Sie eine Parquet- oder JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop ziehen (oder durchsuchen und auswählen), beginnt [!DNL Experience Platform] sofort mit der Verarbeitung der Datei und ein Dialogfeld **[!UICONTROL Hochladen]** wird auf der Registerkarte **[!UICONTROL Daten hinzufügen]** angezeigt, das den Fortschritt des Datei-Uploads anzeigt.
 
 ![Dialog „Upload läuft“](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Weitere Informationen zur Batch-Aufnahme finden Sie im Abschnitt [Übersicht üb
 
 >[!WARNING]
 >
->Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+>Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

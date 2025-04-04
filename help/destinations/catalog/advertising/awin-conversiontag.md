@@ -3,36 +3,36 @@ keywords: Awin Advertiser Conversion Tag-Erweiterung;Konversions-Tag;Awin;Awin;A
 title: Awin Advertising Conversion Tag-Erweiterung
 description: Die Awin Advertiser Conversion Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 41%
+source-wordcount: '499'
+ht-degree: 39%
 
 ---
 
 # Awin Advertising Conversion Tag-Erweiterung {#awin-conversiontag-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Das Konvertierungs-Tag ist die Deklaration des JavaScript-Objekts AWIN.Tracking.Sale , die auf der Bestätigungsseite erfolgt, um das Master-Tag anzuweisen, dass eine Konversion stattgefunden hat. Anschließend führt sie die erforderlichen Tracking-Anfragen aus.
 
 Awin Advertiser Conversion Tag ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Awin Advertiser ConversionTag-Erweiterung in der Benutzeroberfläche](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungsfunktionen in der Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Experience Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungsfunktionen in der Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
 So installieren Sie die [!DNL Awin Advertiser Conversion Tag]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der [Awin Advertiser Conversion Tag-Seite auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite [Awin Advertiser Conversion Tag“ auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 

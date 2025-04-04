@@ -2,9 +2,9 @@
 title: Identitätsdiagramm-Viewer
 description: Im Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 Im Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert. Alle Identitätsdiagramme werden von Adobe Experience Platform Identity Service bei Kundenaktivität nahezu in Echtzeit verwaltet und aktualisiert.
 
-Mit dem Identitätsdiagramm-Viewer in der Platform-Benutzeroberfläche können Sie visualisieren und besser verstehen, welche Kundenidentitäten auf welche Weise miteinander verknüpft sind. Mit dem Viewer können Sie verschiedene Teile des Diagramms per Drag-and-drop verschieben und mit ihnen interagieren, sodass Sie komplexe Identitätsbeziehungen untersuchen, Fehler effizient beheben und von einer erhöhten Transparenz bei der Verwendung von Informationen profitieren können. 
+Mit dem Identitätsdiagramm-Viewer in der Benutzeroberfläche von Experience Platform können Sie visualisieren und besser verstehen, welche Kundenidentitäten auf welche Weise miteinander verknüpft sind. Mit dem Viewer können Sie verschiedene Teile des Diagramms per Drag-and-drop verschieben und mit ihnen interagieren, sodass Sie komplexe Identitätsbeziehungen untersuchen, Fehler effizient beheben und von einer erhöhten Transparenz bei der Verwendung von Informationen profitieren können. 
 
-Das folgende Dokument beschreibt die Schritte für den Zugriff auf und die Verwendung des Identitätsdiagramm-Viewers in der Platform-Benutzeroberfläche.
+Das folgende Dokument beschreibt die Schritte für den Zugriff auf und die Verwendung des Identitätsdiagramm-Viewers in der Experience Platform-Benutzeroberfläche.
 
 ## Anleitungsvideo
 
@@ -38,7 +38,7 @@ Für die Arbeit mit dem Identitätsdiagramm-Viewer sind Kenntnisse der verschied
 
 ## Zugriff auf den Identitätsdiagramm-Viewer {#access-identity-graph-viewer}
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Identitäten]** im linken Navigationsbereich und anschließend **[!UICONTROL Identitätsdiagramm]** aus der Liste der Registerkarten in der Kopfzeile aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Identitäten]** im linken Navigationsbereich und anschließend **[!UICONTROL Identitätsdiagramm]** aus der Liste der Registerkarten in der Kopfzeile aus.
 
 ![Der Arbeitsbereich „Identitäten“ in der Experience Platform-Benutzeroberfläche mit ausgewählter Registerkarte „Identitätsdiagramm“.](../images/graph-viewer/identity-graph.png)
 
@@ -135,7 +135,7 @@ Wählen Sie im Vorschaufenster ein Fingerabdrucksymbol aus, um die Identitäten 
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Platform-Benutzeroberfläche untersuchen können. Weiterführende Informationen zu Identitäten in Platform finden Sie in der [Identity Service - Übersicht](../home.md)
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Experience Platform-Benutzeroberfläche erkunden können. Weiterführende Informationen zu Identitäten in Experience Platform finden Sie in der [Identity Service - Übersicht](../home.md)
 
 ## Änderungsprotokoll
 

@@ -2,10 +2,10 @@
 title: YouTube Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform vertraut.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 83%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Haupterweiterung
 
-Verwenden Sie das Code-Fragment [Embed a player using an \&lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten auf der HTML jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
+Verwenden Sie das Code-Fragment [Embed a player using an &lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten im HTML jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
 
 Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer YouTube-Videos auf einer einzelnen Website, indem ein `id`-Attribut mit einem eindeutigen Wert im iframe-Skript-Tag eingefügt und `enablejsapi=1` und `rel=0` an das Ende des `src`-Attributwerts angehängt werden, falls dies noch nicht der Fall ist. Beispiel:
 
@@ -98,7 +98,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
 >[!TIP]
 > 
->Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie unter [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erklärt, und dann als ein Segment in Analysis Workspace angewendet werden.
+>Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Experience Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erläutert, und dann als ein Segment in Analysis Workspace angewendet werden.
 
 Erstellen Sie zum Verketten von Videoinformationswerten ein neues Datenelement mit dem Namen „Videometadaten“ und programmieren Sie es so, dass alle oben aufgeführten Videodatenelemente abgerufen und zusammengestellt werden. z. B.:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Weitere Informationen zur effektiven Erstellung und Verwendung von Datenelementen in Platform finden Sie in der Dokumentation [Datenelemente](../../../ui/managing-resources/data-elements.md).
+Weitere Informationen zur effektiven Erstellung und Verwendung von Datenelementen in Experience Platform finden Sie in der Dokumentation [Datenelemente](../../../ui/managing-resources/data-elements.md).

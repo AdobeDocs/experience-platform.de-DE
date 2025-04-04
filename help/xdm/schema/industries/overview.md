@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Übersicht über Datenmodelle für Unternehmen
 description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene vertikale Branchen, die mithilfe standardmäßiger Experience-Datenmodell (XDM)-Komponenten erstellt werden können.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Um Ihnen eine Orientierungshilfe für Ihre Datenmodellierungsstrategie basierend
 
 ## Voraussetzungen
 
-Zum Lesen der ERDs, auf die in diesem Handbuch verwiesen wird, müssen Sie über ein Grundverständnis verfügen, wie XDM-Komponenten interagieren, um Schemata zu bilden, und wie XDM-Schemata in Experience Platform als Ganzes funktionieren. Stellen Sie sicher, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
+Zum Lesen der ERDs, auf die in diesem Handbuch verwiesen wird, müssen Sie über ein Grundverständnis verfügen, wie XDM-Komponenten interagieren, um Schemas zu bilden, und wie XDM-Schemas in Experience Platform als Ganzes funktionieren. Stellen Sie sicher, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
 
-* [XDM-System - Übersicht](../../home.md) Erfahren Sie, wie XDM im Platform-Ökosystem funktioniert.
+* [XDM-System - Übersicht](../../home.md) Erfahren Sie, wie XDM im Experience Platform-Ökosystem funktioniert.
 * [Grundlagen der Schemakomposition](../../schema/composition.md): Erfahren Sie, wie XDM-Komponenten (wie Schemafeldgruppen, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
 
 Es wird außerdem empfohlen, das [Handbuch zu Best Practices für die Datenmodellierung](../../schema/best-practices.md) zu lesen, um allgemeine Richtlinien zur Zuordnung Ihrer Daten zu XDM zu erhalten.

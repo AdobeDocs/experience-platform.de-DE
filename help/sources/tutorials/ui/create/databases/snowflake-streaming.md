@@ -1,15 +1,15 @@
 ---
-title: Streamen von Daten aus Ihrer Snowflake-Datenbank auf Experience Platform über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie Daten aus Ihrer Snowflake-Datenbank auf Experience Platform streamen.
+title: Streamen von Daten aus Ihrer Snowflake-Datenbank an Experience Platform mithilfe der Benutzeroberfläche
+description: Erfahren Sie, wie Sie Daten aus Ihrer Snowflake-Datenbank an Experience Platform streamen.
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
-ht-degree: 17%
+source-wordcount: '1648'
+ht-degree: 16%
 
 ---
 
-# Streamen von Daten aus Ihrer [!DNL Snowflake]-Datenbank auf Experience Platform über die Benutzeroberfläche
+# Streamen von Daten aus Ihrer [!DNL Snowflake]-Datenbank an Experience Platform mithilfe der Benutzeroberfläche
 
 In diesem Handbuch erfahren Sie, wie Sie die Benutzeroberfläche verwenden, um Daten aus Ihrer [!DNL Snowflake] an Adobe Experience Platform zu streamen.
 
@@ -24,11 +24,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Authentifizierung
 
-Lesen Sie das Handbuch unter [Vorausgesetzte Einrichtung für  [!DNL Snowflake] -Streaming](../../../../connectors/databases/snowflake-streaming.md), um Informationen zu den Schritten zu erhalten, die Sie durchführen müssen, bevor Sie Streaming-Daten von [!DNL Snowflake] auf Experience Platform aufnehmen können.
+Lesen Sie das Handbuch unter [Vorausgesetzte Einrichtung für  [!DNL Snowflake] -Streaming](../../../../connectors/databases/snowflake-streaming.md), um Informationen zu den Schritten zu erhalten, die Sie durchführen müssen, bevor Sie Streaming-Daten von [!DNL Snowflake] in Experience Platform aufnehmen können.
 
-## Verwenden der [!DNL Snowflake Streaming] zum Streamen [!DNL Snowflake] Daten auf Experience Platform
+## Verwenden der [!DNL Snowflake Streaming] zum Streamen [!DNL Snowflake] Daten an Experience Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *Kategorie* die Option **[!DNL Snowflake Streaming]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
@@ -36,9 +36,9 @@ Wählen Sie unter *Kategorie* die Option **[!DNL Snowflake Streaming]** und dann
 >
 >Für Quellen, die im Quellkatalog kein authentifiziertes Konto haben, wird die Option **[!UICONTROL Einrichten]** angezeigt. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog in der Experience Platform-Benutzeroberfläche, wobei die Snowflake-Streaming-Quellkarte ausgewählt ist.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![Der Quellkatalog in der Experience Platform-Benutzeroberfläche mit ausgewählter Snowflake Streaming-Quellkarte.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-Die Seite **[!UICONTROL Snowflake-Streaming-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die **[!UICONTROL Snowflake Streaming-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 >[!BEGINTABS]
 
@@ -53,8 +53,8 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und wart
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | Konto | Der Name Ihres [!DNL Snowflake]. Konventionen zu Kontonamen finden Sie im [[!DNL Snowflake Streaming] Authentifizierungshandbuch](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Warehouse | Der Name Ihres [!DNL Snowflake]. Warehouses verwalten die Ausführung von Abfragen in [!DNL Snowflake]. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, um Daten auf Experience Platform zu bringen. |
-| Datenbank | Der Name Ihrer [!DNL Snowflake]. Die Datenbank enthält die Daten, die auf Experience Platform übertragen werden sollen. |
+| Warehouse | Der Name Ihres [!DNL Snowflake]. Warehouses verwalten die Ausführung von Abfragen in [!DNL Snowflake]. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, um Daten in Experience Platform zu bringen. |
+| Datenbank | Der Name Ihrer [!DNL Snowflake]. Die -Datenbank enthält die Daten, die Sie an Experience Platform übermitteln möchten. |
 | Schema | (Optional) Das mit Ihrem [!DNL Snowflake] verknüpfte Datenbankschema. |
 | Benutzername | Der Benutzername Ihres [!DNL Snowflake]. |
 | Kennwort | Das Kennwort für Ihr [!DNL Snowflake]. |
@@ -82,7 +82,7 @@ Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 Der Schritt [!UICONTROL Daten auswählen] wird angezeigt. In diesem Schritt müssen Sie die Daten auswählen, die Sie in Experience Platform importieren möchten, Zeitstempel und Zeitzonen konfigurieren und eine Beispieldatendatei für die Aufnahme von Rohdaten bereitstellen.
 
-Verwenden Sie das Datenbankverzeichnis auf der linken Bildschirmseite und wählen Sie die Tabelle aus, die Sie auf Experience Platform importieren möchten.
+Verwenden Sie das Datenbankverzeichnis auf der linken Bildschirmseite und wählen Sie die Tabelle aus, die Sie in Experience Platform importieren möchten.
 
 ![Die ausgewählte Datenschnittstelle mit ausgewählter Datenbanktabelle.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
@@ -149,13 +149,13 @@ Nachdem Ihr Datensatz konfiguriert wurde, müssen Sie Details zu Ihrem Datenflus
 | --- | --- |
 | Datenflussname | Der Name des Datenflusses.  Standardmäßig wird dabei der Name der zu importierenden Datei verwendet. |
 | Beschreibung | (Optional) Eine kurze Beschreibung Ihres Datenflusses. |
-| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise generieren, die Benutzende abonnieren können. Für diese Optionen ist ein laufender Datenfluss erforderlich, um sie im Trigger zu halten. Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
+| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise erstellen, die Benutzende abonnieren können. Für diese Optionen ist ein laufender Datenfluss erforderlich, um sie im Trigger zu halten. Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ## Zuordnen von Feldern zu einem XDM-Schema {#mapping}
 
-Der Schritt [!UICONTROL Zuordnung] wird angezeigt. Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie diese Daten in das Experience Platform aufnehmen, und wählen Sie dann **[!UICONTROL Weiter]**. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-](../../../../../data-prep/ui/mapping.md)).
+Der Schritt [!UICONTROL Zuordnung] wird angezeigt. Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie diese Daten in Experience Platform aufnehmen, und wählen Sie dann **[!UICONTROL Weiter]**. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-](../../../../../data-prep/ui/mapping.md)).
 
 ![Die Zuordnungsschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 

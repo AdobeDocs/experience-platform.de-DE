@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 99%
+source-wordcount: '1018'
+ht-degree: 92%
 
 ---
 
@@ -39,7 +39,7 @@ Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] 
 
 ## Datenerfassung {#data-collection}
 
-Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
+Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe oder andere Ziele weitergegeben werden können.
 
 **Neue Funktionen**
 
@@ -47,9 +47,9 @@ Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kunden
 | --- | --- |
 | Verbesserter UI-Workflow für die Konfiguration von Datenströmen | Der Workflow zum Erstellen eines neuen Datenstroms in der Datenerfassungs-UI wurde aktualisiert. Beim Hinzufügen von Services zu einem Datenstrom werden nur die Services, auf die Sie Zugriff haben, in die Optionsliste aufgenommen. Weitere Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datenstroms](../../datastreams/overview.md). |
 | Datenvorbereitung für die Datenerfassung | Wenn Sie das Adobe Experience Platform Web SDK verwenden, können Sie jetzt Datenvorlagenfunktionen verwenden, um Ihre Daten Server-seitig dem Experience-Datenmodell (XDM) zuzuordnen. Weitere Informationen finden Sie im Abschnitt [Datenvorbereitung für die Datenerfassung](../../datastreams/data-prep.md) im Leitfaden zu den Datenströmen. |
-| IDs von Erstanbieter-Geräten | Sie können jetzt Ihre eigenen Geräte-IDs beim Erfassen von Kundendaten mit dem Platform Web SDK an das Adobe Experience Platform Edge Network senden, um eine Problemumgehung für aktuelle Browser-Beschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](../../web-sdk/identity/first-party-device-ids.md). |
+| IDs von Erstanbieter-Geräten | Sie können jetzt Ihre eigenen Geräte-IDs bei der Erfassung von Kundendaten mit der Experience Platform Web SDK an Adobe Experience Platform Edge Network senden, um eine Problemumgehung für die jüngsten Browser-Einschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](../../web-sdk/identity/first-party-device-ids.md). |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Experience Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -77,7 +77,7 @@ Weitere allgemeine Informationen zum [!DNL Identity Service] finden Sie unter [I
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

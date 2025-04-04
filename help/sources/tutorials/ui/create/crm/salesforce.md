@@ -1,17 +1,17 @@
 ---
-title: Verbinden Ihres Salesforce-Kontos über die Experience Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche auf Experience Platform übertragen.
+title: Verbinden Ihres Salesforce-Kontos über die Benutzeroberfläche von Experience Platform
+description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche in Experience Platform übertragen.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 19%
+source-wordcount: '936'
+ht-degree: 17%
 
 ---
 
-# Verbinden Ihres [!DNL Salesforce]-Kontos mit dem Experience Platform über die Benutzeroberfläche
+# Verbinden Ihres [!DNL Salesforce]-Kontos mit Experience Platform über die Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Salesforce]-Konto verbinden und Ihre CRM-Daten über die Experience Platform-Benutzeroberfläche in Adobe Experience Platform übertragen.
+In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Salesforce]-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche von Experience Platform in Adobe Experience Platform übertragen.
 
 ## Erste Schritte
 
@@ -59,11 +59,11 @@ Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie
 
 >[!ENDTABS]
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Salesforce]-Konto mit Experience Platform zu verbinden.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Salesforce]-Konto mit Experience Platform zu verbinden.
 
 ## Verbinden Ihres [!DNL Salesforce]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie **[!DNL Salesforce]** unter der Kategorie *[!UICONTROL CRM]* und dann **[!UICONTROL Daten hinzufügen]**.
 
@@ -71,7 +71,7 @@ Wählen Sie **[!DNL Salesforce]** unter der Kategorie *[!UICONTROL CRM]* und dan
 >
 >Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit ausgewählter Salesforce-Quellkarte.](../../../../images/tutorials/create/salesforce/catalog.png)
+![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Salesforce-Quellkarte.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 Die **[!UICONTROL Verbindung zu Salesforce herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -127,4 +127,4 @@ Der Rest des Workflows bleibt unverändert. Der einzige Nachteil besteht darin, 
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Salesforce]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/crm.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Salesforce]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/crm.md).

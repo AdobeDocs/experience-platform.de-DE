@@ -1,12 +1,12 @@
 ---
 title: Erstellen einer PathFactory-Basisverbindung mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie Ihr PathFactory-Konto mithilfe der Flow Service-API gegen Experience Platform authentifizieren.
+description: Erfahren Sie, wie Sie Ihr PathFactory-Konto mithilfe der Flow Service-API für Experience Platform authentifizieren.
 badge: Beta
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 46%
+source-wordcount: '546'
+ht-degree: 24%
 
 ---
 
@@ -20,18 +20,18 @@ Lesen Sie dieses Dokument, um zu erfahren, wie Sie eine Basisverbindung für [!D
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL PathFactory] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
 
-Um auf Ihr PathFactory-Konto auf der Plattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr PathFactory-Konto in der Experience Platform zuzugreifen, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Weitere Informationen zum Schützen und Verwenden Ihrer Anmeldeinformationen und
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL PathFactory] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -107,4 +107,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 In diesem Tutorial haben Sie eine [!DNL PathFactory]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung mithilfe der  [!DNL Flow Service] -API auf Platform zu übertragen](../../collect/marketing-automation.md)
+* [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung mithilfe der API  [!DNL Flow Service]  Experience Platform zu übertragen](../../collect/marketing-automation.md)

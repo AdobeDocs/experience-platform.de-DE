@@ -2,20 +2,20 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quell-Connectoren;Quell-Connector;Quellen;Datenquellen;Datenquelle;Datenquellenverbindung
 solution: Experience Platform
 title: Übersicht über Quell-Connectoren
-description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 72%
+source-wordcount: '1557'
+ht-degree: 67%
 
 ---
 
 # Übersicht über Quell-Connectoren
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Experience Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
 
 Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentraler Stelle aufnehmen und auswerten, um auf diesen Erkenntnissen basierend weitere Schritte einzuleiten.
 
@@ -84,7 +84,7 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einer 
 
 ### Cloud-Speicherplatz {#cloud-storage}
 
-Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden mit der Benutzeroberfläche in den Quellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Cloud-Speicherquellen können Ihre eigenen Daten in Experience Platform übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden mit der Benutzeroberfläche in den Quellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE batch]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE batch]{type=Informative}
@@ -228,7 +228,7 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 >[!TIP]
 >
->Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Rollen** werden erstellt, um die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren. **Kennzeichnungen** werden auf &quot;**&quot; angewendet** um den Zugriff auf diese bestimmte Rolle festzulegen. **Kennzeichnungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente hat, muss er einer Rolle *mit derselben Beschriftung, die der abgefragten Ressource zugewiesen ist* hinzugefügt werden. Weitere Informationen finden Sie im [End-to-End-Handbuch zur attributbasierten Zugriffssteuerung](../access-control/abac/end-to-end-guide.md).
+>Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Rollen** werden erstellt, um die Benutzertypen zu kategorisieren, die mit Ihrer Experience Platform-Instanz interagieren. **Kennzeichnungen** werden auf &quot;**&quot; angewendet** um den Zugriff auf diese bestimmte Rolle festzulegen. **Kennzeichnungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente hat, muss er einer Rolle *mit derselben Beschriftung, die der abgefragten Ressource zugewiesen ist* hinzugefügt werden. Weitere Informationen finden Sie im [End-to-End-Handbuch zur attributbasierten Zugriffssteuerung](../access-control/abac/end-to-end-guide.md).
 
 - Wenden Sie Kennzeichnungen auf Schemafelder an, um den Zugriff auf bestimmte Schemafelder in Ihrer Organisation zu definieren. Sobald der Zugriff auf bestimmte Schemafelder eingerichtet ist, können Benutzerinnen und Benutzer nur noch Zuordnungen für die Felder erstellen, auf die sie Zugriff haben.
 - Benutzende ohne die entsprechenden Rollen können keine Datenflüsse mit Zuordnungen erstellen oder aktualisieren, die unzugängliche Schemafelder beinhalten. Darüber hinaus können nicht autorisierte Benutzer vorhandene Datenflüsse mit nicht zugänglichen Schemafeldern nicht aktualisieren, löschen, aktivieren oder deaktivieren.

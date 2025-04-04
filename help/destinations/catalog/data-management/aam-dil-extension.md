@@ -1,30 +1,30 @@
 ---
-keywords: Audience Manager-DIL-Erweiterung;Ziel-Audience-Manager;DIL-Erweiterung
+keywords: Audience Manager DIL-Erweiterung;Ziel-Audience-Manager;DIL-Erweiterung
 title: Audience Manager DIL-Erweiterung
-description: Die Audience Manager-DIL-Erweiterung ist ein Ziel der Data Management Platform (DMP) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Audience Manager DIL-Erweiterung ist ein Ziel der Data Management Platform (DMP) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 58%
+source-wordcount: '514'
+ht-degree: 53%
 
 ---
 
 # Audience Manager DIL-Erweiterung {#aam-dil-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Dies ist die Adobe Audience Manager Data Integration Library-Erweiterung (Client-seitige Implementierung). Hinweis: Diese Erweiterung ist nicht für die Server-seitige Weiterleitung (Server-Side Forwarding, SSF) von Adobe Analytics-Daten vorgesehen. Nutzen Sie für SSF die Adobe Analytics-Erweiterung. Wichtig: Ab Version 8.0 ist DIL stark vom [!DNL Experience Cloud] ID-Service, Version 3.3 oder höher, abhängig. Bitte sowohl [!DNL Experience Cloud] ID-Service als auch DIL implementieren, um vollständige [!DNL Audience Manager]-Datenintegrationsfunktionen zu erhalten.
 
 [!DNL Audience Manager] DIL ist eine Erweiterung der Data Management Platform (DMP) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite [Audience Manager-Erweiterung](../../../tags/extensions/client/audience-manager/overview.md) in der Tags-Dokumentation.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Erweiterungen in Experience Platform finden Sie unter [Übersicht über Tag-Erweiterungen](../launch-extensions/overview.md).
 
 ![Audience Manager DIL-Erweiterung](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die [!DNL Audience Manager] DIL-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

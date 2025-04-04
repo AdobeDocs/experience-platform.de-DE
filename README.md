@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # Bereitstellen von Inhalten
@@ -43,7 +43,7 @@ Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams
 
 ## Kontakt zum Dokumentations-Team von Experience Platform
 
-Wie bereits erwähnt, können Mitglieder der Adobe-Community ein Thema einreichen, das dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Adobe-Mitarbeiter sind, können Sie ein Thema einreichen oder sich direkt an das Dokumentations-Team von Experience Platform wenden. Den leitenden Autor für einen bestimmten Bereich von Adobe Platform finden Sie im [Dokumentations-Wiki zu Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Wie bereits erwähnt, können Mitglieder der Adobe-Community ein Thema einreichen, das dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Adobe-Mitarbeiter sind, können Sie ein Thema einreichen oder sich direkt an das Dokumentations-Team von Experience Platform wenden. Den leitenden Autor für einen bestimmten Experience Platform-Bereich finden Sie im Dokumentations-Wiki zu [Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Werkzeuge und Einrichtung
 

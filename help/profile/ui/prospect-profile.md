@@ -3,9 +3,9 @@ title: Interessentenprofile
 description: Erfahren Sie, wie Sie Interessentenprofile erstellen und verwenden, um mithilfe von Drittanbieterinformationen Informationen über unbekannte Kunden zu sammeln.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Das [!UICONTROL JSON anzeigen] wird angezeigt. Die Attribute des Interessentenpr
 
 ## Vorgeschlagene Anwendungsfälle {#use-cases}
 
-Informationen dazu, wie Sie die Funktion für Interessentenprofile in Experience Platform in Kombination mit anderen Platform-Funktionen verwenden können, finden Sie in der Dokumentation zum folgenden Anwendungsfall:
+Informationen dazu, wie Sie die Funktion für Interessentenprofile in Experience Platform in Kombination mit anderen Experience Platform-Funktionen verwenden können, finden Sie in der Dokumentation zum folgenden Anwendungsfall:
 
 - [Engagieren und Akquirieren neuer Kundinnen und Kunden über die Interessentenfunktion](../../rtcdp/partner-data/prospecting.md)
 

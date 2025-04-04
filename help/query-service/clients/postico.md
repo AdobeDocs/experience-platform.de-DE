@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinden von Postico mit dem Abfrage-Service
 description: Dieses Dokument enthält den Link zur Installation des Backup-Clients Postico für den Abfrage-Service von Adobe Experience Platform.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 4%
 
 ---
@@ -29,13 +29,13 @@ Um [!DNL Postico] mit dem Abfrage-Service zu verbinden, öffnen Sie [!DNL Postic
 | **[!DNL Port]:** | Der Port für [!DNL Query Service]. Sie müssen Port **80** oder **5432** verwenden, um eine Verbindung mit [!DNL Query Service] herzustellen. |
 | **[!DNL User]** | Erstellen Sie einen Namen für Ihre spezifische Verbindung. Lassen Sie das Feld leer, um Ihren Mac-Anmeldenamen zu verwenden. |
 | **[!DNL Password]** | Diese alphanumerische Zeichenfolge ist Ihre Experience Platform **[!UICONTROL Kennwort]**-Berechtigung. Wenn Sie nicht ablaufende Anmeldeinformationen verwenden möchten, ist dieser Wert die verketteten Argumente aus der `technicalAccountID` und der in die JSON-Konfigurationsdatei heruntergeladenen `credential`. Das Kennwort hat folgende Form: {technicalAccountId}:{credential}. Die JSON-Konfigurationsdatei für nicht ablaufende Anmeldeinformationen ist ein einmaliger Download während ihrer Initialisierung, von dem Adobe keine Kopie speichert. |
-| **[!DNL Database]** | Verwenden Sie den Berechtigungswert **[!UICONTROL Experience Platform]** Datenbank): `prod:all`. |
+| **[!DNL Database]** | Verwenden Sie Ihren Experience Platform **[!UICONTROL Datenbank]** Berechtigungswert: `prod:all`. |
 
-Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [ zu Anmeldeinformationen ](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [ zu Anmeldeinformationen ](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Experience Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 Nachdem Sie Ihre Anmeldeinformationen eingefügt haben, wählen Sie **[!DNL Connect]** aus, um eine Verbindung mit dem Abfrage-Service herzustellen.
 
-Nachdem Sie eine Verbindung zu Platform hergestellt haben, können Sie eine Liste aller Beziehungen anzeigen, die zuvor mit dem Abfrage-Service hergestellt wurden.
+Nachdem Sie eine Verbindung zu Experience Platform hergestellt haben, können Sie eine Liste aller Beziehungen anzeigen, die zuvor mit dem Abfrage-Service hergestellt wurden.
 
 ## SQL-Anweisungen erstellen
 

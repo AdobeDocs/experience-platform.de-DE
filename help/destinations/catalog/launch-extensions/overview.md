@@ -1,27 +1,27 @@
 ---
 keywords: Tag-Erweiterungen; Tag-Erweiterung; Launch-Ziele; Platform-Tag-Erweiterungen;Plattform-Tag-Erweiterung;Platform Launch-Ziele
 title: Tag-Erweiterungen in Adobe Experience Platform
-description: Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
+description: Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Experience Platform bietet eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 76%
+source-wordcount: '493'
+ht-degree: 56%
 
 ---
 
 # Tag-Erweiterungen in Adobe Experience Platform
 
-Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten.
+Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Experience Platform bietet eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten.
 
 Eine Einführung in Tags finden Sie in den folgenden Ressourcen:
 
 - [Übersicht über Tags](../../../tags/home.md)
 - [Schnellstartanleitung](../../../tags/quick-start/quick-start.md)
 
-## So finden Sie Tag-Erweiterungen in der Platform-Oberfläche {#how-to-find-extensions-in-interface}
+## So finden Sie Tag-Erweiterungen in der Benutzeroberfläche von Experience Platform {#how-to-find-extensions-in-interface}
 
-Um die Erweiterungen in der Platform-Benutzeroberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie im Filter **[!UICONTROL Typen]** die Option **[!UICONTROL Erweiterungen]**.
+Um die Erweiterungen in der Experience Platform-Benutzeroberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Types]** aus.
 
 ![Erweiterungsfilter in der Benutzeroberfläche](../../assets/catalog/launch-extensions/filter.png)
 
@@ -29,7 +29,7 @@ Um die Erweiterungen in der Platform-Benutzeroberfläche zu finden, navigieren S
 
 Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet ](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
 
-Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [ Ereignisweiterleitung finden Sie in der Übersicht ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Experience Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [ Ereignisweiterleitung finden Sie in der Übersicht ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
 
 
 
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Vorteile der Verwendung von Tag-Erweiterungen {#extensions-benefits}
 
-Die Tag-Funktionen von Platform sind für Kunden von Experience Cloud kostenlos. Das System vereinfacht die Tag-Bereitstellung auf Ihrer Website durch benutzerfreundliche Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. Tags haben einen geringen Platzbedarf auf Ihrer Website und ermöglicht das schnelle Laden Ihrer Seiten.
+Die Tag-Funktionen von Experience Platform sind für bestehende Experience Cloud-Kunden kostenlos. Das System vereinfacht die Tag-Bereitstellung auf Ihrer Website durch benutzerfreundliche Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. Tags haben einen geringen Platzbedarf auf Ihrer Website und ermöglicht das schnelle Laden Ihrer Seiten.
 
 Sie können zwar keine Zielgruppen für Tag-Erweiterungen aktivieren, aber Sie können Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen zu Regeln finden Sie in der [Tags-Dokumentation](../../../tags/ui/managing-resources/rules.md).
 
@@ -59,7 +59,7 @@ Erweiterungen können Sie für verschiedene Anwendungsfälle nutzen. Beispielhaf
 
 ## Erweiterungskategorien {#extension-categories}
 
-In Platform gibt es die folgenden Kategorien von Erweiterungen:
+Erweiterungen können in Experience Platform unter die folgenden Kategorien fallen:
 
 - [Werbung](../advertising/overview.md)
 - [Analysen](../analytics/overview.md)

@@ -3,18 +3,18 @@ keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten;Str
 solution: Experience Platform
 title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 44%
+source-wordcount: '1180'
+ht-degree: 36%
 
 ---
 
 # Erstellen eines Streaming-Datenflusses für Rohdaten mit der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Rohdaten aus einem Streaming-Quell-Connector und zum Übertragen dieser Daten auf Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Rohdaten aus einem Streaming-Quell-Connector und zum Übertragen dieser Daten in Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
@@ -24,12 +24,12 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
    - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Die Streaming-Aufnahme für Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Die Streaming-Aufnahme für Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ### Erstellen einer Quellverbindung {#source}
 
@@ -41,7 +41,7 @@ Für dieses Tutorial benötigen Sie außerdem eine gültige Quellverbindungs-ID 
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses XDM-Zielschema erweitert auch die XDM-[!DNL Individual Profile].
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses XDM-Zielschema erweitert auch die XDM-[!DNL Individual Profile].
 
 Um ein XDM-Zielschema zu erstellen, stellen Sie eine POST-Anfrage an den `/schemas`-Endpunkt der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -204,7 +204,7 @@ Eine erfolgreiche Antwort gibt ein -Array zurück, das die ID des neu erstellten
 
 ## Erstellen einer Zielverbindung {#target-connection}
 
-Zielverbindungen erstellen und verwalten eine Zielverbindung zu Platform oder einem beliebigen Ort, an dem die übertragenen Daten landen. Zielverbindungen enthalten Informationen zum Datenziel, Datenformat und zur Zielverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich sind. Target-Verbindungsinstanzen sind für einen Mandanten und eine Organisation spezifisch.
+Zielverbindungen erstellen und verwalten eine Zielverbindung zu Experience Platform oder einem beliebigen Ort, an dem die übertragenen Daten landen. Zielverbindungen enthalten Informationen zum Datenziel, Datenformat und zur Zielverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich sind. Target-Verbindungsinstanzen sind für einen Mandanten und eine Organisation spezifisch.
 
 Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/targetConnections`-Endpunkt der [!DNL Flow Service]-API. Im Rahmen der Anfrage müssen Sie das Datenformat, die im vorherigen Schritt abgerufene `dataSetId` und die feste Verbindungsspezifikations-ID angeben, die mit [!DNL Data Lake] verknüpft ist. Diese ID ist `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -325,7 +325,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Abrufen einer Liste von Datenflussspezifikationen {#specs}
 
-Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Experience Platform verantwortlich. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden.
 
 **API-Format**
 
@@ -566,7 +566,7 @@ Die folgenden Beispiele gelten für alle:
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten von Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten von Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

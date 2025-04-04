@@ -2,24 +2,24 @@
 title: Feldbasierte Workflows im Schema-Editor
 description: Erfahren Sie, wie Sie Felder aus vorhandenen Feldergruppen einzeln zu Ihren Experience-Datenmodell(XDM)-Schemata hinzufügen.
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # Feldbasierte Workflows im Schema-Editor
 
-Adobe Experience Platform bietet einen robusten Satz standardisierter [Feldergruppen](../schema/composition.md#field-group) zur Verwendung in Experience-Datenmodell(XDM)-Schemata. Struktur und Semantik dieser Feldergruppen sind sorgfältig darauf zugeschnitten, eine Vielzahl von Segmentierungsanwendungsfällen und andere nachgelagerte Anwendungen in Platform zu erfüllen. Sie können auch eigene benutzerdefinierte Feldergruppen definieren, um individuelle Geschäftsanforderungen zu erfüllen.
+Adobe Experience Platform bietet einen robusten Satz standardisierter [Feldergruppen](../schema/composition.md#field-group) zur Verwendung in Experience-Datenmodell(XDM)-Schemata. Die Struktur und Semantik hinter diesen Feldergruppen sind sorgfältig darauf zugeschnitten, eine Vielzahl von Segmentierungsanwendungsfällen und andere nachgelagerte Anwendungen in Experience Platform zu erfüllen. Sie können auch eigene benutzerdefinierte Feldergruppen definieren, um individuelle Geschäftsanforderungen zu erfüllen.
 
 Wenn Sie eine Feldergruppe zu einem Schema hinzufügen, übernimmt dieses Schema alle in dieser Gruppe enthaltenen Felder. Sie können jetzt jedoch einzelne Felder zu Ihrem Schema hinzufügen, ohne andere Felder aus der zugehörigen Feldergruppe einbeziehen zu müssen, die Sie nicht unbedingt verwenden müssen.
 
-In diesem Handbuch werden die verschiedenen Methoden zum Hinzufügen einzelner Felder zu einem Schema in der Platform-Benutzeroberfläche behandelt.
+In diesem Handbuch werden die verschiedenen Methoden zum Hinzufügen einzelner Felder zu einem Schema in der Experience Platform-Benutzeroberfläche behandelt.
 
 ## Voraussetzungen
 
-In diesem Tutorial wird davon ausgegangen, dass Sie mit der [Komposition von XDM-Schemas](../schema/composition.md) und der Verwendung des Schema-Editors in der Platform-Benutzeroberfläche vertraut sind. Um diesem Schritt zu folgen, sollten Sie mit dem [Erstellen eines neuen Schemas](./resources/schemas.md) und dem Zuweisen zu einer Standardklasse beginnen, bevor Sie mit diesem Handbuch fortfahren.
+In diesem Tutorial wird davon ausgegangen, dass Sie mit der [Komposition von XDM-Schemas](../schema/composition.md) und der Verwendung des Schema-Editors in der Experience Platform-Benutzeroberfläche vertraut sind. Um diesem Schritt zu folgen, sollten Sie mit dem [Erstellen eines neuen Schemas](./resources/schemas.md) und dem Zuweisen zu einer Standardklasse beginnen, bevor Sie mit diesem Handbuch fortfahren.
 
 ## Entfernen hinzugefügter Felder aus Standardfeldgruppen {#remove-field-group}
 
@@ -111,4 +111,4 @@ Weitere Informationen [ Hinzufügen benutzerdefinierter Felder finden Sie im Han
 
 ## Nächste Schritte
 
-In diesem Handbuch wurden die neuen feldbasierten Workflows für den Schema-Editor in der Platform-Benutzeroberfläche behandelt. Weitere Informationen zum Verwalten von Schemata in der Benutzeroberfläche finden Sie unter [Benutzeroberfläche - Übersicht](./overview.md).
+In diesem Handbuch wurden die neuen feldbasierten Workflows für den Schema-Editor in der Experience Platform-Benutzeroberfläche behandelt. Weitere Informationen zum Verwalten von Schemata in der Benutzeroberfläche finden Sie unter [Benutzeroberfläche - Übersicht](./overview.md).

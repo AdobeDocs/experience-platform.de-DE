@@ -3,16 +3,16 @@ keywords: social;soziale Ziele;Livefyre;facebook;Facebook
 title: Social-Media-Ziele – Übersicht
 description: Mit Social-Media-Zielen können Sie Profile für Ihre Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails aktivieren.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '106'
 ht-degree: 23%
 
 ---
 
 # Social-Media-Ziele – Übersicht {#social-network-destinations}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Mit Social-Media-Zielen können Sie Profile für Ihre Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails aktivieren.
 
@@ -27,4 +27,4 @@ Adobe Experience Platform unterstützt derzeit die folgenden Social-Media-Ziele:
 
 ## Herstellen einer Verbindung zu einem neuen Social-Media-Ziel {#connect-destination}
 
-Um Zielgruppen für Ihre Kampagnen an Social-Media-Ziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen für Ihre Kampagnen an Social-Media-Ziele zu senden, muss Experience Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.

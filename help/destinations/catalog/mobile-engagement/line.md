@@ -1,13 +1,13 @@
 ---
 keywords: mobil;Ziele für mobile Interaktion;LINE;Ziel für mobile Interaktion über LINE
 title: LINE-Verbindung
-description: Mit dem LINE-Ziel können Sie Profile zu Ihrer Platform-Zielgruppe hinzufügen und vernetzten Benutzern personalisierte Erlebnisse bereitstellen.
+description: Mit dem LINE-Ziel können Sie Ihrer Experience Platform-Zielgruppe Profile hinzufügen und vernetzten Benutzern personalisierte Erlebnisse bereitstellen.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 42%
+source-wordcount: '1198'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt
 
 [!DNL LINE] verwendet Bearer-Token als Authentifizierungsmechanismus für die Kommunikation mit der [!DNL LINE] Messaging-API. Anweisungen zur Authentifizierung bei Ihrer [!DNL LINE] finden Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Als Marketing-Experte können Sie Benutzende in einem Ziel für mobile Interaktion ansprechen, wobei Zielgruppen in [!DNL Adobe Experience Platform] integriert sind. Darüber hinaus können Sie ihnen personalisierte Erlebnisse auf der Grundlage von Attributen aus ihren [!DNL Adobe Experience Platform] Profilen bereitstellen, sobald Zielgruppen und Profile in [!DNL Adobe Experience Platform] aktualisiert werden.
 
@@ -29,7 +29,7 @@ Als Marketing-Experte können Sie Benutzende in einem Ziel für mobile Interakti
 
 ### Voraussetzungen für [!DNL LINE] {#prerequisites-destination}
 
-Beachten Sie die folgenden Voraussetzungen in [!DNL LINE], um Daten von Platform in Ihr [!DNL LINE]-Konto zu exportieren:
+Beachten Sie die folgenden Voraussetzungen in [!DNL LINE], um Daten aus Experience Platform in Ihr [!DNL LINE]-Konto zu exportieren:
 
 #### Sie benötigen ein [!DNL LINE]-Konto {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Sie müssen sich registrieren und ein [!DNL LINE] Konto erstellen, falls Sie noc
 
 #### Sammeln Sie die [!DNL LINE channel access token (long-lived)] aus der [!DNL LINE] Developer Console {#gather-credentials}
 
-Damit Platform auf [!DNL LINE] Ressourcen zugreifen kann, benötigen Sie die *[!DNL Channel access token (long-lived)]* des gewünschten [!DNL LINE]Messaging *API*-Kanals.
+Damit Experience Platform auf [!DNL LINE] Ressourcen zugreifen kann, benötigen Sie die *[!DNL Channel access token (long-lived)]* des gewünschten [!DNL LINE]Messaging *API*-Kanals.
 
 1. Melden Sie sich mit Ihrem [!DNL LINE]-Konto bei der [[!DNL LINE] Entwicklerkonsole](https://developers.line.biz/console) an.
 1. Rufen Sie als Nächstes die *[!DNL Providers]* auf, wählen Sie dann die gewünschte *[!DNL Provider]* aus und wählen Sie schließlich den Kanal *Messaging-API* aus, um auf die Einstellungen zuzugreifen. Wenn Sie zum ersten Mal auf die Entwicklerkonsole zugreifen, befolgen Sie die [[!DNL LINE] Dokumentation](https://developers.line.biz/en/docs/messaging-api/getting-started/), um die zum Erstellen eines Anbieters erforderlichen Schritte auszuführen.
@@ -85,7 +85,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL LINE]
 ### Beim Ziel authentifizieren {#authenticate}
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
-![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Füllen Sie die erforderlichen Felder aus.
 * **[!UICONTROL Bearer-Token]**: Ihr [!DNL LINE Channel access token (long-lived)] über die [!DNL LINE] Entwicklerkonsole. Siehe den Abschnitt [Sammeln von Anmeldeinformationen](#gather-credentials).
@@ -95,7 +95,7 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Sta
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
-![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -118,7 +118,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL LINE]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen. Um Ihre XDM-Felder den [!DNL LINE]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL LINE]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Um Ihre XDM-Felder den [!DNL LINE]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
 Abhängig von Ihrer Quellidentität müssen die folgenden Ziel-Identity-Namespaces zugeordnet werden:
 
@@ -128,14 +128,14 @@ Abhängig von Ihrer Quellidentität müssen die folgenden Ziel-Identity-Namespac
 | LINE-Benutzerkennung | `UserID` | `LineId` |
 
 Wenn es sich bei Ihren Zielidentitäten um *LINE-Benutzer-IDs* handelt, benötigen Sie Folgendes:
-![Beispiel-Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung bei Verwendung von LINE-Benutzer-IDs für Zielidentitäten.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Beispiel-Screenshot der Experience Platform-Benutzeroberfläche, der das Zielgruppen-Mapping bei Verwendung von LINE-Benutzer-IDs für Zielidentitäten zeigt.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 Wenn Ihre Zielidentität *ID für Advertisers (IFAs) lautet* benötigen Sie Folgendes:
-![Beispiel-Screenshot der Platform-Benutzeroberfläche mit dem Zielgruppen-Mapping bei Verwendung der ID für Advertiser (IFAs) für Zielidentitäten.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit dem Zielgruppen-Mapping bei Verwendung der ID für Werbetreibende (IFAs) für Zielidentitäten.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nach einem erfolgreichen Datenexport von Experience Platform erstellt das [!DNL LINE]-Ziel mithilfe des ausgewählten Zielgruppennamen eine neue Zielgruppe in [!DNL LINE].
+Nach einem erfolgreichen Datenexport aus Experience Platform erstellt das [!DNL LINE]-Ziel mithilfe des ausgewählten Zielgruppennamen eine neue Zielgruppe in [!DNL LINE].
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 

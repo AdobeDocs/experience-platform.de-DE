@@ -4,13 +4,13 @@ description: Exportieren Sie Daten mithilfe privater Listeneinträge in Ihr Snow
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 51%
 
 ---
-
 
 # Snowflake-Verbindung {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Das Snowflake-Ziel unterstützt die Zuordnung von Profilattributen zu benutzerdefinierten Attributen.
 
-![Bild der Platform-Benutzeroberfläche mit dem Zuordnungsbildschirm für das Snowflake-Ziel.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Bild der Experience Platform-Benutzeroberfläche mit dem Zuordnungsbildschirm für das Snowflake-Ziel.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 Die Zielattribute werden in Snowflake automatisch mit dem Attributnamen erstellt, den Sie im Feld **[!UICONTROL Attributname]** angeben.
 

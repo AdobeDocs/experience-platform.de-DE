@@ -2,10 +2,10 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 91%
+source-wordcount: '1615'
+ht-degree: 89%
 
 ---
 
@@ -238,7 +238,7 @@ Der Sitzungsspeicher ähnelt dem lokalen Speicher. Der Unterschied besteht darin
 
 ### Besucherverhalten
 
-Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Erweiterung der Logik in Regeln oder anderen Platform-Lösungen.
+Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Anreicherung der Logik in Regeln oder anderen Experience Platform-Lösungen.
 
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 

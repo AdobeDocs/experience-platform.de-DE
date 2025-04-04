@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2022
 description: Versionshinweise August 2022 für Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 99%
+source-wordcount: '2012'
+ht-degree: 88%
 
 ---
 
@@ -36,7 +36,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Privatkundinnen und -kunden Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Privatkundinnen und -kunden Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Kunden-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep]
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution-Plattform mit den weltweit meisten Daten zu B2B-Käufer-Verkäufer-Interaktionen und erheblichen Investitionen in proprietäre KI-Technologien zur Umwandlung von Verkaufsdaten in Intelligenz. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung des Vertriebsengagements und der Nutzung von Umsatzdaten, um ihre Effizienz, Vorhersagbarkeit und ihr Wachstum zu verbessern. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution Experience Platform mit den weltweit meisten Daten zu B2B-Käufer-Verkäufer-Interaktionen und erheblichen Investitionen in proprietäre KI-Technologien zur Umwandlung von Verkaufsdaten in Intelligenz. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung des Vertriebsengagements und der Nutzung von Umsatzdaten, um ihre Effizienz, Vorhersagbarkeit und ihr Wachstum zu verbessern. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -145,7 +145,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Feste Grenze für Zusammenführungsrichtlinien | Platform erzwingt jetzt eine feste Grenze von **fünf** Zusammenführungsrichtlinien pro Sandbox. Wenn Ihre Sandbox derzeit mehr als fünf Zusammenführungsrichtlinien hat, können Sie **keine** neuen Zusammenführungsrichtlinien erstellen, bis die Sandbox weniger als fünf Zusammenführungsrichtlinien hat. |
+| Feste Grenze für Zusammenführungsrichtlinien | Experience Platform erzwingt jetzt eine feste Grenze von **5** Zusammenführungsrichtlinien pro Sandbox. Wenn Ihre Sandbox derzeit mehr als fünf Zusammenführungsrichtlinien hat, können Sie **keine** neuen Zusammenführungsrichtlinien erstellen, bis die Sandbox weniger als fünf Zusammenführungsrichtlinien hat. |
 | Bereinigung verwaister Profilrandattribute | Für alle Organisationen entfernt der Profil-Service jetzt täglich übrig gebliebene Randattribute der Benutzeraktivitätsregion, um eine genauere Darstellung der Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf Profile auswirken, die aus Datensätzen zusammengeführt werden, in denen `com_adobe_aep_profile_region_dataset` als `true` markiert ist. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor dieser Version übrig gebliebene Randattributfragmente einbezogen haben. |
 
 {style="table-layout:auto"}
@@ -160,13 +160,13 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für 4000 Segmente | Für alle Organisationen mit Platform können jetzt bis zu 4000 Segmentdefinitionen unterstützt werden. Weitere Informationen darüber, wie sich diese Änderung auf die Segmentauftrags-APIs auswirkt, finden Sie im [Leitfaden für Segmentauftragsendpunkte](../../segmentation/api/segment-jobs.md). |
+| Unterstützung für 4000 Segmente | Alle Unternehmen mit Experience Platform können jetzt bis zu 4.000 Segmentdefinitionen unterstützen. Weitere Informationen darüber, wie sich diese Änderung auf die Segmentauftrags-APIs auswirkt, finden Sie im [Leitfaden für Segmentauftragsendpunkte](../../segmentation/api/segment-jobs.md). |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

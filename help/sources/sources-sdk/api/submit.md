@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Source übermitteln
 description: Das folgende Dokument beschreibt die Schritte zum Testen und Überprüfen einer neuen Quelle mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Selbstbedienungsquellen (Batch-SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 16%
+source-wordcount: '829'
+ht-degree: 10%
 
 ---
 
@@ -18,9 +18,9 @@ Im folgenden Dokument erfahren Sie, wie Sie Ihre Quelle mit der [[!DNL Flow Serv
 
 ## Erste Schritte
 
-* Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
-* Informationen zum Generieren Ihrer Anmeldeinformationen für Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
-* Informationen zum Einrichten von [!DNL Postman] für Platform-APIs finden Sie im Tutorial zum Einrichten [ Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
+* Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
+* Informationen zum Generieren Ihrer Anmeldeinformationen für Experience Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
+* Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [ von Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
 * Um Ihren Test- und Debugging-Prozess zu unterstützen, laden Sie die [Sammlung und Umgebung für die Selbstbedienungsquellen-Verifizierung hier herunter](../assets/sdk-verification.zip) und führen Sie die folgenden Schritte aus.
 
 ## Testen der Quelle
@@ -59,10 +59,10 @@ Sobald Ihre Authentifizierungs- und Quellspezifikationsparameter angegeben wurde
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `x-api-key`&quot;. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer `x-api-key` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer `x-gw-ims-org-id` finden [ im Tutorial zum Einrichten  [!DNL Postman]](../../../landing/postman.md) Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Das zum Abschließen von Aufrufen an Experience Platform-APIs erforderliche Autorisierungs-Token. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `authorizationToken`&quot;. | `Bearer authorizationToken` |
-| `schemaId` | Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `authorizationToken` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `Bearer authorizationToken` |
+| `schemaId` | Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Die eindeutige Version, die Ihrem Schema entspricht. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | Die `meta:altId`, die zusammen mit dem `schemaId` beim Erstellen eines neuen Schemas zurückgegeben wird. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -82,7 +82,7 @@ Die [!DNL Runner] Benutzeroberfläche wird angezeigt, über die Sie die Ausführ
 
 >[!NOTE]
 >
->Sie können **Fluss löschen** in der Checkliste für die Ausführungsreihenfolge deaktivieren, wenn Sie das Dashboard zur Quellenüberwachung in der Platform-Benutzeroberfläche verwenden möchten. Nachdem Sie jedoch mit dem Testen fertig sind, müssen Sie sicherstellen, dass Ihre Testflüsse gelöscht werden.
+>Sie können **Fluss löschen** in der Checkliste für die Ausführungsreihenfolge deaktivieren, wenn Sie das Dashboard zur Quellenüberwachung in der Experience Platform-Benutzeroberfläche verwenden möchten. Nachdem Sie jedoch mit dem Testen fertig sind, müssen Sie sicherstellen, dass Ihre Testflüsse gelöscht werden.
 
 ![run-collection](../assets/run-collection.png)
 

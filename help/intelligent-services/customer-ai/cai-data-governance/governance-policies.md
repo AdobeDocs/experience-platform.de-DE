@@ -4,16 +4,16 @@ feature: Customer AI
 title: Governance-Richtlinien für Kundinnen- und Kunden-KI
 description: Adobe Experience Platform bietet verschiedene Dienste und Tools, mit denen Sie Ihre erfassten Erlebnisdaten sicher kontrollieren können.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 97%
+source-wordcount: '190'
+ht-degree: 86%
 
 ---
 
 # Governance-Richtlinien in Kunden-KI
 
-Nachdem Sie den Workflow zum Erstellen eines Modells und Senden der Modellkonfiguration abgeschlossen haben, wird durch die [Durchsetzung von Richtlinien](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
+Nachdem Sie den Workflow zum Erstellen eines Modells und Senden der Modellkonfiguration abgeschlossen haben, wird durch die [Durchsetzung von Richtlinien](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Experience Platform mit Datennutzungsrichtlinien konform sind.
 
 ![Ein Popup mit Informationen zur Richtlinienverletzung](../images/user-guide/policy-violation-popover-cai.png).
 

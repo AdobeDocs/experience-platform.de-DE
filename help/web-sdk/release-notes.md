@@ -1,12 +1,12 @@
 ---
 title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 66%
+source-wordcount: '2288'
+ht-degree: 64%
 
 ---
 
@@ -294,7 +294,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 - Der Befehl [`getIdentity`](/help/web-sdk/commands/getidentity.md) gibt jetzt die ID der Edge-Region zusammen mit der Identität zurück.
 - Die vom Server empfangenen Warnungen und Fehler wurden verbessert und werden nun auf besser geeignete Weise gehandhabt.
 - Es wurde Unterstützung für Adobe Consent 2.0 Standard für den [`setConsent`](/help/web-sdk/commands/setconsent.md) hinzugefügt.
-- Die Einverständisvoreinstellungen werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, dem Platform Web SDK und dem Platform Edge Network zu ermöglichen. Wenn Sie Einverständnisvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, `setConsent` bei jedem Laden der Seite aufzurufen.
+- Die Einverständnisvoreinstellungen werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, Experience Platform Web SDK und Experience Platform Edge Network zu ermöglichen. Wenn Sie Einverständnisvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, `setConsent` bei jedem Laden der Seite aufzurufen.
 - Es wurden zwei [Überwachungs-Hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected`, hinzugefügt.
 - Fehlerbehebung: Die Benachrichtigungsereignisse für Personalisierungsinteraktionen enthielten doppelte Informationen über dieselbe Aktivität, wenn Benutzende zu einer neuen Singe-Page-App-Ansicht navigiert haben, zur ursprünglichen Ansicht zurückgekehrt sind und dann auf ein für die Konversion qualifiziertes Element geklickt haben.
 - Fehlerbehebung: Wenn beim ersten vom SDK gesendeten Ereignis `documentUnloading` auf `true` eingestellt war, wurde [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) zum Senden des Ereignisses verwendet, was zu einem Fehler in Bezug auf eine nicht hergestellte Identität führte.

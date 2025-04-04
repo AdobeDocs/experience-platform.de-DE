@@ -4,9 +4,9 @@ user-guide-title: Handbuch zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '133'
 ht-degree: 91%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 91%
    * [[!DNL Profile]-Detailanpassung](ui/profile-customization.md)
    * [Interessentenprofile](ui/prospect-profile.md)
 * Berechnete Attribute {#computed-attributes}
-   * [Übersicht](computed-attributes/overview.md)
+   * [Überblick](computed-attributes/overview.md)
    * [API-Handbuch für berechnete Attribute](computed-attributes/api.md)
    * [Handbuch zur Benutzeroberfläche für berechnete Attribute](computed-attributes/ui.md)
    * [Häufig gestellte Fragen](computed-attributes/faq.md)
@@ -54,4 +54,4 @@ ht-degree: 91%
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Profil-API-Referenz](https://www.adobe.com/go/profile-apis-en)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+* [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

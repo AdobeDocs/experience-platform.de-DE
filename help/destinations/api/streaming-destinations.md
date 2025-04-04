@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API-Tutorials;Streaming-Ziele-API;Plattform
+keywords: Experience Platform;Startseite;beliebte Themen;API-Tutorials;Streaming-Ziele-API;Experience Platform
 solution: Experience Platform
 title: Verbinden mit Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service-API in Adobe Experience Platform
 description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform-API behandelt
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 43%
+source-wordcount: '2219'
+ht-degree: 40%
 
 ---
 
@@ -28,17 +28,17 @@ In diesem Tutorial wird für alle Beispiele das [!DNL Amazon Kinesis] verwendet,
 
 ![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Zielgruppen](../assets/api/streaming-destination/overview.png)
 
-Wenn Sie die Benutzeroberfläche von Platform bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexportziele](../ui/activate-segment-streaming-destinations.md) .
+Wenn Sie die Benutzeroberfläche in Experience Platform bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexportziele](../ui/activate-segment-streaming-destinations.md) .
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das „System of Record“ für den Speicherort und die Herkunft von Daten auf Experience Platform.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Streaming-Ziele in Platform aktivieren zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Streaming-Ziele in Experience Platform zu aktivieren.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -53,13 +53,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Werte für erforderliche und optionale Kopfzeilen sammeln {#gather-values}
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an Platform-APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an Experience Platform-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -270,12 +270,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID, die Sie im Schritt [Liste der verfügbaren Ziele anfordern](#get-the-list-of-available-destinations) erhalten haben.
 * `{AUTHENTICATION_CREDENTIALS}`: Geben Sie den Namen Ihres Streaming-Ziels ein: `Aws Kinesis authentication credentials` oder `Azure EventHub authentication credentials`.
-* `{ACCESS_ID}`: *Für [!DNL Amazon Kinesis].* Ihre Zugriffs-ID für Ihren Speicherort in Amazon Kinesis.
-* `{SECRET_KEY}`: *Für [!DNL Amazon Kinesis].* Sie Ihren geheimen Schlüssel für Ihren Speicherort in Amazon Kinesis.
-* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem [!DNL Amazon Kinesis]-Konto, in der Platform Ihre Daten streamt.
+* `{ACCESS_ID}`: *Für [!DNL Amazon Kinesis].* Ihre Zugriffs-ID für Ihren Amazon Kinesis-Speicherort.
+* `{SECRET_KEY}`: *Für [!DNL Amazon Kinesis].* Sie Ihren geheimen Schlüssel für Ihren Amazon Kinesis-Speicherort.
+* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem [!DNL Amazon Kinesis]-Konto, in der Experience Platform Ihre Daten streamt.
 * `{SAS_KEY_NAME}`: *Für [!DNL Azure Event Hubs].* Geben Sie den Namen Ihres SAS-Schlüssels ein. Erfahren Sie mehr über die Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Dokumentation zu Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *Für [!DNL Azure Event Hubs].* Geben Sie Ihren SAS-Schlüssel ein. Erfahren Sie mehr über die Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Dokumentation zu Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Für [!DNL Azure Event Hubs].* Füllen Sie den [!DNL Azure Event Hubs]-Namespace aus, in den Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Event Hubs-Namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in der [!DNL Microsoft].
+* `{EVENT_HUB_NAMESPACE}`: *Für [!DNL Azure Event Hubs].* Füllen Sie den [!DNL Azure Event Hubs]-Namespace aus, in den Experience Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Event Hubs-Namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in der [!DNL Microsoft].
 
 **Antwort**
 
@@ -330,9 +330,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Nutzen Sie die Kennung der Basisverbindung, die Sie im obigen Schritt erhalten haben.
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikation, die Sie im Schritt [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations) erhalten haben.
-* `{NAME_OF_DATA_STREAM}`: *Für [!DNL Amazon Kinesis].* Geben Sie den Namen Ihres vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis]-Konto an. Platform exportiert Daten in diesen Stream.
-* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem Amazon Kinesis-Konto, in die Platform Ihre Daten streamt.
-* `{EVENT_HUB_NAME}`: *Für [!DNL Azure Event Hubs].* Geben Sie den [!DNL Azure Event Hub] ein, in den Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Ereignis-Hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in der [!DNL Microsoft].
+* `{NAME_OF_DATA_STREAM}`: *Für [!DNL Amazon Kinesis].* Geben Sie den Namen Ihres vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis]-Konto an. Experience Platform exportiert Daten in diesen Stream.
+* `{REGION}`: *Für [!DNL Amazon Kinesis].* Die Region in Ihrem Amazon Kinesis-Konto, in der Experience Platform Ihre Daten streamt.
+* `{EVENT_HUB_NAME}`: *Für [!DNL Azure Event Hubs].* Geben Sie den [!DNL Azure Event Hub] ein, in den Experience Platform Ihre Daten streamen soll. Weitere Informationen finden Sie unter [Erstellen eines Ereignis-Hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in der [!DNL Microsoft].
 
 **Antwort**
 
@@ -630,11 +630,11 @@ Gehen Sie wie folgt vor, um mithilfe der angehängten [!DNL Postman] eine Verbin
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum jeweiligen Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenvorgänge verwendet werden, die Sie möglicherweise durchführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
+In diesem Tutorial haben Sie Experience Platform erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum jeweiligen Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenvorgänge verwendet werden, die Sie möglicherweise durchführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

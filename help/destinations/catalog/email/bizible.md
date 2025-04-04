@@ -3,10 +3,10 @@ keywords: Bizible;Bizible-Erweiterung;Bizible-Ziel
 title: Bizible-Erweiterung
 description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 54%
+source-wordcount: '434'
+ht-degree: 49%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 54%
 
 [!DNL Bizible] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Bizible finden Sie unter [Marketing-Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in den Ressourcen zur Bizible-Übersicht.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Bizible-Erweiterung](../../assets/catalog/email/bizible/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die [!DNL Bizible]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

@@ -2,7 +2,7 @@
 title: Adobe Campaign Managed Cloud Services-Verbindung
 description: Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1633'
 ht-degree: 31%
@@ -15,7 +15,7 @@ ht-degree: 31%
 >
 >Diese Integration funktioniert mit [Adobe Campaign Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de)
 
@@ -25,7 +25,7 @@ Mit Campaign haben Sie folgende Möglichkeiten:
 * E-Mail-, Mobil-, Online- und Offline-Kanäle in die Kunden-Journey integrieren,
 * Zielführende, zeitlich optimal abgestimmte Nachrichten und Angebote automatisch versenden.
 
-## Leitplanken {#guardrails}
+## Leitlinien {#guardrails}
 
 Beachten Sie die folgenden Leitplanken bei der Verwendung der Adobe Campaign Managed Cloud Services-Verbindung:
 
@@ -41,7 +41,7 @@ Beachten Sie die folgenden Leitplanken bei der Verwendung der Adobe Campaign Man
 * Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
 * Die von dieser Verbindung unterstützte maximale Länge von Dateinamen beträgt 255 Zeichen. Wenn Sie [den Namen der exportierten Datei konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names) stellen Sie sicher, dass der Dateiname 255 Zeichen nicht überschreitet. Eine Überschreitung der maximalen Dateinamenlänge führt zu Aktivierungsfehlern.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das Ziel &quot;Adobe Campaign Manage Service“ verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
@@ -70,8 +70,8 @@ Damit Sie besser verstehen können, wie und wann Sie das Ziel &quot;Adobe Campai
 |---|---|---|
 | EXTERNAL_ID | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. Es wird empfohlen, diese Identität zu verwenden und sie der ID in Ihrer Campaign-Instanz zuzuordnen, die für den Kunden steht (Loyalty_ID, Account_ID, Customer_ID usw.) |
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 
@@ -174,7 +174,7 @@ Navigieren Sie zum Menü **[!UICONTROL Administration]** > **[!UICONTROL Audit]*
 
 ### Zugreifen auf exportierte Daten {#data}
 
-Bei **[!UICONTROL Zielgruppensynchronisierung]** können Sie die exportierte Zielgruppe überprüfen, indem Sie zum Menü **[!UICONTROL Profil und Ziel]** > **[!UICONTROL Liste]** > **[!UICONTROL AEP-Zielgruppen]** navigieren.
+Bei **[!UICONTROL Zielgruppensynchronisierung]** können Sie die exportierte Zielgruppe überprüfen, indem Sie zum Menü **[!UICONTROL Profil und Ziel]** > **[!UICONTROL Liste]** > **[!UICONTROL AEP-Zielgruppen]**.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 

@@ -1,21 +1,21 @@
 ---
-title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für Azure mithilfe der Platform-Benutzeroberfläche
+title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für Azure mithilfe der Experience Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Azure-Mandanten einrichten und Ihre Verschlüsselungsschlüssel-ID an Adobe Experience Platform senden.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 18%
 
 ---
 
-# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für Azure mithilfe der Platform-Benutzeroberfläche
+# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für Azure mithilfe der Experience Platform-Benutzeroberfläche
 
-In diesem Dokument werden die Azure-spezifischen Anweisungen zum Aktivieren der CMK-Funktion (Customer Managed Keys) in Platform mithilfe der Benutzeroberfläche behandelt. Spezifische Anweisungen für AWS finden Sie im [AWS-Setup-Handbuch](../aws/ui-set-up.md).
+In diesem Dokument werden die Azure-spezifischen Anweisungen zum Aktivieren der CMK-Funktion (Customer Managed Keys) in Experience Platform mithilfe der Benutzeroberfläche behandelt. Spezifische Anweisungen für AWS finden Sie im [AWS-Setup-Handbuch](../aws/ui-set-up.md).
 
-Anweisungen, wie Sie diesen Prozess für von Azure gehostete Platform-Instanzen mithilfe der API abschließen, finden Sie im Dokument [API CMK-Einrichtung](./api-set-up.md).
+Anweisungen zum Abschließen dieses Prozesses für Azure-gehostete Experience Platform-Instanzen mithilfe der API finden Sie im Dokument [API CMK-Einrichtung](./api-set-up.md).
 
 ## Voraussetzungen
 
@@ -56,7 +56,7 @@ Kopieren Sie die [!UICONTROL Anwendungsauthentifizierungs-URL] und fügen Sie si
 
 >[!IMPORTANT]
 >
->Wenn Sie über mehrere [!DNL Microsoft Azure]-Abonnements verfügen, können Sie Ihre Platform-Instanz möglicherweise mit dem falschen Schlüsseltresor verbinden. In diesem Fall müssen Sie den `common` Abschnitt des URL-Namens für die Anwendungsauthentifizierung durch die CMK-Verzeichnis-ID ersetzen.<br>Kopieren Sie die CMK-Verzeichnis-ID aus der Seite „Portaleinstellungen“, „Verzeichnisse“ und „Abonnements“ der [!DNL Microsoft Azure]-Anwendung<br>![ Die Seite &quot;[!DNL Microsoft Azure]-Anwendungsportaleinstellungen“, „Verzeichnisse und Abonnements“ mit hervorgehobener Verzeichnis-ID.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Fügen Sie es als Nächstes in die Adressleiste Ihres Browsers ein.<br>![Eine Google-Browser-Seite mit hervorgehobenem Abschnitt „Allgemein“ der Anwendungsauthentifizierungs-URL.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Wenn Sie über mehrere [!DNL Microsoft Azure] verfügen, können Sie Ihre Experience Platform-Instanz möglicherweise mit dem falschen Schlüsseltresor verbinden. In diesem Fall müssen Sie den `common` Abschnitt des URL-Namens für die Anwendungsauthentifizierung durch die CMK-Verzeichnis-ID ersetzen.<br>Kopieren Sie die CMK-Verzeichnis-ID aus der Seite „Portaleinstellungen“, „Verzeichnisse“ und „Abonnements“ der [!DNL Microsoft Azure]-Anwendung<br>![ Die Seite &quot;[!DNL Microsoft Azure]-Anwendungsportaleinstellungen“, „Verzeichnisse und Abonnements“ mit hervorgehobener Verzeichnis-ID.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Fügen Sie es als Nächstes in die Adressleiste Ihres Browsers ein.<br>![Eine Google-Browser-Seite mit hervorgehobenem Abschnitt „Allgemein“ der Anwendungsauthentifizierungs-URL.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Zuweisen der CMK-App zu einer Rolle {#assign-to-role}
 
@@ -82,7 +82,7 @@ Sie können die Anwendung überprüfen, indem Sie die [!UICONTROL Anwendungs-ID]
 
 ![Die [!UICONTROL Konfiguration für kundenseitig verwaltete Schlüssel] mit der hervorgehobenen [!UICONTROL Anwendungs-ID].](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Alle Details, die zur Überprüfung der Azure-Tools erforderlich sind, sind in der Platform-Benutzeroberfläche enthalten. Diese Granularität wird bereitgestellt, da viele Benutzer andere Azure-Tools verwenden möchten, um ihre Fähigkeit zu verbessern, diese Anwendungen beim Zugriff auf ihren Schlüsseltresor zu überwachen und zu protokollieren. Das Verständnis dieser Kennungen ist für diesen Zweck und für den Zugriff der Adobe-Services auf den Schlüssel von entscheidender Bedeutung.
+Alle Details, die zur Überprüfung der Azure-Tools erforderlich sind, sind in der Experience Platform-Benutzeroberfläche enthalten. Diese Granularität wird bereitgestellt, da viele Benutzer andere Azure-Tools verwenden möchten, um ihre Fähigkeit zu verbessern, diese Anwendungen beim Zugriff auf ihren Schlüsseltresor zu überwachen und zu protokollieren. Das Verständnis dieser Kennungen ist für diesen Zweck und für den Zugriff der Adobe-Services auf den Schlüssel von entscheidender Bedeutung.
 
 ## Aktivieren der Konfiguration des Verschlüsselungsschlüssels auf Experience Platform {#send-to-adobe}
 
@@ -110,11 +110,11 @@ Sie gelangen zurück zum [!UICONTROL Dashboard der Verschlüsselungskonfiguratio
 
 ## Überprüfen des Konfigurationsstatus {#check-status}
 
-Lassen Sie der Verarbeitung viel Zeit. Um den Status der Konfiguration zu überprüfen, kehren Sie zur Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] zurück und scrollen Sie nach unten zum [!UICONTROL Konfigurationsstatus]. Die Fortschrittsleiste wurde auf Schritt eins von drei erweitert und erklärt, dass das System überprüft, ob Platform Zugriff auf den Schlüssel und den Schlüsseltresor hat.
+Lassen Sie der Verarbeitung viel Zeit. Um den Status der Konfiguration zu überprüfen, kehren Sie zur Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] zurück und scrollen Sie nach unten zum [!UICONTROL Konfigurationsstatus]. Die Fortschrittsleiste wurde auf Schritt eins von drei erweitert und erklärt, dass das System überprüft, ob Experience Platform Zugriff auf den Schlüssel und den Schlüsseltresor hat.
 
 Es gibt vier potenzielle Status der CMK-Konfiguration. Diese sind wie folgt:
 
-* Schritt 1: Überprüft, ob Platform Zugriff auf den Schlüssel und den Schlüsseltresor hat.
+* Schritt 1: Überprüft, ob Experience Platform Zugriff auf den Schlüssel und den Schlüsseltresor hat.
 * Schritt 2: Der Schlüsseltresor und der Schlüsselname werden derzeit zu allen Datenspeichern in Ihrer Organisation hinzugefügt.
 * Schritt 3: Der Schlüsseltresor und der Schlüsselname wurden erfolgreich zu den Datenspeichern hinzugefügt.
 * `FAILED`: Es ist ein Problem aufgetreten, das in erster Linie mit dem Schlüssel, dem Schlüsseltresor oder der Einrichtung der Multi-Mandanten-App-zusammenhängt.

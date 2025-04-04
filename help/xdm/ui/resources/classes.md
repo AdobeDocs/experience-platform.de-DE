@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Klasse;Klassen;
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Klassen erstellen und bearbeiten.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform Klassen erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 7%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 7%
 
 In Adobe Experience Platform definiert die Klasse eines Schemas die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemata, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
-Adobe bietet mehrere standardmäßige („Kern„) Experience-Datenmodell (XDM)-Klassen, einschließlich [XDM Individual Profile](../../classes/individual-profile.md) und [XDM ExperienceEvent](../../classes/experienceevent.md). Zusätzlich zu diesen Kernklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihre Organisation zu beschreiben.
+Adobe bietet mehrere Standardklassen („Kern„) des Experience-Datenmodells (XDM), einschließlich [XDM Individual Profile](../../classes/individual-profile.md) und [XDM ExperienceEvent](../../classes/experienceevent.md). Zusätzlich zu diesen Kernklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihre Organisation zu beschreiben.
 
 Dieses Dokument bietet einen Überblick darüber, wie Sie benutzerdefinierte Klassen in der Experience Platform-Benutzeroberfläche erstellen, bearbeiten und verwalten.
 
@@ -32,13 +32,13 @@ Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch da
 
 ## Erste Schritte {#getting-started}
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich die Option]** Schemata[!UICONTROL  aus, um den Arbeitsbereich Schemata] zu öffnen. Wählen Sie dann die Registerkarte **[!UICONTROL Klassen]** aus. Eine Liste der verfügbaren Klassen wird angezeigt.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich]** Schemata“ aus, um den Arbeitsbereich [!UICONTROL Schemata] zu öffnen. Wählen Sie dann die Registerkarte **[!UICONTROL Klassen]** aus. Eine Liste der verfügbaren Klassen wird angezeigt.
 
 ![Die Anzahl der Klassen auf der Registerkarte [!UICONTROL Klassen] des Arbeitsbereichs [!UICONTROL Schemata] [!UICONTROL Klassen] und [!UICONTROL Schemata] hervorgehoben.](../../images/ui/resources/classes/available-classes.png)
 
 ## Klassen filtern {#filter}
 
-Die Liste der Klassen wird automatisch nach ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die durch Adobe definierten Klassen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die durch Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
+Die Liste der Klassen wird automatisch nach ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Klassen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
 
 ![Die Registerkarte [!UICONTROL Klassen] des Arbeitsbereichs [!UICONTROL Schemata] mit [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] hervorgehoben.](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
@@ -48,7 +48,7 @@ Die Liste der Klassen wird automatisch nach ihrer Erstellung gefiltert. Die Stan
 
 ## Erstellen einer neuen Klasse {#create}
 
-Es gibt zwei Methoden, um eine Klasse in der Platform-Benutzeroberfläche zu erstellen: **[!UICONTROL Create class]** oder **[!UICONTROL Create schema]**.
+Es gibt zwei Methoden, um eine Klasse in der Experience Platform-Benutzeroberfläche zu erstellen: **[!UICONTROL Create class]** oder **[!UICONTROL Create schema]**.
 
 ### Klasse erstellen
 
@@ -124,7 +124,7 @@ Wenn Sie zuvor Schemata erstellt haben, die diese Klasse verwenden, werden die n
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Klassen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für durch Adobe definierte Kernklassen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
+>Nur benutzerdefinierte Klassen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernklassen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
 >
 >Nachdem eine benutzerdefinierte Klasse gespeichert und bei der Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen daran vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
 
@@ -156,6 +156,6 @@ Weitere Informationen finden Sie im Handbuch [Erstellen und Bearbeiten ](./schem
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Dokument wurde beschrieben, wie Klassen mithilfe der Platform-Benutzeroberfläche erstellt und bearbeitet werden. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
+In diesem Dokument wurde beschrieben, wie Klassen mithilfe der Experience Platform-Benutzeroberfläche erstellt und bearbeitet werden. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
 
 Informationen zum Verwalten von Klassen mithilfe der Schema Registry-API finden Sie im [Classes-Endpunkthandbuch](../../api/classes.md).

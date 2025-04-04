@@ -3,10 +3,10 @@ title: Mailchimp-Tags
 description: Das Mailchimp Tags -Ziel ermöglicht es Ihnen, Ihre Kontodaten zu exportieren und in Mailchimp zu aktivieren, um mit Kontakten zu interagieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 28%
+source-wordcount: '1657'
+ht-degree: 26%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 28%
 
 [!DNL Mailchimp Tags] verwendet [Audiences](https://mailchimp.com/help/getting-started-audience/) und [Tags](https://mailchimp.com/help/getting-started-tags/), um Ihre Kontaktinformationen zu verwalten. Tags sind Kennzeichnungen, mit denen Sie Ihre Kontakte organisieren und für Ihre interne Kategorisierung in [!DNL Mailchimp] kennzeichnen können.
 
-Im Gegensatz zu [!DNL Mailchimp Interest Categories], mit denen Sie Ihre Kontakte nach ihren Interessen und Vorlieben sortieren würden, soll [!DNL Mailchimp Tags] Abonnements für Themen verwalten, die für Ihre Kontakte von Interesse sein könnten. *Beachten Sie, dass Experience Platform auch einen Anschluss für [!DNL Mailchimp Interest Categories] hat. Sie können ihn auf der [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) Seite ansehen.*
+Im Gegensatz zu [!DNL Mailchimp Interest Categories], mit denen Sie Ihre Kontakte nach ihren Interessen und Vorlieben sortieren würden, soll [!DNL Mailchimp Tags] Abonnements für Themen verwalten, die für Ihre Kontakte von Interesse sein könnten. *Beachten Sie, dass Experience Platform auch eine Verbindung für [!DNL Mailchimp Interest Categories] hat. Sie können sie auf der [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) auschecken.*
 
-Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/). Sie können **neue Kontakte hinzufügen** oder **Tags vorhandener [!DNL Mailchimp] Kontakte aktualisieren** innerhalb einer bestehenden [!DNL Mailchimp] Zielgruppe, nachdem Sie sie in einer neuen Zielgruppe aktiviert haben. [!DNL Mailchimp Tags] verwendet die ausgewählten Zielgruppennamen aus Platform als Tag-Namen in [!DNL Mailchimp].
+Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/). Sie können **neue Kontakte hinzufügen** oder **Tags vorhandener [!DNL Mailchimp] Kontakte aktualisieren** innerhalb einer bestehenden [!DNL Mailchimp] Zielgruppe, nachdem Sie sie in einer neuen Zielgruppe aktiviert haben. [!DNL Mailchimp Tags] verwendet die ausgewählten Zielgruppennamen aus Experience Platform als Tag-Namen in [!DNL Mailchimp].
 
 ## Anwendungsfälle {#use-cases}
 
@@ -26,11 +26,11 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL Mailchimp Tags]-Z
 
 ### Senden von E-Mails an Kontakte für Marketing-Kampagnen {#use-case-send-emails}
 
-Die Verkaufsabteilung eines Unternehmens möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Kontaktliste senden. Die Kontaktlisten werden stapelweise von verschiedenen Offline-Quellen empfangen und müssen daher verfolgt werden. Das Team identifiziert eine vorhandene [!DNL Mailchimp] Zielgruppe und beginnt mit der Erstellung der Experience Platform-Zielgruppen, denen die Kontakte aus jeder Liste hinzugefügt werden. Wenn diese Zielgruppen nach dem Senden an [!DNL Mailchimp Tags] in der ausgewählten [!DNL Mailchimp]-Zielgruppe keine Kontakte vorhanden sind, werden sie mit einem zugehörigen Tag hinzugefügt, das den Zielgruppennamen enthält, zu dem der Kontakt gehört. Wenn in der [!DNL Mailchimp] Zielgruppe bereits Kontakte vorhanden sind, wird ein neues Tag mit dem Namen der Zielgruppe hinzugefügt. Da die Kennzeichnungen in [!DNL Mailchimp] sichtbar sind, können die Offline-Quellen leicht identifiziert werden. Nachdem die Daten an [!DNL Mailchimp] gesendet wurden, senden sie die E-Mail zur Marketing-Kampagne an die Audience.
+Die Verkaufsabteilung eines Unternehmens möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Kontaktliste senden. Die Kontaktlisten werden stapelweise von verschiedenen Offline-Quellen empfangen und müssen daher verfolgt werden. Das Team identifiziert eine bestehende [!DNL Mailchimp]-Zielgruppe und beginnt mit der Erstellung der Experience Platform-Zielgruppen, denen die Kontakte aus jeder Liste hinzugefügt werden. Wenn diese Zielgruppen nach dem Senden an [!DNL Mailchimp Tags] in der ausgewählten [!DNL Mailchimp]-Zielgruppe keine Kontakte vorhanden sind, werden sie mit einem zugehörigen Tag hinzugefügt, das den Zielgruppennamen enthält, zu dem der Kontakt gehört. Wenn in der [!DNL Mailchimp] Zielgruppe bereits Kontakte vorhanden sind, wird ein neues Tag mit dem Namen der Zielgruppe hinzugefügt. Da die Kennzeichnungen in [!DNL Mailchimp] sichtbar sind, können die Offline-Quellen leicht identifiziert werden. Nachdem die Daten an [!DNL Mailchimp] gesendet wurden, senden sie die E-Mail zur Marketing-Kampagne an die Audience.
 
 ## Voraussetzungen {#prerequisites}
 
-In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie für das Einrichten in Experience Platform und [!DNL Mailchimp] benötigen, sowie Informationen, die Sie vor der Arbeit mit dem [!DNL Mailchimp Tags]-Ziel erfassen müssen.
+In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experience Platform und [!DNL Mailchimp] einrichten müssen, sowie Informationen, die Sie vor der Arbeit mit dem [!DNL Mailchimp Tags]-Ziel sammeln müssen.
 
 ### Voraussetzungen in Experience Platform {#prerequisites-in-experience-platform}
 
@@ -38,7 +38,7 @@ Bevor Sie Daten für das [!DNL Mailchimp Tags]-Ziel aktivieren, müssen Sie ein 
 
 ### Voraussetzungen für das [!DNL Mailchimp Tags] Ziel {#prerequisites-destination}
 
-Beachten Sie die folgenden Voraussetzungen, um Daten von Platform in Ihr [!DNL Mailchimp Tags]-Konto zu exportieren:
+Beachten Sie die folgenden Voraussetzungen, um Daten aus Experience Platform in Ihr [!DNL Mailchimp Tags]-Konto zu exportieren:
 
 #### Sie benötigen ein [!DNL Mailchimp]-Konto {#prerequisites-account}
 
@@ -68,7 +68,7 @@ Notieren Sie sich den *des Rechenzentrums (`us14` in diesem Beispiel)*. Sie ben�
 
 Weitere Anleitungen finden Sie in der Dokumentation zu [[!DNL Mailchimp] Grundlagen](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
-### Leitplanken {#guardrails}
+### Leitlinien {#guardrails}
 
 Siehe [!DNL Mailchimp]Ratenbeschränkungen[ für ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) Informationen zu den Beschränkungen, die durch die [!DNL Mailchimp]-API auferlegt werden.
 
@@ -88,7 +88,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Für jede in Platform ausgewählte Zielgruppe wird der entsprechende [!DNL Mailchimp Tags] Segmentstatus mit dem Zielgruppenstatus aus Platform aktualisiert.</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Für jede in Experience Platform ausgewählte Zielgruppe wird der entsprechende [!DNL Mailchimp Tags] Segmentstatus mit dem Zielgruppenstatus aus Experience Platform aktualisiert.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unt
 
 {style="table-layout:auto"}
 
-![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
@@ -133,14 +133,14 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Sta
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | Feld | Beschreibung |
 | --- | --- |
 | **[!UICONTROL Name]** | Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können. |
 | **[!UICONTROL Beschreibung]** | Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren. |
 | **[!UICONTROL Rechenzentrum]** | Ihr [!DNL Mailchimp]-Konto `data center`. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Mailchimp] Identifizieren](#identify-data-center)Datenzentrum“. |
-| **[!UICONTROL Zielgruppenname (bitte zuerst das Rechenzentrum eingeben)]** | Nachdem Sie Ihr **[!UICONTROL Rechenzentrum]** eingegeben haben, werden in dieser Dropdown-Liste automatisch die Zielgruppennamen aus Ihrem [!DNL Mailchimp]-Konto angezeigt. Wählen Sie die Zielgruppe aus, die Sie mit Daten aus Platform aktualisieren möchten. |
+| **[!UICONTROL Zielgruppenname (bitte zuerst das Rechenzentrum eingeben)]** | Nachdem Sie Ihr **[!UICONTROL Rechenzentrum]** eingegeben haben, werden in dieser Dropdown-Liste automatisch die Zielgruppennamen aus Ihrem [!DNL Mailchimp]-Konto angezeigt. Wählen Sie die Zielgruppe aus, die Sie mit Daten aus Experience Platform aktualisieren möchten. |
 
 {style="table-layout:auto"}
 
@@ -161,18 +161,18 @@ Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](/help/destina
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Mailchimp Tags]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Mailchimp Tags]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Mailchimp Tags]-Zielfeldern korrekt zuzuordnen:
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Option **[!UICONTROL Identity-Namespace]** und wählen Sie den `Email` Identity-Namespace aus.
 
-   ![Screenshot der Platform-Benutzeroberfläche mit dem Feld &quot;Source&quot; als E-Mail aus dem Identity-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit dem Feld &quot;Source&quot; als E-Mail aus dem Identity-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Option **[!UICONTROL Identity-Namespace]** und wählen Sie den `Email` Identity-Namespace aus.
 
-   ![Screenshot der Platform-Benutzeroberfläche mit dem Zielfeld als E-Mail aus dem Identity-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   Screenshot der ![Experience Platform-Benutzeroberfläche mit dem Zielfeld als E-Mail aus dem Identity-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Die Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Tags] lauten wie folgt:
 
@@ -181,7 +181,7 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Mailchimp Tags]-Zielfelder
    | `IdentityMap: Email` | `Identity: Email` | Ja |
 
    Nachfolgend finden Sie ein Beispiel mit den abgeschlossenen Zuordnungen:
-   ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Feldzuordnungen.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Feldzuordnungen.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)![
 
 Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 

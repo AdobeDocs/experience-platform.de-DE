@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Query Service und Data Distiller
 description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5024'
-ht-degree: 83%
+source-wordcount: '5029'
+ht-degree: 81%
 
 ---
 
@@ -118,7 +118,7 @@ Die folgenden Schritte beschreiben, wie Sie eine tabellarische Ansicht eines Dat
 - Wählen Sie nach der Anmeldung bei Experience Platform die Option **[!UICONTROL Datensätze]** im linken Navigationsbereich der Benutzeroberfläche, um zum Dashboard [!UICONTROL Datensätze] zu navigieren.
 - Die Datensatz-Registerkarte [!UICONTROL Durchsuchen] wird geöffnet. Sie können die Suchleiste verwenden, um die verfügbaren Optionen zu verfeinern. Wählen Sie einen Datensatz aus der Liste aus.
 
-![Das Dashboard „Datensätze“ in der Platform-Benutzeroberfläche mit Suchleiste und hervorgehobenem Datensatz.](./images/troubleshooting/dataset-selection.png)
+![Das Dashboard „Datensätze“ in der Experience Platform-Benutzeroberfläche mit Suchleiste und hervorgehobenem Datensatz.](./images/troubleshooting/dataset-selection.png)
 
 - Der Bildschirm [!UICONTROL Datensatzaktivität] wird angezeigt. Wählen Sie **[!UICONTROL Vorschau des Datensatzes anzeigen]**, um einen Dialog des XDM-Schemas und eine tabellarische Ansicht von vereinfachten Daten aus dem ausgewählten Datensatz zu öffnen. Weitere Informationen finden Sie in der [Dokumentation zur Vorschau eines Datensatzes](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### Kann ich meine Daten stichprobenweise überprüfen?
 
 +++Antwort
-An dieser Funktion wird derzeit gearbeitet. Details werden in den [Versionshinweisen](../release-notes/latest/latest.md) und über die Dialogfelder der Platform-Benutzeroberfläche bekannt gegeben, sobald die Funktion zur Veröffentlichung bereit ist.
+An dieser Funktion wird derzeit gearbeitet. Details werden in den [Versionshinweisen](../release-notes/latest/latest.md) und über die Dialogfelder der Experience Platform-Benutzeroberfläche bekannt gegeben, sobald die Funktion zur Veröffentlichung bereit ist.
 +++
 
 ### Welche Helferfunktionen werden vom Abfrage-Service unterstützt?
@@ -522,7 +522,7 @@ Es gibt keine Begrenzung der Gleichzeitigkeit von Abfragen, da Batch-Abfragen al
 Es gibt Monitoring- und Warnfunktionen, mit denen Sie sich über Abfrageaktivitäten und -status informieren können. Weitere Informationen finden Sie in den Dokumenten zur [Auditprotokollintegration für den Abfrage-Service](./data-governance/audit-log-guide.md) und zu [Abfrageprotokollen](./ui/overview.md#log).
 +++
 
-### Gibt es eine Möglichkeit, Aktualisierungen zurückzusetzen? Wenn beispielsweise ein Fehler auftritt oder einige Berechnungen beim Zurückschreiben von Daten in Platform neu konfiguriert werden müssen, wie sollte dieses Szenario behandelt werden?
+### Gibt es eine Möglichkeit, Aktualisierungen zurückzusetzen? Wenn beispielsweise ein Fehler auftritt oder einige Berechnungen beim Zurückschreiben von Daten in Experience Platform neu konfiguriert werden müssen, wie sollte dieses Szenario gehandhabt werden?
 
 +++Antwort
 Derzeit unterstützen wir keine Zurücksetzungen oder Aktualisierungen auf diese Weise.
@@ -563,7 +563,7 @@ Es gibt drei Möglichkeiten, den Zugriff zu beschränken. Diese sind wie folgt:
 
 +++
 
-### Gibt es nach Rückgabe der Daten durch den Abfrage-Service irgendwelche Prüfungen, die von Platform ausgeführt werden können, um sicherzustellen, dass keine geschützten Daten zurückgegeben wurden?
+### Gibt es nach Rückgabe der Daten durch den Abfrage-Service irgendwelche Prüfungen, die von Experience Platform ausgeführt werden können, um sicherzustellen, dass keine geschützten Daten zurückgegeben wurden?
 
 - Der Abfrage-Service unterstützt eine attributbasierte Zugriffssteuerung. Sie können den Zugriff auf Daten auf die Spalten-/Blattebene und/oder die Strukturebene einschränken. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie in der Dokumentation.
 
@@ -652,7 +652,7 @@ Die Backend-Infrastruktur wird ständig verbessert, um die Auslastung und Verarb
 ### Die Meldung „Abfrage erstellen“ bleibt beim Versuch, eine Verbindung zum Abfrage-Service herzustellen, hängen „Verbindung wird initialisiert…“. Wie behebe ich das Problem?
 
 +++Antwort
-Wenn die Option „Abfrage erstellen“ bei „Verbindung wird initialisiert…“ hängt, handelt es sich wahrscheinlich um ein Verbindungs- oder Sitzungsproblem. Aktualisieren Sie den Browser, wenn Sie die Platform-Benutzeroberfläche verwenden, und versuchen Sie es erneut.
+Wenn die Option „Abfrage erstellen“ bei „Verbindung wird initialisiert…“ hängt, handelt es sich wahrscheinlich um ein Verbindungs- oder Sitzungsproblem. Aktualisieren Sie den Browser, wenn Sie die Experience Platform-Benutzeroberfläche verwenden, und versuchen Sie es erneut.
 +++
 
 ## Datensatzbeispiele

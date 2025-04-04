@@ -2,10 +2,10 @@
 title: Erstellen einer Marketo Engage Source-Verbindung und eines Datenflusses für Daten zu benutzerdefinierten Aktivitäten in der Benutzeroberfläche
 description: In diesem Tutorial werden Schritte zum Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses in der Benutzeroberfläche beschrieben, um benutzerdefinierte Aktivitätsdaten in Adobe Experience Platform zu importieren.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 22%
+source-wordcount: '1477'
+ht-degree: 17%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->In diesem Tutorial erfahren Sie, wie Sie (**-Aktivitätsdaten** von [!DNL Marketo] auf Experience Platform einrichten und übertragen. Anweisungen zum Einbringen von Daten **Standardaktivität** finden Sie im [[!DNL Marketo] UI-Handbuch](./marketo.md).
+>In diesem Tutorial erfahren Sie, wie Sie (**-Aktivitätsdaten** von [!DNL Marketo] in Experience Platform einrichten und übertragen. Anweisungen zum Einbringen von Daten **Standardaktivität** finden Sie im [[!DNL Marketo] UI-Handbuch](./marketo.md).
 
 Zusätzlich zu [Standardaktivitäten](../../../../connectors/adobe-applications/mapping/marketo.md#activities) können Sie auch die [!DNL Marketo] verwenden, um benutzerdefinierte Aktivitätsdaten in Adobe Experience Platform zu übertragen. In diesem Dokument wird beschrieben, wie Sie eine Quellverbindung und einen Datenfluss für benutzerdefinierte Aktivitätsdaten mithilfe der [!DNL Marketo] in der Benutzeroberfläche erstellen.
 
@@ -22,16 +22,16 @@ Zusätzlich zu [Standardaktivitäten](../../../../connectors/adobe-applications/
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [B2B-Namespaces und Dienstprogramm zur automatischen Schemaerstellung](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Mit dem B2B-Namespace- und dem Dienstprogramm zur automatischen Schemaerstellung können Sie [!DNL Postman] verwenden, um automatisch Werte für Ihre B2B-Namespaces und -Schemas zu generieren. Sie müssen zuerst Ihre B2B-Namespaces und -Schemata abschließen, bevor Sie eine [!DNL Marketo] Quellverbindung und einen Datenfluss erstellen.
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Experience-Datenmodell (XDM)](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../../../xdm/ui/resources/schemas.md): Erfahren Sie, wie Sie in der Benutzeroberfläche Schemata erstellen und bearbeiten.
 * [Identitäts-Namespaces](../../../../../identity-service/features/namespaces.md): Identitäts-Namespaces sind eine Komponente von [!DNL Identity Service], die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Abrufen von Details zur benutzerdefinierten Aktivität
 
-Um benutzerdefinierte Aktivitätsdaten von [!DNL Marketo] auf Experience Platform zu übertragen, müssen Sie als Erstes den API-Namen und den Anzeigenamen Ihrer benutzerdefinierten Aktivität abrufen.
+Um benutzerdefinierte Aktivitätsdaten von [!DNL Marketo] an Experience Platform zu übertragen, müssen Sie als Erstes den API-Namen und den Anzeigenamen Ihrer benutzerdefinierten Aktivität abrufen.
 
 Melden Sie sich über die [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1)-Oberfläche bei Ihrem Konto an. Wählen Sie in der linken Navigationsleiste unter [!DNL Database Management] die Option **Benutzerdefinierte Marketo-Aktivitäten**.
 
@@ -45,7 +45,7 @@ Wählen Sie **Felder** in der oberen Kopfzeile aus, um die mit Ihrer benutzerdef
 
 ## Feldergruppen für benutzerdefinierte Aktivitäten im Schema der B2B-Aktivitäten einrichten
 
-Wählen Sie im Dashboard *[!UICONTROL Schemata]* der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Durchsuchen]** und wählen Sie dann **[!UICONTROL B2B-]** aus der Liste der Schemata aus.
+Wählen Sie im Dashboard *[!UICONTROL Schemata]* der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Durchsuchen]** und wählen Sie dann **[!UICONTROL B2B-Aktivität]** aus der Liste der Schemata aus.
 
 >[!TIP]
 >
@@ -91,7 +91,7 @@ Der letzte Schritt bei der Vorbereitung Ihres Schemas besteht darin, einzelne Fe
 
 Nachdem Sie Ihr Schema fertig eingerichtet haben, können Sie nun mit dem Erstellen eines Datenflusses für Ihre benutzerdefinierten Aktivitätsdaten fortfahren.
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
@@ -154,7 +154,7 @@ Um einem vorhandenen Datenfluss benutzerdefinierte Aktivitätsdaten hinzuzufüge
 
 Sobald Ihr Datenfluss abgeschlossen ist, können Sie [Abfrage-Service](../../../../../query-service/home.md) verwenden, um Aktivitäten für Ihre benutzerdefinierten Aktivitätsdaten zu filtern.
 
-Wenn benutzerdefinierte Aktivitäten in Platform aufgenommen werden, wird der API-Name der benutzerdefinierten Aktivität automatisch zu ihrer `eventType`. Verwenden Sie `eventType={API_NAME}`, um nach benutzerdefinierten Aktivitätsdaten zu filtern.
+Wenn benutzerdefinierte Aktivitäten in Experience Platform aufgenommen werden, wird der API-Name der benutzerdefinierten Aktivität automatisch zu ihrer `eventType`. Verwenden Sie `eventType={API_NAME}`, um nach benutzerdefinierten Aktivitätsdaten zu filtern.
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -169,8 +169,8 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 Die folgende Abbildung zeigt eine Beispiel-SQL-Anweisung im [Abfrage-Editor](../../../../../query-service/ui/user-guide.md) die nach benutzerdefinierten Aktivitätsdaten filtert.
 
-![Platform-Benutzeroberfläche mit einem Abfragebeispiel für benutzerdefinierte Aktivitäten.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![In der Experience Platform-Benutzeroberfläche wird ein Abfragebeispiel für benutzerdefinierte Aktivitäten angezeigt.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie ein Platform-Schema für die [!DNL Marketo] benutzerdefinierter Aktivitätsdaten eingerichtet und einen Datenfluss erstellt, um diese Daten in Platform zu übertragen. Allgemeine Informationen zur [!DNL Marketo] finden Sie im Abschnitt [[!DNL Marketo] Quelle - Übersicht](../../../../connectors/adobe-applications/marketo/marketo.md).
+In diesem Tutorial haben Sie ein Experience Platform-Schema für die [!DNL Marketo] benutzerdefinierter Aktivitätsdaten eingerichtet und einen Datenfluss erstellt, um diese Daten in Experience Platform zu übertragen. Allgemeine Informationen zur [!DNL Marketo] finden Sie im Abschnitt [[!DNL Marketo] Quelle - Übersicht](../../../../connectors/adobe-applications/marketo/marketo.md).

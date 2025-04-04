@@ -3,10 +3,10 @@ keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele – Übersicht
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketing-Experten dabei helfen, durch anonyme Daten zu navigieren und Interessenten Angebote oder Anzeigen auf der Grundlage früherer Aktivitäten oder als Teil von Audiences mit ähnlichen Gewohnheiten bereitzustellen.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 62%
+source-wordcount: '151'
+ht-degree: 56%
 
 ---
 
@@ -18,7 +18,7 @@ Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verha
 
 ## Unterstützte Personalisierungsziele {#supported-destinations}
 
-Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt Experience Platform die unten aufgeführten Personalisierungsziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 **Verbindungen**
 

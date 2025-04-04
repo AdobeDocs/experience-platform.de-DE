@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 63%
+source-wordcount: '859'
+ht-degree: 61%
 
 ---
 
@@ -27,7 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Data Governance {#governance}
 
-[!DNL Experience Platform] können Unternehmen Daten aus verschiedenen Unternehmenssystemen zusammenführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. [!DNL Experience Platform] umfasst eine End-to-End-Data-Governance-Infrastruktur, die eine ordnungsgemäße Verwendung von Daten innerhalb von [!DNL Platform] und bei der gemeinsamen Nutzung durch Systeme sicherstellt.
+[!DNL Experience Platform] können Unternehmen Daten aus verschiedenen Unternehmenssystemen zusammenführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. [!DNL Experience Platform] umfasst eine End-to-End-Data-Governance-Infrastruktur, die eine ordnungsgemäße Verwendung von Daten innerhalb von [!DNL Experience Platform] und bei der gemeinsamen Nutzung durch Systeme sicherstellt.
 
 Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Bestimmung der Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffssteuerung für Daten bei Marketing-Aktionen.
 
@@ -63,12 +63,12 @@ Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten j
 
 * Keine
 
-Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
+Weitere Informationen zur Aufnahme von Daten in Experience Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
 
 ## Ziele {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
 
 **Neue Ziele**
 
@@ -101,7 +101,7 @@ Weitere Informationen zu [!DNL Identity Service] finden Sie unter [Identity Serv
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 95%
+source-wordcount: '1141'
+ht-degree: 90%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform bietet mehrere Dashboards, mit denen Sie wichtige Info
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dashboards (Beta) für Profile, Segmente, Ziele und Lizenznutzung | **Anmerkung: Diese Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre. |
+| Dashboards (Beta) für Profile, Segmente, Ziele und Lizenznutzung | **Anmerkung: Diese Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in Experience Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -54,9 +54,9 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie im Abschni
 
 ## [!DNL Dataflows] {#dataflows}
 
-In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
+In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Experience Platform erleichtert die Verfolgung dieses potenziell nichtlinearen Datenflusses, indem es für Transparenz bei Datenflüssen sorgt.
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connektoren in Zielgruppen-Datensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-Time Customer Profile] verwendet werden, bevor sie schließlich für [!DNL Destinations] aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connektoren in Zielgruppen-Datensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-Time Customer Profile] verwendet werden, bevor sie schließlich für [!DNL Destinations] aktiviert werden.
 
 **Neue Funktionen**
 
@@ -120,7 +120,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 ## [!DNL Sources] {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

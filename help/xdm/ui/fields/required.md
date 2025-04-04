@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Erforderlich;Feld;
+keywords: Experience Platform;Startseite;beliebte Themen;api;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Pflichtfeld;Feld;
 title: Definieren erforderlicher Felder in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie ein erforderliches XDM-Feld in der Experience Platform-Benutzeroberfläche definieren.
+description: Erfahren Sie, wie Sie ein erforderliches XDM-Feld in der Benutzeroberfläche von Experience Platform definieren.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Im Experience-Datenmodell (XDM) gibt ein erforderliches Feld an, dass ein gülti
 
 >[!IMPORTANT]
 >
->Unabhängig davon, ob ein Schemafeld erforderlich ist oder nicht, akzeptiert Platform für kein aufgenommenes Feld `null` oder leere Werte. Wenn in einem Datensatz oder Ereignis kein Wert für ein bestimmtes Feld vorhanden ist, sollte der Schlüssel für dieses Feld aus der Aufnahme-Payload ausgeschlossen werden.
+>Unabhängig davon, ob ein Schemafeld erforderlich ist oder nicht, akzeptiert Experience Platform für kein aufgenommenes Feld `null` oder leere Werte. Wenn in einem Datensatz oder Ereignis kein Wert für ein bestimmtes Feld vorhanden ist, sollte der Schlüssel für dieses Feld aus der Aufnahme-Payload ausgeschlossen werden.
 
 Beim [Definieren eines neuen ](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform können Sie es als erforderliches Feld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Erforderlich]** in der rechten Leiste aktivieren. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Änderung auf das Schema anzuwenden.
 

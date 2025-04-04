@@ -3,9 +3,9 @@ title: Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP
 type: Tutorial
 description: Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud-Speicher-Ziele exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Die wichtigsten Informationen zur Funktionalität finden Sie in diesem Abschnitt
 * Sie können Arrays, Zuordnungen und Objekte in `JSON`- und `Parquet`-Dateien in Cloud-Speicher-Ziele exportieren. Bei Unternehmens- und Edge-Personalisierungszielen ist der exportierte Datentyp `JSON`. Personen und Zielgruppen potenzieller Kunden werden unterstützt, Konto-Zielgruppen jedoch nicht.
 * Bei dateibasierten Cloud-Speicher-Zielen *können* Arrays, Zuordnungen und Objekte in CSV-Dateien exportieren, jedoch nur unter Verwendung der Funktion „Berechnete Felder“ und Verketten dieser Felder in einer Zeichenfolge mithilfe der `array_to_string`-Funktion.
 
-## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
+## Arrays und andere Objekttypen in Experience Platform {#arrays-strings-other-objects}
 
 In Experience Platform können Sie [XDM-Schemata](/help/xdm/home.md) verwenden, um verschiedene Feldtypen zu verwalten. Bevor die Unterstützung für Array-Exporte hinzugefügt wurde, konnten Sie einfache Schlüssel-Wert-Paarfelder wie Zeichenfolgen aus Experience Platform an Ihre gewünschten Ziele exportieren. Ein Beispiel für ein solches Feld, das zuvor für den Export unterstützt wurde, ist `personalEmail.address`:`johndoe@acme.org`.
 

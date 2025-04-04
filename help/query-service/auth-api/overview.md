@@ -3,9 +3,9 @@ title: Data Distiller Authorization API-Handbuch
 description: Erfahren Sie, wie Sie mit der Data Distiller-Autorisierungs-API netzwerkbasierte IP-Einschränkungen für sichere Verbindungen über SQL erzwingen können. Verwenden Sie diese API, um die Datenzugriffssteuerung für Ihre Adobe Experience Platform-Daten zu verbessern.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
+>Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie beim Adobe-Support.
 
 Verwenden Sie die Data Distiller-Autorisierungs-API , um IP-basierte Einschränkungen zu erzwingen. Durch die Anwendung dieser Maßnahmen wird sichergestellt, dass nur genehmigte Netzwerke und Client-Computer über SQL in Adobe Experience Platform auf Daten zugreifen können. Diese Steuerelemente helfen Ihnen bei der Einhaltung strenger Sicherheitsstandards und bieten gleichzeitig Echtzeit-Zugriffsüberwachung und -Warnmeldungen.
 
@@ -30,7 +30,7 @@ Mit den folgenden Funktionen können Sie IP-basierte Zugriffsbeschränkungen def
 
 ## Audit- und Überwachungsfunktionen
 
-Um sichere Datenzugriffspraktiken zu unterstützen, protokolliert der Abfrage-Service alle Client-IPs, die auf Experience Platform zugreifen oder versuchen, darauf zuzugreifen. Audit-Ereignisse, einschließlich verweigerter Verbindungen, werden an Platform Audit-Protokolle gesendet. Dies ermöglicht Folgendes:
+Um sichere Datenzugriffspraktiken zu unterstützen, protokolliert der Abfrage-Service alle Client-IPs, die auf Experience Platform zugreifen oder versuchen, darauf zuzugreifen. Audit-Ereignisse, einschließlich verweigerter Verbindungen, werden an Experience Platform-Audit-Protokolle gesendet. Dies ermöglicht Folgendes:
 
 - **Echtzeit-Überwachung**: Verfolgen Sie IP-basierte Zugriffsmuster, um die Einhaltung sicherzustellen.
 - **Benachrichtigung bei nicht autorisiertem Zugriff**: Identifizieren Sie Zugriffsversuche von nicht autorisierten IPs und reagieren Sie darauf.

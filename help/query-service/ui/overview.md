@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 24%
 
 ---
@@ -17,7 +17,7 @@ Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläch
 
 ![Der Arbeitsbereich „Abfrage-Service“ mit hervorgehobenen Abfragen und der hervorgehobenen Registerkarte „Übersicht“.](../images/ui/overview/queries-overview.png)
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Die [!UICONTROL Übersicht] bietet einen optimierten Einstiegspunkt für die Arbeit mit Abfragen und Distiller-Datenvorlagen. Hier können Sie auf alle Funktionen zugreifen, die zum Schreiben von Abfragen, Erkunden von Datensätzen und Analysieren von Zielgruppendaten erforderlich sind, um einen reibungslosen Workflow für Ihre Datenanalysen und Zielgruppeneinblicke sicherzustellen. Verwenden Sie diese Übersicht, um zu erfahren, was Sie mit Data Distiller erreichen können, und um Schlüsselmetriken zur Verwendung Ihres Abfrage-Service zu ermitteln.
 
@@ -36,8 +36,8 @@ Die [!UICONTROL Übersicht] enthält mehrere Hauptabschnitte, die Ihnen bei den 
 Der [!UICONTROL Data Distiller-Funktionen] enthält Dokumentations-Links zu erweiterten Data Distiller-Funktionen:
 
 - **[[!UICONTROL Datenexploration]](../use-cases/data-exploration.md)** Erfahren Sie, wie Sie mit SQL aufgenommene Batch-Daten untersuchen, Fehler beheben und überprüfen.
-- **[[!UICONTROL Abgeleitete Datensätze für Experience Platform-Anwendungen]](../data-distiller/derived-datasets/overview.md)**: Erfahren Sie, wie Sie abgeleitete Datensätze erstellen, um komplexe und vielfältige Anwendungsfälle zu unterstützen, mit denen Ihr Datendienstprogramm optimiert wird.
-- **[[!UICONTROL KI/ML-Pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Erfahren Sie mehr über wichtige Konzepte hinter Ihren bevorzugten Tools für maschinelles Lernen und darüber, wie Sie benutzerdefinierte Modelle erstellen, die Ihre Marketing-Anwendungsfälle unterstützen. In dieser Reihe von Handbüchern werden die erforderlichen Schritte zum Erstellen von Funktions-Pipelines beschrieben, die Daten vom Experience Platform vorbereiten, um benutzerdefinierte Modelle in Ihre maschinelle Lernumgebung einzuspeisen.
+- **[[!UICONTROL Abgeleitete Datensätze für Experience Platform-]](../data-distiller/derived-datasets/overview.md)**: Erfahren Sie, wie Sie abgeleitete Datensätze erstellen, um komplexe und vielfältige Anwendungsfälle zu unterstützen, mit denen Ihr Datendienstprogramm optimiert wird.
+- **[[!UICONTROL KI/ML-Pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Erfahren Sie mehr über wichtige Konzepte hinter Ihren bevorzugten Tools für maschinelles Lernen und darüber, wie Sie benutzerdefinierte Modelle erstellen, die Ihre Marketing-Anwendungsfälle unterstützen. In dieser Reihe von Handbüchern werden die erforderlichen Schritte zum Erstellen von Funktions-Pipelines beschrieben, die Daten aus Experience Platform vorbereiten, um benutzerdefinierte Modelle in Ihre maschinelle Lernumgebung einzuspeisen.
 - **[[!UICONTROL SQL Insights]](../data-distiller/sql-insights/overview.md)**: Erfahren Sie mehr über die wichtigsten Funktionen und Schritte, die zum Entwickeln eines Insights-Dashboards aus SQL mit Data Distiller erforderlich sind.
 
 ![Der Arbeitsbereich „Abfrage-Service“ mit hervorgehobenem Abschnitt zu den Funktionen von Data Distiller.](../images/ui/overview/data-distiller-capabilities.png)
@@ -142,7 +142,7 @@ Die Registerkarte **[!UICONTROL Vorlagen]** enthält Abfragen, die von Benutzend
 | **[!UICONTROL Geändert von]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf den Abfrage-Service hat, kann Abfragen ändern. |
 | **[!UICONTROL Zuletzt geändert]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |
 
-Weitere Informationen zu [ in der Platform](./query-templates.md)Benutzeroberfläche finden Sie in der Dokumentation zu Abfragevorlagen .
+Weitere Informationen zu [ in der Benutzeroberfläche von Experience Platform finden ](./query-templates.md) in der Dokumentation zu Abfragevorlagen .
 
 ## Protokoll {#log}
 
@@ -174,4 +174,4 @@ Die Registerkarte **[!UICONTROL Anmeldedaten]** zeigt sowohl Ihre ablaufenden al
 
 ## Nächste Schritte
 
-Da Sie nun mit der Benutzeroberfläche des Abfrage-Service auf [!DNL Platform] vertraut sind, können Sie auf den Abfrage-Editor zugreifen, um Ihre eigenen Abfrageprojekte zu erstellen und diese für andere Benutzer in Ihrer Organisation freizugeben. Weitere Informationen zum Erstellen und Ausführen von Abfragen im Abfrage-Editor finden Sie im [Benutzerhandbuch zum Abfrage-Editor](./user-guide.md).
+Da Sie nun mit der Benutzeroberfläche des Abfrage-Service auf [!DNL Experience Platform] vertraut sind, können Sie auf den Abfrage-Editor zugreifen, um Ihre eigenen Abfrageprojekte zu erstellen und diese für andere Benutzer in Ihrer Organisation freizugeben. Weitere Informationen zum Erstellen und Ausführen von Abfragen im Abfrage-Editor finden Sie im [Benutzerhandbuch zum Abfrage-Editor](./user-guide.md).

@@ -3,10 +3,10 @@ title: Verwenden Sie die Umfrage zur Selbstidentifizierung, um Ihr persönliches
 description: Erfahren Sie, wie Sie die Benutzeroberfläche der Umfrage zur Selbstidentifizierung verwenden, um relevante Inhalte basierend auf Ihren Aufgabenfunktionen und zugehörigen Zielen zu erhalten.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 96%
+source-wordcount: '569'
+ht-degree: 66%
 
 ---
 
@@ -18,17 +18,17 @@ ht-degree: 96%
 
 Die Umfrage zur Selbstidentifizierung ist ein kurzer Fragebogen, der auf der Startseite der Adobe Experience Platform-Benutzeroberfläche vorgestellt wird. Sie können die Umfrage ausfüllen, um Informationen über Ihre Aufgaben und allgemeinen Ziele bereitzustellen. Diese Informationen werden dann verwendet, um produktinterne Leitfäden besser auszurichten und letztendlich Inhalte bereitzustellen, die für Ihre Ziele relevanter sind.
 
-Dieses Dokument enthält Informationen dazu, wie Sie die Umfrage zur Selbstidentifizierung in der Platform-Benutzeroberfläche verwenden können, um relevante Inhalte basierend auf Ihren Zielen und Aufgaben zu erhalten, und wie Sie Ihre persönlichen Profilattribute mithilfe der Benutzeroberfläche neu konfigurieren können.
+Dieses Dokument enthält Informationen dazu, wie Sie die Umfrage zur Selbstidentifizierung in der Experience Platform-Benutzeroberfläche verwenden können, um relevante Inhalte basierend auf Ihren Zielen und Aufgaben zu erhalten, und wie Sie Ihre persönlichen Profilattribute mithilfe der Benutzeroberfläche neu konfigurieren können.
 
 Um mehr über Adobe Experience Platform zu erfahren, lesen Sie [Experience Platform – Übersicht](home.md).
 
-## Umfrage zur Selbstidentifizierung in der Platform-Benutzeroberfläche
+## Umfrage zur Selbstidentifizierung in der Experience Platform-Benutzeroberfläche
 
-Die Eingabeaufforderung zur Selbstidentifizierung wird bei der Anmeldung unten rechts auf der Startseite der Platform-Benutzeroberfläche angezeigt.
+Die Eingabeaufforderung zur Selbstidentifizierung wird bei der Anmeldung unten rechts auf der Startseite der Experience Platform-Benutzeroberfläche angezeigt.
 
 Um die Umfrage zu starten, wählen Sie **[!UICONTROL Starten]** aus.
 
-![Startseite der Platform-Benutzeroberfläche mit der Popup-Meldung, die Sie auffordert, die Umfrage zur Selbstidentifizierung zu starten.](./images/survey/survey-prompt.png)
+![Startseite der Experience Platform-Benutzeroberfläche mit der Popup-Meldung, die Sie auffordert, die Umfrage zur Selbstidentifizierung zu starten.](./images/survey/survey-prompt.png)
 
 Wählen Sie bei der ersten Frage der Umfrage die Funktion aus, die Ihre Arbeit am besten beschreibt.
 
@@ -81,16 +81,16 @@ Wählen Sie nach dem Ausfüllen der Umfrage zur Selbstidentifizierung die Option
 
 Aktualisieren Sie Ihre Aufgabenbereiche und Ziele mithilfe des Menüs „Voreinstellungen“ von Experience Cloud. Um das Menü „Voreinstellungen“ zu öffnen, klicken Sie auf Ihr Profilsymbol in der oberen Navigationsleiste und wählen Sie **[!UICONTROL Voreinstellungen]**.
 
-![Die Startseite der Platform-Benutzeroberfläche mit dem Profilsymbol und der ausgewählten Schaltfläche für Voreinstellungen.](./images/survey/preferences.png)
+![Die Startseite der Experience Platform-Benutzeroberfläche mit dem Profilsymbol und der ausgewählten Schaltfläche für Voreinstellungen.](./images/survey/preferences.png)
 
 Als Nächstes wählen Sie im Bereich [!UICONTROL Allgemein] Ihres Profilvoreinstellungsmenüs die Option **[!UICONTROL Aufgabenbereiche und Ziele aktualisieren]**.
 
-![Der Abschnitt „Allgemein“ der Seite mit den Profilvoreinstellungen für die Platform-Benutzeroberfläche](./images/survey/update.png)
+![Der Abschnitt „Allgemein“ der Seite mit den Profileinstellungen der Experience Platform-Benutzeroberfläche](./images/survey/update.png)
 
 Die Umfrage zur Selbstidentifizierung wird angezeigt, sodass Sie Ihre Antworten neu konfigurieren und Ihr Profil aktualisieren können.
 
-![Auf der Seite mit den Profilvoreinstellungen der Platform-Benutzeroberfläche wird die Umfrage zur Selbstidentifizierung angezeigt, damit Benutzende ihr persönliches Profil aktualisieren können.](./images/survey/new-survey.png)
+![Auf der Seite mit den Profilvoreinstellungen der Experience Platform-Benutzeroberfläche wird die Umfrage zur Selbstidentifizierung angezeigt, damit Benutzende ihr persönliches Profil aktualisieren können.](./images/survey/new-survey.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie jetzt Informationen zu Ihren Auftragsfunktionen und -zielen übermittelt und aktualisiert, um bei der Verwendung der Platform-Benutzeroberfläche relevantere Inhalte zu erhalten. Weitere Informationen zur Platform-Benutzeroberfläche finden Sie im Abschnitt [Übersicht über Experience Platform](home.md).
+Durch Lesen dieses Dokuments haben Sie jetzt Informationen zu Ihren Auftragsfunktionen und -zielen übermittelt und aktualisiert, um bei der Verwendung der Experience Platform-Benutzeroberfläche relevantere Inhalte zu erhalten. Weitere Informationen zur Experience Platform-Benutzeroberfläche finden Sie in der [Übersicht über Experience Platform](home.md).

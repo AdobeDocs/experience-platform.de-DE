@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Anmeldedaten-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Anmeldedaten-Konfiguration
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 100%
+source-wordcount: '589'
+ht-degree: 97%
 
 ---
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verw
 > 
 >Lesen Sie [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
 
-Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
+Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Experience Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
 
 Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -252,7 +252,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details Ihrer a
 
 ## Umgang mit API-Fehlern {#error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

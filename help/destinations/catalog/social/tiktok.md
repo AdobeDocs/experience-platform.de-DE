@@ -3,16 +3,16 @@ title: TikTok-Verbindung
 description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 38%
 
 ---
 
 # TikTok-Verbindung
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager. Besuchen Sie das Business Help Center von [TikTok](https://ads.tiktok.com/help/article/audiences) um weitere Informationen zu erhalten.
 
@@ -20,7 +20,7 @@ Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das
 >
 >Dieser Ziel-Connector und diese Dokumentationsseite werden vom TikTok-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das TikTok-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel für Kundinnen und Kunden von Adobe Experience Platform.
 
@@ -42,8 +42,8 @@ TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Um sich beim Ziel zu authentifizieren, werden Sie umgeleitet, um sich bei Ihrem 
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Details zur Zielverbindung](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Bild der Platform-Benutzeroberfläche mit den einzufüllenden Details zur Zielverbindung")
+![Details zur Zielverbindung](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Bild der Experience Platform-Benutzeroberfläche mit den einzufüllenden Details zur Zielverbindung")
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -123,7 +123,7 @@ Auswählen der Zielfelder:
 
 * Wählen Sie den E-Mail-Namespace als Zielidentität aus.
 
-![Identitätszuordnung](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Bild der Platform-Benutzeroberfläche, Zuordnung von Identitäten")
+![Identitätszuordnung](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Bild der Experience Platform-Benutzeroberfläche, Zuordnung von Identitäten")
 
 ## Exportierte Daten {#exported-data}
 

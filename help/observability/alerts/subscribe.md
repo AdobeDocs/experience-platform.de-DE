@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 title: Abonnieren von Adobe I/O-Ereignisbenachrichtigungen
-description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren  [!DNL Platform] -Service bereitgestellt.
+description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren  [!DNL Experience Platform] -Service bereitgestellt.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 88%
@@ -15,7 +15,7 @@ ht-degree: 88%
 
 Mit [!DNL Observability Insights] können Sie Ereignisbenachrichtigungen zu Aktivitäten von Adobe Experience Platform abonnieren. Diese Ereignisse werden an einen konfigurierten Webhook gesendet, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen.
 
-In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Adobe Experience Platform-Services abonnieren können. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren [!DNL Platform]-Service bereitgestellt.
+In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Adobe Experience Platform-Services abonnieren können. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren [!DNL Experience Platform]-Service bereitgestellt.
 
 ## Erste Schritte
 
@@ -41,7 +41,7 @@ Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console
 
 >[!NOTE]
 >
->Das Benachrichtigungsereignis zur Datenaufnahme wird seit Adobe I/O nicht mehr unterstützt. Stattdessen sollten Sie das I/O-Ereignis **Flussausführungs-Info** Quellen verwenden.
+>Das Benachrichtigungsereignis zur Datenaufnahme wird in Adobe I/O nicht mehr unterstützt. Stattdessen sollten Sie das I/O-Ereignis **Flussausführungs-Info** Quellen verwenden.
 
 Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Wählen Sie hier **[!UICONTROL Ereignis hinzufügen]** aus.
 

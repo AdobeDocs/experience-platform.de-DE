@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Namespace im Experience-Datenmodell (XDM)
 description: Erfahren Sie, wie Sie mit dem Namespace im Experience-Datenmodell (XDM) Ihre Schemata erweitern und Feldkollisionen verhindern können, wenn verschiedene Schemakomponenten zusammengeführt werden.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Die folgenden Abschnitte zeigen, wie Namespaces in der XDM-Syntax zugewiesen wer
 
 ### Standard-XDM {#standard}
 
-Die standardmäßige XDM-Syntax bietet Einblicke in die Darstellung von Namespaces in Schemata (einschließlich [wie sie in Adobe Experience Platform übersetzt werden](#compatibility)).
+Die standardmäßige XDM-Syntax zeigt in insight, wie Namespaces in Schemata dargestellt werden (einschließlich [wie sie in Adobe Experience Platform übersetzt werden](#compatibility)).
 
 Standard-XDM verwendet [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts)-Syntax, um Feldern Namespaces zuzuweisen. Dieser Namespace wird in Form eines URI (z. B. `https://ns.adobe.com/xdm` für den `xdm`-Namespace) oder als Präfix bereitgestellt, das im `@context` eines Schemas konfiguriert ist.
 
@@ -89,7 +89,7 @@ Im Folgenden finden Sie ein Beispielschema für ein Produkt in der standardmäß
 
 ### Kompatibilitätsmodus {#compatibility}
 
-In Adobe Experience Platform werden XDM-Schemata in der Syntax [Kompatibilitätsmodus](../api/appendix.md#compatibility) dargestellt, wobei die JSON-LD-Syntax zur Darstellung von Namespaces nicht verwendet wird. Stattdessen konvertiert Platform den Namespace in ein übergeordnetes Feld (beginnend mit einem Unterstrich) und verschachtelt die Felder darunter.
+In Adobe Experience Platform werden XDM-Schemata in der Syntax [Kompatibilitätsmodus](../api/appendix.md#compatibility) dargestellt, wobei die JSON-LD-Syntax zur Darstellung von Namespaces nicht verwendet wird. Stattdessen konvertiert Experience Platform den Namespace in ein übergeordnetes Feld (beginnend mit einem Unterstrich) und verschachtelt die Felder darunter.
 
 Beispielsweise wird das standardmäßige XDM-`repo:createdDate` in `_repo.createdDate` konvertiert und würde im Kompatibilitätsmodus unter der folgenden Struktur angezeigt:
 

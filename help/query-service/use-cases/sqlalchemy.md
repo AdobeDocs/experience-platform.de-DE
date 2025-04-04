@@ -1,27 +1,27 @@
 ---
-title: Verwalten von Platform-Daten mithilfe von Python und SQLAlchemy
-description: Erfahren Sie, wie Sie mit SQLAlchemy Ihre Platform-Daten mit Python anstelle von SQL verwalten können.
+title: Verwalten von Experience Platform-Daten mithilfe von Python und SQLAlchemy
+description: Erfahren Sie, wie Sie mit SQLAlchemy Ihre Experience Platform-Daten mit Python anstelle von SQL verwalten können.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 7%
+source-wordcount: '578'
+ht-degree: 0%
 
 ---
 
-# Verwalten von Platform-Daten mithilfe von [!DNL Python] und [!DNL SQLAlchemy]
+# Verwalten von Experience Platform-Daten mithilfe von [!DNL Python] und [!DNL SQLAlchemy]
 
 Erfahren Sie, wie Sie SQLAlchemy für mehr Flexibilität bei der Verwaltung Ihrer Adobe Experience Platform-Daten verwenden. Für diejenigen, die mit SQL nicht so vertraut sind, kann SQLAlchemy die Entwicklungszeit bei der Arbeit mit relationalen Datenbanken erheblich verbessern. Dieses Dokument enthält Anweisungen und Beispiele zum Verbinden von [!DNL SQLAlchemy] mit dem Abfrage-Service und zum Beginnen der Verwendung von Python für die Interaktion mit Ihren Datenbanken.
 
-[!DNL SQLAlchemy] ist ein Object Relational Mapper (ORM) und eine [!DNL Python] Code-Bibliothek, die in einer SQL-Datenbank gespeicherte Daten in [!DNL Python] Objekte übertragen kann. Sie können dann CRUD-Vorgänge für Daten durchführen, die im Data Lake von Platform gespeichert sind, indem Sie [!DNL Python] Code verwenden. Dadurch entfällt die Notwendigkeit, Daten nur noch mit PSQL zu verwalten.
+[!DNL SQLAlchemy] ist ein Object Relational Mapper (ORM) und eine [!DNL Python] Code-Bibliothek, die in einer SQL-Datenbank gespeicherte Daten in [!DNL Python] Objekte übertragen kann. Sie können dann CRUD-Vorgänge für Daten durchführen, die im Data Lake von Experience Platform gespeichert sind, indem Sie [!DNL Python] Code verwenden. Dadurch entfällt die Notwendigkeit, Daten nur noch mit PSQL zu verwalten.
 
 ## Erste Schritte
 
-Um die erforderlichen Anmeldedaten zum Verbinden von [!DNL SQLAlchemy] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL SQLAlchemy] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
 
 ## [!DNL Query Service] {#credentials}
 
-Um Ihre Anmeldedaten zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldedaten]** aus. Eine vollständige Anleitung zum Auffinden Ihrer Anmeldedaten finden Sie im [Anmeldedaten-Handbuch](../ui/credentials.md).
+Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Experience Platform-Benutzeroberfläche an und wählen **[!UICONTROL Abfragen]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Eine vollständige Anleitung zum Auffinden Ihrer Anmeldedaten finden Sie im [Anmeldedaten-Handbuch](../ui/credentials.md).
 
 ![Die Registerkarte „Anmeldeinformationen“ mit hervorgehobenen ablaufenden Anmeldeinformationen für den Abfrage-Service.](../images/use-cases/credentials.png)
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->Das Kennwort zum Verbinden von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
+>Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
 
 ### Erstellen einer Engine-Instanz [#create-engine]
 
@@ -69,7 +69,7 @@ Nachdem die Variablen erstellt wurden, importieren Sie die Funktion `create_engi
 >
 >`create_engine`Gibt eine Instanz einer Engine zurück. Es öffnet jedoch die Verbindung zum Abfrage-Service erst, wenn eine Abfrage aufgerufen wird, für die eine Verbindung erforderlich ist.
 
-SSL muss beim Zugriff auf Platform über Drittanbieter-Clients aktiviert sein. Verwenden Sie als Teil Ihrer Engine die `connect_args` , um zusätzliche Keyword-Argumente einzugeben. Es wird empfohlen, den SSL-Modus auf `require` festzulegen. Weitere Informationen zu den akzeptierten Werten finden [ in ](../clients/ssl-modes.md) Dokumentation zu SSL-Modi .
+SSL muss beim Zugriff auf Experience Platform über Drittanbieter-Clients aktiviert sein. Verwenden Sie als Teil Ihrer Engine die `connect_args` , um zusätzliche Keyword-Argumente einzugeben. Es wird empfohlen, den SSL-Modus auf `require` festzulegen. Weitere Informationen zu den akzeptierten Werten finden [ in ](../clients/ssl-modes.md) Dokumentation zu SSL-Modi .
 
 Im folgenden Beispiel wird der [!DNL Python] Code angezeigt, der zum Initialisieren einer Engine und einer Verbindungszeichenfolge erforderlich ist.
 
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->Das Kennwort zum Verbinden von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
+>Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
 
-Sie können jetzt Platform-Daten mit [!DNL Python] abfragen. Das folgende Beispiel gibt ein Array von Query Service-Tabellennamen zurück.
+Sie können jetzt Experience Platform-Daten mit [!DNL Python] abfragen. Das folgende Beispiel gibt ein Array von Query Service-Tabellennamen zurück.
 
 ```python
 from sqlalchemy import inspect

@@ -2,10 +2,10 @@
 title: Data Landing Zone Source
 description: Erfahren Sie, wie Sie die Data Landing Zone mit Adobe Experience Platform verbinden
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 20%
+source-wordcount: '1366'
+ht-degree: 18%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 20%
 >
 >Diese Seite ist spezifisch für den [!DNL Data Landing Zone]-Quell *Connector* Experience Platform. Informationen zum Herstellen einer Verbindung zum [!DNL Data Landing Zone]-*-*-Connector finden Sie auf [[!DNL Data Landing Zone] Zieldokumentationsseite](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeichereinrichtung zugreifen können, um Dateien in Platform zu laden. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Experience Platform erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder die Befehlszeilenschnittstelle verwenden.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeichereinrichtung zugreifen können, um Dateien in Experience Platform zu laden. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Experience Platform-Produkt- und -Services-Lizenz bereitgestellt werden. Alle Kundinnen und Kunden von Experience Platform erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihrem Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder die Befehlszeilenschnittstelle verwenden.
 
 [!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. Mit der SAS-basierten Authentifizierung können Sie sicher über eine öffentliche Internetverbindung auf Ihren [!DNL Data Landing Zone]-Container zugreifen. Für den Zugriff auf Ihren [!DNL Data Landing Zone]-Container sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren. Experience Platform erzwingt eine strikte siebentägige Gültigkeitsdauer für alle Dateien und Ordner, die in einen [!DNL Data Landing Zone]-Container hochgeladen werden. Alle Dateien und Ordner werden nach sieben Tagen gelöscht.
 
@@ -54,7 +54,7 @@ Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie als Nächstes
 
 >[!TIP]
 >
->Sie können Ihre [!DNL Data Landing Zone]-Anmeldeinformationen aus dem Quellkatalog in der Platform-Benutzeroberfläche abrufen.
+>Sie können Ihre [!DNL Data Landing Zone]-Anmeldeinformationen aus dem Quellkatalog in der Experience Platform-Benutzeroberfläche abrufen.
 
 Geben Sie Ihre [!DNL Data Landing Zone] SAS-URL ein und klicken Sie dann auf **Weiter**
 
@@ -318,6 +318,6 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie Daten aus Ihrem 
 
 ### Verwenden der Benutzeroberfläche
 
-- [Verbinden  [!DNL Data Landing Zone]  Platform über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Verbindung  [!DNL Data Landing Zone]  Experience Platform über die Benutzeroberfläche herstellen](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 

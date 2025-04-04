@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;
 title: Handbuch zur Fehlerbehebung bei der Datenvorbereitung
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Adobe Experience Platform-Datenvorbereitung.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 28%
+source-wordcount: '1257'
+ht-degree: 26%
 
 ---
 
 # [!DNL Data Prep] – Handbuch zur Fehlerbehebung
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur [!DNL Data Prep] von Adobe Experience Platform sowie eine Anleitung zur Behebung gängiger Fehler. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei Platform-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur [!DNL Data Prep] von Adobe Experience Platform sowie eine Anleitung zur Behebung gängiger Fehler. Fragen und allgemeine Informationen zur Fehlerbehebung bei Experience Platform-APIs finden Sie im Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs [](../landing/troubleshooting.md).
 
 ## FAQs
 
@@ -38,7 +38,7 @@ Berechnete Felder haben eine maximale Länge von 4096 Zeichen.
 
 Stellen Sie sicher, dass der Datentyp für jedes Feld mit dem im Schema definierten Typ übereinstimmt. Darüber hinaus müssen Einschränkungen wie „erforderlich“, „Aufzählung“ und „Format“ eingehalten werden.
 
-Die aufgenommenen Daten müssen dem in Experience Platform definierten Experience-Datenmodell-Schema (XDM) entsprechen. Wenn das Attribut nicht mit dem erwarteten Typ oder Format übereinstimmt, der im Schema angegeben ist, schlägt die Aufnahme fehl.
+Die aufgenommenen Daten müssen dem in Experience Platform definierten Experience-Datenmodell (XDM)-Schema entsprechen. Wenn das Attribut nicht mit dem erwarteten Typ oder Format übereinstimmt, der im Schema angegeben ist, schlägt die Aufnahme fehl.
 
 Wenn die Funktionen zur Datenvorbereitung verwendet werden, stellen Sie sicher, dass die Umwandlung zu den richtigen Attributen führt. Sie können die Attribute während des Einrichtungsprozesses des Quell-Workflows überprüfen. Wählen Sie während des Zuordnungsschritts die Option **[!UICONTROL Neuer Feldtyp]** und dann **[!UICONTROL Berechnetes Feld hinzufügen]** aus. Verwenden Sie als Nächstes die Schnittstelle für berechnete Felder, um jede Funktion in der Vorschau anzuzeigen.
 
@@ -58,7 +58,7 @@ Nach der Aufnahme können Sie Data Distiller verwenden, um die Daten mithilfe vo
 >
 >* Identity Service: Datensätze können nicht direkt aus Identity Service entfernt werden. Sie müssen das gesamte Profil löschen und dann das Profil mit den richtigen Datensätzen erneut hochladen, indem Sie die API zum Löschen von Profilen verwenden.
 
-### Was sind die Best Practices für die Verwendung von berechneten Feldern beim GIF von Daten?
+### Was sind die Best Practices für die Verwendung von berechneten Feldern in GIF-Daten?
 
 Sie können die Funktionen zur Datenvorbereitung während des Zuordnungsschritts von Quelldaten zum XDM-Schema verwenden, um ein neues berechnetes Feld zu erstellen.
 

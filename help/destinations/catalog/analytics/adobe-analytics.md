@@ -3,36 +3,36 @@ keywords: Analytics-Erweiterung;Analytics-Erweiterung;Zielanalyse
 title: Adobe Analytics-Erweiterung
 description: Die Adobe Analytics-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 46%
+source-wordcount: '466'
+ht-degree: 44%
 
 ---
 
 # Adobe Analytics-Erweiterung
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Adobe Analytics ist eine branchenführende Lösung, mit der Sie Ihre Kunden besser verstehen und Ihr Geschäft mit Customer Intelligence steuern können.
 
 Adobe Analytics ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie in der Übersicht über die Adobe Analytics-Erweiterung [](/help/tags/extensions/client/analytics/overview.md) in der Tags-Dokumentation.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe Analytics-Erweiterung](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Experience Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
 Installieren der Adobe Analytics-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

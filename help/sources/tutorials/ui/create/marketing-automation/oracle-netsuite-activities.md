@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 46%
+source-wordcount: '624'
+ht-degree: 40%
 
 ---
 
@@ -37,33 +37,33 @@ Wenn Sie bereits über ein gültiges [!DNL Oracle NetSuite]-Konto verfügen, kö
 
 ## Verbinden Ihres [!DNL Oracle NetSuite]-Kontos {#connect-account}
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *Kategorie* Marketing-Automatisierung“ die Option **[!DNL Oracle NetSuite Activities]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
-![Screenshot der Platform-Benutzeroberfläche für den Katalog mit der Karte &quot;Oracle NetSuite-Aktivitäten“](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für den Katalog mit der Karte &quot;Oracle NetSuite-Aktivitäten“](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-Die Seite **[!UICONTROL Connect Oracle NetSuite Activities Account]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Oracle NetSuite-Aktivitätskonto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 >[!IMPORTANT]
 >
->Das Aktualisierungstoken läuft nach sieben Tagen ab. Sobald Ihr Token abläuft, müssen Sie ein Konto auf Experience Platform mit Ihrem aktualisierten Token erstellen. Wenn Sie kein neues Konto mit Ihrem aktualisierten Token erstellen, wird möglicherweise die folgende Fehlermeldung angezeigt: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>Das Aktualisierungstoken läuft nach sieben Tagen ab. Sobald Ihr Token abläuft, müssen Sie auf Experience Platform ein Konto mit Ihrem aktualisierten Token erstellen. Wenn Sie kein neues Konto mit Ihrem aktualisierten Token erstellen, wird möglicherweise die folgende Fehlermeldung angezeigt: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Vorhandenes Konto {#existing-account}
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Oracle NetSuite Activities]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des Kontos Oracle NetSuite-Aktivitäten mit einem bestehenden Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Screenshot der Experience Platform-Benutzeroberfläche zum Verbinden des Kontos &quot;Oracle NetSuite-Aktivitäten“ mit einem bestehenden Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Neues Konto {#new-account}
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des Kontos Oracle NetSuite-Aktivitäten mit einem neuen Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Screenshot der Experience Platform-Benutzeroberfläche, um das Konto &quot;Oracle NetSuite-Aktivitäten“ mit einem neuen Konto zu verbinden](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Nächste Schritte {#next-steps}
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle NetSuite Activities]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](../../dataflow/marketing-automation.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle NetSuite Activities]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/marketing-automation.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -71,7 +71,7 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verw
 
 ### Zuordnung {#mapping}
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >

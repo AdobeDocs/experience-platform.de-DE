@@ -3,16 +3,16 @@ title: Übersicht über die API für einheitliche Tags
 description: Erfahren Sie, wie Sie mit der Unified Tags-API einheitliche Tags und Ordner in Adobe Experience Platform verwalten können.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # Übersicht über die API für einheitliche Tags
 
-Mit der Unified Tags-API können Sie Ihre Geschäftsobjekte in Adobe Experience Platform kategorisieren und verwalten. Sie können sowohl Ordner als auch Tags erstellen, die verwendet werden können, um Platform-Objekte wie Zielgruppen oder Datensätze mithilfe von Endpunkten in dieser API besser zu organisieren.
+Mit der Unified Tags-API können Sie Ihre Geschäftsobjekte in Adobe Experience Platform kategorisieren und verwalten. Sie können sowohl Ordner als auch Tags erstellen, die verwendet werden können, um Experience Platform-Objekte wie Zielgruppen oder Datensätze mithilfe von Endpunkten in dieser API besser zu organisieren.
 
 Bevor Sie die einzelnen Endpunkthandbücher lesen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md), um wichtige Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr zu erhalten.
 

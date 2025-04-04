@@ -2,16 +2,16 @@
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: d56a37c5b1c5768b3f6811be9d30d45628fdabca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 7%
+source-wordcount: '1196'
+ht-degree: 6%
 
 ---
 
 # Adobe Analytics-Quell-Connector für Report Suite-Daten
 
-Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics-Quell-Connector aufnehmen. Der [!DNL Analytics]-Quell-Connector streamt von [!DNL Analytics] erfasste Daten in Echtzeit an Platform und konvertiert SCDS-formatierte [!DNL Analytics] in [!DNL Experience Data Model] (XDM)-Felder für die Verwendung durch Platform.
+Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics-Quell-Connector aufnehmen. Der [!DNL Analytics]-Quell-Connector streamt von [!DNL Analytics] erfasste Daten in Echtzeit an Experience Platform und konvertiert SCDS-formatierte [!DNL Analytics] in [!DNL Experience Data Model] (XDM)-Felder zur Verwendung durch Experience Platform.
 
 Dieses Dokument bietet einen Überblick über [!DNL Analytics] und beschreibt die Anwendungsfälle für [!DNL Analytics].
 
@@ -19,15 +19,15 @@ Dieses Dokument bietet einen Überblick über [!DNL Analytics] und beschreibt di
 
 [!DNL Analytics] ist eine leistungsstarke Engine, mit der Sie mehr über Ihre Kunden und deren Interaktion mit Ihren Web-Eigenschaften erfahren, sehen können, wo Ihre Ausgaben für digitales Marketing effektiv sind, und Bereiche für Verbesserungen ermitteln können. [!DNL Analytics] verarbeitet Billionen von Web-Transaktionen pro Jahr, und mit dem [!DNL Analytics]-Quell-Connector können Sie einfach diese umfangreichen Verhaltensdaten nutzen und die [!DNL Real-Time Customer Profile] in wenigen Minuten anreichern.
 
-![Eine Grafik, die das Journey von Daten aus verschiedenen Adobe-Anwendungen, einschließlich Adobe Analytics, veranschaulicht.](./images/analytics-data-experience-platform.png)
+![Eine Grafik, die das Journey von Daten aus verschiedenen Adobe-Programmen, einschließlich Adobe Analytics, veranschaulicht.](./images/analytics-data-experience-platform.png)
 
-[!DNL Analytics] sammelt Daten aus verschiedenen digitalen Kanälen und Rechenzentren weltweit. Sobald die Daten erfasst sind, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese leichte Verarbeitung durchlaufen haben, werden sie als für den Verbrauch durch [!DNL Real-Time Customer Profile] bereit erachtet. In einem parallel zu den oben genannten Prozessen werden dieselben verarbeiteten Daten in Microbatches aufgenommen und in Platform-Datensätze aufgenommen, die von [!DNL Query Service] und anderen Datenerfassungsanwendungen verwendet werden können.
+[!DNL Analytics] sammelt Daten aus verschiedenen digitalen Kanälen und Rechenzentren weltweit. Sobald die Daten erfasst sind, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese leichte Verarbeitung durchlaufen haben, werden sie als für den Verbrauch durch [!DNL Real-Time Customer Profile] bereit erachtet. In einem parallel zu den oben genannten Prozessen werden dieselben verarbeiteten Daten in Mikro-Batches aufgenommen und in Experience Platform-Datensätze aufgenommen, die von [!DNL Query Service] und anderen Datenerfassungsanwendungen verwendet werden können.
 
 Weiterführende Informationen [ Verarbeitungsregeln finden Sie ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=de) „Übersicht zu Verarbeitungsregeln“.
 
 ## Experience-Datenmodell (XDM)
 
-XDM ist eine öffentlich dokumentierte Spezifikation, die allgemeine Strukturen und Definitionen für eine Anwendung bereitstellt, um mit Services auf Experience Platform zu kommunizieren.
+XDM ist eine öffentlich dokumentierte Spezifikation, die allgemeine Strukturen und Definitionen für eine Anwendung bereitstellt, die für die Kommunikation mit Services auf Experience Platform verwendet werden soll.
 
 Durch Einhaltung von XDM-Standards können Daten einheitlich integriert werden, was die Bereitstellung von Daten und das Sammeln von Informationen erleichtert.
 
@@ -39,21 +39,21 @@ Weiterführende Informationen zu XDM finden Sie in der [XDM-Systemübersicht](..
 >
 >Umwandlungen der Datenvorbereitung können zu einer Latenz im gesamten Datenfluss führen. Die zusätzliche Latenz hängt von der Komplexität der Umwandlungslogik ab.
 
-Wenn eine Quellverbindung hergestellt wird, um [!DNL Analytics] Daten über die Platform-Benutzeroberfläche in Experience Platform zu importieren, werden die Datenfelder automatisch zugeordnet und innerhalb von Minuten in [!DNL Real-Time Customer Profile] aufgenommen. Anweisungen zum Erstellen einer Quellverbindung mit [!DNL Analytics] mithilfe der Platform-Benutzeroberfläche finden Sie im [Analytics-Quell-Connector-Tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
+Wenn eine Quellverbindung hergestellt wird, um [!DNL Analytics] Daten über die Experience Platform-Benutzeroberfläche in Experience Platform zu importieren, werden die Datenfelder automatisch zugeordnet und innerhalb von Minuten in [!DNL Real-Time Customer Profile] aufgenommen. Anweisungen zum Erstellen einer Quellverbindung mit [!DNL Analytics] mithilfe der Experience Platform-Benutzeroberfläche finden Sie im [Analytics-Quell-Connector-Tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Ausführliche Informationen zur Feldzuordnung, die zwischen dem [!DNL Analytics] und dem Experience Platform erfolgt, finden Sie im [Handbuch zur Adobe Analytics](./mapping/analytics.md)Feldzuordnung.
+Ausführliche Informationen zur Feldzuordnung, die zwischen [!DNL Analytics] und Experience Platform stattfindet, finden Sie im Handbuch [Adobe Analytics-Feldzuordnung](./mapping/analytics.md).
 
-## Wie hoch ist die erwartete Latenz für Analytics-Daten in Platform?
+## Wie hoch ist die erwartete Latenz für Analytics-Daten in Experience Platform?
 
-Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabelle aufgeführt. Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Kundenanwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+Die erwartete Latenz für Analytics-Daten in Experience Platform ist in der folgenden Tabelle aufgeführt. Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Kundenanwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
 
 | Analytics-Daten | Erwartete Latenz |
 | -------------- | ---------------- |
 | Neue zu [!DNL Real-Time Customer Profile] Daten (A4T **nicht** aktiviert) | &lt; 2 Minuten |
 | Neue zu [!DNL Real-Time Customer Profile] Daten (A4T **aktiviert**) | Bis zu 30 Minuten |
 | Neue Daten an Data Lake | &lt; 2,25 Stunden |
-| Neue Daten auf Customer Journey Analytics ohne [Stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 Stunden |
-| Neue Daten zum Customer Journey Analytics mit Stitching | &lt; 7 Stunden |
+| Neue Daten in Customer Journey Analytics ohne [Zuordnung](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 Stunden |
+| Neue Daten zu Customer Journey Analytics mit Zuordnung | &lt; 7 Stunden |
 | Aufstockung von weniger als 10 Milliarden Ereignissen | &lt; 4 Wochen |
 
 Weitere Informationen zu Customer Journey Analytics-Latenzen finden Sie unter [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
@@ -78,12 +78,12 @@ Die folgende Tabelle enthält weitere Informationen zu Identitätsfeldern in Ihr
 | Identitätsfeld | Beschreibung |
 | --- | --- |
 | AAID | Die AAID ist die primäre Gerätekennung in Adobe Analytics und ist garantiert bei jedem Ereignis vorhanden, das durch die [!DNL Analytics] weitergeleitet wird. Die AAID wird manchmal als *veraltete Analytics-ID* oder als `s_vi` Cookie-ID bezeichnet. Trotzdem wird eine AAID erstellt, selbst wenn das `s_vi` Cookie nicht vorhanden ist. Die AAID wird in den Daten-Feeds durch die Spalten `post_visid_high` und `post_visid_low` [[!DNL Analytics]  dargestellt](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Das Feld AAID enthält für jedes Ereignis eine einzelne Identität, die einen von mehreren verschiedenen Typen besitzen kann, die in der [Reihenfolge der Vorgänge für_IDs [!DNL Analytics]  beschrieben ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Hinweis**: Innerhalb einer gesamten Report Suite kann eine AAID eine Mischung von Typen über Ereignisse hinweg enthalten. |
-| ECID | Die ECID (Experience Cloud-ID) ist ein separates Gerätekennungsfeld, das in Adobe Analytics ausgefüllt wird, wenn [!DNL Analytics] mithilfe des Experience Cloud Identity Services implementiert wird. Die ECID wird manchmal auch als MCID (Marketing Cloud ID) bezeichnet. Wenn eine ECID für ein Ereignis vorhanden ist, kann die AAID auf ECID basieren, je nachdem, ob die Analytics-[Übergangsphase](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) konfiguriert ist. Die ECID wird in den Analytics-Daten-Feeds durch die `mcvisid` dargestellt. Weitere Informationen zu ECID finden Sie in der [ECID-Übersicht](../../../identity-service/features/ecid.md). Informationen zur Funktionsweise von ECID mit [!DNL Analytics] finden Sie im Dokument zu [Analytics- und Experience Cloud-ID-Anfragen](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
+| ECID | Die ECID (Experience Cloud-ID) ist ein separates Gerätekennungsfeld, das in Adobe Analytics ausgefüllt wird, wenn [!DNL Analytics] mithilfe des Experience Cloud Identity Services implementiert wird. Die ECID wird manchmal auch als MCID (Marketing Cloud ID) bezeichnet. Wenn eine ECID für ein Ereignis vorhanden ist, kann die AAID auf ECID basieren, je nachdem, ob die Analytics-[Übergangsphase](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) konfiguriert ist. Die ECID wird in den Analytics-Daten-Feeds durch die `mcvisid` dargestellt. Weitere Informationen zu ECID finden Sie in der [ECID-Übersicht](../../../identity-service/features/ecid.md). Informationen zur Funktionsweise von ECID mit [!DNL Analytics] finden Sie im Dokument zu [Analytics- und Experience Cloud ID-Anfragen](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
 | AACUSTOMID | Die AACUSTOMID ist ein separates Kennungsfeld, das in Adobe Analytics auf der Grundlage der Verwendung der `s.VisitorID` in der [!DNL Analytics]-Implementierung ausgefüllt wird. Die AACUSTOMID wird in Daten-Feeds durch die Spalte `cust_visid` [[!DNL Analytics]  dargestellt](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Wenn die AACUSTOMID vorhanden ist, basiert die AAID auf der AACUSTOMID, da die AACUSTOMID alle anderen Kennungen überträgt, wie durch die [Reihenfolge der Vorgänge für [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html) definiert. |
 
 ### Behandlung von Identitäten durch die [!DNL Analytics]
 
-Die [!DNL Analytics]-Quelle übergibt diese Identitäten an Experience Platform im XDM-Formular als:
+Die [!DNL Analytics] übergibt diese Identitäten in XDM-Form an Experience Platform als:
 
 * `endUserIDs._experience.aaid.id`
 * `endUserIDs._experience.mcid.id`

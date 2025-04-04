@@ -4,10 +4,10 @@ description: Informationen dazu, wie Daten aus Acxiom Prospecting über die Benu
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 15%
+source-wordcount: '1862'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 15%
 >
 >Die [!DNL Acxiom Prospecting Data Import]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Der Datenimport von [!DNL Acxiom] für Adobe Real-time Customer Data Platform ist ein Prozess zur Bereitstellung der produktivsten potenziellen Zielgruppen. [!DNL Acxiom] nimmt First-Party-Daten von Real-Time CDP über einen sicheren Export und führt diese Daten über ein preisgekröntes Hygiene- und Identitätsauflösungssystem aus. Dadurch wird eine Datendatei erstellt, die als Unterdrückungsliste verwendet werden soll. Diese Datei wird dann mit der globalen Acxiom-Datenbank abgeglichen, sodass die Interessentenlisten für den Import maßgeschneidert werden können.
+Der Datenimport von [!DNL Acxiom] für Adobe Real-Time Customer Data Platform ist ein Prozess zur Bereitstellung der produktivsten potenziellen Zielgruppen. [!DNL Acxiom] nimmt First-Party-Daten von Real-Time CDP über einen sicheren Export und führt diese Daten über ein preisgekröntes Hygiene- und Identitätsauflösungssystem aus. Dadurch wird eine Datendatei erstellt, die als Unterdrückungsliste verwendet werden soll. Diese Datei wird dann mit der globalen Acxiom-Datenbank abgeglichen, sodass die Interessentenlisten für den Import maßgeschneidert werden können.
 
 Sie können die [!DNL Acxiom]-Quelle verwenden, um Antworten vom Interessenten-Service Acxiom abzurufen und zuzuordnen, indem Sie Amazon S3 als Droppoint verwenden.
 
@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihren Bucket auf Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
+Um auf Ihren Bucket in Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -50,7 +50,7 @@ Um auf Ihren Bucket auf Experience Platform zuzugreifen, müssen Sie gültige We
 
 ## Verbinden Ihres [!DNL Acxiom]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -141,11 +141,11 @@ Wenn Ihr Datensatz für Profil aktiviert ist, können Sie in diesem Schritt den 
 | --- | --- |
 | Datenflussname | Der Name des Datenflusses.  Standardmäßig wird dabei der Name der zu importierenden Datei verwendet. |
 | Beschreibung | (Optional) Eine kurze Beschreibung Ihres Datenflusses. |
-| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise generieren, die von Benutzenden abonniert werden können. Diese Optionen stellen einen laufenden Datenfluss zu diesen Triggern dar.  Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
+| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise erstellen, die Benutzende abonnieren können. Diese Optionen ermöglichen den gesamten laufenden Datenfluss zu diesen Triggern.  Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
 
 ## Zuordnung
 
-Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie Daten auf das Experience Platform aufnehmen.  Weitere Informationen finden Sie im [Zuordnungshandbuch in der Benutzeroberfläche](../../../../../data-prep/ui/mapping.md)
+Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie Daten in Experience Platform aufnehmen.  Weitere Informationen finden Sie im [Zuordnungshandbuch in der Benutzeroberfläche](../../../../../data-prep/ui/mapping.md)
 
 ![Die Zuordnungsschnittstelle.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
@@ -175,7 +175,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf Beenden und gew�
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten aus Ihrer [!DNL Acxiom] auf Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten aus Ihrer [!DNL Acxiom] in Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
 
 ### Überwachen Ihres Datenflusses
 

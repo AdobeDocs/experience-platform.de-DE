@@ -2,10 +2,10 @@
 title: Self-Hosting von Bibliotheken
 description: Hier erfahren Sie, wie Sie Self-Hosting für Ihre Builds von Tag-Bibliotheken in Adobe Experience Platform implementieren können.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 100%
+source-wordcount: '491'
+ht-degree: 90%
 
 ---
 
@@ -19,7 +19,7 @@ Tags in Adobe Experience Platform ermöglichen die Erstellung eines Dateisatzes,
 
 Builds müssen an einer anderen Stelle gehostet werden, damit sie zur Laufzeit bei Bedarf von Clientgeräten abgerufen werden können.
 
-Platform kann entweder das Hosting dieser Dateien für Sie verwalten, oder Sie tun dies selbst.
+Experience Platform kann entweder das Hosting dieser Dateien für Sie verwalten oder Sie selbst.
 
 ## Verwaltet von Adobe {#managed-by-adobe}
 
@@ -33,7 +33,7 @@ Der primäre Grund für die Verwendung von verwaltetem Hosting ist der Komfort. 
 
 ## Selbstständiges Hosting
 
-Wenn Adobe Ihre gehosteten Dateien nicht verwalten soll, müssen Sie sie selbst hosten. Zum Hosten Ihrer Dateien müssen Sie die fertigen Builds von Platform abrufen. Zudem sind Sie dafür verantwortlich, die Dateien über den Versionszyklus Ihres Unternehmens auf vom Unternehmen verwaltete Server abzurufen.
+Wenn Adobe Ihre gehosteten Dateien nicht verwalten soll, müssen Sie sie selbst hosten. Um Ihre Dateien zu hosten, müssen Sie die fertigen Builds von Experience Platform abrufen und dafür verantwortlich sein, die Dateien über den Versionszyklus Ihres Unternehmens auf vom Unternehmen verwaltete Server abzurufen.
 
 ### Gründe für die Verwendung des selbstständigen Hostings
 

@@ -5,17 +5,17 @@ breadcrumb-title: Handbuch zum Adobe Experience Platform Debugger
 user-guide-description: Untersuchen Sie Ihre Web-Seiten auf Probleme mit Ihren Experience Platform-Implementierungen mithilfe des Adobe Experience Platform Debuggers für Chrome und Firefox.
 feature: Debugger
 role: Developer,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 100%
+source-wordcount: '73'
+ht-degree: 94%
 
 ---
 
 
 # Adobe Experience Platform-Debugger {#debugger}
 
-* [Platform Debugger – Übersicht](./home.md)
+* [Übersicht über Experience Platform Debugger](./home.md)
 * [Installieren der Erweiterung](./install-debugger.md)
 * [Konfigurieren der Erweiterung](./configure-debugger.md)
 * [Registerkarte „Zusammenfassung“](./summary.md)

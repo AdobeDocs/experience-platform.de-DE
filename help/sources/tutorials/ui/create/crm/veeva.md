@@ -5,16 +5,16 @@ title: Erstellen einer Veeva CRM-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Veva CRM-Quellverbindung erstellen.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 79%
+source-wordcount: '427'
+ht-degree: 71%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Veeva CRM] in der Benutzeroberfläche
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, CRM-Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Veeva CRM]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
+Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, CRM-Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Veeva CRM]-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -40,9 +40,9 @@ Weiterführende Informationen zu den ersten Schritten finden Sie in diesem [[!DN
 
 ## Verbinden Ihres [!DNL Veeva CRM]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Veeva CRM]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Veeva CRM]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -66,4 +66,4 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Veeva CRM]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](../../dataflow/crm.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Veeva CRM]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/crm.md).

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 97%
+source-wordcount: '890'
+ht-degree: 89%
 
 ---
 
@@ -51,7 +51,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 ### Customer AI
 
-Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Die in Real-Time Customer Data Platform verfügbare Kunden-KI dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
@@ -73,7 +73,7 @@ Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL In
 
 ## Segmentierungs-Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in Platform konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
+Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral auf Experience Platform konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
@@ -87,13 +87,13 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmenti
 
 ## [!DNL Sources] {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Betaversion) | Sie können über die Benutzeroberfläche nun eine [!DNL Marketo Engage]-Quellverbindung erstellen, um B2B-Daten an Platform zu übertragen und mit Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Quell-Connector-Dokumentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Betaversion) | Sie können jetzt über die Benutzeroberfläche eine [!DNL Marketo Engage]-Quellverbindung erstellen, um B2B-Daten an Experience Platform zu übertragen und mit Anwendungen, die mit Experience Platform verbunden sind, auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Quell-Connector-Dokumentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

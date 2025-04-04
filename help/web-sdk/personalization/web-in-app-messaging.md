@@ -2,9 +2,9 @@
 title: Konfigurieren der Web-In-App-Messaging-Unterstützung in Web SDK
 description: Erfahren Sie, wie Sie die Tag-Erweiterung „Web SDK" konfigurieren, um Web-In-App-Nachrichten zu unterstützen.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -53,12 +53,12 @@ Aktivieren Sie im Abschnitt **[!UICONTROL Personalization]** die Option **[!UICO
 
 Web-In-App-Messaging unterstützt zwei Typen von Triggern:
 
-* [Senden von Daten an Platform](#send-data-platform)
+* [Senden von Daten an Experience Platform](#send-data-platform)
 * [Manuelles Auslösen der Nachrichten](#manual-trigger)
 
 Anhand der folgenden Abschnitte können Sie die Tag-Erweiterung „Web SDK&quot; entsprechend den gewünschten Triggern konfigurieren.
 
-### Konfigurationsschritte für den Trigger **[!UICONTROL Daten an Platform senden]** {#send-data-platform}
+### Konfigurationsschritte für den Trigger **[!UICONTROL Daten an Experience Platform senden]** {#send-data-platform}
 
 Wählen Sie die Tag-Eigenschaft aus, die Ihre Web SDK-Erweiterung enthält, und [Erstellen einer neuen Regel](../../tags/ui/managing-resources/rules.md##create-a-rule) mit den folgenden Einstellungen:
 

@@ -2,10 +2,10 @@
 title: Builds
 description: Machen Sie sich mit dem Konzept und der Funktionsweise von Builds in Adobe Experience Platform vertraut.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 100%
+source-wordcount: '791'
+ht-degree: 86%
 
 ---
 
@@ -56,15 +56,15 @@ Um einen Build abzuschließen, wählen Sie eine Bibliothek und die Build-Option 
 
 Durch Minimierung werden Bandbreitenkosten reduziert und die Geschwindigkeit erhöht, indem Daten, die nicht für die Ausführung erforderlich sind, aus der jeweiligen Datei entfernt werden.
 
-Um die Performance zu steigern, minimiert Platform alle Elemente, einschließlich:
+Um die Leistung zu steigern, minimiert Experience Platform alles, einschließlich:
 
 * Tag-Hauptbibliothek
 * Modul-Code, der von den Entwicklern als Teil einer Erweiterung bereitgestellt wird
-* Benutzerspezifischer Code von Platform-Benutzern
+* Benutzerdefinierter Code, der von Experience Platform-Benutzern bereitgestellt wird
 
 >[!NOTE]
 >
->Wenn Ihr Modul- und Ihr benutzerspezifischer Code bereits minimiert wurden, minimiert Platform sie erneut. Diese zweite Minimierung bietet keine zusätzlichen Vorteile, verursacht jedoch keinen Schaden und macht Platform weniger komplex und leichter zu verwalten.
+>Wenn Ihr Modulcode und benutzerdefinierter Code bereits minimiert wurden, minimiert Experience Platform ihn erneut. Diese zweite Minimierung bietet keine zusätzlichen Vorteile, verursacht jedoch keinen Schaden und macht Experience Platform weniger komplex und leichter zu verwalten.
 
 Jeder Client-seitige Code, der bereitgestellt wird, verweist auf die minimierte Version des Codes. Dies ist in den Dateinamen zu sehen, die der standardmäßigen Namenskonvention für minimierte Dateien entsprechen:
 
@@ -74,7 +74,7 @@ Wenn Sie den nicht minimierten Code sehen möchten, entfernen Sie „.min“ aus
 
 `launch-%environment_id%.js`
 
-Wenn ein Erweiterungsentwickler minimierten Code mit seiner Erweiterung bereitstellt, stellt Platform im nicht minimierten Build keinen nicht minimierten Code bereit. Wenn ein Platform-Benutzer minimierten Code in ein Feld für benutzerspezifischen Code eingibt, wird dieser Code bei nicht minimierten Builds dennoch minimiert. Platform hebt die Minimierung nicht auf.
+Wenn ein Erweiterungsentwickler minimierten Code mit seiner Erweiterung bereitstellt, stellt Experience Platform im nicht minimierten Build keinen nicht minimierten Code bereit. Wenn ein Experience Platform-Benutzer minimierten Code in ein Feld für benutzerspezifischen Code eingibt, wird dieser Code bei nicht minimierten Builds ebenfalls minimiert. Experience Platform hebt die Minimierung nicht auf.
 
 Weitere Informationen zur Minimierung finden Sie in [diesem Stackpath-Artikel](https://blog.stackpath.com/glossary/minification/).
 

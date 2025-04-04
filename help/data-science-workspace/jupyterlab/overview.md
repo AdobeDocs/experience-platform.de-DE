@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von JupyterLab
 description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftlerinnen und Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 98%
+source-wordcount: '1838'
+ht-degree: 95%
 
 ---
 
@@ -27,24 +27,24 @@ In diesem Dokument erhalten Sie einen Überblick über [!DNL JupyterLab] und sei
 
 Die JupyterLab-Integration mit Experience Platform wird von Architekturänderungen, Designüberlegungen, benutzerdefinierten Notebook-Erweiterungen, vorinstallierten Bibliotheken und einer Oberfläche im Stil von Adobe begleitet.
 
-In der folgenden Liste werden einige der Funktionen vorgestellt, die bei JupyterLab auf Platform einzigartig sind:
+In der folgenden Liste sind einige der Funktionen aufgeführt, die nur in JupyterLab auf Experience Platform verfügbar sind:
 
 | Funktion | Beschreibung |
 | --- | --- |
 | **Kernels** | Kernels bieten Notebook und anderen [!DNL JupyterLab]-Frontends die Möglichkeit, Code in verschiedenen Programmiersprachen auszuführen und zu prüfen. [!DNL Experience Platform] bietet zusätzliche Kernels zur Unterstützung der Entwicklung in [!DNL Python], R, PySpark und [!DNL Spark]. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
 | **Datenzugriff** | Auf vorhandene Datensätze kann direkt in [!DNL JupyterLab] zugegriffen werden, bei voller Unterstützung der Lese- und Schreibfunktionen. |
-| **[!DNL Platform]-Service-Integration** | Mit nativen Integrationen können Sie andere [!DNL Platform]-Services direkt von [!DNL JupyterLab] aus nutzen. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Platform-Diensten](#service-integration). |
-| **Authentifizierung** | Zusätzlich zum <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">nativen Sicherheitsmodell von JupyterLab</a> wird jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Platform-Diensten, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a> verschlüsselt und authentifiziert. |
+| **[!DNL Experience Platform]-Service-Integration** | Mit nativen Integrationen können Sie andere [!DNL Experience Platform]-Services direkt von [!DNL JupyterLab] aus nutzen. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt [Integration mit anderen Experience Platform-Services](#service-integration). |
+| **Authentifizierung** | Zusätzlich zum <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank"> Sicherheitsmodell von JupyterLab </a> jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Experience Platform-Diensten, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS) verschlüsselt und authentifiziert</a> |
 | **Entwicklungsbibliotheken** | In [!DNL Experience Platform] stellt [!DNL JupyterLab] vorinstallierte Bibliotheken für [!DNL Python], R und PySpark zur Verfügung. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries). |
-| **Bibliotheks-Controller** | Wenn die vorinstallierten Bibliotheken Ihren Anforderungen nicht entsprechen, können Sie zusätzliche Bibliotheken für Python und R installieren und vorübergehend in isolierten Containern speichern, um die Integrität von [!DNL Platform] sowie die Sicherheit Ihrer Daten zu wahren. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
+| **Bibliotheks-Controller** | Wenn die vorinstallierten Bibliotheken Ihren Anforderungen nicht entsprechen, können Sie zusätzliche Bibliotheken für Python und R installieren und vorübergehend in isolierten Containern speichern, um die Integrität von [!DNL Experience Platform] sowie die Sicherheit Ihrer Daten zu wahren. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
 
 >[!NOTE]
 >
 >Zusätzliche Bibliotheken sind nur für die Sitzung verfügbar, in der sie installiert werden. Wenn Sie neue Sitzungen starten, müssen Sie alle zusätzlichen Bibliotheken, die Sie benötigen, neu installieren.
 
-## Integration in andere [!DNL Platform]-Services {#service-integration}
+## Integration in andere [!DNL Experience Platform]-Services {#service-integration}
 
-Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experience Platform]. Die Integration von [!DNL JupyterLab] auf [!DNL Platform] als eingebettete IDE ermöglicht es, mit anderen [!DNL Platform]-Services zu interagieren, sodass Sie [!DNL Platform] optimal nutzen können. Folgende [!DNL Platform]-Services sind in [!DNL JupyterLab] verfügbar:
+Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experience Platform]. Die Integration von [!DNL JupyterLab] auf [!DNL Experience Platform] als eingebettete IDE ermöglicht es, mit anderen [!DNL Experience Platform]-Services zu interagieren, sodass Sie [!DNL Experience Platform] optimal nutzen können. Folgende [!DNL Experience Platform]-Services sind in [!DNL JupyterLab] verfügbar:
 
 * **[!DNL Catalog Service]:** Aufrufen und Erkunden von Datensätzen mit Lese- und Schreibfunktionen.
 * **[!DNL Query Service]:** Greifen Sie auf Datensätze zu und untersuchen Sie sie mithilfe von SQL, was bei großen Datenmengen zu einem geringeren Overhead beim Datenzugriff führt.
@@ -53,7 +53,7 @@ Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experi
 
 >[!NOTE]
 >
->Einige [!DNL Platform]-Service-Integrationen in [!DNL JupyterLab] sind auf bestimmte Kernels beschränkt. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels).
+>Einige [!DNL Experience Platform]-Service-Integrationen in [!DNL JupyterLab] sind auf bestimmte Kernels beschränkt. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels).
 
 ## Wichtigste Funktionen und allgemeine Vorgänge
 
@@ -150,7 +150,7 @@ Notebook-Kernels sind sprachspezifische Rechen-Engines zur Verarbeitung von Note
 
 Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie in der folgenden Tabelle beschrieben:
 
-| Kernel | Installationsunterstützung für Bibliotheken | [!DNL Platform]-Integrationen |
+| Kernel | Installationsunterstützung für Bibliotheken | [!DNL Experience Platform]-Integrationen |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |

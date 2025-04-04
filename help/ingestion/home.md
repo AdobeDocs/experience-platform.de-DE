@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;Datenspeicherort;Datenspeicherort;Daten-Management;Daten-Management;Abstammung;Abstammung;Batch;Batch;erfasste Daten
 solution: Experience Platform
 title: Datenerfassung – Übersicht
-description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
+description: In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in Experience Platform mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 66%
+source-wordcount: '579'
+ht-degree: 61%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 66%
 
 Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Die Datenaufnahme in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Experience Platform Daten aus diesen Quellen aufnimmt, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Experience Platform-Services persistiert werden.
 
-In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in Experience Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
+In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in Experience Platform mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt, in denen Sie weitere Informationen finden.
 
 ## Batch-Erfassung
 

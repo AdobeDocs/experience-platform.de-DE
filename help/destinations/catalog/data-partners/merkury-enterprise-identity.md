@@ -3,7 +3,7 @@ title: Merkury Enterprise Identity-Ziel
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zielverbindung für Merkury Enterprise Identity erstellen.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 18%
@@ -16,7 +16,7 @@ ht-degree: 18%
 >
 >Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Merkury]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihren [!DNL Merkury].
 
-## Übersicht
+## Überblick
 
 Verwenden Sie das [!DNL Merkury Enterprise Identity] Ziel, um genauere, umfassendere und aufschlussreichere Verbraucherprofile zu erstellen. Mit verbesserten Profildaten können Marketing-Fachleute bessere Einblicke, Segmente und Modelle ermöglichen, was zu einer genaueren Zielgruppenbestimmung und prädiktiven Modellierung führt.
 
@@ -56,8 +56,8 @@ Das [!DNL Merkury Enterprise Identity]-Ziel bietet die Möglichkeit, Verbraucher
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style="table-layout:auto"}
@@ -68,8 +68,8 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | **Zielgruppe** | **Unterstützt** | **Beschreibung** | **Herkunft** |
 |---|---|---|---|
-| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform [[Segmentierungs-Service]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert werden. |
-| Benutzerdefinierte Uploads | x | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform [[Segmentierungs-Service]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert wurden. |
+| Benutzerdefinierte Uploads | x | Audiences [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -79,8 +79,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | **Zielgruppe** | **Unterstützt** | **Herkunft Beschreibung** |
 |---|---|---|      
-| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform [[Segmentierungs-Service]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert werden. |
-| Benutzerdefinierte Uploads | X | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform [[Segmentierungs-Service]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert wurden. |
+| Benutzerdefinierte Uploads | X | Audiences [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, führen Sie die Schritte aus, d
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **Mit Ziel verbinden**.
 
-Um auf Ihren Bucket auf Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
+Um auf Ihren Bucket in Experience Platform zuzugreifen, müssen Sie gültige Werte für die folgenden Anmeldeinformationen angeben:
 
 | **Anmeldedaten** | **Beschreibung** |
 |---|---|
@@ -157,7 +157,7 @@ Mapping-Vorschläge sind in der folgenden Tabelle aufgeführt. In dieser Liste s
 
 | Zielfeld | Source-Beschreibung |
 |---|---|
-| id | Identitätsfeld, das zum Zuordnen [!DNL Merkury] Daten zum Experience Platform über den [!DNL Merkury Enterprise Identity] Source-Connector verwendet werden soll |
+| id | Identitätsfeld, das zum Zuordnen [!DNL Merkury] Daten zu Experience Platform über den [!DNL Merkury Enterprise Identity] Source-Connector verwendet werden soll |
 | input_first_name | Der `person.name.firstName` Wert in Experience Platform. |
 | input_last_name | Der `person.name.lastName` Wert in Experience Platform. |
 | input_address_line_1 | Der `mailingAddress.street` Wert in Experience Platform. |
@@ -180,4 +180,4 @@ Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit D
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Profildaten von der Experience Platform in Ihren [!DNL Merkury] verwalteten S3-Speicherort zu exportieren. Als Nächstes müssen Sie sich mit dem Namen des Kontos, den Dateinamen und dem Pfad des Buckets an Ihren [!DNL Merkury] wenden, damit die Verarbeitung eingerichtet werden kann.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Profildaten aus Experience Platform an Ihren [!DNL Merkury] verwalteten S3-Speicherort zu exportieren. Als Nächstes müssen Sie sich mit dem Namen des Kontos, den Dateinamen und dem Pfad des Buckets an Ihren [!DNL Merkury] wenden, damit die Verarbeitung eingerichtet werden kann.

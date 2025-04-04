@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Schemafeldgruppe „Einverständnis und Voreinstellungen“
 description: Erfahren Sie mehr über die Schemafeldgruppe „Einverständnis und Voreinstellungen“.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Die [!UICONTROL Einverständnis und Voreinstellungen] bietet `consents` ein einz
 
 >[!TIP]
 >
->Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Platform](../../ui/explore.md)Benutzeroberfläche finden Sie im Handbuch zu XDM-Ressourcen zu .
+>Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch ](../../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
 
 Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den die Feldergruppe [!UICONTROL Einverständnis und Voreinstellungen] verarbeiten kann. Informationen zur Verwendung der meisten von der Feldergruppe bereitgestellten Felder finden Sie im Handbuch zum Datentyp [Einverständnisse und Voreinstellungen](../../data-types/consents.md). Die folgenden Unterabschnitte konzentrieren sich auf die eindeutigen Attribute, die die Feldergruppe zum Datentyp hinzufügt.
 

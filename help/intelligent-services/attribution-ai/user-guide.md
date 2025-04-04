@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;Benutzerhandbuch;Attributions-KI;beliebte Themen;Region
 feature: Attribution AI
-title: Handbuch zur Attribution AI-Benutzeroberfläche
-description: Dieses Dokument dient als Anleitung für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
+title: Handbuch zur Attributions-KI-Benutzeroberfläche
+description: Dieses Dokument dient als Anleitung für die Interaktion mit Attribution AI in der Intelligent Services-Benutzeroberfläche.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2451'
 ht-degree: 1%
 
 ---
 
-# Handbuch zur Attribution AI-Benutzeroberfläche
+# Handbuch zur Attributions-KI-Benutzeroberfläche
 
-Attribution AI ist Teil von Intelligent Services und bietet einen mehrere Kanäle umfassenden algorithmischen Attributions-Service, der die Auswirkungen und inkrementelle Auswirkungen von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Fachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in jeder Phase der Journey der Kunden verstehen.
+Attribution AI ist Teil von Intelligent Services und bietet einen mehrere Kanäle umfassenden algorithmischen Attributions-Service, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Fachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in jeder Phase der Journey der Kunden verstehen.
 
-Dieses Dokument dient als Anleitung für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
+Dieses Dokument dient als Anleitung für die Interaktion mit Attribution AI in der Intelligent Services-Benutzeroberfläche.
 
 ## Modell erstellen
 
-Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche **[!UICONTROL Dienste]** im linken Navigationsbereich aus. Der **[!UICONTROL Services]**-Browser wird angezeigt und zeigt verfügbare Adobe Intelligent Services an. Wählen Sie im Container für Attribution AI die Option **[!UICONTROL Öffnen]**.
+Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche **[!UICONTROL Dienste]** im linken Navigationsbereich aus. Der **[!UICONTROL Services]**-Browser wird angezeigt und zeigt verfügbare Adobe Intelligent Services an. Wählen Sie im Container für Attributions-KI **[!UICONTROL Öffnen]** aus.
 
 ![Zugriff auf Ihr Modell](./images/user-guide/open_Attribution_ai.png)
 
-Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Service-Modelle von Attribution AI aufgelistet und Informationen zu ihnen angezeigt, darunter der Modellname, Konversionsereignisse, die Häufigkeit der Modellausführung und der Status der letzten Aktualisierung.
+Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Service-Modelle der Attributions-KI aufgelistet und Informationen über sie angezeigt, einschließlich des Modellnamens, Konversionsereignissen, der Häufigkeit der Modellausführung und des Status der letzten Aktualisierung.
 
-Die Metrik **[!UICONTROL Insgesamt bewertete Konversionsereignisse]** finden Sie unten rechts im Container **[!UICONTROL Modell erstellen]**. Diese Metrik verfolgt die Gesamtzahl der von Attribution AI im aktuellen Kalenderjahr erzielten Konversionsereignisse, einschließlich aller Sandbox-Umgebungen und gelöschter Service-Modelle.
+Die Metrik **[!UICONTROL Insgesamt bewertete Konversionsereignisse]** finden Sie unten rechts im Container **[!UICONTROL Modell erstellen]**. Diese Metrik verfolgt die Gesamtzahl der von Attributions-KI im aktuellen Kalenderjahr erzielten Konversionsereignisse, einschließlich aller Sandbox-Umgebungen und gelöschter Service-Modelle.
 
 ![Konversionen insgesamt](./images/user-guide/total_conversions.png)
 
@@ -33,8 +33,8 @@ Dienstmodelle können mithilfe der Steuerelemente auf der rechten Seite der Benu
 
 - **[!UICONTROL Bearbeiten]**: Wenn Sie **[!UICONTROL Bearbeiten]** auswählen, können Sie ein vorhandenes Service-Modell ändern. Sie können den Namen, die Beschreibung, den Status, die Bewertungshäufigkeit des Modells und zusätzliche Bewertungs-Datensatzspalten bearbeiten.
 - **[!UICONTROL Klonen]**: Wenn Sie **[!UICONTROL Klonen]** auswählen, wird das ausgewählte Service-Modell kopiert. Anschließend können Sie den Workflow ändern, um kleinere Anpassungen vorzunehmen, und ihn in ein neues Modell umbenennen.
-- **[!UICONTROL Löschen]**: Sie können ein Service-Modell einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Scores, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
-- **[!UICONTROL Datenquelle]**: Ein Link zum verwendeten Datensatz. Wenn mehr als ein Datensatz vom Attribution AI verwendet wird, wird „Mehrere“ gefolgt von der Anzahl der Datensätze angezeigt. Nach Auswahl des Hyperlinks wird das Popup-Fenster für die Datensatzvorschau angezeigt.
+- **[!UICONTROL Löschen]**: Sie können ein Service-Modell einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Experience Platform gelöscht. Scores, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
+- **[!UICONTROL Datenquelle]**: Ein Link zum verwendeten Datensatz. Wenn mehr als ein Datensatz von Attributions-KI verwendet wird, wird „Mehrere“ gefolgt von der Anzahl der Datensätze angezeigt. Nach Auswahl des Hyperlinks wird das Popup-Fenster für die Datensatzvorschau angezeigt.
 - **[!UICONTROL Details des letzten Durchgangs]**: Wird nur angezeigt, wenn ein Durchgang fehlschlägt. Informationen darüber, warum der Durchlauf fehlgeschlagen ist, wie z. B. Fehler-Codes, werden hier angezeigt.
 
 ![Seitenbereich](./images/user-guide/multiple-datasets-pane.png)
@@ -49,7 +49,7 @@ Wählen Sie **[!UICONTROL Modell erstellen]**, um zu beginnen.
 
 ![Modell erstellen](./images/user-guide/landing_page.png)
 
-Als Nächstes wird die Einrichtungsseite für Attribution AI angezeigt, auf der Sie einen Namen und eine optionale Beschreibung für Ihr Service-Modell angeben können.
+Als Nächstes wird die Seite Einrichten für Attributions-KI angezeigt, auf der Sie einen Namen und eine optionale Beschreibung für Ihr Service-Modell angeben können.
 
 ![Benennen eines Modells](./images/user-guide/naming_instance.png)
 
@@ -57,7 +57,7 @@ Als Nächstes wird die Einrichtungsseite für Attribution AI angezeigt, auf der 
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Attribution AI können absichtlich Adobe Analytics-, Erlebnisereignis- und Kundenerlebnisereignisdaten verwenden, um Attributionsbewertungen zu berechnen. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Attribution AI kompatibel sind. Um einen Datensatz auszuwählen, klicken Sie auf das Symbol (**+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Sie können auch die Suchoption verwenden, um die Datensätze, die Sie interessieren, schnell zu finden.
+Standardmäßig kann Attributions-KI Adobe Analytics-, Erlebnisereignis- und Kundenerlebnisereignisdaten verwenden, um Attributionsbewertungen zu berechnen. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Attributions-KI kompatibel sind. Um einen Datensatz auszuwählen, klicken Sie auf das Symbol (**+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Sie können auch die Suchoption verwenden, um die Datensätze, die Sie interessieren, schnell zu finden.
 
 Nachdem Sie die gewünschten Datensätze ausgewählt haben, klicken Sie auf die Schaltfläche **[!UICONTROL Hinzufügen]**, um die Datensätze zum Bereich für die Datensatzvorschau hinzuzufügen.
 
@@ -71,7 +71,7 @@ Die Datensatzvorschau enthält Daten wie die Zeit der letzten Aktualisierung, da
 
 Wählen Sie **[!UICONTROL Speichern]**, um Ihre Entwürfe zu speichern, während Sie den Workflow durchlaufen. Sie können auch Modellkonfigurationen von Entwürfen speichern und zum nächsten Schritt im Workflow wechseln. Verwenden Sie **[!UICONTROL Speichern und fortfahren]** um Entwürfe während der Modellkonfigurationen zu erstellen und zu speichern. Mit der Funktion können Sie Entwürfe der Modellkonfiguration erstellen und speichern. Dies ist besonders nützlich, wenn Sie viele Felder im Konfigurations-Workflow definieren müssen.
 
-![Der Workflow „Erstellen“ auf der Registerkarte „Data Science Services-Attribution AI&quot; mit den hervorgehobenen Optionen „Speichern und speichern und fortfahren“.](./images/user-guide/aai-save-save-&-exit.png)
+![Der Workflow „Erstellen“ auf der Registerkarte „Attributions-KI von Data Science Services“ mit den hervorgehobenen Optionen „Speichern und speichern und fortfahren“.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Datensatz-Vollständigkeit {#dataset-completeness}
 
@@ -81,7 +81,7 @@ In der Datensatzvorschau gibt einen Prozentwert für die Datensatzvollständigke
 
 >[!NOTE]
 >
->Die Vollständigkeit des Datensatzes wird anhand des maximalen Schulungsfensters für Attribution AI (ein Jahr) berechnet. Das bedeutet, dass Daten, die älter als ein Jahr sind, beim Anzeigen Ihres Datensatzvollständigkeitswerts nicht berücksichtigt werden.
+>Die Vollständigkeit des Datensatzes wird anhand des maximalen Trainings-Fensters für Attributions-KI (ein Jahr) berechnet. Das bedeutet, dass Daten, die älter als ein Jahr sind, beim Anzeigen Ihres Datensatzvollständigkeitswerts nicht berücksichtigt werden.
 
 ![Datensatz-Vollständigkeit](./images/user-guide/dataset-completeness.png)
 
@@ -109,7 +109,7 @@ Falls in einem Namespace mehr als eine Identität verfügbar ist, stellen Sie si
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-Nachdem Sie die Datensätze ausgewählt und hinzugefügt haben, wird **Konfigurationsschritt &quot;**&quot; angezeigt. Attribution AI erfordert, dass Sie das Medienkanal-Feld für jeden Datensatz zuordnen, den Sie im vorherigen Schritt ausgewählt haben. Dies liegt daran, dass ohne die Medienkanal-Zuordnung zwischen Datensätzen die von Attribution AI abgeleiteten Einblicke möglicherweise nicht richtig angezeigt werden, sodass die Einblicke-Seite schwer zu interpretieren ist. Obwohl nur der Medienkanal erforderlich ist, wird dringend empfohlen, einige der optionalen Felder wie Medienaktion, Kampagnenname, Kampagnengruppe und Kampagnen-Tag zuzuordnen. Dies ermöglicht es dem Attribution AI, klarere Einblicke zu gewinnen und optimale Ergebnisse zu erzielen.
+Nachdem Sie die Datensätze ausgewählt und hinzugefügt haben, wird **Konfigurationsschritt &quot;**&quot; angezeigt. Attributions-KI erfordert, dass Sie das Medienkanal-Feld für jeden Datensatz zuordnen, den Sie im vorherigen Schritt ausgewählt haben. Dies liegt daran, dass ohne die Medienkanal-Zuordnung zwischen Datensätzen die aus Attributions-KI abgeleiteten Insights möglicherweise nicht richtig angezeigt werden, sodass die Insights-Seite schwer zu interpretieren ist. Obwohl nur der Medienkanal erforderlich ist, wird dringend empfohlen, einige der optionalen Felder wie Medienaktion, Kampagnenname, Kampagnengruppe und Kampagnen-Tag zuzuordnen. Auf diese Weise bietet Attribution AI klarere Einblicke und optimale Ergebnisse.
 
 ![Zuordnung](./images/user-guide/mapping-save-&-exit.png)
 
@@ -205,7 +205,7 @@ Nachdem Sie alle erforderlichen Touchpoints definiert haben, scrollen Sie nach o
 
 ## Erweiterte Einrichtung für Training und Scoring
 
-Die letzte Seite in Attribution AI ist die Seite **[!UICONTROL Erweitert]** die zum Einrichten von Training und Scoring verwendet wird.
+Die letzte Seite in Attributions-KI ist die Seite **[!UICONTROL Erweitert]** die für die Einrichtung von Schulungen und Bewertungen verwendet wird.
 
 ![Optionen für neue Seitensätze](./images/user-guide/advanced_settings_set_options.png)
 
@@ -267,10 +267,10 @@ Nachdem Sie Ihr Trainings-Fenster ausgewählt haben, wählen **[!UICONTROL oben]
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine Service-Instanz in Attribution AI erstellt. Sobald die Instanz die Bewertung abgeschlossen hat (warten Sie bis zu 24 Stunden), können Sie [Attribution AI Insights entdecken](./discover-insights.md). Wenn Sie Ihre Scoring-Ergebnisse herunterladen möchten, lesen Sie außerdem die Dokumentation [Scores herunterladen](./download-scores.md).
+In diesem Tutorial haben Sie erfolgreich eine Service-Instanz in Attributions-KI erstellt. Sobald die Instanz die Bewertung abgeschlossen hat (erlauben Sie bis zu 24 Stunden), können Sie [Attribution AI-Insights entdecken](./discover-insights.md). Wenn Sie Ihre Scoring-Ergebnisse herunterladen möchten, lesen Sie außerdem die Dokumentation [Scores herunterladen](./download-scores.md).
 
 ## Zusätzliche Ressourcen
 
-Im folgenden Video wird ein End-to-End-Workflow zum Erstellen einer neuen Instanz in Attribution AI beschrieben.
+Im folgenden Video wird ein End-to-End-Workflow zum Erstellen einer neuen Instanz in Attributions-KI beschrieben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

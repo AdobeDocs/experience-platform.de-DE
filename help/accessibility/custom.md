@@ -4,10 +4,10 @@ title: Benutzerdefinierte Barrierefreiheitslösungen für Experience Platform
 type: Documentation
 description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitslösungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 92%
+source-wordcount: '1664'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform wird kontinuierlich verbessert, um die Bedürfnisse al
 
 Die Benutzeroberfläche von Experience Platform erfüllt die erforderlichen Kontrastverhältnisse für Standardtext, Grafiken und Benutzeroberflächenkomponenten. Die Farben der Benutzeroberfläche wurden ebenfalls so ausgewählt, dass sie die Barrierefreiheit für alle Benutzer unterstützen, auch für Benutzer mit visuellen Beeinträchtigungen.
 
-Auf viele Elemente der Benutzeroberfläche von Platform, die mit dem Mauszeiger angeklickt oder bearbeitet werden können, kann auch mit der Tastatur zugegriffen werden. Dazu gehören die linke Navigation, Video-Player, Tabellen und mehr.
+In können Benutzeroberflächenelemente, die mit einem Zeiger angeklickt oder bearbeitet werden können, auch über eine Tastatur genutzt werden. Dazu gehören die linke Navigation, Video-Player, Tabellen und mehr.
 
 Experience Platform strebt die Einhaltung internationaler Barrierefreiheitsstandards an, einschließlich der Web Content Accessibility Guidelines 2.1 Level A und Level AA sowie der Web-Standards der Web Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA).
 
@@ -41,13 +41,13 @@ Wenn der linke Navigationsbereich im Fokus ist, erlauben es die Pfeiltasten nach
 
 ![Der linke Navigationsbereich von Experience Platform mit ausgewählten Quellen.](images/left-navigation-sources.png)
 
-Einige Funktionen in Platform sind nicht für alle Benutzer aktiviert. Diese Elemente werden in der Navigation angezeigt, können jedoch nicht ausgewählt werden. Beim Navigieren mit der Tastatur werden diese Elemente während der Pfeiltasten-Navigation übersprungen und können nicht mit der **Eingabetaste** ausgewählt werden.
+Einige Funktionen in Experience Platform sind nicht für alle Benutzer aktiviert. Diese Elemente werden in der Navigation angezeigt, können jedoch nicht ausgewählt werden. Beim Navigieren mit der Tastatur werden diese Elemente während der Pfeiltasten-Navigation übersprungen und können nicht mit der **Eingabetaste** ausgewählt werden.
 
 ![Abschnitte des linken Navigationsbereichs von Experience Platform, die für den Benutzer nicht aktiviert sind, können nicht ausgewählt werden.](images/left-navigation-sections-disabled.png)
 
 ## Dialogfeld „Eingebettetes Video“
 
-Videos können in Experience Platform über die Tastaturnavigation angezeigt werden, indem ein verfügbarer Video-Link hervorgehoben und ausgewählt wird. Dadurch wird ein eingebettetes Videodialogfeld in der Platform-Benutzeroberfläche geöffnet.
+Videos können in Experience Platform über die Tastaturnavigation angezeigt werden, indem ein verfügbarer Video-Link hervorgehoben und ausgewählt wird. Dadurch wird ein eingebettetes Videodialogfeld in der Experience Platform-Benutzeroberfläche geöffnet.
 
 ![Ein blauer Rahmen wird um ein ausgewähltes Element herum angezeigt, um anzugeben, dass es sich im Fokus befindet.](images/profile-overview-tab.png)
 

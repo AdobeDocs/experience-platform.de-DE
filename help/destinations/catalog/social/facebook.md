@@ -3,7 +3,7 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 28%
@@ -20,13 +20,13 @@ Sie können dieses Ziel für das Audience-Targeting in [!DNL Facebook's] Familie
 
 ![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche.](../../assets/catalog/social/facebook/catalog.png)
 
-## Anwendungsfälle
+## Anwendungsszenarien
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook]-Ziel verwenden, finden Sie hier zwei Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit dieser Funktion bewältigen können.
 
 ### Anwendungsfall #1
 
-Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebote basierend auf ihren vorherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen aus seinem eigenen CRM in Adobe Experience Platform aufnehmen, Zielgruppen aus seinen eigenen Offline-Daten erstellen und diese Zielgruppen an die [!DNL Facebook] Social-Media-Plattform senden, wodurch seine Werbeausgaben optimiert werden.
+Ein Online-retailer möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebote auf der Grundlage ihrer vorherigen Bestellungen zeigen. Der Online-retailer kann E-Mail-Adressen aus dem eigenen CRM in Adobe Experience Platform aufnehmen, Zielgruppen aus eigenen Offline-Daten erstellen und diese Zielgruppen an die [!DNL Facebook] Social-Media-Plattform senden, wodurch die Werbeausgaben optimiert werden.
 
 ### Anwendungsfall #2
 
@@ -44,8 +44,8 @@ Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 ## Unterstützte Zielgruppen {#supported-audiences}
@@ -98,8 +98,8 @@ Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
-* **Aufnahme von rohen Telefonnummern**: Sie können rohe Telefonnummern im [!DNL E.164] Format in [!DNL Platform] aufnehmen. Sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre unformatierten Telefonnummern in den `Phone_E.164`-Namespace aufnehmen.
-* **Aufnehmen von Hash** Telefonnummern: Sie können Ihre Telefonnummern vor der Aufnahme in [!DNL Platform] vorab hashen. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre gehashten Telefonnummern in den `Phone_SHA256`-Namespace aufnehmen.
+* **Aufnahme von rohen Telefonnummern**: Sie können rohe Telefonnummern im [!DNL E.164] Format in [!DNL Experience Platform] aufnehmen. Sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre unformatierten Telefonnummern in den `Phone_E.164`-Namespace aufnehmen.
+* **Aufnehmen von Hash** Telefonnummern: Sie können Ihre Telefonnummern vor der Aufnahme in [!DNL Experience Platform] vorab hashen. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre gehashten Telefonnummern in den `Phone_SHA256`-Namespace aufnehmen.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
 ## Hash-Anforderungen für E-Mails {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Experience Platform].
 
 Weitere Informationen zum Aufnehmen von E-Mail-Adressen in Experience Platform finden Sie unter [Übersicht über die Batch](/help/ingestion/batch-ingestion/overview.md)Aufnahme und [Streaming-Aufnahme - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -122,8 +122,8 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 >[!NOTE]
 >
->Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
-> Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+>Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
+> Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
 > Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
 
 ![Im Zuordnungsschritt hervorgehobenes Steuerelement „Umwandlung anwenden“.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -230,9 +230,9 @@ Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim 
 Auswahl der Quellfelder:
 
 * Wählen Sie den `Email` Namespace als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht in einen Hash-Wert umgewandelt werden.
-* Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Platform] gemäß den [!DNL Facebook]E[Mail-Hash-Anforderungen](#email-hashing-requirements) gehasht haben.
-* Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] werden die Telefonnummern hashen, um [!DNL Facebook] Anforderungen zu erfüllen.
-* Wählen Sie den `Phone_SHA256`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
+* Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Experience Platform] gemäß den [!DNL Facebook]E[Mail-Hash-Anforderungen](#email-hashing-requirements) gehasht haben.
+* Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Experience Platform] werden die Telefonnummern hashen, um [!DNL Facebook] Anforderungen zu erfüllen.
+* Wählen Sie den `Phone_SHA256`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Experience Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
 * Wählen Sie den `IDFA` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
 * Wählen Sie den `GAID` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
 * Wählen Sie den `Custom` Namespace als Quellidentität aus, wenn Ihre Daten aus anderen Kennungstypen bestehen.
@@ -246,9 +246,9 @@ Auswählen der Zielfelder:
 
 >[!IMPORTANT]
 >
->Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
+>Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
 > 
->Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+>Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
 
 ![Im Zuordnungsschritt hervorgehobenes Steuerelement „Umwandlung anwenden“.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

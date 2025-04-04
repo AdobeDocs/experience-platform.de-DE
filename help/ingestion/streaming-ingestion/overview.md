@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
 description: Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 14%
@@ -25,7 +25,7 @@ Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen,
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 
-Mit der Streaming-Aufnahme können Benutzer Profildatensätze streamen und in Sekunden in [!DNL Platform] [!DNL ExperienceEvents], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, bleiben automatisch im [!DNL Data Lake] erhalten.
+Mit der Streaming-Aufnahme können Benutzer Profildatensätze streamen und in Sekunden in [!DNL Experience Platform] [!DNL ExperienceEvents], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, bleiben automatisch im [!DNL Data Lake] erhalten.
 
 Weiterführende Informationen finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
 

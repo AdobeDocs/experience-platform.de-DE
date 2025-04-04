@@ -2,18 +2,18 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen gesendet werden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2616'
-ht-degree: 93%
+source-wordcount: '2624'
+ht-degree: 87%
 
 ---
 
 # Datenerfassung End-to-End – Übersicht
 
-Adobe Experience Platform erfasst und transferiert Ihre Daten an andere Adobe-Produkte und Drittanbieterziele. Um Ereignisdaten von Ihrer Anwendung an das Experience Platform-Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
+Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Drittanbieterziele. Um Ereignisdaten von Ihrem Programm an Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
-Dieses Handbuch bietet eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge Network mithilfe der Datenerfassungsfunktionen von Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
+Dieses Handbuch bietet eine allgemeine Anleitung zum Senden eines Ereignisses über die Edge Network mithilfe der Datenerfassungsfunktionen von Experience Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
 >[!NOTE]
 >
@@ -32,13 +32,12 @@ Informationen zum Gewähren des Zugriffs auf Eigenschaften [ Eigenschaftsrechte 
 
 Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemata zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
-Wenn Sie bereits Zugriff auf Platform haben, müssen Sie sicherstellen, dass alle [Berechtigungen](../access-control/home.md#permissions) unter den folgenden Kategorien aktiviert sind:
+Wenn Sie bereits Zugriff auf Experience Platform haben, müssen Sie sicherstellen, dass alle [Berechtigungen](../access-control/home.md#permissions) unter den folgenden Kategorien aktiviert sind:
 
 * Datenmodellierung
 * Identitäten
 
-Informationen zum Gewähren von Berechtigungen für Platform-Funktionen für Benutzer finden Sie unter [Übersicht zur Benutzeroberfläche der Zugangssteuerung](../access-control/ui/overview.md). 
-
+Informationen [ Gewähren von Berechtigungen für Experience Platform-Funktionen für Benutzende finden Sie ](../access-control/ui/overview.md) „Übersicht zur Benutzeroberfläche der Zugriffssteuerung“.
 
 ## Prozesszusammenfassung
 
@@ -108,7 +107,7 @@ Die Konfigurationsanforderungen für einen Datenstrom hängen davon ab, an welch
 
 ## Installieren und konfigurieren des Web SDKs {#install}
 
-Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie das Platform Web SDK installieren und konfigurieren, um mit dem Senden von Daten an das Edge Network zu beginnen.
+Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie Experience Platform Web SDK installieren und konfigurieren, um mit dem Senden von Daten an Edge Network zu beginnen.
 
 >[!NOTE]
 >
@@ -136,7 +135,7 @@ Wenn Sie eine neue Eigenschaft erstellen, geben Sie einen beschreibenden Namen a
 
 ![Eigenschaft erstellen](./images/e2e/create-property.png)
 
-Die Übersichtsseite für die Eigenschaft wird angezeigt. Wählen Sie von hier aus im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann **[!UICONTROL Katalog]** aus. Suchen Sie die Liste für das Platform Web SDK (optional unter Verwendung der Suchleiste zur Eingrenzung der Ergebnisse) und wählen Sie **[!UICONTROL Installieren]**.
+Die Übersichtsseite für die Eigenschaft wird angezeigt. Wählen Sie von hier aus im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann **[!UICONTROL Katalog]** aus. Suchen Sie die Liste für die Experience Platform Web SDK (optional unter Verwendung der Suchleiste zur Eingrenzung der Ergebnisse) und wählen Sie **[!UICONTROL Installieren]**.
 
 ![Installieren des Web SDKs](./images/e2e/install-sdk.png)
 
@@ -160,7 +159,7 @@ Wählen Sie im nächsten Bildschirm **[!UICONTROL Adobe Experience Platform Web 
 
 ![XDM-Objekttyp](./images/e2e/xdm-object.png)
 
-Das Konfigurationsdialogfeld wird für den XDM-Objekttyp angezeigt. Im Dialogfeld wird automatisch Ihre Platform-Sandbox ausgewählt. Von hier aus können Sie alle Schemata sehen, die in dieser Sandbox erstellt wurden. Wählen Sie das zuvor erstellte XDM-Schema aus der Liste aus.
+Das Konfigurationsdialogfeld wird für den XDM-Objekttyp angezeigt. Im Dialogfeld wird automatisch Ihre Experience Platform-Sandbox ausgewählt. Von hier aus können Sie alle Schemas sehen, die in dieser Sandbox erstellt wurden. Wählen Sie das zuvor erstellte XDM-Schema aus der Liste aus.
 
 ![XDM-Objekttyp](./images/e2e/select-schema.png)
 
@@ -247,7 +246,7 @@ Nachdem die Regel konfiguriert wurde, können Sie sie zu einer Tag-Bibliothek hi
 >
 >Wenn Sie noch keine Umgebung in der Datenerfassungs-Benutzeroberfläche eingerichtet haben, müssen Sie dies tun, bevor Sie einen Build erstellen können. Weitere Informationen finden Sie im Abschnitt [Konfigurieren einer Umgebung für eine Web-Eigenschaft](../tags/ui/publishing/environments.md#web-configuration) in der Tag-Dokumentation.
 
-Informationen zum Erstellen einer Bibliothek, Hinzufügen von Erweiterungen und Regeln zur Bibliothek und Erstellen dieser Bibliothek in einer Umgebung finden Sie im Handbuch zum [Verwalten von Bibliotheken](../tags/ui/publishing/libraries.md) in der Tags-Dokumentation. Stellen Sie beim Erstellen der Bibliothek sicher, dass Sie die Platform Web SDK-Erweiterung und die zuvor erstellten Datenerfassungsregeln einbeziehen.
+Informationen zum Erstellen einer Bibliothek, Hinzufügen von Erweiterungen und Regeln zur Bibliothek und Erstellen dieser Bibliothek in einer Umgebung finden Sie im Handbuch zum [Verwalten von Bibliotheken](../tags/ui/publishing/libraries.md) in der Tags-Dokumentation. Stellen Sie beim Erstellen der Bibliothek sicher, dass Sie die Experience Platform Web SDK-Erweiterung und die zuvor erstellten Datenerfassungsregeln einbeziehen.
 
 Nachdem Sie die Bibliothek erstellt und ihren Build einer Umgebung zugewiesen haben, können Sie diese Umgebung auf der Client-Seite Ihrer Website installieren. Weitere Informationen finden Sie im Abschnitt [Installieren von Umgebungen](../tags/ui/publishing/environments.md#installation).
 
@@ -275,4 +274,4 @@ Nach Abschluss des Builds besteht der letzte Schritt darin, den Datenstrom zu ak
 
 ## Nächste Schritte
 
-Dieses Handbuch bietet eine allgemeine Übersicht darüber, wie Daten mithilfe des Platform Web SDKs an das Edge Network gesendet werden. Weitere Informationen zu den verschiedenen Komponenten und Services finden Sie in der Dokumentation, auf die in diesem Handbuch verlinkt wird.
+Dieses Handbuch bietet eine allgemeine Übersicht darüber, wie Daten mithilfe der Experience Platform Web SDK an Edge Network gesendet werden. Weitere Informationen zu den verschiedenen Komponenten und Services finden Sie in der Dokumentation, auf die in diesem Handbuch verlinkt wird.

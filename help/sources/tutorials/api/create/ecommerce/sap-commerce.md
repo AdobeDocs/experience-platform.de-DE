@@ -1,12 +1,12 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für SAP Commerce mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um SAP Commerce-Daten mithilfe der Flow Service-API auf Experience Platform zu übertragen.
+description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um SAP Commerce-Daten mithilfe der Flow Service-API an Experience Platform zu übertragen.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2314'
-ht-degree: 53%
+source-wordcount: '2325'
+ht-degree: 47%
 
 ---
 
@@ -22,8 +22,8 @@ Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SA
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL SAP Commerce] herstellen zu können.
 
@@ -40,13 +40,13 @@ Um [!DNL SAP Commerce] mit Experience Platform zu verbinden, müssen Sie Werte f
 
 Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-## Verbinden von [!DNL SAP Commerce] mit Platform mithilfe der [!DNL Flow Service]-API
+## Verbinden von [!DNL SAP Commerce] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Im Folgenden werden die Schritte beschrieben, die Sie ausführen müssen, um Ihre [!DNL SAP Commerce] zu authentifizieren, eine Quellverbindung zu erstellen und einen Datenfluss zu erstellen, um Ihre Konto- und Kontaktdaten auf Experience Platform zu bringen.
+Im Folgenden werden die Schritte beschrieben, die Sie ausführen müssen, um Ihre [!DNL SAP Commerce] zu authentifizieren, eine Quellverbindung zu erstellen und einen Datenfluss zu erstellen, um Ihre Konto- und Kontaktdaten an Experience Platform zu senden.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL SAP Commerce] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.region` | Ihr Rechenzentrumsstandort. Die Region befindet sich in der `url` und hat einen ähnlichen Wert wie `eu10` oder `us10`. Wenn die `url` beispielsweise `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` ist, benötigen Sie `eu10`. |
 | `auth.params.clientId` | Der Wert von `clientId` aus dem Service-Schlüssel. |
 | `auth.params.clientSecret` | Der Wert von `clientSecret` aus dem Service-Schlüssel. |
@@ -126,9 +126,9 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> [!DNL SAP Commerce] unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie verwenden, übergeben Sie einen der folgenden : <ul><li>`customers`</li><li>`contacts`</li></ul> |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Experience Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> [!DNL SAP Commerce] unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie verwenden, übergeben Sie einen der folgenden : <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
 Die [!DNL SAP Commerce]-Quelle unterstützt mehrere APIs. Je nachdem, welchen Objekttyp Sie nutzen, wird die Anfrage wie folgt gesendet:
 
@@ -556,7 +556,7 @@ Eine erfolgreiche Antwort gibt eine JSON-Struktur wie die folgende zurück:
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API stellen. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -684,7 +684,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -986,7 +986,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL SAP Commerce] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL SAP Commerce] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -1046,7 +1046,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -1087,4 +1087,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

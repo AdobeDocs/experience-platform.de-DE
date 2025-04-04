@@ -4,10 +4,10 @@ title: Dashboard „Ziele“
 description: Adobe Experience Platform verfügt über ein Dashboard, in dem Sie wichtige Informationen über die aktiven Ziele Ihrer Organisation anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3243'
-ht-degree: 61%
+source-wordcount: '3246'
+ht-degree: 60%
 
 ---
 
@@ -27,7 +27,7 @@ Im Dashboard „Ziele“ finden Sie eine Momentaufnahme der Ziele, die Ihre Orga
 
 ## Das [!UICONTROL Ziele]-Dashboard erkunden {#explore}
 
-Um in der Platform-Benutzeroberfläche zum Ziele-Dashboard zu gelangen, wählen Sie **[!UICONTROL Ziele]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus.
+Um in der Experience Platform-Benutzeroberfläche zum Ziele-Dashboard zu navigieren, wählen Sie **[!UICONTROL Ziele]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
 
 Datum und Uhrzeit des letzten Schnappschusses werden oben in der [!UICONTROL Übersicht] neben dem Ziel-Dropdown-Menü angezeigt. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
 
@@ -35,7 +35,7 @@ Datum und Uhrzeit des letzten Schnappschusses werden oben in der [!UICONTROL Üb
 >
 >Wenn Experience Platform neu in Ihrem Unternehmen ist und es noch keine aktiven Ziele hat, sind das Ziele-Dashboard und die Registerkarte [!UICONTROL Übersicht] nicht zu sehen. Wenn Sie [!UICONTROL Ziele] über die linke Navigation auswählen, wird stattdessen die Registerkarte [!UICONTROL Katalog] angezeigt. Weitere Informationen über die Registerkarte [!UICONTROL Katalog] finden Sie im Handbuch zum Arbeitsbereich [[!UICONTROL Ziele]](../../destinations/ui/destinations-workspace.md).
 
-![Die Ziele-Übersicht der Platform-Benutzeroberfläche mit hervorgehobenem aktuellem Schnappschuss.](../images/destinations/snapshot-timestamp.png)
+![Die Ziele-Übersicht der Experience Platform-Benutzeroberfläche mit hervorgehobenem aktuellem Schnappschuss.](../images/destinations/snapshot-timestamp.png)
 
 ### Das [!UICONTROL Ziele]-Dashboard modifizieren {#modify}
 
@@ -53,7 +53,7 @@ In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefiniert
 
 ### SQL anzeigen {#view-sql}
 
-Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
+Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
 
 ## Standard-Widgets {#default-widgets}
 
@@ -253,7 +253,7 @@ Alle Zielgruppengrößen im System werden von der größten zur kleinsten Zielgr
 
 Wenn die Anzahl der zugeordneten Zielgruppenprofile außerhalb der Standardabweichung von der durchschnittlichen zugeordneten Profilgröße der letzten 30 Tage liegt, deutet dies auf eine Anomalie im System hin und sollte untersucht werden.
 
-Wenn eine Zielgruppe im Widget [!UICONTROL Zustand der zugeordneten Zielgruppe] stark abweicht, sollten Sie das Diagramm zur Entwicklung der Zielgruppengröße heranziehen und die anomale Zielgruppe lokalisieren. Der Trend kann weitere Einblicke in den Zustand Ihrer Audience bieten.
+Wenn eine Zielgruppe im Widget [!UICONTROL Zustand der zugeordneten Zielgruppe] stark abweicht, sollten Sie das Diagramm zur Entwicklung der Zielgruppengröße heranziehen und die anomale Zielgruppe lokalisieren. Der Trend kann weitere insight zur Verbesserung der Konsistenz Ihrer Zielgruppe liefern.
 
 >[!NOTE]
 >

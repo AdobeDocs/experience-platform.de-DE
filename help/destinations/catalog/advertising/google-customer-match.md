@@ -3,7 +3,7 @@ keywords: Google Customer Match; Google Customer Match; Google Customer Match
 title: Google Customer Match-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Eigenschaften wie Search, Shopping und Gmail zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 18%
@@ -60,8 +60,8 @@ Für einige Ziele in Experience Platform gelten bestimmte Regeln und Verpflichtu
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | user_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style="table-layout:auto"}
@@ -110,8 +110,8 @@ Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer Match]:
 
-* **Aufnehmen von rohen Telefonnummern**: Sie können rohe Telefonnummern im [!DNL E.164]-Format in [!DNL Platform] aufnehmen, und sie werden bei der Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre unformatierten Telefonnummern in den `Phone_E.164`-Namespace aufnehmen.
-* **Aufnehmen von Hash** Telefonnummern: Sie können Ihre Telefonnummern vor der Aufnahme in [!DNL Platform] vorab hashen. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre gehashten Telefonnummern in den `PHONE_SHA256_E.164`-Namespace aufnehmen.
+* **Aufnehmen von rohen Telefonnummern**: Sie können rohe Telefonnummern im [!DNL E.164]-Format in [!DNL Experience Platform] aufnehmen, und sie werden bei der Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre unformatierten Telefonnummern in den `Phone_E.164`-Namespace aufnehmen.
+* **Aufnehmen von Hash** Telefonnummern: Sie können Ihre Telefonnummern vor der Aufnahme in [!DNL Experience Platform] vorab hashen. Wenn Sie diese Option wählen, stellen Sie sicher, dass Sie immer Ihre gehashten Telefonnummern in den `PHONE_SHA256_E.164`-Namespace aufnehmen.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer
 
 ### Hash-Anforderungen für E-Mails {#hashing-requirements}
 
-Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Platform].
+Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder E-Mail-Adressen in Clear in Experience Platform verwenden und bei der Aktivierung hashen [!DNL Experience Platform].
 
 Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivierungsbeschränkungen finden Sie in den folgenden Abschnitten der Dokumentation zu Google:
 
@@ -137,9 +137,9 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 Bevor Sie den `User_ID`-Namespace zum Senden von Daten an Google verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL gTag] synchronisieren. Detaillierte Informationen finden Sie in der offiziellen Dokumentation ](https://support.google.com/google-ads/answer/9199250) [Google .
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 <!-- ## Configure destination - video walkthrough {#video}
@@ -202,9 +202,9 @@ Dies ist ein Beispiel für eine korrekte Identitätszuordnung beim Aktivieren vo
 Auswahl der Quellfelder:
 
 * Wählen Sie den `Email` Namespace als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht in einen Hash-Wert umgewandelt werden.
-* Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Platform] gemäß den [!DNL Google Customer Match]E[Mail-Hash-Anforderungen](#hashing-requirements) gehasht haben.
-* Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] werden die Telefonnummern hashen, um [!DNL Google Customer Match] Anforderungen zu erfüllen.
-* Wählen Sie den `Phone_SHA256_E.164`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
+* Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Experience Platform] gemäß den [!DNL Google Customer Match]E[Mail-Hash-Anforderungen](#hashing-requirements) gehasht haben.
+* Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Experience Platform] werden die Telefonnummern hashen, um [!DNL Google Customer Match] Anforderungen zu erfüllen.
+* Wählen Sie den `Phone_SHA256_E.164`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Experience Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
 * Wählen Sie den `IDFA` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
 * Wählen Sie den `GAID` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
 * Wählen Sie den `Custom` Namespace als Quellidentität aus, wenn Ihre Daten aus anderen Kennungstypen bestehen.
@@ -218,9 +218,9 @@ Auswählen der Zielfelder:
 
 ![Identitätszuordnung zwischen Quell- und Zielfeldern, die im Zuordnungsschritt des Aktivierungs-Workflows angezeigt wird.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
-Daten aus nicht gehashten Namespaces werden von [!DNL Platform] bei der Aktivierung automatisch gehasht.
+Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
 
-Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
+Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
 
 ![hervorgehobenes Steuerelement „Umwandlung anwenden“ im Schritt „Zuordnung“ des Aktivierungs-Workflows.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 

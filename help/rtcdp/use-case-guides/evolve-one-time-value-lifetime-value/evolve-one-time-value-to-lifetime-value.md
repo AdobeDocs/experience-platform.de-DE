@@ -3,9 +3,9 @@ title: Weiterentwicklung des einmaligen Kundenwerts zum Lebenszeitwert
 description: Erfahren Sie, wie Sie personalisierte Kampagnen erstellen, um die besten komplementären Produkte oder Services basierend auf den Attributen, dem Verhalten und früheren Käufen eines bestimmten Kunden anzubieten.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3181'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ Sie beginnen, indem Sie Ihrer Audience von Kunden mit hohem und niedrigem Freque
 ![Schritt für Schritt Entwicklung eines einmaligen Werts zu einem Lebenszeitwert Allgemeine visuelle Übersicht.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. Sie erstellen Schemata und Datensätze und markieren sie dann für [!UICONTROL Profil].
-2. Die Daten werden erfasst und über Web SDK, Mobile Edge SDK oder API in Experience Platform integriert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
+2. Daten werden erfasst und über Web SDK, Mobile Edge SDK oder API in Experience Platform integriert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
 3. Sie laden Profile in Real-Time CDP und erstellen Governance-Richtlinien, um eine verantwortungsvolle Nutzung zu gewährleisten.
 4. Sie erstellen zielgerichtete Zielgruppen aus der Liste der Profile, um nach Kundinnen und Kunden mit hohem und niedrigem Frequenzwert zu suchen.
 5. Sie erstellen in [!DNL Adobe Journey Optimizer] zwei Journey, von denen einer Benutzern eine Nachricht über ein neues Abonnementprogramm und der andere eine Nachricht zur Bestätigung des Kaufs sendet.
@@ -210,7 +210,7 @@ External Source System Audit Attributes ist ein standardmäßiger Experience-Dat
 
 #### Offline-Transaktionsschema des Kunden {#customer-offline-transactions-schema}
 
-Dieses Schema wird verwendet, um die Ereignisdaten, aus denen Ihre Kundenaktivität besteht und die auf Plattformen außerhalb Ihrer Website auftreten, zu strukturieren und zu referenzieren. Diese Daten werden normalerweise aus einem POS (oder einem ähnlichen System) in [!DNL Adobe Experience Platform] aufgenommen und meistens über eine API-Verbindung an Platform gestreamt. Weitere Informationen [Batch-Aufnahme](/help/ingestion/batch-ingestion/getting-started.md). Sie dient als Referenz für die verschiedenen Offline-Konversionsereignisse, die zum Auslösen von Journey-Ereignissen, einer umfassenden Online- und Offline-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten, aus denen Ihre Kundenaktivität besteht und die auf Plattformen außerhalb Ihrer Website auftreten, zu strukturieren und zu referenzieren. Diese Daten werden normalerweise aus einem POS (oder einem ähnlichen System) in [!DNL Adobe Experience Platform] aufgenommen und meistens über eine API-Verbindung an Experience Platform gestreamt. Weitere Informationen [Batch-Aufnahme](/help/ingestion/batch-ingestion/getting-started.md). Sie dient als Referenz für die verschiedenen Offline-Konversionsereignisse, die zum Auslösen von Journey-Ereignissen, einer umfassenden Online- und Offline-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
 
 ![Offline-Transaktionsschema des Kunden mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -234,7 +234,7 @@ External Source System Audit Attributes ist ein standardmäßiger Experience-Dat
 
 +++
 
-#### Adobe des Web-Connector-Schemas {#adobe-web-connector-schema}
+#### Adobe Web Connector-Schema {#adobe-web-connector-schema}
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ External Source System Audit Attributes ist ein standardmäßiger Experience-Dat
 
 Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Ihrer Website oder auf anderen zugehörigen digitalen Plattformen auftritt. Dieses Schema ähnelt dem Schema für digitale Transaktionen bei Kunden, unterscheidet sich jedoch insofern, als es verwendet werden kann, wenn Web SDK keine Option für die Datenerfassung ist. Daher können Sie dieses Schema verwenden, wenn Sie die [!DNL Adobe Analytics Data Connector] verwenden, um Ihre Online-Daten entweder als primären oder sekundären Datenstrom an [!DNL Adobe Experience Platform] zu senden.
 
-![Adobe-Web-Connector-Schema mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![Adobe Web Connector-Schema mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 Das [!DNL Adobe]-Web-Connector-Schema wird durch eine [!UICONTROL XDM ExperienceEvent]-Klasse dargestellt, die die folgenden Feldergruppen enthält:
 
@@ -300,7 +300,7 @@ In diesem Anwendungsfall müssen Sie zwei Zielgruppen erstellen, um bestimmte At
 
 * Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Benutzeroberfläche des Zielgruppen-Services](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Informationen zum Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
-* Informationen zum Erstellen von Zielgruppen mithilfe von Platform-abgeleiteten Segmentdefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
+* Informationen zum Erstellen von Zielgruppen mithilfe von aus Experience Platform abgeleiteten Segmentdefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
 
 Insbesondere müssen Sie zwei Zielgruppen in verschiedenen Schritten des Anwendungsfalls erstellen und verwenden, wie in der Abbildung unten dargestellt.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Details und zusätzliche Services für ein Produktprofil verwalten
 description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltung der Einzelheiten und zusätzlichen Services für ein Produktprofil in Adobe Admin Console beschrieben. Über das Menü Profileinstellungen können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 98%
@@ -23,7 +23,7 @@ Das Menü **[!UICONTROL Produktprofil bearbeiten]** wird angezeigt, die Register
 
 Wählen Sie **[!UICONTROL Weiter]** aus, um auf die Seite **[!UICONTROL Services aktivieren]** zuzugreifen.
 
-Im Menü **[!UICONTROL Services aktivieren]** kann der Zugriff eines Profils auf zusätzliche [!DNL Platform]-Services, die beim Erstellen des Profils anfänglich konfiguriert wurden, geändert werden. Je nach Ihrem [!DNL Platform]-Abonnement können diese Services Folgendes umfassen:
+Im Menü **[!UICONTROL Services aktivieren]** kann der Zugriff eines Profils auf zusätzliche [!DNL Experience Platform]-Services, die beim Erstellen des Profils anfänglich konfiguriert wurden, geändert werden. Je nach Ihrem [!DNL Experience Platform]-Abonnement können diese Services Folgendes umfassen:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]

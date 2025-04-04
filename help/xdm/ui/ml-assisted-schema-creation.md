@@ -1,11 +1,11 @@
 ---
 title: Unterstützte Schemaerstellung durch maschinelles Lernen
-description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Schemata erstellen.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform Schemas erstellen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learnin
 
 ## Navigieren Sie zum Workflow Schema erstellen . {#navigate-to-schema-creation-workflow}
 
-Wählen Sie in der linken Navigation der Platform-Benutzeroberfläche den Arbeitsbereich **[!UICONTROL Schemata]** aus. Der Arbeitsbereich **[!UICONTROL Schemata]** wird angezeigt. Wählen Sie **[!UICONTROL Schema erstellen]** aus, um ein neues Schema hinzuzufügen und einen Workflow zur Schemaerstellung zu starten.
+Wählen Sie in der linken Navigation der Experience Platform-Benutzeroberfläche den Arbeitsbereich **[!UICONTROL Schemata]** aus. Der Arbeitsbereich **[!UICONTROL Schemata]** wird angezeigt. Wählen Sie **[!UICONTROL Schema erstellen]** aus, um ein neues Schema hinzuzufügen und einen Workflow zur Schemaerstellung zu starten.
 
 ![Der Arbeitsbereich „Schemata“ mit hervorgehobener Option „Schema“ im linken Navigationsbereich und „Schema erstellen“.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

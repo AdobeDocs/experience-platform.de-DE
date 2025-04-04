@@ -2,9 +2,9 @@
 title: Erstellen abgeleiteter Datensätze mit SQL
 description: Erfahren Sie, wie Sie SQL verwenden, um einen abgeleiteten Datensatz zu erstellen, der für Profil aktiviert ist, und wie Sie den Datensatz für das Echtzeit-Kundenprofil und den Segmentierungs-Service verwenden.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Erfahren Sie, wie Sie mit SQL-Abfragen Daten aus vorhandenen Datensätzen bearbeiten und transformieren können, um einen abgeleiteten Datensatz zu erstellen, der für Profil aktiviert ist. Dieser Workflow bietet eine effiziente, alternative Methode zum Erstellen abgeleiteter Datensätze für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils.
 
-In diesem Dokument werden verschiedene praktische SQL-Erweiterungen beschrieben, die einen abgeleiteten Datensatz für die Verwendung mit dem Echtzeit-Kundenprofil generieren. Der Workflow vereinfacht den Prozess, den Sie andernfalls durch verschiedene API-Aufrufe oder Platform-Benutzeroberflächeninteraktionen abschließen müssten.
+In diesem Dokument werden verschiedene praktische SQL-Erweiterungen beschrieben, die einen abgeleiteten Datensatz für die Verwendung mit dem Echtzeit-Kundenprofil generieren. Der Workflow vereinfacht den Prozess, den Sie andernfalls durch verschiedene API-Aufrufe oder Experience Platform-Benutzeroberflächeninteraktionen abschließen müssten.
 
 Normalerweise umfasst das Generieren und Veröffentlichen eines abgeleiteten Datensatzes für das Echtzeit-Kundenprofil die folgenden Schritte:
 
@@ -35,7 +35,7 @@ Query Service ermöglicht Ihnen, alle oben aufgeführten Aktionen mithilfe von S
 >
 >Die unten bereitgestellte SQL-Abfrage setzt die Verwendung eines bereits vorhandenen Namespace voraus.
 
-Verwenden Sie eine Abfrage vom Typ Tabelle als Auswahl erstellen (CTAS), um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt einen Datensatz und stellt ihn für Real-time Customer Data Platform (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage folgt dem Format, das im folgenden Beispiel gezeigt wird:
+Verwenden Sie eine Abfrage vom Typ Tabelle als Auswahl erstellen (CTAS), um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt einen Datensatz und stellt ihn für Real-Time Customer Data Platform (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage folgt dem Format, das im folgenden Beispiel gezeigt wird:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternativ können Datensätze auch über die Platform-Benutzeroberfläche für Profile aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für Profil aktiviert finden Sie in der [Aktivieren eines Datensatzes für das Echtzeit-Kundenprofil](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternativ können Datensätze auch über die Experience Platform-Benutzeroberfläche für Profile aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für Profil aktiviert finden Sie in der [Aktivieren eines Datensatzes für das Echtzeit-Kundenprofil](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In der folgenden Beispielabfrage wird der `decile_table` Datensatz mit `id` als primäre Identitätsspalte erstellt und weist den Namespace `IDFA` auf. Es gibt auch ein Feld namens `decile1Month` vom Datentyp Zuordnung . Die erstellte Tabelle (`decile_table`) ist für Profil aktiviert.
 
@@ -178,7 +178,7 @@ Im Beispiel sehen Sie, dass `table_with_a_decile` für das Profil aktiviert und 
 
 ### Erstellen einer Feldergruppe mit SQL
 
-Feldergruppen können jetzt mithilfe von SQL erstellt werden. Dies bietet eine Alternative zur Verwendung des Schema-Editors in der Platform-Benutzeroberfläche oder einem API-Aufruf an die Schemaregistrierung.
+Feldergruppen können jetzt mithilfe von SQL erstellt werden. Dies bietet eine Alternative zur Verwendung des Schema-Editors in der Experience Platform-Benutzeroberfläche oder einem API-Aufruf an die Schemaregistrierung.
 
 Nachfolgend finden Sie eine Beispielanweisung zum Erstellen einer Feldergruppe.
 

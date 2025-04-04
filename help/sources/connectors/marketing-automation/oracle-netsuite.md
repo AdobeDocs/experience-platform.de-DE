@@ -1,13 +1,13 @@
 ---
-title: Oracle NetSuite Source - Überblick
+title: Übersicht über Oracle NetSuite Source
 description: Erfahren Sie, wie Sie Oracle NetSuite mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 22%
+source-wordcount: '756'
+ht-degree: 11%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 22%
 >
 >Die [!DNL Oracle NetSuite]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform unterstützt die Aufnahme von Daten in Marketing-Automatisierungssystemen von Drittanbietern. Der Support für Anbieter von Marketing-Automatisierung umfasst [!DNL Oracle NetSuite].
 
 [[!DNL Oracle NetSuite]](https://www.netsuite.com/) ist eine Cloud-basierte Business-Management-Suite, die ERP-/Finanz-, CRM- und E-Commerce-Lösungen umfasst.
 
-Sie können zwei verschiedene Quellen verwenden, um Daten von [!DNL Oracle NetSuite] auf Experience Platform aufzunehmen:
+Sie können zwei verschiedene Quellen verwenden, um Daten von [!DNL Oracle NetSuite] in Experience Platform aufzunehmen:
 
 * Verwenden Sie die [!DNL Oracle NetSuite Activities], um Ereignisdaten aufzunehmen.
 * Verwenden Sie die [!DNL Oracle NetSuite Entities], um Kunden- und Kontaktdaten aufzunehmen.
@@ -42,7 +42,7 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste möglicherweise 
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Ihre [!DNL Oracle NetSuite] auf Experience Platform übertragen können, müssen Sie zunächst sicherstellen, dass Folgendes vorhanden ist:
+Bevor Sie Ihre [!DNL Oracle NetSuite] Daten in Experience Platform übertragen können, müssen Sie zunächst sicherstellen, dass Folgendes vorhanden ist:
 
 * **Ein [!DNL Oracle NetSuite]-Konto**.
    * Wenden Sie sich an [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml), wenn Sie noch kein gültiges Konto haben.
@@ -58,7 +58,7 @@ Bevor Sie Ihre [!DNL Oracle NetSuite] auf Experience Platform übertragen könne
 
 ### Sammeln erforderlicher Anmeldedaten {#gather-credentials}
 
-Um eine Verbindung zwischen [!DNL Oracle NetSuite] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL Oracle NetSuite] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -71,20 +71,20 @@ Um eine Verbindung zwischen [!DNL Oracle NetSuite] und Platform herzustellen, m�
 
 >[!IMPORTANT]
 >
->Nachdem ein Aktualisierungs-Token abgelaufen ist, müssen Sie ein neues Konto in Experience Platform mit Ihren aktualisierten Token erstellen.
+>Nachdem ein Aktualisierungs-Token abgelaufen ist, müssen Sie in Experience Platform ein neues Konto mit Ihren aktualisierten Token erstellen.
 
-## Verbinden von [!DNL Oracle NetSuite Activities] mit Platform {#oracle-netsuite-activities}
+## Verbinden von [!DNL Oracle NetSuite Activities] mit Experience Platform {#oracle-netsuite-activities}
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Oracle NetSuite Activities] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Oracle NetSuite Activities] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL Oracle NetSuite Activities]  mithilfe von APIs in Platform zu ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
-* [Verbinden Sie Ihr - [!DNL Oracle NetSuite Activities]  über die Benutzeroberfläche mit dem Experience Platform](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
+* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL Oracle NetSuite Activities]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [Verbinden Ihres - [!DNL Oracle NetSuite Activities]  mit Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [Erstellen eines Datenflusses für eine Quellverbindung mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## Verbinden von [!DNL Oracle NetSuite Entities] mit Platform {#oracle-netsuite-entities}
+## Verbinden von [!DNL Oracle NetSuite Entities] mit Experience Platform {#oracle-netsuite-entities}
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Oracle NetSuite Entities] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Oracle NetSuite Entities] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL Oracle NetSuite Entities]  mithilfe von APIs in Platform zu ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
-* [Verbinden Sie Ihr - [!DNL Oracle NetSuite Entities]  über die Benutzeroberfläche mit dem Experience Platform](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
+* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL Oracle NetSuite Entities]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [Verbinden Ihres - [!DNL Oracle NetSuite Entities]  mit Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [Erstellen eines Datenflusses für eine Quellverbindung mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md).

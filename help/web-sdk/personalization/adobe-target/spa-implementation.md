@@ -1,11 +1,11 @@
 ---
 title: Implementierung von Einzelseitenanwendungen für die Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mit Adobe Target eine SPA-Implementierung (Single Page Application) des Adobe Experience Platform Web SDK erstellen.
+description: Erfahren Sie, wie Sie mit Adobe Target eine Single Page Application (SPA)-Implementierung der Adobe Experience Platform Web SDK erstellen.
 keywords: Target;Adobe Target;XDM-Ansichten;Ansichten;Einzelseitenanwendungen;SPA;SPA-Lebenszyklus;Client-seitig;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 10%
 
 ---
@@ -21,17 +21,17 @@ Moderne Web-Anwendungen, wie z. B. Einzelseitenanwendungen, haben stattdessen ei
 
 ![Diagramm, das den SPA-Lebenszyklus im Vergleich zum herkömmlichen Seitenlebenszyklus zeigt.](assets/spa-vs-traditional-lifecycle.png)
 
-## Vorteile von Platform Web SDK für SPA
+## Vorteile von Experience Platform Web SDK für SPAs
 
 Hier einige Vorteile bei einer Verwendung des Adobe Experience Platform Web SDK für Einzelseitenanwendungen:
 
 * Möglichkeit zur Zwischenspeicherung aller Angebote beim Seitenladen, um mehrere Server-Aufrufe auf einen einzelnen Server-Aufruf zu reduzieren
 * Drastische Verbesserung des Anwendererlebnisses auf Ihrer Site, da Angebote sofort über den Cache angezeigt werden, ohne dass durch herkömmliche Server-Aufrufe Latenzzeit gebraucht wird
-* Eine einzige Codezeile und ein einmaliges Entwicklersetup ermöglichen es Marketing-Experten, A/B- und Experience Targeting(XT)-Aktivitäten über Visual Experience Composer (VEC) auf der SPA zu erstellen und auszuführen.
+* Eine einzelne Codezeile und ein einmaliges Entwicklersetup ermöglichen es Marketing-Experten, A/B- und Experience Targeting(XT)-Aktivitäten über Visual Experience Composer (VEC) in Ihrer SPA zu erstellen und auszuführen.
 
 ## XDM-Ansichten und Einzelseitenanwendungen
 
-Adobe Target VEC für SPA nutzt ein Konzept namens Ansichten: eine logische Gruppe visueller Elemente, die zusammen ein SPA-Erlebnis bilden. Ein Single Page Application kann daher basierend auf Benutzerinteraktionen als Übergang durch Ansichten anstelle von URLs betrachtet werden. Eine Ansicht kann in der Regel eine ganze Site oder gruppierte visuelle Elemente innerhalb einer Site darstellen.
+Der Adobe Target VEC für SPAs nutzt ein Konzept namens Ansichten: eine logische Gruppe visueller Elemente, die zusammen ein SPA-Erlebnis bilden. Ein Single Page Application kann daher basierend auf Benutzerinteraktionen als Übergang durch Ansichten anstelle von URLs betrachtet werden. Eine Ansicht kann in der Regel eine ganze Site oder gruppierte visuelle Elemente innerhalb einer Site darstellen.
 
 Um näher zu erläutern, was Ansichten sind, wird im folgenden Beispiel eine hypothetische Online-E-Commerce-Site verwendet, die in React implementiert ist, um Beispielansichten zu erkunden.
 
@@ -59,7 +59,7 @@ Das Konzept der Ansichten kann noch viel weiter ausgedehnt werden. Dies sind nur
 
 ## Implementieren von XDM-Ansichten
 
-XDM-Ansichten können in Adobe Target genutzt werden, um es Marketing-Experten zu ermöglichen, A/B- und XT-Tests über den Visual Experience Composer auf SPA durchzuführen. Dazu müssen auf Entwicklerseite die folgenden Schritte ausgeführt werden, um ein einmaliges Setup abzuschließen:
+XDM-Ansichten können in Adobe Target genutzt werden, um es Marketing-Experten zu ermöglichen, A/B- und XT-Tests auf SPAs über den Visual Experience Composer durchzuführen. Dazu müssen auf Entwicklerseite die folgenden Schritte ausgeführt werden, um ein einmaliges Setup abzuschließen:
 
 1. [Adobe Experience Platform Web SDK installieren](/help/web-sdk/install/overview.md)
 2. Bestimmen Sie alle XDM-Ansichten in Ihrer Einzelseitenanwendung, die Sie personalisieren möchten.
@@ -84,7 +84,7 @@ XDM-Ansichten können in Adobe Target genutzt werden, um es Marketing-Experten z
 
 ## `sendEvent()`-Funktionsbeispiele
 
-In diesem Abschnitt werden drei Beispiele beschrieben, die zeigen, wie die `sendEvent()` in React für eine hypothetische E-Commerce-SPA aufgerufen wird.
+In diesem Abschnitt werden drei Beispiele beschrieben, die zeigen, wie die `sendEvent()`-Funktion in React für eine hypothetische E-Commerce-SPA aufgerufen wird.
 
 ### Beispiel 1: Startseite eines A/B-Tests
 
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## Verwenden von Visual Experience Composer für eine SPA
+## Verwenden des Visual Experience Composer für eine SPA
 
 Wenn Sie mit der Definition Ihrer XDM-Ansichten und der Implementierung von `sendEvent()` mit den übergebenen XDM-Ansichten fertig sind, kann der VEC diese Ansichten erkennen und Benutzern ermöglichen, Aktionen und Änderungen für A/B- oder XT-Aktivitäten zu erstellen.
 
 >[!NOTE]
 >
->Um VEC für Ihre SPA verwenden zu können, müssen Sie entweder die VEC Helper-Erweiterung [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) installieren und aktivieren.
+>Um VEC für Ihre SPA zu verwenden, müssen Sie entweder die VEC Helper-Erweiterung [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) installieren und aktivieren.
 
 ### Bedienfeld „Änderungen“
 
@@ -243,7 +243,7 @@ Durch Klicken auf eine Aktion wird das Element auf der Site hervorgehoben, auf d
 | Verschieben | Verschiebt die Aktion in ein Seitenladeereignis oder eine andere Ansicht, die bereits im Bedienfeld Änderungen vorhanden ist.<br/><br/>**Seitenladeereignis** Alle Aktionen, die dem Seitenladeereignis entsprechen, werden beim ersten Laden der Seite Ihrer Web-Anwendung angewendet. <br/><br/>**Hinweis:** Nachdem ein Verschiebevorgang durchgeführt wurde, müssen Sie über Durchsuchen zur Ansicht im VEC navigieren, um zu sehen, ob der Verschiebevorgang gültig war. Wenn die Aktion nicht auf die Ansicht angewendet werden kann, wird ein Fehler angezeigt. |
 | Löschen | Löscht die Aktion. |
 
-## Verwenden des VEC für SPA-Beispiele
+## Beispiele für die Verwendung von VEC für SPAs
 
 In diesem Abschnitt werden drei Beispiele für die Verwendung von Visual Experience Composer zum Erstellen von Aktionen und Änderungen für A/B- oder XT-Aktivitäten beschrieben.
 

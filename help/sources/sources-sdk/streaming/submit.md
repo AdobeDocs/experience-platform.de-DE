@@ -3,10 +3,10 @@ title: Testen und Senden der Source
 description: Das folgende Dokument beschreibt die Schritte zum Testen und Überprüfen einer neuen Quelle mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Selbstbedienungsquellen (Streaming-SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 22%
+source-wordcount: '1273'
+ht-degree: 18%
 
 ---
 
@@ -22,9 +22,9 @@ Im folgenden Dokument erfahren Sie, wie Sie Ihre Quelle mit der [[!DNL Flow Serv
 
 ## Erste Schritte
 
-* Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
-* Informationen zum Generieren Ihrer Anmeldeinformationen für Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
-* Informationen zum Einrichten von [!DNL Postman] für Platform-APIs finden Sie im Tutorial zum Einrichten [ Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
+* Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
+* Informationen zum Generieren Ihrer Anmeldeinformationen für Experience Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
+* Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [ von Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
 * Um Ihren Test- und Debugging-Prozess zu unterstützen, laden Sie die [Sammlung und Umgebung für die Selbstbedienungsquellen-Verifizierung hier herunter](../assets/sdk-verification.zip) und führen Sie die folgenden Schritte aus.
 
 ## Testen der Quelle mithilfe der API
@@ -39,10 +39,10 @@ Um mit dem Testen zu beginnen, müssen Sie zunächst die Sammlung und die Umgebu
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `x-api-key`&quot;. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer `x-api-key` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer `x-gw-ims-org-id` finden [ im Tutorial zum Einrichten  [!DNL Postman]](../../../landing/postman.md) Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Das zum Abschließen von Aufrufen an Experience Platform-APIs erforderliche Autorisierungs-Token. Weitere Informationen zum Abrufen [ Experience Platform-APIs finden Sie im Tutorial ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf `authorizationToken`&quot;. | `Bearer authorizationToken` |
-| `schemaId` | Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `authorizationToken` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `Bearer authorizationToken` |
+| `schemaId` | Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Die eindeutige Version, die Ihrem Schema entspricht. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | Die `meta:altId`, die zusammen mit dem `schemaId` beim Erstellen eines neuen Schemas zurückgegeben wird. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -62,13 +62,13 @@ Die [!DNL Runner] Benutzeroberfläche wird angezeigt, über die Sie die Ausführ
 
 >[!NOTE]
 >
->Sie können **Fluss löschen** in der Checkliste für die Ausführungsreihenfolge deaktivieren, wenn Sie das Dashboard zur Quellenüberwachung in der Platform-Benutzeroberfläche verwenden möchten. Nachdem Sie jedoch mit dem Testen fertig sind, müssen Sie sicherstellen, dass Ihre Testflüsse gelöscht werden.
+>Sie können **Fluss löschen** in der Checkliste für die Ausführungsreihenfolge deaktivieren, wenn Sie das Dashboard zur Quellenüberwachung in der Experience Platform-Benutzeroberfläche verwenden möchten. Nachdem Sie jedoch mit dem Testen fertig sind, müssen Sie sicherstellen, dass Ihre Testflüsse gelöscht werden.
 
 ![run-collection](../assets/run-collection.png)
 
 ## Testen der Quelle mithilfe der Benutzeroberfläche
 
-Um Ihre Quelle in der Benutzeroberfläche zu testen, navigieren Sie in der Platform-Benutzeroberfläche zum Quellkatalog der Sandbox Ihres Unternehmens. Von hier aus sollte Ihre neue Quelle unter der Kategorie *Streaming“*.
+Um Ihre Quelle in der Benutzeroberfläche zu testen, navigieren Sie zum Quellkatalog der Sandbox Ihres Unternehmens in der Experience Platform-Benutzeroberfläche. Von hier aus sollte Ihre neue Quelle unter der Kategorie *Streaming“*.
 
 Da Ihre neue Quelle jetzt in Ihrer Sandbox verfügbar ist, müssen Sie dem Quell-Workflow folgen, um die Funktionen zu testen. Wählen Sie zunächst **[!UICONTROL Einrichten]** aus.
 
@@ -88,7 +88,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../data-prep/ui/mapping.md)
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../data-prep/ui/mapping.md)
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -109,4 +109,4 @@ Schließlich müssen Sie den Streaming-Endpunkt Ihres Datenflusses abrufen. Dies
 
 ## Übermitteln Ihrer Quelle
 
-Sobald Ihre Quelle den gesamten Workflow abschließen kann, können Sie sich an Ihren Adobe-Support-Mitarbeiter wenden und Ihre Quelle zur Integration in anderen Experience Platform-Organisationen einreichen.
+Sobald Ihre Quelle den gesamten Workflow abschließen kann, können Sie sich an Ihren Adobe-Support-Mitarbeiter wenden und Ihre Quelle zur Integration in anderen Experience Platform-Organisationen übermitteln.

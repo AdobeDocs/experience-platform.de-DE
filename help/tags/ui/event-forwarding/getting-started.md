@@ -3,10 +3,10 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 84%
+source-wordcount: '893'
+ht-degree: 78%
 
 ---
 
@@ -27,15 +27,15 @@ Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen 
 * [Edge Network Server-API](/help/server-api/overview.md)
 
 >[!NOTE]
->Das Platform Web SDK und das Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
+>Experience Platform Web SDK und Experience Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
 
 Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lösungen einschalten, um Daten dorthin zu senden. Um Daten an eine Drittanbieter-Lösung zu senden, richten Sie diese in der Ereignisweiterleitung ein.
 
 ## Voraussetzungen
 
-* Adobe Real-Time CDP Connections, Prime oder Ultimate (Preise erhalten Sie von Ihrem Adobe-Account-Team)
+* Adobe Real-Time CDP Connections, Prime oder Ultimate (Preise erhalten Sie von Ihrem Adobe-Accountteam)
 * Ereignisweiterleitung in Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network Server-API, die zum Senden von Daten an Edge Network konfiguriert ist
+* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network Server-API, die zum Senden von Daten an Edge Network konfiguriert sind
 * Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)
 
 ## Erstellen eines XDM-Schemas
@@ -100,17 +100,17 @@ Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleit
 
 Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigenschaft.
 
-## Konfigurieren der Platform Web SDK-Erweiterung, um Daten an den zuvor erstellten Daten-Stream zu senden
+## Konfigurieren Sie die Experience Platform Web SDK-Erweiterung, um Daten an den zuvor erstellten Datenstrom zu senden
 
-Erstellen Sie Ihre Eigenschaft im Arbeitsbereich **[!UICONTROL Tags]**, navigieren Sie dann zu **[!UICONTROL Erweiterungen]** und wählen Sie die Erweiterung Experience Platform Web SDK aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
+Erstellen Sie Ihre Eigenschaft im Arbeitsbereich **[!UICONTROL Tags]**, navigieren Sie dann zu **[!UICONTROL Erweiterungen]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
 
 Weitere Informationen [ Konfigurationsoptionen finden Sie in der ](../../extensions/client/web-sdk/overview.md) zur Web SDK-Erweiterung .
 
-## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
+## Erstellen einer Tag-Regel zum Senden von Daten an Experience Platform Web SDK
 
 Nachdem alle oben genannten Elemente eingerichtet sind, können Sie die erforderlichen Datendefinitionen, Regeln usw. erstellen, die sowohl Ereignisweiterleitung als auch Tags nutzen, für die jedoch nur eine einzige Anfrage von der Seite benötigt wird.
 
-Erstellen Sie eine Seitenladeregel mit der Platform Web SDK-Erweiterung und dem Aktionstyp „Ereignis senden“:
+Erstellen Sie eine Seitenladeregel mit der Experience Platform Web SDK-Erweiterung und dem Aktionstyp „Ereignis senden“:
 
 1. Öffnen Sie die Registerkarte **[!UICONTROL Regeln]** und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
 
@@ -120,7 +120,7 @@ Erstellen Sie eine Seitenladeregel mit der Platform Web SDK-Erweiterung und dem 
 
 1. Fügen Sie ein Ereignis hinzu, indem Sie eine Erweiterung und einen der für diese Erweiterung verfügbaren Ereignistypen auswählen und dann die Einstellungen für das Ereignis konfigurieren. Wählen Sie beispielsweise **[!UICONTROL Core - Window Loaded]** aus.
 
-1. Fügen Sie eine Aktion hinzu, indem Sie die Platform Web SDK-Erweiterung verwenden. Wählen Sie **[!UICONTROL Ereignis senden]** aus der Liste **[!UICONTROL Aktionstyp]** aus, wählen Sie die gewünschte Instanz aus (Alloy-Instanz, die zuvor konfiguriert wurde) und wählen Sie dann ein Datenelement aus, das zum XDM-Datenblock innerhalb des Alloy-Treffers hinzugefügt werden soll.
+1. Fügen Sie eine Aktion mit der Experience Platform Web SDK-Erweiterung hinzu. Wählen Sie **[!UICONTROL Ereignis senden]** aus der Liste **[!UICONTROL Aktionstyp]** aus, wählen Sie die gewünschte Instanz aus (Alloy-Instanz, die zuvor konfiguriert wurde) und wählen Sie dann ein Datenelement aus, das zum XDM-Datenblock innerhalb des Alloy-Treffers hinzugefügt werden soll.
 
 1. Belassen Sie den Rest der Einstellungen für dieses Beispiel als Standard und wählen Sie **[!UICONTROL Speichern]**.
 

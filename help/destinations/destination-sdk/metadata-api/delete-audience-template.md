@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Löschen einer Zielgruppenvorlage
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 100%
+source-wordcount: '289'
+ht-degree: 94%
 
 ---
 
@@ -63,7 +63,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zusammen mit einer leer
 
 ## Umgang mit API-Fehlern {#error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

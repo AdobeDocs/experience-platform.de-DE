@@ -2,9 +2,9 @@
 title: Berechnete Attribute - Übersicht
 description: Berechnete Attribute sind Funktionen zum Aggregieren von Daten auf Ereignisebene in Attribute auf Profilebene. Diese Funktionen werden automatisch berechnet, damit sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ Personalization auf der Grundlage des Benutzerverhaltens ist eine wichtige Vorau
 
 Berechnete Attribute helfen dabei, Profilverhaltensdaten schnell in aggregierte Werte auf Profilebene zu konvertieren, ohne von technischen Ressourcen für Folgendes abhängig zu sein:
 
-- Aktivierung gezielter Eins-zu-eins- oder Batch-Personalisierung mit Aktivierung von Verhaltens-Aggregaten für Real-time Customer Data Platform-Ziele und Verwendung in Adobe Journey Optimizer
+- Aktivierung gezielter Eins-zu-eins- oder Batch-Personalisierung mit Aktivierung von Verhaltens-Aggregaten für Real-Time Customer Data Platform-Ziele und Verwendung in Adobe Journey Optimizer
 - Vereinfachte Zielgruppensegmentierung mit Speicherung von Verhaltens-Aggregaten als Profilattribute
 - Standardisierung aggregierter Profilverhaltensdaten für die Nutzung über Plattformen und Apps hinweg
 - Besseres Daten-Management durch Konsolidierung alter Profilereignisdaten in aussagekräftige Verhaltenserkenntnisse
@@ -32,13 +32,13 @@ Beispiele für Anwendungsfälle sind:
 - Reduzieren mehrerer ereignisbasierter Zielgruppen in eine verdichtetere Gruppe berechneter Attribute
 - Retargeting nicht authentifizierter Benutzer extern mithilfe aktueller Partner-IDs aus Ereignissen
 
-Dieses Handbuch hilft Ihnen, die Rolle berechneter Attribute innerhalb von Platform besser zu verstehen, und erläutert die Grundlagen berechneter Attribute.
+In diesem Handbuch erfahren Sie mehr über die Rolle berechneter Attribute in Experience Platform und lernen die Grundlagen berechneter Attribute kennen.
 
 ## Berechnete Attribute
 
 Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen einfach importieren und zusammenführen, um [!DNL Real-Time Customer Profiles] zu generieren. Jedes Profil enthält wichtige Daten zu einer Person, wie z. B. ihre Kontaktdaten, Präferenzen und den Kaufverlauf, sodass eine 360-Grad-Ansicht des Kunden entsteht.
 
-Manche der im Profil erfassten Daten sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. „Vorname“), während bei anderen Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Daten zu generieren (z. B. „Lebenszeitkaufsumme“). Um diese Daten auf einen Blick leichter verständlich zu machen, können Sie mit [!DNL Platform] berechnete Attribute erstellen, die diese Verweise und Berechnungen automatisch ausführen und den Wert im entsprechenden Feld zurückgeben.
+Manche der im Profil erfassten Daten sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. „Vorname“), während bei anderen Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Daten zu generieren (z. B. „Lebenszeitkaufsumme“). Um diese Daten auf einen Blick leichter verständlich zu machen, können Sie mit [!DNL Experience Platform] berechnete Attribute erstellen, die diese Verweise und Berechnungen automatisch ausführen und den Wert im entsprechenden Feld zurückgeben.
 
 Zu den berechneten Attributen gehört die Erstellung eines Ausdrucks oder einer „Regel“, die mit eingehenden Daten arbeitet und den resultierenden Wert in einem Profilattribut speichert. Ausdrücke können auf verschiedene Weise definiert werden, sodass Sie angeben können, für welche Ereignisse eine Aggregation durchgeführt werden soll, welche Funktionen aggregiert werden sollen oder welche Lookback-Dauer zulässig ist.
 
@@ -46,7 +46,7 @@ Zu den berechneten Attributen gehört die Erstellung eines Ausdrucks oder einer 
 
 Mit berechneten Attributen können Sie Ereignis-Aggregate eigenständig definieren, indem Sie vordefinierte Funktionen nutzen. Die Details zu diesen Funktionen finden Sie unten:
 
-| Funktion | Beschreibung | Unterstützte Datentypen | Beispielverwendung |
+| Funktion | Beschreibung | Unterstützte Datentypen | Anwendungsbeispiel |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Eine Funktion, **den** Wert für qualifizierte Ereignisse summiert. | Ganzzahlen, Zahlen, Längen | Summe aller Käufe in den letzten 7 Tagen |
 | ANZAHL | Eine Funktion, die **zählt** die Anzahl der Ereignisse, die für die angegebene Regel aufgetreten sind. | K. A. | Anzahl der Käufe in den letzten 3 Monaten |

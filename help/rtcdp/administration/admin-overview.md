@@ -1,17 +1,17 @@
 ---
 keywords: RTCDP-Administration - Übersicht;Administration - Übersicht
-title: Übersicht über die Administration von Real-time Customer Data Platform
-description: Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform.
+title: Übersicht über die Administration von Real-Time Customer Data Platform
+description: Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 21%
 
 ---
 
-# Übersicht über die Administration von Real-time Customer Data Platform
+# Übersicht über die Administration von Real-Time Customer Data Platform
 
 Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von [!DNL Adobe Real-Time Customer Data Platform], powered by Adobe Experience Platform.
 
@@ -33,6 +33,6 @@ Weitere Informationen zur Zugriffssteuerung finden Sie unter [Attributbasierte Z
 
 Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wurde entwickelt, um Programme für digitale Erlebnisse global zu erweitern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
-Um diese Anforderung zu erfüllen, stellt Adobe Experience Platform *Sandboxes* bereit, mit denen Sie eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen können, die zur Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse verwendet werden können. Sie können die Sandbox-Tooling-Funktion verwenden, um die Konfigurationsgenauigkeit über Sandboxes hinweg zu verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos zu exportieren und zu importieren. Befolgen Sie die Schritte im [Handbuch zur Sandbox-Tooling-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md).
+Um diese Anforderung zu erfüllen, stellt Adobe Experience Platform *Sandboxes* bereit, mit denen Sie eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen können, die zur Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse verwendet werden können. Sie können die Sandbox-Tooling-Funktion verwenden, um die Konfigurationsgenauigkeit über Sandboxes hinweg zu verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos zu exportieren und zu importieren. Befolgen Sie die Schritte im [Handbuch zur Sandbox-Tooling-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md).
 
 Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md) in der [!DNL Experience Platform].

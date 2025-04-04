@@ -3,10 +3,10 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 73%
+source-wordcount: '1145'
+ht-degree: 70%
 
 ---
 
@@ -53,7 +53,7 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 
 Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin, sich bei der Zielplattform zu authentifizieren.
 
-Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Platform-Workflow aufgefordert, Anmeldedaten zur Authentifizierung einzugeben. Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Experience Platform-Workflow aufgefordert, Anmeldeinformationen zur Authentifizierung einzugeben. Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Für **[!DNL Amazon S3]erforderliche und optionale Authentifizierungsparameter**
 

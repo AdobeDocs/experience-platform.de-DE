@@ -3,10 +3,10 @@ keywords: PebblePost;PebblePost;PebblePost programmatische Briefpost;PebblePost 
 title: PebblePost-Erweiterung
 description: Die PebblePost-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 82%
+source-wordcount: '452'
+ht-degree: 68%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 82%
 
 ## Übersicht {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail] Lösung hilft Digital-Marketing-Fachleuten, das Online-Interesse und die Absichten mit offline bearbeiteten, greifbaren Medien zu verbinden, die konvertieren. Marketing-Experten können die benutzerdefinierten Daten-Audiences, die sie in Adobe erstellt haben, nutzen, um nun Verbraucher mit einem relevanten, länger anhaltenden Medien-Impression anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Reaktionsaktivität und den Konversionen vor Ort.
+[!DNL PebblePost's Programmatic Direct Mail] Lösung hilft Digital-Marketing-Fachleuten, das Online-Interesse und die Absichten mit offline bearbeiteten, greifbaren Medien zu verbinden, die konvertieren. Marketing-Experten können die benutzerdefinierten Daten-Audiences nutzen, die sie in Adobe erstellt haben, um nun Verbraucher mit einem relevanten, länger anhaltenden internen Medieneindruck anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Reaktionsaktivität und den Konversionen vor Ort.
 
 [!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![PebblePost-Erweiterung](../../assets/catalog/email/pebblepost/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die [!DNL PebblePost]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -56,6 +56,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Auch wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Platform-Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Experience Platform-Benutzeroberfläche weiterhin &quot;**[!UICONTROL &quot;]** die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

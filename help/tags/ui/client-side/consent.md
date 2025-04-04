@@ -2,10 +2,10 @@
 title: Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 description: Erfahren Sie, wie Sie die Opt-in- und Opt-out-Signale von Kunden für verschiedene Adobe-Lösungen in Adobe Experience Platform verwalten.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '610'
+ht-degree: 94%
 
 ---
 
@@ -36,7 +36,7 @@ Vergewissern Sie sich im Abschnitt „Linktracking“ der Konfigurationseinstell
 * Downloadlinks verfolgen
 * Ausgehende Links verfolgen
 
-Wenn diese Einstellungen nicht aktiviert sind, löst Platform [!DNL Adobe Analytics] nicht automatisch aus. [!DNL Analytics] wird nur dann ausgelöst, wenn Sie dies in einer Regelaktion speziell festlegen. Bestimmen Sie mithilfe der Regelbedingungen, was wann ausgelöst werden soll. Wenn Sie beispielsweise Cookies zur Bestimmung des Anmeldestatus verwenden möchten, legen Sie ein Datenelement fest, das dieses Cookie ausliest, und verwenden Sie es in der Regel als Bedingung, um zu bestimmen, wann die erste „Beacon senden“-Aktion ausgelöst werden soll.
+Wenn diese Einstellungen nicht aktiviert sind, löst Experience Platform [!DNL Adobe Analytics] nicht automatisch aus. [!DNL Analytics] wird nur dann ausgelöst, wenn Sie dies in einer Regelaktion speziell festlegen. Bestimmen Sie mithilfe der Regelbedingungen, was wann ausgelöst werden soll. Wenn Sie beispielsweise Cookies zur Bestimmung des Anmeldestatus verwenden möchten, legen Sie ein Datenelement fest, das dieses Cookie ausliest, und verwenden Sie es in der Regel als Bedingung, um zu bestimmen, wann die erste „Beacon senden“-Aktion ausgelöst werden soll.
 
 Sie können auch erwägen, das [Adobe-Anmeldeobjekt](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de) zu verwenden, um die Auslösung dieses Tags in Abstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
 

@@ -4,10 +4,10 @@ title: Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
-ht-degree: 43%
+source-wordcount: '5005'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 43%
 
 Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen über Ihre [!DNL Real-Time Customer Profile]-Daten anzeigen können, die während eines täglichen Schnappschusses erfasst wurden. In diesem Handbuch wird beschrieben, wie Sie auf das Profile-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
 
-Eine Übersicht über [ Profilfunktionen in der Benutzeroberfläche von Experience Platform finden Sie ](../../profile/ui/user-guide.md) Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils .
+Eine Übersicht über [ Profilfunktionen in der Benutzeroberfläche von Experience Platform ](../../profile/ui/user-guide.md) Sie im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils .
 
 ## Daten des Profile-Dashboards
 
@@ -29,11 +29,11 @@ Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zu
 
 ## Erkunden des Profile-Dashboards {#explore-dashboard}
 
-Um in der Platform-Benutzeroberfläche zum Profile-Dashboard zu navigieren, wählen Sie **[!UICONTROL Profile]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+Um in der Benutzeroberfläche von Experience Platform zum Profile-Dashboard zu navigieren, wählen Sie **[!UICONTROL Profile]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
 
 >[!NOTE]
 >
->Wenn Platform neu für Ihr Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Profile-Dashboard nicht zu sehen. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Profile-Dashboard nicht angezeigt. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ![Das Dashboard &quot;Experience Platform-Profile“ mit hervorgehobenen Optionen „Profile“ und „Übersicht“.](../images/profiles/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefiniert
 
 ### SQL anzeigen {#view-sql}
 
-Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
+Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -119,8 +119,8 @@ Kundenzustimmung und Kontaktvoreinstellungen sind komplexe Themen. Um zu erfahre
 
 * Informationen zu den Schemafeldgruppen, die erforderlich sind, um [Einverständnisdaten gemäß dem Adobe-Standard zu erfassen](../../landing/governance-privacy-security/consent/adobe/overview.md) finden Sie in der Dokumentation zu diesen profilaktivierten Schemafeldgruppen.
    * [[!UICONTROL Details zu Einverständnis und Voreinstellungen]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn Platform Web oder Mobile SDK zum Senden von Einverständnissignalen verwendet wird)
-* Informationen zum Verarbeiten von Kundeneinverständnis- und Präferenzdaten mit dem Adobe-Standard finden Sie in der Übersicht zu [Einverständnisverarbeitung in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn Experience Platform Web oder Mobile SDK zum Senden von Einverständnissignalen verwendet werden)
+* Informationen zur Verarbeitung von Einverständnis- und Präferenzdaten von Kunden mit dem Adobe-Standard finden Sie in der Übersicht zur [Einverständnisverarbeitung in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * Eine kombinierte Data Governance- und Einverständnisrichtlinie kann verwendet werden, um Profile nach Segmentierung zu filtern, basierend auf ihren Einverständnisvoreinstellungen und Ihren festgelegten Organisationsregeln. Informationen zum Erstellen und Verwenden dieser kombinierten Richtlinien finden Sie im Benutzerhandbuch [Verwalten von Datennutzungsrichtlinien](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Hinzufügen von Widgets {#add-widgets}
@@ -169,7 +169,7 @@ Das Dashboard [!UICONTROL Vereinigungsschema] zeigt das Vereinigungsschema für 
 
 Vereinigungsschemata bestehen aus mehreren Schemata, die dieselbe Klasse haben und für Profil aktiviert wurden. Damit haben Sie die Möglichkeit, in einer einzigen Ansicht alle Felder zu sehen, die in allen Schemata derselben Klasse enthalten sind.
 
-Weitere Informationen zum [Anzeigen von Vereinigungsschemata in der Platform](../../profile/ui/union-schema.md#view-union-schemas)Benutzeroberfläche finden Sie im Handbuch zur Benutzeroberfläche der Vereinigungsschemata .
+Weitere Informationen zum [Anzeigen von Vereinigungsschemata in der Experience Platform-Benutzeroberfläche](../../profile/ui/union-schema.md#view-union-schemas) finden Sie im Handbuch zur Benutzeroberfläche der Vereinigungsschemata .
 
 ## Widgets und Metriken
 
@@ -221,7 +221,7 @@ Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl u
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus.
 
-![Das Dashboard &quot;Experience Platform-Zielgruppen“ mit [!UICONTROL  hervorgehobenen Widget „Kunden]KI-Verteilung der Scores[!UICONTROL  und „Modelldetails anzeigen].](../images/segments/customer-ai-distribution-of-scores.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der ]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
 
 Die detaillierte Seite mit Modelleinblicken wird angezeigt.
 
@@ -248,7 +248,7 @@ Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfiguriert
 >
 >Die Gesamtzahl der berechneten Profile hängt von der ausgewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Eine kurze Beschreibung finden Sie [ Abschnitt ](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
 
-![Das Dashboard &quot;Experience Platform-Zielgruppen“ mit hervorgehobenem Widget „Zusammenfassung der Kunden-KI-Bewertung“.](../images/segments/customer-ai-scoring-summary.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit hervorgehobenem Widget „Zusammenfassung der Kunden-KI-Bewertung“.](../images/segments/customer-ai-scoring-summary.png)
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus. Weitere Informationen zur Kunden-KI finden Sie im Handbuch [Benutzeroberfläche für Einblicke entdecken](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -314,7 +314,7 @@ Das Widget **[!UICONTROL Änderung der Profilanzahl]** zeigt die Anzahl der zusa
 >
 >Das Widget [!UICONTROL Änderung der Profilanzahl] gibt die Anzahl der hinzugefügten Profile an **die (**) die erste Profilaufnahme und die Einrichtung des Profilspeichers vorgenommen wurden. Mit anderen Worten: Wenn Ihr Unternehmen den Profilspeicher einrichtet und am ersten Tag 4.000.000 aufnimmt, ist das Dashboard innerhalb von 24 Stunden verfügbar, jedoch wird im [!UICONTROL Änderung der Profilanzahl] der Wert 0 angezeigt. Diese Zählmethode wird durchgeführt, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihre Organisation weitere 1.000.000 Profile in den Profilspeicher auf. Wenn der nächste Schnappschuss erstellt wird, zeigt das Widget [!UICONTROL Änderung der Profilanzahl] insgesamt 1.000.000 hinzugefügte Profile an, während das Widget [!UICONTROL Profilanzahl] insgesamt 5.000.000 Profile anzeigt.
 
-![Das Profile-Dashboard der Platform-Benutzeroberfläche mit dem hervorgehobenen Widget „Änderung der Profilanzahl“.](../images/profiles/profile-count-change.png)
+![Das Profile-Dashboard der Experience Platform-Benutzeroberfläche mit dem hervorgehobenen Widget „Änderung der Profilanzahl“.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Trend der Änderung der Profilanzahl] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ Das Widget **[!UICONTROL Änderung der Profilanzahl]** zeigt die Anzahl der zusa
 >title="Trend der Änderung der Profilanzahl"
 >abstract="Dieses Widget zeigt die Zahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Das Widget **[!UICONTROL Trend der Änderung der Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn der Schnappschuss erstellt wird. Wenn Sie also Profile in Platform aufnehmen, wird die Anzahl der Profile erst beim nächsten Schnappschuss angezeigt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
+Das Widget **[!UICONTROL Trend der Änderung der Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn der Schnappschuss erstellt wird. Wenn Sie also Profile in Experience Platform aufnehmen, wird die Anzahl der Profile erst beim nächsten Schnappschuss angezeigt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
 Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
@@ -514,7 +514,7 @@ Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung zweier ausgew�
 
 Dieses Widget stellt die visuelle Überschneidung von Segmentdefinitionen dar und ermöglicht es Ihnen, die Segmentierungsstrategie zu optimieren, indem Sie die Ähnlichkeiten zwischen Ihren Segmentdefinitionen untersuchen.
 
-![Das Profile-Dashboard der Platform-Benutzeroberfläche mit Hervorhebung des Dropdown-Menüs „Zusammenführungsrichtlinie“ und der Dropdown-Menüs der Widget-Zielgruppe.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Das Profile-Dashboard der Experience Platform-Benutzeroberfläche mit Hervorhebung des Dropdown-Menüs „Zusammenführungsrichtlinie“ und der Dropdown-Menüs der Widget-Zielgruppe.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

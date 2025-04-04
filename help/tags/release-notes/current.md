@@ -2,10 +2,10 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 100%
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ Es wurden neue Erweiterungen veröffentlicht:
 
 ## 26. Oktober 2022
 
-* **Behandlung sensibler Daten für Datenströme**: Datenströme nutzen jetzt mehrere Platform-Technologien, um sensible Daten entsprechend den Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) zu behandeln. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../datastreams/overview.md#sensitive).
+* **Behandlung sensibler Daten für Datenströme**: Datenströme nutzen jetzt mehrere Experience Platform-Technologien, um sensible Daten entsprechend den Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) zu behandeln. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../datastreams/overview.md#sensitive).
 * **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Splunk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
 * **[!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Zendesk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
 
 ## 28. September 2022
 
-* **Integration der linken Navigationsleiste von Adobe Experience Platform**: Alle Funktionen, die bisher ausschließlich in der Datenerfassungs-Benutzeroberfläche verfügbar waren (einschließlich Tags und Ereignisweiterleitung), sind jetzt auch über die linke Navigation in der Benutzeroberfläche von Experience Platform verfügbar, und zwar unter der Kategorie **[!UICONTROL Datensammlung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln.
+* **Integration der linken Navigationsleiste von Adobe Experience Platform**: Alle Funktionen, die bisher ausschließlich in der Datenerfassungs-Benutzeroberfläche verfügbar waren (einschließlich Tags und Ereignisweiterleitung), sind jetzt auch über die linke Navigation in der Benutzeroberfläche von Experience Platform verfügbar, und zwar unter der Kategorie **[!UICONTROL Datensammlung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Experience Platform zwischen Benutzeroberflächen zu wechseln.
 * **Benutzerzuordnung in Tags und Ereignisweiterleitung**: Bei der Auflistung der verfügbaren Eigenschaften in Tags und Ereignisweiterleitung wird jetzt für jede aufgeführte Eigenschaft angezeigt, wann und von wem sie zuletzt aktualisiert wurde.
 * **[[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung**: Sie können jetzt mit einer Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) Daten an [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html).
 

@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Ziel-Server-Konfiguration
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 100%
+source-wordcount: '467'
+ht-degree: 96%
 
 ---
 
@@ -221,7 +221,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zurückgegeben, wobei d
 
 ## Umgang mit API-Fehlern {#error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

@@ -3,28 +3,28 @@ keywords: Livefyre;Livefyre-Erweiterung
 title: Adobe Livefyre-Erweiterung
 description: Die Adobe Livefyre-Erweiterung ist ein Social-Media-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 60%
+source-wordcount: '443'
+ht-degree: 55%
 
 ---
 
 # Adobe Livefyre-Erweiterung {#adobe-livefyre-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Mit Adobe Livefyre können Sie einen konstanten Fluss von anwendergenerierten Inhalten auf Ihrer Website erkunden, organisieren und veröffentlichen, um für authentische und hochpersonalisierte Erlebnisse zu sorgen.
 
-Adobe Livefyre ist eine Social Extension in Adobe Experience Platform. Weitere Informationen zum Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre ist eine Social-Media-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe Livefyre-Erweiterung](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 So installieren Sie die Adobe Livefyre-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

@@ -6,10 +6,10 @@ title: Datenanforderungen in Kunden-KI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2545'
-ht-degree: 96%
+source-wordcount: '2551'
+ht-degree: 92%
 
 ---
 
@@ -62,8 +62,8 @@ In der folgenden Tabelle sind einige der in diesem Dokument häufig verwendeten 
 
 | Begriff | Definition |
 | --- | --- |
-| [Experience-Datenmodell (XDM)](../../xdm/home.md) | XDM ist der grundlegende Rahmen, durch den Adobe Experience Cloud als Teil von Adobe Experience Platform die richtige Botschaft der richtigen Person zur richtigen Zeit auf dem richtigen Kanal präsentieren kann. Platform verwendet das XDM-System, um Daten auf eine bestimmte Weise zu organisieren, die die Verwendung für Platform-Services vereinfacht. |
-| [XDM-Schema](../../xdm/schema/composition.md) | Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemata bestehen aus einer XDM-Basisklasse und keiner, einer oder mehreren Schemafeldgruppen. |
+| [Experience-Datenmodell (XDM)](../../xdm/home.md) | XDM ist der grundlegende Rahmen, durch den Adobe Experience Cloud als Teil von Adobe Experience Platform die richtige Botschaft der richtigen Person zur richtigen Zeit auf dem richtigen Kanal präsentieren kann. Experience Platform verwendet das XDM-System, um Daten auf eine bestimmte Weise zu organisieren, die die Verwendung für Experience Platform-Services vereinfacht. |
+| [XDM-Schema](../../xdm/schema/composition.md) | Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Experience Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp einschränkt, der in den einzelnen Feldern enthalten sein kann. Schemata bestehen aus einer XDM-Basisklasse und keiner, einer oder mehreren Schemafeldgruppen. |
 | [XDM-Klasse](../../xdm/schema/field-constraints.md) | Alle XDM-Schemata beschreiben Daten, die als `Experience Event` kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben. |
 | [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldgruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldgruppen sind nur mit bestimmten Klassen kompatibel, angegeben durch ihr `meta:intendedToExtend`-Attribut. |
 | [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die ebenfalls ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch stellen Datentypen eine flexiblere Möglichkeit dar, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemata mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von CEE- als auch von Adobe Analytics-Schemata unterstützt. |
@@ -75,7 +75,7 @@ Bei Eingabedatensätzen wie Adobe Analytics und Adobe Audience Manager ordnen di
 
 Weitere Informationen zum Zuordnen von Adobe Analytics- oder Audience Manager-Daten finden Sie im Handbuch zu Analytics-Feldzuordnungen bzw. im [Handbuch zu Audience Manager-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
-Sie können XDM-Schemata für Erlebnis- oder Kundenerlebnisereignisse bei Eingabedatensätzen verwenden, die nicht über einen der oben genannten Connectoren aufgefüllt werden. Während der Schema-Erstellung können zusätzliche XDM-Feldergruppen hinzugefügt werden. Die Feldergruppen können von Adobe (wie die Standardfeldgruppen) oder als benutzerdefinierte Feldergruppen bereitgestellt werden, die der Datendarstellung in Platform entsprechen.
+Sie können XDM-Schemata für Erlebnis- oder Kundenerlebnisereignisse bei Eingabedatensätzen verwenden, die nicht über einen der oben genannten Connectoren aufgefüllt werden. Während der Schema-Erstellung können zusätzliche XDM-Feldergruppen hinzugefügt werden. Die Feldergruppen können von Adobe bereitgestellt werden, z. B. die Standardfeldgruppen oder eine benutzerdefinierte Feldergruppe, die der Datendarstellung in Experience Platform entspricht.
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen ve
 
 Kunden-KI verwendet die Ereignisse standardmäßig in diesen vier Standardfeldgruppen: „Commerce“, „Web“, „Anwendung“ und „Suche“. Es ist nicht erforderlich, dass Daten für jedes Ereignis in den unten aufgeführten Standardfeldgruppen vorhanden sind. Bei bestimmten Szenarien werden jedoch bestimmte Ereignisse vorausgesetzt. Wenn Ereignisse in den Standardfeldgruppen verfügbar sind, wird empfohlen, diese in Ihr Schema einzuschließen. Wenn Sie beispielsweise ein Kunden-KI-Modell für die Prognose von Kaufereignissen erstellen möchten, sind dafür Daten aus den Feldergruppen mit Commerce- und Web-Seiten-Details hilfreich.
 
-Um eine Feldergruppe in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie in der linken Leiste die Registerkarte **[!UICONTROL Schemata]** und dann die Registerkarte **[!UICONTROL Feldergruppen]** aus.
+Um eine Feldergruppe in der Experience Platform-Benutzeroberfläche anzuzeigen, wählen Sie in der linken Leiste die Registerkarte **[!UICONTROL Schemata]** und dann die Registerkarte **[!UICONTROL Feldergruppen]** aus.
 
 | Feldergruppe | Ereignistyp | XDM-Feldpfad |
 | --- | --- | --- |
@@ -211,7 +211,7 @@ Kunden-KI benötigt nicht nur eine Mindestzeitspanne, für die die Daten im Syst
 
 Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet gelten. Es gibt zwei Möglichkeiten, die Bewertung (Ausgabe) basierend auf dem, was Sie bereitgestellt haben, zu nutzen. Wenn Sie über einen Datensatz mit aktiviertem Echtzeit-Kundenprofil verfügen, können Sie Einblicke aus dem Echtzeit-Kundenprofil im [Segment Builder](../../segmentation/ui/segment-builder.md) nutzen. Wenn Sie keinen Datensatz mit aktiviertem Profil haben, können Sie den [Kunden-KI-Ausgabedatensatz herunterladen](./user-guide/download-scores.md), der im Data Lake verfügbar ist.
 
-Den Ausgabedatensatz finden Sie im Platform-Arbeitsbereich **Datensätze**. Alle Kunden-KI-Ausgabedatensätze beginnen mit dem Namen **Kunden-KI-Bewertungen – NAME_DER_APP**. Ebenso beginnen alle Kunden-KI-Ausgabeschemata mit dem Namen **Kunden-KI-Schema – Name_der_App**.
+Den Ausgabedatensatz finden Sie im Experience Platform-Arbeitsbereich **Datensätze** . Alle Kunden-KI-Ausgabedatensätze beginnen mit dem Namen **Kunden-KI-Bewertungen – NAME_DER_APP**. Ebenso beginnen alle Kunden-KI-Ausgabeschemata mit dem Namen **Kunden-KI-Schema – Name_der_App**.
 
 ![Name der Ausgabedatensätze in Kunden-KI](./images/user-guide/cai-schema-name-of-app.png)
 

@@ -3,10 +3,10 @@ title: Dokumentationsvorlage für Selbstbedienungs-Streaming in der SDK-Benutzer
 description: Erfahren Sie, wie Sie Streaming-Daten aus einer Quelle mithilfe der Benutzeroberfläche in Adobe Experience Platform übertragen.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 19%
+source-wordcount: '1194'
+ht-degree: 16%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 19%
 
 *Aktualisieren Sie zunächst die Metadaten (Titel und Beschreibung) oben auf der Seite. Bitte ignorieren Sie alle Instanzen von UICONTROL auf dieser Seite. Dieses Tag hilft unseren maschinellen Übersetzungsprozessen dabei, die Seite korrekt in die verschiedenen Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation nach dem Absenden Tags hinzu.*
 
-In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE*-Quell-Connectors mithilfe der Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE*-Quell-Connectors mithilfe der Experience Platform-Benutzeroberfläche beschrieben.
 
-## Übersicht
+## Überblick
 
 *Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es für Kunden bietet. Fügen Sie einen Link zu Ihrer Startseite der Produktdokumentation für weitere Informationen hinzu.*
 
@@ -37,7 +37,7 @@ In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE*-Quell-Connec
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zwischen *YOURSOURCE* und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung zwischen *YOURSOURCE* und Experience Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumenta
 
 ## Verbinden Ihres *YOURSOURCE*-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -61,13 +61,13 @@ Wählen Sie unter **Kategorie** Streaming“ die Option *IHRE*) und dann **[!UIC
 
 >[!TIP]
 >
->Im Folgenden finden Sie einige Beispiele für verwendete Screenshots. Ersetzen Sie beim Erstellen Ihrer Dokumentation die Bilder durch Screenshots Ihrer tatsächlichen Quelle. Sie können dasselbe Markierungsmuster und dieselbe Farbe sowie dieselben Dateinamen verwenden. Stellen Sie sicher, dass Ihr Screenshot den gesamten Bildschirm der Platform-Benutzeroberfläche erfasst. Informationen zum Hochladen Ihrer Screenshots finden Sie im Handbuch unter [Übermitteln Ihrer Dokumentation zur Überprüfung](../documentation/github.md).
+>Im Folgenden finden Sie einige Beispiele für verwendete Screenshots. Ersetzen Sie beim Erstellen Ihrer Dokumentation die Bilder durch Screenshots Ihrer tatsächlichen Quelle. Sie können dasselbe Markierungsmuster und dieselbe Farbe sowie dieselben Dateinamen verwenden. Stellen Sie sicher, dass Ihr Screenshot den gesamten Bildschirm der Experience Platform-Benutzeroberfläche erfasst. Informationen zum Hochladen Ihrer Screenshots finden Sie im Handbuch unter [Übermitteln Ihrer Dokumentation zur Überprüfung](../documentation/github.md).
 
 ![Der Experience Platform-Quellkatalog](../assets/streaming/catalog.png)
 
 ## Daten auswählen
 
-Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Platform übermitteln.
+Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Experience Platform übermitteln.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Teil der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer JSON-Datei anzeigen.
@@ -94,7 +94,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -123,7 +123,7 @@ Um Ihren Streaming-Endpunkt abzurufen, gehen Sie zur Seite [!UICONTROL Datenflus
 
 *Die Workflows für die verbleibenden Schritte zum Erstellen eines Datenflusses werden modularisiert. Wenn Sie bestimmte Aufrufe bezüglich Ihrer Quelle durchführen möchten, lesen Sie bitte den Abschnitt Zusätzliche Ressourcen unten.*
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Zusätzliche Ressourcen
 

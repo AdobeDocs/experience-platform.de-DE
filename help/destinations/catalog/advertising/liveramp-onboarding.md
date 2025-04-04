@@ -3,10 +3,10 @@ title: LiveRamp – Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 89%
+source-wordcount: '1948'
+ht-degree: 84%
 
 ---
 
@@ -38,7 +38,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Screenshot der Platform-Benutzeroberfläche mit Informationen zum Ausfüllen von Details für Ihr Ziel](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Ausfüllen von Details für Ihr Ziel](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -135,13 +135,13 @@ Erstellen Sie im [!UICONTROL Planungsschritt] für jede Zielgruppe einen Exportz
 * **[!UICONTROL Häufigkeit]**: [!UICONTROL Täglich]
 * **[!UICONTROL Datum]**: Wählen Sie die gewünschten Start- und Endzeiten für den Export aus.
 
-![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Zielgruppenplanung.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit dem Schritt zur Zielgruppen-Planung.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 Der Name der exportierten Datei kann derzeit nicht benutzerseitig konfiguriert werden. Alle an das [!DNL LiveRamp - Onboarding]-Ziel exportierten Dateien werden automatisch anhand der folgenden Vorlage benannt:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Screenshot der Platform-Benutzeroberfläche mit der Namensvorlage für exportierte Dateien.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+Screenshot der Experience Platform-Benutzeroberfläche mit der Namensvorlage für exportierte Dateien.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)![
 
 Beispielsweise könnte der Name einer exportierten Datei für eine Organisation mit dem Namen [!DNL Luma] in etwa wie folgt aussehen:
 
@@ -187,7 +187,7 @@ Ihre Daten werden an den von Ihnen konfigurierten [!DNL LiveRamp - Onboarding]-S
 
 Exportierte Dateien haben eine maximale Größe von 10 Millionen Zeilen. Experience Platform generiert mehrere Dateien pro Versand, wenn die ausgewählten Zielgruppen 10 Millionen Zeilen überschreiten. Wenn Sie erwarten, dass das Limit für einzelne Dateien überschritten wird, wenden Sie sich an Ihren [!DNL LiveRamp] und bitten Sie ihn, die Batch-Aufnahme für Sie zu konfigurieren.
 
-Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
+Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Experience Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
 
 Betrachten wir beispielsweise folgende Zielgruppen:
 
@@ -196,7 +196,7 @@ Betrachten wir beispielsweise folgende Zielgruppen:
 * Zielgruppe C (Zusammenführungsrichtlinie 1)
 * Zielgruppe D (Zusammenführungsrichtlinie 1)
 
-Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp - Onboarding]:
+Experience Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp - Onboarding]:
 
 * Eine CSV-Datei mit den Zielgruppen A, C und D;
 * Eine CSV-Datei, die Zielgruppe B enthält.
@@ -223,9 +223,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Im obigen Beispiel beschreiben die Abschnitte `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Zielgruppen, die vom Segmentierungs-Service stammen, während `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` eine Zielgruppe beschreibt, die als [benutzerdefinierter Upload in die Plattform importiert wurde](../../../segmentation/ui/audience-portal.md#import-audience).
+Im obigen Beispiel beschreiben die Abschnitte `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Zielgruppen, die vom Segmentierungs-Service stammen, während `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` eine Zielgruppe beschreibt, die als [ in Experience Platform importiert ](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Da Platform für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) eine CSV-Datei generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
+Da Experience Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID generiert.
 
 Das bedeutet, dass die Metriken **[!UICONTROL Aktivierte Identitäten]** und **[!UICONTROL Empfangene Profile]** auf der Seite mit den [Datenflussausführungen](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) für jede Gruppe von Zielgruppen aggregiert werden, die dieselbe Zusammenführungsrichtlinie verwenden, anstatt für jede Zielgruppe angezeigt zu werden.
 

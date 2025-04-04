@@ -3,7 +3,7 @@ keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;SendGrid;SendGrid-Ziel
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre First-Party-Daten exportieren und in SendGrid für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 24%
@@ -40,7 +40,7 @@ Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](http
 >
 >* Für die SendGrid-API, die zum Erstellen der Mailing-Liste aus E-Mail-Profilen verwendet wird, müssen in jedem Profil eindeutige E-Mail-Adressen angegeben werden. Dies gilt unabhängig davon, ob es als Wert für (E *Mail* oder *alternative E-Mail* verwendet wird. Da die SendGrid-Verbindung Zuordnungen sowohl für E-Mail- als auch für alternative E-Mail-Werte unterstützt, stellen Sie sicher, dass alle verwendeten E-Mail-Adressen in jedem Profil des *Datensatzes) eindeutig*. Andernfalls führt das Senden der E-Mail-Profile an SendGrid zu einem Fehler, und dieses E-Mail-Profil ist nicht im Datenexport vorhanden.
 >
->* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie aus Zielgruppen im Experience Platform entfernt werden.
+>* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie aus Zielgruppen in Experience Platform entfernt werden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -48,7 +48,7 @@ SendGrid unterstützt die Aktivierung von Identitäten, die in der folgenden Tab
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail | E-Mail-Adresse | Beachten Sie, dass sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von [!DNL Adobe Experience Platform] unterstützt werden. Wenn das Quellfeld von Experience Platform ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit die Daten bei Aktivierung automatisch gehasht [!DNL Platform].<br/><br/> Beachten Sie, dass **SendGrid** keine Hash-E-Mail-Adressen unterstützt, sodass nur Textdaten ohne Umwandlung an das Ziel gesendet werden. |
+| E-Mail | E-Mail-Adresse | Beachten Sie, dass sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von [!DNL Adobe Experience Platform] unterstützt werden. Wenn das Quellfeld von Experience Platform ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform].<br/><br/> Beachten Sie, dass **SendGrid** keine Hash-E-Mail-Adressen unterstützt, sodass nur Textdaten ohne Umwandlung an das Ziel gesendet werden. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das SendGrid-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
@@ -125,7 +125,7 @@ Auf den folgenden Bildern finden Sie Details, die speziell für dieses Ziel gelt
 1. Wählen Sie eine oder mehrere Zielgruppen für den Export in SendGrid aus.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. Im Schritt **[!UICONTROL Zuordnung]** wird nach der Auswahl von **[!UICONTROL Neue Zuordnung hinzufügen]** die Zuordnungsseite angezeigt, auf der die Quell-XDM-Felder den SendGrid-API-Zielfeldern zugeordnet werden. Die folgenden Bilder zeigen, wie Identitäts-Namespaces zwischen Experience Platform und SendGrid zugeordnet werden. Stellen Sie sicher, dass das Feld **[!UICONTROL Source]** *email* wie unten gezeigt dem Feld **[!UICONTROL Target]** *external_id* zugeordnet werden sollte.
+1. Im Schritt **[!UICONTROL Zuordnung]** wird nach der Auswahl von **[!UICONTROL Neue Zuordnung hinzufügen]** die Zuordnungsseite angezeigt, auf der die Quell-XDM-Felder den SendGrid-API-Zielfeldern zugeordnet werden. Die folgenden Bilder zeigen, wie Identity-Namespaces zwischen Experience Platform und SendGrid zugeordnet werden. Stellen Sie sicher, dass das Feld **[!UICONTROL Source]** *email* wie unten gezeigt dem Feld **[!UICONTROL Target]** *external_id* zugeordnet werden sollte.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)

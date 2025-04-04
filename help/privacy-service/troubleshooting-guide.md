@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 89%
@@ -63,7 +63,7 @@ Das Array enthält zwei Objekte, die einzelne durch ihre `key`-Werte („DavidSm
 Weiterführende Informationen zur Bereitstellung von Informationen zu Benutzeridentitäten finden Sie im Handbuch zu [Identitätsdaten für Datenschutzanfragen](identity-data.md).
 
 
-## Kann ich [!DNL Privacy Service] verwenden, um Daten zu bereinigen, die versehentlich an [!DNL Platform] gesendet wurden?
+## Kann ich [!DNL Privacy Service] verwenden, um Daten zu bereinigen, die versehentlich an [!DNL Experience Platform] gesendet wurden?
 
 Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen von Daten, die versehentlich an ein Produkt gesendet wurden. [!DNL Privacy Service] unterstützt Sie bei der Erfüllung Ihrer Verpflichtungen bezüglich Auskunfts- oder Löschanfragen von betroffenen Personen (oder Verbraucherinnen und Verbrauchern). Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig.
 
@@ -111,4 +111,4 @@ In der folgenden Tabelle sind einige häufige Fehler in [!DNL Privacy Service] m
 | Zugriff und Berechtigungen sind erforderlich. | Zugriff und Berechtigungen sind erforderlich, um [!DNL Privacy Service] verwenden zu können. Wenden Sie sich an Ihre Admins, um Zugriff zu erhalten. |
 | Beim Hochladen und Archivieren der Zugriffsdaten ist ein Problem aufgetreten. | Laden Sie bei diesem Fehler die Zugriffsdaten erneut hoch und versuchen Sie es erneut. |
 | Arbeitslast für aktuelles Limit der Dokumentzahl überschritten. | Reduzieren Sie bei diesem Fehler die Übermittlungsrate und versuchen Sie es erneut. |
-| Zu viele Anfragen<br>(HTTP 429-Fehler) | Wenn Ihre Übermittlungsmuster das überwachte Limit der zulässigen Anzahl von Aufträgen betroffener Personen überschreiten, erhalten Sie einen HTTP-429-Fehler als Antwort auf den anhaltenden Traffic von Ihrem Unternehmen. Dieser Privacy Service ist für die Verarbeitung von Datenschutzanfragen betroffener Personen vorgesehen. Sie darf nicht für die Datenbereinigung verwendet werden. Wenn Sie HTTP 429-Fehler erhalten, werden Einschränkungen für Einschränkungen und Anfragen implementiert, um Adobe vor Missbrauch zu schützen, der die Arbeit an legitimen Compliance-Anforderungen gefährden könnte.<br>Alternative Methoden zum Minimieren Ihrer Daten werden bereitgestellt, indem [Ablaufzeitpläne für Datensätze festlegen](../hygiene/ui/dataset-expiration.md) und die Funktion zum Löschen [ Datensätzen verwendet ](../hygiene/ui/record-delete.md). Weitere Informationen zur Anwendung dieser Funktionen finden Sie in der entsprechenden Dokumentation. |
+| Zu viele Anfragen<br>(HTTP 429-Fehler) | Wenn Ihre Übermittlungsmuster das überwachte Limit der zulässigen Anzahl von Aufträgen betroffener Personen überschreiten, erhalten Sie einen HTTP-429-Fehler als Antwort auf den anhaltenden Traffic von Ihrem Unternehmen. Privacy Service ist für die Verarbeitung von Datenschutzanfragen betroffener Personen vorgesehen. Sie darf nicht für die Datenbereinigung verwendet werden. Wenn Sie HTTP 429-Fehler erhalten, werden Einschränkungen für Einschränkungen und Anfragen implementiert, um Adobe vor Missbrauch zu schützen, der die Arbeit mit legitimen Compliance-Anforderungen gefährden könnte.<br>Alternative Methoden zum Minimieren Ihrer Daten werden bereitgestellt, indem [Ablaufzeitpläne für Datensätze festlegen](../hygiene/ui/dataset-expiration.md) und die Funktion zum Löschen [ Datensätzen verwendet ](../hygiene/ui/record-delete.md). Weitere Informationen zur Anwendung dieser Funktionen finden Sie in der entsprechenden Dokumentation. |

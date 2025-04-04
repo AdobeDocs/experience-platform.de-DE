@@ -3,12 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenspeicherort;Datens
 solution: Experience Platform
 title: Übersicht zu Datensätzen
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
-user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen umfassenden Überblick über Datensätze im Experience Platform. Hier erfahren Sie, wie Sie sie erstellen, Dateneinschränkungen durchsetzen und Daten in Datensätze aufnehmen können.
+user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen Überblick über Datensätze in Experience Platform. Hier erfahren Sie, wie Sie sie erstellen, Dateneinschränkungen durchsetzen und Daten in Datensätze aufnehmen können.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 89%
+source-wordcount: '872'
+ht-degree: 86%
 
 ---
 
@@ -26,7 +26,7 @@ Weitere Informationen dazu inden Sie in der [Übersicht zum Katalog-Service](../
 
 ## Durchsetzen von Einschränkungen für Datensatzdaten
 
-Das [!DNL Experience Data Model] (XDM) ist das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. Alle in [!DNL Platform] aufgenommene Daten müssen einem vordefinierten XDM-Schema entsprechen, bevor sie in [!DNL Data Lake] als Datensatz beibehalten werden können.
+Das [!DNL Experience Data Model] (XDM) ist das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert. Alle in [!DNL Experience Platform] aufgenommene Daten müssen einem vordefinierten XDM-Schema entsprechen, bevor sie in [!DNL Data Lake] als Datensatz beibehalten werden können.
 
 Alle Datensätze enthalten einen Verweis auf das XDM-Schema, das das Format und die Struktur der Daten einschränkt, die sie speichern können. Der Versuch, Daten in einen Datensatz hochzuladen, der nicht dem XDM-Schema des Datensatzes entspricht, führt dazu, dass die Aufnahme fehlschlägt.
 
@@ -34,7 +34,7 @@ Weitere Informationen zu XDM finden Sie in der [Übersicht zum XDM-System](../..
 
 ## Aufnehmen von Daten in Datensätze
 
-Die Adobe Experience Platform-Datenaufnahme steht für die verschiedenen Methoden, mit denen [!DNL Platform] Daten aus verschiedenen Quellen aufnimmt. Unabhängig von der Aufnahmemethode werden alle erfolgreich aufgenommenen Daten in Batch-Dateien konvertiert. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Diese Batch-Dateien werden dann zu dedizierten Datensätzen hinzugefügt und innerhalb des [!DNL Data Lake] beibehalten.
+Die Adobe Experience Platform-Datenaufnahme steht für die verschiedenen Methoden, mit denen [!DNL Experience Platform] Daten aus verschiedenen Quellen aufnimmt. Unabhängig von der Aufnahmemethode werden alle erfolgreich aufgenommenen Daten in Batch-Dateien konvertiert. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Diese Batch-Dateien werden dann zu dedizierten Datensätzen hinzugefügt und innerhalb des [!DNL Data Lake] beibehalten.
 
 Weitere Informationen finden Sie in der [Übersicht zur Datenaufnahme](../../ingestion/home.md).
 
@@ -44,16 +44,16 @@ Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalt
 
 >[!IMPORTANT]
 >
->Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../../data-governance/e2e.md#migrate-labels).
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf der Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../../data-governance/e2e.md#migrate-labels).
 
-Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md). Schrittweise Anweisungen zum Arbeiten mit Nutzungskennzeichnungen in [!DNL Platform] finden Sie in den folgenden Handbüchern:
+Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md). Schrittweise Anweisungen zum Arbeiten mit Nutzungskennzeichnungen in [!DNL Experience Platform] finden Sie in den folgenden Handbüchern:
 
 * [Verwalten von Kennzeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
 * [Verwalten von Datensatzkennzeichnungen in der API](../../data-governance/labels/dataset-api.md)
 
-## Datensätze in nachgelagerten [!DNL Platform]-Services
+## Datensätze in nachgelagerten [!DNL Experience Platform]-Services
 
-Sobald Datensätze zum Speichern aufgenommener Daten verwendet wurden, werden diese Datensätze von nachgelagerten [!DNL Platform]-Services verwendet, um Kundenprofile zu aktualisieren, Erkenntnisse durch maschinelles Lernen zu gewinnen und vieles mehr.
+Sobald Datensätze zum Speichern aufgenommener Daten verwendet wurden, werden diese Datensätze von nachgelagerten [!DNL Experience Platform]-Services verwendet, um Kundenprofile zu aktualisieren, Erkenntnisse durch maschinelles Lernen zu gewinnen und vieles mehr.
 
 Im Folgenden finden Sie eine Liste nachgelagerter Services, die Datensätze für verschiedene Vorgänge verwenden. Weitere Informationen finden Sie in der Dokumentation für den jeweiligen Service.
 
@@ -67,6 +67,6 @@ Im Folgenden finden Sie eine Liste nachgelagerter Services, die Datensätze für
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie sich mit den wichtigsten Verwendungen von Datensätzen in [!DNL Experience Platform] sowie mit den verschiedenen [!DNL Platform]-Services, die Datensätze verwenden, vertraut gemacht. Weitere Informationen zu den zahlreichen Verwendungsmöglichkeiten von Datensätzen in [!DNL Platform] finden Sie in den Service-Dokumentationen, zu denen im Verlauf dieser Übersicht verlinkt wird.
+Durch das Lesen dieses Dokuments haben Sie sich mit den wichtigsten Verwendungen von Datensätzen in [!DNL Experience Platform] sowie mit den verschiedenen [!DNL Experience Platform]-Services, die Datensätze verwenden, vertraut gemacht. Weitere Informationen zu den zahlreichen Verwendungsmöglichkeiten von Datensätzen in [!DNL Experience Platform] finden Sie in den Service-Dokumentationen, zu denen im Verlauf dieser Übersicht verlinkt wird.
 
 Anweisungen zur Interaktion mit Datensätzen in der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch zu Datensätzen](user-guide.md).

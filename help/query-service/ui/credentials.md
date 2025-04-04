@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zu Query Service-Anmeldeinformationen
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Mit dem Abfrage-Service von Adobe Experience Platform können Sie eine Verbindun
 
 >[!NOTE]
 >
->Der Bereich für Anmeldedaten steht nicht automatisch allen Benutzenden zur Verfügung. Wenden Sie sich an Ihr Adobe-Konto-Team, um bei Bedarf die Registerkarte [!UICONTROL Anmeldeinformationen] anzufordern, die in den Arbeitsbereich des Abfrage-Services aufgenommen werden soll. Falls gewünscht, ist diese Änderung organisationsweit und wird vom Entwicklungsteam der Adobe durchgeführt. Es handelt sich nicht um eine von Benutzern gesteuerte Einstellung.
+>Der Bereich für Anmeldedaten steht nicht automatisch allen Benutzenden zur Verfügung. Wenden Sie sich an Ihr Adobe-Konto-Team, um bei Bedarf die Registerkarte [!UICONTROL Anmeldeinformationen] anzufordern, die in den Arbeitsbereich des Abfrage-Services aufgenommen werden soll. Auf Anforderung ist diese Änderung organisationsweit und wird vom Engineering-Team von Adobe durchgeführt. Es handelt sich nicht um eine von Benutzern gesteuerte Einstellung.
 
 ## Ablaufende Anmeldeinformationen {#expiring-credentials}
 
@@ -32,7 +32,7 @@ Sie können ablaufende Anmeldeinformationen verwenden, um schnell eine Verbindun
 
 Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Informationen:
 
-- **[!UICONTROL Host]**: Der Name des Hosts, mit dem Ihr Client verbunden werden soll. Diese enthält den Namen Ihrer Organisation, wie er im oberen Menüband der Platform-Benutzeroberfläche zu sehen ist.
+- **[!UICONTROL Host]**: Der Name des Hosts, mit dem Ihr Client verbunden werden soll. Diese enthält den Namen Ihres Unternehmens, wie er im oberen Menüband der Experience Platform-Benutzeroberfläche zu sehen ist.
 - **[!UICONTROL Port]**: Die Port-Nummer des Hosts, mit dem eine Verbindung hergestellt werden soll.
 - **[!UICONTROL Datenbank]**: Der Name der Datenbank, mit der ein Client verbunden werden soll.
 - **[!UICONTROL Benutzername]**: Der Benutzername, mit dem eine Verbindung zum Abfrage-Service hergestellt wird.
@@ -42,33 +42,33 @@ Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Info
 
 >[!TIP]
 >
->Um die Sitzungsdauer für Ihre ablaufenden Anmeldedaten für die Verbindung zum Abfrage-Service zu ändern, navigieren Sie zur Admin Console [](https://adminconsole.adobe.com/) und wählen Sie die folgenden Optionen auf dem Bildschirm aus: **Einstellungen** > **Datenschutz und Sicherheit** > **Authentifizierungseinstellungen** > **Erweiterte Einstellungen** > **Max Sitzungsdauer**.
+>Um die Sitzungsdauer für Ihre ablaufenden Anmeldedaten für die Verbindung zum Abfrage-Service zu ändern, navigieren Sie zu [Admin Console](https://adminconsole.adobe.com/) und wählen Sie die folgenden Optionen auf dem Bildschirm aus: **Einstellungen** > **Datenschutz und Sicherheit** > **Authentifizierungseinstellungen** > **Erweiterte Einstellungen** > **Max Sitzungsdauer**.
 >
->Admin Console ![Die Registerkarte „Sitzungseinstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
+>![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Hilfe zum Adobe.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
-### Herstellen einer Verbindung zum Customer Journey Analytics von Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
+### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
-Verwenden Sie die Customer Journey Analytics BI-Erweiterung mit Power BI oder Tableau, um mit SQL auf Ihre Customer Journey Analytics [Datenansichten](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/data-views) zuzugreifen. Durch die Integration des Abfrage-Service mit der BI-Erweiterung können Sie direkt in den Sitzungen des Abfrage-Service auf Ihre Datenansichten zugreifen. Diese Integration optimiert die Funktionalität für BI-Tools, die den Abfrage-Service als PostgreSQL-Schnittstelle verwenden. Durch diese Funktion entfällt die Notwendigkeit, Datenansichten in BI-Tools zu duplizieren. Außerdem wird ein plattformübergreifendes konsistentes Reporting sichergestellt und die Integration von Customer Journey Analytics-Daten mit anderen Quellen in BI-Plattformen vereinfacht.
+Verwenden Sie die Customer Journey Analytics BI-Erweiterung mit Power BI oder Tableau, um mit SQL auf Ihre [Datenansichten](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/data-views) von Customer Journey Analytics zuzugreifen. Durch die Integration des Abfrage-Service mit der BI-Erweiterung können Sie direkt in den Sitzungen des Abfrage-Service auf Ihre Datenansichten zugreifen. Diese Integration optimiert die Funktionalität für BI-Tools, die den Abfrage-Service als PostgreSQL-Schnittstelle verwenden. Durch diese Funktion entfällt die Notwendigkeit, Datenansichten in BI-Tools zu duplizieren. Darüber hinaus wird ein plattformübergreifendes konsistentes Reporting sichergestellt und die Integration von Customer Journey Analytics-Daten mit anderen Quellen in BI-Plattformen vereinfacht.
 
-In der Dokumentation erfahren Sie, wie Sie [Query Service mit einer Vielzahl von Desktop-Client-Anwendungen verbinden](../clients/overview.md) z. B. [Power BI ](../clients/power-bi.md) oder [Tableau](../clients/tableau.md)
+In der Dokumentation erfahren Sie, wie Sie [Query Service mit einer Vielzahl von Desktop-Client-Anwendungen verbinden](../clients/overview.md) z. B. [Power BI](../clients/power-bi.md) oder [Tableau](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
 >Um diese Funktion verwenden zu können, sind ein Customer Journey Analytics Workspace-Projekt und eine Datenansicht erforderlich.
 
-Um auf Ihre Customer Journey Analytics-Daten im Power BI oder Tableau zuzugreifen, wählen Sie das Dropdown-Menü [!UICONTROL Datenbank] und dann `prod:cja` aus den verfügbaren Optionen aus. Kopieren Sie als Nächstes Ihre [!DNL Postgres]-Anmeldedaten-Parameter (Host, Port, Datenbank, Benutzername und andere) zur Verwendung in Ihrer Power BI- oder Tableau-Konfiguration.
+Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten zuzugreifen, wählen Sie das Dropdown-Menü [!UICONTROL Datenbank] und dann `prod:cja` aus den verfügbaren Optionen aus. Kopieren Sie als Nächstes Ihre [!DNL Postgres] Anmeldedaten-Parameter (Host, Port, Datenbank, Benutzername und andere) zur Verwendung in Ihrer Power BI- oder Tableau-Konfiguration.
 
 ![Die Registerkarte „Anmeldeinformationen für den Abfrage-Service“ mit hervorgehobenem Datenbank-Dropdown-Menü.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->Wenn Sie Power BI oder Tableau mit Customer Journey Analytics verbinden, wird die Berechtigung „Gleichzeitige Sitzungen“ für den Abfrage-Service genutzt. Wenn zusätzliche Sitzungen und Abfragen erforderlich sind, kann ein zusätzliches Add-on für das Benutzerpaket für Ad-hoc-Abfragen erworben werden, um fünf zusätzliche gleichzeitige Sitzungen und eine zusätzliche gleichzeitige Abfrage zu erhalten.
+>Wenn Sie Power BI oder Tableau mit Customer Journey Analytics verbinden, wird die Berechtigung „Gleichzeitige Sitzungen“ des Abfrage-Services genutzt. Wenn zusätzliche Sitzungen und Abfragen erforderlich sind, kann ein zusätzliches Add-on für das Benutzerpaket für Ad-hoc-Abfragen erworben werden, um fünf zusätzliche gleichzeitige Sitzungen und eine zusätzliche gleichzeitige Abfrage zu erhalten.
 
-Sie können auch direkt über den Abfrage-Editor oder die Postgres-CLI auf Ihre Customer Journey Analytics-Daten zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
+Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-[ Vollständige Anweisungen zum Zugriff auf Ihre Customer Journey Analytics-Datenansichten mit SQL finden Sie ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) Handbuch zur BI-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ Alle erforderlichen Berechtigungen sind jetzt in Adobe Developer Console konfigu
 
 ### Anmeldedaten erstellen {#generate-credentials}
 
-Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Platform-Benutzeroberfläche zurück und wählen Sie in der ]**Navigation die Option**[!UICONTROL  Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
+Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im ]**Navigationsbereich**[!UICONTROL  Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
 
 ![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“ und hervorgehobener Option „Anmeldeinformationen generieren“.](../images/ui/credentials/generate-credentials.png)
 
@@ -116,7 +116,7 @@ Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTR
 
 >[!IMPORTANT]
 >
->Wenn **[!UICONTROL Anmeldeinformationen generieren]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf Ihren lokalen Computer heruntergeladen. Da beim Adobe **generierte** nicht aufgezeichnet werden, müssen Sie die heruntergeladene Datei sicher speichern und die Berechtigung aufzeichnen.
+>Wenn **[!UICONTROL Anmeldeinformationen generieren]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf Ihren lokalen Computer heruntergeladen. Da Adobe **generierten** nicht aufzeichnet, müssen Sie die heruntergeladene Datei sicher speichern und die Anmeldeinformationen aufzeichnen.
 >
 >Wenn die Anmeldeinformationen 90 Tage lang nicht verwendet werden, werden sie außerdem gelöscht.
 

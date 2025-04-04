@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Benachrichtigungen
-description: Durch das Abonnieren von Adobe I/O-Ereignissen können Sie Webhooks verwenden, um Benachrichtigungen zum Flussausführungsstatus Ihrer Quellverbindungen zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
+description: Durch das Abonnieren von Adobe I/O Events können Sie Webhooks verwenden, um Benachrichtigungen über den Flussausführungsstatus Ihrer Quellverbindungen zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
 solution: Experience Platform
 title: Benachrichtigungen zur Flussausführung
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 16%
@@ -13,11 +13,11 @@ ht-degree: 16%
 
 # Flusslaufbenachrichtigungen
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von [!DNL Platform] zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von [!DNL Experience Platform] zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Mit Adobe I/O-Ereignissen können Sie Ereignisse abonnieren und Webhooks verwenden, um Benachrichtigungen zum Status Ihrer Flussausführungen zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
+Mit Adobe I/O Events können Sie Ereignisse abonnieren und Webhooks verwenden, um Benachrichtigungen zum Status Ihrer Flussausführungen zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
 
 In diesem Dokument wird beschrieben, wie Sie Ereignisse abonnieren, Webhooks registrieren und Benachrichtigungen mit Informationen zum Status Ihrer Flussausführungen erhalten.
 
@@ -37,7 +37,7 @@ Im Tutorial zum [ von [!DNL I/O Event]-Benachrichtigungen ](../observability/ale
 >
 >Achten Sie während des Abonnementvorgangs darauf, dass Sie **[!UICONTROL Platform-Benachrichtigungen]** als Ereignisanbieter auswählen und die folgenden Ereignisabonnements auswählen:
 >
->* Die Flussausführung von **[!UICONTROL Experience Platform Source war erfolgreich]**
+>* Flussausführung von **[!UICONTROL Experience Platform Source war erfolgreich]**
 >* Die Flussausführung von **[!UICONTROL Experience Platform Source ist fehlgeschlagen]**
 
 ## Benachrichtigungen zur Flussausführung empfangen
@@ -323,9 +323,9 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit F
 
 ### Fehlermeldungen verstehen {#errors}
 
-Aufnahmefehler können auftreten, wenn Daten aus der Quelle kopiert werden oder wenn die kopierten Daten zu [!DNL Platform] verarbeitet werden. Weitere Informationen zu bestimmten Fehlern finden Sie in der folgenden Tabelle.
+Aufnahmefehler können auftreten, wenn Daten aus der Quelle kopiert werden oder wenn die kopierten Daten zu [!DNL Experience Platform] verarbeitet werden. Weitere Informationen zu bestimmten Fehlern finden Sie in der folgenden Tabelle.
 
 | Fehler | Beschreibung |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Fehler beim Kopieren von Daten aus einer Quelle. |
-| `CONNECTOR-2001-500` | Fehler beim Verarbeiten der kopierten Daten in [!DNL Platform]. Dieser Fehler kann beim Analysieren, Validieren oder Transformieren auftreten. |
+| `CONNECTOR-2001-500` | Fehler beim Verarbeiten der kopierten Daten in [!DNL Experience Platform]. Dieser Fehler kann beim Analysieren, Validieren oder Transformieren auftreten. |

@@ -2,9 +2,9 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard zur Einverständnisanalyse erstellen, um zu verfolgen, wie sich das Einverständnis der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ In der heutigen Marketing-Landschaft müssen Sie die Voreinstellungen für das K
 
 In diesem Dokument wird beschrieben, wie Sie ein Einverständnis-Dashboard für verschiedene Marketing-Anwendungsfälle für Real-Time CDP-Daten erstellen. Insbesondere wird beschrieben, wie Sie eine Zielgruppe mit den entsprechenden Attributen für Ihre Geschäftsanforderungen erstellen und diese Einblicke dann mithilfe vorkonfigurierter Widgets in der Adobe Experience Platform-Benutzeroberfläche nutzen können. Eine alternative Methode zum Erstellen eines eigenen benutzerdefinierten Widgets mit der benutzerdefinierten Dashboards-Funktion wird ebenfalls vorgestellt.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Die in diesem Handbuch behandelten Anwendungsfälle sind Einverständnistrends und Einverständnisüberschneidungen.
 
@@ -24,7 +24,7 @@ Die in diesem Handbuch behandelten Anwendungsfälle sind Einverständnistrends u
 
 ## Erstellen von einverstandenen Zielgruppen {#create-consent-audiences}
 
-Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-Time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts ]**der Ansicht**[!UICONTROL  Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
+Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-Time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts ]**der Ansicht**[!UICONTROL  Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
 
 ![Das [!UICONTROL Zielgruppen]-Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen] und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobe hat verschiedene Einblicke erstellt, die automatisch für Sie in den Dashb
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
-Um die Überschneidung zwischen zwei Einverständnis-Zielgruppen zu überprüfen, fügen Sie [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“ zu ] Profile-Dashboard hinzu und wählen Sie die gewünschten Zielgruppen in den Dropdown-Menüs aus. In der Dokumentation finden Sie Anweisungen zum Hinzufügen eines Widgets zu Ihrem Dashboard [*Zielgruppenüberschneidung nach Zusammenführungsrichtlinie*](../guides/profiles.md#audience-overlap-by-merge-policy) für weitere Informationen zu den Erkenntnissen.
+Um die Überschneidung zwischen zwei Einverständnis-Zielgruppen zu überprüfen, fügen Sie [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“ zu ] Profile-Dashboard hinzu und wählen Sie die gewünschten Zielgruppen in den Dropdown-Menüs aus. Weitere Informationen zur insight finden Sie in der Dokumentation zu Anweisungen zum Hinzufügen eines Widgets zu Ihrem Dashboard [*Zielgruppenüberschneidung nach Zusammenführungsrichtlinie*](../guides/profiles.md#audience-overlap-by-merge-policy) .
 
 <!-- Image needs updating to night mode -->
 

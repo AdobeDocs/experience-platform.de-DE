@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2116'
-ht-degree: 78%
+source-wordcount: '2126'
+ht-degree: 70%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 78%
 
 Datennutzungsbeschriftungen und -richtlinien stehen allen Adobe Experience Platform-Benutzern zur Verfügung. Definieren Sie Datennutzungsrichtlinien und wenden Sie Datennutzungskennzeichnungen an, um sicherzustellen, dass vertrauliche, identifizierbare oder vertragliche Daten korrekt verarbeitet werden. Diese Maßnahmen helfen bei der Durchsetzung der Data-Governance-Regeln Ihres Unternehmens darüber, wie Daten aufgerufen, verarbeitet, gespeichert und freigegeben werden können.
 
-Um Ihr Unternehmen vor potenziellen Risiken und Verbindlichkeiten zu schützen, erzwingt Platform automatisch Nutzungsrichtlinien, falls beim Aktivieren von Zielgruppen für Ziele Verstöße auftreten.
+Um Ihr Unternehmen vor potenziellen Risiken und Verbindlichkeiten zu schützen, erzwingt Experience Platform automatisch Nutzungsrichtlinien, falls beim Aktivieren von Zielgruppen für Ziele Verstöße auftreten sollten.
 
 >[!IMPORTANT]
 >
@@ -25,12 +25,12 @@ Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data G
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt Kenntnisse der verschiedenen Platform-Services voraus, die an der automatischen Durchsetzung beteiligt sind. Lesen Sie die folgende Dokumentation, um mehr zu erfahren, bevor Sie mit diesem Handbuch fortfahren:
+Dieses Handbuch setzt Grundkenntnisse der Experience Platform-Services voraus, die an der automatischen Durchsetzung beteiligt sind. Lesen Sie die folgende Dokumentation, um mehr zu erfahren, bevor Sie mit diesem Handbuch fortfahren:
 
-* [Adobe Experience Platform Data Governance](../home.md): Das Framework, mit dem Platform die Einhaltung der Datennutzungskonformität durch die Verwendung von Beschriftungen und Richtlinien erzwingt.
+* [Adobe Experience Platform Data Governance](../home.md): Das Framework, mit dem Experience Platform die Einhaltung der Datennutzungskonformität durch die Verwendung von Kennzeichnungen und Richtlinien erzwingt.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Die Segmentierungs-Engine, die in [!DNL Platform] verwendet wird, um Zielgruppen aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
-* [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten von Platform aus für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und mehr ermöglichen.
+* [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Die Segmentierungs-Engine, die in [!DNL Experience Platform] verwendet wird, um Zielgruppen aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
+* [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten aus Experience Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und mehr ermöglichen.
 
 ## Durchsetzungsfluss {#flow}
 
@@ -53,13 +53,13 @@ Wenn eine Zielgruppe zum ersten Mal aktiviert wird, prüft [!DNL Policy Service]
 
 ## Datenherkunft {#lineage}
 
-Die Datenherkunft spielt eine zentrale Rolle bei der Durchsetzung von Richtlinien in Platform. Generell bezieht sich die Datenherkunft auf die Herkunft eines Datensatzes und darauf, was mit einem Datensatz mit der Zeit passiert (oder wo er sich bewegt).
+Die Datenherkunft spielt eine wichtige Rolle bei der Durchsetzung von Richtlinien in Experience Platform. Generell bezieht sich die Datenherkunft auf die Herkunft eines Datensatzes und darauf, was mit einem Datensatz mit der Zeit passiert (oder wo er sich bewegt).
 
-Im Rahmen von Data Governance ermöglicht die Datenherkunft die Übertragung von Datennutzungskennzeichnungen von Schemata auf nachgeordnete Services, die diese Daten verwenden, beispielsweise auf Echtzeit-Kundenprofile und Ziele. Dies ermöglicht die Auswertung und Durchsetzung von Richtlinien an verschiedenen wichtigen Punkten auf dem Weg der Daten in Platform und bietet den Datennutzern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
+Im Rahmen von Data Governance ermöglicht die Datenherkunft die Übertragung von Datennutzungskennzeichnungen von Schemata auf nachgeordnete Services, die diese Daten verwenden, beispielsweise auf Echtzeit-Kundenprofile und Ziele. Auf diese Weise können Richtlinien an verschiedenen wichtigen Punkten auf dem Journey der Daten über Experience Platform bewertet und durchgesetzt werden. Außerdem erhalten Datennutzer einen Kontext dazu, warum eine Richtlinienverletzung aufgetreten ist.
 
 In Experience Platform geht es bei der Durchsetzung der Richtlinien um folgende Herkunft:
 
-1. Daten werden in Platform erfasst und in **Datensätzen** gespeichert.
+1. Daten werden in Experience Platform aufgenommen und in (**)**.
 1. Kundenprofile werden anhand dieser Datensätze identifiziert und erstellt, indem Datenfragmente gemäß der **Zusammenführungsrichtlinie** zusammengeführt werden.
 1. Profilgruppen werden auf der Basis von gemeinsamen Attributen in **Zielgruppen** unterteilt.
 1. Zielgruppen werden für nachgelagerte **Ziele** aktiviert.
@@ -69,7 +69,7 @@ Jeder Schritt in der oben genannten Timeline stellt eine Entität dar, die wie i
 | Datenherkunftsphase | Rolle bei der Richtliniendurchsetzung |
 | --- | --- |
 | Datensatz | Datensätze enthalten Datennutzungskennzeichnungen (angewendet auf Schemafeld- oder Datensatzebene), mit denen festgelegt wird, für welche Anwendungsfälle der komplette Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Einverständnisrichtlinien haben, werden alle Profile, die nicht den Einverständnisattributanforderungen Ihrer Richtlinien entsprechen, aus Zielgruppen ausgeschlossen, die für ein Ziel aktiviert sind. |
-| Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
+| Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Experience Platform verwendet, um zu bestimmen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
 | Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthalten, übernimmt die Zielgruppe alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren übernommene Kennzeichnungen durch die geltenden Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
 | Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren Nutzungskennzeichnungen für die Marketing-Aktion des Ziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
 
@@ -83,7 +83,7 @@ Wenn Richtlinienverletzungen auftreten, bieten die in der Benutzeroberfläche an
 
 ## Meldungen zur Richtliniendurchsetzung {#enforcement}
 
-In den folgenden Abschnitten werden die verschiedenen Meldungen zur Richtliniendurchsetzung beschrieben, die in der Benutzeroberfläche von Platform angezeigt werden:
+In den folgenden Abschnitten werden die verschiedenen Meldungen zur Richtliniendurchsetzung beschrieben, die in der Benutzeroberfläche von Experience Platform angezeigt werden:
 
 * [Verletzung von Datennutzungsrichtlinien](#data-usage-violation)
 * [Auswertung der Einverständnisrichtlinie](#consent-policy-evaluation)
@@ -146,7 +146,7 @@ Wenn Sie beim Aktivieren **[!UICONTROL Ziels den Schritt]**&#x200B;Überprüfen[
 
 Es wird ein Dialogfeld für die Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Einverständnisrichtlinien auf die einverstandene Zielgruppe der zu aktivierenden Zielgruppen anzeigen können.
 
-![Dialogfeld für die Überprüfung von Einverständnisrichtlinien in der Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
+![Dialogfeld für die Überprüfung von Einverständnisrichtlinien in der Experience Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
 
 Das Dialogfeld zeigt die einverstandene Zielgruppe für jeweils eine Zielgruppe an. Um die Richtlinienauswertung für eine andere Zielgruppe anzuzeigen, wählen Sie im Dropdown-Menü über dem Diagramm eine aus der Liste aus.
 

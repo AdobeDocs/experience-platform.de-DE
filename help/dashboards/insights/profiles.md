@@ -2,9 +2,9 @@
 title: Profil-Insights
 description: Entdecken Sie die SQL, die Ihren Profileinblicken zugrunde liegt, und verwenden Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren, die Ihre Kunden und deren Kundenerlebnisse weiter untersuchen.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Verstehen Sie Ihre Profileinblicke, indem Sie auf die SQL zugreifen, die sie unterstützt, und dann Ihre eigenen Einblicke generieren, um Ihre Kunden und deren Kundenerlebnisse, aus denen Ihre Profile bestehen, weiter zu untersuchen. Wandeln Sie Ihre Rohdaten in neue umsetzbare Einblicke um, indem Sie das vorhandene Real-Time CDP-Datenmodell als SQL-Inspiration verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-Weitere Informationen [ Anpassen der SQL-Insights ](../view-sql.md) Sie direkt über die Platform-Benutzeroberfläche in der Dokumentation zu SQL anzeigen .
+Weitere Informationen [ Anpassen der SQL-Insights ](../view-sql.md) Sie direkt über die Experience Platform-Benutzeroberfläche in der Dokumentation zu SQL anzeigen .
 
 Die folgenden Einblicke stehen Ihnen als Teil des (Profile[Dashboards ](../guides/profiles.md) benutzerdefinierten (benutzerdefinierten) [ zur ](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Zielgruppenüberschneidung durch Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche Profile sind für beide Zielgruppen gleich?
 - Wie wirkt sich die Überschneidung auf Interaktions- oder Konversionsraten aus?
 - Wie können Marketing-Strategien auf das sich überschneidende Segment zugeschnitten werden?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#audience-overlap-by-merge-policy) der Widget-Dokumentation „Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“.
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie ](../guides/profiles.md#audience-overlap-by-merge-policy) der Widget-Dokumentation „Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“.
 
 ## Bericht zur Zielgruppenüberschneidung {#audience-overlap-report}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche 50 Zielgruppen überschneiden sich am meisten?
 - Welche Zielgruppen überschneiden sich am wenigsten?
 - Wie ändert sich das Überschneidungsmuster je nach Zusammenführungsrichtlinie?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#audience-overlap-report) Widget-Dokumentation zum Bericht zur Zielgruppenüberschneidung .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie ](../guides/profiles.md#audience-overlap-report) der Widget-Dokumentation „Bericht Zielgruppenüberschneidung“ .
 
 ## Zielgruppen (Anzahl) {#audiences}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche Zusammenführungsrichtlinie wird hauptsächlich für die Segmentierung verwendet?
 - Wie ist die Verteilung von Zielgruppen über Zusammenführungsrichtlinien hinweg?
 - Gibt es im Laufe der Zeit signifikante Änderungen bei den Zielgruppenzahlen für bestimmte Zusammenführungsrichtlinien?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Informationen [ Erscheinungsbild und die Funktionalität dieser Einblicke finden ](../guides/profiles.md#audiences) in der Dokumentation zum Zielgruppen-Widget .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden ](../guides/profiles.md#audiences) in der Dokumentation zum Zielgruppen-Widget .
 
 ## Zielgruppen, die dem Zielstatus zugeordnet sind {#audiences-mapped-to-destination-status}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist die Gesamtverteilung der Zielgruppen zwischen zugeordneten und nicht zugeordneten Zielen?
 - Welche spezifischen Ziele haben die höchste Anzahl zugeordneter Zielgruppen?
 - Welcher Anteil der gesamten Zielgruppen bleibt nicht zugeordnet?
 - Gibt es bei diesen nicht zugeordneten Zielgruppen Muster oder verknüpfte Trends?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#audiences-mapped-to-destination-status) Widget-Dokumentation Zielgruppen, die dem Zielstatus zugeordnet sind .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#audiences-mapped-to-destination-status) Widget-Dokumentation Zielgruppen, die dem Zielstatus zugeordnet sind .
 
 ## Zielgruppengröße {#audiences-size}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welches Zielgruppensegment hat die größte Größe?
 - Welches sind die fünf größten Zielgruppen?
 - Wie ändert sich die Verteilung der Zielgruppengröße im Laufe der Zeit für die Top-Zielgruppe?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#audiences-size) Dokumentation zu Widgets für Zielgruppen .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#audiences-size) Dokumentation zu Widgets für Zielgruppen .
 
 ## Kunden-KI – Verteilung der Scores {#customer-ai-distribution-of-scores}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist die Verteilung der Scores auf die einzelnen Buckets für jedes meiner Kunden-KI-Modelle?
 - Wie sind die Werte nach hohen, mittleren und niedrigen Werten verteilt?
 - Wie ist die Verteilung der Bewertungen nach Zusammenführungsrichtlinie aufgeteilt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der Widget](../guides/profiles.md#customer-ai-distribution-of-scores)Dokumentation zur Kunden-KI-Verteilung der Bewertungen ).
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in der Widget](../guides/profiles.md#customer-ai-distribution-of-scores)Dokumentation zur Kunden-KI-Verteilung der Bewertungen ).
 
 ## Zusammenfassung der KI-Kundenbewertung {#customer-ai-scoring-summary}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie lautet die Scoring-Zusammenfassung für jedes meiner Kunden-KI-Modelle?
 - Wie ändern sich die Tendenzwerte meiner Kunden-KI für verschiedene Zielgruppen?
 - Wie ändert sich meine Scoring-Zusammenfassung im Vergleich zu anderen KPIs in der Profilübersicht?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#customer-ai-scoring-summary) Dokumentation zum Kunden-KI-Scoring-.
+Weitere Informationen [ Erscheinungsbild und die Funktionalität dieser insight finden Sie in ](../guides/profiles.md#customer-ai-scoring-summary) Dokumentation zum Kunden-KI-Scoring Zusammenfassung-Widget .
 
 ## Identitätsüberschneidung {#identity-overlap}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie überschneiden sich [!UICONTROL Identitätstyp A] und [!UICONTROL Identitätstyp B]?
 - Wie kann ich Zielgruppen basierend auf der Überschneidung bestimmter Identitätstypen einschränken, um zielgerichtete Marketing-Strategien zu verbessern?
 - Welche Einblicke kann man aus der Evaluierung der Kampagnenleistung in den sich überschneidenden Bereichen gewinnen?
-- Wie können zukünftige Marketing-Maßnahmen mithilfe dieser Leistungseinblicke in Campaign optimiert werden?
+- Wie können zukünftige Marketing-Maßnahmen mithilfe dieser Kampagnen-Performance-insight optimiert werden?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#identity-overlap) Dokumentation zum Widget „Identitätsüberschneidung“ .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#identity-overlap) Dokumentation zum Widget „Identitätsüberschneidung“ .
 
 ## Anzahl der Profile {#profile-count}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
-- Wie hoch ist die Gesamtanzahl der Profile in der Adobe Real-time Customer Data Platform?
+- Wie hoch ist die Gesamtanzahl der Profile in der Adobe Real-Time Customer Data Platform?
 - Wie werden Profile basierend auf Zusammenführungsrichtlinien verteilt?
 - Welche Zusammenführungsrichtlinie hat die höchste Profilanzahl?
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Vollständige Informationen zu Erscheinungsbild und Funktionalität dieser Einblicke finden Sie im [Widget-Handbuch zur Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Vollständige Informationen zum Aussehen und zur Funktionalität dieser insight finden Sie im [Handbuch zu Widgets für die Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#profile-count) der Dokumentation zum Widget „Profilanzahl“ .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#profile-count) Dokumentation zum Widget „Profilanzahl“ .
 
 ## Änderung der Profilanzahl {#profile-count-change}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist der Trend bei den Änderungen der Gesamtprofilanzahl?
 - Was hat zu signifikanten Spitzen oder Rückgängen der Profilanzahl geführt?
 - Gibt es bestimmte Zusammenführungsrichtlinien, die die Änderung der Profilanzahl bewirken?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#profile-count-change) Dokumentation zum Widget „Änderung der Profilanzahl“.
+Weitere [ über das Erscheinungsbild und die Funktionalität dieser insight finden ](../guides/profiles.md#profile-count-change) in der Dokumentation zum Widget Änderung der Profilanzahl .
 
 ## Trend der Änderung der Profilanzahl {#profile-count-change-trend}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie sieht der allgemeine Trend der Änderung der Profilanzahl in den letzten 12 Monaten basierend auf der Zusammenführungsrichtlinie aus?
 - Gibt es bestimmte Muster oder Schwankungen in der Profilanzahl, die innerhalb der letzten 30 Tage geändert werden und Beachtung erfordern?
 - Wie ändert sich die Profilanzahl in den letzten 90 Tagen im Vergleich zum Gesamttrend?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#profile-count-change-trend) der Widget-Dokumentation „Trend der Änderung der Profilanzahl .
+Weitere [ über das Erscheinungsbild und die Funktionalität dieser insight finden ](../guides/profiles.md#profile-count-change-trend) in der Widget-Dokumentation zum Trend der Änderung der Profilanzahl .
 
 ## Entwicklung der Profilanzahl {#profile-count-trend}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist der allgemeine Trend der Profilanzahl basierend auf der Zusammenführungsrichtlinie in den letzten 30 Tagen?
 - Wie lässt sich dieser Trend mit den längerfristigen Trends (z. B. 90 Tage und 12 Monate) vergleichen?
 - Welche Zusammenführungsrichtlinie trägt am meisten zur Erhöhung oder Verringerung der Profilanzahl über die angegebenen Zeiträume (30 Tage, 90 Tage und 12 Monate) bei?
 - Gibt es bestimmte Spitzen oder Rückgänge bei der Profilanzahl, die mit bestimmten Ereignissen oder Zeiträumen innerhalb des 30-tägigen Zeitraums korrelieren?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#profile-count-trend) der Widget-Dokumentation „Trend der Profilanzahl“.
+Weitere [ über das Erscheinungsbild und die Funktionen ](../guides/profiles.md#profile-count-trend) insight finden Sie in der Dokumentation zum Widget „Trend der Profilanzahl“ .
 
 ## Profile nach Identität {#profiles-by-identity}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welcher Identitätstyp nimmt unter der Gesamtzahl der Profile einen höheren Anteil ein?
 - Gibt es signifikante Unterschiede zwischen den Identitätstypen?
 - Wie ist die Gesamtverteilung der Identitätstypen?
 - Gibt es signifikante Unterschiede oder Anomalien bei der Identitätszählung?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/profiles.md#profiles-by-identity) Dokumentation zum Widget „Profile nach Identität .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#profiles-by-identity) Dokumentation zum Widget „Profile nach Identität .
 
 ## Trend der Änderung der Profilanzahl {#profiles-count-change-trend}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist der allgemeine Trend bei der Änderung der Profilanzahl in den letzten 12 Monaten, basierend auf der Zusammenführungsrichtlinie?
 - Gibt es bestimmte Muster oder Schwankungen in der Änderung der Profilanzahl in den letzten 30 Tagen, die Aufmerksamkeit erfordern?
 - Wie lässt sich die Änderung der Profilanzahl in den letzten 90 Tagen im Vergleich zum Gesamttrend vergleichen?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#profiles-count-change-trend) der Widget-Dokumentation zum Trend der Änderung der Profilanzahl .
+Weitere [ über das Erscheinungsbild und die Funktionalität dieser insight finden Sie ](../guides/profiles.md#profiles-count-change-trend) der Widget-Dokumentation zum Trend der Änderung der Profilanzahl .
 
 ## Trend zur Änderung der Profilanzahl nach Identität {#profiles-count-change-trend-by-identity}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist der allgemeine Trend bei der Änderung der Profilanzahl über verschiedene Identitäten hinweg in den letzten 12 Monaten?
 - Gibt es bestimmte Identitätstrends, die innerhalb der letzten 30 Tage signifikante Änderungen aufweisen?
 - Wie unterscheiden sich die Änderungen der Profilanzahl beim Vergleich der Trends von 30 Tagen, 90 Tagen und 12 Monaten für eine bestimmte Identität?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der ](../guides/profiles.md#profiles-count-change-trend-by-identity) zum Widget „Trend der Änderung der Profilanzahl nach Identität“ .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in der ](../guides/profiles.md#profiles-count-change-trend-by-identity) zum Widget „Trend der Änderung der Profilanzahl nach Identität .
 
 ## Einzelne Identitätsprofile {#single-identity-profiles}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Werden meine Kundenidentitätsdaten konsistent mit einzelnen Identitäten dargestellt?
 - Welcher Prozentsatz meiner Benutzerbasis besteht aus Profilen mit nur einem einzigen Identitätstyp?
 - Wie wirkt sich dies auf die Vollständigkeit des Profils aus, wenn es sich um Profile mit nur einem Identitätstyp handelt?
 - Gibt es eine Korrelation zwischen dem häufigsten Identitätstyp und der Anzahl einzelner Identitätsprofile?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#single-identity-profiles) der Dokumentation zum Widget „Einzelne Identitätsprofile .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#single-identity-profiles) Dokumentation zum Widget „Einzelne Identitätsprofile .
 
 ## Einzelne Identitätsprofile nach Identität {#single-identity-profiles-by-identity}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Unique Customers haben sich mit einer einzigen Identität (z. B. E-Mail oder Telefonnummer) registriert?
 - Wie ist die Verteilung einzelner Identitätsprofile auf verschiedene Identitätstypen wie E-Mail oder Telefonnummern?
 - Gibt es Identitätsmuster oder -verschiebungen innerhalb der einzelnen Identitätsprofile?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#single-identity-profiles-by-identity) der Dokumentation zum Widget „Einzelne Identitätsprofile nach Identität .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in der ](../guides/profiles.md#single-identity-profiles-by-identity) zu Identitäts-Widgets Einzelprofile .
 
 ## Nicht segmentierte Profile {#unsegmented-profiles}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Profile sind nicht Teil einer Zielgruppe?
 - Welcher Prozentsatz der gesamten Zielgruppe wird durch nicht segmentierte Profile dargestellt?
 - Trägt eine Zusammenführungsrichtlinie zu einer großen Anzahl nicht segmentierter Profile bei?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie ](../guides/profiles.md#unsegmented-profiles) der Widget-Dokumentation zu nicht segmentierten Profilen .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden ](../guides/profiles.md#unsegmented-profiles) in der Widget-Dokumentation zu nicht segmentierten Profilen .
 
 ## Nächste Schritte
 

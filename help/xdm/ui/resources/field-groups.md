@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Feldergruppe;Feldergruppen;
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie in der Benutzeroberfläche zum Experience Platform Schemafeldgruppen erstellen und bearbeiten.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform Schemafeldgruppen erstellen und bearbeiten.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,11 +22,11 @@ Im Experience-Datenmodell (XDM) sind Schemafeldgruppen wiederverwendbare Kompone
 
 Eine Feldergruppe definiert auf der Grundlage des Verhaltens der Daten, die die Feldergruppe darstellt (Datensatz oder Zeitreihe), mit welcher(n) Klasse(n) sie kompatibel ist. Das bedeutet, dass nicht alle Feldergruppen für die Verwendung mit allen Klassen verfügbar sind.
 
-Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl von Marketing-Anwendungsfällen abdecken. Sie können jedoch auch eigene benutzerdefinierte Feldergruppen erstellen und bearbeiten, um zusätzliche Konzepte zu definieren, die sich auf Ihr Unternehmen in Ihren XDM-Schemata beziehen. Dieses Handbuch bietet einen Überblick darüber, wie Sie benutzerdefinierte Feldergruppen für Ihr Unternehmen in der Platform-Benutzeroberfläche erstellen, bearbeiten und verwalten.
+Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl von Marketing-Anwendungsfällen abdecken. Sie können jedoch auch eigene benutzerdefinierte Feldergruppen erstellen und bearbeiten, um zusätzliche Konzepte zu definieren, die sich auf Ihr Unternehmen in Ihren XDM-Schemata beziehen. Dieses Handbuch bietet einen Überblick darüber, wie Sie benutzerdefinierte Feldergruppen für Ihr Unternehmen in der Experience Platform-Benutzeroberfläche erstellen, bearbeiten und verwalten.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Im Abschnitt [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in die [Grundlagen der Schemakomposition](../../schema/composition.md) Informationen dazu, wie Feldergruppen zu XDM-Schemata beitragen.
+Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Eine Einführung in die Rolle [ XDM im Experience Platform-Ökosystem ](../../home.md) Sie in der Übersicht zu XDM und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Feldergruppen zu XDM-Schemata beitragen.
 
 Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
@@ -48,7 +48,7 @@ Der [!DNL Schema Editor] wird erneut angezeigt, wobei die neue Feldergruppe in d
 
 ## Feldergruppen filtern {#filter}
 
-Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gefiltert. Die Standardeinstellung zeigt die durch Adobe definierten Feldergruppen an. Sie können die Liste jedoch auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die durch Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
+Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Feldergruppen an. Sie können die Liste jedoch auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
 
 ![Registerkarte [!UICONTROL Feldergruppen] des Arbeitsbereichs [!UICONTROL Schemata] mit den hervorgehobenen Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert].](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -56,7 +56,7 @@ Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gef
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für durch Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
+>Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
 >
 >Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema für die Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
 
@@ -92,6 +92,6 @@ Wenn dieselbe Feldergruppe bereits in anderen Schemata verwendet wird, werden di
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
 
 Informationen zum Verwalten von Feldergruppen mithilfe der [!DNL Schema Registry]-API finden Sie im [Handbuch zu Feldergruppen-Endpunkten](../../api/field-groups.md).

@@ -5,10 +5,10 @@ title: Erstellen einer generischen REST-API-Basisverbindung mithilfe der Flow Se
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine generische REST-API mit Adobe Experience Platform verbinden.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 58%
+source-wordcount: '955'
+ht-degree: 45%
 
 ---
 
@@ -26,10 +26,10 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -61,7 +61,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Generic REST API] herstellen
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 [!DNL Generic REST API] unterstützt sowohl einfache Authentifizierung als auch OAuth 2-Aktualisierungs-Code. In den folgenden Beispielen finden Sie Anleitungen zum Authentifizieren mit beiden Authentifizierungstypen.
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit [!DNL Generic REST API] verknüpft ist. Diese feste ID lautet: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.host` | Die Stamm-URL, mit der die Verbindung zu Ihrer [!DNL Generic REST API] hergestellt wird. |
 | `auth.params.accessToken` | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
@@ -126,7 +126,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ### Erstellen einer [!DNL Generic REST API]-Basisverbindung mit einfacher Authentifizierung
 
-Um eine [!DNL Generic REST API] Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt [!DNL Flow Service] -API und geben Sie dabei Ihre grundlegenden Authentifizierungs-Anmeldeinformationen an.
+Um eine [!DNL Generic REST API] Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt [!DNL Flow Service] -API und geben Sie dabei Ihre grundlegenden Authentifizierungsdaten an.
 
 **API-Format**
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit [!DNL Generic REST API] verknüpft ist. Diese feste ID lautet: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Platform verbinden. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Experience Platform verbinden. |
 | `auth.params.host` | Die Stamm-URL, mit der die Verbindung zu Ihrer [!DNL Generic REST API] hergestellt wird. |
 | `auth.params.username` | Der Benutzername, der Ihrer [!DNL Generic REST API] entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 | `auth.params.password` | Das Passwort, das Ihrer [!DNL Generic REST API] entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
@@ -190,4 +190,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 In diesem Tutorial haben Sie eine [!DNL Generic REST API]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen eines Datenflusses, um Protokolldaten mithilfe der -API  [!DNL Flow Service]  Platform zu übertragen](../../collect/protocols.md)
+* [Erstellen eines Datenflusses, um Protokolldaten mithilfe der API  [!DNL Flow Service]  Experience Platform zu übertragen](../../collect/protocols.md)

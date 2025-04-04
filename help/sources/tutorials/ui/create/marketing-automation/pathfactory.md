@@ -3,14 +3,14 @@ title: Verbinden Ihres PathFactory-Kontos mit Experience Platform über die Benu
 description: Erfahren Sie, wie Sie Ihr PathFactory-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
 badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 21%
+source-wordcount: '572'
+ht-degree: 18%
 
 ---
 
-# Verbinden Ihres [!DNL PathFactory]-Kontos mit Experience Platform über die Benutzeroberfläche
+# Verbinden Ihres [!DNL PathFactory] über die Benutzeroberfläche mit Experience Platform
 
 In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL PathFactory]-Besucher-, Sitzungs- und Seitenansichtsdaten über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -23,11 +23,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über ein [!DNL PathFactory]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Übertragen von Daten zur Marketing-Automatisierung auf Experience Platform mithilfe der Benutzeroberfläche“ ](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über ein [!DNL PathFactory]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Übertragen von Daten zur Marketing-Automatisierung in Experience Platform mithilfe der Benutzeroberfläche“ ](../../dataflow/marketing-automation.md).
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
 
-Um auf Ihr PathFactory-Konto auf der Plattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr PathFactory-Konto in der Experience Platform zuzugreifen, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Ausführliche Anleitungen zum Schützen und Verwenden Ihrer Anmeldeinformationen
 
 ## Verbinden Ihres [!DNL PathFactory]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, die vom Experience Platform unterstützt werden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, die von Experience Platform unterstützt werden.
 
 Sie können die entsprechende Kategorie aus der Liste der Kategorien auswählen. Sie können auch die Suchleiste verwenden, um nach einer bestimmten Quelle zu filtern.
 
@@ -68,4 +68,4 @@ Wenn Sie bereits über ein vorhandenes Konto verfügen, wählen Sie **[!UICONTRO
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL PathFactory]-Konto und Experience Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Ihre Daten zur Marketing-Automatisierung in Experience Platform zu übertragen](../../dataflow/marketing-automation.md).
+In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL PathFactory]-Konto und Experience Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Ihre Daten zur Marketing-Automatisierung in Experience Platform zu importieren](../../dataflow/marketing-automation.md).

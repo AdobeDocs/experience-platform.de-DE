@@ -2,10 +2,10 @@
 title: Asynchrone Bereitstellung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 100%
+source-wordcount: '1046'
+ht-degree: 98%
 
 ---
 
@@ -106,4 +106,4 @@ Tags sind mit einer Schaltfläche versehen, über die Sie das asynchrone Laden a
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Dieser Code informiert Platform darüber, dass der Browser-Parser das Seitenende erreicht hat. Da Tags vor diesem Zeitpunkt wahrscheinlich nicht geladen und ausgeführt wurden, führt der Aufruf von `_satellite.pageBottom()` zu einem Fehler, und der Ereignistyp „Seitenende“ verhält sich möglicherweise nicht wie erwartet.
+   Dieser Code teilt Experience Platform mit, dass der Browser-Parser das Seitenende erreicht hat. Da Tags vor diesem Zeitpunkt wahrscheinlich nicht geladen und ausgeführt wurden, führt der Aufruf von `_satellite.pageBottom()` zu einem Fehler, und der Ereignistyp „Seitenende“ verhält sich möglicherweise nicht wie erwartet.

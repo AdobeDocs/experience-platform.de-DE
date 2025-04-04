@@ -2,20 +2,20 @@
 description: Erfahren Sie, wie Sie die Ziel-Server-Spezifikationen im Adobe Experience Platform Destination SDK über den Endpunkt „/authoring/destination-servers“ konfigurieren.
 title: Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2739'
-ht-degree: 100%
+source-wordcount: '2753'
+ht-degree: 89%
 
 ---
 
 # Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 
-Ziel-Server-Spezifikationen definieren den Typ der Zielplattform, die die Daten von Adobe Experience Platform erhält, sowie die Kommunikationsparameter zwischen Platform und Ihrem Ziel. Beispiel:
+Ziel-Server-Spezifikationen definieren den Typ der Zielplattform, die die Daten von Adobe Experience Platform erhält, sowie die Kommunikationsparameter zwischen Experience Platform und Ihrem Ziel. Beispiel:
 
-* Eine [Streaming](#streaming-example)-Ziel-Server-Spezifikation definiert den HTTP-Server-Endpunkt, der die HTTP-Nachrichten von Platform erhält. Informationen zum Konfigurieren der Formatierung der HTTP-Aufrufe an den Endpunkt finden Sie auf der Seite [Spezifikationen für Vorlagentypen](templating-specs.md).
-* Eine [Amazon S3](#s3-example)-Ziel-Server-Spezifikation definiert den [!DNL S3]-Behälternamen und -Pfad, in den Platform die Dateien exportiert.
-* Eine [SFTP](#sftp-example)-Ziel-Server-Spezifikation definiert den Host-Namen, das Stammverzeichnis, den Kommunikations-Port und den Verschlüsselungstyp des SFTP-Servers, auf den Platform die Dateien exportiert.
+* Eine [Streaming](#streaming-example) Ziel-Server-Spezifikation definiert den HTTP-Server-Endpunkt, der die HTTP-Nachrichten von Experience Platform erhält. Informationen zum Konfigurieren der Formatierung der HTTP-Aufrufe an den Endpunkt finden Sie auf der Seite [Spezifikationen für Vorlagentypen](templating-specs.md).
+* Eine [Amazon S3](#s3-example)-Ziel-Server-Spezifikation definiert den [!DNL S3]-Behälternamen und -Pfad, in den Experience Platform die Dateien exportiert.
+* Eine [SFTP](#sftp-example)-Ziel-Server-Spezifikation definiert den Host-Namen, das Stammverzeichnis, den Kommunikations-Port und den Verschlüsselungstyp des SFTP-Servers, auf den Experience Platform die Dateien exportiert.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder auf den folgenden Übersichtsseiten zur Zielkonfiguration:
 
@@ -46,7 +46,7 @@ Wenn Sie einen Ziel-Server [erstellen](../../authoring-api/destination-server/cr
 
 ## Hartcodierte bzw. vorlagenbasierte Felder {#templatized-fields}
 
-Bei der Erstellung eines Ziel-Servers durch Destination SDK können Sie die Parameterwerte für die Konfiguration entweder durch eine Hartcodierung in die Konfiguration oder durch Verwendung von Vorlagenfeldern definieren. Mit vorlagenbasierten Feldern können Sie von Benutzenden bereitgestellte Werte aus der Platform-Benutzeroberfläche lesen.
+Bei der Erstellung eines Ziel-Servers durch Destination SDK können Sie die Parameterwerte für die Konfiguration entweder durch eine Hartcodierung in die Konfiguration oder durch Verwendung von Vorlagenfeldern definieren. Mit Vorlagenfeldern können Sie von Benutzenden bereitgestellte Werte aus der Experience Platform-Benutzeroberfläche lesen.
 
 Die Ziel-Server-Parameter haben zwei konfigurierbare Felder. Diese Optionen bestimmen, ob Sie hartcodierte oder vorlagenbasierte Werte verwenden.
 
@@ -63,7 +63,7 @@ Sowohl hartcodierte als auch vorlagenbasierte Felder haben ihre eigene Verwendun
 
 **Herstellen einer Verbindung zu Ihrem Ziel ohne Benutzereingabe**
 
-Wenn Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche eine [Verbindung zu Ihrem Ziel herstellen](../../../ui/connect-destination.md), möchten Sie vielleicht den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
+Wenn Benutzerinnen [ Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
 
 Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie in Ihrer Ziel-Server-Konfiguration hartcodierte Parameterwerte verwenden, wird die Verbindung zwischen Adobe Experience Platform und Ihrer Zielplattform ohne Benutzereingabe veranlasst.
 
@@ -83,13 +83,13 @@ Im folgenden Beispiel erstellt ein Partner einen Data Landing Zone(DLZ)-Ziel-Ser
 }
 ```
 
-Wenn Benutzerinnen und Benutzer das [Tutorial zur Zielverbindung](../../../ui/connect-destination.md) durchlaufen, sehen sie also keinen [Authentifizierungsschritt](../../../ui/connect-destination.md#authenticate). Stattdessen wird die Authentifizierung von Platform durchgeführt, wie in der Abbildung unten dargestellt.
+Wenn Benutzerinnen und Benutzer das [Tutorial zur Zielverbindung](../../../ui/connect-destination.md) durchlaufen, sehen sie also keinen [Authentifizierungsschritt](../../../ui/connect-destination.md#authenticate). Stattdessen wird die Authentifizierung von Experience Platform durchgeführt, wie in der Abbildung unten dargestellt.
 
-![UI-Bild, das den Authentifizierungsbildschirm zwischen Platform und einem DLZ-Ziel anzeigt.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![UI-Bild, das den Authentifizierungsbildschirm zwischen Experience Platform und einem DLZ-Ziel anzeigt.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Herstellen einer Verbindung zu Ihrem Ziel mit Benutzereingabe**
 
-Wenn die Verbindung zwischen Platform und Ihrem Ziel anhand einer bestimmten Benutzereingabe in der Platform-Benutzeroberfläche hergestellt werden soll, z. B. durch Auswahl eines API-Endpunkts oder Angabe eines Feldwerts, können Sie in der Server-Spezifikation vorlagenbasierte Felder verwenden, um die Benutzereingabe zu lesen und eine Verbindung mit Ihrer Zielplattform herzustellen.
+Wenn die Verbindung zwischen Experience Platform und Ihrem Ziel anhand einer bestimmten Benutzereingabe in der Experience Platform-Benutzeroberfläche hergestellt werden soll, z. B. durch Auswahl eines API-Endpunkts oder Angabe eines Feldwerts, können Sie in der Server-Spezifikation vorlagenbasierte Felder verwenden, um die Benutzereingabe zu lesen und eine Verbindung mit Ihrer Zielplattform herzustellen.
 
 Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streaming-example)-Integration, und das Feld `url.value` verwendet den Vorlagenparameter `{{customerData.region}}`, um einen Teil des API-Endpunkts basierend auf der Benutzereingabe zu personalisieren.
 
@@ -106,7 +106,7 @@ Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streamin
 }
 ```
 
-Damit Benutzerinnen und Benutzer einen Wert in der Platform-Benutzeroberfläche auswählen können, muss der Parameter `region` auch in der [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) als Kundendatenfeld definiert werden, wie unten dargestellt:
+Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
 
 ```json
 "customerDataFields":[
@@ -153,7 +153,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 |---|---|---|
 | `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist weder für Partner noch für Kundinnen und Kunden sichtbar. Beispiel: `Moviestar destination server`. |
 | `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie dieses für Streaming-Ziele auf `URL_BASED` fest. |
-| `templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie im Feld `value` einen hartcodierten Wert verwenden und nicht ein Vorlagenfeld. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/{{customerData.region}}/items` haben, wo die Benutzerinnen und Benutzer die Region des Endpunkts in der Platform-Benutzeroberfläche auswählen müssen. </li><li> Verwenden Sie `NONE`, wenn auf Seiten von Adobe keine vorlagenbasierte Transformation erforderlich ist, z. B. wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/items` haben. </li></ul> |
+| `templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie im Feld `value` einen hartcodierten Wert verwenden und nicht ein Vorlagenfeld. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/{{customerData.region}}/items` haben, wo die Benutzerinnen und Benutzer die Region des Endpunkts in der Experience Platform-Benutzeroberfläche auswählen müssen. </li><li> Verwenden Sie `NONE`, wenn auf Seiten von Adobe keine vorlagenbasierte Transformation erforderlich ist, z. B. wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/items` haben. </li></ul> |
 | `value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 
 {style="table-layout:auto"}
@@ -294,7 +294,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) -Ziel-Server {#dlz-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Platform-Daten in einen [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md)-Speicher exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit Experience Platform-Daten in einen [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Data Landing Zone]-Ziel ([!DNL DLZ]).
 
@@ -323,7 +323,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Google Cloud Storage]-Ziel-Server {#gcs-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Platform-Daten in Ihr [!DNL Google Cloud Storage] -Konto exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit Experience Platform-Daten in Ihr [!DNL Google Cloud Storage] exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Google Cloud Storage]-Ziel.
 

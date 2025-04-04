@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 16%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 16%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
-Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Platform-Instanz erfasst.
+Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst.
 
 Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metriken werden über mehrere Produkte hinweg gemeinsam genutzt und spiegeln die aggregierte Nutzung über alle Produkte hinweg wider, die sie verwenden, nicht über die Gesamtwerte pro Produkt. Das Dashboard bietet eine konsolidierte Verwendung dieser Metriken in allen Produktions- oder Entwicklungs-Sandboxes sowie die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Programme können mit Nutzungsmetriken verfolgt werden: Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Benutzeroberfläche von [Experience Platform](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
 ## [!UICONTROL Lizenznutzung] Dashboard-Daten
 
@@ -148,11 +148,11 @@ Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt d
 
 >[!NOTE]
 >
->Die meisten Metriken im Dashboard werden täglich aktualisiert, basierend auf einer Momentaufnahme Ihrer Platform-Instanz. [!UICONTROL Verfügbare CJA-]: bildet eine Ausnahme und wird monatlich aktualisiert. Mit „Packs“ gekennzeichnete Metriken wie [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] und [!UICONTROL Streaming Segmentation No of Packs] spiegeln Lizenzberechtigungen für Add-on-Angebote wider und verfolgen die laufende Nutzung nicht. Änderungen, die nach der Momentaufnahme vorgenommen werden, sind erst sichtbar, wenn die nächste Momentaufnahme erstellt wird.
+>Die meisten Metriken im Dashboard werden täglich aktualisiert, basierend auf einer Momentaufnahme Ihrer Experience Platform-Instanz. [!UICONTROL Verfügbare CJA-]: bildet eine Ausnahme und wird monatlich aktualisiert. Mit „Packs“ gekennzeichnete Metriken wie [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] und [!UICONTROL Streaming Segmentation No of Packs] spiegeln Lizenzberechtigungen für Add-on-Angebote wider und verfolgen die laufende Nutzung nicht. Änderungen, die nach der Momentaufnahme vorgenommen werden, sind erst sichtbar, wenn die nächste Momentaufnahme erstellt wird.
 
 ## Genauere Informationen zum Lizenznutzungs-Dashboard {#explore}
 
-Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenznutzung zu navigieren, wählen **[!UICONTROL in der linken Leiste]** Lizenznutzung“ aus. Das Dashboard enthält zwei Registerkarten: **[!UICONTROL Metriken]** und **[!UICONTROL Produkte]**.
+Um in der Experience Platform-Benutzeroberfläche zum Lizenznutzungs-Dashboard zu navigieren, wählen **[!UICONTROL in der linken]** „Lizenznutzung“ aus. Das Dashboard enthält zwei Registerkarten: **[!UICONTROL Metriken]** und **[!UICONTROL Produkte]**.
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 41%
@@ -53,18 +53,18 @@ Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, au
 | [!DNL Privacy Service]-Rebranding | Der früher als „GDPR Service“ bezeichnete Service wurde in [!DNL Privacy Service] umbenannt, da der Service erweitert wurde, um neben der DSGVO auch andere Vorschriften zu unterstützen. |
 | Neue API-Endpunkte | Der Basispfad für die [!DNL Privacy Service]-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert. |
 | Neue erforderliche `regulation`-Eigenschaft | Bei der Erstellung neuer Aufträge in der [!DNL Privacy Service]-API muss eine `regulation`-Eigenschaft in der Anfrage-Payload angegeben werden, die angibt, nach welcher Vorschrift der Auftrag verfolgt werden soll. Akzeptierte Werte sind `gdpr` und `ccpa`. |
-| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe-[!DNL Primetime Authentication], wobei `primetimeAuthentication` als Produktwert verwendet wird. |
+| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe [!DNL Primetime Authentication] und verwendet `primetimeAuthentication` als Produktwert. |
 | Verbesserungen der Privacy Service-Benutzeroberfläche | Separate Auftrags-Tracking-Seiten für DSGVO- und CCPA-Vorschriften. Neuer **Regulierungstyp** Dropdown zum Umschalten zwischen Tracking-Daten für DSGVO und CCPA. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Für weitere Informationen zu [!DNL Privacy Service] lesen Sie zunächst die [Übersicht über den Privacy Service ](../../privacy-service/home.md).
+Für weitere Informationen zu [!DNL Privacy Service] lesen Sie zunächst die [Übersicht über Privacy Service](../../privacy-service/home.md).
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Zielbereitstellungseinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden, um anzugeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 title: Zielbereitstellung
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 99%
+source-wordcount: '564'
+ht-degree: 96%
 
 ---
 
@@ -48,7 +48,7 @@ Bei der Konfiguration Ihrer Zielversandeinstellungen können Sie mithilfe der in
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Platform-Kundinnen und -Kunden über eine der [hier](customer-authentication.md) beschriebenen Authentifizierungsmethoden bei Ihrem System anmelden.</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldedaten-Objekt mithilfe der Konfiguration der [Anmeldedaten-API](../../credentials-api/create-credential-configuration.md) erstellen. </li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Experience Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Experience Platform-Kundinnen und -Kunden über eine der hier beschriebenen Authentifizierungsmethoden bei [ System ](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Experience Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldedaten-Objekt mithilfe der Konfiguration der [Anmeldedaten-API](../../credentials-api/create-credential-configuration.md) erstellen. </li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` des [Ziel-Servers](../../authoring-api/destination-server/create-destination-server.md), an die Sie Daten exportieren möchten. |
 | `deliveryMatchers.type` | Zeichenfolge | <ul><li>Legen Sie diese bei der Konfiguration des Zielversands für dateibasierte Ziele immer auf `SOURCE` fest.</li><li>Beim Konfigurieren des Zielversands für ein Streaming-Ziel ist der Abschnitt `deliveryMatchers` nicht erforderlich.</li></ul> |
 | `deliveryMatchers.value` | Zeichenfolge | <ul><li>Legen Sie diese bei der Konfiguration des Zielversands für dateibasierte Ziele immer auf `batch` fest.</li><li>Beim Konfigurieren des Zielversands für ein Streaming-Ziel ist der Abschnitt `deliveryMatchers` nicht erforderlich.</li></ul> |

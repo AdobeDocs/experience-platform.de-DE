@@ -4,10 +4,10 @@ title: Zielgruppen-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen über Zielgruppen anzeigen können, die Ihr Unternehmen erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 38%
+source-wordcount: '3136'
+ht-degree: 36%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 38%
 
 Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige, bei einem täglichen Schnappschuss erfasste Informationen zu Ihren Zielgruppen anzeigen können. In diesem Handbuch wird beschrieben, wie Sie das Dashboard [!UICONTROL Zielgruppen] in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Platform-Benutzeroberfläche erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
+Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Benutzeroberfläche von Experience Platform erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] Dashboard-Daten
 
-Das Dashboard [!UICONTROL Zielgruppen] zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die sich in Ihrem Unternehmen im Profilspeicher in Experience Platform befinden. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
+Das [!UICONTROL Zielgruppen]-Dashboard zeigt Informationen über die Attributdaten (Datensatzdaten) an, die sich in Ihrem Unternehmen im Profilspeicher in Experience Platform befinden. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
 Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard [!UICONTROL Zielgruppen] wird nicht in Echtzeit aktualisiert.
 
@@ -29,11 +29,11 @@ Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zu
 
 ## Erkunden des [!UICONTROL Zielgruppen] Dashboards {#explore}
 
-Um in der Platform-Benutzeroberfläche zum [!UICONTROL Zielgruppen]-Dashboard zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+Um in der Experience Platform-Benutzeroberfläche zum [!UICONTROL Zielgruppen]-Dashboard zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
 
 >[!NOTE]
 >
->Wenn Ihre Organisation erst seit kurzem Platform nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Zielgruppen] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Zielgruppen] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
 
 ![Die Registerkarte [!UICONTROL Zielgruppen]-Dashboard [!UICONTROL Übersicht] mit [!UICONTROL Zielgruppen] und [!UICONTROL Übersicht] hervorgehoben.](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefiniert
 
 ### SQL anzeigen {#view-sql}
 
-Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
+Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im Arbeitsbereich [!UICONTROL Übersicht] anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
 
 ## Audience auswählen {#select-audience}
 
@@ -119,7 +119,7 @@ Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl u
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus.
 
-![Das Dashboard &quot;Experience Platform-Zielgruppen“ mit [!UICONTROL  hervorgehobenen Widget „Kunden]KI-Verteilung der Scores[!UICONTROL  und „Modelldetails anzeigen].](../images/segments/customer-ai-distribution-of-scores.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der ]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
 
 Die detaillierte Seite mit Modelleinblicken wird angezeigt.
 
@@ -146,7 +146,7 @@ Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfiguriert
 >
 >Die Gesamtzahl der berechneten Profile hängt von der ausgewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Eine kurze Beschreibung finden Sie [ Abschnitt ](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
 
-![Das Dashboard &quot;Experience Platform-Zielgruppen“ mit hervorgehobenem Widget „Zusammenfassung der Kunden-KI-Bewertung“.](../images/segments/customer-ai-scoring-summary.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit hervorgehobenem Widget „Zusammenfassung der Kunden-KI-Bewertung“.](../images/segments/customer-ai-scoring-summary.png)
 
 Wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus, um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren. Weitere Informationen zur Kunden-KI finden Sie im Handbuch [Benutzeroberfläche für Einblicke entdecken](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 

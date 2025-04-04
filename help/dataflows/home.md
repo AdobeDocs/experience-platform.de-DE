@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Datenflüsse – Übersicht
 description: In diesem Dokument werden Datenflüsse vorgestellt und ihre Verwendung in Adobe Experience Platform erläutert.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 100%
+source-wordcount: '243'
+ht-degree: 69%
 
 ---
 
 # Datenflüsse – Übersicht
 
-In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Platform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
+In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Experience Platform erleichtert die Verfolgung dieses potenziell nichtlinearen Datenflusses, indem es für Transparenz bei Datenflüssen sorgt.
 
 ## Verwenden von Datenflüssen
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie vom Identity Service und Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie vom Identity Service und Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
 
 Weitere Informationen zur Verwendung von Datenflüssen in Quell-Connectoren finden Sie unter [Quellen – Übersicht](../sources/home.md).
 
@@ -29,4 +29,4 @@ Weitere Informationen zum Vorbereiten von Daten nach deren Aufnahme finden Sie i
 
 ## Überwachen von Datenflüssen
 
-Die Überwachung von Datenflüssen kann entweder mit Platform-APIs oder über die Platform-Benutzeroberfläche erfolgen. Informationen zum Überwachen von Datenflüssen mithilfe der API finden Sie im [Tutorial zur Datenflussüberwachungs-API](./api/monitor.md). Informationen zum Überwachen von Datenflüssen in der Platform-Benutzeroberfläche finden Sie in den Tutorials zur [Datenflussüberwachung für Quellen](./ui/monitor-sources.md) und [Datenflussüberwachung für Ziele](./ui/monitor-destinations.md).
+Die Überwachung von Datenflüssen kann entweder mit Experience Platform-APIs oder über die Experience Platform-Benutzeroberfläche erfolgen. Informationen zum Überwachen von Datenflüssen mithilfe der API finden Sie im [Tutorial zur Datenflussüberwachungs-API](./api/monitor.md). Informationen zum Überwachen von Datenflüssen in der Experience Platform-Benutzeroberfläche finden Sie in den Tutorials [Überwachen von Datenflüssen für ](./ui/monitor-sources.md) und [Überwachen von Datenflüssen für Ziele](./ui/monitor-destinations.md).

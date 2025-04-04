@@ -3,36 +3,36 @@ keywords: Advertising Cloud;Advertising Cloud-Erweiterung;Advertising Cloud-Ziel
 title: Adobe Advertising Cloud-Erweiterung
 description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 44%
+source-wordcount: '441'
+ht-degree: 42%
 
 ---
 
 # Adobe Advertising Cloud-Erweiterung {#adobe-advertising-cloud-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-Dies ist die [!DNL Advertising Cloud] Erweiterung zur Implementierung von [!DNL Advertising Cloud]-Konversions- und Zielgruppen-Tags sowohl für die DSP als auch für die Suche (DCO wird derzeit nicht unterstützt).
+Dies ist die [!DNL Advertising Cloud] Erweiterung zur Implementierung [!DNL Advertising Cloud] Konversions- und Zielgruppen-Tags für DSP und Search (DCO wird derzeit nicht unterstützt).
 
-Adobe Advertising Cloud ist eine Werbeerweiterung in Adobe Experience Platform.
+Adobe Advertising Cloud ist eine Advertising-Erweiterung in Adobe Experience Platform.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe Advertising Cloud-Erweiterung](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungsfunktionen in der Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Experience Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungsfunktionen in der Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
 So installieren Sie die Adobe Advertising Cloud-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

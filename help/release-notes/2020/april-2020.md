@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 58%
@@ -89,7 +89,7 @@ Weiterführende Informationen finden Sie in der [Übersicht zu Data Governance](
 
 ## Ziele {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
 
 **Neue Ziele**
 
@@ -118,11 +118,11 @@ Bekannte Probleme
 
 * Keine
 
-Für weitere Informationen zu [!DNL Privacy Service] lesen Sie zunächst die [Übersicht über den Privacy Service ](../../privacy-service/home.md).
+Für weitere Informationen zu [!DNL Privacy Service] lesen Sie zunächst die [Übersicht über Privacy Service](../../privacy-service/home.md).
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

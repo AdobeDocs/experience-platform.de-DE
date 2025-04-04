@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 96%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,7 +92,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md). &#x200B;
 
 ## Query Service {#query-service}
 
@@ -128,7 +128,7 @@ Weitere Informationen über Real-Time CDP B2B Edition finden Sie in der [Übersi
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -136,8 +136,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Festlegen des Zugriffs auf Abonnementebene mit [!DNL Google PubSub] | Sie können jetzt den Zugriff auf ein bestimmtes Themenabonnement definieren, wenn Sie die Quelle [!DNL Google PubSub] durch Angabe der Anmelde-ID bei der Authentifizierung verwenden. Weitere Informationen finden sich im [!DNL Google PubSub]-Authentifizierungs-Tutorial im Abschnitt [Verwenden der Flow Service-API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) oder [Platform-Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Aufnehmen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] | Jetzt können benutzerdefinierte Aktivitätsdaten aus Ihrer [!DNL Marketo]-Instanz zu Experience Platform hinzugefügt werden. Um benutzerdefinierte Aktivitätsdaten aufzunehmen, müssen im Schema „B2B-Aktivitäten“ benutzerdefinierte Aktivitätsfeldgruppen eingerichtet und ein Datenfluss mithilfe des Aktivitäts-Datensatzes erstellt werden. Sobald der Datenfluss abgeschlossen ist, enthält der aufgenommene Datensatz sowohl standardmäßige als auch benutzerdefinierte Aktivitäten aus Ihrer [!DNL Marketo]-Instanz. Sie können dann den [Abfrage-Service](../../query-service/home.md) verwenden, um in Platform auf die Datensätze der benutzerdefinierten Aktivitäten zuzugreifen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines Datenflusses für Daten zu benutzerdefinierten Aktivitäten](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Festlegen des Zugriffs auf Abonnementebene mit [!DNL Google PubSub] | Sie können jetzt den Zugriff auf ein bestimmtes Themenabonnement definieren, wenn Sie die Quelle [!DNL Google PubSub] durch Angabe der Anmelde-ID bei der Authentifizierung verwenden. Weitere Informationen finden Sie im Tutorial zur [!DNL Google PubSub]-Authentifizierung [Verwenden der Flow Service-API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) oder [Experience Platform-Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Aufnehmen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] | Jetzt können benutzerdefinierte Aktivitätsdaten aus Ihrer [!DNL Marketo]-Instanz zu Experience Platform hinzugefügt werden. Um benutzerdefinierte Aktivitätsdaten aufzunehmen, müssen im Schema „B2B-Aktivitäten“ benutzerdefinierte Aktivitätsfeldgruppen eingerichtet und ein Datenfluss mithilfe des Aktivitäts-Datensatzes erstellt werden. Sobald der Datenfluss abgeschlossen ist, enthält der aufgenommene Datensatz sowohl standardmäßige als auch benutzerdefinierte Aktivitäten aus Ihrer [!DNL Marketo]-Instanz. Anschließend können Sie [Abfrage-Service](../../query-service/home.md) verwenden, um auf Ihre benutzerdefinierten Aktivitätsdatensätze in Experience Platform zuzugreifen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines Datenflusses für Daten zu benutzerdefinierten Aktivitäten](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Ausschließen nicht beanspruchter Konten von [!DNL Marketo] | Jetzt kann beim Erstellen eines Datenflusses für Unternehmensdaten konfiguriert werden, ob nicht beanspruchte Konten bei der Erfassung ausgeschlossen oder einbezogen werden sollen. Weitere Informationen finden sich im Handbuch unter [Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

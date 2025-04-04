@@ -4,16 +4,16 @@ description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Azure-Mandanten einric
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 47%
+source-wordcount: '1035'
+ht-degree: 44%
 
 ---
 
 # Einrichten und Konfigurieren von kundenverwalteten Schlüsseln für Azure mithilfe der API
 
-In diesem Dokument werden die Azure-spezifischen Anweisungen zum Aktivieren von kundenverwalteten Schlüsseln (CMK) in Adobe Experience Platform mithilfe der -API behandelt. Anweisungen zum Abschließen dieses Prozesses mithilfe der Benutzeroberfläche für Azure-gehostete Platform-Instanzen finden Sie im Dokument [UI CMK-Einrichtung](./ui-set-up.md).
+In diesem Dokument werden die Azure-spezifischen Anweisungen zum Aktivieren von kundenverwalteten Schlüsseln (CMK) in Adobe Experience Platform mithilfe der -API behandelt. Anweisungen zum Abschließen dieses Prozesses mithilfe der Benutzeroberfläche für von Azure gehostete Experience Platform-Instanzen finden Sie im Dokument [UI CMK Setup](./ui-set-up.md).
 
 Spezifische Anweisungen für AWS finden Sie im [AWS-Setup-Handbuch](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzu
 
 Weitere Informationen zur Zuweisung von Rollen und Berechtigungen in Experience Platform finden Sie in der [Dokumentation zu Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
 
-Um CMK für Azure-gehostete Plattforminstanzen zu aktivieren, muss Ihr [[!DNL Azure] Schlüsseltresor“ mit ](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
+Um CMK für Azure-gehostete Experience Platform-Instanzen zu aktivieren[[!DNL Azure]  muss Ihr -Schlüsseltresor mit ](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
 
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Soft-Delete aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Nachdem Sie Ihren Schlüsseltresor konfiguriert haben, müssen Sie sich für das
 
 ### Erste Schritte
 
-Zum Registrieren des CMK-Programms müssen Sie Aufrufe an Platform-APIs durchführen. Weitere Informationen dazu, wie Sie die erforderlichen Authentifizierungskopfzeilen für diese Aufrufe erfassen, finden Sie im [Handbuch zur Platform-API-Authentifizierung](../../../api-authentication.md).
+Zum Registrieren der CMK-App müssen Sie Aufrufe an Experience Platform-APIs durchführen. Weitere Informationen dazu, wie Sie die erforderlichen Authentifizierungskopfzeilen für diese Aufrufe erfassen, finden Sie im Authentifizierungshandbuch für die [Experience Platform-API](../../../api-authentication.md).
 
 Während das Authentifizierungshandbuch Anweisungen zum Generieren Ihres eigenen eindeutigen Werts für die erforderliche `x-api-key`-Anfragekopfzeile enthält, verwenden alle API-Vorgänge in diesem Handbuch stattdessen den statischen Wert `acp_provisioning`. Sie müssen allerdings weiterhin eigene Werte für `{ACCESS_TOKEN}` und `{ORG_ID}` angeben.
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 Das `status`-Attribut kann einen von vier Werten mit folgenden Bedeutungen haben:
 
-1. `RUNNING`: Überprüft, ob Platform auf den Schlüssel und den Schlüsseltresor zugreifen kann.
+1. `RUNNING`: Überprüft, ob Experience Platform auf den Schlüssel und den Schlüsseltresor zugreifen kann.
 1. `UPDATE_EXISTING_RESOURCES`: Das System fügt den Schlüsseltresor und den Schlüsselnamen zu den Datenspeichern in allen Sandboxes in Ihrer Organisation hinzu.
 1. `COMPLETED`: Der Schlüsseltresor und der Schlüsselname wurden erfolgreich zu den Datenspeichern hinzugefügt.
 1. `FAILED`: Es ist ein Problem aufgetreten, das in erster Linie mit dem Schlüssel, dem Schlüsseltresor oder der Einrichtung der Multi-Mandanten-App-zusammenhängt.
 
 ## Nächste Schritte
 
-Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Bei von Azure gehosteten Platform-Instanzen werden Daten, die in primäre Datenspeicher aufgenommen werden, jetzt mit dem oder den Schlüssel(n) in Ihrem [!DNL Azure]-Schlüsseltresor ver- und entschlüsselt.
+Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Bei von Azure gehosteten Experience Platform-Instanzen werden Daten, die in primäre Datenspeicher aufgenommen werden, jetzt mit dem oder den Schlüssel(n) in Ihrem [!DNL Azure]-Schlüsseltresor ver- und entschlüsselt.
 
 Weitere Informationen zur Datenverschlüsselung in Adobe Experience Platform finden Sie unter [Verschlüsselungsdokumentation](../../encryption.md).

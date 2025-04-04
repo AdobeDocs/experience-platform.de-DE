@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise November 2022
 description: Die Versionshinweise von November 2022 für Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 100%
+source-wordcount: '456'
+ht-degree: 89%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [!DNL Google Ads Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Konvertierungsdaten an [!DNL Google Ads] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
 | [!DNL Microsoft Azure]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Microsoft Azure] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Microsoft Azure] Übersicht der Erweiterungen](../../tags/extensions/server/azure/overview.md). |
 
-Weitere Informationen zu den Datenerfassungsfunktionen von Platform finden Sie unter [Datenerfassung – Übersicht](../../collection/home.md).
+Weitere Informationen zu den Datenerfassungsfunktionen von Experience Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -45,11 +45,11 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

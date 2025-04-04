@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Vereinigung;Vereinigungen;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;Startseite;beliebte Themen;api;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Vereinigung;Vereinigungen;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unions-API-Endpunkt
 description: Mit dem Endpunkt "/unions“ in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 39%
 
 ---
@@ -31,7 +31,7 @@ Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die 
 
 ### Segmentzugehörigkeitszuordnung
 
-Die `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Platform aufgenommen werden, und ermöglicht so die Integration in andere Lösungen wie Adobe Audience Manager. Weitere Informationen finden Sie im Tutorial [Erstellen von Zielgruppen mithilfe ](../../segmentation/tutorials/create-a-segment.md) APIs“.
+Die `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Experience Platform aufgenommen werden, und ermöglicht so die Integration in andere Lösungen wie Adobe Audience Manager. Weitere Informationen finden Sie im Tutorial [Erstellen von Zielgruppen mithilfe ](../../segmentation/tutorials/create-a-segment.md) APIs“.
 
 ## Abrufen einer Liste von Vereinigungen {#list}
 

@@ -2,25 +2,25 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: API-Endpunkt für Zusammenführungsrichtlinien
 type: Documentation
-description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
+description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Experience Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
-ht-degree: 64%
+source-wordcount: '2468'
+ht-degree: 63%
 
 ---
 
 # Endpunkt für Zusammenführungsrichtlinien
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Experience Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 
-Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
+Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Dieses Handbuch enthält Schritte zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der -API.
 
-Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzeroberfläche von finden Sie im [Handbuch zur Benutzeroberfläche der Zusammenführungsrichtlinien](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle beim Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzeroberfläche von finden Sie im [Handbuch zur Benutzeroberfläche der Zusammenführungsrichtlinien](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle in Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ## Erste Schritte
 
@@ -28,7 +28,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Cus
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Zusammenführungsrichtlinien gelten für Ihre Organisation als privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Jede API, die auf [!DNL Profile] Daten zugreift, erfordert eine Zusammenführungsrichtlinie. Es wird jedoch eine Standardrichtlinie verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] stellt Organisationen eine standardmäßige Zusammenführungsrichtlinie bereit. Sie können aber auch eine Zusammenführungsrichtlinie für eine bestimmte Schemaklasse des Experience-Datenmodells (XDM) erstellen und als Standard für Ihre Organisation festlegen.
+Zusammenführungsrichtlinien gelten für Ihre Organisation als privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Jede API, die auf [!DNL Profile] Daten zugreift, erfordert eine Zusammenführungsrichtlinie. Es wird jedoch eine Standardrichtlinie verwendet, wenn keine explizite Angabe erfolgt. [!DNL Experience Platform] stellt Organisationen eine standardmäßige Zusammenführungsrichtlinie bereit. Sie können aber auch eine Zusammenführungsrichtlinie für eine bestimmte Schemaklasse des Experience-Datenmodells (XDM) erstellen und als Standard für Ihre Organisation festlegen.
 
 Während jede Organisation potenziell mehrere Zusammenführungsrichtlinien pro Schemaklasse haben kann, kann jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie haben. Jede als Standard festgelegte Zusammenführungsrichtlinie wird in Fällen verwendet, in denen der Name der Schemaklasse angegeben wird und eine Zusammenführungsrichtlinie erforderlich, aber nicht angegeben ist.
 
@@ -73,7 +73,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 | `name` | Anzeigename, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
 | `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
 | `schema.name` | Als Teil des [`schema`](#schema)-Objekts enthält das `name` die XDM-Schemaklasse, auf die sich die Zusammenführungsrichtlinie bezieht. Weitere Informationen zu Schemata und Klassen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
-| `version` | [!DNL Platform] gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
+| `version` | [!DNL Experience Platform] gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
 | `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführung](#attribute-merge) Objekt, das angibt, wie die Zusammenführungsrichtlinie Profilattribute im Falle von Datenkonflikten priorisiert. |
 | `isActiveOnEdge` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie im Randbereich verwendet werden kann. Standardmäßig ist dieser Wert `false`. |
@@ -348,7 +348,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Mehrere Zusammenführungsrichtlinien anhand von Kriterien auflisten
 
-Sie können mehrere Zusammenführungsrichtlinien in Ihrer Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt senden und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
+Sie können mehrere Zusammenführungsrichtlinien in Ihrer Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt senden und optionale Abfrageparameter verwenden, um die Antwort zu filtern, zu sortieren und zu paginieren. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
 
 **API-Format**
 
@@ -761,6 +761,6 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen zu erstellen.
+Nachdem Sie nun wissen, wie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert werden, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen zu erstellen.
 
 Weitere Informationen zum Definieren und Verwenden von Zielgruppen finden ](../../segmentation/home.md) in der Dokumentation zum [Adobe Experience Platform-Segmentierungs-Service.

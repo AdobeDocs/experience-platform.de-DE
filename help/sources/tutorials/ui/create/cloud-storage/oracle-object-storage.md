@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Oracle-Objektspeicher;oracle-Objektspeicher
+keywords: Experience Platform;Startseite;beliebte Themen;Oracle Object Storage;Oracle Object Storage
 solution: Experience Platform
-title: Erstellen einer Oracle-Objektspeicher-Source-Verbindung über die Benutzeroberfläche
+title: Erstellen einer Oracle Object Storage Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Adobe Experience Platform eine Quellverbindung für den Oracle-Objektspeicher erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Adobe Experience Platform eine Oracle Object Storage-Quellverbindung erstellen.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 47%
+source-wordcount: '459'
+ht-degree: 32%
 
 ---
 
@@ -20,8 +20,8 @@ In diesem Tutorial finden Sie die Schritte zum Erstellen einer [!DNL Oracle Obje
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -35,13 +35,13 @@ Um eine Verbindung zu [!DNL Oracle Object Storage] herzustellen, müssen Sie Wer
 | `bucketName` | Der zulässige Behältername ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein. Er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
 | `folderPath` | Der Pfad des zulässigen Ordners ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. |
 
-Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch zur Authentifizierung beim [Oracle-Objektspeicher](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Weitere Informationen zum Abrufen dieser Werte finden Sie im [Authentifizierungshandbuch für den Oracle-Objektspeicher](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Oracle-Objektspeicherkonto für die Verbindung mit Platform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um ein neues Oracle Object Storage-Konto für die Verbindung mit Experience Platform zu erstellen.
 
 ## Herstellen einer Verbindung zum Oracle-Objektspeicher
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
@@ -63,4 +63,4 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle Object Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial [Konfigurieren eines Datenflusses, um Daten aus Ihrem Cloud-Speicher in Platform zu übertragen](../../dataflow/batch/cloud-storage.md) fortfahren.
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle Object Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial [Konfigurieren eines Datenflusses, um Daten aus Ihrem Cloud-Speicher in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md) fortfahren.

@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 39%
+source-wordcount: '706'
+ht-degree: 36%
 
 ---
 
@@ -37,33 +37,33 @@ Wenn Sie bereits über ein gültiges [!DNL Oracle NetSuite]-Konto verfügen, kö
 
 ## Verbinden Ihres [!DNL Oracle NetSuite Activities]-Kontos {#connect-account}
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *Kategorie* Marketing-Automatisierung“ die Option **[!DNL Oracle NetSuite Entities]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
-![Screenshot der Platform-Benutzeroberfläche für den Katalog mit der Oracle NetSuite Entities-Karte](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für den Katalog mit der Karte &quot;Oracle NetSuite-Entitäten“](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
-Die **[!UICONTROL Connect Oracle NetSuite Entities-Konto]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Oracle NetSuite Entities-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 >[!IMPORTANT]
 >
->Das Aktualisierungstoken läuft nach sieben Tagen ab. Sobald Ihr Token abläuft, müssen Sie ein Konto auf Experience Platform mit Ihrem aktualisierten Token erstellen. Wenn Sie kein neues Konto mit Ihrem aktualisierten Token erstellen, wird möglicherweise die folgende Fehlermeldung angezeigt: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>Das Aktualisierungstoken läuft nach sieben Tagen ab. Sobald Ihr Token abläuft, müssen Sie auf Experience Platform ein Konto mit Ihrem aktualisierten Token erstellen. Wenn Sie kein neues Konto mit Ihrem aktualisierten Token erstellen, wird möglicherweise die folgende Fehlermeldung angezeigt: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Vorhandenes Konto {#existing-account}
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Oracle NetSuite Entities]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des Oracle NetSuite Entities-Kontos mit einem bestehenden Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+![Screenshot der Experience Platform-Benutzeroberfläche zum Verbinden des Oracle NetSuite Entities-Kontos mit einem bestehenden Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### Neues Konto {#new-account}
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des Oracle NetSuite Entities-Kontos mit einem neuen Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+![Screenshot der Experience Platform-Benutzeroberfläche zum Verbinden des Oracle NetSuite Entities-Kontos mit einem neuen Konto](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
 ### Daten auswählen
 
-Wählen Sie als Nächstes den Objekttyp aus, den Sie auf Experience Platform aufnehmen möchten.
+Wählen Sie als Nächstes den Objekttyp aus, den Sie in Experience Platform aufnehmen möchten.
 
 | Entitätstyp | Beschreibung |
 | --- | --- |
@@ -74,17 +74,17 @@ Wählen Sie als Nächstes den Objekttyp aus, den Sie auf Experience Platform auf
 
 >[!TAB Kontakt]
 
-![Screenshot der Platform-Benutzeroberfläche für das Oracle von NetSuite-Entitäten, auf dem die Konfiguration mit der ausgewählten Option „Kontakt“ angezeigt wird](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für Oracle NetSuite-Entitäten, auf dem die Konfiguration mit ausgewählter Option „Kontakt“ angezeigt wird](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB Kunde]
 
-![Screenshot der Platform-Benutzeroberfläche für das Oracle von NetSuite-Entitäten, auf dem die Konfiguration mit ausgewählter Kundenoption angezeigt wird](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für Oracle NetSuite-Entitäten, auf dem die Konfiguration mit ausgewählter Kundenoption angezeigt wird](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 
 ## Nächste Schritte {#next-steps}
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle NetSuite Entities]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten zur Marketing-Automatisierung in Platform zu importieren](../../dataflow/marketing-automation.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Oracle NetSuite Entities]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten zur Marketing-Automatisierung in Experience Platform zu importieren](../../dataflow/marketing-automation.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -92,7 +92,7 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verw
 
 ### Zuordnung {#mapping}
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >

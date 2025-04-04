@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Apache HDFS;HDFS;HDFS
 solution: Experience Platform
 title: Erstellen einer Apache HDFS-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Apache Hadoop-Quellverbindung für das verteilte Dateisystem erstellen.
+description: Erfahren Sie, wie Sie eine Apache Hadoop Distributed File System-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 35%
@@ -18,11 +18,11 @@ ht-degree: 35%
 >
 >Der [!DNL Apache] HDFS-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
-Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Apache Hadoop Distributed File System]-Quell-Connectors (im Folgenden als „HDFS“ bezeichnet) über die [!DNL Platform]-Benutzeroberfläche beschrieben.
+Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Apache Hadoop Distributed File System]-Quell-Connectors (im Folgenden als „HDFS“ bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Platform] voraus.
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Experience Platform] voraus.
 
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
@@ -41,7 +41,7 @@ Um Ihren HDFS-Quell-Connector zu authentifizieren, müssen Sie Werte für die fo
 
 ## HDFS-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HDFS-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HDFS-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -67,4 +67,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das HDFS-Konto aus, mit dem S
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem HDFS-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem HDFS-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

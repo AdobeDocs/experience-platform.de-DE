@@ -2,10 +2,10 @@
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 97%
+source-wordcount: '829'
+ht-degree: 92%
 
 ---
 
@@ -27,7 +27,7 @@ Das folgende Diagramm zeigt einen allgemeinen Überblick über die Komponenten, 
 
 Die Ziel-Server-Konfiguration verknüpft Informationen zu Ihren Server-Spezifikationen und der von Adobe verwendeten Vorlage zum Bereitstellen von Payloads an Ihr Ziel.
 
-Hier geben Sie beispielsweise die API-Endpunkte auf Ihrer Seite an, mit denen sich Experience Platform verbinden muss, sowie die Kopfzeilen und das Format der von Platform durchgeführten API-Aufrufe.
+Hier geben Sie beispielsweise die API-Endpunkte auf Ihrer Seite an, mit denen sich Experience Platform verbinden muss, sowie die Kopfzeilen und das Format der von Experience Platform durchgeführten API-Aufrufe.
 
 Bei dateibasierten Zielen enthält diese Konfiguration auch die unterstützten Dateiformatierungs- und Komprimierungsformate für Ihr Ziel. Sie können die im Folgenden beschriebenen Funktionen über den [Endpunkt destination-servers](../authoring-api/destination-server/create-destination-server.md)konfigurieren.
 

@@ -2,9 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Metrics-API-Endpunkt
-description: Erfahren Sie, wie Sie Observability-Metriken in Experience Platform mithilfe der Observability Insights-API abrufen.
+description: Erfahren Sie, wie Sie Observability Insights-Metriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 25%
@@ -13,7 +13,7 @@ ht-degree: 25%
 
 # Metrik-Endpunkt
 
-Observability-Metriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Mit dem `/metrics`-Endpunkt in der [!DNL Observability Insights API] können Sie programmgesteuert Metrikdaten für die Aktivität Ihrer Organisation in [!DNL Platform] abrufen.
+Observability-Metriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Mit dem `/metrics`-Endpunkt in der [!DNL Observability Insights API] können Sie programmgesteuert Metrikdaten für die Aktivität Ihrer Organisation in [!DNL Experience Platform] abrufen.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Observability
 
 ## Beobachtbarkeitsmetriken abrufen
 
-Sie können Metrikdaten abrufen, indem Sie eine POST-Anfrage an den `/metrics`-Endpunkt stellen und dabei die Metriken angeben, die Sie in der Payload abrufen möchten.
+Sie können Metrikdaten abrufen, indem Sie eine POST-Anfrage an den `/metrics`-Endpunkt senden und dabei die Metriken angeben, die Sie in der Payload abrufen möchten.
 
 **API-Format**
 
@@ -175,7 +175,7 @@ Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der An
 | `metric` | Der Name einer der in der Anfrage angegebenen Metriken. |
 | `filters` | Die Filterkonfiguration für die angegebene Metrik. |
 | `datapoints` | Ein Array, dessen Objekte die Ergebnisse der angegebenen Metrik und Filter darstellen. Die Anzahl der Objekte im Array hängt von den in der Anfrage bereitgestellten Filteroptionen ab. Wenn keine Filter bereitgestellt wurden, enthält das -Array nur ein einzelnes -Objekt, das alle Datensätze darstellt. |
-| `groupBy` | Wenn mehrere Datensätze in der `filter`-Eigenschaft für eine Metrik angegeben wurden und die `groupBy`-Option in der Anfrage auf „true“ gesetzt wurde, enthält dieses Objekt die ID des Datensatzes, für den die entsprechende `dps`-Eigenschaft gilt.<br><br>Wenn dieses Objekt in der Antwort leer erscheint, gilt die entsprechende `dps`-Eigenschaft für alle Datensätze, die im `filters`-Array bereitgestellt werden (oder für alle Datensätze in [!DNL Platform], wenn keine Filter bereitgestellt wurden). |
+| `groupBy` | Wenn mehrere Datensätze in der `filter`-Eigenschaft für eine Metrik angegeben wurden und die `groupBy`-Option in der Anfrage auf „true“ gesetzt wurde, enthält dieses Objekt die ID des Datensatzes, für den die entsprechende `dps`-Eigenschaft gilt.<br><br>Wenn dieses Objekt in der Antwort leer erscheint, gilt die entsprechende `dps`-Eigenschaft für alle Datensätze, die im `filters`-Array bereitgestellt werden (oder für alle Datensätze in [!DNL Experience Platform], wenn keine Filter bereitgestellt wurden). |
 | `dps` | Die zurückgegebenen Daten für die angegebene Metrik, den angegebenen Filter und den angegebenen Zeitbereich. Jeder Schlüssel in diesem Objekt stellt einen Zeitstempel mit einem entsprechenden Wert für die angegebene Metrik dar. Der Zeitraum zwischen den einzelnen Datenpunkten hängt vom in der Anfrage angegebenen `granularity` ab. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ Der folgende Abschnitt enthält zusätzliche Informationen zum Arbeiten mit dem 
 
 ### Verfügbare Metriken {#available-metrics}
 
-In der folgenden Tabelle sind alle Metriken aufgelistet, die nach [!DNL Observability Insights] verfügbar gemacht werden, aufgeschlüsselt nach [!DNL Platform] Service. Jede Metrik enthält eine Beschreibung und einen akzeptierten ID-Abfrageparameter.
+In der folgenden Tabelle sind alle Metriken aufgelistet, die nach [!DNL Observability Insights] verfügbar gemacht werden, aufgeschlüsselt nach [!DNL Experience Platform] Service. Jede Metrik enthält eine Beschreibung und einen akzeptierten ID-Abfrageparameter.
 
 >[!NOTE]
 >

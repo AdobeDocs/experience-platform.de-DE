@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 6%
@@ -103,17 +103,17 @@ Die Erweiterung ist jetzt installiert und für die Verwendung in Ihrer Eigenscha
 
 ## Datenerfassung
 
-Bei Verwendung dieser Erweiterung in einer [Regel](../../../ui/managing-resources/rules.md) gibt es mehrere Datenwerte, die die Erweiterung mit jedem Ereignis an Mailchimp sendet. Für eine typische Implementierung können Sie die [Adobe Experience Platform Web SDK-Erweiterung](../../client/web-sdk/overview.md) so konfigurieren, dass diese Daten zur Verwendung durch die Erweiterung in der Ereignisweiterleitungs-Eigenschaft an [!DNL Platform Edge Network] gesendet werden.
+Bei Verwendung dieser Erweiterung in einer [Regel](../../../ui/managing-resources/rules.md) gibt es mehrere Datenwerte, die die Erweiterung mit jedem Ereignis an Mailchimp sendet. Für eine typische Implementierung können Sie die [Adobe Experience Platform Web SDK-Erweiterung](../../client/web-sdk/overview.md) so konfigurieren, dass diese Daten zur Verwendung durch die Erweiterung in der Ereignisweiterleitungs-Eigenschaft an [!DNL Experience Platform Edge Network] gesendet werden.
 
 Die für diese Erweiterung erforderlichen Daten können von Web SDK entweder als XDM-Daten (unter Verwendung des [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)-Objekts) oder als Nicht-XDM-Daten (unter Verwendung des [`data`](/help/web-sdk/commands/sendevent/data.md)-Objekts) gesendet werden.
 
-Wenn ein Kunde beispielsweise einen Kauf tätigt oder sich für ein Ereignis auf Ihrer Website registriert, können Sie über Mailchimp mit dieser Erweiterung eine Bestätigungs-E-Mail senden. Nachdem Sie die erforderlichen Informationen von Web SDK an das Edge Network gesendet haben, sendet die Erweiterung die E-Mail mit Mailchimp als Trigger.
+Wenn ein Kunde beispielsweise einen Kauf tätigt oder sich für ein Ereignis auf Ihrer Website registriert, können Sie über Mailchimp mit dieser Erweiterung eine Bestätigungs-E-Mail senden. Nachdem Sie die erforderlichen Informationen von Web SDK an Edge Network gesendet haben, sendet die Erweiterung die E-Mail mit Mailchimp als Trigger.
 
 ![Konfiguration der Ereignisaktion hinzufügen](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Datenelemente
 
-Der Screenshot im vorherigen Abschnitt zeigt die Daten, die Sie mit jedem Ereignis von dieser Erweiterung an Mailchimp senden können. Nachdem Sie Web SDK für das Senden dieser Daten an das Edge Network konfiguriert haben, können Sie Datenelemente in der Ereignisweiterleitungseigenschaft erstellen, damit die Erweiterung auf diese Werte zugreifen kann.
+Der Screenshot im vorherigen Abschnitt zeigt die Daten, die Sie mit jedem Ereignis von dieser Erweiterung an Mailchimp senden können. Nachdem Sie Web SDK für das Senden dieser Daten an Edge Network konfiguriert haben, können Sie Datenelemente in der Ereignisweiterleitungseigenschaft erstellen, damit die Erweiterung auf diese Werte zugreifen kann.
 
 Die nachstehende Tabelle enthält weitere Details zu jedem möglichen Wert.
 
@@ -140,7 +140,7 @@ Sie können jetzt diese Erweiterung und die Aktion Ereignis hinzufügen zu Trigg
 
 ## Datenvalidierung
 
-Beim Arbeiten mit Erweiterungen für die Ereignisweiterleitung ist der [Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) sehr hilfreich. Im Abschnitt Protokolle unter Edge-Protokolle können Sie die Anfragen sehen, die von Ihren Ereignisweiterleitungsregeln nach deren Auslösung gestellt wurden. Die folgenden Screenshots zeigen, wie eine Anfrage an die Mailchimp-API von der Erweiterung gestellt wird.
+Beim Arbeiten mit Erweiterungen für die Ereignisweiterleitung ist die [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) sehr hilfreich. Im Abschnitt Protokolle unter Edge-Protokolle können Sie die Anfragen sehen, die von Ihren Ereignisweiterleitungsregeln nach deren Auslösung gestellt wurden. Die folgenden Screenshots zeigen, wie eine Anfrage an die Mailchimp-API von der Erweiterung gestellt wird.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

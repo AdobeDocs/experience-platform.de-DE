@@ -6,20 +6,20 @@ description: Dieses Dokument bietet einen kurzen Überblick über einige zugrund
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 50%
 
 ---
 
 # Experience Platform API-Grundlagen
 
-Adobe Experience Platform-APIs verwenden mehrere zugrunde liegende Technologien und Syntaxen, die für das effektive Verwalten von JSON-basierten [!DNL Platform] wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
+Adobe Experience Platform-APIs verwenden mehrere zugrunde liegende Technologien und Syntaxen, die für das effektive Verwalten von JSON-basierten [!DNL Experience Platform] wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
 
 ## JSON Pointer {#json-pointer}
 
-JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON Pointer ist eine Zeichenfolge aus Token, die durch `/`-Zeichen getrennt sind und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON-Zeiger -Zeichenfolgen werden in vielen PATCH-Vorgängen für [!DNL Platform]-APIs verwendet, wie weiter unten in diesem Dokument beschrieben. Weitere Informationen zu JSON Pointer finden Sie in der Dokumentation [JSON Pointer – Überblick](https://rapidjson.org/md_doc_pointer.html).
+JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON Pointer ist eine Zeichenfolge aus Token, die durch `/`-Zeichen getrennt sind und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON-Zeiger -Zeichenfolgen werden in vielen PATCH-Vorgängen für [!DNL Experience Platform]-APIs verwendet, wie weiter unten in diesem Dokument beschrieben. Weitere Informationen zu JSON Pointer finden Sie in der Dokumentation [JSON Pointer – Überblick](https://rapidjson.org/md_doc_pointer.html).
 
 ### Beispiel für ein JSON-Schema-Objekt
 
@@ -98,7 +98,7 @@ Das folgende JSON stellt ein vereinfachtes XDM-Schema dar, dessen Felder mit JSO
 
 ## JSON Patch {#json-patch}
 
-Es gibt viele PATCH-Vorgänge für [!DNL Platform]-APIs, die JSON-Patch-Objekte für ihre Anfrage-Payloads akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anfragetext senden zu müssen.
+Es gibt viele PATCH-Vorgänge für [!DNL Experience Platform]-APIs, die JSON-Patch-Objekte für ihre Anfrage-Payloads akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anfragetext senden zu müssen.
 
 ### Beispiel für ein JSON Patch-Objekt
 
@@ -109,7 +109,7 @@ Es gibt viele PATCH-Vorgänge für [!DNL Platform]-APIs, die JSON-Patch-Objekte 
 }
 ```
 
-* `op`: Die Art des Patch-Vorgangs. JSON Patch unterstützt zwar mehrere verschiedene Vorgangstypen, jedoch sind nicht alle PATCH-Vorgänge in [!DNL Platform] APIs mit jedem Vorgangstyp kompatibel. Verfügbare Vorgangsarten sind:
+* `op`: Die Art des Patch-Vorgangs. JSON Patch unterstützt zwar mehrere verschiedene Vorgangstypen, jedoch sind nicht alle PATCH-Vorgänge in [!DNL Experience Platform] APIs mit jedem Vorgangstyp kompatibel. Verfügbare Vorgangsarten sind:
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und 
 
 ## Nächste Schritte
 
-In diesem Dokument wurden einige der Technologien und Syntaxen vorgestellt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zum Arbeiten mit Platform[APIs, einschließlich Best ](api-guide.md), finden Sie im Handbuch „Erste Schritte“. Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Platform](troubleshooting.md).
+In diesem Dokument wurden einige der Technologien und Syntaxen vorgestellt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zur Verwendung [ Experience Platform-APIs, einschließlich Best ](api-guide.md), finden Sie im Handbuch „Erste Schritte“. Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](troubleshooting.md).

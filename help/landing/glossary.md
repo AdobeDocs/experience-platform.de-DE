@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7996'
+source-wordcount: '8009'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ## A
 
-**Zugriffssteuerung**: Die rollenbasierte Zugriffssteuerung ermöglicht es Administratoren, Benutzenden von Experience Platform Zugriff und Berechtigungen zuzuweisen. Zu den Berechtigungen gehört die Möglichkeit, Experience Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen.
+**Zugriffssteuerung**: Die rollenbasierte Zugriffssteuerung ermöglicht es Administratoren, Benutzern von Experience Platform Zugriff und Berechtigungen zuzuweisen. Zu den Berechtigungen gehört die Möglichkeit, Experience Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen.
 
 **Zugriffsschlüssel-ID**: Eine Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem geheimen [!DNL Amazon] S3-Zugriffsschlüssel verknüpft ist. Die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel werden zusammen zum Signieren von [!DNL Amazon Web Services] (AWS)-Anfragen verwendet.
 
@@ -25,29 +25,29 @@ ht-degree: 4%
 
 **Aktivität**: In [!DNL Offer Decisioning] enthält eine Aktivität die Logik, die über die Auswahl eines Angebots bestimmt.
 
-**Administrator**: Eine oder mehrere Personen in Ihrer Organisation, die Berechtigungen für das Experience Platform in Adobe Admin Console konfigurieren und anpassen können.
+**Administrator**: Eine oder mehrere Personen in Ihrem Unternehmen, die Berechtigungen für Experience Platform in Adobe Admin Console konfigurieren und anpassen können.
 
-**Adobe Admin Console**: Adobe Admin Console bietet einen zentralen Speicherort für die Verwaltung von Adobe-Produktberechtigungen und den Zugriff für Ihr Unternehmen. Über die Konsole können Administratoren Benutzergruppen Zugriffsberechtigungen für verschiedene Platform-Funktionen erteilen, wie z. B. „Datensätze verwalten“, „Datensätze anzeigen“ oder „Profile verwalten“.
+**Adobe Admin Console**: Adobe Admin Console bietet einen zentralen Speicherort für die Verwaltung von Adobe-Produktberechtigungen und den Zugriff für Ihr Unternehmen. Über die Konsole können Administratoren Benutzergruppen Zugriffsberechtigungen für verschiedene Experience Platform-Funktionen erteilen, wie z. B. „Datensätze verwalten“, „Datensätze anzeigen“ oder „Profile verwalten“.
 
 **Adobe Experience Platform**: Adobe Experience Platform standardisiert Daten und Inhalte im gesamten Unternehmen, unterstützt Echtzeit-Kundenprofile, ermöglicht Datenwissenschaft und beschleunigt die Inhaltsgeschwindigkeit, um die Erlebnispersonalisierung auf dem gesamten Kunden-Journey zu fördern.
 
-**Adobe Experience Platform Query Service**: Ermöglicht Datenanalysten die Abfrage von Ereignissen und Profilen zur Verwendung in Analysen und maschinellem Lernen. Mit Query Service können Datenwissenschaftler und Analysten alle ihre im Experience Platform gespeicherten Datensätze abrufen (einschließlich Verhaltensdaten sowie POS (Point-of-Sale), CRM (Customer Relationship Management) und mehr) und diese Datensätze abfragen, um spezifische Fragen zu den Daten zu beantworten.
+**Adobe Experience Platform Query Service**: Ermöglicht Datenanalysten die Abfrage von Ereignissen und Profilen zur Verwendung in Analysen und maschinellem Lernen. Mit Query Service können Datenwissenschaftler und Analysten alle in Experience Platform gespeicherten Datensätze abrufen (einschließlich Verhaltensdaten sowie POS (Point-of-Sale), CRM (Customer Relationship Management) und mehr) und diese Datensätze abfragen, um spezifische Fragen zu den Daten zu beantworten.
 
 **Adobe Experience Platform-Segmentierungs-**: Ermöglicht das Erstellen von Segmenten und das Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten. Diese Zielgruppen können dann in ihre eigenen Datensätze im Data Lake exportiert werden.
 
-**Adobe Intelligent Services**: Intelligent Services wie Attribution AI und Kunden-KI sind auf maschinellem Lernen basierende Modelle auf künstlicher Intelligenz, die speziell entwickelt wurden und für die Ausführung und den Betrieb von Experience Platform erforderlich sind.
+**Adobe Intelligent Services**: Intelligent Services wie Attributions-KI und Kunden-KI sind auf maschinellem Lernen basierende Modelle auf künstlicher Intelligenz, die speziell entwickelt wurden und die Ausführung und den Betrieb von Experience Platform erfordern.
 
-**Adobe I/O**: Adobe I/O ist Teil von Experience Platform und bietet Zugriff auf alles, was Entwickler benötigen, um Platform zu integrieren, zu erweitern und anzupassen, einschließlich APIs, Ereignisse, Entwicklerkonsole und hilfreiche Tools.
+**Adobe I/O**: Adobe I/O ist Teil von Experience Platform und bietet Zugriff auf alles, was Entwickler benötigen, um Experience Platform zu integrieren, zu erweitern und anzupassen, einschließlich APIs, Ereignisse, Entwicklerkonsole und hilfreiche Tools.
 
 **Adobe Sensei**: Adobe Sensei ist das Intelligence-Framework, das Experience Platform unterstützt. Darüber hinaus bietet es eine Reihe von KI-Services, mit denen Marken ihre Fähigkeit verbessern können, personalisierte Kundenerlebnisse in Echtzeit bereitzustellen.
 
 **Amazon S3-Bucket**: [!DNL Amazon S3] Buckets sind die grundlegenden Container für Daten, die im [!DNL Amazon]-Ökosystem gespeichert sind. Buckets enthalten Objekte. Jedes Objekt wird gespeichert und mit einem eindeutigen, vom Entwickler zugewiesenen Schlüssel abgerufen.
 
-**Amazon S3-Connector**: Der [!DNL Amazon] S3-Connector ermöglicht Kunden von Experience Platform eine sichere Verbindung und den Zugriff auf ihre [!DNL Amazon] S3-Daten.
+**Amazon S3-Connector**: Der [!DNL Amazon] S3-Connector ermöglicht Kundinnen und Kunden von Experience Platform eine sichere Verbindung und den Zugriff auf ihre [!DNL Amazon] S3-Daten.
 
 **APA**: Die [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) fördert und schützt die Privatsphäre von Personen und regelt, wie australische Regierungsbehörden und Organisationen mit personenbezogenen Daten umgehen. Die [!DNL Privacy Act] enthält Grundsätze, die für Organisationen des Privatsektors gelten. So haben Privatpersonen beispielsweise das Recht zu verstehen, warum die personenbezogenen Daten erfasst werden und wie sie verwendet werden, auf ihre Daten zuzugreifen, sie zu löschen und ihre personenbezogenen Daten zu korrigieren.
 
-**Speicherstrategie anhängen**: Die Speicherstrategie „Anhängen“ ist eine Option, die verwendet wird, wenn Daten von Drittanbietern angegeben werden, die über eine Verbindung aufgenommen werden sollen, und wenn neue Daten oder Zeilen am Ende des Datensatzes angehängt werden. Die zuvor aufgenommenen Zeilen bleiben unberührt, und nur Zeilen, die seit der letzten geplanten Ausführung erstellt wurden, werden in das Experience Platform aufgenommen. Alle Zeilen, die im Quellsystem geändert wurden, bleiben auf dem Experience Platform unverändert.
+**Speicherstrategie anhängen**: Die Speicherstrategie „Anhängen“ ist eine Option, die verwendet wird, wenn Daten von Drittanbietern angegeben werden, die über eine Verbindung aufgenommen werden sollen, und wenn neue Daten oder Zeilen am Ende des Datensatzes angehängt werden. Die zuvor aufgenommenen Zeilen bleiben unberührt, und nur Zeilen, die seit der letzten geplanten Ausführung erstellt wurden, werden in Experience Platform aufgenommen. Alle Zeilen, die im Quellsystem geändert wurden, bleiben in Experience Platform unverändert.
 
 **Array**: Arrays werden für geordnete Elemente mit demselben Datentyp verwendet.
 
@@ -55,9 +55,9 @@ ht-degree: 4%
 
 **Attribute**: Attribute sind angegebene Merkmale, die ein Profil darstellen.
 
-**Attributzusammenführung**: Beim Definieren einer Zusammenführungsrichtlinie mit der Echtzeit-Kundenprofil-API gibt das `attributeMerge`-Objekt an, wie die Zusammenführungsrichtlinie Profilattribute im Falle von Datenkonflikten priorisiert. Dies entspricht der Auswahl einer [!UICONTROL Zusammenführungsmethode] beim Definieren einer Zusammenführungsrichtlinie in der Platform-Benutzeroberfläche.
+**Attributzusammenführung**: Beim Definieren einer Zusammenführungsrichtlinie mit der Echtzeit-Kundenprofil-API gibt das `attributeMerge`-Objekt an, wie die Zusammenführungsrichtlinie Profilattribute im Falle von Datenkonflikten priorisiert. Dies entspricht der Auswahl einer [!UICONTROL Zusammenführungsmethode] beim Definieren einer Zusammenführungsrichtlinie in der Experience Platform-Benutzeroberfläche.
 
-**Attribution AI**: [!DNL Attribution AI] ist ein Intelligent Service, der auf Adobe Sensei basiert und algorithmische Mehrkanal-Attributionsfunktionen über den gesamten Kundenlebenszyklus hinweg bietet.
+**Attribution AI**: [!DNL Attribution AI] ist ein Intelligent Service, der auf Adobe Sensei basiert und algorithmische Mehrkanal-Attributionsfunktionen für den gesamten Kundenlebenszyklus bietet.
 
 **Audience**: Eine Audience ist der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
 
@@ -69,13 +69,13 @@ ht-degree: 4%
 
 **Aufstockung**: Bei geplanten Quellen ermöglicht die Aufstockungsoption die Aufnahme historischer Daten.
 
-**Aufstockungszeitraum**: Der Aufstockungszeitraum ist eine Option, um den Zeitraum für die Aufnahme historischer Drittanbieterdaten über eine Quellverbindung festzulegen. Wenn Sie einen Aufstockungszeitraum von „Für immer“ auswählen, wird der gesamte Verlauf der Quelldaten auf Experience Platform aufgenommen.
+**Aufstockungszeitraum**: Der Aufstockungszeitraum ist eine Option, um den Zeitraum für die Aufnahme historischer Drittanbieterdaten über eine Quellverbindung festzulegen. Wenn Sie einen Aufstockungszeitraum von „Für immer“ auswählen, wird der gesamte Verlauf der Quelldaten in Experience Platform aufgenommen.
 
 **Batch**: Ein Batch ist ein Satz von Daten, die über einen bestimmten Zeitraum gesammelt und als eine Einheit verarbeitet werden. Datensätze bestehen aus mehreren Batches.
 
 **Batch-ID**: Eine Batch-ID ist eine von Adobe generierte Kennung für einen Datenstapel.
 
-**Batch-Aufnahme**: Die Batch-Aufnahme ermöglicht es Ihnen, Daten als Batch-Dateien in Experience Platform aufzunehmen. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Einheit aufgenommen werden.
+**Batch-Aufnahme**: Die Batch-Aufnahme ermöglicht Ihnen das Aufnehmen von Daten in Form von Batch-Dateien in Experience Platform. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Einheit aufgenommen werden.
 
 **Batch-**: Die Batch-Segmentierung ist eine Alternative zu einem fortlaufenden Datenauswahlprozess und verschiebt alle Profildaten gleichzeitig durch Segmentdefinitionen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und gespeichert, sodass es zur Verwendung exportiert werden kann.
 
@@ -87,7 +87,7 @@ ht-degree: 4%
 
 **Begrenzung**: In [!DNL Offer Decisioning] wird die Begrenzung (auch als Frequenzlimitierung bezeichnet) in Entscheidungsregeln verwendet, um zu definieren, wie oft ein Angebot unterbreitet wird. Es gibt zwei Arten von Obergrenzen: wie oft ein Angebot für die gesamte Ziel-Audience vorgeschlagen werden kann (eine so genannte „globale Begrenzung„) und wie oft ein Angebot demselben Endbenutzer vorgeschlagen werden kann (eine so genannte „Profilbegrenzung„).
 
-**Catalog**: Im Kontext von Quellen und Zielen ist ein Katalog eine Galerie mit verfügbaren Anschlüssen zu Adobe-Anwendungen und Technologien von Drittanbietern. Nicht zu verwechseln mit [!DNL Catalog Service].
+**Katalog**: Im Kontext von Quellen und Zielen ist ein Katalog eine Galerie mit verfügbaren Verbindungen zu Adobe-Anwendungen und Technologien von Drittanbietern. Nicht zu verwechseln mit [!DNL Catalog Service].
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (manchmal auch als [!DNL Catalog] bezeichnet) ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. [!DNL Catalog] speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such-, Überwachungs- und Data-Governance-Zwecke.
 
@@ -155,17 +155,17 @@ ht-degree: 4%
 
 **Datenelement**: Im Kontext von Tags ist ein Datenelement ein Zeiger, der in Regeln und Erweiterungen verwendet wird, um auf ein bestimmtes Datenelement zu verweisen, das auf dem Client-Gerät vorhanden ist.
 
-**Datenaufnahme**: Bei der Datenaufnahme werden Daten aus einer Quelle zum Experience Platform hinzugefügt. Daten können auf verschiedene Weise in Platform aufgenommen werden, einschließlich Streaming, Batches oder Hinzufügen über Quell-Connectoren.
+**Datenaufnahme**: Bei der Datenaufnahme werden Daten aus einer Quelle zu Experience Platform hinzugefügt. Daten können auf verschiedene Weise in Experience Platform aufgenommen werden, einschließlich Streaming, Batches oder Hinzufügen über Quell-Connectoren.
 
 **Datenschicht**: Im Kontext von Tags ist eine Datenschicht eine Datenstruktur, die auf dem Client-Gerät vorhanden ist und Metadaten über den Kontext enthält, in dem eine Seite oder ein Bildschirm angezeigt wird.
 
 **Data Governance**: Data Governance umfasst die Strategien und Technologien, mit denen sichergestellt wird, dass die Daten den Vorschriften und organisatorischen Richtlinien in Bezug auf die Datennutzung entsprechen.
 
-**Datenintegrationspartner**: Datenintegrationspartner vereinfachen und automatisieren das Laden und Umwandeln großer Datenmengen aus über 200 Quellen auf Experience Platform, ohne Code zu schreiben.
+**Datenintegrationspartner**: Datenintegrationspartner vereinfachen und automatisieren das Laden und Umwandeln großer Datenmengen aus über 200 Quellen in Experience Platform, ohne Code zu schreiben.
 
 **Datensatzkennzeichnungen**: Datennutzungskennzeichnungen können zu Datensätzen hinzugefügt werden. Alle Felder in diesem Datensatz übernehmen die Kennzeichnungen des Datensatzes.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] in Experience Platform ermöglicht es Kunden, anhand von Daten aus verschiedenen Platform- und Adobe-Anwendungen Modelle für maschinelles Lernen zu erstellen, um intelligente Segmente zu erstellen, Einblicke zu generieren und Prognosen zu liefern, mit denen Sie die digitalen Erlebnisse der Endbenutzer erheblich verbessern können.
+**Data Science Workspace**: Mit der [!DNL Data Science Workspace] in Experience Platform können Kunden anhand von Daten aus allen Experience Platform- und Adobe-Anwendungen Modelle für maschinelles Lernen erstellen, um intelligente Segmente zu erstellen, Einblicke zu generieren und Prognosen zu liefern, mit denen Sie die digitalen Erlebnisse der Endbenutzer erheblich verbessern können.
 
 **Datenquelle**: Eine Datenquelle ist eine vom Benutzer angegebene Herkunft von Daten. Beispiele für eine Datenquelle sind eine Mobile App, Profil- und/oder Erlebnisereignisse, Website-Profilereignisse oder ein CRM.
 
@@ -177,9 +177,9 @@ ht-degree: 4%
 
 **Datennutzungskennzeichnungen**: Mit Datennutzungskennzeichnungen können Sie Daten kategorisieren, die datenschutzbezogene Überlegungen und vertragliche Bedingungen zur Einhaltung von Verordnungen und Unternehmensrichtlinien widerspiegeln. Einem Datensatz hinzugefügte Datennutzungsbeschriftungen werden übernommen oder auf alle Felder in diesem Datensatz angewendet. Datennutzungsbeschriftungen können auch direkt auf Felder angewendet werden.
 
-**Datenfluss**: Ein Datenfluss ist eine virtuelle Pipeline von Daten, die von einer Quelle in Platform und von dort zu Zielen fließen.
+**Datenfluss**: Ein Datenfluss ist eine virtuelle Pipeline von Daten, die von einer Quelle in Experience Platform und von dort zu Zielen fließen.
 
-**Datenflussausführung**: Eine Datenflussausführung ist ein Datenfluss, der basierend auf einem vom Benutzer angegebenen Zeitplan auf Experience Platform landet.
+**Datenflussausführung**: Eine Datenflussausführung ist ein Datenfluss, der basierend auf einem vom Benutzer festgelegten Zeitplan in Experience Platform landet.
 
 **Datensatz**: Ein Datensatz ist ein Konstrukt zur Speicherung und Verwaltung von Daten, normalerweise einer Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält.
 
@@ -191,15 +191,15 @@ ht-degree: 4%
 
 **Delta-Spalte**: Mit einer Delta-Spalte können Sie ein Quelldatenfeld auswählen, das einen Zeitstempel für die inkrementelle Aufnahme darstellt.
 
-**Delta-Speicherstrategie**: Die Delta-Speicherstrategie ist eine Option für die Aufnahme von Drittanbieterdaten über eine Quellverbindung. Mit der Option kann der Benutzer angeben, dass neue oder geänderte Zeilen von Quelldaten in Experience Platform aufgenommen werden. Am Ende des Datensatzes werden neue Zeilen hinzugefügt und geänderte Zeilen im Datensatz auf Experience Platform aktualisiert.
+**Delta-Speicherstrategie**: Die Delta-Speicherstrategie ist eine Option für die Aufnahme von Drittanbieterdaten über eine Quellverbindung. Mit der Option kann der Benutzer angeben, dass neue oder geänderte Zeilen von Quelldaten in Experience Platform aufgenommen werden. Am Ende des Datensatzes werden neue Zeilen hinzugefügt und geänderte Zeilen im Datensatz in Experience Platform aktualisiert.
 
-**Descriptor**: Im Experience-Datenmodell (XDM) ist ein Deskriptor ein zusätzlicher Satz schemabezogener Metadaten, der ein bestimmtes Verhalten für ein Feld beschreibt. Deskriptoren können vom Experience Platform verwendet werden, um das beabsichtigte Schemaverhalten zu verstehen, z. B. die Beziehung zwischen zwei Schemas.
+**Descriptor**: Im Experience-Datenmodell (XDM) ist ein Deskriptor ein zusätzlicher Satz schemabezogener Metadaten, der ein bestimmtes Verhalten für ein Feld beschreibt. Deskriptoren können von Experience Platform verwendet werden, um das beabsichtigte Schemaverhalten zu verstehen, z. B. die Beziehung zwischen zwei Schemas.
 
 **Ziel**: Ein Ziel ist ein allgemeiner Begriff für einen Endpunkt, z. B. eine Adobe-Anwendung, eine Werbeplattform, einen Cloud-Speicher-Service oder einen Marketing-Service, bei dem eine Zielgruppe aktiviert und bereitgestellt wird.
 
 **Zielkategorie**: Eine Zielkategorie ist eine Gruppierung von Zielen mit ähnlichen Eigenschaften.
 
-**Zielkatalog**: Ein Zielkatalog ist eine Liste der verfügbaren Ziele in Experience Platform.
+**Zielkatalog**: Ein Zielkatalog ist eine Liste der in Experience Platform verfügbaren Ziele.
 
 **Direktaufrufregeln**: Im Kontext von Tags ist eine Direktaufrufregel eine Regel, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird, wobei die Ereigniserkennung und die Suchsysteme umgangen werden.
 
@@ -227,7 +227,7 @@ ht-degree: 4%
 
 **Ereignisse**: Ereignisse sind die Verhaltensdaten, die einem Profil zugeordnet sind.
 
-**Experience-Datenmodell (XDM)** [!DNL Experience Data Model] (XDM) ist ein Open-Source-Framework, das Standardschemata verwendet, um Daten für die Verwendung mit Experience Platform- und Adobe Experience Cloud-Anwendungen zu vereinheitlichen. XDM standardisiert die Datenstruktur und beschleunigt und vereinfacht den Prozess der Gewinnung von Erkenntnissen aus großen Datenmengen.
+**Experience-Datenmodell (XDM)** [!DNL Experience Data Model] (XDM) ist ein Open-Source-Framework, das Standardschemata verwendet, um Daten zur Verwendung mit Experience Platform- und Adobe Experience Cloud-Programmen zu vereinheitlichen. XDM standardisiert die Datenstruktur und beschleunigt und vereinfacht den Prozess der Gewinnung von Erkenntnissen aus großen Datenmengen.
 
 **Experiment**: Ein Experiment ist der Prozess der Erstellung eines trainierten Modells durch Trainieren der Instanz mit einem Beispielteil von Live-Produktionsdaten. Dies unterscheidet sich von einem trainierten Modell, das mit einem Holdout-Testdatensatz getestet wird. Dies unterscheidet sich auch von dem Konzept eines Experiments in einigen Frameworks für maschinelles Lernen, wo es sich tatsächlich um ein Beispielmodellierungsprojekt handelt.
 
@@ -297,15 +297,15 @@ ht-degree: 4%
 
 **I2-Datennutzungskennzeichnung**: Die `I2`-Datennutzungskennzeichnung wird verwendet, um Daten zu klassifizieren, die in Kombination mit anderen Daten verwendet werden können, um eine bestimmte Person indirekt zu identifizieren oder zu kontaktieren.
 
-**IMS-Organisation**: Eine IMS-Organisation (manchmal auch als IMS-Organisation bezeichnet) ist der Name, der verwendet wird, um ein Unternehmen oder eine bestimmte Gruppe innerhalb eines Unternehmens über Adobe-Produkte hinweg zu identifizieren. Admins können den Zugriff und die Berechtigungen von Funktionen für Benutzende einer Organisation konfigurieren und verwalten.
+**IMS-Organisation**: Eine IMS-Organisation (manchmal auch als IMS-Organisation bezeichnet) ist der Name, der zur Identifizierung eines Unternehmens oder einer bestimmten Gruppe innerhalb eines Unternehmens in Adobe-Produkten verwendet wird. Admins können den Zugriff und die Berechtigungen von Funktionen für Benutzende einer Organisation konfigurieren und verwalten.
 
 **Aufnahme**: Siehe Datenaufnahme.
 
-**Aufnahmezeitplan**: Ein Aufnahmezeitplan bietet zeitbasierte Optionen für die Aufnahme von einer Quelle auf Experience Platform.
+**Aufnahmezeitplan**: Ein Aufnahmezeitplan bietet zeitbasierte Optionen für die Aufnahme von einer Quelle in Experience Platform.
 
 **Eingabefunktion**: Eine Eingabefunktion wird in der Funktionszuordnung angegeben und von einem Modell für maschinelles Lernen zur Erstellung von Prognosen verwendet.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] wie [!DNL Attribution AI] und [!DNL Customer AI] sind Modelle auf Basis von maschinellem Lernen und künstlicher Intelligenz, die Experience Platform (oder auf Platform aufbauende Anwendungen wie Adobe Real-time Customer Data Platform) für die Ausführung und den Betrieb erfordern.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] wie [!DNL Attribution AI] und [!DNL Customer AI] sind Modelle auf maschinellem Lernen und künstlicher Intelligenz, die erfordern, dass Experience Platform (oder Anwendungen, die auf Experience Platform wie Adobe Real-Time Customer Data Platform aufbauen) ausgeführt und betrieben werden.
 
 **Interessenbasiertes Targeting oder Personalisierung**: Interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die folgenden drei Bedingungen erfüllt sind:
 
@@ -315,9 +315,9 @@ ht-degree: 4%
 
 ## J
 
-**[!DNL JupyterLab]**: Eine Web-basierte Open-Source-Schnittstelle für Project [!DNL Jupyter], die in die Platform-Benutzeroberfläche integriert ist.
+**[!DNL JupyterLab]**: Eine Web-basierte Open-Source-Schnittstelle für Project [!DNL Jupyter], die in die Experience Platform-Benutzeroberfläche integriert ist.
 
-**[!DNL Jupyter Notebook]**: Die in JupyterLab integrierten Jupyter Notebooks ermöglichen es Ihnen, Datenbereinigung und -umwandlung, numerische Simulation, statistische Modellierung, Datenvisualisierung, maschinelles Lernen und mehr über Ihre Experience Platform-Daten in einer Vielzahl von Sprachen wie Python, Scala und PySpark durchzuführen.
+**[!DNL Jupyter Notebook]**: Die in JupyterLab integrierten Jupyter Notebooks ermöglichen Ihnen die Datenbereinigung und -umwandlung, numerische Simulation, statistische Modellierung, Datenvisualisierung, maschinelles Lernen und mehr über Ihre Experience Platform-Daten in verschiedenen Sprachen wie Python, Scala und PySpark.
 
 ## K
 
@@ -341,7 +341,7 @@ ht-degree: 4%
 
 **Marketing-**: Im Data Governance-Framework ist eine Marketing-Aktion (auch als Marketing-Anwendungsfall bezeichnet) eine Aktion, die ein Experience Platform-Datennutzer durchführt und bei der geprüft werden muss, ob Datennutzungsrichtlinien verletzt wurden.
 
-**Zusammenführungsmethode**: Beim Definieren einer Zusammenführungsrichtlinie mithilfe der Platform-Benutzeroberfläche gibt die Zusammenführungsmethode an, wie Datenfragmente bei einem Konflikt priorisiert werden sollen. Wenn Sie die Echtzeit-Kundenprofil-API verwenden, um eine Zusammenführungsrichtlinie zu definieren, wird die Zusammenführungsmethode mithilfe des `attributeMerge`-Objekts bestimmt.
+**Zusammenführungsmethode**: Beim Definieren einer Zusammenführungsrichtlinie mithilfe der Experience Platform-Benutzeroberfläche gibt die Zusammenführungsmethode an, wie Datenfragmente bei einem Konflikt priorisiert werden sollen. Wenn Sie die Echtzeit-Kundenprofil-API verwenden, um eine Zusammenführungsrichtlinie zu definieren, wird die Zusammenführungsmethode mithilfe des `attributeMerge`-Objekts bestimmt.
 
 **Zusammenführungsrichtlinie**: Zusammenführungsrichtlinien sind Regeln, mit denen Experience Platform bestimmt, wie Kundendatenfragmente aus mehreren Quellen kombiniert werden, um ein individuelles Profil zu erstellen. Wenn ein Datenkonflikt auftritt, bestimmt die Zusammenführungsrichtlinie, welche Daten für die Aufnahme in das Profil priorisiert werden sollen.
 
@@ -391,9 +391,9 @@ ht-degree: 4%
 
 **Platzierungen**: Eine Platzierung ist der Speicherort und/oder Kontext, in dem ein Angebot für Endbenutzende erscheint.
 
-**Arbeitsbereich Richtlinien**: Ein Arbeitsbereich in der Platform-Benutzeroberfläche, mit dem Datenverantwortliche Datennutzungsbeschriftungen und -richtlinien für Ihr Unternehmen anzeigen und verwalten können.
+**Arbeitsbereich Richtlinien**: Ein Arbeitsbereich in der Experience Platform-Benutzeroberfläche, mit dem Datenverantwortliche Datennutzungsbeschriftungen und -richtlinien für Ihr Unternehmen anzeigen und verwalten können.
 
-**Richtlinie**: Eine Datennutzungsrichtlinie ist eine Regel, die Marketing-Aktionen angibt, die aufgrund der Anwendung von Nutzungskennzeichnungen auf Platform-Daten eingeschränkt sind.
+**Richtlinie**: Eine Datennutzungsrichtlinie ist eine Regel, die Marketing-Aktionen angibt, die aufgrund der Anwendung von Nutzungskennzeichnungen auf Experience Platform-Daten eingeschränkt sind.
 
 **Richtliniendurchsetzung**: Ermöglicht die Durchsetzung von Datennutzungsrichtlinien mit angewendeten Marketing-Aktionen, um Datenvorgänge zu verhindern, die Richtlinienverletzungen innerhalb einer Organisation darstellen.
 
@@ -403,7 +403,7 @@ ht-degree: 4%
 
 **Privates Identitätsdiagramm**: Das private Identitätsdiagramm (manchmal auch als privates Diagramm bezeichnet) ist eine private Zuordnung von Beziehungen zwischen zusammengefügten und verknüpften Identitäten, die auf Grundlage Ihrer Erstanbieter-Daten erstellt wird und nur für Ihre Organisation sichtbar ist. Für jede Organisation gibt es nur ein privates Diagramm, das als struktureller Blueprint für die individuellen Identitätsdiagramme dient, die für jeden Kunden generiert werden, der mit Ihrer Marke interagiert.
 
-**Produktprofil**: Mit Produktprofilen können Admins Benutzerzugriff auf alle oder einen Teil der mit dem Experience Platform verbundenen Services gewähren.
+**Produktprofil**: Mit Produktprofilen können Admins Benutzerzugriff auf alle oder einen Teil der mit Experience Platform verknüpften Services gewähren.
 
 **Produktions-Sandbox**: Eine Produktions-Sandbox ist eine Sandbox für die Verwendung in Ihrer Produktionsumgebung. Im Gegensatz zu Nicht-Produktions-Sandboxes können Produktions-Sandboxes nicht zurückgesetzt oder gelöscht werden.
 
@@ -433,11 +433,11 @@ ht-degree: 4%
 
 ## R
 
-**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung auf der gesamten digitalen Kunden-Journey zu erstellen.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung auf der gesamten digitalen Kunden-Journey zu erstellen.
 
 **Echtzeit-Kundenprofil**: Das Echtzeit-Kundenprofil (manchmal auch als Profil bezeichnet) bietet eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert. Mit dem Profil können Sie Ihre Kundendaten in individuellen Profilen zusammenführen, die aussagekräftige, im Zeitverlauf gezeichnete Berichte für jede Kundeninteraktion bieten.
 
-**Rezept**: Ein Rezept ist ein Adobe-Begriff für eine Modellspezifikation und ein Container auf oberster Ebene, der bestimmte Prozesse für maschinelles Lernen, KI-Algorithmen, Verarbeitungslogik und Konfigurationsparameter darstellt, die zum Erstellen und Ausführen eines trainierten Modells und somit zur Lösung spezifischer Geschäftsprobleme erforderlich sind.
+**Rezept**: Ein Rezept ist Adobes Begriff für eine Modellspezifikation und ein Container auf oberster Ebene, der bestimmte Prozesse für maschinelles Lernen, KI-Algorithmen, Verarbeitungslogik und Konfigurationsparameter darstellt, die zum Erstellen und Ausführen eines trainierten Modells und somit zur Lösung spezifischer Geschäftsprobleme erforderlich sind.
 
 **Datensatz**: Ein Datensatz sind Daten, die als Zeilen in einem Datensatz bestehen bleiben.
 
@@ -461,11 +461,11 @@ ht-degree: 4%
 
 **Beispieldaten**: Beispieldaten sind eine Vorschau einer Datendatei, normalerweise der ersten 100 Zeilen, die einem Datenwissenschaftler oder -ingenieur eine Vorstellung davon liefert, welches Schema oder welche Daten sich in der Datendatei befinden.
 
-**Sandbox**: Eine Sandbox ist ein virtuelles Konstrukt, das eine einzelne Platform-Instanz in eine separate virtuelle Umgebung unterteilt, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+**Sandbox**: Eine Sandbox ist ein virtuelles Konstrukt, das eine einzelne Experience Platform-Instanz in eine separate virtuelle Umgebung unterteilt, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
 **Sandbox zurücksetzen**: Beim Zurücksetzen einer Sandbox werden alle Daten, einschließlich Daten, Profile und Segmente, in einer Sandbox gelöscht. Das Zurücksetzen von Sandboxes kann sich auf Daten auswirken, die mit internen oder externen Zielen verbunden sind.
 
-**Sandbox Switcher**: Das Sandbox Switcher-Steuerelement in Experience Platform ermöglicht Benutzenden das Navigieren zwischen Sandboxes, auf die sie Zugriff haben. Durch das Wechseln einer Sandbox werden alle Inhalte geändert und der Funktionszugriff kann je nach Berechtigungen geändert werden.
+**Sandbox-Umschalter**: Das Sandbox-Umschalter-Steuerelement in Experience Platform ermöglicht Benutzenden das Navigieren zwischen Sandboxes, auf die sie Zugriff haben. Durch das Wechseln einer Sandbox werden alle Inhalte geändert und der Funktionszugriff kann je nach Berechtigungen geändert werden.
 
 **Zeitplan**: Ein Zeitplan ist eine benutzerdefinierte Spezifikation für die Häufigkeit oder Kadenz der Datenaufnahme aus einer Datenquelle eines Drittanbieters in Adobe Experience Platform.
 
@@ -475,7 +475,7 @@ ht-degree: 4%
 
 **Schemafeldgruppe**: Im Experience-Datenmodell (XDM) ermöglicht eine Schemafeldgruppe es Benutzenden, wiederverwendbare Felder zu erweitern, um ein oder mehrere Attribute zu definieren, die in ein Schema aufgenommen werden sollen.
 
-**Schemabibliothek**: Die Schemabibliothek enthält XDM-Ressourcen, die dem Branchenstandard entsprechen und per Adobe bereitgestellt werden, sowie benutzerdefinierte Ressourcen, die von Ihrem Unternehmen definiert wurden.
+**Schemabibliothek**: Die Schemabibliothek enthält XDM-Ressourcen, die dem Branchenstandard entsprechen und von Adobe zur Verfügung gestellt werden, sowie benutzerdefinierte Ressourcen, die von Ihrem Unternehmen definiert wurden.
 
 **Schemaregistrierung**: Die Schemaregistrierung bietet eine Benutzeroberfläche und eine RESTful-API, mit der alle Schema-bezogenen Ressourcen in der Schemabibliothek angezeigt und verwaltet werden.
 
@@ -483,7 +483,7 @@ ht-degree: 4%
 
 **Segment**: Ein Segment ist ein Regelsatz, der Attribute und Ereignisdaten enthält, die eine Reihe von Profilen als Zielgruppe qualifizieren.
 
-**Segment Builder**: Die [!DNL Segment Builder] ist eine visuelle Entwicklungsumgebung zum Erstellen von Segmentdefinitionen. Es dient als gemeinsame Komponente aller Anwendungen, die den Experience Platform-Segmentierungs-Service verwenden.
+**Segment Builder**: Die [!DNL Segment Builder] ist eine visuelle Entwicklungsumgebung zum Erstellen von Segmentdefinitionen. Es dient als gemeinsame Komponente aller Anwendungen, die den Segmentierungs-Service von Experience Platform verwenden.
 
 **Segmentdefinition**: Eine Segmentdefinition ist der Regelsatz, mit dem die wichtigsten Merkmale oder das Verhalten einer Zielgruppe beschrieben werden. Nach der Erstellung einer Segmentdefinition werden die darin beschriebenen Regeln zur Bestimmung qualifizierter Zielgruppenmitglieder für ein Segment verwendet.
 
@@ -511,19 +511,19 @@ ht-degree: 4%
 
 **S2-Datennutzungskennzeichnung**: Eine `S2` Datennutzungskennzeichnung wird zum Klassifizieren von Daten verwendet, die zur Bestimmung eines grob definierten Geofence-Bereichs verwendet werden können.
 
-**Source**: Eine Quelle ist ein allgemeiner Begriff für jeden Eingabe-Connector in Platform. Siehe auch: Source-Connector
+**Source**: Eine Quelle ist ein allgemeiner Begriff für jeden Eingabe-Connector in Experience Platform. Siehe auch: Source-Connector
 
 **Source-**: Ein Quellattribut ist ein Feld im Quelldatensatz. Source-Attribute werden Zielschemafeldern zugeordnet.
 
-**Source-**: Der Quellkatalog ist die Liste der verfügbaren Quell-Connectoren auf Experience Platform.
+**Source-**: Der Quellkatalog ist die Liste der verfügbaren Quell-Connectoren in Experience Platform.
 
 **Source-Kategorie**: Eine Quellkategorie ist eine Gruppierung von Quellen mit ähnlichen Eigenschaften.
 
-**Source-Connector**: Source-Connectoren (auch als Quellen bezeichnet) helfen Benutzenden, Daten aus mehreren Quellen einfach aufzunehmen, wodurch die Strukturierung, Beschriftung und Optimierung von Daten mithilfe von Experience Platform-Services ermöglicht wird. Daten können aus einer Vielzahl von Quellen aufgenommen werden, z. B. aus Cloud-basiertem Speicher, Software von Drittanbietern und CRM-Systemen.
+**Source-Connector**: Source-Connectoren (auch als Quellen bezeichnet) helfen Benutzenden, Daten aus mehreren Quellen einfach aufzunehmen, wodurch die Strukturierung, Beschriftung und Verbesserung von Daten mithilfe von Experience Platform-Services möglich ist. Daten können aus einer Vielzahl von Quellen aufgenommen werden, z. B. aus Cloud-basiertem Speicher, Software von Drittanbietern und CRM-Systemen.
 
 **Streaming-Verbindung**: Eine Streaming-Verbindung ist ein eindeutiger Endpunkt, der von Adobe bereitgestellt und an Ihr Unternehmen gebunden wird, um Daten in Experience Platform zu streamen.
 
-**Standard-Identity-Namespace**: Standard-Identity-Namespaces sind vordefinierte Identity-Namespaces, die von Adobe bereitgestellt werden. Hierbei handelt es sich um branchenübliche Lösungen, mit denen Kunden identifiziert werden können.
+**Standard-Identity-Namespace**: Standard-Identity-Namespaces sind vordefinierte Identity-Namespaces von Adobe, die branchenübliche Lösungen zur Identifizierung von Kunden darstellen.
 
 **Streaming-Aufnahme**: Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform senden.
 

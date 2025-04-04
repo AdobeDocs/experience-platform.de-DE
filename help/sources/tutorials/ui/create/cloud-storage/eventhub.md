@@ -3,10 +3,10 @@ title: Erstellen einer Source-Verbindung für Azure Event Hubs über die Benutze
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Azure Event Hubs-Quellverbindung erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 18%
+source-wordcount: '1098'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->Die [!DNL Azure Event Hubs] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Azure Event Hubs] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
 Lesen Sie dieses Tutorial, um zu erfahren, wie Sie ein [!DNL Azure Event Hubs]-Konto mithilfe der Benutzeroberfläche von Adobe Experience Platform erstellen.
 
@@ -81,7 +81,7 @@ Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie 
 
 ## Verbinden Ihres [!DNL Event Hubs]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 

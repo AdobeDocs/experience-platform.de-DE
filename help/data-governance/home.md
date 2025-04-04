@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Governance – Übersicht
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 66%
+source-wordcount: '1624'
+ht-degree: 64%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 66%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de" text="Data Governance – Übersicht"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de" text="Überblick über Data-Governance-Beschriftungen"
 
-Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie dafür sorgen, dass Ihre Datenoperationen in [!DNL Platform] mit den Datennutzungsrichtlinien konform sind.
+Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie dafür sorgen, dass Ihre Datenoperationen in [!DNL Experience Platform] mit den Datennutzungsrichtlinien konform sind.
 
-Verwalten Sie Kundendaten und stellen Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicher, die für die Verwendung von Daten mit Adobe Experience Platform Data Governance gelten. Data Governance spielt beim Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen.
+Verwalten Sie Kundendaten und stellen Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicher, die für die Verwendung von Daten mit Adobe Experience Platform Data Governance gelten. Data Governance spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen.
 
 >[!NOTE]
 >
->In Experience Platform betrifft Data Governance nur die Art und Weise, wie Daten verwendet oder aktiviert werden, unabhängig davon, welcher Benutzer die Aktion durchführt. Informationen zum Steuern des Zugriffs auf spezifische Datenfelder für bestimmte Platform-Benutzer in Ihrer Organisation finden Sie hingegen in der Dokumentation zur [attributbasierten Zugriffssteuerung](../access-control/abac/overview.md).
+>In Experience Platform betrifft Data Governance nur die Art und Weise, wie Daten verwendet oder aktiviert werden, unabhängig davon, welcher Benutzer die Aktion durchführt. Informationen zum Steuern des Zugriffs auf bestimmte Datenfelder für bestimmte Experience Platform-Benutzende in Ihrem Unternehmen finden Sie stattdessen in der Dokumentation [attributbasierten Zugriffssteuerung](../access-control/abac/overview.md).
 
 ## Data Governance-Rollen {#data-governance-roles}
 
@@ -77,7 +77,7 @@ Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnun
 >
 >Eine vollständige Liste [ verfügbaren Bezeichnungen und Definitionen für ](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
 
-Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform erfasst oder in [!DNL Platform] verfügbar werden.
+Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform aufgenommen oder in [!DNL Experience Platform] verfügbar werden.
 
 Weitere Informationen dazu, wie [ Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
 
@@ -93,7 +93,7 @@ Es sind zwei Richtlinientypen verfügbar:
 * **[!UICONTROL Data Governance-Richtlinie]**: Zum Beschränken der Datenaktivierung auf Grundlage der durchgeführten Marketing-Aktion und der Datennutzungskennzeichnungen der betreffenden Daten
 * **[!UICONTROL Einverständnisrichtlinie]**: Filtern Sie die Profile, die für [Ziele“ aktiviert werden können](../destinations/home.md) basierend auf dem Einverständnis oder den Voreinstellungen Ihrer Kunden.
 
-Sobald Datennutzungskennzeichnungen angewendet wurden, können Datenverwalter mithilfe der Richtlinien-Service-API oder der Experience Platform-Benutzeroberfläche Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
+Sobald Datennutzungskennzeichnungen angewendet wurden, können Datenverwalter mithilfe der Richtlinien-Service-API oder der Benutzeroberfläche von Experience Platform Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -134,6 +134,6 @@ Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklär
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Im folgenden Video erfahren Sie, wie Sie Datennutzungsbeschriftungen auf Ihre Schemata oder auf einen gesamten Datensatz in Experience Platform anwenden.
+Im folgenden Video erfahren Sie, wie Sie Datennutzungskennzeichnungen auf Ihre Schemata oder auf einen Datensatz in Experience Platform insgesamt anwenden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

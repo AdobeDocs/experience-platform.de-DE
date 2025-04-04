@@ -2,16 +2,16 @@
 title: Übersicht über Data Distiller
 description: Eine Zusammenfassung der Datennutzungsbeschränkungen von Distiller für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # Übersicht über Data Distiller
 
-Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie Daten nach der Aufnahme für Echtzeit-Kundenprofile oder analytische Anwendungsfälle vorbereiten (z. B. bereinigen, gestalten und bearbeiten), indem Sie Batch-Abfragen im Abfrage-Service ausführen. Ihre Verwendung von Data Distiller hängt von Ihren Berechtigungen für Platform-basierte Programme ab.
+Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie Daten nach der Aufnahme für Echtzeit-Kundenprofile oder analytische Anwendungsfälle vorbereiten (z. B. bereinigen, gestalten und bearbeiten), indem Sie Batch-Abfragen im Abfrage-Service ausführen. Ihre Verwendung von Data Distiller hängt von Ihrer Berechtigung für Experience Platform-basierte Programme ab.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -33,7 +33,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 * **Query Service Users**: The number of Query Service users detailed in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service Users is a shared feature. 
 -->
 
-## Leitplanken
+## Leitlinien
 
 Siehe das Dokument [Leitplanken für den Abfrage](../guardrails.md) bezüglich der standardmäßigen Nutzungsbeschränkungen für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 

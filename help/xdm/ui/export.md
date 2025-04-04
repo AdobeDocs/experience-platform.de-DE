@@ -4,9 +4,9 @@ title: Exportieren von XDM-Schemata über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ Um diese Anforderung zu erfüllen, können Sie mit dem [!UICONTROL Schemas] in d
 
 ## Voraussetzungen
 
-Auch wenn Sie in der Platform-Benutzeroberfläche XDM-Ressourcen exportieren können, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren, um den Workflow abzuschließen. Lesen Sie das Handbuch [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) um wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen zu erhalten, bevor Sie dieses Handbuch befolgen.
+Auch wenn Sie über die Experience Platform-Benutzeroberfläche XDM-Ressourcen exportieren können, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren, um den Workflow abzuschließen. Lesen Sie das Handbuch [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) um wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen zu erhalten, bevor Sie dieses Handbuch befolgen.
 
 ## Export-Payload generieren {#generate-export-payload}
 
-Export-Payloads können in der Platform-Benutzeroberfläche über das Bedienfeld Details auf der Registerkarte [!UICONTROL Durchsuchen] oder direkt über die Arbeitsfläche des Schemas im Schema-Editor generiert werden.
+Export-Payloads können in der Experience Platform-Benutzeroberfläche über das Bedienfeld Details auf der Registerkarte [!UICONTROL Durchsuchen] oder direkt über die Arbeitsfläche des Schemas im Schema-Editor generiert werden.
 
 Um eine Export-Payload zu generieren, wählen Sie **[!UICONTROL Schemata]** im linken Navigationsbereich aus. Wählen Sie im Arbeitsbereich [!UICONTROL Schemas] die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
 

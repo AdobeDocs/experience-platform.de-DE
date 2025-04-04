@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzer für ein Produktprofil verwalten
 description: Dieses Dokument zeigt Ihnen, wie Sie Benutzer für ein Produktprofil in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 82%
+source-wordcount: '230'
+ht-degree: 65%
 
 ---
 
@@ -33,4 +33,4 @@ Das folgende Video soll Ihnen dabei helfen, die Verwaltung von Administratoren f
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Funktionen über die [!DNL Admin Console] steuern können, finden Sie im Anhang zur [Übersicht über die Zugriffssteuerung](../home.md) weitere Informationen zu den einzelnen Berechtigungen und die Platform-Funktionen, auf die sie Zugriff gewähren.
+Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Experience Platform-Funktionen über die [!DNL Admin Console] steuern können, finden Sie im Anhang zum [Übersicht über die Zugriffskontrolle](../home.md) weitere Informationen zu den einzelnen Berechtigungen und die Experience Platform-Funktionen, auf die sie Zugriff gewähren.

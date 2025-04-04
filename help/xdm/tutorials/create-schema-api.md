@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Schema;Schema;Schemas;Schemas;erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;schema;Schemas;Schemas;erstellen
 solution: Experience Platform
 title: Erstellen eines Schemas mithilfe der Schema Registry-API
 type: Tutorial
 description: In diesem Tutorial wird die Schema Registry-API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
-ht-degree: 36%
+source-wordcount: '2584'
+ht-degree: 34%
 
 ---
 
 # Erstellen eines Schemas mithilfe der [!DNL Schema Registry]-API
 
-Die [!DNL Schema Registry] wird verwendet, um in Adobe Experience Platform auf die [!DNL Schema Library] zuzugreifen. Die [!DNL Schema Library] enthält Ressourcen, die Ihnen von Adobe, [!DNL Experience Platform] und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden. Die Registry bietet eine Benutzeroberfläche und RESTful-API, über die auf alle in der Bibliothek verfügbaren Ressourcen zugegriffen werden kann.
+Die [!DNL Schema Registry] wird verwendet, um in Adobe Experience Platform auf die [!DNL Schema Library] zuzugreifen. Die [!DNL Schema Library] enthält Ressourcen, die Ihnen von Adobe, [!DNL Experience Platform] Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden. Die Registry bietet eine Benutzeroberfläche und RESTful-API, über die auf alle in der Bibliothek verfügbaren Ressourcen zugegriffen werden kann.
 
 In diesem Tutorial wird die [!DNL Schema Registry]-API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen. Wenn Sie die Benutzeroberfläche lieber in [!DNL Experience Platform] verwenden möchten, finden Sie im [Tutorial zum Schema](create-schema-ui.md)Editor) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
 
 >[!NOTE]
 >
->Wenn Sie CSV-Daten in Platform aufnehmen, können Sie [diese Daten einem XDM-Schema zuordnen, das durch KI-generierte Empfehlungen erstellt wurde](../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
+>Wenn Sie CSV-Daten in Experience Platform aufnehmen, können Sie [diese Daten einem XDM-Schema zuordnen, das durch KI-generierte Empfehlungen erstellt wurde](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Schema Registry]-API benötigen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den `Accept`-Header und seine möglichen Werte).
 
@@ -304,7 +304,7 @@ Für die Schemata des Mitglieds des Treueprogramms sind zwei weitere Standardfel
 
 >[!TIP]
 >
->Es lohnt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können (GET) alle für eine bestimmte Klasse verfügbaren Feldergruppen auflisten, indem Sie eine -Anfrage für jeden der Container „global“ und „tenant“ ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld „meta:intendedToExtend“ mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die [!DNL XDM Individual Profile]-Klasse, daher wird die [!DNL XDM Individual Profile]-`$id` verwendet:
+>Es lohnt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können (GET) alle Feldergruppen auflisten, die für eine bestimmte Klasse verfügbar sind, indem Sie eine -Anfrage für jeden der Container „global“ und „tenant“ ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld „meta:intendedToExtend“ mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die [!DNL XDM Individual Profile]-Klasse, daher wird die [!DNL XDM Individual Profile]-`$id` verwendet:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -424,7 +424,7 @@ Während die Standardfeldgruppe [!UICONTROL Treuedetails] nützliche Felder für
 
 Um diese Felder hinzuzufügen, können Sie Ihre eigenen benutzerdefinierten Feldergruppen im `tenant`-Container definieren. Diese Feldergruppen sind für Ihre Organisation eindeutig und können von niemandem außerhalb Ihrer Organisation angezeigt oder bearbeitet werden.
 
-Um eine neue Feldergruppe (POST) zu erstellen, muss Ihre Anfrage ein `meta:intendedToExtend` enthalten, das die `$id` für die Basisklasse(n) enthält, mit der die Feldergruppe kompatibel ist, sowie die Eigenschaften, die die Feldergruppe enthalten wird.
+Um eine neue Feldergruppe (POST) zu erstellen, muss Ihre Anfrage ein `meta:intendedToExtend` Feld enthalten, das die `$id` für die Basisklasse(n) enthält, mit der die Feldergruppe kompatibel ist, sowie die Eigenschaften, die die Feldergruppe enthalten wird.
 
 Alle benutzerdefinierten Eigenschaften müssen unter Ihrem `TENANT_ID` verschachtelt sein, um Konflikte mit anderen Feldergruppen oder Feldern zu vermeiden.
 
@@ -959,7 +959,7 @@ Mittels Anfrage zum Nachschlagen (GET) unter Angabe der URL-codierten `$id`-URI 
 
 ### Verwenden des Datentyps im Schema
 
-Nachdem der Datentyp Treuestufe erstellt wurde, können Sie das `loyaltyTier` Feld in der von Ihnen erstellten Feldergruppe aktualisieren (PATCH), um auf den Datentyp anstelle der Felder zu verweisen, die zuvor vorhanden waren.
+Nachdem der Datentyp Treuestufe erstellt wurde, können Sie das `loyaltyTier` in der von Ihnen erstellten Feldergruppe aktualisieren (PATCH), um auf den Datentyp anstelle der Felder zu verweisen, die zuvor vorhanden waren.
 
 **API-Format**
 

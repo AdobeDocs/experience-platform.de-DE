@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwenden eines Texteditors in der lokalen Umgebung, um eine Seite mit der Quelldokumentation zu erstellen
 description: In diesem Dokument wird beschrieben, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anfrage (PR) senden.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ In diesem Dokument wird beschrieben, wie Sie mit Ihrer lokalen Umgebung die Doku
 
 >[!TIP]
 >
->Die folgenden Dokumente aus dem Handbuch zum Beitragen zur Adobe können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Die folgenden Dokumente aus dem Adobe Contributing Guide können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Voraussetzungen
 
@@ -29,7 +29,7 @@ Der erste Schritt beim Einrichten Ihrer lokalen Authoring-Umgebung besteht darin
 
 ![platform-repo](../assets/platform-repo.png)
 
-Wählen Sie auf der Hauptseite des Platform-GitHub-Repositorys die Option **Verzweigung** aus.
+Wählen Sie auf der Hauptseite des Experience Platform GitHub-Repositorys **Verzweigung** aus.
 
 ![Verzweigung](../assets/fork.png)
 
@@ -53,7 +53,7 @@ Geben Sie im angezeigten Popup-Fenster einen beschreibenden Namen für Ihre Verz
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-Wählen Sie als Nächstes **Publish-Verzweigung**.
+Wählen Sie als Nächstes **Verzweigung veröffentlichen**.
 
 ![publish-branch](../assets/publish-branch.png)
 
@@ -93,7 +93,7 @@ Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. F�
 
 >[!TIP]
 >
->Lassen Sie das **Bearbeitungen von Betreuern zulassen** aktiviert, um sicherzustellen, dass das Adobe-Dokumentations-Team Änderungen am PR vornehmen kann.
+>Lassen Sie das **Bearbeitung durch Betreuer zulassen** aktiviert, um sicherzustellen, dass das Dokumentations-Team von Adobe Änderungen am PR vornehmen kann.
 
 ![create-pr](../assets/create-pr.png)
 

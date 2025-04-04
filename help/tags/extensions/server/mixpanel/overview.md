@@ -4,9 +4,9 @@ title: Mixpanel-Erweiterung zur Nachverfolgung von Ereignissen bei der API-Ereig
 description: Diese Adobe Experience Platform-Ereignisweiterleitungserweiterung sendet Edge Network-Ereignisse an Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 >
 >Weitere Informationen dazu, wie Ereignisse zusammengeführt werden, um Identitäts[Cluster zu erstellen, finden Sie in der [!DNL Mixpanel]-Dokumentation ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management)Identitätsverwaltung[!DNL Mixpanel]. Es wird außerdem empfohlen, das Dokument zu [Unique IDs](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) zu lesen, um zu verstehen, wie sie zur Identifizierung von Benutzern in Ereignisdaten verwendet werden.
 
-## Anwendungsfälle
+## Anwendungsszenarien
 
-Diese Erweiterung sollte verwendet werden, wenn Sie Daten aus dem -Edge Network verwenden möchten, [!DNL Mixpanel] die Produktanalysefunktionen von zu nutzen.
+Diese Erweiterung sollte verwendet werden, wenn Sie Daten aus der Edge Network verwenden möchten, [!DNL Mixpanel] die Produktanalysefunktionen von zu nutzen.
 
 Nehmen wir zum Beispiel ein Einzelhandelsunternehmen mit einer kanalübergreifenden Präsenz (Website und Mobilgerät). Das Unternehmen erfasst Transaktions- oder Konversationseingaben als Ereignisdaten von seinen Plattformen und lädt sie mithilfe der Erweiterung für die Ereignisweiterleitung in [!DNL Mixpanel].
 
@@ -47,7 +47,7 @@ Stellen Sie sicher, dass die [[!DNL Identity Merge]](https://help.mixpanel.com/h
 
 [!DNL Mixpanel] löst Identitäts-Cluster auf zwei Arten auf:
 
-* **Identifizieren** : [!DNL Mixpanel] verbindet die von Ihnen gewählte Kennung mit einer anonymen `distinct_id`. Wenn auf Ihrer Website die [!DNL Mixpanel] SDK aktiviert ist, verwendet Platform die `distinct_id`, die dem derzeit angemeldeten Benutzer zugewiesen ist.
+* **Identifizieren** : [!DNL Mixpanel] verbindet die von Ihnen gewählte Kennung mit einer anonymen `distinct_id`. Wenn auf Ihrer Website die [!DNL Mixpanel] SDK aktiviert ist, verwendet Experience Platform die `distinct_id`, die dem derzeit angemeldeten Benutzer zugewiesen ist.
 * **Alias**: [!DNL Mixpanel] kombiniert zwei nicht anonyme `distinct id` miteinander, wenn zusätzliche Zusammenführungskriterien erfüllt sind.
 
 >[!NOTE]
@@ -58,7 +58,7 @@ Stellen Sie sicher, dass die [[!DNL Identity Merge]](https://help.mixpanel.com/h
 
 ### Sammeln erforderlicher Konfigurationsdetails {#configuration-details}
 
-Um Experience Platform mit [!DNL Mixpanel] zu verbinden, benötigen Sie die folgenden Eingänge:
+Um Experience Platform mit [!DNL Mixpanel] zu verbinden, benötigen Sie die folgenden Eingaben:
 
 | Schlüsseltyp | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen
 
 ## Erstellen einer [!DNL Send Event] Regel
 
-Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitungs-Eigenschaft. Fügen Sie **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Mixpanel]** fest. Edge Network Legen Sie als Nächstes den Aktionstyp auf &quot;**[!UICONTROL &quot; fest]** um Ereignisereignisse an [!DNL Mixpanel] zu senden.
+Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitungs-Eigenschaft. Fügen Sie **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Mixpanel]** fest. Legen Sie als Nächstes den Aktionstyp auf &quot;**[!UICONTROL &quot; fest]** um Edge Network-Ereignisse an [!DNL Mixpanel] zu senden.
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
@@ -110,4 +110,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Konversionsereignisse mithilfe der
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] JavaScript-API](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Weitere Informationen zu den Ereignisweiterleitungsfunktionen in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+Weitere Informationen zu den Funktionen für die Ereignisweiterleitung in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).

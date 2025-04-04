@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Schema;Felder;felder;Standardfelder;standardfelder;Wörterbuch;wörterbuch;Zuordnung;zuordnung
 solution: Experience Platform
 title: Wörterbuch der XDM-Felder (Experience-Datenmodell)
-description: Das Experience-Datenmodell (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemata verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller Platform-Dienste, da alle Dienste, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
+description: Das Experience-Datenmodell (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemata verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller Experience Platform-Services, da alle Services, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '13972'
+source-wordcount: '13973'
 ht-degree: 96%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 96%
 # Wörterbuch der XDM-Felder
 
 
-Das [!DNL Experience Data Model] (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemata verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller [!DNL Platform]-Services, da alle Services, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
+Das [!DNL Experience Data Model] (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemata verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller [!DNL Experience Platform]-Services, da alle Services, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
 
 Weitere Informationen zu den Bausteinen von Schemata, einschließlich Prinzipien und Best Practices beim Definieren von Schemata für [!DNL Experience Platform], finden Sie in den [Grundlagen der Schemakomposition](composition.md).
 

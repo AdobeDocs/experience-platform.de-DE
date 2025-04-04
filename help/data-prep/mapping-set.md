@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Zuordnungssätze
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 96%
+source-wordcount: '960'
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ Ein Zuordnungssatz ist ein Satz von Zuordnungen, der Daten von einem Schema in e
 Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenvorbereitung](./home.md): Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, zu verwandeln und zu validieren.
-- [Datenflüsse](../dataflows/home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
+- [Datenflüsse](../dataflows/home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): Die Methoden, mit denen Daten an [!DNL Experience Platform] gesendet werden können.
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 

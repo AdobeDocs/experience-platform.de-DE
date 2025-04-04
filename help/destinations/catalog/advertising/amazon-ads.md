@@ -3,24 +3,24 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1819'
-ht-degree: 49%
+source-wordcount: '1820'
+ht-degree: 47%
 
 ---
 
 # Amazon Ads-Verbindung {#amazon-ads}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 [!DNL Amazon Ads] bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhändler, Kindle Direct Publishing (KDP)-Autoren, App-Entwickler und/oder Agenturen erreichen können.
 
 Die [!DNL Amazon Ads] Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration für [!DNL Amazon Ads] Produkte, einschließlich Amazon DSP (ADSP) und Amazon Marketing Cloud (AMC).
 
-Mithilfe des [!DNL Amazon Ads]-Ziels in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung in der Amazon-DSP definieren.  Darüber hinaus können Benutzende ihre Daten in [!DNL Amazon Marketing Cloud] hochladen, um die Leistung nach Zielgruppe, von Advertisern bereitgestellten Dimensionen, Zugehörigkeit zu Amazon-Segmenten oder anderen in AMC verfügbaren Signalen zu verstehen. Nach dem Hochladen von Advertiser-Zielgruppen in AMC können Benutzende [!DNL Amazon Marketing Cloud] verwenden, um Zielgruppenmitglieder mithilfe von Amazon-Signalen aus [!DNL Amazon Marketing Cloud] zu ändern, zu verbessern oder an sie anzuhängen.
+Mithilfe des [!DNL Amazon Ads]-Ziels in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung in Amazon DSP definieren.  Darüber hinaus können Benutzende ihre Daten in [!DNL Amazon Marketing Cloud] hochladen, um die Leistung nach Zielgruppe, von Advertisern bereitgestellten Dimensionen, Zugehörigkeit zu Amazon-Segmenten oder anderen in AMC verfügbaren Signalen zu verstehen. Nach dem Hochladen von Advertiser-Zielgruppen in AMC können Benutzende [!DNL Amazon Marketing Cloud] verwenden, um Zielgruppenmitglieder mithilfe von Amazon-Signalen aus [!DNL Amazon Marketing Cloud] zu ändern, zu verbessern oder an sie anzuhängen.
 
-AMC vereint die einzigartigen Signale aus den von Amazon verwalteten und betriebenen Eigenschaften, die sich über Medien wie Display, Video, Streaming-TV, Audio und gesponserte Anzeigen erstrecken. Benutzerinnen und Benutzer können einfach kuratierte Segmente von Adobe Experience Platform an AMC senden, um das Lernen zu verbessern, z. B. die Markengruppen der Zielgruppen, Lifestyle-Kohorten und Markennamen-Interaktionsmuster. Erweiterte Segmente können dann verwendet werden, um Medienaktivierungen in der Amazon-DSP zu optimieren.
+AMC vereint die einzigartigen Signale aus den von Amazon verwalteten und betriebenen Eigenschaften, die sich über Medien wie Display, Video, Streaming-TV, Audio und gesponserte Anzeigen erstrecken. Benutzerinnen und Benutzer können einfach kuratierte Segmente von Adobe Experience Platform an AMC senden, um das Lernen zu verbessern, z. B. die Markengruppen der Zielgruppen, Lifestyle-Kohorten und Markennamen-Interaktionsmuster. Erweiterte Segmente können dann verwendet werden, um Medienaktivierungen in Amazon DSP zu optimieren.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Damit Sie besser verstehen können, wie und wann Sie das *[!DNL Amazon Ads]*-Zie
 
 ### Aktivierung und Zielgruppenbestimmung {#activation-and-targeting}
 
-Durch diese Integration mit Amazon DSP können [!DNL Amazon Ads] Advertiser CDP-Zielgruppen von Adobe Experience Platform an die DSP von Amazon weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Zielgruppen können innerhalb der Amazon-DSP für positives Targeting sowie für negatives Targeting (Unterdrückung) ausgewählt werden. 
+Durch diese Integration mit Amazon DSP können [!DNL Amazon Ads] Advertiser CDP-Zielgruppen von Adobe Experience Platform an Amazons DSP weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Zielgruppen können innerhalb der Amazon-DSP für positives Targeting sowie für negatives Targeting (Unterdrückung) ausgewählt werden. 
 
 ### Analyse und Messung {#analytics-and-measurement}
 
@@ -40,14 +40,14 @@ Durch diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) können [!DNL Am
 
 ### Advertising-Optimierung
 
-Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) ermöglicht es Werbetreibenden, eigene Kundenlisten hochzuladen und mithilfe von [!DNL Amazon Marketing Cloud] SQL wiederkehrend Überschneidungsanalysen, Unterdrückungen, Ergänzungen oder Optimierungen für Zielgruppen durchzuführen, bevor in der Amazon-DSP eine für die Aktivierung geeignete Zielgruppe für das Targeting erstellt wird.
+Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) ermöglicht es Werbetreibenden, eigene Kundenlisten hochzuladen und mithilfe von [!DNL Amazon Marketing Cloud] SQL wiederkehrend Überschneidungsanalysen, Unterdrückungen, Ergänzungen oder Optimierungen für Zielgruppen durchzuführen, bevor in Amazon DSP eine für die Aktivierung geeignete Zielgruppe für das Targeting erstellt wird.
 
 ## Voraussetzungen {#prerequisites}
 
 Um die [!DNL Amazon Ads] mit Adobe Experience Platform verwenden zu können, müssen Benutzende zunächst Zugriff auf ein Amazon DSP Advertiser-Konto oder eine [!DNL Amazon Marketing Cloud]-Instanz haben. Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der [!DNL Amazon Ads]-Website:
 
 * [Erste Schritte mit Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [Erste Schritte mit dem Amazon-Marketing Cloud ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [Erste Schritte mit Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -55,8 +55,8 @@ Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ Die [!DNL Amazon Ads]-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Tele
 
 * Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie den Identity-Namespace von `Email_LC_SHA256` als ein Quellfeld aus.
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
-* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die Option `Apply Transformation`, damit Platform die Identitäten bei der Aktivierung hasht.
+* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die `Apply Transformation`-Option, damit Experience Platform die Identitäten bei der Aktivierung hasht.
 * *NEU ab der Version vom September 2024*: Amazon Ads erfordert, dass Sie ein Feld mit einem `countryCode` im 2-stelligen ISO-Format zuordnen, um den Prozess der Identitätsauflösung zu erleichtern (z. B.: US, GB, MX, CA usw.). Verbindungen ohne `countryCode` führen zu negativen Auswirkungen auf die Übereinstimmungsraten der Identitäten.
 
 Sie wählen in einer Zielkonfiguration des [!DNL Amazon Ads]-Connectors nur einmal ein bestimmtes Zielfeld aus.  Wenn Sie beispielsweise eine Geschäfts-E-Mail senden, können Sie keine persönliche E-Mail in derselben Zielkonfiguration zuordnen.
@@ -149,7 +149,7 @@ Suchen Sie im linken Schema-Browser Ihre Zielgruppe unter **[!UICONTROL Advertis
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Validierung der Erstellung von Amazon-Marketing Cloud-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Validierung der Erstellung von Amazon Marketing Cloud-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

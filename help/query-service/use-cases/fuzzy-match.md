@@ -1,10 +1,10 @@
 ---
 title: Ungenaue Übereinstimmung im Abfrage-Service
-description: Erfahren Sie, wie Sie eine Übereinstimmung für Ihre Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr mit einer Zeichenfolge Ihrer Wahl übereinstimmen.
+description: Erfahren Sie, wie Sie eine Übereinstimmung für Ihre Experience Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr mit einer Zeichenfolge Ihrer Wahl übereinstimmen.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -350,7 +350,7 @@ Wählen **Ausgabe**, um die Ergebnisse dieses Joins anzuzeigen.
 
 +++
 
-### Fuzzy-Match-Ergebnisse in Platform speichern {#save-to-platform}
+### Fuzzy-Match-Ergebnisse in Experience Platform speichern {#save-to-platform}
 
 Schließlich können die Ergebnisse der Fuzzy Match-Abfrage mithilfe von SQL als Datensatz in Adobe Experience Platform gespeichert werden.
 

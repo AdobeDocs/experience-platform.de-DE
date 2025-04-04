@@ -1,20 +1,20 @@
 ---
-title: Client-seitige Protokollierung für A4T-Daten in Platform Web SDK
+title: Client-seitige Protokollierung für A4T-Daten in der Experience Platform Web SDK
 description: Erfahren Sie, wie Sie die Client-seitige Protokollierung für Adobe Analytics for Target (A4T) mithilfe der Experience Platform Web SDK aktivieren.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: Target;A4T;Protokollierung;Web SDK;Experience Platform;Plattform
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Client-seitige Protokollierung für A4T-Daten in Platform Web SDK
+# Client-seitige Protokollierung für A4T-Daten in der Experience Platform Web SDK
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Mit Adobe Experience Platform Web SDK können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) Client-seitig in Ihrer Web-Anwendung erfassen.
 
@@ -229,7 +229,7 @@ Die folgenden Unterabschnitte zeigen, wie Sie die Client-seitige Analytics-Proto
 
 Sie können die Web-SDK verwenden, um die Ausführung von Vorschlägen aus [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de)-Aktivitäten zu steuern.
 
-Wenn Sie Vorschläge für einen bestimmten Entscheidungsumfang anfordern, enthält der zurückgegebene Vorschlag das entsprechende Analytics-Token. Best Practice ist es, den `sendEvent`-Befehl von Platform Web SDK zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um sie auszuführen, während die Analytics-Token gleichzeitig erfasst werden.
+Wenn Sie Vorschläge für einen bestimmten Entscheidungsumfang anfordern, enthält der zurückgegebene Vorschlag das entsprechende Analytics-Token. Best Practice ist es, den Experience Platform Web SDK `sendEvent`-Befehl zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um sie auszuführen, während die Analytics-Token gleichzeitig erfasst werden.
 
 Sie können einen `sendEvent`-Befehl für einen formularbasierten Experience Composer-Aktivitätsbereich wie den folgenden Trigger ausführen:
 
@@ -421,7 +421,7 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Zusammenfassung der Implementierung {#implementation-summary}
 
-Zusammenfassend lässt sich sagen, dass beim Anwenden von formularbasierten Experience Composer -Aktivitäten mit Platform Web SDK die folgenden Schritte ausgeführt werden müssen:
+Zusammenfassend lässt sich sagen, dass beim Anwenden von formularbasierten Experience Composer -Aktivitäten mit der Experience Platform Web SDK die folgenden Schritte ausgeführt werden müssen:
 
 1. Senden eines Ereignisses, das Form-Based Experience Composer-Aktivitätsangebote abruft;
 1. Anwenden der Inhaltsänderungen auf die Seite
@@ -473,7 +473,7 @@ Mit Web SDK können Sie Angebote verarbeiten, die mit [Visual Experience Compose
 >
 >Die Schritte zur Implementierung dieses Anwendungsfalls ähneln den Schritten für [Form-Based Experience Composer activities](#form-based-composer). Bitte lesen Sie den vorherigen Abschnitt für weitere Details.
 
-Wenn das automatische Rendering aktiviert ist, können Sie die Analytics-Token aus den Vorschlägen erfassen, die auf der Seite ausgeführt wurden. Best Practice ist es, den `sendEvent`-Befehl von Platform Web SDK zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um die Vorschläge zu filtern, die Web SDK gerendert haben soll.
+Wenn das automatische Rendering aktiviert ist, können Sie die Analytics-Token aus den Vorschlägen erfassen, die auf der Seite ausgeführt wurden. Best Practice ist es, den Experience Platform Web SDK-`sendEvent` zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um die zu filtern, die Web SDK gerendert haben soll.
 
 **Beispiel**
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum Umgang mit [4T-Daten im Edge Network finden ](server-side.md) im Handbuch zur Server-seitigen Protokollierung .
+In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden ](server-side.md) im Handbuch zur Server-seitigen Protokollierung.

@@ -5,10 +5,10 @@ title: Erstellen einer Microsoft Dynamics Source-Verbindung über die Benutzerob
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Microsoft Dynamics-Quellverbindung erstellen.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 31%
+source-wordcount: '617'
+ht-degree: 25%
 
 ---
 
@@ -54,7 +54,7 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem  [!DNL Dynamics
 
 ## Verbinden Ihres [!DNL Dynamics]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -86,7 +86,7 @@ Sie können beim Erstellen eines [!DNL Dynamics]-Kontos entweder die Standardaut
 
 >[!TAB Einfache Authentifizierung]
 
-Um ein [!DNL Dynamics] Konto mit einfacher Authentifizierung zu erstellen, wählen Sie [!UICONTROL Standardauthentifizierung] und geben Sie dann Werte für Ihren [!UICONTROL Service-URI], [!UICONTROL Benutzername] und [!UICONTROL Kennwort] an. **Hinweis**: Die Standardauthentifizierung in [!DNL Dynamics] kann durch die Zwei-Faktor-Authentifizierung blockiert werden, die derzeit von Platform nicht unterstützt wird. In diesem Fall wird empfohlen, eine schlüsselbasierte Authentifizierung zu verwenden, um einen Quell-Connector mithilfe von [!DNL Dynamics] zu erstellen.
+Um ein [!DNL Dynamics] Konto mit einfacher Authentifizierung zu erstellen, wählen Sie [!UICONTROL Standardauthentifizierung] und geben Sie dann Werte für Ihren [!UICONTROL Service-URI], [!UICONTROL Benutzername] und [!UICONTROL Kennwort] an. **Hinweis**: Die Standardauthentifizierung in [!DNL Dynamics] kann durch die Zwei-Faktor-Authentifizierung blockiert werden, die derzeit von Experience Platform nicht unterstützt wird. In diesem Fall wird empfohlen, eine schlüsselbasierte Authentifizierung zu verwenden, um einen Quell-Connector mithilfe von [!DNL Dynamics] zu erstellen.
 
 Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie dann einige Zeit, bis das neue Konto eingerichtet ist.
 
@@ -104,4 +104,4 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten S
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Dynamics]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss konfigurieren, um Daten in Platform zu importieren](../../dataflow/crm.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Dynamics]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/crm.md).

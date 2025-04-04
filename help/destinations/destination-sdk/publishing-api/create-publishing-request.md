@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf formatieren, um eine Anfrage zur Veröffentlichung über Adobe Experience Platform Destination SDK zu senden.
 title: Erstellen einer Zielveröffentlichungsanfrage
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 100%
+source-wordcount: '449'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +79,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrer Zi
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

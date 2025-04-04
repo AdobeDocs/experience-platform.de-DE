@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Übersicht über den Source-Connector für Kundenattribute
 description: Erfahren Sie, wie Sie Kundenattribute mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 19%
+source-wordcount: '381'
+ht-degree: 12%
 
 ---
 
 # Connector für Kundenattribute
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Mit [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) in Experience Cloud können Sie Ihre erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management) hochladen. Sie können die Daten in eine Datenquelle für Kundenattribute in Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
+Mit der [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) in Experience Cloud können Sie Ihre erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management) hochladen. Sie können die Daten in eine Datenquelle für Kundenattribute in Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
 
 Experience Platform unterstützt die Aufnahme [!DNL Customer Attributes] Profildaten in Adobe Experience Platform.
 
@@ -29,7 +29,7 @@ Die primäre Identität eines Datensatzes ist in der ersten Spalte der CSV-Datei
 
 Bei Verwendung [!DNL Customer Attributes] Quelle können Sie keinen vorhandenen Namespace für die Identität auswählen, da [!DNL Customer Attributes] davon ausgeht, dass sich die primäre Identität für das Schema immer in der Identitätszuordnung befindet. [!DNL Customer Attributes] erstellt dann automatisch die Zuordnung der Quell-ID zur Identitätszuordnungs-UUID.
 
-Damit [!DNL Customer Attributes] Daten mit anderen [!DNL Profile]-Datensätzen verknüpft werden können, müssen ihre Daten und Identitäten mit einer Experience Cloud-ID abgeglichen werden können.
+Damit [!DNL Customer Attributes] Daten mit anderen [!DNL Profile]-Datensätzen verknüpft werden können, müssen ihre Daten und Identitäten mit einer Experience Cloud ID abgeglichen werden können.
 
 Sie können den `CORE`-Namespace einrichten, indem Sie die Experience Cloud-ID für den Besucher mithilfe von [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) oder der [Experience Cloud ID Service-API ](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
 

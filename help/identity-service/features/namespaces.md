@@ -2,9 +2,9 @@
 title: Überblick über den Identitäts-Namespace
 description: Erfahren Sie mehr über Identity-Namespaces in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1860'
 ht-degree: 26%
 
 ---
@@ -85,16 +85,16 @@ Die folgenden Identitätstypen sind in Experience Platform verfügbar:
 | Geräte-ID | Geräte-IDs identifizieren Hardware-Geräte, wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam verwendet werden. |
 | E-Mail-Adresse | E-Mail-Adressen werden oft mit einer einzelnen Person verknüpft und können daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies ist ein Hinweis darauf, dass der Wert sensibel behandelt werden [!DNL Identity Service]. |
 | Nicht personenbezogene Kennung | Nicht personenbezogene IDs werden für das Speichern von Identifikatoren verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind, z. B. eine Produktnummer oder Daten, die mit Produkten, Organisationen oder Geschäften verbunden sind. |
-| Partner-ID | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind oft pseudonym, um die wahre Identität einer Person nicht preiszugeben, und können probabilistisch sein. In Real-time Customer Data Platform werden Partner-IDs hauptsächlich für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagramm-Verknüpfungen verwendet.</li><li>Identitätsdiagramme werden bei der Aufnahme einer Identität, die einen als Partner-ID-Typ angegebenen Identity-Namespace enthält, nicht generiert.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp der Partner-ID aufgenommen werden, kann dies zu Einschränkungen des Systemdiagramms bei Identity Service sowie zu einer unerwünschten Zusammenführung von Profilen führen.</li><ul> |
+| Partner-ID | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind oft pseudonym, um die wahre Identität einer Person nicht preiszugeben, und können probabilistisch sein. In Real-Time Customer Data Platform werden Partner-IDs hauptsächlich für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagramm-Verknüpfungen verwendet.</li><li>Identitätsdiagramme werden bei der Aufnahme einer Identität, die einen als Partner-ID-Typ angegebenen Identity-Namespace enthält, nicht generiert.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp der Partner-ID aufgenommen werden, kann dies zu Einschränkungen des Systemdiagramms bei Identity Service sowie zu einer unerwünschten Zusammenführung von Profilen führen.</li><ul> |
 | Telefonnummer | Telefonnummern werden oft einer einzelnen Person zugeordnet und können daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. Identitäten dieser Art umfassen PII. Dies ist ein Hinweis darauf, dass der Wert sensibel behandelt werden [!DNL Identity Service]. |
 
 {style="table-layout:auto"}
 
 ### Standard-Namespaces {#standard}
 
-Experience Platform bietet mehrere Identity-Namespaces, die für alle Organisationen verfügbar sind. Diese werden als Standard-Namespaces bezeichnet und über die [!DNL Identity Service]-API oder die Platform-Benutzeroberfläche angezeigt.
+Experience Platform bietet mehrere Identity-Namespaces , die für alle Organisationen verfügbar sind. Diese werden als Standard-Namespaces bezeichnet und über die [!DNL Identity Service]-API oder die Experience Platform-Benutzeroberfläche angezeigt.
 
-Die folgenden Standard-Namespaces stehen allen Organisationen in Platform zur Verfügung:
+Die folgenden Standard-Namespaces stehen allen Organisationen in Experience Platform zur Verfügung:
 
 | Anzeigename | Beschreibung |
 | ------------ | ----------- |

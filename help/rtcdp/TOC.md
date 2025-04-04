@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 66%
+source-wordcount: '302'
+ht-degree: 64%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 66%
    * [Kunden-KI](segmentation/customer-ai.md)
 * Datensätze {#datasets}
    * [Datensätze](datasets/dataset.md)
-   * [Datenqualität in Platform](datasets/data-quality.md)
+   * [Datenqualität in Experience Platform](datasets/data-quality.md)
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)

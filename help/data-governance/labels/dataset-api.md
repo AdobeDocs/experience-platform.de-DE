@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 91%
@@ -23,7 +23,7 @@ In diesem Dokument wird beschrieben, wie Sie Kennzeichnungen für Datensätze un
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog-Entwicklerhandbuch beschrieben sind, um die erforderlichen Anmeldedaten für Aufrufe an [!DNL Platform]-APIs zu sammeln.
+Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog-Entwicklerhandbuch beschrieben sind, um die erforderlichen Anmeldedaten für Aufrufe an [!DNL Experience Platform]-APIs zu sammeln.
 
 Um die in diesem Dokument beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Catalog-Objekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
@@ -103,7 +103,7 @@ Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines
 
 >[!NOTE]
 >
->Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, ist der neueste `etag` erforderlich, um die Kennzeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzkennzeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die in der Anfrage geändert werden sollen, sodass der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass der PUT-Aufruf dieselben übergeordneten Entitäten beibehält wie der GET-Aufruf. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
+>Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, ist der letzte `etag` erforderlich, um die Kennzeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzkennzeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die in der Anfrage geändert werden sollen, sodass der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass der PUT-Aufruf dieselben übergeordneten Entitäten beibehält wie der GET-Aufruf. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
 
 Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 

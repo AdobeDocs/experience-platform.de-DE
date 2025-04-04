@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Demo-Erweiterung – Übersicht
 description: Machen Sie sich mit der Erweiterung „Adobe Experience Platform Demo“ in Adobe Experience Platform vertraut.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 100%
+source-wordcount: '1071'
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Die Funktionen dieser Erweiterung werden auf die neue Erweiterung portiert. Nachfolgend ein kurzer Vergleich der aktuellen Funktionen:
 
-| Platform Demo-Erweiterung | Platform Web-SDK |
+| Experience Platform Demo-Erweiterung | Experience Platform Web-SDK |
 | ------------------ | ----------- |
 | Unterstützung für benutzerdefinierte Kunden-IDs | Unterstützung für benutzerdefinierte Kunden-IDs |
 | Client-seitige Mapping-Benutzeroberfläche für XDM | Build in ECID (visitor.js nicht benötigt) |

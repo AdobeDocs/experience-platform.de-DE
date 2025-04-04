@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 100%
+source-wordcount: '794'
+ht-degree: 98%
 
 ---
 
@@ -1066,7 +1066,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte {#next-steps}
 

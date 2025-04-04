@@ -3,9 +3,9 @@ title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 69%
 
 ---
@@ -57,4 +57,4 @@ Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Vorgangskontingent f�
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Anfragen zum Datenlebenszyklus mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Datenlebenszyklus-Benutzeroberfläche](../ui/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Anfragen zum Datenlebenszyklus mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Datenlebenszyklus-Benutzeroberfläche](../ui/overview.md).

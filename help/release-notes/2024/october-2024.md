@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2024
 description: Versionshinweise von Oktober 2024 für Adobe Experience Platform.
 exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1160'
 ht-degree: 26%
 
 ---
@@ -86,7 +86,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie unter [Segmentie
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 

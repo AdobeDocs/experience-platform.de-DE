@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 71%
+source-wordcount: '1068'
+ht-degree: 68%
 
 ---
 
@@ -35,9 +35,9 @@ Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folg
 - In einem benutzerdefinierten Zeitraum hat keine Aktivität stattgefunden. Aktivität wird entweder durch alle erfassten Erlebnisereignisse oder durch von Kunden initiierte Aktualisierungen der Profilattribute definiert.
    - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität angesehen. Eine nicht von Benutzenden initiierte Aktualisierung der Zielgruppenzugehörigkeit wird jedoch **nicht** als Aktivität angesehen. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit für Erlebnisereignisse auf dem Zeitpunkt des Ereignisses und für Profilattribute auf dem Zeitpunkt der Aufnahme.
 
-## Zugriff auf {#access}
+## Zugriff {#access}
 
-Ablauf von Daten pseudonymer Profile kann nicht über die Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um diese Funktion zu aktivieren. Bitte geben Sie bei der Kontaktaufnahme mit dem Support die folgenden Informationen an:
+Ablauf von Daten pseudonymer Profile kann nicht über die Experience Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um diese Funktion zu aktivieren. Bitte geben Sie bei der Kontaktaufnahme mit dem Support die folgenden Informationen an:
 
 - Die Identity-Namespaces, die für das Löschen eines pseudonymen Profils berücksichtigt werden sollen.
    - Beispiel: Nur `ECID`, nur `AAID` oder eine Kombination aus `ECID` und `AAID`.
@@ -75,11 +75,11 @@ Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten könne
 
 Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Sobald Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
 
-Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte Ihrer bekannten Benutzerdaten festlegen und den Ablauf von Daten pseudonymer Profile auf eine viel kürzere Dauer festlegen, um die Auswirkungen pseudonymer Profile auf die Einhaltung Ihrer Platform-Lizenzverträge zu begrenzen.
+Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte Ihrer bekannten Benutzerdaten festlegen und den Ablauf von Daten pseudonymer Profile auf eine viel kürzere Dauer festlegen, um die Auswirkungen pseudonymer Profile auf die Einhaltung Ihrer Experience Platform-Lizenzverträge zu begrenzen.
 
 ### Wann sollten Benutzer Ablauf von Daten pseudonymer Profile verwenden?
 
-- Wenn Sie das Web SDK verwenden, um Daten direkt an Platform zu senden.
+- Wenn Sie Web SDK verwenden, um Daten direkt an Experience Platform zu senden.
 - Wenn Sie eine Website haben, die nicht-authentifizierte Kundinnen und Kunden en masse bedient.
 - Wenn Sie in Ihren Datensätzen eine übermäßige Anzahl an Profilen haben und bestätigt haben, dass diese auf Identity-Namespaces zurückzuführen sind, die auf anonymen Cookies basieren.
    - Um dies zu bestimmen, sollten Sie den Bericht zur Überschneidung von Identity-Namespaces verwenden. Weitere Informationen zu diesem Bericht finden Sie im [Berichtabschnitt zur Identitätsüberschneidung](./api/preview-sample-status.md#identity-overlap-report) im Handbuch für die Vorschau der Beispiel-Status-API.

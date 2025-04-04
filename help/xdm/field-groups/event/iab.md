@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;iab;tcf;Zustimmung;
+keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;ExperienceEvent;Felder;Schemata;Schemata;Schemadesign;Feldergruppe;Feldergruppe;iab;tcf;Zustimmung;
 solution: Experience Platform
 title: IAB TCF 2.0-Einverständnis-Feldergruppe für Ereignisschemata
 description: Erfahren Sie mehr über die Feldergruppe des IAB TCF 2.0-Einverständnisschemas für die XDM ExperienceEvent-Klasse.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zum Anwendungsfall [ Feldergruppe finden Sie im Handbuch ](../../../landing/governance-privacy-security/consent/iab/overview.md) IAB TCF 2.0-Unterstützung in Platform . Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
+Weitere Informationen zum Anwendungsfall [ Feldergruppe finden Sie im Handbuch ](../../../landing/governance-privacy-security/consent/iab/overview.md) IAB TCF 2.0-Unterstützung in Experience Platform . Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

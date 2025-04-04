@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Intelligent Services – Übersicht
 description: Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketing-Experten Prognosen in Adobe Experience Cloud, Adobe Experience Platform und Anwendungen anderer Anbieter aktivieren.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 100%
+source-wordcount: '506'
+ht-degree: 96%
 
 ---
 
@@ -48,11 +48,11 @@ Kundendaten werden mit dem Experience-Datenmodell (XDM) in [!DNL Adobe Experienc
 
 ### Konfigurieren
 
-Der Marketing-Analyst konfiguriert die gewünschten Vorhersagen, indem er Verfahrensregeln festlegt und relevante Daten identifiziert.
+Der Marketing-Analyst konfiguriert die gewünschten Vorhersagen, indem er Geschäftsregeln festlegt und relevante Daten identifiziert.
 
 ### Vorhersagen
 
-Nachdem die Modelle Training und Bewertung abgeschlossen haben, werden die Ergebnisse in Platform zurückgeschrieben.
+Nachdem die Modelle trainiert und bewertet wurden, werden die Punktzahlen wieder in Experience Platform geschrieben.
 
 ### Handeln
 

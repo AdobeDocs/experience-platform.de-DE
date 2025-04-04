@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenvorbereitung – Übersicht
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 100%
+source-wordcount: '790'
+ht-degree: 98%
 
 ---
 
@@ -52,7 +52,7 @@ Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung von F
 
 ## Verarbeiten von Datenformaten
 
-Datenvorbereitung kann verschiedene Datenformate, die in Platform erfasst werden, zuverlässig verarbeiten. Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Verarbeitung von Datenformaten](./data-handling.md).
+Die Datenvorbereitung kann verschiedene Datenformate, die in Experience Platform aufgenommen werden, zuverlässig verarbeiten. Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Verarbeitung von Datenformaten](./data-handling.md).
 
 ## Senden Sie partielle Zeilenaktualisierungen mit [!DNL Data Prep]
 

@@ -3,53 +3,53 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 78%
+source-wordcount: '324'
+ht-degree: 60%
 
 ---
 
 
 # Überblick über Adobe Experience Platform {#landing}
 
-* [Platform – Übersicht](home.md)
-* [Platform – Übersicht (Video)](video/platform-overview.md)
+* [Übersicht zu Experience Platform](home.md)
+* [Übersicht über Experience Platform (Video)](video/platform-overview.md)
 * [Multi-Cloud-Übersicht](multi-cloud.md)
 * [Vergleich von Edge Network und Hub](./edge-and-hub-comparison.md)
-* [Platform-Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
-* [Ein auf Platform basierendes Kundenerlebnis (Video)](video/customer-experience.md)
-* [Hinter den Kulissen eines auf Platform basierenden Kundenerlebnisses (Video)](video/customer-experience-bts.md)
+* [Experience Platform-Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
+* [Ein auf Experience Platform basierendes Kundenerlebnis (Video)](video/customer-experience.md)
+* [Hinter den Kulissen eines auf Experience Platform basierenden Kundenerlebnisses (Video)](video/customer-experience-bts.md)
 * Erste Schritte {#getting-started}
    * [Beispiel für einen End-to-End-Workflow](end-to-end-tutorial.md)
    * [Schlüsselfunktionen (Video)](video/key-capabilities.md)
    * [Häufige Anwendungsfälle (Video)](video/platform-use-cases.md)
-   * [Architektur von Platform (Video)](video/platform-architecture.md)
+   * [Experience Platform-Architektur (Video)](video/platform-architecture.md)
    * [Rollen und Projektphasen (Video)](video/roles-project-phases.md)
 * Benutzeroberfläche von Experience Platform {#platform-ui}
-   * [Handbuch zur Benutzeroberfläche von Platform](ui-guide.md)
-   * [Tour durch die Benutzeroberfläche von Platform (Video)](video/platform-ui.md)
+   * [Handbuch zur Experience Platform-Benutzeroberfläche](ui-guide.md)
+   * [Tour durch die Benutzeroberfläche von Experience Platform (Video)](video/platform-ui.md)
    * [Handbuch zur Benutzeroberfläche von Workflows](workflows.md)
    * [Browser- und Sprachunterstützung](browser-language-support.md)
    * [Umfrage zur Selbstidentifizierung](self-identification.md)
 * Experience Platform-APIs {#platform-apis}
-   * [Erste Schritte mit Platform-APIs](api-guide.md)
-   * [Platform-APIs authentifizieren und aufrufen](api-authentication.md)
+   * [Erste Schritte mit Experience Platform-APIs](api-guide.md)
+   * [Authentifizieren und Zugreifen auf Experience Platform-APIs](api-authentication.md)
    * [API-Grundlagen](api-fundamentals.md)
-   * [Verwenden von Postman mit Platform-APIs](postman.md)
+   * [Verwenden von Postman mit Experience Platform-APIs](postman.md)
    * [API-Referenzdokumente](https://www.adobe.com/go/platform-api-reference-en)
-* Dokumentation zu Platform {#documentation}
+* Dokumentation zu Experience Platform {#documentation}
    * [Übersicht](documentation/overview.md)
    * [Sprachunterstützung](documentation/language-support.md)
-* Auf Platform {#ecosystem} aufbauende Anwendungen
-   * [Übersicht](application-services.md)
+* Auf Experience Platform {#ecosystem} aufbauende Programme
+   * [Überblick](application-services.md)
    * [Adobe Real-Time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
    * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-   * [Integrationen von Platform mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
+   * [Integrationen von Experience Platform mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Verwaltung, Datenschutz und Sicherheit {#governance-privacy-security}
    * [Übersicht](./governance-privacy-security/overview.md)
    * Einverständnisverwaltung {#consent}
@@ -59,7 +59,7 @@ ht-degree: 78%
       * IAB TCF 2.0 {#iab}
          * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/iab/dataset.md)
-      * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
+      * [Integrieren von Experience Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
    * Audit-Protokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
       * Audit-Abfrage-API {#audit-api}

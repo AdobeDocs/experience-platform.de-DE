@@ -5,10 +5,10 @@ title: Notebook zur explorativen Datenanalyse (EDA)
 type: Tutorial
 description: In diesem Handbuch wird beschrieben, wie Sie mit dem Notebook zur explorativen Datenanalyse (EDA) Muster in Web-Daten erkennen, Ereignisse mit einem Prognoseziel aggregieren, aggregierte Daten bereinigen und die Beziehung zwischen Prädiktoren und Zielen verstehen können.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2789'
-ht-degree: 99%
+source-wordcount: '2790'
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Verbinden mit Adobe Experience Platform [!DNL Query Service]
 
-Mit [!DNL JupyterLab] in Platform können Sie SQL in einem [!DNL Python]-Notebook verwenden, um über den [Abfrage-Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=de) auf Daten zuzugreifen. Der Zugriff auf Daten über den [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Bearbeitung großer Datensätze nützlich sein. Beachten Sie, dass Datenabfragen mit dem [!DNL Query Service] ein Limit bei der Verarbeitungszeit von 10 Minuten aufweisen.
+[!DNL JupyterLab] auf Experience Platform ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook für den Datenzugriff über [Abfrage-Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=de). Der Zugriff auf Daten über den [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Bearbeitung großer Datensätze nützlich sein. Beachten Sie, dass Datenabfragen mit dem [!DNL Query Service] ein Limit bei der Verarbeitungszeit von 10 Minuten aufweisen.
 
 Bevor Sie den [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie Grundlagenkenntnisse zur [[!DNL Query Service] -SQL-Syntax](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=de) besitzen.
 

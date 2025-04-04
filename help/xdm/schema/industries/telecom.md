@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Datenmodell ERD der Telekommunikationsbranche
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) an, das ein standardisiertes Datenmodell für die Telekommunikationsbranche beschreibt, das mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel ist.
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Das folgende Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) stel
 
 >[!NOTE]
 >
->Das ERD wie beschrieben ist eine Empfehlung dafür, wie Sie Ihre Daten für diesen branchenspezifischen Anwendungsfall modellieren sollten. Um dieses Datenmodell in Platform verwenden zu können, müssen Sie die empfohlenen Schemas und deren Beziehungen selbst erstellen. Weitere Informationen finden Sie in den Handbüchern zur Verwaltung [Schemata](../../ui/resources/schemas.md) und [Beziehungen](../../tutorials/relationship-ui.md) in der Benutzeroberfläche.
+>Das ERD wie beschrieben ist eine Empfehlung dafür, wie Sie Ihre Daten für diesen branchenspezifischen Anwendungsfall modellieren sollten. Um dieses Datenmodell in Experience Platform verwenden zu können, müssen Sie die empfohlenen Schemata und ihre Beziehungen selbst erstellen. Weitere Informationen finden Sie in den Handbüchern zur Verwaltung [Schemata](../../ui/resources/schemas.md) und [Beziehungen](../../tutorials/relationship-ui.md) in der Benutzeroberfläche.
 
 Folgende Legende verwenden, um dieses ERD zu interpretieren:
 

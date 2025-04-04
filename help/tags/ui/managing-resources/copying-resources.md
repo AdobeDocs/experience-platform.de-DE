@@ -2,10 +2,10 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 96%
+source-wordcount: '781'
+ht-degree: 93%
 
 ---
 
@@ -60,7 +60,7 @@ Wenn Sie eine Erweiterung in eine andere Eigenschaft kopieren, müssen Sie Folge
 
 ## Kopieren von Regeln und Datenelementen
 
-Alle Regeln und Datenelemente werden von einer Erweiterung bereitgestellt. Wenn Sie also Eigenschaften-übergreifend kopieren, muss die Platform zugrunde liegende Erweiterungen berücksichtigen.
+Alle Regeln und Datenelemente werden von einer Erweiterung bereitgestellt. Wenn Sie also Eigenschaften-übergreifend kopieren, muss Experience Platform diese zugrunde liegenden Erweiterungen berücksichtigen.
 
 ![Kopieren einer Regel in meine Demo-Property](../../images/copy-rules-dialog1.png)
 

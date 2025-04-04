@@ -3,10 +3,10 @@ title: Übersicht über Google PubSub Source
 description: Erfahren Sie, wie Sie Google PubSub über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 19%
+source-wordcount: '829'
+ht-degree: 10%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 19%
 >
 >Die [!DNL Google PubSub] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [!DNL AWS], [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Services und Zielen in Platform importieren können.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [!DNL AWS], [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Services und Zielen in Experience Platform importieren können.
 
-Cloud-Speicher sind eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Google PubSub] in Echtzeit importieren.
+Cloud-Speicherquellen können Ihre Daten in Experience Platform übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Experience Platform können Sie Daten aus [!DNL Google PubSub] in Echtzeit importieren.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -49,7 +49,7 @@ Um Schlüssel für Ihr Service-Konto zu generieren, wählen Sie die Kopfzeile Sc
 
 ![Das Fenster Schlüssel hinzufügen in der Google Developer Console](../../images/tutorials/create/google-pubsub/add-key.png)
 
-Bei erfolgreicher Ausführung erhalten Sie eine Meldung, die angibt, dass der private Schlüssel auf Ihrem Computer gespeichert wurde und eine Datei heruntergeladen wird. Sie können dann den Inhalt dieser Datei als Anmeldeinformationen verwenden, wenn Sie Ihr [!DNL Google PubSub]-Konto auf Experience Platform erstellen.
+Bei erfolgreicher Ausführung erhalten Sie eine Meldung, die angibt, dass der private Schlüssel auf Ihrem Computer gespeichert wurde und eine Datei heruntergeladen wird. Sie können dann den Inhalt dieser Datei als Anmeldeinformationen verwenden, wenn Sie Ihr [!DNL Google PubSub] auf Experience Platform erstellen.
 
 ### Berechtigungen auf Themen- und Abonnementebene erteilen {#grant-permissions}
 
@@ -59,7 +59,7 @@ Um Berechtigungen auf der Themen- und Abonnementebene zu gewähren, navigieren S
 
 ## Konfigurationen für optimale [!DNL Google PubSub usage] {#optimal-configurations}
 
-In diesem Abschnitt werden Konfigurationen beschrieben, die Sie vornehmen sollten, um die Verwendung der [!DNL Google PubSub] auf Experience Platform zu optimieren.
+In diesem Abschnitt werden Konfigurationen beschrieben, die Sie vornehmen sollten, um Ihre Nutzung der [!DNL Google PubSub] auf Experience Platform zu optimieren.
 
 ### Abonnementeigenschaften {#subscription-properties}
 
@@ -81,9 +81,9 @@ Sie müssen **die Aufbewahrungsdauer Ihrer Abonnementnachricht auf 24 Stunden od
 >
 >Pro [!DNL Google PubSub]-Abonnement kann nur ein Quelldatenfluss erstellt werden. Die Wiederverwendung eines Abonnements führt selbst über Sandboxes hinweg zu Datenverlust.
 
-## [!DNL Google PubSub] mit Experience Platform verbinden
+## Verbinden von [!DNL Google PubSub] mit Experience Platform
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google PubSub] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Google PubSub] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verwenden von APIs
 

@@ -1,14 +1,14 @@
 ---
 keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
-description: Durch die Verwendung von Account-Profilen ermöglicht Adobe Real-time Customer Data Platform B2B edition die Vereinheitlichung von Account-Informationen aus mehreren Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
+description: Durch die Verwendung von Account-Profilen ermöglicht Adobe Real-Time Customer Data Platform B2B edition die Vereinheitlichung von Account-Informationen aus mehreren Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 55%
+source-wordcount: '1681'
+ht-degree: 54%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Account-Profile sind nur für Kundinnen und Kunden von Real-time Customer Data Platform B2B edition verfügbar. Um mehr über Real-Time CDP zu erfahren, auch zu den für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst die [Übersicht über Real-Time CDP](../overview.md).
+>Account-Profile sind nur für Kundinnen und Kunden von Real-Time Customer Data Platform B2B edition verfügbar. Um mehr über Real-Time CDP zu erfahren, auch zu den für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst die [Übersicht über Real-Time CDP](../overview.md).
 
 Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält eine Anleitung zur Interaktion mit Account-Profilen mithilfe der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Real-Time CDP, B2B edition-Funktionen.
 
@@ -28,7 +28,7 @@ Wählen Sie **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigat
 
 ![Die Registerkarte „Kontoprofile - Übersicht“ mit hervorgehobenen Profilen im linken Navigationsbereich und hervorgehobener Übersicht.](images/b2b-account-profile-overview.png)
 
-Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL  Dashboard ]](../../dashboards/guides/account-profiles.md)Kontoprofile“. Weitere Informationen dazu, wie Ihre Insights-Datenmodelle zum Erstellen benutzerdefinierter Diagramme für Ihre Dashboards verwendet werden können, finden Sie in der Dokumentation ](../../dashboards/data-models/cdp-insights-data-model-b2b.md) [Real-time Customer Data Platform Insights-Datenmodell B2B edition.
+Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL  Dashboard ]](../../dashboards/guides/account-profiles.md)Kontoprofile“. Weitere Informationen dazu, wie Ihre Insights[Datenmodelle zum Erstellen benutzerdefinierter Diagramme für Ihre Dashboards verwendet werden können, finden Sie in der Dokumentation unter Real-time Customer Data Platform Insights-Datenmodell B2B edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) .
 
 ## Lead-Konto-Zuordnung konfigurieren {#configure-lead-to-account-matching}
 
@@ -92,7 +92,7 @@ Real-Time CDP, B2B edition unterstützt die Möglichkeit, eine direkte Suche dur
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
-Ein weiteres Beispiel könnte sein, dass Sie eine Umwandlung der Daten durchführen, nachdem diese ein System verlassen haben und bevor sie in Platform aufgenommen werden. Sie können die Funktion für die direkte Suche verwenden, um einen Kontext für die Daten bereitzustellen (z. B. um anzugeben, dass es sich um Marketo-Daten handelt, obwohl sie beispielsweise von einem Amazon S3-Bucket stammen), sodass das System weiß, wo die Daten gesucht werden sollen und wie sie korrekt wiedergegeben werden.
+Ein weiteres Beispiel könnte sein, dass Sie eine Transformation der Daten durchführen, nachdem diese ein System verlassen haben und bevor sie in Experience Platform eintreten. Sie können die Funktion für die direkte Suche verwenden, um einen Kontext für die Daten bereitzustellen (z. B. um anzugeben, dass es sich um Marketo-Daten handelt, obwohl sie beispielsweise von einem Amazon S3-Bucket stammen), sodass das System weiß, wo die Daten gesucht werden sollen und wie sie korrekt wiedergegeben werden.
 
 Um eine direkte Suche zu starten, wählen Sie **[!UICONTROL Sonstige]** aus dem Dropdown-Menü **[!UICONTROL Durchsuchen nach]** aus, und geben Sie dann **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Account-ID]** für den Account ein, den Sie anzeigen möchten.
 

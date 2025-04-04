@@ -4,9 +4,9 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze an ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5146'
+source-wordcount: '5149'
 ht-degree: 11%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 11%
 
 >[!AVAILABILITY]
 >
->* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- und Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+>* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- und Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Weitere Informationen erhalten Sie vom Adobe-Support.
 
 >[!IMPORTANT]
 >
->**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wird die Option eingeführt, ein `endTime` für den Export von Datensatzdatenflüssen festzulegen. Adobe führt außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse ein, die *vor der September-Version) erstellt*. Für einen dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da die Exporte sonst an diesem Datum gestoppt werden. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai gestoppt werden.
+>**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wird die Option eingeführt, ein `endTime` für den Export von Datensatzdatenflüssen festzulegen. Adobe führt außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse ein, die *vor der September-Version erstellt*. Für einen dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da die Exporte sonst an diesem Datum gestoppt werden. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai gestoppt werden sollen.
 >
 >Entsprechend gilt für alle Datenflüsse, die Sie ohne Angabe eines `endTime` erstellen, standardmäßig eine Endzeit von sechs Monaten ab dem Zeitpunkt, zu dem sie erstellt werden.
 
@@ -62,9 +62,9 @@ Derzeit können Sie Datensätze in die Cloud-Speicher-Ziele exportieren, die im 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen werden, bleiben als Datensätze im [!DNL Data Lake] erhalten. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
-   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Datensätze an Cloud-Speicher-Ziele in Platform zu exportieren.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Datensätze an Cloud-Speicher-Ziele in Experience Platform zu exportieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 
@@ -78,13 +78,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Experience Platform-Authentifizierungs-Tutorial abschließen](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Tutorial zur Experience Platform-Authentifizierung abschließen](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Experience Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -2468,7 +2468,7 @@ Beachten Sie den Unterschied im Dateiformat zwischen den beiden Dateitypen, wenn
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Bekannte Einschränkungen {#known-limitations}
 
@@ -2480,7 +2480,7 @@ Anzeigen einer [Liste häufig gestellter Fragen](/help/destinations/ui/export-da
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Batch-Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Datensätze zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
+In diesem Tutorial haben Sie Experience Platform erfolgreich mit einem Ihrer bevorzugten Batch-Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Datensätze zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

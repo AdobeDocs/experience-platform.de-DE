@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Erstellen einer Quellverbindung für MailChimp-Mitglieder über die Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und MailChimp-Mitgliedern herstellen.
+title: Erstellen einer Quellverbindung für MailChimp-Mitglieder über die Experience Platform-Benutzeroberfläche
+description: Erfahren Sie, wie Sie Adobe Experience Platform über die Experience Platform-Benutzeroberfläche mit MailChimp-Mitgliedern verbinden.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 93%
+source-wordcount: '697'
+ht-degree: 63%
 
 ---
 
-# Erstellen einer [!DNL Mailchimp Members]-Quellverbindung mithilfe der Platform-Benutzeroberfläche
+# Erstellen einer [!DNL Mailchimp Members] Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Mailchimp]-Quell-Connectors erläutert, um [!DNL Mailchimp Members]-Daten über die Benutzeroberfläche in Adobe Experience Platform aufzunehmen.
 
@@ -19,12 +19,12 @@ In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Mailchimp]-Quell-Co
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Sammeln erforderlicher Anmeldedaten
 
-Um Ihre [!DNL Mailchimp Members]-Daten in Platform einzubringen, müssen Sie zunächst die Authentifizierungs-Anmeldedaten angeben, die Ihrem [!DNL Mailchimp]-Konto entsprechen.
+Um Ihre [!DNL Mailchimp Members] Daten in Experience Platform einzubringen, müssen Sie zunächst die Authentifizierungsdaten angeben, die Ihrem [!DNL Mailchimp] entsprechen.
 
 Die [!DNL Mailchimp Members]-Quelle unterstützt sowohl OAuth 2-Aktualisierungs-Code als auch die Standardauthentifizierung. Weitere Informationen zu diesen Authentifizierungstypen finden Sie in den Tabellen unten.
 
@@ -33,10 +33,10 @@ Die [!DNL Mailchimp Members]-Quelle unterstützt sowohl OAuth 2-Aktualisierungs-
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | Domain | Die Stamm-URL, die für die Verbindung mit der MailChimp-API verwendet wird. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
-| URL für den Autorisierungstest | Die URL für den Autorisierungstest wird verwendet, um Anmeldedaten beim Herstellen einer Verbindung von [!DNL Mailchimp] mit Platform zu überprüfen. Wenn dies nicht angegeben wird, werden die Anmeldedaten stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
+| URL für den Autorisierungstest | Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Herstellen einer Verbindung von [!DNL Mailchimp] mit Experience Platform zu überprüfen. Wenn dies nicht angegeben wird, werden die Anmeldedaten stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | Zugriffs-Token | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
-Weitere Informationen zur Verwendung von OAuth 2 zum Authentifizieren Ihres [!DNL Mailchimp]-Kontos für Platform finden Sie in diesem [[!DNL Mailchimp] Dokument zur Verwendung von OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
+Weitere Informationen zur Verwendung von OAuth 2 zum Authentifizieren Ihres [!DNL Mailchimp]-Kontos für Experience Platform finden Sie in diesem [[!DNL Mailchimp] Dokument zur Verwendung von OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
 ### Einfache Authentifizierung
 
@@ -46,9 +46,9 @@ Weitere Informationen zur Verwendung von OAuth 2 zum Authentifizieren Ihres [!DN
 | Benutzername | Der Benutzername, der Ihrem MailChimp-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 | Passwort | Das Passwort, das Ihrem MailChimp-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 
-## Verbinden Ihres [!DNL Mailchimp Members]-Kontos mit Platform
+## Verbinden Ihres [!DNL Mailchimp Members] mit Experience Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -97,4 +97,4 @@ Die Seite wird in eine interaktive Schemastruktur aktualisiert, in der Sie die H
 
 ## Nächste Schritte
 
-Nachdem Sie Ihr [!DNL Mailchimp]-Konto authentifiziert und Ihre [!DNL Mailchimp Members]-Daten ausgewählt haben, können Sie nun mit der Erstellung eines Datenflusses beginnen, um Ihre Daten in Platform zu übertragen. Ausführliche Anweisungen zum Erstellen eines Datenflusses finden Sie in der Dokumentation zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Platform zu übertragen](../../dataflow/marketing-automation.md).
+Nachdem Sie Ihr [!DNL Mailchimp]-Konto authentifiziert und Ihre [!DNL Mailchimp Members] ausgewählt haben, können Sie jetzt mit der Erstellung eines Datenflusses beginnen, um Ihre Daten in Experience Platform zu übertragen. Ausführliche Anweisungen zum Erstellen eines Datenflusses finden Sie in der Dokumentation unter [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Experience Platform zu übertragen](../../dataflow/marketing-automation.md).

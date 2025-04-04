@@ -2,10 +2,10 @@
 title: Sichern von Objektkonfigurationen mithilfe von Sandbox-Tools
 description: Um Sandboxes sicher zurückzusetzen und Versionierungsunterstützung hinzuzufügen, sichern Sie Objektkonfigurationen (oder Metadaten) mithilfe von Sandbox-Toolingpaketen. Backup-Pakete verhindern den Verlust wichtiger Konfigurationen wie Schemata, Datensätze und Zielgruppen, insbesondere bei Entwicklungsiterationen.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Beachten Sie bei der Planung der Erstellung eines eigenen Backup-Pakets in Ihrer
 - Stellen Sie je nach Umfang der Metadaten, die Sie sichern möchten, sicher, dass Sie verstehen, wie [ Objekte manuell zu einem Paket hinzufügen ](../ui/sandbox-tooling.md#add-object-to-a-new-package) wie [ eine gesamte Sandbox exportieren ](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Stellen Sie sicher, dass Sie in Ihrer Organisation mit den richtigen Berechtigungen Zugriff auf Sandbox-Tools haben.
 
-### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
+### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
 Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [ erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
 
@@ -85,7 +85,7 @@ Sie können einzelne Objekte auf eine der folgenden Arten in einem Paket sichern
 
 ##### Erstellen eines Pakets mit mehreren Objekten
 
-Wählen Sie in Experience Platform im linken Navigationsbereich **[!UICONTROL Sandboxes]** und dann **[!UICONTROL Packages]** aus. Um mit der Erstellung eines neuen Pakets zu beginnen, wählen **[!UICONTROL oben rechts]** Paket erstellen“ aus.
+Wählen Sie in Experience Platform **[!UICONTROL Sandboxes]** im linken Navigationsbereich aus und klicken Sie dann auf **[!UICONTROL Pakete]**. Um mit der Erstellung eines neuen Pakets zu beginnen, wählen **[!UICONTROL oben rechts]** Paket erstellen“ aus.
 
 ![Die Registerkarte „Pakete“ im Sandbox-Dashboard mit hervorgehobener Option „Paket erstellen“.](../images/use-cases/create-package.png)
 

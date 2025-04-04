@@ -2,10 +2,10 @@
 title: Erstellen einer Source-Verbindung und eines Datenflusses für Mixpanel mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Mixpanel verbinden.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1980'
-ht-degree: 61%
+source-wordcount: '1992'
+ht-degree: 52%
 
 ---
 
@@ -17,14 +17,14 @@ Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellver
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Mixpanel] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zwischen [!DNL Mixpanel] und Platform herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL Mixpanel] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Weitere Informationen zum Authentifizieren Ihrer [!DNL Mixpanel] finden Sie unte
 
 ## Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Mixpanel] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -61,7 +61,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Mixpanel base connection",
-      "description": "Mixpanel base connection to authenticate to Platform",
+      "description": "Mixpanel base connection to authenticate to Experience Platform",
       "connectionSpec": {
           "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
           "version": "1.0"
@@ -81,7 +81,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.` | Enthält die zum Authentifizieren Ihrer Quelle erforderlichen Anmeldeinformationen. |
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL Mixpanel]-Konto entspricht. |
 | `auth.params.password` | Das Passwort, das Ihrem [!DNL Mixpanel]-Konto entspricht. |
@@ -116,9 +116,9 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `{"projectId":"2671127","timezone":"Pacific Standard Time"}` in base64 kodieren. **Hinweis**: Im folgenden Beispiel entspricht `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` in base64 kodierte `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Experience Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `{"projectId":"2671127","timezone":"Pacific Standard Time"}` in base64 kodieren. **Hinweis**: Im folgenden Beispiel entspricht `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` in base64 kodierte `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **Anfrage**
@@ -398,7 +398,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -455,7 +455,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die dem Data Lake entspricht. Diese feste ID lautet: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
-| `data.format` | Das Format der [!DNL Mixpanel]-Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der [!DNL Mixpanel], die Sie an Experience Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -581,7 +581,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ## Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL Mixpanel] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Mixpanel] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -645,7 +645,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -686,4 +686,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

@@ -5,7 +5,7 @@ title: Abrufen fehlgeschlagener Batches mithilfe der Datenzugriffs-API
 type: Tutorial
 description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 79%
@@ -14,7 +14,7 @@ ht-degree: 79%
 
 # Abrufen fehlgeschlagener Batches mit der Datenzugriffs-API
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie ihre Daten mithilfe verschiedener Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie ihre Daten mithilfe verschiedener Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Experience Platform] einfügen können.
 
 In diesem Tutorial werden die Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Batch mithilfe [!DNL Data Ingestion] APIs beschrieben.
 
@@ -31,19 +31,19 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 

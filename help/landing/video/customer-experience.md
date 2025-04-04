@@ -7,15 +7,15 @@ doc-type: video
 activity: understand
 thumbnail: 27361.jpg
 exl-id: f59bf52a-13fe-4b84-81d6-518b9b081151
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 18%
+source-wordcount: '78'
+ht-degree: 17%
 
 ---
 
 # Ein durch Experience Platform unterstütztes Kundenerlebnis
 
-Sehen Sie sich an, wie Experience Platform Kunden ein ansprechendes, relevantes Echtzeit-Erlebnis bietet. Dazu sehen Sie sich dieses Video an, das einem hypothetischen Erlebnis folgt, das mit Platform aus der Perspektive eines Kunden erstellt wurde.
+Sehen Sie sich an, wie Experience Platform Kunden ein ansprechendes, relevantes Echtzeit-Erlebnis bietet, indem Sie sich dieses Video ansehen. Es folgt einem hypothetischen Erlebnis, das mit Experience Platform aus der Perspektive eines Kunden erstellt wurde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)

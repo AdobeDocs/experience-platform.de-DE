@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 80%
+source-wordcount: '1750'
+ht-degree: 71%
 
 ---
 
@@ -53,10 +53,10 @@ Bei der Erstellung Ihrer eigenen Kundendatenfelder können Sie die in der folgen
 
 | Parameter | Typ | Erforderlich/Optional | Beschreibung |
 |---------|----------|------|---|
-| `name` | Zeichenfolge | Erforderlich | Geben Sie einen Namen für das benutzerdefinierte Feld ein, das Sie einführen. Dieser Name ist in der Platform-Benutzeroberfläche nur sichtbar, wenn die Variable `title` leer ist oder fehlt. |
+| `name` | Zeichenfolge | Erforderlich | Geben Sie einen Namen für das benutzerdefinierte Feld ein, das Sie einführen. Dieser Name ist in der Experience Platform-Benutzeroberfläche nur sichtbar, wenn das Feld `title` leer ist oder fehlt. |
 | `type` | Zeichenfolge | Erforderlich | Gibt an, welchen Typ von benutzerdefiniertem Feld Sie einführen. Akzeptierte Werte: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Zeichenfolge | Optional | Gibt den Feldnamen so an, wie er für Kundinnen und Kundenin der Platform-Benutzeroberfläche angezeigt wird. Wenn dieses Feld leer ist oder fehlt, übernimmt die Benutzeroberfläche den Feldnamen vom `name`-Wert. |
-| `description` | Zeichenfolge | Optional | Geben Sie eine Beschreibung für das benutzerdefinierte Feld ein. Diese Beschreibung ist in der Platform-Benutzeroberfläche nicht sichtbar. |
+| `title` | Zeichenfolge | Optional | Gibt den Feldnamen so an, wie er für Kundinnen und Kunden in der Experience Platform-Benutzeroberfläche angezeigt wird. Wenn dieses Feld leer ist oder fehlt, übernimmt die Benutzeroberfläche den Feldnamen vom `name`-Wert. |
+| `description` | Zeichenfolge | Optional | Geben Sie eine Beschreibung für das benutzerdefinierte Feld ein. Diese Beschreibung ist in der Benutzeroberfläche von Experience Platform nicht sichtbar. |
 | `isRequired` | Boolesch | Optional | Gibt an, ob Benutzerinnen und Benutzer im Zielkonfigurations-Workflow einen Wert für dieses Feld angeben müssen. |
 | `pattern` | Zeichenfolge | Optional | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie in dieses Feld `^[A-Za-z]+$` ein. |
 | `enum` | Zeichenfolge | Optional | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für Benutzende verfügbaren Optionen auf. |
@@ -67,7 +67,7 @@ Bei der Erstellung Ihrer eigenen Kundendatenfelder können Sie die in der folgen
 
 {style="table-layout:auto"}
 
-Im folgenden Beispiel werden im Bereich `customerDataFields` zwei Felder definiert, die Benutzerinnen und Benutzer beim Herstellen einer Verbindung zum Ziel in die Platform-Benutzeroberfläche eingeben müssen:
+Im folgenden Beispiel werden im Abschnitt `customerDataFields` zwei Felder definiert, die Benutzerinnen und Benutzer beim Herstellen einer Verbindung zum Ziel in die Experience Platform-Benutzeroberfläche eingeben müssen:
 
 * `Account ID`: Eine Benutzerkonto-ID für Ihre Zielplattform.
 * `Endpoint region`: Der regionale Endpunkt der API, mit der sie eine Verbindung herstellen. Im Bereich `enum` wird ein Dropdown-Menü mit den darin definierten Werten erstellt, die von den Benutzerinnen und Benutzern ausgewählt werden können.
@@ -103,7 +103,7 @@ Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unte
 
 ## Namen und Beschreibungen von Zielverbindungen {#names-description}
 
-Beim Erstellen eines neuen Ziels fügt Destination SDK in der Platform-Benutzeroberfläche automatisch Felder für den **[!UICONTROL Namen]** und die **[!UICONTROL Beschreibung]** zum Bildschirm für die Zielverbindung hinzu. Wie Sie im obigen Beispiel sehen können, werden die Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** in der Benutzeroberfläche gerendert, ohne in die Konfiguration der Kundendatenfelder einbezogen zu werden.
+Beim Erstellen eines neuen Ziels fügt Destination SDK automatisch Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** zum Bildschirm für die Zielverbindung in der Experience Platform-Benutzeroberfläche hinzu. Wie Sie im obigen Beispiel sehen können, werden die Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** in der Benutzeroberfläche gerendert, ohne in die Konfiguration der Kundendatenfelder einbezogen zu werden.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Beim Erstellen eines neuen Ziels fügt Destination SDK in der Platform-Benutzero
 
 ## Reihenfolge der Kundendatenfelder {#ordering}
 
-Die Kundendatenfelder werden in der Plattform-Benutzeroberfläche in der Reihenfolge angezeigt, in der Sie sie in der Zielkonfiguration hinzufügen.
+Die Reihenfolge, in der Sie die Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Experience Platform-Benutzeroberfläche angezeigt.
 
 Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Name]**, **[!UICONTROL Beschreibung]**, **[!UICONTROL Behältername]**, **[!UICONTROL Ordnerpfad]**, **[!UICONTROL Dateityp]**, **[!UICONTROL Komprimierungsformat]** angezeigt werden.
 
@@ -559,7 +559,7 @@ Unten sehen Sie den resultierenden Bildschirm der Benutzeroberfläche, der auf d
 
 ## Zugriff auf vorlagenbasierte Kundendatenfelder {#accessing-templatized-fields}
 
-Wenn für Ihr Ziel Benutzereingaben erforderlich sind, müssen Sie Ihren Benutzerinnen und Benutzern eine Auswahl von Kundendatenfeldern bereitstellen, die sie über die Platform-Benutzeroberfläche ausfüllen können. Anschließend müssen Sie Ihren Ziel-Server so konfigurieren, dass die Benutzereingabe aus den Kundendatenfeldern korrekt gelesen wird. Dies erfolgt über vorlagenbasierte Felder.
+Wenn für Ihr Ziel Benutzereingaben erforderlich sind, müssen Sie Ihren Benutzerinnen und Benutzern eine Auswahl von Kundendatenfeldern bereitstellen, die sie über die Experience Platform-Benutzeroberfläche ausfüllen können. Anschließend müssen Sie Ihren Ziel-Server so konfigurieren, dass die Benutzereingabe aus den Kundendatenfeldern korrekt gelesen wird. Dies erfolgt über vorlagenbasierte Felder.
 
 Vorlagenfelder verwenden das Format `{{customerData.fieldName}}`, wobei `fieldName` der Name des Kundendatenfelds ist, aus dem Informationen gelesen werden. Allen in der Vorlage enthaltenen Kundendatenfeldern wird `customerData.` vorangestellt, und sie werden in doppelte Klammern `{{ }}` eingeschlossen.
 
@@ -613,7 +613,7 @@ Weitere Informationen zum Konfigurieren des Ziel-Servers zum Lesen von Vorlagenf
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie diesen Artikel gelesen haben, sollten Sie besser verstehen, wie Sie Ihren Benutzerinnen und Benutzern ermöglichen können, Informationen über Kundendatenfelder in die Experience Platform-Benutzeroberfläche einzugeben. Jetzt wissen Sie auch, wie Sie das richtige Kundendatenfeld für Ihren Anwendungsfall auswählen und Kundendatenfelder in der Platform-Benutzeroberfläche konfigurieren, bestellen und gruppieren können.
+Nachdem Sie diesen Artikel gelesen haben, sollten Sie besser verstehen, wie Sie Ihren Benutzerinnen und Benutzern ermöglichen können, Informationen über Kundendatenfelder in die Experience Platform-Benutzeroberfläche einzugeben. Jetzt wissen Sie auch, wie Sie das richtige Kundendatenfeld für Ihren Anwendungsfall auswählen und Kundendatenfelder in der Experience Platform-Benutzeroberfläche konfigurieren, bestellen und gruppieren können.
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 

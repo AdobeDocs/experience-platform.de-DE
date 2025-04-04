@@ -1,12 +1,12 @@
 ---
-keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;oracle Responsys-Ziel
+keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;Oracle Responsys-Ziel
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 46%
+source-wordcount: '709'
+ht-degree: 44%
 
 ---
 
@@ -24,7 +24,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -76,14 +76,14 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien unter dem Abschnitt „Schlüssel **[!UICONTROL eine Verschlüsselung mit PGP/GPG]**. Ihr öffentlicher Schlüssel muss als eine mit [!DNL Base64] verschlüsselte Zeichenfolge verfasst sein.
 * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad an Ihrem Speicherort an, an dem Platform Ihre Exportdaten als CSV-Dateien ablegt.
+* **[!UICONTROL Ordnerpfad]** Geben Sie den Pfad an Ihrem Speicherort an, an dem Experience Platform Ihre Exportdaten als CSV-Dateien ablegt.
 * **[!UICONTROL Dateiformat]**: Wählen Sie **CSV**, um CSV-Dateien an Ihren Speicherort zu exportieren.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -108,8 +108,8 @@ Beim Aktivieren von Zielgruppen für dieses Ziel empfiehlt Adobe die Auswahl ein
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Oracle Responsys]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Zielgruppenaktivierung überprüfen](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Zielgruppenaktivierung.
+Für [!DNL Oracle Responsys] Ziele erstellt Experience Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Zielgruppenaktivierung überprüfen](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Zielgruppenaktivierung.
 
 ## Einrichten des Datenimports in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Nachdem Sie [!DNL Platform] mit Ihrem [!DNL SFTP] Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Responsys] einrichten. Informationen hierzu finden Sie unter [ von Kontakten oder Konten ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) der [!DNL Oracle Responsys Help Center].
+Nachdem Sie [!DNL Experience Platform] mit Ihrem [!DNL SFTP] Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Responsys] einrichten. Informationen hierzu finden Sie unter [ von Kontakten oder Konten ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) der [!DNL Oracle Responsys Help Center].

@@ -3,10 +3,10 @@ title: Erstellen einer Amazon Kinesis Source-Verbindung mithilfe der Flow Servic
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einer Amazon Kinesis-Quelle verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 59%
+source-wordcount: '732'
+ht-degree: 52%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
->Die [!DNL Amazon Kinesis] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Amazon Kinesis] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
 Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis] (nachstehend „[!DNL Kinesis]“ genannt) mit Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,10 +22,10 @@ Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Kinesis] mithilfe der [!DNL Flow Service]-API erfolgreich mit Platform verbinden zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Kinesis] mithilfe der [!DNL Flow Service]-API erfolgreich mit Experience Platform verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -33,16 +33,16 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Amazon Kinesis]-Konto 
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `accessKeyId` | Die Zugriffsschlüssel-ID ist die Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
-| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
+| `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Experience Platform verwendet wird. |
+| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Experience Platform verwendet wird. |
 | `region` | Die Region für Ihr [!DNL Kinesis]. Weitere Informationen zu Regionen [ Sie im Handbuch zum Hinzufügen von IP](../../../../ip-address-allow-list.md)Adressen zu Ihrer Zulassungsliste . |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Spezifikations-ID der [!DNL Kinesis]-Verbindung lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Weiterführende Informationen zu [!DNL Kinesis] Zugriffsschlüsseln und deren Generierung finden Sie in diesem [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 

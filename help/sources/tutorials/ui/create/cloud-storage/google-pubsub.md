@@ -1,12 +1,12 @@
 ---
 title: Erstellen einer Google PubSub-Source-Verbindung in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Quell-Connector für Google PubSub erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 36%
+source-wordcount: '1106'
+ht-degree: 24%
 
 ---
 
@@ -14,16 +14,16 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->Die [!DNL Google PubSub] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Google PubSub] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Google PubSub] (nachstehend „[!DNL PubSub]“ genannt) in der Benutzeroberfläche von Platform beschrieben.
+In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Google PubSub] (im Folgenden als &quot;[!DNL PubSub]&quot; bezeichnet) mithilfe der Benutzeroberfläche von Experience Platform.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/batch/cloud-storage.md) fortfahren.
 
@@ -57,11 +57,11 @@ Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-
 >
 >Wenn Sie die auf Service-Konten basierende Authentifizierung verwenden, stellen Sie sicher, dass Sie einen ausreichenden Benutzerzugriff auf Ihr Service-Konto gewährt haben und dass in JSON keine zusätzlichen Leerzeichen vorhanden sind, wenn Sie Ihre Anmeldedaten kopieren und einfügen.
 
-Nachdem Sie die erforderlichen Anmeldedaten zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PubSub]-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PubSub]-Konto mit Experience Platform zu verknüpfen.
 
-## Verbinden Sie Ihr [!DNL PubSub]-Konto
+## Verbinden Ihres [!DNL PubSub]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -112,7 +112,7 @@ Um ein Konto mit eingeschränktem Zugriff nur auf ein bestimmtes [!DNL PubSub] T
 
 ## Daten auswählen
 
-Bei einer erfolgreichen Authentifizierung gelangen Sie zum Schritt [!UICONTROL Daten auswählen], in dem Sie durch Ihre [!DNL PubSub] navigieren und die Daten auswählen können, die Sie zum Experience Platform bringen möchten.
+Bei einer erfolgreichen Authentifizierung gelangen Sie zum Schritt [!UICONTROL Daten auswählen], in dem Sie durch Ihre [!DNL PubSub] navigieren und die Daten auswählen können, die Sie an Experience Platform übermitteln möchten.
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Wenn Sie sich mit einem Thema und einem abonnementbasierten Zugriff authentifizi
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL PubSub]-Konto und Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Streaming-Daten aus Ihrem Cloud-Speicher in Platform zu übertragen](../../dataflow/streaming/cloud-storage-streaming.md).
+In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL PubSub]-Konto und Experience Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Streaming-Daten aus Ihrem Cloud-Speicher in Experience Platform zu übertragen](../../dataflow/streaming/cloud-storage-streaming.md).

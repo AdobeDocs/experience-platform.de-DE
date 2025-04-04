@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2022
 description: Versionshinweise Januar 2022 für Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 97%
+source-wordcount: '1344'
+ht-degree: 81%
 
 ---
 
@@ -26,7 +26,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Warnhinweise {#alerts}
 
-Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
 
 **Aktualisierte Funktionen**
 
@@ -35,7 +35,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 | Neue Warnhinweisregeln | Für Workflows, die sich auf Datenaufnahme, Identitäten, Profile, Segmentierung und Aktivierung beziehen, stehen jetzt verschiedene neue Warnhinweisregeln zur Verfügung. Die aktualisierte Liste der Warnhinweistypen finden Sie in der Übersicht zu [Warnhinweisregeln](../../observability/alerts/rules.md). |
 | Kontextabhängige Warnhinweise für Quelldatenflüsse | Jetzt können Sie sich für den Empfang von Warnhinweisen zum Status Ihrer Datenflüsse während des Aufnahme-Workflows anmelden. Weitere Informationen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../sources/tutorials/ui/alerts.md). |
 
-Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warnhinweise – Übersicht](../../observability/alerts/overview.md).
+Weitere Informationen zu Warnhinweisen in Experience Platform finden Sie im Abschnitt [Warnhinweise - Übersicht](../../observability/alerts/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -57,7 +57,7 @@ Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Konsolidiertes Zuordnungserlebnis | Die neue Zuordnungsschnittstelle in der Platform-Benutzeroberfläche bietet Ihnen ein konsistentes Zuordnungserlebnis, um intelligente Zuordnungsempfehlungen zu nutzen, Zuordnungsregeln manuell zu konfigurieren und Fehler zu beheben, die bei Ihren Zuordnungssätzen auftreten. Weitere Informationen finden Sie im [[!DNL Data Prep] Handbuch zur Benutzeroberfläche](../../data-prep/ui/mapping.md). |
+| Konsolidiertes Zuordnungserlebnis | Die neue Zuordnungsschnittstelle in der Experience Platform-Benutzeroberfläche bietet Ihnen ein konsistentes Zuordnungserlebnis, um intelligente Zuordnungsempfehlungen zu nutzen, Zuordnungsregeln manuell zu konfigurieren und Fehler zu beheben, die bei Ihren Zuordnungssätzen auftreten. Weitere Informationen finden Sie im [[!DNL Data Prep] Handbuch zur Benutzeroberfläche](../../data-prep/ui/mapping.md). |
 
 Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
@@ -69,7 +69,7 @@ Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Ü
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| Personalisierung der gleichen Seite und der nächsten Seite | Die Funktion [Personalisierung der gleichen Seite und der nächsten Seite](../../destinations/ui/activate-edge-personalization-destinations.md) bietet eine gemeinsame Ansicht von Benutzenden für Programme im Edge Network, um die Konsistenz zwischen Marketing- und Kundenkanälen zu gewährleisten. Diese Personalisierung ist über die [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) und [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md) möglich. Informationen zum Konfigurieren Ihrer Kampagnen mit Personalisierung der gleichen Seite oder der nächsten Seite finden Sie im [spezifischen Tutorial](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| Personalisierung der gleichen Seite und der nächsten Seite | Die Funktion [Personalisierung der gleichen Seite und der nächsten Seite](../../destinations/ui/activate-edge-personalization-destinations.md) bietet eine gemeinsame Ansicht von Benutzern für Programme auf der Edge Network, um die Konsistenz zwischen Marketing- und Kundenkanälen zu gewährleisten. Diese Personalisierung ist über die [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) und [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md) möglich. Informationen zum Konfigurieren Ihrer Kampagnen mit Personalisierung der gleichen Seite oder der nächsten Seite finden Sie im [spezifischen Tutorial](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Batch-Zielüberwachung und Metriken auf Segmentebene | Die Zielüberwachungsfunktionalität für Ihre Aktivierungsdatenströme wurde nun von Streaming-Zielen auf Batch-Ziele und Segmentmetriken erweitert. Weitere Informationen finden Sie unter [Dashboard für die Überwachung von Zielen](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Dashboard für die Überwachung von Segmentvorgängen](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) und [Ansicht auf Segmentebene](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Planen der Bearbeitung vorhandener Batch-Aktivierungsdatenflüsse in der Benutzeroberfläche | Mit dieser Version wird erstmals die Möglichkeit geboten, den Zeitplan Ihrer bestehenden Aktivierungsdatenflüsse für Batch-Ziele zu bearbeiten. Weitere Informationen finden Sie unter [Aktivieren von Profildaten für Batch-Profilziele](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Marketo-Zielverbesserungen | Experience Platform-Kunden, die Marketo Engage nutzen, können ihre Marketo-Datenbank optimieren, indem sie neue Personendatensätze von Experience Platform über den [Marketo-Ziel-Connector](/help/destinations/catalog/adobe/marketo-engage.md) per Push in Marketo Engage übertragen. <br> Beim Senden von Zielgruppensegmenten von Experience Platform zu Marketo Engage können Personen innerhalb des Segments, die noch nicht in Ihrer Marketo Engage-Datenbank vorhanden sind, automatisch hinzugefügt werden. Weitere Informationen finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste verschieben](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (Schritt 9 des Tutorials zeigt, wie Sie neue Personendatensätze in Marketo verschieben können). |
@@ -98,13 +98,13 @@ Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Ser
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Darum stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dieser Anforderung gerecht zu werden, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserungen der Sandbox-Benutzeroberfläche | Der Sandbox-Indikator ist jetzt für alle Programme der Platform-Benutzeroberfläche in die Kopfzeile integriert. Die Sandbox-Anzeige zeigt den Namen, die Region und den Typ der Sandbox an und ermöglicht Ihnen auch den Zugriff auf ein Dropdown-Menü, über das zwischen Sandboxes gewechselt werden kann. Weitere Informationen finden Sie im [Handbuch zur Sandbox-Benutzeroberfläche](../../sandboxes/ui/user-guide.md). |
+| Verbesserungen der Sandbox-Benutzeroberfläche | Der Sandbox-Indikator ist jetzt für alle Experience Platform-Benutzeroberflächenanwendungen in die Kopfzeile integriert. Die Sandbox-Anzeige zeigt den Namen, die Region und den Typ der Sandbox an und ermöglicht Ihnen auch den Zugriff auf ein Dropdown-Menü, über das zwischen Sandboxes gewechselt werden kann. Weitere Informationen finden Sie im [Handbuch zur Sandbox-Benutzeroberfläche](../../sandboxes/ui/user-guide.md). |
 
 Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 
@@ -116,13 +116,13 @@ Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Segment Match | Segment Match ist ein Service für die Zusammenarbeit mit Daten, der es zwei oder mehr Platform-Benutzern ermöglicht, Daten basierend auf gemeinsamen Kennungen auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen. Segment Match verwendet Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs. Weiterführende Informationen finden Sie in der [Übersicht zu Segment Match](../../segmentation/ui/segment-match/overview.md). |
+| Segment Match | Segment Match ist ein Service für die Zusammenarbeit mit Daten, der es zwei oder mehr Experience Platform-Benutzenden ermöglicht, Daten basierend auf gemeinsamen Kennungen auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen. Segment Match verwendet Experience Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs. Weiterführende Informationen finden Sie in der [Übersicht zu Segment Match](../../segmentation/ui/segment-match/overview.md). |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

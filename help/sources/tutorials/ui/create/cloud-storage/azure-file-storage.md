@@ -5,7 +5,7 @@ title: Erstellen einer Azure File Storage-Source-Verbindung über die Benutzerob
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Azure File Storage-Quellverbindung erstellen.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 46%
@@ -14,7 +14,7 @@ ht-degree: 46%
 
 # Erstellen einer [!DNL Azure File Storage]-Quellverbindung über die Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Azure File Storage]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Azure File Storage]-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -41,7 +41,7 @@ Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL Azure Fil
 
 ## Verbinden Ihres [!DNL Azure File Storage]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Azure File Storage]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Azure File Storage]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -67,4 +67,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Azure File Storage]
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Azure File Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Azure File Storage]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

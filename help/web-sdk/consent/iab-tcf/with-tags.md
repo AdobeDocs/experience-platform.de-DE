@@ -1,23 +1,23 @@
 ---
-title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Tags und der Platform Web SDK-Erweiterung
+title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Tags und der Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie das IAB TCF 2.0-Einverständnis mit Tags und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
 
-# Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Tags und der Platform Web SDK-Erweiterung
+# Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Tags und der Experience Platform Web SDK-Erweiterung
 
-Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch erfahren Sie, wie Sie eine Tag-Eigenschaft zum Senden von IAB TCF 2.0-Einverständnisinformationen an Adobe mithilfe der Tag-Erweiterung &quot;Adobe Experience Platform Web SDK&quot; einrichten.
+Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch erfahren Sie, wie Sie mithilfe der Tag-Erweiterung &quot;Adobe Experience Platform Web SDK&quot; eine Tag-Eigenschaft für das Senden von IAB TCF 2.0-Einverständnisinformationen an Adobe einrichten.
 
 Wenn Sie keine Tags verwenden möchten, lesen Sie bitte das Handbuch unter [Verwenden von IAB TCF 2.0 ohne Tags](./without-tags.md).
 
 ## Erste Schritte
 
-Um IAB TCF 2.0 mit Tags und der Platform Web SDK-Erweiterung verwenden zu können, benötigen Sie ein XDM-Schema und einen Datensatz.
+Um IAB TCF 2.0 mit Tags und der Experience Platform Web SDK-Erweiterung verwenden zu können, benötigen Sie ein XDM-Schema und einen Datensatz.
 
 Darüber hinaus setzt dieses Handbuch ein Grundverständnis für Adobe Experience Platform Web SDK voraus. Zur schnellen Auffrischung lesen Sie bitte die [Übersicht über Adobe Experience Platform Web SDK](../../home.md) und die Dokumentation [Häufig gestellte Fragen](../../faq.md) .
 
@@ -113,7 +113,7 @@ addEventListener();
 
 Dieser Code ist identisch mit dem vorherigen benutzerdefinierten Code, mit dem Unterschied, dass sowohl `useractioncomplete`- als auch `tcloaded`-Ereignisse behandelt werden. Der [vorherige benutzerspezifische Code](#consent-code-1) ist nur dann Trigger, wenn der Kunde seine Voreinstellungen zum ersten Mal auswählt. Dieser Code ist auch dann Trigger, wenn der Kunde seine Präferenzen bereits ausgewählt hat. Beispielsweise beim zweiten Laden der Seite.
 
-Fügen Sie die Aktion „Ereignis senden“ über die Platform Web SDK-Erweiterung hinzu. Wählen Sie innerhalb des XDM-Felds das XDM-Datenelement aus, das Sie im vorherigen Abschnitt erstellt haben.
+Fügen Sie die Aktion „Ereignis senden“ über die Experience Platform Web SDK-Erweiterung hinzu. Wählen Sie innerhalb des XDM-Felds das XDM-Datenelement aus, das Sie im vorherigen Abschnitt erstellt haben.
 
 ## Senden anderer Ereignisse mit Informationen zum IAB TCF 2.0-Einverständnis
 
@@ -121,4 +121,4 @@ Wenn Ereignisse nach dem ersten Erlebnisereignis ausgelöst werden, sind die bei
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK-Erweiterung verwenden, können Sie sich auch für die Integration mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-time Customer Data Platform entscheiden. Weitere Informationen finden [ in der Übersicht zum IAB Transparency &amp; Consent Framework ](./overview.md).0 .
+Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Experience Platform Web SDK-Erweiterung verwenden, können Sie auch eine Integration mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-Time Customer Data Platform wählen. Weitere Informationen finden [ in der Übersicht zum IAB Transparency &amp; Consent Framework ](./overview.md).0 .

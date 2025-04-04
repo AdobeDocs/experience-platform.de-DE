@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Löschen von Datenflüssen in der Benutzeroberfläche
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 18%
@@ -22,12 +22,12 @@ In diesem Tutorial werden Schritte zum Löschen von Datenflüssen mithilfe des [
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Löschen von Datenflüssen
 
-Wählen Sie in der [Experience Platform](https://platform.adobe.com)Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen, und wählen Sie dann **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile aus.
+Wählen Sie in der [Experience Platform](https://platform.adobe.com)-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen, und wählen Sie dann **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus.
 
 ![Katalog](../../images/tutorials/delete/catalog.png)
 

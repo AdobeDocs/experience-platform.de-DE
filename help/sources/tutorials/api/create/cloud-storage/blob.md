@@ -2,10 +2,10 @@
 title: Erstellen einer Azure Blob-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Azure Blob verbinden.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 41%
+source-wordcount: '772'
+ht-degree: 28%
 
 ---
 
@@ -19,8 +19,8 @@ In diesem Tutorial werden Schritte zum Erstellen einer Basisverbindung für [!DN
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Blob]-Quellverbindung erstellen zu können.
 
@@ -34,7 +34,7 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Blob]-Speicher herstel
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `connectionString` | Eine Zeichenfolge, die die Autorisierungsinformationen enthält, die zum Authentifizieren von [!DNL Blob] beim Experience Platform erforderlich sind. Das [!DNL Blob]-Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument unter [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `connectionString` | Eine Zeichenfolge, die die Autorisierungsinformationen enthält, die zum Authentifizieren von [!DNL Blob] bei Experience Platform erforderlich sind. Das [!DNL Blob]-Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument unter [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Blob] ist: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 >[!TAB SAS-URI-Authentifizierung]
@@ -48,9 +48,9 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Blob]-Speicher herstel
 
 >[!ENDTABS]
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -58,7 +58,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 >
 >Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL Blob] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Die [!DNL Blob]-Quelle unterstützt sowohl die Authentifizierung mit Verbindungszeichenfolge als auch mit Shared Access Signature (SAS). Ein SAS-URI (Shared Access Signature) ermöglicht eine sichere delegierte Autorisierung für Ihr [!DNL Blob]. Sie können SAS verwenden, um Authentifizierungsdaten mit unterschiedlichem Zugriffsgrad zu erstellen, da Sie bei einer SAS-basierten Authentifizierung Berechtigungen, Start- und Ablaufdaten sowie Bestimmungen zu bestimmten Ressourcen festlegen können.
 
@@ -130,7 +130,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 >[!TAB SAS-URI-Authentifizierung]
 
-Um eine [!DNL Blob] mit Shared Access Signature-URI zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service]-API und geben Sie dabei Werte für Ihre [!DNL Blob]-`sasUri` an.
+Um eine [!DNL Blob] Verbindung mit dem URI mit freigegebener Zugriffssignatur zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service]-API und geben dabei Werte für Ihre [!DNL Blob]-`sasUri` an.
 
 +++Anfrage
 

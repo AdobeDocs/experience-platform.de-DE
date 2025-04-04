@@ -3,10 +3,10 @@ title: Erste Schritte mit der MTLS-Service-API
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie für eine erfolgreiche Arbeit mit der MTLS-API benötigen.
 role: Developer
 exl-id: db5978cf-fe47-4b76-86ba-c8ea1ee6b12f
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 42%
+source-wordcount: '215'
+ht-degree: 32%
 
 ---
 
@@ -22,7 +22,7 @@ In der Dokumentation zur MTLS-Service-API wird anhand eines Beispiel-API-Aufrufs
 
 ## Erforderliche Kopfzeilen
 
-Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um Platform-Endpunkte erfolgreich aufrufen zu können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um Experience Platform-Endpunkte erfolgreich aufrufen zu können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

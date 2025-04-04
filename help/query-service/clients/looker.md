@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinden von Looker mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Looker mit dem Abfrage-Service von Adobe Experience Platform erläutert.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ Geben Sie hier die Details für die unten aufgeführten Verbindungseinstellungen
 - **[!DNL Username and Password]:** Die Anmeldedaten, die verwendet werden. Der Benutzername hat die Form `ORG_ID@AdobeOrg`.
 - **SSL**: Aktivieren Sie SSL, um eine sichere Verbindung über das Netzwerk sicherzustellen.
 
-Um die Anmeldeinformationen zu finden, die zum Verbinden von Looker mit dem Abfrage-Service erforderlich sind, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden der Anmeldeinformationen **host**, **port**, **database**, **username** und **password** finden Sie im Handbuch [credentials](../ui/credentials.md).
+Um die zum Verbinden von Looker mit dem Abfrage-Service erforderlichen Anmeldeinformationen zu finden, melden Sie sich bei der Experience Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden der Anmeldeinformationen **host**, **port**, **database**, **username** und **password** finden Sie im Handbuch [credentials](../ui/credentials.md).
 
 ![Die Seite mit den Anmeldeinformationen des Arbeitsbereichs &quot;Experience Platform-Abfragen“ mit hervorgehobenen Anmeldeinformationen und den ablaufenden Anmeldeinformationen.](../images/clients/looker/query-service-credentials-page.png)
 

@@ -1,10 +1,10 @@
 ---
 title: Verwenden von Adobe Target mit Web SDK für die Personalisierung
-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK mithilfe von Adobe Target personalisierte Inhalte rendern können
+description: Erfahren Sie, wie Sie mit Experience Platform Web SDK personalisierte Inhalte mithilfe von Adobe Target rendern können
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1368'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Erfahren Sie im Tutorial zum Migrieren von Target von at.js 2.x [ Platform Web SDK, wie Sie Ihre Target-Implementierung ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) Platform Web SDK migrieren.
+>Erfahren Sie im Tutorial zum Migrieren von Target von at.js 2.x [ Experience Platform Web SDK , wie Sie Ihre Target-Implementierung ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) Experience Platform Web SDK migrieren.
 >
->Erfahren Sie im Tutorial zur erstmaligen Implementierung von Target [Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview). Target-spezifische Informationen finden Sie im Tutorial-Abschnitt „Einrichten [ Target mit Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Erfahren Sie im Tutorial zur erstmaligen Implementierung von Target [Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview). Target-spezifische Informationen finden Sie im Tutorial-Abschnitt „Einrichten [ Target mit Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target] unterstützt:
@@ -35,18 +35,18 @@ Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target] unt
 
 Das folgende Diagramm hilft Ihnen, den Workflow von [!DNL Target] und [!DNL Web SDK] Edge Decisioning zu verstehen.
 
-![Abbildung der Adobe Target-Edge-Entscheidungsfindung mit Platform Web SDK](assets/target-platform-web-sdk-new.png)
+![Abbildung der Adobe Target-Edge-Entscheidungsfindung mit Experience Platform Web SDK](assets/target-platform-web-sdk-new.png)
 
 | Anruf | Details |
 | --- | --- |
-| 1 | Das Gerät lädt die [!DNL Web SDK]. Der [!DNL Web SDK] sendet eine Anfrage mit XDM-Daten, der Datenstrom-Umgebungs-ID, den übergebenen Parametern und der Kunden-ID (optional) an das Edge Network. Seite (oder Container) ist vorab ausgeblendet. |
-| 2 | Das Edge Network sendet die Anfrage an die Edge-Services, um sie mit der Besucher-ID, dem Einverständnis und anderen Besucherkontextinformationen wie Geolocation und gerätefreundlichen Namen anzureichern. |
-| 3 | Das Edge Network sendet die angereicherte Personalisierungsanfrage mit der Besucher-ID und den übergebenen Parametern an den [!DNL Target] Edge. |
+| 1 | Das Gerät lädt die [!DNL Web SDK]. Der [!DNL Web SDK] sendet eine Anfrage mit XDM-Daten, der Datenstrom-Umgebungs-ID, den übergebenen Parametern und der Kunden-ID (optional) an die Edge Network. Seite (oder Container) ist vorab ausgeblendet. |
+| 2 | Der Edge Network sendet die Anfrage an die Edge-Services, um sie mit der Besucher-ID, dem Einverständnis und anderen Besucherkontextinformationen wie Geolokalisierung und gerätefreundlichen Namen anzureichern. |
+| 3 | Der Edge Network sendet die angereicherte Personalisierungsanfrage mit der Besucher-ID und den übergebenen Parametern an den [!DNL Target] Edge. |
 | 4 | Profilskripte werden ausgeführt und fließen dann in [!DNL Target] Profilspeicher ein. Der Profilspeicher ruft Segmente aus der [!UICONTROL Zielgruppenbibliothek] ab (z. B. freigegebene Segmente aus [!DNL Adobe Analytics], [!DNL Adobe Audience Manager] und [!DNL Adobe Experience Platform]). |
-| 5 | Basierend auf URL-Anforderungsparametern und Profildaten bestimmt [!DNL Target], welche Aktivitäten und Erlebnisse für den Besucher bzw. die Besucherin in der aktuellen Seitenansicht und für zukünftige vorab abgerufene Ansichten angezeigt werden sollen. [!DNL Target] sendet dies dann zurück an das Edge Network. |
-| 6 | a. Das Edge Network sendet die Personalisierungsantwort zurück an die Seite, wobei optional Profilwerte für die zusätzliche Personalisierung enthalten sind. Personalisierte Inhalte auf der aktuellen Seite werden so schnell wie möglich ohne Flackern der Standardinhalte angezeigt.<br> B. Personalisierte Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer Single Page Application (SPA) angezeigt werden, werden zwischengespeichert, sodass sie sofort ohne zusätzlichen Server-Aufruf angewendet werden können, wenn die Ansichten ausgelöst werden. <br>c. Das Edge Network sendet die Besucher-ID und andere Werte in Cookies, z. B. Einverständnis, Sitzungs-ID, Identität, Cookie-Prüfung, Personalisierung. |
-| 7 | Web SDK sendet die Benachrichtigung vom Gerät an das Edge Network. |
-| 8 | Das Edge Network leitet [!UICONTROL Analytics for Target] (A4T)-Details (Aktivitäts-, Erlebnis- und Konversionsmetadaten) an den [!DNL Analytics] Edge weiter. |
+| 5 | Basierend auf URL-Anforderungsparametern und Profildaten bestimmt [!DNL Target], welche Aktivitäten und Erlebnisse für den Besucher bzw. die Besucherin in der aktuellen Seitenansicht und für zukünftige vorab abgerufene Ansichten angezeigt werden sollen. [!DNL Target] sendet dies dann zurück an die Edge Network. |
+| 6 | a. Der Edge Network sendet die Personalisierungsantwort zurück an die Seite, wobei optional Profilwerte für die zusätzliche Personalisierung enthalten sind. Personalisierte Inhalte auf der aktuellen Seite werden so schnell wie möglich ohne Flackern der Standardinhalte angezeigt.<br> B. Personalisierte Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer Einzelseiten-App (SPA) angezeigt werden, werden zwischengespeichert, sodass sie sofort ohne zusätzlichen Server-Aufruf angewendet werden können, wenn die Ansichten ausgelöst werden. <br>c. Die Edge Network sendet die Besucher-ID und andere Werte in Cookies, z. B. Einverständnis, Sitzungs-ID, Identität, Cookie-Prüfung, Personalisierung. |
+| 7 | Web SDK sendet die Benachrichtigung vom Gerät an Edge Network. |
+| 8 | Edge Network leitet [!UICONTROL Analytics for Target] (A4T)-Details (Aktivitäts-, Erlebnis- und Konversionsmetadaten) an den [!DNL Analytics] Edge weiter. |
 
 ## Aktivieren von [!DNL Adobe Target]
 
@@ -240,7 +240,7 @@ In der folgenden Tabelle sind [!DNL Recommendations] Attribute aufgeführt und e
 |  | productPurchasedId | Unterstützt |
 | Seite oder Elementkategorie für Kategorieaffinität | user.categoryId | Unterstützt |
 
-**Senden von Recommendations-Attributen an Adobe Target:**
+**So senden Sie Recommendations-Attribute an Adobe Target:**
 
 ```js
 alloy("sendEvent", {

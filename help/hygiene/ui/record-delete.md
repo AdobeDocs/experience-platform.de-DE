@@ -3,10 +3,10 @@ title: Löschen von Datensätzen
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 28%
+source-wordcount: '1574'
+ht-degree: 25%
 
 ---
 
@@ -23,19 +23,19 @@ Verwenden Sie den [[!UICONTROL Datenlebenszyklus]-Arbeitsbereich](./overview.md)
 
 ## Voraussetzungen {#prerequisites}
 
-Das Löschen von Datensätzen setzt ein grundlegendes Verständnis der Funktionsweise von Identitätsfeldern im Experience Platform voraus. Insbesondere müssen Sie die Identity-Namespace-Werte der Entitäten kennen, deren Datensätze Sie löschen möchten, je nach Datensatz (oder Datensätzen), aus dem Sie sie löschen möchten.
+Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Identitätsfeldern in Experience Platform voraus. Insbesondere müssen Sie die Identity-Namespace-Werte der Entitäten kennen, deren Datensätze Sie löschen möchten, je nach Datensatz (oder Datensätzen), aus dem Sie sie löschen möchten.
 
-Weitere Informationen zu Identitäten in Platform finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu Identitäten in Experience Platform finden Sie in der folgenden Dokumentation:
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemata definiert werden.
 * [Identity-Namespaces](../../identity-service/features/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Verwendet Identitätsdiagramme, um vereinheitlichte Verbraucherprofile auf der Grundlage aggregierter Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
-* [Experience-Datenmodell (XDM)](../../xdm/home.md): Stellt Standarddefinitionen und -strukturen für Platform-Daten durch die Verwendung von Schemata bereit. Alle Platform-Datensätze entsprechen einem bestimmten XDM-Schema und das Schema definiert, welche Felder Identitäten sind.
+* [Experience-Datenmodell (XDM)](../../xdm/home.md): Stellt Standarddefinitionen und -strukturen für Experience Platform-Daten durch die Verwendung von Schemata bereit. Alle Experience Platform-Datensätze entsprechen einem bestimmten XDM-Schema und das Schema definiert, welche Felder Identitäten sind.
 * [Identitätsfelder](../../xdm/ui/fields/identity.md): Erfahren Sie, wie ein Identitätsfeld in einem XDM-Schema definiert wird.
 
 ## Erstellen einer Anfrage {#create-request}
 
-Wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Platform-Benutzeroberfläche]** Option „Datenlebenszyklus“ aus. Der [!UICONTROL Datenlebenszyklusanfragen] wird angezeigt. Wählen Sie anschließend **[!UICONTROL Anfrage erstellen]** auf der Hauptseite im Arbeitsbereich aus.
+Wählen Sie zunächst **[!UICONTROL Datenlebenszyklus]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus. Der [!UICONTROL Datenlebenszyklusanfragen] wird angezeigt. Wählen Sie anschließend **[!UICONTROL Anfrage erstellen]** auf der Hauptseite im Arbeitsbereich aus.
 
 ![Der Arbeitsbereich [!UICONTROL Datenlebenszyklusanfragen] mit [!UICONTROL Anfrage erstellen] ausgewählt.](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Wenn Sie Datensätze aus allen Datensätzen löschen möchten, wählen Sie **[!U
 >title="Primärer Identitätswert"
 >abstract="In dieser Spalte müssen Sie den Wert für den Identity-Namespace des Eintrags angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der Typ des Identity-Namespace `email` ist, sollte der Wert die E-Mail-Adresse des Eintrags sein. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
-Beim Löschen von Datensätzen müssen Sie Identitätsinformationen angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Platform werden Datensätze basierend auf dem Feld **Identity-Namespace** gelöscht, das durch das Schema des Datensatzes definiert wird.
+Beim Löschen von Datensätzen müssen Sie Identitätsinformationen angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Experience Platform werden Datensätze basierend auf dem Feld **Identity-Namespace** gelöscht, das durch das Schema des Datensatzes definiert wird.
 
-Wie alle Identitätsfelder in Platform besteht ein Identity-Namespace aus zwei Elementen: einem **type** (manchmal auch als Identity-Namespace bezeichnet) und einem **value**. Der Identitätstyp liefert den Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. über eine E-Mail-Adresse). Der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für den `email` Identitätstyp). Felder, die häufig als Identitäten verwendet werden, sind Kontoinformationen, Geräte-IDs und Cookie-IDs.
+Wie alle Identitätsfelder in Experience Platform besteht ein Identity-Namespace aus zwei Elementen: einem **type** (manchmal auch als Identity-Namespace bezeichnet) und einem **value**. Der Identitätstyp liefert den Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. über eine E-Mail-Adresse). Der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für den `email` Identitätstyp). Felder, die häufig als Identitäten verwendet werden, sind Kontoinformationen, Geräte-IDs und Cookie-IDs.
 
 >[!TIP]
 >
->Wenn Sie den Identity-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identity-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
+>Wenn Sie den Identity-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Experience Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identity-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
 >
 >![Das Dashboard „Datensätze“, in dem ein Datensatz ausgewählt und ein Schemadialogfeld im Bedienfeld „Datensatzdetails“ geöffnet wurde. Die primäre ID des Datensatzes ist hervorgehoben.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ Nachdem Sie unter **[!UICONTROL Anfrageeinstellungen]** die Identitäten zur Anf
 
 >[!IMPORTANT]
 > 
->Es gibt verschiedene Beschränkungen für die Gesamtzahl der Löschvorgänge von eindeutigen Identitätsdatensätzen, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrer Lizenzvereinbarung. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform oder Adobe Journey Optimizer erworben haben, können monatlich bis zu 100.000 Identitätseintragslöschungen übermitteln. Organisationen, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben, können monatlich bis zu 600.000 Identitätseinträge löschen.<br>Mit einer einzigen Löschanfrage für Datensätze über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](../api/workorder.md#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, so viele IDs wie möglich pro Anfrage bis zu Ihrem ID-Limit zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollten Sie die Übermittlung einer geringen Anzahl oder einer einzelnen ID pro Löschanfrage für den Datensatz vermeiden.
+>Es gibt verschiedene Beschränkungen für die Gesamtzahl der Löschvorgänge von eindeutigen Identitätsdatensätzen, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrer Lizenzvereinbarung. Organisationen, die alle Editionen von Adobe Real-Time Customer Data Platform oder Adobe Journey Optimizer erworben haben, können monatlich bis zu 100.000 Identitätseintragslöschungen übermitteln. Organisationen, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben, können monatlich bis zu 600.000 Identitätseinträge löschen.<br>Mit einer einzigen Löschanfrage für Datensätze über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](../api/workorder.md#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, so viele IDs wie möglich pro Anfrage bis zu Ihrem ID-Limit zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollten Sie die Übermittlung einer geringen Anzahl oder einer einzelnen ID pro Löschanfrage für den Datensatz vermeiden.
 
 ![Die Felder  Name“ und [!UICONTROL Beschreibung] der Anfrageeinstellung mit [!UICONTROL Submit] Hervorhebung.](../images/ui/record-delete/submit.png)
 

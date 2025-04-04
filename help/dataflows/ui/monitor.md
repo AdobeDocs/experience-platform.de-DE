@@ -2,9 +2,9 @@
 title: Monitoring-Dashboard - Übersicht
 description: Erfahren Sie, wie Sie das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 4%
 
 ---
@@ -19,26 +19,26 @@ Verwenden Sie das Überwachungs-Dashboard in der Adobe Experience Platform-Benut
 
 Das Monitoring-Dashboard unterstützt die Ansicht mehrerer verschiedener Datentypen:
 
-* **Kunde und Konto**: Kundendaten beziehen sich auf die in [Real-time Customer Data Platform](../../rtcdp/home.md) verwendeten Daten, während sich Kontodaten auf [Kontoprofildaten](../../rtcdp/accounts/account-profile-overview.md) beziehen, auf die zugegriffen werden kann, wenn [Real-Time CDP, B2B edition](../../rtcdp/b2b-overview.md) abonniert wurde. Wenn Ihre Real-Time CDP-Lizenz Real-Time CDP, B2B edition nicht enthält, können Sie das Monitoring-Dashboard nur zur Überwachung von Kundendaten verwenden.
+* **Kunde und Konto**: Kundendaten beziehen sich auf die in [Real-Time Customer Data Platform](../../rtcdp/home.md) verwendeten Daten, während sich Kontodaten auf [Kontoprofildaten](../../rtcdp/accounts/account-profile-overview.md) beziehen, auf die zugegriffen werden kann, wenn [Real-Time CDP, B2B edition](../../rtcdp/b2b-overview.md) abonniert wurde. Wenn Ihre Real-Time CDP-Lizenz Real-Time CDP, B2B edition nicht enthält, können Sie das Monitoring-Dashboard nur zur Überwachung von Kundendaten verwenden.
 * **Interessent**: [Interessentenprofile](../../profile/ui/prospect-profile.md) dienen zur Darstellung von Personen, die noch nicht mit Ihrem Unternehmen interagiert haben, die Sie jedoch erreichen möchten. Mit Interessentenprofilen können Sie Ihre Kundenprofile mit Attributen von vertrauenswürdigen Drittanbieterpartnern ergänzen. Sie müssen über eine Lizenz für Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate verfügen, um den Datentyp des potenziellen Kunden anzeigen zu können.
 * **Kontoprofil-Anreicherung**: Mit Kontoprofilen können Sie Kontoinformationen aus mehreren Quellen vereinheitlichen. Sie müssen über eine Lizenz für Real-Time CDP, B2B edition verfügen, um die Daten zur Kontoprofilanreicherung überwachen zu können.
 
-Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Überwachungs-Dashboard das Journey Ihrer Daten über verschiedene Experience Platform-Services hinweg überwachen können.
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Monitoring-Dashboard das Journey Ihrer Daten über verschiedene Experience Platform-Services hinweg überwachen können.
 
 ## Erste Schritte
 
-Dieses Dokument setzt Grundkenntnisse der folgenden Komponenten von Experience Platform voraus:
+Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Datenflüsse](../home.md): Datenflüsse sind Darstellungen von Datenvorgängen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich „Quellen“ verwenden, um Datenflüsse zu erstellen, die Daten aus einer bestimmten Quelle auf Experience Platform aufnehmen.
-* [Quellen](../../sources/home.md): Verwenden Sie Quellen auf Experience Platform, um Daten aus einem Adobe-Programm oder einer Datenquelle eines Drittanbieters aufzunehmen.
+* [Datenflüsse](../home.md): Datenflüsse sind Darstellungen von Datenvorgängen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich „Quellen“ verwenden, um Datenflüsse zu erstellen, die Daten aus einer bestimmten Quelle in Experience Platform aufnehmen.
+* [Quellen](../../sources/home.md): Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung oder einer Datenquelle eines Drittanbieters aufzunehmen.
 * [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Segmentierung](../../segmentation/home.md): Verwenden Sie den Segmentierungs-Service, um Segmente und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten zu erstellen.
-* [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten von Platform aus für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
+* [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten aus Experience Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
 
 ## Handbuch zum Monitoring-Dashboard
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Überwachung]** unter [!UICONTROL Daten-Management] in der linken Navigationsleiste aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Überwachung]** unter [!UICONTROL Datenverwaltung] im linken Navigationsbereich aus.
 
 ![Das Überwachungs-Dashboard in der Experience Platform-Benutzeroberfläche.](../assets/ui/monitor-overview/monitoring.png)
 
@@ -53,19 +53,19 @@ Sie können Ihre Ansicht anhand der folgenden Datentypen filtern:
 
 >[!TAB Alle]
 
-Wählen Sie **[!UICONTROL Alle]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu allen Daten anzuzeigen, die im Laufe eines bestimmten Zeitraums auf Experience Platform aufgenommen wurden.
+Wählen Sie **[!UICONTROL Alle]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu allen Daten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
 
 ![Der Überwachungs-Datentyp ist auf „Alle“ festgelegt.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Kunde &amp; Konto]
 
-Wählen Sie **[!UICONTROL Kunde und Konto]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Kunden- und Kontodaten anzuzeigen, die im Laufe eines bestimmten Zeitraums auf Experience Platform aufgenommen wurden.
+Wählen Sie **[!UICONTROL Kunde und Konto]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Kunden- und Kontodaten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
 
 ![Der Überwachungs-Datentyp ist auf „Kunde und Konto“ festgelegt.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Interessent]
 
-Wählen Sie **[!UICONTROL Interessent]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Interessensdaten anzuzeigen, die im Laufe eines bestimmten Zeitraums auf Experience Platform aufgenommen wurden. **Hinweis**: Datentypaktivitäten von Interessenten können nur angezeigt werden, wenn Sie [Berechtigung für Interessentendaten](../../rtcdp/partner-data/prospecting.md) haben.
+Wählen Sie **[!UICONTROL Interessent]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Interessensdaten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden. **Hinweis**: Datentypaktivitäten von Interessenten können nur angezeigt werden, wenn Sie [Berechtigung für Interessentendaten](../../rtcdp/partner-data/prospecting.md) haben.
 
 ![Der Überwachungs-Datentyp ist auf „Interessent“ festgelegt.](../assets/ui/monitor-overview/prospect.png)
 

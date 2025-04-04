@@ -2,10 +2,10 @@
 title: Unterstützung einer Content Security Policy (CSP)
 description: Erfahren Sie, wie Sie mit den Einschränkungen der Content Security Policy (CSP) umgehen, wenn Sie Ihre Website mit Tags in Adobe Experience Platform integrieren.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 100%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -82,7 +82,7 @@ CSP deaktiviert Inline-Skripte standardmäßig und muss daher manuell konfigurie
 
 >[!NOTE]
 >
->Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Platform finden Sie im [Handbuch zu Subresource Integrity (SRI)](./sri.md).
+>Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Experience Platform finden Sie [ Handbuch zu Subresource Integrity (SRI)](./sri.md).
 
 ### Mit Nonce zulassen {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie Sie Ihren CSP-Header so konfigurieren können, dass er die Tag-Bibliotheksdatei und Inline-Skripte akzeptiert.
 
-Als zusätzliche Sicherheitsmaßnahme können Sie auch Subresource Integrity (SRI) verwenden, um abgerufene Bibliotheks-Builds zu validieren. Diese Funktion hat jedoch einige große Einschränkungen, wenn sie mit Tag-Management-Systemen wie Tags verwendet wird. Weitere Informationen finden Sie im Handbuch zur [SRI-Kompatibilität in Platform](./sri.md).
+Als zusätzliche Sicherheitsmaßnahme können Sie auch Subresource Integrity (SRI) verwenden, um abgerufene Bibliotheks-Builds zu validieren. Diese Funktion hat jedoch einige große Einschränkungen, wenn sie mit Tag-Management-Systemen wie Tags verwendet wird. Weitere Informationen finden Sie im Handbuch [SRI-](./sri.md) in Experience Platform&quot;.

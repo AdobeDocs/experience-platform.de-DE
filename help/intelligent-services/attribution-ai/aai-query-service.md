@@ -2,11 +2,11 @@
 keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Query-Service;Attributionsabfragen;Attributionsbewertungen
 feature: Attribution AI
 title: Analysieren von Attributionsbewertungen mit dem Abfrage-Service
-description: Erfahren Sie, wie Sie mit dem Abfrage-Service von Adobe Experience Platform Attribution AI-Bewertungen analysieren können.
+description: Erfahren Sie, wie Sie mit dem Abfrage-Service von Adobe Experience Platform Attribution AI-Werte analysieren können.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ Jede Zeile in den Daten stellt eine Konversion dar, bei der Informationen zu zug
 | ---------------------- | ------ |
 | Touchpoint-Name | `touchpointsDetail. touchpointName` |
 | Touchpoint-Kanal | `touchpointsDetail.touchPoint.mediaChannel` |
-| Algorithmische Punktzahlen für Touchpoint Attribution AI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Algorithmische Scores für Touchpoint Attribution AI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Ermitteln von Datenpfaden
 
-Wählen Sie in der Benutzeroberfläche von Adobe Experience Platform **[!UICONTROL Datensätze]** im linken Navigationsbereich aus. Die **[!UICONTROL Datensätze]** wird angezeigt. Wählen Sie als Nächstes die **[!UICONTROL Durchsuchen]** und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
+Wählen Sie in der Benutzeroberfläche von Adobe Experience Platform **[!UICONTROL Datensätze]** im linken Navigationsbereich aus. Die **[!UICONTROL Datensätze]** wird angezeigt. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Durchsuchen]** und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
 
 ![Zugriff auf Ihr Modell](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Mithilfe des Scoring-Schemas können Sie einen Wert auswählen oder suchen. Nach
 
 ## Zugriff auf Query Service
 
-Um über die Platform-Benutzeroberfläche auf den Abfrage-Service zuzugreifen, wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Abfragen]** und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
+Um über die Experience Platform-Benutzeroberfläche auf den Abfrage-Service zuzugreifen, wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Abfragen]** und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
 
 ![Query Service durchsuchen](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsszenarien
         conversionName, tp_count DESC
 ```
 
-### Beispiele für die Erstellung von Einblicken
+### Beispiele für die insight-Generierung
 
 **Inkrementelle Aufschlüsselung der Einheiten nach Touchpoint und Konversionsdatum (innerhalb eines Konversionsfensters)**
 
@@ -305,7 +305,7 @@ Mit dieser Abfrage wird die Struktur-Spalte in mehrere einzelne Spalten reduzier
 
 >[!TIP]
 >
-> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset` ersetzen. Die Variable `COLUMN_NAME` kann die Werte optionaler Durchlaufspaltennamen (Berichtsspalten) übernehmen, die bei der Konfiguration Ihres Attribution AI-Modells hinzugefügt wurden. Bitte überprüfen Sie Ihr Scoring-Ausgabeschema, um die `{COLUMN_NAME}` Werte zu finden, die zum Durchführen dieser Abfrage benötigt werden.
+> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset` ersetzen. Die Variable `COLUMN_NAME` kann die Werte optionaler Durchlaufspaltennamen (Berichtsspalten) übernehmen, die bei der Konfiguration Ihres Attributions-KI-Modells hinzugefügt wurden. Bitte überprüfen Sie Ihr Scoring-Ausgabeschema, um die `{COLUMN_NAME}` Werte zu finden, die zum Durchführen dieser Abfrage benötigt werden.
 
 ```sql
 SELECT 

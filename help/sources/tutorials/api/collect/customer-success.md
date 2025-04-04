@@ -3,23 +3,23 @@ keywords: Experience Platform;Startseite;beliebte Themen;Customer Success erfass
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Customer-Success-Quellen mithilfe der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Customer-Success-System und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Customer-Success-System und deren Aufnahme in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 88%
+source-wordcount: '1267'
+ht-degree: 76%
 
 ---
 
 # Erstellen eines Datenflusses für Customer-Success-Quellen mit der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Customer-Success-Quelle und zum Übertragen dieser Daten auf Platform mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Customer-Success-Quelle und zum Übertragen dieser Daten auf Experience Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 >[!NOTE]
 >
 >* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Customer-Success-Quelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellen - Übersicht](../../../home.md#customer-success) eine Liste der Customer-Success-Quellen, mit denen Sie eine Basisverbindung erstellen können.
->* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
+>* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen als UTC konfiguriert werden.
 
 ## Erste Schritte
 
@@ -30,11 +30,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in [!DNL Experience Platform] aufnehmen.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 
@@ -136,7 +136,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -283,7 +283,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Abrufen von Datenflussspezifikationen {#specs}
 
-Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die Flow Service-API richten. Datenflussspezifikationen sorgen für die Erfassung von Daten aus einem Drittanbieter-Customer-Success-System.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Experience Platform verantwortlich. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die Flow Service-API richten. Datenflussspezifikationen sorgen für die Erfassung von Daten aus einem Drittanbieter-Customer-Success-System.
 
 **API-Format**
 
@@ -303,7 +303,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform sorgt. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die Details der Datenflussspezifikation zurück, die für die Übermittlung von Daten aus Ihrer Quelle an Experience Platform verantwortlich ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
 
 >[!NOTE]
 >
@@ -623,7 +623,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten nach einem bestimmten Zeitplan aus einem Customer-Success-System zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten nach einem bestimmten Zeitplan aus einem Customer-Success-System zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Experience Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

@@ -5,7 +5,7 @@ title: Erstellen einer Source-Verbindung für Azure Data Lake Storage Gen2 über
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Azure Data Lake Storage Gen2 erstellen.
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 33%
@@ -14,7 +14,7 @@ ht-degree: 33%
 
 # Erstellen einer [!DNL Azure Data Lake Storage Gen2]-Quellverbindung über die Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie Schritte zum Authentifizieren eines [!DNL Azure Data Lake Storage Gen2]-Quell-Connectors (im Folgenden als &quot;[!DNL ADLS Gen2]&quot; bezeichnet) über die [!DNL Platform]-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie Schritte zum Authentifizieren eines [!DNL Azure Data Lake Storage Gen2]-Quell-Connectors (im Folgenden als &quot;[!DNL ADLS Gen2]&quot; bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -42,7 +42,7 @@ Weitere Informationen zu diesen Werten finden Sie [diesem [!DNL ADLS Gen2] Dokum
 
 ## Verbinden Ihres [!DNL ADLS Gen2]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL ADLS Gen2]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL ADLS Gen2]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL ADLS Gen2] Konto, m
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL ADLS Gen2]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL ADLS Gen2]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

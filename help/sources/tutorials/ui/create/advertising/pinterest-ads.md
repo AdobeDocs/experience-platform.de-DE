@@ -6,10 +6,10 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 27%
+source-wordcount: '825'
+ht-degree: 25%
 
 ---
 
@@ -40,17 +40,17 @@ Um [!DNL Pinterest Ads] mit Experience Platform zu verbinden, müssen Sie Werte 
 
 Weitere Informationen zu diesen Verbindungseigenschaften finden Sie unter [[!DNL Pinterest Ads] Übersicht](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-### Erstellen eines Platform-Schemas {#create-platform-schema}
+### Erstellen eines Experience Platform-Schemas {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie zunächst ein Platform-Schema erstellen, das für Ihre [!DNL Pinterst Ads] verwendet werden soll. Lesen Sie das Tutorial [Erstellen eines Platform-](../../../../../xdm/schema/composition.md)), um ausführliche Schritte zum Erstellen eines Schemas zu erfahren.
+Sie müssen auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre [!DNL Pinterst Ads] verwendet wird. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie im Tutorial ](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
 
-![Ein Platform-Beispielschema für Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Ein Experience Platform-Beispielschema für Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 Eine Liste der von den APIs für [!DNL Pinterest], Anzeigengruppen und Anzeigen unterstützten Felder finden Sie im Abschnitt [[!DNL Pinterest] Felder](#pinterest-fields).
 
 ## Verbinden Ihres [!DNL Pinterest Ads]-Kontos {#connect-account}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -76,7 +76,7 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ## Daten auswählen {#select-data}
 
-Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und stellt eine Schnittstelle zur Verfügung, über die Sie die Informationen eingeben können, die an die APIs übergeben werden, um die Daten zu erhalten, die Sie in Platform importieren möchten.
+Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und stellt eine Schnittstelle zur Verfügung, über die Sie die Informationen eingeben können, die an die APIs übergeben werden, um die Daten, die Sie an Experience Platform übermitteln möchten, zu übertragen.
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -86,7 +86,7 @@ Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und stellt eine Sch
 
 >[!TIP]
 >
->Sie können mehrere `object_ids` bereitstellen, indem Sie kommagetrennte Werte übergeben. Die maximale Anzahl von IDs, die Sie in einer einzelnen Anfrage übergeben können, beträgt 100. Wenn falsche Werte übergeben werden, zeigt Platform die folgende Meldung an: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>Sie können mehrere `object_ids` bereitstellen, indem Sie kommagetrennte Werte übergeben. Die maximale Anzahl von IDs, die Sie in einer einzelnen Anfrage übergeben können, beträgt 100. Wenn falsche Werte übergeben werden, zeigt Experience Platform die folgende Meldung an: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 Wählen Sie nach Angabe der Werte **[!UICONTROL Auswählen]** aus. Wenn die angegebenen Werte gültig sind, wird der rechte Teil der Schnittstelle, Vorschau der Daten, ausgefüllt.
 
@@ -94,7 +94,7 @@ Wählen Sie nach Angabe der Werte **[!UICONTROL Auswählen]** aus. Wenn die ange
 
 ## Nächste Schritte {#next-steps}
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Pinterest Ads]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Werbedaten in Platform zu importieren](../../dataflow/advertising.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Pinterest Ads]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Werbedaten in Experience Platform zu importieren](../../dataflow/advertising.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -119,9 +119,9 @@ Nachdem Sie die Werte für Ihren Zeitplan angegeben haben, klicken Sie auf **[!U
 
 Um zu überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL Pinterest Ads] Daten aufgenommen werden, führen Sie die folgenden Schritte aus:
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datenflüsse anzeigen]** neben dem Menü [!DNL Pinterest Ads] auf der Katalogseite aus. Sie können dann auf [!UICONTROL Vorschau des Datensatzes] klicken, um die aufgenommenen Daten zu überprüfen.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Pinterest Ads] auf der Katalogseite aus. Sie können dann auf [!UICONTROL Vorschau des Datensatzes] klicken, um die aufgenommenen Daten zu überprüfen.
 
-![Screenshot der Platform-Benutzeroberfläche für den Pinterest Ads-Vorschaudatensatz.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Screenshot der Experience Platform-Benutzeroberfläche für Pinterest Ads-Vorschau-Datensatz.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 Sie können die Daten mit den Zahlen vergleichen, die in der [!DNL Pinterest]-Benutzeroberfläche sichtbar sind
 

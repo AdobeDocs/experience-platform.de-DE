@@ -2,10 +2,10 @@
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereitstellung von Tag-Bibliotheks-Builds in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 89%
+source-wordcount: '1181'
+ht-degree: 82%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 89%
 
 Von Adobe verwaltete Hosts sind die Standard-Host-Einstellung für die Bereitstellung Ihrer Tag-Bibliotheks-Builds in Adobe Experience Platform. Wenn Sie eine neue Eigenschaft über die Datenerfassungs-Benutzeroberfläche erstellen, wird ein von Adobe verwalteter Standard-Host für Sie erstellt.
 
-Bei von Adobe verwalteten Hosts werden Bibliotheks-Builds an ein Content Delivery Network (CDN) eines Drittanbieters bereitgestellt, mit dem Adobe Verträge geschlossen hat. Diese CDNs funktionieren unabhängig von Adobe. Selbst wenn Platform gewartet wird oder anderweitig ausfällt, funktioniert der bereitgestellte Code auf Ihren Websites und Anwendungen weiterhin normal. Der Einbettungs-Code für einen von Adobe gewarteten Host verweist auf die Hauptbibliotheksdatei des CDN, damit ein Client-Gerät die Dateien zur Laufzeit abrufen kann.
+Bei von Adobe verwalteten Hosts werden Bibliotheks-Builds an ein Content Delivery Network (CDN) eines Drittanbieters bereitgestellt, mit dem Adobe Verträge geschlossen hat. Diese CDNs funktionieren unabhängig von Adobe. Selbst wenn Experience Platform gewartet wird oder anderweitig ausfällt, funktioniert Ihr bereitgestellter Code auf Ihren Sites und Anwendungen weiterhin wie gewohnt. Der Einbettungs-Code für einen von Adobe gewarteten Host verweist auf die Hauptbibliotheksdatei des CDN, damit ein Client-Gerät die Dateien zur Laufzeit abrufen kann.
 
-Dieses Dokument bietet einen Überblick über die von Adobe verwalteten Hosts in Platform und beschreibt, wie Sie einen neuen von Adobe verwalteten Host in der Benutzeroberfläche erstellen.
+Dieses Dokument bietet einen Überblick über die von Adobe verwalteten Hosts in Experience Platform und beschreibt, wie Sie einen neuen von Adobe verwalteten Host in der Benutzeroberfläche erstellen.
 
 ## Akamai
 
@@ -33,7 +33,7 @@ Die auf Akamai gehosteten Dateien haben die Domain `assets.adobedtm.com`. Diese 
 
 >[!WARNING]
 >
->Wenn Ihre Bibliothek nicht über das Akamai-Netzwerk verfügbar ist, kann Platform keine Fehler verhindern, die dadurch entstehen können.
+>Wenn Ihre Bibliothek nicht über das Akamai-Netzwerk verfügbar ist, kann Experience Platform keine Fehler verhindern, die dadurch entstehen können.
 
 ## Zwischenspeicherung von Bibliotheks-Builds
 
@@ -88,9 +88,9 @@ Wie aus der obigen Tabelle hervorgeht, wird die Browser-Zwischenspeicherung in d
 
 Cache-Steuerungs-Header werden nur für den Hauptbibliotheks-Build angewendet. Alle Unterressourcen unterhalb der Hauptbibliothek werden immer als neu erachtet und müssen daher nicht im Browser zwischengespeichert werden.
 
-## Verwenden von Adobe-verwaltetem Hosting in der Benutzeroberfläche
+## Verwenden des von Adobe verwalteten Hostings in der Benutzeroberfläche
 
-Wenn Sie zum ersten Mal eine Eigenschaft in der Platform- oder Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
+Wenn Sie zum ersten Mal eine Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
 
 >[!NOTE]
 >

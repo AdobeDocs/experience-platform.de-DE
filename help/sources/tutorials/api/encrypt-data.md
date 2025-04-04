@@ -2,10 +2,10 @@
 title: Verschlüsselte Datenaufnahme
 description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API aufnehmen.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1806'
-ht-degree: 72%
+source-wordcount: '1816'
+ht-degree: 63%
 
 ---
 
@@ -31,13 +31,13 @@ In diesem Dokument wird beschrieben, wie Sie ein Verschlüsselungsschlüsselpaar
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
    * [Cloud-Speicherquellen](../api/collect/cloud-storage.md): Erstellen Sie einen Datenfluss, um Batch-Daten aus Ihrer Cloud-Speicherquelle in Experience Platform zu übertragen.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ### Unterstützte Dateierweiterungen für verschlüsselte Dateien {#supported-file-extensions-for-encrypted-files}
 
@@ -221,7 +221,7 @@ Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Name, �
 
 Sie können optional ein Schlüsselpaar für die Signaturverifizierung erstellen, um Ihre verschlüsselten Daten zu signieren und aufzunehmen.
 
-In dieser Phase müssen Sie Ihre eigene Kombination aus privatem Schlüssel und öffentlichem Schlüssel generieren und dann den privaten Schlüssel zum Signieren Ihrer verschlüsselten Daten verwenden. Als Nächstes müssen Sie Ihren öffentlichen Schlüssel in Base64 codieren und ihn dann für Experience Platform freigeben, damit Platform Ihre Signatur überprüfen kann.
+In dieser Phase müssen Sie Ihre eigene Kombination aus privatem Schlüssel und öffentlichem Schlüssel generieren und dann den privaten Schlüssel zum Signieren Ihrer verschlüsselten Daten verwenden. Als Nächstes müssen Sie Ihren öffentlichen Schlüssel in Base64 kodieren und ihn dann für Experience Platform freigeben, damit Experience Platform Ihre Signatur überprüfen kann.
 
 ### Freigeben eines öffentlichen Schlüssels für Experience Platform
 
@@ -322,9 +322,9 @@ curl -X GET \
 
 ## Verbinden Ihrer Cloud-Speicherquelle mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Nachdem Sie Ihr Verschlüsselungsschlüsselpaar abgerufen haben, können Sie nun fortfahren, indem Sie eine Quellverbindung für Ihre Cloud-Speicherquelle erstellen und Ihre verschlüsselten Daten an Platform übertragen.
+Nachdem Sie Ihr Verschlüsselungsschlüsselpaar abgerufen haben, können Sie nun fortfahren, eine Quellverbindung für Ihre Cloud-Speicherquelle zu erstellen und Ihre verschlüsselten Daten an Experience Platform zu übertragen.
 
-Zunächst müssen Sie eine Basisverbindung erstellen, um Ihre Quelle für Platform zu authentifizieren. Um eine Basisverbindung zu erstellen und Ihre Quelle zu authentifizieren, wählen Sie die gewünschte Quelle aus der folgenden Liste aus:
+Zunächst müssen Sie eine Basisverbindung erstellen, um Ihre Quelle für Experience Platform zu authentifizieren. Um eine Basisverbindung zu erstellen und Ihre Quelle zu authentifizieren, wählen Sie die gewünschte Quelle aus der folgenden Liste aus:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -413,8 +413,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `flowSpec.id` | Die Flussspezifikations-ID, die Cloud-Speicherquellen entspricht. |
-| `sourceConnectionIds` | Die ID der Quellverbindung. Diese ID stellt die Übertragung von Daten von der Quelle an Platform dar. |
-| `targetConnectionIds` | Die ID der Zielverbindung. Diese ID stellt dar, wo die Daten landen, sobald sie an Platform übermittelt werden. |
+| `sourceConnectionIds` | Die ID der Quellverbindung. Diese ID stellt die Übertragung von Daten von der Quelle an Experience Platform dar. |
+| `targetConnectionIds` | Die ID der Zielverbindung. Diese ID stellt dar, wo die Daten landen, sobald sie an Experience Platform übermittelt werden. |
 | `transformations[x].params.mappingId` | Die ID der Zuordnung. |
 | `transformations.name` | Bei der Aufnahme verschlüsselter Dateien müssen Sie `Encryption` als zusätzlichen Transformationsparameter für Ihren Datenfluss angeben. |
 | `transformations[x].params.publicKeyId` | Die von Ihnen erstellte ID des öffentlichen Schlüssels. Diese ID entspricht einer Hälfte des Verschlüsselungsschlüsselpaars, das zum Verschlüsseln Ihrer Cloud-Speicherdaten verwendet wird. |

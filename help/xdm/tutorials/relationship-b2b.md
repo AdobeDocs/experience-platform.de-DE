@@ -1,10 +1,10 @@
 ---
-title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B edition
-description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B edition eine n:1-Beziehung zwischen zwei Schemas definieren.
+title: Definieren einer Beziehung zwischen zwei Schemas in Real-Time Customer Data Platform B2B edition
+description: Erfahren Sie, wie Sie in Adobe Real-Time Customer Data Platform B2B edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1771'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 14%
 >title="Referenzschema"
 >abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Abhängig von der Klasse des Schemas kann dieses auch vorhandene Beziehungen zu anderen Entitäten im B2B-Kontext besitzen. In der Dokumentation erfahren Sie, wie B2B-Schemaklassen miteinander in Beziehung stehen."
 
-Adobe Real-time Customer Data Platform B2B edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, einschließlich [Konten](../classes/b2b/business-account.md), [Chancen](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md) und mehr. Indem Sie Schemata erstellen, die auf diesen Klassen basieren, und sie für die Verwendung im [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, können Sie Daten aus unterschiedlichen Quellen zu einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
+Adobe Real-Time Customer Data Platform B2B edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, einschließlich [Konten](../classes/b2b/business-account.md), [Chancen](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md) und mehr. Indem Sie Schemata erstellen, die auf diesen Klassen basieren, und sie für die Verwendung im [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, können Sie Daten aus unterschiedlichen Quellen zu einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
 
 Vereinigungsschemata können jedoch nur Felder enthalten, die von Schemata erfasst werden, die dieselbe Klasse aufweisen. Hier kommen die Schemabeziehungen ins Spiel. Durch die Implementierung von Beziehungen in Ihren B2B-Schemata können Sie beschreiben, wie diese Geschäftsentitäten miteinander in Beziehung stehen und Attribute aus mehreren Klassen in nachgelagerten Segmentierungsanwendungsfällen einschließen können.
 
@@ -28,9 +28,9 @@ In diesem Tutorial werden die Schritte zum Definieren einer Viele-zu-eins-Bezieh
 
 >[!NOTE]
 >
->Wenn Sie Real-time Customer Data Platform B2B edition nicht verwenden oder eine Eins-zu-eins-Beziehung erstellen möchten, lesen Sie stattdessen das Handbuch [Erstellen einer Eins-zu-eins-Beziehung](./relationship-ui.md).
+>Wenn Sie Real-Time Customer Data Platform B2B edition nicht verwenden oder eine Eins-zu-eins-Beziehung erstellen möchten, lesen Sie stattdessen das Handbuch [Erstellen einer Eins-zu-eins-Beziehung](./relationship-ui.md).
 >
->In diesem Tutorial wird beschrieben, wie Sie in der Platform-Benutzeroberfläche manuell Beziehungen zwischen B2B-Schemas herstellen. Wenn Sie Daten aus einer B2B-Quellverbindung importieren, können Sie stattdessen ein Dienstprogramm zur automatischen Generierung verwenden, um die erforderlichen Schemas, Identitäten und Beziehungen zu erstellen. Weitere Informationen finden Sie in der Quelldokumentation zu B2B-Namespaces und -Schemata [Verwendung des Dienstprogramms zur automatischen Generierung](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+>In diesem Tutorial wird beschrieben, wie Sie in der Experience Platform-Benutzeroberfläche manuell Beziehungen zwischen B2B-Schemas herstellen. Wenn Sie Daten aus einer B2B-Quellverbindung importieren, können Sie stattdessen ein Dienstprogramm zur automatischen Generierung verwenden, um die erforderlichen Schemas, Identitäten und Beziehungen zu erstellen. Weitere Informationen finden Sie in der Quelldokumentation zu B2B-Namespaces und -Schemata [Verwendung des Dienstprogramms zur automatischen Generierung](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Erste Schritte
 
@@ -53,7 +53,7 @@ Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschem
 >title="Referenz-Identity-Namespace"
 >abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgelegtes primäres Identitätsfeld verfügen, um Teil einer Beziehung sein zu können. Weitere Informationen zu Identitäten in B2B-Beziehungen finden Sie in der Dokumentation."
 
-Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer primären Identität für eine B2B-Entität, dass sich zeichenfolgenbasierte Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen, was zu Datenkonflikten in Platform führen könnte.
+Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer Primäridentität für eine B2B-Entität, dass sich zeichenfolgenbasierte Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen, was zu Datenkonflikten in Experience Platform führen könnte.
 
 Aus diesem Grund enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-Felder, die dem Datentyp [[!UICONTROL B2B]Source&quot; ](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen kontextuellen Informationen über die Quelle der Kennung bereit. Eines dieser Felder verkettet `sourceKey` die Werte der anderen Felder im Datentyp, um eine völlig eindeutige Kennung für die Entität zu erzeugen. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemata verwendet werden.
 
@@ -61,7 +61,7 @@ Aus diesem Grund enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-F
 
 >[!NOTE]
 >
->Beim [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md) müssen Sie einen Identity-Namespace bereitstellen, unter dem die Identität definiert wird. Dabei kann es sich um einen Standard-Namespace handeln, der vom Adobe bereitgestellt wird, oder um einen benutzerdefinierten Namespace, der von Ihrem Unternehmen definiert wurde. In der Praxis ist der Namespace einfach eine kontextuelle Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, sofern dies für Ihr Unternehmen für die Kategorisierung des Identitätstyps von Bedeutung ist. Weitere Informationen finden Sie in der Übersicht [Identity](../../identity-service/features/namespaces.md)Namespaces) .
+>Beim [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md) müssen Sie einen Identity-Namespace bereitstellen, unter dem die Identität definiert wird. Dabei kann es sich um einen von Adobe bereitgestellten Standard-Namespace oder um einen von Ihrem Unternehmen definierten benutzerdefinierten Namespace handeln. In der Praxis ist der Namespace einfach eine kontextuelle Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, sofern dies für Ihr Unternehmen für die Kategorisierung des Identitätstyps von Bedeutung ist. Weitere Informationen finden Sie in der Übersicht [Identity](../../identity-service/features/namespaces.md)Namespaces) .
 
 Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in diesem Tutorial verwendet werden, bevor eine Beziehung definiert wurde. Notieren Sie sich, wo die primären Identitäten in der Schemastruktur definiert wurden, und die benutzerdefinierten Namespaces, die sie verwenden.
 

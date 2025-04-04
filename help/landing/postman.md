@@ -2,22 +2,22 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Adobe Experience Platform;API-Handbuch;Platform-API-Handbuch;Einführung in Platform;Entwicklerhandbuch
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-description: Dieses Dokument enthält Schritte zum Einrichten einer Postman-Umgebung, zum Importieren von Postman-Sammlungen und eine Liste der verfügbaren Sammlungen für jeden Platform-Service.
+description: Dieses Dokument enthält Schritte zum Einrichten einer Postman-Umgebung, zum Importieren von Postman-Sammlungen und eine Liste der verfügbaren Sammlungen für jeden Experience Platform-Service.
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 # Postman in Adobe Experience Platform
 
-Postman ist eine Kollaborationsplattform für die API-Entwicklung, mit der Sie Umgebungen mit voreingestellten Variablen einrichten, API-Sammlungen freigeben, CRUD-Anfragen optimieren und vieles mehr. Die meisten Platform-API-Services verfügen über Postman-Sammlungen, die Sie bei API-Aufrufen unterstützen können.
+Postman ist eine Kollaborationsplattform für die API-Entwicklung, mit der Sie Umgebungen mit voreingestellten Variablen einrichten, API-Sammlungen freigeben, CRUD-Anfragen optimieren und vieles mehr. Die meisten Experience Platform-API-Services verfügen über Postman-Sammlungen, die Sie bei API-Aufrufen unterstützen können.
 
-## Einrichten einer Postman-Umgebung für das Experience Platform
+## Einrichten einer Postman-Umgebung für Experience Platform
 
 Im folgenden Video-Handbuch wird das Erstellen und Einrichten Ihrer Postman-Umgebung beschrieben. Eine Postman-Umgebung enthält alle erforderlichen Kopfzeilen, die Sie für API-Aufrufe an die verschiedenen unten bereitgestellten Sammlungen benötigen. Sobald eingerichtet, können Sie bei jedem Ablauf eines Werts (z. B. eines `ACCESS_TOKEN`) den aktuellen Wert in der Umgebung aktualisieren. Dieser neue Wert wird dann für alle Sammlungen verwendet.
 
@@ -25,7 +25,7 @@ Im folgenden Video-Handbuch wird das Erstellen und Einrichten Ihrer Postman-Umge
 
 ## Postman-Sammlungen {#collections}
 
-Einen Ordner mit allen verfügbaren Postman-Sammlungen finden Sie im GitHub-Repository der [Experience Platform-Postman-Beispiele](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativ kann ein Sammlungs-Link für Postman in jeder einzelnen Swagger-Datei in der [API-Referenzdokumentation) auf ](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O gefunden werden.
+Einen Ordner mit allen verfügbaren Postman-Sammlungen finden Sie, indem Sie das GitHub-Repository mit den [Experience Platform Postman-Beispielen besuchen](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativ kann ein Sammlungs-Link für Postman in jeder einzelnen Swagger-Datei in der (API[Referenzdokumentation) ](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O gefunden werden.
 
 Um eine Postman-Sammlung herunterzuladen, wählen Sie auf der GitHub-Seite die Option **[!DNL Raw]** aus, um die rohe JSON-Datei in eine neue Registerkarte zu laden. Klicken Sie dann mit der rechten Maustaste und wählen Sie **[!DNL Save as]** , um die Datei an einem lokalen Ziel Ihrer Wahl zu speichern.
 
@@ -53,7 +53,7 @@ Weitere Informationen zur Postman-Benutzeroberfläche und ihren verfügbaren Fun
 
 >[!WARNING]
 >
->Wie in der Postman-Sammlung des Identity Management Service (IMS) erwähnt, sind die genannten Generierungsmethoden für **produktionsfremde Verwendung)**. Beim lokalen Signieren wird eine JavaScript-Bibliothek von einem Drittanbieterhost geladen, und beim Remote-Signieren wird der private Schlüssel an einen Webdienst gesendet, der sich im Besitz von Adobe befindet und von diesem betrieben wird. Während Adobe diesen privaten Schlüssel nicht speichert, sollten Produktionsschlüssel niemals mit anderen geteilt werden.
+>Wie in der Postman-Sammlung des Identity Management Service (IMS) erwähnt, sind die genannten Generierungsmethoden für **produktionsfremde Verwendung)**. Beim lokalen Signieren wird eine JavaScript-Bibliothek von einem Drittanbieterhost geladen, und beim Remote-Signieren wird der private Schlüssel an einen Webservice gesendet, der sich im Besitz von Adobe befindet und von diesem betrieben wird. Adobe speichert diesen privaten Schlüssel zwar nicht, aber die Produktionsschlüssel sollten niemals für andere freigegeben werden.
 
 Im folgenden Video wird die Postman-Sammlung des [Identity Management-Services (IMS](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) verwendet, die aus dem öffentlichen GitHub-Repository heruntergeladen werden kann.
 
@@ -61,4 +61,4 @@ Im folgenden Video wird die Postman-Sammlung des [Identity Management-Services (
 
 ## Nächste Schritte
 
-In diesem Dokument wurden Postman-Umgebungen, Sammlungen und das Importieren von Sammlungen vorgestellt. Nachdem Sie nun Postman bereit haben, finden Sie im [Platform - Erste Schritte](api-guide.md) Informationen zu erforderlichen Kopfzeilen, Beispielen und einer Liste von [API-Handbüchern](api-guide.md#api-guides) die für jeden Platform-Service verfügbar sind.
+In diesem Dokument wurden Postman-Umgebungen, Sammlungen und das Importieren von Sammlungen vorgestellt. Nachdem Sie nun Postman bereit haben, finden Sie im Handbuch „Erste Schritte mit Experience Platform](api-guide.md) Informationen zu erforderlichen Kopfzeilen, Beispielen und einer Liste von [API-Handbüchern](api-guide.md#api-guides) die für jeden Experience Platform-Service verfügbar sind.[

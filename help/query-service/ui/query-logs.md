@@ -2,9 +2,9 @@
 title: Abfrageprotokolle
 description: Abfrageprotokolle werden automatisch bei jeder Ausführung einer Abfrage generiert und stehen über die Benutzeroberfläche zur Fehlerbehebung zur Verfügung. In diesem Dokument wird beschrieben, wie Sie den Abschnitt Query Service-Protokolle der Benutzeroberfläche verwenden und darin navigieren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Um die Abfrageprotokolle zu überprüfen, wählen Sie [!UICONTROL Abfragen] aus,
 >
 >Systemabfragen und Dashboard-Abfragen sind standardmäßig ausgeschlossen. Im Abschnitt [Filter](#filter-logs) finden Sie Informationen dazu, wie Sie die angezeigten Protokolle basierend auf Ihren Einstellungen verfeinern können.
 
-![Die Platform-Benutzeroberfläche mit hervorgehobenen Abfragen und hervorgehobenem Protokoll.](../images/ui/query-log/logs.png)
+![Die Experience Platform-Benutzeroberfläche mit hervorgehobenen Abfragen und hervorgehobenem Protokoll.](../images/ui/query-log/logs.png)
 
 ## Anpassen und Suchen {#customize-and-search}
 

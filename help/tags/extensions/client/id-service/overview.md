@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud Identity Service-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform vertraut.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 100%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -49,7 +49,7 @@ Klicken Sie auf **[!UICONTROL Hinzufügen]**, um einen weiteren Pfad auszuschlie
 
 Verwenden Sie die Opt-in-Optionen, um festzulegen, ob für Besucher ein Opt-in für Adobe-Dienste auf Ihrer Site erforderlich ist, was auch die Festlegung beinhaltet, ob Cookies zum Tracking der Besucheraktivität erstellt werden sollen.
 
-Das Opt-in ist der zentrale Bezugspunkt für alle Client-seitigen Bibliotheken, wenn es darum geht, festzulegen, ob Cookies beim Besuch Ihrer Site auf dem Gerät oder Browser eines Benutzers erstellt werden können. Das Opt-in bietet keine Unterstützung für die Erfassung oder Speicherung von Voreinstellungen bezüglich der Benutzerzustimmung.
+Opt-in ist der zentrale Bezugspunkt für alle Client-seitigen Bibliotheken der Experience Platform-Lösung, um zu bestimmen, ob beim Besuch Ihrer Site Cookies auf dem Gerät oder Browser eines Benutzers erstellt werden können. Das Opt-in bietet keine Unterstützung für die Erfassung oder Speicherung von Voreinstellungen bezüglich der Benutzerzustimmung.
 
 **Opt-in aktivieren?**
 

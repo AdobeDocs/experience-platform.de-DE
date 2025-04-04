@@ -2,10 +2,10 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 89%
 
 ---
 
@@ -37,7 +37,7 @@ Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm [Experience Cloud ](https://experience.adobe.com/) und wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm von [Experience Cloud ](https://experience.adobe.com/) wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Eine Erweiterung ist eine Integration, die von Adobe oder einem Adobe-Partner er
 
 Für alle neuen Eigenschaften ist die [Haupterweiterung](../extensions/client/core/overview.md) installiert. Mobile-Eigenschaften enthalten zusätzliche Erweiterungen. Die Haupterweiterung wird von Adobe erstellt, um einen robusten Standardsatz mit Datenelementtypen für Ihre Datenschicht und mit Ereignistypen für Ihre Regeln bereitzustellen. Die meisten Aktionen, die Sie durchführen (Abrufen einer ECID, Senden von [!DNL Adobe Analytics]-Signalen, Laden der globalen [!DNL Target] Mbox usw.), stammen aus Erweiterungen, die Sie über den Katalog installieren.
 
-Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie die Privatsphäre und die Zustimmung Ihrer Endbenutzer im Zusammenhang mit der [!DNL GDPR] verwalten? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie granulare Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Was Tags in Experience Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie die Privatsphäre und die Zustimmung Ihrer Endbenutzer im Zusammenhang mit der [!DNL GDPR] verwalten? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie granulare Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Erstellen von Datenelementen und Regeln
 

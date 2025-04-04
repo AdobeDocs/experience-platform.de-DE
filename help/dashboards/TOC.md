@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '143'
 ht-degree: 65%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 65%
 * [Standard-Dashboards](standard-dashboards.md)
 * [Herunterladen von Dashboards als PDF](download.md)
 * SQL Insights: Abfrage pro Modus {#sql-insights-query-pro-mode}
-   * [Übersicht](sql-insights-query-pro-mode/overview.md)
+   * [Überblick](sql-insights-query-pro-mode/overview.md)
    * Data Distiller-Vorlagen {#templates}
-      * [Übersicht](sql-insights-query-pro-mode/templates/overview.md)
+      * [Überblick](sql-insights-query-pro-mode/templates/overview.md)
       * [Erweiterte Zielgruppenüberschneidungen](sql-insights-query-pro-mode/templates/overlaps.md)
       * [Zielgruppenvergleich](sql-insights-query-pro-mode/templates/comparison.md)
       * [Zielgruppen-Trends](sql-insights-query-pro-mode/templates/trends.md)
@@ -57,10 +57,10 @@ ht-degree: 65%
 * Anwendungsfälle für Insights {#insights-use-cases}
    * [Einverständnisanalyse](insights-use-cases/consent-analysis.md)
 * Verfügbare Datenmodelle {#data-models}
-   * [Real-time Customer Data Platform Insights-Datenmodell B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Real-time Customer Data Platform Insights-Datenmodell B2C-Edition](data-models/cdp-insights-data-model-b2c.md)
+   * [Real-Time Customer Data Platform Insights-Datenmodell B2B edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-Time Customer Data Platform Insights-Datenmodell B2C-Edition](data-models/cdp-insights-data-model-b2c.md)
 * Anwendungsintegrationen {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Abfrage-Dashboard-Datensätze](query.md)
-* [SQL-Einblick anzeigen](view-sql.md)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+* [Insight SQL anzeigen](view-sql.md)
+* [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

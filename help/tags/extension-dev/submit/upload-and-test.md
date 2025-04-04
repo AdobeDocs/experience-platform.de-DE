@@ -2,10 +2,10 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Platform-Benutzeroberfläche oder die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
+Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Experience Platform-Benutzeroberfläche oder die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
 
 In diesem Dokument wird beschrieben, wie Sie End-to-End-Tests für Ihre Erweiterung implementieren.
 
@@ -66,7 +66,7 @@ npx @adobe/reactor-uploader
 > kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
 > Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können von der Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
+Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
 
 - Was ist Ihr `clientId`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
 - Was ist Ihr `clientSecret`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
@@ -114,7 +114,7 @@ Um Ihre Erweiterung hinzuzufügen, wählen Sie die Registerkarte **Katalog**.
 
 ![](../images/getting-started/catalog.png)
 
-Im Katalog werden Kartensymbole für alle verfügbaren Erweiterungen angezeigt. Wenn Ihre Erweiterung nicht im Katalog angezeigt wird, vergewissern Sie sich, dass Sie die zuvor unter „Einrichten der Adobe Administration Console“ und „Erstellen eines Erweiterungspakets“ beschriebenen Schritte ausgeführt haben. Ihr Erweiterungspaket wird möglicherweise als „Ausstehend“ angezeigt, wenn die ursprüngliche Verarbeitung in Platform nicht abgeschlossen wurde.
+Im Katalog werden Kartensymbole für alle verfügbaren Erweiterungen angezeigt. Wenn Ihre Erweiterung nicht im Katalog angezeigt wird, vergewissern Sie sich, dass Sie die zuvor unter „Einrichten der Adobe Administration Console“ und „Erstellen eines Erweiterungspakets“ beschriebenen Schritte ausgeführt haben. Ihr Erweiterungspaket wird möglicherweise als Ausstehend angezeigt, wenn Experience Platform die anfängliche Verarbeitung nicht abgeschlossen hat.
 
 Wenn Sie die vorherigen Schritte ausgeführt haben und immer noch kein Erweiterungspaket vom Typ „Ausstehend“ oder „Fehlgeschlagen“ im Katalog angezeigt wird, sollten Sie den Status Ihres Erweiterungspakets direkt mithilfe der API überprüfen. Informationen zum Ausführen des entsprechenden API-Aufrufs finden Sie unter [Abrufen eines Erweiterungspakets](../../api/endpoints/extension-packages.md#lookup) in der API-Dokumentation.
 

@@ -3,7 +3,7 @@ title: Erstellen einer Amazon Kinesis Source-Verbindung über die Benutzeroberfl
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Amazon Kinesis-Quellverbindung erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 41%
@@ -14,9 +14,9 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->Die [!DNL Amazon Kinesis] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Amazon Kinesis] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie Schritte zum Authentifizieren eines [!DNL Amazon Kinesis]-Quell-Connectors (im Folgenden als &quot;[!DNL "Kinesis"]&quot; bezeichnet) über die [!DNL Platform]-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie Schritte zum Authentifizieren eines [!DNL Amazon Kinesis]-Quell-Connectors (im Folgenden als &quot;[!DNL "Kinesis"]&quot; bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -43,7 +43,7 @@ Weitere Informationen zu diesen Werten finden Sie [diesem [!DNL Kinesis] Dokumen
 
 ## Verbinden Ihres [!DNL Kinesis]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Kinesis]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Kinesis]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Kinesis] Konto, mit
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Kinesis]-Konto hergestellt, um [!DNL Platform]. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Kinesis]-Konto hergestellt, um [!DNL Experience Platform]. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in zu importieren [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

@@ -4,10 +4,10 @@ title: Dashboards - Übersicht
 type: Documentation
 description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, mit denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 99%
+source-wordcount: '307'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform bietet mehrere Dashboard, mit denen Sie wichtige Infor
 
 ## Einführung in Dashboards
 
-Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Arbeitsablauf innerhalb von Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre.
+Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in Experience Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre.
 
 ## Erste Schritte mit Dashboards
 

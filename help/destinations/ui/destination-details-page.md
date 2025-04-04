@@ -3,7 +3,7 @@ keywords: Ziele;Ziel;Detailseite Ziele;Detailseite Ziele
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen sowie Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 8%
@@ -12,13 +12,13 @@ ht-degree: 8%
 
 # Anzeigen von Zieldetails
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute und Aktivitäten Ihrer Ziele anzeigen und überwachen. Zu diesen Details gehören der Name und die ID des Ziels, Steuerelemente zum Aktivieren oder Deaktivieren der Ziele und mehr. Zu den Details gehören auch Metriken für aktivierte Profildatensätze, aktivierte, fehlgeschlagene und ausgeschlossene Identitäten und ein Verlauf der Datenflussausführungen.
 
 >[!NOTE]
 >
->Die Seite mit den Zieldetails ist Teil des Arbeitsbereichs [!UICONTROL Ziele] im [!DNL Platform] [!DNL UI]. Weitere Informationen dazu finden [[!UICONTROL  in ] Übersicht zum ](./destinations-workspace.md) .
+>Die Seite mit den Zieldetails ist Teil des Arbeitsbereichs [!UICONTROL Ziele] im [!DNL Experience Platform] [!DNL UI]. Weitere Informationen dazu finden [[!UICONTROL  in ] Übersicht zum ](./destinations-workspace.md) .
 
 ## Anzeigen von Zieldetails {#view-details}
 
@@ -82,8 +82,8 @@ Die Registerkarte [!UICONTROL Datenflussausführungen] enthält Metrikdaten zu I
 
 >[!NOTE]
 >
->* Die Zielüberwachungsfunktion wird derzeit für alle Ziele in Experience Platform-Zielen unterstützt *mit Ausnahme* Ziele [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Benutzerdefinierte ](/help/destinations/catalog/personalization/custom-personalization.md) und [Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
->* Für die Ziele [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) und [HTTP API](/help/destinations/catalog/streaming/http-destination.md) werden die Metriken in Bezug auf ausgeschlossene, fehlgeschlagene und aktivierte Identitäten geschätzt. Ein höheres Volumen an Aktivierungsdaten führt zu einer höheren Genauigkeit der Metriken.
+>* Die Zielüberwachungsfunktion wird derzeit für alle Ziele in Experience Platform unterstützt *mit Ausnahme* Ziele [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Benutzerdefinierte ](/help/destinations/catalog/personalization/custom-personalization.md) und [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
+>* Für die [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)-, [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)- und [HTTP API](/help/destinations/catalog/streaming/http-destination.md)-Ziele werden die Metriken in Bezug auf ausgeschlossene, fehlgeschlagene und aktivierte Identitäten geschätzt. Ein höheres Volumen an Aktivierungsdaten führt zu einer höheren Genauigkeit der Metriken.
 
 ![Datenflussausführungsansicht](../assets/ui/details-page/dataflow-runs.png)
 
@@ -93,7 +93,7 @@ Die angezeigte Dauer der Datenflussausführungen zwischen Streaming- und dateiba
 
 ### Streaming-Ziele {#streaming}
 
-Während die **[!UICONTROL Verarbeitungsdauer]** die für die meisten Streaming-Datenflussausführungen angezeigt wird, etwa vier Stunden beträgt, wie in der Abbildung unten dargestellt, ist die tatsächliche Verarbeitungszeit für jeden Datenflusslauf viel kürzer. Datenflussausführungsfenster bleiben länger offen, falls Experience Platform erneut Aufrufe an das Ziel ausführen muss, und stellen Sie außerdem sicher, dass keine spät eingehenden Daten für dasselbe Zeitfenster verpasst werden.
+Während die **[!UICONTROL Verarbeitungsdauer]** die für die meisten Streaming-Datenflussausführungen angezeigt wird, etwa vier Stunden beträgt, wie in der Abbildung unten dargestellt, ist die tatsächliche Verarbeitungszeit für jeden Datenflusslauf viel kürzer. Datenflussausführungsfenster bleiben länger offen, falls Experience Platform erneut versuchen muss, das Ziel aufzurufen, und stellen Sie außerdem sicher, dass es keine spät ankommenden Daten für dasselbe Zeitfenster verpasst.
 
 ![Bild der Seite mit den Datenflussausführungen, wobei die Spalte „Verarbeitungszeit“ für ein Streaming-Ziel hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

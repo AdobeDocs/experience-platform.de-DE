@@ -4,18 +4,18 @@ title: Herunterladen von Experience Platform-Dashboards als PDF
 type: Documentation
 description: Speichern Sie Kopien von Dashboard-Visualisierungen mithilfe der Funktion „Als PDF herunterladen“, die in der Experience Platform-Benutzeroberfläche verfügbar ist.
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
-source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 85%
+source-wordcount: '584'
+ht-degree: 65%
 
 ---
 
 # Herunterladen von Dashboards als PDF
 
-Dashboards in Adobe Experience Platform können über die Platform-Benutzeroberfläche als PDF heruntergeladen werden, um den Informationsaustausch mit Mitgliedern Ihres Unternehmens zu erleichtern.
+Dashboards in Adobe Experience Platform können über die Experience Platform-Benutzeroberfläche in PDF heruntergeladen werden, um den Informationsaustausch mit Mitgliedern Ihres Unternehmens zu erleichtern.
 
-Dieses Dokument bietet eine Zusammenfassung, wie Dashboards über die Platform-Benutzeroberfläche heruntergeladen und über das Standard-Druckmenü des Browsers im PDF-Format gespeichert werden können.
+Dieses Dokument bietet eine Zusammenfassung, wie Dashboards über die Experience Platform-Benutzeroberfläche heruntergeladen und über das Druckmenü des Standardbrowsers in PDF gespeichert werden können.
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ Um mit dem Herunterladen eines Dashboards zu beginnen, navigieren Sie zum Dashbo
 
 Nach dem Klicken auf **[!UICONTROL Herunterladen]** wird das standardmäßige Druckmenü für Ihren Browser geöffnet. In diesem Beispiel wird das Google Chrome-Druckmenü angezeigt.
 
-Im Druckmenü können Sie eine Vorschau der zu speichernden PDF-Datei anzeigen. Die PDF-Datei ist eine wahre Darstellung der Dashboard-Widgets, wie sie in der Platform-Benutzeroberfläche angezeigt werden. Die Größe der PDF-Datei wird automatisch angepasst, um alle derzeit sichtbaren Dashboard-Widgets auf einer einzigen Seite anzuzeigen.
+Im Druckmenü können Sie eine Vorschau der zu speichernden PDF-Datei anzeigen. Die PDF ist eine wahre Darstellung der Dashboard-Widgets, wie sie in der Experience Platform-Benutzeroberfläche angezeigt werden. Die Größe der PDF wird automatisch angepasst, um alle derzeit sichtbaren Dashboard-Widgets auf einer Seite anzuzeigen.
 
 ![Die Profilübersicht wird auf einem Einzelseitenformat mit dem Bedienfeld Druckoptionen auf der rechten Seite angezeigt.](images/download/download-chrome-print.png)
 
@@ -51,7 +51,7 @@ Klicken Sie nach der Vorschau der PDF-Datei auf **Speichern**, um den Speicheror
 
 ## Anpassen von Dashboard-PDFs
 
-Die generierte PDF-Datei entspricht dem Dashboard, das Sie in der Benutzeroberfläche sehen können, und enthält nur die Widgets, die derzeit in Ihrem Dashboard sichtbar sind. Bestimmte Dashboards können angepasst werden, um die Größe und Position von Widgets zu ändern oder Widgets zur Ansicht hinzuzufügen oder daraus zu entfernen. Durch das Anpassen des Erscheinungsbilds Ihres Dashboards in der Platform-Benutzeroberfläche wird auch das Erscheinungsbild der generierten PDF-Datei geändert.
+Die generierte PDF-Datei entspricht dem Dashboard, das Sie in der Benutzeroberfläche sehen können, und enthält nur die Widgets, die derzeit in Ihrem Dashboard sichtbar sind. Bestimmte Dashboards können angepasst werden, um die Größe und Position von Widgets zu ändern oder Widgets zur Ansicht hinzuzufügen oder daraus zu entfernen. Durch das Anpassen des Erscheinungsbilds Ihres Dashboards in der Experience Platform-Benutzeroberfläche wird auch das Erscheinungsbild der generierten PDF geändert.
 
 Sie können beispielsweise das Erscheinungsbild Ihres Profil-Dashboards ändern, um mehrere Widgets mit voller Breite einzuschließen, die über drei Standard-Widgets angeordnet sind.
 

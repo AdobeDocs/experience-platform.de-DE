@@ -2,10 +2,10 @@
 title: Aktivieren eines Kompetenzzentrums mithilfe von Sandbox-Tools
 description: Aktivieren Sie mithilfe von Sandbox-Tools ein Kompetenzzentrum, indem Sie ein „goldenes Sandbox“-Paket erstellen, um Best Practices für mehrere Sandboxes zu standardisieren.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 6%
 
 ---
 
@@ -37,7 +37,7 @@ Beachten Sie bei der Planung der Einrichtung eines eigenen Kompetenzzentrums in 
 - Erstellen Sie eine Sandbox mit allen relevanten und validierten Konfigurationen, die als goldene Sandbox festgelegt werden sollen.
 - Gewinnen Sie bei Bedarf einen Beitrag der Stakeholder und stimmen Sie Ihren grundlegenden Standards zu.
 
-### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
+### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
 Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [ erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
 
@@ -73,7 +73,7 @@ Jetzt, da Ihre Sandbox Ihre grundlegenden Objektkonfigurationen enthält, kann s
 
 ### Paket in relevante Sandboxes importieren
 
-Nachdem Ihr Paket erstellt wurde, können Sie dieses Paket in Ihre entsprechenden Sandboxes importieren. Es empfiehlt sich, ein Paket, das eine gesamte Sandbox enthält, in eine leere Sandbox zu importieren. Mithilfe von Sandbox-Tools können Sie [ein ganzes Sandbox-Paket importieren](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) direkt auf Experience Platform in eine Sandbox importieren.
+Nachdem Ihr Paket erstellt wurde, können Sie dieses Paket in Ihre entsprechenden Sandboxes importieren. Es empfiehlt sich, ein Paket, das eine gesamte Sandbox enthält, in eine leere Sandbox zu importieren. Mithilfe von Sandbox-Tools können Sie [ein ganzes Sandbox-Paket importieren](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) direkt in Experience Platform in eine Sandbox importieren.
 
 ### Package-Freigabe für mehrere Organisationen
 
@@ -81,7 +81,7 @@ Mit Sandbox-Tools können Sie Pakete, die Sie erstellt haben, unternehmensüberg
 
 ### Importe und Exporte mithilfe von Auditprotokollen überwachen
 
-Beim Importieren oder Exportieren Ihres Pakets können Sie den Status der Aufträge mithilfe des Dashboards **[!UICONTROL Aufträge]** in Experience Platform überwachen. Weitere Informationen zu Überwachungsaufträgen finden Sie im Handbuch unter [Überwachung von Importdetails](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Beim Importieren oder Exportieren Ihres Pakets können Sie den Status der Aufträge mithilfe des Dashboards **[!UICONTROL Vorgänge]** in Experience Platform überwachen. Weitere Informationen zu Überwachungsaufträgen finden Sie im Handbuch unter [Überwachung von Importdetails](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Aktualisieren Sie die goldene Sandbox regelmäßig
 

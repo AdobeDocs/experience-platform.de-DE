@@ -5,7 +5,7 @@ title: Erstellen einer Data-Governance-Richtlinie in der API
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API eine Data-Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 100%
@@ -26,10 +26,10 @@ Dieses Dokument enthält eine Schritt-für-Schritt-Anleitung zur Erstellung eine
 
 Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Erstellen und Auswerten von Datennutzungsrichtlinien zum Einsatz kommen:
 
-* [Adobe Experience Platform-Daten-Governance](../home.md): Der Rahmen, mit dem durch [!DNL Platform] die korrekte Datenverwendung erzwungen wird.
+* [Adobe Experience Platform-Daten-Governance](../home.md): Der Rahmen, mit dem durch [!DNL Experience Platform] die korrekte Datenverwendung erzwungen wird.
    * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Bevor Sie mit dieser Anleitung beginnen, lesen Sie das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Policy Service]-API benötigen, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 

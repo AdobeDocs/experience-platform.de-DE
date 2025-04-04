@@ -2,10 +2,10 @@
 title: AEM Asset Insights-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „AEM Asset Insights“ in Adobe Experience Platform vertraut.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 100%
+source-wordcount: '1063'
+ht-degree: 98%
 
 ---
 
@@ -53,7 +53,7 @@ In diesem Abschnitt wird beschrieben, wie Sie AEM mit Tags in Adobe Experience P
 
 ### Integrieren von AEM mit Tags
 
-Die empfohlene Integration von [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de) mit Adobe Experience Manager erfolgt über Adobe I/O.
+Die empfohlene Integration von [Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de) mit Adobe Experience Manager erfolgt über Adobe I/O.
 
 1. [Verbinden von AEM mit Tags über Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=de).
 

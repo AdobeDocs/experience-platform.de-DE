@@ -2,22 +2,22 @@
 title: Integration des Administratorprotokolls in Query Service
 description: In den Audit-Protokollen des Abfrage-Service werden Datensätze für verschiedene Benutzeraktionen gespeichert, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Unternehmensrichtlinien für die Datenverwaltung und gesetzlichen Anforderungen zu bilden. Dieses Tutorial bietet einen Überblick über die Administratorprotokoll-Funktionen, die für den Abfrage-Service spezifisch sind.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 8%
 
 ---
 
 # Integration [!DNL Query Service] Auditprotokolls
 
-Die Integration des Administratorprotokolls in Adobe Experience Platform [!DNL Query Service] stellt Datensätze zu abfragebezogenen Benutzeraktionen bereit. Audit-Protokolle sind ein wichtiges Tool zur Fehlerbehebung und zur Einhaltung von Unternehmensrichtlinien für die Datenverwaltung und gesetzlichen Anforderungen. Mit der Funktion können Sie ein Aktionsprotokoll für viele Ereignistypen zurückgeben und die Datensätze filtern und exportieren. Auf die Protokolle kann entweder über die Platform-Benutzeroberfläche oder die [Audit-Abfrage-API](https://www.adobe.io/experience-platform-apis/references/audit-query/) zugegriffen und sie in CSV- oder JSON-Dateiformaten heruntergeladen werden.
+Die Integration des Administratorprotokolls in Adobe Experience Platform [!DNL Query Service] stellt Datensätze zu abfragebezogenen Benutzeraktionen bereit. Audit-Protokolle sind ein wichtiges Tool zur Fehlerbehebung und zur Einhaltung von Unternehmensrichtlinien für die Datenverwaltung und gesetzlichen Anforderungen. Mit der Funktion können Sie ein Aktionsprotokoll für viele Ereignistypen zurückgeben und die Datensätze filtern und exportieren. Auf die Protokolle kann entweder über die Experience Platform-Benutzeroberfläche oder die [Audit-Abfrage-API](https://www.adobe.io/experience-platform-apis/references/audit-query/) zugegriffen und sie in CSV- oder JSON-Dateiformaten heruntergeladen werden.
 
-Weitere Informationen zur Benutzeroberfläche für Auditprotokolle finden Sie im Dokument [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md). Weitere Informationen zum Aufrufen von Platform-APIs finden Sie im [Handbuch zur Audit-Protokoll-API](../../landing/api-guide.md).
+Weitere Informationen zur Benutzeroberfläche für Auditprotokolle finden Sie im Dokument [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md). Weitere Informationen zum Aufrufen von Experience Platform-APIs finden Sie im [Handbuch zur Audit-Protokoll-API](../../landing/api-guide.md).
 
 ## Voraussetzungen
 
-Die Berechtigung [!DNL Data Governance]Benutzeraktivitätsprotokoll anzeigen[!UICONTROL  muss aktiviert ], damit das Administratorprotokoll-Dashboard in der Platform-Benutzeroberfläche angezeigt werden kann. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Die Berechtigung [!DNL Data Governance]Benutzeraktivitätsprotokoll anzeigen[!UICONTROL  muss aktiviert ], damit das Administratorprotokoll-Dashboard in der Experience Platform-Benutzeroberfläche angezeigt werden kann. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] Auditprotokollkategorien {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Die von [!DNL Query Service] bereitgestellten Auditprotokollkategorien lauten wi
 
 Um eine Prüfung für [!DNL Query Service] Aktivitäten durchzuführen, wählen Sie **[!UICONTROL Prüfungen]** im linken Navigationsbereich aus, gefolgt vom Trichtersymbol (![Filtersymbol).](/help/images/icons/filter.png)), um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
 
-![Das Dashboard des Administratorprotokolls der Platform-Benutzeroberfläche mit hervorgehobenen Steuerelementen „Prüfungen“ im linken Navigationsbereich und hervorgehobenen Filterfeldern.](../images/audit-log/filter-controls.png)
+![Das Administratorprotokoll-Dashboard der Experience Platform-Benutzeroberfläche mit hervorgehobenen „Prüfungen“ im linken Navigationsbereich und hervorgehobenen Filtersteuerelementen.](../images/audit-log/filter-controls.png)
 
-Über die Registerkarte [!UICONTROL Audits]-Dashboard [!UICONTROL Aktivitätsprotokoll] können Sie alle aufgezeichneten Platform-Aktionen nach einer der [!DNL Query Service] Kategorien filtern. Die Protokollergebnisse können weiter gefiltert werden, basierend auf dem Zeitraum, in dem sie ausgeführt wurden, der durchgeführten Aktion/Funktion oder dem Benutzer, der die Abfrage durchgeführt hat. Siehe die Dokumentation zum Auditprotokoll für [vollständige Anweisungen zum Filtern der Protokolle nach Kategorie, Aktion, Benutzer und Status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Über die Registerkarte [!UICONTROL Audits] [!UICONTROL Aktivitätsprotokoll] können Sie alle aufgezeichneten Experience Platform-Aktionen nach einer der [!DNL Query Service] Kategorien filtern. Die Protokollergebnisse können weiter gefiltert werden, basierend auf dem Zeitraum, in dem sie ausgeführt wurden, der durchgeführten Aktion/Funktion oder dem Benutzer, der die Abfrage durchgeführt hat. Siehe die Dokumentation zum Auditprotokoll für [vollständige Anweisungen zum Filtern der Protokolle nach Kategorie, Aktion, Benutzer und Status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen zu allen Abfragen, die Ihren ausgewählten Filterkriterien entsprechen.
 

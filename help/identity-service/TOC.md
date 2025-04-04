@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Anleitung zum Platform Identity Service
+breadcrumb-title: Handbuch zum Experience Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 72%
+source-wordcount: '145'
+ht-degree: 69%
 
 ---
 
@@ -47,4 +47,4 @@ ht-degree: 72%
 - [Definieren von Identitätsfeldern in der Benutzeroberfläche](label-identities.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+- [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

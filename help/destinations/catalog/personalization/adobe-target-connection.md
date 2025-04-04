@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 32%
+source-wordcount: '1769'
+ht-degree: 31%
 
 ---
 
@@ -161,7 +161,7 @@ Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](../../ui/acti
 
 Es sind zusätzliche Schritte erforderlich, um eine Zielgruppe aus einer bestehenden Adobe Target-Verbindung zu entfernen, wenn diese Zielgruppe bereits in einer Adobe Target-[ (Aktivität) verwendet ](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Der Versuch, eine Zielgruppe aus einer Adobe Target-Verbindung zu entfernen, führt zu einem Fehler, wenn die Zielgruppe von einer Adobe Target-Aktivität verwendet wird.
 
-![Platform-UI-Bild, das einen Fehler anzeigt, der durch den Versuch verursacht wurde, eine Zielgruppe zu entfernen, die von einer Target-Aktivität verwendet wird.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Bild der Experience Platform-Benutzeroberfläche, das einen Fehler anzeigt, der durch den Versuch verursacht wurde, eine Zielgruppe zu entfernen, die von einer Target-Aktivität verwendet wird.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 Um eine Zielgruppe aus einem Target-Ziel zu entfernen, wenn die Zielgruppe in einer Aktivität verwendet wird, müssen Sie zunächst entweder die Zielgruppe aus der Target-Aktivität entfernen, die sie verwendet, oder die Aktivität vollständig löschen. Anschließend können Sie die Zielgruppe aus Ihrer Target-Verbindung entfernen.
 

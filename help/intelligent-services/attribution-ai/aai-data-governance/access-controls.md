@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Zugriffssteuerung für Attributions-KI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung für Attributions-KI.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 98%
+source-wordcount: '493'
+ht-degree: 93%
 
 ---
 
-# Zugriffskontrolle in Attribution AI
+# Zugriffssteuerung in Attributions-KI
 
 Die Zugriffssteuerung für Attributions-KI wird über Adobe Experience Platform in [Adobe Admin Console](https://adminconsole.adobe.com/) bereitgestellt Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 
@@ -28,7 +28,7 @@ Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [
 
 Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 
-Mithilfe der attributbasierten Zugriffssteuerung können Administrierende den Zugriff der Benutzenden sowohl auf sensible persönliche Daten (Sensitive Personal Data, SPD) als auch auf personenbezogene Daten (Personally Identifiable Information, PII) für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Durch attributbasierte Zugriffssteuerung können Admins den Zugriff der Benutzenden sowohl auf sensible persönliche Daten (SPD) als auch auf persönlich identifizierbare Informationen (PII) für alle Experience Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 Aufgrund der attributbasierten Zugriffssteuerung sind einige Felder und Funktionen möglicherweise eingeschränkt und für bestimmte Attributions-KI-Service-Mdelle nicht verfügbar. Beispiele sind „Identität“, „Bewertungsdefinition“ und „Klon“.
 
@@ -50,4 +50,4 @@ Wenn Sie ein Modell mit eingeschränkten Informationen erstellt haben und mit de
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](../overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.
+Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](../overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Experience Platform] nutzen.

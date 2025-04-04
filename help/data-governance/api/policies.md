@@ -5,10 +5,10 @@ title: API-Endpunkt für Data Governance-Richtlinien
 description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen verabschiedet hat und die die Arten von Marketing-Aktionen beschreiben, die Sie mit den Daten in Experience Platform durchführen dürfen bzw. die Ihnen untersagt sind. Der Endpunkt /policies wird für alle API-Aufrufe im Zusammenhang mit dem Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
-ht-degree: 100%
+source-wordcount: '1864'
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen be
 
 >[!IMPORTANT]
 >
->Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzende in Ihrer Organisation zugreifen können.  Im `/policies`-Endpunkt-Handbuch für die [Zugriffssteuerungs-API](../../access-control/abac/api/policies.md) finden Sie Einzelheiten zur programmgesteuerten Verwaltung von Zugriffssteuerungsrichtlinien.
+>Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Experience Platform-Benutzende in Ihrem Unternehmen zugreifen können. Im `/policies`-Endpunkt-Handbuch für die [Zugriffssteuerungs-API](../../access-control/abac/api/policies.md) finden Sie Einzelheiten zur programmgesteuerten Verwaltung von Zugriffssteuerungsrichtlinien.
 
 ## Erste Schritte
 

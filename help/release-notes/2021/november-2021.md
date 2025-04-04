@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise November 2021
 description: Versionshinweise von November 2021 für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 86%
+source-wordcount: '781'
+ht-degree: 81%
 
 ---
 
@@ -41,13 +41,13 @@ Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platf
 
 ### Neue B2B- und B2P-Editionen {#editions}
 
-Neue B2B- und B2P-Editionen, die B2B-Daten und -Funktionen sowohl in Real-Time CDP als auch in Platform Activation-Produkten ermöglichen, sind zum Kauf verfügbar.
+Neue B2B- und B2P-Editionen, die B2B-Daten und -Funktionen sowohl in Real-Time CDP als auch in Experience Platform Activation-Produkten ermöglichen, sind zum Kauf verfügbar.
 
 Weitere Informationen zu Real-Time CDP B2B edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
 
 ### Neue Marketo-Connectoren für Datenquelle und Ziel {#marketo}
 
-Neue Marketo-Connectoren für Datenquelle und Ziel ermöglichen das Streamen von Marketo-Daten in Platform und von Platform-Zielgruppen zurück an Marketo. Verfügbar für alle Platform-Benutzer.
+Neue Marketo-Connectoren für Datenquelle und Ziel ermöglichen das Streamen von Marketo-Daten in Experience Platform und von Experience Platform-Zielgruppen zurück an Marketo. Verfügbar für alle Experience Platform-Benutzer.
 
 | Funktion | Beschreibung |
 |----------|-------------|
@@ -56,13 +56,13 @@ Neue Marketo-Connectoren für Datenquelle und Ziel ermöglichen das Streamen von
 
 ### Standard-B2B-XDM {#XDM}
 
-Standard-B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle Platform-Benutzer verfügbar.
+Standardmäßige B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle Experience Platform-Benutzer verfügbar.
 
 | Funktion | Beschreibung |
 |-----------|--------------|
-| Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B edition bietet mehrere standardmäßige XDM-Dateien, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. |
+| Standard-B2B-XDM-Klassen | Real-Time Customer Data Platform B2B edition bietet mehrere standardmäßige XDM-Dateien, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. |
 
-Weitere Informationen zur [ von B2B-Datenentitäten finden Sie ](../../rtcdp/schemas/b2b.md) der Dokumentation zu Schemas in Real-time Customer Data Platform B2B edition .
+Weitere Informationen zur [ von B2B-Datenentitäten finden Sie ](../../rtcdp/schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
 
 ### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
 

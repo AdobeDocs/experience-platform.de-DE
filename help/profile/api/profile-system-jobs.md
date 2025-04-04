@@ -5,9 +5,9 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Echtzeit-Kundenprofildaten zu entfernen. Dies erfordert die Verwendung der Profil-API zum Erstellen eines Profil-Systemauftrags oder einer Löschanfrage.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 35%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->Die folgenden Endpunkte können je nach Implementierung von Adobe Experience Platform auf Microsoft Azure und Amazon Web Services (AWS) unterschiedlich sein. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Die folgenden Endpunkte können je nach Implementierung von Adobe Experience Platform auf Microsoft Azure und Amazon Web Services (AWS) unterschiedlich sein. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Platform] aufgenommene Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für das Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-Time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der [!DNL Real-Time Customer Profile]-API zum Erstellen eines [!DNL Profile] Systemauftrags oder „Löschanfrage“.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Experience Platform] aufgenommene Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für das Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-Time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der [!DNL Real-Time Customer Profile]-API zum Erstellen eines [!DNL Profile] Systemauftrags oder „Löschanfrage“.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in 
 
 >[!AVAILABILITY]
 >
->Die folgenden Abfrageparameter sind **verfügbar** wenn Sie Platform in Microsoft Azure verwenden.
+>Die folgenden Abfrageparameter sind **verfügbar** wenn Sie Experience Platform auf Microsoft Azure verwenden.
 >
 >Bei Verwendung dieses Endpunkts auf AWS werden die ersten 100 Systemaufträge in absteigender Reihenfolge und basierend auf ihrem Erstellungsdatum zurückgegeben.
 
@@ -502,7 +502,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Systemanfrage zur�
 
 >[!AVAILABILITY]
 >
->Die folgende Funktion ist **verfügbar** wenn Platform auf Microsoft Azure verwendet wird.
+>Die folgende Funktion ist **verfügbar** wenn Experience Platform auf Microsoft Azure verwendet wird.
 
 Wenn Sie versuchen, eine Löschanfrage für einen Datensatz-Batch vom Typ Datensatz zu initiieren, tritt ein 400-Fehler auf, der in etwa wie folgt aussieht:
 

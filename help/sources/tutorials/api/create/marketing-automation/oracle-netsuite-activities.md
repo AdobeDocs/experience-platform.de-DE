@@ -1,14 +1,14 @@
 ---
-title: Erstellen einer Quellverbindung und eines Datenflusses für Oracle-NetSuite-Aktivitäten mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Oracle NetSuite-Ereignisdaten mithilfe der Flow Service-API auf Experience Platform zu übertragen.
+title: Erstellen einer Quellverbindung und eines Datenflusses für Oracle NetSuite-Aktivitäten mit der Flow Service-API
+description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Oracle NetSuite-Ereignisdaten mithilfe der Flow Service-API an Experience Platform zu übertragen.
 hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 54%
+source-wordcount: '1974'
+ht-degree: 46%
 
 ---
 
@@ -24,8 +24,8 @@ Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ereignisdaten aus Ihrem
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Oracle NetSuite Activities] herstellen zu können.
 
@@ -33,17 +33,17 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Informationen [[!DNL Oracle NetSuite]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/marketing-automation/oracle-netsuite.md) „Übersicht“.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-## Verbinden von [!DNL Oracle NetSuite Activities] mit Platform mithilfe der [!DNL Flow Service]-API
+## Verbinden von [!DNL Oracle NetSuite Activities] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Im folgenden Handbuch erfahren Sie, wie Sie Ihre [!DNL Oracle NetSuite Activities] authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, um Ihre Ereignisdaten auf Experience Platform zu übertragen.
+Im folgenden Handbuch erfahren Sie, wie Sie Ihre [!DNL Oracle NetSuite Activities] authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, um Ihre Ereignisdaten an Experience Platform zu senden.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Basisverbindungs-ID. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Oracle NetSuite Activities] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.clientId` | Der Client-ID-Wert beim Erstellen des Integrationsdatensatzes. Den Prozess zum Erstellen eines Integrationsdatensatzes finden Sie [hier](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). Der Wert ist eine Zeichenfolge mit 64 Zeichen, die `7fce.....b42f` ähnelt. |
 | `auth.params.clientSecret` | Der Client-ID-Wert beim Erstellen des Integrationsdatensatzes. Den Prozess zum Erstellen eines Integrationsdatensatzes finden Sie [hier](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). Der Wert ist eine Zeichenfolge mit 64 Zeichen, die `5c98.....1b46` ähnelt. |
 | `auth.params.accessTokenUrl` | Die [!DNL NetSuite] Zugriffstoken-URL, ähnlich wie `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`, bei der Sie ACCOUNT_ID durch Ihre [!DNL NetSuite]-Konto-ID ersetzen. |
@@ -125,9 +125,9 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> Der Wert ist für [!DNL Oracle NetSuite Activities] leer.</li></ul> |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die an Experience Platform übermittelt werden soll. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> Der Wert ist für [!DNL Oracle NetSuite Activities] leer.</li></ul> |
 
 ```shell
 curl -X GET \
@@ -331,7 +331,7 @@ Eine erfolgreiche Antwort gibt eine JSON-Struktur wie die folgende zurück:
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API stellen. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -386,7 +386,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -550,7 +550,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL Oracle NetSuite Activities] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Oracle NetSuite Activities] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -610,7 +610,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -651,4 +651,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

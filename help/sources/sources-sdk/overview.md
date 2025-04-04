@@ -2,9 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Übersicht über Selbstbedienungsquellen (Batch-SDK)
-description: Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind eine Reihe von Konfigurations-APIs, mit denen Sie eine REST-API-basierte Quelle mithilfe der Flow Service-API integrieren können, um Ihre Daten auf den Experience Platform zu bringen.
+description: Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind eine Reihe von Konfigurations-APIs, mit denen Sie eine REST-API-basierte Quelle mithilfe der Flow Service-API integrieren können, um Ihre Daten an Experience Platform zu übertragen.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 7%
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 # Übersicht über Selbstbedienungsquellen (Batch-SDK)
 
-Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind ein Framework, mit dem Sie eine REST-API-basierte Quelle mithilfe der -API in den Experience Platform-[[!DNL Flow Service]  integrieren ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Service Sources (Batch-SDK) bietet eine Reihe von Konfigurations-APIs, um Ihre eigene Quelle zu erstellen und Ihre Batch-Daten auf Experience Platform zu bringen.
+Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind ein Framework, mit dem Sie eine REST-API-basierte Quelle mithilfe der -API in den Experience Platform[[!DNL Flow Service] Quellkatalog ](https://www.adobe.io/experience-platform-apis/references/flow-service/) können. Self-Service-Quellen (Batch-SDK) bieten eine Reihe von Konfigurations-APIs, um Ihre eigene Quelle zu erstellen und Ihre Batch-Daten in Experience Platform zu übertragen.
 
 Mit Selbstbedienungsquellen (Batch-SDK) können Sie:
 
-* Konfigurieren und Integrieren einer neuen Quelle in den Experience Platform-Katalog mithilfe der [!DNL Flow Service]-API.
+* Konfigurieren Sie mithilfe der [!DNL Flow Service]-API eine neue Quelle und integrieren Sie sie in den Experience Platform-Katalog.
 * Definieren Sie Spezifikationen für Ihre Quelle, einschließlich Informationen zu unterstützten Authentifizierungstypen und dazu, wie Ressourcendaten abgerufen werden.
 * Erstellen Sie eine benutzerfreundliche Dokumentation für Ihre neue Quelle.
 
@@ -27,15 +27,15 @@ Die Dokumentation zu Selbstbedienungsquellen enthält Anweisungen zum Konfigurie
 
 ## Verstehen von Quellen
 
-Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-Weitere Informationen zu Quellen und eine Liste der verschiedenen derzeit auf Experience Platform unterstützten Quellen finden Sie unter [Quellen - Übersicht](../home.md).
+Weitere Informationen zu Quellen und eine Liste der verschiedenen Quellen, die derzeit von Experience Platform unterstützt werden, finden Sie unter [Quellen - Übersicht](../home.md).
 
 ## Erstellen einer Quelle
 
-Über Self-Service-Quellen können Sie Ihre eigene REST-API-basierte Quelle integrieren und Ihre Daten mit [!DNL Flow Service] auf Experience Platform bringen. Sie können eine Quelle in den Experience Platform-Quellkatalog integrieren, indem Sie neue Verbindungsspezifikationen über die [!DNL Flow Service]-API erstellen, konfigurieren und senden.
+Über Selbstbedienungsquellen können Sie Ihre eigene REST-API-basierte Quelle integrieren und Ihre Daten mit [!DNL Flow Service] an Experience Platform übertragen. Sie können eine Quelle in den Experience Platform-Quellkatalog integrieren, indem Sie neue Verbindungsspezifikationen über die [!DNL Flow Service]-API erstellen, konfigurieren und senden.
 
-Informationen zum Integrieren einer neuen [ auf Experience Platform finden Sie ](./api/api-overview.md) Handbuch unter „Erstellen einer neuen Verbindungsspezifikation .
+Informationen zur Integration einer neuen [ in Experience Platform finden Sie ](./api/api-overview.md) Handbuch unter „Erstellen einer neuen“.
 
 ## Dokumentieren der Quelle
 
@@ -43,7 +43,7 @@ Nachdem Sie Ihre Quelle erstellt haben, finden Sie im [Dokumentationshandbuch](.
 
 ## Allgemeine Vorgehensweise
 
-Der schrittweise Prozess zum Konfigurieren Ihrer Quelle auf Experience Platform wird unten beschrieben:
+Der schrittweise Prozess zum Konfigurieren Ihrer -Quelle in Experience Platform wird unten beschrieben:
 
 * Lesen Sie [ API-Handbuch für Selbstbedienungsquellen (Batch-SDK](./api/api-overview.md).
    * Lesen Sie [Erste Schritte](./api/getting-started.md).

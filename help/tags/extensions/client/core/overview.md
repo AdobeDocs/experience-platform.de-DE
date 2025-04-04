@@ -2,9 +2,9 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5445'
+source-wordcount: '5447'
 ht-degree: 95%
 
 ---
@@ -106,7 +106,7 @@ Wenn das Element ein Anker-Tag (`<a>`) zu verlinkten Inhalten ist, können Sie a
 >
 >Bei dieser Option ist äußerste Vorsicht geboten, da sie sich bei falscher Verwendung negativ auf das Anwendererlebnis auswirken kann.
 
-Wenn Sie die Link-Verzögerung verwenden, verhindert Platform tatsächlich, dass der Browser von der Seite weg navigiert. Anschließend führt es nach der angegebenen Zeitüberschreitung eine JavaScript-Umleitung zum ursprünglichen Ziel durch. Dies ist besonders dann problematisch, wenn Ihr Seiten-Markup `<a>`-Tags enthält, bei denen die vorgesehene Funktion den Benutzer nicht tatsächlich weg von der Seite navigieren lässt. Wenn Sie Ihr Problem nicht anders lösen können, sollten Sie mit der Definition Ihrer Auswahl sehr genau umgehen, damit dieses Ereignis nur genau dort ausgelöst wird, wo Sie es brauchen, und sonst nirgends.
+Wenn Sie die Link-Verzögerung verwenden, verhindert Experience Platform tatsächlich, dass der Browser von der Seite weg navigiert. Anschließend führt es nach der angegebenen Zeitüberschreitung eine JavaScript-Umleitung zum ursprünglichen Ziel durch. Dies ist besonders dann problematisch, wenn Ihr Seiten-Markup `<a>`-Tags enthält, bei denen die vorgesehene Funktion den Benutzer nicht tatsächlich weg von der Seite navigieren lässt. Wenn Sie Ihr Problem nicht anders lösen können, sollten Sie mit der Definition Ihrer Auswahl sehr genau umgehen, damit dieses Ereignis nur genau dort ausgelöst wird, wo Sie es brauchen, und sonst nirgends.
 
 Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer die angegebene Zeitdauer abwarten und in keiner Weise mit der Ausführung der Regelaktionen verbunden sind. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger als erforderlich zu warten, und auch möglich, dass die Verzögerung nicht lang genug ist, um alle Aktionen der Regel erfolgreich abzuschließen. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
 
@@ -839,7 +839,7 @@ Der Sitzungsspeicher ähnelt dem lokalen Speicher. Der Unterschied besteht darin
 
 ### Besucherverhalten
 
-Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Erweiterung der Logik in Regeln und anderen Platform-Lösungen.
+Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Anreicherung der Logik in Regeln und anderen Experience Platform-Lösungen.
 
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 

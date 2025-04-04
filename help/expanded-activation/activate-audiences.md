@@ -2,16 +2,16 @@
 title: Aktivieren von Audience Manager-Zielgruppen durch erweiterte Aktivierung
 description: Erfahren Sie, wie Sie Audience Manager-Zielgruppen über Audience Manager Expanded Activation für Social-Media- und Werbeziele aktivieren.
 exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
-source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
-# Zielgruppen durch erweiterte Audience Manager-Aktivierung aktivieren
+# Zielgruppen über die erweiterte Audience Manager-Aktivierung aktivieren
 
-Auf dieser Seite wird der End-to-End-Workflow beschrieben, den Sie befolgen müssen, um Zielgruppen vom Audience Manager für die von der erweiterten Aktivierung unterstützten Zielplattformen zu aktivieren.
+Auf dieser Seite wird der End-to-End-Workflow beschrieben, den Sie befolgen müssen, um Zielgruppen aus Audience Manager für die von der erweiterten Aktivierung unterstützten Zielplattformen zu aktivieren.
 
 ## Voraussetzungen {#before-you-begin}
 
@@ -21,34 +21,34 @@ Bei den in diesem Handbuch beschriebenen Schritten wird davon ausgegangen, dass 
 >
 >Um Zielgruppen über [!DNL Expanded Activation] zu aktivieren, stellen Sie sicher, dass Ihre Audience Manager-Zielgruppen auf (**E-Mail-Adressen)**. Weitere Informationen finden Sie [Voraussetzungen](overview.md#prerequisites).
 
-## 1. Schritt: Quellverbindung des Audience Managers konfigurieren {#configure-source}
+## Schritt 1: Konfigurieren der Audience Manager-Quellverbindung {#configure-source}
 
-Der [Audience Manager-Quell-Connector](../sources/connectors/adobe-applications/audience-manager.md) sendet in Adobe Audience Manager erfasste Zielgruppendaten zur Aktivierung auf den Zielplattformen, die von der erweiterten Aktivierung unterstützt werden.
+Der [Audience Manager-Quell](../sources/connectors/adobe-applications/audience-manager.md)Connector sendet in Adobe Audience Manager erfasste Zielgruppendaten zur Aktivierung auf den Zielplattformen, die von der erweiterten Aktivierung unterstützt werden.
 
-Befolgen Sie die Anleitung zum [ einer Audience Manager-Quellverbindung ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) Konfigurieren Ihres Quell-Connectors.
+Folgen Sie der Anleitung zum [ einer Audience Manager-Quellverbindung, ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) Ihren Quell-Connector zu konfigurieren.
 
-![Platform-UI-Bild, das die Registerkarte „Quellen“ mit der Audience Manager-Quellverbindung anzeigt.](assets/sources-tab.png)
+![Bild der Experience Platform-Benutzeroberfläche, das die Registerkarte „Quellen“ mit der Audience Manager-Quellverbindung anzeigt.](assets/sources-tab.png)
 
 >[!TIP]
 >
 >Der Adobe Audience Manager-Quell-Connector ist der einzige Quell-Connector, der in der erweiterten Aktivierung verfügbar ist.
 >
->Wenn Sie Zielgruppen basierend auf zusätzlichen Kennungen aufnehmen möchten, müssen Sie eine Edition von [Real-Time CDP](../rtcdp/overview.md) erwerben. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+>Wenn Sie Zielgruppen basierend auf zusätzlichen Kennungen aufnehmen möchten, müssen Sie eine Edition von [Real-Time CDP](../rtcdp/overview.md) erwerben. Weitere Informationen erhalten Sie vom Adobe-Support.
 
 ### Anzeigen und Überwachen aufgenommener Zielgruppen {#view-audiences}
 
-Die Zielgruppen, die Sie über den Audience Manager in die erweiterte Aktivierung einbringen, können im Dashboard **[!UICONTROL Zielgruppen]** angezeigt werden.
+Die Zielgruppen, die Sie in die erweiterte Aktivierung von Audience Manager einbringen, können im Dashboard **[!UICONTROL Zielgruppen]** angezeigt werden.
 
 Um Ihre Zielgruppen anzuzeigen, gehen Sie zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** > **[!UICONTROL Durchsuchen]**.
 
-![Platform-UI-Bild, das die Seite Zielgruppen anzeigt.](assets/audiences-browse.png)
+![Bild der Experience Platform-Benutzeroberfläche mit der Seite „Zielgruppen“.](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
 >* Es kann bis zu 48 Stunden dauern, bis Zielgruppen in der erweiterten Aktivierung vollständig ausgefüllt sind. Dies gilt auch für Aktualisierungen vorhandener Audience Manager-Zielgruppen.
->* Neu erstellte Audience Manager-Zielgruppen werden nicht automatisch in der erweiterten Aktivierung angezeigt. Um neue Segmente in Expanded Activation aufzunehmen, müssen Sie sie über den Audience Manager-Quell-Connector hinzufügen.
+>* Neu erstellte Audience Manager-Zielgruppen werden nicht automatisch in der erweiterten Aktivierung angezeigt. Um neue Segmente in die erweiterte Aktivierung aufzunehmen, müssen Sie sie über den Audience Manager-Quell-Connector hinzufügen.
 
-Nachdem Sie Ihren Audience Manager-Quell-Connector konfiguriert haben, fahren Sie mit [Schritt 2](#create-destination-connection) fort.
+Nachdem Sie Ihren Audience Manager-Quell-Connector konfiguriert haben, gehen Sie zu [Schritt 2](#create-destination-connection).
 
 ## Schritt 2: Erstellen einer neuen Zielverbindung {#create-destination-connection}
 
@@ -58,15 +58,15 @@ Navigieren Sie in der linken Seitenleiste zu **[!UICONTROL Verbindungen]** > **[
 
 Die verfügbaren Zielkategorien für [!DNL Expanded Activation] sind [advertising](../destinations/catalog/advertising/overview.md) und [social](../destinations/catalog/social/overview.md).
 
-![Platform-UI-Bild, das den Zielkatalog für die erweiterte Aktivierung zeigt.](assets/destination-catalog.png)
+![Bild der Experience Platform-Benutzeroberfläche mit dem Zielkatalog für die erweiterte Aktivierung.](assets/destination-catalog.png)
 
 Um eine neue Verbindung zu einer Zielplattform zu erstellen, folgen Sie der Anleitung [Erstellen einer neuen Zielverbindung](../destinations/ui/connect-destination.md). Gehen Sie dann zu [Schritt 3](#activate-audiences).
 
 ## Schritt 3: Aktivieren von Zielgruppen für Ihr Ziel {#activate-audiences}
 
-Nachdem Sie erfolgreich [Audience Manager-Zielgruppen](#configure-source) aufgenommen und [eine neue Zielverbindung erstellt haben](#create-destination-connection) können Sie Ihre Zielgruppen jetzt für die Zielplattform Ihrer Wahl aktivieren.
+Nachdem Sie Audience Manager[Zielgruppen erfolgreich ](#configure-source) und [eine neue Zielverbindung erstellt haben](#create-destination-connection) können Sie Ihre Zielgruppen jetzt für die Zielplattform Ihrer Wahl aktivieren.
 
-![Platform-UI-Bild, das den Zielkatalog für die erweiterte Aktivierung zeigt.](assets/activate-audiences.png)
+![Bild der Experience Platform-Benutzeroberfläche mit dem Zielkatalog für die erweiterte Aktivierung.](assets/activate-audiences.png)
 
 Um Zielgruppen für Ihr Ziel zu aktivieren, folgen Sie der Anleitung [Aktivieren von Zielgruppen für Streaming-Ziele](../destinations/ui/activate-segment-streaming-destinations.md).
 

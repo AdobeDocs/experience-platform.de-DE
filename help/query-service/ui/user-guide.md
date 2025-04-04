@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 25%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der [!DNL Experience Platform]-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in [!DNL Experience Platform].
 
-Weitere Informationen zu Konzepten und Funktionen von Query Service finden Sie in der [Query Service – Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service von [!DNL Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
+Weitere Informationen zu Konzepten und Funktionen von Query Service finden Sie in der [Query Service – Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service von [!DNL Experience Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
 
 ## Erste Schritte {#getting-started}
 
@@ -97,7 +97,7 @@ Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. Sie k�
 
 >[!NOTE]
 >
->Da die Platform-Benutzeroberfläche bis zu 1.000 Zeilen unterstützen kann, wird die Übergabe eines LIMIT-Werts über 1.000 ignoriert.
+>Da die Experience Platform-Benutzeroberfläche bis zu 1.000 Zeilen unterstützen kann, wird die Übergabe eines LIMIT-Werts über 1.000 ignoriert.
 
 ![Der Abfrage-Editor mit hervorgehobenem Dropdown-Menü „Ergebnisanzahl“.](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, welche Funktionen im Abfrage-Editor verfügbar sind und wie Sie in der Anwendung navigieren, können Sie damit beginnen, Ihre eigenen Abfragen direkt in [!DNL Platform] zu erstellen. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze im [!DNL Data Lake] finden Sie im Handbuch zum [Ausführen von Abfragen](../best-practices/writing-queries.md).
+Nachdem Sie nun wissen, welche Funktionen im Abfrage-Editor verfügbar sind und wie Sie in der Anwendung navigieren, können Sie damit beginnen, Ihre eigenen Abfragen direkt in [!DNL Experience Platform] zu erstellen. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze im [!DNL Data Lake] finden Sie im Handbuch zum [Ausführen von Abfragen](../best-practices/writing-queries.md).

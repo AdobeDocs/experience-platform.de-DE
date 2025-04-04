@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3224'
 ht-degree: 57%
 
 ---
@@ -19,7 +19,7 @@ Da XDM vom Design her äußerst vielseitig und anpassbar ist, ist es wichtig, be
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, sollten Sie sich mit der [Übersicht zum XDM-System](../home.md) beschäftigen, um eine allgemeine Einführung in XDM und seine Rolle beim Experience Platform zu erhalten.
+Bevor Sie dieses Handbuch lesen, sollten Sie sich mit der [Übersicht zum XDM-System](../home.md) beschäftigen, um eine allgemeine Einführung in XDM und seine Rolle in Experience Platform zu erhalten.
 
 Da sich dieses Handbuch ausschließlich auf wichtige Überlegungen zum Schema-Design konzentriert, wird dringend empfohlen, die [Grundlagen der Schemakomposition](./composition.md) zu lesen, um detaillierte Erläuterungen zu den einzelnen Schemaelementen, die in diesem Handbuch erwähnt werden, zu erhalten.
 
@@ -28,24 +28,24 @@ Da sich dieses Handbuch ausschließlich auf wichtige Überlegungen zum Schema-De
 Der empfohlene Ansatz zum Entwerfen Ihres Datenmodells für die Verwendung in Experience Platform kann wie folgt zusammengefasst werden:
 
 1. Machen Sie sich mit den geschäftlichen Anwendungsfällen für Ihre Daten vertraut.
-1. Identifizieren Sie die primären Datenquellen, die für diese Anwendungsfälle in Platform integriert werden sollten.
-1. Identifizieren Sie alle sekundären Datenquellen, die ebenfalls von Interesse sein könnten. Wenn beispielsweise derzeit nur eine der Geschäftseinheiten in Ihrem Unternehmen daran interessiert ist, ihre Daten nach Platform zu portieren, könnte eine ähnliche Geschäftseinheit in Zukunft auch daran interessiert sein, ähnliche Daten zu portieren. Die Berücksichtigung dieser sekundären Quellen hilft, das Datenmodell in Ihrem gesamten Unternehmen zu standardisieren.
+1. Identifizieren Sie die primären Datenquellen, die für diese Anwendungsfälle in Experience Platform integriert werden sollten.
+1. Identifizieren Sie alle sekundären Datenquellen, die ebenfalls von Interesse sein könnten. Wenn beispielsweise derzeit nur eine der Geschäftseinheiten in Ihrem Unternehmen daran interessiert ist, ihre Daten nach Experience Platform zu portieren, könnte eine ähnliche Geschäftseinheit in Zukunft auch daran interessiert sein, ähnliche Daten zu portieren. Die Berücksichtigung dieser sekundären Quellen hilft, das Datenmodell in Ihrem gesamten Unternehmen zu standardisieren.
 1. Erstellen Sie ein allgemeines Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) für die identifizierten Datenquellen.
-1. Konvertieren Sie das allgemeine ERD in ein plattformzentriertes ERD (einschließlich Profilen, Erlebnisereignissen und Lookup-Entitäten).
+1. Konvertieren Sie das allgemeine ERD in ein Experience Platform-orientiertes ERD (einschließlich Profilen, Erlebnisereignissen und Lookup-Entitäten).
 
-Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle erforderlichen Datenquellen variieren von Organisation zu Organisation. Während sich die restlichen Abschnitte in diesem Dokument auf die letzteren Schritte der Organisation und Erstellung eines ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten für Ihre Entscheidungen Informationen darüber liefern, welche Datenquellen nach Platform migriert werden sollen.
+Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle erforderlichen Datenquellen variieren von Organisation zu Organisation. Während sich die restlichen Abschnitte in diesem Dokument auf die letzteren Schritte der Organisation und Erstellung eines ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten für Ihre Entscheidungen Informationen darüber liefern, welche Datenquellen nach Experience Platform migriert werden sollen.
 
 ## Erstellen eines allgemeinen ERD {#create-an-erd}
 
-Nachdem Sie die Datenquellen ermittelt haben, die Sie in Platform integrieren möchten, erstellen Sie ein allgemeines ERD, das Ihnen dabei hilft, Ihre Daten XDM-Schemata zuzuordnen.
+Nachdem Sie die Datenquellen ermittelt haben, die Sie in Experience Platform integrieren möchten, erstellen Sie ein allgemeines ERD, das Ihnen dabei hilft, Ihre Daten XDM-Schemata zuzuordnen.
 
-Das folgende Beispiel stellt ein vereinfachtes ERD für ein Unternehmen dar, das Daten in Platform integrieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, einschließlich Kundenkonten, Hotels und mehreren gängigen E-Commerce-Ereignissen.
+Das folgende Beispiel stellt ein vereinfachtes ERD für ein Unternehmen dar, das Daten in Experience Platform importieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, einschließlich Kundenkonten, Hotels und mehreren gängigen E-Commerce-Ereignissen.
 
 ![Ein relationales Entitätsdiagramm, das die wesentlichen Entitäten hervorhebt, die bei der Datenaufnahme in XDM-Klassen sortiert werden sollten.](../images/best-practices/erd.png)
 
 ## Sortieren von Entitäten in Profil-, Lookup- und Ereigniskategorien {#sort-entities}
 
-Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie in Platform integrieren möchten, müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
+Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie in Experience Platform integrieren möchten, müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
 
 | Kategorie | Beschreibung |
 | --- | --- |
@@ -79,7 +79,7 @@ Wenn eine Entität Attribute enthält, die sich auf eine einzelne Kundin oder ei
 
 #### Tracking von Daten im Laufe der Zeit {#track-data}
 
-Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, handelt es sich höchstwahrscheinlich um eine Ereignisentität. Das Hinzufügen von Produktelementen zum Warenkorb kann beispielsweise in Platform als Ereignis vom Typ „In den Warenkorb legen“ verfolgt werden:
+Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, handelt es sich höchstwahrscheinlich um eine Ereignisentität. Das Hinzufügen von Produktelementen zum Warenkorb kann beispielsweise in Experience Platform als Ereignis vom Typ „In den Warenkorb legen“ verfolgt werden:
 
 | Kunden-ID | Typ | Produkt-ID | Menge | Zeitstempel |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl 
 
 >[!CAUTION]
 >
->Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an Platform senden.
+>Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an Experience Platform senden.
 
 #### Kardinalität {#cardinality}
 
@@ -231,7 +231,7 @@ Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein 
 
 ## Datenvalidierungsfelder {#data-validation-fields}
 
-Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während einer Batch-Aufnahme zu überprüfen, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Platform aufgenommen werden, wird empfohlen, beim Erstellen der Schemata die Kriterien für die Validierung auf Feldebene zu definieren.
+Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während einer Batch-Aufnahme zu überprüfen, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Experience Platform aufgenommen werden, wird empfohlen, beim Erstellen der Schemata die Kriterien für die Validierung auf Feldebene zu definieren.
 
 >[!IMPORTANT]
 >
@@ -245,11 +245,11 @@ Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld a
 
 Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Wahrung der Datenintegrität beim Erstellen eines Schemas.
 
-* **Primäridentitäten berücksichtigen**: Beim Adobe von Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie es, zusätzliche Felder als primäre Identitäten für dieses Schema festzulegen.
+* **Primäre Identitäten berücksichtigen**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie es, zusätzliche Felder als primäre Identitäten für dieses Schema festzulegen.
 * **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld &quot;`_id`&quot; in Erlebnisereignis-Schemata kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
 * **Längenbeschränkungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Eine Warnung Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Begrenzungen der minimalen und maximalen Länge zu erfüllen. Diese Einschränkungen helfen bei der Aufrechterhaltung der Konsistenz und der Datenqualität.
 * **Muster auf konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster folgen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
-* **eVars in Analytics-Schemata begrenzen**: Normalerweise sollte ein Analytics-Schema nur eine eVar als Identität aufweisen. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
+* **eVars in Analytics-Schemata begrenzen**: Normalerweise sollte ein Analytics-Schema nur über eine eVar verfügen, die als Identität gekennzeichnet ist. Wenn Sie mehr als einen eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
 * **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Das ausgewählte Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie sie nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identity-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu einem unerwünschten Profilausfall führen.
 * **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Null-Werte für nicht erforderliche Felder sind jedoch zulässig.
 

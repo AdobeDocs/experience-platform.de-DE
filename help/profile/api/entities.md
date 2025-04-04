@@ -5,7 +5,7 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 37%
@@ -18,7 +18,7 @@ ht-degree: 37%
 >
 >Die ExperienceEvent-Suche mit der Profilzugriffs-API wird nicht mehr unterstützt. Verwenden Sie Funktionen wie berechnete Attribute für Anwendungsfälle, in denen ExperienceEvents nachgeschlagen werden muss. Weitere Informationen zu dieser Änderung erhalten Sie bei der Adobe-Kundenunterstützung.
 
-Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer Profile] mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weiterführende Informationen zum Zugriff auf Profile über die [!DNL Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
+Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer Profile] mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weiterführende Informationen zum Zugriff auf Profile über die [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
 
 ## Erste Schritte
 
@@ -1223,7 +1223,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 mit einem leeren Antworttext 
 
 ## Nächste Schritte
 
-Mithilfe dieses Handbuchs haben Sie erfolgreich auf [!DNL Real-Time Customer Profile] Datenfelder, Profile und Zeitreihendaten zugegriffen. Informationen zum Zugriff auf andere in [!DNL Platform] gespeicherte Datenressourcen finden Sie unter [Datenzugriff - Übersicht](../../data-access/home.md).
+Mithilfe dieses Handbuchs haben Sie erfolgreich auf [!DNL Real-Time Customer Profile] Datenfelder, Profile und Zeitreihendaten zugegriffen. Informationen zum Zugriff auf andere in [!DNL Experience Platform] gespeicherte Datenressourcen finden Sie unter [Datenzugriff - Übersicht](../../data-access/home.md).
 
 ## Anhang {#appendix}
 

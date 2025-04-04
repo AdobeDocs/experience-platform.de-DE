@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinden von Aqua Data Studio mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '502'
 ht-degree: 8%
 
 ---
@@ -23,7 +23,7 @@ Für dieses Handbuch müssen Sie bereits Zugriff auf [!DNL Aqua Data Studio] hab
 >
 >Es gibt [!DNL Windows] und [!DNL macOS] Versionen von [!DNL Aqua Data Studio]. Screenshots in diesem Handbuch wurden mit dem [!DNL macOS] Desktop-Programm erstellt. Es kann zu geringfügigen Diskrepanzen zwischen den Versionen in der Benutzeroberfläche kommen.
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Aqua Data Studio] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] in der Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Aqua Data Studio] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
 
 ## Registrieren des Servers {#register-server}
 
@@ -32,14 +32,14 @@ Nach der Installation von [!DNL Aqua Data Studio] müssen Sie zunächst den Serv
 Sobald das Dialogfeld **[!DNL Register Server]** für einen PostgresSQL-Server angezeigt wird, geben Sie die folgenden Details für die Server-Einstellungen an.
 
 - **[!DNL Name]**: Der Name Ihrer Verbindung. Es wird empfohlen, einen Anzeigenamen anzugeben, um die Verbindung zu erkennen.
-- **[!DNL Login Name]**: Der Anmeldename ist Ihre Platform-Organisations-ID. Es hat die Form von `ORG_ID@AdobeOrg`.
+- **[!DNL Login Name]**: Der Anmeldename ist Ihre Experience Platform-Organisations-ID. Es hat die Form von `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: Dies ist eine alphanumerische Zeichenfolge, die im Dashboard für [!DNL Query Service]-Anmeldeinformationen gefunden wurde.
 - **[!DNL Host and Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung mit [!DNL Query Service] herzustellen.
-- **[!DNL Database]:** Die zu verwendende Datenbank. Verwenden Sie den Wert für die `dbname` der Platform-Benutzeroberfläche: `prod:all`.
+- **[!DNL Database]:** Die zu verwendende Datenbank. Verwenden Sie den Wert für die `dbname` der Experience Platform-Benutzeroberfläche: `prod:all`.
 
 ### [!DNL Query Service]
 
-Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der [!DNL Platform]-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Eine vollständige Anleitung, um Ihre Anmeldedaten, Hosts, Ports und Datenbanknamen zu finden, finden Sie im [Handbuch zu Anmeldedaten](../ui/credentials.md).
+Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der [!DNL Experience Platform]-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Eine vollständige Anleitung, um Ihre Anmeldedaten, Hosts, Ports und Datenbanknamen zu finden, finden Sie im [Handbuch zu Anmeldedaten](../ui/credentials.md).
 
 [!DNL Query Service] bietet auch nicht ablaufende Anmeldeinformationen, um eine einmalige Einrichtung mit Drittanbieter-Clients zu ermöglichen. Siehe die Dokumentation für [vollständige Anweisungen zum Generieren und Verwenden nicht ablaufender Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials).
 

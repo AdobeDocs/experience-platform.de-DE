@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Beispielprofile für Ihr Streaming-Ziel generieren können, die Sie für Zieltests verwenden können.
 title: Generieren von Beispielprofilen basierend auf einem Quellschema
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 99%
+source-wordcount: '980'
+ht-degree: 98%
 
 ---
 
@@ -373,7 +373,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der angegebenen Anz
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

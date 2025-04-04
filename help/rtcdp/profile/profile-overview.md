@@ -4,10 +4,10 @@ title: Grundlegendes zum Echtzeit-Kundenprofil in Real-Time CDP
 description: Erfahren Sie, wie Sie mit Adobe Real-time Customer Data Platform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kundinnen und Kunden erstellen können.
 feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 100%
+source-wordcount: '457'
+ht-degree: 85%
 
 ---
 
@@ -31,11 +31,11 @@ Wenn Kundendaten erfasst werden, werden sie mithilfe von Identitäten zu einem e
 
 ## Zusammenführungsrichtlinien
 
-Beim Zusammenführen von Kundendaten dienen als Zusammenführungsrichtlinien jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen. Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](merge-policies.md).
+Beim Zusammenführen von Kundendaten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Experience Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](merge-policies.md).
 
 ## Profilansicht
 
-Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Details zum Anzeigen von Profilen in Platform finden Sie in der [Übersicht zur Profilansicht](profile-browse.md).
+Mit Experience Platform können Sie Kundenprofile einfach anzeigen und mithilfe verschiedener Attribute nach bestimmten Profilen suchen. Weitere Informationen zum Anzeigen von Profilen in Experience Platform finden Sie unter [Übersicht zur Profilansicht](profile-browse.md).
 
 ## Nächste Schritte
 

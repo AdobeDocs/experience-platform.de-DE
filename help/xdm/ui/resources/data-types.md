@@ -3,11 +3,11 @@ keywords: Experience Platform;Startseite;beliebte Themen;UI;XDM;XDM-System;Exper
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Datentypen über die Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie Datentypen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform Datentypen erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,17 +27,17 @@ Adobe Experience Platform bietet viele Standarddatentypen, mit denen eine Vielza
 >
 >Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp in einem anderen Schema nicht erstellen. Diese Einschränkung gilt für den Mandanten Ihrer Organisation.
 
-In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Benutzeroberfläche von Experience Platform beschrieben.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Im Abschnitt [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Datentypen zu XDM-Schemata beitragen.
+Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Datentypen zu XDM-Schemata beitragen.
 
 Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Öffnen der [!DNL Schema Editor] für einen Datentyp {#data-type}
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich die Option]** Schemata[!UICONTROL  aus, um den Arbeitsbereich Schemata] zu öffnen. Wählen Sie dann die Registerkarte **[!UICONTROL Datentypen]** aus. Eine Liste der verfügbaren Datentypen wird angezeigt. Die Liste der Datentypen wird automatisch nach der Art ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die vom Adobe definierten Datentypen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Schemata]** im linken Navigationsbereich aus, um den Arbeitsbereich [!UICONTROL Schemata] zu öffnen. Wählen Sie dann die Registerkarte **[!UICONTROL Datentypen]** aus. Eine Liste der verfügbaren Datentypen wird angezeigt. Die Liste der Datentypen wird automatisch nach der Art ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Datentypen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden.
 
 ![Der Arbeitsbereich [!UICONTROL Schemata] mit [!UICONTROL Schemata] im linken Navigationsbereich und [!UICONTROL Datentypen] hervorgehoben.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -63,7 +63,7 @@ Von hier aus können Sie mit dem [ Abschnitt fortfahren](#add-fields) um Felder 
 
 ### Filtern von Datentypen {#filter}
 
-Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die durch Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
+Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
 
 ![Die Registerkarte [!UICONTROL Datentypen] des Arbeitsbereichs [!UICONTROL Schemata] mit [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] hervorgehoben.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
@@ -125,6 +125,6 @@ Die Arbeitsfläche aktualisiert den Datentyp des Felds von &quot;[!UICONTROL Obj
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Datentypen mithilfe der Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Datentypen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
 
 Informationen zum Verwalten von Datentypen mit der [!DNL Schema Registry]-API finden Sie im [Handbuch zu Datentypendpunkten](../../api/data-types.md).

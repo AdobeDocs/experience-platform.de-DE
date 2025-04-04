@@ -1,18 +1,18 @@
 ---
-title: Vergleich von at.js mit dem Experience Platform Web SDK
-description: Erfahren Sie, wie die at.js-Funktionen im Vergleich zu Experience Platform Web SDK funktionieren
+title: Vergleich von at.js mit der Experience Platform Web SDK
+description: Vergleich der at.js-Funktionen mit Experience Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;Entscheidungsumfänge;Snippet vorab ausblenden;VEC;Form-Based Experience Composer;xdm;Zielgruppen;Entscheidungen;Umfang;Schema;Systemdiagramm;Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 4%
 
 ---
 
 # Vergleich der at.js-Bibliothek mit dem Web SDK
 
-## Übersicht
+## Überblick
 
 Dieser Artikel bietet einen Überblick über die Unterschiede zwischen der `at.js`-Bibliothek und der Experience Platform Web SDK.
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 });
 ```
 
-Experience Platform Web SDK sendet automatisch eine Benachrichtigung mit den Angeboten, die von der WEB SDK ausgeführt wurden. Dies ist ein Beispiel dafür, wie die Payload einer Benachrichtigungsanfrage aussieht:
+Experience Platform Web SDK sendet automatisch eine Benachrichtigung mit den Angeboten, die von WEB SDK ausgeführt wurden. Dies ist ein Beispiel dafür, wie die Payload einer Benachrichtigungsanfrage aussieht:
 
 ```json
 {
@@ -657,7 +657,7 @@ alloy("sendEvent", {
 
 ### Verwenden von at.js
 
-Verwenden Sie die `adobe.target.triggerView`. Diese Funktion kann aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut gerendert wird. Adobe.target.triggerView() sollte für Einzelseitenanwendungen (SPA) implementiert werden, damit der Visual Experience Composer (VEC) zum Erstellen von A/B-Tests und Erlebnis-Targeting-(XT)-Aktivitäten verwendet werden kann. Wenn adobe.target.triggerView() nicht auf der Website implementiert ist, kann der VEC nicht für SPA verwendet werden.
+Verwenden Sie die `adobe.target.triggerView`. Diese Funktion kann aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut gerendert wird. Für Single Page Applications (SPAs) sollte adobe.target.triggerView() implementiert werden, damit der Visual Experience Composer (VEC) zum Erstellen von A/B-Tests und Experience Targeting(XT)-Aktivitäten verwendet werden kann. Wenn adobe.target.triggerView() nicht auf der Website implementiert ist, kann der VEC nicht für SPA verwendet werden.
 
 **Beispiel**
 
@@ -712,7 +712,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->Stellen Sie sicher, dass Sie Platform Web SDK Version 2.6.0 oder höher verwenden.
+>Stellen Sie sicher, dass Sie Experience Platform Web SDK Version 2.6.0 oder höher verwenden.
 
 Die Antwort-Token werden als Teil der `propositions` zurückgegeben, die im Ergebnis des `sendEvent`-Befehls verfügbar gemacht werden. Jeder Vorschlag enthält ein Array von `items`, und jedes Element verfügt über ein `meta` Objekt, das mit Antwort-Token gefüllt wird, wenn diese in der Admin-Benutzeroberfläche von Target aktiviert sind. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -1027,7 +1027,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Wie verwende ich Target Recommendations
+## Verwenden von Target Recommendations
 
 ### Verwenden von at.js
 
@@ -1249,7 +1249,7 @@ at.js stellt die folgenden Debugging-Funktionen bereit:
 * Mbox Debug - at.js protokolliert jede Aktion
 * Target Trace : Mit einem im Bullseye generierten Mbox-Trace-Token ist ein Trace-Objekt mit Details, die am Entscheidungsprozess beteiligt waren, unter `window.___target_trace` -Objekt verfügbar
 
-Hinweis: Alle diese Debugging-Funktionen sind mit erweiterten Funktionen im [Adobe Experience Platform Debugger verfügbar](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+Hinweis: Alle diese Debugging-Funktionen sind mit erweiterten Funktionen in [Adobe Experience Platform Debugger verfügbar](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Verwenden von Web SDK
 
@@ -1258,5 +1258,5 @@ Bei Verwendung von Web SDK stehen mehrere Debugging-Funktionen zur Verfügung:
 * Verwenden von [Assurance](/help/assurance/home.md)
 * [Web SDK Debug aktiviert](/help/web-sdk/use-cases/debugging.md)
 * Verwenden [ Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* [Adobe Experience Platform Debugger ](/help/debugger/home.md)
+* Verwenden Sie [Adobe Experience Platform Debugger](/help/debugger/home.md)
 * Zielspur

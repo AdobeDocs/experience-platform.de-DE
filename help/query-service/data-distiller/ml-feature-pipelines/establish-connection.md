@@ -2,9 +2,9 @@
 title: Verbinden von einem Jupyter-Notebook mit Data Distiller
 description: Erfahren Sie, wie Sie von einem Jupyter-Notebook aus eine Verbindung zu Data Distiller herstellen.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ In diesem Handbuch wird davon ausgegangen, dass Sie mit interaktiven [!DNL Pytho
 
 ### Abrufen von Verbindungsberechtigungen {#obtain-credentials}
 
-Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Services herzustellen, benötigen Sie Experience Platform-API-Anmeldedaten. API-Anmeldeinformationen können in der [Adobe Developer Console](https://developer.adobe.com/console/home) von einer Person erstellt werden, die Entwicklerzugriff auf die Experience Platform hat. Es wird empfohlen, eine OAuth2-API-Berechtigung speziell für datenwissenschaftliche Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens anzuweisen, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
+Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Services herzustellen, benötigen Sie Experience Platform-API-Anmeldedaten. API-Anmeldeinformationen können in der [Adobe Developer Console ](https://developer.adobe.com/console/home) von einer Person erstellt werden, die Entwicklerzugriff auf die Experience Platform hat. Es wird empfohlen, eine OAuth2-API-Berechtigung speziell für datenwissenschaftliche Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens anzuweisen, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
 
-Detaillierte [ zum Erstellen von API Anmeldeinformationen und zum Abrufen der erforderlichen Berechtigungen finden Sie unter ](../../../landing/api-authentication.md)Authentifizieren und Zugreifen auf Experience Platform-APIs“.
+Detaillierte [ zum Erstellen von API-Anmeldeinformationen und zum Abrufen ](../../../landing/api-authentication.md) erforderlichen Berechtigungen finden Sie unter „Authentifizieren und Zugreifen auf Experience Platform-APIs“.
 
 Zu den empfohlenen Berechtigungen für Data Science gehören:
 
@@ -32,7 +32,7 @@ Zu den empfohlenen Berechtigungen für Data Science gehören:
 - Ziele: [!UICONTROL Datensatzziele verwalten und aktivieren]
 - Abfrage-Service: [!UICONTROL Abfragen verwalten]
 
-Standardmäßig wird einer Rolle (und den dieser Rolle zugewiesenen API-Anmeldeinformationen) der Zugriff auf alle gekennzeichneten Daten verweigert. Abhängig von den Data Governance-Richtlinien des Unternehmens kann ein Systemadministrator der Rolle Zugriff auf bestimmte gekennzeichnete Daten gewähren, die für die Verwendung in der Datenwissenschaft als geeignet erachtet werden. Platform-Kundinnen und -Kunden sind dafür verantwortlich, die Richtlinien für den Zugriff auf Kennzeichnungen und die Einhaltung relevanter Vorschriften und organisatorischer Richtlinien angemessen zu verwalten.
+Standardmäßig wird einer Rolle (und den dieser Rolle zugewiesenen API-Anmeldeinformationen) der Zugriff auf alle gekennzeichneten Daten verweigert. Abhängig von den Data Governance-Richtlinien des Unternehmens kann ein Systemadministrator der Rolle Zugriff auf bestimmte gekennzeichnete Daten gewähren, die für die Verwendung in der Datenwissenschaft als geeignet erachtet werden. Experience Platform-Kunden sind dafür verantwortlich, die Richtlinien und Zugriffsberechtigungen für Kennzeichnungen angemessen zu verwalten, um die relevanten Vorschriften und Unternehmensrichtlinien einzuhalten.
 
 ### Speichern von Anmeldeinformationen in einer separaten Konfigurationsdatei {#store-credentials}
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## Installieren der AEP Python-Bibliothek {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) ist eine von Adobe verwaltete Open-Source-[!DNL Python], die Funktionen zum Herstellen einer Verbindung mit Data Distiller und zum Senden von Abfragen sowie zum Anfordern an andere Experience Platform-Services bereitstellt. Die `aepp`-Bibliothek wiederum basiert auf dem PostgreSQL-Datenbankadapterpaket, das für interaktive Daten-Distiller-Abfragen `psycopg2` ist. Es ist möglich, nur mit `psycopg2` eine Verbindung zu Data Distiller herzustellen und Experience Platform-Datensätze abzufragen, `aepp` bietet jedoch mehr Komfort und zusätzliche Funktionen, um Anfragen an alle Experience Platform-API-Services zu senden.
+[aepp](https://github.com/adobe/aepp/tree/main) ist eine von Adobe verwaltete Open-Source-[!DNL Python], die Funktionen zum Herstellen einer Verbindung mit Data Distiller und zum Senden von Abfragen sowie zum Senden von Anfragen an andere Experience Platform-Services bereitstellt. Die `aepp`-Bibliothek wiederum basiert auf dem PostgreSQL-Datenbankadapterpaket, das für interaktive Daten-Distiller-Abfragen `psycopg2` ist. Es ist möglich, nur eine Verbindung zu Data Distiller herzustellen und Experience Platform-Datensätze mit `psycopg2` abzufragen, aber `aepp` bietet mehr Komfort und zusätzliche Funktionen, um Anfragen an alle Experience Platform-API-Services zu senden.
 
 Um `aepp` und `psycopg2` in Ihrer Umgebung zu installieren oder zu aktualisieren, können Sie den `%pip` magic-Befehl in Ihrem Notebook verwenden:
 
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie in Ihrer maschinellen Lernumgebung von einem [!DNL Python]-Notebook aus eine Verbindung zu Data Distiller herstellen können. Der nächste Schritt beim Erstellen von Funktions-Pipelines vom Experience Platform zur Bereitstellung benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Datensätze zu durchsuchen und zu analysieren](./exploratory-analysis.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie in Ihrer maschinellen Lernumgebung von einem [!DNL Python]-Notebook aus eine Verbindung zu Data Distiller herstellen können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin[ Ihre Datensätze zu untersuchen und ](./exploratory-analysis.md).

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Streaming-Verbindung;St
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten mithilfe der Flow Service-API erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 33%
+source-wordcount: '1656'
+ht-degree: 29%
 
 ---
 
@@ -21,14 +21,14 @@ In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/exper
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Erlebnisdaten organisiert.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Erlebnisdaten organisiert.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Darüber hinaus benötigen Sie zum Erstellen einer Streaming-Verbindung ein Ziel-XDM-Schema und einen Datensatz. Um zu erfahren, wie Sie diese erstellen, lesen Sie das Tutorial [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -36,9 +36,9 @@ Eine Basisverbindung gibt die Quelle an und enthält die Informationen, die erfo
 
 ### Nicht authentifizierte Verbindung
 
-Nicht authentifizierte Verbindungen sind die Standard-Streaming-Verbindung, die Sie erstellen können, wenn Sie Daten in Platform streamen möchten.
+Nicht authentifizierte Verbindungen sind die Standard-Streaming-Verbindung, die Sie erstellen können, wenn Sie Daten in Experience Platform streamen möchten.
 
-Um eine nicht authentifizierte Basisverbindung zu erstellen, stellen Sie eine Verbindungsanfrage an den `/connections`-Endpunkt und geben Sie dabei einen Namen für Ihre POST, den Datentyp und die HTTP-API-Verbindungsspezifikations-ID an. Diese ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Um eine nicht authentifizierte Basisverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei einen Namen für Ihre Verbindung, den Datentyp und die HTTP-API-Verbindungsspezifikations-ID an. Diese ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **API-Format**
 
@@ -130,7 +130,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellte
 
 ### Authentifizierte Verbindung
 
-Authentifizierte Verbindungen sollten verwendet werden, wenn Sie zwischen Datensätzen aus vertrauenswürdigen und nicht vertrauenswürdigen Quellen unterscheiden müssen. Benutzer, die Informationen mit personenbezogenen Daten (PII) senden möchten, sollten beim Streaming von Informationen an Platform eine authentifizierte Verbindung herstellen.
+Authentifizierte Verbindungen sollten verwendet werden, wenn Sie zwischen Datensätzen aus vertrauenswürdigen und nicht vertrauenswürdigen Quellen unterscheiden müssen. Benutzende, die Informationen mit personenbezogenen Daten (PII) senden möchten, sollten beim Streaming von Informationen an Experience Platform eine authentifizierte Verbindung herstellen.
 
 Um eine authentifizierte Basisverbindung zu erstellen, müssen Sie den `authenticationRequired`-Parameter in Ihre Anfrage einbeziehen und seinen Wert als `true` angeben. In diesem Schritt können Sie auch eine Quell-ID für Ihre authentifizierte Basisverbindung angeben. Dieser Parameter ist optional und verwendet denselben Wert wie das `name`-Attribut, wenn er nicht angegeben wird.
 
@@ -290,7 +290,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 ## Erstellen einer Quellverbindung {#source}
 
-Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt und geben Sie dabei Ihre Basisverbindungs-ID an.
+Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt, während Sie Ihre Basisverbindungs-ID angeben.
 
 **API-Format**
 
@@ -332,7 +332,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellte
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -559,7 +559,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrem ne
 }
 ```
 
-## Daten posten, die in Platform aufgenommen werden sollen {#ingest-data}
+## In Experience Platform aufzunehmende Daten posten {#ingest-data}
 
 >[!NOTE]
 >
@@ -692,9 +692,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu den neu a
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, mit der Sie den Streaming-Endpunkt verwenden können, um Daten in Platform aufzunehmen. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie im Tutorial [Erstellen einer Streaming-Verbindung](../../../ui/create/streaming/http.md).
+In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, mit der Sie den Streaming-Endpunkt verwenden können, um Daten in Experience Platform aufzunehmen. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie im Tutorial [Erstellen einer Streaming-Verbindung](../../../ui/create/streaming/http.md).
 
-Um zu erfahren, wie Sie Daten an Platform streamen, lesen Sie entweder das Tutorial [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
+Um zu erfahren, wie Sie Daten an Experience Platform streamen, lesen Sie entweder das Tutorial [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Anhang
 

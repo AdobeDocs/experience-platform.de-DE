@@ -3,7 +3,7 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 79%
@@ -30,13 +30,13 @@ Die Registerkarte **[!UICONTROL Übersicht]** zeigt das Dashboard [!UICONTROL Zi
 
 ## [!UICONTROL Katalog] {#catalog}
 
-Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller in [!DNL Platform] verfügbaren Ziele angezeigt, an die Sie Daten senden können.
+Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller in [!DNL Experience Platform] verfügbaren Ziele angezeigt, an die Sie Daten senden können.
 
-Die [!DNL Platform]-Benutzeroberfläche bietet mehrere Such- und Filteroptionen auf der Zielkatalogseite:
+Die [!DNL Experience Platform]-Benutzeroberfläche bietet mehrere Such- und Filteroptionen auf der Zielkatalogseite:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
 * Filtern Sie Ziele mithilfe der Steuerung [!UICONTROL Kategorien].
-* Schalten Sie zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele] um. Wenn Sie **[!UICONTROL Alle Ziele]** auswählen, werden alle verfügbar [!DNL Platform]-Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]** auswählen, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Schalten Sie zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele] um. Wenn Sie **[!UICONTROL Alle Ziele]** auswählen, werden alle verfügbar [!DNL Experience Platform]-Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]** auswählen, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
 * Wählen Sie aus, die Typen von **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]** anzuzeigen. Um den Unterschied zwischen den beiden Kategorien zu verstehen, lesen Sie [Zieltypen und -kategorien](../destination-types.md).
 
 ![Zielkatalog mit einigen Werbe- und Cloud-Speicher-Zielen.](../assets/ui/workspace/catalog.png)

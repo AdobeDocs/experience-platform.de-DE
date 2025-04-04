@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Browser- und Sprachunterstützung für die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Adobe Experience Platform können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 33%
 
 ---
@@ -16,7 +16,7 @@ Die Benutzeroberfläche von Adobe Experience Platform wurde entwickelt, um mehre
 
 ## Browser-Unterstützung
 
-Die Platform-Benutzeroberfläche wurde für eine optimale Funktionsweise in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Browserversionen können Probleme auftreten.
+Die Benutzeroberfläche von Experience Platform wurde für eine optimale Funktionsweise in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Browserversionen können Probleme auftreten.
 
 | Betriebssystem | Unterstützte Browser |
 |---|---|
@@ -32,7 +32,7 @@ Die folgenden Betriebssysteme und Browser werden nicht unterstützt:
 
 ## Sprachunterstützung
 
-Die Platform-Benutzeroberfläche ist derzeit in den folgenden Sprachen verfügbar:
+Die Benutzeroberfläche von Experience Platform ist derzeit in den folgenden Sprachen verfügbar:
 
 * Englisch
 * Französisch
@@ -51,7 +51,7 @@ Die Standardsprache der Benutzeroberfläche wird durch die in Ihrem Benutzerprof
 
 Gehen Sie wie folgt vor, um Ihre Sprache zu ändern:
 
-1. Beim Experience Platform-Konto anmelden.
+1. Melden Sie sich bei Ihrem Experience Platform-Konto an.
 1. Drücken Sie `Ctrl + i`, um das Menü Kontoinformationen aufzurufen.
 1. Navigieren Sie zu **[!UICONTROL Bevorzugte Sprachen]**.
 1. Wählen Sie Ihre Voreinstellungen für die erste und zweite Sprache aus.

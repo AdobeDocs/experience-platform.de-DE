@@ -3,10 +3,10 @@ keywords: Experience Platform;Identität;Identity Service;Fehlerbehebung;Leitpla
 title: Leitplanken für Identity Service
 description: Dieses Dokument enthält Informationen zur Verwendung und zu den Ratenbeschränkungen für Identity Service-Daten, damit Sie die Verwendung des Identitätsdiagramms optimieren können.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
-ht-degree: 40%
+source-wordcount: '1586'
+ht-degree: 39%
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschr�
 
 Die folgenden Experience Platform-Dienste sind an der Modellierung von Identitätsdaten beteiligt:
 
-* [Identitäten](home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
+* [Identitäten](home.md): Bridge-Identitäten aus unterschiedlichen Datenquellen bei der Aufnahme in Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
 
 ## Datenmodellbeschränkungen
@@ -60,7 +60,7 @@ Ab dem 31. März 2023 blockiert Identity Service die Aufnahme der Adobe Analytic
 
 ## Performance-Garantien {#performance-guardrails}
 
-Identity Service überwacht eingehende Daten kontinuierlich, um eine hohe Leistung und Zuverlässigkeit in jedem Maßstab zu gewährleisten. Ein kurzer Zustrom von Erlebnisereignisdaten kann jedoch zu Leistungseinbußen und Latenzzeiten führen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich.
+Identity Service überwacht eingehende Daten kontinuierlich, um eine hohe Leistung und Zuverlässigkeit in jedem Maßstab zu gewährleisten. Ein kurzer Zustrom von Erlebnisereignisdaten kann jedoch zu Leistungseinbußen und Latenzzeiten führen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich.
 
 ## Verstehen der Löschlogik, wenn ein Identitätsdiagramm bei Kapazität aktualisiert wird {#deletion-logic}
 
@@ -108,7 +108,7 @@ Daten werden nur im Identity Service gelöscht, nicht jedoch im Echtzeit-Kundenp
 
 Wenn Sie Ihre authentifizierten Ereignisse gegen die CRMID beibehalten möchten, wird empfohlen, Ihre primären IDs von ECID zu CRMID zu ändern. Anweisungen zum Implementieren dieser Änderung finden Sie in den folgenden Dokumenten:
 
-* [Konfigurieren der Identitätszuordnung für das Experience Platform von Tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Konfigurieren der Identitätszuordnung für Experience Platform-Tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identitätsdaten in der Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Beispielszenarien
@@ -196,10 +196,10 @@ Weitere Informationen über [!DNL Identity Service] finden Sie in der folgenden 
 * [[!DNL Identity Service] – Übersicht](home.md)
 * [Identitätsdiagramm-Viewer](features/identity-graph-viewer.md)
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus den Produktbeschreibungsdokumenten von Real-Time CDP:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
-* [Real-time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

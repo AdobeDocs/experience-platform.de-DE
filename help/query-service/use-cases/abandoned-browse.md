@@ -3,9 +3,9 @@ keywords: Experience Platform;Abfrage-Service;Abfrage-Service;Abfrage
 title: Anwendungsbeispiel für Adobe Experience Platform Query Service
 description: Ein Beispiel, das die Vielseitigkeit und die Vorteile des Abfrage-Service von Adobe Experience Platform veranschaulicht.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## Beispiel für einen [!DNL Query Service]-Abbruch mit Adobe Analytics {#video-example}
 
-Die folgende Videopräsentation bietet einen ganzheitlichen Anwendungsfall für Ihre Experience Platform-Daten in der realen Welt, der sich auf [!DNL Query Service]- und Adobe-Analytics-Integrationen konzentriert.
+Die folgende Videopräsentation bietet einen ganzheitlichen Anwendungsfall für Ihre Experience Platform-Daten aus der Praxis, bei dem der Schwerpunkt auf der Integration von [!DNL Query Service] und Adobe Analytics liegt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ Die von [!DNL Query Service] bereitgestellten Funktionen dienen vielen Zwecken. 
 
 Indem Sie außerdem Logik in Ihre Abfrage aufnehmen, die alle wiederkehrenden oder statischen Bedingungen erfüllt, extrahiert [!DNL Query Service] den Aufwand für eine aufwändige Segmentierung.
 
-Adobe Experience Platform bietet ein Daten-Repository und die erforderlichen Tools, um Ihre Daten effizient und zuverlässig zu aktivieren. Da Daten in Platform gespeichert bleiben, können Sie Attribute ableiten, während Sie andere Prozesse ausführen, und Sie müssen keine Daten mehr zur Bearbeitung und Verarbeitung in Tools von Drittanbietern exportieren. Ein solcher Verarbeitungsaufwand kann sich erheblich auf die Zeitleiste eines Projekts auswirken, wenn Hunderte von Attributen oder Kampagnen verarbeitet werden. Dadurch erhalten Marketing-Fachleute einen zentralen Ort, an dem sie auf ihre Daten zugreifen und Kampagnen erstellen können, sowie eine sehr dynamische Möglichkeit, ihre Nachrichten zu segmentieren und zu personalisieren.
+Adobe Experience Platform bietet ein Daten-Repository und die erforderlichen Tools, um Ihre Daten effizient und zuverlässig zu aktivieren. Da Daten innerhalb von Experience Platform bleiben, können Sie Attribute ableiten, während Sie andere Prozesse ausführen, und es entfällt die Notwendigkeit, Daten zur Bearbeitung und Verarbeitung in Tools von Drittanbietern zu exportieren. Ein solcher Verarbeitungsaufwand kann sich erheblich auf die Zeitleiste eines Projekts auswirken, wenn Hunderte von Attributen oder Kampagnen verarbeitet werden. Dadurch erhalten Marketing-Fachleute einen zentralen Ort, an dem sie auf ihre Daten zugreifen und Kampagnen erstellen können, sowie eine sehr dynamische Möglichkeit, ihre Nachrichten zu segmentieren und zu personalisieren.
 
 ## Nächste Schritte
 

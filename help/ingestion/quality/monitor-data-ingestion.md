@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überwachen der Datenaufnahme
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 37%
@@ -13,7 +13,7 @@ ht-degree: 37%
 
 # Überwachen der Datenaufnahme
 
-Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie Ihre Daten mithilfe verschiedener Dateitypen (wie CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] aufnehmen können.
+Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie Ihre Daten mithilfe verschiedener Dateitypen (wie CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Experience Platform] aufnehmen können.
 
 Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 
@@ -30,9 +30,9 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 >
 >Um die Gesamtzahl der Ereignisse an einem bestimmten Datum zu berechnen, verwenden Sie den Ausdruck von `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Wählen Sie in der [](https://platform.adobe.com)Experience Platform-Benutzeroberfläche **[!UICONTROL im linken]** die Option „Monitoring“ und anschließend **[!UICONTROL Streaming End-to-End]** aus.
+Wählen Sie in der ](https://platform.adobe.com) von {0 **[!UICONTROL Experience Platform]** im linken Navigationsmenü die Option „Monitoring“ und dann **[!UICONTROL Streaming End-to-End]** aus.[
 
-Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der von [!DNL Platform] empfangenen Streaming-Ereignisse, ein Diagramm, das die Rate der von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfolgreich verarbeiteten Streaming-Ereignisse sowie eine detaillierte Liste der eingehenden Daten anzeigt.
+Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der von [!DNL Experience Platform] empfangenen Streaming-Ereignisse, ein Diagramm, das die Rate der von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfolgreich verarbeiteten Streaming-Ereignisse sowie eine detaillierte Liste der eingehenden Daten anzeigt.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

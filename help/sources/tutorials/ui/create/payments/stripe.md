@@ -1,16 +1,16 @@
 ---
-title: Nehmen Sie Zahlungsdaten von Ihrem Stripe-Konto über die Benutzeroberfläche auf Experience Platform auf.
-description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto über die Benutzeroberfläche auf Experience Platform aufnehmen.
+title: Nehmen Sie Zahlungsdaten aus Ihrem Stripe-Konto über die Benutzeroberfläche in Experience Platform auf.
+description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto mithilfe der Benutzeroberfläche in Experience Platform aufnehmen.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 17%
+source-wordcount: '1658'
+ht-degree: 16%
 
 ---
 
-# Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe]-Konto auf das Experience Platform über die Benutzeroberfläche
+# Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe]-Konto in Experience Platform über die Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie ]
 
 ## Verbinden Ihres [!DNL Stripe]-Kontos {#connect}
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter *Kategorie* Zahlungen“ die Option **[!DNL Stripe]** und dann **[!UICONTROL Einrichten]**.
 
@@ -43,7 +43,7 @@ Wählen Sie unter *Kategorie* Zahlungen“ die Option **[!DNL Stripe]** und dann
 
 ![Der Quellkatalog in der Experience Platform-Benutzeroberfläche mit ausgewählter Stripe-Quellkarte.](../../../../images/tutorials/create/stripe/catalog.png)
 
-Die **[!UICONTROL Connect Stripe-Konto]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die **[!UICONTROL Stripe-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 >[!BEGINTABS]
 
@@ -92,7 +92,7 @@ Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss 
 
 ### Datensatz-Details {#dataset-details}
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform erfasst werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
+Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
 >[!BEGINTABS]
 
@@ -135,13 +135,13 @@ Nachdem Ihr Datensatz konfiguriert wurde, müssen Sie Details zu Ihrem Datenflus
 | --- | --- |
 | Datenflussname | Der Name des Datenflusses.  Standardmäßig wird dabei der Name der zu importierenden Datei verwendet. |
 | Beschreibung | (Optional) Eine kurze Beschreibung Ihres Datenflusses. |
-| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise generieren, die Benutzende abonnieren können. Diese Optionen erfordern alle einen laufenden Datenfluss, um sie Trigger.  Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
+| Warnhinweise | Experience Platform kann ereignisbasierte Warnhinweise erstellen, die Benutzende abonnieren können. Diese Optionen erfordern alle einen laufenden Datenfluss, um sie Trigger.  Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../alerts.md) <ul><li>**Start der Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses beginnt.</li><li>**Erfolgreiche Ausführung des Quelldatenflusses**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn Ihr Datenfluss fehlerfrei endet.</li><li>**Fehler bei der Ausführung des Datenflusses an Quellen**: Wählen Sie diesen Warnhinweis aus, um eine Benachrichtigung zu erhalten, wenn die Ausführung des Datenflusses mit Fehlern endet.</li></ul> |
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ## Zuordnen von Feldern zu einem XDM-Schema {#mapping}
 
-Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt. Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie diese Daten in das Experience Platform aufnehmen. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-](../../../../../data-prep/ui/mapping.md)).
+Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt. Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie diese Daten in Experience Platform aufnehmen. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-](../../../../../data-prep/ui/mapping.md)).
 
 ![Die Zuordnungsschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -182,7 +182,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Zahlungsdaten aus Ihrer [!DNL Stripe] auf Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Zahlungsdaten aus Ihrer [!DNL Stripe] in Experience Platform zu übertragen. Weitere Ressourcen finden Sie in der unten beschriebenen Dokumentation.
 
 ### Überwachen Ihres Datenflusses
 

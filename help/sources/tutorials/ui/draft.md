@@ -2,10 +2,10 @@
 title: Entwurf von Datenflüssen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre Datenflüsse als Entwurf speichern und bei Verwendung des Arbeitsbereichs „Quellen“ zu einem späteren Zeitpunkt veröffentlichen können.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 7%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
@@ -19,11 +19,11 @@ In diesem Dokument wird beschrieben, wie Sie Ihre Datenflüsse speichern, wenn S
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
 ## Speichern eines Datenflusses als Entwurf
 
-Sie können den Fortschritt der Erstellung eines Datenflusses jederzeit anhalten, nachdem Sie die Daten ausgewählt haben, die Sie in Platform importieren möchten.
+Sie können den Fortschritt der Erstellung eines Datenflusses jederzeit anhalten, nachdem Sie die Daten ausgewählt haben, die Sie in Experience Platform importieren möchten.
 
 Wenn Sie beispielsweise Ihren Fortschritt während des Schritts „Datenflussdetails“ speichern möchten, wählen Sie **[!UICONTROL Als Entwurf speichern]**.
 

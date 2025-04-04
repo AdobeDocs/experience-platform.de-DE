@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
-ht-degree: 99%
+source-wordcount: '2168'
+ht-degree: 96%
 
 ---
 
 # Handbuch zur Fehlerbehebung bei Identity Service
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Identity Service] sowie eine Anleitung zur Behebung gängiger Fehler. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei [!DNL Platform]-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Identity Service] sowie eine Anleitung zur Behebung gängiger Fehler. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei [!DNL Experience Platform]-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
 
 Daten, die eine Identifizierung einzelner Kundinnen und Kunden erlauben, sind häufig auf die verschiedenen Geräte und Systeme verteilt, die Kundinnen und Kunden zur Interaktion mit Ihrer Marke verwenden. [!DNL Identity Service] sammelt diese fragmentierten Identitäten und fasst sie zusammen, um eine vollständige Übersicht über Kundenverhalten zu liefern, sodass Sie in Echtzeit für effektive digitale Erlebnisse sorgen können. Weiterführende Informationen finden Sie in der [Identity Service – Übersicht](./home.md).
 
@@ -89,7 +89,7 @@ Identitäten werden in API-Aufrufen entweder anhand ihrer zusammengesetzten Iden
 
 ## Wie geht Identity Service mit personenbezogenen Daten (PII) um?
 
-Identity Service verfügt über Standard-Namespaces, die die Aufnahme von Hash-Identitätswerten für Telefonnummern und E-Mail-Adressen unterstützen. Sie sind jedoch für das Hashing von Werten verantwortlich. Weitere Informationen zum Hashing von Daten, die in Platform aufgenommen werden, finden Sie im [[!DNL Data Prep] Handbuch zu Zuordnungsfunktionen](../data-prep/functions.md#hashing).
+Identity Service verfügt über Standard-Namespaces, die die Aufnahme von Hash-Identitätswerten für Telefonnummern und E-Mail-Adressen unterstützen. Sie sind jedoch für das Hashing von Werten verantwortlich. Weitere Informationen zum Hashing von Daten, die in Experience Platform aufgenommen werden, finden Sie im [[!DNL Data Prep] Handbuch zu Zuordnungsfunktionen](../data-prep/functions.md#hashing).
 
 ## Was gilt es beim Hashing von PII-basierten Identitäten zu beachten?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Warum kann ich nicht auf die Identitätsdiagramm-Seite oder APIs zugreifen?
 
-Ihr Platform-Admin muss Ihnen die `view-identity-graph`-Berechtigung gewähren, damit Sie Identitätsdiagrammdaten anzeigen können. Ohne diese Berechtigung erhalten Sie auf der Anzeigeseite für Identitätsdiagramme und beim Aufrufen von Platform-APIs eine Meldung, dass die Berechtigung verweigert wurde. Weitere Informationen zu Berechtigungen finden Sie in der [Übersicht zur Zugriffskontrolle](../access-control/home.md).
+Ihr Experience Platform-Administrator muss Ihnen die `view-identity-graph` Berechtigung gewähren, damit Sie Identitätsdiagrammdaten anzeigen können. Ohne diese Berechtigung erhalten Sie auf der Identitätsdiagramm-Viewer-Seite und beim Aufrufen von Experience Platform-APIs eine Meldung, dass die Berechtigung verweigert wurde. Weitere Informationen zu Berechtigungen finden Sie in der [Übersicht zur Zugriffskontrolle](../access-control/home.md).
 
 ## Fehlerbehebung
 
@@ -216,7 +216,7 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre Organisation nicht über die erfor
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit Sie [!DNL Platform]-APIs weiterverwenden können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit Sie [!DNL Experience Platform]-APIs weiterverwenden können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ### Token für Autorisierungsdienst ist ungültig.
 
@@ -228,7 +228,7 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit Sie [!DNL Platform]-APIs weiterverwenden können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit Sie [!DNL Experience Platform]-APIs weiterverwenden können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ### Anwender-Token weist keinen gültigen Produktkontext auf.
 
@@ -276,11 +276,11 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre Organisation nicht über die erfor
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn bei Ausführung eines [!DNL Platform]-Service-Aufrufs eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
+Dieser Fehler wird angezeigt, wenn bei Ausführung eines [!DNL Experience Platform]-Service-Aufrufs eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
 
 ## Fehler-Codes zur Batch-Erfassung
 
-[!DNL Identity Service] nimmt Identitätsdaten aus Datensatz- und Zeitreihendaten auf, die mithilfe einer Batch-Aufnahme in [!DNL Platform] hochgeladen werden. Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
+[!DNL Identity Service] nimmt Identitätsdaten aus Datensatz- und Zeitreihendaten auf, die mithilfe einer Batch-Aufnahme in [!DNL Experience Platform] hochgeladen werden. Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
 
 Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL Identity Service], die bei Verwendung der [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) auftreten können.
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei 
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche mithilfe von Datenvorbereitungsfunktionen CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 36%
+source-wordcount: '1474'
+ht-degree: 33%
 
 ---
 
@@ -16,14 +16,14 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.
 
 ## Erste Schritte
 
-Für dieses Tutorial werden Kenntnisse der folgenden Platform-Komponenten benötigt:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Experience Platform-Komponenten voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Customer-Experience-Daten von Platform strukturiert werden.
+* [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
 ## Zugriff auf die Zuordnungsschnittstelle in der Benutzeroberfläche
 

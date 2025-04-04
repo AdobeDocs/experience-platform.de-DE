@@ -2,10 +2,10 @@
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 36%
+source-wordcount: '880'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Mit Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesich
 
 ## Einrichten eines Zugriffsschlüssels für den Server {#access-key}
 
-Platform stellt mithilfe eines verschlüsselten Schlüssels eine Verbindung mit Ihrer SFTP-Site her. Es sind einige Schritte nötig, um dies korrekt einzurichten:
+Experience Platform stellt mithilfe eines verschlüsselten Schlüssels eine Verbindung zu Ihrer SFTP-Site her. Es sind einige Schritte nötig, um dies korrekt einzurichten:
 
 ### Erstellen eines Schlüsselpaars aus öffentlichem/privatem Schlüssel
 
@@ -35,7 +35,7 @@ Auf Ihrem SFTP-Server muss ein öffentliches/privates Schlüsselpaar installiert
 
 Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln [ öffentlichen Schlüsseln finden Sie ](../../../api/guides/encrypting-values.md) Abschnitt zum Verschlüsseln von Werten im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
 
-### Zulassungsliste Platform-IP-Adressen
+### Auf die Zulassungsliste setzen Experience Platforms-IP-Adressen
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels ver
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die innerhalb Ihrer Unternehmens-Firewall verwendet werden, damit Platform Ihren SFTP-Server erreichen und eine Verbindung zu ihm herstellen kann. Diese IP-Adressen lauten:
+Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die innerhalb Ihrer Unternehmens-Firewall verwendet werden, damit Experience Platform Ihren SFTP-Server erreichen und eine Verbindung zu ihm herstellen kann. Diese IP-Adressen lauten:
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Wählen Sie **[!UICONTROL Speichern]**, um den Host mit der ausgewählten Konfig
 
 ![Bild, das den zu speichernden SFTP-Host anzeigt](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die Möglichkeit getestet, die Dateien an Ihren SFTP-Server zu senden. Platform erstellt einen Ordner, schreibt eine Datei in diesen Ordner, prüft, ob die Datei dort vorhanden ist, und bereinigt sie anschließend selbst. Wenn das Benutzerkonto auf Ihrem SFTP-Server (das an das sichere Zertifikat angehängt ist, das Sie Platform bereitgestellt haben) nicht über die erforderlichen Berechtigungen zum Ausführen dieser Aktion verfügt, wechselt der Host in den Status „Fehlgeschlagen“.
+Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die Möglichkeit getestet, die Dateien an Ihren SFTP-Server zu senden. Experience Platform erstellt einen Ordner, schreibt eine Datei in diesen Ordner, prüft, ob die Datei dort vorhanden ist, und bereinigt sie anschließend selbst. Wenn das Benutzerkonto auf Ihrem SFTP-Server (das an das sichere Zertifikat angehängt ist, das Sie Experience Platform bereitgestellt haben) nicht über die erforderlichen Berechtigungen zum Ausführen dieser Aktion verfügt, wechselt der Host in den Status „Fehlgeschlagen“.
 
 ## Nächste Schritte
 

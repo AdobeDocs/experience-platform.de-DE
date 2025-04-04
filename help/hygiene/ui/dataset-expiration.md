@@ -2,9 +2,9 @@
 title: Automatisierte Datensatzgültigkeiten
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 49%
 
 ---
@@ -22,13 +22,13 @@ Der [[!UICONTROL Datenlebenszyklus]-Arbeitsbereich](./overview.md) in der Adobe 
 >
 >Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
 
-In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und automatisieren können.
+In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Experience Platform-Benutzeroberfläche planen und automatisieren können.
 
 >[!NOTE]
 >
 >Die Datensatzgültigkeit löscht derzeit keine Daten aus der Adobe Experience Platform Edge Network. Es ist jedoch nicht möglich, dass Daten nach Ablauf des Datensatzes innerhalb der Edge Network bleiben. Dies liegt daran, dass sich die 15-tägige Service-Lizenzvereinbarung für die Datensatzgültigkeit mit dem 14-tägigen Zeitraum überschneidet, in dem Daten innerhalb von Edge Network vorhanden sind, bevor sie verworfen werden.
 
-Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den [Datensatzgültigkeits-Endpunkt](../api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](../api/workorder.md). Sie können auch Datensatzgültigkeiten und [Löschungen von Datensätzen](./record-delete.md) über die Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
+Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den [Datensatzgültigkeits-Endpunkt](../api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](../api/workorder.md). Sie können auch Datensatzgültigkeiten und [Löschungen von Datensätzen](./record-delete.md) über die Experience Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
 
 >[!NOTE]
 >

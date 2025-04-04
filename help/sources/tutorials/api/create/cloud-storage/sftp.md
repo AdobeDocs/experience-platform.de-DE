@@ -2,10 +2,10 @@
 title: Erstellen einer SFTP-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 27%
+source-wordcount: '761'
+ht-degree: 14%
 
 ---
 
@@ -19,8 +19,8 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Lesen Sie [[!DNL SFTP] Authentifizierungshandbuch](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials), um ausführliche Schritte zum Abrufen Ihrer Authentifizierungsdaten zu erhalten.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -42,7 +42,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 >
 >Nach der Erstellung können Sie den Authentifizierungstyp einer [!DNL SFTP] Basisverbindung nicht mehr ändern. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Die [!DNL SFTP]-Quelle unterstützt sowohl die einfache Authentifizierung als auch die Authentifizierung über einen öffentlichen SSH-Schlüssel. In diesem Schritt können Sie auch den Pfad zu dem Unterordner festlegen, auf den Sie Zugriff gewähren möchten.
 
@@ -100,7 +100,7 @@ curl -X POST \
 | `auth.params.port` | Der Port des SFTP-Servers Der Standardwert für diese Ganzzahl ist 22. |
 | `auth.params.username` | Der Benutzername, der Ihrem SFTP-Server zugeordnet ist. |
 | `auth.params.password` | Das mit Ihrem SFTP-Server verknüpfte Kennwort. |
-| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
+| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Experience Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
 | `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
 | `auth.params.disableChunking` | Ein boolescher Wert, der bestimmt, ob der SFTP-Server die Unterteilung unterstützt oder nicht. |
 | `connectionSpec.id` | Die SFTP-Server-Verbindungsspezifikations-ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
@@ -162,7 +162,7 @@ curl -X POST \
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL SFTP]-Server zugeordnet ist. |
 | `auth.params.privateKeyContent` | Der mit Base64 kodierte Inhalt des privaten SSH-Schlüssels. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | `auth.params.passPhrase` | Die Passphrase oder das Passwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Passphrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
-| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
+| `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Experience Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
 | `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
 | `auth.params.disableChunking` | Ein boolescher Wert, der bestimmt, ob der SFTP-Server die Unterteilung unterstützt oder nicht. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL SFTP]-Server-Verbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |

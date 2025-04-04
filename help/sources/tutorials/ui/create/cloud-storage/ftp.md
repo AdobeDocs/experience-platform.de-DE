@@ -5,9 +5,9 @@ title: Erstellen einer FTP-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine FTP-Quellverbindung erstellen.
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '464'
 ht-degree: 31%
 
 ---
@@ -43,7 +43,7 @@ Um eine Verbindung zu FTP herzustellen, müssen Sie Werte für die folgenden Ver
 
 ## Herstellen einer Verbindung zu Ihrem FTP-Server
 
-Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um ein neues FTP-Konto für die Verbindung mit Platform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um ein neues FTP-Konto für die Verbindung mit Experience Platform zu erstellen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein eingehendes Konto erstellen können.
 
@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das FTP-Konto aus, mit dem Si
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem FTP-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in Platform zu übertragen](../../dataflow/batch/cloud-storage.md).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem FTP-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrem Cloud-Speicher in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md).

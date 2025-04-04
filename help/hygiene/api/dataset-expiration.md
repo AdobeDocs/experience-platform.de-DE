@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 51%
+source-wordcount: '1966'
+ht-degree: 50%
 
 ---
 
@@ -18,7 +18,7 @@ Eine Datensatzgültigkeit ist nur ein zeitverzögerter Löschvorgang. Der Datens
 
 >[!NOTE]
 >
->Obwohl die Löschung als spezifischer Zeitpunkt angegeben ist, kann es bis zu 24 Stunden nach Ablauf der Frist dauern, bevor die eigentliche Löschung eingeleitet wird. Nachdem der Löschvorgang gestartet wurde, kann es bis zu sieben Tage dauern, bis alle Spuren des Datensatzes aus Platform-Systemen entfernt wurden.
+>Obwohl die Löschung als spezifischer Zeitpunkt angegeben ist, kann es bis zu 24 Stunden nach Ablauf der Frist dauern, bevor die eigentliche Löschung eingeleitet wird. Nachdem der Löschvorgang gestartet wurde, kann es bis zu sieben Tage dauern, bis alle Spuren des Datensatzes aus Experience Platform-Systemen entfernt wurden.
 
 Sie können die Gültigkeit jederzeit abbrechen oder den Löschzeitpunkt ändern, solange der Datensatz-Löschvorgang noch nicht gestartet wurde. Nachdem Sie eine Datensatzgültigkeit abgebrochen haben, können Sie sie erneut starten, indem Sie ein neues Ablaufdatum festlegen.
 
@@ -28,7 +28,7 @@ Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als 
 >
 >Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
 
-Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den Datensatzgültigkeits-Endpunkt und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](./workorder.md). Sie können das Löschen von [Datensatzgültigkeiten](../ui/dataset-expiration.md) und [Datensätzen](../ui/record-delete.md) auch über die Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
+Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen über den Datensatzgültigkeits-Endpunkt und ID-Löschungen (Daten auf Zeilenebene) mithilfe primärer Identitäten über den [Arbeitsauftrags-Endpunkt](./workorder.md). Sie können das Löschen von [Datensatzgültigkeiten](../ui/dataset-expiration.md) und [Datensätzen](../ui/record-delete.md) auch über die Experience Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor 
 
 ## Auflisten der Datensatzgültigkeiten {#list}
 
-Sie können alle Datensatzgültigkeiten für Ihre Organisation auflisten, indem Sie eine GET-Anfrage stellen. Abfrageparameter können verwendet werden, um die Antwort nach geeigneten Ergebnissen zu filtern.
+Sie können alle Datensatzgültigkeiten für Ihr Unternehmen auflisten, indem Sie eine GET-Anfrage stellen. Abfrageparameter können verwendet werden, um die Antwort nach geeigneten Ergebnissen zu filtern.
 
 **API-Format**
 
@@ -202,7 +202,7 @@ Die folgende JSON-Datei enthält die gekürzte Antwort für die Details eines Da
 
 Um sicherzustellen, dass Daten nach einem bestimmten Zeitraum aus dem System entfernt werden, planen Sie eine Gültigkeit für einen bestimmten Datensatz, indem Sie die Datensatz-ID sowie das Ablaufdatum und die Ablaufzeit im ISO 8601-Format angeben.
 
-Um eine Datensatzgültigkeit zu erstellen, führen Sie eine POST-Anfrage durch (wie unten dargestellt) und geben Sie die unten genannten Werte in der Payload an.
+Um eine Datensatzgültigkeit zu erstellen, führen Sie eine POST-Anfrage durch (wie unten gezeigt) und geben Sie die unten genannten Werte in der Payload an.
 
 >[!NOTE]
 >

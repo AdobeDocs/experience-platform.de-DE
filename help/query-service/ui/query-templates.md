@@ -2,10 +2,10 @@
 title: Abfragevorlagen
 description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzenden wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Abfrage-Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 73%
+source-wordcount: '593'
+ht-degree: 63%
 
 ---
 
@@ -17,7 +17,7 @@ Dieses Dokument enthält die Informationen, die zum Erstellen von Abfragevorlage
 
 ## Voraussetzungen
 
-Die Berechtigung [!UICONTROL Abfragen verwalten] muss aktiviert sein, damit Sie auf den Abfrage-Editor zugreifen und das Abfrage-Dashboard in der Platform-Benutzeroberfläche anzeigen können. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Die Berechtigung [!UICONTROL Abfragen verwalten] muss aktiviert sein, damit Sie auf den Abfrage-Editor zugreifen und das Abfrage-Dashboard in der Experience Platform-Benutzeroberfläche anzeigen können. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## Abfragevorlage erstellen
 
@@ -33,7 +33,7 @@ In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor
 
 ## Abfragevorlagen durchsuchen {#browse}
 
-Wählen Sie im Arbeitsbereich „Abfragen“ der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]**, um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
+Wählen Sie im Arbeitsbereich „Abfragen“ der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]**, um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
 
 ![Der Arbeitsbereich „Abfragen“ mit hervorgehobener Registerkarte „Vorlagen“.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit der Abfrage-Servic
 
 >[!NOTE]
 >
->Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte „Abfrage-Service-Vorlagen“ der Platform-Benutzeroberfläche sichtbar.
+>Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte Abfrage-Service-Vorlagen der Experience Platform-Benutzeroberfläche sichtbar.
 
 ## Nächste Schritte
 

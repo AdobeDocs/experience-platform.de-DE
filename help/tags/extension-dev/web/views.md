@@ -2,10 +2,10 @@
 title: Ansichten in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 100%
+source-wordcount: '2063'
+ht-degree: 97%
 
 ---
 
@@ -148,9 +148,9 @@ Das `options`-Objekt sollte eine einzelne boolesche Eigenschaft namens `tokenize
 
 Wahrscheinlich enthalten Ihre Ansichten Formularfelder, in denen Benutzer Datenelemente nutzen möchten. Wenn Ihre Ansicht beispielsweise über ein Textfeld verfügt, in das der Benutzer einen Produktnamen eingeben soll, ist es unter Umständen nicht sinnvoll, einen hartcodierten Wert in das Feld einzugeben. Stattdessen sollte der Wert des Felds dynamisch sein (zur Laufzeit bestimmt) und dies lässt sich mithilfe eines Datenelements erreichen.
 
-Beispiel: Angenommen, wir erstellen eine Erweiterung, die einen Beacon sendet, um eine Konversion zu verfolgen. Nehmen wir weiter an, dass eines der Datenelemente, die unser Beacon sendet, ein Produktname ist. Unsere Erweiterungsansicht, die es dem Benutzer ermöglicht, den Beacon zu konfigurieren, würde wahrscheinlich ein Textfeld für den Produktnamen aufweisen. Es wäre meist nicht sinnvoll, wenn der Platform-Benutzer einen statischen Produktnamen wie „Calzone Oven XL“ eingeben würde, da der Produktname wahrscheinlich von der Seite abhängt, von der der Beacon gesendet wird. Dies ist ein guter Fall für ein Datenelement.
+Beispiel: Angenommen, wir erstellen eine Erweiterung, die einen Beacon sendet, um eine Konversion zu verfolgen. Nehmen wir weiter an, dass eines der Datenelemente, die unser Beacon sendet, ein Produktname ist. Unsere Erweiterungsansicht, die es dem Benutzer ermöglicht, den Beacon zu konfigurieren, würde wahrscheinlich ein Textfeld für den Produktnamen aufweisen. Normalerweise wäre es für den Experience Platform-Benutzer nicht sinnvoll, einen statischen Produktnamen wie „Calzone Oven XL“ einzugeben, da der Produktname wahrscheinlich von der Seite abhängt, von der der Beacon gesendet wird. Dies ist ein guter Fall für ein Datenelement.
 
-Wenn ein Benutzer das Datenelement mit dem Namen `productname` für den Produktnamenwert verwenden möchte, kann er den Namen des Datenelements in Prozentzeichen eingeschlossen (`%productname%`) eingeben. Wir bezeichnen den Namen des in Prozentzeichen eingeschlossenen Datenelements als „Datenelement-Token“. Platform-Benutzer sind oft mit diesem Konstrukt vertraut. Ihre Erweiterung speichert dann das Datenelement-Token in dem `settings`-Objekt, das sie exportiert. Ihr Einstellungsobjekt könnte dann wie folgt aussehen:
+Wenn ein Benutzer das Datenelement mit dem Namen `productname` für den Produktnamenwert verwenden möchte, kann er den Namen des Datenelements in Prozentzeichen eingeschlossen (`%productname%`) eingeben. Wir bezeichnen den Namen des in Prozentzeichen eingeschlossenen Datenelements als „Datenelement-Token“. Experience Platform-Benutzer sind oft mit diesem Konstrukt vertraut. Ihre Erweiterung speichert dann das Datenelement-Token in dem `settings`-Objekt, das sie exportiert. Ihr Einstellungsobjekt könnte dann wie folgt aussehen:
 
 ```js
 {

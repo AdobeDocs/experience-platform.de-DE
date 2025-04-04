@@ -3,9 +3,9 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) verbinden und pseudonyme Zielgruppen für diese Plattformen freigeben.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 46%
 
 ---
@@ -66,4 +66,4 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ## Herstellen einer Verbindung zu einem neuen Werbeziel {#connect-destination}
 
-Um Zielgruppen an Werbeziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen an Werbeziele für Ihre Kampagnen zu senden, muss Experience Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.

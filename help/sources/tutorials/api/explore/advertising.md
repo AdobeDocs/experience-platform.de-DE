@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erkunden eines Advertising-Systems mithilfe der Flow Service-API
 description: Flow Service wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können. In diesem Tutorial wird die Flow Service-API verwendet, um Werbesysteme zu erkunden.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 19%
+source-wordcount: '503'
+ht-degree: 15%
 
 ---
 
@@ -21,22 +21,22 @@ In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/exper
 
 >[!IMPORTANT]
 >
->Für dieses Tutorial benötigen Sie die eindeutige Basisverbindungs-ID für Ihre Werbequelle. Wenn Sie diese ID nicht haben, finden Sie im Tutorial zum [Verbinden einer Werbequelle mit Platform](../../api/create/advertising/ads.md) weitere Informationen.
+>Für dieses Tutorial benötigen Sie die eindeutige Basisverbindungs-ID für Ihre Werbequelle. Wenn Sie diese ID nicht haben, finden Sie weitere Informationen im Tutorial [Verbinden einer Werbequelle mit Experience Platform](../../api/create/advertising/ads.md).
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Werbesystem verbinden zu können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Datentabellen
 
-Mithilfe der Basisverbindung für Ihr Werbesystem können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
+Mithilfe der Basisverbindung für Ihr Werbesystem können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Experience Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort ist eine Reihe von Tabellen von bis zu Ihrem Werbesystem. Suchen Sie die Tabelle, die Sie in [!DNL Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort ist eine Reihe von Tabellen von bis zu Ihrem Werbesystem. Suchen Sie die Tabelle, die Sie in [!DNL Experience Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -96,9 +96,9 @@ Eine erfolgreiche Antwort ist eine Reihe von Tabellen von bis zu Ihrem Werbesyst
 ]
 ```
 
-## Inspect - die Tabellenstruktur
+## Überprüfen der Tabellenstruktur
 
-Um die Tabellenstruktur aus Ihrem Werbesystem zu überprüfen, führen Sie eine GET-Anfrage durch, während Sie den Pfad einer Tabelle als Abfrageparameter angeben.
+Um die Tabellenstruktur aus Ihrem Advertising-System zu überprüfen, führen Sie eine GET-Anfrage aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
 
 **API-Format**
 
@@ -170,4 +170,4 @@ Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu de
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Werbesystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] einbringen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Werbesystem zu erfassen und in Platform zu ](../collect/advertising.md).
+In diesem Tutorial haben Sie Ihr Werbesystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Werbesystem zu erfassen und in Experience Platform zu ](../collect/advertising.md).

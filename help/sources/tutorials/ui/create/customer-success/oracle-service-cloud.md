@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;or
 title: Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle Service Cloud-Quellverbindung erstellen.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 97%
+source-wordcount: '481'
+ht-degree: 90%
 
 ---
 
@@ -31,7 +31,7 @@ Wenn Sie bereits über eine gültige Oracle Service Cloud-Verbindung verfügen, 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr Oracle Service Cloud-Konto in [!DNL Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr Oracle Service Cloud-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ Weiterführende Informationen zur Authentifizierung Ihres Oracle Service Cloud-K
 
 ## Verbinden Ihres Oracle Service Cloud-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog]-Bildschirm zeigt eine Vielzahl von Quellen an, die zum Erstellen eines Kontos verwendet werden können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog]-Bildschirm zeigt eine Vielzahl von Quellen an, die zum Erstellen eines Kontos verwendet werden können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
@@ -67,4 +67,4 @@ Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** a
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem Oracle Service Cloud-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Customer Success-Daten in Platform zu importieren](../../dataflow/crm.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem Oracle Service Cloud-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Customer Success-Daten in Experience Platform zu importieren](../../dataflow/crm.md).

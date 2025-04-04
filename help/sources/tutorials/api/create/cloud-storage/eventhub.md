@@ -3,10 +3,10 @@ title: Erstellen einer Source-Verbindung mit Azure Event Hubs mithilfe der Flow 
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Azure Event Hubs-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 33%
+source-wordcount: '1496'
+ht-degree: 30%
 
 ---
 
@@ -14,18 +14,18 @@ ht-degree: 33%
 
 >[!IMPORTANT]
 >
->Die [!DNL Azure Event Hubs] ist im Quellkatalog für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die [!DNL Azure Event Hubs] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie [!DNL Azure Event Hubs] (im Folgenden als &quot;[!DNL Event Hubs]&quot; bezeichnet) mithilfe der -API [[!DNL Flow Service]  Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie [!DNL Azure Event Hubs] (im Folgenden als &quot;[!DNL Event Hubs]&quot; bezeichnet) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) mit Experience Platform verbinden.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Event Hubs] mithilfe der [!DNL Flow Service]-API erfolgreich mit Platform verbinden zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Event Hubs] mithilfe der [!DNL Flow Service]-API erfolgreich mit Experience Platform verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -79,9 +79,9 @@ Weitere Informationen zu [!DNL Azure Active Directory] finden Sie im [Azure-Hand
 
 Weitere Informationen zu diesen Werten finden Sie in [diesem Dokument zu Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB Standardauthentifizierung]
 
-POST Um ein Konto mit Standardauthentifizierung zu erstellen, stellen Sie eine Kontoanfrage an den `/connections`-Endpunkt, während Sie Werte für Ihre `sasKeyName`, `sasKey` und `namespace` angeben.
+Um ein Konto mit Standardauthentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Werte für Ihre `sasKeyName`, `sasKey` und `namespace` an.
 
 +++Anfrage
 
@@ -157,7 +157,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 >[!TAB SAS-Authentifizierung]
 
-POST Um ein Konto mit SAS-Authentifizierung zu erstellen, stellen Sie eine Kontoanfrage an den `/connections`-Endpunkt und geben Sie dabei Werte für Ihre `sasKeyName`, `sasKey`, `namespace` und `eventHubName` an.
+Um ein Konto mit SAS-Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Werte für Ihre `sasKeyName`, `sasKey`, `namespace` und `eventHubName` an.
 
 +++Anfrage
 

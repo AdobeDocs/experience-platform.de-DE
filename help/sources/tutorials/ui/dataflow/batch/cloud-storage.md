@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenfluss;Datenfluss
 title: Konfigurieren eines Datenflusses, um Batch-Daten aus einem Cloud-Speicher-Source in der Benutzeroberfläche aufzunehmen
 description: In diesem Tutorial erfahren Sie, wie Sie einen neuen Datenfluss konfigurieren, um Batch-Daten aus einer Cloud-Speicherquelle in der Benutzeroberfläche aufzunehmen
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1929'
 ht-degree: 29%
 
 ---
@@ -38,7 +38,7 @@ Cloud-Speicherquellen für Batch-Daten unterstützen die folgenden Dateiformate 
 
 ## Daten hinzufügen
 
-Nachdem Sie Ihr Cloud-Speicherkonto erstellt haben, wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der Ihnen eine Schnittstelle bietet, um Ihre Cloud-Speicherdateihierarchie zu untersuchen und den Ordner oder die spezifische Datei auszuwählen, die Sie in Platform importieren möchten.
+Nachdem Sie Ihr Cloud-Speicherkonto erstellt haben, wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, in dem Sie die Hierarchie Ihrer Cloud-Speicherdatei untersuchen und den Ordner oder die spezifische Datei auswählen können, die Sie nach Experience Platform übertragen möchten.
 
 * Der linke Teil der Benutzeroberfläche ist ein Verzeichnis-Browser, der die Hierarchie Ihrer Cloud-Speicherdatei anzeigt.
 * Im rechten Bereich der Benutzeroberfläche können Sie bis zu 100 Datenzeilen aus einem kompatiblen Ordner oder einer kompatiblen Datei in der Vorschau anzeigen.
@@ -83,7 +83,7 @@ Wählen [!UICONTROL  im Schritt ]Daten auswählen“ eine komprimierte Datei fü
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-Um eine bestimmte Datei in Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
+Um eine bestimmte Datei in Experience Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
 
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -127,7 +127,7 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -183,14 +183,14 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen, und Erkenntnisse zur Überwachung von Datensätzen gewonnen. Um mehr über das Erstellen von Datenflüssen zu erfahren, können Sie Ihr Wissen ergänzen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform] wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen, und insight bei der Überwachung von Datensätzen gewonnen. Um mehr über das Erstellen von Datenflüssen zu erfahren, können Sie Ihr Wissen ergänzen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Experience Platform] wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+> Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

@@ -5,9 +5,9 @@ title: Daten mit Notebooks analysieren
 type: Tutorial
 description: In diesem Tutorial wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen, sie erkunden und visualisieren können.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1730'
 ht-degree: 22%
 
 ---
@@ -26,7 +26,7 @@ Die folgenden Konzepte werden eingeführt:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in [!DNL Adobe Experience Platform] integriert.
 - **Batches:** Datensätze bestehen aus Batches. Ein Batch ist ein Satz von Daten, die über einen bestimmten Zeitraum gesammelt und als Einheit verarbeitet werden. Neue Batches werden erstellt, wenn Daten zu einem Datensatz hinzugefügt werden.
-- **Datenzugriffs-SDK (veraltet):** Die Datenzugriffs-SDK wird jetzt nicht mehr unterstützt. Bitte verwenden Sie das [[!DNL Platform SDK]](../authoring/platform-sdk.md).
+- **Datenzugriffs-SDK (veraltet):** Die Datenzugriffs-SDK wird jetzt nicht mehr unterstützt. Bitte verwenden Sie das [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md).
 
 ## Notebooks in Data Science Workspace erkunden
 
@@ -58,7 +58,7 @@ Das Rezept für Einzelhandelsumsätze ist ein eigenständiges Beispiel, das dens
 
 >[!NOTE]
 >
->Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren des [ finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK ](../authoring/platform-sdk.md) Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
+>Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren von [ finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK ](../authoring/platform-sdk.md) Experience Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
 
 Wir werden den internen Zugriff auf Daten von [!DNL Adobe Experience Platform] und den externen Zugriff auf Daten überprüfen. Wir verwenden die `data_access_sdk_python`-Bibliothek für den Zugriff auf interne Daten wie Datensätze und XDM-Schemata. Für externe Daten verwenden wir die [!DNL Python]-Bibliothek von Pandas.
 
@@ -96,7 +96,7 @@ Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias
 
 >[!TIP]
 >
->Informationen zum Konvertieren des Codes finden Sie im [[!DNL Platform SDK]](../authoring/platform-sdk.md).
+>Informationen zum Konvertieren des Codes finden Sie im [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md).
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

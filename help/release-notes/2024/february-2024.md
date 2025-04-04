@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2024
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 29%
+source-wordcount: '1248'
+ht-degree: 25%
 
 ---
 
@@ -24,7 +24,7 @@ Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 ## Warnhinweise {#alerts}
 
-Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -95,7 +95,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -109,13 +109,13 @@ Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../s
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Experience Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
 
 **Neue Funktion**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Konto-Zielgruppen | Account-Zielgruppen sind jetzt allgemein verfügbar! Sie können jetzt die Kontosegmentierung verwenden, um die volle Einfachheit und Komplexität des Marketing-Segmentierungs-Erlebnisses von personenbasierten Zielgruppen zu Account-basierten Zielgruppen in den B2B- und B2P-Editionen der Echtzeit-Kundenplattform zu bringen. In dieser Version können Sie personenbasierte Zielgruppen als Prädikat für kontobasierte Zielgruppen verwenden, Suchfunktionen hinzufügen, die Verwendung benutzerdefinierter Entitäten unterstützen und mit Data Governance konform sind. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/types/account-audiences.md). |
+| Konto-Zielgruppen | Account-Zielgruppen sind jetzt allgemein verfügbar! Sie können jetzt die Kontosegmentierung verwenden, um die volle Einfachheit und Komplexität des Marketing-Segmentierungserlebnisses von personenbasierten Zielgruppen zu Account-basierten Zielgruppen in den B2B- und B2P-Editionen von Real-time Customer Experience Platform zu bringen. In dieser Version können Sie personenbasierte Zielgruppen als Prädikat für kontobasierte Zielgruppen verwenden, Suchfunktionen hinzufügen, die Verwendung benutzerdefinierter Entitäten unterstützen und mit Data Governance konform sind. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

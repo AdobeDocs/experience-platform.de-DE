@@ -2,10 +2,10 @@
 title: Datensatzbeispiele
 description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, verringert jedoch die Abfragegenauigkeit. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die annähernde Abfrageverarbeitung verwalten können
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 96%
+source-wordcount: '633'
+ht-degree: 94%
 
 ---
 
@@ -31,7 +31,7 @@ Um die in diesem Dokument beschriebenen Funktionen zum Erstellen und Löschen vo
 
 >[!NOTE]
 >
->Sie müssen das Sitzungs-Flag jedes Mal aktivieren, wenn Sie sich bei Platform anmelden.
+>Sie müssen das Sitzungs-Flag jedes Mal aktivieren, wenn Sie sich bei Experience Platform anmelden.
 
 ![Der Abfrage-Editor mit dem hervorgehobenen Befehl &quot;SET aqp=true;&quot;.](../images/key-concepts/set-session-flag.png)
 

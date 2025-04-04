@@ -2,9 +2,9 @@
 title: Schemafeldgruppe „Media Analytics Interaction Details“
 description: Erfahren Sie mehr über die Schemafeldgruppe „MediaAnalytics Interaction Details“.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Sie können Felder ausblenden, die nicht von der Media Edge-API verwendet werden. Das Ausblenden dieser Felder erleichtert das Lesen und Verstehen des Schemas, es ist jedoch nicht erforderlich. Diese Felder beziehen sich nur auf die Felder in der Feldergruppe [!UICONTROL MediaAnalytics Interaction Details] . Um die Lesbarkeit in der Platform-Benutzeroberfläche zu verbessern, befolgen Sie die Anweisungen in der [Media Analytics-Dokumentation zum Ausblenden nicht verwendeter Felder](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>Sie können Felder ausblenden, die nicht von der Media Edge-API verwendet werden. Das Ausblenden dieser Felder erleichtert das Lesen und Verstehen des Schemas, es ist jedoch nicht erforderlich. Diese Felder beziehen sich nur auf die Felder in der Feldergruppe [!UICONTROL MediaAnalytics Interaction Details] . Um die Lesbarkeit in der Experience Platform-Benutzeroberfläche zu verbessern, folgen Sie den Anweisungen in der [Media Analytics-Dokumentation zum Ausblenden nicht verwendeter Felder](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
 
 <!-- 
 >[!NOTE]

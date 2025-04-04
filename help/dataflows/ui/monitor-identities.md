@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Überwachen von Identitäten;Überwachen von Datenflüssen;Datenflüsse;Identitäten;
-description: Adobe Experience Platform Identity Service bietet Ihnen einen umfassenden Überblick über Ihre Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend zusammenführen und so wirkungsvolle, persönliche digitale Erlebnisse in Echtzeit bereitstellen können. Dieses Tutorial enthält Anweisungen dazu, wie Sie Datenflüsse mit Identitäten mithilfe der Experience Platform-Benutzeroberfläche überwachen können.
+description: Adobe Experience Platform Identity Service bietet Ihnen einen umfassenden Überblick über Ihre Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend zusammenführen und so wirkungsvolle, persönliche digitale Erlebnisse in Echtzeit bereitstellen können. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Identitäten mithilfe der Benutzeroberfläche von Experience Platform überwachen können.
 title: Überwachen von Datenflüssen für Identitäten in der Benutzeroberfläche
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 15%
+source-wordcount: '1155'
+ht-degree: 14%
 
 ---
 
@@ -19,10 +19,10 @@ Das Monitoring-Dashboard bietet Ihnen eine visuelle Darstellung der Datenaktivit
 
 ## Erste Schritte {#getting-started}
 
-- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
+- [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 - [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Überwachen des Identitäten-Dashboards {#identity-metrics}
 
@@ -54,7 +54,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | Identitätsmetriken | Beschreibung |
 | ---------------- | ----------- |
 | **[!UICONTROL Empfangene Datensätze]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Platform aufgenommen wurden. |
+| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Experience Platform aufgenommen wurden. |
 | **[!UICONTROL Datensätze übersprungen]** | Die Anzahl der Datensätze, die aufgenommen, aber nicht in [!DNL Identity Service], weil es nur eine Kennung in der Datensatzzeile gab. |
 | **[!UICONTROL Aufgenommene Datensätze]** | Die Anzahl der Datensätze, die in [!DNL Identity Service] aufgenommen werden. |
 | **[!UICONTROL Identitäten hinzugefügt]** | Die Anzahl der neu zu [!DNL Identity Service] hinzugefügten Kennungen. |
@@ -78,7 +78,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | **[!UICONTROL Datensatz]** | Der Name des Datensatzes, in den der Datenfluss eingefügt wird. |
 | **[!UICONTROL Source-Name]** | Der Name der Quelle, zu der der Datenfluss gehört |
 | **[!UICONTROL Empfangene Datensätze]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Platform aufgenommen wurden. |
+| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Experience Platform aufgenommen wurden. |
 | **[!UICONTROL Datensätze übersprungen]** | Die Anzahl der Datensätze, die aufgenommen, aber nicht in [!DNL Identity Service], weil es nur eine Kennung in der Datensatzzeile gab. |
 | **[!UICONTROL Aufgenommene Datensätze]** | Die Anzahl der Datensätze, die in [!DNL Identity Service] aufgenommen werden. |
 | **[!UICONTROL Einträge insgesamt]** | Die Gesamtzahl aller Datensätze, einschließlich fehlgeschlagener, übersprungener, hinzugefügter Identitäten und duplizierter Datensätze. |
@@ -100,7 +100,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | Metrik | Beschreibung |
 | -------| ----------- |
 | **[!UICONTROL Empfangene Datensätze]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Platform aufgenommen wurden. |
+| **[!UICONTROL Datensätze fehlgeschlagen]** | Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in Experience Platform aufgenommen wurden. |
 | **[!UICONTROL Datensätze übersprungen]** | Die Anzahl der Datensätze, die aufgenommen, aber nicht in [!DNL Identity Service], weil es nur eine Kennung in der Datensatzzeile gab. |
 | **[!UICONTROL Aufgenommene Datensätze]** | Die Anzahl der Datensätze, die in [!DNL Identity Service] aufgenommen werden. |
 | **[!UICONTROL Identitäten hinzugefügt]** | Die Anzahl der neu zu [!DNL Identity Service] hinzugefügten Kennungen. |

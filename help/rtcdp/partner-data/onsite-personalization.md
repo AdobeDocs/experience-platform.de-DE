@@ -3,10 +3,10 @@ title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe 
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 89%
+source-wordcount: '2676'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Wenn Sie planen, von Partnern bereitgestellte Attribute zu verwenden, um Ihren a
 * In welchem Umfang sind Sie mit der Bereitstellung von Personalisierung in verschiedenen Kanälen und für verschiedene Anwendungsfälle, die auf probabilistisch abgeleiteten Datensätzen basieren, vertraut, im Vergleich zu deterministisch bestätigten Attributen?
 * Wie sollte sich das Erlebnis für vorauthentifizierte, aber erkannte Besucherinnen und Besucher bei der Authentifizierung ändern?
 
-### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
+### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
 Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Real-time Customer Data Platform und anderen Experience Cloud-Lösungen verwenden. Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/abac/overview.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
@@ -131,7 +131,7 @@ Verwenden Sie zunächst den Anwendungsumschalter in der rechten oberen Ecke des 
 
 Der Abschnitt **[!UICONTROL Datenerfassung]** der Benutzeroberfläche ähnelt dem unten stehenden Bild.
 
-![Der Abschnitt „Datenerfassung“ in der Platform-Benutzeroberfläche.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Datenerfassungsabschnitt der Experience Platform-Benutzeroberfläche.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Datenstrom erstellen
 
@@ -259,7 +259,7 @@ Jetzt können Sie Zielgruppen für die Personalisierung erstellen und aktivieren
 
 #### Erstellen einer Zielgruppe und Einrichten der Edge-Segmentierung
 
-Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um die Besucher Ihrer Website zu erfassen.
+Navigieren Sie in der Experience Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um die Besucher Ihrer Website zu erfassen.
 
 ![Ansicht der Navigation zu Audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

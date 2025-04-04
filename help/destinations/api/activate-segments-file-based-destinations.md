@@ -4,16 +4,16 @@ title: Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Ser
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 9%
 
 ---
 
 # Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API
 
-Verwenden Sie die erweiterten Dateiexportfunktionen, um beim Exportieren von Dateien vom Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
+Verwenden Sie die erweiterten Dateiexportfunktionen, um beim Exportieren von Dateien aus Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
@@ -51,9 +51,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen und Zielgruppen in [!DNL Adobe Experience Platform] generieren.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Daten für dateibasierte Ziele in Platform zu aktivieren.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Daten für dateibasierte Ziele in Experience Platform zu aktivieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 
@@ -67,13 +67,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Experience Platform-Authentifizierungs-Tutorial abschließen](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Tutorial zur Experience Platform-Authentifizierung abschließen](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Experience Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -326,7 +326,7 @@ Gehen Sie wie folgt vor, um einen Zielgruppenexport-Datenfluss zu einem Cloud-Sp
 
 ![Schritte zum Aktivieren von Zielgruppen mit Hervorhebung des aktuellen Schritts, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Nachdem Sie entschieden haben, an welches Ziel Sie Zielgruppen exportieren, müssen Sie eine Quellverbindung erstellen. Die [Quellverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) stellt die Verbindung zum internen [Experience Platform-Profilspeicher ](/help/profile/home.md#profile-data-store).
+Nachdem Sie entschieden haben, an welches Ziel Sie Zielgruppen exportieren, müssen Sie eine Quellverbindung erstellen. Die [Quellverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) stellt die Verbindung zum internen [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) dar.
 
 >[!BEGINSHADEBOX]
 
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort mit einem Beispielschema**
 
-Inspect : Die Antwort, die Sie durch den obigen Aufruf erhalten. Sie müssen einen Drilldown in die Antwort durchführen, um das Objekt `targetSpec.attributes.partnerSchema.jsonSchema` zu finden
+Überprüfen Sie die Antwort, die Sie beim obigen Aufruf erhalten haben. Sie müssen einen Drilldown in die Antwort durchführen, um das Objekt `targetSpec.attributes.partnerSchema.jsonSchema` zu finden
 
 +++ Antwort zum Abrufen des Partnerschemas für das Ausgabeschema
 
@@ -4817,11 +4817,11 @@ Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückge
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Zielgruppen zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
+In diesem Tutorial haben Sie Experience Platform erfolgreich mit einem Ihrer bevorzugten Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Zielgruppen zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

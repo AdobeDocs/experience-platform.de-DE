@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abrufen der Fehlerdiagnose für die Datenaufnahme
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Aufnahme, zur Verwaltung von Fehlern bei der partiellen Batch-Aufnahme sowie eine Referenz für Typen der partiellen Batch-Aufnahme.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 36%
@@ -13,7 +13,7 @@ ht-degree: 36%
 
 # Abrufen der Fehlerdiagnose für die Datenaufnahme
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie Daten mithilfe verschiedener Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Aufnahme verwenden, mit der Sie Daten mithilfe verschiedener Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Aufnahme, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Experience Platform] einfügen können.
 
 Dieses Dokument enthält Informationen zur Überwachung der Batch-Aufnahme, zur Verwaltung von Fehlern bei der partiellen Batch-Aufnahme sowie eine Referenz für Typen der partiellen Batch-Aufnahme.
 
@@ -30,23 +30,23 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zum [!DNL Schema Registry] gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Herunterladen der Fehlerdiagnose {#download-diagnostics}
 
-Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tage aufbewahrt.
+Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Experience Platform] bis zu 30 Tage aufbewahrt.
 
 ### Auflisten von Eingabedateien {#list-files}
 

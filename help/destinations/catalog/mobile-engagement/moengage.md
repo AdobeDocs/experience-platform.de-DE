@@ -3,7 +3,7 @@ title: Moengage-Verbindung
 description: Moengage ist eine Plattform zur Kundeninteraktion, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 35%
@@ -100,7 +100,7 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 Um Ihre Zielgruppendaten ordnungsgemäß von [!DNL Adobe Experience Platform] an das [!DNL Moengage] Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen.
 
-Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres [!DNL Experience Data Model] (XDM) in Ihrem [!DNL Platform]-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
+Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres [!DNL Experience Data Model] (XDM) in Ihrem [!DNL Experience Platform]-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 Um Ihre XDM-Felder den [!DNL Moengage]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
@@ -128,7 +128,7 @@ Wählen [!UICONTROL  im Abschnitt ]Zielfeld“ das Zuordnungssymbol rechts neben
 ![MoEngage-Zielgruppen-Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 Im Fenster [!UICONTROL Zielfeld auswählen] können Sie zwischen zwei Kategorien von Zielfeldern wählen:
-* [!UICONTROL Identity-Namespace auswählen]: Verwenden Sie diese Option, um [!DNL Platform] Identity-Namespaces [!DNL Moengage] Identity-Namespaces zuzuordnen.
+* [!UICONTROL Identity-Namespace auswählen]: Verwenden Sie diese Option, um [!DNL Experience Platform] Identity-Namespaces [!DNL Moengage] Identity-Namespaces zuzuordnen.
 * [!UICONTROL Benutzerdefinierte Attribute auswählen]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten [!DNL Moengage] zuzuordnen, die Sie in Ihrem [!DNL Moengage]-Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Moengage] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Moengage] zuordnen, wird das `Last_Name`-Attribut in [!DNL Moengage] erstellt, falls es noch nicht vorhanden ist, und ihm wird das `lastName` XDM-Attribut zugeordnet.
 
 ![MoEngage-Ziel-Zuordnungsfelder](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die Ereignisweiterleitung
-description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
+description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, mit der Sie mit der Experience Platform-Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 75%
+source-wordcount: '1190'
+ht-degree: 51%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 75%
 
 Mit der Ereignisweiterleitung in Adobe Experience Platform können Sie erfasste Ereignisdaten zur Server-seitigen Verarbeitung an ein Ziel senden. Die Ereignisweiterleitung reduziert den Umfang von Web-Seiten und Mobile Apps. Dabei wird das Adobe Experience Platform Edge-Netzwerk verwendet, um Aufgaben auszuführen, die normalerweise auf dem Client laufen. Ereignisweiterleitungsregeln werden auf ähnliche Weise wie Tags implementiert und können Daten transformieren und an neue Ziele senden. Anstatt diese Daten jedoch von einer Client-Anwendung wie einem Webbrowser zu senden, werden sie von den Servern von Adobe gesendet.
 
-Dieses Dokument bietet einen Überblick über die Ereignisweiterleitung in Platform.
+Dieses Dokument bietet einen allgemeinen Überblick über die Ereignisweiterleitung in Experience Platform.
 
 ![Ereignisweiterleitung im Datenerfassungs-Ökosystem.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Informationen dazu, wie die Ereignisweiterleitung in Platform in das Datenerfassungs-Ökosystem passt, finden Sie in der [Übersicht zur Datenerfassung](../../../collection/home.md).
+>Informationen dazu, wie die Ereignisweiterleitung in Experience Platform in das Datenerfassungs-Ökosystem passt, finden Sie unter [Datenerfassung - Übersicht](../../../collection/home.md).
 
 Die Ereignisweiterleitung in Kombination mit dem [Web SDK](/help/web-sdk/home.md) und dem [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=de) von Adobe Experience Platform bietet die folgenden Vorteile:
 
@@ -46,10 +46,10 @@ Die Ereignisweiterleitung in Kombination mit dem [Web SDK](/help/web-sdk/home.md
 
 In Bezug auf die Konfiguration verwendet die Ereignisweiterleitung viele Konzepte von Tags, z. B. [Regeln](../managing-resources/rules.md), [Datenelemente](../managing-resources/data-elements.md) und [Erweiterungen](../managing-resources/extensions/overview.md). Der Hauptunterschied zwischen den beiden kann wie folgt zusammengefasst werden:
 
-* Tags **sammeln** Ereignisdaten von einer Website oder nativen Mobile App und sendet sie an das Platform Edge Network.
-* Die Ereignisweiterleitung **sendet** eingehende Ereignisdaten vom Platform Edge Network an einen Endpunkt, der ein endgültiges Ziel darstellt, oder an einen Endpunkt, der Daten bereitstellt, mit denen Sie die ursprüngliche Payload anreichern können.
+* Tags **sammelt** Ereignisdaten von einer Website oder nativen Mobile App und sendet sie an Experience Platform Edge Network.
+* Die Ereignisweiterleitung **eingehende** von Experience Platform Edge Network an einen Endpunkt, der ein endgültiges Ziel darstellt, oder an einen Endpunkt, der Daten bereitstellt, mit denen Sie die ursprüngliche Payload anreichern können.
 
-Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt auf Ihrer Site oder in Ihrer nativen Mobile App erfassen, müssen bei der Ereignisweiterleitung Ereignisdaten über das Platform Edge Network gesendet werden, um an Ziele weitergeleitet zu werden. Mit anderen Worten: Sie müssen das Platform Web- oder Mobile-SDK in Ihre digitale Property implementieren (entweder über Tags oder mithilfe von Roh-Code), um die Ereignisweiterleitung verwenden zu können.
+Während Tags Ereignisdaten mithilfe der Experience Platform Web- und Mobile-SDKs direkt auf Ihrer Site oder in Ihrer nativen Mobile App erfassen, müssen bei der Ereignisweiterleitung Ereignisdaten über Experience Platform Edge Network gesendet werden, um an Ziele weitergeleitet zu werden. Mit anderen Worten: Sie müssen Experience Platform Web oder Mobile SDK in Ihrer digitalen Eigenschaft implementieren (entweder über Tags oder mit Rohcode), um die Ereignisweiterleitung zu verwenden.
 
 ### Properties {#properties}
 
@@ -61,7 +61,7 @@ Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Properties, die v
 
 ![Properties der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/properties.png)
 
-Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre Plattform auf. Sie unterscheiden nicht zwischen Web oder Mobile, da sie nur Daten verarbeiten, die vom Platform Edge Network empfangen werden, das selbst Ereignisdaten sowohl von Web- als auch von mobilen Plattformen empfangen kann.
+Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre Plattform auf. Sie unterscheiden nicht zwischen Web oder Mobile, da sie nur Daten verarbeiten, die von Experience Platform Edge Network empfangen werden, das selbst Ereignisdaten sowohl von Web- als auch von Mobilplattformen empfangen kann.
 
 ### Erweiterungen {#extensions}
 
@@ -75,11 +75,11 @@ Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Fu
 
 Die Typen der in der Ereignisweiterleitung verfügbaren Datenelemente sind auf den Katalog der kompatiblen [Erweiterungen](#extensions) beschränkt, die sie bereitstellen.
 
-Während die Datenelemente selbst in der Ereignisweiterleitung auf die gleiche Weise erstellt und konfiguriert werden wie Tags, gibt es einige wichtige Syntaxunterschiede bei der Referenzierung von Daten im Platform Edge Network.
+Während Datenelemente selbst in der Ereignisweiterleitung auf die gleiche Weise erstellt und konfiguriert werden wie Tags, gibt es einige wichtige Syntaxunterschiede bei der Referenzierung von Daten aus Experience Platform Edge Network.
 
-#### Referenzieren von Daten im Platform Edge Network {#data-element-path}
+#### Verweisen auf Daten aus Experience Platform Edge Network {#data-element-path}
 
-Um Daten im Platform Edge Network zu referenzieren, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Pfad]** für den Typ.
+Um auf Daten aus Experience Platform Edge Network zu verweisen, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Pfad]** für den Typ.
 
 Der Wert **[!UICONTROL Pfad]** für das Datenelement muss dem Muster `arc.event.{ELEMENT}` entsprechen (z. B.: `arc.event.xdm.web.webPageDetails.URL`). Dieser Pfad muss korrekt angegeben werden, damit Daten gesendet werden können.
 

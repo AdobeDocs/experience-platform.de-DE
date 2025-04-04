@@ -3,9 +3,9 @@ title: Intelligente Rückgewinnung
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3896'
 ht-degree: 4%
 
 ---
@@ -165,15 +165,15 @@ Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Kla
 
 +++Details zur Endbenutzer-ID (Feldergruppe)
 
-Die [Details zur Endbenutzer-](/help/xdm/field-groups/event/enduserids.md)) wird verwendet, um die Identitätsinformationen einer Person in mehreren Adobe-Anwendungen zu beschreiben.
+Die [Details zur Endbenutzer-](/help/xdm/field-groups/event/enduserids.md)) wird verwendet, um die Identitätsinformationen einer Person in mehreren Adobe-Programmen zu beschreiben.
 
 | Felder | Beschreibung |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
 | `endUserIDs._experience.emailid.id` | Endbenutzer-E-Mail-Adressen-ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud ID (MCID). Die ECID wird jetzt als Experience Cloud ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). Die ECID wird jetzt als Experience Cloud ID (ECID) bezeichnet. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Namespace-Code der Marketing Cloud-ID (MCID). |
 
 +++
@@ -205,7 +205,7 @@ External Source System Audit Attributes ist ein standardmäßiger Experience-Dat
 
 #### Offline-Transaktionsschema des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten, aus denen Ihre Kundenaktivität besteht und die auf Plattformen außerhalb Ihrer Website auftreten, zu strukturieren und zu referenzieren. Diese Daten werden normalerweise aus einem POS (oder einem ähnlichen System) in [!DNL Adobe Experience Platform] aufgenommen und meistens über eine API-Verbindung an Platform gestreamt. Sie dient als Referenz für die verschiedenen Offline-Konversionsereignisse, die zum Auslösen von Journey-Analysen, einer umfassenden Online- und Offline-Kundenanalyse, erweiterten Zielgruppenfunktionen und personalisiertem Messaging verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten, aus denen Ihre Kundenaktivität besteht und die auf Plattformen außerhalb Ihrer Website auftreten, zu strukturieren und zu referenzieren. Diese Daten werden normalerweise aus einem POS (oder einem ähnlichen System) in [!DNL Adobe Experience Platform] aufgenommen und meistens über eine API-Verbindung an Experience Platform gestreamt. Sie dient als Referenz für die verschiedenen Offline-Konversionsereignisse, die zum Auslösen von Journey-Analysen, einer umfassenden Online- und Offline-Kundenanalyse, erweiterten Zielgruppenfunktionen und personalisiertem Messaging verwendet werden.
 
 Das Offline-Transaktionsschema des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse dargestellt.
 
@@ -257,7 +257,7 @@ External Source System Audit Attributes ist ein standardmäßiger Experience-Dat
 
 +++
 
-#### Adobe des Web-Connector-Schemas
+#### Adobe Web Connector-Schema
 
 >[!NOTE]
 >
@@ -288,8 +288,8 @@ Die Feldergruppe [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/
 | `endUserIDs._experience.emailid.authenticatedState` | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
 | `endUserIDs._experience.emailid.id` | Endbenutzer-E-Mail-Adressen-ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-ID (MCID). Die ECID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Authentifizierungsstatus der Marketing Cloud ID (MCID). Die ECID wird jetzt als Experience Cloud ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). Die ECID wird jetzt als Experience Cloud ID (ECID) bezeichnet. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Namespace-Code der Marketing Cloud-ID (MCID). |
 
 +++
@@ -350,7 +350,7 @@ Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur
 
 Weitere Informationen zum direkten Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 
-Weitere Informationen zum Erstellen von Zielgruppen mithilfe von Platform-abgeleiteten Zielgruppendefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
+Weitere Informationen zum Erstellen von Zielgruppen mithilfe von aus Experience Platform abgeleiteten Zielgruppendefinitionen finden Sie im [Handbuch für die Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -444,7 +444,7 @@ Auf dieser Journey müssen keine Zielgruppen erstellt werden.
 
 Das Szenario zum Durchsuchen abgebrochener Produkte zielt auf das Durchsuchen abgebrochener Produkte sowohl auf der Website als auch in der mobilen App ab.<p>![Vom Kunden aufgegebenes Szenario zur Produktsuche Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Szenario zur Produktsuche durch Kunden aufgegeben Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-+++Ereignisse
++++Events
 
 Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -569,7 +569,7 @@ Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereigniss
 
 Das Szenario „Transaktionsabbruch“ zielt auf Produkte ab, die in den Warenkorb gelegt, aber noch nicht sowohl auf der Website als auch in der Mobile App gekauft wurden.<p>![Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht](../intelligent-re-engagement/images/abandoned-cart-journey.png "Szenario mit abgebrochenem Warenkorb - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-+++Ereignisse
++++Events
 
 Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -702,7 +702,7 @@ Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereigniss
 
 Das Szenario der Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die Mobile App getätigt werden.<p>![Kundenbestellungsbestätigungsszenario Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario mit Bestätigung von Kundenaufträgen - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-+++Ereignisse
++++Events
 
 Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -775,7 +775,7 @@ Sie können Zielgruppen für abgebrochene Produkte aktivieren und Zielgruppen f�
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Bezahlte Medien und Social Media](/help/destinations/catalog/social/overview.md)
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming-Ziel](/help/destinations/catalog/streaming/http-destination.md)
-   * [Benutzerdefiniertes Ziel, erstellt mithilfe der -Destination SDK.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates (benutzerdefiniertes [ mithilfe von Destination SDK erstellen](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [Benutzerdefiniertes Ziel, erstellt mithilfe von Destination SDK.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates (benutzerdefiniertes[ Ziel mit Destination SDK erstellen](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Nächste Schritte {#next-steps}
 

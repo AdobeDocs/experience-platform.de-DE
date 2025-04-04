@@ -3,36 +3,36 @@ Keywords: ECID;ecid
 title: Experience Cloud-ID-Service-Erweiterung
 description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 40%
+source-wordcount: '461'
+ht-degree: 38%
 
 ---
 
 # [!DNL Experience Cloud] ID-Service-Erweiterung {#adobe-ecid-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Diese Erweiterung implementiert den [!DNL Experience Cloud] ID-Service, der Besucher über alle [!DNL Experience Cloud] hinweg identifiziert.
 
 [!DNL Experience Cloud] ID-Service ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite [Experience Cloud ID Service-Erweiterung](../../../tags/extensions/client/id-service/overview.md) in der Tags-Dokumentation.
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe ECID-Erweiterung](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kundinnen und Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Experience Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
 So installieren Sie die [!DNL Experience Cloud] ID Service-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 

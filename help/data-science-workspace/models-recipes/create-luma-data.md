@@ -5,9 +5,9 @@ title: Erstellen der Luma-Web-Schemata und -Datensätze
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Demo-Tendenzmodell von Luma erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 ### Erstellen des Luma-Web-Datenschemas und Aufnehmen der Daten
 
-Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Platform verfügen, mit dem Ihr Modell trainiert und bewertet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
+Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

@@ -1,9 +1,10 @@
 ---
 title: Konfigurieren von AWS KMS für kundenverwaltete Schlüssel
 description: Erfahren Sie, wie Sie Amazon Web Services Key Management Service (KMS) für die Verwendung mit kundenverwalteten Schlüsseln in Adobe Experience Platform konfigurieren.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -12,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Dieses Dokument gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Dieses Dokument gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >[Vom Kunden verwaltete Schlüssel](../overview.md) (CMK) auf AWS werden für Privacy und Security Shield unterstützt, sind jedoch nicht für Healthcare Shield verfügbar. CMK wird auf Azure sowohl für Privacy und Security Shield als auch für Healthcare Shield unterstützt.
 
 Verwenden Sie dieses Handbuch, um Ihre Daten mit Amazon Web Services (AWS) Key Management Service (KMS) zu schützen, indem Sie Verschlüsselungsschlüssel für Adobe Experience Platform erstellen, verwalten und steuern. Diese Integration vereinfacht die Compliance, optimiert den Betrieb durch Automatisierung und macht die Pflege Ihrer eigenen Schlüsselverwaltungsinfrastruktur überflüssig.
 
-Informationen zu Customer Journey Analytics-spezifischen Anweisungen finden Sie in der Dokumentation zu [Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Spezifische Anweisungen für Customer Journey Analytics finden Sie in der Dokumentation zu [Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -36,7 +37,7 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der 
    - Geben Sie an, welche Aktionen Benutzenden erlaubt oder verweigert werden sollen.
    - Implementieren Sie eine differenzierte Zugriffssteuerung, indem Sie Berechtigungen mithilfe von IAM-Richtlinien zuweisen.
 Weitere Informationen finden [ in der offiziellen Dokumentation ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) IAM-Richtlinien für AWS KMS .
-- **Datensicherheit in Experience Platform**: Erfahren Sie, wie Platform die Datensicherheit gewährleistet und zur Verschlüsselung mit externen Services wie AWS KMS integriert. Platform schützt Daten mit HTTPS TLS v1.2 für die Übertragung, Cloud-Provider-Verschlüsselung im Ruhezustand, isolierten Speicher und anpassbare Authentifizierungs- und Verschlüsselungsoptionen. Weitere Informationen zur [ Ihrer Daten finden Sie unter ](../overview.md)Governance, Datenschutz und Sicherheit“ oder im Dokument [Datenverschlüsselung in Platform](../../encryption.md) .
+- **Datensicherheit in Experience Platform**: Erfahren Sie, wie Experience Platform die Datensicherheit gewährleistet und zur Verschlüsselung mit externen Services wie AWS KMS integriert. Experience Platform schützt Daten mit HTTPS TLS v1.2 für die Übertragung, Cloud-Anbieterverschlüsselung im Ruhezustand, isolierten Speicher und anpassbare Authentifizierungs- und Verschlüsselungsoptionen. Experience Platform Weitere Informationen zur [ Ihrer Daten finden Sie unter ](../overview.md)Governance, Datenschutz und Sicherheit“ oder im Dokument [Datenverschlüsselung in ](../../encryption.md)).
 - **AWS-Verwaltungskonsole**: Ein zentraler Hub, über den Sie von einem webbasierten Programm aus auf alle AWS-Services zugreifen und diese verwalten können. Verwenden Sie die Suchleiste, um schnell Tools zu finden, Benachrichtigungen zu überprüfen, Ihr Konto und Ihre Abrechnung zu verwalten und Ihre Einstellungen anzupassen. Weitere Informationen finden [ in der offiziellen Dokumentation ](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) AWS-Verwaltungskonsole .
 
 ## Erste Schritte {#get-started}
@@ -73,7 +74,7 @@ Um mit der Einrichtung und Verwaltung Ihres Verschlüsselungsschlüssels zu begi
 
 >[!IMPORTANT]
 >
->Sicherstellen der sicheren Speicherung, des Zugriffs und der Verfügbarkeit der Verschlüsselungsschlüssel Sie sind dafür verantwortlich, Ihre Schlüssel zu verwalten und Unterbrechungen des Platform-Betriebs zu verhindern.
+>Sicherstellen der sicheren Speicherung, des Zugriffs und der Verfügbarkeit der Verschlüsselungsschlüssel Sie sind dafür verantwortlich, Ihre Schlüssel zu verwalten und Unterbrechungen des Experience Platform-Betriebs zu verhindern.
 
 Wählen Sie im Arbeitsbereich [!DNL Key Management Service (KMS)] die Option **[!DNL Create a key]** aus.
 
@@ -95,7 +96,7 @@ Wählen Sie als Nächstes die [!DNL Regionality] aus, die den Regionsbereich des
 
 >[!IMPORTANT]
 >
->AWS erzwingt Regionsbeschränkungen für KMS-Schlüssel. Diese Regionsbeschränkung bedeutet, dass der Schlüssel in derselben Region wie Ihr Adobe-Konto liegen muss. Adobe kann nur auf KMS-Schlüssel zugreifen, die sich in der Region Ihres Kontos befinden. Stellen Sie sicher, dass die ausgewählte Region mit der Region Ihres Adobe-Einzelmandantenkontos übereinstimmt.
+>AWS erzwingt Regionsbeschränkungen für KMS-Schlüssel. Diese Regionsbeschränkung bedeutet, dass sich der Schlüssel in derselben Region wie Ihr Adobe-Konto befinden muss. Adobe kann nur auf KMS-Schlüssel zugreifen, die sich in der Region Ihres Kontos befinden. Stellen Sie sicher, dass die ausgewählte Region mit der Region Ihres Adobe-Einzelmandantenkontos übereinstimmt.
 
 ![Schritt 1 des Workflows „Schlüssel konfigurieren“ mit hervorgehobenen erweiterten Optionen &quot;AWS-Region“, „KMS“ und „Schlüssel für einzelne Region“.](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
@@ -103,7 +104,7 @@ Wählen Sie als Nächstes die [!DNL Regionality] aus, die den Regionsbereich des
 
 Die zweite, [!DNL Add labels] Phase des Workflows wird angezeigt. Hier konfigurieren Sie die Felder [!DNL Alias] und [!DNL Tags], um Ihren Verschlüsselungsschlüssel über die AWS KMS-Konsole zu verwalten und zu finden.
 
-Geben Sie im Eingabefeld **[!DNL Alias]** einen beschreibenden Titel für Ihren Schlüssel ein. Der Alias dient als benutzerfreundliche Kennung, mit der Sie den Schlüssel schnell über die Suchleiste in der AWS KMS-Konsole finden können. Um Verwirrung zu vermeiden, wählen Sie einen aussagekräftigen Namen, der den Zweck des Schlüssels widerspiegelt, z. B. &quot;Adobe-Platform-Key“ oder „Customer-Encryption-Key“. Sie können auch eine Beschreibung des Schlüssels einfügen, wenn der Schlüsselalias nicht ausreicht, um seinen Zweck zu beschreiben.
+Geben Sie im Eingabefeld **[!DNL Alias]** einen beschreibenden Titel für Ihren Schlüssel ein. Der Alias dient als benutzerfreundliche Kennung, mit der Sie den Schlüssel schnell über die Suchleiste in der AWS KMS-Konsole finden können. Um Verwirrung zu vermeiden, wählen Sie einen aussagekräftigen Namen aus, der den Zweck des Schlüssels widerspiegelt, z. B. &quot;Adobe-Experience-Platform-Key“ oder „Customer-Encryption-Key“. Sie können auch eine Beschreibung des Schlüssels einfügen, wenn der Schlüsselalias nicht ausreicht, um seinen Zweck zu beschreiben.
 
 Weisen Sie abschließend Ihrem Schlüssel Metadaten zu, indem Sie im Abschnitt [!DNL Tags] Schlüssel-Wert-Paare hinzufügen. Dieser Schritt ist optional, Sie sollten jedoch Tags hinzufügen, um AWS-Ressourcen zu kategorisieren und zu filtern und so die Verwaltung zu erleichtern. Wenn Ihr Unternehmen beispielsweise mehrere Adobe-bezogene Ressourcen verwendet, können Sie diese mit &quot;Adobe&quot; oder „Experience Platform“ taggen. Dieser zusätzliche Schritt erleichtert die Suche und Verwaltung aller zugehörigen Ressourcen in der Verwaltungskonsole von AWS. Wählen Sie **[!DNL Add tag]** aus, um den Prozess zu starten.
 
@@ -131,7 +132,7 @@ Wählen Sie **[!DNL Next]** aus, um den Workflow fortzusetzen.
 
 In Schritt 4 des Workflows können Sie Folgendes [!DNL Define key usage permissions]. Aktivieren Sie in der Liste **[!DNL Key users]** die Kontrollkästchen für alle IAM-Benutzer und -Rollen, für die Sie über die Berechtigung zur Verwendung dieses Schlüssels verfügen möchten.
 
-Aus dieser Ansicht können Sie auch [!DNL Add another AWS account]. Es wird jedoch dringend davon abgeraten, weitere AWS-Konten hinzuzufügen. Das Hinzufügen eines weiteren Kontos kann Risiken mit sich bringen und die Berechtigungsverwaltung für Verschlüsselungs- und Entschlüsselungsvorgänge verkomplizieren. Durch die Beibehaltung des Schlüssels, der mit einem einzigen AWS-Konto verknüpft ist, gewährleistet Adobe eine sichere Integration mit AWS KMS, minimiert Risiken und sorgt für einen zuverlässigen Betrieb.
+Aus dieser Ansicht können Sie auch [!DNL Add another AWS account]. Es wird jedoch dringend davon abgeraten, weitere AWS-Konten hinzuzufügen. Das Hinzufügen eines weiteren Kontos kann Risiken mit sich bringen und die Berechtigungsverwaltung für Verschlüsselungs- und Entschlüsselungsvorgänge verkomplizieren. Da der Schlüssel mit einem einzigen AWS-Konto verknüpft ist, stellt Adobe eine sichere Integration mit AWS KMS sicher, minimiert Risiken und sorgt für einen zuverlässigen Betrieb.
 
 Wählen Sie **[!DNL Next]** aus, um den Workflow fortzusetzen.
 

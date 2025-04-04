@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Datentyp „Einverständnis und Voreinstellungen“
 description: Der Datentyp Einverständnis für Datenschutz, Personalization und Marketing-Voreinstellungen unterstützt die Erfassung von Kundenberechtigungen und -einstellungen, die von Einverständnisverwaltungsplattformen (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert wurden.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2334'
 ht-degree: 1%
 
 ---
@@ -38,13 +38,13 @@ Eine Präferenz ist eine Option, mit der der Kunde angeben kann, wie verschieden
 * **Personalization-Voreinstellungen**: Voreinstellungen dafür, wie die Marke die einem Kunden bereitgestellten Erlebnisse personalisieren soll.
 * **Marketing-**: Voreinstellungen dazu, ob eine Marke über verschiedene Kanäle Kontakt mit einem Kunden aufnehmen darf.
 
-Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Platform-Benutzeroberfläche dargestellt wird:
+Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Experience Platform-Benutzeroberfläche dargestellt wird:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Platform](../ui/explore.md)Benutzeroberfläche finden Sie im Handbuch zu XDM-Ressourcen zu .
+>Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch ](../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
 
 Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTROL Einverständnis und Voreinstellungen]-Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung der einzelnen Felder finden Sie in den folgenden Abschnitten.
 

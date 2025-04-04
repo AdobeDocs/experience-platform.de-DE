@@ -5,10 +5,10 @@ title: Erstellen einer PayPal-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine PayPal-Quellverbindung erstellen.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 43%
+source-wordcount: '462'
+ht-degree: 38%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 43%
 >
 >Die [!DNL PayPal] wird Ende Juni 2025 eingestellt.
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL PayPal]-Quell-Connectors mithilfe der Platform-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL PayPal]-Quell-Connectors mithilfe der Benutzeroberfläche von Experience Platform.
 
 ## Erste Schritte
 
@@ -33,7 +33,7 @@ Wenn Sie bereits über eine gültige [!DNL PayPal]-Verbindung verfügen, können
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL PayPal] Platform-Konto zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL PayPal]-Konto Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Weiterführende Informationen zu den ersten Schritten finden Sie in diesem [[!DN
 
 ## Verbinden Ihres [!DNL PayPal]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PayPal]-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PayPal]-Konto mit Experience Platform zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -71,4 +71,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL PayPal] Konto, mit 
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL PayPal]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Zahlungsdaten in Platform zu importieren](../../dataflow/payments.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL PayPal]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Zahlungsdaten in Experience Platform zu importieren](../../dataflow/payments.md).

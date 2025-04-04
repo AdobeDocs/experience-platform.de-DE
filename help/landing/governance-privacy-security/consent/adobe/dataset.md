@@ -6,9 +6,9 @@ description: Erfahren Sie, wie Sie ein Experience-Datenmodell-Schema (XDM) und e
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1581'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Damit Adobe Experience Platform Ihre Einverständnis-/Präferenzdaten von Kunden verarbeiten kann, müssen diese Daten an einen Datensatz gesendet werden, dessen Schema Felder enthält, die mit Einverständnissen und anderen Berechtigungen in Verbindung stehen. Insbesondere muss dieser Datensatz auf der [!DNL XDM Individual Profile]-Klasse basieren und für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sein.
 
-In diesem Dokument werden die Schritte zum Konfigurieren eines Datensatzes für die Verarbeitung von Einverständnisdaten im Experience Platform beschrieben. Einen Überblick über den vollständigen Workflow für die Verarbeitung von Einverständnis-/Voreinstellungsdaten in Platform erhalten Sie im Abschnitt [Übersicht zur Einverständnisverarbeitung](./overview.md).
+In diesem Dokument werden die Schritte zum Konfigurieren eines Datensatzes für die Verarbeitung von Einverständnisdaten in Experience Platform beschrieben. Einen Überblick über den vollständigen Workflow für die Verarbeitung von Einverständnis-/Voreinstellungsdaten in Experience Platform finden Sie unter [Übersicht zur Einverständnisverarbeitung](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 >[!IMPORTANT]
 >
->In diesem Tutorial wird davon ausgegangen, dass Sie das [!DNL Profile] in Platform kennen, das Sie zum Erfassen von Kundenattributinformationen verwenden möchten. Unabhängig von der Methode, die Sie zum Erfassen von Einverständnisdaten verwenden, muss dieses Schema [für das Echtzeit-Kundenprofil aktiviert) ](../../../../xdm/ui/resources/schemas.md#profile). Darüber hinaus kann die primäre Identität des Schemas kein direkt identifizierbares Feld sein, das in interessenbasierter Werbung, wie z. B. einer E-Mail-Adresse, nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
+>In diesem Tutorial wird davon ausgegangen, dass Sie das [!DNL Profile] in Experience Platform kennen, das Sie zum Erfassen von Kundenattributinformationen verwenden möchten. Unabhängig von der Methode, die Sie zum Erfassen von Einverständnisdaten verwenden, muss dieses Schema [für das Echtzeit-Kundenprofil aktiviert) ](../../../../xdm/ui/resources/schemas.md#profile). Darüber hinaus kann die primäre Identität des Schemas kein direkt identifizierbares Feld sein, das in interessenbasierter Werbung, wie z. B. einer E-Mail-Adresse, nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
 
 ## [!UICONTROL Details zu Einverständnis und Voreinstellungen] Feldergruppenstruktur {#structure}
 
@@ -99,9 +99,9 @@ Die Feldergruppe stellt das Feld `consents` vom Typ „Objekt“ bereit, dessen 
 Um Einverständnisdaten mit dem Adobe-Standard zu erfassen, müssen Sie über ein profilaktiviertes Schema verfügen, das die folgenden beiden Feldergruppen enthält:
 
 * [[!UICONTROL Details zu Einverständnis und Voreinstellungen]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn Platform Web oder Mobile SDK zum Senden von Einverständnissignalen verwendet wird)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn Experience Platform Web oder Mobile SDK zum Senden von Einverständnissignalen verwendet werden)
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich die Option]** Schemata“ und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus, um eine Liste der vorhandenen Schemata anzuzeigen. Wählen Sie hier den Namen des [!DNL Profile] Schemas aus, dem Sie Einverständnisfelder hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden das Schema „Mitglieder des Treueprogramms“, das im [Tutorial zur Schemaerstellung](../../../../xdm/tutorials/create-schema-ui.md) erstellt wurde.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Schemata]** im linken Navigationsbereich und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste der vorhandenen Schemata anzuzeigen. Wählen Sie hier den Namen des [!DNL Profile] Schemas aus, dem Sie Einverständnisfelder hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden das Schema „Mitglieder des Treueprogramms“, das im [Tutorial zur Schemaerstellung](../../../../xdm/tutorials/create-schema-ui.md) erstellt wurde.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -129,7 +129,7 @@ Die Arbeitsfläche wird erneut angezeigt und zeigt an, dass die Felder `consents
 >
 >Wenn Sie ein neues Schema erstellen oder ein vorhandenes Schema bearbeiten, das nicht für das Profil aktiviert wurde, müssen Sie [Schema für das Profil aktivieren](../../../../xdm/ui/resources/schemas.md#profile) vor dem Speichern.
 
-Wenn das von Ihnen bearbeitete Schema von dem [!UICONTROL Profildatensatz) verwendet wird, ] in Ihrem Platform Web SDK-Datenstrom angegeben ist, enthält dieser Datensatz jetzt die neuen Einverständnisfelder. Sie können jetzt zum [Handbuch zur Einverständnisverarbeitung“ zurückkehren](./overview.md#merge-policies) um mit dem Konfigurieren von Experience Platform zur Verarbeitung von Einverständnisdaten fortzufahren. Wenn Sie keinen Datensatz für dieses Schema erstellt haben, befolgen Sie die Schritte im nächsten Abschnitt.
+Wenn das von Ihnen bearbeitete Schema von dem [!UICONTROL Profildatensatz) verwendet wird, ] in Ihrem Experience Platform Web SDK-Datenstrom angegeben ist, enthält dieser Datensatz jetzt die neuen Einverständnisfelder. Sie können jetzt zum [Handbuch zur Einverständnisverarbeitung“ zurückkehren, ](./overview.md#merge-policies) den Prozess der Konfiguration von Experience Platform zur Verarbeitung von Einverständnisdaten fortzusetzen. Wenn Sie keinen Datensatz für dieses Schema erstellt haben, befolgen Sie die Schritte im nächsten Abschnitt.
 
 ## Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema {#dataset}
 
@@ -161,13 +161,13 @@ Wählen Sie abschließend **[!UICONTROL Aktivieren]** im Bestätigungs-Pop-up au
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Der Datensatz ist jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, mit der Platform Web SDK Einverständnisdaten an Profile zu senden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] beim Einrichten Ihres [Datenstroms](../../../../datastreams/overview.md) auswählen.
+Der Datensatz ist jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, mit der Experience Platform Web SDK Einverständnisdaten an Profile zu senden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] beim Einrichten Ihres [Datenstroms](../../../../datastreams/overview.md) auswählen.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Einverständnisfelder zu einem [!DNL Profile] Schema hinzugefügt, dessen Datensatz zum Aufnehmen von Einverständnisdaten mithilfe der Platform Web SDK oder der direkten XDM-Aufnahme verwendet wird.
+In diesem Tutorial haben Sie Einverständnisfelder zu einem [!DNL Profile] Schema hinzugefügt, dessen Datensatz zum Aufnehmen von Einverständnisdaten mithilfe der Experience Platform Web SDK oder der direkten XDM-Aufnahme verwendet wird.
 
-Sie können jetzt zur [Übersicht über die Einverständnisverarbeitung) zurückkehren, ](./overview.md#merge-policies) mit der Konfiguration von Experience Platform zur Verarbeitung von Einverständnisdaten fortzufahren.
+Sie können jetzt zur Übersicht über die [ zurückkehren, ](./overview.md#merge-policies) Experience Platform weiterhin für die Verarbeitung von Einverständnisdaten zu konfigurieren.
 
 ## Anhang
 
@@ -179,7 +179,7 @@ Wenn Sie zusätzliche Einverständnissignale erfassen müssen, die nicht in der 
 
 >[!IMPORTANT]
 >
->Die Platform Web- und Mobile-SDKs unterstützen in ihren Befehlen zur Einverständnisänderung keine benutzerdefinierten Felder. Derzeit ist die einzige Möglichkeit, benutzerdefinierte Einverständnisfelder in Profile aufzunehmen, [Batch-Aufnahme](../../../../ingestion/batch-ingestion/overview.md) oder eine [Quellverbindung](../../../../sources/home.md).
+>Die Web- und Mobile-SDKs von Experience Platform unterstützen in ihren Einverständnisänderungsbefehlen keine benutzerdefinierten Felder. Derzeit ist die einzige Möglichkeit, benutzerdefinierte Einverständnisfelder in Profile aufzunehmen, [Batch-Aufnahme](../../../../ingestion/batch-ingestion/overview.md) oder eine [Quellverbindung](../../../../sources/home.md).
 
 Es wird dringend empfohlen, die Feldergruppe [!UICONTROL Einverständnis und Voreinstellungsdetails] als Grundlage für die Struktur Ihrer Einverständnisdaten zu verwenden und bei Bedarf zusätzliche Felder hinzuzufügen, anstatt zu versuchen, die gesamte Struktur von Grund auf neu zu erstellen.
 

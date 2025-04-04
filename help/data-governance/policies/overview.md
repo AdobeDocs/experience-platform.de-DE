@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datennutzungsrichtlinien – Übersicht
 description: Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Adobe Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 100%
+source-wordcount: '1213'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ Es sind zwei Richtlinientypen verfügbar:
 
 >[!NOTE]
 >
->Datennutzungsrichtlinien sind nicht mit [Zugriffskontrollrichtlinien](../../access-control/abac/end-to-end-guide.md#policy) zu verwechseln, die bestimmen, ob bestimmte Platform-Benutzende in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und werden über die Registerkarte [!UICONTROL Berechtigungen] konfiguriert.
+>Datennutzungsrichtlinien sind nicht mit [Zugriffssteuerungsrichtlinien“ zu verwechseln](../../access-control/abac/end-to-end-guide.md#policy) die bestimmen, ob bestimmte Experience Platform-Benutzende in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und werden über die Registerkarte [!UICONTROL Berechtigungen] konfiguriert.
 
 Dieses Dokument bietet eine allgemeine Übersicht über die Richtlinien zur Datennutzung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
@@ -57,7 +57,7 @@ Eine Liste der [von Adobe definierten verfügbaren Marketing-Aktionen](#core-act
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Datennutzungsrichtlinien verwalten {#manage}
@@ -70,7 +70,7 @@ Sobald die Datennutzungsbeschriftungen angewendet wurden, können Datenverwalter
 
 Eine schrittweise Anleitung zum Arbeiten mit Marketing-Aktionen und Datennutzungsrichtlinien in der API finden Sie im Tutorial [Erstellen und Auswerten von Datennutzungsrichtlinien](create.md). Weiterführende Informationen zum Ausführen der wichtigsten von der [!DNL Policy Service]-API unterstützten Vorgänge finden Sie im [Policy Service-Entwicklerhandbuch](../api/getting-started.md).
 
-Informationen zum Arbeiten mit Marketing-Aktionen und Richtlinien in der [!DNL Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch zu den Datennutzungsrichtlinien](./user-guide.md).
+Informationen zum Arbeiten mit Marketing-Aktionen und Richtlinien in der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch zu den Datennutzungsrichtlinien](./user-guide.md).
 
 ## Nächste Schritte
 
@@ -99,5 +99,5 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 | Exportieren an Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten von dort, wo sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. |
 | Onsite-Werbung | Eine Aktion, die Daten für Anzeigen auf Websites verwendet, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder in Programmen Ihres Unternehmens, oder zur Messung des Versands und der Effektivität solcher Anzeigen dient. |
 | Onsite-Personalisierung | Eine Aktion, die Daten zur Personalisierung von Inhalten in einer Website verwendet. Bei der Onsite-Personalisierung geht es um alle Daten, die verwendet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, und darum, auszuwählen, welche Inhalte oder Anzeigen auf der Grundlage dieser Rückschlüsse bereitgestellt werden. |
-| Segmentübereinstimmung | Eine Aktion, bei der Daten für die Adobe Experience Platform-Segmentübereinstimmung verwendet werden, wodurch zwei oder mehr Platform-Benutzende Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
+| Segmentübereinstimmung | Eine Aktion, bei der Daten für Adobe Experience Platform Segment Match verwendet werden, mit der zwei oder mehr Experience Platform-Benutzende Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
 | Personalisierung für eine einzelne Identität | Eine Aktion, bei der eine einzelne Identität zu Personalisierungszwecken verwendet werden muss, anstatt Identitäten aus mehreren Quellen identische Inhalte zu bieten. |

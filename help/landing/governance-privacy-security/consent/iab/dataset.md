@@ -6,9 +6,9 @@ description: In diesem Dokument werden die Schritte zum Einrichten der beiden er
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1680'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,9 @@ Insbesondere sind zwei Datensätze erforderlich, um TCF 2.0-Einverständnisdaten
 
 >[!IMPORTANT]
 >
->Platform erzwingt nur die TCF-Zeichenfolgen, die im Datensatz „Individuelles Profil“ erfasst sind. Während ein ExperienceEvent-Datensatz im Rahmen dieses Workflows weiterhin erforderlich ist, um einen Datenstrom zu erstellen, müssen Sie nur Daten in den Profildatensatz aufnehmen. Der ExperienceEvent-Datensatz kann weiterhin verwendet werden, wenn Sie Einverständnisänderungsereignisse im Laufe der Zeit verfolgen möchten, aber diese Werte werden beim Erzwingen der Segmentaktivierung nicht in verwendet.
+>Experience Platform erzwingt nur die TCF-Zeichenfolgen, die im Einzelprofildatensatz erfasst werden. Während ein ExperienceEvent-Datensatz im Rahmen dieses Workflows weiterhin erforderlich ist, um einen Datenstrom zu erstellen, müssen Sie nur Daten in den Profildatensatz aufnehmen. Der ExperienceEvent-Datensatz kann weiterhin verwendet werden, wenn Sie Einverständnisänderungsereignisse im Laufe der Zeit verfolgen möchten, aber diese Werte werden beim Erzwingen der Segmentaktivierung nicht in verwendet.
 
-In diesem Dokument werden die Schritte zum Einrichten dieser beiden Datensätze beschrieben. Einen Überblick über den gesamten Workflow zur Konfiguration der Platform-Datenvorgänge für TCF 2.0 erhalten Sie im Abschnitt [IAB TCF 2.0-Kompatibilitätsübersicht](./overview.md).
+In diesem Dokument werden die Schritte zum Einrichten dieser beiden Datensätze beschrieben. Einen Überblick über den gesamten Workflow zur Konfiguration Ihrer Experience Platform-Datenvorgänge für TCF 2.0 erhalten Sie im Abschnitt [IAB TCF 2.0-Kompatibilitätsübersicht](./overview.md).
 
 ## Voraussetzungen
 
@@ -62,9 +62,9 @@ Weitere Informationen zu [ Struktur und ](../../../../xdm/field-groups/event/iab
 
 Um Datensätze zu erstellen, die Einverständnisdaten erfassen, müssen Sie zunächst XDM-Schemata erstellen, auf denen diese Datensätze basieren.
 
-Wie im vorherigen Abschnitt erwähnt, ist ein Schema erforderlich, das die Klasse [!UICONTROL XDM Individual Profile] verwendet, um das Einverständnis in nachgelagerten Platform-Workflows zu erzwingen. Optional können Sie auch ein separates Schema auf der Grundlage von [!UICONTROL XDM ExperienceEvent] erstellen, wenn Sie Einverständnisänderungen im Laufe der Zeit verfolgen möchten. Beide Schemata müssen ein `identityMap` und eine entsprechende TCF 2.0-Feldergruppe enthalten.
+Wie im vorherigen Abschnitt erwähnt, ist ein Schema erforderlich, das die Klasse [!UICONTROL XDM Individual Profile] verwendet, um das Einverständnis in nachgelagerten Experience Platform-Workflows zu erzwingen. Optional können Sie auch ein separates Schema auf der Grundlage von [!UICONTROL XDM ExperienceEvent] erstellen, wenn Sie Einverständnisänderungen im Laufe der Zeit verfolgen möchten. Beide Schemata müssen ein `identityMap` und eine entsprechende TCF 2.0-Feldergruppe enthalten.
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich die Option]** Schemata“ aus, um den Arbeitsbereich [!UICONTROL Schemata] zu öffnen. Führen Sie von hier aus die Schritte in den folgenden Abschnitten aus, um jedes erforderliche Schema zu erstellen.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Schemata]** im linken Navigationsbereich aus, um den [!UICONTROL Schemata] zu öffnen. Führen Sie von hier aus die Schritte in den folgenden Abschnitten aus, um jedes erforderliche Schema zu erstellen.
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [
 
 #### Aktivieren des Schemas für die Verwendung in [!DNL Real-Time Customer Profile]
 
-Damit Platform die erhaltenen Einverständnisdaten mit bestimmten Kundenprofilen verknüpfen kann, muss das Einverständnisschema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sein.
+Damit Experience Platform die erhaltenen Einverständnisdaten mit bestimmten Kundenprofilen verknüpfen kann, muss das Einverständnisschema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sein.
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ In diesem Tutorial haben Sie mindestens einen Datensatz erstellt, der jetzt zur 
 * Ein datensatzbasierter Datensatz, der für die Verwendung im Echtzeit-Kundenprofil aktiviert ist. **(erforderlich)**
 * Ein zeitreihenbasierter Datensatz, der nicht für die [!DNL Profile] aktiviert ist. (Optional)
 
-Sie können jetzt zur Übersicht über [IAB TCF 2.0](./overview.md#merge-policies) zurückkehren, um mit der Konfiguration von Platform für die Einhaltung von TCF 2.0 fortzufahren.
+Sie können jetzt zur Übersicht über [IAB TCF 2.0](./overview.md#merge-policies) zurückkehren, um mit der Konfiguration von Experience Platform für die Einhaltung von TCF 2.0 fortzufahren.

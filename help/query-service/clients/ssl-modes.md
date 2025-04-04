@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage
 title: SSL-Optionen des Abfrage-Services
 description: Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zum Adobe Experience Platform Query Service und darüber, wie Sie eine Verbindung mit dem vollständigen SSL-Überprüfungsmodus herstellen.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ Zur Erhöhung der Sicherheit bietet Adobe Experience Platform [!DNL Query Servic
 
 ## Voraussetzungen
 
-In diesem Dokument wird davon ausgegangen, dass Sie bereits ein Desktop-Client-Programm eines Drittanbieters zur Verwendung mit Ihren Platform-Daten heruntergeladen haben. Spezifische Anweisungen zur Integration der SSL-Sicherheit bei der Verbindung mit einem Drittanbieter-Client finden Sie in der entsprechenden Dokumentation zum Verbindungshandbuch. Eine Liste aller [!DNL Query Service] unterstützten Clients finden Sie unter [Client-Verbindungen - Übersicht](./overview.md).
+In diesem Dokument wird davon ausgegangen, dass Sie bereits ein Desktop-Client-Programm eines Drittanbieters zur Verwendung mit Ihren Experience Platform-Daten heruntergeladen haben. Spezifische Anweisungen zur Integration der SSL-Sicherheit bei der Verbindung mit einem Drittanbieter-Client finden Sie in der entsprechenden Dokumentation zum Verbindungshandbuch. Eine Liste aller [!DNL Query Service] unterstützten Clients finden Sie unter [Client-Verbindungen - Übersicht](./overview.md).
 
 ## Verfügbare SSL-Optionen {#available-ssl-options}
 
-Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
+Experience Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
 
 Die verschiedenen `sslmode`-Parameterwerte bieten unterschiedliche Schutzebenen. Durch die Verschlüsselung Ihrer Daten in Bewegung mit SSL-Zertifikaten wird verhindert, dass „Man-in-the-Middle“ (MITM)-Angriffe, Abhören und Identitätswechsel stattfinden. Die nachstehende Tabelle enthält eine Aufschlüsselung der verschiedenen verfügbaren SSL-Modi und des Schutzniveaus, das sie bieten.
 
@@ -40,13 +40,13 @@ Die verschiedenen `sslmode`-Parameterwerte bieten unterschiedliche Schutzebenen.
 >
 >Der Unterschied zwischen `verify-ca` und `verify-full` hängt von der Richtlinie der Stammzertifikatbehörde (CA) ab. Wenn Sie Ihre eigene lokale Zertifizierungsstelle erstellt haben, um private Zertifikate für Ihre Programme auszustellen, bietet die Verwendung von `verify-ca` oft ausreichend Schutz. Bei Verwendung einer öffentlichen Zertifizierungsstelle ermöglicht `verify-ca` Verbindungen zu einem Server, der möglicherweise von einer anderen Person bei der Zertifizierungsstelle registriert wurde. `verify-full` sollte immer mit einer öffentlichen Stamm-CA verwendet werden.
 
-Beim Herstellen einer Drittanbieterverbindung zu einer Platform-Datenbank wird empfohlen, mindestens `sslmode=require` zu verwenden, um eine sichere Verbindung für Ihre bewegten Daten zu gewährleisten. Der `verify-full` SSL-Modus wird für die Verwendung in den meisten sicherheitsempfindlichen Umgebungen empfohlen.
+Beim Herstellen einer Drittanbieterverbindung zu einer Experience Platform-Datenbank wird empfohlen, mindestens `sslmode=require` zu verwenden, um eine sichere Verbindung für die bewegten Daten zu gewährleisten. Der `verify-full` SSL-Modus wird für die Verwendung in den meisten sicherheitsempfindlichen Umgebungen empfohlen.
 
 ## Einrichten eines Stammzertifikats für die Serverüberprüfung {#root-certificate}
 
 >[!IMPORTANT]
 >
->Die TLS/SSL-Zertifikate in Produktionsumgebungen für die interaktive Postgres-API des Abfrage-Services wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Obwohl dies eine jährliche Anforderung ist, hat sich in diesem Fall auch das Stammzertifikat in der Kette geändert, da die Zertifikatanbieter von Adobe TLS/SSL ihre Zertifikatshierarchie aktualisiert haben. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise müssen einem PSQL-CLI-Client die Stammzertifikate möglicherweise zu einer expliziten `~/postgresql/root.crt` hinzugefügt werden, da dies sonst zu einem Fehler führen kann. Beispiel: `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu [ Problem finden Sie in ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) offiziellen PostgreSQL-Dokumentation .<br>Das hinzuzufügende Stammzertifikat kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem heruntergeladen ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Die TLS/SSL-Zertifikate in Produktionsumgebungen für die interaktive Postgres-API des Abfrage-Services wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Dies ist zwar eine jährliche Anforderung, aber in diesem Fall hat sich auch das Stammzertifikat in der Kette geändert, da die TLS/SSL-Zertifikatanbieter von Adobe ihre Zertifikatshierarchie aktualisiert haben. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise müssen einem PSQL-CLI-Client die Stammzertifikate möglicherweise zu einer expliziten `~/postgresql/root.crt` hinzugefügt werden, da dies sonst zu einem Fehler führen kann. Beispiel: `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu [ Problem finden Sie in ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) offiziellen PostgreSQL-Dokumentation .<br>Das hinzuzufügende Stammzertifikat kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem heruntergeladen ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Um eine sichere Verbindung zu gewährleisten, muss die SSL-Nutzung sowohl auf dem Client als auch auf dem Server konfiguriert werden, bevor die Verbindung hergestellt wird. Wenn SSL nur auf dem Server konfiguriert ist, sendet der Client möglicherweise vertrauliche Informationen wie Passwörter, bevor festgestellt wird, dass der Server hohe Sicherheit erfordert.
 

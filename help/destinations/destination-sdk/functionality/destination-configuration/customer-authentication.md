@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 97%
+source-wordcount: '1103'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte In
 * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Bevor Kundinnen und Kunden Daten aus Platform in Ihr Ziel exportieren können, müssen sie eine neue Verbindung zwischen Experience Platform und Ihrem Ziel herstellen, indem sie die Schritte im Tutorial [Zielverbindung](../../../ui/connect-destination.md) befolgen.
+Bevor Kundinnen und Kunden Daten aus Experience Platform in Ihr Ziel exportieren können, müssen sie eine neue Verbindung zwischen Experience Platform und Ihrem Ziel herstellen, indem sie die Schritte im Tutorial [Zielverbindung](../../../ui/connect-destination.md) befolgen.
 
 Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md), wird im Abschnitt `customerAuthenticationConfigurations` definiert, was Kundinnen und Kunden im [Authentifizierungsbildschirm](../../../ui/connect-destination.md#authenticate) sehen. Abhängig vom Zielauthentifizierungstyp müssen Kundinnen und Kunden verschiedene Authentifizierungsdetails angeben, z. B.:
 
@@ -39,7 +39,7 @@ In diesem Artikel werden alle unterstützten Konfigurationen für die Kundenauth
 
 >[!IMPORTANT]
 >
->Für die Konfiguration der Kundenauthentifizierung müssen Sie keine Parameter konfigurieren. Sie können die auf dieser Seite angezeigten Snippets kopieren und in Ihre API-Aufrufe einfügen, wenn Sie eine Zielkonfiguration [erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md) oder [aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md), und Ihren Benutzerinnen und Benutzern wird der entsprechende Authentifizierungsbildschirm in der Platform-Benutzeroberfläche angezeigt.
+>Für die Konfiguration der Kundenauthentifizierung müssen Sie keine Parameter konfigurieren. Sie können die auf dieser Seite angezeigten Snippets kopieren und in Ihre API-Aufrufe einfügen, wenn Sie eine Zielkonfiguration [erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md) oder [aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md) und Ihren Benutzerinnen und Benutzern der entsprechende Authentifizierungsbildschirm in der Experience Platform-Benutzeroberfläche angezeigt wird.
 
 >[!IMPORTANT]
 >

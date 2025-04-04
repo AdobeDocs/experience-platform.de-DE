@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Gepacktes Rezept importieren;Data Science Workspace;beliebte Themen;Rezepte;Benutzeroberfläche;Engine erstellen
+keywords: Experience Platform;Gepacktes Rezept importieren;Datenwissenschafts-Workspace;beliebte Themen;Rezepte;Benutzeroberfläche;Engine erstellen
 solution: Experience Platform
 title: Importieren eines gepackten Rezepts in die Data Science Workspace-Benutzeroberfläche
 type: Tutorial
 description: Dieses Tutorial bietet Einblicke in das Konfigurieren und Importieren eines gepackten Rezepts mit dem bereitgestellten Beispiel für Einzelhandelsumsätze. Nach Abschluss dieses Tutorials können Sie ein Modell in Adobe Experience Platform Data Science Workspace erstellen, trainieren und auswerten.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 32%
@@ -128,7 +128,7 @@ Für die Zwecke dieses Tutorials können Sie die Standardkonfigurationsdateien f
 
 ### Docker-basiertes Rezept importieren - [!DNL Python] {#python}
 
-Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
+Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Experience Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -162,7 +162,7 @@ Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, w
 
 ### Docker-basiertes Rezept importieren - R {#r}
 
-Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
+Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Experience Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -196,7 +196,7 @@ Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, w
 
 ### Docker-basiertes Rezept importieren - PySpark {#pyspark}
 
-Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
+Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Experience Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -232,7 +232,7 @@ Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, w
 
 ### Docker-basiertes Rezept importieren - Scala {#scala}
 
-Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
+Navigieren Sie zunächst zu und wählen **[!UICONTROL Workflows]** oben links in der [!DNL Experience Platform]-Benutzeroberfläche aus. Wählen Sie als Nächstes **Rezept importieren** und wählen Sie **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -268,7 +268,7 @@ Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, w
 
 ## Nächste Schritte {#next-steps}
 
-Dieses Tutorial bietet Einblicke in die Konfiguration und den Import eines Rezepts in [!DNL Data Science Workspace]. Jetzt können Sie mit dem neu erstellten Rezept ein Modell erstellen, trainieren und auswerten.
+In diesem Tutorial wurde insight über das Konfigurieren und Importieren eines Rezepts in [!DNL Data Science Workspace] informiert. Jetzt können Sie mit dem neu erstellten Rezept ein Modell erstellen, trainieren und auswerten.
 
 - [Trainieren und Auswerten eines Modells in der Benutzeroberfläche](./train-evaluate-model-ui.md)
 - [Trainieren und Auswerten eines Modells mithilfe der API](./train-evaluate-model-api.md)

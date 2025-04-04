@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Einblicke;Kunden-KI;beliebte Themen;Kunden-KI-Segmente
+keywords: Experience Platform;Insights;Kunden-KI;beliebte Themen;Kunden-KI-Segmente
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Erstellen von Kundensegmenten mit prognostizierten Scores
 description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt finden Sie Schritte zum Erstellen von Segmenten mit Segment Builder.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 75%
+source-wordcount: '319'
+ht-degree: 70%
 
 ---
 
@@ -20,7 +20,7 @@ Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profi
 >
 >Um diese Methode verwenden zu können, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert sein.
 
-Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Segmente]** und dann auf **[!UICONTROL Segment erstellen]**.
+Klicken Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Segmente]** im linken Navigationsbereich und klicken Sie dann auf **[!UICONTROL Segment erstellen]**.
 
 ![](../images/user-guide/segments_new.png)
 

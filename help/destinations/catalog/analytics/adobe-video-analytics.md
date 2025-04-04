@@ -1,30 +1,30 @@
 ---
 keywords: Media Analytics-Erweiterung;Media Analytics;Audio- und Videoerweiterung
 title: Adobe Media Analytics für Audio und Video-Erweiterung
-description: Die Erweiterung von Adobe Medien Analytics für Audio und Video ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Adobe Media Analytics for Audio and Video-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 60%
+source-wordcount: '500'
+ht-degree: 55%
 
 ---
 
 # Adobe Media Analytics für Audio und Video-Erweiterung {#adobe-analytics-for-video-extension}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Adobe Media Analytics für Audio und Video ist ein Add-on zum Analytics-Basisangebot, mit dem Kunden zuverlässige Messwerte für Video, Audio und Werbung erhalten.
 
-Adobe Medien Analytics for Audio and Video ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
+Adobe Media Analytics for Audio and Video ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
 ![Adobe Media Analytics für Audio und Video-Erweiterung](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
 Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 Installieren der Adobe Analytics für Video-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Experience Platform Wechseln Sie in der ](https://platform.adobe.com/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Adobe Medien Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Erweiterung von Analytics für Audio und Video ](../../../tags/extensions/client/media-analytics/overview.md) der Tags-Dokumentation.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Erweiterung von Adobe Media Analytics für Audio und Video](../../../tags/extensions/client/media-analytics/overview.md) in der Tags-Dokumentation.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 

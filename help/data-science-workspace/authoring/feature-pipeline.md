@@ -4,7 +4,7 @@ title: Erstellen einer Feature Pipeline mit dem Model Authoring SDK
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework-Laufzeit Feature Engineering im benötigten Umfang durchzuführen. In diesem Dokument werden die verschiedenen Klassen beschrieben, die in einer Funktions-Pipeline zu finden sind, und eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Funktions-Pipeline mithilfe der Modellerstellungs-SDK in PySpark bereitgestellt.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 27%
@@ -45,7 +45,7 @@ Um ein Rezept in einer beliebigen Organisation auszuführen, ist Folgendes erfor
 - Ein umgewandeltes Schema und ein leerer Datensatz, der auf diesem Schema basiert.
 - Ein Ausgabeschema und ein leerer Datensatz basierend auf diesem Schema.
 
-Alle oben genannten Datensätze müssen in die [!DNL Platform]-Benutzeroberfläche hochgeladen werden. Verwenden Sie dazu das von der Adobe bereitgestellte [Bootstrap-Skript](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+Alle oben genannten Datensätze müssen in die [!DNL Experience Platform]-Benutzeroberfläche hochgeladen werden. Verwenden Sie dazu das von Adobe bereitgestellte [Bootstrap-Skript](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Feature Pipeline-Klassen
 
@@ -113,7 +113,7 @@ Ein ausführlicheres Konfigurationsbeispiel finden Sie in [ Datei ](https://gith
 
 DataLoader ist für das Abrufen und Filtern von Eingabedaten zuständig. Ihre Implementierung von DataLoader muss die abstrakte Klasse `DataLoader` erweitern und die abstrakte Methode `load` überschreiben.
 
-Im folgenden Beispiel wird ein [!DNL Platform] Datensatz nach ID abgerufen und als DataFrame zurückgegeben, wobei die Datensatz-ID (`dataset_id`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
+Im folgenden Beispiel wird ein [!DNL Experience Platform] Datensatz nach ID abgerufen und als DataFrame zurückgegeben, wobei die Datensatz-ID (`dataset_id`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
 
 **PySpark-Beispiel**
 
@@ -291,7 +291,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 Der DataSaver ist für die Speicherung Ihrer resultierenden Funktionsdatensätze an einem Speicherort verantwortlich. Ihre Implementierung von DataSaver muss die abstrakte Klasse `DataSaver` erweitern und die abstrakte Methode `save` überschreiben.
 
-Im folgenden Beispiel wird die DataSaver-Klasse erweitert, die Daten nach ID in einem [!DNL Platform] Datensatz speichert, wobei die Datensatz-ID (`featureDatasetId`) und die Mandanten-ID (`tenantId`) in der Konfiguration definierte Eigenschaften sind.
+Im folgenden Beispiel wird die DataSaver-Klasse erweitert, die Daten nach ID in einem [!DNL Experience Platform] Datensatz speichert, wobei die Datensatz-ID (`featureDatasetId`) und die Mandanten-ID (`tenantId`) in der Konfiguration definierte Eigenschaften sind.
 
 **PySpark-Beispiel**
 
@@ -404,25 +404,25 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Erstellen einer Feature Pipeline Engine {#create-engine-api}
 
-Sobald Sie über den Speicherort Ihres Docker-Images verfügen, können Sie [Feature Pipeline Engine erstellen](../api/engines.md#feature-pipeline-docker) indem Sie die [!DNL Sensei Machine Learning]-API verwenden und eine POST zum `/engines` durchführen. Wenn Sie eine Feature Pipeline Engine erfolgreich erstellen, erhalten Sie eine eindeutige Engine-Kennung (`id`). Stellen Sie sicher, dass Sie diesen Wert speichern, bevor Sie fortfahren.
+Sobald Sie über den Speicherort Ihres Docker-Images verfügen, können Sie [Feature-Pipeline-Engine erstellen](../api/engines.md#feature-pipeline-docker) indem Sie mit der [!DNL Sensei Machine Learning]-API einen POST-Test an `/engines` durchführen. Wenn Sie eine Feature Pipeline Engine erfolgreich erstellen, erhalten Sie eine eindeutige Engine-Kennung (`id`). Stellen Sie sicher, dass Sie diesen Wert speichern, bevor Sie fortfahren.
 
 ### Erstellen einer MLInstance {#create-mlinstance}
 
-Mithilfe Ihrer neu erstellten `engineID` müssen Sie [MLIstance erstellen](../api/mlinstances.md#create-an-mlinstance) indem Sie eine POST-Anfrage an den `/mlInstance`-Endpunkt stellen. Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten MLInstance einschließlich der im nächsten API-Aufruf verwendeten eindeutigen Kennung (`id`) enthält.
+Mithilfe Ihrer neu erstellten `engineID` müssen Sie [MLIstance erstellen](../api/mlinstances.md#create-an-mlinstance) indem Sie eine POST-Anfrage an den `/mlInstance`-Endpunkt senden. Bei einer erfolgreichen Antwort wird eine Payload zurückgegeben, die die Details der neu erstellten MLInstance einschließlich der im nächsten API-Aufruf verwendeten eindeutigen Kennung (`id`) enthält.
 
 ### Erstellen eines Experiments {#create-experiment}
 
-Als Nächstes müssen Sie [ein Experiment erstellen](../api/experiments.md#create-an-experiment). Um ein Experiment zu erstellen, benötigen Sie Ihre eindeutige MLIstance-Kennung (`id`) und eine POST-Anfrage an den `/experiment`-Endpunkt. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments enthält, einschließlich der eindeutigen Kennung (`id`), die beim nächsten API-Aufruf verwendet wird.
+Als Nächstes müssen Sie [ein Experiment erstellen](../api/experiments.md#create-an-experiment). Zum Erstellen eines Experiments benötigen Sie Ihre eindeutige MLIstance-Kennung (`id`) und eine POST-Anfrage an den `/experiment`-Endpunkt. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments enthält, einschließlich der eindeutigen Kennung (`id`), die beim nächsten API-Aufruf verwendet wird.
 
 ### Angeben der Aufgabe „Experimentausführungsfunktion-Pipeline“ {#specify-feature-pipeline-task}
 
-Nachdem Sie ein Experiment erstellt haben, müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, treffen Sie eine zusätzliche POST, um mit Ihrem `EXPERIMENT_ID` zu [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring), und senden Sie im Hauptteil `{ "mode":"featurePipeline"}`, um eine Experimentierausführung für die Funktions-Pipeline anzugeben.
+Nachdem Sie ein Experiment erstellt haben, müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, führen Sie einen zusätzlichen POST-Test durch, um mit Ihrem `EXPERIMENT_ID` zu [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring), und senden Sie im Hauptteil `{ "mode":"featurePipeline"}`, um eine Experimentierausführung für die Funktions-Pipeline anzugeben.
 
 Stellen Sie nach Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` , um [den Experimentstatus abzurufen](../api/experiments.md#retrieve-specific) und warten Sie, bis der Experimentstatus aktualisiert wurde.
 
 ### Angeben der Aufgabe „Experiment ausführen“ {#training}
 
-Als Nächstes müssen Sie [die Aufgabe Trainings-Durchgang angeben](../api/experiments.md#experiment-training-scoring). Stellen Sie eine POST auf `experiments/{EXPERIMENT_ID}/runs` und legen Sie im Hauptteil den Modus auf `train` fest und senden Sie eine Reihe von Aufgaben, die Ihre Trainingsparameter enthalten. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des angeforderten Experiments enthält.
+Als Nächstes müssen Sie [die Aufgabe Trainings-Durchgang angeben](../api/experiments.md#experiment-training-scoring). Führen Sie einen POST-Test auf `experiments/{EXPERIMENT_ID}/runs` durch und legen Sie im Hauptteil den Modus auf `train` fest. Senden Sie dann eine Reihe von Aufgaben, die Ihre Trainingsparameter enthalten. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des angeforderten Experiments enthält.
 
 Stellen Sie nach Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` , um [den Experimentstatus abzurufen](../api/experiments.md#retrieve-specific) und warten Sie, bis der Experimentstatus aktualisiert wurde.
 
@@ -432,7 +432,7 @@ Stellen Sie nach Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` , 
 >
 > Um diesen Schritt abzuschließen, muss mindestens ein erfolgreicher Trainings-Durchgang mit Ihrem Experiment verknüpft sein.
 
-Nach einem erfolgreichen Trainings-Lauf müssen Sie [die Aufgabe des Scoring-Durchgangs angeben](../api/experiments.md#experiment-training-scoring). Nehmen Sie eine POST zu `experiments/{EXPERIMENT_ID}/runs` vor und legen Sie im Hauptteil das `mode` auf „score“ fest. Dadurch wird der Scoring-Experiment-Durchgang gestartet.
+Nach einem erfolgreichen Trainings-Lauf müssen Sie [die Aufgabe des Scoring-Durchgangs angeben](../api/experiments.md#experiment-training-scoring). Führen Sie einen POST-Test auf `experiments/{EXPERIMENT_ID}/runs` durch und legen Sie im Hauptteil das `mode` Attribut auf „score“ fest. Dadurch wird der Scoring-Experiment-Durchgang gestartet.
 
 Stellen Sie nach Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` , um [den Experimentstatus abzurufen](../api/experiments.md#retrieve-specific) und warten Sie, bis der Experimentstatus aktualisiert wurde.
 

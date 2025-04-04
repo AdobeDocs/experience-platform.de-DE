@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Fehlerbehebung bei Quellen
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 100%
+source-wordcount: '749'
+ht-degree: 97%
 
 ---
 
 # Handbuch zur Fehlerbehebung bei Quellen
 
-In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Platform]-Diensten, einschließlich solcher, die für alle [!DNL Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
+In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Experience Platform]-Diensten, einschließlich solcher, die für alle [!DNL Experience Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
 ## Häufig gestellte Fragen
 
@@ -67,7 +67,7 @@ Alle Batch-Aufnahme-Quellen unterstützen eine partielle Aufnahme. Streaming-Auf
 
 ### Wann sollte ich die partielle Aufnahme verwenden?
 
-Die partielle Aufnahme sollte verwendet werden, wenn Sie **keine** Einschränkungen haben, z.B. dass die gesamte Datei in Platform aufgenommen werden muss. Als Alternative bietet sich eine partielle Aufnahme an, sofern Sie bereit sind, Daten aufzunehmen, die Fehler enthalten können.
+Die partielle Aufnahme sollte verwendet werden, wenn Sie **Einschränkungen**, z. B. dass die gesamte Datei in Experience Platform aufgenommen werden muss. Als Alternative bietet sich eine partielle Aufnahme an, sofern Sie bereit sind, Daten aufzunehmen, die Fehler enthalten können.
 
 ### Was ist der typische Fehlerschwellenwert bei der partiellen Aufnahme?
 

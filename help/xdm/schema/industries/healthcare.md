@@ -2,9 +2,9 @@
 title: Datenmodell ERD der Gesundheitsbranche
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) an, das ein standardisiertes Datenmodell für die Gesundheitsbranche beschreibt. Dieses Datenmodell ist mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '606'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ Das folgende Entitätsbeziehungsdiagramm (Entity Relationship Diagram, ERD) stel
 
 >[!NOTE]
 >
->Das ERD wie beschrieben ist eine Empfehlung dafür, wie Sie Ihre Daten für diesen branchenspezifischen Anwendungsfall modellieren sollten. Um dieses Datenmodell in Platform verwenden zu können, müssen Sie die empfohlenen Schemas und deren Beziehungen selbst erstellen. Weitere Informationen finden Sie in den Handbüchern zur Verwaltung [Schemata](../../ui/resources/schemas.md) und [Beziehungen](../../tutorials/relationship-ui.md) in der Benutzeroberfläche.
+>Das ERD wie beschrieben ist eine Empfehlung dafür, wie Sie Ihre Daten für diesen branchenspezifischen Anwendungsfall modellieren sollten. Um dieses Datenmodell in Experience Platform verwenden zu können, müssen Sie die empfohlenen Schemata und ihre Beziehungen selbst erstellen. Weitere Informationen finden Sie in den Handbüchern zur Verwaltung [Schemata](../../ui/resources/schemas.md) und [Beziehungen](../../tutorials/relationship-ui.md) in der Benutzeroberfläche.
 
 Folgende Legende verwenden, um dieses ERD zu interpretieren:
 

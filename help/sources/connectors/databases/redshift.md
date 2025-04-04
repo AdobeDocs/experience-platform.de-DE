@@ -3,10 +3,10 @@ title: Übersicht über den Amazon Redshift Source Connector
 description: Erfahren Sie, wie Sie Amazon Redshift mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 32%
+source-wordcount: '406'
+ht-degree: 22%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 32%
 >- Sie können jetzt die [!DNL Amazon Redshift]-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Datenbanktypen herstellen, z. B. relationale Datenbanken, NoSQL oder Data Warehouses. Die Unterstützung für Datenbankanbieter umfasst [!DNL Amazon Redshift].
+Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Experience Platform kann eine Verbindung zu verschiedenen Datenbanktypen herstellen, z. B. relationale Datenbanken, NoSQL oder Data Warehouses. Die Unterstützung für Datenbankanbieter umfasst [!DNL Amazon Redshift].
 
 ## Einrichten der [!DNL Amazon Redshift] für Experience Platform auf Azure {#azure}
 
@@ -41,13 +41,13 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform in AWS verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform auf AWS](../../ip-address-allow-list.md) .
 
-## Verbinden von [!DNL Amazon Redshift] mit Platform mithilfe von APIs
+## Verbinden von [!DNL Amazon Redshift] mit Experience Platform mithilfe von APIs
 
 - [Verbinden von Amazon Redshift mit Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/redshift.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden von [!DNL Amazon Redshift] mit Platform über die Benutzeroberfläche
+## Verbinden von [!DNL Amazon Redshift] mit Experience Platform über die Benutzeroberfläche
 
 - [Erstellen einer Amazon Redshift-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/databases/redshift.md)
 - [Erstellen eines Datenflusses für eine Datenbank-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)

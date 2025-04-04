@@ -1,17 +1,17 @@
 ---
 title: Bestimmen eines Neigungs-Scores mithilfe eines durch maschinelles Lernen generierten prädiktiven Modells
-description: Erfahren Sie, wie Sie mit Query Service Ihr prädiktives Modell auf Platform-Daten anwenden können. In diesem Dokument wird gezeigt, wie mithilfe von Platform-Daten die Kaufneigung eines Kunden bei jedem Besuch vorhergesagt werden kann.
+description: Erfahren Sie, wie Sie mit Query Service Ihr prädiktives Modell auf Experience Platform-Daten anwenden können. In diesem Dokument wird gezeigt, wie mithilfe von Experience Platform-Daten die Kaufneigung eines Kunden bei jedem Besuch vorhergesagt werden kann.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # Bestimmen eines Neigungs-Scores mithilfe eines durch maschinelles Lernen generierten prädiktiven Modells
 
-Mit Query Service können Sie Prognosemodelle, z. B. Tendenzwerte, die auf Ihrer maschinellen Lernplattform erstellt wurden, zur Analyse von Experience Platform-Daten nutzen.
+Mit dem Abfrage-Service können Sie Prognosemodelle wie Tendenzwerte nutzen, die auf Ihrer maschinellen Lernplattform erstellt wurden, um Experience Platform-Daten zu analysieren.
 
 In diesem Handbuch wird erläutert, wie Sie mit dem Abfrage-Service Daten an Ihre Plattform für maschinelles Lernen senden können, um ein Modell in einem Notebook zu trainieren. Das trainierte Modell kann mithilfe von SQL auf Daten angewendet werden, um die Kaufneigung eines Kunden bei jedem Besuch vorherzusagen.
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Importieren von Analytics-Tabellen aus Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Importieren von Analytics-Tabellen aus Experience Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Um ein Tendenz-Score-Modell zu generieren, muss eine Projektion der in Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook] importiert werden. Von einer [!DNL Python] 3-[!DNL Jupyter Notebook], die mit dem Abfrage-Service verbunden ist, importieren die folgenden Befehle einen Kundenverhaltensdatensatz aus Luma, einem fiktiven Bekleidungsgeschäft. Da Platform-Daten im Experience-Datenmodell (XDM)-Format gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Schemastruktur entspricht. In der Dokumentation finden Sie Anweisungen zum Generieren [ JSON-Beispielobjekts](../../xdm/ui/sample.md).
+Um ein Tendenz-Score-Modell zu generieren, muss eine Projektion der in Experience Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook] importiert werden. Von einer [!DNL Python] 3-[!DNL Jupyter Notebook], die mit dem Abfrage-Service verbunden ist, importieren die folgenden Befehle einen Kundenverhaltensdatensatz aus Luma, einem fiktiven Bekleidungsgeschäft. Da Experience Platform-Daten im Experience-Datenmodell (XDM)-Format gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Schemastruktur entspricht. In der Dokumentation finden Sie Anweisungen zum Generieren [ JSON-Beispielobjekts](../../xdm/ui/sample.md).
 
 ![Das [!DNL Jupyter Notebook]-Dashboard mit mehreren hervorgehobenen Befehlen.](../images/use-cases/jupyter-commands.png)
 
@@ -161,7 +161,7 @@ Aus dem Balkendiagramm können mehrere Muster erkannt werden. Die Themen Point o
 
 ## Verwenden des Abfrage-Service zum Anwenden des trainierten Modells {#use-query-service-to-apply-trained-model}
 
-Nachdem das trainierte Modell erstellt wurde, muss es auf die auf Experience Platform gespeicherten Daten angewendet werden. Dazu muss die Logik der Pipeline für maschinelles Lernen in SQL konvertiert werden. Die beiden Hauptkomponenten dieses Übergangs sind:
+Nachdem das trainierte Modell erstellt wurde, muss es auf die in Experience Platform gespeicherten Daten angewendet werden. Dazu muss die Logik der Pipeline für maschinelles Lernen in SQL konvertiert werden. Die beiden Hauptkomponenten dieses Übergangs sind:
 
 - Zunächst muss SQL an die Stelle des [!DNL Logistics Regression]-Moduls treten, um die Wahrscheinlichkeit einer Prognosebezeichnung zu erhalten. Das von Logistics Regression erstellte Modell erzeugte das Regressionsmodell `y = wX + c`, bei dem die Gewichtung `w` und die `c` die Ausgabe des Modells bilden. SQL-Funktionen können verwendet werden, um die Gewichtungen zu multiplizieren, um eine Wahrscheinlichkeit zu erhalten.
 

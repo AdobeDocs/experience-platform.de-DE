@@ -2,9 +2,9 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 14%
 
 ---
@@ -113,7 +113,7 @@ In der folgenden Tabelle werden die unterstützten Warnhinweistypen für Abfrage
 
 >[!NOTE]
 >
->Wenn Sie einen Warnhinweis [!UICONTROL Verzögerung bei der Abfrageausführung] festlegen, müssen Sie Ihre gewünschte Verzögerungszeit in der Platform-Benutzeroberfläche in Minuten festlegen. Geben Sie die Dauer in Minuten ein. Die maximale Verzögerung beträgt 24 Stunden (1440 Minuten).
+>Wenn Sie einen Warnhinweis [!UICONTROL Verzögerung bei der Abfrageausführung] festlegen, müssen Sie Ihre gewünschte Verzögerungszeit in der Experience Platform-Benutzeroberfläche in Minuten festlegen. Geben Sie die Dauer in Minuten ein. Die maximale Verzögerung beträgt 24 Stunden (1440 Minuten).
 
 Einen Überblick über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln, finden Sie unter [Warnhinweise - Übersicht](../../observability/alerts/overview.md). Anleitungen zum Verwalten von Warnhinweisen und Warnhinweisregeln in der Adobe Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche von Warnhinweisen](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ Die folgende Tabelle enthält Beschreibungen der einzelnen Spalten, die im Detai
 |---------------------|----------------------------------|
 | [!UICONTROL ID der Abfrageausführung] | Zeigt für jede ausgeführte Abfrage eine eindeutige Kennung an, mit der Sie einzelne Ausführungen Ihrer geplanten Abfragen verfolgen und referenzieren können. |
 | [!UICONTROL Start der Abfrageausführung] | Gibt das Startdatum und die Uhrzeit der Abfrageausführung an, damit Sie überwachen können, wann jede Ausführung begann. |
-| [!UICONTROL Abfrageausführung abgeschlossen] | Zeigt das Abschlussdatum und die Uhrzeit der Abfrageausführung an, um Einblicke in die Ausführungsdauer und den Status zu geben. |
+| [!UICONTROL Abfrageausführung abgeschlossen] | Zeigt das Abschlussdatum und die Uhrzeit der Abfrageausführung an, um die Ausführungsdauer und den Status von insight anzugeben. |
 | [!UICONTROL Status] | Zeigt den aktuellen Status der Abfrageausführung an, z. B. `Completed,` `Running,` oder `Failed,`, um das Ergebnis schnell zu bewerten. |
 | [!UICONTROL Datensätze] | Listet die bei der Abfrageausführung verwendeten Datensätze auf, um anzuzeigen, welche Datenquellen an der Ausführung beteiligt waren. |
 | [!UICONTROL Stunden berechnen] | Zeigt die für jede Abfrageausführung verwendete Berechnungszeit in Stunden. Dies hilft bei der Verfolgung der Ressourcennutzung und der Optimierung der Abfrageleistung. |

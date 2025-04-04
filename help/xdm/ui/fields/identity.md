@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Identität;Feld;
 solution: Experience Platform
 title: Definieren von Identitätsfeldern in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie ein Identitätsfeld in der Experience Platform-Benutzeroberfläche definieren.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 15%
 
 ---
@@ -17,7 +17,7 @@ Im Experience-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zum
 
 ## Voraussetzungen
 
-Identitätsfelder sind eine wichtige Komponente bei der Erstellung von Kundenidentitätsdiagrammen in Platform, die sich letztendlich darauf auswirkt, wie das Echtzeit-Kundenprofil unterschiedliche Datenfragmente zusammenführt, um einen vollständigen Überblick über den Kunden zu erhalten. Bevor Sie Identitätsfelder in Ihren Schemata definieren, lesen Sie die folgende Dokumentation, um mehr über die wichtigsten Services und Konzepte im Zusammenhang mit Identitätsfeldern zu erfahren:
+Identitätsfelder sind eine wichtige Komponente bei der Erstellung von Kundenidentitätsdiagrammen in Experience Platform, was sich letztendlich darauf auswirkt, wie das Echtzeit-Kundenprofil unterschiedliche Datenfragmente zusammenführt, um einen vollständigen Überblick über den Kunden zu erhalten. Bevor Sie Identitätsfelder in Ihren Schemata definieren, lesen Sie die folgende Dokumentation, um mehr über die wichtigsten Services und Konzepte im Zusammenhang mit Identitätsfeldern zu erfahren:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemata definiert werden.
    * [Identity-Namespaces](../../../identity-service/features/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.

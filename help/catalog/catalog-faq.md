@@ -3,16 +3,16 @@ keywords: Katalog-Service; Fragen; häufig gestellte Fragen; FAQ; Datensätze FA
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform Catalog Service und Datensätzen.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # Häufig gestellte Fragen {#faq}
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform-Katalog-Service und zu Datensätzen. Fragen und Fehlerbehebungen für andere Platform-Services, einschließlich Problemen in allen Platform-APIs, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform-Katalog-Service und zu Datensätzen. Fragen und Fehlerbehebungen für andere Experience Platform-Services, einschließlich Problemen in allen Experience Platform-APIs, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
 ## Aufbewahrungsrichtlinien und -regeln {#retention-policies-and-rules}
 
@@ -38,7 +38,7 @@ Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für den Data Lake und
 
 +++Antwort
 
-Datensatzgültigkeiten werden wöchentlich ausgewertet und verarbeitet, wobei alle abgelaufenen Datensätze gelöscht werden. Ein Ereignis wird als abgelaufen betrachtet, wenn es länger als 30 Tage in Platform aufgenommen wurde (Aufnahmedatum > 30 Tage) und sein Ereignisdatum den definierten Aufbewahrungszeitraum überschreitet.
+Datensatzgültigkeiten werden wöchentlich ausgewertet und verarbeitet, wobei alle abgelaufenen Datensätze gelöscht werden. Ein Ereignis wird als abgelaufen betrachtet, wenn es länger als 30 Tage in Experience Platform aufgenommen wurde (Aufnahmedatum > 30 Tage) und sein Ereignisdatum den definierten Aufbewahrungszeitraum überschreitet.
 
 +++
 
@@ -46,7 +46,7 @@ Datensatzgültigkeiten werden wöchentlich ausgewertet und verarbeitet, wobei al
 
 +++Antwort
 
-Nach dem Festlegen einer Aufbewahrungsrichtlinie werden vorhandene Ereignisse sofort aus Platform gelöscht, wenn ihr Ereignis-Zeitstempel die Aufbewahrungsfrist überschreitet. Neue Ereignisse werden gelöscht, sobald ihr Zeitstempel die Aufbewahrungsfrist überschreitet.
+Nach dem Festlegen einer Aufbewahrungsrichtlinie werden vorhandene Ereignisse sofort aus Experience Platform gelöscht, wenn ihr Ereigniszeitstempel die Aufbewahrungsfrist überschreitet. Neue Ereignisse werden gelöscht, sobald ihr Zeitstempel die Aufbewahrungsfrist überschreitet.
 
 Wenn Sie beispielsweise am 15. Mai eine 30-Tage-Gültigkeit anwenden, passiert Folgendes:
 

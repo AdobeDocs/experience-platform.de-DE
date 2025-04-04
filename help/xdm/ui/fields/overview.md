@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Feld;
 solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
+description: Erfahren Sie, wie Sie XDM-Felder in der Benutzeroberfläche von Experience Platform definieren.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ Beim Definieren eines neuen Felds können in der rechten Leiste zusätzliche Kon
 
 ## Spezielle Feldtypen {#special}
 
-Die rechte Leiste enthält mehrere Kontrollkästchen zum Festlegen spezieller Rollen für das ausgewählte Feld. Die Anwendungsfälle für einige dieser Optionen beinhalten wichtige Überlegungen bezüglich Ihrer Datenmodellierungsstrategie und der Art und Weise, wie Sie nachgelagerte Platform-Services verwenden möchten.
+Die rechte Leiste enthält mehrere Kontrollkästchen zum Festlegen spezieller Rollen für das ausgewählte Feld. Die Anwendungsfälle für einige dieser Optionen beinhalten wichtige Überlegungen bezüglich Ihrer Datenmodellierungsstrategie und der Art und Weise, wie Sie nachgelagerte Experience Platform-Services verwenden möchten.
 
 Weitere Informationen zu diesen speziellen Typen finden Sie in der folgenden Dokumentation:
 

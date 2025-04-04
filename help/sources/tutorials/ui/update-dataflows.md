@@ -1,11 +1,11 @@
 ---
-description: Erfahren Sie, wie Sie einen vorhandenen Quellen-Datenfluss in der Experience Platform-Benutzeroberfläche aktualisieren.
+description: Erfahren Sie, wie Sie einen vorhandenen Quell-Datenfluss in der Experience Platform-Benutzeroberfläche aktualisieren.
 title: Aktualisieren eines Source-Verbindungsdatenflusses in der Benutzeroberfläche
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 17%
+source-wordcount: '768'
+ht-degree: 10%
 
 ---
 
@@ -17,8 +17,8 @@ Lesen Sie dieses Tutorial, um zu erfahren, wie Sie einen vorhandenen Datenfluss 
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Aktualisieren von Datenflüssen {#update-dataflows}
 
@@ -27,7 +27,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >title="Ablaufdatum des Datensatzes"
 >abstract="Diese Spalte gibt die Anzahl der Tage an, die verbleiben, bis der Zieldatensatz automatisch abläuft.<br>Ein Datenfluss schlägt fehl, wenn der Zieldatensatz abgelaufen ist. Um zu verhindern, dass ein Datenfluss fehlschlägt, muss sichergestellt werden, dass der Zieldatensatz am richtigen Datum abläuft. Informationen zum Aktualisieren der Ablaufdaten finden Sie in der Dokumentation."
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ und dann **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Quellen]** in der linken Navigationsleiste und wählen Sie dann **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile.
 
 ![Der Quellkatalog mit der ausgewählten Kopfzeile „Datenflüsse“.](../../images/tutorials/update-dataflows/catalog.png)
 

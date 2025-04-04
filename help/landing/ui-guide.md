@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1938'
 ht-degree: 2%
 
 ---
@@ -59,9 +59,9 @@ Der Abschnitt **[!UICONTROL Empfohlenes Lernen]** enthält Links zu nützlichen 
 
 ## Navigationsleiste oben
 
-Die obere Navigationsleiste in der Platform-Benutzeroberfläche zeigt die Organisation an, bei der Sie derzeit angemeldet sind, und bietet mehrere wichtige Steuerelemente.
+Die obere Navigationsleiste in der Experience Platform-Benutzeroberfläche zeigt die Organisation an, bei der Sie derzeit angemeldet sind, und bietet mehrere wichtige Steuerelemente.
 
-Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Platform-Logo. Wenn Sie dieses Logo jederzeit auswählen, gelangen Sie zurück zum Startbildschirm der Platform-Benutzeroberfläche.
+Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Platform-Logo. Wenn Sie dieses Logo jederzeit auswählen, gelangen Sie zurück zum Startbildschirm der Experience Platform-Benutzeroberfläche.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -75,11 +75,11 @@ Wenn Sie auf den Umschalter klicken, wird ein Dropdown-Menü mit den Organisatio
 
 ### Anwendungen wechseln
 
-Das nächste Element auf der rechten Seite der oberen Navigation ist der **Programmumschalter**, dargestellt durch das Symbol ![Programmumschalter](/help/images/icons/apps.png) . Wenn Sie auf dieses Symbol klicken, können Sie zwischen Adobe-Anwendungen wechseln, auf die Ihr Unternehmen Zugriff hat, z. B. Experience Platform, Analytics, Assets und andere.
+Das nächste Element auf der rechten Seite der oberen Navigation ist der **Programmumschalter**, dargestellt durch das Symbol ![Programmumschalter](/help/images/icons/apps.png) . Wenn Sie auf dieses Symbol klicken, können Sie zwischen Adobe-Programmen wechseln, auf die Ihr Unternehmen Zugriff hat, z. B. Experience Platform, Analytics, Assets und andere.
 
 ### Hilfe
 
-Rechts neben dem Programmumschalter befindet sich das Menü **Hilfe und Support**, das durch das Symbol ![Fragezeichen/Hilfe](/help/images/icons/help.png) dargestellt wird. Wenn Sie dieses Symbol auswählen, wird ein Popup-Menü angezeigt, das mehrere Hilfe- und Support-Ressourcen enthält. Die **[!UICONTROL Hilfe]** zeigt eine Liste der relevanten Dokumentation für die Seite an, auf der Sie sich gerade befinden. Auf **[!UICONTROL Registerkarte]** Support“ können Sie ein Support-Ticket beim Support-Team für Adobe erstellen. Auf **[!UICONTROL Registerkarte]** Feedback“ können Sie Feedback zu Platform an Adobe senden.
+Rechts neben dem Programmumschalter befindet sich das Menü **Hilfe und Support**, das durch das Symbol ![Fragezeichen/Hilfe](/help/images/icons/help.png) dargestellt wird. Wenn Sie dieses Symbol auswählen, wird ein Popup-Menü angezeigt, das mehrere Hilfe- und Support-Ressourcen enthält. Die **[!UICONTROL Hilfe]** zeigt eine Liste der relevanten Dokumentation für die Seite an, auf der Sie sich gerade befinden. Auf **[!UICONTROL Registerkarte]** Support“ können Sie ein Support-Ticket beim Adobe-Supportteam erstellen. Auf **[!UICONTROL Registerkarte]** Feedback“ können Sie Adobe Feedback zu Experience Platform senden.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ Im Abschnitt **Benachrichtigungen**, der durch das Symbol ![Glocke/Benachrichtig
 
 Das letzte Element in der oberen Navigationsleiste ist das **Benutzereinstellungen**, das durch das Symbol ![Benutzereinstellungen/Benutzerprofil](images/user-guide/profile-icon.png) dargestellt wird. Wählen Sie dieses Symbol aus, um Ihre Voreinstellungen zu bearbeiten oder sich abzumelden.
 
-Sie können zwischen dem hellen und dem dunklen Design für die Platform-Benutzeroberfläche wechseln, indem Sie den Schalter direkt unter Ihrem Namen und Ihrer E-Mail-Adresse verwenden. Wählen Sie das gewünschte Design aus.
+Sie können zwischen dem hellen und dem dunklen Design für die Experience Platform-Benutzeroberfläche wechseln, indem Sie den Schalter direkt unter Ihrem Namen und Ihrer E-Mail-Adresse verwenden. Wählen Sie das gewünschte Design aus.
 
 ![](images/theme.png)
 
 ### Sandboxes
 
-Unmittelbar unter der oberen Navigationsleiste befindet sich die Sandbox-Leiste. Diese Leiste zeigt an, welche Sandbox Sie derzeit für Platform verwenden. Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
+Unmittelbar unter der oberen Navigationsleiste befindet sich die Sandbox-Leiste. Diese Leiste zeigt an, welche Sandbox Sie derzeit für Experience Platform verwenden. Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
 
 ## Linke Navigation {#left-nav}
 
-In der Navigation auf der linken Seite des Bildschirms werden alle verschiedenen Services aufgelistet, die in der Platform-Benutzeroberfläche unterstützt werden.
+Im Navigationsbereich auf der linken Bildschirmseite werden alle verschiedenen Services aufgelistet, die in der Experience Platform-Benutzeroberfläche unterstützt werden.
 
 Klicken Sie auf das Menüsymbol, um das linke Navigationsfenster ein- oder auszublenden.
 
@@ -115,15 +115,15 @@ Sie können die Navigation in der geöffneten Position sperren, indem Sie nach d
 
 ![](images/user-guide/homepage-left.png)
 
-Im Abschnitt **[!UICONTROL Startseite]** können Sie zur Homepage der Platform-Benutzeroberfläche zurückkehren.
+Im Abschnitt **[!UICONTROL Startseite]** können Sie zur Homepage der Experience Platform-Benutzeroberfläche zurückkehren.
 
-Der **[!UICONTROL Workflows]** Abschnitt zeigt eine Liste mehrstufiger Workflows zur Durchführung von Vorgängen in Platform. Weitere Informationen zu Workflows finden Sie in der [Workflows - Übersicht](./workflows.md).
+Der **[!UICONTROL Workflows]** Abschnitt zeigt eine Liste mehrstufiger Workflows zum Ausführen von Vorgängen in Experience Platform. Weitere Informationen zu Workflows finden Sie in der [Workflows - Übersicht](./workflows.md).
 
 ### [!UICONTROL Verbindungen]
 
-Im Abschnitt **[!UICONTROL Quellen]** können Sie Quellverbindungen erstellen, aktualisieren und löschen, sodass Sie Daten aus externen Quellen in Platform aufnehmen können. Weitere Informationen zu Quellen finden Sie in der [Quellen - Übersicht](../sources/home.md).
+Im Abschnitt **[!UICONTROL Quellen]** können Sie Quellverbindungen erstellen, aktualisieren und löschen, sodass Sie Daten aus externen Quellen in Experience Platform aufnehmen können. Weitere Informationen zu Quellen finden Sie in der [Quellen - Übersicht](../sources/home.md).
 
-Im Abschnitt **[!UICONTROL Ziele]** können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten aus Platform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie in der [Ziele - Übersicht](../destinations/home.md).
+Im Abschnitt **[!UICONTROL Ziele]** können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten aus Experience Platform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie in der [Ziele - Übersicht](../destinations/home.md).
 
 ### [!UICONTROL Kunde]
 
@@ -131,13 +131,13 @@ Im Abschnitt **[!UICONTROL Profile]** können Sie Kundenprofile durchsuchen, Pro
 
 Im Abschnitt **[!UICONTROL Zielgruppen]** können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung von [!UICONTROL Zielgruppen] finden Sie im [Segmentierungs-Benutzerhandbuch](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungs-Service finden Sie in der [Segmentierungs-Service - Übersicht](../segmentation/home.md).
 
-Im **[!UICONTROL Identitäten]** können Sie Identity-Namespaces erstellen und verwalten. Weitere Informationen zum Abschnitt [!UICONTROL Identitäten], einschließlich Informationen zu Identity-Namespaces und zur Verwendung von Identitäten in der Platform-Benutzeroberfläche, finden Sie im Abschnitt [Übersicht zu Identitäts-Namespaces](../identity-service/features/namespaces.md).
+Im **[!UICONTROL Identitäten]** können Sie Identity-Namespaces erstellen und verwalten. Weitere Informationen zum Abschnitt [!UICONTROL Identitäten], einschließlich Informationen zu Identitäts-Namespaces und zur Verwendung von Identitäten in der Experience Platform-Benutzeroberfläche, finden Sie im Abschnitt [Übersicht über Identitäts-Namespaces](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Datenschutz]
 
 Im **[!UICONTROL Richtlinien]** können Sie Datennutzungsrichtlinien erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts Richtlinien finden Sie im [Benutzerhandbuch zu Datennutzungsrichtlinien](../data-governance/policies/user-guide.md). Weitere Informationen zu Datennutzungsrichtlinien finden Sie in der [Datennutzungsrichtlinien - Übersicht](../data-governance/policies/overview.md).
 
-Im **[!UICONTROL Anfragen]** können Sie Datenschutzanfragen erstellen und verwalten. Beachten Sie, dass Sie auf die Zulassungsliste gesetzt sein müssen, um Zugriff auf die Privacy Service-Benutzeroberfläche zu erhalten. Weitere Informationen zur Verwendung des Abschnitts „Anfragen“ finden Sie im [Privacy Service-Benutzerhandbuch](../privacy-service/ui/user-guide.md). Weitere Informationen zum Privacy Service finden Sie in der [Privacy Service-Übersicht](../privacy-service/home.md).
+Im **[!UICONTROL Anfragen]** können Sie Datenschutzanfragen erstellen und verwalten. Beachten Sie, dass Sie auf die Zulassungsliste gesetzt sein müssen, um Zugriff auf die Privacy Service-Benutzeroberfläche zu erhalten. Weitere Informationen zur Verwendung des Abschnitts „Anfragen“ finden Sie im [Privacy Service-Benutzerhandbuch](../privacy-service/ui/user-guide.md). Weitere Informationen zu Privacy Service finden Sie in der [Privacy Service-Übersicht](../privacy-service/home.md).
 
 ### [!UICONTROL Datenwissenschaft]
 
@@ -145,7 +145,7 @@ Der Abschnitt **[!UICONTROL Notebooks]** bietet Zugriff auf JupyterLab, eine int
 
 Im Abschnitt **[!UICONTROL Modelle]** können Sie maschinelles Lernen und künstliche Intelligenz verwenden, um Modelle zu erstellen, zu entwickeln, zu trainieren und anzupassen, um Prognosen zu erstellen. Weitere Informationen zum Abschnitt „Modelle“ finden Sie im Tutorial [Trainieren und Auswerten eines Modells](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-Im Abschnitt **[!UICONTROL Services]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder Adobe Intelligent Services verwenden, eine Reihe von KI-Services, die personalisierte Kundenerlebnisse in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt Services finden Sie im Tutorial [Veröffentlichen eines Modells als Service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Im Abschnitt **[!UICONTROL Services]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder Intelligent Services von Adobe verwenden, eine Reihe von KI-Services, die personalisierte Kundenerlebnisse in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt Services finden Sie im Tutorial [Veröffentlichen eines Modells als Service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Daten-Management]
 
@@ -172,7 +172,7 @@ Adobe Journey Optimizer ist ein auf Experience Platform aufbauender Programm-Ser
 
 ### [!UICONTROL Administration]
 
-Die Platform-Benutzeroberfläche verfügt über ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können. Diese Informationen werden in Form eines täglichen Schnappschusses erfasst. Greifen Sie auf dieses Dashboard zu, indem **[!UICONTROL Lizenznutzung]** in der Navigation auswählen. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie im [Handbuch zum Dashboard zur Lizenznutzung](./license-usage-and-guardrails/license-usage-dashboard.md).
+Die Benutzeroberfläche von Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können. Diese Informationen werden in Form eines täglichen Schnappschusses erfasst. Greifen Sie auf dieses Dashboard zu, indem **[!UICONTROL Lizenznutzung]** in der Navigation auswählen. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie im [Handbuch zum Dashboard zur Lizenznutzung](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ Die Platform-Benutzeroberfläche verfügt über ein Dashboard, über das Sie wic
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich nun mit der Startseite und den wichtigsten Navigationselementen der Platform-Benutzeroberfläche vertraut gemacht. Weitere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Platform-Services. Links zu dieser Dokumentation finden Sie im Abschnitt [Linker ](#left-nav)) weiter oben in diesem Dokument.
+Durch das Lesen dieses Handbuchs haben Sie sich nun mit der Startseite und den wichtigsten Navigationselementen der Experience Platform-Benutzeroberfläche vertraut gemacht. Weitere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Experience Platform-Services. Links zu dieser Dokumentation finden Sie im Abschnitt [Linker ](#left-nav)) weiter oben in diesem Dokument.

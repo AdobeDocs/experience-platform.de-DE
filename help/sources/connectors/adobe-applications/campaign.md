@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Adobe Campaign Managed Cloud Services;Kampagne;Campaign Managed Services
 title: Adobe Campaign Managed Cloud Services
-description: Erfahren Sie, wie Sie Campaign Managed Cloud Service über die Benutzeroberfläche mit Platform verbinden
+description: Erfahren Sie, wie Sie Campaign Managed Cloud Services über die Benutzeroberfläche mit Experience Platform verbinden
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 9%
+source-wordcount: '747'
+ht-degree: 5%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und stellt dazu eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung bereit. Weitere Informationen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) Adobe Campaign v8 .[
 
@@ -20,7 +20,7 @@ Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Adobe Campaign 
 
 ## Voraussetzungen
 
-Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8-Version auf Experience Platform zu bringen, müssen Sie zunächst die folgenden Voraussetzungen erfüllen:
+Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8-Version nach Experience Platform zu bringen, müssen Sie zunächst die folgenden Voraussetzungen erfüllen:
 
 * [Einrichten des Ereignisprotokollimports mithilfe der Adobe Campaign-Client-Konsole](#view-delivery-and-tracking-log-data)
 * [Erstellen eines XDM-ExperienceEvent-Schemas](#create-a-schema)
@@ -70,9 +70,9 @@ Detaillierte Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch unte
 
 Schließlich müssen Sie einen Datensatz für Ihre Schemata erstellen. Detaillierte Anweisungen zum Erstellen eines Datensatzes finden Sie im Handbuch unter [Erstellen eines Datensatzes in der Benutzeroberfläche](../../../catalog/datasets/user-guide.md).
 
-## Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Platform-Benutzeroberfläche
+## Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
 
-Nachdem Sie nun auf Ihre Datenprotokolle in der Client-Konsole von Campaign zugegriffen, ein Schema erstellt und einen Datensatz erstellt haben, können Sie jetzt mit dem Erstellen einer Quellverbindung fortfahren, um Ihre Campaign Managed Services-Daten in Platform zu übertragen.
+Nachdem Sie nun auf Ihre Datenprotokolle in der Client-Konsole von Campaign zugegriffen, ein Schema erstellt und einen Datensatz erstellt haben, können Sie jetzt mit dem Erstellen einer Quellverbindung fortfahren, um Ihre Campaign Managed Services-Daten in Experience Platform zu übertragen.
 
 Detaillierte Anweisungen zum Übertragen Ihrer Versand-Logs und Trackinglog-Daten von Campaign v8 auf Experience Platform finden Sie im Handbuch unter [Erstellen einer Managed Services-Quellverbindung in der Benutzeroberfläche von Campaign](../../tutorials/ui/create/adobe-applications/campaign.md).
 
@@ -80,4 +80,4 @@ Detaillierte Anweisungen zum Übertragen Ihrer Versand-Logs und Trackinglog-Date
 >
 >Es gibt einen Sonderfall, bei dem die Interaktion eines kürzlich entfernten E-Mail-Empfängers mit einer E-Mail personenbezogene Daten erneut in Experience Platform aufnehmen könnte. In einigen Fällen kann dies das Marketing für diesen Benutzer wieder aktivieren.
 >
->* Dieses Szenario ist nur zwischen der Zeit aktiv, zu der eine Datenschutzanfrage auf Experience Platform ausgeführt wurde, und der Zeit, zu der sie in Adobe Campaign Classic ausgeführt wurde. Nachdem die Anfrage in Campaign ausgeführt wurde, gibt es eine Prüfung, um sicherzustellen, dass der Datensatz nicht in Campaign exportiert wird. Bitte stellen Sie nach 72 Stunden der Ausführung eine DSGVO-Anfrage erneut, um das Problem zu beheben.
+>* Dieses Szenario ist nur zwischen der Ausführung einer Datenschutzanfrage in Experience Platform und der Ausführung in Adobe Campaign Classic aktiv. Nachdem die Anfrage in Campaign ausgeführt wurde, gibt es eine Prüfung, um sicherzustellen, dass der Datensatz nicht in Campaign exportiert wird. Bitte stellen Sie nach 72 Stunden der Ausführung eine DSGVO-Anfrage erneut, um das Problem zu beheben.

@@ -3,9 +3,9 @@ title: Aufnehmen verschlüsselter Daten in der Quellen-Benutzeroberfläche Works
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quell-Benutzeroberfläche aufnehmen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 9%
 
 ---
@@ -22,10 +22,10 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie verschlüsselte Daten mit Clo
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, lesen Sie die folgenden Dokumente, um die folgenden Experience Platform-Funktionen und -Konzepte besser zu verstehen.
+Bevor Sie mit diesem Tutorial fortfahren, lesen Sie die folgenden Dokumente, um die folgenden Funktionen und Konzepte von Experience Platform besser zu verstehen.
 
-* [Quellen](../../home.md): Verwenden Sie Quellen auf Experience Platform, um Daten aus einem Adobe-Programm oder einer Datenquelle eines Drittanbieters aufzunehmen.
-* [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind Darstellungen von Datenvorgängen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich „Quellen“ verwenden, um Datenflüsse zu erstellen, die Daten aus einer bestimmten Quelle auf Experience Platform aufnehmen.
+* [Quellen](../../home.md): Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung oder einer Datenquelle eines Drittanbieters aufzunehmen.
+* [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind Darstellungen von Datenvorgängen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich „Quellen“ verwenden, um Datenflüsse zu erstellen, die Daten aus einer bestimmten Quelle in Experience Platform aufnehmen.
 * [Sandboxes](../../../sandboxes/home.md): Verwenden Sie Sandboxes in Experience Platform, um virtuelle Partitionen zwischen Ihren Experience Platform-Instanzen zu erstellen und Umgebungen für Entwicklung oder Produktion zu erstellen.
 
 ### Allgemeine Übersicht
@@ -52,11 +52,11 @@ Bevor Sie mit diesem Tutorial fortfahren, lesen Sie die folgenden Dokumente, um 
 
 Ein Verschlüsselungsschlüsselpaar ist ein asymmetrischer Verschlüsselungsmechanismus, der aus einem öffentlichen und einem privaten Schlüssel besteht. Der öffentliche Schlüssel wird zur Verschlüsselung von Daten und der private Schlüssel zur Entschlüsselung dieser Daten verwendet.
 
-Sie können Ihr Verschlüsselungsschlüsselpaar über die Experience Platform-Benutzeroberfläche erstellen. Nach der Generierung erhalten Sie einen öffentlichen Schlüssel und eine entsprechende Schlüssel-ID. Verwenden Sie den öffentlichen Schlüssel zum Verschlüsseln Ihrer Daten und dann die Schlüssel-ID, um Ihre Identität zu bestätigen, wenn Sie dabei sind, Ihre verschlüsselten Daten aufzunehmen. Der private Schlüssel wird automatisch auf Experience Platform gespeichert, wo er in einem sicheren Tresor aufbewahrt wird. Er wird erst verwendet, wenn die Daten entschlüsselungsbereit sind.
+Sie können Ihr Verschlüsselungsschlüsselpaar über die Experience Platform-Benutzeroberfläche erstellen. Nach der Generierung erhalten Sie einen öffentlichen Schlüssel und eine entsprechende Schlüssel-ID. Verwenden Sie den öffentlichen Schlüssel zum Verschlüsseln Ihrer Daten und dann die Schlüssel-ID, um Ihre Identität zu bestätigen, wenn Sie dabei sind, Ihre verschlüsselten Daten aufzunehmen. Der private Schlüssel wird automatisch an Experience Platform gesendet, wo er in einem sicheren Tresor gespeichert wird. Er wird erst verwendet, wenn die Daten entschlüsselungsbereit sind.
 
 >[!ENDSHADEBOX]
 
-Navigieren Sie in der Platform-Benutzeroberfläche zum Arbeitsbereich Quellen und wählen Sie [!UICONTROL Schlüsselpaare] aus der oberen Kopfzeile aus.
+Navigieren Sie in der Experience Platform-Benutzeroberfläche zum Arbeitsbereich „Quellen“ und wählen Sie [!UICONTROL Schlüsselpaare] in der oberen Kopfzeile aus.
 
 ![Der Quellkatalog mit ausgewählter Kopfzeile „Schlüsselpaare“.](../../images/tutorials/edi/catalog.png)
 
@@ -136,7 +136,7 @@ Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen 
 
 ![ Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
 
-Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, erfordert das Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
+Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, benötigt Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
 
 ![Die „Ist diese Datei verschlüsselt?“ Aktivieren Sie den Umschalter und klicken Sie auf die Schaltfläche „Beispieldatei auswählen“. ](../../images/tutorials/edi/select_sample_file.png)
 
@@ -165,4 +165,4 @@ Sie können [Aktualisierungen an Ihrem Datenfluss vornehmen](../ui/update-datafl
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments können Sie jetzt verschlüsselte Daten aus Ihrer Cloud-Speicher-Batch-Quelle auf Experience Platform aufnehmen. Informationen zum Aufnehmen verschlüsselter Daten mithilfe der APIs finden Sie im Handbuch unter [Aufnehmen verschlüsselter Daten mithilfe der  [!DNL Flow Service] -API](../api/encrypt-data.md). Allgemeine Informationen zu Quellen auf Experience Platform finden Sie unter [Quellen - Übersicht](../../home.md).
+Durch Lesen dieses Dokuments können Sie jetzt verschlüsselte Daten aus Ihrer Cloud-Speicher-Batch-Quelle in Experience Platform aufnehmen. Informationen zum Aufnehmen verschlüsselter Daten mithilfe der APIs finden Sie im Handbuch unter [Aufnehmen verschlüsselter Daten mithilfe der  [!DNL Flow Service] -API](../api/encrypt-data.md). Allgemeine Informationen zu Quellen in Experience Platform finden Sie unter [Quellen - Übersicht](../../home.md).

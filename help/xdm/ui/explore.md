@@ -2,25 +2,25 @@
 keywords: Experience Platform;Startseite;beliebte Themen;UI;Benutzeroberfläche;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;erkunden;Klasse;Feldergruppe;Datentyp;Schema;
 solution: Experience Platform
 title: Erkunden von Schema-Ressourcen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie vorhandene Schemata, Klassen, Schemafeldgruppen und Datentypen in der Benutzeroberfläche zum Experience Platform untersuchen.
+description: Erfahren Sie, wie Sie vorhandene Schemata, Klassen, Schemafeldgruppen und Datentypen in der Benutzeroberfläche von Experience Platform untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # Erkunden von Schema-Ressourcen in der Benutzeroberfläche
 
-In Adobe Experience Platform werden alle Schema-Ressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library] gespeichert, einschließlich der vom Adobe bereitgestellten Standardressourcen und der von Ihrem Unternehmen definierten benutzerdefinierten Ressourcen. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer vorhandenen Feldergruppe oder eines vorhandenen Datentyps in der [!DNL Schema Library] anzeigen. Dies ist besonders bei der Planung und Vorbereitung der Datenaufnahme nützlich, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen jedes Felds bereitstellt, das von diesen XDM-Ressourcen bereitgestellt wird.
+In Adobe Experience Platform werden alle Schema-Ressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library] gespeichert, einschließlich der von Adobe bereitgestellten Standardressourcen und der von Ihrem Unternehmen definierten benutzerdefinierten Ressourcen. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder jedes vorhandenen Schemas, jeder vorhandenen Klasse, jeder vorhandenen Feldergruppe oder jedes vorhandenen Datentyps in der [!DNL Schema Library] anzeigen. Dies ist besonders bei der Planung und Vorbereitung der Datenaufnahme nützlich, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen jedes Felds bereitstellt, das von diesen XDM-Ressourcen bereitgestellt wird.
 
 In diesem Tutorial werden die Schritte zum Untersuchen vorhandener Schemata, Klassen, Feldergruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Suchen einer Schema-Ressource {#lookup}
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Schemas]** im linken Navigationsbereich aus. Der Arbeitsbereich [!UICONTROL Schemata] bietet eine Registerkarte **[!UICONTROL Durchsuchen]**, auf der alle Schemata in Ihrer Organisation untersucht werden können, sowie zusätzliche dedizierte Registerkarten zum Durchsuchen von **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]**, **[!UICONTROL Datentypen]** und **[!UICONTROL Beziehungen]**.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Schemas]** im linken Navigationsbereich aus. Der Arbeitsbereich [!UICONTROL Schemata] bietet eine Registerkarte **[!UICONTROL Durchsuchen]**, auf der alle Schemata in Ihrer Organisation untersucht werden können, sowie zusätzliche dedizierte Registerkarten zum Durchsuchen von **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]**, **[!UICONTROL Datentypen]** und **[!UICONTROL Beziehungen]**.
 
 ![Der Arbeitsbereich „Schemata“ mit mehreren hervorgehobenen Registerkarten.](../images/ui/explore/tabs.png)
 
@@ -63,7 +63,7 @@ Alle Felder vom Typ „Objekt“, die Untereigenschaften enthalten, werden stand
 
 ### Indikator für Standardklasse und Feldergruppe {#standard-class-and-field-group-indicator}
 
-Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 
 ![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -73,7 +73,7 @@ Eine Anleitung [ Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Fe
 
 Einigen Feldnamen wird ein Unterstrich vorangestellt, z. B. `_repo` und `_id`. Diese stellen Platzhalter für Felder dar, die das System bei der Datenaufnahme automatisch generiert und zuweist.
 
-Daher sollten die meisten dieser Felder bei der Aufnahme in Platform aus der Struktur Ihrer Daten ausgeschlossen werden. Die wichtigste Ausnahme von dieser Regel ist das [`_{TENANT_ID}` Feld](../api/getting-started.md#know-your-tenant_id) unter dem alle XDM-Felder, die unter Ihrer Organisation erstellt wurden, einen Namespace erhalten müssen.
+Daher sollten die meisten dieser Felder bei der Aufnahme in Experience Platform aus der Datenstruktur ausgeschlossen werden. Die wichtigste Ausnahme von dieser Regel ist das [`_{TENANT_ID}` Feld](../api/getting-started.md#know-your-tenant_id) unter dem alle XDM-Felder, die unter Ihrer Organisation erstellt wurden, einen Namespace erhalten müssen.
 
 ### Datentypen {#data-types}
 
@@ -107,7 +107,7 @@ Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (!
 
 >[!NOTE]
 >
->Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
+>Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
 
 ### Beziehungsfelder {#relationship}
 

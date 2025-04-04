@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemata;
 solution: Experience Platform
 title: API-Endpunkt für Schemata
-description: Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemata zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Sie können den Endpunkt "/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Experience Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 94%
+source-wordcount: '619'
+ht-degree: 84%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 94%
 
 # Endpunkt für Schemata
 
-Schemata können mit Mapper verwendet werden, um dafür zu sorgen, dass die von Ihnen in Adobe Experience Platform erfassten Daten mit den gewünschten Daten übereinstimmen. Sie können den `/schemas`-Endpunkt nutzen, um programmgesteuert benutzerdefinierte Schemata zur Verwendung mit Mapper in Platform zu erstellen, aufzulisten und abzurufen.
+Schemata können mit Mapper verwendet werden, um dafür zu sorgen, dass die von Ihnen in Adobe Experience Platform erfassten Daten mit den gewünschten Daten übereinstimmen. Sie können den `/schemas`-Endpunkt verwenden, um programmgesteuert benutzerdefinierte Schemas zur Verwendung mit Mapper in Experience Platform zu erstellen, aufzulisten und abzurufen.
 
 >[!NOTE]
 >
->Mit diesem Endpunkt erstellte Schemata werden ausschließlich mit Mapper und Zuordnungssätzen genutzt. Informationen zum Erstellen von Schemata, auf die andere Platform-Dienste zugreifen können, finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
+>Mit diesem Endpunkt erstellte Schemata werden ausschließlich mit Mapper und Zuordnungssätzen genutzt. Informationen zum Erstellen von Schemata, auf die andere Experience Platform-Services zugreifen können, finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
 
 ## Abrufen aller Schemata
 

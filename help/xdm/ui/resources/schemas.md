@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-�
 
 >[!NOTE]
 >
->In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Platform aufnehmen, können Sie Algorithmen des maschinellen Lernens (ML) verwenden, um **aus CSV-Beispieldaten ein Schema zu generieren**. Dieser Workflow stimmt mit Ihrem Datenformat überein und erstellt automatisch ein neues Schema, das auf der Struktur und dem Inhalt Ihrer CSV-Datei basiert. Weitere Informationen zu [ Workflow finden Sie ](../ml-assisted-schema-creation.md) Handbuch zur Erstellung von XML-unterstützten Schemata .
+>In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Experience Platform aufnehmen, können Sie mithilfe von ML-Algorithmen (maschinelles Lernen) **aus CSV-Beispieldaten ein Schema generieren**. Dieser Workflow stimmt mit Ihrem Datenformat überein und erstellt automatisch ein neues Schema, das auf der Struktur und dem Inhalt Ihrer CSV-Datei basiert. Weitere Informationen zu [ Workflow finden Sie ](../ml-assisted-schema-creation.md) Handbuch zur Erstellung von XML-unterstützten Schemata .
 
 Wählen [!UICONTROL  Arbeitsbereich Schemata ] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus.
 
@@ -342,7 +342,7 @@ Um den Vorgang abzuschließen, klicken Sie auf **[!UICONTROL Speichern]**, um da
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Das Schema ist jetzt für die Verwendung im Echtzeit-Kundenprofil aktiviert. Wenn Platform Daten in Datensätze aufnimmt, die auf diesem Schema basieren, werden diese Daten in Ihre zusammengefassten Profildaten integriert.
+Das Schema ist jetzt für die Verwendung im Echtzeit-Kundenprofil aktiviert. Wenn Experience Platform Daten basierend auf diesem Schema in Datensätze aufnimmt, werden diese Daten in Ihre zusammengefassten Profildaten integriert.
 
 ## Anzeigenamen für Schemafelder bearbeiten {#display-names}
 
@@ -388,7 +388,7 @@ Nach Bestätigung der Klassenänderung wird die Arbeitsfläche zurückgesetzt un
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Platform-Benutzeroberfläche behandelt. Es wird dringend empfohlen, das [Tutorial zur Schemaerstellung](../../tutorials/create-schema-ui.md) durchzugehen, um einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu erhalten, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen for Eindeutige Anwendungsfälle.
+In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemata in der Experience Platform-Benutzeroberfläche behandelt. Es wird dringend empfohlen, das [Tutorial zur Schemaerstellung](../../tutorials/create-schema-ui.md) durchzugehen, um einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu erhalten, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen for Eindeutige Anwendungsfälle.
 
 Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
 

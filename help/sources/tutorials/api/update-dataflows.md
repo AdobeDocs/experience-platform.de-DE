@@ -2,10 +2,10 @@
 title: Aktualisieren von Datenflüssen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API einen Datenfluss erstellen, einschließlich Name, Beschreibung und Zeitplan.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 87%
+source-wordcount: '661'
+ht-degree: 75%
 
 ---
 
@@ -23,12 +23,12 @@ Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gült
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Weitere Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Nachschlagen von Datenflussdetails
 

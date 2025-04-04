@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Handbuch zur API für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über den Prozess der Erstellung einer neuen Quelle, einschließlich der Schritte zum Abrufen, Schreiben und Senden einer neuen Verbindungsspezifikation mithilfe der Flow Service-API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 10%
+source-wordcount: '484'
+ht-degree: 8%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 Dieses Dokument bietet einen Überblick über den Prozess der Erstellung einer neuen Quelle, einschließlich der Schritte zum Schreiben und Senden einer neuen Verbindungsspezifikation mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Experience Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie auf einfache Weise Quellverbindungen zu verschiedenen Datenanbietern einrichten können. Diese Quell-Connectoren bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
 
 Die [!DNL Flow Service]-API bietet mehrere Endpunkte, mit denen Sie die Verbindungs- und Flussspezifikationen für eine neue Quelle, die Sie über Selbstbedienungsquellen (Batch-SDK) integrieren, programmgesteuert verwalten können.
 
@@ -40,7 +40,7 @@ Sie können Ihre Verbindungsspezifikation aktualisieren, indem Sie eine PUT-Anfr
 
 ## Übermitteln Ihrer Quelle
 
-Um Ihre Quelle zur Integration auf Experience Platform zu senden, müssen Sie zunächst den gesamten [!DNL Flow Service]-API-Workflow für Quellen abschließen, um sicherzustellen, dass Ihre Quelle erfolgreich funktioniert. Wenn Ihre Quelle erfolgreich ausgeführt wird, können Sie fortfahren und sich an Ihren Adobe-Support-Mitarbeiter wenden, um sie zu verifizieren und zu bewerben. Weitere Informationen finden Sie in [ Anleitung zum Testen und Senden ](./submit.md) Quelle .
+Um Ihre Quelle zur Integration in Experience Platform zu übermitteln, müssen Sie zunächst den gesamten [!DNL Flow Service]-API-Workflow für Quellen abschließen, um sicherzustellen, dass Ihre Quelle erfolgreich funktioniert. Wenn Ihre Quelle erfolgreich ausgeführt wird, können Sie fortfahren und sich an Ihren Adobe-Support-Mitarbeiter wenden, um sie zu überprüfen und zu bewerben. Weitere Informationen finden Sie in [ Anleitung zum Testen und Senden ](./submit.md) Quelle .
 
 ## Nächste Schritte
 

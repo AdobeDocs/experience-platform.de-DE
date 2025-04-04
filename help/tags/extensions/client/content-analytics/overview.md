@@ -2,9 +2,9 @@
 title: Adobe Content Analytics-Erweiterung - Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung "Adobe Content Analytics" in Adobe Experience Platform vertraut.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Die [!DNL Adobe Content Analytics] Tag-Erweiterung ermöglicht das Tracking von inhaltsbezogenen Ereignissen auf einer Website. Die -Erweiterung sendet Inhaltsdaten (Erlebnisse und Assets) von Web-Eigenschaften über Experience Platform Edge Network an einen Datenstrom in Adobe Experience Cloud.
 
-Mit der -Erweiterung können Sie bestimmte inhaltsbezogene Ereignisdaten in Platform streamen, damit Sie diese Daten in Ihren Inhaltsanalyseberichten in Customer Journey Analytics verwenden können.
+Mit der -Erweiterung können Sie bestimmte inhaltsbezogene Ereignisdaten in Experience Platform streamen, damit Sie diese Daten in Ihren Inhaltsanalyseberichten in Customer Journey Analytics verwenden können.
 
 In diesem Dokument wird erläutert, wie Sie die Tag-Erweiterung in der Tags-Benutzeroberfläche konfigurieren.
 

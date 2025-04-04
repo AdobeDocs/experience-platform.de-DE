@@ -3,23 +3,23 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Date
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Aufnehmen in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank und deren Aufnahme in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1417'
-ht-degree: 88%
+source-wordcount: '1428'
+ht-degree: 75%
 
 ---
 
 # Erstellen eines Datenflusses für Datenbankquellen mithilfe der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbankquelle und zum Übertragen dieser Daten in Platform mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbankquelle und zum Übertragen dieser Daten in Experience Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 >[!NOTE]
 >
 >* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellenübersicht](../../../home.md#database) eine Liste der Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
->* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige Zeitstempel, der für die [[!DNL Snowflake] Quelle](../../../connectors/databases/snowflake.md) unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
+>* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen als UTC konfiguriert werden. Der einzige Zeitstempel, der für die [[!DNL Snowflake] Quelle](../../../connectors/databases/snowflake.md) unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 ## Erste Schritte
 
@@ -30,11 +30,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten in Form von Batch-Dateien in Experience Platform aufnehmen.
-* [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 
@@ -129,7 +129,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -277,7 +277,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Abrufen von Datenflussspezifikationen {#specs}
 
-Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden. Datenflussspezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System bestimmt.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Experience Platform verantwortlich. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden. Datenflussspezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System bestimmt.
 
 **API-Format**
 
@@ -297,7 +297,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform sorgt. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die Details der Datenflussspezifikation zurück, die für die Übermittlung von Daten aus Ihrer Quelle an Experience Platform verantwortlich ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
 
 >[!NOTE]
 >
@@ -688,7 +688,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt,um Daten aus einer Datenbank nach einem bestimmten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt,um Daten aus einer Datenbank nach einem bestimmten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten Experience Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

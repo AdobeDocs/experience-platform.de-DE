@@ -2,10 +2,10 @@
 title: Erstellen einer Zendesk Source-Verbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zendesk-Quellverbindung erstellen.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 35%
+source-wordcount: '746'
+ht-degree: 30%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Zendesk]-Konto in Platform zugreifen zu können, müssen Sie Werte für die folgenden Anmeldeinformationen angeben:
+Um auf Ihr [!DNL Zendesk]-Konto in Experience Platform zugreifen zu können, müssen Sie Werte für die folgenden Anmeldeinformationen angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -35,9 +35,9 @@ Weitere Informationen zum Authentifizieren Ihrer [!DNL Zendesk] finden Sie unter
 
 ![Zendesk-API-Token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### Erstellen eines Platform-Schemas für [!DNL Zendesk]
+### Erstellen eines Experience Platform-Schemas für [!DNL Zendesk]
 
-Bevor Sie eine [!DNL Zendesk] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Platform Schemas .
+Bevor Sie eine [!DNL Zendesk] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Weitere Anleitungen zu Ihrem für die [!DNL Zendesk Search API] erforderlichen [!DNL Zendesk] finden Sie im Abschnitt [Beschränkungen](#limits) unten.
 
@@ -45,7 +45,7 @@ Weitere Anleitungen zu Ihrem für die [!DNL Zendesk Search API] erforderlichen [
 
 ## Verbinden Ihres [!DNL Zendesk]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -75,7 +75,7 @@ Nachdem Ihre Quelle authentifiziert wurde, wird die Seite in eine interaktive Sc
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Zendesk]-Konto und Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Customer Success-Daten in Platform zu importieren](../../dataflow/customer-success.md).
+In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Zendesk]-Konto und Experience Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Customer Success-Daten in Experience Platform zu importieren](../../dataflow/customer-success.md).
 
 ## Zusätzliche Ressourcen
 
@@ -83,9 +83,9 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verw
 
 ### Validierung {#validation}
 
-Im Folgenden werden die Schritte beschrieben, die Sie unternehmen können, um zu überprüfen, ob Sie Ihre [!DNL Zendesk] erfolgreich verbunden haben und ob [!DNL Zendesk] Profile in Platform aufgenommen werden.
+Im Folgenden wird beschrieben, wie Sie überprüfen können, ob Sie Ihre [!DNL Zendesk] erfolgreich verbunden haben und ob [!DNL Zendesk] Profile in Experience Platform aufgenommen werden.
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Der [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Datensätze] zuzugreifen. Der [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
 
 ![Aktivitätsseite](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -97,7 +97,7 @@ Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes]** aus, um die 
 
 ![Zendesk-](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-Sie können Ihre Platform-Daten auch mit den Daten auf Ihrer Seite [!DNL Zendesk] > [!DNL Customers] vergleichen.
+Sie können Ihre Experience Platform-Daten auch mit den Daten auf Ihrer Seite [!DNL Zendesk] > [!DNL Customers] vergleichen.
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

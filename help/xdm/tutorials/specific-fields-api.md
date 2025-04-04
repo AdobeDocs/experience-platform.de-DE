@@ -2,10 +2,10 @@
 title: Hinzufügen bestimmter Felder zu einem Schema mithilfe der Schema Registry-API
 description: Erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus bereits vorhandenen Feldergruppen zu einem Experience-Datenmodell(XDM)-Schema hinzufügen.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 100%
+source-wordcount: '626'
+ht-degree: 96%
 
 ---
 
@@ -285,6 +285,6 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 
 ## Nächste Schritte
 
-In diesem Handbuch wird die Verwendung von API-Aufrufen zum Hinzufügen einzelner Felder aus einer vorhandenen Feldergruppe zu einem Schema beschrieben. Weitere Informationen zum Ausführen ähnlicher feldbasierter Aufgaben in der Platform-Benutzeroberfläche finden Sie im Handbuch zu [feldbasierten Workflows](../ui/field-based-workflows.md).
+In diesem Handbuch wird die Verwendung von API-Aufrufen zum Hinzufügen einzelner Felder aus einer vorhandenen Feldergruppe zu einem Schema beschrieben. Weitere Informationen zum Ausführen ähnlicher feldbasierter Aufgaben in der Experience Platform-Benutzeroberfläche finden Sie im Handbuch zu [feldbasierten Workflows](../ui/field-based-workflows.md).
 
 Weitere Informationen zu den Funktionen der Schema Registry-API und eine vollständige Liste der Endpunkte und Prozesse finden Sie in der [API-Übersicht](../api/overview.md).

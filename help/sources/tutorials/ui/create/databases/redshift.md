@@ -3,10 +3,10 @@ title: Verbinden von AWS Redshift mit Experience Platform über die Benutzerober
 description: Erfahren Sie, wie Sie ein AWS Redshift-Konto mithilfe der Quellen-Benutzeroberfläche mit Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 22%
+source-wordcount: '719'
+ht-degree: 20%
 
 ---
 
@@ -31,7 +31,7 @@ Wenn Sie bereits über eine gültige [!DNL AWS Redshift]-Verbindung verfügen, k
 
 ## Navigieren im Quellkatalog
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie **[!DNL AWS Redshift]** unter der Kategorie *[!UICONTROL Datenbanken]* und dann **[!UICONTROL Einrichten]**.
 

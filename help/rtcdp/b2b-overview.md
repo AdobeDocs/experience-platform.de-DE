@@ -5,10 +5,10 @@ description: Übersicht über das Konto in der B2B-Edition von Real-time Custome
 feature: Get Started, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 98%
+source-wordcount: '1058'
+ht-degree: 85%
 
 ---
 
@@ -30,7 +30,7 @@ Ausführlichere Details zu den Verbesserungen in Real-Time CDP B2B Edition sind 
 
 Real-Time CDP B2B Edition bietet mehrere neue XDM-Schemaklassen, Feldgruppen und Beziehungstypen zur Erfassung und Strukturierung Ihrer Daten, speziell für B2B-Zwecke. In der Übersicht über [XDM in Real-Time CDP B2B Edition](./schemas/b2b.md) finden Sie eine Aufschlüsselung der einzelnen Verbesserungen.
 
-Durch die Verwendung vorkonfigurierter B2B-Schemata können Sie Daten in einer standardisierten, umsetzbaren Struktur einbringen. Viele der neuen Schemaklassen entsprechen fast direkt denen, die in gängigen CRM-Systemen wie [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] und anderen B2B-Datenquellen zu finden sind. Mit Real-Time CDP B2B Edition können Sie Daten aus B2B-Quellen auf unkomplizierte Weise und mit leicht zu überprüfenden Ergebnissen in Platform einbringen.
+Durch die Verwendung vorkonfigurierter B2B-Schemata können Sie Daten in einer standardisierten, umsetzbaren Struktur einbringen. Viele der neuen Schemaklassen entsprechen fast direkt denen, die in gängigen CRM-Systemen wie [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] und anderen B2B-Datenquellen zu finden sind. Mit Real-Time CDP B2B edition können Sie Daten aus B2B-Quellen auf unkomplizierte Weise und mit leicht zu überprüfenden Ergebnissen in Experience Platform importieren.
 
 Diese XDM-Erweiterungen ermöglichen eine bessere Aufnahme und Aktivierung von Daten über B2B-zentrierte Quellen und Ziele und verbessern die Datenvereinheitlichung und -präsentation für vielfältigere und flexiblere Anwendungsfälle.
 
@@ -47,7 +47,7 @@ Das Identitätsauflösungssystem bietet die folgenden Funktionen:
 
 Das System zur Identitätsauflösung wurde erweitert, um eine vielseitigere Classification von Personen zu ermöglichen. Das System ermöglicht es, Personen sowohl als Geschäfts-Opportunities als auch als Kunden zu identifizieren.
 
-Account-Datensätze, die vom Quell-CRM synchronisiert und über mehrere Pfade innerhalb des Systems verbunden sind, werden von Platform zusammengeführt. Das System fasst die Personen, die mit Opportunities in Verbindung stehen, und die als Kunden erfassten Personen zusammen, ist aber auch in der Lage, die Unterscheidung zwischen ihnen als Attribut zu erhalten, wenn sie identifizierbar sind.
+Account-Datensätze, die vom Quell-CRM synchronisiert und über mehrere Pfade innerhalb des Systems verbunden sind, werden von Experience Platform zusammengeführt. Das System fasst die Personen, die mit Opportunities in Verbindung stehen, und die als Kunden erfassten Personen zusammen, ist aber auch in der Lage, die Unterscheidung zwischen ihnen als Attribut zu erhalten, wenn sie identifizierbar sind.
 
 Es werden übereinstimmende Identifikatoren verwendet, um Account-Datensätze aus verschiedenen Systemen miteinander zu verknüpfen und zusammenzuführen. Account-Hierarchien bleiben bei diesem Vorgang erhalten. Mithilfe von Unterscheidungsmerkmalen wird geprüft, ob eine Person mit einem Account verbunden ist oder nicht, und es besteht die Möglichkeit, sie bei Bedarf vom Account zu trennen.
 
@@ -59,17 +59,17 @@ Bei korrekter Implementierung verfolgt das System Personen anhand eindeutiger pr
 
 ## B2B-Quellen
 
-Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Mit der [!DNL Marketo]-Quelle können Sie B2B-Daten in Platform streamen und diese Daten mit Platform-verbundenen Programmen auf dem neuesten Stand halten. Dabei wird eine beliebige Anzahl von [!DNL Marketo]-Instanzen unterstützt (was für große Unternehmen mit mehreren Instanzen von Vorteil ist) und in eine einzige Organisation eingebracht, wo die Daten zusammengeführt werden.
+Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Mit der [!DNL Marketo] können Sie B2B-Daten in Experience Platform streamen und diese Daten mit Anwendungen, die mit Experience Platform verbunden sind, auf dem neuesten Stand halten. Dabei wird eine beliebige Anzahl von [!DNL Marketo]-Instanzen unterstützt (was für große Unternehmen mit mehreren Instanzen von Vorteil ist) und in eine einzige Organisation eingebracht, wo die Daten zusammengeführt werden.
 
 >[!NOTE]
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um Real-Time CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu Marketo und der Einbindung von B2B-Daten in Platform finden Sie in der Dokumentation zu den [Quellen in Real-Time CDP B2B Edition](./sources/b2b.md).
+Weitere Informationen zu [ und der Einbindung von B2B-Daten in Experience Platform finden Sie in der ](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
 
 ## B2B-Ziele
 
-Experience Platform-Ziele wie Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager sind verfügbar und werden von Real-Time CDP B2B Edition vollständig unterstützt. Das Marketo Engage-Ziel streamt auch Segmentzugehörigkeitsdaten aus Platform und macht diese als Listen in Marketo verfügbar.
+Experience Platform-Ziele wie Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager sind verfügbar und werden von Real-Time CDP B2B Edition vollständig unterstützt. Das Marketo Engage-Ziel streamt auch Segmentzugehörigkeitsdaten aus Experience Platform und stellt sie als Listen in Marketo zur Verfügung.
 
 Weitere informationen finden Sie in der Übersicht zum [Marketo Engage-Ziel](../destinations/catalog/adobe/marketo-engage.md).
 

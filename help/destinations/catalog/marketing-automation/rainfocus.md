@@ -3,7 +3,7 @@ title: RainFocus-Teilnehmerprofile
 description: Erfahren Sie, wie Sie mit dem Ziel-Connector für RainFocus-Teilnehmerprofile Zielgruppenprofile mit dem globalen RainFocus-Teilnehmerprofil synchronisieren können.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: aa3af07e5a0909c95d9e23d209b041fa1fcd67b6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 44%
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 # RainFocus-Teilnehmerprofile {#rainfocus-destination}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Verwenden Sie das [!DNL RainFocus Attendee Profiles] Ziel, um Kundenprofile aus Adobe Experience Platform in die [!DNL RainFocus] zu streamen, um Teilnehmerprofile zu erstellen und zu aktualisieren.
 
@@ -20,7 +20,7 @@ Verwenden Sie das [!DNL RainFocus Attendee Profiles] Ziel, um Kundenprofile aus 
 >
 >Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL RainFocus]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `clientcare@rainfocus.com` oder besuchen Sie das RainFocus [Hilfezentrum](https://help.rainfocus.com/hc/en-us).
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das RainFocus-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel bewältigen können.
 
@@ -48,7 +48,7 @@ Sie müssen außerdem über eine RainFocus-Kennung **Ereigniscode** verfügen, a
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}

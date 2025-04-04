@@ -4,7 +4,7 @@ title: Hinzufügen von Daten zum Echtzeit-Kundenprofil
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 59%
@@ -24,7 +24,7 @@ Sie können ein Schema zur Verwendung in [!DNL Real-Time Customer Profile] mithi
 
 ## Hinzufügen von Daten mithilfe der Batch-Erfassung
 
-Alle Daten, die mithilfe der Batch-Aufnahme in [!DNL Platform] hochgeladen wurden, werden in die einzelnen Datensätze hochgeladen. Bevor diese Daten von [!DNL Real-Time Customer Profile] verwendet werden können, muss der betreffende Datensatz speziell konfiguriert werden. Vollständige Anweisungen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für den Profile und Identity Service](dataset-configuration.md).
+Alle Daten, die mithilfe der Batch-Aufnahme in [!DNL Experience Platform] hochgeladen wurden, werden in die einzelnen Datensätze hochgeladen. Bevor diese Daten von [!DNL Real-Time Customer Profile] verwendet werden können, muss der betreffende Datensatz speziell konfiguriert werden. Vollständige Anweisungen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für den Profile und Identity Service](dataset-configuration.md).
 
 Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben. Detaillierte Anweisungen zum Hochladen von Dateien in verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 

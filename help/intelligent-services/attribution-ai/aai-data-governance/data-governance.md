@@ -5,22 +5,22 @@ feature: Attribution AI
 title: Data Governance in Attributions-Ki
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 96%
+source-wordcount: '208'
+ht-degree: 72%
 
 ---
 
-# Attribution AI und Data Governance in Attribution AI
+# Attributions-KI und Data Governance in Attributions-KI
 
 Sämtliche Einstellungen mit Bezug zu Data Governance in Attributions-KI werden von Adobe Experience Platform übernommen.
 
 ## Data Governance {#governance}
 
-Durch die Integration von Attributions-KI mit der Data Governance von Adobe Experience Platform können Sie Ihre Daten über Platform über die gesamte Journey kontrollieren und nachvollziehen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
+Durch die Integration von Attribution AI mit Adobe Experience Platform Data Governance können Sie Ihre Daten über Experience Platform während ihres gesamten Journey kontrollieren und erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
 
-Datenschutzkennzeichnungen und -richtlinien, die für von Platform genutzte Datensätze erstellt wurden, können im Konfigurations-Workflow von Attributions-KI angezeigt werden. Diese Kennzeichnungen stoppen oder warnen Benutzende, die gekennzeichnete Felder verwenden.
+Datennutzungsbeschriftungen und -richtlinien, die für von Experience Platform genutzte Datensätze erstellt wurden, können im Konfigurations-Workflow von Attributions-KI angezeigt werden. Diese Kennzeichnungen stoppen oder warnen Benutzende, die gekennzeichnete Felder verwenden.
 
 Diese Integration ermöglicht ein effizienteres Compliance-Management. Datenverantwortliche in Ihrem Unternehmen können Richtlinien festlegen, um die Nutzung zu beschränken. So können Sie Daten verwenden, die den von Datenverantwortlichen definierten Richtlinien entsprechen. Weitere Informationen finden Sie in der Dokumentation zu [Kennzeichnungen und Richtlinien](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=de).
 

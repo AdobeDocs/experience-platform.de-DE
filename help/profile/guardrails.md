@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
-ht-degree: 55%
+source-wordcount: '2617'
+ht-degree: 52%
 
 ---
 
@@ -31,9 +31,9 @@ Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur
 Die folgenden Experience Platform-Services sind an der Modellierung von Echtzeit-Kundenprofildaten beteiligt:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
-* [Identitäten](../identity-service/home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
-* [Schemata](../xdm/home.md): Experience-Datenmodell-Schemata (XDM) sind das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
-* [Zielgruppen](../segmentation/home.md): Die Segmentierungs-Engine in Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
+* [Identitäten](../identity-service/home.md): Bridge-Identitäten aus unterschiedlichen Datenquellen bei der Aufnahme in Experience Platform.
+* [Schemata](../xdm/home.md): Experience-Datenmodell-Schemata (XDM) sind das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Zielgruppen](../segmentation/home.md): Die Segmentierungs-Engine in Experience Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
 
 ## Arten von Beschränkungen
 
@@ -177,9 +177,9 @@ In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente�
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 
-Beim Zusammenführen von Daten aus mehreren Quellen dienen als Zusammenführungsrichtlinien die Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, welche Informationen in das Profil für die Person aufgenommen werden sollen. Pro Sandbox sind maximal fünf (5) Zusammenführungsrichtlinien zulässig, die das `_xdm.context.profile`-Schema verwenden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie in der [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
+Beim Zusammenführen von Daten aus mehreren Quellen dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Experience Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, welche Informationen in das Profil für die Person aufgenommen werden sollen. Pro Sandbox sind maximal fünf (5) Zusammenführungsrichtlinien zulässig, die das `_xdm.context.profile`-Schema verwenden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie in der [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
 
-### Adobe Analytics Report Suite-Datensätze in Platform {#aa-datasets}
+### Adobe Analytics Report Suite-Datensätze in Experience Platform {#aa-datasets}
 
 Für Profil können mehrere Report Suites aktiviert werden, solange alle Datenkonflikte gelöst sind. Mit der Funktionalität zur Datenvorbereitung können Sie Datenkonflikte zwischen eVars, Listen und Eigenschaften beheben. Weitere Informationen zur Verwendung der Funktionalität zur Datenvorbereitung finden Sie im [Handbuch zur Adobe Analytics Connector-Benutzeroberfläche](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datennutzungskennzeichnungen – Übersicht
 description: Erfahren Sie, wie Datennutzungskennzeichnungen verwendet werden, um die Einhaltung von Data-Governance-Richtlinien in Adobe Experience Platform durchzusetzen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 100%
+source-wordcount: '789'
+ht-degree: 94%
 
 ---
 
@@ -24,11 +24,11 @@ Dieses Dokument bietet eine Übersicht über Datennutzungskennzeichnungen in [!D
 
 ## Verstehen von Datennutzungskennzeichnungen
 
-Mit Datennutzungskennzeichnungen können Sie Datensätze anhand der für diese Daten geltenden Governance-Richtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Beschriftung zu versehen.
+Mit Datennutzungskennzeichnungen können Sie Datensätze anhand der für diese Daten geltenden Governance-Richtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Experience Platform] mit einer Beschriftung zu versehen.
 
 Datennutzungsbeschriftungen, die auf Datensatzebene angewendet werden, werden für alle Felder des Datensatzes übernommen. Außerdem können Beschriftungen direkt auf einzelne Felder (Spaltenüberschriften) in einem Datensatz angewendet werden, ohne dass eine Übernahme erfolgt.
 
-[!DNL Platform] bietet mehrere standardmäßige „Kern“-Datennutzungsbeschriftungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Kennzeichnungen und zu den Governance-Richtlinien, für die sie stehen, finden Sie im Handbuch zu den [grundlegenden Datennutzungskennzeichnungen](reference.md).
+[!DNL Experience Platform] bietet mehrere standardmäßige „Kern“-Datennutzungsbeschriftungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Kennzeichnungen und zu den Governance-Richtlinien, für die sie stehen, finden Sie im Handbuch zu den [grundlegenden Datennutzungskennzeichnungen](reference.md).
 
 Zusätzlich zu den von Adobe bereitgestellten Beschriftungen können Sie auch eigene benutzerdefinierte Beschriftungen für Ihr Unternehmen definieren. Weitere Informationen finden Sie im Abschnitt [Verwalten von Beschriftungen](#manage-labels).
 
@@ -38,13 +38,13 @@ Alle von [Adobe Experience Platform Segmentation Service](../../segmentation/hom
 
 Neben der Vererbung von Beschriftungen auf Datensatzebene übernehmen Segmente standardmäßig alle Beschriftungen auf Feldebene aus den zugehörigen Datensätzen. Daher können Sie leichter identifizieren, welche Attribute bei Ihren Segmenten ausgeschlossen werden sollen, und so verhindern, dass die Segmente Beschriftungen von ausgeschlossenen Feldern übernehmen.
 
-Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Platform finden Sie in der Übersicht über [automatische Richtliniendurchsetzung](../enforcement/auto-enforcement.md).
+Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Experience Platform finden Sie in der Übersicht über [automatische Richtliniendurchsetzung](../enforcement/auto-enforcement.md).
 
 ### Vererbung von Adobe Audience Manager-Datenexportsteuerelementen
 
 [!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager-Segmente angewendet wurden, werden in entsprechende Kennzeichnungen und Marketing-Aktionen übersetzt, die von [!DNL Experience Platform] Data Governance erkannt werden.
 
-Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungskennzeichnungen in [!DNL Platform] zugeordnet werden, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
+Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungskennzeichnungen in [!DNL Experience Platform] zugeordnet werden, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
 
 ## Verwalten von Datennutzungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
 
@@ -61,7 +61,7 @@ Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [
 
 >[!IMPORTANT]
 >
->Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../e2e.md#migrate-labels).
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf der Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../e2e.md#migrate-labels).
 
 ### Verwenden von APIs
 

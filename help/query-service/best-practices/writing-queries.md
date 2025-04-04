@@ -5,9 +5,9 @@ title: Allgemeine Leitlinien für die Ausführung von Abfragen im Abfrage-Servic
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen beschrieben, die Sie beim Schreiben von Abfragen in Adobe Experience Platform Query Service beachten sollten.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Si
 
 >[!NOTE]
 >
->Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
+>Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ Wenn Sie Klammernotation verwenden **sind** Anführungszeichen erforderlich.
 
 ## Anzeigen von Tabelleninformationen
 
-Nachdem Sie eine Verbindung zum Abfrage-Service hergestellt haben, können Sie alle verfügbaren Tabellen in Platform mit den Befehlen `\d` oder `SHOW TABLES` anzeigen.
+Nachdem Sie eine Verbindung zum Abfrage-Service hergestellt haben, können Sie alle verfügbaren Tabellen in Experience Platform mit den Befehlen `\d` oder `SHOW TABLES` anzeigen.
 
 ### Standard-Tabellenansicht
 

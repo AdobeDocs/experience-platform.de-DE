@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;API;erkunden;Fl
 title: Erkunden einer tabellarischen Source mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um den Inhalt und die Struktur einer tabellenbasierten Quelle zu untersuchen.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 21%
+source-wordcount: '471'
+ht-degree: 16%
 
 ---
 
@@ -22,12 +22,12 @@ In diesem Tutorial erfahren Sie, wie Sie die Struktur und den Inhalt Ihrer Daten
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Datentabellen
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Quelle zurück. Suchen Sie die Tabelle, die Sie in Platform importieren möchten, und notieren Sie sich die `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Quelle zurück. Suchen Sie die Tabelle, die Sie in Experience Platform importieren möchten, und notieren Sie sich die `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
 
 ```json
 [
@@ -77,7 +77,7 @@ Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Quelle zurück. 
 ]
 ```
 
-## Inspect - die Tabellenstruktur
+## Überprüfen der Tabellenstruktur
 
 Um den Inhalt Ihrer Datentabellen zu überprüfen, führen Sie eine GET-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
 
@@ -188,7 +188,7 @@ Eine erfolgreiche Antwort gibt Informationen über den Inhalt und die Struktur d
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Informationen über die Struktur und den Inhalt Ihrer Datentabellen gesammelt. Darüber hinaus haben Sie den Pfad zu der Tabelle abgerufen, die Sie in Platform aufnehmen möchten. Sie können diese Informationen verwenden, um eine Quellverbindung und einen Datenfluss zu erstellen, um Ihre Daten in Platform zu übertragen. In den folgenden Tutorials finden Sie spezifische Schritte zum Erstellen einer Quellverbindung und eines Datenflusses mithilfe der [!DNL Flow Service]-API:
+In diesem Tutorial haben Sie Informationen über die Struktur und den Inhalt Ihrer Datentabellen gesammelt. Darüber hinaus haben Sie den Pfad zu der Tabelle abgerufen, die Sie in Experience Platform aufnehmen möchten. Mithilfe dieser Informationen können Sie eine Quellverbindung und einen Datenfluss erstellen, um Ihre Daten an Experience Platform zu übertragen. In den folgenden Tutorials finden Sie spezifische Schritte zum Erstellen einer Quellverbindung und eines Datenflusses mithilfe der [!DNL Flow Service]-API:
 
 * [Advertising-Quellen](../collect/advertising.md)
 * [CRM-Quellen](../collect/crm.md)

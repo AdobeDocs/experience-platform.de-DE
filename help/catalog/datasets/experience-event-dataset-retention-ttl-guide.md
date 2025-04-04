@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2341'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ TTL ist nützlich bei der Verwaltung zeitkritischer Daten, die im Laufe der Zeit
 
 ### Branchenbeispiel {#industry-example}
 
-Nehmen wir als Beispiel einen Video-Streaming-Service, der Benutzerinteraktionen wie Videoansichten, Suchen und Empfehlungen verfolgt. Obwohl aktuelle Interaktionsdaten für die Personalisierung von entscheidender Bedeutung sind, verlieren ältere Aktivitätsprotokolle (z. B. Interaktionen von vor mehr als einem Jahr) an Relevanz. Durch die Verwendung der Gültigkeit auf Zeilenebene entfernt Platform automatisch veraltete Protokolle, sodass nur aktuelle und aussagekräftige Daten für Analysen und Empfehlungen verwendet werden.
+Nehmen wir als Beispiel einen Video-Streaming-Service, der Benutzerinteraktionen wie Videoansichten, Suchen und Empfehlungen verfolgt. Obwohl aktuelle Interaktionsdaten für die Personalisierung von entscheidender Bedeutung sind, verlieren ältere Aktivitätsprotokolle (z. B. Interaktionen von vor mehr als einem Jahr) an Relevanz. Durch die Verwendung der Gültigkeit auf Zeilenebene entfernt Experience Platform automatisch veraltete Protokolle, sodass nur aktuelle und aussagekräftige Daten für Analysen und Empfehlungen verwendet werden.
 
 ## TTL-Eignung bewerten
 
@@ -76,7 +76,7 @@ Um mit der TTL-Verwaltung zu beginnen, überprüfen Sie zunächst die aktuellen 
 
 >[!TIP]
 >
->Die Platform-Gateway-URL und der Basispfad für die Catalog Service-API sind: `https://platform.adobe.io/data/foundation/catalog`.
+>Die Experience Platform-Gateway-URL und der Basispfad für die Catalog Service-API sind: `https://platform.adobe.io/data/foundation/catalog`.
 
 **API-Format**
 
@@ -375,13 +375,13 @@ Sie können Aufbewahrungsrichtlinien auf Datensätze anwenden, die mithilfe der 
 ### Wie bald löscht der Auftrag zur Datensatzaufbewahrung Daten aus Data Lake-Services?
 
 +++Antwort
-Datensatz-TTLs werden wöchentlich ausgewertet und verarbeitet und dabei werden alle abgelaufenen Datensätze gelöscht. Ein Ereignis wird als abgelaufen betrachtet, wenn es vor mehr als 30 Tagen (Aufnahmedatum > 30 Tage) in Platform aufgenommen wurde und sein Ereignisdatum die definierte Aufbewahrungsfrist (TTL) überschreitet.
+Datensatz-TTLs werden wöchentlich ausgewertet und verarbeitet und dabei werden alle abgelaufenen Datensätze gelöscht. Ein Ereignis wird als abgelaufen betrachtet, wenn es vor mehr als 30 Tagen (Aufnahmedatum > 30 Tage) in Experience Platform aufgenommen wurde und sein Ereignisdatum die definierte Aufbewahrungsfrist (TTL) überschreitet.
 +++
 
 ### Wie bald löscht der Vorgang zur Datensatzaufbewahrung Daten aus Profil-Services?
 
 +++Antwort
-Nach dem Festlegen einer Aufbewahrungsrichtlinie werden vorhandene Ereignisse in Platform sofort gelöscht, wenn ihr Ereignis-Zeitstempel die Aufbewahrungsfrist (TTL) überschreitet. Neue Ereignisse werden gelöscht, sobald ihr Zeitstempel die Aufbewahrungsfrist überschreitet.
+Nach dem Festlegen einer Aufbewahrungsrichtlinie werden vorhandene Ereignisse in Experience Platform sofort gelöscht, wenn ihr Ereigniszeitstempel die Aufbewahrungsfrist (TTL) überschreitet. Neue Ereignisse werden gelöscht, sobald ihr Zeitstempel die Aufbewahrungsfrist überschreitet.
 
 Wenn Sie beispielsweise am 15. Mai eine 30-Tage-Gültigkeit anwenden, passiert Folgendes:
 
@@ -436,6 +436,6 @@ Weitere Informationen finden Sie im Handbuch [Erstellen abgeleiteter Datensätze
 
 Nachdem Sie nun gelernt haben, wie Sie TTL-Einstellungen für den Ablauf auf Zeilenebene verwalten, lesen Sie die folgende Dokumentation, um Ihr Verständnis der TTL-Verwaltung zu vertiefen:
 
-- Aufbewahrungsaufträge: Erfahren Sie mit dem [Handbuch zur Datenlebenszyklus-Benutzeroberfläche“, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und automatisieren ](../../hygiene/ui/dataset-expiration.md), oder überprüfen Sie die Konfigurationen zur Datensatzaufbewahrung und stellen Sie sicher, dass abgelaufene Datensätze gelöscht werden.
+- Aufbewahrungsaufträge: Erfahren Sie mit dem [Handbuch zur Datenlebenszyklus-Benutzeroberfläche“, wie Sie Datensatzgültigkeiten in der Experience Platform-Benutzeroberfläche planen und automatisieren ](../../hygiene/ui/dataset-expiration.md), oder überprüfen Sie die Konfigurationen zur Datensatzaufbewahrung und stellen Sie sicher, dass abgelaufene Datensätze gelöscht werden.
 - [API-Endpunkthandbuch zur Datensatzgültigkeit](../../hygiene/api/dataset-expiration.md): Erfahren Sie, wie Sie ganze Datensätze und nicht nur Zeilen löschen können. Erfahren Sie, wie Sie die Datensatzgültigkeit mithilfe der API planen, verwalten und automatisieren können, um eine effiziente Datenaufbewahrung zu gewährleisten.
 - [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md) Erfahren Sie, wie Sie Ihre Datenaufbewahrungsstrategie an umfassenderen Compliance-Anforderungen und Marketing-Nutzungsbeschränkungen ausrichten können.

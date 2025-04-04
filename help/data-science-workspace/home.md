@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace – Übersicht
 description: Dieser Leitfaden bietet eine Übersicht über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 99%
@@ -94,7 +94,7 @@ Die richtigen Daten zu finden und sie vorzubereiten, ist der arbeitsintensivste 
 
 Unter Adobe Experience Platform werden Ihre Daten über verschiedene Kanäle hinweg zentralisiert und im standardisierten XDM-Schema gespeichert, sodass sie leichter zu finden, zu verstehen und zu bereinigen sind. Ein einziger Datenspeicher auf der Grundlage eines gemeinsamen Schemas kann Ihnen unzählige Stunden an Datenforschung und -vorbereitung ersparen.
 
-Verwenden Sie beim Durchsuchen R, [!DNL Python] oder Scala mit dem integrierten gehosteten [!DNL Jupyter Notebook], um den Datenkatalog in [!DNL Platform] zu durchsuchen. Mit einer dieser Sprachen können Sie auch die Vorteile von [!DNL Spark] ML und TensorFlow nutzen. Beginnen Sie von Grund auf oder verwenden Sie eine der bereitgestellten Notebook-Vorlagen für spezifische geschäftliche Herausforderungen.
+Verwenden Sie beim Durchsuchen R, [!DNL Python] oder Scala mit dem integrierten gehosteten [!DNL Jupyter Notebook], um den Datenkatalog in [!DNL Experience Platform] zu durchsuchen. Mit einer dieser Sprachen können Sie auch die Vorteile von [!DNL Spark] ML und TensorFlow nutzen. Beginnen Sie von Grund auf oder verwenden Sie eine der bereitgestellten Notebook-Vorlagen für spezifische geschäftliche Herausforderungen.
 
 Im Rahmen des Workflows für die Datenforschung können Sie auch neue Daten aufnehmen oder vorhandene Funktionen zur Hilfe bei der Datenvorbereitung verwenden.
 

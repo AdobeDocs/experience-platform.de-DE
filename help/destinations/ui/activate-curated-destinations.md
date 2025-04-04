@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-K
 type: Tutorial
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform mithilfe der LiveRamp-ID für verbundene TV- und Audio-Ziele und andere Integrationen aktivieren.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Verwenden Sie die Adobe Real-Time CDP-Integration mit [!DNL LiveRamp], um Zielgr
 
 >[!IMPORTANT]
 >
->Sie müssen LiveRampIDs in der Experience Platform-Oberfläche nicht aufnehmen oder in irgendeiner Weise mit ihnen arbeiten.
+>Sie müssen LiveRampIDs in der Experience Platform-Benutzeroberfläche nicht aufnehmen und in keiner Weise mit ihnen arbeiten.
 >
 > Sie können Identitäten aus Real-Time CDP exportieren, z. B. PII-basierte Kennungen, bekannte Kennungen und benutzerdefinierte IDs, wie in der offiziellen [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) beschrieben. Diese Identitäten werden dann im Aktivierungsprozess weiter unten mit [!DNL LiveRamp RampIDs] abgeglichen.
 
@@ -66,17 +66,17 @@ Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf di
 
 ### Schritt 1: Senden Sie Ihre Zielgruppen von Experience Platform über das [!DNL LiveRamp - Onboarding] Ziel an LiveRamp {#onboarding}
 
-Um Ihre Zielgruppen für kuratierte Ziele auf der Grundlage von LiveRampIDs zu aktivieren, müssen Sie zunächst Ihre Zielgruppen **Experience Platform nach[!DNL LiveRamp]** exportieren.
+Um Ihre Zielgruppen für kuratierte Ziele auf Grundlage von LiveRamp-IDs zu aktivieren, müssen Sie zunächst Ihre Zielgruppen **Experience Platform nach[!DNL LiveRamp]** exportieren.
 
 Verwenden Sie dazu das **[!DNL LiveRamp - Onboarding]** .
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der LiveRamp-Onboarding-Zielkarte](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
-Informationen zum Konfigurieren des [!DNL LiveRamp - Onboarding] Ziels und zum Exportieren Ihrer Zielgruppen von Experience Platform finden Sie in der Dokumentation zum [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) Ziel .
+Informationen zum Konfigurieren des [!DNL LiveRamp - Onboarding] Ziels und zum Exportieren Ihrer Zielgruppen aus Experience Platform finden Sie in der Dokumentation zum [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) Ziel .
 
 >[!IMPORTANT]
 >
->Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../profile/merge-policies/overview.md). In der Dokumentation zum [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) finden Sie detaillierte Informationen zur Validierung Ihres Datenexports in LiveRamp.
+>Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Experience Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../profile/merge-policies/overview.md). In der Dokumentation zum [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) finden Sie detaillierte Informationen zur Validierung Ihres Datenexports in LiveRamp.
 
 
 Fahren Sie nach dem erfolgreichen Export Ihrer Zielgruppen in LiveRamp mit [Schritt 2](#distribution) fort.
@@ -107,7 +107,7 @@ Wenn Sie das **[!DNL LiveRamp - Distribution]**-Ziel konfigurieren, müssen Sie 
 ><br>
 >Beispiel: `LiveRamp - Roku`.
 
-![Screenshot der Platform-Benutzeroberfläche mit mehreren LiveRamp-Zielen.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit mehreren LiveRamp-Zielen.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 

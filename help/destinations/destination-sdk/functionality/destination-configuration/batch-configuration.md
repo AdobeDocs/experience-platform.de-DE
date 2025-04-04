@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 96%
+source-wordcount: '1058'
+ht-degree: 86%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 96%
 
 Verwenden Sie die Batch-Konfigurationsoptionen in Destination SDK, um Benutzerinnen und Benutzern die Möglichkeit zu geben, die exportierten Dateinamen anzupassen und den Exportzeitplan nach ihren Wünschen zu konfigurieren.
 
-Wenn Sie dateibasierte Ziele über Destination SDK erstellen, können Sie Standarddateinamen konfigurieren und Zeitpläne exportieren. Alternativ können Sie Benutzerinnen und Benutzern über die Platform-Benutzeroberfläche die Option zum Konfigurieren dieser Einstellungen geben. Sie können beispielsweise Verhaltensweisen wie die folgenden konfigurieren:
+Wenn Sie dateibasierte Ziele über Destination SDK erstellen, können Sie Standarddateinamen konfigurieren und Zeitpläne exportieren. Alternativ können Sie Benutzerinnen und Benutzern über die Experience Platform-Benutzeroberfläche die Option zum Konfigurieren dieser Einstellungen geben. Sie können beispielsweise Verhaltensweisen wie die folgenden konfigurieren:
 
 * Einschließen spezifischer Informationen in den Dateinamen, z. B. Zielgruppen-IDs, Ziel-IDs oder benutzerdefinierte Informationen.
-* Benutzerinnen und Benutzer können die Dateibenennung über die Platform-Benutzeroberfläche anpassen.
+* Benutzerinnen und Benutzern ermöglichen, die Dateibenennung über die Experience Platform-Benutzeroberfläche anzupassen.
 * Konfigurieren von Dateiexporten für bestimmte Zeitintervalle.
-* Definieren, welche Anpassungsoptionen für die Dateibenennung und den Export von Zeitplänen für Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche angezeigt werden.
+* Definieren, welche Anpassungsoptionen für die Dateibenennung und den Export von Zeitplänen für Benutzerinnen und Benutzer in der Experience Platform-Benutzeroberfläche angezeigt werden.
 
 Batch-Konfigurationseinstellungen sind Teil der Zielkonfiguration für dateibasierte Ziele.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden der -Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Sie können die Dateibenennungs- und Exportzeitplaneinstellungen über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
 * [Erstellen einer Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aktualisieren einer Zielkonfiguration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In diesem Artikel werden alle unterstützten Batch-Konfigurationsoptionen beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, was Kundinnen und Kunden in der Platform-Benutzeroberfläche sehen werden.
+In diesem Artikel werden alle unterstützten Batch-Konfigurationsoptionen beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, was Kundinnen und Kunden in der Experience Platform-Benutzeroberfläche sehen werden.
 
 >[!IMPORTANT]
 >
@@ -113,9 +113,9 @@ Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Name
 | Makro | UI-Bezeichnung | Beschreibung | Beispiel |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Ziel] | Zielname in der Benutzeroberfläche. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment-ID] | Eindeutige, von Platform generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL Segment-ID] | Eindeutige, von Experience Platform generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Segmentname] | Benutzerdefinierter Zielgruppenname | VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Ziel-ID] | Eindeutige, von Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Ziel-ID] | Eindeutige, von Experience Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Zielname] | Benutzerdefinierter Name der Zielinstanz. | Mein Werbeziel 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organisationsname] | Name der Kundenorganisation in Adobe Experience Platform. | Mein Organisationsname |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox-Name] | Name der von der Kundinnen oder dem Kunden verwendeten Sandbox. | prod |

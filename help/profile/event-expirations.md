@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gültigkeitsdauern von Erlebnisereignissen
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren der Gültigkeitsdauern für einzelne Erlebnisereignisse in einem Adobe Experience Platform-Datensatz.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 78%
+source-wordcount: '858'
+ht-degree: 68%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 78%
 
 In Adobe Experience Platform können Sie Gültigkeitsdauern für alle Erlebnisereignisse konfigurieren, die in einen Datensatz aufgenommen werden, der für das Echtzeit[Kundenprofil aktiviert ](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
-Gültigkeitsdauern von Erlebnisereignissen können nicht über die Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um Gültigkeitsdauern von Erlebnisereignissen für Ihre erforderlichen Datensätze zu aktivieren.
+Gültigkeitsdauern von Erlebnisereignissen können nicht über die Benutzeroberfläche oder APIs von Experience Platform konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um Gültigkeitsdauern von Erlebnisereignissen für Ihre erforderlichen Datensätze zu aktivieren.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ Gültigkeitsdauern von Erlebnisereignissen können nicht über die Platform-Benu
 
 ## Automatisierter Prozess zur Gültigkeitsdauer
 
-Nachdem Gültigkeitsdauern von Erlebnisereignissen für einen Datensatz mit aktiviertem Profil aktiviert wurden, wendet Platform die Gültigkeitswerte für jedes erfasste Ereignis in einem zweistufigen Prozess automatisch an:
+Nachdem Gültigkeitsdauern von Erlebnisereignissen für einen profilaktivierten Datensatz aktiviert wurden, wendet Experience Platform die Gültigkeitswerte für jedes erfasste Ereignis in einem zweistufigen Prozess automatisch an:
 
 1. Bei allen neuen Daten, die in den Datensatz aufgenommen werden, wird der Ablaufwert zur Aufnahmezeit auf der Grundlage des Ereignis-Zeitstempels angewendet.
 1. Für alle bereits vorhandenen Daten im Datensatz wird der Ablaufwert rückwirkend als einmaliger Systemauftrag zur Aufstockung angewendet. Sobald der Gültigkeitswert im Datensatz platziert wurde, werden Ereignisse, die älter als der Gültigkeitswert sind, bei Ausführung des Systemauftrags sofort gelöscht. Alle anderen Ereignisse werden entfernt, sobald sie ihre Gültigkeitswerte vom Zeitstempel des Ereignisses erreichen. Wenn alle Erlebnisereignisse entfernt wurden und das Profil keine Profilattribute mehr hat, ist das Profil nicht mehr vorhanden.
@@ -76,4 +76,4 @@ Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten könne
 
 Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Wenn Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
 
-Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte von Daten Ihrer bekannten Benutzer festlegen und für Ablauf von Daten pseudonymer Profile eine wesentlich kürzere Dauer wählen, um die Auswirkungen von pseudonymen Profilen auf die Einhaltung Ihrer Platform-Lizenzverträge zu begrenzen.
+Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte Ihrer bekannten Benutzerdaten festlegen und für Ablauf von Daten pseudonymer Profile eine viel kürzere Dauer festlegen, um die Auswirkungen pseudonymer Profile auf die Einhaltung Ihrer Experience Platform-Lizenzverträge zu begrenzen.

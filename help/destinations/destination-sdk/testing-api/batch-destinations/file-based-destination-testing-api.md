@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance testen können, ob Ihr dateibasiertes Ziel richtig konfiguriert ist, und die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel überprüfen.
 title: Testen Ihres dateibasierten Ziels mit Beispielprofilen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 100%
+source-wordcount: '831'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sic
 
 * Sie haben ein vorhandenes dateibasiertes Ziel, das über das Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md) sehen.
 * Sie haben in der Experience Platform-Benutzeroberfläche mindestens einen Aktivierungsfluss für Ihr Ziel erstellt.
-* Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
+* Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Experience Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
 
   ![Bild der Benutzeroberfläche, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
 * *Optional*: Wenn Sie Ihre Zielkonfiguration mit einem Beispielprofil testen möchten, das zum API-Aufruf hinzugefügt wurde, verwenden Sie den Endpunkt [/sample-profiles](file-based-sample-profile-generation-api.md), um ein Beispielprofil zu generieren, das auf Ihrem vorhandenen Quellschema basiert. Wenn Sie kein Beispielprofil angeben, generiert die API ein Profil und gibt es in der Antwort zurück.
@@ -238,7 +238,7 @@ Bei einer erfolgreiche Antwort wird der HTTP-Status 200 zusammen mit der Antwort
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

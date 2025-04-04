@@ -3,16 +3,16 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Benutzeroberfläche;B
 title: Anpassung von Profildetails in der Benutzeroberfläche
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige von Echtzeit-Kundenprofildaten in der Adobe Experience Platform-Benutzeroberfläche.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # [!DNL Real-Time Customer Profile]-Detailanpassung {#profile-detail-customization}
 
-In der Benutzeroberfläche von Adobe Experience Platform können Sie [!DNL Real-Time Customer Profile] in Form von Kundenprofilen anzeigen und damit interagieren. Die in der Benutzeroberfläche angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht jedes einzelnen Kunden zu erstellen. Dazu gehören Details wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen. Die in Profilen angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten [!DNL Profile] anzuzeigen. Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Art und Weise, wie [!DNL Profile] Daten in der Platform-Benutzeroberfläche angezeigt werden.
+In der Benutzeroberfläche von Adobe Experience Platform können Sie [!DNL Real-Time Customer Profile] in Form von Kundenprofilen anzeigen und damit interagieren. Die in der Benutzeroberfläche angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht jedes einzelnen Kunden zu erstellen. Dazu gehören Details wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen. Die in Profilen angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten [!DNL Profile] anzuzeigen. Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Art und Weise, wie [!DNL Profile] Daten in der Experience Platform-Benutzeroberfläche angezeigt werden.
 
 Eine vollständige Anleitung zur Benutzeroberfläche Profile finden Sie im [Handbuch zur Benutzeroberfläche von Profilen](user-guide.md).
 
@@ -74,7 +74,7 @@ Nach dem Speichern kehren Sie zur Registerkarte **[!UICONTROL Detail]** zurück,
 
 ## Neue Karte hinzufügen {#add-a-new-card}
 
-Um das Erscheinungsbild von Profilen auf Experience Platform weiter anzupassen, können Sie dem Dashboard neue Karten hinzufügen und die Attribute auswählen, die auf diesen Karten angezeigt werden sollen. Wählen Sie zunächst **[!UICONTROL Dashboard ändern]** auf der Registerkarte **[!UICONTROL Detail]** aus.
+Um das Erscheinungsbild von Profilen in Experience Platform weiter anzupassen, können Sie dem Dashboard neue Karten hinzufügen und die Attribute auswählen, die auf diesen Karten angezeigt werden sollen. Wählen Sie zunächst **[!UICONTROL Dashboard ändern]** auf der Registerkarte **[!UICONTROL Detail]** aus.
 
 ![Die Schaltfläche „Profildetails anpassen“ ist hervorgehoben.](../images/profile-customization/customize-profile-details.png)
 

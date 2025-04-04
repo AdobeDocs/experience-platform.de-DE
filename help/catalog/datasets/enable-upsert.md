@@ -4,10 +4,10 @@ title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit „upsert“-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 90%
+source-wordcount: '1069'
+ht-degree: 86%
 
 ---
 
@@ -21,14 +21,14 @@ In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes mit „upse
 
 ## Erste Schritte
 
-Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Platform]-Services:
+Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Experience Platform]-Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und für [!DNL Real-Time Customer Profile] und [!DNL Identity Service] konfigurieren können.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 - [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform aufnehmen.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -36,7 +36,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type`-Kopfzeile erforderlich. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Erstellen eines Datensatzes, der für Profilaktualisierungen aktiviert ist
 
@@ -236,7 +236,7 @@ Ein vorhandener Datensatz kann mit einer einzigen PATCH-Anfrage für Profil- und
 
 >[!IMPORTANT]
 >
->Stellen Sie beim Aktivieren Ihres Datensatzes für Profil sicher, dass das Schema, mit dem der Datensatz verknüpft ist, **ebenfalls** Profil-aktiviert ist. Wenn das Schema nicht Profil-aktiviert ist, wird der Datensatz in der Platform-Benutzeroberfläche **nicht** als Profil-aktiviert angezeigt.
+>Stellen Sie beim Aktivieren Ihres Datensatzes für Profil sicher, dass das Schema, mit dem der Datensatz verknüpft ist, **ebenfalls** Profil-aktiviert ist. Wenn das Schema nicht Profil-aktiviert ist, wird der Datensatz **nicht** in der Experience Platform-Benutzeroberfläche als Profil-aktiviert angezeigt.
 
 **API-Format**
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine OneTrust-Integrationsquelle mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit OneTrust Integration verbinden.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 61%
+source-wordcount: '1924'
+ht-degree: 55%
 
 ---
 
@@ -25,21 +25,21 @@ Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellver
 >
 >Der [!DNL OneTrust Integration]-Quell-Connector und die Dokumentation wurden vom [!DNL OneTrust Integration]-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [[!DNL OneTrust] Team](https://my.onetrust.com/s/contactsupport?language=en_US).
 
-Bevor Sie eine Verbindung zwischen [!DNL OneTrust Integration] und Platform herstellen können, müssen Sie zunächst Ihr Zugriffs-Token abrufen. Detaillierte Anweisungen zum Auffinden Ihres Zugriffs-Tokens finden Sie im [[!DNL OneTrust Integration] OAuth 2-Handbuch](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Bevor Sie eine Verbindung zwischen [!DNL OneTrust Integration] und Experience Platform herstellen können, müssen Sie zunächst Ihr Zugriffstoken abrufen. Detaillierte Anweisungen zum Auffinden Ihres Zugriffs-Tokens finden Sie im [[!DNL OneTrust Integration] OAuth 2-Handbuch](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 Das Zugriffstoken wird nach Ablauf nicht automatisch aktualisiert, da System-zu-System-Aktualisierungstoken von [!DNL OneTrust] nicht unterstützt werden. Daher müssen Sie sicherstellen, dass Ihr Zugriffstoken in der Verbindung aktualisiert wird, bevor es abläuft. Die konfigurierbare maximale Lebensdauer für ein Zugriffstoken beträgt ein Jahr. Weitere Informationen zum Aktualisieren Ihres Zugriffstokens finden Sie unter [[!DNL OneTrust] Verwalten Ihrer OAuth 2.0-Client-Anmeldeinformationen](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## Verbinden von [!DNL OneTrust Integration] mit Platform mithilfe der [!DNL Flow Service]-API
+## Verbinden von [!DNL OneTrust Integration] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
 >Die [!DNL OneTrust Integration] API-Spezifikationen werden für Adobe zur Datenaufnahme freigegeben.
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL OneTrust Integration]-Quellverbindung und zum Erstellen eines Datenflusses, um [!DNL OneTrust Integration] Daten mithilfe der (API[[!DNL Flow Service]  in Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL OneTrust Integration] Quellverbindung und zum Erstellen eines Datenflusses, um [!DNL OneTrust Integration] Daten mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Experience Platform zu übertragen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL OneTrust Integration] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -63,7 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ONETRUST base connection",
-      "description": "ONETRUST base connection to authenticate to Platform",
+      "description": "ONETRUST base connection to authenticate to Experience Platform",
       "connectionSpec": {
           "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
           "version": "1.0"
@@ -82,7 +82,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.` | Enthält die Anmeldeinformationen, die zum Authentifizieren Ihrer Quelle erforderlich sind, einschließlich des Zugriffstokens für die Verbindung zur API. |
 | `auth.params.accessToken` | Das Zugriffstoken, das Ihrem [!DNL OneTrust Integration]-Konto entspricht. |
 
@@ -101,7 +101,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
 
-Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Platform] importieren möchten:
+Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in [!DNL Experience Platform] importieren möchten:
 
 **API-Format**
 
@@ -117,7 +117,7 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
 
 **Anfrage**
@@ -621,7 +621,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -678,7 +678,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Spezifikations-ID der Verbindung, die [!DNL Data Lake] entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der [!DNL OneTrust Integration]-Daten, die Sie an Platform übermitteln möchten. |
+| `data.format` | Das Format der [!DNL OneTrust Integration], die Sie an Experience Platform übermitteln möchten. |
 | `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
@@ -786,7 +786,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL OneTrust Integration] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL OneTrust Integration] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -849,7 +849,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -890,4 +890,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

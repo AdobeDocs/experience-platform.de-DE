@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Oracle;
-title: (Beta) Erstellen einer Oracle Responsys-Quellverbindung mithilfe der Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Platform-Benutzeroberfläche mit Oracle Responsys verbinden.
+title: (Beta) Erstellen einer Oracle Responsys-Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Experience Platform-Benutzeroberfläche mit Oracle Responsys verbinden.
 hide: true
 hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 97%
+source-wordcount: '491'
+ht-degree: 54%
 
 ---
 
-# (Beta) Erstellen einer [!DNL Oracle Responsys]-Quellverbindung mithilfe der Platform-Benutzeroberfläche
+# (Beta) Erstellen einer [!DNL Oracle Responsys] Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -22,16 +22,16 @@ In diesem Tutorial werden die Schritte zum Erstellen einer [[!DNL Oracle Respons
 
 ## Erste Schritte
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Platform voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Wenn Sie bereits über ein authentifiziertes [!DNL Oracle Responsys]-Konto in Platform verügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Platform aufzunehmen](../../dataflow/marketing-automation.md) fortfahren.
+Wenn Sie bereits über ein authentifiziertes [!DNL Oracle Responsys]-Konto in Experience Platform verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Experience Platform aufzunehmen“ ](../../dataflow/marketing-automation.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zwischen [!DNL Oracle Responsys] und Platform herzustellen, müssen Sie Werte für die folgenden Authentifizierungseigenschaften angeben:
+Um [!DNL Oracle Responsys] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Authentifizierungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -41,11 +41,11 @@ Um eine Verbindung zwischen [!DNL Oracle Responsys] und Platform herzustellen, m
 
 Weitere Informationen zu Authentifizierungs-Anmeldedaten für [!DNL Oracle Responsys] finden Sie im [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
-Nachdem Sie die erforderlichen Anmeldedaten zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle Responsys]-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle Responsys]-Konto mit Experience Platform zu verknüpfen.
 
-## Verbinden Sie Ihr [!DNL Oracle Responsys]-Konto
+## Verbinden Ihres [!DNL Oracle Responsys]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -69,4 +69,4 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus un
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Oracle Responsys]-Konto und Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen [Datenfluss erstellen, um Daten zur Marketing-Automatisierung in Platform aufzunehmen](../../dataflow/marketing-automation.md).
+In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Oracle Responsys]-Konto und Experience Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Datenfluss erstellen, um Daten zur Marketing-Automatisierung in Experience Platform zu übertragen](../../dataflow/marketing-automation.md).

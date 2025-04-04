@@ -3,10 +3,10 @@ title: Google Cloud Storage-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zum Google Cloud-Speicher herstellen und Zielgruppen aktivieren oder Datensätze exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 62%
+source-wordcount: '1236'
+ht-degree: 56%
 
 ---
 
@@ -18,7 +18,7 @@ Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Google Cloud Storage], um
 
 ## Herstellen einer Verbindung zu Ihrem [!DNL Google Cloud Storage] über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL Google Cloud Storage]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
+* Um über die Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL Google Cloud Storage]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
 * Um programmgesteuert eine Verbindung zu Ihrem [!DNL Google Cloud Storage]-Speicherort herzustellen, lesen Sie das Tutorial [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
@@ -27,7 +27,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -47,18 +47,18 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* Erfahren Sie[ wie Datensätze über die Platform-Benutzeroberfläche exportiert ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform ](/help/destinations/ui/export-datasets.md).
 * So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
-Beim Exportieren *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
+Beim Exportieren *Zielgruppendaten* erstellt Experience Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
-Beim Exportieren *Datensätze* erstellt Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
 
 ## Vorausgesetzte Einrichtung für das Verbinden Ihres [!DNL Google Cloud Storage]-Kontos {#prerequisites}
 
-Um Platform mit [!DNL Google Cloud Storage] zu verbinden, müssen Sie zunächst die Interoperabilität für Ihr [!DNL Google Cloud Storage]-Konto aktivieren. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
+Um Experience Platform mit [!DNL Google Cloud Storage] zu verbinden, müssen Sie zunächst die Interoperabilität für Ihr [!DNL Google Cloud Storage]-Konto aktivieren. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
 
 ![Das Dashboard der Google Cloud-Plattform mit Hervorhebung von Cloud-Speicher und Einstellungen.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -70,7 +70,7 @@ Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authent
 
 ![Das hervorgehobene Steuerelement „Schlüssel für ein Dienstkonto erstellen“ im Dashboard der Google Cloud-Plattform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Platform zu verbinden.
+Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Experience Platform zu verbinden.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -84,8 +84,8 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL Zugriffsschlüssel-ID]**: eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. Informationen zum Abrufen dieses Werts finden Sie im Abschnitt [Voraussetzungen](#prerequisites) weiter oben.
-* **[!UICONTROL Geheimer Zugriffsschlüssel]**: eine mit Base64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihre [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. Informationen zum Abrufen dieses Werts finden Sie im Abschnitt [Voraussetzungen](#prerequisites) weiter oben.
+* **[!UICONTROL Zugriffsschlüssel-ID]**: Eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres [!DNL Google Cloud Storage] bei Experience Platform verwendet wird. Informationen zum Abrufen dieses Werts finden Sie im Abschnitt [Voraussetzungen](#prerequisites) weiter oben.
+* **[!UICONTROL Geheimer Zugriffsschlüssel]**: Eine mit Base64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihres [!DNL Google Cloud Storage] bei Experience Platform verwendet wird. Informationen zum Abrufen dieses Werts finden Sie im Abschnitt [Voraussetzungen](#prerequisites) weiter oben.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -154,4 +154,4 @@ Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie I
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allow-list}
 
-Siehe den Artikel [IP-Adresse](ip-address-allow-list.md) , wenn Sie einer Adobe auf die Zulassungsliste setzen-IP-Adresse eine -Zulassungsliste hinzufügen müssen.
+Siehe den Artikel [IP-Adresse](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe auf die Zulassungsliste setzen-IPs hinzufügen müssen.

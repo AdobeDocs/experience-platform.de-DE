@@ -4,9 +4,9 @@ title: Amazon Kinesis-Verbindung
 description: Stellen Sie mit Ihrem Amazon Kinesis-Speicher eine ausgehende Echtzeit-Verbindung her, um Daten von Adobe Experience Platform zu streamen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 54%
 
 ---
@@ -25,11 +25,11 @@ Sie können eine ausgehende Echtzeit-Verbindung zu Ihrem [!DNL Amazon Kinesis]-S
 
 * Weitere Informationen zu [!DNL Amazon Kinesis] finden Sie in der [Dokumentation zu Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Informationen zum programmgesteuerten Herstellen einer Verbindung zu [!DNL Amazon Kinesis] finden Sie im [Tutorial zur Streaming-Ziele-API](../../api/streaming-destinations.md).
-* Informationen zum Verbinden von mit [!DNL Amazon Kinesis] über die Platform-Benutzeroberfläche finden Sie in den folgenden Abschnitten.
+* Informationen zum Verbinden von mit [!DNL Amazon Kinesis] über die Benutzeroberfläche von Experience Platform finden Sie in den folgenden Abschnitten.
 
 ![Amazon Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsszenarien {#use-cases}
 
 Durch die Verwendung von Streaming-Zielen wie [!DNL Amazon Kinesis] können Sie einfach hochwertige Segmentierungsereignisse und zugehörige Profilattribute in Ihre gewünschten Systeme einspeisen.
 
@@ -41,7 +41,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -59,17 +59,17 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
-Um die Sicherheits- und Compliance-Anforderungen von Kundinnen und Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das [!DNL Amazon Kinesis]-Ziel auf die Zulassungsliste gesetzt werden können. Siehe [Zulassungsliste von IP-Adressen für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md), um die vollständige Liste der IP-Adressen in der Zulassungsliste einzusehen.
+Um die Sicherheits- und Compliance-Anforderungen von Kundinnen und Kunden zu erfüllen, stellt Experience Platform auf die Zulassungsliste setzen eine Liste mit statischen IPs bereit, die Sie für das [!DNL Amazon Kinesis]-Ziel auswählen können. Siehe [Zulassungsliste von IP-Adressen für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md), um die vollständige Liste der IP-Adressen in der Zulassungsliste einzusehen.
 
 ## Erforderliche [!DNL Amazon Kinesis]-Berechtigungen {#required-kinesis-permission}
 
-Um Daten erfolgreich mit Ihren [!DNL Amazon Kinesis] Streams zu verbinden und dorthin zu exportieren, benötigt Experience Platform Berechtigungen für die folgenden Aktionen:
+Um Daten erfolgreich mit Ihren [!DNL Amazon Kinesis]-Streams zu verbinden und dorthin zu exportieren, benötigt Experience Platform Berechtigungen für die folgenden Aktionen:
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Diese Berechtigungen werden über die [!DNL Kinesis] Console angeordnet und von Platform überprüft, sobald Sie Ihr Kinesis-Ziel in der Platform-Benutzeroberfläche konfigurieren.
+Diese Berechtigungen werden über die [!DNL Kinesis] Console angeordnet und von Experience Platform überprüft, sobald Sie Ihr Kinesis-Ziel in der Experience Platform-Benutzeroberfläche konfigurieren.
 
 Im folgenden Beispiel werden die Mindestzugriffsrechte angezeigt, die zum erfolgreichen Exportieren von Daten an ein [!DNL Kinesis] erforderlich sind.
 
@@ -114,9 +114,9 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Geben Sie die unten stehenden Felder ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
-![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Authentifizierungsdetails von Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Amazon Kinesis-Authentifizierungsdetails](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]-Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie in [!DNL Amazon Web Services] ein `access key - secret access key`-Paar, um Platform Zugriff auf Ihr [!DNL Amazon Kinesis]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]-Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie in [!DNL Amazon Web Services] ein `access key - secret access key`, um Experience Platform Zugriff auf Ihr [!DNL Amazon Kinesis] zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: Geben Sie an, an welche [!DNL Amazon Web Services] Daten gestreamt werden sollen.
 
 ### Ausfüllen der Zieldetails {#destination-details}
@@ -133,11 +133,11 @@ Geben Sie die unten stehenden Felder ein und wählen Sie **[!UICONTROL Mit Ziel 
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Zieldetails von Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Amazon Kinesis-Zieldetails](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen für Ihre Verbindung mit [!DNL Amazon Kinesis] an
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihre Verbindung mit [!DNL Amazon Kinesis] an.
-* **[!UICONTROL Stream]**: Geben Sie den Namen eines vorhandenen Daten-Streams in Ihrem [!DNL Amazon Kinesis]-Konto an. Platform exportiert Daten in diesen Stream.
+* **[!UICONTROL Stream]**: Geben Sie den Namen eines vorhandenen Daten-Streams in Ihrem [!DNL Amazon Kinesis]-Konto an. Experience Platform exportiert Daten in diesen Stream.
 * **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
 * **[!UICONTROL Segmentzeitstempel einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
 
@@ -145,7 +145,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -166,7 +166,7 @@ Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/
 
 ## Profilexportverhalten {#profile-export-behavior}
 
-Experience Platform optimiert das Verhalten beim Profilexport für Ihr [!DNL Amazon Kinesis] Ziel, sodass nur Daten an Ihr Ziel exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppen-Qualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten beim Profilexport für Ihr [!DNL Amazon Kinesis] Ziel, sodass nur Daten an Ihr Ziel exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
@@ -304,6 +304,6 @@ Bei fehlgeschlagenen Anfragen an Ihr HTTP-API-Ziel speichert Experience Platform
 
 >[!MORELIKETHIS]
 >
->* [Verbindung zu Amazon Kinesis herstellen und Daten mithilfe der Flow Service-API aktivieren](../../api/streaming-destinations.md)
+>* [Verbinden mit Amazon Kinesis und Aktivieren von Daten mithilfe der Flow Service-API](../../api/streaming-destinations.md)
 >* [Azure Event Hubs-Ziel](./azure-event-hubs.md)
 >* [Zieltypen und Kategorien](../../destination-types.md)

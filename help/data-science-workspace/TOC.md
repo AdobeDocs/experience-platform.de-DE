@@ -6,10 +6,10 @@ user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte m
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 99%
+source-wordcount: '227'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 99%
 * Modellerstellung {#authoring}
    * [Modellerstellungs-SDK](authoring/sdk.md)
    * [Erstellen einer Feature Pipeline](authoring/feature-pipeline.md)
-   * [Modellerstellung mit dem Platform-SDK (Python)](authoring/platform-sdk.md)
+   * [Modellerstellung mit Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Python-Datenzugriff](authoring/python.md)
    * [Spark-Datenzugriff](authoring/spark.md)
 * Modell- und Rezept-Tutorials {#models-recipes}
@@ -65,4 +65,4 @@ ht-degree: 99%
    * [Planen von automatisiertem Training und Auswertung eines Service (Benutzeroberfläche)](models-recipes/schedule-models-ui.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
+* [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

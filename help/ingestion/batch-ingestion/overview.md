@@ -2,18 +2,18 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;Batch;Batch;Datensatz aktivieren;Übersicht zur Batch-Aufnahme;Übersicht;Übersicht zur Batch-Aufnahme;
 solution: Experience Platform
 title: Übersicht über die Batch-Aufnahme-API
-description: Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der Registrierung des Experience-Datenmodells (XDM) entsprechen.
+description: Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der Registrierung des Experience-Datenmodells (XDM) entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1390'
 ht-degree: 65%
 
 ---
 
 # Übersicht über die Batch-Aufnahme-API
 
-Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registrierung entsprechen.
+Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registrierung entsprechen.
 
 Die [Referenz zur Batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)Aufnahme-API enthält zusätzliche Informationen zu diesen API-Aufrufen.
 

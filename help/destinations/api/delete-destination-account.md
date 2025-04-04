@@ -5,10 +5,10 @@ title: Löschen eines Zielkontos mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie ein Zielkonto mithilfe der Flow Service-API löschen können.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 40%
+source-wordcount: '765'
+ht-degree: 38%
 
 ---
 
@@ -29,7 +29,7 @@ Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Die Verbindung
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um ein Zielkonto mithilfe der [!DNL Flow Service]-API erfolgreich löschen zu können.
 
@@ -39,13 +39,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -64,7 +64,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 Der erste Schritt beim Löschen eines Zielkontos besteht darin, die Verbindungs-ID herauszufinden, die dem Zielkonto entspricht, das Sie löschen möchten.
 
-Navigieren Sie in der Experience Platform-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Konten]** und wählen Sie das zu löschende Konto aus, indem Sie die Zahl in der Spalte **[!UICONTROL Ziele]** auswählen.
+Navigieren Sie in der Experience Platform **[!UICONTROL Benutzeroberfläche zu]** > **[!UICONTROL Konten]** und wählen Sie das zu löschende Konto aus, indem Sie die Zahl in der Spalte **[!UICONTROL Ziele]** auswählen.
 
 ![Zielkonto zum Löschen auswählen](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -148,7 +148,7 @@ A successful response returns the current details of your connection including i
 >
 >Bevor Sie das Zielkonto löschen, müssen Sie alle vorhandenen Datenflüsse zum Zielkonto löschen.
 >Informationen zum Löschen vorhandener Datenflüsse finden Sie auf den folgenden Seiten:
->* [Verwenden der Experience Platform-](../ui/delete-destinations.md) zum Löschen vorhandener Datenflüsse
+>* [Verwenden der Experience Platform-Benutzeroberfläche](../ui/delete-destinations.md) um vorhandene Datenflüsse zu löschen;
 >* [Verwenden der Flow Service-API](delete-destination-dataflow.md) um vorhandene Datenflüsse zu löschen.
 
 Nachdem Sie über eine Verbindungs-ID verfügen und sichergestellt haben, dass keine Datenflüsse zum Zielkonto vorhanden sind, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API aus.
@@ -180,7 +180,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

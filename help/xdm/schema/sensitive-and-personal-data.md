@@ -2,9 +2,9 @@
 title: Vertrauliche und persönliche Informationen in XDM
 description: Erfahren Sie mehr über wichtige Aspekte zu sensiblen personenbezogenen Daten (SPI) und persönlich identifizierbaren Informationen (PII) im Experience-Datenmodell (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Wenden Sie sich an Ihre Rechtsabteilung, um zu bestimmen, wie sensible und perso
 
 XDM bietet eine Vielzahl von Standardfeldgruppen und -datentypen, um relevante, häufig verwendete Datenstrukturen zu beschreiben, die Kundenerlebnisse verbessern. Wenn eine empfohlene Standardressource eingeschränkte Felder enthält, die Sie nicht in Ihre Schemata aufnehmen möchten, müssen Sie diese Ressource jedoch nicht verwenden.
 
-Platform ermöglicht es Ihnen, eigene benutzerdefinierte Feldergruppen und Datentypen zu definieren, sodass Sie umfassend steuern können, wie Ihre Daten strukturiert sind, wenn verfügbare Standardressourcen Ihre Anforderungen nicht erfüllen. Weitere Informationen dazu, wie Sie diese benutzerdefinierten Ressourcen definieren, finden Sie in der folgenden Dokumentation:
+Experience Platform ermöglicht es Ihnen, eigene benutzerdefinierte Feldergruppen und Datentypen zu definieren, sodass Sie die Struktur Ihrer Daten vollständig steuern können, falls verfügbare Standardressourcen Ihren Anforderungen nicht entsprechen. Weitere Informationen dazu, wie Sie diese benutzerdefinierten Ressourcen definieren, finden Sie in der folgenden Dokumentation:
 
 * [Erstellen einer benutzerdefinierten Feldgruppe](../ui/resources/field-groups.md#create)
 * [Erstellen eines benutzerdefinierten Datentyps](../ui/resources/data-types.md#create)

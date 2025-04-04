@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zugriff auf und Funktionen von Data Science Workspace
 description: Im folgenden Dokument werden die Berechtigungen für Data Science Workspace und der Zugriff auf Funktionen beschrieben.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '717'
 ht-degree: 11%
 
 ---
@@ -23,13 +23,13 @@ Im folgenden Dokument werden die Berechtigungen für Data Science Workspace und 
 
 ![DSW-Register](./images/access/platform-tabs.png)
 
-- **Notebooks:** Bietet eine interaktive Entwicklungsumgebung ([JupyterLab](./jupyterlab/overview.md)) zum Untersuchen, Analysieren und Modellieren Ihrer Daten auf Experience Platform.
+- **Notebooks:** Bietet eine interaktive Entwicklungsumgebung ([JupyterLab](./jupyterlab/overview.md)) zum Durchsuchen, Analysieren und Modellieren Ihrer Daten in Experience Platform.
 - **Modelle:** Stellt Tools bereit, die zum Erstellen, Veröffentlichen und Speichern erweiterter Rezepte und Modelle für maschinelles Lernen verwendet werden. Weitere Informationen finden Sie im Tutorial [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](./models-recipes/create-publish-model.md) .
-- **Services:** Enthält sowohl von Adobe bereitgestellte Services wie [KI-/ML-Services](../intelligent-services/home.md) als auch benutzerdefinierte Services, die Sie mit Data Science Workspace erstellt haben.
+- **Services:** Enthält sowohl von Adobe bereitgestellte Services wie [KI-/ML-](../intelligent-services/home.md) als auch benutzerdefinierte Services, die Sie mit Data Science Workspace erstellt haben.
 
 Warum wird nur die Registerkarte „Services“ angezeigt?
 
-- Ihr Unternehmen hat möglicherweise nur Anspruch auf Adobe Real-time Customer Data Platform (Real-Time CDP), das den Kunden-KI-/ML-Service umfasst.
+- Ihr Unternehmen hat möglicherweise nur Anspruch auf Adobe Real-Time Customer Data Platform (Real-Time CDP), das den Kunden-KI-/ML-Service umfasst.
 
 Wenn Sie keine der Registerkarten **Datenwissenschaft** sehen können und Data Science Workspace-Funktionen nutzen möchten, wenden Sie sich an Ihren Unternehmensadministrator, um zu überprüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
 
@@ -64,11 +64,11 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung „Data Sc
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Services in Data Science Workspace. | Der API- und UI-Zugriff auf alle Services in Data Science Workspace ist deaktiviert. Wenn diese Option deaktiviert ist **kann die Auswahl der** Notebooks **, Modelle** und **Services** nicht erfolgen. <li>Der Zugriff auf **Services** ist möglicherweise weiterhin über Adobe Real-time Customer Data Platform (Real-Time CDP) verfügbar.</li> |
+| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Services in Data Science Workspace. | Der API- und UI-Zugriff auf alle Services in Data Science Workspace ist deaktiviert. Wenn diese Option deaktiviert ist **kann die Auswahl der** Notebooks **, Modelle** und **Services** nicht erfolgen. <li>Der Zugriff auf **Services** ist möglicherweise weiterhin über Adobe Real-Time Customer Data Platform (Real-Time CDP) verfügbar.</li> |
 
 ## Sandbox-Unterstützung
 
-Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Platform-Instanz unterstützt mehrere Produktions- und Nicht-Produktions-Sandboxes, von denen jede eine eigene Bibliothek mit Platform-Ressourcen verwaltet. Nicht-Produktions-Sandboxes ermöglichen es Ihnen, Funktionen zu testen, Experimente durchzuführen und benutzerdefinierte Konfigurationen vorzunehmen, ohne dass sich dies auf Ihre Produktions-Sandboxes auswirkt. Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
+Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Experience Platform-Instanz unterstützt mehrere Produktions- und Nicht-Produktions-Sandboxes, von denen jede eine eigene Bibliothek mit Experience Platform-Ressourcen verwaltet. Nicht-Produktions-Sandboxes ermöglichen es Ihnen, Funktionen zu testen, Experimente durchzuführen und benutzerdefinierte Konfigurationen vorzunehmen, ohne dass sich dies auf Ihre Produktions-Sandboxes auswirkt. Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
 
 Derzeit gelten für Data Science Workspace die folgenden Sandbox-Einschränkungen:
 

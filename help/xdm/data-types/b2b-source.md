@@ -2,9 +2,9 @@
 title: B2B-Source-Datentyp
 description: Erfahren Sie mehr über den Datentyp B2B-Source-Experience-Datenmodell (XDM).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Wenn wir uns ausschließlich auf zeichenfolgenbasierte Kennungen verlassen, kann es zu Überschneidungen zwischen IDs in mehreren Systemen kommen (z. B. könnte eine Opportunity in einem CRM-System eine Zeichenfolge-ID erhalten, aber dieselbe ID könnte sich auf eine völlig andere Opportunity beziehen). Dies kann beim Zusammenführen von Daten in [Echtzeit-Kundenprofil) zu Datenkonflikten ](../../profile/home.md).
 
-Mit dem Datentyp [!UICONTROL B2B Source] können Sie die ursprüngliche String-ID einer Entität verwenden und mit quellenspezifischen Kontextinformationen kombinieren, um sicherzustellen, dass sie im Platform-System unabhängig von der Quelle, aus der sie stammt, vollständig eindeutig bleibt.
+Mit dem Datentyp [!UICONTROL B2B Source] können Sie die ursprüngliche String-ID einer Entität verwenden und mit quellenspezifischen Kontextinformationen kombinieren, um sicherzustellen, dass sie im Experience Platform-System unabhängig von der Quelle, aus der sie stammt, vollständig eindeutig bleibt.
 
 ![B2B-Source-Struktur](../images/data-types/b2b-source.png)
 

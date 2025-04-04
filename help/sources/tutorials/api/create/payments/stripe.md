@@ -1,16 +1,16 @@
 ---
-title: Aufnehmen von Zahlungsdaten von Ihrem - [!DNL Stripe]  auf das Experience Platform mithilfe von APIs
-description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto mithilfe der Flow Service-API auf Experience Platform aufnehmen
+title: Aufnehmen von Zahlungsdaten aus Ihrem - [!DNL Stripe]  in Experience Platform mithilfe von APIs
+description: Erfahren Sie, wie Sie Zahlungsdaten aus Ihrem Stripe-Konto mithilfe der Flow Service-API in Experience Platform aufnehmen
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
-ht-degree: 44%
+source-wordcount: '2028'
+ht-degree: 40%
 
 ---
 
-# Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe]-Konto auf das Experience Platform mithilfe von APIs
+# Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe] mithilfe von APIs in Experience Platform
 
 >[!NOTE]
 >
@@ -22,24 +22,24 @@ Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ihre Zahlungsdaten von 
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ### Authentifizierung
 
 Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/payments/stripe.md) „Übersicht“.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-## [!DNL Stripe] mit Experience Platform verbinden
+## Verbinden von [!DNL Stripe] mit Experience Platform
 
-Folgen Sie der unten stehenden Anleitung, um zu erfahren, wie Sie Ihre [!DNL Stripe] authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, um Ihre Zahlungsdaten auf Experience Platform zu übertragen.
+Folgen Sie der unten stehenden Anleitung, um zu erfahren, wie Sie Ihre [!DNL Stripe] authentifizieren, eine Quellverbindung erstellen und einen Datenfluss erstellen, um Ihre Zahlungsdaten an Experience Platform zu senden.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Basisverbindungs-ID. Mithilfe der Basisverbindungs-ID können Sie Dateien aus Ihrer Quelle heraus durchsuchen und darin navigieren. Darüber hinaus können Sie die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Details zu den Datentypen und Formaten dieser Elemente.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mithilfe der Basisverbindungs-ID können Sie Dateien aus Ihrer Quelle heraus durchsuchen und darin navigieren. Darüber hinaus können Sie die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Details zu den Datentypen und Formaten dieser Elemente.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Stripe] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -82,7 +82,7 @@ curl -X POST \
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID der Quelle. Die Verbindungsspezifikations-ID für [!DNL Stripe] ist `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` und diese ID ist fest. |
-| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für das Experience Platform authentifizieren. |
+| `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
 | `auth.params.accessToken` | Das Zugriffstoken Ihres [!DNL Stripe] Kontos. Anweisungen [[!DNL Stripe]  Abrufen Ihres Zugriffs-Tokens finden Sie ](../../../../connectors/payments/stripe.md#prerequisites) Authentifizierungshandbuch . |
 
 **Antwort**
@@ -115,7 +115,7 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Dieser Wert ist immer auf `rest` festgelegt. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
-| `fileType=json` | Der Dateityp der Datei, die Sie an Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
+| `fileType=json` | Der Dateityp der Datei, die Sie an Experience Platform übermitteln möchten. Derzeit ist `json` der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
 | `{SOURCE_PARAMS}` | Eine [!DNL Base64-] Zeichenfolge, die auf den Ressourcenpfad verweist, den Sie untersuchen möchten. Ihr Ressourcenpfad muss in [!DNL Base64] codiert sein, um das genehmigte Format für die `{SOURCE_PARAMS}` zu erhalten. Beispielsweise wird `{"resourcePath":"charges"}` als `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D` codiert. Die Liste der verfügbaren Ressourcenpfade umfasst: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
@@ -407,7 +407,7 @@ Eine erfolgreiche Antwort gibt eine JSON-Struktur wie die folgende zurück:
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API stellen. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -463,7 +463,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten im Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Experience Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
@@ -814,7 +814,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschli
 
 ### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt, um Daten von [!DNL Stripe] an Platform zu übertragen, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um Daten von [!DNL Stripe] an Experience Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
 * [Zielverbindungs-ID](#target-connection)
@@ -875,7 +875,7 @@ curl -X POST \
 | `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
-| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten auf Experience Platform gebracht werden. |
+| `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Experience Platform übermittelt werden. |
 | `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
 | `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
@@ -916,4 +916,4 @@ Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow S
 
 ### Konto löschen
 
-Löschen Sie Ihr DELETE, indem Sie eine Kontoanfrage an die [!DNL Flow Service]-API richten und dabei die Basisverbindungs-ID des Kontos angeben, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API mit Angabe der Basisverbindungs-ID des Kontos ausführen, das Sie löschen möchten. Vollständige API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](../../delete.md).

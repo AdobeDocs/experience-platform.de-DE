@@ -4,9 +4,9 @@ description: Audit Query ist eine RESTful-API, mit der Entwickler sehen können,
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 9%
 
 ---
@@ -17,9 +17,9 @@ Die [!DNL Audit Query]-API stellt Endpunkte bereit, mit denen Sie Ereignisdaten 
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Audit Query] API-Swagger](https://www.adobe.io/experience-platform-apis/references/audit-query/).
 
-## Events
+## Ereignisse
 
-Audit-Ereignisse bieten Einblicke in Benutzeraktionen in Platform, einschließlich Aktionstyp, Datum und Uhrzeit, E-Mail-ID der Person, die die Aktion ausgeführt hat, und zusätzliche Attribute, die für den Aktionstyp für verschiedene Funktionen in Adobe Experience Platform relevant sind. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Handbuch zu Ereignisendpunkten](./events.md).
+Audit-Ereignisse bieten Einblicke in Benutzeraktionen in Experience Platform, einschließlich Aktionstyp, Datum und Uhrzeit, E-Mail-ID der Person, die die Aktion ausgeführt hat, und zusätzliche Attribute, die für den Aktionstyp für verschiedene Funktionen in Adobe Experience Platform relevant sind. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Handbuch zu Ereignisendpunkten](./events.md).
 
 ## Exportieren
 

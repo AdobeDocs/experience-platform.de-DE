@@ -2,10 +2,10 @@
 title: Verbinden von Google Ads mit Experience Platform mithilfe von APIs
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Google Ads verbinden.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 39%
+source-wordcount: '462'
+ht-degree: 28%
 
 ---
 
@@ -28,9 +28,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Google Ads] herstellen zu können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -38,7 +38,7 @@ Informationen zur Authentifizierung finden Sie im Abschnitt [[!DNL Google Ads] Q
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre Google Ads-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
@@ -110,4 +110,4 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 In diesem Tutorial haben Sie eine [!DNL Google Ads]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt und Ihr [!DNL Google Ads]-Konto mit Experience Platform verbunden. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen eines Datenflusses, um Werbedaten mithilfe der API  [!DNL Flow Service]  Platform zu übertragen](../../collect/advertising.md)
+* [Erstellen eines Datenflusses, um Werbedaten mithilfe der API  [!DNL Flow Service]  Experience Platform zu übertragen](../../collect/advertising.md)

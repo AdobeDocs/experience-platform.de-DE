@@ -2,16 +2,16 @@
 title: Implementieren der Adobe Experience Platform Assurance-Erweiterung
 description: In diesem Handbuch wird beschrieben, wie Sie die Adobe Experience Platform Assurance-Erweiterung implementieren und installieren.
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
 
 # Implementieren der Adobe Experience Platform Assurance-Erweiterung
 
-In diesem Tutorial wird erläutert, wie Sie die Platform Assurance-Erweiterung in Mobile SDK installieren und implementieren. Anweisungen zum Hinzufügen der Assurance-Erweiterung zu Ihrem Programm finden Sie in der [Übersicht über die Adobe Experience Platform Assurance-Erweiterung](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+In diesem Tutorial wird erläutert, wie Sie die Experience Platform Assurance-Erweiterung in der mobilen SDK installieren und implementieren. Anweisungen zum Hinzufügen der Assurance-Erweiterung zu Ihrem Programm finden Sie in der [Übersicht über die Adobe Experience Platform Assurance-Erweiterung](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
 ## Erste Schritte
 
@@ -48,7 +48,7 @@ Die **Mobile-Eigenschaftsdetails** wird angezeigt. Wählen Sie **[!UICONTROL Erw
 
 ![Die Seite mit den Details zu den Mobile-Eigenschaften wird angezeigt. Es werden Informationen zu den letzten Aktivitäten angezeigt. Die Registerkarte „Erweiterungen“ ist hervorgehoben.](./images/implement-assurance/tag-properties.png)
 
-Wählen Sie **[!UICONTROL Katalog]** aus, um eine Liste der Erweiterungen anzuzeigen, die Sie der Mobile-Eigenschaft hinzufügen können. Suchen Sie mithilfe des Filters nach der **[!UICONTROL AEP Assurance]** und wählen Sie **[!UICONTROL Installieren]** aus.
+Wählen Sie **[!UICONTROL Katalog]** aus, um eine Liste der Erweiterungen anzuzeigen, die Sie der Mobile-Eigenschaft hinzufügen können. Suchen Sie mithilfe des Filters die Erweiterung **[!UICONTROL AEP Assurance]** und wählen Sie **[!UICONTROL Installieren]**.
 
 ![Der Erweiterungskatalog wird angezeigt. Die Assurance-Erweiterung wird nach gefiltert und angezeigt. Die Schaltfläche „Installieren“ ist hervorgehoben.](./images/implement-assurance/assurance-extension.png)
 

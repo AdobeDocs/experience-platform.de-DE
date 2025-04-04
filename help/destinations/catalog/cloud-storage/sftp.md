@@ -2,9 +2,9 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1095'
 ht-degree: 45%
 
 ---
@@ -30,7 +30,7 @@ Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durc
 
 ## Herstellen einer Verbindung zu SFTP über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* Um über die Platform-Benutzeroberfläche eine Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
+* Um über die Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
 * Um programmgesteuert eine Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie den Abschnitt [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
@@ -39,7 +39,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -61,14 +61,14 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* Erfahren Sie[ wie Datensätze über die Platform-Benutzeroberfläche exportiert ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform ](/help/destinations/ui/export-datasets.md).
 * So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
-Beim Exportieren *Zielgruppendaten* erstellt Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
+Beim Exportieren *Zielgruppendaten* erstellt Experience Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
-Beim Exportieren *Datensätze* erstellt Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -121,7 +121,7 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 ![Felder mit Zieldetails für das SFTP-Ziel.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Experience Platform-Benutzeroberfläche hilft.
+* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Benutzeroberfläche von Experience Platform hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
 * **[!UICONTROL Dateityp]**: Wählen Sie das Format aus, das Experience Platform für die exportierten Dateien verwenden soll. Bei Auswahl der Option [!UICONTROL CSV] können Sie auch [die Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
@@ -148,4 +148,4 @@ Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie I
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allow-list}
 
-Siehe den Artikel [IP-Adresse](ip-address-allow-list.md) , wenn Sie einer Adobe auf die Zulassungsliste setzen-IP-Adresse eine -Zulassungsliste hinzufügen müssen.
+Siehe den Artikel [IP-Adresse](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe auf die Zulassungsliste setzen-IPs hinzufügen müssen.

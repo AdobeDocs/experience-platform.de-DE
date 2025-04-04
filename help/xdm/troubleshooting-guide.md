@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 82%
 
 ---
 
 # Handbuch zur Fehlerbehebung beim XDM-System
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum [!DNL Experience Data Model] (XDM) und XDM-System in Adobe Experience Platform, einschließlich einer Anleitung zur Behebung gängiger Fehler. Fragen und Fehlerbehebungen für andere Platform-Dienste finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum [!DNL Experience Data Model] (XDM) und XDM-System in Adobe Experience Platform, einschließlich einer Anleitung zur Behebung gängiger Fehler. Fragen und Fehlerbehebungen für andere Experience Platform-Services finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
-Das **[!DNL Experience Data Model] (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemata für das Customer Experience Management definiert. Die Methodologie, auf der [!DNL Experience Platform] basiert, das **XDM-System**, nutzt [!DNL Experience Data Model]-Schemata, die für [!DNL Platform]-Services zur Verwendung bereitstehen. Die **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md).
+Das **[!DNL Experience Data Model] (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemata für das Customer Experience Management definiert. Die Methodologie, auf der [!DNL Experience Platform] basiert, das **XDM-System**, nutzt [!DNL Experience Data Model]-Schemata, die für [!DNL Experience Platform]-Services zur Verwendung bereitstehen. Die **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md).
 
 ## Häufig gestellte Fragen
 

@@ -1,21 +1,21 @@
 ---
 title: Verbinden Ihres Snowflake-Streaming-Kontos mit Adobe Experience Platform
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake-Streaming verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake Streaming verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 27%
+source-wordcount: '852'
+ht-degree: 21%
 
 ---
 
-# Streamen von [!DNL Snowflake] mit der [!DNL Flow Service]-API auf Experience Platform
+# Streamen von [!DNL Snowflake] an Experience Platform mithilfe der [!DNL Flow Service]-API
 
 >[!IMPORTANT]
 >
 >
-> Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzende verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+> Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
 In diesem Tutorial erfahren Sie, wie Sie mithilfe der -API Daten aus Ihrem [!DNL Snowflake]-Konto mit Adobe Experience Platform [[!DNL Flow Service]  und ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -23,18 +23,18 @@ In diesem Tutorial erfahren Sie, wie Sie mithilfe der -API Daten aus Ihrem [!DNL
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Für die erforderliche Einrichtung und Informationen zur [!DNL Snowflake] Streaming-Quelle. Bitte lesen Sie die [[!DNL Snowflake] Übersicht über Streaming-Quellen](../../../../connectors/databases/snowflake-streaming.md).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung {#create-a-base-connection}
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre [!DNL Snowflake] Authentifizierungsdaten als Teil des Anfragetexts an.
 
@@ -86,7 +86,7 @@ curl -X POST \
 | --- | --- |
 | `auth.params.account` | Der Name Ihres [!DNL Snowflake] Streaming-Kontos. |
 | `auth.params.database` | Der Name der [!DNL Snowflake], aus der Daten abgerufen werden. |
-| `auth.params.warehouse` | Der Name Ihres [!DNL Snowflake]. Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Platform einzeln aufgerufen werden. |
+| `auth.params.warehouse` | Der Name Ihres [!DNL Snowflake]. Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Experience Platform einzeln aufgerufen werden. |
 | `auth.params.username` | Der Benutzername für Ihr [!DNL Snowflake] Streaming-Konto. |
 | `auth.params.schema` | (Optional) Das mit Ihrem [!DNL Snowflake]-Streaming-Konto verknüpfte Datenbankschema. |
 | `auth.params.password` | Das Passwort für Ihr [!DNL Snowflake] Streaming-Konto. |
@@ -195,7 +195,7 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | Die ID der authentifizierten Basisverbindung für Ihre [!DNL Snowflake] Streaming-Quelle. Diese ID wurde in einem früheren Schritt generiert. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID für die [!DNL Snowflake] Streaming-Quelle. |
-| `params.tableName` | Der Name der Tabelle in Ihrer [!DNL Snowflake]-Datenbank, die Sie an Platform übermitteln möchten. |
+| `params.tableName` | Der Name der Tabelle in Ihrer [!DNL Snowflake], die Sie an Experience Platform übermitteln möchten. |
 | `params.timestampColumn` | Der Name der Zeitstempelspalte, die zum Abrufen inkrementeller Werte verwendet wird. |
 | `params.backfill` | Ein boolesches Flag, das bestimmt, ob die Daten ab dem Anfang (Epochenzeit 0) oder ab dem Zeitpunkt abgerufen werden, zu dem die Quelle initiiert wird. Weitere Informationen zu diesem Wert finden Sie unter [[!DNL Snowflake] Übersicht über Streaming-Quellen](../../../../connectors/databases/snowflake-streaming.md). |
 | `params.timezoneValue` | Der Wert für die Zeitzone gibt an, welche aktuelle Zeit für die Abfrage der [!DNL Snowflake]-Datenbank abgerufen werden soll. Dieser Parameter sollte bereitgestellt werden, wenn die Zeitstempelspalte in der Konfiguration auf `TIMESTAMP_NTZ` festgelegt ist. Wenn nicht angegeben, ist `timezoneValue` standardmäßig UTC. |
@@ -213,7 +213,7 @@ Bei einer erfolgreichen Antwort werden Ihre Quellverbindungs-ID und das entsprec
 
 ## Erstellen eines Datenflusses
 
-Um einen Datenfluss zum Streamen von Daten aus Ihrem [!DNL Snowflake] an Platform zu erstellen, müssen Sie eine POST-Anfrage an den `/flows`-Endpunkt stellen und dabei die folgenden Werte angeben:
+Um einen Datenfluss zum Streamen von Daten aus Ihrem [!DNL Snowflake]-Konto an Experience Platform zu erstellen, müssen Sie eine POST-Anfrage an den `/flows`-Endpunkt senden und dabei die folgenden Werte angeben:
 
 >[!TIP]
 >

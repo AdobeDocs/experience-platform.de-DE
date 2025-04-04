@@ -3,9 +3,9 @@ keywords: Experience Platform;Abfrage-Service;Abfrage-Service;Abfrage
 title: Erste Schritte mit dem Abfrage-Service von Adobe Experience Platform
 description: Eine Aufschlüsselung der erforderlichen Schritte zur vollständigen Nutzung des Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '243'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ Sobald Ihr Unternehmen für Adobe Experience Platform bereitgestellt wurde, kann
 
 Dieses [Tutorial zur Datenaufnahme](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) bietet einen Überblick über das Erstellen eines Datensatzes, das Zuordnen eines Datensatzes zu einem Schema, das Hinzufügen von Daten zum Datensatz und das Bestätigen seiner Aufnahme. Die [Dokumentation zur Aufnahme - Übersicht](../../ingestion/home.md) ergänzt diese und bietet detailliertere Informationen und Links zu anderen Lernressourcen.
 
-Nachdem Sie Ihre Daten in Adobe Experience Platform erfasst haben, können Sie mit [!DNL Query Service] arbeiten, indem Sie entweder die [[!DNL Query Editor] in der Platform-Benutzeroberfläche) ](../ui/user-guide.md) die [[!DNL Query Service] API](../api/getting-started.md) verwenden. Eine vollständige Dokumentation zur Verwendung der einzelnen Tools finden Sie in den jeweiligen Abschnitten.
+Nachdem Sie Ihre Daten in Adobe Experience Platform erfasst haben, können Sie mit [!DNL Query Service] arbeiten, indem Sie entweder die [[!DNL Query Editor] in der Experience Platform-Benutzeroberfläche) ](../ui/user-guide.md) die [[!DNL Query Service] API](../api/getting-started.md) verwenden. Eine vollständige Dokumentation zur Verwendung der einzelnen Tools finden Sie in den jeweiligen Abschnitten.
 
 ## Nächste Schritte
 
@@ -26,7 +26,7 @@ In diesem Dokument wurden die Voraussetzungen für die Verwendung [!DNL Query Se
 - [SQL-Syntax in Query Service](../sql/syntax.md)
 - [Erstellen abgeleiteter Datensätze mit SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Weitere Informationen dazu, wie der Abfrage-Service die Datenverarbeitung in Platform unterstützt, finden Sie in der [Präsentation zum abgebrochenen Durchsuchen-Anwendungsfall](../use-cases/abandoned-browse.md#video-example).
+Weitere Informationen dazu, wie der Abfrage-Service die Datenverarbeitung in Experience Platform unterstützt, finden Sie in der [Präsentation zum abgebrochenen Durchsuchen-Anwendungsfall](../use-cases/abandoned-browse.md#video-example).
 
 Die folgenden Ressourcen sind nützlich, um Ihr Verständnis von [!DNL Query Service] zu verbessern:
 

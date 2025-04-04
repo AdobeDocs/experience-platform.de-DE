@@ -2,34 +2,34 @@
 title: Testen einer Adobe Target-Implementierung mit Adobe Experience Platform Debugger
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Debugger eine Website testen und debuggen können, die für Adobe Target aktiviert ist.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 99%
+source-wordcount: '1047'
+ht-degree: 84%
 
 ---
 
 # Testen einer Adobe Target-Implementierung mit Adobe Experience Platform Debugger
 
-Adobe Experience Platform Debugger bietet eine Suite nützlicher Tools zum Testen und Debuggen einer Website, die mit einer Adobe Target-Implementierung ausgestattet wurde. In diesem Handbuch werden einige gängige Workflows und Best Practices für die Verwendung von Platform Debugger auf einer Target-fähigen Website behandelt.
+Adobe Experience Platform Debugger bietet eine Suite nützlicher Tools zum Testen und Debuggen einer Website, die mit einer Adobe Target-Implementierung ausgestattet wurde. In diesem Handbuch werden einige gängige Workflows und Best Practices für die Verwendung von Experience Platform Debugger auf einer Target-fähigen Website behandelt.
 
 ## Voraussetzungen
 
-Um Platform Debugger für Target nutzen zu können, muss die Website die [at.js-Bibliothek](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) Version 1.x oder höher verwenden. Frühere Versionen werden nicht unterstützt.
+Um Experience Platform Debugger für Target verwenden zu können, muss die Website die [at.js-Bibliothek ](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) Version 1.x oder höher verwenden. Frühere Versionen werden nicht unterstützt.
 
-## Initialisieren von Platform Debugger
+## Initialisieren von Experience Platform Debugger
 
-Öffnen Sie die Website, die Sie testen möchten, in einem Browser und öffnen Sie dann die Platform Debugger-Erweiterung.
+Öffnen Sie die Website, die Sie testen möchten, in einem Browser und öffnen Sie dann die Experience Platform Debugger-Erweiterung.
 
-Wählen Sie **[!DNL Target]** in der linken Navigationsleiste aus. Wenn Platform Debugger erkennt, dass eine kompatible Version von at.js auf der Site ausgeführt wird, werden Adobe Target-Implementierungsdetails angezeigt.
+Wählen Sie **[!DNL Target]** in der linken Navigationsleiste aus. Wenn Experience Platform Debugger erkennt, dass eine kompatible Version von at.js auf der Site ausgeführt wird, werden Adobe Target-Implementierungsdetails angezeigt.
 
-![Die in Platform Debugger ausgewählte Target-Ansicht zeigt an, dass Adobe Target auf der aktuell angezeigten Browser-Seite aktiv ist.](../images/solutions/target/target-initialized.png)
+![Die in Experience Platform Debugger ausgewählte Target-Ansicht zeigt an, dass Adobe Target auf der aktuell angezeigten Browser-Seite aktiv ist](../images/solutions/target/target-initialized.png)
 
 ## Globale Konfigurationsinformationen
 
-Informationen zur globalen Konfiguration der Implementierung werden am oberen Rand der Target-Ansicht in Platform Debugger angezeigt.
+Informationen zur globalen Konfiguration der Implementierung werden oben in der Target-Ansicht in Experience Platform Debugger angezeigt.
 
-![Globale Konfigurationsinformationen für Target in Platform Debugger werden hier hervorgehoben](../images/solutions/target/global-config.png)
+![Globale Konfigurationsinformationen für Target in Experience Platform Debugger werden hier hervorgehoben](../images/solutions/target/global-config.png)
 
 | Name | Beschreibung |
 | --- | --- |
@@ -44,11 +44,11 @@ Informationen zur globalen Konfiguration der Implementierung werden am oberen Ra
 
 Wählen Sie **[!DNL Network Requests]** aus, um zusammenfassende Informationen zu den einzelnen Netzwerkanfragen anzuzeigen, die auf der Seite durchgeführt wurden.
 
-![Der Abschnitt [!DNL Network Requests] für Target wurde in Platform Debugger ausgewählt](../images/solutions/target/network-requests.png)
+![Der [!DNL Network Requests] Abschnitt für Target, der in Experience Platform Debugger ausgewählt wurde](../images/solutions/target/network-requests.png)
 
 Wenn Sie Aktionen auf der Seite ausführen (einschließlich des Neuladens der Seite), werden der Tabelle automatisch neue Spalten hinzugefügt, sodass Sie die Sequenz der Aktionen und die Änderungen von Werten zwischen den einzelnen Anfragen anzeigen können.
 
-![Der Abschnitt [!DNL Network Requests] für Target wurde in Platform Debugger ausgewählt](../images/solutions/target/new-request.png)
+![Der [!DNL Network Requests] Abschnitt für Target, der in Experience Platform Debugger ausgewählt wurde](../images/solutions/target/new-request.png)
 
 Die folgenden Werte werden erfasst:
 
@@ -98,13 +98,13 @@ Die folgenden Werte werden erfasst:
 
 Um die Details eines Parameters für ein bestimmtes Netzwerkereignis anzuzeigen, klicken Sie auf die betreffende Tabellenzelle. Dann wird ein Popup mit weiteren Informationen zum Parameter angezeigt, einschließlich einer Beschreibung und dessen Wert. Wenn es sich bei dem Wert um ein JSON-Objekt handelt, enthält das Dialogfeld eine vollständig navigierbare Ansicht der Objektstruktur.
 
-![Der [!DNL Network Requests]-Abschnitt für Target, der in Platform Debugger ausgewählt wurde](../images/solutions/target/request-param-details.png)
+![Der [!DNL Network Requests] Abschnitt für Target, der in Experience Platform Debugger ausgewählt wurde](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 Wählen Sie **[!DNL Configuration]** aus, um eine Auswahl zusätzlicher Debugging-Werkzeuge für Target zu aktivieren oder zu deaktivieren.
 
-![Der [!DNL Configuration Requests]-Abschnitt für Target, der in Platform Debugger ausgewählt wurde](../images/solutions/target/configuration.png)
+![Der [!DNL Configuration Requests] Abschnitt für Target, der in Experience Platform Debugger ausgewählt wurde](../images/solutions/target/configuration.png)
 
 | Debugging-Tool | Beschreibung |
 | --- | --- |

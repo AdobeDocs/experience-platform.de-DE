@@ -2,18 +2,18 @@
 keywords: Experience Platform, Profil, Kundenprofil in Echtzeit, Zusammenführungsrichtlinien, Benutzeroberfläche, Benutzeroberfläche, Zeitstempel geordnet, Datensatzpriorität
 title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
-description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
+description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Experience Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 77%
+source-wordcount: '1289'
+ht-degree: 69%
 
 ---
 
 # Zusammenführungsrichtlinien – Übersicht
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Experience Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Dieses Dokument bietet einen Überblick über Zusammenführungsrichtlinien und deren Rolle in Experience Platform.
 
@@ -22,14 +22,14 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusamm
 Dieses Handbuch setzt ein Grundverständnis für mehrere wichtige [!DNL Experience Platform]-Funktionen voraus. Bevor Sie dieses Handbuch befolgen und mit Zusammenführungsrichtlinien arbeiten, überprüfen Sie bitte die Dokumentation für die folgendenen Services:
 
 * [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Platform] aufgenommen werden.
-* [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Experience Platform] aufgenommen werden.
+* [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien verstehen
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine einheitlich Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine einheitlich Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Experience Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
 
-Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht.
+Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht.
 
 Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
 
@@ -54,7 +54,7 @@ Um eine Zusammenführungsrichtlinie mit **[!UICONTROL Datensatzpriorität]** zu 
 
 ### Zeitstempel geordnet {#timestamp-ordered}
 
-Bei der Aufnahme von Profildatensätzen in Experience Platform wird ein Systemzeitstempel zum Zeitpunkt der Aufnahme ermittelt und dem Datensatz hinzugefügt. Wenn **[!UICONTROL Zeitstempel ordered]** als Zusammenführungsmethode für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profile basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf Basis des Zeitstempels, an dem der Datensatz in Platform aufgenommen wurde.
+Bei der Aufnahme von Profildatensätzen in Experience Platform wird ein Systemzeitstempel zum Zeitpunkt der Aufnahme ermittelt und dem Datensatz hinzugefügt. Wenn **[!UICONTROL Zeitstempel ordered]** als Zusammenführungsmethode für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profile basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt basierend auf dem Zeitstempel, an dem der Datensatz in Experience Platform aufgenommen wurde.
 
 ## Identitätszuordnung {#id-stitching}
 
@@ -67,7 +67,7 @@ Um mehr über Identitäten und ihre Rolle beim Generieren von Profilen und Zielg
 
 ## Standardmäßige Zusammenführungsrichtlinie {#default-merge-policy}
 
-Eine Organisation kann eine standardmäßige Zusammenführungsrichtlinie für ihre Organisation erstellen, die beim Zusammenführen von Profilfragmenten verwendet wird. Auf diese Weise können Benutzende bei Aktionen im Experience Platform wie der Anzeige von Kundenprofilen oder der Erstellung von Zielgruppen einfach die Standardrichtlinie auswählen. In den meisten Fällen wird die standardmäßige Zusammenführungsrichtlinie verwendet, sofern keine andere Zusammenführungsrichtlinie angegeben ist.
+Eine Organisation kann eine standardmäßige Zusammenführungsrichtlinie für ihre Organisation erstellen, die beim Zusammenführen von Profilfragmenten verwendet wird. Auf diese Weise können Benutzende bei Aktionen in Experience Platform wie der Anzeige von Kundenprofilen oder der Erstellung von Zielgruppen einfach die Standardrichtlinie auswählen. In den meisten Fällen wird die standardmäßige Zusammenführungsrichtlinie verwendet, sofern keine andere Zusammenführungsrichtlinie angegeben ist.
 
 Jede Organisation kann mehrere Zusammenführungsrichtlinien erstellen, die sich auf eine einzelne XDM-Schemaklasse beziehen, jedoch kann für jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie deklariert werden. Ihre Organisation könnte beispielsweise über eine standardmäßige Zusammenführungsrichtlinie für die [!DNL XDM Individual Profile]-Klasse und eine andere standardmäßige Zusammenführungsrichtlinie für eine benutzerdefinierte Produktinventarklasse verfügen.
 

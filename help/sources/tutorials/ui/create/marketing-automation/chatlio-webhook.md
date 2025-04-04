@@ -3,9 +3,9 @@ title: Erstellen einer Chatlio Source-Verbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Chatlio-Quellverbindung erstellen.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1167'
 ht-degree: 21%
 
 ---
@@ -48,25 +48,25 @@ Bevor Sie eine [!DNL Chatlio] Quellverbindung erstellen, benötigen Sie ein Quel
 }
 ```
 
-### Erstellen eines Platform-Schemas für [!DNL Chatlio] {#create-platform-schema}
+### Erstellen eines Experience Platform-Schemas für [!DNL Chatlio] {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie ein Platform-Schema für Ihre Quelle erstellen. Lesen Sie das Tutorial [Erstellen eines Platform-](../../../../../xdm/schema/composition.md)), um ausführliche Schritte zum Erstellen eines Schemas zu erfahren.
+Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie im Tutorial ](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
 
-![Die Platform-Benutzeroberfläche mit einem Beispielschema für Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![Die Experience Platform-Benutzeroberfläche mit einem Beispielschema für Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Verbinden Ihres [!DNL Chatlio]-Kontos {#connect-account}
 
-Wählen Sie in der Platform **[!UICONTROL Benutzeroberfläche die Option]** Quellen“ in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellenkatalog anzuzeigen, der auf Experience Platform verfügbar ist.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellkatalog anzuzeigen, der in Experience Platform verfügbar ist.
 
 Verwenden Sie das Menü *[!UICONTROL Kategorien]*, um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
 Gehen Sie zur Kategorie [!UICONTROL Marketing], um die [!DNL Chatlio] anzuzeigen. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]** aus.
 
-![Der Platform-UI-Katalog mit Chatlio-Karte](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![Der Experience Platform UI-Katalog mit Chatlio-Karte](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Daten auswählen {#select-data}
 
-Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Platform übermitteln möchten.
+Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Experience Platform übermitteln möchten.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Teil der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer JSON-Datei anzeigen.
@@ -93,7 +93,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die unten aufgeführten Zuordnungen sind obligatorisch und sollten eingerichtet werden, bevor Sie mit der Phase [!UICONTROL Überprüfung] fortfahren.
 
@@ -151,7 +151,7 @@ Wählen Sie als Nächstes die Registerkarte **[!DNL Behavior]** aus und fügen S
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert, um Ihre [!DNL Chatlio]-Daten auf Experience Platform zu übertragen. Informationen zum Überwachen der aufgenommenen Daten finden Sie im Handbuch unter [Überwachen von Streaming-Datenflüssen mithilfe der Platform-Benutzeroberfläche](../../monitor-streaming.md).
+In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert, um Ihre [!DNL Chatlio]-Daten in Experience Platform zu übertragen. Informationen zum Überwachen der aufgenommenen Daten finden Sie im Handbuch unter [Überwachen von Streaming-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche](../../monitor-streaming.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -165,8 +165,8 @@ Um zu überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL Chatl
 
 ![Screenshot der Chatlio-Benutzeroberfläche mit dem Chatverlauf](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Datenflüsse anzeigen]** neben dem Menü [!DNL Chatlio] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die Daten zu überprüfen, die für die Webhooks aufgenommen wurden, die Sie in [!DNL Chatlio] konfiguriert haben.
+* Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Chatlio] im Quellkatalog aus. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus, um die Daten zu überprüfen, die für die Webhooks aufgenommen wurden, die Sie in [!DNL Chatlio] konfiguriert haben.
 
-![Screenshot der Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 Weitere Informationen zu [!DNL Chatlio] finden Sie in der [[!DNL Chatlio] Dokumentation](https://chatlio.com/docs/) und [FAQ](https://chatlio.com/pricing/#FAQ).

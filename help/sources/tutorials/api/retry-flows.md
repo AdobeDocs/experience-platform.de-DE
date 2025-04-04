@@ -2,10 +2,10 @@
 title: Wiederholen fehlgeschlagener Datenflussdurchgänge
 description: Erfahren Sie, wie Sie fehlgeschlagene Datenflussausführungen mithilfe der Flow Service-API erneut versuchen können.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 19%
+source-wordcount: '272'
+ht-degree: 11%
 
 ---
 
@@ -21,16 +21,16 @@ In diesem Tutorial werden Schritte zum Wiederholen fehlgeschlagener Datenflussau
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Wiederholen einer fehlgeschlagenen Datenflussausführung
 
-Um einen fehlgeschlagenen Datenfluss erneut auszuführen, stellen Sie eine POST-Anfrage an den `/runs`-Endpunkt und geben Sie dabei die Ausführungs-ID Ihres Datenflusses und den `re-trigger` als Teil Ihrer Abfrageparameter an.
+Um einen fehlgeschlagenen Datenfluss erneut auszuführen, stellen Sie eine POST-Anfrage an den `/runs`-Endpunkt, wobei Sie die Ausführungs-ID Ihres Datenflusses und den `re-trigger` als Teil Ihrer Abfrageparameter angeben.
 
 **API-Format**
 

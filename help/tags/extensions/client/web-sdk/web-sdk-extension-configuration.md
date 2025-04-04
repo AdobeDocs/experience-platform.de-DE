@@ -2,9 +2,9 @@
 title: Konfigurieren der Tag-Erweiterung „Web SDK"
 description: Erfahren Sie, wie Sie die Tag-Erweiterung "Experience Platform Web SDK" in der Tags-Benutzeroberfläche konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 Die Tag-Erweiterung &quot;[!DNL Web SDK]&quot; sendet Daten von Web-Eigenschaften über die Edge Network von Experience Platform an Adobe Experience Cloud.
 
-Die Erweiterung ermöglicht es Ihnen, Daten in Platform zu streamen, Identitäten zu synchronisieren, Einverständnissignale von Kunden zu verarbeiten und automatisch Kontextdaten zu erfassen.
+Die Erweiterung ermöglicht es Ihnen, Daten in Experience Platform zu streamen, Identitäten zu synchronisieren, Einverständnissignale von Kunden zu verarbeiten und automatisch Kontextdaten zu erfassen.
 
 In diesem Dokument wird erläutert, wie Sie die Tag-Erweiterung in der Tags-Benutzeroberfläche konfigurieren.
 

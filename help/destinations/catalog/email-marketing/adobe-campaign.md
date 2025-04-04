@@ -3,7 +3,7 @@ keywords: email;E-Mail;E-Mail;E-Mail-Ziele;Adobe Campaign;Campaign
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 38%
@@ -24,7 +24,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, Ihrer Zulassungsliste bestimmte IP-Bereiche hinzuzufügen.
 
-Siehe [IP-Adressdatei für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md), wenn Sie Ihrer Zulassungsliste Adobe auf die Zulassungsliste setzen-IPs hinzufügen müssen.
+Siehe [IP-Adressen-Adobe auf die Zulassungsliste setzte für SFTP](../cloud-storage/ip-address-allow-list.md)Ziele, wenn Sie Ihrer Zulassungsliste IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -74,8 +74,8 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien unter dem Abschnitt „Schlüssel **[!UICONTROL eine Verschlüsselung mit PGP/GPG]**. Ihr öffentlicher Schlüssel muss als eine mit [!DNL Base64] verschlüsselte Zeichenfolge verfasst sein.
 * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-* **[!UICONTROL Bucket-Name]**: *Bei S3-Verbindungen*. Geben Sie den Speicherort Ihres S3-Buckets ein, in dem [!DNL Platform] Ihre Exportdaten als CSV-Dateien ablegen.
-* **[!UICONTROL Ordnerpfad]** Geben Sie den Pfad an Ihrem Speicherort an, an dem [!DNL Platform] Ihre Exportdaten als CSV-Dateien ablegen.
+* **[!UICONTROL Bucket-Name]**: *Bei S3-Verbindungen*. Geben Sie den Speicherort Ihres S3-Buckets ein, in dem [!DNL Experience Platform] Ihre Exportdaten als CSV-Dateien ablegen.
+* **[!UICONTROL Ordnerpfad]** Geben Sie den Pfad an Ihrem Speicherort an, an dem [!DNL Experience Platform] Ihre Exportdaten als CSV-Dateien ablegen.
 * **[!UICONTROL Container]**: *Für Blob-Verbindungen*. Der Container, der den Blob enthält, in dem sich Ihr Ordnerpfad befindet.
 * **[!UICONTROL Dateiformat]**: Wählen Sie **CSV**, um CSV-Dateien an Ihren Speicherort zu exportieren.
 
@@ -101,7 +101,7 @@ Beim Aktivieren von Zielgruppen für dieses Ziel empfiehlt Adobe die Auswahl ein
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen der Zielgruppenaktivierung](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Zielgruppenaktivierung.
+Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Experience Platform] eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen der Zielgruppenaktivierung](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Zielgruppenaktivierung.
 
 ## Einrichten des Datenimports in Adobe Campaign {#import-data-into-campaign}
 
@@ -111,6 +111,6 @@ Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine `.csv`-Datei an d
 >* Sie müssen Ihre exportierten Segmente in Adobe Campaign mithilfe von [!DNL Campaign]-Workflows planen, importieren und zuordnen. Siehe [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=de) in der Dokumentation zu Adobe Campaign Classic und [Informationen zu Datenverwaltungsaktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in der Dokumentation zu Adobe Campaign Standard.
 >* Die bevorzugte Methode zum Senden von Daten an Adobe Campaign ist [!DNL Amazon S3] oder [!DNL Azure Blob].
 
-Nachdem Sie [!DNL Platform] mit Ihrem [!DNL Amazon S3]- oder [!DNL Azure Blob]-Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in Adobe Campaign einrichten. Informationen hierzu finden Sie auf den folgenden Dokumentationsseiten zu Adobe Campaign:
+Nachdem Sie [!DNL Experience Platform] mit Ihrem [!DNL Amazon S3]- oder [!DNL Azure Blob]-Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in Adobe Campaign einrichten. Informationen hierzu finden Sie auf den folgenden Dokumentationsseiten zu Adobe Campaign:
 * [Erste Schritte mit dem Datenimport und -export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=de#getting-started) und [Laden (Datei)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=de) in der Dokumentation zu Adobe Campaign Classic.
 * [Erste Schritte mit Prozessen und Daten-](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) und [Datei laden](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in der Dokumentation zu Adobe Campaign Standard.

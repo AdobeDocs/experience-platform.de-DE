@@ -2,10 +2,10 @@
 title: Erstellen von Entwürfen Ihrer Flow Service-Entitäten mithilfe der API
 description: Erfahren Sie, wie Sie Entwürfe Ihrer Basisverbindungen, Quellverbindungen, Zielverbindungen und Datenflüsse mithilfe der Flow Service-API erstellen
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 100%
+source-wordcount: '1193'
+ht-degree: 93%
 
 ---
 
@@ -21,12 +21,12 @@ In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Flow Service]-Entitäten in 
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ### Prüfen auf Unterstützung des Entwurfsmodus
 

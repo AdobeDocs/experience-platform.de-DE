@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;ui;Workspace;Aufzählung;Feld;
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;UI;Arbeitsbereich;Aufzählung;Feld;
 solution: Experience Platform
 title: Definieren von Aufzählungsfeldern und empfohlenen Werten in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie Auflistungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche zum Experience Platform definieren.
+description: Erfahren Sie, wie Sie Aufzählungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche von Experience Platform definieren.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Evolutionsregeln für Aufzählungen und empfohlene Werte {#evolution}
 
-Nachdem ein Schema mit einem Aufzählungsfeld verwendet wurde, um Daten in Platform aufzunehmen, müssen alle weiteren Änderungen an der Schemadefinition den bereits im System vorhandenen Daten entsprechen. Im Allgemeinen können Änderungen, die an einem vorhandenen Feld vorgenommen werden, dieses Feld nur **weniger** einschränkend machen. Ein Feld kann nicht restriktiver gestaltet werden, als es bereits ist.
+Nachdem ein Schema mit einem Aufzählungsfeld verwendet wurde, um Daten in Experience Platform aufzunehmen, müssen alle weiteren Änderungen an der Schemadefinition den bereits im System vorhandenen Daten entsprechen. Im Allgemeinen können Änderungen, die an einem vorhandenen Feld vorgenommen werden, dieses Feld nur **weniger** einschränkend machen. Ein Feld kann nicht restriktiver gestaltet werden, als es bereits ist.
 
 Bei Auflistungen und empfohlenen Werten gelten nach der Aufnahme die folgenden Regeln:
 

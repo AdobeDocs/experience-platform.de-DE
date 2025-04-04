@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 94%
+source-wordcount: '891'
+ht-degree: 92%
 
 ---
 
@@ -21,7 +21,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 ## Aktivitäten {#activities}
 
-Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Platform aufgenommen.
+Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Experience Platform aufgenommen.
 
 Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden ](../../../../xdm/classes/experienceevent.md) in der Dokumentation zur XDM Experience Event-Klasse.
 

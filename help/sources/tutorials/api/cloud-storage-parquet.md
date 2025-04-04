@@ -5,7 +5,7 @@ title: Aufnehmen von Parquet-Daten aus einem Cloud-Speichersystem eines Drittanb
 type: Tutorial
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Sie durch die Schritte zur Aufnahme von Apache Parquet-Daten aus einem Cloud-Speichersystem eines Drittanbieters zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 44%
@@ -22,8 +22,8 @@ In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Sie durch die 
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Parquet-Daten aus einem Cloud-Speicher eines Drittanbieters mithilfe der [!DNL Flow Service]-API erfolgreich aufnehmen zu können.
 
@@ -33,13 +33,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Verbindung erstellen
 
-Um Parquet-Daten mithilfe von [!DNL Platform]-APIs aufzunehmen, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle eines Drittanbieters verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine Verbindung mithilfe der folgenden Tutorials erstellen:
+Um Parquet-Daten mithilfe von [!DNL Experience Platform]-APIs aufzunehmen, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle eines Drittanbieters verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine Verbindung mithilfe der folgenden Tutorials erstellen:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,7 +61,7 @@ Rufen Sie die eindeutige Kennung (`$id`) der Verbindung ab und speichern Sie sie
 
 ## Erstellen eines Zielschemas
 
-Damit die Quelldaten in [!DNL Platform] verwendet werden können, muss auch ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen [!DNL Platform] Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in [!DNL Experience Platform] verwendet werden können, muss auch ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen [!DNL Experience Platform] Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
 Wenn Sie die Benutzeroberfläche lieber in [!DNL Experience Platform] verwenden möchten, finden Sie im Tutorial [Schema-](../../../xdm/tutorials/create-schema-ui.md)) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
 
@@ -257,7 +257,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen einer Datensatz-Basisverbindung
 
-Um externe Daten in [!DNL Platform] aufzunehmen, muss zunächst eine [!DNL Experience Platform] Datensatz-Basisverbindung abgerufen werden.
+Um externe Daten in [!DNL Experience Platform] aufzunehmen, muss zunächst eine [!DNL Experience Platform] Datensatz-Basisverbindung abgerufen werden.
 
 Um eine Datensatzbasisverbindung zu erstellen, führen Sie die Schritte aus, die im Abschnitt [Tutorial zur Datensatzbasisverbindung](./create-dataset-base-connection.md) beschrieben sind.
 
@@ -427,7 +427,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Cloud-Speichersystem eines Drittanbieters nach einem bestimmten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Cloud-Speichersystem eines Drittanbieters nach einem bestimmten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Experience Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht zum Echtzeit-Kundenprofil](../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../data-science-workspace/home.md)

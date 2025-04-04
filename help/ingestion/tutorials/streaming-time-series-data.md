@@ -5,10 +5,10 @@ title: Streamen von Zeitreihendaten mithilfe von Streaming-Aufnahme-APIs
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 57%
+source-wordcount: '1214'
+ht-degree: 55%
 
 ---
 
@@ -20,15 +20,15 @@ In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnah
 
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Erlebnisdaten organisiert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Erlebnisdaten organisiert.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry]-API abdeckt und beschreibt, wie Aufrufe an sie durchgeführt werden. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemata erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../landing/api-guide.md).
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 
@@ -275,7 +275,7 @@ Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Si
 
 ## Zeitreihendaten an die Streaming-Verbindung erfassen
 
-Nachdem der Datensatz, die Streaming-Verbindung und der Datenfluss erstellt wurden, können Sie XDM-formatierte JSON-Datensätze aufnehmen, um Zeitreihendaten in [!DNL Platform] aufzunehmen.
+Nachdem der Datensatz, die Streaming-Verbindung und der Datenfluss erstellt wurden, können Sie XDM-formatierte JSON-Datensätze aufnehmen, um Zeitreihendaten in [!DNL Experience Platform] aufzunehmen.
 
 **API-Format**
 
@@ -292,7 +292,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 Die Aufnahme von Zeitreihendaten in eine Streaming-Verbindung kann entweder mit oder ohne Quellnamen erfolgen.
 
-Die folgende Beispielanfrage nimmt Zeitreihendaten mit einem fehlenden Quellnamen in Platform auf. Wenn den Daten der Quellname fehlt, wird die Quell-ID aus der Streaming-Verbindungsdefinition hinzugefügt.
+Die folgende Beispielanfrage nimmt Zeitreihendaten mit fehlendem Quellnamen in Experience Platform auf. Wenn den Daten der Quellname fehlt, wird die Quell-ID aus der Streaming-Verbindungsdefinition hinzugefügt.
 
 Sowohl `xdmEntity._id` als auch `xdmEntity.timestamp` sind erforderliche Felder für Zeitreihendaten. Das `xdmEntity._id`-Attribut stellt eine eindeutige Kennung für den Datensatz selbst dar **nicht** eindeutige ID der Person oder des Geräts, deren Datensatz er ist.
 
@@ -509,6 +509,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] aufnehmen. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie über [!DNL Platform] Benutzeroberfläche mit der Überwachung Ihrer aufgenommenen Daten beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Experience Platform] aufnehmen. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie über [!DNL Experience Platform] Benutzeroberfläche mit der Überwachung Ihrer aufgenommenen Daten beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).

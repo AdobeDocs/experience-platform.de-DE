@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform. Fragen und Fehlerbehebungen für andere [!DNL Platform]-Services finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform. Fragen und Fehlerbehebungen für andere [!DNL Experience Platform]-Services finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
 [!DNL Experience Platform] nutzt Produktprofile in der [Adobe Admin Console](https://adminconsole.adobe.com), um rollenbasierte Zugriffskontrolle bereitzustellen und Anwender mit Berechtigungen und Sandboxes zu verknüpfen.  Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](home.md).
 
@@ -23,13 +23,13 @@ Wenn Sie System-, Produkt- oder Produktprofil-Admin Ihrer Organisation sind, kö
 
 Wenn Sie kein Administrator sind, können Sie Ihre aktuellen Zugriffsberechtigungen dennoch anzeigen, indem Sie eine Anfrage an den `/acl/effective-policies`-Endpunkt in der Access Control-API senden. Weiterführende Informationen finden Sie im Abschnitt „Gültige Richtlinien anzeigen“ im [Entwicklerhandbuch zur Zugriffskontrolle](./api/effective-policies.md).
 
-## Einige Funktionen in der [!DNL Platform]-Benutzeroberfläche sind nicht verfügbar. Wie wird der Zugriff auf diese Funktionen durch Berechtigungen gesteuert?
+## Einige Funktionen in der [!DNL Experience Platform]-Benutzeroberfläche sind nicht verfügbar. Wie wird der Zugriff auf diese Funktionen durch Berechtigungen gesteuert?
 
-Wenn Sie keine Zugriffsberechtigungen für eine bestimmte [!DNL Platform]-Funktion haben, wird diese Funktion in der [!DNL Experience Platform]-Benutzeroberfläche ausgeblendet oder ausgegraut dargestellt. Um beispielsweise den Tab [!UICONTROL Profile] anzeigen zu können, müssen Sie entweder über die Berechtigung [!UICONTROL Profile anzeigen] oder über [!UICONTROL Profile verwalten] verfügen. Wenden Sie sich an Ihren Administrator, wenn Sie zusätzliche Berechtigungen für Funktionen von [!DNL Experience Platform] benötigen.
+Wenn Sie keine Zugriffsberechtigungen für eine bestimmte [!DNL Experience Platform]-Funktion haben, wird diese Funktion in der [!DNL Experience Platform]-Benutzeroberfläche ausgeblendet oder ausgegraut dargestellt. Um beispielsweise den Tab [!UICONTROL Profile] anzeigen zu können, müssen Sie entweder über die Berechtigung [!UICONTROL Profile anzeigen] oder über [!UICONTROL Profile verwalten] verfügen. Wenden Sie sich an Ihren Administrator, wenn Sie zusätzliche Berechtigungen für Funktionen von [!DNL Experience Platform] benötigen.
 
 ## Wie werden Berechtigungen angeordnet, und welche Gruppe enthält die Berechtigung, die ich verwenden möchte?
 
-Berechtigungen werden nach den Funktionen von [!DNL Platform] gruppiert und kategorisiert, für die sie gelten (z. B. [!DNL Data Management] und [!DNL Profile Management]). Eine vollständige Liste der verfügbaren Berechtigungen sowie der Gruppen, zu denen sie gehören, finden Sie im Abschnitt [Berechtigungen](home.md#permissions) in der Übersicht zur Zugriffskontrolle.
+Berechtigungen werden nach den Funktionen von [!DNL Experience Platform] gruppiert und kategorisiert, für die sie gelten (z. B. [!DNL Data Management] und [!DNL Profile Management]). Eine vollständige Liste der verfügbaren Berechtigungen sowie der Gruppen, zu denen sie gehören, finden Sie im Abschnitt [Berechtigungen](home.md#permissions) in der Übersicht zur Zugriffskontrolle.
 
 Weiterführende Informationen zur Bereitstellung rollenbasierter Zugriffskontrolle finden Sie unter [Zugriffskontrolle – Übersicht](home.md).
 

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie Ihr Ziel für die unterstützten Konfigurationen der Identitäts- und Attributzuordnung konfigurieren.
 title: Unterstützte Zuordnungskonfigurationen
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 99%
+source-wordcount: '670'
+ht-degree: 77%
 
 ---
 
@@ -64,19 +64,19 @@ Benutzerinnen und Benutzer können Attribute aus ihrem Quell-XDM-Profil benutzer
 
 Benutzerinnen und Benutzer müssen bei der Auswahl der Zielfeldzuordnung manuell den Namen des benutzerdefinierten Zielattributs eingeben.
 
-![Screenshot der Platform-Benutzeroberfläche mit Auswahl der benutzerdefinierten Attribute.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl der benutzerdefinierten Attribute.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unten dargestellt.
 
-![Screenshot der Platform-Benutzeroberfläche mit der XDM-Attributzuordnung zu benutzerdefinierten Attributen für Streaming-Ziele.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit der XDM-Attributzuordnung zu benutzerdefinierten Attributen für Streaming-Ziele.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Zuordnen von Identity-Namespaces zu Partner-Identity-Namespaces {#streaming-identity-to-identity}
 
-Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Platform den von Ihnen definierten Identity-Namespaces zuordnen.
+Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Experience Platform den von Ihnen definierten Identity-Namespaces zuordnen.
 
 Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unten dargestellt.
 
-![Screenshot der Platform-Benutzeroberfläche mit Identitätszuordnung zu Identitäten für Streaming-Ziele.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Identitätszuordnung zu Identitäten für Streaming-Ziele.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Unterstützte Zuordnungen für dateibasierte Ziele {#batch-mappings}
 
@@ -118,33 +118,33 @@ Bei dateibasierten Zielen wird das Zielfeld automatisch mit einem Standardattrib
 
 Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unten dargestellt.
 
-![Screenshot der Platform-Benutzeroberfläche mit der XDM-Zuordnung zu benutzerdefinierten Attributen für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit der XDM-Zuordnung zu benutzerdefinierten Attributen für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Benutzerinnen und Benutzer können den Standardnamen beibehalten oder einen benutzerdefinierten Attributnamen im Bildschirm zur Zielfeldauswahl eingeben.
 
-![Screenshot der Platform-Benutzeroberfläche mit einer benutzerdefinierten Zielattribut-Auswahl für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit einer benutzerdefinierten Zielattribut-Auswahl für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Zuordnen von Identity-Namespaces zu benutzerdefinierten Attributen {#batch-identity-to-custom}
 
-Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Platform benutzerdefinierten Attributen auf der Seite Ihres Ziels zuordnen.
+Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Experience Platform benutzerdefinierten Attributen des Ziels zuordnen.
 
 Bei der Auswahl eines Identity-Namespace als Quellfeld wird das Zielfeld automatisch mit einem entsprechenden Identity-Namespace ausgefüllt. Um das Zielfeld durch ein benutzerdefiniertes Attribut zu ersetzen, müssen Benutzerinnen und Benutzer einen benutzerdefinierten Attributnamen in den Bildschirm zur Zielfeldauswahl eingeben.
 
-![Screenshot der Platform-Benutzeroberfläche mit einer benutzerdefinierten Zielattribut-Auswahl für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit einer benutzerdefinierten Zielattribut-Auswahl für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unten dargestellt.
 
-![Screenshot der Platform-Benutzeroberfläche, der die Identitätszuordnung zu benutzerdefinierten Attributen für dateibasierte Ziele zeigt.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Identitätszuordnung zu benutzerdefinierten Attributen für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Zuordnen von Identity-Namespaces zu Partner-Identity-Namespaces {#batch-identity-to-identity}
 
-Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Platform äquivalenten Identity-Namespaces zuordnen.
+Benutzerinnen und Benutzer können benutzerdefinierte oder globale Identity-Namespaces von Experience Platform äquivalenten Identity-Namespaces zuordnen.
 
 Bei der Auswahl eines Identity-Namespace als Quellfeld wird das Zielfeld automatisch mit einem entsprechenden Identity-Namespace ausgefüllt.
 
 Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unten dargestellt.
 
-![Screenshot der Platform-Benutzeroberfläche, der die Identitätszuordnung zur Identität für dateibasierte Ziele zeigt.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+Screenshot der ![Experience Platform-Benutzeroberfläche mit Identitätszuordnung zu Identitäten für dateibasierte Ziele.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Nächste Schritte {#next-steps}

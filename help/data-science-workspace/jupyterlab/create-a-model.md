@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;JupyterLab;Rezept;Notebooks;Data Science Workspace;beliebte Themen;Rezept erstellen
+keywords: Experience Platform;JupyterLab;Rezept;Notebooks;Datenwissenschafts-Workspace;beliebte Themen;Rezept erstellen
 solution: Experience Platform
 title: Erstellen eines Modells mit JupyterLab-Notebooks
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte, um ein Rezept mithilfe der Rezept-Builder-Vorlage für JupyterLab-Notebooks zu erstellen.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2106'
-ht-degree: 29%
+source-wordcount: '2108'
+ht-degree: 28%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Tutorial führt Sie durch die erforderlichen Schritte zum Erstellen eines
 
 ## Vorgestellte Konzepte:
 
-- **Rezepte:** Ein Rezept ist ein Adobe-Begriff für eine Modellspezifikation und ein Container der obersten Ebene, der einen bestimmten Algorithmus für maschinelles Lernen, einen KI-Algorithmus oder eine Gruppe von Algorithmen, eine Verarbeitungslogik und eine Konfiguration darstellt, die zum Erstellen und Ausführen eines trainierten Modells erforderlich sind.
+- **Rezepte:** Ein Rezept ist Adobes Begriff für eine Modellspezifikation und ein Container der obersten Ebene, der einen bestimmten Algorithmus für maschinelles Lernen, einen KI-Algorithmus oder eine Gruppe von Algorithmen, eine Verarbeitungslogik und eine Konfiguration darstellt, die zum Erstellen und Ausführen eines trainierten Modells erforderlich sind.
 - **Modell:** Ein Modell ist eine Instanz eines maschinellen Lernrezepts, das mithilfe von historischen Daten und Konfigurationen zur Lösung eines geschäftlichen Anwendungsfalls trainiert wird.
 - **Training:** Ein Training besteht aus dem Erlernen von Mustern und Insights auf Grundlage gekennzeichneter Daten.
 - **Scoring:** Beim Scoring werden mithilfe eines trainierten Modells Insights aus Daten generiert.
@@ -116,25 +116,25 @@ Standardmäßig sind für das Trainieren und Bewerten von Daten die folgenden Ko
 
 Der Zweck des Ladeprogramms für Trainings-Daten besteht darin, Daten zu instanziieren, die zum Erstellen des maschinellen Lernmodells verwendet werden. In der Regel gibt es zwei Aufgaben, die der Trainings-Datenlader ausführt:
 
-- Daten aus [!DNL Platform] werden geladen
+- Daten aus [!DNL Experience Platform] werden geladen
 - Datenvorbereitung und Funktionsentwicklung
 
 Die folgenden beiden Abschnitte liefern Informationen über das Laden und Vorbereiten von Daten.
 
 ### Laden von Daten {#loading-data}
 
-In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) verwendet. Daten können aus Dateien in [!DNL Adobe Experience Platform] entweder mit dem [!DNL Platform] SDK (`platform_sdk`) oder aus externen Quellen mithilfe der `read_csv()`- oder `read_json()` von Pandas geladen werden.
+In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) verwendet. Daten können aus Dateien in [!DNL Adobe Experience Platform] entweder mit dem [!DNL Experience Platform] SDK (`platform_sdk`) oder aus externen Quellen mithilfe der `read_csv()`- oder `read_json()` von Pandas geladen werden.
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [Externe Quellen](#external-sources)
 
 >[!NOTE]
 >
 >Im Recipe Builder-Notebook werden Daten über das `platform_sdk`-Ladeprogramm geladen.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### [!DNL Experience Platform] SDK {#platform-sdk}
 
-Eine ausführliche Anleitung zur Verwendung des Datenladeprogramms `platform_sdk` finden Sie im [Handbuch zum Platform-SDK](../authoring/platform-sdk.md). Dieses Tutorial enthält Informationen zur Build-Authentifizierung, zum grundlegenden Lesen von Daten sowie zum grundlegenden Schreiben von Daten.
+Ein ausführliches Tutorial zur Verwendung des `platform_sdk` Data Loaders finden Sie im [Handbuch zu Experience Platform SDK](../authoring/platform-sdk.md). Dieses Tutorial enthält Informationen zur Build-Authentifizierung, zum grundlegenden Lesen von Daten sowie zum grundlegenden Schreiben von Daten.
 
 ### Externe Quellen {#external-sources}
 
@@ -158,7 +158,7 @@ Jetzt befinden sich Ihre Daten im Dataframe-Objekt und können im [nächsten Abs
 
 ## Trainings-Datenladerdatei
 
-In diesem Beispiel werden Daten mit dem Platform SDK geladen. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
+In diesem Beispiel werden Daten mit der Experience Platform SDK geladen. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -177,7 +177,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Wie im Abschnitt [Konfigurationsdatei](#configuration-files) erwähnt, werden die folgenden Konfigurationsparameter für den Zugriff auf Daten vom Experience Platform mithilfe von `client_context = get_client_context(config_properties)` festgelegt:
+>Wie im Abschnitt [Konfigurationsdatei](#configuration-files) erwähnt, werden die folgenden Konfigurationsparameter für den Zugriff auf Daten aus Experience Platform mithilfe von `client_context = get_client_context(config_properties)` festgelegt:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -269,7 +269,7 @@ Wenn Sie das Bearbeiten des Rezepts abgeschlossen und mit der Trainings-/Bewertu
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nachdem Sie **[!UICONTROL Rezept erstellen]** ausgewählt haben, werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf [!DNL Platform] erstellt wurde.
+Nachdem Sie **[!UICONTROL Rezept erstellen]** ausgewählt haben, werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf [!DNL Experience Platform] erstellt wurde.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 

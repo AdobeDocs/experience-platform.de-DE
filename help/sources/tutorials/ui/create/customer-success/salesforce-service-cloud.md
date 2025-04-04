@@ -1,17 +1,17 @@
 ---
-title: Verbinden Ihres Salesforce Service Cloud-Kontos über die Experience Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Ihr Salesforce Service Cloud-Konto verbinden und Ihre Kundenerfolgsdaten über die Benutzeroberfläche auf Experience Platform übertragen.
+title: Verbinden Ihres Salesforce Service Cloud-Kontos über die Benutzeroberfläche von Experience Platform
+description: Erfahren Sie, wie Sie über die Benutzeroberfläche eine Verbindung mit Ihrem Salesforce Service Cloud-Konto herstellen und Ihre Kundenerfolgsdaten zu Experience Platform übertragen.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 21%
+source-wordcount: '844'
+ht-degree: 19%
 
 ---
 
-# Verbinden Ihres [!DNL Salesforce Service Cloud]-Kontos mit dem Experience Platform über die Benutzeroberfläche
+# Verbinden Ihres [!DNL Salesforce Service Cloud]-Kontos mit Experience Platform über die Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL Salesforce Service Cloud]-Konto herstellen und Ihre Kundenerfolgsdaten zu Adobe Experience Platform übertragen.
+In diesem Tutorial erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Experience Platform eine Verbindung zu Ihrem [!DNL Salesforce Service Cloud]-Konto herstellen und Ihre Kundenerfolgsdaten an Adobe Experience Platform übermitteln.
 
 ## Erste Schritte
 
@@ -59,11 +59,11 @@ Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce Service Clo
 
 >[!ENDTABS]
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Salesforce Service Cloud]-Konto mit Experience Platform zu verbinden.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Salesforce Service Cloud]-Konto mit Experience Platform zu verbinden.
 
 ## Verbinden Ihres [!DNL Salesforce Service Cloud]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie **[!DNL Salesforce Service Cloud]** unter der Kategorie *[!UICONTROL Customer Success]* und dann **[!UICONTROL Daten hinzufügen]** aus.
 
@@ -121,4 +121,4 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]**.
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Salesforce Service Cloud]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Customer Success-Daten auf Experience Platform zu übertragen](../../dataflow/customer-success.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Salesforce Service Cloud]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Customer Success-Daten in Experience Platform zu importieren](../../dataflow/customer-success.md).

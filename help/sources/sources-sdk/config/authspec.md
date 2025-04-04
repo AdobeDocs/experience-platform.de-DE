@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Authentifizierungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Authentifizierungsspezifikationen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrer Quelle herstellen können.
 
-Das `authSpec`-Array enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Platform erforderlich sind. Jede beliebige Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
+Das `authSpec`-Array enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Experience Platform erforderlich sind. Jede beliebige Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
 
 ## Authentifizierungsspezifikationen
 
@@ -340,4 +340,4 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
 
 ## Nächste Schritte
 
-Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument [Konfigurieren von Quellspezifikationen](./sourcespec.md) .
+Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Experience Platform integrieren möchten. Weitere Informationen finden Sie im Dokument [Konfigurieren von Quellspezifikationen](./sourcespec.md) .

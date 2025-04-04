@@ -3,9 +3,9 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '464'
 ht-degree: 38%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform unterstützt Datenexporte an die folgenden Cloud-Speic
 
 ## Verbinden mit einem neuen Cloud-Speicherziel {#connect-destination}
 
-Um Zielgruppen an Cloud-Speicher-Ziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen an Cloud-Speicher-Ziele für Ihre Kampagnen zu senden, muss Experience Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
 
 
 ## Verwenden von Makros zum Erstellen eines Ordners an Ihrem Speicherort {#use-macros}

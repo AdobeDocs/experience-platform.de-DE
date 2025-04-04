@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicher;Cloud-Sp
 title: Erkunden von Cloud-Speicherordnern mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um ein Cloud-Speichersystem eines Drittanbieters zu erkunden.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 18%
+source-wordcount: '695'
+ht-degree: 15%
 
 ---
 
@@ -22,12 +22,12 @@ In diesem Tutorial erfahren Sie, wie Sie die Struktur und die Inhalte Ihres Clou
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-### Verwenden von Platform-APIs
+### Verwenden von Experience Platform-APIs
 
-Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Cloud-Speicherordnern
 
@@ -94,9 +94,9 @@ Eine erfolgreiche Antwort gibt ein Array von Dateien und Ordnern zurück, die im
 ]
 ```
 
-## Inspect - Dateistruktur
+## Überprüfen der Dateistruktur
 
-Um die Dateistruktur aus Ihrem Cloud-Speicher zu überprüfen, führen Sie eine GET-Anfrage durch, wobei Sie den Dateipfad und -typ als Abfrageparameter angeben.
+Um die Dateistruktur aus Ihrem Cloud-Speicher zu überprüfen, führen Sie eine GET-Anfrage aus, während Sie den Dateipfad und -typ als Abfrageparameter angeben.
 
 Sie können die Struktur einer Datendatei aus Ihrer Cloud-Speicherquelle überprüfen, indem Sie eine GET-Anfrage ausführen und dabei den Pfad und den Typ der Datei angeben. Sie können auch verschiedene Dateitypen wie CSV-, TSV- oder komprimierte JSON- und durch Trennzeichen getrennte Dateien untersuchen, indem Sie deren Dateitypen als Teil der Abfrageparameter angeben.
 
@@ -168,4 +168,4 @@ Die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Cloud-Speichersystem erkundet, den Pfad der Datei gefunden, die Sie in [!DNL Platform] einbringen möchten, und ihre Struktur betrachtet. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Cloud-Speicher zu erfassen und in Platform zu ](../collect/cloud-storage.md).
+In diesem Tutorial haben Sie Ihr Cloud-Speichersystem erkundet, den Pfad der Datei gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und ihre Struktur betrachtet. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Cloud-Speicher zu erfassen und in Experience Platform zu ](../collect/cloud-storage.md).

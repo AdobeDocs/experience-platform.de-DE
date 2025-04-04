@@ -5,7 +5,7 @@ title: Erstellen einer MariaDB-Source-Verbindung über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Maria DB-Quellverbindung erstellen.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 # Erstellen eines Quell-Connectors für [!DNL MariaDB] in der Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines Maria DB-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines Maria DB-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Wenn Sie bereits über eine [!DNL MariaDB] Verbindung verfügen, können Sie den
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL MariaDB]-Konto in [!DNL Platform] zugreifen zu können, müssen Sie den folgenden Wert angeben:
+Um auf Ihr [!DNL MariaDB]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie den folgenden Wert angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL MariaD
 
 ## Verbinden Ihres [!DNL Maria DB]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Maria DB]-Konto mit [!DNL Platform] zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Maria DB]-Konto mit [!DNL Experience Platform] zu verknüpfen.
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -63,4 +63,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL MariaDB] Konto, mit
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL MariaDB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL MariaDB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).

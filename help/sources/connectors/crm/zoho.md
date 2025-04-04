@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector Zoho CRM
 description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 97%
+source-wordcount: '509'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 97%
 >
 >Die [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Zoho CRM].
 
@@ -27,7 +27,7 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 ## Abrufen Ihrer Authentifizierungs-Anmeldedaten für [!DNL Zoho CRM]
 
-Bevor Sie Daten aus Ihrem [!DNL Zoho CRM]-Konto auf Platform übertragen können, müssen Sie zunächst Ihre Anmeldedaten abrufen, um Ihre [!DNL Zoho CRM]-Quelle zu authentifizieren. Gehen Sie wie folgt vor, um Ihre Client-ID, Ihr Client-Geheimnis, Ihr Zugriffs-Token und Ihr Aktualisierungs-Token abzurufen.
+Bevor Sie Daten aus Ihrem [!DNL Zoho CRM]-Konto in Experience Platform übertragen können, müssen Sie zunächst Ihre Anmeldedaten abrufen, um Ihre [!DNL Zoho CRM] zu authentifizieren. Gehen Sie wie folgt vor, um Ihre Client-ID, Ihr Client-Geheimnis, Ihr Zugriffs-Token und Ihr Aktualisierungs-Token abzurufen.
 
 ### Registrieren Ihres Programms
 
@@ -49,15 +49,15 @@ Bei einer erfolgreichen Anfrage werden Ihre Zugriffs- und Aktualisierungs-Token 
 
 Ausführliche Anweisungen zur Anforderung Ihrer Anmeldedaten finden Sie im [[!DNL Zoho CRM] Authentifizierungshandbuch](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## Verbinden von [!DNL Zoho CRM] mit [!DNL Platform] mithilfe von APIs
+## Verbinden von [!DNL Zoho CRM] mit [!DNL Experience Platform] mithilfe von APIs
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Zoho CRM] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Zoho CRM] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 - [Erstellen einer  [!DNL Zoho CRM] -Basisverbindung mit der Flow Service-API](../../tutorials/api/create/crm/zoho.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
-## Verbinden von [!DNL Zoho CRM] mit [!DNL Platform] über die Benutzeroberfläche
+## Verbinden von [!DNL Zoho CRM] mit [!DNL Experience Platform] über die Benutzeroberfläche
 
 - [Erstellen einer  [!DNL Zoho CRM] -Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/crm/zoho.md)
 - [Erstellen eines Datenflusses für eine CRM-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)

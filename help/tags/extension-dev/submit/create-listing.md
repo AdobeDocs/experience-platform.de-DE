@@ -2,9 +2,9 @@
 title: Erstellen eines Exchange-Listeneintrags für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung dem öffentlichen Katalog in Adobe Experience Platform hinzufügen.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 71%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform verfügt über einen zentralen Katalog, in dem Anwende
 
 Neben den Erweiterungen im Produktkatalog sind im [Experience Cloud Exchange App Marketplace auch öffentliche Erweiterungen ](https://exchange.adobe.com/apps/browse/ec).
 
-Diese Einträge ermöglichen es Entwicklern von Erweiterungen, Beschreibungen über Funktionen zu posten, Links zu zusätzlichem Support- und Dokumentationsmaterial bereitzustellen sowie Ihre Erweiterungen für potenzielle Anwender zu vermarkten, welche Ihre Firma oder die Funktionen Ihrer Erweiterung möglicherweise noch nicht kennen. Auf diesem Marketplace verfügt Ihre Erweiterung über eine öffentliche Liste, die angezeigt werden kann, ohne dass sich der Benutzer für Platform authentifizieren muss. Für öffentliche Erweiterungen ist die Erstellung dieses Exchange-Listeneintrags ein erforderlicher Schritt.
+Diese Einträge ermöglichen es Entwicklern von Erweiterungen, Beschreibungen über Funktionen zu posten, Links zu zusätzlichem Support- und Dokumentationsmaterial bereitzustellen sowie Ihre Erweiterungen für potenzielle Anwender zu vermarkten, welche Ihre Firma oder die Funktionen Ihrer Erweiterung möglicherweise noch nicht kennen. Auf diesem Marketplace verfügt Ihre Erweiterung über eine öffentliche Liste, die angezeigt werden kann, ohne dass sich der Benutzer bei Experience Platform authentifizieren muss. Für öffentliche Erweiterungen ist die Erstellung dieses Exchange-Listeneintrags ein erforderlicher Schritt.
 
 >[!TIP]
 >

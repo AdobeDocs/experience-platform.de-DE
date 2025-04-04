@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2176'
-ht-degree: 21%
+source-wordcount: '2178'
+ht-degree: 20%
 
 ---
 
@@ -40,40 +40,40 @@ Weitere Informationen finden Sie im [Data Lake-Migrationshandbuch](../../landing
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
+[!DNL Experience Platform] nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf eine Vielzahl von Experience Platform-Funktionen, einschließlich Datenmodellierung, Profilverwaltung und Sandbox-Administration.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Berechtigungen | In der [!DNL Admin Console] können Sie auf der Registerkarte innerhalb eines [!DNL Platform] Produktprofils anpassen, welche [!DNL Platform]-Funktionen für die mit diesem Profil verbundenen Benutzer verfügbar sind. Zu den verfügbaren Berechtigungskategorien gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Datenverwaltung]**, **[!UICONTROL Profilverwaltung]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**, **[!UICONTROL Datenaufnahme]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** und **** Data Governance ]****[!UICONTROL . |
-| Zugriff auf Sandboxes | Die **[!UICONTROL Berechtigungen]** in einem [!DNL Platform] Produktprofil kann Benutzern Zugriff auf bestimmte Sandboxes gewähren. Zusätzliche Informationen finden Sie im Abschnitt zu [Sandboxes](#sandboxes) unten. |
+| Berechtigungen | In der [!DNL Admin Console] können Sie auf der Registerkarte innerhalb eines [!DNL Experience Platform] Produktprofils anpassen, welche [!DNL Experience Platform]-Funktionen für die mit diesem Profil verbundenen Benutzer verfügbar sind. Zu den verfügbaren Berechtigungskategorien gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Datenverwaltung]**, **[!UICONTROL Profilverwaltung]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**, **[!UICONTROL Datenaufnahme]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** und **** Data Governance ]****[!UICONTROL . |
+| Zugriff auf Sandboxes | Die **[!UICONTROL Berechtigungen]** in einem [!DNL Experience Platform] Produktprofil kann Benutzern Zugriff auf bestimmte Sandboxes gewähren. Zusätzliche Informationen finden Sie im Abschnitt zu [Sandboxes](#sandboxes) unten. |
 
 Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning] ist ein in [!DNL Experience Platform] integrierter Anwendungs-Service. Sie ermöglicht es Ihnen, [!DNL Platform] zu nutzen, um Ihren Kunden über alle Berührungspunkte hinweg zur richtigen Zeit das beste Angebot und Erlebnis zu bieten.
+[!DNL Offer Decisioning] ist ein in [!DNL Experience Platform] integrierter Anwendungs-Service. Sie ermöglicht es Ihnen, [!DNL Experience Platform] zu nutzen, um Ihren Kunden über alle Berührungspunkte hinweg zur richtigen Zeit das beste Angebot und Erlebnis zu bieten.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Zentralisierte Angebotsbibliothek | Die Benutzeroberfläche, in der Sie die verschiedenen Elemente erstellen und verwalten, aus denen Ihre Angebote bestehen, und deren Regeln und Einschränkungen definieren. |
-| Offer Decisioning-Engine | Die Offer Decisioning-Engine nutzt [!DNL Platform] Daten und [!DNL Real-Time Customer Profiles] sowie die Angebotsbibliothek, um den richtigen Zeitpunkt, die richtigen Kunden und die richtigen Kanäle für das Unterbreiten von Angeboten auszuwählen. |
+| Offer Decisioning-Engine | Die Offer Decisioning-Engine nutzt [!DNL Experience Platform] Daten und [!DNL Real-Time Customer Profiles] sowie die Angebotsbibliothek, um den richtigen Zeitpunkt, die richtigen Kunden und die richtigen Kanäle für das Unterbreiten von Angeboten auszuwählen. |
 
 Weitere Informationen finden Sie in der [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de).
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] wurde entwickelt, um Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diesem Bedarf gerecht zu werden, stellt [!DNL Experience Platform] Sandboxes bereit, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+[!DNL Experience Platform] wurde entwickelt, um Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diesem Bedarf gerecht zu werden, stellt [!DNL Experience Platform] Sandboxes bereit, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Produktions-Sandbox | [!DNL Experience Platform] bietet eine einzelne Produktions-Sandbox, die nicht gelöscht oder zurückgesetzt werden kann. Die Gesamtzahl der verfügbaren Sandboxes, Produktion und produktionsfremd, wird durch die erworbene Lizenz bestimmt. |
-| Nicht-Produktions-Sandboxes | Für eine einzelne [!DNL Platform]-Instanz können mehrere Nicht-Produktions-Sandboxes erstellt werden, sodass Sie Funktionen testen, Experimente durchführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktions-Sandbox zu beeinträchtigen. |
+| Nicht-Produktions-Sandboxes | Für eine einzelne [!DNL Experience Platform]-Instanz können mehrere Nicht-Produktions-Sandboxes erstellt werden, sodass Sie Funktionen testen, Experimente durchführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktions-Sandbox zu beeinträchtigen. |
 | Sandbox-Wechsler | In der [!DNL Experience Platform] Benutzeroberfläche können Sie mit dem Sandbox-Umschalter in der oberen linken Ecke des Bildschirms über ein Dropdown-Menü zwischen verfügbaren Sandboxes wechseln. Der Sandbox-Umschalter bietet außerdem eine Suchfunktion, mit der Sie durch verfügbare Sandboxes filtern können. |
 | `x-sandbox-name`-Kopfzeile | Alle Aufrufe [!DNL Experience Platform] -APIs müssen jetzt die neue `x-sandbox-name`-Kopfzeile enthalten, deren Wert auf das `name` Attribut der Sandbox verweist, in der der Vorgang ausgeführt wird. |
 
@@ -106,7 +106,7 @@ Weitere Informationen finden Sie im Dokument unter [Erstellen eines Rezepts mit 
 
 ## [!DNL Destinations] {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
 
 **Neue Ziele**
 
@@ -135,23 +135,23 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Datensatz für Customer Experience Events (CEE) | Das Erstellen eines CEE-Datensatzes unterstützt jetzt das Hinzufügen von Identitätsfeldern zum Datensatz mit dem Schema-Editor. Attribution AI- und Kunden-KI verwenden die primäre Identität zum Kombinieren von Ereignissen. |
+| Datensatz für Customer Experience Events (CEE) | Das Erstellen eines CEE-Datensatzes unterstützt jetzt das Hinzufügen von Identitätsfeldern zum Datensatz mit dem Schema-Editor. Attributions-KI und Kunden-KI verwenden die primäre Identität zum Kombinieren von Ereignissen. |
 
 Weitere Informationen finden Sie im Abschnitt zum [ von Identitätsfeldern zu einem Datensatz ](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) Intelligent Services-Datenvorbereitungshandbuch.
 
 ### Attributions-KI
 
-Attribution AI ist Teil von Intelligent Services und bietet einen mehrere Kanäle umfassenden algorithmischen Attributions-Service, der die Auswirkungen und inkrementelle Auswirkungen von Kundeninteraktionen auf bestimmte Ergebnisse berechnet.
+Attribution AI ist Teil von Intelligent Services und bietet einen mehrere Kanäle umfassenden algorithmischen Attributions-Service, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Link zur Datenquelle | Der Link zur ursprünglichen Datensatzquelle kann in der rechten Leiste einer ausgewählten Service-Instanz angezeigt und aufgerufen werden. |
-| Instanznamen bearbeiten | Sie können jetzt den Namen einer bestehenden Attribution AI-Instanz ändern. |
+| Instanznamen bearbeiten | Sie können jetzt den Namen einer vorhandenen Attribution AI-Instanz ändern. |
 | Instanz klonen | Kopiert die aktuell ausgewählte Dienstinstanz und ermöglicht Änderungen. |
-| Konfigurationsparameter der Instanz ändern | Sie können jetzt die Konfiguration einer bestehenden Attribution AI-Instanz ändern, falls sie noch nicht mit der Bewertung begonnen hat. |
-| Einmalige Punktzahl | Sie können jetzt Ad-hoc-Modellbewertung in Ihren Attribution AI-Instanzen mit Trigger durchführen. |
+| Konfigurationsparameter der Instanz ändern | Sie können jetzt die Konfiguration einer vorhandenen Attribution AI-Instanz ändern, wenn sie noch nicht mit der Bewertung begonnen hat. |
+| Einmalige Punktzahl | Sie können jetzt Ad-hoc-Modellbewertung in Ihren Attribution AI-Instanzen Trigger machen. |
 | Durchlauf durch Spalten | Sie können jetzt zusätzliche Spalten konfigurieren, die den Rohausgabe-Score-Dateien hinzugefügt werden, um zusätzliche Dimensionen zu BI-Tool-Ansichten hinzuzufügen. |
 | Instanzaktivierung und -deaktivierung | Sie können jetzt das geplante Modell-Training und die Bewertung Ihrer Attribution AI-Instanzen aktivieren und deaktivieren. |
 | Berechtigungsverfolgung | Die Gesamtmenge der von Ihrem Konto verwendeten Attribution Insights finden Sie im Container Instanz erstellen . |
@@ -159,7 +159,7 @@ Attribution AI ist Teil von Intelligent Services und bietet einen mehrere Kanäl
 | Top-Konversionspfade | Ein neues Insights-Diagramm auf der Registerkarte Pfadanalyse . Das Diagramm enthält eine Liste der fünf wichtigsten Konversionspfade, die die Sequenz der Marketing-Kanal-Touchpoints zeigen, die zu den meisten Konversionen geführt haben. |
 | Touchpoint-Effektivität | Bietet detaillierte Einblicke in die drei wichtigsten Variablen, mit denen Ihr Modell die Touchpoint-Effektivität misst. Die Variablen sind das Verhältnis von positiven und negativen Pfaden, Touchpoint-Effizienz und Touchpoint-Volumen. |
 
-Weiterführende Informationen finden Sie in der Übersicht zu [Attribution AI ](../../intelligent-services/attribution-ai/overview.md).
+Weitere Informationen finden Sie im Abschnitt [Übersicht über Attributions-KI](../../intelligent-services/attribution-ai/overview.md).
 
 ### Kunden-KI
 
@@ -187,14 +187,14 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Aktualisierter Workflow für Zusammenführungsrichtlinien | Platform hat die Konfiguration der Zusammenführungsrichtlinie auf einen neuen schrittweisen Workflow aktualisiert. Dieser Workflow ermöglicht es Benutzenden, Datenfragmente aus mehreren Profildatensätzen zusammenzuführen und Prioritäten für die Art und Weise festzulegen, wie Daten über diese Datensätze hinweg zusammengeführt werden, um eine umfassende Ansicht jedes einzelnen Profils zu erstellen. Benutzer können ausgewählte XDM-Datensätze mit einzelnen Profilen zusammenführen, indem sie die entsprechende Zusammenführungsmethode auswählen (Zeitstempel geordnet oder Datensatzpriorität) und ExperienceEvent-Datensätze an die Profildatensätze anhängen. |
+| Aktualisierter Workflow für Zusammenführungsrichtlinien | Experience Platform hat die Konfiguration der Zusammenführungsrichtlinie auf einen neuen schrittweisen Workflow aktualisiert. Dieser Workflow ermöglicht es Benutzenden, Datenfragmente aus mehreren Profildatensätzen zusammenzuführen und Prioritäten für die Art und Weise festzulegen, wie Daten über diese Datensätze hinweg zusammengeführt werden, um eine umfassende Ansicht jedes einzelnen Profils zu erstellen. Benutzer können ausgewählte XDM-Datensätze mit einzelnen Profilen zusammenführen, indem sie die entsprechende Zusammenführungsmethode auswählen (Zeitstempel geordnet oder Datensatzpriorität) und ExperienceEvent-Datensätze an die Profildatensätze anhängen. |
 | Vereinigungsschemaansicht | In der Experience Platform-Benutzeroberfläche können Benutzende Informationen zu allen Schemata und Datensätzen, die zum Vereinigungsschema beitragen, sowie Attribute von Oberflächenschlüsseln wie Identitäts- und Beziehungsfelder leichter finden. Diese Aktualisierungen verbessern die Möglichkeit, Probleme zu beheben und zu überprüfen, ob Profile korrekt konfiguriert und Identitäten korrekt zugeordnet wurden und Daten erfolgreich aufgenommen wurden. |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie [ der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

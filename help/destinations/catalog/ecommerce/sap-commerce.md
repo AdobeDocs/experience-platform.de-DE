@@ -3,10 +3,10 @@ title: SAP Commerce-Verbindung
 description: Verwenden Sie den SAP Commerce Destination Connector, um Kundendatensätze in Ihrem SAP-Konto zu aktualisieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2246'
-ht-degree: 26%
+source-wordcount: '2268'
+ht-degree: 25%
 
 ---
 
@@ -36,11 +36,11 @@ Weitere Informationen finden Sie in der Experience Platform[Dokumentation für d
 
 ### Voraussetzungen für das [!DNL SAP Commerce] Ziel {#prerequisites-destination}
 
-Beachten Sie die folgenden Voraussetzungen, um Daten von Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren:
+Beachten Sie die folgenden Voraussetzungen, um Daten aus Experience Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren:
 
 #### Sie müssen über ein [!DNL SAP Subscription Billing] Konto verfügen {#prerequisites-account}
 
-Um Daten von Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren, benötigen Sie ein [!DNL SAP Subscription Billing]-Konto. Wenn Sie kein gültiges Abrechnungskonto haben, wenden Sie sich an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
+Um Daten aus Experience Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren, benötigen Sie ein [!DNL SAP Subscription Billing]. Wenn Sie kein gültiges Abrechnungskonto haben, wenden Sie sich an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
 
 #### Generieren eines Service-Schlüssels {#prerequisites-service-key}
 
@@ -79,9 +79,9 @@ Um Daten von Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren, benötige
 
 #### Erstellen benutzerdefinierter Verweise in [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-Um den Experience Platform-Zielgruppenstatus in [!DNL SAP Subscription Billing] zu aktualisieren, benötigen Sie ein benutzerdefiniertes Referenzfeld für jede in Platform ausgewählte Zielgruppe.
+Um den Experience Platform-Zielgruppenstatus in [!DNL SAP Subscription Billing] zu aktualisieren, benötigen Sie ein benutzerdefiniertes Referenzfeld für jede in Experience Platform ausgewählte Zielgruppe.
 
-Um die benutzerdefinierten Verweise zu erstellen, melden Sie sich bei Ihrem [!DNL SAP Subscription Billing]-Konto an und navigieren Sie zur **[Stammdaten und Konfiguration]** > **[Benutzerdefinierte Verweise]**. Wählen Sie als Nächstes **[!UICONTROL Erstellen]**, um für jede in Platform ausgewählte Audience einen neuen Verweis hinzuzufügen. Sie benötigen diese Referenzfeldnamen im nachfolgenden Schritt [Planen des Zielgruppenexports und Beispiel](#schedule-segment-export-example).
+Um die benutzerdefinierten Verweise zu erstellen, melden Sie sich bei Ihrem [!DNL SAP Subscription Billing]-Konto an und navigieren Sie zur **[Stammdaten und Konfiguration]** > **[Benutzerdefinierte Verweise]**. Wählen Sie als Nächstes **[!UICONTROL Erstellen]**, um für jede in Experience Platform ausgewählte Audience einen neuen Verweis hinzuzufügen. Sie benötigen diese Referenzfeldnamen im nachfolgenden Schritt [Planen des Zielgruppenexports und Beispiel](#schedule-segment-export-example).
 
 Ein Beispiel für das Erstellen eines benutzerdefinierten **[!UICONTROL Verweistyps]** innerhalb von [!DNL SAP Subscription Billing] wird unten gezeigt:
 ![Bild, das zeigt, wo eine benutzerdefinierte Referenz in der SAP-Abonnementabrechnung erstellt werden kann.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -99,7 +99,7 @@ Um [!DNL SAP Commerce] mit Experience Platform zu verbinden, müssen Sie Werte f
 | Endpunkt | Der Wert von `url` aus dem Dienstschlüssel ähnelt `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | Region | Ihr Rechenzentrumsstandort. Die Region befindet sich in der `url` und hat einen ähnlichen Wert wie `eu10` oder `us10`. Wenn die `url` beispielsweise `https://eu10.revenue.cloud.sap/api` ist, benötigen Sie `eu10`. |
 
-## Leitplanken {#guardrails}
+## Leitlinien {#guardrails}
 
 API-Anfragen an den [!DNL SAP Cloud Management service] unterliegen [Ratenbeschränkungen](https://help.sap.com/docs/btp/sap-business-technology-platform/account-administration-rate-limiting). Wenn das Ratenlimit überschritten wird, wird der Status-Code einer `HTTP 429 Too Many Requests` Antwort angezeigt.
 
@@ -121,7 +121,7 @@ Dieses Ziel unterstützt auch die Aktivierung der in der folgenden Tabelle besch
 
 | Zielgruppentyp | Unterstützt | Beschreibung |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -132,7 +132,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Platform wird das entsprechende [!DNL SAP Commerce] zusätzliche Attribut mit dem Zielgruppenstatus in Platform aktualisiert.</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Experience Platform wird das entsprechende [!DNL SAP Commerce] zusätzliche Attribut von Experience Platform mit seinem Zielgruppenstatus aktualisiert.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -159,14 +159,14 @@ Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Absch
 | **[!UICONTROL Region]** | Ihr Rechenzentrumsstandort. Die Region befindet sich in der `url` und hat einen ähnlichen Wert wie `eu10` oder `us10`. Wenn die `url` beispielsweise `https://eu10.revenue.cloud.sap/api` ist, benötigen Sie `eu10`. |
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
-![Bild aus der Platform-Benutzeroberfläche, das zeigt, wie eine Authentifizierung beim Ziel erfolgt.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![Bild von der Experience Platform-Benutzeroberfläche, das zeigt, wie eine Authentifizierung beim Ziel erfolgt.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
-![Bild aus der Platform-Benutzeroberfläche mit den Zieldetails, die nach der Authentifizierung ausgefüllt werden müssen.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![Bild aus der Experience Platform-Benutzeroberfläche mit den Zieldetails, die nach der Authentifizierung ausgefüllt werden müssen.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -189,36 +189,36 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL SAP Commerce] Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen. Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL SAP Commerce]-Zielfeldern korrekt zuzuordnen:
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL SAP Commerce] Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL SAP Commerce]-Zielfeldern korrekt zuzuordnen:
 
 #### `customerNumberSAP` Identität zuordnen
 
 Die `customerNumberSAP` Identität ist eine obligatorische Zuordnung für dieses Ziel. Gehen Sie wie folgt vor, um sie zuzuordnen:
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** den **[!UICONTROL Identity-Namespace auswählen]** und wählen Sie `customerNumberSAP` aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von E-Mail als Quellattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Quellattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den **[!UICONTROL Identity-Namespace]** und wählen Sie die `customerNumber` Identität aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von E-Mail als Zielattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Zielattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Quellfeld | Zielfeld | Obligatorisch |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Ja |
 
 Nachfolgend finden Sie ein Beispiel mit der Identitätszuordnung:
-![Bild aus der Platform-Benutzeroberfläche mit einem Beispiel für die Identitätszuordnung von customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![Bild aus der Experience Platform-Benutzeroberfläche mit einem Beispiel für die Identitätszuordnung von customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### Zuordnungsattribute
 
 Um weitere Attribute hinzuzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL SAP Subscription Billing]-Konto aktualisieren möchten, wiederholen Sie die folgenden Schritte:
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus.
-   ![Screenshot der Platform-Benutzeroberfläche mit Auswahl von Nachname als Quellattribut.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+   Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl des Nachnamens als Quellattribut.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und geben Sie den Namen des [!DNL SAP Subscription Billing] Attributs aus der Liste der [ (Schema](https://api.sap.com/api/BusinessPartner_APIs/schema)-Attribute ein.
-   ![Screenshot der Platform-Benutzeroberfläche, bei dem lastName als Zielattribut definiert ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+   Screenshot der ![Experience Platform-Benutzeroberfläche, bei dem lastName als Zielattribut definiert ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >
@@ -261,7 +261,7 @@ Anschließend können Sie wie unten dargestellt zusätzliche Zuordnungen zwische
 | `xdm: workAddress.city` | `Attribute: city` | Nein |
 
 Nachfolgend finden Sie ein Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde eine Einzelperson ist:
-![Bild aus der Platform-Benutzeroberfläche mit einem Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde eine Einzelperson ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![Bild aus der Experience Platform-Benutzeroberfläche mit einem Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde eine Einzelperson ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
 >[!TAB Firmenkunde]
 
@@ -271,7 +271,7 @@ Nachfolgend finden Sie ein Beispiel mit obligatorischen und optionalen Attributz
 | `xdm: workAddress.city` | `Attribute: city` | Nein |
 
 Nachfolgend finden Sie ein Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde ein Unternehmen ist:
-![Bild aus der Platform-Benutzeroberfläche mit einem Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde ein Unternehmen ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![Bild aus der Experience Platform-Benutzeroberfläche mit einem Beispiel mit obligatorischen und optionalen Attributzuordnungen, bei denen der Kunde ein Unternehmen ist.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 
@@ -279,10 +279,10 @@ Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, 
 
 ### Planen des Zielgruppenexports und Beispiel {#schedule-segment-export-example}
 
-Bei der Durchführung des Schritts [Planen des ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)-Exports) müssen Sie Platform-Zielgruppen manuell den [Attributen](#prerequisites-attribute) in [!DNL SAP Subscription Billing] zuordnen.
+Bei der Durchführung des Schritts [Planen des ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)-Exports) müssen Sie Experience Platform-Zielgruppen manuell den [Attributen](#prerequisites-attribute) in [!DNL SAP Subscription Billing] zuordnen.
 
 Ein Beispiel für den Schritt „Zielgruppenexport planen“ mit hervorgehobener Position der [!DNL SAP Commerce] **[!UICONTROL Zuordnungs-ID]** wird unten angezeigt:
-![Bild von Platform mit ausgefüllten Zeitplan-Zielgruppenexport-IDs.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+![Bild aus Experience Platform mit ausgefüllten Zeitplan-Zielgruppenexport-IDs.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 Wählen Sie dazu jedes Segment aus und geben Sie dann den Namen des benutzerdefinierten Verweises aus [!DNL SAP Subscription Billing] in das Feld [!DNL SAP Commerce]Zuordnungs **[!UICONTROL ID]** des Ziel-Connectors ein. Anleitungen zum Erstellen benutzerdefinierter Verweise finden Sie im Abschnitt [Erstellen benutzerdefinierter Verweise in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
@@ -297,11 +297,11 @@ Ein Beispiel **[!UICONTROL Verweistyp]** aus [!DNL SAP Subscription Billing] wir
 ![Bild, das zeigt, wo eine benutzerdefinierte Referenz in der SAP-Abonnementabrechnung erstellt werden kann.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 Ein Beispiel für den Schritt „Zielgruppenexport planen“, bei dem eine Zielgruppe ausgewählt und die entsprechende [!DNL SAP Commerce] (**[!UICONTROL -ID]** hervorgehoben ist, finden Sie unten:
-![Bild von Platform mit ausgefüllten Zeitplan-Zielgruppenexport-IDs.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+![Bild aus Experience Platform mit ausgefüllten Zeitplan-Zielgruppenexport-IDs.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 Wie gezeigt, sollte der Wert im Feld **[!UICONTROL Zuordnungs]** genau mit dem Wert [!DNL SAP Subscription Billing]Referenztyp **** übereinstimmen.
 
-Wiederholen Sie diesen Abschnitt für jede aktivierte Platform-Zielgruppe.
+Wiederholen Sie diesen Abschnitt für jede aktivierte Experience Platform-Zielgruppe.
 
 Basierend auf der Abbildung oben, in der Sie zwei Zielgruppen ausgewählt haben, würde die Zuordnung wie folgt aussehen:
 

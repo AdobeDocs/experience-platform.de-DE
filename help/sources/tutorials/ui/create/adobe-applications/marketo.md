@@ -2,10 +2,10 @@
 title: Erstellen einer Marketo Engage Source-Verbindung und eines Datenflusses in der Benutzeroberfläche
 description: In diesem Tutorial werden Schritte zum Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses in der Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 46%
+source-wordcount: '1836'
+ht-degree: 43%
 
 ---
 
@@ -22,16 +22,16 @@ In diesem Tutorial erfahren Sie, wie Sie einen [!DNL Marketo Engage]-Quell-Conne
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [B2B-Namespaces und Dienstprogramm zur automatischen Schemaerstellung](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Mit dem B2B-Namespace- und dem Dienstprogramm zur automatischen Schemaerstellung können Sie [!DNL Postman] verwenden, um automatisch Werte für Ihre B2B-Namespaces und -Schemas zu generieren. Sie müssen zuerst Ihre B2B-Namespaces und -Schemata abschließen, bevor Sie eine [!DNL Marketo] Quellverbindung und einen Datenfluss erstellen.
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Experience-Datenmodell (XDM)](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../../../xdm/ui/resources/schemas.md): Erfahren Sie, wie Sie in der Benutzeroberfläche Schemata erstellen und bearbeiten.
 * [Identitäts-Namespaces](../../../../../identity-service/features/namespaces.md): Identitäts-Namespaces sind eine Komponente von [!DNL Identity Service], die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Marketo]-Konto auf Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr [!DNL Marketo]-Konto in Experience Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---- | ---- |
@@ -45,9 +45,9 @@ Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die Sch
 
 ## Verbinden Ihres [!DNL Marketo]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Adobe* Anwendungen} **[!UICONTROL Marketo Engage]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie *Adobe* Programme} **[!UICONTROL Marketo Engage]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 >[!TIP]
 >
@@ -97,7 +97,7 @@ Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss 
 
 ### Datensatz-Details {#dataset-details}
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform erfasst werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
+Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
 >[!BEGINTABS]
 
@@ -203,13 +203,13 @@ Die folgenden Abschnitte enthalten zusätzliche Richtlinien, die Sie bei der Ver
 
 ### Fehlermeldungen in der Benutzeroberfläche {#error-messages}
 
-Die folgenden Fehlermeldungen werden in der Benutzeroberfläche angezeigt, wenn Platform Probleme mit Ihrem Setup erkennt:
+Die folgenden Fehlermeldungen werden in der Benutzeroberfläche angezeigt, wenn Experience Platform Probleme mit Ihrem Setup erkennt:
 
 #### [!DNL Munchkin ID] ist der entsprechenden Organisation nicht zugeordnet
 
-Die Authentifizierung wird verweigert, wenn Ihr [!DNL Munchkin ID] nicht der von Ihnen verwendeten Platform-Organisation zugeordnet ist. Konfigurieren Sie die Zuordnung zwischen Ihrer [!DNL Munchkin ID] und Ihrer Organisation mithilfe der [[!DNL Marketo] Benutzeroberfläche](https://app-sjint.marketo.com/#MM0A1).
+Die Authentifizierung wird verweigert, wenn Ihr [!DNL Munchkin ID] nicht der von Ihnen verwendeten Experience Platform-Organisation zugeordnet ist. Konfigurieren Sie die Zuordnung zwischen Ihrer [!DNL Munchkin ID] und Ihrer Organisation mithilfe der [[!DNL Marketo] Benutzeroberfläche](https://app-sjint.marketo.com/#MM0A1).
 
-![Eine Fehlermeldung, die anzeigt, dass die Marketo-Instanz der Adobe-Organisation nicht korrekt zugeordnet ist.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+![Eine Fehlermeldung, die anzeigt, dass die Marketo-Instanz nicht korrekt der Adobe-Organisation zugeordnet ist.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 
 #### Primäre Identität fehlt
 

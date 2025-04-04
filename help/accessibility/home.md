@@ -4,10 +4,10 @@ title: Übersicht über Funktionen zur Barrierefreiheit in Experience Platform
 type: Documentation
 description: Adobe Experience Platform möchte allen Anwendern barrierefreie und inklusive Funktionen bieten.
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 100%
+source-wordcount: '310'
+ht-degree: 77%
 
 ---
 
@@ -17,12 +17,12 @@ Barrierefreiheit bezieht sich auf eine Reihe von Funktionen, die ein Software-Pr
 
 Adobe Experience Platform möchte allen Personen barrierefreie und inklusive Funktionen bereitstellen, darunter auch Benutzern, die mit Hilfssystemen wie Spracherkennungs-Software und Bildschirmlesehilfen arbeiten. Experience Platform wird kontinuierlich verbessert, um die Bedürfnisse aller Arten von Benutzern zu erfüllen und die weltweiten Standards einzuhalten, welche Personen mit visuellen, auditiven, Mobilitäts- oder anderen Beeinträchtigungen einschließen.
 
-Weitere von Platform unterstützte Funktionen zur Barrierefreiheit sind die Tastaturnavigation, die semantische Struktur, der ausreichende Kontrast zwischen Vordergrund- und Hintergrundelementen, die Unterstützung von Hilfstechnologien und klare Beschriftungen der Elemente.
+Weitere von Experience Platform unterstützte Funktionen zur Barrierefreiheit sind die Tastaturnavigation, die semantische Struktur, der ausreichende Kontrast zwischen Vordergrund- und Hintergrundelementen, die Unterstützung von Hilfstechnologien und klare Elementbeschriftungen.
 
 Weitere Informationen zu den von Experience Platform unterstützten allgemeinen Barrierefreiheitsfunktionen finden Sie im [Handbuch der Barrierefreiheitsfunktionen](features.md).
 
-Informationen zu benutzerdefinierten Barrierefreiheitsfunktionen in bestimmten Bereichen der Platform-Benutzeroberfläche finden Sie im [Handbuch zu benutzerdefinierten Barrierefreiheitslösungen für Experience Platform](custom.md).
+Informationen zu benutzerdefinierten Barrierefreiheitsfunktionen in bestimmten Bereichen der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zu benutzerdefinierten Barrierefreiheitslösungen für Experience Platform](custom.md).
 
-Um die Konformität mit den Regeln der Barrierefreiheit zu erreichen, folgt Experience Platform den international anerkannten Best Practices in den Web Content Accessibility Guidelines (WCAG) 2.1 Level A und Level AA. Weitere Informationen zu den letzten Verbesserungen der Barrierefreiheit in Experience Platform finden Sie in den aktuellen [Platform-Versionshinweisen](../release-notes/latest/latest.md).
+Um die Konformität mit den Regeln der Barrierefreiheit zu erreichen, folgt Experience Platform den international anerkannten Best Practices in den Web Content Accessibility Guidelines (WCAG) 2.1 Level A und Level AA. Weitere Informationen zu den letzten Verbesserungen der Barrierefreiheit in Experience Platform finden Sie in den aktuellen [Experience Platform-Versionshinweisen](../release-notes/latest/latest.md).
 
 Detaillierte Berichte dazu, wie Adobe-Programme die einzelnen Konformitätsstufen erfüllen, finden Sie in der Dokumentation zum [Konformitätsbericht zur Barrierefreiheit](https://www.adobe.com/accessibility/compliance.html) (ACR).

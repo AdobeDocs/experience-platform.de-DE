@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1659'
-ht-degree: 40%
+source-wordcount: '1662'
+ht-degree: 37%
 
 ---
 
@@ -31,7 +31,7 @@ Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 ## Anwendungsfall-Playbooks {#use-case-playbooks}
 
-Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
+Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-Time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
 
 Lesen Sie die folgenden Dokumentationsseiten, um mit [!UICONTROL Playbooks für Anwendungsfälle] zu beginnen:
 
@@ -43,9 +43,9 @@ Lesen Sie die folgenden Dokumentationsseiten, um mit [!UICONTROL Playbooks für 
 
 ## Attributbasierte Zugriffssteuerung {#abac}
 
-Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Experience Platform-Benutzenden in Ihrem Unternehmen den Zugriff auf einzelne Objekte gewähren oder sperren.
 
-Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Administratorinnen Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Durch attributbasierte Zugriffssteuerung können Admins Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Experience Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 **Neue oder aktualisierte Dokumentation**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| SQL anzeigen | Sie können jetzt mit dem Umschalter SQL anzeigen den SQL-Code hinter Ihren Profilen, Zielgruppen, Zielen und benutzerdefinierten Einblicken anzeigen und dann die Abfrage bei Bedarf über den Abfrage-Editor ausführen. Der Zugriff auf den SQL-Code, der Ihren Real-time Customer Data Platform-Einblicken zugrunde liegt, hilft Ihnen, die Logik hinter der Analyse Ihres Datenmodells zu verstehen. Diese Transparenz macht Ihre Adobe-Real-Time CDP-Daten zugänglicher, verständlicher und wirkungsvoller für die Entscheidungsfindung.<br>Nutzen Sie die Inspiration aus dem SQL-Code von über 40 vorhandenen Einblicken, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Die SQL-Abfrage ist auch für Ihre [Profile](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md) und [Ziele](../../dashboards/insights/destinations.md) in der Experience League-Dokumentation verfügbar. In diesen Dokumenten werden die geschäftlichen Anwendungsfälle beschrieben, die mit den standardmäßigen Einblicken beantwortet werden können. Weitere Informationen finden Sie im Handbuch unter [Anzeigen von Insight SQL](../../dashboards/view-sql.md). |
+| SQL anzeigen | Sie können jetzt mit dem Umschalter SQL anzeigen den SQL-Code hinter Ihren Profilen, Zielgruppen, Zielen und benutzerdefinierten Einblicken anzeigen und dann die Abfrage bei Bedarf über den Abfrage-Editor ausführen. Der Zugriff auf den SQL-Code, der Ihre Einblicke in Real-time Customer Data Platform ermöglicht, hilft Ihnen, die Logik hinter der Analyse Ihres Datenmodells zu verstehen. Diese Transparenz macht Ihre Adobe Real-Time CDP-Daten zugänglicher, verständlicher und wirkungsvoller für die Entscheidungsfindung.<br>Nutzen Sie die Inspiration aus dem SQL-Code von über 40 vorhandenen Einblicken, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten gewinnen. Die SQL-Abfrage ist auch für Ihre [Profile](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md) und [Ziele](../../dashboards/insights/destinations.md) in der Dokumentation zu Experience League verfügbar. In diesen Dokumenten werden die geschäftlichen Anwendungsfälle beschrieben, die mit den standardmäßigen Einblicken beantwortet werden können. Weitere Informationen finden Sie im Handbuch unter [Anzeigen von insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 | Dokumentation aktualisieren | Beschreibung |
 | --- | --- |
-| Neustrukturierung der Dokumentation | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Darstellung und Klarheit von Konzepten in Identity Service zu verbessern:<ul><li>Auf der [Identity Service-Übersichtsseite](../../identity-service/home.md) finden Sie ein erweitertes Terminologiehandbuch, ein Anwendungsbeispiel mit einer typischen Kunden-Journey, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service im Experience Platform-Ökosystem spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine detaillierte Zusammenfassung, wie die beiden Services zusammenarbeiten und die Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Erläuterungen und Visualisierungen [ Verhaltens des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie ](../../identity-service/features/identity-linking-logic.md) Handbuch zur Identitätsdienst-Verknüpfungslogik .</li></ul> |
+| Neustrukturierung der Dokumentation | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Darstellung und Klarheit von Konzepten in Identity Service zu verbessern:<ul><li>Auf der [Identity Service-Übersichtsseite](../../identity-service/home.md) finden Sie ein erweitertes Terminologiehandbuch, ein Anwendungsbeispiel mit einer typischen Kunden-Journey, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service innerhalb des Experience Platform-Ökosystems spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine detaillierte Zusammenfassung, wie die beiden Services zusammenarbeiten und die Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Erläuterungen und Visualisierungen [ Verhaltens des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie ](../../identity-service/features/identity-linking-logic.md) Handbuch zur Identitätsdienst-Verknüpfungslogik .</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -181,8 +181,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] | Verwenden Sie die [!DNL Oracle NetSuite] Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) auf Experience Platform zu übertragen. |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Verwenden Sie die [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) Integration im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto auf Experience Platform zu übertragen. |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] | Verwenden Sie die [!DNL Oracle NetSuite] Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)-Konten in Experience Platform zu übertragen. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Verwenden Sie die [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) Integration im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto an Experience Platform zu übertragen. |
 | Unterstützung der Schlüsselpaar-Authentifizierung für [!DNL Snowflake] Batch-Quelle | Sie können jetzt die Schlüsselpaar-Authentifizierung verwenden, wenn Sie ein neues [!DNL Snowflake] für Batch-Daten erstellen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der ](../../sources/tutorials/api/create/databases/snowflake.md)) oder im Handbuch [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

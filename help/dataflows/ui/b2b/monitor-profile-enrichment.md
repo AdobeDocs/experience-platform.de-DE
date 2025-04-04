@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 4%
 
 Verwenden Sie das Dashboard [!UICONTROL Profilanreicherung] um zu verstehen, ob Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken anzuzeigen, um die Effektivität der Anreicherungen zu messen.
 
-Wählen Sie in der [Platform](https://platform.adobe.com)Benutzeroberfläche die Option **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus, um auf das [!UICONTROL Monitoring]-Dashboard zuzugreifen. Wählen Sie in der Ansichtsauswahl die Option **B2B-Fluss** aus, um die für [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) spezifischen Dashboard-Elemente anzuzeigen.  Das [!UICONTROL Monitoring]-Dashboard enthält die grundlegenden Metriken der letzten erfolgreichen Ausführung und den täglichen Auftragsstatus, der bis zu 90 Tage in der Vergangenheit lag.
+Wählen Sie in der [Experience Platform](https://platform.adobe.com)-Benutzeroberfläche **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus, um auf das Dashboard [!UICONTROL Monitoring] zuzugreifen. Wählen Sie in der Ansichtsauswahl die Option **B2B-Fluss** aus, um die für [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) spezifischen Dashboard-Elemente anzuzeigen.  Das [!UICONTROL Monitoring]-Dashboard enthält die grundlegenden Metriken der letzten erfolgreichen Ausführung und den täglichen Auftragsstatus, der bis zu 90 Tage in der Vergangenheit lag.
 
 ## Profilanreicherung für verwandte Konten {#related-accounts}
 
 Das Dashboard [!UICONTROL Verknüpfte Konten] zeigt die grundlegenden Metriken und den Status des täglichen Auftrags an, der spezifisch für die Profilanreicherung [Verknüpfte Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) ist.
 
-![Visueller Hinweis darauf, wie Sie in der Experience Platform-Benutzeroberfläche zum Bildschirm „Überwachung von Vorgängen zur Profilanreicherung“ gelangen.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Visueller Hinweis darauf, wie Sie in der Experience Platform-Benutzeroberfläche zum Bildschirm Überwachung von Vorgängen zur Profilanreicherung gelangen.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
 Die Daten in der Karte **[!UICONTROL Metriken]** enthalten die grundlegenden Metriken aus der letzten erfolgreichen Ausführung des Vorgangs für verwandte Konten.
 

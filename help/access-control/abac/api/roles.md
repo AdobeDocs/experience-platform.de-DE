@@ -5,10 +5,10 @@ title: Roles API-Endpunkt
 description: Mit dem /roles-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 27%
+source-wordcount: '1670'
+ht-degree: 28%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 27%
 >
 >Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über eine „org admin“-Rolle für die angeforderte Organisation verfügen.
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrer Organisation hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
+Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
 Mit dem `/roles`-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Rollen in Ihrer Organisation programmgesteuert verwalten.
 
@@ -28,7 +28,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der attributbasierten Zu
 
 ## Abrufen einer Liste von Rollen {#list}
 
-Sie können alle vorhandenen Rollen, die zu Ihrer Organisation gehören, auflisten, indem Sie eine GET-Anfrage an den `/roles`-Endpunkt stellen.
+Sie können alle vorhandenen Rollen, die zu Ihrem Unternehmen gehören, auflisten, indem Sie eine GET-Anfrage an den `/roles`-Endpunkt stellen.
 
 **API-Format**
 
@@ -108,7 +108,7 @@ Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation
 | `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Experience Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
 ## Suchen einer Rolle {#lookup}
@@ -175,7 +175,7 @@ Eine erfolgreiche Antwort gibt Details für die abgefragte Rollen-ID zurück, ei
 | `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Experience Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
 ## Objekte nach Rollen-ID nachschlagen
@@ -323,12 +323,12 @@ Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der entsprec
 | `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Experience Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
 ## Aktualisieren einer Rolle {#patch}
 
-Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an den `/roles`-Endpunkt senden und dabei die entsprechende Rollen-ID und die Werte für die Vorgänge angeben, die Sie anwenden möchten.
+Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an den `/roles`-Endpunkt stellen und dabei die entsprechende Rollen-ID und die Werte für die Vorgänge angeben, die Sie anwenden möchten.
 
 **API-Format**
 
@@ -403,7 +403,7 @@ Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich 
 | `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Experience Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
 ## Aktualisieren einer Rolle anhand der Rollen-ID {#put}
@@ -477,7 +477,7 @@ Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, ei
 | `roleType` | Der zugewiesene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
 | `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihrer Organisation an, die für eine bestimmte Rolle bereitgestellt werden. |
-| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
+| `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Subjekt und den Experience Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbeschriftungen an, die auf die abgefragte Rolle angewendet wurden. |
 
 ## Betreff nach Funktions-ID aktualisieren

@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine bestehende Zielkonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Zielkonfiguration
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 99%
+source-wordcount: '371'
+ht-degree: 95%
 
 ---
 
@@ -207,7 +207,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu
 
 ## Umgang mit API-Fehlern {#error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Nächste Schritte
 

@@ -2,18 +2,18 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Analytics;Mixpanel
 solution: Experience Platform
 title: Erstellen eines Datenflusses mit einer Analytics-Source in der Benutzeroberfläche
-description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Analytics-Quelle erstellen.
+description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Datenfluss für eine Analytics-Quelle erstellen.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 45%
+source-wordcount: '1459'
+ht-degree: 44%
 
 ---
 
 # Erstellen eines Datenflusses mithilfe einer Analytics-Quelle in der Benutzeroberfläche
 
-Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Datensatz in Adobe Experience Platform aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Analytics-Quelle erstellen.
+Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Datensatz in Adobe Experience Platform aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Datenfluss für eine Analytics-Quelle erstellen.
 
 >[!NOTE]
 >
@@ -21,9 +21,9 @@ Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgeruf
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Quellen](../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
@@ -83,11 +83,11 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 >[!IMPORTANT]
 >
->Sie können keine dynamischen Schlüsselpaarwerte als Objekt von [!DNL OneTrust] Platform zuordnen und müssen diese Schlüssel im Zielschema angeben, um Ihre Daten während der Aufnahme zuordnen zu können.
+>Sie können keine dynamischen Schlüsselpaarwerte als Objekt von [!DNL OneTrust] zu Experience Platform zuordnen und müssen diese Schlüssel im Zielschema angeben, um Ihre Daten während der Aufnahme zuzuordnen.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -141,7 +141,7 @@ Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurde
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus Ihrer Analytics-Quelle in Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus Ihrer Analytics-Quelle in Experience Platform zu übertragen. Eingehende Daten können jetzt von nachgelagerten [!DNL Experience Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](../../../../data-science-workspace/home.md)
@@ -149,6 +149,6 @@ In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus
 
 >[!WARNING]
 >
-> Die im folgenden Video angezeigte Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+> Die im folgenden Video angezeigte Experience Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

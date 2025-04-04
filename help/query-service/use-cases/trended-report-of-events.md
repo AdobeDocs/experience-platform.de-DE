@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage
 title: Erstellen eines Trendberichts mit Ereignissen
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um einen Trend-Bericht mit Ereignissen über einen bestimmten Datumsbereich gruppiert nach Datum zu erstellen.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 Dieses Dokument enthält ein Beispiel für den erforderlichen SQL-Code, um einen Trend-Bericht zu Ereignissen nach Tag über einen bestimmten Datumsbereich zu erstellen. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei ](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie [ Abschnitt „Nächste Schritte“.
 
-Berichte bieten Ihnen Zugriff auf Ihre Platform-Daten, um die strategischen geschäftlichen Einblicke Ihres Unternehmens zu nutzen. Mit diesen Berichten können Sie Ihre Platform-Daten auf verschiedene Weise untersuchen, Schlüsselmetriken in leicht verständlichen Formaten anzeigen und die resultierenden Erkenntnisse teilen.
+Berichte bieten Ihnen Zugriff auf Ihre Experience Platform-Daten, um die strategischen geschäftlichen Einblicke Ihres Unternehmens zu nutzen. Mit diesen Berichten können Sie Ihre Experience Platform-Daten auf verschiedene Weise untersuchen, Schlüsselmetriken in leicht verständlichen Formaten anzeigen und die resultierenden Erkenntnisse teilen.
 
 Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch die Kombination von Abfrage-Service und [!DNL Experience Events] können Sie Verhaltenstrends bei Ihren Benutzenden effektiv verfolgen. Im folgenden Dokument finden Sie Beispiele für Abfragen mit [!DNL Experience Events].
 
