@@ -2,9 +2,9 @@
 title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Jede Marketing-Modellierungstechnik beinhaltet Kompromisse, die sowohl Vorteile 
 Die RFM-Modellierung hat jedoch Einschränkungen. Sie setzt Einheitlichkeit innerhalb von Segmenten auf der Grundlage von Neuigkeit, Häufigkeit und Geldwert voraus, was das Kundenverhalten übermäßig vereinfachen kann. Das Modell weist diesen Faktoren ebenfalls dieselbe Gewichtung zu, was den Kundenwert möglicherweise falsch darstellt. Darüber hinaus berücksichtigt es nicht den Kontext, z. B. produktspezifische Eigenschaften oder Kundenpräferenzen, die zu Fehlinterpretationen des Kaufverhaltens führen können.
 
 ## Erstellen einer dynamischen, auf RFM-Werten basierenden SQL-Zielgruppe {#build-a-dynamic-rfm-audience}
+
+Die folgende Infografik bietet einen allgemeinen Überblick über den Workflow zur Erstellung von RFM-SQL-Zielgruppen, der in diesem Tutorial beschrieben wird.
+
+![Eine Infografik mit dem Titel „RFM-Score-Based SQL Audience“, die vier Schritte veranschaulicht: CSV hochladen, Daten erkunden, mit RFM-Scores anreichern und die Zielgruppe aktivieren.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Bevor Sie mit der Fallstudie zu Luma beginnen, müssen Sie einen Beispieldatensatz aufnehmen. Wählen [ zunächst den Link aus, um den `luma_web_data.zip`-Datensatz lokal herunterzuladen](../resources/luma_web_data.zip). Der Beispieldatensatz ist eine CSV-Datei im komprimierten ZIP-Format, die an den Anwendungsfall angepasst wird. Entpacken Sie diese ZIP-Datei mit Adobe Acrobat oder einem vertrauenswürdigen Dateiextraktions-Tool, z. B. dem integrierten Dienstprogramm Ihres Betriebssystems. In der Praxis würden Sie Daten normalerweise aus Adobe Analytics, Adobe Commerce oder Adobe Web/Mobile SDK beziehen.
 
