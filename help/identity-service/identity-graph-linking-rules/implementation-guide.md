@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 6%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 6%
 >
 >Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
+>[!IMPORTANT]
+>
+>In diesem Dokument wird davon ausgegangen, dass Sie Ihre Implementierung in einer neuen Sandbox ohne Daten starten.
+
 Lesen Sie dieses Dokument für eine schrittweise Anleitung, die Sie bei der Implementierung Ihrer Daten mit Adobe Experience Platform Identity Service befolgen können.
 
 Schrittweise Anleitung:
-
 
 1. [Vollständige Voraussetzungen für die Implementierung](#prerequisites-for-implementation)
 2. [Erstellen der erforderlichen Identity-Namespaces](#namespace)

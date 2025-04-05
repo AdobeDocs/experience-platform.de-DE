@@ -2,10 +2,10 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 3%
+source-wordcount: '644'
+ht-degree: 4%
 
 ---
 
@@ -71,7 +71,13 @@ Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schrit
 
 ![Ein Bestätigungsfenster mit ausgewählter Schaltfläche „Bestätigen“.](../images/rules/confirmation.png)
 
-Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorhandene Diagramme nur vom Diagrammalgorithmus betroffen sind **nur wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird. Darüber hinaus erhalten Sie eine Benachrichtigung, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
+### Bestätigen der Einstellungen {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorhandene Diagramme nur vom Diagrammalgorithmus betroffen sind **nur wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird.
+>
+>* Darüber hinaus erhalten Sie eine Benachrichtigung, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
 
 ![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
 
@@ -79,7 +85,7 @@ Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorha
 
 Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
 
-* [Übersicht über Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
