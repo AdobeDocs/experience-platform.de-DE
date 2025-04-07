@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2407'
 ht-degree: 1%
 
 ---
@@ -50,11 +50,13 @@ Bevor Sie eine Aufbewahrungsrichtlinie anwenden, prüfen Sie, ob Ihr Datensatz e
 
 Wenn historische Aufzeichnungen für langfristige Analysen oder Geschäftsvorgänge unerlässlich sind, ist TTL möglicherweise nicht der richtige Ansatz. Durch die Überprüfung dieser Faktoren wird sichergestellt, dass die TTL mit Ihren Datenaufbewahrungsanforderungen übereinstimmt, ohne die Datenverfügbarkeit zu beeinträchtigen.
 
-## Planen von Abfragen
+## Planen von Abfragen {#plan-queries}
 
-Bevor Sie die TTL anwenden, verwenden Sie Abfragen, um die Größe und Relevanz des Datensatzes zu analysieren. Das Ausführen gezielter Abfragen hilft dabei, zu bestimmen, wie viele Daten unter verschiedenen TTL-Konfigurationen aufbewahrt oder entfernt werden würden.
+Vor der Anwendung der TTL ist es wichtig, die Datensatzgröße und Datenrelevanz zu bewerten und zu bewerten, wie viele historische Daten aufbewahrt werden sollten. In der folgenden Abbildung wird der vollständige Prozess der Implementierung von TTL beschrieben, von der Planung von Abfragen bis zur Überwachung der Effektivität der Datenspeicherung.
 
-Beispielsweise zählt die folgende SQL-Abfrage die Anzahl der Datensätze, die in den letzten 30 Tagen erstellt wurden:
+![Ein visueller Workflow zur Implementierung von TTL in Erlebnisereignis-Datensätzen. Zu den Schritten gehören die Bewertung der Datenlebensdauer und der Auswirkungen des Entfernens, die Validierung der TTL-Einstellungen mit Abfragen, die Konfiguration der TTL über die Catalog Service API und die kontinuierliche Überwachung der TTL-Auswirkungen sowie Anpassungen.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+Das Ausführen gezielter Abfragen hilft dabei, zu bestimmen, wie viele Daten unter verschiedenen TTL-Konfigurationen aufbewahrt oder entfernt werden würden. Beispielsweise zählt die folgende SQL-Abfrage die Anzahl der Datensätze, die in den letzten 30 Tagen erstellt wurden:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
