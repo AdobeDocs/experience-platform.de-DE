@@ -2,9 +2,9 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme bei Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ Diese Abfrage geht davon aus, dass:
 
 * Eine Identität wird von identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemata ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
 * Die CRMID wird über identityMap gesendet. Wenn die CRMID als Feld gesendet wird, entfernen Sie die `key='Email'` aus der WHERE-Klausel.
+
+>[!NOTE]
+>
+>**Bei WebSDK-Implementierung und ECID** Duplizierung: Wenn das ECID-Feld als Identität (Identitätsdeskriptor) anstelle der identityMap markiert ist, wird in der identityMap eine zweite ECID generiert. Durch diese Duplizierung kann verhindert werden, dass das Echtzeit-Kundenprofil anonyme Ereignisse speichert, da in einem einzigen Ereignis zwei ECIDs vorhanden sind.
 
 ## Probleme mit dem Diagrammverhalten {#graph-behavior-related-issues}
 
