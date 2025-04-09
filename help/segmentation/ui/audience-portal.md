@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
+source-git-commit: d80378d6ffc9598c21bc217c0577f611fe8671cc
 workflow-type: tm+mt
-source-wordcount: '4371'
+source-wordcount: '4413'
 ht-degree: 54%
 
 ---
@@ -15,7 +15,9 @@ Audience Portal ist ein zentraler Knotenpunkt in Adobe Experience Platform, übe
 
 In Audience Portal können Sie die folgenden Aufgaben ausführen:
 
-- [Anzeigen einer Liste Ihrer Zielgruppen](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [Anzeigen einer Liste Ihrer Zielgruppen](#list)
    - [Verwenden von Schnellaktionen für Audiences](#quick-actions)
    - [Anpassen der in der Liste der Zielgruppen angezeigten Eigenschaften](#customize)
    - [Verwenden von Filtern, Ordnern und Tags zum Organisieren von Audiences](#manage-audiences)
@@ -28,6 +30,8 @@ In Audience Portal können Sie die folgenden Aufgaben ausführen:
    - [Verwenden Sie die Federated Audience-Komposition, um eine Audience mit Daten aus Ihrem vorhandenen Data Warehouse zu erstellen](#fac)
    - [Verwenden von Data Distiller zum Erstellen einer Zielgruppe](#data-distiller)
 - [Extern generierte Zielgruppen importieren](#import-audience)
+
+>[!ENDSHADEBOX]
 
 Um das Audience Portal zu öffnen, wählen Sie **[!UICONTROL Abschnitt Segmentierung]** Registerkarte Durchsuchen aus.
 
@@ -64,7 +68,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. Weitere Informationen zu dieser Funktion finden Sie in den [Häufig gestellte Fragen zur Segmentierung](../faq.md#copy). |
 | [!UICONTROL Zugriffsbeschriftungen anwenden] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die Zugriffsbeschriftungen für die Zielgruppe. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Veröffentlichen] | Benutzerdefinierter Upload, Segmentierungs-Service | Veröffentlicht die ausgewählte Zielgruppe. Weitere Informationen zur Verwaltung des Lebenszyklusstatus finden Sie im Abschnitt [Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
-| [!UICONTROL Deaktivieren] | Benutzerdefinierter Upload, Segmentierungs-Service | Deaktiviert die ausgewählte Zielgruppe. Weitere Informationen zur Verwaltung des Lebenszyklusstatus finden Sie im Abschnitt [Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
+| [!UICONTROL Deaktivieren] | Benutzerdefinierter Upload, Segmentierungs-Service | Deaktiviert die ausgewählte Zielgruppe. Um eine Zielgruppe zu deaktivieren, kann sie **nicht** in **beliebigen** Zielen (einschließlich Nicht-Experience Platform-Zielen) aktiviert werden oder Teil **beliebigen** anderen Zielgruppen sein. Weitere Informationen zur Verwaltung des Lebenszyklusstatus finden Sie im Abschnitt [Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
 | [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängen **können** nicht gelöscht werden. Weitere Informationen zum Löschen von Audiences finden Sie unter [Häufig gestellte Fragen zur Segmentierung](../faq.md#lifecycle-states). |
 | [!UICONTROL Zu Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verschiebt die Zielgruppe zwischen Sandboxes. Weitere Informationen zu dieser Funktion finden Sie im [Sandbox-Tool-Handbuch](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -199,7 +203,7 @@ Die Liste der verfügbaren Filter wird angezeigt.
 
 | Filter | Beschreibung |
 | ------ | ----------- |
-| [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Zu den verfügbaren Optionen gehören: Segmentierungs-Service, Benutzerdefinierter Upload, Zielgruppenkomposition und Audience Manager. |
+| [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Zu den möglichen Werten gehören [Segmentierungs](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller) und [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Hat ein beliebiges Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein beliebiges Tag]** und **[!UICONTROL Hat alle Tags]** wählen. Wenn **[!UICONTROL Hat ein beliebiges Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **jedes** der Tags, die Sie hinzugefügt haben. Wenn **[!UICONTROL Hat alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **alle** der von Ihnen hinzugefügten Tags enthalten. |
 | [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Zu den verfügbaren Optionen gehören [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaktiv] und [!UICONTROL Veröffentlicht]. |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht das Filtern nach der Aktualisierungshäufigkeit der Zielgruppe (Auswertungsmethode). Zu den verfügbaren Optionen [!UICONTROL Batch], [!UICONTROL Streaming] und [!UICONTROL Edge] |
