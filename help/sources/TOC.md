@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 95%
+source-wordcount: '1070'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 95%
 
 - [Quellen – Übersicht](home.md)
 - Verfügbare Quell-Connectoren {#connectors}
-   - Adobe-Programme {#adobe-applications}
+   - Adobe-Anwendungen {#adobe-applications}
       - [Analytics-Klassifizierungsquelle](connectors/adobe-applications/classifications.md)
       - [Analytics-Quelle](connectors/adobe-applications/analytics.md)
       - [Audience Manager-Quelle](connectors/adobe-applications/audience-manager.md)
@@ -36,7 +36,7 @@ ht-degree: 95%
          - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Migrationshandbuch für die ECID-Zuordnung](connectors/adobe-applications/marketo/migration.md)
-   - Advertising {#advertising}
+   - Werbung {#advertising}
       - [Google Ads-Connector](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -58,7 +58,7 @@ ht-degree: 95%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP-Connector](connectors/cloud-storage/sftp.md)
       - [Amazon S3- und Azure Blob-Connector](connectors/cloud-storage/blob-s3.md)
-   - Einverständnis und Voreinstellungen {#consent}
+   - Consent &amp; Preferences {#consent}
       - [OneTrust-Integration](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
@@ -92,9 +92,10 @@ ht-degree: 95%
       - [Snowflake Streaming-Connector](connectors/databases/snowflake-streaming.md)
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
-   - {#data-partner} für Daten- und Identitätspartner
+   - Daten- und Identitätspartner {#data-partner}
       - [Acxiom-Datenaufnahme](connectors/data-partners/acxiom-data-ingestion.md)
       - [Datenimport aus Acxiom Prospecting](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia-Benutzerprofile](connectors/data-partners/algolia-user-profiles.md)
       - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Identitätsauflösung für Unternehmen von Merkury](connectors/data-partners/merkury.md)
@@ -126,7 +127,7 @@ ht-degree: 95%
       - [HTTP-API-Connector](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
    - Erstellen einer Basisverbindung {#create}
-      - Advertising {#advertising}
+      - Werbung {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -146,7 +147,7 @@ ht-degree: 95%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
-      - Einverständnis und Voreinstellungen {#consent}
+      - Consent &amp; Preferences {#consent}
          - [OneTrust-Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -206,7 +207,7 @@ ht-degree: 95%
          - [Generic REST-API](tutorials/api/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/api/create/streaming/http.md)
-   - Erkunden von Daten {#explore}
+   - Daten erkunden {#explore}
       - [Erkunden von Werbedaten](tutorials/api/explore/advertising.md)
       - [Erkunden von Cloud-Speicherdaten](tutorials/api/explore/cloud-storage.md)
       - [Erkunden von CRM-Daten](tutorials/api/explore/crm.md)
@@ -241,7 +242,7 @@ ht-degree: 95%
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/api/labels.md)
 - Tutorials zur Benutzeroberfläche {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
-      - Adobe-Programme {#adobe-applications}
+      - Adobe-Anwendungen {#adobe-applications}
          - [Adobe Analytics (Report Suite-Daten)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (Klassifizierungsdaten)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -249,7 +250,7 @@ ht-degree: 95%
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Benutzerdefinierte Marketo-Aktivitäten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - Werbung {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -271,7 +272,7 @@ ht-degree: 95%
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 und Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
-      - Einverständnis und Voreinstellungen {#consent}
+      - Consent &amp; Preferences {#consent}
          - [OneTrust-Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -306,9 +307,10 @@ ht-degree: 95%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake-Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - {#data-partner} für Daten- und Identitätspartner
+      - Daten- und Identitätspartner {#data-partner}
          - [Acxiom-Datenaufnahme](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Datenimport aus Acxiom Prospecting](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Algolia-Benutzerprofile](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Identitätsauflösung für Unternehmen von Merkury](tutorials/ui/create/data-partners/merkury.md)
@@ -339,7 +341,7 @@ ht-degree: 95%
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
-   - Konfigurieren eines Datenflusses {#dataflow}
+   - Datenfluss konfigurieren {#dataflow}
       - [Datenfluss der Werbeverbindung](tutorials/ui/dataflow/advertising.md)
       - [Datenfluss der Analytics-Verbindung](tutorials/ui/dataflow/analytics.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -366,13 +368,13 @@ ht-degree: 95%
    - [Speichern eines Datenflusses als Entwurf](tutorials/ui/draft.md)
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/ui/labels.md)
 - Selbstbedienungsquellen (Batch-SDK) {#sdk}
-   - [Übersicht](sources-sdk/overview.md)
-   - Konfigurieren Ihrer Verbindungsspezifikation {#config}
+   - [Überblick](sources-sdk/overview.md)
+   - Konfigurieren der Verbindungsspezifikation {#config}
       - [Konfigurationsoptionen](sources-sdk/config/config.md)
       - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
       - [Konfigurieren der Quellspezifikation](sources-sdk/config/sourcespec.md)
       - [Konfigurieren der Analysespezifikation](sources-sdk/config/explorespec.md)
-   - Handbuch zur API für Selbstbedienungsquellen (Batch SDK) {#self-serve-api}
+   - Handbuch zur API für Selbstbedienungsquellen (Batch-SDK) {#self-serve-api}
       - [Übersicht über die API für Selbstbedienungsquellen (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Erste Schritte](sources-sdk/api/getting-started.md)
       - [Erstellen einer Verbindungsspezifikation](sources-sdk/api/create.md)
