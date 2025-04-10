@@ -1,26 +1,23 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
-solution: Experience Platform
-title: Erstellen einer PostgreSQL Source-Verbindung über die Benutzeroberfläche
-type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine PostgreSQL-Quellverbindung erstellen.
+title: Verbinden von PostgreSQL mit Experience Platform über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie Ihre PostgreSQL-Datenbank mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche von Experience Platform mit Experience Platform verbinden.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 47%
+source-wordcount: '643'
+ht-degree: 18%
 
 ---
 
-# Erstellen eines Quell-Connectors für [!DNL PostgreSQL] in der Benutzeroberfläche
+# Verbinden von [!DNL PostgreSQL] mit Experience Platform über die Benutzeroberfläche
 
-Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL PostgreSQL]-Quell-Connectors mithilfe der [!DNL Experience Platform]-Benutzeroberfläche.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre [!DNL PostgreSQL]-Datenbank mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
@@ -29,15 +26,9 @@ Wenn Sie bereits über eine gültige [!DNL PostgreSQL]-Verbindung verfügen, kö
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL PostgreSQL]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie den folgenden Wert angeben:
+Weitere Informationen zur Authentifizierung [[!DNL PostgreSQL]  Sie ](../../../../connectors/databases/postgres.md) „Übersicht“.
 
-| Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
-| `connectionString` | Die mit Ihrem [!DNL PostgreSQL]-Konto verknüpfte Verbindungszeichenfolge. Das [!DNL PostgreSQL]-Verbindungszeichenfolgenmuster ist: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-
-Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL PostgreSQL] Dokument](https://www.postgresql.org/docs/9.2/app-psql.html).
-
-#### Aktivieren der SSL-Verschlüsselung für die Verbindungszeichenfolge
+### Aktivieren der SSL-Verschlüsselung für die Verbindungszeichenfolge
 
 Sie können die SSL-Verschlüsselung für Ihre [!DNL PostgreSQL] Verbindungszeichenfolge aktivieren, indem Sie Ihre Verbindungszeichenfolge mit den folgenden Eigenschaften anhängen:
 
@@ -48,32 +39,62 @@ Sie können die SSL-Verschlüsselung für Ihre [!DNL PostgreSQL] Verbindungszeic
 
 Im Folgenden finden Sie ein Beispiel für eine [!DNL PostgreSQL] Verbindungszeichenfolge, die mit SSL-Verschlüsselung angehängt wird: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
-## Verbinden Ihres [!DNL PostgreSQL]-Kontos
+## Navigieren im Quellkatalog {#navigate}
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PostgreSQL]-Konto mit [!DNL Experience Platform] zu verknüpfen.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie die entsprechende Kategorie im Bedienfeld *[!UICONTROL Kategorien]* aus Alternativ können Sie die Suchleiste verwenden, um zur gewünschten Quelle zu navigieren.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Um [!DNL PostgreSQL] zu verwenden, wählen Sie die Quellkarte **[!UICONTROL PostgreSQL]** unter *[!UICONTROL Datenbanken]* und dann **[!UICONTROL Einrichten]**.
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+>[!TIP]
+>
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-Wählen Sie unter **[!UICONTROL Kategorie]** die Option **[!UICONTROL PostgreSQL DB]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]** aus, um einen neuen [!DNL PostgreSQL]-Connector zu erstellen.
 
-![](../../../../images/tutorials/create/postgresql/catalog.png)
 
-Die **[!UICONTROL Verbindung zu[!DNL PostgreSQL]]** herstellen“ wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+## Vorhandenes Konto verwenden {#existing}
 
-### Neues Konto
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das [!DNL PostgreSQL] Konto aus, das Sie verwenden möchten.
 
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Eingabeformular einen Namen, eine optionale Beschreibung und Ihre [!DNL PostgreSQL] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen **[!UICONTROL Verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
+![Die vorhandene Kontoschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/postgresql/catalog.png)
 
-![](../../../../images/tutorials/create/postgresql/new.png)
+## Neues Konto erstellen {#create}
 
-### Vorhandenes Konto
+Wenn Sie noch kein -Konto haben, müssen Sie ein neues Konto erstellen, indem Sie die Authentifizierungsdaten angeben, die Ihrer Quelle entsprechen.
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL PostgreSQL] Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen an und fügen Sie optional eine Beschreibung für Ihr Konto hinzu.
 
-![](../../../../images/tutorials/create/postgresql/existing.png)
+![Die neue Kontoschnittstelle im Quell-Workflow mit einem Kontonamen und einer optionalen Beschreibung.](../../../../images/tutorials/create/postgresql/existing.png)
 
-## Nächste Schritte
+### Verbindung zu Experience Platform auf Azure herstellen {#azure}
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL PostgreSQL]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).
+Sie können Ihr [!DNL PostgreSQL]-Konto mit Experience Platform auf Azure verbinden, indem Sie entweder den Kontoschlüssel oder die Standardauthentifizierung verwenden.
+
+>[!BEGINTABS]
+
+>[!TAB Authentifizierung mit Kontoschlüssel]
+
+Um die Kontoschlüsselauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Kontoschlüsselauthentifizierung]**, geben Sie Ihre [Verbindungszeichenfolge](../../../../connectors/databases/postgres.md#azure) an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
+
+![Die neue Kontoschnittstelle im Quell-Workflow mit ausgewählter „Authentifizierung des Kontoschlüssels“.](../../../../images/tutorials/create/postgresql/account-key.png)
+
+>[!TAB Einfache Authentifizierung]
+
+Um die Standardauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Standardauthentifizierung]** aus, geben Sie Werte für Ihre [Authentifizierungsdaten](../../../../connectors/databases/postgres.md#azure) ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus.
+
+![Die neue Kontoschnittstelle im Quell-Workflow mit ausgewählter „Standardauthentifizierung“.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Verbinden mit Experience Platform auf Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
+
+Um ein neues [!DNL PostgreSQL]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [ (Anmeldeinformationen für die Authentifizierung) ](../../../../connectors/databases/postgres.md#aws).
+
+![Die neue Kontoschnittstelle im Quell-Workflow zum Herstellen einer Verbindung mit AWS.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+
+## Erstellen eines Datenflusses für Ihre [!DNL PostgreSQL]
+
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL MariaDB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/databases.md).
