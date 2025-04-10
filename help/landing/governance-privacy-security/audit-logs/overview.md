@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 30%
+ht-degree: 36%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 30%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Häufigste Aktionen"
->abstract="Dieses Widget zeigt die häufigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
+>abstract="Dieses Widget zeigt die häufigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie im linken Navigationsbereich **Audits** aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Am häufigsten anwesende Benutzende"
->abstract="Dieses Widget zeigt die Benutzenden an, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
+>abstract="Dieses Widget zeigt die Benutzenden an, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Experience Platform anzuzeigen, wählen Sie im linken Navigationsbereich **Audits** aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Überwachen von Benutzeraktivitäten in Experience Platform"
->abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Experience Platform-Services und -Funktionen in Form von Auditprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Audit-Protokolle können bei der Fehlerbehebung in Experience Platform helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
+>abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Experience Platform-Dienste und -Funktionen in Form von Auditprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Auditprotokolle können die Fehlerbehebung in Experience Platform erleichtern und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Services und Funktionen in Form von „Audit-Protokollen“ zu überprüfen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung in Experience Platform helfen kann und Ihrem Unternehmen dabei hilft, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 

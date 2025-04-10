@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2135'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -53,7 +53,7 @@ Weitere Informationen zur Verwaltung von und Interaktion mit Schemas in Experien
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Datenverhalten"
->abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Experience Platform finden Sie in der Dokumentation ."
+>abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Experience Platform finden Sie in der Dokumentation."
 
 Daten, die in Experience Platform verwendet werden können, sind in drei Verhaltenstypen unterteilt:
 

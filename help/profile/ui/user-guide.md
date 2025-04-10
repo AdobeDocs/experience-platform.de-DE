@@ -131,7 +131,7 @@ Nachdem Sie einen Wert eingegeben haben, wählen Sie **[!UICONTROL Anzeigen]** u
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entität nicht gefunden"
->abstract="Dies bedeutet, dass Experience Platform die angeforderte Entität nicht finden konnte. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
+>abstract="Das bedeutet, dass die angeforderte Entität von Experience Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 Nach Auswahl einer **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen.
 

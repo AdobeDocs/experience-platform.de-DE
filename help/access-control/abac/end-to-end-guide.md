@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -66,7 +66,7 @@ Der Arbeitsbereich Berechtigungen für die Experience Platform-Benutzeroberfläc
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Was sind Kennzeichnungen?"
->abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugrffsrichtlinien kategorisieren. Adobe Experience Platform bietet mehrere von Adobe definierte <strong>Core</strong>-Datennutzungskennzeichnungen, die eine Vielzahl gängiger Einschränkungen für die Datenverwaltung abdecken. Mit <strong>S</strong>-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data, regulierte Gesundheitsdaten) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugrffsrichtlinien kategorisieren. Adobe Experience Platform bietet verschiedene, von Adobe definierte <strong>Kern</strong>-Labels für die Datennutzung, die eine Vielzahl gängiger Einschränkungen für Data Governance abdecken. Mit <strong>S</strong>-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data, regulierte Gesundheitsdaten) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (Protected Health Information, PHI) beziehen. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 Rollen sind Möglichkeiten, die Typen von Benutzenden zu kategorisieren, die mit Ihrer Experience Platform-Instanz interagieren, und sind Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Zugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.

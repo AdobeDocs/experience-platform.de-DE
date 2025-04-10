@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2458'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -32,7 +32,7 @@ Dieses Handbuch setzt ein Verständnis mehrerer wichtiger [!DNL Experience Platf
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Zusammenführungsrichtlinie nicht gefunden"
->abstract="Dies bedeutet, dass Experience Platform die angeforderte Zusammenführungsrichtlinie nicht finden konnte. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Zusammenführungsrichtlinien-ID in der URL aufgeführt ist.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Zusammenführungsrichtlinie verfügen, auf die Sie zugreifen möchten.</li></ul>"
+>abstract="Das bedeutet, dass die angeforderte Zusammenführungsrichtlinie von Experience Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Zusammenführungsrichtlinien-ID in der URL aufgeführt ist.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Zusammenführungsrichtlinie verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 In der [!DNL Experience Platform] Benutzeroberfläche können Sie mit Zusammenführungsrichtlinien beginnen, indem Sie im linken Navigationsbereich **[!UICONTROL Profile]** auswählen und dann die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]** auswählen.
 

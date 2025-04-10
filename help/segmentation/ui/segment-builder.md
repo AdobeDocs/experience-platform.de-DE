@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '4980'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -349,7 +349,7 @@ Wenn Sie **[!UICONTROL Container entpacken]** auswählen, wird der untergeordnet
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Zusammenführungsrichtlinien"
->abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um das Profil zu bilden. Experience Platform hat eine standardmäßige Zusammenführungsrichtlinie bereitgestellt. Sie können aber auch unter „Profile“ eine neue standardmäßige Zusammenführungsrichtlinie erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die dem Marketing-Zweck für diese Zielgruppe entspricht."
+>abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um das Profil zu bilden. Experience Platform bietet eine standardmäßige Zusammenführungsrichtlinie. Alternativ können Sie eine neue standardmäßige Zusammenführungsrichtlinie in „Profile“ erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die dem Marketing-Zweck für diese Zielgruppe entspricht."
 
 Mit [!DNL Experience Platform] können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kundinnen und Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Experience Platform] bestimmt, wie Daten priorisiert und welche Daten kombiniert werden sollen, um ein Profil zu erstellen.
 

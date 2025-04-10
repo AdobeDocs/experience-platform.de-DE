@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2250'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Vorlagen für Quellen in der Experience Platform-Benutzeroberfläche"
+>title="Vorlagen für Quellen in der Benutzeroberfläche von Experience Platform"
 >abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemata, Datensätze, Identitäten, Zuordnungsregeln, Identity-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets aktualisieren, um sie an Anwendungsfälle anzupassen."
 
 >[!IMPORTANT]
@@ -45,7 +45,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-## Verwenden von Vorlagen in der Experience Platform-Benutzeroberfläche {#use-templates-in-the-platform-ui}
+## Verwenden von Vorlagen in der Benutzeroberfläche von Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
