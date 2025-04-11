@@ -3,9 +3,9 @@ title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 6%
 >[!AVAILABILITY]
 >
 >Eine flexible Zielgruppenauswertung ist **nur** Instanzen von Experience Platform verfügbar, die auf [!DNL Microsoft Azure] ausgeführt werden. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../landing/multi-cloud.md).
+>
+>Darüber hinaus ist eine flexible Zielgruppenauswertung **nur** für die Verwendung mit Real-Time CDP B2C Edition verfügbar.
 
 Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segmentierungsauftrag ausführen. Mit einer flexiblen Zielgruppenauswertung können Sie Ad-hoc-Kampagnenstarts, Just-in-time-Nachrichten oder andere zeitkritische Aktivitäten ausführen.
 

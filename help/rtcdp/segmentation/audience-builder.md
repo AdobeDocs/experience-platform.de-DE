@@ -3,13 +3,13 @@ title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 3%
 
 ---
-
 
 # Audience Builder in Real-Time Customer Data Platform
 
@@ -18,6 +18,21 @@ ht-degree: 3%
 ![Audience Builder im Abschnitt Konten.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Felder {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Vollständiges XDM-Schema anzeigen"
+>abstract="Standardmäßig werden nur Felder angezeigt, die Daten enthalten. Aktivieren Sie diese Option, um alle Felder im XDM-Schema anzuzeigen."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Beziehungsselektoren anzeigen"
+>abstract="Standardmäßig werden die Standardbeziehungen für Ihre Organisation verwendet. Aktivieren Sie diese Option, um die verwendeten Beziehungsselektoren anzuzeigen."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Eingeschränkte Felder anzeigen"
+>abstract="Standardmäßig werden nur Felder angezeigt, die über keine Einschränkungen verfügen. Aktivieren Sie diese Option, um Felder mit Einschränkungen anzuzeigen."
 
 Bei Verwendung von Audience Builder für -Konten können Sie Kontoattribute oder vorhandene Zielgruppen als Felder Ihrer Zielgruppe verwenden.
 
