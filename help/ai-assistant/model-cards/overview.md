@@ -3,24 +3,31 @@ title: Modellkarten für KI-Modelltransparenz in Adobe Experience Platform
 description: Erfahren Sie mehr über Modellkarten in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 21a95bd678cf83c72a08213b647ef778cfb49cfc
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
+source-git-commit: 1edecf0cb413b66d66973517421bc0062f475337
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
 # Modellkarten für KI-Modelltransparenz in Adobe Experience Platform
 
-Modellkarten sind die Standardformate, mit denen KI-Modelltransparenz kommuniziert wird. Modellkarten sind öffentlich und sollen das Verständnis sowohl bestehender als auch künftiger Kunden für die von Adobe verwendeten KI-Modelle verbessern. Modellkarten sind im Allgemeinen statisch. Es gibt jedoch mehrere Aspekte von KI-Modellen, die sich im Laufe der Zeit ändern können, einschließlich Herkunft, Verzerrung und andere Transparenzattribute.
+Eine KI-Modellkarte ist das Standardformat, mit dem die Transparenz eines KI-Modells kommuniziert wird. Modellkarten bieten umfassende Informationen über das zugrunde liegende Modell, auf dem ein bestimmtes KI-Tool basiert. Modellkarten enthalten Informationen wie den Zweck eines KI-Tools, Schulungsdaten, Leistungsmetriken, Einschränkungen und ethische Überlegungen. Sie können die Transparenz, die Modellkarten bieten, nutzen, um die Funktionen und Einschränkungen des Modells besser zu verstehen und eine verantwortungsvolle und faire Verwendung von KI besser zu fördern.
+
+Modellkarten sind öffentlich und sollen das Verständnis sowohl bestehender als auch künftiger Kunden für die von Adobe verwendeten KI-Modelle verbessern. Modellkarten sind im Allgemeinen statisch. Es gibt jedoch mehrere Aspekte von KI-Modellen, die sich im Laufe der Zeit ändern können, einschließlich Herkunft, Verzerrung und andere Transparenzattribute.
 
 Lesen Sie dieses Dokument, um mehr über Modellkarten in Adobe Experience Platform zu erfahren.
 
 ## Kartenmodellabschnitte {#model-card-sections}
 
+Eine Modellkarte besteht aus einer Vielzahl verschiedener Abschnitte, die sich jeweils auf einen bestimmten Aspekt des KI-Modells konzentrieren.
+
 Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Modellkarte, einschließlich Informationen zu den von ihnen behandelten Fragen.
 
 ### Modellübersicht {#model-overview}
+
+Die Modellübersicht enthält allgemeine Informationen zu einem KI-Modell. Verwenden Sie diesen Abschnitt, um Informationen wie den Namen, den Zweck und den Typ Ihres KI-Modells bereitzustellen. Darüber hinaus können Sie diesen Abschnitt verwenden, um Ihre vorgesehenen Benutzenden zu identifizieren und die Integration Ihres Modells mit Experience Platform zu erläutern.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -38,6 +45,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Vorgesehene Verwendung {#intended-use}
 
+Der Abschnitt „Verwendungszweck“ enthält Informationen zu den primären Anwendungsfällen Ihres KI-Modells. In diesem Abschnitt können Sie die Probleme, die Ihr Modell lösen soll, die Branchen und/oder Domains, für die Ihr Modell relevant ist, und die Missbrauchsfälle erläutern, die bei der Verwendung Ihres KI-Modells vermieden werden sollten.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -52,6 +61,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 +++
 
 ### Modellein- und -ausgänge {#model-inputs-and-outputs}
+
+Der Abschnitt Modelleingaben und -ausgaben enthält Informationen zu den unterstützten Datentypen, die Ihr Modell als Eingabe verwendet und als Ausgabe zurückgibt. In diesem Abschnitt finden Sie Beispiele für die Dateneingaben und -ausgaben, die für Ihr KI-Modell relevant sind.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -68,6 +79,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Trainings-Daten {#training-data}
 
+Der Abschnitt Trainingsdaten enthält Informationen zu den Datensätzen, die zum Trainieren eines bestimmten KI-Modells verwendet wurden. In diesem Abschnitt können Sie die Größe und Quelle der Trainings-Daten, die im Datensatz identifizierten Verzerrungen und die Art der Vorverarbeitung von Daten erläutern.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -82,6 +95,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 +++
 
 ### Modellarchitektur und Schulung {#model-architecture-and-training}
+
+Im Abschnitt Modellarchitektur und Training wird der Blueprint Ihres KI-Modells beschrieben. Dieser Abschnitt bezieht sich auf die Struktur und das Design des KI-Modells, einschließlich Details zum Typ des verwendeten Algorithmus und der verwendeten Auswertungsmethoden. Sie können diesen Abschnitt auch verwenden, um Informationen über die verwendeten Trainings-Frameworks sowie über die Compute-Ressourcen bereitzustellen, die bei Schulungen verwendet wurden.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -99,6 +114,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Leistung und Bewertung {#performance-and-evaluation}
 
+Der Abschnitt Leistung und Bewertung enthält Informationen zu den Metriken und Methoden, mit denen bewertet wird, wie gut das Modell seine beabsichtigten Aufgaben erfüllt. In diesem Abschnitt erhalten Sie Informationen zu den verwendeten Auswertungsmetriken sowie zu identifizierten Schwächen oder Fehlerfällen.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -114,19 +131,23 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Fairness und Voreingenommenheit {#fairness-and-bias}
 
+Der Abschnitt Fairness und Bias enthält Informationen darüber, wie das KI-Modell in Bezug auf Fairness- und Bias-Metriken abgeschnitten hat. Fairness bezieht sich auf die Fähigkeit des Modells, gerechte Ergebnisse für verschiedene demografische Gruppen und Anwendungsfälle bereitzustellen, während Bias sich auf systematische Fehler bezieht, die zu unfairen Ergebnissen führen. In diesem Abschnitt erfahren Sie mehr über die durchgeführten Fairness-Prüfungen und darüber, wie das Modell Verzerrungen verringert.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
 | --- | --- | --- |
 | Welche Fairness-Prüfungen wurden durchgeführt? | Die durchgeführten Prozesse zur Verzerrungsanalyse und Risikominderung. | Das Modell wurde demografischen Paritätstests und gegenseitigen Fairness-Bewertungen unterzogen, um Leistungsunterschiede zwischen verschiedenen Benutzersegmenten zu erkennen. |
 | Hat das Modell unverhältnismäßige Auswirkungen auf bestimmte Gruppen? | etwaige festgestellte Leistungsunterschiede. | Die Analyse ergab einen Leistungsabfall von 5 % bei Benutzenden mit niedrigen historischen Interaktionsdaten. Um diesem Problem zu begegnen, beinhaltet das Modell während des Trainings neue Gewichtungstechniken. |
-| Wie kann das Modell dies abschwächen? | Die zur Beseitigung von Verzerrungen verwendeten Techniken. | Der Datensatz wird stratifiziert, um eine proportionale Repräsentation verschiedener Kundendemografiken zu gewährleisten, und während des Trainings werden Fairness-Einschränkungen eingeführt, um zu verhindern, dass das Modell eine bestimmte Gruppe bevorzugt. Regelmäßige Verzerrungsaudits werden unter Verwendung der demografischen Paritätsanalyse durchgeführt, die Anpassungen ermöglicht, wenn Leistungsunterschiede festgestellt werden. |
+| Wie mindert das Modell die Verzerrung? | Die zur Beseitigung von Verzerrungen verwendeten Techniken. | Der Datensatz wird stratifiziert, um eine proportionale Repräsentation verschiedener Kundendemografiken zu gewährleisten, und während des Trainings werden Fairness-Einschränkungen eingeführt, um zu verhindern, dass das Modell eine bestimmte Gruppe bevorzugt. Regelmäßige Verzerrungsaudits werden unter Verwendung der demografischen Paritätsanalyse durchgeführt, die Anpassungen ermöglicht, wenn Leistungsunterschiede festgestellt werden. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Erklärbarkeit und Interpretierbarkeit {#explainability-and-interpretability}
+
+Der Abschnitt Erklärbarkeit und Interpretierbarkeit enthält Informationen zur Fähigkeit eines KI-Modells, klare und verständliche Erklärungen bereitzustellen, und zur Leichtigkeit, mit der ein menschlicher Benutzer verstehen kann, wie Eingabefunktionen Prognosen und Antworten beeinflussen. In diesem Abschnitt erfahren Sie, wie Benutzer besser verstehen können, warum Ihr Modell bestimmte Entscheidungen trifft und welche Tools oder Techniken für die Interpretation verfügbar sind.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -141,6 +162,12 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Robustheit und Verallgemeinerung {#robustness-and-generalization}
 
+Der Abschnitt Robustheit und Generalisierung enthält Informationen dazu, wie gut Ihr KI-Modell mit unsichtbaren Daten umgehen kann. Darüber hinaus können Sie in diesem Abschnitt erläutern, wie Ihr Modell seine Leistung und Genauigkeit bei unerwarteten oder anspruchsvollen Eingaben beibehält.
+
+>[!TIP]
+>
+>In KI beziehen sich „nicht angesehene Daten“ auf Daten, die sich von den Daten unterscheiden, an denen ein bestimmtes Modell trainiert wurde.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -153,6 +180,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 +++
 
 ### Überlegungen zu Sicherheit und Datenschutz {#security-and-privacy-considerations}
+
+Der Abschnitt Überlegungen zur Sicherheit und zum Datenschutz enthält Informationen zu den Maßnahmen und Praktiken, die zum Schutz sensibler Daten und zur Gewährleistung der sicheren Verwendung Ihres Modells implementiert wurden. In diesem Abschnitt können Sie Fragen dazu beantworten, wie Ihr Modell mit sensiblen Daten umgeht.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -167,6 +196,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Überwachung und Wartung {#monitoring-and-maintenance}
 
+Der Abschnitt Überwachung und Wartung enthält Informationen darüber, wie die Leistung Ihres Modells im Laufe der Zeit überwacht wird und wie oft das Modell neu trainiert wird. Sie können diesen Abschnitt verwenden, um Informationen darüber bereitzustellen, wie Metriken wie Genauigkeit, Präzision, Rückruf und Latenz verfolgt werden.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -179,6 +210,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 +++
 
 ### Ethische Überlegungen und verantwortungsvolle KI {#ethical-considerations-and-responsible-ai}
+
+Der Abschnitt Ethische Überlegungen und Verantwortliche KI enthält Informationen zu allen ethischen Bedenken, die mit Ihrem KI-Modell verbunden sind. Dieser Abschnitt enthält auch Informationen dazu, wie gut Ihr Modell mit den Prinzipien verantwortungsvoller KI übereinstimmt. Verwenden Sie diesen Abschnitt, um Informationen zu den potenziellen ethischen Auswirkungen der Verwendung Ihres Modells bereitzustellen, einschließlich der Erkennung von Verzerrungen, der Gewährleistung von Fairness und der Vermeidung von Schäden für Einzelpersonen oder Gruppen.
 
 +++Fragen und Beispielantworten anzeigen
 
@@ -193,6 +226,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 
 ### Bekannte Einschränkungen {#known-limitations}
 
+Der Abschnitt Bekannte Einschränkungen enthält Informationen zu den vorhandenen Einschränkungen, die für Ihr KI-Modell identifiziert wurden. Verwenden Sie diesen Abschnitt, um die Bedingungen hervorzuheben, unter denen Ihr KI-Modell möglicherweise schlecht abschneidet, und um die Einschränkungen zu umreißen, die Benutzende kennen müssen.
+
 +++Fragen und Beispielantworten anzeigen
 
 | Question | Erforderliche Informationen | Beispielantwort |
@@ -205,6 +240,8 @@ Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Mo
 +++
 
 ### Künftige Verbesserungen {#future-improvements}
+
+Der Abschnitt Zukünftige Verbesserungen enthält Informationen zu Funktionsaktualisierungen, die für Ihr KI-Modell geplant sind. In diesem Abschnitt erfahren Sie mehr über Ihre Verbesserungs-Roadmap.
 
 +++Fragen und Beispielantworten anzeigen
 
