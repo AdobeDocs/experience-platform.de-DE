@@ -4,9 +4,9 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze an ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5149'
+source-wordcount: '5151'
 ht-degree: 11%
 
 ---
@@ -19,7 +19,9 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wird die Option eingeführt, ein `endTime` für den Export von Datensatzdatenflüssen festzulegen. Adobe führt außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse ein, die *vor der September-Version erstellt*. Für einen dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da die Exporte sonst an diesem Datum gestoppt werden. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai gestoppt werden sollen.
+>**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wurde die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*.
+>
+>Für jeden dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da Ihre Exporte sonst an diesem Datum anhalten. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai 2025 beendet werden sollen.
 >
 >Entsprechend gilt für alle Datenflüsse, die Sie ohne Angabe eines `endTime` erstellen, standardmäßig eine Endzeit von sechs Monaten ab dem Zeitpunkt, zu dem sie erstellt werden.
 

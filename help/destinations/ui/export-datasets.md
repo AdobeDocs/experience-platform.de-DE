@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen zu Cloud-Speicher-Zielen
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '2594'
-ht-degree: 36%
+source-wordcount: '2703'
+ht-degree: 35%
 
 ---
 
@@ -14,7 +14,15 @@ ht-degree: 36%
 
 >[!AVAILABILITY]
 >
->* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+>Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Weitere Informationen erhalten Sie vom Adobe-Support.
+
+>[!IMPORTANT]
+>
+>**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wurde die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*.
+>
+>Für jeden dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da Ihre Exporte sonst an diesem Datum anhalten. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai 2025 beendet werden sollen.
+>
+>Weitere Informationen [ Bearbeiten des Enddatums ](#scheduling) Datensatzexport-Datenflusses finden Sie im Abschnitt „Planung“.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform an Ihren bevorzugten Cloud-Speicherort, z. B. [!DNL Amazon S3], SFTP-Speicherorte oder [!DNL Google Cloud Storage], mithilfe der Experience Platform-Benutzeroberfläche erforderlich ist.
 
@@ -22,7 +30,7 @@ Sie können auch die Experience Platform-APIs zum Exportieren von Datensätzen v
 
 ## Datensätze, die exportiert werden können {#datasets-to-export}
 
-Die Datensätze, die Sie exportieren können, variieren je nach Experience Platform-Anwendung (Real-Time CDP, Adobe Journey Optimizer), Ebene (Prime oder Ultimate) und Add-ons, die Sie erworben haben (z. B. Data Distiller).
+Die Datensätze, die Sie exportieren können, variieren je nach Experience Platform-Programm (Real-Time CDP, Adobe Journey Optimizer), der Ebene (Prime oder Ultimate) und allen Add-ons, die Sie erworben haben (z. B. Data Distiller).
 
 In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Programm, Produktstufe und erworbenen Add-ons exportieren können:
 
@@ -90,7 +98,7 @@ Derzeit können Sie Datensätze in die Cloud-Speicher-Ziele exportieren, die im 
 Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl die Zielgruppenaktivierung als auch den Datensatzexport.
 
 * Erwägen Sie die Aktivierung von Zielgruppen, wenn Ihre Daten in Profilen gruppiert nach Zielgruppeninteressen oder Qualifikationen strukturiert sein sollen.
-* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschafts-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Datentechniker oder Analyst können Sie beispielsweise Daten von Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud-ML-Tools verwenden oder in Ihrem System für langfristige Speicheranforderungen speichern.
+* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschafts-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Datentechniker oder Analyst können Sie beispielsweise Daten aus Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud-ML-Tools verwenden oder in Ihrem System für langfristige Speicheranforderungen speichern.
 
 Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie „Zielgruppen *für Cloud* Speicher- oder E-Mail-Marketing-Ziele aktivieren möchten, lesen Sie [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -269,7 +277,7 @@ Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entf
 
 ## Berechtigungen für den Datensatzexport {#licensing-entitlement}
 
-Informationen dazu, wie viele Daten Sie pro Experience Platform-Anwendung und Jahr exportieren dürfen, finden Sie in den Produktbeschreibungsdokumenten. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung ([) ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Informationen dazu, wie viele Daten Sie pro Jahr für jede Experience Platform-Anwendung exportieren dürfen, finden Sie in den Produktbeschreibungsdokumenten. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung ([) ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Beachten Sie, dass die Berechtigungen für den Datenexport für verschiedene Programme nicht additiv sind. Wenn Sie beispielsweise Real-Time CDP Ultimate und Adobe Journey Optimizer Ultimate erwerben, ist die Berechtigung für den Profilexport gemäß den Produktbeschreibungen höher als die beiden Berechtigungen. Die Berechnung Ihrer Volumenberechtigungen erfolgt anhand der Gesamtzahl der lizenzierten Profile und der Multiplikation mit 500 KB für Real-Time CDP Prime bzw. 700 KB für Real-Time CDP Ultimate, um zu bestimmen, wie viel Datenvolumen Ihnen zusteht.
 
