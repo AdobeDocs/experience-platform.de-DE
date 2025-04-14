@@ -3,7 +3,7 @@ title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 6%
@@ -387,3 +387,4 @@ Für die flexible Zielgruppenbewertung werden nur Zielgruppen mit der Herkunft d
 Flexible Ausführungen zur Zielgruppenauswertung, die entweder mit der API oder der Benutzeroberfläche erstellt wurden, zählen bis zum maximalen Limit. Der tägliche Batch-Segmentierungsauftrag, der nächtlich ausgeführt wird, trägt jedoch **nicht** zu diesem Limit bei.
 
 +++
+
