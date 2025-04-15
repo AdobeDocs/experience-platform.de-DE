@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 82%
+source-wordcount: '1290'
+ht-degree: 76%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 82%
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
    * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* UI-Handbücher {#ui}
+* Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
    * Aktivieren von Daten für Ziele{#activate}
@@ -51,6 +51,7 @@ ht-degree: 82%
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [Exportieren von Arrays, Zuordnungen und Objekten](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Durchführen von Umwandlungen an Daten, die in Cloud-Speicher-Ziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [Aktualisieren des Enddatums der Datenflüsse für den Export von Datensätzen](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
@@ -109,7 +110,7 @@ ht-degree: 82%
       * [The Trade Desk CRM-Verbindung](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
-   * Analyseziele {#analytics}
+   * Analytics-Ziele {#analytics}
       * [Analyseziele – Übersicht](./catalog/analytics/overview.md)
       * [Adform Website Tracking-Erweiterung](./catalog/analytics/adform.md)
       * [Adobe Analytics-Erweiterung](./catalog/analytics/adobe-analytics.md)
@@ -153,7 +154,7 @@ ht-degree: 82%
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
       * [Zeta-Marketing-Plattform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * {#data-partner} für Daten- und Identitätspartner
+   * Daten- und Identitätspartner {#data-partner}
       * [Unterdrückung potenzieller Acxiom-Kunden](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
@@ -165,7 +166,7 @@ ht-degree: 82%
       * [Marketo-Erweiterung](./catalog/email/marketo.md)
       * [Marketo Munchkin-Erweiterung](./catalog/email/marketo-munchkin.md)
       * [PebblePost-Erweiterung](./catalog/email/pebblepost.md)
-   * E-Mail-Marketing-Ziele {#email-marketing}
+   * E-Mail-Marketing-Ziele  {#email-marketing}
       * [E-Mail-Marketing-Ziele – Übersicht](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-Verbindung](./catalog/email-marketing/adobe-campaign-managed-services.md)
@@ -270,14 +271,14 @@ ht-degree: 82%
          * [Konfigurieren eines Data Landing Zone-Ziels (DLZ) mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Konfigurieren eines dateibasierten Ziels zum Exportieren von potenziellen Zielgruppen](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
-   * API-Referenz zum Ziel-Authoring {#authoring-api}
+   * API-Referenz zur Zielerstellung {#authoring-api}
       * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Vorgänge des Ziel-Servers {#server-operations}
          * [Erstellen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Abrufen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
          * [Aktualisieren einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
          * [Löschen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
-      * Zielkonfigurationsvorgänge {#destination-operations}
+      * Vorgänge der Zielkonfiguration {#destination-operations}
          * [Erstellen einer Zielkonfiguration](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
          * [Abrufen einer Zielkonfiguration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
          * [Aktualisieren einer Zielkonfiguration](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
@@ -287,7 +288,7 @@ ht-degree: 82%
       * [Abrufen einer Zielgruppenvorlage](./destination-sdk/metadata-api/retrieve-audience-template.md)
       * [Aktualisieren einer Zielgruppenvorlage](./destination-sdk/metadata-api/update-audience-template.md)
       * [Löschen einer Zielgruppenvorlage](./destination-sdk/metadata-api/delete-audience-template.md)
-   * API-Referenz für Anmeldedaten-Konfigurationen {#credentials-api}
+   * API-Referenz für Berechtigungskonfigurationen {#credentials-api}
       * [Erstellen einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/create-credential-configuration.md)
       * [Abrufen einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
       * [Aktualisieren einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/update-credential-configuration.md)
