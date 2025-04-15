@@ -6,10 +6,10 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 95%
+source-wordcount: '778'
+ht-degree: 85%
 
 ---
 
@@ -20,8 +20,8 @@ ht-degree: 95%
 * Erste Schritte {#get-started}
    * [Schnellstartanleitung](./quick-start/quick-start.md)
    * [Implementierungshandbücher](./quick-start/implementation-guides.md)
-* UI-Handbücher {#ui}
-   * [Übersicht](./ui/managing-resources/overview.md)
+* Handbücher zur Benutzeroberfläche {#ui}
+   * [Überblick](./ui/managing-resources/overview.md)
    * Erweiterungen {#extensions}
       * [Übersicht](./ui/managing-resources/extensions/overview.md)
       * [Erweiterungs-Upgrades](./ui/managing-resources/extensions/extension-upgrade.md)
@@ -32,7 +32,7 @@ ht-degree: 95%
    * [Vergleichen von Ressourcenrevisionen](./ui/managing-resources/compare-resource-revisions.md)
    * [Löschen von Ressourcen](./ui/managing-resources/delete-resources.md)
    * [Entfernen von Ressourcen aus einer Bibliothek](./ui/managing-resources/remove-resources-from-library.md)
-* Veröffentlichen {#publish}
+* Veröffentlichung läuft {#publish}
    * [Übersicht](./ui/publishing/overview.md)
    * [Veröffentlichungsablauf](./ui/publishing/publishing-flow.md)
    * Hosts {#hosts}
@@ -65,7 +65,7 @@ ht-degree: 95%
    * [Unternehmen und Eigenschaften](./ui/administration/companies-and-properties.md)
    * [Benutzerberechtigungen](./ui/administration/user-permissions.md)
 * Erweiterungen {#extensions}
-   * [Übersicht](./extensions/overview.md)
+   * [Überblick](./extensions/overview.md)
    * Tag-Erweiterungen (Client-seitig) {#client}
       * [Übersicht](./extensions/client/overview.md)
       * [Barrierefreie Metriken zur Site-Geschwindigkeit](https://exchange.adobe.com/apps/ec/103053)
@@ -80,28 +80,28 @@ ht-degree: 95%
       * [Adobe Analytics und Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics und Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics und Salesforce](https://exchange.adobe.com/apps/ec/101530)
-      * Adobe Analytics Product String {#product-string}
+      * Adobe Analytics-Produktzeichenfolge {#product-string}
          * [Übersicht](./extensions/client/product-string/overview.md)
          * [Versionshinweise](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Produktzeichenfolgen-Builder](https://exchange.adobe.com/apps/ec/101461)
       * [Adobe Analytics über das Adobe Experience Platform Web SDK](https://exchange.adobe.com/de/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
-         * [Übersicht](./extensions/client/audience-manager/overview.md)
+         * [Überblick](./extensions/client/audience-manager/overview.md)
       * Adobe Client-Datenschicht {#client-data-layer}
          * [Übersicht](./extensions/client/client-data-layer/overview.md)
          * [Versionshinweise](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [Überblick](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
-         * [Übersicht](./extensions/client/contexthub/overview.md)
+         * [Überblick](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
-      * Adobe Experience Cloud ID-Dienst {#id-service}
+      * Adobe Experience Cloud ID-Service {#id-service}
          * [Übersicht](./extensions/client/id-service/overview.md)
          * [Versionshinweise](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Platform Demo {#platform-demo}
-         * [Übersicht](./extensions/client/platform-demo/overview.md)
+      * Adobe Experience Platform-Demo {#platform-demo}
+         * [Überblick](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
-         * [Übersicht](./extensions/client/web-sdk/overview.md)
+         * [Überblick](./extensions/client/web-sdk/overview.md)
          * [Konfigurieren der Web SDK-Tag-Erweiterung](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Ereignistypen](./extensions/client/web-sdk/event-types.md)
          * [Aktionstypen](./extensions/client/web-sdk/action-types.md)
@@ -114,14 +114,14 @@ ht-degree: 95%
          * [Übersicht](./extensions/client/asset-insights/overview.md)
          * [Versionshinweise](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * Adobe Media Analytics for Audio and Video {#media-analytics}
+      * Adobe Media Analytics für Audio und Video {#media-analytics}
          * [Übersicht](./extensions/client/media-analytics/overview.md)
          * [Versionshinweise](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Übersicht](./extensions/client/media-analytics-3x/overview.md)
          * [Versionshinweise](./extensions/client/media-analytics-3x/release-notes.md)
-      * Adobe Privacy {#privacy}
-         * [Übersicht](./extensions/client/privacy/overview.md)
+      * Adobe - Datenschutz {#privacy}
+         * [Überblick](./extensions/client/privacy/overview.md)
       * [Adobe Report Suite-Auswahl](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Übersicht](./extensions/client/target/overview.md)
@@ -140,7 +140,7 @@ ht-degree: 95%
       * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
       * [Verzweigung](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove]-Video-Tracking {#brightcove}
+      * Video-Tracking [!DNL BrightCove] {#brightcove}
          * [Übersicht](./extensions/client/brightcove/overview.md)
          * [Versionshinweise](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
@@ -153,7 +153,7 @@ ht-degree: 95%
       * [Verknüpfen](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Cookie-Einverständnisverwaltung durch Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
-      * Core {#core}
+      * Kern {#core}
          * [Übersicht](./extensions/client/core/overview.md)
          * [Versionshinweise](./extensions/client/core/release-notes.md)
       * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)
@@ -210,24 +210,26 @@ ht-degree: 95%
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Wiedergabe](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube]-Video-Tracking {#youtube}
+      * Video-Tracking [!DNL YouTube] {#youtube}
          * [Übersicht](./extensions/client/youtube/overview.md)
          * [Versionshinweise](./extensions/client/youtube/release-notes.md)
    * Erweiterungen für die Ereignisweiterleitung (Server-seitig) {#server}
-      * [Übersicht](./extensions/server/overview.md)
+      * [Überblick](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Übersicht](./extensions/server/cloud-connector/overview.md)
          * [Versionshinweise](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [Übersicht](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [Übersicht](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Übersicht](./extensions/server/braze/overview.md)
       * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * Core {#core}
-         * [Übersicht](./extensions/server/core/overview.md)
+      * Kern {#core}
+         * [Überblick](./extensions/server/core/overview.md)
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
       * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
-         * [Übersicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
+         * [Überblick](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Übersicht](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
@@ -251,18 +253,18 @@ ht-degree: 95%
          * [Übersicht](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Übersicht](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] Web Events API-{#tiktok}
+      * [!DNL Tiktok] Web-Ereignis-API {#tiktok}
          * [Übersicht](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Übersicht](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] Ereignis-API {#zendesk}
-         * [Übersicht](./extensions/server/zendesk/overview.md)
-* Entwickeln von Erweiterungen {#extension-dev}
+         * [Überblick](./extensions/server/zendesk/overview.md)
+* Entwicklung von Erweiterungen {#extension-dev}
    * [Übersicht](./extension-dev/overview.md)
    * [Erste Schritte](./extension-dev/getting-started.md)
    * [Unterstützte Browser](./extension-dev/browsers.md)
    * Einreichungsprozess {#submit}
-      * [Übersicht](./extension-dev/submit/overview.md)
+      * [Überblick](./extension-dev/submit/overview.md)
       * [Einrichten der Organisation](./extension-dev/submit/setup.md)
       * [Gewähren von Benutzerzugriff](./extension-dev/submit/access.md)
       * [Entwickeln einer Erweiterung](./extension-dev/submit/develop.md)
