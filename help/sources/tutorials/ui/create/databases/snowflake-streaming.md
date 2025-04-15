@@ -2,7 +2,7 @@
 title: Streamen von Daten aus Ihrer Snowflake-Datenbank an Experience Platform mithilfe der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Daten aus Ihrer Snowflake-Datenbank an Experience Platform streamen.
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 16%
@@ -86,7 +86,7 @@ Verwenden Sie das Datenbankverzeichnis auf der linken Bildschirmseite und wähle
 
 ![Die ausgewählte Datenschnittstelle mit ausgewählter Datenbanktabelle.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Wählen Sie als Nächstes den Zeitstempel-Spaltentyp Ihrer Tabelle aus. Sie können zwischen zwei Arten von Zeitstempelspalten wählen: `TIMESTAMP_NTZ` oder `TIMESTAMP_LTZ`. Wenn Sie den Spaltentyp `TIMESTAMP_NTZ` auswählen, müssen Sie auch eine Zeitzone angeben. Die Spalten sollten eine NOT NULL-Einschränkung aufweisen. Weitere Informationen finden Sie im Abschnitt zu [Einschränkungen und häufig gestellte Fragen]
+Wählen Sie als Nächstes den Zeitstempel-Spaltentyp Ihrer Tabelle aus. Sie können zwischen zwei Arten von Zeitstempelspalten wählen: `TIMESTAMP_NTZ` oder `TIMESTAMP_LTZ`. Wenn Sie den Spaltentyp `TIMESTAMP_NTZ` auswählen, müssen Sie auch eine Zeitzone angeben. Die Spalten sollten eine NOT NULL-Einschränkung aufweisen. Weitere Informationen finden Sie im Abschnitt zu [Einschränkungen und häufig gestellte Fragen](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 In diesem Schritt können Sie auch Aufstockungseinstellungen konfigurieren. Die Aufstockung bestimmt, welche Daten anfänglich aufgenommen werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Aufnahme aufgenommen. Andernfalls werden nur die Dateien aufgenommen, die zwischen dem ersten Aufnahmevorgang und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht aufgenommen.
 
