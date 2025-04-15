@@ -3,9 +3,10 @@ title: Verbinden von Algolia-Benutzerprofilen mit Experience Platform über die 
 description: Erfahren Sie, wie Sie beabsichtigte Algolia-Benutzende mit Experience Platform verbinden
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 15%
 
 ---
@@ -53,13 +54,13 @@ Um [!DNL Algolia] zu verwenden, wählen Sie die Quellkarte **[!UICONTROL Algolia
 
 ## Authentifizierung
 
-### Vorhandenes Konto
+### Vorhandenes Konto verwenden
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das [!DNL Algolia User Profiles] Konto aus, das Sie verwenden möchten. Um fortzufahren, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![Die vorhandene Kontoschnittstelle.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### Neues Konto
+### Neues Konto erstellen
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und [!DNL Algolia] Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
@@ -76,7 +77,7 @@ Nachdem Sie Ihre Daten für die Aufnahme ausgewählt und in der Vorschau angezei
 
 ![Der Schritt „Daten auswählen“ des Workflows.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Angeben von Datenflussdetails
+## Angeben von Datenflussdetails
 
 Wenn Sie einen vorhandenen Datensatz verwenden, wählen Sie einen Datensatz aus, der mit einem Schema verknüpft ist, das die [!DNL Algolia Profile] Feldergruppe verwendet.
 
@@ -86,13 +87,13 @@ Wenn Sie einen neuen Datensatz erstellen, wählen Sie ein Schema aus, das die [!
 
 ![Der neue Datensatzschritt des Quell-Workflows.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Zuordnen von Datenfeldern zu einem XDM-Schema
+## Zuordnen von Datenfeldern zu einem XDM-Schema
 
 Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden Schemafeldern zuzuordnen, bevor Sie Daten in Experience Platform aufnehmen.  Weitere Informationen finden Sie im [Zuordnungshandbuch in der Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 ![Der Zuordnungsschritt des Quell-Workflows.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Planen von Aufnahmedurchgängen
+## Planen von Aufnahmedurchgängen
 
 Verwenden Sie als Nächstes die Zeitplanungs-Schnittstelle, um den Aufnahmezeitplan Ihres Datenflusses zu definieren.
 
@@ -107,7 +108,7 @@ Verwenden Sie als Nächstes die Zeitplanungs-Schnittstelle, um den Aufnahmezeitp
 | Startzeit | Der Zeitstempel für die projizierte Ausführung, dargestellt in UTC-Zeitzone. |
 | Aufstockung | Die Aufstockung bestimmt, welche Daten anfänglich aufgenommen werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Aufnahme aufgenommen. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Aufnahme-Ausführung und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht aufgenommen. |
 
-### Überprüfen des Datenflusses
+## Überprüfen des Datenflusses
 
 Verwenden Sie die Überprüfungsseite für eine Zusammenfassung Ihres Datenflusses vor der Aufnahme. Die Details sind in die folgenden Kategorien unterteilt:
 

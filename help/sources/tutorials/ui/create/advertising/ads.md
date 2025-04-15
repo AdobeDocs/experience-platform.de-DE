@@ -2,14 +2,18 @@
 title: Verbinden von Google Ads mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche Ihr Google Ads-Konto mit Adobe Experience Platform verbinden.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '877'
 ht-degree: 10%
 
 ---
 
 # Verbinden von [!DNL Google Ads] mit Experience Platform über die Benutzeroberfläche
+
+>[!WARNING]
+>
+>Die [!DNL Google Ads] ist derzeit nicht in der Benutzeroberfläche verfügbar. Sie können (mithilfe der API) weiterhin [!DNL Google Ads] Daten [ Experience Platform ](../../../api/create/advertising/ads.md).
 
 >[!NOTE]
 >
@@ -56,8 +60,8 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und ge
 
 * **Client-Kunden-ID**: Die Kunden-ID ist die Kontonummer, die dem [!DNL Google Ads] Client-Konto entspricht, das Sie mit der [!DNL Google Ads]-API verwalten möchten. Diese ID folgt der Vorlage von `123-456-7890`.
 * **Kunden-ID anmelden**: Die Kunden-ID für die Anmeldung ist die Kontonummer, die Ihrem [!DNL Google Ads] Manager-Konto entspricht und zum Abrufen von Berichtsdaten von einem bestimmten aktiven Kunden verwendet wird. Weitere Informationen zur Anmelde-Kunden-ID finden Sie in der [[!DNL Google Ads] API-Dokumentation](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
-* **Entwickler-Token**: Mit dem Entwickler-Token können Sie auf die [!DNL Google Ads]-API zugreifen. Sie können dasselbe Entwickler-Token verwenden, um Anfragen an alle Ihre [!DNL Google Ads]-Konten zu richten. Rufen Sie Ihr Entwickler-Token ab[ indem Sie sich bei Ihrem Manager-Konto ](https://ads.google.com/home/tools/manager-accounts/) und dann zur Seite „API-Center“ navigieren.
-* **Aktualisierungstoken**: Das Aktualisierungstoken ist Teil [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffs-Token nach ihrem Ablauf neu generieren.
+* **Entwicklertoken**: Mit dem Entwicklertoken können Sie auf die [!DNL Google Ads] API zugreifen. Sie können dasselbe Entwicklertoken verwenden, um Anforderungen für alle Ihre [!DNL Google Ads] Konten zu stellen. Rufen Sie Ihr Entwicklertoken ab, indem [Sie es in Ihrem Manager-Konto Protokollierung](https://ads.google.com/home/tools/manager-accounts/) und dann zur API Center-Seite navigieren.
+* **Aktualisieren Token**: Das Aktualisierungstoken ist Teil der [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffstoken nach Ablauf erneut generieren.
 * **Client-ID**: Die Client-ID wird zusammen mit dem Client-Geheimnis im Rahmen [!DNL OAuth2] Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre zu [!DNL Google] Anwendung identifizieren.
 * **Client-Geheimnis**: Das Client-Geheimnis wird zusammen mit der Client-ID als Teil [!DNL OAuth2] Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre zu [!DNL Google] Anwendung identifizieren.
 * **[!DNL Google Ads]API-Version**: Die aktuelle API-Version, die von [!DNL Google Ads] unterstützt wird. Die neueste Version ist zwar `v18`, die neueste unterstützte Version für Experience Platform ist jedoch `v17`.

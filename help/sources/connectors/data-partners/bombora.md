@@ -2,10 +2,12 @@
 title: Bombora Intent
 description: Erfahren Sie mehr über die Bombora Intent-Quelle auf Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
+source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1615'
 ht-degree: 10%
 
 ---
@@ -18,7 +20,7 @@ Mit der [!DNL Bombora Intent] Quelle können Sie Daten zum [!DNL Bombora's] des 
 
 In diesem Dokument finden Sie vorausgesetzte Informationen zur [!DNL Bombora].
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Im Folgenden finden Sie Anwendungsbeispiele, die Sie auf die [!DNL Bombora] anwenden können.
 
