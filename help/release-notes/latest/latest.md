@@ -43,7 +43,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+**Neue oder aktualisierte Funktionen** {#new-updated-destinations}
 
 | Ziel | Beschreibung |
 | --- | --- |

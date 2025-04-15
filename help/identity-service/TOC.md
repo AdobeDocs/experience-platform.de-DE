@@ -8,7 +8,7 @@ role: Admin,Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 69%
+ht-degree: 72%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 69%
    - [Identitätsverknüpfungslogik](./features/identity-linking-logic.md)
    - [Identitätsdiagramm-Viewer](./features/identity-graph-viewer.md)
    - [Löschungen in Identity Service](./features/deletion.md)
-   - {#identity-graph-linking-rules} zur Verknüpfung von Identitätsdiagramm-Regeln
+   - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
       - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
       - [Algorithmus zur Identitätsoptimierung](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung](./identity-graph-linking-rules/implementation-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 69%
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
-- Identity Service-API {#api}
+- API für den Identitätsdienst {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Kennzeichnen eines Felds als Identität](api/label-identities.md)
    - [Cluster-Identitäten auflisten](api/list-cluster-identites.md)
