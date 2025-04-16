@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
+source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1282'
 ht-degree: 76%
 
 ---
@@ -51,7 +51,6 @@ ht-degree: 76%
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [Exportieren von Arrays, Zuordnungen und Objekten](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Durchführen von Umwandlungen an Daten, die in Cloud-Speicher-Ziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md)
-      * [Aktualisieren des Enddatums der Datenflüsse für den Export von Datensätzen](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
