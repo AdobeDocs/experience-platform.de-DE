@@ -3,9 +3,9 @@ title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ Lesen Sie zunächst das Material unter den unten stehenden Links, um sich mit de
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### Praktische Anleitung zur Produktivitätssteigerung mit dem KI-Assistenten
+
+>[!NOTE]
+>
+>Diese Arbeitsmappe wurde zuletzt am 31. März 2025 aktualisiert. Seither haben sich einige Funktionen möglicherweise weiterentwickelt oder erweitert. Darüber hinaus wird möglicherweise noch frühzeitig auf einige Funktionen zugegriffen, auf die in diesem Handbuch verwiesen wird. Wenn Sie auf etwas stoßen, das noch nicht in Ihrer Umgebung verfügbar ist, und Sie daran interessiert sind, es zu erkunden, wenden Sie sich bitte an Ihr Adobe-Account-Team, um frühzeitigen Zugriff anzufordern.
+
+Im Folgenden finden Sie eine praktische Anleitung zur Produktivitätssteigerung mit dem KI-Assistenten.
+
+* [Steigern Sie Ihre Produktivität mit dem KI-Assistenten](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## Neue Funktionen
 
@@ -439,16 +450,6 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 * [Operative Einblicke mit dem KI-Assistenten entsperren](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Steigern Sie Ihre Produktivität mit dem KI-Assistenten
-
->[!NOTE]
->
->Diese Arbeitsmappe wurde zuletzt am 31. März 2025 aktualisiert. Seither haben sich einige Funktionen möglicherweise weiterentwickelt oder erweitert. Darüber hinaus wird möglicherweise noch frühzeitig auf einige Funktionen zugegriffen, auf die in diesem Handbuch verwiesen wird. Wenn Sie auf etwas stoßen, das noch nicht in Ihrer Umgebung verfügbar ist, und Sie daran interessiert sind, es zu erkunden, wenden Sie sich bitte an Ihr Adobe-Account-Team, um frühzeitigen Zugriff anzufordern.
-
-Im Folgenden finden Sie eine praktische Anleitung zur Produktivitätssteigerung mit dem KI-Assistenten.
-
-* [Steigern Sie Ihre Produktivität mit dem KI-Assistenten](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Nächste Schritte
 
