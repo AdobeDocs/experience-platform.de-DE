@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 64%
+source-wordcount: '307'
+ht-degree: 60%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 64%
       * [Leitlinien für die Real-time CDP B2B Edition](b2b-guardrails.md)
 * Audience Manager und Real-Time CDP {#evolution}
    * [Wechsel von Audience Manager](aam-to-rtcdp.md)
-* Account-Profile {#account}
+* Kontoprofile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
    * [Administration – Übersicht](administration/admin-overview.md)
-* Zielgruppen und {#segmentation}
+* Zielgruppen und Segmentierung {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Audience Builder-Handbuch](segmentation/audience-builder.md)
    * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
@@ -44,7 +44,7 @@ ht-degree: 64%
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
-* Leitplanken {#guardrails}
+* Leitlinien {#guardrails}
    * [Übersicht über Real-Time CDP-Schutzmechanismen](guardrails/overview.md)
    * [Schutzmaßnahmen bei der Datenaufnahme](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Leitplanken für den [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
@@ -62,7 +62,7 @@ ht-degree: 64%
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Profil durchsuchen](profile/profile-browse.md)
-* Real-Time CDP B2B Edition – KI/ML-Dienste {#b2b-cdp-ai-ml}
+* KI-/ML-Services von Real-Time CDP B2B edition {#b2b-cdp-ai-ml}
    * [Verwandte Konten](b2b-ai-ml-services/related-accounts.md)
    * [Lead-Konto-Zuordnung](b2b-ai-ml-services/lead-to-account-matching.md)
    * Prädiktives Lead- und Konto-Scoring {#predictive-lead-and-account-scoring-intro}
@@ -76,13 +76,14 @@ ht-degree: 64%
    * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
 * Anwendungsfälle {#use-cases}
    * [Übersicht über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
-   * {#customer-acquisition} zur Kundenakquise
+   * Kundenakquise {#customer-acquisition}
       * [Kundengewinnung und -gewinnung ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
       * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
-   * {#profile-enrichment} zur Profilanreicherung
+      * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/unauthenticated-retargeting.md)
+   * Profilanreicherung {#profile-enrichment}
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Personalisierte Einblicke und Interaktions-{#personalization-insights-engagement}
+   * Personalisierte Einblicke und Interaktion {#personalization-insights-engagement}
       * [Weiterentwicklung des einmaligen Kundenwerts zum Lebenszeitwert](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Kunden auf intelligente Weise wieder ansprechen](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Kunden intelligent wieder ansprechen: Luma-Beispiele](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
