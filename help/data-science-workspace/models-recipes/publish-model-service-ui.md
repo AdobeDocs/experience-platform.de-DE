@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;Modell veröffentlichen;Datenwissenschafts-Workspace;beliebte Themen;Bewerten eines Services
+keywords: Experience Platform;Modell veröffentlichen;Datenwissenschafts-Workspace;beliebte Themen;Service bewerten
 solution: Experience Platform
-title: Publish as a Cloud Service-Modell in der Data Science Workspace-Benutzeroberfläche
+title: Veröffentlichen eines Modells als Service in der Data Science Workspace-Benutzeroberfläche
 type: Tutorial
 description: Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und evaluiertes Modell als Service veröffentlichen, sodass Benutzende in Ihrem Unternehmen Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
@@ -41,7 +41,7 @@ Wählen Sie in Adobe Experience Platform **[!UICONTROL Modelle]** in der linken 
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-Wählen Sie **[!UICONTROL Publish]** oben rechts auf der Modellübersichtsseite aus, um einen Service-Erstellungsprozess zu starten.
+Wählen Sie **[!UICONTROL Veröffentlichen]** oben rechts auf der Seite Modellübersicht aus, um einen Service-Erstellungsprozess zu starten.
 
 ![](../images/models-recipes/publish-model/view_training.png)
 

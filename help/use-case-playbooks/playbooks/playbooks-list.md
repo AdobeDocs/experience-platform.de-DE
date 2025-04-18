@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Verfügbare Playbooks für Anwendungsfälle für Real-time Customer Data Platform und Adobe Journey Optimizer.
-description: Eine Liste aller Playbooks in Real-time Customer Data Platform und Adobe Journey Optimizer.
+title: Verfügbare Playbooks für Anwendungsfälle für Real-Time Customer Data Platform und Adobe Journey Optimizer.
+description: Eine Liste aller Playbooks in Real-Time Customer Data Platform und Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -61,7 +61,7 @@ Auf dieser Seite erhalten Sie einen Überblick über alle verfügbaren Playbooks
 
 {style="table-layout:auto"}
 
-## Playbooks für Anwendungsfälle in Real-time Customer Data Platform {#rtcdp-playbooks}
+## Playbooks für Anwendungsfälle in Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Playbook-Name | Beschreibung |
 | ------------- | ----------- |

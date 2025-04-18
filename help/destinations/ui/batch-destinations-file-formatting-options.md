@@ -32,7 +32,7 @@ Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Mit Ziel
 >
 >Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Der Zielentwickler kann bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Zielentwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung mit dem Ziel verfügbar sind. Erforderliche Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
 > 
->Die Adobe-integrierten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützen derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
+>Die von Adobe erstellten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützen derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
 
 ![Abbildung mit einigen der verfügbaren Dateiformatierungsoptionen.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -122,7 +122,7 @@ Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Date
 
 * Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
 * Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in ein Paar doppelter Anführungszeichen um.
-* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn wie er ist (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn unverändert (ohne doppelte Anführungszeichen).
 
 >[!TIP]
 >

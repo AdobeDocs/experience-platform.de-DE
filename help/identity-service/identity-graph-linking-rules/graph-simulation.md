@@ -182,7 +182,7 @@ Im folgenden Beispieldiagramm gibt es aus den folgenden Gründen eine gepunktete
 
 Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit dem [!DNL Graph Simulation]-Tool besser verstehen können, wie Ihre Identitätsdaten mit einem bestimmten Satz von Regeln und Konfigurationen behandelt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [Übersicht über Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

@@ -20,7 +20,7 @@ Das [!DNL Microsoft Bing]-Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. 
 
 Um Profildaten an [!DNL Microsoft Bing] zu senden, müssen Sie zunächst eine Verbindung mit dem Ziel herstellen.
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Als Marketing-Experte möchte ich in der Lage sein, Zielgruppen aus [!DNL Microsoft Advertising IDs] zu verwenden, um Benutzende per Display- oder Suchwerbung über [!DNL Microsoft Advertising] Kanäle hinweg anzusprechen.
 

@@ -45,7 +45,7 @@ Die folgende Tabelle enthält weitere Informationen zum Ausführungsstatus von D
 | Erfolgreich | Der `Success` gibt an, dass alle Datensätze für die entsprechende Datenflussausführung innerhalb des Zeitraums von einer Stunde verarbeitet wurden und dass im Verlauf der Datenflussausführung keine Fehler aufgetreten sind. |
 | Verarbeitung läuft | Der `Processing` zeigt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt häufig unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
 | Fehler | Der `Error` zeigt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
-| Keine Durchläufe | Der `No runs` gibt an, dass der Datenfluss erstellt, aber keine Datenflussausführungen gestartet wurden. |
+| Keine Ausführungen | Der `No runs` gibt an, dass der Datenfluss erstellt, aber keine Datenflussausführungen gestartet wurden. |
 
 Auf [!UICONTROL  Seite „Datenflussaktivität] werden spezifische Informationen zu Ihrem Streaming-Datenfluss angezeigt. Das obere Banner enthält die kumulative Anzahl der aufgenommenen und fehlgeschlagenen Datensätze für alle Streaming-Datenflussausführungen in Ihrem ausgewählten Datumsbereich.
 

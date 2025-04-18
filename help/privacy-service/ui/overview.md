@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Übersicht über die Privacy Service-Benutzeroberfläche
-description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Anwendungen hinweg zu koordinieren und zu überwachen.
+description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen in verschiedenen Experience Cloud-Programmen zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
@@ -18,11 +18,11 @@ ht-degree: 20%
 >title="Anfragen durch betroffene Personen"
 >abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen durch betroffene Personen an, die an einem bestimmten Tag von Privacy Service verarbeitet wurden. Weitere Informationen zu Ihren Privacy Service-Prozessen finden Sie in der linken Navigationsleiste unter **Anfragen**."
 
-Die Privacy Service-Benutzeroberfläche ermöglicht es Ihnen, Datenschutz- und Compliance-Anfragen über verschiedene Adobe Experience Cloud-Programme hinweg zu koordinieren.
+Die Benutzeroberfläche von Privacy Service ermöglicht es Ihnen, Datenschutz- und Compliance-Anfragen über verschiedene Adobe Experience Cloud-Programme hinweg zu koordinieren.
 
 >[!NOTE]
 >
->Informationen zur programmgesteuerten Verwaltung von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie im [Privacy Service-API-Handbuch](../api/overview.md). Privacy Service Weitere Informationen finden Sie im Dokument [Verwalten ](../permissions.md) Benutzerberechtigungen“.
+>Informationen zur programmgesteuerten Verwaltung von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie im [Privacy Service-API-Handbuch](../api/overview.md). Weitere Informationen finden Sie im Dokument [Verwalten ](../permissions.md) Privacy Service-Berechtigungen“.
 
 ## Melden Sie sich bei der [!DNL Privacy Service] Benutzeroberfläche an
 

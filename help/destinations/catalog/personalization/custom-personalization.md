@@ -23,13 +23,13 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, müssen Sie beim Konfigurieren des Ziels **[!UICONTROL Benutzerdefinierte Personalization](/help/server-api/overview.md) für die attributbasierte Personalisierung die]**-Edge Network-Server-API verwenden. [ Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../../server-api/authentication.md) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, müssen Sie beim Konfigurieren des Ziels &quot;**[!UICONTROL Benutzerdefinierte Personalization&quot; für ](/help/server-api/overview.md) Attribut-basierte Personalisierung die {0]** Edge Network-Server-API verwenden. [ Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../../server-api/authentication.md) erfolgen.
 >
 ><br>Sie können Profilattribute über die [Edge Network-Server-API abrufen](/help/server-api/overview.md) indem Sie eine serverseitige Integration hinzufügen, die denselben Datenstrom verwendet, den Sie bereits für Ihre Web- oder Mobile-SDK-Implementierung verwenden.
 >
 ><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zugehörigkeit zur Zielgruppe.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Richten Sie dieses Ziel ein, damit externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Kunden-Websites ausgeführt werden, Zielgruppeninformationen von Adobe Experience Platform abrufen können.
 
@@ -39,7 +39,7 @@ Dieses Ziel erfordert je nach Implementierung eine der folgenden Datenerfassungs
 
 * Verwenden Sie die [Adobe Experience Platform Web SDK](/help/web-sdk/home.md), wenn Sie Daten von Ihrer Website erfassen möchten.
 * Verwenden Sie die [Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/)SDK, wenn Sie Daten von Ihrer Mobile App erfassen möchten.
-* Verwenden Sie die [Edge Network-Server](../../../server-api/overview.md)API, wenn Sie [Web SDK](/help/web-sdk/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) nicht verwenden oder das Benutzererlebnis anhand von Profilattributen personalisieren möchten.
+* Verwenden Sie die [Edge Network](../../../server-api/overview.md)Server-API, wenn Sie [Web SDK](/help/web-sdk/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) nicht verwenden oder wenn Sie das Benutzererlebnis anhand von Profilattributen personalisieren möchten.
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}

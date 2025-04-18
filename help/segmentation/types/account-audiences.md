@@ -11,7 +11,7 @@ ht-degree: 23%
 
 ---
 
-# Konto-Zielgruppen
+# Kontozielgruppen
 
 >[!AVAILABILITY]
 >

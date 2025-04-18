@@ -78,7 +78,7 @@ Identity Service erkennt, dass CRMID:60013ABC bereits in Ihrem Diagramm vorhande
 
 ## Kundenszenario
 
-Sie sind Datentechniker und nehmen den folgenden CRM-Datensatz (Profildatensatz) auf Experience Platform auf.
+Sie sind Datentechniker und nehmen den folgenden CRM-Datensatz (Profildatensatz) in Experience Platform auf.
 
 | CRMID** | Telefon* | E-Mail* | Vorname | Last name |
 | --- | --- | --- | --- | --- |

@@ -64,7 +64,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 >Dieser Schritt gilt nur für einige Zielgruppen-Streaming-Ziele. Wenn Ihr Ziel nicht über einen Schritt **[!UICONTROL Zuordnung]** verfügt, fahren Sie mit [Zielgruppen-Planung](#scheduling) fort.
 >
 >Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Sie zusätzlich zu *Zielprofilattributen auch mindestens* Zielidentitäts-Namespace zuordnen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
-> ![Abbildung des Zuordnungsschritts mit einer obligatorischen Identitäts-Namespace-Zuordnung.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+> ![Abbildung des Zuordnungsschritts, der eine obligatorische Identitäts-Namespace-Zuordnung anzeigt.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identity-Namespaces auswählen, die als Zielidentitäten im Ziel zugeordnet werden sollen.

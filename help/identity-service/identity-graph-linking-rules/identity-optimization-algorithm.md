@@ -165,7 +165,7 @@ Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme
 
 Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
 
-* [Übersicht über Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

@@ -766,7 +766,7 @@ CRMID: Tom, ECID: 111
 
 Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
 
-* [Übersicht über Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

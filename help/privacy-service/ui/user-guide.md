@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Exportieren;Exportieren
 solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
-description: Erfahren Sie, wie Sie die Privacy Service-Benutzeroberfläche verwenden, um Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen zu koordinieren und zu überwachen.
+description: Erfahren Sie, wie Sie die Benutzeroberfläche von Privacy Service verwenden, um Datenschutzanfragen in verschiedenen Experience Cloud-Programmen zu koordinieren und zu überwachen.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 18%
+source-wordcount: '1770'
+ht-degree: 19%
 
 ---
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;UI;Benutzeroberfläche;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema-Editor;Schema-Editor;Schema;Schema;Schemas;Schemas;erstellen;Beziehung;Beziehung;Referenz;Referenz;
+keywords: Experience Platform;Startseite;beliebte Themen;UI;Benutzeroberfläche;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema-Editor;Schema-Editor;Schema;schema;Schemata;erstellen;Beziehung;Beziehung;Referenz;Referenz;
 solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
-description: Dieses Dokument enthält eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemata mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche.
+description: Dieses Dokument enthält ein Tutorial zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Benutzeroberfläche von Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -41,7 +41,7 @@ Dieses Dokument enthält ein Tutorial zum Definieren einer Beziehung zwischen zw
 
 >[!NOTE]
 >
->Anweisungen zum Erstellen einer Viele-zu-eins-Beziehung in Adobe Real-time Customer Data Platform B2B edition finden Sie im Handbuch zum [ von B2B-Beziehungen](./relationship-b2b.md).
+>Anweisungen zum Erstellen einer Viele-zu-eins-Beziehung in Adobe Real-Time Customer Data Platform B2B edition finden Sie im Handbuch zum [ von B2B-Beziehungen](./relationship-b2b.md).
 
 ## Erste Schritte
 

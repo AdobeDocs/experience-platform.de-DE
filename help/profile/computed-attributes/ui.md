@@ -28,7 +28,7 @@ Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschie
 
 ## Berechnete Attribute anzeigen {#view}
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Profile]** im linken Navigationsbereich gefolgt von **[!UICONTROL Berechnete Attribute]** aus, um eine Liste der für Ihr Unternehmen verfügbaren berechneten Attribute anzuzeigen. Dazu gehören Informationen zum Namen, zur Beschreibung, zum letzten Auswertungsdatum und zum letzten Auswertungsstatus des berechneten Attributs.
+Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Profile]** im linken Navigationsbereich aus, gefolgt von **[!UICONTROL Berechnete Attribute]**, um eine Liste der für Ihr Unternehmen verfügbaren berechneten Attribute anzuzeigen. Dazu gehören Informationen zum Namen, zur Beschreibung, zum letzten Auswertungsdatum und zum letzten Auswertungsstatus des berechneten Attributs.
 
 ![Der Abschnitt [!UICONTROL Profil] und die Registerkarten [!UICONTROL Berechnete Attribute] sind hervorgehoben und zeigen Benutzern, wie sie auf die Seite zum Durchsuchen berechneter Attribute zugreifen können.](./images/ui/browse.png)
 
@@ -118,7 +118,7 @@ Weitere Informationen zur schnellen Aktualisierung finden Sie im Abschnitt [schn
 
 Nachdem diese Schritte abgeschlossen sind, können Sie jetzt entweder wählen, dieses berechnete Attribut als Entwurf zu speichern oder es sofort zu veröffentlichen.
 
-![Die Schaltflächen [!UICONTROL Als Entwurf speichern] und [!UICONTROL Publish] sind hervorgehoben.](./images/ui/draft-or-publish.png)
+![Die Schaltflächen [!UICONTROL Als Entwurf speichern] und [!UICONTROL Veröffentlichen] sind hervorgehoben.](./images/ui/draft-or-publish.png)
 
 ## Anzeigen der Details eines berechneten Attributs {#view-details}
 
