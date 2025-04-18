@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 71%
+source-wordcount: '404'
+ht-degree: 70%
 
 ---
 
@@ -27,9 +27,10 @@ ht-degree: 71%
       - [Überblick](data-distiller/derived-datasets/overview.md)
       - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Erstellen von dezilbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL Insights für erweiterte App-Reporting-{#sql-insights}
+   - SQL Insights für erweiterte App-Berichte {#sql-insights}
       - [Überblick](data-distiller/sql-insights/overview.md)
       - [Abfrage pro Modus](data-distiller/sql-insights/query-pro-mode.md)
+      - [Accelerated Store - Übersicht](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Beschleunigte Abfragen senden](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/sql-insights/reporting-insights-data-model.md)
    - KI/ML-Funktions-Pipelines {#ml-feature-pipelines}
@@ -40,7 +41,7 @@ ht-degree: 71%
       - [Exportieren von Daten in ML-Umgebungen](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow zur Anreicherung von KI/ML-Daten](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Sitzung zum Summit 2025](data-distiller/top-tips-to-maximize-value.md)
-- Data Distiller-Statistiken und {#advanced-statistics} für maschinelles Lernen
+- Data Distiller-Statistiken und maschinelles Lernen {#advanced-statistics}
    - [Überblick](advanced-statistics/overview.md)
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)
@@ -53,7 +54,7 @@ ht-degree: 71%
    - Beispiele {#examples}
       - [Bot-Filterung mithilfe von Statistiken und maschinellem Lernen](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prognostizieren der Kundenabwanderung mithilfe der SQL-basierten logistischen Regression](advanced-statistics/examples/predict-customer-churn.md)
-- Data Distiller Audiences-{#data-distiller-audiences}
+- Daten-Distiller-Zielgruppen {#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mithilfe von SQL](data-distiller-audiences/overview.md)
 - Beispiele {#use-cases}
    - [Überblick](use-cases/overview.md)
@@ -85,7 +86,7 @@ ht-degree: 71%
    - [Deduplizierung von Daten](key-concepts/deduplication.md)
    - [Datensatzbeispiele](key-concepts/dataset-samples.md)
    - [Berechnung der Datensatzstatistiken](key-concepts/dataset-statistics.md)
-- Data Distiller Hypercubes-{#hypercubes}
+- Data Distiller Hypercubes {#hypercubes}
    - [Effiziente Big-Data-Analyse mit Hypercubes](hypercubes/overview.md)
 - Clients mit Query Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
@@ -110,7 +111,7 @@ ht-degree: 71%
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
-- Query Service-API {#api}
+- Abfrage-Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Abfragen](api/queries.md)
    - [Verbindungsparameter](api/connection-parameters.md)
@@ -119,7 +120,7 @@ ht-degree: 71%
    - [Abfragevorlagen](api/query-templates.md)
    - [Beschleunigte Abfragen](api/accelerated-queries.md)
    - [Abonnements von Warnhinweisen](api/alert-subscriptions.md)
-- Data Distiller Authorization API-{#auth-api}
+- Data Distiller Authorization-API {#auth-api}
    - [Übersicht](auth-api/overview.md)
    - [Erste Schritte](auth-api/getting-started.md)
    - [IP-Zugriff](auth-api/ip-access.md)
