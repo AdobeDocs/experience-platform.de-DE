@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
+source-git-commit: 3bd3ef14cd0bd2c079c1c881a70865b067f28341
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 85%
 
 ---
@@ -220,6 +220,8 @@ ht-degree: 85%
          * [Versionshinweise](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Übersicht](./extensions/server/adform/overview.md)
+      * [!DNL Amazon] {#amazon}
+         * [Übersicht](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
          * [Übersicht](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
