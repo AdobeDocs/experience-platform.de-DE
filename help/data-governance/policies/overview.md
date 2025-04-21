@@ -16,7 +16,7 @@ ht-degree: 95%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="Beschränken der Datennutzung"
->abstract="Der Datennutzungsrichtlinientyp wertet spezifische Marketing-Aktionen aus, die auf Data Governance-Beschriftungen angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
+>abstract="Der Datennutzungsrichtlinientyp wertet spezifische Marketing-Aktionen aus, die auf Data-Governance-Labels angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 

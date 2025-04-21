@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Benutzerhandbuch zur Datennutzungsrichtlinie
+keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Benutzerhandbuch zur Datennutzungsrichtlinie
 solution: Experience Platform
 title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
@@ -126,7 +126,7 @@ Einverständnisrichtlinien bestehen aus zwei logischen Komponenten:
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If-Bedingung"
->abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können die Durchführung bestimmter Marketing-Aktionen, das Vorhandensein bestimmter Data Governance-Bezeichnungen oder eine Kombination aus beidem umfassen."
+>abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können bestimmte Marketing-Aktionen, bestimmte Data-Governance-Labels oder eine Kombination aus beiden beinhalten."
 
 Im Abschnitt **[!UICONTROL If]** wählen Sie die Marketing-Aktionen und/oder Datennutzungskennzeichnungen aus, die diese Richtlinie auslösen sollen. Wählen Sie **[!UICONTROL Alle anzeigen]** und **[!UICONTROL Titel auswählen]** aus, um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. Bezeichnungen anzuzeigen.
 
