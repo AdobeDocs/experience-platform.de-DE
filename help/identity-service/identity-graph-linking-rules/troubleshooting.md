@@ -2,20 +2,24 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme bei Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3375'
 ht-degree: 0%
 
 ---
 
-# Handbuch zur Fehlerbehebung bei Regeln für die Verknüpfung von Identitätsdiagrammen
+# Handbuch zur Fehlerbehebung für [!DNL Identity Graph Linking Rules]
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
-Beim Testen und Validieren von Regeln zur Identitätsdiagramm-Verknüpfung können Probleme im Zusammenhang mit der Datenaufnahme und dem Verhalten im Diagramm auftreten. Lesen Sie dieses Dokument, um zu erfahren, wie Sie einige häufige Probleme beheben können, die beim Arbeiten mit Regeln zur Identitätsdiagramm-Verknüpfung auftreten können.
+Beim Testen und Validieren von [!DNL Identity Graph Linking Rules] können Probleme im Zusammenhang mit der Datenaufnahme und dem Diagrammverhalten auftreten. In diesem Dokument erfahren Sie, wie Sie einige häufige Probleme bei der Arbeit mit [!DNL Identity Graph Linking Rules] beheben können.
 
 ## Übersicht über den Datenaufnahmefluss {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ Es gibt verschiedene Gründe, warum dies passieren könnte, darunter die folgend
 * Standardmäßig werden [AAIDs für die Aufnahme blockiert](../guardrails.md#identity-namespace-ingestion).
 * Die Identität wird aufgrund von [Systemschutzmechanismen](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) entfernt.
 
-Im Kontext von Verknüpfungsregeln für Identitätsdiagramme kann ein Datensatz von Identity Service abgelehnt werden, da das eingehende Ereignis zwei oder mehr Identitäten mit demselben eindeutigen Namespace, aber unterschiedlichen Identitätswerten hat. Dieses Szenario geschieht normalerweise aufgrund von Implementierungsfehlern.
+Im Kontext von [!DNL Identity Graph Linking Rules] kann ein Datensatz von Identity Service abgelehnt werden, da das eingehende Ereignis zwei oder mehr Identitäten mit demselben eindeutigen Namespace, aber unterschiedlichen Identitätswerten hat. Dieses Szenario geschieht normalerweise aufgrund von Implementierungsfehlern.
 
 Betrachten Sie das folgende Ereignis mit zwei Annahmen:
 
@@ -318,11 +322,11 @@ Sie können die folgende Abfrage im Profil-Schnappschuss-Exportdatensatz verwend
 
 >[!TIP]
 >
->Die beiden oben aufgeführten Abfragen liefern die erwarteten Ergebnisse, wenn die Sandbox nicht für den Zwischenansatz mit gemeinsamen Geräten aktiviert ist und sich anders verhält als die Verknüpfungsregeln für Identitätsdiagramme.
+>Die beiden oben aufgeführten Abfragen liefern die erwarteten Ergebnisse, wenn die Sandbox nicht für den Zwischenansatz für freigegebene Geräte aktiviert ist und sich anders als [!DNL Identity Graph Linking Rules] verhält.
 
 ## Häufig gestellte Fragen {#faq}
 
-In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Regeln für die Verknüpfung von Identitätsdiagrammen.
+In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu [!DNL Identity Graph Linking Rules].
 
 ## Algorithmus zur Identitätsoptimierung {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ Der Algorithmus zur Identitätsoptimierung wird zuerst angewendet, um die Darste
 
 ## Testen
 
-In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Test- und Debugging-Funktionen in Regeln zur Verknüpfung von Identitätsdiagrammen.
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Test- und Debugging-Funktionen in [!DNL Identity Graph Linking Rules].
 
 ### Welche Szenarien sollte ich in einer Entwicklungs-Sandbox-Umgebung testen?
 

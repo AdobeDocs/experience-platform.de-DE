@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1866'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 Jede Kundenimplementierung ist einzigartig und auf die Ziele einer bestimmten Organisation zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der Praxis sind:
 

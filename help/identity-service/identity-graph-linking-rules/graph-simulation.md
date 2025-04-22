@@ -2,9 +2,9 @@
 title: Handbuch zur Benutzeroberfläche für die Diagrammsimulation
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Service-Benutzeroberfläche verwenden.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1563'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
 >
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 >* Ihr Konto muss über die Berechtigung **Identitätsdiagramm anzeigen** verfügen, um auf das [!DNL Graph Simulation]-Tool zugreifen zu können. Weitere Informationen finden Sie im [Handbuch zu Berechtigungen in der attributbasierten Zugriffssteuerung](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus“ ](./identity-optimization-algorithm.md).
@@ -182,7 +185,7 @@ Im folgenden Beispieldiagramm gibt es aus den folgenden Gründen eine gepunktete
 
 Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit dem [!DNL Graph Simulation]-Tool besser verstehen können, wie Ihre Identitätsdaten mit einem bestimmten Satz von Regeln und Konfigurationen behandelt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

@@ -2,9 +2,9 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1617'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus in Identity Service, der sicherstellt, dass ein Identitätsdiagramm für eine einzelne Person repräsentativ ist, und daher das unerwünschte Zusammenführen von Identitäten im Echtzeit-Kundenprofil verhindert.
 
@@ -163,9 +167,9 @@ Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme
 
 ## Nächste Schritte
 
-Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
-* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

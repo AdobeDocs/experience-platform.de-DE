@@ -2,14 +2,14 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 8%
+source-wordcount: '1497'
+ht-degree: 7%
 
 ---
 
-# Überblick über die Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules] – Übersicht {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
-Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und präzisere Personalisierung für Ihre Benutzenden ermöglichen.
+Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über [!DNL Identity Graph Linking Rules] bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzerinnen und Benutzer ermöglichen.
 
-Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung von Regeln zur Verknüpfung von Identitätsdiagrammen zu erhalten:
+Sehen Sie sich das folgende Video an, um weitere Informationen zur Verwendung von [!DNL Identity Graph Linking Rules] zu erhalten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Erste Schritte
 
-Die folgenden Dokumente sind für das Verständnis der Verknüpfungsregeln für Identitätsdiagramme von entscheidender Bedeutung.
+Die folgenden Dokumente sind für das Verständnis von [!DNL Identity Graph Linking Rules] unerlässlich.
 
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
@@ -45,7 +49,7 @@ Die folgenden Dokumente sind für das Verständnis der Verknüpfungsregeln für 
 >title="Szenarien zum Zusammenführen von Diagrammen"
 >abstract="Es gibt mehrere Gründe, warum Diagramme zusammengeführt werden oder mehrere Personenentitäten darstellen können."
 
-In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen berücksichtigen können.
+In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von [!DNL Identity Graph Linking Rules] berücksichtigen können.
 
 ### Freigegebenes Gerät
 
@@ -61,7 +65,7 @@ Es gibt Fälle, in denen sich ein Gerät mehrmals anmelden kann:
 
 In diesen Fällen wird eine einzelne ECID aus Diagrammsicht und ohne aktivierte Beschränkungen mit mehreren CRMIDs verknüpft.
 
-Mit Regeln zur Identitätsdiagramm-Verknüpfung können Sie:
+Mit [!DNL Identity Graph Linking Rules] können Sie:
 
 * Konfigurieren Sie die ID, die für die Anmeldung als eindeutige Kennung verwendet wird. Sie können beispielsweise ein Diagramm so beschränken, dass nur eine Identität mit einem CRMID-Namespace gespeichert wird, und diese CRMID daher als eindeutige Kennung eines gemeinsam genutzten Geräts definieren.
    * Auf diese Weise können Sie sicherstellen, dass CRMIDs nicht von der ECID zusammengeführt werden.
@@ -72,7 +76,7 @@ Es gibt auch Instanzen von Benutzern, die bei der Registrierung gefälschte Wert
 
 ![Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt.](../images/identity-settings/invalid-email-phone.png)
 
-Mit Regeln zur Identitätsdiagramm-Verknüpfung können Sie:
+Mit [!DNL Identity Graph Linking Rules] können Sie:
 
 * Konfigurieren Sie entweder die CRMID, Telefonnummer oder E-Mail-Adresse als eindeutige Kennung und beschränken Sie daher eine Person auf nur eine CRMID, Telefonnummer und/oder E-Mail-Adresse, die mit ihrem Konto verknüpft ist.
 
@@ -89,11 +93,11 @@ Diese Identitäten können zu folgenden Diagrammen führen, bei denen mehrere CR
 
 ![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten.](../images/identity-settings/bad-data.png)
 
-Mit Regeln zur Identitätsdiagramm-Verknüpfung können Sie die CRMID als eindeutige Kennung konfigurieren, um das Reduzieren unerwünschter Profile aufgrund dieses Datentyps zu verhindern.
+Mit [!DNL Identity Graph Linking Rules] können Sie die CRMID als eindeutige Kennung konfigurieren, um das Reduzieren unerwünschter Profile aufgrund dieses Datentyps zu verhindern.
 
-## Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-Mit Regeln zur Identitätsdiagramm-Verknüpfung können Sie:
+Mit [!DNL Identity Graph Linking Rules] können Sie:
 
 * Erstellen Sie für jeden Benutzer ein einzelnes Identitätsdiagramm bzw. ein zusammengeführtes Profil, indem Sie eindeutige Namespaces konfigurieren. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen zu einem Identitätsdiagramm zusammengeführt werden.
 * Verknüpfen Sie authentifizierte Online-Ereignisse mit der Person, indem Sie Prioritäten konfigurieren
@@ -151,7 +155,7 @@ Weitere Informationen finden Sie im Handbuch unter [Namespace-Priorität](./name
 
 ## Nächste Schritte
 
-Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)

@@ -2,10 +2,10 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 4%
+source-wordcount: '697'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 
@@ -23,7 +27,7 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Identitätseinstellungen
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit Identitätseinstellungen arbeiten:
 
-* [Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
@@ -83,9 +87,9 @@ Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schrit
 
 ## Nächste Schritte
 
-Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
-* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)

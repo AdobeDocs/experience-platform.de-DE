@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Schrittweise Anleitung:
 
 ## Voraussetzungen für die Implementierung {#prerequisites-for-implementation}
 
-In diesem Abschnitt werden die Schritte beschrieben, die Sie vor der Implementierung von Regeln zur Verknüpfung von Identitätsdiagrammen mit Ihren Daten ausführen müssen.
+In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die Sie vor der Implementierung von [!DNL Identity Graph Linking Rules] in Ihren Daten ausführen müssen.
 
 ### Eindeutiger Namespace
 
@@ -291,9 +295,9 @@ Dieses Beispiel zeigt auch, dass Tom und Summer sich in verschiedenen Personenen
 
 ## Nächste Schritte
 
-Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
-* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)

@@ -2,9 +2,9 @@
 title: Beispiele für Diagrammkonfigurationen
 description: Erfahren Sie mehr über gängige Diagrammszenarien, die bei der Arbeit mit Regeln zur Identitätsdiagramm-Verknüpfung und Identitätsdaten auftreten können.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 7%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Accountteam, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
+>Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
+>
+>* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
+>* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
+>* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 >[!NOTE]
 >
 >* „CRMID“ und „loginID“ sind benutzerdefinierte Namespaces. In diesem Dokument ist „CRMID“ eine Personenkennung und „loginID“ eine mit einer bestimmten Person verknüpfte Anmeldekennung.
 >* Um die in diesem Dokument beschriebenen Beispieldiagrammszenarien zu simulieren, müssen Sie zunächst zwei benutzerdefinierte Namespaces erstellen, einen mit dem Identitätssymbol „CRMID“ und einen weiteren mit dem Identitätssymbol „loginID“. Bei Identitätssymbolen wird zwischen Groß- und Kleinschreibung unterschieden.
 
-In diesem Dokument werden Beispiele für die Diagrammkonfiguration beschrieben, die bei der Arbeit mit Regeln zur Identitätsdiagrammverknüpfung und Identitätsdaten häufig vorkommen.
+In diesem Dokument werden Beispiele für Diagrammkonfigurationen für gängige Szenarien beschrieben, auf die Sie bei der Arbeit mit [!DNL Identity Graph Linking Rules]- und Identitätsdaten stoßen können.
 
 ## Nur CRMID
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## Nächste Schritte
 
-Weitere Informationen zu Verknüpfungsregeln für Identitätsdiagramme finden Sie in der folgenden Dokumentation:
+Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
-* [Überblick über die Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
 * [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
