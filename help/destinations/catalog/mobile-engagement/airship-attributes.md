@@ -3,24 +3,16 @@ keywords: Luftschiffattribute;Luftschiffziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting in Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 28%
+source-wordcount: '1042'
+ht-degree: 31%
 
 ---
 
 # [!DNL Airship Attributes]-Verbindung {#airship-attributes-destination}
 
->[!IMPORTANT]
->
->* Ab dem 25. März 2025 werden im Zielkatalog zwei [!DNL Airship Attributes] nebeneinander angezeigt. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der vorhandene [!DNL Airship Attributes]-Ziel-Connector wurde in **[!UICONTROL (veraltet) Airship Attributes]** umbenannt und eine neue Karte mit dem Namen **[!UICONTROL Airship Attributes]** ist jetzt für Sie verfügbar.
->* Verwenden Sie die **[!UICONTROL Airship Attributes]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum Ziel &quot;**[!UICONTROL (veraltet) Airship Attributes]** haben, werden diese automatisch aktualisiert, sodass keine Aktion von Ihnen erforderlich ist.
->* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * Verbindungsspezifikations-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
-
-## Überblick {#overview}
+## Übersicht {#overview}
 
 [!DNL Airship] ist die führende Experience Platform für Kundeninteraktion und hilft Ihnen, Ihren Anwendern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitzustellen.
 
@@ -81,7 +73,7 @@ Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. „Ziel der 
 
 Klicken Sie **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
