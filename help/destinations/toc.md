@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 76%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 76%
          * [Unterstützte Transformationsfunktionen](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Konfiguration der Dateiformatierung](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Zielkonfigurationskomponenten {#destination-configuration}
+         * [Zielgruppen-Datentyp konfigurieren](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Konfiguration der Kundenauthentifizierung](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [OAuth2-Autorisierung](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Benutzerdefinierte Datenfelder](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
