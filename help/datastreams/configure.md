@@ -2,7 +2,7 @@
 title: Erstellen und Konfigurieren von Datenströmen
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ Geräte- und Hardwareinformationen verwenden die `context` Array-`"device"`, wä
 
 Stellen Sie außerdem sicher, dass jedes gewünschte XDM-Feld in Ihrem Schema vorhanden ist. Ist dies nicht der Fall, können Sie die von Adobe bereitgestellte `Environment Details` Feldergruppe zu Ihrem Schema hinzufügen.
 
-### Konfigurieren der erweiterten {#@advanced-options}
+### Erweiterte Optionen konfigurieren {#advanced-options}
 
 Um erweiterte Konfigurationsoptionen anzuzeigen, wählen Sie **[!UICONTROL Erweiterte Optionen]** aus. Hier können Sie zusätzliche Datenstromeinstellungen konfigurieren, z. B. IP-Verschleierung, First-Party-ID-Cookies und mehr.
 
