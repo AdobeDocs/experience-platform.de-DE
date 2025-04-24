@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen zu Cloud-Speicher-Zielen
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 35%
+source-wordcount: '2732'
+ht-degree: 34%
 
 ---
 
@@ -104,7 +104,10 @@ Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätze
 
 ## Voraussetzungen {#prerequisites}
 
-Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [eine Verbindung mit einem Ziel hergestellt haben](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+Beachten Sie die folgenden Voraussetzungen, um Datensätze zu exportieren:
+
+* Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [eine Verbindung mit einem Ziel hergestellt haben](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+* Profildatensätze müssen für die Verwendung im Echtzeit-Kundenprofil aktiviert werden. [Weitere Informationen](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) wie Sie diese Option aktivieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 

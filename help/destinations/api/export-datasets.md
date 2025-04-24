@@ -4,10 +4,10 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze an ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '5151'
-ht-degree: 11%
+source-wordcount: '5220'
+ht-degree: 12%
 
 ---
 
@@ -56,6 +56,13 @@ Derzeit können Sie Datensätze in die Cloud-Speicher-Ziele exportieren, die im 
 * [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
+## Voraussetzungen {#prerequisites}
+
+Beachten Sie die folgenden Voraussetzungen, um Datensätze zu exportieren:
+
+* Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [eine Verbindung mit einem Ziel hergestellt haben](/help/destinations/ui/connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](/help/destinations/catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+* Profildatensätze müssen für die Verwendung im Echtzeit-Kundenprofil aktiviert werden. [Weitere Informationen](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) wie Sie diese Option aktivieren.
 
 ## Erste Schritte {#get-started}
 

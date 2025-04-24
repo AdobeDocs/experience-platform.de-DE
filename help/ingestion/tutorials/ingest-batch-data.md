@@ -5,7 +5,7 @@ title: Aufnehmen von Daten in Experience Platform
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%
@@ -78,7 +78,7 @@ Auf der Registerkarte Info befindet sich auch ein **[!UICONTROL Profil]**-Umscha
 
 ![Datensatzaktivität](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Datensatz für [!DNL Real-Time Customer Profile] aktivieren
+## Datensatz für [!DNL Real-Time Customer Profile] aktivieren {#enable-for-profile}
 
 Datensätze werden für die Aufnahme von Daten in [!DNL Experience Platform] verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzufügen. Diese zusammengesetzten Informationen werden als [!DNL Real-Time Customer Profile] bezeichnet. Damit [!DNL Experience Platform] wissen, welche Informationen im [!DNL Real-Time Profile] enthalten sein sollen, können Datensätze mit dem Umschalter **[!UICONTROL Profil]** für die Aufnahme markiert werden.
 
