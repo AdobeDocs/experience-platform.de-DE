@@ -3,9 +3,9 @@ title: Nachschlagen von Edge-Profilattributen in Echtzeit
 description: Erfahren Sie, wie Sie Edge-Profilattribute mithilfe des benutzerdefinierten Personalization-Ziels und der Edge Network-API in Echtzeit suchen
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ Beim Konfigurieren des auf dieser Seite beschriebenen Anwendungsfalls verwenden 
 * [Datenströme](../../datastreams/overview.md): Ein Datenstrom empfängt eingehende Ereignisdaten von Web SDK und antwortet mit Edge-Profildaten.
 * [Zusammenführungsrichtlinien](../../segmentation/ui/segment-builder.md#merge-policies): Sie erstellen eine [!UICONTROL Active-On-Edge] Zusammenführungsrichtlinie, um sicherzustellen, dass die Edge-Profile die richtigen Profildaten verwenden.
 * [Benutzerdefinierte Personalization-Verbindung](../catalog/personalization/custom-personalization.md): Sie konfigurieren eine neue benutzerdefinierte Personalisierungsverbindung, die die Profilattribute an die Edge Network sendet.
-* [Edge Network-](../../server-api/overview.md): Sie verwenden die Edge Network-API [interaktive Datenerfassung](../../server-api/interactive-data-collection.md), um Profilattribute schnell aus den Edge-Profilen abzurufen.
+* [Edge Network-](https://developer.adobe.com/data-collection-apis/docs/): Sie verwenden die Edge Network-API [interaktive Datenerfassung](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/), um Profilattribute schnell aus den Edge-Profilen abzurufen.
 
 ## Performance-Garantien {#guardrails}
 
@@ -166,7 +166,7 @@ Der nächste Schritt besteht darin, Ihre Personalisierungslösung so zu konfigur
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Profilattribute über die [Edge Network-API abrufen](../../server-api/overview.md). Darüber hinaus müssen Sie die Profilattribute über die Edge Network-API [Endpunkt für die interaktive Datenerfassung](../../server-api/interactive-data-collection.md) abrufen, damit die API-Aufrufe authentifiziert werden.
+>Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Profilattribute über die [Edge Network-API abrufen](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Darüber hinaus müssen Sie die Profilattribute über die Edge Network-API [Endpunkt für die interaktive Datenerfassung](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) abrufen, damit die API-Aufrufe authentifiziert werden.
 ><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zielgruppenzugehörigkeit, und Ihnen stehen keine Profilattribute zur Verfügung.
 
 Der in [Schritt 1) konfigurierte Datenstrom ](#create-datastream) jetzt eingehende Ereignisdaten akzeptieren und mit Edge-Profilinformationen antworten.

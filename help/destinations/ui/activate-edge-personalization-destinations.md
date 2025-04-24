@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform für Personalisierungs-Anwendungsfälle der gleichen Seite und der nächsten Seite für Edge-Ziele aktivieren.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 14%
 
 ---
@@ -45,7 +45,7 @@ Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Ado
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Verwenden Sie Personalisierungslösungen von Adobe wie Adobe Target oder Ihre eigenen Personalisierungspartnerplattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. hauseigene CMS), um über das Ziel [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) ein tieferes Personalisierungserlebnis zu ermöglichen. All dies unter Verwendung der Datenerfassungs- und Segmentierungsfunktionen von Experience Platform Edge Network.
 
@@ -150,9 +150,9 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Benutzerdefiniertes Personalization]**-Ziel, dass Sie beim Konfigurieren des Ziels für ](../../server-api/overview.md) Attribut-basierte Personalisierung die [Edge Network-Server-API verwenden. Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../server-api/authentication.md) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert **[!UICONTROL Ziel „Benutzerdefinierte Personalization]** die Verwendung der [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/) beim Konfigurieren des Ziels für die attributbasierte Personalisierung. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
 >
-><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
+><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Edge Network-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
 ><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zugehörigkeit zur Zielgruppe.
 

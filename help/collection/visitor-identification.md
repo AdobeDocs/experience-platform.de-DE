@@ -1,19 +1,19 @@
 ---
 title: Besucheridentifizierung
-description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API Besuchende identifiziert
-seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
+description: Erfahren Sie, wie die Adobe Experience Platform Edge Network-API Besuchende identifiziert
+seo-description: Learn how Adobe Experience Platform Edge Network API identifies visitors
 keywords: Edge Network;Gateway;API;Besucher;Besucherin;Identifizierung
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 100%
+source-wordcount: '149'
+ht-degree: 86%
 
 ---
 
 # Besucheridentifizierung
 
-Die Edge Network Server-API unterstützt [Besucheridentifizierung über Erstanbieter-ID ([!DNL FPID])](visitor-identification-fpid.md).
+Die Edge Network-API unterstützt [Besucheridentifizierung über Erstanbieter-ID ([!DNL FPID])](visitor-identification-fpid.md).
 
 Alle Benutzeridentitäten sollten in der Feldergruppe `identityMap` angegeben werden. Diese Feldergruppe ist im AEP Web SDK-Mixin `ExperienceEvent` enthalten.
 

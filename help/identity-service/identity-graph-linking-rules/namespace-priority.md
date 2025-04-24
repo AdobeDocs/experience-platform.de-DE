@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 3%
 
 ---
@@ -86,7 +86,7 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
 * Nachdem Sie die Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
    * Dies liegt daran, dass Erlebnisereignisse dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten, und die Namespace-Priorität stellt sicher, dass dem Erlebnisereignis der wichtigste Namespace zugeordnet ist.
 * Daher werden die folgenden Konfigurationen **vom Echtzeit-Kundenprofil nicht mehr verwendet**:
-   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe der Web SDK, Mobile SDK oder Edge Network Server-API (Identity-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Services außerhalb des Echtzeit-Kundenprofils wie Data Lake Storage oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
+   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe der Web SDK, Mobile SDK oder Edge Network API (Identity-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Services außerhalb des Echtzeit-Kundenprofils wie Data Lake Storage oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
    * Alle Felder, die in einem XDM-Erlebnisereignis-Klassenschema als primäre Identität gekennzeichnet sind.
    * Standardeinstellungen für die primäre Identität im Adobe Analytics-Quell-Connector (ECID oder AAID).
 * Dagegen bestimmt **Namespace-Priorität nicht die primäre Identität für Profildatensätze**.

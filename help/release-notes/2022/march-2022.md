@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2022
 description: Versionshinweise März 2022 für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 84%
+source-wordcount: '1183'
+ht-degree: 81%
 
 ---
 
@@ -73,7 +73,7 @@ Weitere Informationen zu Warnhinweisen in Experience Platform finden Sie im Absc
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend auf täglichen Momentaufnahmen der Daten wichtige Informationen zu den Unternehmensdaten dargestellt werden.
+Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend auf täglichen Schnappschüssen wichtige Informationen zu den Unternehmensdaten dargestellt werden.
 
 ### Profil-Dashboards
 
@@ -115,7 +115,7 @@ Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-sei
 | Funktion | Beschreibung |
 | --- | --- |
 | Globale Datenstromeinstellungen | Sie können jetzt beim Konfigurieren eines Datenstroms mehrere neue globale Einstellungen konfigurieren: Ort, First-Party-ID-Cookie und Third-Party-ID-Synchronisierung. Weitere Informationen dazu finden Sie im Handbuch zur Datenstrom-Benutzeroberfläche im Abschnitt [Konfigurieren eines Datenstroms](../../datastreams/overview.md#create). |
-| [Edge Network Server-API](../../server-api/overview.md) | Mit der Server-API können Kunden mithilfe eines neuen, authentifizierten Endpunkts mit dem Experience Platform Edge Network interagieren, wodurch eine Vielzahl von Datenerfassungs-, Personalisierungs-, Werbungs- und Marketing-Anwendungsfällen ermöglicht wird. |
+| [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Mit der Edge Network-API können Kunden über einen neuen, authentifizierten Endpunkt mit Experience Platform Edge Network interagieren, um eine Vielzahl von Datenerfassungs-, Personalisierungs-, Werbe- und Marketing-Anwendungsfällen zu ermöglichen. |
 
 Weitere Informationen zur Datenerfassung in Experience Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
 

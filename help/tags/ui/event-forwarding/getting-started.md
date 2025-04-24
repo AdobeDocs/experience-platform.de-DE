@@ -3,9 +3,9 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Edge Network Server-API](/help/server-api/overview.md)
+* [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK und Experience Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
@@ -35,7 +35,7 @@ Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lö
 
 * Adobe Real-Time CDP Connections, Prime oder Ultimate (Preise erhalten Sie von Ihrem Adobe-Accountteam)
 * Ereignisweiterleitung in Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network Server-API, die zum Senden von Daten an Edge Network konfiguriert sind
+* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network API, die zum Senden von Daten an Edge Network konfiguriert sind
 * Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)
 
 ## Erstellen eines XDM-Schemas

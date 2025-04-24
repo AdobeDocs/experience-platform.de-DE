@@ -2,9 +2,9 @@
 title: Verbessern der Datenerfassung mit Wetterdaten von DNL The Weather Channel
 description: Erweitern Sie die Daten, die Sie über Datenströme erfassen, mit Wetterdaten von DNL The Weather Channel.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Es gibt drei Arten von Daten, die von [!DNL The Weather Channel] verfügbar sind
 Bevor Sie Wetterdaten verwenden, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
 * Sie müssen die Wetterdaten lizenzieren, die Sie von [!DNL The Weather Channel] verwenden werden. Von dort werden sie dann für Ihr Konto aktiviert.
-* Wetterdaten sind nur über Datenströme verfügbar. Um Wetterdaten zu verwenden, müssen Sie [!DNL Web SDK], [!DNL Mobile Edge Extension] oder die [Server-API](../../server-api/overview.md) verwenden, um diese Daten einzuschließen.
+* Wetterdaten sind nur über Datenströme verfügbar. Um Wetterdaten zu verwenden, müssen Sie [!DNL Web SDK], [!DNL Mobile Edge Extension] oder die [Edge Network-API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/) um diese Daten einzuschließen.
 * Für Ihren Datenstrom muss die [[!UICONTROL Geo-Position]](../configure.md#advanced-options) aktiviert sein.
 * Fügen Sie die [Wetterfeldgruppe](#schema-configuration) zum verwendeten Schema hinzu.
 
@@ -66,7 +66,7 @@ In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Wetterdaten stehen in der [Real-time Customer Data Platform](../../rtcdp/overview.md) zur Verwendung in Zielgruppen zur Verfügung. Wetterdaten werden an Ereignisse angehängt.
+Wetterdaten stehen in der [Real-Time Customer Data Platform](../../rtcdp/overview.md) zur Verwendung in Zielgruppen zur Verfügung. Wetterdaten werden an Ereignisse angehängt.
 
 ![Segment Builder, der Wetterereignisse anzeigt](../assets/data-enrichment/weather/schema-builder.png)
 

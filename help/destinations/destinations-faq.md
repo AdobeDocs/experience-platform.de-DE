@@ -3,9 +3,9 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 3%
 
 ---
@@ -201,7 +201,7 @@ Nein, [Web SDK](../web-sdk/home.md) ist nicht erforderlich, um Zielgruppen für 
 
 Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) anstelle von Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
-Für Anwendungsfälle [Personalisierung der gleichen Seite und ](ui/activate-edge-personalization-destinations.md) nächsten Seite“ müssen Sie entweder [Web SDK](../web-sdk/home.md) oder die [Edge Network Server-API verwenden](../server-api/overview.md). Weitere Informationen finden Sie in [ Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
+Bei [Personalisierung der gleichen Seite und ](ui/activate-edge-personalization-destinations.md) nächsten Seite“ müssen Sie entweder [Web SDK](../web-sdk/home.md) oder die [Edge Network API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [ Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
 +++
 
 ### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerdefiniertes Personalization-Ziel senden kann?
@@ -244,10 +244,10 @@ Dies wird derzeit nicht über die Benutzeroberfläche „Ziele“ unterstützt. 
 Wenn Sie ein Ziel löschen, werden alle unter dem Ziel zugeordneten Zielgruppen und Attribute aus Adobe Target gelöscht und auch aus Edge Network entfernt.
 +++
 
-### Funktioniert die Integration mit der Edge Network Server-API?
+### Funktioniert die Integration mit der Edge Network-API?
 
 +++Antwort
-Ja, die Edge Network-Server-API funktioniert mit dem benutzerdefinierten Personalization-Ziel. Da Profilattribute vertrauliche Daten enthalten können, müssen Sie zum Schutz dieser Daten beim benutzerdefinierten Personalization-Ziel die Edge Network-Server-API für die Datenerfassung verwenden. Darüber hinaus müssen alle API-Aufrufe in einem [authentifizierten Kontext](../server-api/authentication.md) erfolgen.
+Ja, die Edge Network-API funktioniert mit dem benutzerdefinierten Personalization-Ziel. Da Profilattribute vertrauliche Daten enthalten können, müssen Sie zum Schutz dieser Daten beim benutzerdefinierten Personalization-Ziel die Edge Network-API für die Datenerfassung verwenden. Darüber hinaus müssen alle API-Aufrufe in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
 +++
 
 ### Ich kann nur eine einzige Zusammenführungsrichtlinie haben, die im Randbereich aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden, und sie dennoch als Streaming-Zielgruppen an Adobe Target senden?

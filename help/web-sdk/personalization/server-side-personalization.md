@@ -1,22 +1,22 @@
 ---
-title: Server-seitige Personalisierung mithilfe der Edge Network Server-API
-description: Dieser Artikel zeigt, wie Sie die Edge Network Server-API verwenden können, um eine Server-seitige Personalisierung für Ihre Web-Eigenschaften bereitzustellen.
+title: Server-seitige Personalisierung mithilfe der Edge Network-API
+description: In diesem Artikel wird gezeigt, wie Sie mit der Edge Network-API serverseitige Personalisierung in Ihren Web-Eigenschaften bereitstellen können.
 keywords: Personalisierung;Server-API;Edge-Netzwerk;Server-seitig;
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 100%
+source-wordcount: '559'
+ht-degree: 82%
 
 ---
 
 
-# Server-seitige Personalisierung mithilfe der Edge Network Server-API
+# Server-seitige Personalisierung mithilfe der Edge Network-API
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-Die Server-seitige Personalisierung umfasst die Verwendung der [Edge Network Server-API](../../server-api/overview.md), um das Kundenerlebnis in Ihren Web-Eigenschaften zu personalisieren.
+Die Server-seitige Personalisierung umfasst die Verwendung der [Edge Network-](https://developer.adobe.com/data-collection-apis/docs/getting-started/), um das Kundenerlebnis in Ihren Web-Eigenschaften zu personalisieren.
 
-In dem in diesem Artikel beschriebenen Beispiel werden Personalisierungsinhalte mithilfe der Server-API Server-seitig abgerufen. Anschließend wird die HTML basierend auf den abgerufenen Personalisierungsinhalten Server-seitig gerendert.
+In dem in diesem Artikel beschriebenen Beispiel werden Personalisierungsinhalte mithilfe der Edge Network-API Server-seitig abgerufen. Anschließend wird die HTML basierend auf den abgerufenen Personalisierungsinhalten Server-seitig gerendert.
 
 Die nachstehende Tabelle zeigt ein Beispiel für personalisierte und nicht personalisierte Inhalte.
 
@@ -37,12 +37,12 @@ Cookies werden verwendet, um die Benutzeridentität und Cluster-Informationen be
 
 ### Platzierung anfordern {#request-placement}
 
-Personalisierungsanfragen sind erforderlich, um Vorschläge zu erhalten und eine Anzeigebenachrichtigung zu senden. Bei Verwendung einer Server-seitigen Implementierung sendet der Anwendungs-Server diese Anfragen an die Edge Network Server-API.
+Personalisierungsanfragen sind erforderlich, um Vorschläge zu erhalten und eine Anzeigebenachrichtigung zu senden. Bei Verwendung einer serverseitigen Implementierung sendet der Anwendungsserver diese Anfragen an die Edge Network-API.
 
 | Anfrage | Gemacht von |
 |---|---|
-| Interaktionsanfrage zum Abrufen von Vorschlägen | Anwendungs-Server, der die Edge Network Server-API aufruft. |
-| Interaktionsanfrage zum Senden von Anzeigebenachrichtigungen | Anwendungs-Server, der die Edge Network Server-API aufruft. |
+| Interaktionsanfrage zum Abrufen von Vorschlägen | Anwendungsserver, der die Edge Network-API aufruft. |
+| Interaktionsanfrage zum Senden von Anzeigebenachrichtigungen | Anwendungsserver, der die Edge Network-API aufruft. |
 
 ## Beispielanwendung {#sample-app}
 
@@ -68,7 +68,7 @@ In diesem Abschnitt werden die Schritte zum Abrufen der Personalisierungsinhalte
 
 1. [Express](https://expressjs.com/de/) wird für eine schlanke Server-seitige Implementierung verwendet. Dies handhabt grundlegende Server-Anfragen und Routing.
 2. Der Browser fordert die Webseite an. Alle Cookies, die zuvor vom Browser gespeichert wurden, sind, mit dem Präfix `kndctr_` versehen, enthalten.
-3. Wenn die Seite vom Anwendungs-Server angefordert wird, wird ein Ereignis an den [Endpunkt der interaktiven Datenerfassung](../../../server-api/interactive-data-collection.md) gesendet, um Personalisierungsinhalte abzurufen. Die Beispielanwendung verwendet Hilfsmethoden, um das Erstellen und Senden von Anfragen an die API zu vereinfachen (siehe [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). Die `POST`-Anfrage enthält ein `event` und eine `query`. Die Cookies aus dem vorherigen Schritt sind, sofern verfügbar, im Array `meta>state>entries` enthalten.
+3. Wenn die Seite vom Anwendungs-Server angefordert wird, wird ein Ereignis an den [Endpunkt der interaktiven Datenerfassung](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) gesendet, um Personalisierungsinhalte abzurufen. Die Beispielanwendung verwendet Hilfsmethoden, um das Erstellen und Senden von Anfragen an die API zu vereinfachen (siehe [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). Die `POST`-Anfrage enthält ein `event` und eine `query`. Die Cookies aus dem vorherigen Schritt sind, sofern verfügbar, im Array `meta>state>entries` enthalten.
 
    ```js
    fetch(

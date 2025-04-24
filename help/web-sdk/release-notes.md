@@ -3,7 +3,7 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 64%
@@ -199,7 +199,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Es wurde Unterstützung für [seitenweise vollständige Migration](home.md#migrating-to-web-sdk) hinzugefügt. Das Adobe Target-Profil wird jetzt beibehalten, wenn Besuchende zwischen at.js- und Web SDK-Seiten wechseln.
 - Es wurde konfigurierbare Unterstützung für [hohe Entropie bei Client-Hinweisen für Benutzeragenten](/help/web-sdk/use-cases/client-hints.md) hinzugefügt.
-- Es wurde Unterstützung für den [`applyResponse`](/help/web-sdk/commands/applyresponse.md)-Befehl hinzugefügt. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
+- Es wurde Unterstützung für den [`applyResponse`](/help/web-sdk/commands/applyresponse.md)-Befehl hinzugefügt. Dies ermöglicht die hybride Personalisierung über die [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA-Modus-Links funktionieren jetzt über mehrere Seiten.
 
 **Fehlerbehebungen und Verbesserungen**

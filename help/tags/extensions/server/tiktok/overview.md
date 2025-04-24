@@ -3,7 +3,7 @@ title: Integration der Adobe TikTok Web Events API-Erweiterung
 description: Mit dieser Adobe Experience Platform-Web-Ereignis-API können Sie Website-Interaktionen direkt mit TikTok teilen.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 4%
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Übersicht über die [!DNL TikTok] Web Events API-Erweiterung
 
-Die [!DNL TikTok]-Ereignis-API ist eine sichere [Edge Network-Server-API](/help/server-api/overview.md)-Schnittstelle, über die Sie Informationen direkt über Benutzeraktionen auf Ihren Websites mit [!DNL TikTok] teilen können. Sie können die Ereignisweiterleitungsregeln nutzen, um Daten vom [!DNL Adobe Experience Platform Edge Network] an [!DNL TikTok] zu senden, indem Sie die [!DNL TikTok] Web Events API-Erweiterung verwenden.
+Die [!DNL TikTok]-Ereignis-API ist eine sichere [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/)-Schnittstelle, über die Sie Informationen direkt über Benutzeraktionen auf Ihren Websites mit [!DNL TikTok] teilen können. Sie können die Ereignisweiterleitungsregeln nutzen, um Daten vom [!DNL Adobe Experience Platform Edge Network] an [!DNL TikTok] zu senden, indem Sie die [!DNL TikTok] Web Events API-Erweiterung verwenden.
 
 ## Voraussetzungen für [!DNL TikTok] {#prerequisites}
 

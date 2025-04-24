@@ -3,9 +3,9 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Anwendungen, die auf Ihrer Site ausgeführt werden, eine Möglichkeit, Zielgruppeninformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung basierend auf der Zugehörigkeit zu einer Zielgruppe im Benutzerprofil.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '964'
 ht-degree: 51%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, müssen Sie beim Konfigurieren des Ziels &quot;**[!UICONTROL Benutzerdefinierte Personalization&quot; für ](/help/server-api/overview.md) Attribut-basierte Personalisierung die {0]** Edge Network-Server-API verwenden. [ Alle Aufrufe der Server-API müssen in einem [authentifizierten Kontext](../../../server-api/authentication.md) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Edge Network Um diese Daten zu schützen, müssen Sie beim Konfigurieren des Ziels **[!UICONTROL Benutzerdefinierte Personalization](https://developer.adobe.com/data-collection-apis/docs/) für die attributbasierte Personalisierung die]**-API [ verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) erfolgen.
 >
-><br>Sie können Profilattribute über die [Edge Network-Server-API abrufen](/help/server-api/overview.md) indem Sie eine serverseitige Integration hinzufügen, die denselben Datenstrom verwendet, den Sie bereits für Ihre Web- oder Mobile-SDK-Implementierung verwenden.
+><br>Sie können Profilattribute über die [Edge Network-API abrufen](https://developer.adobe.com/data-collection-apis/docs/) indem Sie eine serverseitige Integration hinzufügen, die denselben Datenstrom verwendet, den Sie bereits für Ihre Web- oder Mobile-SDK-Implementierung verwenden.
 >
 ><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zugehörigkeit zur Zielgruppe.
 
@@ -39,7 +39,7 @@ Dieses Ziel erfordert je nach Implementierung eine der folgenden Datenerfassungs
 
 * Verwenden Sie die [Adobe Experience Platform Web SDK](/help/web-sdk/home.md), wenn Sie Daten von Ihrer Website erfassen möchten.
 * Verwenden Sie die [Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/)SDK, wenn Sie Daten von Ihrer Mobile App erfassen möchten.
-* Verwenden Sie die [Edge Network](../../../server-api/overview.md)Server-API, wenn Sie [Web SDK](/help/web-sdk/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) nicht verwenden oder wenn Sie das Benutzererlebnis anhand von Profilattributen personalisieren möchten.
+* Verwenden Sie die [Edge Network](https://developer.adobe.com/data-collection-apis/docs/)API, wenn Sie [Web SDK](/help/web-sdk/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) nicht verwenden oder das Benutzererlebnis anhand von Profilattributen personalisieren möchten.
 
 >[!IMPORTANT]
 >
