@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Batch-Aufnahme-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwicklerinnen und Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
-ht-degree: 65%
+source-wordcount: '2435'
+ht-degree: 64%
 
 ---
 
@@ -27,7 +27,9 @@ Bevor Sie fortfahren, lesen Sie die [Übersicht über die Batch](overview.md)Auf
 
 >[!NOTE]
 >
->Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout erreichen oder Fehler wegen der Größe des Anfragetexts erhalten, müssen Sie zum Upload großer Dateien wechseln.
+>- Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout erreichen oder Fehler wegen der Größe des Anfragetexts erhalten, müssen Sie zum Upload großer Dateien wechseln.
+>
+>- Verwenden Sie einzeiliges JSON anstelle von mehrzeiligem JSON als Eingabe für die Batch-Aufnahme. Einzeiliges JSON ermöglicht eine bessere Leistung, da das System eine Eingabedatei in mehrere Blöcke unterteilen und diese parallel verarbeiten kann, während mehrzeiliges JSON nicht aufgeteilt werden kann. Dies kann die Datenverarbeitungskosten erheblich reduzieren und die Batch-Verarbeitungslatenz verbessern.
 
 ### Batch erstellen
 
