@@ -4,10 +4,10 @@ title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
 description: Gehen Sie wie in diesem Artikel beschrieben vor, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ca33131c505803b74075f6d8331095b016a301a0
+source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 18%
+source-wordcount: '814'
+ht-degree: 10%
 
 ---
 
@@ -16,9 +16,11 @@ ht-degree: 18%
 In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Aktivierungsdatenflüsse für Ziele konfigurieren, z. B.:
 
 * [Aktivieren oder Deaktivieren](#enable-disable-dataflows) von Aktivierungsdatenflüssen
-* [Hinzufügen zusätzlicher Zielgruppen und Profilattribute](#add-audiences) zu Aktivierungsdatenflüssen
-* [Hinzufügen zusätzlicher Datensätze](#add-datasets) zu Aktivierungs-Workflows;
-* [Bearbeiten von Namen und ](#edit-names-descriptions)) für Ihre Aktivierungsdatenflüsse
+* [Hinzufügen zusätzlicher Zielgruppen](#add-audiences) zu Aktivierungsdatenflüssen
+* [Zugeordnete Attribute und Identitäten bearbeiten](#edit-mapped-attributes)
+* [Bearbeiten des Aktivierungsplans und der Exporthäufigkeit](#edit-schedule-frequency)
+* [Hinzufügen zusätzlicher Datensätze](#add-datasets) zu Aktivierungs-Workflows
+* [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
@@ -48,15 +50,57 @@ Verwenden Sie den Umschalter **[!UICONTROL Aktiviert]/[!UICONTROL Deaktiviert]**
 
 ## Hinzufügen von Zielgruppen zu einem Aktivierungsdatenfluss {#add-audiences}
 
-Wählen **[!UICONTROL in der rechten]** „Zielgruppen aktivieren“ aus, um zu ändern, welche Zielgruppen oder Profilattribute an das Ziel gesendet werden sollen. Diese Aktion führt Sie zum Aktivierungs-Workflow, der je nach Zieltyp unterschiedlich ist.
+Wählen **[!UICONTROL Zielgruppen aktivieren]** in der rechten Leiste aus, um zu ändern, welche Zielgruppen an das Ziel gesendet werden sollen. Diese Aktion führt Sie zum Aktivierungs-Workflow.
 
-![Bild der Experience Platform-Benutzeroberfläche mit der Option „Zielgruppen-Datenfluss aktivieren“.](../assets/ui/edit-activation/activate-audiences.png)
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Aktivieren von Zielgruppen-Datenflüssen.](../assets/ui/edit-activation/activate-audiences.png)
 
-Weitere Informationen zu den Aktivierungs-Workflows für die einzelnen Zieltypen finden Sie in den folgenden Handbüchern:
+Im Schritt **[!UICONTROL Auswählen]** Zielgruppen“ des Aktivierungs-Workflows können Sie vorhandene Zielgruppen entfernen oder neue Zielgruppen zum Aktivierungs-Workflow hinzufügen.
+
+Der Aktivierungs-Workflow unterscheidet sich je nach Zieltyp geringfügig. Weitere Informationen zu den Aktivierungs-Workflows für die einzelnen Zieltypen finden Sie in den folgenden Handbüchern:
 
 * [Aktivieren von Zielgruppen für Streaming](./activate-segment-streaming-destinations.md)Ziele (z. B. Facebook oder Twitter);
 * [Aktivieren von Zielgruppen für Batch-Profil-](./activate-batch-profile-destinations.md) (z. B. Amazon S3 oder Oracle Eloqua);
 * [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
+
+## Bearbeiten des Aktivierungsplans und der Exporthäufigkeit {#edit-schedule-frequency}
+
+Wählen **[!UICONTROL Zielgruppen aktivieren]** in der rechten Leiste aus. Diese Aktion führt Sie zum Aktivierungs-Workflow.
+
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Aktivieren von Zielgruppen-Datenflüssen.](../assets/ui/edit-activation/activate-audiences.png)
+
+Wählen Sie **[!UICONTROL Schritt]** Planung“ im Aktivierungs-Workflow aus, um den Aktivierungsplan zu bearbeiten und die Exportfrequenz für Ihren Datenfluss festzulegen. In diesem Schritt können Sie konfigurieren, wie oft Daten an das Ziel exportiert werden.
+
+Im Schritt **[!UICONTROL Planung]** des Aktivierungs-Workflows haben Sie folgende Möglichkeiten:
+* Anpassen der Exportfrequenz.
+* Festlegen oder Ändern des Start- und Enddatums für den Aktivierungsdatenfluss und mehr.
+
+Die Planungsvorgänge, die Sie ausführen können, variieren geringfügig je nach Zieltyp. Weitere Informationen zu den Aktivierungs-Workflows für die einzelnen Zieltypen finden Sie in den folgenden Handbüchern:
+
+* [Aktivieren von Zielgruppen für Streaming](./activate-segment-streaming-destinations.md)Ziele (z. B. Facebook oder Twitter);
+* [Aktivieren von Zielgruppen für Batch-Profil-](./activate-batch-profile-destinations.md) (z. B. Amazon S3 oder Oracle Eloqua);
+* [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
+
+## Zugeordnete Attribute und Identitäten bearbeiten {#edit-mapped-attributes}
+
+Wählen **[!UICONTROL Zielgruppen aktivieren]** in der rechten Leiste aus. Diese Aktion führt Sie zum Aktivierungs-Workflow.
+
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Aktivieren von Zielgruppen-Datenflüssen.](../assets/ui/edit-activation/activate-audiences.png)
+
+Wählen Sie im Aktivierungs **[!UICONTROL Workflow den Schritt]** Zuordnung“ aus, um die zugeordneten Attribute und Identitäten für Ihren Aktivierungsdatenfluss zu bearbeiten. Auf diese Weise können Sie anpassen, welche Profilattribute und Identitäten an das Ziel exportiert werden sollen.
+
+Im Schritt **[!UICONTROL Zuordnung]** des Aktivierungs-Workflows haben Sie folgende Möglichkeiten:
+
+* Hinzufügen neuer Attribute oder Identitäten zur Zuordnung.
+* Entfernen vorhandener Attribute oder Identitäten aus der Zuordnung.
+* Passen Sie die Reihenfolge der Zuordnungen an, um die Spaltenreihenfolge in exportierten Dateien zu definieren.
+
+Der Aktivierungs-Workflow unterscheidet sich je nach Zieltyp geringfügig. Weitere Informationen zu den Aktivierungs-Workflows für die einzelnen Zieltypen finden Sie in den folgenden Handbüchern:
+
+* [Aktivieren von Zielgruppen für Streaming](./activate-segment-streaming-destinations.md)Ziele (z. B. Facebook oder Twitter);
+* [Aktivieren von Zielgruppen für Batch-Profil-](./activate-batch-profile-destinations.md) (z. B. Amazon S3 oder Oracle Eloqua);
+* [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
+
+
 
 ## Hinzufügen von Datensätzen zu einem Aktivierungsdatenfluss {#add-datasets}
 
@@ -66,7 +110,9 @@ Wählen **[!UICONTROL Datensätze exportieren]** in der rechten Leiste aus, um z
 >
 >Diese Option ist nur für (Ziele[ die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
 
-![Experience Platform-UI-Bild, das die Option zur Ausführung des Datenflusses für Datensätze exportieren anzeigt.](../assets/ui/edit-activation/export-datasets.png)
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
+
+
 
 <!-- ## Apply access labels {#apply-access-labels}
 
