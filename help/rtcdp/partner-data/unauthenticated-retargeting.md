@@ -1,15 +1,16 @@
 ---
-title: Offsite-Retargeting nicht authentifizierter Besucher
+title: Nicht authentifiziertes Server-seitiges Retargeting
 description: Erfahren Sie, wie Sie nicht authentifizierte Benutzer mithilfe von ECIDs erneut ansprechen können
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Nicht authentifiziertes Retargeting {#unauthenticated-retargeting}
+# Nicht authentifiziertes Server-seitiges Retargeting {#unauthenticated-retargeting}
 
 Da Drittanbieter-Cookies an Effektivität verlieren, wechseln Unternehmen zu Cookie-losen Lösungen für personalisierte Interaktion und Retargeting. Offsite-Retargeting ermöglicht es Unternehmen, anspruchsvolle Anwender basierend auf ihren vorherigen Interaktionen zu erreichen, ohne auf Client-seitige JavaScript angewiesen zu sein.
 

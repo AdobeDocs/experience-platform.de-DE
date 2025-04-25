@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 60%
+source-wordcount: '305'
+ht-degree: 61%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 60%
       * [Kundengewinnung und -gewinnung ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
       * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
-      * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/unauthenticated-retargeting.md)
+      * [Nicht authentifiziertes Server-seitiges Retargeting](./partner-data/unauthenticated-retargeting.md)
    * Profilanreicherung {#profile-enrichment}
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Personalisierte Einblicke und Interaktion {#personalization-insights-engagement}
