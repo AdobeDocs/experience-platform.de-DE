@@ -2,9 +2,9 @@
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 15%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 15%
 >
 >Die Unterstützung für das Filtern von Daten auf Zeilenebene ist derzeit nur für die folgenden Quellen verfügbar:
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] Standardaktivitäten](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] Standardaktivitäten](../../connectors/adobe-applications/marketo/marketo.md)
 
 Lesen Sie dieses Handbuch für Anweisungen zum Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
