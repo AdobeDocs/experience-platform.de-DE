@@ -8,7 +8,7 @@ role: User
 source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 78%
+ht-degree: 77%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 78%
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
 - [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
-- Segmentierungs-API {#api}
+- Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
    - [Zielgruppen](api/audiences.md)
@@ -28,8 +28,8 @@ ht-degree: 78%
    - [Segmentdefinitionen](api/segment-definitions.md)
    - [Segmentaufträge](api/segment-jobs.md)
    - [Segmentsuche](api/segment-search.md)
-- Segmentierungsbenutzeroberfläche {#ui}
-   - [Übersicht](ui/overview.md)
+- Benutzeroberfläche für die Segmentierung {#ui}
+   - [Überblick](ui/overview.md)
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
    - [Zielgruppen-Portal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
@@ -40,7 +40,7 @@ ht-degree: 78%
    - Segment Match {#segment-match}
       - [Übersicht zu Segment Match](ui/segment-match/overview.md)
       - [Fehlerbehebung](ui/segment-match/troubleshooting.md)
-- {#methods} der Segmentierungsmethoden
+- Segmentierungsmethoden {#methods}
    - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
    - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
@@ -50,7 +50,7 @@ ht-degree: 78%
    - [Überblick](types/overview.md)
    - [Personen und Zielgruppen](types/people-audiences.md)
    - [Potenzielle Zielgruppen](types/prospect-audiences.md)
-   - [Konto-Zielgruppen](types/account-audiences.md)
+   - [Kontozielgruppen](types/account-audiences.md)
    - [Lookalike-Zielgruppen](types/lookalike-audiences.md)
 - Tutorials {#tutorials}
    - [Erstellen einer Segmentdefinition](tutorials/create-a-segment.md)
@@ -63,7 +63,7 @@ ht-degree: 78%
    - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungskonformität für Zielgruppen](tutorials/governance.md)
-- Profilabfragesprache {#pql}
+- Profile Query Language {#pql}
    - [Übersicht](pql/overview.md)
    - [Boolesche Funktionen](pql/boolean-functions.md)
    - [Vergleichsfunktionen](pql/comparison-functions.md)
