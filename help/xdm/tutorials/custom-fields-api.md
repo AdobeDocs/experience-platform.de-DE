@@ -2,9 +2,9 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren können.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den bereitgestel
 Sie können optional durch die folgenden zusätzlichen Eigenschaften einschränken, welche Arten von Werten für die Zeichenfolge eingegeben werden können:
 
 * `pattern`: Ein Regex-Muster zur Einschränkung.
-* `minLength`: Eine Mindestlänge für die Zeichenfolge.
+* `minLength`: Eine Mindestlänge für die Zeichenfolge. Zeichenfolgen erhalten standardmäßig einen Mindestwert von `1`.
 * `maxLength`: Eine maximale Länge für die Zeichenfolge.
 
 ```json

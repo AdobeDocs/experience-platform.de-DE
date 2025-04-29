@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '3224'
-ht-degree: 57%
+source-wordcount: '3236'
+ht-degree: 56%
 
 ---
 
@@ -251,7 +251,7 @@ Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Wahrung der Dateninte
 * **Muster auf konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster folgen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
 * **eVars in Analytics-Schemata begrenzen**: Normalerweise sollte ein Analytics-Schema nur über eine eVar verfügen, die als Identität gekennzeichnet ist. Wenn Sie mehr als einen eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
 * **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Das ausgewählte Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie sie nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identity-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu einem unerwünschten Profilausfall führen.
-* **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Null-Werte für nicht erforderliche Felder sind jedoch zulässig.
+* **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Null-Werte für nicht erforderliche Felder sind jedoch zulässig. Neue Zeichenfolgenfelder haben standardmäßig eine Mindestlänge von einem Zeichen.
 
 ## Nächste Schritte
 
