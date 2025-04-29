@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 51%
@@ -138,3 +138,4 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 ## Nächste Schritte
 
 Nach dem Lesen dieses Handbuchs wissen Sie, wie Sie Ablauf von Daten pseudonymer Profile anzeigen und erstellen können. Weitere Informationen zum Daten-Management für Experience Platform als Ganzes finden Sie im [Handbuch zu Best Practices für die Verwaltung von Datenlizenzen](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
