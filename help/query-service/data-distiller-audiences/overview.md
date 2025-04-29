@@ -2,10 +2,10 @@
 title: Erstellen von Zielgruppen mithilfe von SQL
 description: Erfahren Sie, wie Sie mit der SQL-Zielgruppenerweiterung in Adobe Experience Platform Data Distiller Zielgruppen mithilfe von SQL-Befehlen erstellen, verwalten und veröffentlichen können. Dieses Handbuch behandelt alle Aspekte des Zielgruppen-Lebenszyklus, einschließlich der Erstellung, Aktualisierung und Löschung von Profilen und der Verwendung datengesteuerter Zielgruppendefinitionen für dateibasierte Ziele.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 3%
 
 ---
 
@@ -100,6 +100,97 @@ Das folgende Beispiel zeigt, wie Sie mit dem Befehl `INSERT INTO` Profile zu ein
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Zielgruppendaten ersetzen (INSERT OVERWRITE) {#replace-audience}
+
+Verwenden Sie den Befehl `INSERT OVERWRITE INTO` , um alle vorhandenen Profile in einer Zielgruppe durch die Ergebnisse einer neuen SQL-Abfrage zu ersetzen. Dieser Befehl ist nützlich für die Verwaltung dynamischer Zielgruppensegmente, da Sie die Inhalte einer Zielgruppe in einem einzigen Schritt vollständig aktualisieren können.
+
+>[!AVAILABILITY]
+>
+>Der Befehl `INSERT OVERWRITE INTO` steht nur Kunden von Data Distiller zur Verfügung. Weitere Informationen zum Data Distiller-Add-on erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+
+Im Gegensatz zu [`INSERT INTO`](#add-profiles-to-audience), das der aktuellen Zielgruppe hinzugefügt wird, entfernt `INSERT OVERWRITE INTO` alle vorhandenen Zielgruppenmitglieder und fügt nur die von der Abfrage zurückgegebenen ein. Dies bietet mehr Kontrolle und Flexibilität bei der Verwaltung von Zielgruppen, die häufige oder vollständige Aktualisierungen erfordern.
+
+Verwenden Sie die folgende Syntaxvorlage, um eine Zielgruppe mit einem neuen Satz von Profilen zu überschreiben:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parameter**
+
+In der folgenden Tabelle werden die für den `INSERT OVERWRITE INTO`-Befehl erforderlichen Parameter erläutert:
+
+| Parameter | Beschreibung |
+|-----------|-------------|
+| `audience_name` | Der Name der mit dem `CREATE AUDIENCE`-Befehl erstellten Zielgruppe. |
+| `select_query` | Eine `SELECT` Anweisung, die die Profile definiert, die in die Zielgruppe aufgenommen werden sollen. |
+
+**Beispiel:**
+
+In diesem Beispiel wird die `audience_monthly_refresh` Zielgruppe mit den Ergebnissen der Abfrage vollständig überschrieben. Alle Profile, die nicht von der Abfrage zurückgegeben werden, werden aus der Zielgruppe entfernt.
+
+>[!NOTE]
+>
+>Der Zielgruppe darf nur ein Batch-Upload zugeordnet sein, damit Überschreibvorgänge ordnungsgemäß funktionieren.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Verhalten beim Überschreiben von Zielgruppen im Echtzeit-Kundenprofil
+
+Wenn Sie eine Zielgruppe überschreiben, wendet das Echtzeit-Kundenprofil die folgende Logik an, um die Profilmitgliedschaft zu aktualisieren:
+
+- Profile, die nur im neuen Stapel angezeigt werden, werden als eingegeben markiert.
+- Profile, die nur im vorherigen Batch vorhanden waren, werden als beendet markiert.
+- In beiden Stapeln vorhandene Profile bleiben unverändert (es wird kein Vorgang ausgeführt).
+
+Dadurch wird sichergestellt, dass Zielgruppen-Updates in nachgelagerten Systemen und Workflows korrekt widergespiegelt werden.
+
+**Beispielszenario**
+
+Wenn eine `A1` ursprünglich Folgendes enthält:
+
+| ID | NAME |
+|----|------|
+| A | Wagenheber |
+| B | John |
+| C | Martha |
+
+Und die Abfrage zum Überschreiben gibt zurück:
+
+| ID | NAME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Die aktualisierte Zielgruppe enthält dann:
+
+| ID | NAME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Profil B wird entfernt, Profil A wird aktualisiert, und Profil C bleibt unverändert.
+
+Wenn die Abfrage zum Überschreiben ein neues Profil enthält:
+
+| ID | NAME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+Dann lautet die endgültige Zielgruppe:
+
+| ID | NAME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Beispiel für eine RFM-Modell-Zielgruppe {#rfm-model-audience-example}
 
