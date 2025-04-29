@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
-ht-degree: 49%
+source-wordcount: '4596'
+ht-degree: 48%
 
 ---
 
@@ -125,7 +125,7 @@ Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Aktivieren nach der Zielgruppenauswertung"
->abstract="Die Aktivierung erfolgt unmittelbar nach Abschluss des täglichen Segmentierungsvorgangs. Dadurch wird sichergestellt, dass die aktuellen Profile exportiert werden."
+>abstract="<p>Die Aktivierung erfolgt unmittelbar nach Abschluss des täglichen Segmentierungsvorgangs. Dadurch wird sichergestellt, dass die aktuellen Profile exportiert werden.</p><p>Die Option zum Exportieren von Profilen nach der Zielgruppenbewertung ist für <i> wöchentliche und </i> Exporthäufigkeit nicht verfügbar.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export ei
 
    * **[!UICONTROL Einmal]**: plant einen einmaligen, bedarfsgesteuerten Export einer vollständigen Datei.
    * **[!UICONTROL Täglich]**: plant vollständige Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
+   * **[!UICONTROL Wöchentlich]**: Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Wochentag bis zum ausgewählten Enddatum.
+   * **[!UICONTROL Monatlich]** Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Datum des Monats bis zum ausgewählten Enddatum. Bei Monaten mit weniger als 30 oder 31 Tagen erfolgt der Export am letzten Tag des Monats.
 
 2. Verwenden Sie den Umschalter **[!UICONTROL Zeit]**, um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder zu einem bestimmten, geplanten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
 
@@ -187,6 +189,7 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]**, um einen Export 
 
    * **[!UICONTROL Täglich]**: plant inkrementelle Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
    * **[!UICONTROL Stündlich]**: plant inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
+
 
 2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
 
