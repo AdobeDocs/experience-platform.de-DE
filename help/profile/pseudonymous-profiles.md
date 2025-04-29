@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 68%
+source-wordcount: '1245'
+ht-degree: 51%
 
 ---
 
@@ -26,7 +26,7 @@ In Adobe Experience Platform können Sie Datenablaufzeiten für pseudonyme Profi
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Ablaufen pseudonymer Profildaten"
->abstract="Der Ablauf pseudonymer Profildaten entspricht der Anzahl der Tage, für die ein pseudonymes Profil in Adobe Experience Platform verbleibt, bevor es entfernt wird."
+>abstract="Ablauf von Daten pseudonymer Profile gibt die Anzahl der Tage an, die ein pseudonymes Profil in Adobe Experience Platform verbleibt, bevor es entfernt wird. Dieser Wert muss auf mindestens 1 gesetzt werden. Beachten Sie, dass es bis zu drei Tage dauern kann, bis das pseudonyme Profil entfernt wird."
 
 Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folgenden Bedingungen erfüllt:
 
@@ -37,17 +37,36 @@ Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folg
 
 ## Zugriff {#access}
 
-Ablauf von Daten pseudonymer Profile kann nicht über die Experience Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um diese Funktion zu aktivieren. Bitte geben Sie bei der Kontaktaufnahme mit dem Support die folgenden Informationen an:
+>[!AVAILABILITY]
+>
+>Um auf diese Funktion zugreifen zu können, benötigen Sie die folgenden Berechtigungen:
+>
+>- Profileinstellungen verwalten
+>- Anzeigen von Profilen
+>
+>Mit **Berechtigung** Profileinstellungen verwalten“ können Sie die Datenabläufe festlegen, während Sie mit der Berechtigung **Profile anzeigen** die Datenabläufe anzeigen können.
+>
+>Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](../access-control/home.md#permissions).
 
-- Die Identity-Namespaces, die für das Löschen eines pseudonymen Profils berücksichtigt werden sollen.
-   - Beispiel: Nur `ECID`, nur `AAID` oder eine Kombination aus `ECID` und `AAID`.
-- Die Wartezeit, bevor ein pseudonymes Profil gelöscht wird. Die Standardempfehlung für Kunden beträgt 14 Tage. Dieser Wert kann jedoch je nach Anwendungsfall unterschiedlich sein.
+Um Ablauf von Daten pseudonymer Profile zu Ihrer Organisation hinzuzufügen, gehen Sie zum Profil-Dashboard und wählen Sie **[!UICONTROL Einstellungen]** aus.
+
+![Die Schaltfläche „Einstellungen“ im Profil-Dashboard ist hervorgehoben.](./images/pseudonymous-profiles/profile-settings.png)
+
+Das [!UICONTROL Profileinstellungen] wird angezeigt. In diesem Popover können Sie die Anzahl der Tage für den Ablauf von Daten pseudonymer Profile sowie den Identity-Namespace festlegen, der für den Ablauf von Daten verwendet wird.
+
+Bei Produktions-Sandboxes beträgt der standardmäßige Ablauf von Daten pseudonymer Profile 14 Tage, wobei der Mindestzeitraum 1 Tag und der Höchstzeitraum 365 Tage beträgt. Bei Entwicklungs-Sandboxes beträgt der standardmäßige Ablauf von Daten pseudonymer Profile 3 Tage, wobei der Mindestzeitraum 1 Tag und der Höchstzeitraum 365 Tage beträgt.
+
+Wählen Sie **[!UICONTROL Anwenden]**, um Ihre Einstellungen für den Datenablauf zu speichern.
+
+![Das Popover zum Hinzufügen von Ablauf von Daten pseudonymer Profile zu den Profilen Ihres Unternehmens. Die Schaltfläche „Anwenden“ ist hervorgehoben.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## Häufig gestellte Fragen {#faq}
 
 Im folgenden Abschnitt finden Sie häufig gestellte Fragen zu Ablauf von Daten pseudonymer Profile:
 
 ### Wie unterscheidet sich Ablauf von Daten pseudonymer Profile vom Ablauf von Erlebnisereignisdaten?
+
++++ Antwort
 
 Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten sind komplementäre Funktionen.
 
@@ -69,7 +88,11 @@ Ablauf von Daten pseudonymer Profile entfernt Ereignis- **und** Profildatensätz
 
 Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilklassendaten. Die Profilklassendaten werden nur entfernt, wenn alle Daten über **alle** Datensätze hinweg entfernt werden und es **keine** Profilklassendatensätze gibt, die für das Profil verbleiben.
 
++++
+
 ### Wie kann Ablauf von Daten pseudonymer Profile in Verbindung mit Ablauf von Erlebnisereignisdaten verwendet werden?
+
++++ Antwort
 
 Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können sich gegenseitig ergänzen.
 
@@ -77,14 +100,22 @@ Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen ein
 
 Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte Ihrer bekannten Benutzerdaten festlegen und den Ablauf von Daten pseudonymer Profile auf eine viel kürzere Dauer festlegen, um die Auswirkungen pseudonymer Profile auf die Einhaltung Ihrer Experience Platform-Lizenzverträge zu begrenzen.
 
-### Wann sollten Benutzer Ablauf von Daten pseudonymer Profile verwenden?
++++
+
+### Für welche Arten von Anwendungsfällen sollte ich Ablauf von Daten pseudonymer Profile verwenden?
+
++++ Antwort
 
 - Wenn Sie Web SDK verwenden, um Daten direkt an Experience Platform zu senden.
 - Wenn Sie eine Website haben, die nicht-authentifizierte Kundinnen und Kunden en masse bedient.
 - Wenn Sie in Ihren Datensätzen eine übermäßige Anzahl an Profilen haben und bestätigt haben, dass diese auf Identity-Namespaces zurückzuführen sind, die auf anonymen Cookies basieren.
    - Um dies zu bestimmen, sollten Sie den Bericht zur Überschneidung von Identity-Namespaces verwenden. Weitere Informationen zu diesem Bericht finden Sie im [Berichtabschnitt zur Identitätsüberschneidung](./api/preview-sample-status.md#identity-overlap-report) im Handbuch für die Vorschau der Beispiel-Status-API.
 
++++
+
 ### Welche Einschränkungen sollten Sie beachten, bevor Sie Ablauf von Daten pseudonymer Profile verwenden?
+
++++ Antwort
 
 - Der Ablauf von Daten pseudonymer Profile erfolgt auf **Sandbox**-Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
 - Wenn Sie diese Funktion aktiviert haben, wird das Löschen von Profilen **dauerhaft**. Es gibt **keine** Möglichkeit, die gelöschten Profile zurückzusetzen oder wiederherzustellen.
@@ -93,7 +124,17 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
 - Ablauf von Daten pseudonymer Profile **nicht** sofort ausgeführt und kann bis zu drei Tage dauern, bis sie verarbeitet werden.
 
++++
+
 ### Wie interagiert Ablauf von Daten pseudonymer Profile mit Leitplanken für Identity Service-Daten?
+
++++ Antwort
 
 - Das Identity Service-[ „first-in, first-out“-Löschsystem ](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
 - Wenn dieses Löschverhalten dazu führt, dass ein Nur-ECID-Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, wird dieses Profil nach Ablauf von Daten pseudonymer Profile aus dem Profilspeicher gelöscht.
+
++++
+
+## Nächste Schritte
+
+Nach dem Lesen dieses Handbuchs wissen Sie, wie Sie Ablauf von Daten pseudonymer Profile anzeigen und erstellen können. Weitere Informationen zum Daten-Management für Experience Platform als Ganzes finden Sie im [Handbuch zu Best Practices für die Verwaltung von Datenlizenzen](../landing/license-usage-and-guardrails/data-management-best-practices.md).
