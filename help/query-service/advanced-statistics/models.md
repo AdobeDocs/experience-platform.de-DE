@@ -3,9 +3,9 @@ title: Modelle
 description: Modell-Lebenszyklusverwaltung mit der Data Distiller SQL-Erweiterung. Erfahren Sie, wie Sie erweiterte statistische Modelle mithilfe von SQL erstellen, trainieren und verwalten, einschließlich wichtiger Prozesse wie Modellversionierung, -auswertung und -vorhersage, um aus Ihren Daten umsetzbare Einblicke zu gewinnen.
 role: Developer
 exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
-source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
+source-git-commit: 09129d9d19816b4d93b4979305f4ad532e5ffde4
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1645'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
+>Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie beim Adobe-Support.
 
-Query Service unterstützt jetzt die Kernprozesse des Erstellens und Bereitstellens eines Modells. Sie können SQL verwenden, um das Modell mithilfe Ihrer Daten zu trainieren, seine Genauigkeit zu bewerten und dann ein Trainingsmodell anzuwenden, um Vorhersagen für neue Daten zu treffen. Anschließend können Sie das Modell verwenden, um aus Ihren früheren Daten zu generalisieren und fundierte Entscheidungen über reale Szenarien zu treffen.
+Query Service unterstützt jetzt die Kernprozesse des Erstellens und Bereitstellens eines Modells. Sie können SQL verwenden, um das Modell unter Verwendung Ihrer Daten zu trainieren, seine Genauigkeit zu bewerten und dann das trainierte Modell verwenden, um Vorhersagen für neue Daten zu treffen. Anschließend können Sie das Modell verwenden, um aus Ihren früheren Daten zu generalisieren und fundierte Entscheidungen über reale Szenarien zu treffen.
 
 Die drei Schritte im Modell-Lebenszyklus zum Generieren umsetzbarer Einblicke sind:
 
@@ -75,6 +75,10 @@ Um Ihnen dabei zu helfen, die wichtigsten Komponenten und Konfigurationen im Pro
 
 Verwenden Sie SQL, um auf den für das Training verwendeten Datensatz zu verweisen.
 
+>[!TIP]
+>
+>Eine vollständige Referenz zur `TRANSFORM`-Klausel, einschließlich unterstützter Funktionen und der Verwendung in `CREATE MODEL` und `CREATE TABLE`, finden Sie in der [`TRANSFORM`-Klausel in der SQL-Syntaxdokumentation](../sql/syntax.md#transform).
+
 ## Modell aktualisieren {#update}
 
 Erfahren Sie, wie Sie ein vorhandenes Modell für maschinelles Lernen aktualisieren können, indem Sie neue technische Funktionstransformationen anwenden und Optionen wie den Algorithmustyp und die Beschriftungsspalte konfigurieren. Bei jeder Aktualisierung wird eine neue Version des Modells erstellt, die ab der letzten Version erhöht wird. Dadurch wird sichergestellt, dass Änderungen nachverfolgt werden und das Modell in zukünftigen Evaluierungs- oder Prognoseschritten wiederverwendet werden kann.
@@ -104,6 +108,80 @@ In den folgenden Anmerkungen werden die wichtigsten Komponenten und Optionen im 
 - `UPDATE model <model_alias>`: Der Befehl update übernimmt die Versionierung und erstellt eine neue Modellversion, die gegenüber der letzten Version erhöht wurde.
 - `version`: Ein optionales Keyword, das nur während Aktualisierungen verwendet wird, um explizit anzugeben, dass eine neue Version erstellt werden soll. Wird dies weggelassen, erhöht das System die Version automatisch.
 
+### Anzeigen einer Vorschau und Beibehalten transformierter Funktionen {#preview-transform-output}
+
+Verwenden Sie die `TRANSFORM`-Klausel in `CREATE TABLE`- und `CREATE TEMP TABLE`-Anweisungen, um die Ausgabe von Merkmalstransformationen vor dem Modelltraining in der Vorschau anzuzeigen und beizubehalten. Diese Verbesserung bietet Einblick in die Art und Weise, wie Umwandlungsfunktionen (wie Kodierung, Tokenisierung und Vektor-Assembler) auf Ihren Datensatz angewendet werden.
+
+Durch Materialisierung umgewandelter Daten in eine eigenständige Tabelle können Sie Zwischenelemente untersuchen, die Verarbeitungslogik validieren und die Funktionsqualität sicherstellen, bevor Sie ein Modell erstellen. Dies verbessert die Transparenz in der gesamten Pipeline für maschinelles Lernen und unterstützt eine fundiertere Entscheidungsfindung während der Modellentwicklung.
+
+#### Aufbau {#syntax}
+
+Verwenden Sie die `TRANSFORM`-Klausel in einer `CREATE TABLE`- oder `CREATE TEMP TABLE`-Anweisung, wie unten dargestellt:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+Oder:
+
+```sql
+CREATE TEMP TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+**Beispiel**
+
+Erstellen einer Tabelle mit einfachen Transformationen:
+
+```sql
+CREATE TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review;
+```
+
+Erstellen einer temporären Tabelle mithilfe zusätzlicher Konstruktionsschritte für Funktionen:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+Fragen Sie dann die Ausgabe ab:
+
+```sql
+SELECT * FROM ctas_transform_table LIMIT 1;
+```
+
+#### Wichtige Überlegungen {#considerations}
+
+Diese Funktion verbessert die Transparenz und unterstützt die Funktionsüberprüfung. Es gibt jedoch wichtige Einschränkungen, die zu beachten sind, wenn die `TRANSFORM`-Klausel außerhalb der Modellerstellung verwendet wird.
+
+- **Vektorausgaben**: Wenn die Transformation vektorähnliche Ausgaben erzeugt, werden diese automatisch in Arrays konvertiert.
+- **Einschränkung der Wiederverwendung**: Tabellen, die mit `TRANSFORM` erstellt wurden, können nur während der Tabellenerstellung Umwandlungen anwenden. Neue Datenstapel, die mit `INSERT INTO` eingefügt wurden, werden **nicht automatisch transformiert**. Um dieselbe Umwandlungslogik auf neue Daten anzuwenden, müssen Sie die Tabelle mit einer New `CREATE TABLE AS SELECT` (CTAS)-Anweisung neu erstellen.
+- **Beschränkung der Wiederverwendung von**: Mit `TRANSFORM` erstellte Tabellen können nicht direkt in `CREATE MODEL` Anweisungen verwendet werden. Sie müssen die `TRANSFORM` bei der Modellerstellung neu definieren. Transformationen, die Vektorausgaben erzeugen, werden beim Modell-Training nicht unterstützt. Weitere Informationen finden Sie unter [Ausgabedatentypen für die Funktionstransformation](./feature-transformation.md#available-transformations).
+
+>[!NOTE]
+>
+>Diese Funktion ist für die Überprüfung und Validierung konzipiert. Sie ist kein Ersatz für wiederverwendbare Pipeline-Logik. Alle Umwandlungen, die für die Modelleingabe vorgesehen sind, müssen im Schritt zur Modellerstellung explizit neu definiert werden.
 
 ## Evaluieren von Modellen {#evaluate-model}
 
@@ -114,7 +192,7 @@ SELECT *
 FROM   model_evaluate(model-alias, version-number,SELECT col1,
        col2,
        label-COLUMN
-FROM   test -dataset)
+FROM   test_dataset)
 ```
 
 Die `model_evaluate` Funktion akzeptiert `model-alias` als erstes Argument und eine flexible `SELECT` als zweites Argument. Query Service führt zunächst die `SELECT` aus und ordnet die Ergebnisse der `model_evaluate` Adobe Defined Function (ADF) zu. Das System erwartet, dass die Spaltennamen und Datentypen im Ergebnis der `SELECT`-Anweisung mit denen übereinstimmen, die im Trainings-Schritt verwendet werden. Diese Spaltennamen und Datentypen werden als Testdaten und Kennzeichnungsdaten zur Auswertung behandelt.
@@ -125,21 +203,62 @@ Die `model_evaluate` Funktion akzeptiert `model-alias` als erstes Argument und e
 
 ## Vorhersagen {#predict}
 
-Verwenden Sie anschließend das Keyword `model_predict` , um das angegebene Modell und die angegebene Version auf einen Datensatz anzuwenden und Prognosen für die ausgewählten Spalten zu generieren. Die folgende SQL-Anweisung zeigt diesen Prozess und zeigt, wie mithilfe des Alias und der Version des Modells Ergebnisse prognostiziert werden können.
-
-```sql
-SELECT *
-FROM   model_predict(model-alias, version-number,SELECT col1,
-       col2,
-       label-COLUMN
-FROM   dataset)
-```
-
-`model_predict` akzeptiert als erstes Argument den Modellalias und als zweites Argument eine flexible `SELECT`. Query Service führt zunächst die `SELECT` aus und ordnet die Ergebnisse dem `model_predict` ADF zu. Das System erwartet, dass die Spaltennamen und Datentypen im Ergebnis der `SELECT`-Anweisung mit denen aus dem Trainings-Schritt übereinstimmen. Diese Daten werden dann für die Bewertung und Erstellung von Prognosen verwendet.
-
 >[!IMPORTANT]
 >
->Bei der Auswertung (`model_evaluate`) und Vorhersage (`model_predict`) werden die zum Zeitpunkt des Trainings durchgeführten Transformationen verwendet.
+>Die verbesserte Spaltenauswahl und der Alias für `model_predict` werden durch ein Feature Flag gesteuert. Standardmäßig sind Zwischenfelder wie `probability` und `rawPrediction` nicht in der Prognoseausgabe enthalten.\
+>Um den Zugriff auf diese Zwischenfelder zu aktivieren, führen Sie den folgenden Befehl aus, bevor Sie `model_predict` ausführen:
+>
+>`set advanced_statistics_show_hidden_fields=true;`
+
+Verwenden Sie das Keyword `model_predict` , um das angegebene Modell und die angegebene Version auf einen Datensatz anzuwenden und Prognosen zu generieren. Sie können alle Ausgabespalten auswählen, bestimmte Spalten auswählen oder Aliase zuweisen, um die Ausgabeklärheit zu verbessern.
+
+Standardmäßig werden nur Basisspalten und die endgültige Prognose zurückgegeben, es sei denn, das Feature Flag ist aktiviert.
+
+```sql
+SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
+```
+
+### Bestimmte Ausgabefelder auswählen {#select-specific-output-fields}
+
+Wenn das Feature Flag aktiviert ist, können Sie eine Teilmenge von Feldern aus der `model_predict` Ausgabe abrufen. Verwenden Sie diese Option, um Zwischenergebnisse wie Prognosewahrscheinlichkeiten, Rohprognosewerte und Basisspalten aus der Eingabeabfrage abzurufen.
+
+**1. Fall: Gibt alle verfügbaren Ausgabefelder zurück**
+
+```sql
+SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**2. Fall: Gibt die ausgewählten Spalten zurück**
+
+```sql
+SELECT a, b, c, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**3. Fall: Gibt die ausgewählten Spalten mit Aliassen zurück**
+
+```sql
+SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+In jedem Fall steuert die äußere `SELECT`, welche Ergebnisfelder zurückgegeben werden. Dazu gehören Basisfelder aus der Eingabeabfrage sowie Prognoseausgaben wie `probability`, `rawPrediction` und `predictionCol`.
+
+### Beibehalten von Prognosen mithilfe von CREATE TABLE oder INSERT INTO
+
+Sie können Prognosen entweder mit „CREATE TABLE AS SELECT“ oder „INSERT INTO SELECT“ beibehalten, einschließlich Prognoseausgaben bei Bedarf.
+
+**Beispiel: Tabelle mit allen Prognoseausgabefeldern erstellen**
+
+```sql
+CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Beispiel: Ausgewählte Ausgabefelder mit Aliassen einfügen**
+
+```sql
+INSERT INTO scored_data SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+Dies bietet die Flexibilität, nur die relevanten Prognoseausgabefelder und Basisspalten für nachgelagerte Analysen oder Berichte auszuwählen und beizubehalten.
 
 ## Auswerten und Verwalten von Modellen
 

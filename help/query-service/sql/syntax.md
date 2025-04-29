@@ -4,10 +4,10 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die vom Abfrage-Service von Adobe Experience Platform unterstützte SQL-Syntax beschrieben.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
+source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
 workflow-type: tm+mt
-source-wordcount: '4265'
-ht-degree: 5%
+source-wordcount: '4623'
+ht-degree: 4%
 
 ---
 
@@ -192,32 +192,141 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-Die folgende Syntax definiert eine `CREATE TABLE AS SELECT`-Abfrage (CTAS):
+Verwenden Sie den Befehl `CREATE TABLE AS SELECT` (CTAS), um die Ergebnisse einer `SELECT` Abfrage in eine neue Tabelle zu materialisieren. Dies ist nützlich, um umgewandelte Datensätze zu erstellen, Aggregationen durchzuführen oder eine Vorschau von durch Funktionen erstellten Daten anzuzeigen, bevor sie in einem Modell verwendet werden.
+
+Wenn Sie bereit sind, ein Modell mit umgewandelten KEs zu trainieren, finden Sie in der [Models-Dokumentation](../advanced-statistics/models.md) Anleitungen zur Verwendung von `CREATE MODEL` mit der `TRANSFORM`.
+
+Sie können optional eine `TRANSFORM`-Klausel einfügen, um eine oder mehrere Funktionen des Feature Engineering direkt in der CTAS-Anweisung anzuwenden. Verwenden Sie `TRANSFORM`, um die Ergebnisse Ihrer Umwandlungslogik vor dem Modell-Training zu überprüfen.
+
+Diese Syntax gilt sowohl für permanente als auch für temporäre Tabellen.
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
+CREATE TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
+```
+
+```sql
+CREATE TEMP TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
 ```
 
 | Parameter | Beschreibung |
 | ----- | ----- |
-| `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der durch die CTAS-Abfrage erstellt wurde. |
-| `rowvalidation` | (Optional) Gibt an, ob der Benutzer eine Validierung auf Zeilenebene für jeden neuen Batch wünscht, der für den neu erstellten Datensatz aufgenommen wird. Der Standardwert lautet `true`. |
-| `label` | Wenn Sie einen Datensatz mit einer CTAS-Abfrage erstellen, verwenden Sie diese Kennzeichnung mit dem Wert `profile` , um Ihren Datensatz als für Profil aktiviert zu kennzeichnen. Das bedeutet, dass Ihr Datensatz beim Erstellen automatisch für das Profil markiert wird. Weitere Informationen zur Verwendung von `label` finden Sie im Dokument Abgeleitete Attributerweiterung . |
-| `select_query` | Eine `SELECT`. Die Syntax der `SELECT` Abfrage finden Sie im Abschnitt [SELECT-Abfragen](#select-queries). |
-
-**Beispiel**
-
-```sql
-CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-```
+| `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie die neue Tabelle mit einem vorhandenen XDM-Schema verknüpfen möchten. |
+| `rowvalidation` | (Optional) Aktiviert die Validierung auf Zeilenebene für jeden Batch, der in den Datensatz aufgenommen wird. Der Standardwert ist „true“. |
+| `label` | (Optional) Verwenden Sie den Wert `PROFILE` , um den Datensatz als für die Profilaufnahme aktiviert zu kennzeichnen. |
+| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der ](#transform) zur [`TRANSFORM`-Klausel . |
+| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie ](#select-queries) Abschnitt [`SELECT` . |
 
 >[!NOTE]
 >
->Die `SELECT`-Anweisung muss einen Alias für die Aggregatfunktionen wie `COUNT`, `SUM`, `MIN` usw. aufweisen. Außerdem kann die `SELECT`-Anweisung mit oder ohne Klammern () bereitgestellt werden. Sie können eine `SNAPSHOT`-Klausel bereitstellen, um inkrementelle Deltas in die Zieltabelle zu lesen.
+>Die `SELECT`-Anweisung muss einen Alias für Aggregatfunktionen wie `COUNT`, `SUM` oder `MIN` enthalten. Sie können die `SELECT` Abfrage mit oder ohne Klammern bereitstellen. Dies gilt unabhängig davon, ob die `TRANSFORM` verwendet wird oder nicht.
+
+**Beispiele**
+
+Ein einfaches Beispiel mit einer `TRANSFORM`Klausel, um eine Vorschau einiger angepasster Funktionen anzuzeigen:
+
+```sql
+CREATE TABLE ctas_transform_table_vp14 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+Ein erweitertes Beispiel mit mehreren Umwandlungsschritten:
+
+```sql
+CREATE TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+Beispiel für eine temporäre Tabelle:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+#### Einschränkungen und Verhalten {#limitations-and-behavior}
+
+Beachten Sie die folgenden Einschränkungen bei der Verwendung der `TRANSFORM`-Klausel mit `CREATE TABLE` oder `CREATE TEMP TABLE`:
+
+- Wenn eine Transformationsfunktion eine Vektorausgabe erzeugt, wird sie automatisch in ein Array konvertiert.
+- Daher können mit `TRANSFORM` erstellte Tabellen nicht direkt in `CREATE MODEL` Anweisungen verwendet werden. Sie müssen die Transformationslogik während der Modellerstellung neu definieren, um die entsprechenden Merkmalsvektoren zu erzeugen.
+- Umwandlungen werden nur während der Tabellenerstellung angewendet. Neue Daten, die mit `INSERT INTO` in die Tabelle eingefügt werden, werden **nicht automatisch transformiert**. Um Umwandlungen auf neue Daten anzuwenden, müssen Sie die Tabelle mithilfe von `CREATE TABLE AS SELECT` mit der `TRANSFORM`-Klausel neu erstellen.
+- Diese Methode dient zur Vorschau und Validierung von Transformationen zu einem bestimmten Zeitpunkt und nicht zum Erstellen wiederverwendbarer Transformations-Pipelines.
+
+>[!NOTE]
+>
+>Weitere Informationen zu den verfügbaren Transformationsfunktionen und ihren Ausgabetypen finden Sie unter [Ausgabedatentypen für die Funktionstransformation](../advanced-statistics/feature-transformation.md#available-transformations).
+
+
+### TRANSFORM-Klausel {#transform}
+
+Verwenden Sie die `TRANSFORM`-Klausel, um vor dem Modell-Training oder der Tabellenerstellung eine oder mehrere Feature Engineering-Funktionen auf einen Datensatz anzuwenden. Mit dieser Klausel können Sie die genaue Form Ihrer Eingabefunktionen in der Vorschau anzeigen, überprüfen oder definieren.
+
+Die `TRANSFORM`-Klausel kann in den folgenden Anweisungen verwendet werden:
+
+- `CREATE MODEL`
+- `CREATE TABLE`
+- `CREATE TEMP TABLE`
+
+Detaillierte Anweisungen zur Verwendung [ ERSTELLEN ](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
+
+Informationen zur Verwendung mit `CREATE TABLE` finden Sie [ Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
+
+#### MODELLBEISPIEL ERSTELLEN
+
+```sql
+CREATE MODEL review_model
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) AS ohe_add_comments,
+  tokenizer(comments) AS token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) AS stp_token,
+  ngram(stp_token, 3) AS ngram_token,
+  tf_idf(ngram_token, 20) AS ngram_idf,
+  count_vectorizer(stp_token, 13) AS cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) AS cmts_idf,
+  vector_assembler(array(cmts_idf, viewsgot, ohe_add_comments, ngram_idf, cnt_vec_comments)) AS features
+)
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='reviews')
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+#### Einschränkungen {#limitations}
+
+Die folgenden Einschränkungen gelten für die Verwendung von `TRANSFORM` mit `CREATE TABLE`. `CREATE TABLE AS SELECT` Abschnitt Einschränkungen und Verhalten finden Sie eine detaillierte Erklärung darüber, wie umgewandelte Daten gespeichert werden, wie Vektorausgaben verarbeitet werden und warum die Ergebnisse nicht direkt in Modell-Trainings-Workflows wiederverwendet werden können.
+
+- Vektorausgaben werden automatisch in Arrays umgewandelt, die nicht direkt in `CREATE MODEL` verwendet werden können.
+- Die Umwandlungslogik wird nicht als Metadaten beibehalten und kann nicht stapelweise wiederverwendet werden.
 
 ## INSERT INTO
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 24%
+source-wordcount: '2767'
+ht-degree: 19%
 
 ---
 
@@ -104,6 +104,50 @@ Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatis
 
 ![Der Arbeitsbereich des Abfrage-Editors.](../images/ui/overview/query-editor.png)
 
+### Abfrageergebnisse herunterladen {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Download-Funktionen stehen nur Kunden mit dem Add-on Data Distiller zur Verfügung. Weitere Informationen zu Data Distiller erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+
+Sie können jetzt Abfrageergebnisse direkt über die Benutzeroberfläche des Abfrage-Editors herunterladen. Nach erfolgreicher Ausführung der Abfrage können Sie die Ausgabe im CSV-, XLSX- oder JSON-Dateiformat herunterladen. Diese Funktion optimiert die Workflows für Marketing- und Analyse-Teams, indem sie den sofortigen Zugriff auf Abfrageergebnisse für Offline-Analysen, Berichte und Excel-basierte Prozesse ermöglicht.
+
+Um Ihre Abfrageergebnisse herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** in der rechten oberen Ecke der Registerkarte Abfrage-Editor **[!UICONTROL Ergebnis]** aus. Wählen Sie dann **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** oder **[!UICONTROL JSON]** aus dem Dropdown-Menü aus. Die Datei wird automatisch auf Ihren lokalen Computer heruntergeladen.
+
+>[!NOTE]
+>
+>Die Schaltfläche **[!UICONTROL Herunterladen]** wird nur angezeigt, wenn eine Abfrage Ergebnisse zurückgibt. Wenn keine Datensätze zurückgegeben werden, wird auf der **[!UICONTROL Ergebnis]**-Registerkarte die Meldung „Keine Ergebnisse“ angezeigt und die Download-Option ist deaktiviert.
+
+![Die Registerkarte „Ergebnisse“ des Abfrage-Editors mit Hervorhebung der Option „Herunterladen“ und des Dropdown-Menüs.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Beim Öffnen einer CSV-Datei in Excel wird möglicherweise der folgende Warnhinweis angezeigt: <br>Möglicher Datenverlust. Einige Funktionen gehen möglicherweise verloren, wenn Sie diese Arbeitsmappe im kommagetrennten CSV-Format speichern. Um diese Funktionen beizubehalten, speichern Sie sie in einem Excel-Dateiformat.“<br>Beachten Sie außerdem, dass die Formatierung von Datum und Uhrzeit je nach Dateityp variieren kann. CSV-Dateien behalten das in den Abfrageergebnissen angezeigte Format bei, während XLSX-Dateien in Excel möglicherweise automatisch lokalisierte Formatierungen anwenden.
+
+### Ergebnisse im Vollbildmodus anzeigen {#view-results}
+
+Wählen Sie nach dem Ausführen einer erfolgreichen Abfrage **[!UICONTROL Ergebnisse anzeigen]** auf der Registerkarte **[!UICONTROL Ergebnis]** aus, um eine tabellarische Vollbildansicht Ihrer Ergebnisse zu öffnen.
+
+Die Vollbildansicht zeigt die Ausgabe in einem in der Größe veränderbaren Raster an, was die Überprüfung großer Datensätze und das spaltenübergreifende Scannen erleichtert. Dieser Vorschaumodus ist besonders hilfreich, wenn Sie große Tabellen analysieren oder Details auf Zeilenebene überprüfen.
+
+>[!NOTE]
+>
+>Die Vorschau ist schreibgeschützt und ändert weder Ihre Abfrage noch Ihren Datensatz.
+
+![Das Dialogfeld für die Vollbildvorschau mit ausgewählter Option „Ergebnisse anzeigen“](../images/ui/overview/view-results-fullscreen.png)
+
+### Ergebnisse kopieren {#copy-results}
+
+Verwenden Sie die erweiterte Kopierfunktion im Abfrage-Editor, um Abfrageergebnisse schnell als kommagetrennte Werte (CSV) zu kopieren. Einfaches Einfügen der kopierten Daten in Tabellenkalkulationsanwendungen wie Excel zur weiteren Analyse. Diese Funktion verbessert die Lesbarkeit, behält die Formatierung bei und optimiert die Validierungs- und Reporting-Workflows, ohne auf Tools von Drittanbietern angewiesen zu sein.
+
+Sie können Abfrageergebnisse entweder über die Registerkarte [!UICONTROL Ergebnis] oder über die Vollbildergebnisvorschau kopieren. Wählen Sie auf der **[!UICONTROL Ergebnis]**-Registerkarte das Kopiersymbol (![Kopiersymbol) aus.](../../images/icons/copy.png)), um alle Abfrageergebnisse in die Zwischenablage zu kopieren. Wählen Sie im Abfrage-Editor auf der Registerkarte Ergebnisse einzelne Zeilen aus oder verwenden Sie die Kontrollkästchen-Spaltenüberschrift, um alle Zeilen auszuwählen. Wählen Sie eine einzelne Zeile aus, um das Kopiersymbol zu aktivieren.
+
+![Die Registerkarte „Ergebnisse“ des Abfrage-Editors mit hervorgehobenem Kopiersymbol.](../images/ui/overview/query-editor-copy-icon.png)
+
+Wählen Sie alternativ **[!UICONTROL Ergebnisse anzeigen]** aus, um die Vollbildvorschau zu öffnen. Wählen Sie in diesem Dialogfeld einzelne Zeilen aus oder verwenden Sie das Kontrollkästchen in der oberen linken Ecke, um alle Zeilen auszuwählen, und klicken Sie dann auf das Symbol „Kopieren“ (![A copy icon).](../../images/icons/copy.png)), um die ausgewählten Daten zu kopieren.
+
+![Das Dialogfeld für die Vollbildvorschau mit ausgewählten Ergebniszeilen und hervorgehobenem Kopiersymbol.](../images/ui/overview/results-copy.png)
+
 ## Geplante Abfragen {#scheduled-queries}
 
 Abfragen, die bereits als Vorlage gespeichert wurden, können so geplant werden, dass sie regelmäßig ausgeführt werden. Bei der Planung einer Abfrage können Sie die Häufigkeit der Ausführungen, das Start- und Enddatum, den Wochentag, an dem die geplante Abfrage ausgeführt wird, sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll. Abfragezeitpläne werden mit dem Abfrage-Editor festgelegt.
@@ -113,8 +157,6 @@ Informationen zum Planen einer Abfrage über die Benutzeroberfläche finden Sie 
 Nachdem eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen auf der Registerkarte [!UICONTROL Geplante Abfragen] angezeigt. Ausführliche Informationen zur Abfrage, zu den Ausführungen, dem Ersteller und dem Zeitpunkt finden Sie, wenn Sie eine geplante Abfrage aus der Liste auswählen.
 
 ![Der Arbeitsbereich „Abfragen“ mit hervorgehobener Registerkarte „Geplante Abfragen“, auf der Zeilen von Abfragezeitplänen angezeigt werden.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Spalte | Beschreibung |
 | --- | --- |
