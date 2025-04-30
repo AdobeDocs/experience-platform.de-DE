@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 76%
+source-wordcount: '1292'
+ht-degree: 75%
 
 ---
 
@@ -203,7 +203,8 @@ ht-degree: 76%
       * [Gainsight-Erweiterung](./catalog/personalization/gainsight.md)
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
       * [Marketo Web-Personalisierungserweiterung](./catalog/personalization/marketo-web-personalization.md)
-      * [Pega Customer Decision Hub-Verbindung](./catalog/personalization/pega.md)
+      * [Pega CDH RealTime Audience-Verbindung](./catalog/personalization/pega.md)
+      * [(V2) Pega CDH RealTime Audience-Verbindung](./catalog/personalization/pega-v2.md)
       * [Pega-Profilverbindung](./catalog/personalization/pega-profile.md)
    * Social-Media-Ziele{#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)

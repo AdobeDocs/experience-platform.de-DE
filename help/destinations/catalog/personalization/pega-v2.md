@@ -1,7 +1,7 @@
 ---
 title: (V2) Pega CDH RealTime Audience-Verbindung
 description: Verwenden Sie das Echtzeit-Zielgruppenziel Pega Customer Decision Hub in Adobe Experience Platform, um Profilattribute und Daten zur Zielgruppenzugehörigkeit zur nächstbesten Entscheidungsoption an Pega Customer Decision Hub zu senden.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 16%
@@ -115,17 +115,21 @@ Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
 Bei einer erfolgreichen Aktualisierung der Zielgruppenzugehörigkeit für ein Profil würden die Zielgruppenkennung, der Name und die Status in den Datenspeicher für die Pega-Marketing-Zielgruppenzugehörigkeit eingefügt. Die Mitgliedschaftsdaten werden mit einem Kunden verknüpft, der in [!DNL Pega Customer Decision Hub] das Kundenprofil Designer verwendet, wie unten dargestellt.
+
 ![Abbildung des Bildschirms der Benutzeroberfläche, mit dem Sie mithilfe des Kundenprofils Designer Daten zur Zielgruppenzugehörigkeit von Adobe mit dem Kunden verknüpfen können](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 Die Daten zur Zielgruppenzugehörigkeit werden in den Pega-Designer-Interaktionsrichtlinien mit der nächsten besten Aktion für die Entscheidungsfindung mit der nächsten besten Aktion verwendet, wie unten dargestellt.
-![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie Felder für die Zielgruppenzugehörigkeit als Bedingungen in den Interaktionsrichtlinien von Pega Next-Best-Action Designer hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie Felder für die Zielgruppenzugehörigkeit als Bedingungen in den Interaktionsrichtlinien von Pega Next-Best-Action Designer hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 Die Datenfelder für die Kundenzielgruppenzugehörigkeit werden wie unten dargestellt als Prädiktoren in adaptiven Modellen hinzugefügt.
+
 ![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie mithilfe von Prediction Studio Zielgruppenzugehörigkeitsfelder als Prädikatoren in adaptiven Modellen hinzufügen können](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Weitere Informationen finden Sie in der folgenden [!DNL Pega]-Dokumentation:
+
 * [Einrichten einer OAuth 2.0-Client-Registrierung](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Erstellen einer Echtzeit-Ausführung für Datenflüsse](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Verwalten von Kundendatensätzen in der Designer des Kundenprofils](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
