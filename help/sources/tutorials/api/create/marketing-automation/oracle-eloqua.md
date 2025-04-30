@@ -2,10 +2,10 @@
 title: Erstellen einer Oracle Eloqua-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Eloqua verbinden.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 59%
+source-wordcount: '602'
+ht-degree: 55%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 59%
 
 >[!WARNING]
 >
->Die [!DNL Oracle Eloqua] wird Ende Juni 2025 eingestellt.
+>Die [!DNL Oracle Eloqua] wird im Januar 2026 eingestellt. Eine neue Quelle wird noch in diesem Jahr als Alternative veröffentlicht. Nach der Veröffentlichung der neuen Quelle müssen Sie die Migration zur neuen Quelle planen, indem Sie neue Kontoverbindungen und Datenflüsse vor Ende Januar 2026 erstellen.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

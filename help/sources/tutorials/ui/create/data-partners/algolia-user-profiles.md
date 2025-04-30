@@ -1,19 +1,17 @@
 ---
 title: Verbinden von Algolia-Benutzerprofilen mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie beabsichtigte Algolia-Benutzende mit Experience Platform verbinden
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 15%
 
 ---
 
 # Aufnehmen [!DNL Algolia User Profiles] Daten in Experience Platform über die Benutzeroberfläche
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie Zahlungsdaten von Ihrem [!DNL Algolia User Profiles]-Konto über die Benutzeroberfläche in Adobe Experience Platform aufnehmen.
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der Benutzeroberfläche Daten aus Ihrem [!DNL Algolia User Profiles]-Konto in Adobe Experience Platform aufnehmen.
 
 ## Erste Schritte
 
