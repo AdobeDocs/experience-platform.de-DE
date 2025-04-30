@@ -4,9 +4,9 @@ title: Erfahren Sie, wie Sie mit dem KI-Assistenten Ihre eigenen Playbooks erste
 description: So erstellen Sie eigene Playbooks für Anwendungsfälle und geben diese frei.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
+source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ Wenn ein Playbook für unangemessene oder anstößige Inhalte markiert wird, wir
 
 Wenn Ihre Organisation mehrere Sandboxes enthält, müssen Sie Playbooks nicht manuell über sie hinweg freigeben. Nachdem Sie ein Playbook in einer Sandbox erstellt und veröffentlicht haben, wird es für alle Sandboxes in dieser Organisation verfügbar. Sie können dann Instanzen dieses Playbooks in jeder der anderen Sandboxes erstellen.
 
-Wenn das Playbook auf Felder verweist, die im Vereinigungsschema einer anderen Sandbox nicht verfügbar sind, wird beim Erstellen der Instanz möglicherweise eine Fehlermeldung angezeigt. Diese Meldung ruft die fehlenden Felder auf, sodass Sie das Schema bei Bedarf aktualisieren können.
+Wenn das Playbook auf Felder verweist, die nicht im Vereinigungsschema der Ziel-Sandbox verfügbar sind oder denen die erforderlichen Berechtigungen fehlen, wird beim Erstellen der Instanz möglicherweise eine Fehlermeldung angezeigt. Diese Meldung ruft die fehlenden Felder und/oder fehlenden Berechtigungen auf.
 
->[!IMPORTANT]
->
->Die transitive Playbook-Freigabe wird nicht unterstützt. Wenn Sie ein Playbook von einer Organisation für eine andere freigeben und dann importieren, kann es nicht erneut von der empfangenden Organisation für eine dritte Organisation freigegeben werden.
+Wenn im Vereinigungsschema Felder fehlen, werden diese beim Import in einem Dialogfeld hervorgehoben.
+
+![Felder fehlen im Vereinigungsschema, das während des Importvorgangs aufgelistet wird](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Freigeben von Playbooks in Organisationen {#sharing-playbooks-organizations}
 
@@ -181,14 +181,14 @@ Gehen Sie wie folgt vor, um ein Playbook von einer Organisation für eine andere
 * **Freigabe initiieren**: Nachdem das Playbook veröffentlicht und eine Partnerschaft eingerichtet wurde, wählen Sie **[!UICONTROL Playbook freigeben]**.
 * **Zielorganisation auswählen**: Wählen Sie die Organisation aus, für die Sie das Playbook freigeben möchten, wenn Sie dazu aufgefordert werden.
 * **Bestätigen und freigeben**: Bestätigen Sie Ihre Auswahl. Sie erhalten Bestätigungsnachrichten, die eine erfolgreiche Freigabe anzeigen.
-* ***Überprüfen der Zielorganisation**: Melden Sie sich bei der Zielorganisation an, um sicherzustellen, dass das Playbook verfügbar ist.
+* **Zielorganisation überprüfen**: Melden Sie sich bei der Zielorganisation an, um sicherzustellen, dass das Playbook verfügbar ist.
 * **Playbook importieren**: Wählen Sie **[!UICONTROL Importieren]**, um das Playbook in die Zielorganisation zu importieren. Sie können sie auf der Registerkarte **Playbooks** anzeigen.
 
-Wenn im Vereinigungsschema Felder fehlen, werden diese beim Import in einem Dialogfeld hervorgehoben.
-
-![Felder fehlen im Vereinigungsschema, das während des Importvorgangs aufgelistet wird](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 Wenn das Playbook nicht angezeigt wird, stellen Sie sicher, dass es veröffentlicht ist und die Organisationspartnerschaft aktiv ist.
+
+>[!IMPORTANT]
+>
+>Die transitive Playbook-Freigabe wird nicht unterstützt. Wenn Sie ein Playbook von einer Organisation für eine andere freigeben und dann importieren, kann es nicht erneut von der empfangenden Organisation für eine dritte Organisation freigegeben werden.
 
 ## Erforderliche Berechtigungen
 
