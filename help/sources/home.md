@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1559'
 ht-degree: 67%
 
 ---
@@ -149,7 +149,7 @@ Experience Platform unterstützt die Aufnahme von Daten aus einem Daten- und Ide
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE batch]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE batch]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md)
+- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE batch]{type=Informative}
 - [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE batch]{type=Informative}
 - [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE batch]{type=Informative}
