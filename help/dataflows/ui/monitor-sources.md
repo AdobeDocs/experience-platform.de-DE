@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard Daten überwachen können, die aus Quellen aufgenommen werden.
-title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard die in den Data Lake aufgenommenen Daten überwachen können.
+title: Überwachen der Data Lake-Aufnahme
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 17%
+source-wordcount: '1303'
+ht-degree: 16%
 
 ---
 
-# Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
+# Überwachen der Data Lake-Aufnahme
 
 >[!IMPORTANT]
 >
 >Streaming-Quellen wie die [HTTP-API-Quelle](../../sources/connectors/streaming/http.md) werden derzeit nicht vom Überwachungs-Dashboard unterstützt. Derzeit können Sie das Dashboard nur zur Überwachung von Batch-Quellen verwenden.
 
-Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Monitoring-Dashboard Ihre Quelldatenflüsse in der Experience Platform-Benutzeroberfläche überwachen können.
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Überwachungs-Dashboard die Data-Lake-Aufnahme in der Experience Platform-Benutzeroberfläche überwachen können.
 
 ## Erste Schritte {#get-started}
 
@@ -28,7 +28,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-## Überwachen der Quelldaten mithilfe des Monitoring-Dashboards
+## Verwenden des Überwachungs-Dashboards für die Data-Lake-Aufnahme
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Datensätze. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Wählen **[!UICONTROL Data Lake]** aus der Hauptkopfzeile im Monitoring-Dashboard aus, um Ihre Data-Lake-Aufnahmerate anzuzeigen.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![Das Überwachungs-Dashboard mit der ausgewählten Quellenkarte.](../assets/ui/monitor-sources/data-lake.png)
 
-Wählen Sie im Monitoring-Dashboard [!UICONTROL Quellen] aus der Hauptkopfzeile aus, um Ihr Dashboard mit einer Anzeige der Datenfluss-Aufnahmerate Ihrer Quellen zu aktualisieren.
-
-![Das Überwachungs-Dashboard mit der ausgewählten Quellenkarte.](../assets/ui/monitor-sources/sources.png)
-
-Das Diagramm [!UICONTROL Aufnahmerate] zeigt Ihre Datenaufnahmerate basierend auf Ihrem konfigurierten Zeitrahmen an. Standardmäßig zeigt das Überwachungs-Dashboard die Aufnahmerate der letzten 24 Stunden an. Anweisungen zum Konfigurieren Ihres Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Zeitrahmens für die Überwachung](monitor.md#configure-monitoring-time-frame).
+Das Diagramm [!UICONTROL Aufnahmerate] zeigt Ihre Datenaufnahmerate basierend auf Ihrem konfigurierten Zeitrahmen an. Standardmäßig zeigt das Überwachungs-Dashboard die Aufnahmeraten der letzten 24 Stunden an. Anweisungen zum Konfigurieren Ihres Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Zeitrahmens für die Überwachung](monitor.md#configure-monitoring-time-frame).
 
 Das Diagramm ist standardmäßig für die Anzeige aktiviert. Um das Diagramm auszublenden, wählen Sie **[!UICONTROL Metriken und Diagramme]** aus, um den Umschalter zu deaktivieren und das Diagramm auszublenden.
 
@@ -132,11 +128,9 @@ Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken
 >
 >Sie können die Fehlerdiagnose nur verwenden, wenn die Funktion während des Erstellungsprozesses der Quellverbindung aktiviert wurde.
 
-![Das Bedienfeld „Fehler bei der Datenflussausführung“.](../assets/ui/monitor-sources/errors.png)
-
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie mithilfe des Dashboards **[!UICONTROL Überwachung“ den Datenfluss der Aufnahme von der]** aus überwacht. Sie haben auch erfolgreich Fehler identifiziert, die zum Scheitern von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie gelernt, wie Sie die Data-Lake-Aufnahmegeschwindigkeit mit dem Dashboard **[!UICONTROL Monitoring]** überwachen. Außerdem haben Sie gelernt, Fehler zu identifizieren, die Datenflussfehler während der Aufnahme verursachen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Identitätsdaten überwachen](./monitor-identities.md).
 * [Überwachen von ](./monitor-profiles.md).

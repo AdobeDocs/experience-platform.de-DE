@@ -2,9 +2,9 @@
 title: Monitoring-Dashboard - Übersicht
 description: Erfahren Sie, wie Sie das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 4%
 
 ---
@@ -63,12 +63,6 @@ Wählen Sie **[!UICONTROL Kunde und Konto]** aus, um Ihr Dashboard zu aktualisie
 
 ![Der Überwachungs-Datentyp ist auf „Kunde und Konto“ festgelegt.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Interessent]
-
-Wählen Sie **[!UICONTROL Interessent]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Interessensdaten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden. **Hinweis**: Datentypaktivitäten von Interessenten können nur angezeigt werden, wenn Sie [Berechtigung für Interessentendaten](../../rtcdp/partner-data/prospecting.md) haben.
-
-![Der Überwachungs-Datentyp ist auf „Interessent“ festgelegt.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Anreicherung von Kontoprofilen]
 
 Wählen Sie **[!UICONTROL Kontoprofilanreicherung]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Profilanreicherungsdaten anzuzeigen. **Hinweis**: Sie können die Metriken zur Anreicherung von Account-Profilen nur anzeigen, wenn Sie berechtigt sind, B2B[Daten ](../../rtcdp/b2b-tutorial.md).
@@ -81,11 +75,11 @@ Verwenden Sie die obere Kopfzeile des Dashboards für ein dienstübergreifendes 
 
 >[!BEGINTABS]
 
->[!TAB Quellen]
+>[!TAB Data Lake]
 
-Wählen Sie **[!UICONTROL Quellen]** aus, um Metriken zur Aufnahmerate Ihrer Quellen anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachung von ](monitor-sources.md)).
+Wählen Sie **[!UICONTROL Data Lake]** aus, um Metriken zu Ihrer Data-Lake-Aufnahmerate anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen der Data-Lake](monitor-sources.md)Aufnahme“.
 
-![Das Überwachungs-Dashboard in der Benutzeroberfläche mit der ausgewählten Quellkarte.](../assets/ui/monitor-overview/sources.png)
+![Das Überwachungs-Dashboard in der Benutzeroberfläche mit der ausgewählten Data-Lake-Karte.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identitäten]
 
@@ -133,8 +127,12 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 Durch Lesen dieses Dokuments können Sie sich jetzt in der Benutzeroberfläche durch das Überwachungs-Dashboard navigieren. Informationen zum Überwachen von Daten für einen bestimmten Experience Platform-Service finden Sie in der folgenden Dokumentation:
 
-* [Überwachen von ](monitor-sources.md).
+* [Überwachen der Data Lake-Aufnahme](monitor-sources.md).
 * [Identitätsdaten überwachen](monitor-identities.md).
 * [Überwachen von ](monitor-profiles.md).
 * [Zielgruppendaten überwachen](monitor-audiences.md).
 * [Zieldaten überwachen](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
