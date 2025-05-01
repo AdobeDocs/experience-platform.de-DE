@@ -2,7 +2,7 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 5%
@@ -147,7 +147,7 @@ Bei einem Algorithmus zur Identitätsoptimierung werden fehlerhafte Identitätsw
 
 ![bad-email](../images/identity-settings/bad-email.png)
 
-### Anonyme Ereignisverknüpfung
+## Anonyme Ereignisverknüpfung
 
 ECIDs speichern nicht authentifizierte (anonyme) Ereignisse, während CRMID authentifizierte Ereignisse speichert. Bei gemeinsam genutzten Geräten wird die ECID (Träger nicht authentifizierter Ereignisse) mit dem (**authentifizierten)** verknüpft.
 
