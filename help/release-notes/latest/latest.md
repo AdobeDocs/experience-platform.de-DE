@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2025
 description: Versionshinweise April 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 24%
+source-wordcount: '2040'
+ht-degree: 23%
 
 ---
 
@@ -30,7 +30,9 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Identity Service](#identity)
 - [Abfrage-Service](#query-service)
 - [Echtzeit-Kundenprofil](#profile)
+- [Sandboxes](#sandboxes)
 - [Quellen](#sources)
+- [Anwendungsfall-Playbooks](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -126,6 +128,20 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersicht](../../profile/home.md)
 
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderung zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung der Erweiterung des Sandbox-Tooling-Plug-ins | Benutzerdefinierte Aktionen können jetzt beim Duplizieren von Journey-Objekten in Sandbox-Tools als abhängiges Objekt kopiert werden. Darüber hinaus können Sie vorhandene Aktionen auswählen, die in der Ziel-Sandbox wiederverwendet werden sollen. Sie können auch unabhängig zu einem Paket hinzugefügt werden. Vollständige Informationen zu unterstützten Adobe Journey Optimizer-Objekten finden Sie im [Sandbox-Tools](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects)Handbuch. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
+
 ## Quellen {#sources}
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
@@ -152,3 +168,21 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
+
+## Anwendungsfall-Playbooks {#use-case-playbooks}
+
+Anwendungsfall-Playbooks wurden ursprünglich entwickelt, um bei den ersten Schritten mit Real-Time Customer Data Platform oder Adobe Journey Optimizer zu helfen. Sie werden weiterentwickelt und ermöglichen es Ihnen jetzt, wichtige Marketing-Anwendungsfälle zu starten und Inspiration und vordefinierte Assets bereitzustellen, um sie zu testen und in die Produktion zu übernehmen.
+
+Anwendungsfall-Playbooks sind von einem Erkennungs-Tool in ein kollaboratives Framework übergegangen. Sie helfen Ihnen jetzt dabei, eigene Playbooks zu erstellen, zu verwalten und unternehmensübergreifend freizugeben.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Eigene Playbooks erstellen und freigeben | Ein neues Playbook Authoring-Framework ermöglicht das Erstellen, Verwalten und Freigeben eigener Playbooks für Anwendungsfälle. Dazu gehört die Unterstützung für die Erfassung wichtiger Metadaten, die Bearbeitung von Journey-Zuordnungen und die Verknüpfung relevanter technischer Assets. Sie können Playbooks organisationsübergreifend freigeben, um Marketing-Ansätze zu standardisieren und die Konsistenz zu gewährleisten. |
+
+{style="table-layout:auto"}
+
+Um zu erfahren, wie Sie Ihre eigenen Playbooks erstellen und freigeben können, lesen Sie das Dokument [Erstellen und Freigeben Ihrer eigenen Playbooks](/help/use-case-playbooks/playbooks/author.md).
+
+Weitere Informationen finden Sie im Abschnitt [Übersicht über Playbooks - ](/help/use-case-playbooks/playbooks/overview.md), der einen Überblick über die Funktionen von Playbooks und deren Zweck sowie eine durchgängige Demonstration bietet, einschließlich der Erstellung von Instanzen und des Imports generierter Assets in andere Sandbox-Umgebungen.
