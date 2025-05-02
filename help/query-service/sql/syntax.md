@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die vom Abfrage-Service von Adobe Experience Platform unterstützte SQL-Syntax beschrieben.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 4%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Wenn Sie `HEAD` oder `TAIL` in einer `SNAPSHOT` verwenden, müssen Sie sie in einfache Anführungszeichen setzen (z. B. &quot;HEAD&quot;, „TAIL„). Die Verwendung ohne Anführungszeichen führt zu einem Syntaxfehler.
 
 In der folgenden Tabelle wird die Bedeutung der einzelnen Syntaxoptionen innerhalb der SNAPSHOT-Klausel erläutert.
 
@@ -130,7 +134,7 @@ In der folgenden Tabelle wird die Bedeutung der einzelnen Syntaxoptionen innerha
 | `AS OF end_snapshot_id` | liest Daten so, wie sie zur angegebenen Momentaufnahme-ID erfasst wurden (einschließlich). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Liest Daten zwischen den angegebenen Start- und End-Snapshot-IDs. Es ist exklusiv der `start_snapshot_id` und inklusive der `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | liest Daten vom Anfang (vor dem ersten Schnappschuss) bis zur angegebenen Start-Schnappschuss-ID (einschließlich). Beachten Sie, dass nur Zeilen in `start_snapshot_id` zurückgegeben werden. |
-| `BETWEEN end_snapshot_id AND TAIL` | Liest Daten direkt nach dem angegebenen `end-snapshot_id` bis zum Ende des Datensatzes (ohne Snapshot-ID). Das bedeutet, dass die Abfrage null Zeilen zurückgibt, wenn `end_snapshot_id` der letzte Schnappschuss im Datensatz ist, da es keine Schnappschüsse gibt, die über diesen letzten Schnappschuss hinausgehen. |
+| `BETWEEN end_snapshot_id AND TAIL` | Liest Daten direkt nach dem angegebenen `end_snapshot_id` bis zum Ende des Datensatzes (ohne Snapshot-ID). Das bedeutet, dass die Abfrage null Zeilen zurückgibt, wenn `end_snapshot_id` der letzte Schnappschuss im Datensatz ist, da es keine Schnappschüsse gibt, die über diesen letzten Schnappschuss hinausgehen. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Liest Daten ab der angegebenen Momentaufnahme-ID aus `table_to_be_queried` und verknüpft sie mit den Daten aus `table_to_be_joined` so, wie sie sich bei `your_chosen_snapshot_id` befanden. Der Join basiert auf übereinstimmenden IDs aus den ID-Spalten der beiden verbundenen Tabellen. |
 
 Eine `SNAPSHOT`-Klausel funktioniert mit einem Tabellen- oder Tabellenalias, aber nicht über einer Unterabfrage oder Ansicht. Eine `SNAPSHOT`-Klausel funktioniert überall dort, wo eine `SELECT` Abfrage auf eine Tabelle angewendet werden kann.

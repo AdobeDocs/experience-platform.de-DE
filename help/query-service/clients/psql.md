@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL mit Query Service verbinden
 description: Erfahren Sie, wie Sie den PSQL-Client mit dem Adobe Experience Platform Query Service verbinden, einschließlich unterstützter PostgreSQL-Versionen und Einrichtungsanweisungen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Sobald PSQL installiert ist, können Sie es mit dem Abfrage-Service verbinden. K
 
 Wählen Sie im Abschnitt **[!UICONTROL PSQL]** Befehl das Symbol **[!UICONTROL In Zwischenablage kopieren]** (![Kopiersymbol](/help/images/icons/copy.png)) aus, um die Befehlszeichenfolge zu kopieren.
 
-![Die Registerkarte „Anmeldeinformationen“ des Abfragen-Dashboards mit hervorgehobenem Kopiersymbol.](../images/clients/psql/connect-bi.png)
+![Die Registerkarte „Anmeldeinformationen“ des Abfragen-Dashboards mit hervorgehobenem Kopiersymbol.](../images/clients/psql/copy-credentials.png)
 
 Fügen Sie die Befehlszeichenfolge in Ihr Terminal ein und drücken Sie **Eingabetaste** auf Ihrer Tastatur.
 
