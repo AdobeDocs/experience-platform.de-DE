@@ -4,9 +4,9 @@ title: Erfahren Sie, wie Sie mit dem KI-Assistenten Ihre eigenen Playbooks erste
 description: So erstellen Sie eigene Playbooks für Anwendungsfälle und geben diese frei.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
+source-git-commit: 5cdbc160369a146da3ae8ca39d8c3095887e03b5
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -34,25 +34,25 @@ Führen Sie die folgenden Schritte aus, um ein Playbook mit dem KI-Assistenten z
 
 Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Playbooks]**.
 
-![ „Playbooks“ im linken Navigationsbereich der Benutzeroberfläche hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![Platform-Benutzeroberfläche mit hervorgehobener Option „Playbooks“ im linken Navigationsbereich.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
 Wählen Sie **[!UICONTROL Neues Playbook]** und dann **Playbook mit KI-Assistenten erstellen** aus.
 
-![Die Playbook-Oberfläche mit der Auswahl „Playbook mit KI-Assistenten generieren“.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![Die Benutzeroberfläche zur Erstellung von Playbooks zeigt die ausgewählte Option „Playbook mit KI-Assistenten generieren“ an.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 Beschreiben Sie den Anwendungsfall mithilfe des Eingabeaufforderungsfelds. z. B.:
 
 „Wenden Sie sich an ACME-Kunden, die Laufschuhe durchsucht, den Kauf jedoch nicht abgeschlossen haben.“
 
-![Die Playbook-Oberfläche mit hervorgehobenem Webformularbereich.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Die Benutzeroberfläche zur Erstellung von Playbooks, in der der Webformularbereich hervorgehoben ist, in den Benutzer eine Eingabeaufforderung eingeben können.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
 Wählen Sie **[!UICONTROL Generieren]** aus, um die Playbook-Metadaten zu erstellen.
 
-![Der Eingabeaufforderungsbereich mit der hervorgehobenen Schaltfläche „Playbook generieren“.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
+![Die Benutzeroberfläche zur Erstellung von Playbooks mit der hervorgehobenen Schaltfläche „Generieren“ im Eingabeaufforderungsbereich.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
 Klicken Sie nach der Generierung **[!UICONTROL Bearbeiten]**, um den generierten Titel, die Beschreibung und die Metadaten nach Bedarf zu ändern.
 
-![Das generierte Playbook mit der hervorgehobenen Schaltfläche „Bearbeiten“.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
+![Ein generiertes Playbook mit hervorgehobener Schaltfläche „Bearbeiten“, mit der Benutzende Metadaten ändern können.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
 Um sicherzustellen, dass die Dateningenieure über alle erforderlichen Details zum Einrichten des Anwendungsfalls verfügen, füllen Sie den Abschnitt **[!UICONTROL Playbook-]**&quot; aus. Diese Felder sind optional, helfen jedoch bei der Erfassung wichtiger Informationen und erleichtern die Verbindung der richtigen technischen Komponenten. Wählen Sie **[!UICONTROL Bearbeiten]** aus, um den folgenden Feldern Werte hinzuzufügen:
 
@@ -60,17 +60,17 @@ Um sicherzustellen, dass die Dateningenieure über alle erforderlichen Details z
 * **Zielgruppe**
 * **Marketing-Kanal**
 
-![Der Abschnitt mit den Playbook-Details mit der hervorgehobenen Schaltfläche „Bearbeiten“.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![Der Abschnitt mit den Playbook-Details mit hervorgehobener Schaltfläche „Bearbeiten“, über die Sie Details wie die Branche, die Zielgruppe und den Marketing-Kanal hinzufügen oder ändern können.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
 Nachdem die Metadaten generiert wurden, wählen Sie **[!UICONTROL Journey-Map bearbeiten]** aus, um die Schritte in der Journey-Map nach Bedarf anzupassen.
 
-![Bearbeiten der Journey-Zuordnungs-Schaltfläche.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![Die Schaltfläche &quot;Journey-Map bearbeiten“, um die Schritte in der Journey-Map zu ändern.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
-![Bearbeiten Sie die Journey-Zuordnung, sobald Sie die Playbook-Metadaten erfasst haben.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
+![Die Benutzeroberfläche des Journey-Zuordnungs-Editors, damit Sie die Schritte nach der Erfassung der Playbook-Metadaten anpassen können.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
 Verknüpfen Sie dann das Playbook mit technischen Assets. Um ein Playbook manuell zu erstellen, wählen Sie **[!UICONTROL Playbook manuell erstellen]**.
 
-![Playbook manuell erstellen](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
+![Die Option „Playbook manuell erstellen“, um ein Playbook aus einer leeren Vorlage zu starten.](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
 Eine leere Playbook-Vorlage wird angezeigt. Füllen Sie Details wie &quot;**&quot;** &quot;**&quot;**. Sie können auch die Journey-Zuordnung bearbeiten, um nach Bedarf Ereignisse und Touchpoints hinzuzufügen.
 
@@ -82,25 +82,25 @@ Unabhängig davon, ob Sie ein Playbook manuell oder mit dem KI-Assistenten erste
 >
 > Die Unterstützung für Real-Time CDP wird in einer zukünftigen Version hinzugefügt.
 
-![Die Registerkarte „Technische Assets“ und die Schaltfläche „Erforderliches Produkt hinzufügen“ sind hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![Die Registerkarte „Technische Assets&quot; mit der hervorgehobenen Schaltfläche „Erforderliches Produkt hinzufügen“, mit der Sie technische Assets mit dem Playbook verknüpfen können.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Wählen Sie **[!UICONTROL Asset auswählen]**, um dieses Playbook mit einer Journey zu verknüpfen, wie in der Abbildung unten dargestellt. Wählen Sie dann **Playbook veröffentlichen**, um das Playbook abzuschließen.
 
-![ Schaltfläche „Assets auswählen“ auf der Registerkarte „Technische Assets“ hervorgehoben](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![Die Registerkarte „Technical Assets&quot; mit der hervorgehobenen Schaltfläche „Assets auswählen“, mit der Sie eine Journey mit dem Playbook verknüpfen können.](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![Journey auswählen](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![Wählen Sie eine Journey aus, um sie mit einem Playbook zu verknüpfen.](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 Nach der Veröffentlichung extrahiert das Playbook automatisch das Journey-Schema und die Zielgruppendetails und verknüpft sie.
 
-![Veröffentlichtes Playbook](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
+![Ein veröffentlichtes Playbook mit Metadaten und zugehörigen technischen Assets.](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
 Alle erstellten Playbooks sind auf der Registerkarte &quot;**Playbooks“**.
 
-![ Registerkarte „Ihre Playbooks“](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![ Registerkarte „Ihre Playbooks“ mit einer Liste der erstellten Playbooks.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 Sie können jedes Playbook aus dem Katalog auswählen, um Instanzen zur Wiederverwendung zu erstellen. Weitere Informationen finden Sie in der Dokumentation [Erstellen von Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 
-![ Option „Instanz erstellen“ auf der Registerkarte „Playbook-Übersicht“ hervorgehoben, sobald Sie ein Playbook auswählen.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
+![Die Registerkarte „Playbook-Übersicht“ mit hervorgehobener Option „Instanz erstellen“.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
 
 >[!NOTE]
 >
@@ -108,13 +108,13 @@ Sie können jedes Playbook aus dem Katalog auswählen, um Instanzen zur Wiederve
 
 ## Beispiel-Eingabeaufforderungen
 
-Der KI-Assistent kann verschiedene Aufforderungsstrukturen verarbeiten und wichtige Details extrahieren, während er unnötige Informationen herausfiltert. Im Folgenden finden Sie einige Beispiele für Benutzeraufforderungen und deren Interpretation durch das System:
+Der KI-Assistent kann verschiedene Aufforderungsstrukturen verarbeiten und wichtige Details extrahieren, während er unnötige Informationen herausfiltert. Im Folgenden finden Sie einige Beispiele für Benutzeraufforderungen und dafür, wie sie vom System interpretiert werden.
 
 **Beispiel 1:**
 
 „Erstellen Sie eine Kampagne mit dem Titel „Vervollständigen Sie den Look“, um den Umsatz und den CLV zu steigern. Die Kampagne ermutigt Kundinnen und Kunden, die Küchenartikel oder Möbel gekauft haben, einen ergänzenden Kauf über personalisierte Empfehlungen und Angebote im Zusammenhang mit ihrem Kauf abzuschließen. Erste Nachricht an die Kunden mit Produktempfehlungen. Wenn er innerhalb von 7 Tagen keine Käufe tätigt, erhält er eine zweite Nachricht mit Produktempfehlungen und Angeboten. Verwenden Sie Push-Benachrichtigungen und E-Mail, um die Kunden zu kontaktieren. Targeting von Kunden, die in den letzten 7 Tagen einen Kauf in der Kategorie Küchenartikel oder Möbel getätigt haben und in den letzten 30 Tagen nicht kontaktiert wurden. Im Rahmen der Kampagne möchten wir KPIs wie Klicks (E-Mail, Mobile App, SMS, Push), CTR, E-Wallet, CTR, AOV Conversion.CLV-Umsatz, Kaufereignisse insgesamt (im Geschäft, digital, Callcenter) messen.“
 
-![Beispiel mit einer langen Eingabeaufforderung im Texteingabefeld](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![Beispiel einer langen Eingabeaufforderung, die in das Textfeld eingegeben wurde, um ein Playbook zu generieren.](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Beispiel 2:**
 
@@ -126,20 +126,20 @@ Projektkanäle/Touchpoints: E-Mail
 Zielgruppe: Kunden, die sich für Newsletter-Nachrichten von ACME Fashion angemeldet haben.
 Ziel-KPIs/Interaktionsmetriken/ROI: 1. Steigern Sie den Umsatz durch Produkte. 2. Fördern Sie die Kundentreue.“
 
-![Beispiel für eine organisierte Eingabeaufforderung im Texteingabefeld](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
+![Beispiel einer organisierten Eingabeaufforderung im Listenstil, die in das Textfeld eingegeben wurde, um ein Playbook zu generieren.](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Beispiel 3:**
 
 „Ermutigen Sie Kunden, während einer laufenden Produktwerbekampagne Produkte zu kaufen.
 Interagieren Sie mit Käufern während einer laufenden Promotion, indem Sie geeignete Kommunikation per E-Mail, SMS oder Push-Benachrichtigungen senden, um Produkte zu kaufen. Senden Sie ihnen nach 24 Stunden, in denen sie nicht an der Promotion teilnehmen, eine Erinnerungs-E-Mail.“
 
-![Beispiel mit einer knappen Eingabeaufforderung im Texteingabefeld](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
+![Beispiel einer kurzen Eingabeaufforderung, die in das Texteingabefeld eingegeben wurde, um ein Playbook zu generieren.](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Beispiel 4:**
 
 „Verkaufe Schuhe an High School-Spieler.“
 
-![Beispiel für eine Einzeiler-Eingabeaufforderung](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
+![Beispiel einer einzeiligen Eingabeaufforderung, die in das Textfeld eingegeben wurde, um ein Playbook zu generieren.](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 Der KI-Assistent entfernt alle unnötigen Details wie „Projektname“ oder „Hintergrund“. Es extrahiert die Schlüsselelemente wie „Zielgruppe“, „Kampagnenziel“ und „Marketing-Kanal“ und funktioniert mit jedem Eingabestil.
 
@@ -151,23 +151,23 @@ Diese Beispiele zeigen, wie KI wichtige Details aus Benutzeraufforderungen verfe
 
 ## Inhaltsrichtlinien und Moderation
 
-Achten Sie beim Erstellen von Playbooks auf die Sprache und die Inhalte, die Sie einbeziehen. Playbooks sind in Ihrer gesamten Organisation sichtbar, und Benutzer können beleidigende oder unangemessene Inhalte markieren.
+Achten Sie beim Erstellen von Playbooks auf die Sprache und die Inhalte, die Sie einbeziehen. Playbooks sind in Ihrer gesamten Organisation sichtbar und alle beleidigenden oder unangemessenen Inhalte, die Benutzer kennzeichnen.
 
 ### Kennzeichnungs- und Überprüfungsprozess
 
-Wenn ein Playbook für unangemessene oder anstößige Inhalte markiert wird, wird es automatisch zur Überprüfung an Adobe gemeldet. Adobe überprüft dann den gekennzeichneten Inhalt, und wenn er als unangemessen betrachtet wird, wird der Kunde benachrichtigt und das Playbook entfernt.
+Wenn ein Playbook unangemessene oder anstößige Inhalte enthält, erhält Adobe automatisch einen Bericht zur Überprüfung. Adobe prüft den gekennzeichneten Inhalt, benachrichtigt den Kunden, wenn dieser als unangemessen erachtet wird, und entfernt das Playbook.
 
 ## Freigeben von Playbooks in Sandboxes {#share-playbooks-sandboxes}
 
-Wenn Sie ein Playbook in einer Sandbox erstellen und veröffentlichen, wird es automatisch für alle Sandboxes in Ihrer Organisation verfügbar. Dadurch entfällt die Notwendigkeit der manuellen Freigabe und Sie können Instanzen des Playbooks in jeder anderen Sandbox nahtlos erstellen.
+Wenn Sie ein Playbook in einer Sandbox erstellen und veröffentlichen, wird es automatisch für alle Sandboxes in Ihrer Organisation verfügbar. Durch diese Funktion entfällt die Notwendigkeit der manuellen Freigabe und Sie können Instanzen des Playbooks in jeder anderen Sandbox nahtlos erstellen.
 
 >[!TIP]
 >
->Wenn das Playbook auf Felder verweist, die nicht im Vereinigungsschema der Ziel-Sandbox verfügbar sind oder denen die erforderlichen Berechtigungen fehlen, wird beim Erstellen der Instanz möglicherweise eine Fehlermeldung angezeigt. Diese Meldung ruft die fehlenden Felder und/oder fehlenden Berechtigungen auf.
+>Wenn das Playbook auf Felder verweist, die im Vereinigungsschema der Ziel-Sandbox nicht verfügbar sind, oder wenn Sie nicht über die erforderlichen Berechtigungen verfügen, wird eine Fehlermeldung angezeigt, wenn Sie versuchen, die Instanz zu erstellen. Die Meldung gibt die fehlenden Felder und/oder Berechtigungen an.
 
-Wenn im Vereinigungsschema Felder fehlen, werden diese beim Import in einem Dialogfeld hervorgehoben.
+Wenn Felder im Vereinigungsschema fehlen, werden sie beim Import in einem Dialogfeld hervorgehoben.
 
-![Felder fehlen im Vereinigungsschema, das während des Importvorgangs aufgelistet wird](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+![Ein Dialogfeld, das Felder auflistet, die im Vereinigungsschema während des Playbook-Importvorgangs fehlen.](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Freigeben von Playbooks in Organisationen {#sharing-playbooks-organizations}
 
@@ -210,7 +210,7 @@ Diese Berechtigungen sind für die interne Freigabefunktion erforderlich:
 * [**Paket verwalten**](/help/sandboxes/ui/sandbox-tooling.md)
 * [**Paket freigeben**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
 
-Diese Berechtigungen ermöglichen Ihnen Folgendes:
+Verwenden Sie diese Berechtigungen für Folgendes:
 
 * Sandbox-Umgebung aufrufen
 * Zugriff auf die Funktion in der Sandbox
@@ -218,11 +218,11 @@ Diese Berechtigungen ermöglichen Ihnen Folgendes:
 
 Diese Berechtigungen befinden sich im Abschnitt **[!UICONTROL Sandboxes]** der Liste Berechtigungen .
 
-![Die Liste der Berechtigungen mit den hervorgehobenen entsprechenden Berechtigungen.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![Die Liste mit den Berechtigungen mit den entsprechenden Berechtigungen zum Verwalten und Freigeben von Playbooks ist hervorgehoben.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Journey und zugehörige Objekte - Berechtigungen
 
-Beim Erstellen von Journeys, die Playbooks verwenden, verweisen Sie wahrscheinlich auf andere Objekte wie **Kanäle**, **Zielgruppen** und andere Entitäten. Jede dieser Berechtigungen verfügt über einen eigenen Berechtigungssatz.
+Beim Erstellen von Journey, die Playbooks verwenden, können Sie auf andere Objekte wie **Kanäle**, **Audiences** und andere Entitäten verweisen. Jedes dieser Objekte verfügt über einen eigenen Berechtigungssatz.
 
 Dies sind die wichtigsten Berechtigungen für Journey-bezogene Aktionen, z. B.:
 
