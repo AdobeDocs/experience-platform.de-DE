@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 67%
@@ -32,6 +32,7 @@ Die folgenden Quellen stehen nur [Kunden von Adobe Real-Time Customer Data Platf
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE batch]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE batch]{type=Informative}
 - [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE batch]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE batch]{type=Informative}
@@ -128,7 +129,6 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE batch]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE batch]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE batch]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE batch]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE batch]{type=Informative}
