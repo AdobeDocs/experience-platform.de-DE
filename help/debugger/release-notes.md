@@ -4,7 +4,7 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 93%
@@ -13,19 +13,19 @@ ht-degree: 93%
 
 # Versionshinweise zu Adobe Experience Platform Debugger
 
-## Version 1.6.3 – 30. April 2025
+## Version 1.6.3 - 30. April 2025
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Fest ein Problem, bei dem der Debugger die DTM- und Launch Funktionen nicht funktionsfähig machte.
-* Fest ein Problem, bei dem Analytics Post-verarbeitete Treffer nicht in den Protokollen angezeigt wurden.
-* Fest ein Problem, bei dem Daten in Nicht-ASCII-Sprachen liken Japanisch in Protokollen nicht korrekt angezeigt wurden.
+* Fehlerkorrektur - Der Debugger verhindert, dass DTM- und Tags-Funktionen funktionieren.
+* Es wurde ein Problem behoben, bei dem nachbearbeitete Analytics-Treffer nicht in Protokollen angezeigt wurden.
+* Es wurde ein Problem behoben, bei dem Daten in Nicht-ASCII-Sprachen wie Japanisch in Protokollen nicht korrekt angezeigt wurden.
 
 ## Version 1.6.2 – Mittwoch, 1. Oktober 2024
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Fest einem Problem, bei dem der Debugger zu empfindlich auf alle CSP-Fehler reagierte
+* Es wurde ein Problem behoben, bei dem der Debugger zu empfindlich auf alle CSP-Fehler reagierte
 
 ## Version 1.6.1 – 25. Juli 2024
 
