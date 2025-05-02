@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Azure Databricks mithilfe von APIs mit Experi
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 15%
@@ -32,7 +32,7 @@ Lesen Sie das Handbuch [Erste Schritte mit Experience Platform-APIs](../../../..
 
 ### Vorausgesetzte Einrichtung konfigurieren
 
-Lesen Sie [[!DNL Databricks] Übersicht](../../../../connectors/databases/databricks.md) um Informationen zu den erforderlichen Konfigurationen zu erhalten, die zuerst abgeschlossen werden müssen, bevor Sie Ihr -Konto mit Experience Platform verbinden können.
+Lesen Sie die [[!DNL Databricks] Übersicht](../../../../connectors/databases/databricks.md), um mehr über die erforderlichen Konfigurationen zu erfahren, die abgeschlossen sein müssen, bevor Sie Ihr -Konto mit Experience Platform verbinden können.
 
 ### Sammeln erforderlicher Anmeldedaten
 

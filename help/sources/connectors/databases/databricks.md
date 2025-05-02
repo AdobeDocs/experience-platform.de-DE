@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '591'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 [!DNL Azure Databricks] ist eine Cloud-basierte Plattform für Datenanalyse, maschinelles Lernen und KI. Sie können [!DNL Databricks] für die Integration mit [!DNL Azure] verwenden und eine ganzheitliche Umgebung für das skalierte Erstellen, Bereitstellen und Verwalten von Datenlösungen bereitstellen.
 
-Sie können die [!DNL Databricks] verwenden, um Ihr Konto zu verbinden und Ihre [!DNL Databricks] Daten in Adobe Experience Platform aufzunehmen.
+Verwenden Sie die [!DNL Databricks], um Ihr Konto zu verbinden und Ihre [!DNL Databricks] Daten in Adobe Experience Platform aufzunehmen.
 
 ## Voraussetzungen
 
