@@ -61,7 +61,7 @@ XDM-Ansichten können in Adobe Journey Optimizer genutzt werden, um es Marketing
 
 Dazu müssen auf Entwicklerseite die folgenden Schritte ausgeführt werden, um ein einmaliges Setup abzuschließen:
 
-1. Installieren Sie [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) und überprüfen Sie die Seite [Voraussetzungen für den Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
+1. Installieren Sie [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) und überprüfen Sie die Seite [Voraussetzungen für den Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=de).
 
 2. Bestimmen Sie alle XDM-Ansichten in Ihrer Einzelseitenanwendung, die Sie personalisieren möchten.
 

@@ -76,7 +76,7 @@ Richten Sie eine Ereignisweiterleitung in Platform ein, um erfasste Benutzerverh
 
 Stellen Sie sicher, dass die Offsite-Retargeting-Erweiterung an eine gültige Ereignisregel in der Datenerfassung von Adobe Experience Platform angehängt ist. Normalerweise sollte eine globale Regel erstellt werden, die für wichtige Aktionen wie `page load` oder bestimmte Benutzerinteraktionen ausgelöst wird.
 
-Weitere Informationen zum Konfigurieren der Erweiterung finden Sie in der Dokumentation [Ereignisweiterleitung](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) .
+Weitere Informationen zum Konfigurieren der Erweiterung finden Sie in der Dokumentation [Ereignisweiterleitung](https://experienceleague.adobe.com/de/docs/experience-platform/tags/event-forwarding/getting-started) .
 
 ## Andere Anwendungsfälle {#other-use-cases}
 

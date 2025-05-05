@@ -53,7 +53,7 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 ## Datenelemente erstellen {#create-data-elements}
 
-Um Daten an die [!DNL Snapchat] Conversions-API-Erweiterung zu senden, erstellen Sie [Datenelemente](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) für jeden Datenparameter. Führen Sie folgende Schritte aus:
+Um Daten an die [!DNL Snapchat] Conversions-API-Erweiterung zu senden, erstellen Sie [Datenelemente](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) für jeden Datenparameter. Führen Sie folgende Schritte aus:
 
 1. Navigieren Sie **[!UICONTROL Bildschirm**&#x200B;**Eigenschafteninformationen]** > **[!UICONTROL Datenelemente]** und wählen Sie dann **[!UICONTROL Datenelement hinzufügen]**.
 
@@ -79,7 +79,7 @@ Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forw
 
 ## Erstellen von Regeln zum Senden von Konversionsereignissen an Snap {#create-snap-rules}
 
-[Regeln](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) werden zum Erstellen von Triggern für Erweiterungen in Experience Platform verwendet. In diesem Abschnitt wird beschrieben, wie Sie in Ihrer Ereignisweiterleitungs-Eigenschaft Regeln erstellen, um Konversionsereignisse mithilfe der Conversions-API-Erweiterung an Snap zu senden.
+[Regeln](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) werden zum Erstellen von Triggern für Erweiterungen in Experience Platform verwendet. In diesem Abschnitt wird beschrieben, wie Sie in Ihrer Ereignisweiterleitungs-Eigenschaft Regeln erstellen, um Konversionsereignisse mithilfe der Conversions-API-Erweiterung an Snap zu senden.
 
 ### Neue Regel erstellen
 

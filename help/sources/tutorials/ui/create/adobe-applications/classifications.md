@@ -63,4 +63,4 @@ In diesem Tutorial haben Sie einen Analytics Classifications Data-Connector erst
 
 * [Übersicht über den Adobe Analytics-Quell-Connector](../../../../connectors/adobe-applications/analytics.md)
 * [Erstellen einer Analytics-Quellverbindung für Report Suite-Daten in der Benutzeroberfläche](./analytics.md)
-* [Über Klassifizierungen](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [Über Klassifizierungen](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=de)

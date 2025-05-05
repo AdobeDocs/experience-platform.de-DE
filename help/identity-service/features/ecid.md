@@ -32,7 +32,7 @@ Zur Identifizierung Ihrer Online-Benutzenden müssen Sie Ihre Site oder App mit 
 Die folgende Dokumentation enthält weitere Ressourcen zum ECID-Verständnis in verschiedenen Experience Platform- und Experience Cloud-Anwendungen:
 
 * Informationen zur Verwendung von ECID im Zuge einer Website-Implementierung finden Sie in der Dokumentation für [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de).
-* Informationen zur Verwendung von ECID mit Apps und mobilen Web-Inhalten finden Sie in der Dokumentation zu [Besucher-Tracking zwischen App und mobilem Internet](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
+* Informationen zur Verwendung von ECID mit Apps und mobilen Web-Inhalten finden Sie in der Dokumentation zu [Besucher-Tracking zwischen App und mobilem Internet](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=de#sdk-reference-ios).
 * Die Bereitstellung dieser Tools ist einfach und leicht zu verwalten, wenn Sie [Tags](../../tags/home.md) verwenden.
 * Informationen zur Verwendung von ECID zur Erleichterung der Einhaltung von Datenschutzbestimmungen wie der DSGVO finden Sie in der [Dokumentation zu Privacy Service](../../privacy-service/identity-data.md).
 * Weitere Informationen zu ECID im Kontext von Experience Platform finden Sie unter [Identity Service - Übersicht](../home.md) und [Identity-Namespaces - Übersicht](./namespaces.md).

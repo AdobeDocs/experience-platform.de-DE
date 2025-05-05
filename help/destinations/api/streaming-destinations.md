@@ -563,7 +563,7 @@ Die zurückgegebene Antwort sollte im `transformations` die Zielgruppen und Prof
 
 >[!IMPORTANT]
 >
-> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Aktivieren von Daten für Ihr neues Ziel](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe Beispiel unten.
+> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Aktivieren von Daten für Ihr neues Ziel](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=de), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe Beispiel unten.
 
 ```json
 {

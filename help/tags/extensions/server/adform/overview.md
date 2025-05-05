@@ -47,7 +47,7 @@ Stellen Sie vor der Integration von Adform mit Adobe sicher, dass die folgenden 
 2. **CDP- oder Verbindungs-SKU**: Sie müssen entweder über die Adobe Customer Data Platform (CDP) Prime- oder Ultimate-SKU oder über die Verbindungs-SKU verfügen, um eine nahtlose Client- und Server-seitige Kommunikation zu ermöglichen.
 
 3. **Adobe Experience Platform Edge Network-Konfiguration**:
-   * Stellen Sie sicher, dass der Edge Network für die Unterstützung der Echtzeit-Ereignisweiterleitung für Offsite-Retargeting konfiguriert ist. Weitere Informationen finden Sie [ Handbuch „Erste Schritte ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) der Ereignisweiterleitung“ von Adobe.
+   * Stellen Sie sicher, dass der Edge Network für die Unterstützung der Echtzeit-Ereignisweiterleitung für Offsite-Retargeting konfiguriert ist. Weitere Informationen finden Sie [ Handbuch „Erste Schritte ](https://experienceleague.adobe.com/de/docs/experience-platform/tags/event-forwarding/getting-started) der Ereignisweiterleitung“ von Adobe.
    * Dieser Schritt ist wichtig, um Daten effizient an den Server-seitigen Endpunkt von Adform zu übertragen.
 
 Sobald diese Voraussetzungen erfüllt sind, können Sie mit der Konfiguration und Bereitstellung der [!DNL Adform]-Erweiterung fortfahren.

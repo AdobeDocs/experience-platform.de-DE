@@ -140,7 +140,7 @@ Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie 
 
 ### Kann ich profilaktivierte Schemata löschen?
 
-Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/de/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Wenn Sie die Verwendung eines profilaktivierten Schemas nicht mehr wünschen, wird empfohlen, das Schema umzubenennen und **Nicht verwenden** oder **Inaktiv** einzuschließen.
 

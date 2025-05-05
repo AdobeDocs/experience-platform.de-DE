@@ -46,7 +46,7 @@ Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bere
 - [Datensätze](../../catalog/datasets/overview.md)
 - [Schemata](../../xdm//home.md)
 - [Zielgruppen](../../segmentation/home.md)
-- [Journey aus Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Journey aus Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Nachdem Sie Ihr goldenes Sandbox-Paket abgeschlossen haben, haben Sie ein standa
 
 >[!NOTE]
 >
-> Die oben genannten Schritte folgen dem Prozess in der Benutzeroberfläche von Experience Platform. Es ist möglich, dieselben Schritte mithilfe der -API über verschiedene Endpunkte hinweg auszuführen. Weitere Informationen zu `sandboxes` einzelnen Anfragen über [ API finden ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) im `packages` [Endpunkthandbuch](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Die oben genannten Schritte folgen dem Prozess in der Benutzeroberfläche von Experience Platform. Es ist möglich, dieselben Schritte mithilfe der -API über verschiedene Endpunkte hinweg auszuführen. Weitere Informationen zu `sandboxes` einzelnen Anfragen über [ API finden ](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/api/sandboxes#create) im `packages` [Endpunkthandbuch](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 

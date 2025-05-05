@@ -18,7 +18,7 @@ Adobe hat mehrere Anwendungen auf Experience Platform erstellt. Die Dokumentatio
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=de)
 
 Im folgenden Video werden die Anwendungsfälle der einzelnen Programme beschrieben, die auf dem Experience Platform basieren.
 

@@ -16,14 +16,14 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 >[!TIP]
 >
 >Weitere Informationen finden Sie in der unterstützenden Dokumentation im Adobe-Handbuch für Mitwirkende:
->* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)
+>* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)
+>* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
 
 ## Einrichten der GitHub-Authoring-Umgebung {#set-up-environment}
 
 1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`.
-2. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
+2. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Dokumentations-Repository für Verzweigung Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
    >
    >Sie können Ihr Browser-Fenster jederzeit schließen und später erneut öffnen. Ihre Arbeit wird automatisch gespeichert und wartet auf Sie, wenn Sie den Browser erneut öffnen.
 3. Kopieren Sie den Inhalt aus dem Markdown-Editor in Ihre neue Datei in GitHub.
-4. Verwenden Sie für alle Screenshots oder Bilder, die Sie verwenden möchten, die GitHub-Oberfläche, um die Dateien in `experience-platform.en/help/destinations/assets/catalog/[...]` hochzuladen, wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zum Experience Platform hinzufügen, wählen Sie die Kategorie `personalization` aus. Sie müssen eine Verknüpfung zu den Bildern auf der Seite herstellen, die Sie gerade bearbeiten. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
+4. Verwenden Sie für alle Screenshots oder Bilder, die Sie verwenden möchten, die GitHub-Oberfläche, um die Dateien in `experience-platform.en/help/destinations/assets/catalog/[...]` hochzuladen, wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zum Experience Platform hinzufügen, wählen Sie die Kategorie `personalization` aus. Sie müssen eine Verknüpfung zu den Bildern auf der Seite herstellen, die Sie gerade bearbeiten. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=de#link-to-images).
 
    ![Bild auf GitHub hochladen](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 >[!TIP]
 >
->Um Bilder und Links zu Ihrer Dokumentation und zu anderen Fragen rund um Markdown hinzuzufügen, lesen Sie [Verwenden von Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) im Handbuch zum gemeinsamen Schreiben von Adobe.
+>Um Bilder und Links zu Ihrer Dokumentation und zu anderen Fragen rund um Markdown hinzuzufügen, lesen Sie [Verwenden von Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de) im Handbuch zum gemeinsamen Schreiben von Adobe.

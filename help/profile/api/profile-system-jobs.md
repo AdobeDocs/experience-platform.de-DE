@@ -16,7 +16,7 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->Die folgenden Endpunkte können je nach Implementierung von Adobe Experience Platform auf Microsoft Azure und Amazon Web Services (AWS) unterschiedlich sein. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Die folgenden Endpunkte können je nach Implementierung von Adobe Experience Platform auf Microsoft Azure und Amazon Web Services (AWS) unterschiedlich sein. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/de/docs/experience-platform/landing/multi-cloud).
 
 Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Experience Platform] aufgenommene Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für das Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-Time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder irrtümlich hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der [!DNL Real-Time Customer Profile]-API zum Erstellen eines [!DNL Profile] Systemauftrags oder „Löschanfrage“.
 

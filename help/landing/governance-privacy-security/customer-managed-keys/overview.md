@@ -17,7 +17,7 @@ In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe v
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform unterstützt kundenseitig verwaltete Schlüssel (CMK) für Microsoft Azure und Amazon Web Services (AWS). Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Wenn Ihre Implementierung auf AWS ausgeführt wird, haben Sie die Möglichkeit, den Key Management Service (KMS) für die Experience Platform-Datenverschlüsselung zu verwenden. Weitere Informationen zur unterstützten Infrastruktur finden Sie in der [Übersicht über die Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform unterstützt kundenseitig verwaltete Schlüssel (CMK) für Microsoft Azure und Amazon Web Services (AWS). Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Wenn Ihre Implementierung auf AWS ausgeführt wird, haben Sie die Möglichkeit, den Key Management Service (KMS) für die Experience Platform-Datenverschlüsselung zu verwenden. Weitere Informationen zur unterstützten Infrastruktur finden Sie in der [Übersicht über die Experience Platform-Multi-Cloud](https://experienceleague.adobe.com/de/docs/experience-platform/landing/multi-cloud).
 >
 >Informationen zur Erstellung und Verwaltung von Verschlüsselungsschlüsseln in AWS KMS finden Sie im [Handbuch zur AWS KMS-Datenverschlüsselung](./aws/configure-kms.md). Informationen zu Azure-Implementierungen finden Sie im [Konfigurationshandbuch für Azure Key Vault](./azure/azure-key-vault-config.md).
 
@@ -109,7 +109,7 @@ Beispielsweise zeigt das Profil-Dashboard bis zu sieben Tage lang Daten aus sein
 
 >[!TIP]
 >
->Es gibt zwei Anwendungsfall-spezifische Ausnahmen von der siebentägigen Datensatzgültigkeit für nicht primäre (zwischengespeicherte/vorübergehende) Daten. Weitere Informationen zu diesen Funktionen finden Sie in der entsprechenden Dokumentation.<ul><li>[Adobe Journey Optimizer URL-Verkürzung](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=de#message-preset-sms)</li><li>[Edge-Prognosen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Es gibt zwei Anwendungsfall-spezifische Ausnahmen von der siebentägigen Datensatzgültigkeit für nicht primäre (zwischengespeicherte/vorübergehende) Daten. Weitere Informationen zu diesen Funktionen finden Sie in der entsprechenden Dokumentation.<ul><li>[Adobe Journey Optimizer URL-Verkürzung](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=de#message-preset-sms)</li><li>[Edge-Prognosen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#edge-projections)</li></ul>
 
 ## Nächste Schritte
 

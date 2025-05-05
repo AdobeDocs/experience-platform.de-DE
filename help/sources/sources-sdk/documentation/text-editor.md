@@ -17,7 +17,7 @@ In diesem Dokument wird beschrieben, wie Sie mit Ihrer lokalen Umgebung die Doku
 
 >[!TIP]
 >
->Die folgenden Dokumente aus dem Adobe Contributing Guide können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Die folgenden Dokumente aus dem Adobe Contributing Guide können verwendet werden, um Ihren Dokumentationsprozess weiter zu unterstützen: <ul><li>[Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)</li><li>[Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)</li><li>[GitHub-Beitrags-Workflow für wichtige Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de)</li></ul>
 
 ## Voraussetzungen
 
@@ -37,7 +37,7 @@ Um das Repository auf Ihren lokalen Computer zu klonen, wählen Sie **Code** aus
 
 >[!TIP]
 >
->Weitere Informationen finden Sie im Tutorial zum [Einrichten eines lokalen Git-Repositorys für die -Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
+>Weitere Informationen finden Sie im Tutorial zum [Einrichten eines lokalen Git-Repositorys für die -Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Wählen Sie als Nächstes **Verzweigung veröffentlichen**.
 
 ## Erstellen der Dokumentationsseite für Ihre Quelle
 
-Nachdem das Repository auf den lokalen Computer geklont und eine neue Verzweigung erstellt wurde, können Sie jetzt mit dem Erstellen der Dokumentationsseite für Ihre neue Quelle über den [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors) beginnen.
+Nachdem das Repository auf den lokalen Computer geklont und eine neue Verzweigung erstellt wurde, können Sie jetzt mit dem Erstellen der Dokumentationsseite für Ihre neue Quelle über den [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de#understand-markdown-editors) beginnen.
 
 Adobe empfiehlt die Verwendung von [Visual Studio Code](https://code.visualstudio.com/) und die Installation der Adobe Markdown Authoring-Erweiterung. Um die Erweiterung zu installieren, starten Sie Visual Studio Code, und wählen Sie dann im linken Navigationsbereich **Registerkarte** Erweiterungen“ aus.
 

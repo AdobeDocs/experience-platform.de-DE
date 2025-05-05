@@ -127,4 +127,4 @@ Die folgenden Dokumente bieten zusätzliche Anleitungen zu den Nuancen im Zusamm
 * [Erstellen eines Adobe Service-Kontos (JWT) im Adobe Developer-Portal](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Erstellen eines Schemas in der API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Erstellen eines Schemas in der Benutzeroberfläche](../../../../../xdm/tutorials/create-schema-ui.md)
-* [Definieren von Identitätsfeldern in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [Definieren von Identitätsfeldern in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=de)

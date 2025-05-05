@@ -23,9 +23,9 @@ ht-degree: 6%
 
 | Anzeigename | Eigenschaft | Datentyp | Erforderlich | Beschreibung |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | integer | Nein | Der Bitratenwert (in kbps). |
-| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | integer | Nein | Die Gesamtzahl der bei der Wiedergabe verschobenen Frames. |
-| [[!UICONTROL Frames pro Sekunde]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | integer | Nein | Die aktuelle Stream-Framerate (in Frames pro Sekunde). |
-| [[!UICONTROL Zeit bis zum Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | integer | Nein | Dauer (in Sekunden) zwischen Laden und Starten des Videos. |
+| [[!UICONTROL bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=de#average-bitrate) | `bitrate` | integer | Nein | Der Bitratenwert (in kbps). |
+| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=de#dropped-frames) | `droppedFrames` | integer | Nein | Die Gesamtzahl der bei der Wiedergabe verschobenen Frames. |
+| [[!UICONTROL Frames pro Sekunde]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=de#frames-per-second) | `framesPerSecond` | integer | Nein | Die aktuelle Stream-Framerate (in Frames pro Sekunde). |
+| [[!UICONTROL Zeit bis zum Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=de#time-to-start-1) | `timeToStart` | integer | Nein | Dauer (in Sekunden) zwischen Laden und Starten des Videos. |
 
 {style="table-layout:auto"}

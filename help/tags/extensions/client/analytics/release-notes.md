@@ -23,7 +23,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Eine neue Funktion wurde hinzugefügt, mit der Benutzende eine JSON-Version der Aktion „Variablen festlegen[ anzeigen und ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) können. Die Adobe Web SDK-Erweiterung enthält auch eine Aktion zum [Ausfüllen einer Analytics-Variablen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) durch Bereitstellung von JSON. Durch Kopieren von JSON-Daten aus der AA-Erweiterung in die Web SDK-Erweiterung können migrierende Kunden einfach mehrere Einstellungen gleichzeitig übertragen, anstatt jede Variable manuell hinzuzufügen.
+* Eine neue Funktion wurde hinzugefügt, mit der Benutzende eine JSON-Version der Aktion „Variablen festlegen[ anzeigen und ](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) können. Die Adobe Web SDK-Erweiterung enthält auch eine Aktion zum [Ausfüllen einer Analytics-Variablen](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) durch Bereitstellung von JSON. Durch Kopieren von JSON-Daten aus der AA-Erweiterung in die Web SDK-Erweiterung können migrierende Kunden einfach mehrere Einstellungen gleichzeitig übertragen, anstatt jede Variable manuell hinzuzufügen.
 
 ## 12. August 2024
 
@@ -61,7 +61,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Fehlerbehebungen**:
 
-* Es wurde eine zusätzliche Fehlerbehandlung für Browser mit fehlerhaften APIs [ hohe Entropie (Benutzeragenten](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html)Client-Hinweise) hinzugefügt.
+* Es wurde eine zusätzliche Fehlerbehandlung für Browser mit fehlerhaften APIs [ hohe Entropie (Benutzeragenten](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de)Client-Hinweise) hinzugefügt.
 * Die Kopfzeile [POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Inhaltstyp wurde geändert, sodass sie standardmäßig `x-www-form-urlencoded` verwendet wird.
 
 ## 23. September 2022
@@ -218,7 +218,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
-* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.15.0)
 * Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: „Hängen Sie den Destination Publishing IFRAME nicht an das DOM an oder lösen Sie Ziele aus“
 
 ## 4. Juni 2019
@@ -227,7 +227,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
+* Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
 * Hinzufügung eines Exchange-Links zur Erweiterung. Der Exchange-Listeneintrag kann über die Option „Erweiterungsinfo“ im Dropdown-Menü aufgerufen werden.
 
 **Fehlerbehebungen**:

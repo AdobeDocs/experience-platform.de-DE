@@ -36,18 +36,18 @@ Während Sie Beispiele für Rückgewinnungsszenarien durcharbeiten, erstellen Si
 
 Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Funktionen von Real-Time CDP und Adobe Journey Optimizer (aufgeführt in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/home.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integriert Daten in alle Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Die CDP wird auch verwendet, um Zielgruppen in E-Mails und im Internet zu aktivieren (über [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=de) - Integriert Daten in alle Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Die CDP wird auch verwendet, um Zielgruppen in E-Mails und im Internet zu aktivieren (über [!DNL Adobe Target]).
    * [Schemata](/help/xdm/home.md)
    * [Profile](/help/profile/home.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
    * [Zielgruppen](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
    * [Ziele](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=de) - Hilft Ihnen, Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bereitzustellen.
-   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=de)
    * [Zielgruppen/ Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
-   * [Journey-Aktionen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Journey-Aktionen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
 
 ## So erreichen Sie den Anwendungsfall {#achieve-use-case-instruction}
 
@@ -97,7 +97,7 @@ Um die einzelnen Schritte in den oben stehenden allgemeinen Übersichten abzusch
 
 Experience-Datenmodell (XDM)-Ressourcen werden im Arbeitsbereich [!UICONTROL Schemata] in [!DNL Adobe Experience Platform] verwaltet. Sie können die von [!DNL Adobe] bereitgestellten Kernressourcen (z. B. Feldgruppen) anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
-Weitere Informationen zum Erstellen von [Schemata](/help/xdm/home.md) finden Sie im Tutorial [Erstellen eines Schemas“.](/help/xdm/tutorials/create-schema-ui.md) und [Modellieren von Kundenerlebnisdaten mit XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Weitere Informationen zum Erstellen von [Schemata](/help/xdm/home.md) finden Sie im Tutorial [Erstellen eines Schemas“.](/help/xdm/tutorials/create-schema-ui.md) und [Modellieren von Kundenerlebnisdaten mit XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=de).
 
 Es gibt vier Schema-Designs, die für den Anwendungsfall zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder eingerichtet werden. Sie müssen das Schema aktivieren, damit es in das Echtzeit-Kundenprofil aufgenommen werden kann. Weitere Informationen zur Aktivierung des Schemas für die Verwendung im Echtzeit-Kundenprofil finden Sie unter [Aktivieren eines Schemas für das Echtzeit-Kundenprofil](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 
@@ -141,7 +141,7 @@ Die [Einverständnis und Voreinstellungen](/help/xdm/field-groups//profile/conse
 
 +++Details zum Profiltest (Feldergruppe)
 
-Mit dieser Feldergruppe können Sie Ihren Journey vor der Veröffentlichung mithilfe von Testprofilen testen. Weitere Informationen zum Erstellen von Testprofilen finden Sie im Tutorial [Erstellen von Testprofilen](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) und [Testen des Journey-](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=de).
+Mit dieser Feldergruppe können Sie Ihren Journey vor der Veröffentlichung mithilfe von Testprofilen testen. Weitere Informationen zum Erstellen von Testprofilen finden Sie im Tutorial [Erstellen von Testprofilen](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=de) und [Testen des Journey-](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=de).
 
 +++
 
@@ -314,11 +314,11 @@ Weitere Informationen zum Erstellen eines [Datensatzes](/help/catalog/datasets/o
 
 >[!IMPORTANT]
 >
->Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=de).
 
 #### Einverständniserklärungen
 
-Erwägen Sie beim Erstellen eines Rückgewinnungspfads das Hinzufügen der folgenden [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
+Erwägen Sie beim Erstellen eines Rückgewinnungspfads das Hinzufügen der folgenden [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=de):
 
 * Wenn `consents.marketing.email.val = "Y"` dann eine E-Mail senden können
 * Wenn `consents.marketing.sms.val = "Y"` dann kann SMS
@@ -346,7 +346,7 @@ Für [ Szenario mit abgebrochener Produktsuche sind keine ](/help/data-governanc
 
 Die Rückgewinnungsszenarien verwenden Zielgruppen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Zielgruppen können in [!DNL Adobe Experience Platform] auf verschiedene Weise erstellt werden.
 
-Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Zielgruppen-Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Zielgruppen-Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#create-audience).
 
 Weitere Informationen zum direkten Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 
@@ -436,7 +436,7 @@ Auf dieser Journey müssen keine Zielgruppen erstellt werden.
 >
 >[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden in &quot;[!UICONTROL &quot; &#x200B;].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich. Unten finden Sie die genauen Daten, die für jede Journey benötigt werden.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich. Unten finden Sie die genauen Daten, die für jede Journey benötigt werden.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Das Szenario zum Durchsuchen abgebrochener Produkte zielt auf das Durchsuchen ab
 
 +++Events
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=de).
 
 * Ereignis 1: Produktansichten
    * Schema: Digitale Kundentransaktionen
@@ -571,7 +571,7 @@ Das Szenario „Transaktionsabbruch“ zielt auf Produkte ab, die in den Warenko
 
 +++Events
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=de).
 
 * Ereignis 2: Zum Warenkorb hinzufügen
    * Schema: Digitale Kundentransaktionen
@@ -704,7 +704,7 @@ Das Szenario der Bestellbestätigung konzentriert sich auf Produktkäufe, die ü
 
 +++Events
 
-Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Mit Hilfe von Ereignissen können Sie Ihre Journeys einheitlich auslösen, um Nachrichten in Echtzeit an die Kontakte zu senden, die in die Journey eintreten. Weitere Informationen zu Ereignissen finden Sie im [Handbuch zu allgemeinen Ereignissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=de).
 
 * Event 4: Online-Käufe
    * Schema: Digitale Kundentransaktionen
@@ -755,7 +755,7 @@ Die Schlüssellogik der Journey-Arbeitsfläche erfordert es, bestimmte Ereigniss
 
 >[!ENDTABS]
 
-Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de).
 
 ### Einrichten von Paid Media-Anzeigen in Zielen {#paid-media-ads}
 

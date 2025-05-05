@@ -159,12 +159,12 @@ Im **[!UICONTROL Monitoring]** können Sie die Batch- und Streaming-Aufnahme üb
 
 ### [!UICONTROL Verknüpfte Daten]
 
-Im **[!UICONTROL Modelle]** können Sie Datenmodelle und Schemata entwerfen und erstellen, die die Struktur, Beziehungen und Begrenzungen Ihrer Daten definieren. Weitere Informationen zu den Datenmodellen und Schemata finden Sie im [Benutzerhandbuch zur Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+Im **[!UICONTROL Modelle]** können Sie Datenmodelle und Schemata entwerfen und erstellen, die die Struktur, Beziehungen und Begrenzungen Ihrer Daten definieren. Weitere Informationen zu den Datenmodellen und Schemata finden Sie im [Benutzerhandbuch zur Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 Der Abschnitt **[!UICONTROL Audit]** Protokoll“ bietet eine detaillierte und chronologische Aufzeichnung aller Aktionen und Ereignisse, die in Echtzeit in Ihrer Umgebung durchgeführt wurden. Weitere Informationen zum Audit-Protokoll finden Sie im Benutzerhandbuch [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
 
-Im **[!UICONTROL Federated Database]** können Sie Adobe Experience Platform mit Ihrem Unternehmens-Data Warehouse verbinden. Weitere Informationen zur Verbindung mit Federated Database finden Sie im [Benutzerhandbuch zur Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+Im **[!UICONTROL Federated Database]** können Sie Adobe Experience Platform mit Ihrem Unternehmens-Data Warehouse verbinden. Weitere Informationen zur Verbindung mit Federated Database finden Sie im [Benutzerhandbuch zur Federated Audience Composition](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/config/federated-db).
 
 ### [!UICONTROL Entscheidungsfindung]
 

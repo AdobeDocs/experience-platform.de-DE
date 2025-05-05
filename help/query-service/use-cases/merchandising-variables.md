@@ -26,7 +26,7 @@ In Adobe Analytics können benutzerdefinierte Daten auf Produktebene über spezi
 
 Diese Variablen werden als Merchandising-Variablen mit Produktsyntax bezeichnet. Auf diese Weise können Informationen gesammelt werden, z. B. ein pro Produkt berechneter „Rabattbetrag“ oder Informationen über den „Standort auf der Seite“ des Produkts in den Suchergebnissen des Kunden.
 
-Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mithilfe der Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mithilfe der Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=de#implement-using-product-syntax).
 
 In den folgenden Abschnitten werden die XDM-Felder beschrieben, die für den Zugriff auf die Merchandising-Variablen in Ihrem [!DNL Analytics]-Datensatz erforderlich sind:
 
@@ -127,7 +127,7 @@ In Berichten sind Bestellungen, Umsatz, Produktansichten und Hinzufügungen zum 
 | Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
 | Interne Suche:Wintermütze | 12,99 | 1 | 1 | 1 |
 
-Weitere Informationen zur Verwendung der Konversionsvariablensyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mithilfe der Konversionsvariablensyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Weitere Informationen zur Verwendung der Konversionsvariablensyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mithilfe der Konversionsvariablensyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=de#implement-using-conversion-variable-syntax).
 
 Im Folgenden werden die XDM-Felder angezeigt, um die Konversionsvariablensyntax in Ihrem [!DNL Analytics] Datensatz zu erstellen:
 

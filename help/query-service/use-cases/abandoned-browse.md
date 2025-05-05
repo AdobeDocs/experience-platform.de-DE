@@ -25,7 +25,7 @@ Dieses Dokument und die zugehörige Videopräsentation bieten einen allgemeinen 
 Diese Workflow-Demonstration beruht auf mehreren Adobe Experience Platform-Services. Wenn Sie dem Beispiel folgen möchten, sollten Sie über ein gutes Verständnis der folgenden Funktionen und Services verfügen:
 
 * Die [Grundlagen der Schemakomposition des Experience-Datenmodells (XDM)](../../xdm/schema/composition.md)
-* So erstellen [ Datensätze und nehmen Daten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* So erstellen [ Datensätze und nehmen Daten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de)
 * So [ Sie Daten mithilfe des Adobe Analytics-Quell-Connectors aufnehmen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=de)
 * [Segmentierung](../../segmentation/home.md)
 * [Ziele](../../destinations/home.md)

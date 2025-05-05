@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->Bevor Sie eine [!DNL Marketo Engage]-Quellverbindung und einen Datenfluss erstellen, müssen Sie zunächst sicherstellen, dass Sie [Ihre Adobe-Organisations-](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)) in [!DNL Marketo] zugeordnet haben. Darüber hinaus müssen Sie auch sicherstellen, dass Sie [automatische Ausfüllen Ihrer B2B [!DNL Marketo] Namespaces und -Schemata) ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) haben, bevor Sie eine Quellverbindung und einen Datenfluss erstellen.
+>Bevor Sie eine [!DNL Marketo Engage]-Quellverbindung und einen Datenfluss erstellen, müssen Sie zunächst sicherstellen, dass Sie [Ihre Adobe-Organisations-](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de)) in [!DNL Marketo] zugeordnet haben. Darüber hinaus müssen Sie auch sicherstellen, dass Sie [automatische Ausfüllen Ihrer B2B [!DNL Marketo] Namespaces und -Schemata) ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) haben, bevor Sie eine Quellverbindung und einen Datenfluss erstellen.
 
 In diesem Tutorial erfahren Sie, wie Sie einen [!DNL Marketo Engage]-Quell-Connector (im Folgenden als „[!DNL Marketo]“ abgekürzt) in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform einzubringen.
 

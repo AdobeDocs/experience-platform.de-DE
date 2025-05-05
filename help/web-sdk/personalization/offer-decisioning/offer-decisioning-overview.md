@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitste
 
 ## Terminologie
 
-Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer Decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer Decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=de).
 
 * **Entscheidungsumfänge:** Für Offer Decisioning sind Entscheidungsumfänge die Base64-kodierten JSON-Zeichenfolgen, die die Aktivitäts- und Platzierungs-IDs enthalten, die der Offer Decisioning-Service zum Unterbreiten von Angeboten verwenden soll.
 
@@ -328,4 +328,4 @@ Um Offer Decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
 
 ## Einschränkungen
 
-Einige Angebotsbeschränkungen werden derzeit nicht mit den mobilen Edge Network-Workflows unterstützt, z. B. die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Einige Angebotsbeschränkungen werden derzeit nicht mit den mobilen Edge Network-Workflows unterstützt, z. B. die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=de#eligibility).

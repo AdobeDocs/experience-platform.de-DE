@@ -174,7 +174,7 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
    ...
    ```
 
-1. Verwenden Sie die Media Heartbeat-Instanz und befolgen Sie die [Medien-SDK-JS-](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) und die [JS-API-Dokumentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html), um das Medien-Tracking zu implementieren.
+1. Verwenden Sie die Media Heartbeat-Instanz und befolgen Sie die [Medien-SDK-JS-](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=de) und die [JS-API-Dokumentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html), um das Medien-Tracking zu implementieren.
 
 >[!NOTE]
 >

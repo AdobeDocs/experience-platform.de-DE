@@ -99,4 +99,4 @@ Berechnete Attribute leiten automatisch Datennutzungsbeschriftungen von den Quel
 
 ## Wie verwende ich berechnete Attribute mit Adobe Journey Optimizer?
 
-Um berechnete Attribute in Journey zu verwenden, müssen Sie die `SystemComputedAttributes` Feldergruppe zur Experience Platform-Datenquelle hinzufügen. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im Handbuch zu Adobe Experience Platform-Datenquellen [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Um berechnete Attribute in Journey zu verwenden, müssen Sie die `SystemComputedAttributes` Feldergruppe zur Experience Platform-Datenquelle hinzufügen. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im Handbuch zu Adobe Experience Platform-Datenquellen [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=de).

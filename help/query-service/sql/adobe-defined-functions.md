@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # Adobe-definierte SQL-Funktionen im Abfrage-Service
 
-Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Adobe Experience Platform Query Service, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event]-Daten unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie die in Adobe Analytics.
+Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Adobe Experience Platform Query Service, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event]-Daten unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie die in Adobe Analytics.
 
 Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die in [!DNL Query Service] verfügbar sind.
 
@@ -47,7 +47,7 @@ Wenn Sie mit [!DNL Experience Event] Daten arbeiten, die von einer Website, eine
 
 Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Verknüpfung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu erfahren.
 
-Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de).
 
 **Abfragesyntax**
 

@@ -81,7 +81,7 @@ Der nächste Schritt besteht darin, eine Segmentdefinition zu erstellen und Ziel
 * Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 * Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Alternativ steht auch ein [Segment Builder-Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) zur Verfügung, um weitere Informationen zu erhalten.
+Alternativ steht auch ein [Segment Builder-Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=de) zur Verfügung, um weitere Informationen zu erhalten.
 
 ## Aktivieren Ihrer Audience für eine E-Mail-Kampagne {#activate-audience-for-campaign}
 

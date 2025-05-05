@@ -31,7 +31,7 @@ Dieses Dokument bietet einen Überblick über den [!DNL Marketo Engage]-Quell-Co
 
 ## Einrichten der Adobe-Organisationszuordnung
 
-Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [ Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [ Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de).
 
 ## [!DNL Marketo Engage]-Connector authentifizieren
 

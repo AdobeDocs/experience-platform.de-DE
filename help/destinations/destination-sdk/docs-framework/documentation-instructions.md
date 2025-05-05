@@ -24,8 +24,8 @@ Dieser Dokumentationsabschnitt enthält:
 
 * Schrittweise Anweisungen zum Erstellen einer Dokumentationsseite für Ihr neues Ziel.
 * Eine Vorlage, die Sie für Ihr Ziel ausfüllen können;
-* [Allgemeine Anweisungen zur Verwendung von Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Spezifische Anweisungen für das Adobe-Markdown-](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (das Adobe-Markdown-Format ist dem normalen Markdown sehr ähnlich).
+* [Allgemeine Anweisungen zur Verwendung von Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de);
+* [Spezifische Anweisungen für das Adobe-Markdown-](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de#custom-markdown-extensions) (das Adobe-Markdown-Format ist dem normalen Markdown sehr ähnlich).
 * Eine [Best Practices-Seite](./authoring-best-practices.md) die Ihnen beim Erstellen einer Dokumentationsseite für Ihre Zielseite hilft, die den Qualitätsstandards der Experience Platform-Dokumentation entspricht.
 
 ## Voraussetzungen {#prerequisites}
@@ -38,12 +38,12 @@ Um eine Dokumentation für Ihr Ziel gemäß den Anweisungen in diesem Artikel zu
 
 ## Allgemeine Anweisungen zum Erstellen der Dokumentation für Ihr Ziel in Adobe Experience Platform {#high-level-instructions}
 
-Um eine Dokumentation für Ihr Ziel zu erstellen, müssen Sie [eine Abspaltung erstellen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) des Adobe Experience Platform-Dokumentations-Repositorys und die [bereitgestellte Dokumentationsvorlage](./self-service-template.md) in einer neuen Verzweigung bearbeiten. Verwenden Sie die von der Adobe bereitgestellte Vorlage, um eine neue Zielseite zu erstellen. Öffnen Sie eine Pull-Anfrage (PR), wenn Sie bereit sind. Anweisungen dazu finden Sie weiter unten unter [Schritte zum Erstellen Ihrer neuen Zielseite](./documentation-instructions.md#steps-to-create-docs-page).
+Um eine Dokumentation für Ihr Ziel zu erstellen, müssen Sie [eine Abspaltung erstellen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#fork-the-repository) des Adobe Experience Platform-Dokumentations-Repositorys und die [bereitgestellte Dokumentationsvorlage](./self-service-template.md) in einer neuen Verzweigung bearbeiten. Verwenden Sie die von der Adobe bereitgestellte Vorlage, um eine neue Zielseite zu erstellen. Öffnen Sie eine Pull-Anfrage (PR), wenn Sie bereit sind. Anweisungen dazu finden Sie weiter unten unter [Schritte zum Erstellen Ihrer neuen Zielseite](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ Sie können die GitHub-Web-Benutzeroberfläche oder Ihre lokale Umgebung verwend
 
 ## Best Practices {#best-practices}
 
-Lesen Sie die [Best Practices zum Authoring](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md), bevor und während Sie die Zieldokumentationsseite erstellen. Lesen Sie auch die [Schreibanleitung für die Adobe-Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html), um einige weitere Tipps zu erhalten, die das Adobe-Dokumentations-Team beim Verfassen der Dokumentation verwendet.
+Lesen Sie die [Best Practices zum Authoring](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md), bevor und während Sie die Zieldokumentationsseite erstellen. Lesen Sie auch die [Schreibanleitung für die Adobe-Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=de), um einige weitere Tipps zu erhalten, die das Adobe-Dokumentations-Team beim Verfassen der Dokumentation verwendet.

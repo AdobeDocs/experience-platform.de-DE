@@ -16,7 +16,7 @@ ht-degree: 55%
 
 Mit Adobe Livefyre können Sie einen konstanten Fluss von anwendergenerierten Inhalten auf Ihrer Website erkunden, organisieren und veröffentlichen, um für authentische und hochpersonalisierte Erlebnisse zu sorgen.
 
-Adobe Livefyre ist eine Social-Media-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre ist eine Social-Media-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=de).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 

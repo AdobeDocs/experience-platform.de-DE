@@ -14,7 +14,7 @@ ht-degree: 3%
 
 Sobald Ihr Unternehmen für Adobe Experience Platform bereitgestellt wurde, kann Ihr Administrator Ihnen Zugriff auf [!DNL Query Service] gewähren. Bevor Sie jedoch alle von [!DNL Query Service] angebotenen Funktionen nutzen können, müssen Sie zunächst Daten in Adobe Experience Platform aufnehmen.
 
-Dieses [Tutorial zur Datenaufnahme](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) bietet einen Überblick über das Erstellen eines Datensatzes, das Zuordnen eines Datensatzes zu einem Schema, das Hinzufügen von Daten zum Datensatz und das Bestätigen seiner Aufnahme. Die [Dokumentation zur Aufnahme - Übersicht](../../ingestion/home.md) ergänzt diese und bietet detailliertere Informationen und Links zu anderen Lernressourcen.
+Dieses [Tutorial zur Datenaufnahme](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) bietet einen Überblick über das Erstellen eines Datensatzes, das Zuordnen eines Datensatzes zu einem Schema, das Hinzufügen von Daten zum Datensatz und das Bestätigen seiner Aufnahme. Die [Dokumentation zur Aufnahme - Übersicht](../../ingestion/home.md) ergänzt diese und bietet detailliertere Informationen und Links zu anderen Lernressourcen.
 
 Nachdem Sie Ihre Daten in Adobe Experience Platform erfasst haben, können Sie mit [!DNL Query Service] arbeiten, indem Sie entweder die [[!DNL Query Editor] in der Experience Platform-Benutzeroberfläche) ](../ui/user-guide.md) die [[!DNL Query Service] API](../api/getting-started.md) verwenden. Eine vollständige Dokumentation zur Verwendung der einzelnen Tools finden Sie in den jeweiligen Abschnitten.
 

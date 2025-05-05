@@ -21,14 +21,14 @@ In diesem Dokument wird erläutert, wie Sie die Tag-Erweiterung in der Tags-Benu
 
 >[!NOTE]
 >
->Die Tag-Erweiterung &quot;Adobe Content Analytics“ wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des [Konfigurationsassistenten für Inhaltsanalysen“ automatisch erstellt ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
+>Die Tag-Erweiterung &quot;Adobe Content Analytics“ wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des [Konfigurationsassistenten für Inhaltsanalysen“ automatisch erstellt ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
 
 
 ### Manuelle Installation
 
-Bei einer manuellen Konfiguration muss für die Tag-Erweiterung von Adobe Content Analytics eine Eigenschaft installiert sein. Wenn Sie dies noch nicht getan haben, lesen Sie die Dokumentation unter [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+Bei einer manuellen Konfiguration muss für die Tag-Erweiterung von Adobe Content Analytics eine Eigenschaft installiert sein. Wenn Sie dies noch nicht getan haben, lesen Sie die Dokumentation unter [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/de/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-Nachdem Sie eine Eigenschaft erstellt haben oder wenn Sie die mit dem Assistenten für die geführte Konfiguration von [Content Analytics erstellte Eigenschaft auswählen](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) öffnen Sie die Eigenschaft und wählen Sie in der linken Seitenleiste die Registerkarte **[!UICONTROL Erweiterungen]** aus.
+Nachdem Sie eine Eigenschaft erstellt haben oder wenn Sie die mit dem Assistenten für die geführte Konfiguration von [Content Analytics erstellte Eigenschaft auswählen](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) öffnen Sie die Eigenschaft und wählen Sie in der linken Seitenleiste die Registerkarte **[!UICONTROL Erweiterungen]** aus.
 
 Wählen Sie die **[!UICONTROL Katalog]** aus. Suchen Sie in der Liste der verfügbaren Erweiterungen nach der **[!DNL Adobe Content Analytics]** Erweiterung und wählen Sie **[!UICONTROL Installieren]** aus.
 
@@ -40,7 +40,7 @@ Nach Auswahl von **[!UICONTROL Installieren]** müssen Sie die Tag-Erweiterung f
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +52,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Konfigurieren von Datenströmen
 
-Der Assistent für die geführte Konfiguration von &lbrace;0[&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) Content Analytics wählt automatisch den richtigen Wert für den **[!UICONTROL Sandbox]**- und **[!UICONTROL Produktionsdatenstrom]**.  Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
+Der Assistent für die geführte Konfiguration von &lbrace;0[&#128279;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) Content Analytics wählt automatisch den richtigen Wert für den **[!UICONTROL Sandbox]**- und **[!UICONTROL Produktionsdatenstrom]**.  Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
 
 ![Bild, das die Konfiguration der Datenströme der Tag-Erweiterung &quot;Adobe Content Analytics&quot; in der Tags-Benutzeroberfläche anzeigt](assets/aca-tag-datastreams.png)
 
@@ -83,7 +83,7 @@ Verwenden Sie ![Schließen](./assets/CrossSize300.svg), um einzelne Parameter zu
 
 ## Konfigurieren der Ereignisfilterung
 
-Im Abschnitt **[!UICONTROL Ereignisfilterung]** können Sie die regulären Ausdrücke ändern, um **[!UICONTROL Seiten-URLs]** und **[!UICONTROL Assets-URLs]** beim Erfassen von Daten für Content Analytics zu filtern. Die regulären Ausdrücke, die Sie im Konfigurationsassistenten für [Inhaltsanalysen“ definiert haben](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) werden automatisch ausgefüllt.
+Im Abschnitt **[!UICONTROL Ereignisfilterung]** können Sie die regulären Ausdrücke ändern, um **[!UICONTROL Seiten-URLs]** und **[!UICONTROL Assets-URLs]** beim Erfassen von Daten für Content Analytics zu filtern. Die regulären Ausdrücke, die Sie im Konfigurationsassistenten für [Inhaltsanalysen“ definiert haben](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) werden automatisch ausgefüllt.
 
 ![Bild mit den Ereignisfiltereinstellungen der Adobe Content Analytics-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/aca-tag-eventfiltering.png)
 

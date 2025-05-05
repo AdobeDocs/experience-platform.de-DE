@@ -16,7 +16,7 @@ ht-degree: 49%
 
 [!DNL Bizible] ist die branchenführende B2B-Attributionslösung, die Ihnen einen einzigartigen Einblick in Ihre Daten bietet, sodass Sie intelligente Entscheidungen treffen können, die das Wachstum fördern.
 
-[!DNL Bizible] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Bizible finden Sie unter [Marketing-Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in den Ressourcen zur Bizible-Übersicht.
+[!DNL Bizible] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Bizible finden Sie unter [Marketing-Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=de) in den Ressourcen zur Bizible-Übersicht.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 

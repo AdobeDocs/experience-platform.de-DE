@@ -117,7 +117,7 @@ Zur Veranschaulichung dieses Prozesses sollten Sie sich ein Szenario ansehen, in
 
 | Besuch | Beschreibung |
 | --- | --- |
-| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID]-Cookies begonnen. Die im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) enthaltene [!DNL ECID] ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
+| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID]-Cookies begonnen. Die im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=de#section-c55af54828dc4cce89f6118655d694c8) enthaltene [!DNL ECID] ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
 | Zweiter Besuch | Der Rollout der [!DNL FPID] Lösung hat begonnen. Die vorhandene [!DNL ECID] ist noch vorhanden und bleibt die primäre Kennung zur Besucheridentifizierung. |
 | Dritter Besuch | Zwischen dem zweiten und dem dritten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Da die [!DNL FPID] jedoch mit einem [!DNL DNS] [!DNL A]-Eintrag festgelegt wurde, bleibt die [!DNL FPID] bestehen. Die [!DNL FPID] wird jetzt als primäre ID betrachtet und zum Testen der [!DNL ECID] verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird jetzt als neuer Besucher in den Lösungen Adobe Experience Platform und Experience Cloud betrachtet. |
 | Vierter Besuch | Zwischen dem dritten und vierten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Wie beim vorherigen Besuch bleibt die [!DNL FPID] aufgrund der Art und Weise, wie sie festgelegt wurde, bestehen. Diesmal wird derselbe [!DNL ECID] wie beim vorherigen Besuch generiert. Der Benutzer wird in allen Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer angezeigt wie der vorherige Besuch. |
@@ -133,7 +133,7 @@ Erstanbieter-Geräte-IDs ([!DNL FPIDs]) verfolgen Besucher mithilfe von Erstanbi
 >
 >[!DNL A]- oder [!DNL AAAA] werden nur für das Setzen und Tracking von Cookies unterstützt. Die primäre Methode zur Datenerfassung ist die über eine [!DNL DNS CNAME]. [!DNL FPIDs] werden mit einem [!DNL A]- oder [!DNL AAAA]-Datensatz festgelegt und mit einem [!DNL CNAME] an Adobe gesendet.
 >
->Das Adobe-Managed Certificate Program[&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) von  wird auch für die Erstanbieter-Datenerfassung unterstützt.
+>Das Adobe-Managed Certificate Program[&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de#adobe-managed-certificate-program) von  wird auch für die Erstanbieter-Datenerfassung unterstützt.
 
 Sobald ein [!DNL FPID] Cookie gesetzt wurde, kann sein Wert abgerufen und bei der Erfassung von Ereignisdaten an Adobe gesendet werden. Die erfassten [!DNL FPIDs] werden zur Generierung von [!DNL ECIDs] verwendet, bei denen es sich um die primären Kennungen in Adobe Experience Cloud-Programmen handelt.
 
@@ -164,7 +164,7 @@ Um diese Funktion verwenden zu können, müssen Sie das [!DNL FPID]-Cookie auf d
 
 >[!IMPORTANT]
 >
->Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
+>Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de).
 
 **Schritt 2. Aktivieren**&#x200B;[!UICONTROL &#x200B; First-Party-ID &#x200B;]&#x200B;**Cookie-Funktion für Ihren Datenstrom**
 
@@ -181,7 +181,7 @@ Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben
 >[!NOTE]
 >
 >Wenn Sie Erstanbieter-IDs verwenden, können Sie keine ID-Synchronisierungen von Drittanbietern durchführen. ID-Synchronisierungen von Drittanbietern basieren auf dem [!DNL Visitor ID]-Service und den von diesem Service generierten `UUID`. Bei Verwendung der ID-Funktion von Erstanbietern wird die [!DNL ECID] ohne Verwendung des [!DNL Visitor ID]-Service generiert, was die Synchronisierung von Drittanbieter-IDs unmöglich macht.
-><br> Wenn Sie Erstanbieter-IDs verwenden, werden [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager)-Funktionen, die auf die Aktivierung in Partnerplattformen abzielen, nicht unterstützt, da die Synchronisierung der Audience Manager-Partner-IDs hauptsächlich auf `UUIDs` oder `DIDs` basiert. Die von einer Erstanbieter-ID abgeleitete [!DNL ECID] ist nicht mit einer `UUID` verknüpft, sodass sie nicht adressierbar ist.
+><br> Wenn Sie Erstanbieter-IDs verwenden, werden [Audience Manager](https://experienceleague.adobe.com/de/docs/audience-manager)-Funktionen, die auf die Aktivierung in Partnerplattformen abzielen, nicht unterstützt, da die Synchronisierung der Audience Manager-Partner-IDs hauptsächlich auf `UUIDs` oder `DIDs` basiert. Die von einer Erstanbieter-ID abgeleitete [!DNL ECID] ist nicht mit einer `UUID` verknüpft, sodass sie nicht adressierbar ist.
 
 ## Methode 2: Verwenden von FPIDs in `identityMap` {#identityMap}
 

@@ -56,7 +56,7 @@ Bei der Verwendung der Datenerfassung von Drittanbietern beschränken einige Anz
 
 ### Auswirkungen der Cookie-Lebensdauer auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
-Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe TargetOffer decisioning ](https://experienceleague.adobe.com/en/docs/target) oder [&#128279;](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
+Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe TargetOffer decisioning ](https://experienceleague.adobe.com/de/docs/target) oder [&#128279;](https://experienceleague.adobe.com/de/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
 
 Stellen Sie sich beispielsweise eine Situation vor, in der Sie ein Personalisierungserlebnis erstellt haben, das jedes Element auf die Startseite höher stuft, wenn ein Benutzer es in den letzten sieben Tagen dreimal angesehen hat.
 
@@ -165,7 +165,7 @@ Jedes Identitätsobjekt im Identitäts-Array enthält die folgenden Eigenschafte
 | `authenticatedState` | String | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Legt fest, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
-Die Verwendung des Felds `identityMap` zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie die Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) Methode aus der [!DNL ID Service API]. Weitere Informationen finden Sie in der [ID-Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)API-Dokumentation .
+Die Verwendung des Felds `identityMap` zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie die Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=de) Methode aus der [!DNL ID Service API]. Weitere Informationen finden Sie in der [ID-Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=de)API-Dokumentation .
 
 ## Migration von der Besucher-API zu ECID {#migrating-visitor-api-ecid}
 
@@ -177,7 +177,7 @@ Bei der Migration von mit der Besucher-API können Sie auch vorhandene AMCV-Cook
 
 ### Aktualisieren von Eigenschaften für die Migration
 
-Wenn XDM-formatierte Daten an den Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale umgewandelt werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Prozess wird durch die Verwendung des [BAAAM-Tools](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) das der Audience Manager erstellt hat, erleichtert.
+Wenn XDM-formatierte Daten an den Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale umgewandelt werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Prozess wird durch die Verwendung des [BAAAM-Tools](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=de#getting-started-with-bulk-management) das der Audience Manager erstellt hat, erleichtert.
 
 ## Verwendung bei der Ereignisweiterleitung
 

@@ -236,7 +236,7 @@ Sie benötigen außerdem die folgenden Zielgruppenberechtigungen:
 * **Profil lesen**
 * **Datensatz lesen**
 
-Da Journey sehr flexibel sind und viele miteinander verbundene Objekte umfassen können, werden [vollständige Berechtigungen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) separat dokumentiert und können je nach Anwendungsfall variieren.
+Da Journey sehr flexibel sind und viele miteinander verbundene Objekte umfassen können, werden [vollständige Berechtigungen](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) separat dokumentiert und können je nach Anwendungsfall variieren.
 
 ## Nächste Schritte
 

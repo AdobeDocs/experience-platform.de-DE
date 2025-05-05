@@ -77,7 +77,7 @@ Wenn ein bestimmter Auftrag noch aussteht oder einen Fehler zurückgegeben hat, 
 
 ## Zugriff auf Anfragedaten {#access-request-data}
 
-Wenn Informationen über betroffene Personen angefordert werden, gibt jeder Service Daten in einem Format zurück, das der Art und Weise entspricht, in der sie diese Daten speichern und verwenden. Sobald alle Services die Anfrage abgeschlossen haben, wird in den Auftragsdetails eine ZIP-Archivdatei-URL angegeben, damit diese Daten heruntergeladen werden können. Informationen zum Herunterladen der Ergebnisse des Datenschutzauftrags finden [ im Handbuch zur Fehlerbehebung ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Wenn Informationen über betroffene Personen angefordert werden, gibt jeder Service Daten in einem Format zurück, das der Art und Weise entspricht, in der sie diese Daten speichern und verwenden. Sobald alle Services die Anfrage abgeschlossen haben, wird in den Auftragsdetails eine ZIP-Archivdatei-URL angegeben, damit diese Daten heruntergeladen werden können. Informationen zum Herunterladen der Ergebnisse des Datenschutzauftrags finden [ im Handbuch zur Fehlerbehebung ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=de#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 Im Folgenden finden Sie wichtige Hinweise zur Verwaltung des Datenarchivs:
 

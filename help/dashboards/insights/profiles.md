@@ -481,7 +481,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Vollständige Informationen zum Aussehen und zur Funktionalität dieser insight finden Sie im [Handbuch zu Widgets für die Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Vollständige Informationen zum Aussehen und zur Funktionalität dieser insight finden Sie im [Handbuch zu Widgets für die Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=de#profile-count).
 
 Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/profiles.md#profile-count) Dokumentation zum Widget „Profilanzahl“ .
 

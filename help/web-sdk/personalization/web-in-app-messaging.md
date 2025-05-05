@@ -21,7 +21,7 @@ Mithilfe von In-App-Nachrichten können Sie effektiv mit Ihrer Zielgruppe intera
 >
 >Web-In-App-Messaging ist eine Funktion von [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) die die Web-SDK verwendet, um die personalisierten Inhalte bereitzustellen.
 >
->Detaillierte Anweisungen zum Konfigurieren Ihrer Web-In-App-Messaging-Kampagne finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Detaillierte Anweisungen zum Konfigurieren Ihrer Web-In-App-Messaging-Kampagne finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=de).
 
 
 ## Voraussetzungen {#prerequisites}
@@ -184,5 +184,5 @@ Sie können festlegen, dass In-App-Nachrichten Benutzern für eine bestimmte Anz
 
 Legen [ in der Konfiguration ](../commands/configure/overview.md)Web-SDK&quot; die Option &quot;`personalizationStorageEnabled`&quot; entsprechend Ihren Anforderungen fest:
 
-* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne&rbrace; definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne&rbrace; definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=de#configure-inapp).
 * `personalizationStorageEnabled: false` Trigger die In-App-Nachricht bei jedem Laden der Seite.

@@ -39,16 +39,16 @@ Hierfür sind die beiden Experience Platform-Apps [Real-Time CDP](https://experi
 >
 >Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/abac/end-to-end-guide.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): Integrieren Sie Daten in Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Schließlich wird Real-Time CDP auch verwendet, um Zielgruppen für Paid-Media-Ziele zu aktivieren.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=de): Integrieren Sie Daten in Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Schließlich wird Real-Time CDP auch verwendet, um Zielgruppen für Paid-Media-Ziele zu aktivieren.
    * [Schemata](/help/xdm/home.md)
    * [Profile](/help/profile/home.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
    * [Zielgruppen](/help/segmentation/home.md)
    * [Ziele](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtigen Nachrichten für Ihre Besucher.
-   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtigen Nachrichten für Ihre Besucher.
+   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=de)
    * [Zielgruppen und Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
-   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
 
 ## Architektur von Real-Time CDP und Journey Optimizer
 
@@ -268,9 +268,9 @@ Weitere Informationen zum Erstellen eines [Datensatzes](/help/catalog/datasets/o
 
 >[!IMPORTANT]
 >
->Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=de).
 
-Erwägen Sie die Implementierung der [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) und bitten Sie Ihre Besucher um Zustimmung, bevor Sie sich an sie wenden:
+Erwägen Sie die Implementierung der [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=de) und bitten Sie Ihre Besucher um Zustimmung, bevor Sie sich an sie wenden:
 
 * Wenn `consents.marketing.email.val = "Y"` dann eine E-Mail senden können
 * Wenn `consents.marketing.sms.val = "Y"` dann kann SMS
@@ -298,7 +298,7 @@ Für die Journey[ die Sie im Rahmen ](/help/data-governance/policies/overview.md
 
 In diesem Anwendungsfall müssen Sie zwei Zielgruppen erstellen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe zu unterscheiden. Zielgruppen können in Adobe Experience Platform auf verschiedene Weise erstellt werden:
 
-* Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Benutzeroberfläche des Zielgruppen-Services](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+* Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Benutzeroberfläche des Zielgruppen-Services](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#create-audience).
 * Informationen zum Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 * Informationen zum Erstellen von Zielgruppen mithilfe von aus Experience Platform abgeleiteten Segmentdefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
 
@@ -344,7 +344,7 @@ Diese Zielgruppe wird erstellt, um Profile einzuschließen, die in den letzten 3
 >
 >[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden im [!UICONTROL Ziele] [Arbeitsbereich](/help/destinations/ui/destinations-workspace.md) erstellt.
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich.
 
 Für diesen Anwendungsfall müssen Sie zwei separate Journey erstellen:
 
@@ -367,15 +367,15 @@ Die Lifetime Journey richtet sich an Kunden mit hohem und niedrigem Frequenzwert
 
 Die oben dargestellte Journey folgt der folgenden Logik.
 
-1. Zielgruppe lesen: Verwenden Sie eine [Aktivität „Zielgruppe lesen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) für die erste Zielgruppe, die im Abschnitt „Zielgruppen“ oben erstellt wurde.
+1. Zielgruppe lesen: Verwenden Sie eine [Aktivität „Zielgruppe lesen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=de) für die erste Zielgruppe, die im Abschnitt „Zielgruppen“ oben erstellt wurde.
 
-2. Bedingung - Bevorzugter Kanal: Verwenden Sie eine [Bedingungsaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) um zu bestimmen, wie Sie Kunden erreichen können, ob über E-Mail, SMS oder Push-Benachrichtigungen. Verwenden Sie drei Aktionsaktivitäten, um die drei Verzweigungen zu erstellen.
+2. Bedingung - Bevorzugter Kanal: Verwenden Sie eine [Bedingungsaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=de) um zu bestimmen, wie Sie Kunden erreichen können, ob über E-Mail, SMS oder Push-Benachrichtigungen. Verwenden Sie drei Aktionsaktivitäten, um die drei Verzweigungen zu erstellen.
 
-3. Warten: Verwenden Sie eine [Warteaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) um zu warten, bis Sie auf Käufe warten.
+3. Warten: Verwenden Sie eine [Warteaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=de) um zu warten, bis Sie auf Käufe warten.
 
 4. Bedingung - Abonnement in den letzten 7 Tagen erworben?: Verwenden Sie eine Aktivität vom Typ Bedingung , um auf Produktkäufe in den letzten sieben Tagen zu warten.
 
-5. JourneyStepEventTracker - Abonnement nicht erworben: Verwenden Sie eine [benutzerdefinierte Aktion](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) für die Besucher, die Ihr Abonnement noch nicht erworben haben, obwohl sie Ihre Nachricht erhalten haben. Erstellen Sie als Teil der benutzerdefinierten Bedingung am Ende des Journey ein `journey.feedback` und fügen Sie es einem Datensatz hinzu, der auf dem Schema [!UICONTROL Journey-] basiert. Mit diesem Ereignis segmentieren Sie die Zielgruppe, die das Abonnement nicht erworben hat und die Sie über Paid-Media-Anzeigen ansprechen können.
+5. JourneyStepEventTracker - Abonnement nicht erworben: Verwenden Sie eine [benutzerdefinierte Aktion](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=de) für die Besucher, die Ihr Abonnement noch nicht erworben haben, obwohl sie Ihre Nachricht erhalten haben. Erstellen Sie als Teil der benutzerdefinierten Bedingung am Ende des Journey ein `journey.feedback` und fügen Sie es einem Datensatz hinzu, der auf dem Schema [!UICONTROL Journey-] basiert. Mit diesem Ereignis segmentieren Sie die Zielgruppe, die das Abonnement nicht erworben hat und die Sie über Paid-Media-Anzeigen ansprechen können.
 
 +++
 
@@ -436,7 +436,7 @@ Verwenden Sie die unten vorgeschlagenen Ereignisse, Felder und Aktionen auf Ihre
 
 >[!ENDTABS]
 
-Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de).
 
 ### Einrichten eines Ziels für die Anzeige von Paid Media-Anzeigen {#paid-media-ads}
 

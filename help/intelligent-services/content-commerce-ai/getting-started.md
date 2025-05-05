@@ -67,6 +67,6 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Sobald Sie über alle Ihre Anmeldeinformationen verfügen, können Sie einen benutzerdefinierten Worker für [!DNL Content tagging] einrichten. Die folgenden Dokumente helfen beim Verständnis des Erweiterbarkeits-Frameworks und der Einrichtung der Umgebung.
 
-Um mehr über das Erweiterbarkeits-Framework zu erfahren, lesen Sie zunächst das Dokument [Einführung in die Erweiterbarkeit](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen beschrieben.
+Um mehr über das Erweiterbarkeits-Framework zu erfahren, lesen Sie zunächst das Dokument [Einführung in die Erweiterbarkeit](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=de). In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen beschrieben.
 
-Um mehr über das Einrichten einer Umgebung für [!DNL Content tagging] zu erfahren, lesen Sie zunächst das Handbuch [Einrichten einer Entwicklungsumgebung](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Dieses Dokument enthält Einrichtungsanweisungen, die Ihnen die Entwicklung für den Asset compute-Service ermöglichen.
+Um mehr über das Einrichten einer Umgebung für [!DNL Content tagging] zu erfahren, lesen Sie zunächst das Handbuch [Einrichten einer Entwicklungsumgebung](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=de). Dieses Dokument enthält Einrichtungsanweisungen, die Ihnen die Entwicklung für den Asset compute-Service ermöglichen.

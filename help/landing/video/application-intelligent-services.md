@@ -21,7 +21,7 @@ In diesem Video erhalten Sie einen Überblick über die Anwendung und Intelligen
 Weitere Informationen finden Sie unter den Links in der Dokumentation zu den einzelnen Programmen:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=de)
-* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=de)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=de)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)

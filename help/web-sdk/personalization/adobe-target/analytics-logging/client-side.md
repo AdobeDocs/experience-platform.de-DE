@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## Überblick {#overview}
 
-Mit Adobe Experience Platform Web SDK können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) Client-seitig in Ihrer Web-Anwendung erfassen.
+Mit Adobe Experience Platform Web SDK können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target] auf der Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target] auf der Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
 
 >[!NOTE]
 >
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer-Aktivitäten {#visual-experience-composer-acitivties}
 
-Mit Web SDK können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC) erstellt wurden](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Mit Web SDK können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC) erstellt wurden](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de).
 
 >[!NOTE]
 >

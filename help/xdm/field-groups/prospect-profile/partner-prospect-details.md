@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL Partner Prospect Details (Beispiel)] ist eine standardmäßige Schemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Der [!UICONTROL Partner-Interessentendetails (Beispiel)] bietet ein Beispiel-Framework für verschiedene Details, die sich auf das Profil eines Interessenten beziehen. Dieses Framework optimiert den Prozess der Organisation und Verwaltung verschiedener Informationen zu Interessenten.
 
-Diese Feldergruppe erweitert die Klasse [Individuelles Interessentenprofil](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) im Kontext eines Partners.
+Diese Feldergruppe erweitert die Klasse [Individuelles Interessentenprofil](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=de) im Kontext eines Partners.
 
 ![Abbildung der Feldergruppe &quot;[!UICONTROL &#x200B; Interessentendetails (Beispiel)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

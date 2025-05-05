@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->Diese Version enthält Verbesserungen am Add-on Federated Audience Composition . Weitere Informationen finden Sie in den [Versionshinweisen zur Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
+>Diese Version enthält Verbesserungen am Add-on Federated Audience Composition . Weitere Informationen finden Sie in den [Versionshinweisen zur Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes).
 
 **Versionsdatum: Mittwoch, 18. Februar 2025**
 
@@ -96,7 +96,7 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 | --- | --- |
 | Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse | Im Rahmen der [[!UICONTROL attributbasierten Zugriffssteuerung]](/help/access-control/abac/overview.md) in Real-Time CDP können Sie jetzt Zugriffsbeschriftungen auf [Ziel-Datenflüsse“ ](/help/dataflows/ui/monitor-destinations.md). Auf diese Weise können Sie sicherstellen, dass nur eine Teilmenge der Benutzenden in Ihrer Organisation Zugriff auf bestimmte Zieldatenflüsse erhält. <br> **Wichtig**: Bei der Suche nach Ziel-Datenflüssen mithilfe des Suchfelds oben in der Experience Platform-Benutzeroberfläche können die Ergebnisse Ziel-Datenflüsse enthalten, die aufgrund Ihrer Benutzerzugriffsbeschriftungen nicht angezeigt werden können. Dieses Verhalten wird in einer zukünftigen Aktualisierung korrigiert. |
 | [Reporting auf Zielgruppenebene](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) für die [Marketo Engage-Verbindung](/help/destinations/catalog/adobe/marketo-engage.md) | Sie können jetzt [Informationen anzeigen](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) über die aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene für jede Zielgruppe aufgeschlüsselt sind, die Teil der Datenflüsse für dieses Ziel ist. |
-| Unterstützung externer Zielgruppen für die [TikTok](/help/destinations/catalog/social/tiktok.md)- und [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)-Verbindungen | Sie können externe Zielgruppen für diese Ziele über [benutzerdefinierte Uploads](../../segmentation/ui/audience-portal.md#import-audience) und [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) aktivieren. |
+| Unterstützung externer Zielgruppen für die [TikTok](/help/destinations/catalog/social/tiktok.md)- und [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)-Verbindungen | Sie können externe Zielgruppen für diese Ziele über [benutzerdefinierte Uploads](../../segmentation/ui/audience-portal.md#import-audience) und [Federated Audience Composition](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences) aktivieren. |
 | Exportieren von Arrays, Zuordnungen und Objekten in Cloud-Speicher-Ziele | Durch Verwendung des neuen Umschalters **[!UICONTROL Exportieren von Arrays, Zuordnungen, Objekten]** beim Herstellen einer Verbindung zu einem Cloud-Speicher-Ziel können Sie neue komplexe Objekte in ausgewählte Ziele exportieren. [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
 
 {style="table-layout:auto"}

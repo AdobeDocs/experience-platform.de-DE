@@ -257,7 +257,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTRO
 
 Um den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] zum Aufnehmen von Einverständnisdaten von Ihren Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Anweisungen zum Zuweisen von Datentypen zu Feldern [ Sie im Tutorial ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Einverständnis und Voreinstellungen] enthält, lesen Sie den Abschnitt zum [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
+Anweisungen zum Zuweisen von Datentypen zu Feldern [ Sie im Tutorial ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_de)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Einverständnis und Voreinstellungen] enthält, lesen Sie den Abschnitt zum [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
 
 >[!IMPORTANT]
 >

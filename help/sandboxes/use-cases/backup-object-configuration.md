@@ -40,7 +40,7 @@ Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bere
 - [Datensätze](../../catalog/datasets/overview.md)
 - [Schemata](../../xdm//home.md)
 - [Zielgruppen](../../segmentation/home.md)
-- [Journey aus Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Journey aus Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 

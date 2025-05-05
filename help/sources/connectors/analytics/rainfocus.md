@@ -98,7 +98,7 @@ Wie Sie Ihr Schema für [!DNL RainFocus] Daten erstellen, erfahren Sie in der fo
 >[!IMPORTANT]
 >
 >* Das Schema muss die Klasse **XDM ExperienceEvent“ erweitern**
->* Sie müssen sicherstellen, dass das Schema eine **primäre Identität** enthält und **für Profil aktiviert** ist. Weitere Informationen finden sich im Handbuch unter [Definieren von Identitätsfeldern in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* Sie müssen sicherstellen, dass das Schema eine **primäre Identität** enthält und **für Profil aktiviert** ist. Weitere Informationen finden sich im Handbuch unter [Definieren von Identitätsfeldern in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=de)
 >* Sie können die Beispielidentität (E-Mail) durch eine andere geeignete Kennung wie eine sha256-E-Mail oder ECID ersetzen.
 
 ### Erstellen eines Integrationsprofils in RainFocus {#create-an-integration-profile-in-rainfocus}

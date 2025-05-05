@@ -24,7 +24,7 @@ Mit der ML-Schemagenerierung können Sie schnell neue Datenquellen integrieren u
 
 Dieses Tutorial setzt ein Grundverständnis der Anforderungen für die Schemaerstellung voraus. Bevor Sie mit diesem Handbuch fortfahren, sollten Sie das [Handbuch zur Benutzeroberfläche zum Erstellen und Bearbeiten von Schemata“ ](./resources/schemas.md).
 
-In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learning-Algorithmen (ML) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen [ Erstellen von Schemata finden Sie im Handbuch zum ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) des Schemas oder im Dokument zu [feldbasierten Workflows im Schema-Editor](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) um Ihr Verständnis des Prozesses zur Schemaerstellung zu verbessern.
+In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learning-Algorithmen (ML) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen [ Erstellen von Schemata finden Sie im Handbuch zum ](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) des Schemas oder im Dokument zu [feldbasierten Workflows im Schema-Editor](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/field-based-workflows) um Ihr Verständnis des Prozesses zur Schemaerstellung zu verbessern.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ Der Schema-Editor wird mit dem neu erstellten Schema auf der Arbeitsfläche ange
 
 Nachdem Sie Ihr Schema erstellt haben, können Sie den Schema-Editor verwenden, um bei Bedarf weitere Änderungen vorzunehmen. Ihr neues Schema kann jetzt in Ihre Datenquellen integriert und für die Datenanalyse verwendet werden.
 
-Weitere Informationen zur Verwendung [ Schema-Editors finden ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) im Handbuch zum Bearbeiten eines vorhandenen Schemas .
+Weitere Informationen zur Verwendung [ Schema-Editors finden ](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#edit) im Handbuch zum Bearbeiten eines vorhandenen Schemas .

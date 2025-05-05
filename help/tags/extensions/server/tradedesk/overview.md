@@ -39,7 +39,7 @@ Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen
 
 Geben Sie im nächsten Bildschirm die [!UICONTROL Advertiser-ID] und optional eine [!UICONTROL Händler-ID] ein. Sie können die IDs direkt in diese Eingaben einfügen oder stattdessen ein Datenelement verwenden. Diese dienen als Standardwerte, die bei einem Ereignisaufruf an [!DNL The Trade Desk] Echtzeit-Konversions-API verwendet werden. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
 
-Um zu erfahren, wie Sie Datenelemente erstellen und sie Erweiterungen in Ihrer Tag-Eigenschaft zur Verfügung stellen können, folgen Sie dem Tutorial [Datenelemente erstellen](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) .
+Um zu erfahren, wie Sie Datenelemente erstellen und sie Erweiterungen in Ihrer Tag-Eigenschaft zur Verfügung stellen können, folgen Sie dem Tutorial [Datenelemente erstellen](https://experienceleague.adobe.com/de/docs/platform-learn/data-collection/tags/create-data-elements) .
 
 ![Die Konfigurationsseite der [!DNL The Trade Desk]-Erweiterung mit den [!UICONTROL Advertiser-ID] und [!UICONTROL Händler-ID] hervorgehobenen Feldern.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

@@ -22,8 +22,8 @@ Dieses Dokumentationshandbuch umfasst:
 
 * Ein Tutorial, dem Sie folgen können, um eine Dokumentationsseite für Ihre neue Quelle zu erstellen;
 * Eine Dokumentationsvorlage, die Sie für Ihre neue Quelle ausfüllen können;
-* [Anweisungen zur Verwendung von Markdown zum Schreiben technischer Dokumentationen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Anweisungen zum Verstehen der Adobe-Markdown-Variante](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Anweisungen zur Verwendung von Markdown zum Schreiben technischer Dokumentationen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de);
+* [Anweisungen zum Verstehen der Adobe-Markdown-Variante](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de#custom-markdown-extensions).
 
 ## Voraussetzungen
 
