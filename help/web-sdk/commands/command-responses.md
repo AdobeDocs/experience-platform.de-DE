@@ -23,14 +23,14 @@ Erstellen Sie eine Regel, die das Ereignis **[!UICONTROL Senden abgeschlossen]**
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen [!UICONTROL  unter „Ereignisse] ein vorhandenes Ereignis aus oder erstellen Sie ein Ereignis.
+1. Wählen [!UICONTROL &#x200B; unter „Ereignisse] ein vorhandenes Ereignis aus oder erstellen Sie ein Ereignis.
 1. Legen Sie das [!UICONTROL Erweiterung] Dropdown-Feld auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und setzen Sie den [!UICONTROL Ereignistyp] auf **[!UICONTROL Ereignis senden abgeschlossen]**.
 1. Klicken Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 
 Sie können dann die Aktionen **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** auf diese Regel anwenden.
 
 1. Wenn Sie die oben erstellte oder bearbeitete Regel anzeigen, wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie im Dropdown[!UICONTROL Feld ]Erweiterung“ den Wert **[!UICONTROL Adobe Experience Platform Web SDK]** fest, und legen Sie [!UICONTROL Aktionstyp] je nach gewünschtem Verhalten **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** fest.
+1. Legen Sie im Dropdown[!UICONTROL Feld &#x200B;]Erweiterung“ den Wert **[!UICONTROL Adobe Experience Platform Web SDK]** fest, und legen Sie [!UICONTROL Aktionstyp] je nach gewünschtem Verhalten **[!UICONTROL Vorschläge anwenden]** oder **[!UICONTROL Antwort anwenden]** fest.
 1. Legen Sie die gewünschten Felder der Aktion fest und klicken Sie dann auf **[!UICONTROL Änderungen beibehalten]**.
 
 ## Verarbeiten von Befehlsantworten mithilfe der Web SDK JavaScript-Bibliothek

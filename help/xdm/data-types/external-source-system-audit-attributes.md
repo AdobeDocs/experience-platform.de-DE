@@ -9,7 +9,7 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL  Datentyp „External Source System Audit ]&quot;
+# [!UICONTROL &#x200B; Datentyp „External Source System Audit &#x200B;]&quot;
 
 [!UICONTROL External Source System Audit Attributes] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 

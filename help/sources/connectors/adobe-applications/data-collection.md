@@ -22,7 +22,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der ] [!UICONTROL Adobe-Programme} die Option **[!UICONTROL Adobe-Datenerfassung]** und dann **[!UICONTROL Einrichten]** aus.
+Wählen Sie unter der  Adobe-Programme&rbrace; die Option **[!UICONTROL Adobe-Datenerfassung]** und dann **[!UICONTROL Einrichten]** aus.
 
 ![Datenerfassung](./images/data-collection/catalog.png)
 

@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Zielgruppen-Trends
 
-Analysieren Sie mit Visualisierungen der wichtigsten Zielgruppenmetriken im Dashboard „Zielgruppentrends[!UICONTROL , wie sich Ihre Zielgruppen im ] ändern. Dieses Dashboard hilft Ihnen, Trends wie das Zielgruppenwachstum, die Anzahl der Identitäten und die Anzahl der einzelnen Identitätsprofile zu verfolgen, und ermöglicht Ihnen datengesteuerte Entscheidungen. Durch die Analyse dieser Metriken können Marketing-Fachleute die Zielgruppenbestimmungsstrategien optimieren, die Interaktion mit Zielgruppen verbessern und ihre Segmentierungsbemühungen verfeinern, um effektivere Kampagnen zu ermöglichen.
+Analysieren Sie mit Visualisierungen der wichtigsten Zielgruppenmetriken im Dashboard „Zielgruppentrends[!UICONTROL , wie sich Ihre Zielgruppen im &#x200B;] ändern. Dieses Dashboard hilft Ihnen, Trends wie das Zielgruppenwachstum, die Anzahl der Identitäten und die Anzahl der einzelnen Identitätsprofile zu verfolgen, und ermöglicht Ihnen datengesteuerte Entscheidungen. Durch die Analyse dieser Metriken können Marketing-Fachleute die Zielgruppenbestimmungsstrategien optimieren, die Interaktion mit Zielgruppen verbessern und ihre Segmentierungsbemühungen verfeinern, um effektivere Kampagnen zu ermöglichen.
 
 ## Audiences filtern {#filter-audiences}
 

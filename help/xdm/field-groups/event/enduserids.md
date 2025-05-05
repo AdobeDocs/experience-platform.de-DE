@@ -12,7 +12,7 @@ ht-degree: 15%
 ---
 
 
-# Schemafeldgruppe [!UICONTROL Details ] Endbenutzer-ID“
+# Schemafeldgruppe [!UICONTROL Details &#x200B;] Endbenutzer-ID“
 
 >[!NOTE]
 >

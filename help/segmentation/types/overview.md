@@ -19,7 +19,7 @@ Eine Personen-Zielgruppe ist eine Zielgruppe, die mit Profildaten **Kunden** ers
 
 Ausführlichere Informationen zu Personen-Zielgruppen finden Sie in der [Personen-Zielgruppe - Übersicht](./people-audiences.md).
 
-## Lookalike]Zielgruppe von [!BADGE B2C Edition
+## Lookalike&rbrack;Zielgruppe von B2C Edition
 
 Eine Lookalike-Zielgruppe ist eine Zielgruppe, die durch Analyse einer hochwertigen Zielgruppe mit einem Lookalike-Modell für maschinelles Lernen erstellt wird. Das Look-alike-Modell kann eine Zielgruppe erstellen, die dem Ähnlichkeitsschwellenwert der analysierten hochwertigen Zielgruppe entspricht.
 

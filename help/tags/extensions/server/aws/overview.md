@@ -28,7 +28,7 @@ Sie müssen über ein [!DNL AWS]-Konto mit einem vorhandenen [!DNL Kinesis]-Date
 
 Um die [!DNL AWS] zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder zur Experience Platform-Benutzeroberfläche und wählen **[!UICONTROL in der linken Navigationsleiste]** Ereignisweiterleitung“ aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL AWS] und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL AWS] und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![Die ausgewählte Schaltfläche [!UICONTROL Installieren] für die Erweiterung [!UICONTROL AWS] in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/server/aws/install.png)
 

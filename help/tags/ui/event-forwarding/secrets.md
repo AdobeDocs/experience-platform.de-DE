@@ -186,7 +186,7 @@ Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldedaten für Ihr Google-Ko
 
 Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL LinkedIn] autorisiert werden müssen. Wählen Sie **[!UICONTROL Geheimnis mit[!DNL LinkedIn]]** erstellen und autorisieren“ aus, um fortzufahren.
 
-![[!DNL LinkedIn]-Autorisierungs-Popup mit hervorgehobener [!UICONTROL  „Geheime Daten mit [!DNL LinkedIn]] erstellen und autorisieren“](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![[!DNL LinkedIn]-Autorisierungs-Popup mit hervorgehobener [!UICONTROL &#x200B; „Geheime Daten mit [!DNL LinkedIn]] erstellen und autorisieren“](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
 
@@ -194,7 +194,7 @@ Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte
 
 ![Die Registerkarte [!UICONTROL Geheime Daten] auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Erneutes Autorisieren [!UICONTROL [!DNL LinkedIn] geheimen Daten ] OAuth 2
+#### Erneutes Autorisieren [!UICONTROL [!DNL LinkedIn] geheimen Daten &#x200B;] OAuth 2
 
 >WICHTIG
 >

@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL  Datentyp „Generisches Feld für Marketing-Voreinstellungen ] Abonnements“
+# [!UICONTROL &#x200B; Datentyp „Generisches Feld für Marketing-Voreinstellungen &#x200B;] Abonnements“
 
 [!UICONTROL Generisches Feld für Marketing-Voreinstellungen mit Abonnements] ist ein standardmäßiger XDM-Datentyp, der die Auswahl einer Kundin oder eines Kunden für eine bestimmte Marketing-Voreinstellung beschreibt.
 

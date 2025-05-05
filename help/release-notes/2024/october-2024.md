@@ -48,7 +48,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Tags und Erweiterungen | Adobe Analytics JSON-Ansicht | Sie können jetzt die Adobe Analytics-Tags-Erweiterung verwenden, um eVars, Props und Ereigniseinstellungen als JSON zu untersuchen, die jetzt in die Web-SDK-Erweiterung aufgenommen und zur Bearbeitung exportiert werden können. Sie können diese Daten auch hochladen oder kopieren und auf Ihrem Gerät speichern. Weitere Informationen finden Sie in der Dokumentation ](../../tags/extensions/client/analytics/overview.md) Erweiterung [Adobe Analytics . |
+| Tags und Erweiterungen | Adobe Analytics JSON-Ansicht | Sie können jetzt die Adobe Analytics-Tags-Erweiterung verwenden, um eVars, Props und Ereigniseinstellungen als JSON zu untersuchen, die jetzt in die Web-SDK-Erweiterung aufgenommen und zur Bearbeitung exportiert werden können. Sie können diese Daten auch hochladen oder kopieren und auf Ihrem Gerät speichern. Weitere Informationen finden Sie in der Dokumentation [&#128279;](../../tags/extensions/client/analytics/overview.md) Erweiterung Adobe Analytics . |
 
 {style="table-layout:auto"}
 

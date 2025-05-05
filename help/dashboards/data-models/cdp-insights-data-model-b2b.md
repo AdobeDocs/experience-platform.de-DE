@@ -52,7 +52,7 @@ Das folgende Diagramm zeigt die relevanten Datenfelder in jedem Datensatz, ihren
 
 #### Die neuen Konten nach Branchen-Anwendungsfall {#accounts-by-industry}
 
-Die Logik, die für die Einblicke [!UICONTROL Neue Konten nach Branche] verwendet wird, gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der [[!UICONTROL Dokumentation ]Neue Konten nach Branche](../guides/account-profiles.md#accounts-by-industry) .
+Die Logik, die für die Einblicke [!UICONTROL Neue Konten nach Branche] verwendet wird, gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der [[!UICONTROL Dokumentation &#x200B;]Neue Konten nach Branche](../guides/account-profiles.md#accounts-by-industry) .
 
 >[!TIP]
 >
@@ -97,7 +97,7 @@ LIMIT 5000;
 
 #### Die neuen Konten nach Typ - Anwendungsfall {#accounts-by-type}
 
-Die für die Insight-Funktion [!UICONTROL Neue Konten nach Typ] verwendete Logik gibt die numerische Aufschlüsselung von Konten nach ihrem Typ zurück. Diese Einblicke können als Leitfaden für Geschäftsstrategien und -vorgänge dienen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Neue Konten ] Typ](../guides/account-profiles.md#accounts-by-type) Widget .
+Die für die Insight-Funktion [!UICONTROL Neue Konten nach Typ] verwendete Logik gibt die numerische Aufschlüsselung von Konten nach ihrem Typ zurück. Diese Einblicke können als Leitfaden für Geschäftsstrategien und -vorgänge dienen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Neue Konten &#x200B;] Typ](../guides/account-profiles.md#accounts-by-type) Widget .
 
 Der SQL-Code, der die Einblicke [!UICONTROL Neue Konten nach Typ] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 

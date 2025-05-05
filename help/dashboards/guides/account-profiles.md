@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen zu Ihren Kontoprofilen anzeigen können. Diese Informationen werden bei einem täglichen Schnappschuss erfasst. In diesem Handbuch wird beschrieben, wie Sie das Dashboard [!UICONTROL Kontoprofile] in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Dieses Dokument bietet einen Überblick über die Funktionen im Dashboard [!UICONTROL Kontoprofile] und beschreibt die verfügbaren standardmäßigen Einblicke. Ausführliche Informationen zu [[!UICONTROL  verfügbaren Funktionen finden Sie ] Handbuch ](../../rtcdp/accounts/account-profile-ui-guide.md)Kontoprofile) zur Benutzeroberfläche .
+Dieses Dokument bietet einen Überblick über die Funktionen im Dashboard [!UICONTROL Kontoprofile] und beschreibt die verfügbaren standardmäßigen Einblicke. Ausführliche Informationen zu [[!UICONTROL &#x200B; verfügbaren Funktionen finden Sie &#x200B;] Handbuch ](../../rtcdp/accounts/account-profile-ui-guide.md)Kontoprofile) zur Benutzeroberfläche .
 
 ## Erste Schritte
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Drill-Throughs in der Experience Platform-Benutzeroberf
 
 #### [!UICONTROL Kunden pro Kontodetails] {#customers-per-account-detail}
 
-Das Diagramm [!UICONTROL Kunden pro ]) bietet detailliertere Details zur Anzahl der Konten, die mit verschiedenen Kundentypen verknüpft sind. Es wird eine dreispaltige Tabelle angezeigt, in der die Anzahl der Konten nach Kundentyp (direkt oder indirekt) und dem damit verbundenen Kundenbereich aufgeführt ist. Dieses Diagramm hilft Ihnen zu verstehen, wie die Kunden auf verschiedene Kundenkategorien verteilt sind und wie viele Konten insgesamt mit den einzelnen Kunden verbunden sind.
+Das Diagramm [!UICONTROL Kunden pro &#x200B;]) bietet detailliertere Details zur Anzahl der Konten, die mit verschiedenen Kundentypen verknüpft sind. Es wird eine dreispaltige Tabelle angezeigt, in der die Anzahl der Konten nach Kundentyp (direkt oder indirekt) und dem damit verbundenen Kundenbereich aufgeführt ist. Dieses Diagramm hilft Ihnen zu verstehen, wie die Kunden auf verschiedene Kundenkategorien verteilt sind und wie viele Konten insgesamt mit den einzelnen Kunden verbunden sind.
 
 ![Das Widget „Kunden pro Kontodetails“.](../images/account-profiles/customers-per-account-detail.png)
 
@@ -145,7 +145,7 @@ Das [!UICONTROL Vertriebschancen pro Konto - Übersicht] stellt eine Zusammenfas
 
 #### [!UICONTROL Vertriebschancen nach Kontodetails] {#opportunities-per-account-detail}
 
-Das Diagramm [!UICONTROL Vertriebschancen pro ]) bietet eine detailliertere Aufschlüsselung der Konten auf der Grundlage der Anzahl der Vertriebschancen, die sie haben. Die Tabelle zeigt die Anzahl der Konten gruppiert nach Opportunity-Zählbereichen an, wie z. B. 1-10 Opportunitys oder 100+ Opportunitys. Dieses Diagramm hilft Ihnen dabei, zu erkennen, wie Konten nach der Anzahl der von ihnen verwalteten Opportunitys verteilt sind.
+Das Diagramm [!UICONTROL Vertriebschancen pro &#x200B;]) bietet eine detailliertere Aufschlüsselung der Konten auf der Grundlage der Anzahl der Vertriebschancen, die sie haben. Die Tabelle zeigt die Anzahl der Konten gruppiert nach Opportunity-Zählbereichen an, wie z. B. 1-10 Opportunitys oder 100+ Opportunitys. Dieses Diagramm hilft Ihnen dabei, zu erkennen, wie Konten nach der Anzahl der von ihnen verwalteten Opportunitys verteilt sind.
 
 ![Das Widget „Opportunities pro Kontodetails“.](../images/account-profiles/opportunities-per-account-detail.png)
 
@@ -163,7 +163,7 @@ Das [!UICONTROL Neue Konten nach Typ] Widget zeigt die Gesamtzahl der Konten in 
 
 ### Neue Opportunitys nach Personenrolle {#opportunities-by-person-role}
 
-Das Widget [!UICONTROL Neue Opportunitys nach ]) zeigt die Gesamtzahl Ihrer Opportunitys in einer einzigen Metrik in einem Ringdiagramm an. Das Ringdiagramm veranschaulicht die relative Zusammensetzung der Rollen, aus denen diese Gesamtzahl von Opportunitys besteht. Ein farbcodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Rollen. Die einzelnen Zählungen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor über den entsprechenden Abschnitt des Ringdiagramms bewegt wird.
+Das Widget [!UICONTROL Neue Opportunitys nach &#x200B;]) zeigt die Gesamtzahl Ihrer Opportunitys in einer einzigen Metrik in einem Ringdiagramm an. Das Ringdiagramm veranschaulicht die relative Zusammensetzung der Rollen, aus denen diese Gesamtzahl von Opportunitys besteht. Ein farbcodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Rollen. Die einzelnen Zählungen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor über den entsprechenden Abschnitt des Ringdiagramms bewegt wird.
 
 >[!NOTE]
 >
@@ -217,7 +217,7 @@ Das Dropdown-Menü innerhalb des Widgets ermöglicht die Auswahl des Kontobewert
 
 ### Prädiktive Bewertung - wichtigste Einflussfaktoren {#predictive-scoring-top-influential-factors}
 
-Das [!UICONTROL Widget Prädiktive Bewertung - ] Einflussfaktoren) hilft Ihnen, die wichtigsten Faktoren zu verstehen, die die Bewertungen für jeden Neigungs-Bucket antreiben.
+Das [!UICONTROL Widget Prädiktive Bewertung - &#x200B;] Einflussfaktoren) hilft Ihnen, die wichtigsten Faktoren zu verstehen, die die Bewertungen für jeden Neigungs-Bucket antreiben.
 
 Dieses Widget zeigt die wichtigsten Einflussfaktoren für die Buckets mit hoher, mittlerer und niedriger Neigung an. Ein Balken für jeden Einflussfaktor gibt den Prozentsatz der Kontoprofile in dem Neigungs-Bucket an, der den spezifischen Einflussfaktor enthält.
 
@@ -231,7 +231,7 @@ Das Dropdown-Menü innerhalb des Widgets ermöglicht die Auswahl des Kontobewert
 
 ## Fehler beim Laden der Daten {#errors}
 
-Wenn ein Widget angezeigt wird *[!UICONTROL kann nicht geladen werden. Erneut versuchen.]* liegt daran, dass keine Daten für die B2B-Entität verfügbar sind. Beispielsweise zeigt das unten angezeigte Widget [!UICONTROL Neue Opportunities nach Personengruppe] die Meldung &quot;[!UICONTROL  kann nicht geladen werden. Erneut versuchen.]&quot;, da diese Sandbox keine Opportunity-Daten hat.
+Wenn ein Widget angezeigt wird *[!UICONTROL kann nicht geladen werden. Erneut versuchen.]* liegt daran, dass keine Daten für die B2B-Entität verfügbar sind. Beispielsweise zeigt das unten angezeigte Widget [!UICONTROL Neue Opportunities nach Personengruppe] die Meldung &quot;[!UICONTROL &#x200B; kann nicht geladen werden. Erneut versuchen.]&quot;, da diese Sandbox keine Opportunity-Daten hat.
 
 ![Fehler &quot;insight kann nicht geladen werden“](../images/account-profiles/unable-to-load.png)
 

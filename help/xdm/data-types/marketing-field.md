@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# Datentyp [!UICONTROL Generisches Feld ] Marketing-Voreinstellungen
+# Datentyp [!UICONTROL Generisches Feld &#x200B;] Marketing-Voreinstellungen
 
 [!UICONTROL Generisches Feld für Marketing-]) ist ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Marketing-Voreinstellung beschreibt.
 

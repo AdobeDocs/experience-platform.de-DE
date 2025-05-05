@@ -12,7 +12,7 @@ ht-degree: 26%
 
 # [!DNL Data Prep] – Handbuch zur Fehlerbehebung
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur [!DNL Data Prep] von Adobe Experience Platform sowie eine Anleitung zur Behebung gängiger Fehler. Fragen und allgemeine Informationen zur Fehlerbehebung bei Experience Platform-APIs finden Sie im Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs [](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur [!DNL Data Prep] von Adobe Experience Platform sowie eine Anleitung zur Behebung gängiger Fehler. Fragen und allgemeine Informationen zur Fehlerbehebung bei Experience Platform-APIs finden Sie im Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs [&#128279;](../landing/troubleshooting.md).
 
 ## FAQs
 

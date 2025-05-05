@@ -44,7 +44,7 @@ Der [!UICONTROL Data Distiller-Funktionen] enthält Dokumentations-Links zu erwe
 
 ### Empfohlene Data Distiller-Beschleuniger {#recommended-accelerators}
 
-Klicken Sie auf einen Schnelllink, um zu den entsprechenden Data Distiller-Dashboards (Vorlagen[!UICONTROL  zu ]. Jeder Accelerator bietet leistungsstarke Tools und Visualisierungen, mit denen Sie Zielgruppendaten analysieren, die Segmentierung optimieren und Zielgruppenbestimmungsstrategien verbessern können.
+Klicken Sie auf einen Schnelllink, um zu den entsprechenden Data Distiller-Dashboards (Vorlagen[!UICONTROL &#x200B; zu &#x200B;]. Jeder Accelerator bietet leistungsstarke Tools und Visualisierungen, mit denen Sie Zielgruppendaten analysieren, die Segmentierung optimieren und Zielgruppenbestimmungsstrategien verbessern können.
 
 - **[[!UICONTROL Erweiterte Zielgruppenüberschneidungen]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Über dieses Dashboard können Sie Zielgruppenüberschneidungen zwischen mehreren Zielgruppensegmenten analysieren, um wertvolle Einblicke zu gewinnen und Segmentierungsstrategien zu optimieren. Sie können Ihre Insights auch für weitere Offline-Analyse- oder Berichtszwecke exportieren.
 - **[[!UICONTROL Zielgruppenvergleich]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: In diesem Dashboard können Sie wichtige Zielgruppenmetriken nebeneinander vergleichen und gegenüberstellen, um zwei Zielgruppengruppen im Detail zu analysieren. Diese Einblicke helfen Ihnen, die Zielgruppengröße, das Wachstum und andere wichtige Leistungsindikatoren zu verstehen, und ermöglichen es Ihnen, die Segmentierung zu verfeinern und Targeting-Strategien mit datengesteuerten Entscheidungen zu optimieren.

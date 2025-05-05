@@ -50,7 +50,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die entsprechende Kategorie aus der Liste der Kategorien auswählen. Sie können auch die Suchleiste verwenden, um nach einer bestimmten Quelle zu filtern.
 
-Wählen Sie unter [!UICONTROL  Kategorie ]Marketing-Automatisierung“ **[!UICONTROL Salesforce Marketing Cloud]** und dann **[!UICONTROL Einrichten]** aus.
+Wählen Sie unter [!UICONTROL &#x200B; Kategorie &#x200B;]Marketing-Automatisierung“ **[!UICONTROL Salesforce Marketing Cloud]** und dann **[!UICONTROL Einrichten]** aus.
 
 ![Der Quellkatalog, wobei die Salesforce Marketing Cloud-Quelle ausgewählt wurde.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 

@@ -33,7 +33,7 @@ Weitere Informationen zu [!DNL Pinterest]-spezifischen Anwendungsfällen finden 
 
 Sie müssen über ein gültiges [!DNL Pinterest]Geschäftskonto[ verfügen](https://help.pinterest.com/en/business/article/get-a-business-account) um diese Erweiterung verwenden zu können. Navigieren Sie zur [[!DNL Pinterest] Registrierungsseite](https://www.pinterest.com/business/create/), um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben.
 
-Sie benötigen außerdem ein [!DNL Pinterest] Entwicklerkonto, das mit Ihrem [!DNL Pinterest] Business-Konto verknüpft werden muss. Informationen zum Verknüpfen Ihres Entwicklerkontos mit Ihrem Geschäftskonto finden Sie unter [[!DNL Pinterest ] Entwicklerkonto](https://developers.pinterest.com/account-setup/).
+Sie benötigen außerdem ein [!DNL Pinterest] Entwicklerkonto, das mit Ihrem [!DNL Pinterest] Business-Konto verknüpft werden muss. Informationen zum Verknüpfen Ihres Entwicklerkontos mit Ihrem Geschäftskonto finden Sie unter [[!DNL Pinterest &#x200B;] Entwicklerkonto](https://developers.pinterest.com/account-setup/).
 
 ### Sammeln erforderlicher Konfigurationsdetails {#configuration-details}
 
@@ -60,7 +60,7 @@ Wählen Sie in der linken Navigation **[!UICONTROL Erweiterungen]** aus. Wählen
 
 Wählen Sie in der linken Navigation **[!UICONTROL Erweiterungen]** aus. Wählen **[!UICONTROL auf]** Karte für die [!DNL Pinterest] Erweiterung auf der Registerkarte [!UICONTROL Installiert] aus**.
 
-![[!DNL Pinterest] Erweiterung, die auf der Registerkarte [!UICONTROL Installieren] angezeigt wird, mit [!UICONTROL  hervorgehobenen ] „Konfigurieren“](../../../images/extensions/server/pinterest/configure.png)
+![[!DNL Pinterest] Erweiterung, die auf der Registerkarte [!UICONTROL Installieren] angezeigt wird, mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;] „Konfigurieren“](../../../images/extensions/server/pinterest/configure.png)
 
 Geben Sie im nächsten Bildschirm die [!UICONTROL Anzeigen-Konto-ID] und [!UICONTROL Konversionszugriffs-Token] ein, die Sie zuvor im Abschnitt [Konfigurationsdetails](#configuration-details) erfasst haben. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 

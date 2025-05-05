@@ -92,7 +92,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -104,11 +104,11 @@ Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres 
 
 Um Ihre XDM-Felder den [!DNL Moengage]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-Wählen [!UICONTROL  Schritt ]Zuordnung“ **[!UICONTROL Kontrollkästchen]** aus.
+Wählen [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ **[!UICONTROL Kontrollkästchen]** aus.
 
 ![MoEngage-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-Wählen [!UICONTROL  Schritt ]Zuordnung“ **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
+Wählen [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
 
 ![MoEngage-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
@@ -123,7 +123,7 @@ Im Fenster [!UICONTROL Quellfeld auswählen] können Sie zwischen zwei Kategorie
 
 Wählen Sie Ihr Quellfeld und dann **[!UICONTROL Auswählen]** aus.
 
-Wählen [!UICONTROL  im Abschnitt ]Zielfeld“ das Zuordnungssymbol rechts neben dem Feld aus.
+Wählen [!UICONTROL &#x200B; im Abschnitt &#x200B;]Zielfeld“ das Zuordnungssymbol rechts neben dem Feld aus.
 
 ![MoEngage-Zielgruppen-Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 

@@ -44,7 +44,7 @@ Die [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Das bedeutet,
 
 >[!TAB Konten]
 
-Screenshot der Experience Platform-Benutzeroberfläche mit einem Beispielschema für Konten](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)![
+Screenshot der Experience Platform-Benutzeroberfläche mit einem Beispielschema für Konten![&#128279;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
 >[!TAB Kontakte]
 

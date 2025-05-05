@@ -434,7 +434,7 @@ Auf dieser Journey müssen keine Zielgruppen erstellt werden.
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden in &quot;[!UICONTROL &quot; ].
+>[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden in &quot;[!UICONTROL &quot; &#x200B;].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich. Unten finden Sie die genauen Daten, die für jede Journey benötigt werden.
 

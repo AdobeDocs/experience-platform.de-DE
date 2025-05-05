@@ -54,7 +54,7 @@ Für die **[!UICONTROL Beziehung von Feldern]** können Sie entweder die Standar
 
 ### Attribute {#attributes}
 
-Auf [!UICONTROL  Registerkarte ]Attribute“ können Sie Account-Attribute, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute durchsuchen. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Attribute“ können Sie Account-Attribute, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute durchsuchen. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
 

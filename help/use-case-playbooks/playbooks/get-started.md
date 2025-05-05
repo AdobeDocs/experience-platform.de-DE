@@ -39,7 +39,7 @@ Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox
 
 ![Erstellen einer Entwicklungs-Sandbox für Playbooks für Anwendungsfälle](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-In der linken Leiste unter [!UICONTROL Anwendungsfall-Playbooks] sollte nun „Playbooks[!UICONTROL  angezeigt ].
+In der linken Leiste unter [!UICONTROL Anwendungsfall-Playbooks] sollte nun „Playbooks[!UICONTROL &#x200B; angezeigt &#x200B;].
 
 ![Verwenden der Option „Playbooks für Anwendungsfälle“ in der Benutzeroberfläche nach dem Erstellen einer Sandbox.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 

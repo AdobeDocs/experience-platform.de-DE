@@ -35,7 +35,7 @@ Im letzten Schritt des Workflows für die Erstellung globaler Filter müssen Sie
 
 >[!NOTE]
 >
->Derzeit wird nur [!UICONTROL  Filtertyp ]Kombinationsfeld) unterstützt.
+>Derzeit wird nur [!UICONTROL &#x200B; Filtertyp &#x200B;]Kombinationsfeld) unterstützt.
 
 Wählen Sie abschließend **[!UICONTROL Auswählen]** aus, um zur Dashboard-Ansicht zurückzukehren.
 

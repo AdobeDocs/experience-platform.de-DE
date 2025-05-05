@@ -9,7 +9,7 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL  Datentyp ]Rückgabeelement“
+# [!UICONTROL &#x200B; Datentyp &#x200B;]Rückgabeelement“
 
 [!UICONTROL Rückgabeartikel] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der wichtige Details im Zusammenhang mit dem Rückgabeprozess für einen gekauften Artikel erfasst.
 

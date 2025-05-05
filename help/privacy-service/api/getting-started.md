@@ -64,7 +64,7 @@ Der letzte Konfigurationsschritt besteht darin, die Produktprofile auszuwählen,
 
 >[!NOTE]
 >
-Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu [Privacy Service](../permissions.md)Berechtigungen.
+>Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu [Privacy Service](../permissions.md)Berechtigungen.
 
 Klicken Sie abschließend auf **[!UICONTROL Konfigurierte API speichern]**.
 

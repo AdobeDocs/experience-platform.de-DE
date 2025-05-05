@@ -56,7 +56,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und dann
 
 Nach Erstellung der HTTP-API-Verbindung wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt, in dem Sie eine Schnittstelle zum Hochladen und Anzeigen Ihrer Daten erhalten.
 
-Wählen **[!UICONTROL Dateien hochladen]**, um Ihre Daten hochzuladen. Alternativ können Sie Ihre Daten per Drag-and[!UICONTROL Drop in den Bereich „Dateien per Drag-and-Drop ]&quot; der Benutzeroberfläche ziehen.
+Wählen **[!UICONTROL Dateien hochladen]**, um Ihre Daten hochzuladen. Alternativ können Sie Ihre Daten per Drag-and[!UICONTROL Drop in den Bereich „Dateien per Drag-and-Drop &#x200B;]&quot; der Benutzeroberfläche ziehen.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 

@@ -41,7 +41,7 @@ Die Sicherheit in Bezug auf den Abfrage-Service ist in die folgenden Kategorien 
 
 Mit der Zugriffssteuerung in Adobe Experience Platform können Sie [Adobe Admin Console](https://adminconsole.adobe.com/) verwenden, um den Zugriff auf Abfrage-Service-Funktionen mithilfe von rollenbasierten Berechtigungen zu verwalten. Auf ähnliche Weise können Sie den Zugriff auf bestimmte Datenattribute durch die Kennzeichnungsverwaltung in Schemata und Datenfeldern steuern.
 
-In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, die ein Benutzer besitzen muss, um die Funktionen des Abfrage-Service vollständig nutzen zu können. Detaillierte Anweisungen zum Zuweisen [ Zugriffs auf ein Produktprofil finden ](../../access-control/ui/permissions.md) in den Dokumenten ](../../access-control/ui/users.md)Verwalten von Berechtigungen“ und &quot;[ von Benutzern“.
+In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, die ein Benutzer besitzen muss, um die Funktionen des Abfrage-Service vollständig nutzen zu können. Detaillierte Anweisungen zum Zuweisen [ Zugriffs auf ein Produktprofil finden ](../../access-control/ui/permissions.md) in den Dokumenten [&#128279;](../../access-control/ui/users.md)Verwalten von Berechtigungen“ und &quot; von Benutzern“.
 
 #### Relevante Berechtigungen
 

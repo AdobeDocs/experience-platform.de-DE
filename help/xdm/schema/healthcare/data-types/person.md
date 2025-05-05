@@ -31,7 +31,7 @@ ht-degree: 8%
 | [!UICONTROL Ist aktiv] | `active` | Boolesch | Gibt an, ob der Datensatz der Person aktiv verwendet wird. |
 | [!UICONTROL Geburtsdatum] | `birthDate` | Datum | Das Geburtsdatum der Person. |
 | [!UICONTROL Indikator für Verstorben] | `deceasedBoolean` | Boolesch | Zeigt an, ob die Person verstorben ist oder nicht. |
-| [!UICONTROL Datum/Uhrzeit des ] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Verstorbenen. |
+| [!UICONTROL Datum/Uhrzeit des &#x200B;] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Verstorbenen. |
 | [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:

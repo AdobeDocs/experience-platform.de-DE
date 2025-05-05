@@ -61,4 +61,4 @@ Im folgenden Video wird die Postman-Sammlung des [Identity Management-Services (
 
 ## Nächste Schritte
 
-In diesem Dokument wurden Postman-Umgebungen, Sammlungen und das Importieren von Sammlungen vorgestellt. Nachdem Sie nun Postman bereit haben, finden Sie im Handbuch „Erste Schritte mit Experience Platform](api-guide.md) Informationen zu erforderlichen Kopfzeilen, Beispielen und einer Liste von [API-Handbüchern](api-guide.md#api-guides) die für jeden Experience Platform-Service verfügbar sind.[
+In diesem Dokument wurden Postman-Umgebungen, Sammlungen und das Importieren von Sammlungen vorgestellt. Nachdem Sie nun Postman bereit haben, finden Sie im Handbuch „Erste Schritte mit Experience Platform[&#128279;](api-guide.md) Informationen zu erforderlichen Kopfzeilen, Beispielen und einer Liste von [API-Handbüchern](api-guide.md#api-guides) die für jeden Experience Platform-Service verfügbar sind.

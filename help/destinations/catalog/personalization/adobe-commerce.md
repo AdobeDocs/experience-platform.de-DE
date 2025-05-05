@@ -41,7 +41,7 @@ Nachdem Sie die Voraussetzungen erfüllt haben, stellen Sie eine Verbindung mit 
 
 So stellen Sie eine Verbindung mit dem Ziel [!DNL Adobe Commerce] her:
 
-1. Experience Platform Wechseln Sie in der ](https://experience.adobe.com/platform/) von [zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+1. Experience Platform Wechseln Sie in der [&#128279;](https://experience.adobe.com/platform/) von zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 1. Wählen Sie **[!UICONTROL Personalisierung]** aus.
 1. Wählen Sie das Adobe Commerce-Ziel aus, um es zu markieren, und wählen Sie dann **[!UICONTROL Einrichten]** aus.
 1. Führen Sie die im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschriebenen Schritte aus.
@@ -65,7 +65,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen [ Aktivieren von Zielgruppen für das [!DNL Commerce]-Ziel finden Sie ](../../ui/activate-edge-personalization-destinations.md)Aktivieren von Profilen und Zielgruppen für Profilanfrageziele“.
 

@@ -763,4 +763,4 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 Nachdem Sie nun wissen, wie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert werden, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren [!DNL Real-Time Customer Profile] Zielgruppen zu erstellen.
 
-Weitere Informationen zum Definieren und Verwenden von Zielgruppen finden ](../../segmentation/home.md) in der Dokumentation zum [Adobe Experience Platform-Segmentierungs-Service.
+Weitere Informationen zum Definieren und Verwenden von Zielgruppen finden [&#128279;](../../segmentation/home.md) in der Dokumentation zum Adobe Experience Platform-Segmentierungs-Service.

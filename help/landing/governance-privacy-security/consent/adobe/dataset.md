@@ -21,7 +21,7 @@ In diesem Dokument werden die Schritte zum Konfigurieren eines Datensatzes für 
 
 >[!IMPORTANT]
 >
->Die Beispiele in diesem Handbuch verwenden einen standardisierten Satz von Feldern zur Darstellung von Kundeneinverständniswerten, wie er in der Schemafeldgruppe [[!UICONTROL Einverständnis und ]) ](../../../../xdm/field-groups/profile/consents.md). Die Struktur dieser Felder soll ein effizientes Datenmodell bereitstellen, um viele gängige Anwendungsfälle für die Einverständniserfassung abzudecken.
+>Die Beispiele in diesem Handbuch verwenden einen standardisierten Satz von Feldern zur Darstellung von Kundeneinverständniswerten, wie er in der Schemafeldgruppe [[!UICONTROL Einverständnis und &#x200B;]) ](../../../../xdm/field-groups/profile/consents.md). Die Struktur dieser Felder soll ein effizientes Datenmodell bereitstellen, um viele gängige Anwendungsfälle für die Einverständniserfassung abzudecken.
 >
 >Sie können jedoch auch eigene Feldergruppen definieren, um das Einverständnis entsprechend Ihren eigenen Datenmodellen darzustellen. Wenden Sie sich an Ihre Rechtsabteilung, um die Genehmigung für ein Einverständnisdatenmodell zu erhalten, das Ihren Geschäftsanforderungen entspricht und auf den folgenden Optionen basiert:
 >
@@ -92,7 +92,7 @@ Die Feldergruppe stellt das Feld `consents` vom Typ „Objekt“ bereit, dessen 
 
 >[!NOTE]
 >
->Weitere Informationen zur Struktur und Bedeutung der Untereigenschaften in `consents` finden Sie in der Übersicht zur [[!UICONTROL Einverständnis und ]-Feldergruppe](../../../../xdm/field-groups/profile/consents.md).
+>Weitere Informationen zur Struktur und Bedeutung der Untereigenschaften in `consents` finden Sie in der Übersicht zur [[!UICONTROL Einverständnis und &#x200B;]-Feldergruppe](../../../../xdm/field-groups/profile/consents.md).
 
 ## Hinzufügen erforderlicher Feldergruppen zu Ihrem [!DNL Profile] {#add-field-group}
 
@@ -129,7 +129,7 @@ Die Arbeitsfläche wird erneut angezeigt und zeigt an, dass die Felder `consents
 >
 >Wenn Sie ein neues Schema erstellen oder ein vorhandenes Schema bearbeiten, das nicht für das Profil aktiviert wurde, müssen Sie [Schema für das Profil aktivieren](../../../../xdm/ui/resources/schemas.md#profile) vor dem Speichern.
 
-Wenn das von Ihnen bearbeitete Schema von dem [!UICONTROL Profildatensatz) verwendet wird, ] in Ihrem Experience Platform Web SDK-Datenstrom angegeben ist, enthält dieser Datensatz jetzt die neuen Einverständnisfelder. Sie können jetzt zum [Handbuch zur Einverständnisverarbeitung“ zurückkehren, ](./overview.md#merge-policies) den Prozess der Konfiguration von Experience Platform zur Verarbeitung von Einverständnisdaten fortzusetzen. Wenn Sie keinen Datensatz für dieses Schema erstellt haben, befolgen Sie die Schritte im nächsten Abschnitt.
+Wenn das von Ihnen bearbeitete Schema von dem [!UICONTROL Profildatensatz) verwendet wird, &#x200B;] in Ihrem Experience Platform Web SDK-Datenstrom angegeben ist, enthält dieser Datensatz jetzt die neuen Einverständnisfelder. Sie können jetzt zum [Handbuch zur Einverständnisverarbeitung“ zurückkehren, ](./overview.md#merge-policies) den Prozess der Konfiguration von Experience Platform zur Verarbeitung von Einverständnisdaten fortzusetzen. Wenn Sie keinen Datensatz für dieses Schema erstellt haben, befolgen Sie die Schritte im nächsten Abschnitt.
 
 ## Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema {#dataset}
 
@@ -175,7 +175,7 @@ Der folgende Abschnitt enthält zusätzliche Informationen zum Erstellen eines D
 
 ### Hinzufügen benutzerdefinierter Einverständnis- und Präferenzfelder zum Schema {#custom-consent}
 
-Wenn Sie zusätzliche Einverständnissignale erfassen müssen, die nicht in der standardmäßigen Feldergruppe &quot;[!UICONTROL  und Präferenzdetails] enthalten sind, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Einverständnisschema an Ihre speziellen Geschäftsanforderungen anzupassen. In diesem Abschnitt werden die grundlegenden Prinzipien beschrieben, wie Sie Ihr Einverständnisschema anpassen können, um diese Signale in Profile aufzunehmen.
+Wenn Sie zusätzliche Einverständnissignale erfassen müssen, die nicht in der standardmäßigen Feldergruppe &quot;[!UICONTROL &#x200B; und Präferenzdetails] enthalten sind, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Einverständnisschema an Ihre speziellen Geschäftsanforderungen anzupassen. In diesem Abschnitt werden die grundlegenden Prinzipien beschrieben, wie Sie Ihr Einverständnisschema anpassen können, um diese Signale in Profile aufzunehmen.
 
 >[!IMPORTANT]
 >
@@ -206,7 +206,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 
-Das Feld Einverständnis oder Voreinstellung wird zur Schemastruktur hinzugefügt. Beachten Sie, [!UICONTROL  der in ] rechten Leiste angezeigte „Pfad“ den `_tenantId` Namespace enthält. Dieser Namespace muss immer dann eingeschlossen werden, wenn Sie in Ihren Datenvorgängen auf den Pfad zu diesem Feld verweisen.
+Das Feld Einverständnis oder Voreinstellung wird zur Schemastruktur hinzugefügt. Beachten Sie, [!UICONTROL &#x200B; der in &#x200B;] rechten Leiste angezeigte „Pfad“ den `_tenantId` Namespace enthält. Dieser Namespace muss immer dann eingeschlossen werden, wenn Sie in Ihren Datenvorgängen auf den Pfad zu diesem Feld verweisen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 

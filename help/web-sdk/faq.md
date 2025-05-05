@@ -124,7 +124,7 @@ Anders ausgedrückt: Wenn Sie sich entscheiden, Adobe Experience Platform Web SD
 
 ## Kann ich die ECIDs migrieren, wenn ich mit der Verwendung von Web SDK beginne, damit meine Website-Besucher nicht als neue Besucher angezeigt werden?
 
-Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity ](/help/web-sdk/identity/overview.md#id-migration) der Anleitung zur ID-Migration.[
+Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [&#128279;](/help/web-sdk/identity/overview.md#id-migration) der Anleitung zur ID-Migration.
 
 ## Worin unterscheidet sich Web SDK von Tags?
 

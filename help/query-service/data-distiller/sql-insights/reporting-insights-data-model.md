@@ -23,7 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Experience Platform-Daten enthalten. Bitte beachten Sie die [](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Experience Platform-Daten enthalten. Bitte beachten Sie die [&#128279;](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 

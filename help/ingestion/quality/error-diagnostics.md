@@ -284,7 +284,7 @@ Wenn für den Batch mindestens ein Fehler vorhanden und die Fehlerdiagnose aktiv
 >
 >Wenn keine Fehlerdiagnose verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

@@ -93,7 +93,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -223,7 +223,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Wie lange dauert es nach der Erstellung einer Zielgruppe in Experience Platform, bis diese Zielgruppe für Anwendungsfälle der Edge-Segmentierung verfügbar ist?
 
 +++Antwort
-Zielgruppendefinitionen werden in bis zu einer Stunde an ](../web-sdk/home.md) [Edge Network übertragen. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, könnten einige Besucher fehlen, die sich für die Zielgruppe qualifiziert hätten.
+Zielgruppendefinitionen werden in bis zu einer Stunde an [&#128279;](../web-sdk/home.md) Edge Network übertragen. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, könnten einige Besucher fehlen, die sich für die Zielgruppe qualifiziert hätten.
 +++
 
 ### Wo kann ich die aktivierten Attribute in Adobe Target sehen?

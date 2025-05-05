@@ -45,7 +45,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall für die Profilanzahl {#profile-count}
 
-Die für das Widget [!UICONTROL Profilanzahl] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses zurück. Weitere Informationen finden [[!UICONTROL  in der Dokumentation ]Profilanzahl](../guides/profiles.md#profile-count) Widgets .
+Die für das Widget [!UICONTROL Profilanzahl] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses zurück. Weitere Informationen finden [[!UICONTROL &#x200B; in der Dokumentation &#x200B;]Profilanzahl](../guides/profiles.md#profile-count) Widgets .
 
 Das SQL-Widget, das [!UICONTROL Profilanzahl] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -98,7 +98,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identitäts-Anwendungsfall {#profiles-by-identity}
 
-Das [!UICONTROL Profile nach Identität] zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profilspeicher an. Weitere Informationen dazu finden [[!UICONTROL  in der Widget]Dokumentation ](../guides/profiles.md#profiles-by-identity)Profile nach Identität).
+Das [!UICONTROL Profile nach Identität] zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profilspeicher an. Weitere Informationen dazu finden [[!UICONTROL &#x200B; in der Widget]Dokumentation ](../guides/profiles.md#profiles-by-identity)Profile nach Identität).
 
 Der SQL-Code, der das Widget [!UICONTROL Profile nach Identität] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -161,7 +161,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall für die Zielgruppengröße {#audience-size}
 
-Die für das Widget [!UICONTROL Zielgruppengröße] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt des letzten Schnappschusses zurück. Weitere Informationen finden Sie in [[!UICONTROL  Widget]Dokumentation ](../guides/audiences.md#audience-size)Zielgruppengröße) .
+Die für das Widget [!UICONTROL Zielgruppengröße] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt des letzten Schnappschusses zurück. Weitere Informationen finden Sie in [[!UICONTROL &#x200B; Widget]Dokumentation ](../guides/audiences.md#audience-size)Zielgruppengröße) .
 
 Das SQL-Widget, das [!UICONTROL Zielgruppengröße] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -185,7 +185,7 @@ WHERE
 
 #### Anwendungsfall: Trend zur Änderung der Zielgruppengröße {#audience-size-change-trend}
 
-Die für das Widget [!UICONTROL Entwicklung der Zielgruppengröße] verwendete Logik bietet eine Kantengraph-Illustration der Differenz der Gesamtzahl der Profile, die sich zwischen den letzten täglichen Momentaufnahmen für eine bestimmte Zielgruppe qualifiziert haben. Weitere Informationen finden [[!UICONTROL  in der Widget]Dokumentation ](../guides/audiences.md#audience-size-change-trend)Entwicklung der Zielgruppengröße“.
+Die für das Widget [!UICONTROL Entwicklung der Zielgruppengröße] verwendete Logik bietet eine Kantengraph-Illustration der Differenz der Gesamtzahl der Profile, die sich zwischen den letzten täglichen Momentaufnahmen für eine bestimmte Zielgruppe qualifiziert haben. Weitere Informationen finden [[!UICONTROL &#x200B; in der Widget]Dokumentation ](../guides/audiences.md#audience-size-change-trend)Entwicklung der Zielgruppengröße“.
 
 Das SQL-Widget, das [!UICONTROL Entwicklung der Zielgruppengröße] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -222,7 +222,7 @@ SELECT date_key,
 
 #### Anwendungsfall für die am häufigsten verwendeten Ziele {#most-used-destinations}
 
-Die im Widget [!UICONTROL Am häufigsten verwendete Ziele] verwendete Logik listet die am häufigsten verwendeten Ziele Ihres Unternehmens entsprechend der Anzahl der ihnen zugeordneten Zielgruppen auf. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht ausreichend genutzt werden. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL  Widgets ]Am häufigsten verwendete Ziele](../guides/destinations.md#most-used-destinations) .
+Die im Widget [!UICONTROL Am häufigsten verwendete Ziele] verwendete Logik listet die am häufigsten verwendeten Ziele Ihres Unternehmens entsprechend der Anzahl der ihnen zugeordneten Zielgruppen auf. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht ausreichend genutzt werden. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL &#x200B; Widgets &#x200B;]Am häufigsten verwendete Ziele](../guides/destinations.md#most-used-destinations) .
 
 Das SQL-Widget, das [!UICONTROL Am häufigsten verwendeten Ziele] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -291,7 +291,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identität für einen Anwendungsfall mit einer Audience {#audience-profiles-by-identity}
 
-Die im Widget [!UICONTROL Profile nach Identität] verwendete Logik bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe hinweg. Weitere Informationen dazu finden [[!UICONTROL  in der Widget]Dokumentation ](../guides/audiences.md#profiles-by-identity)Profile nach Identität).
+Die im Widget [!UICONTROL Profile nach Identität] verwendete Logik bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe hinweg. Weitere Informationen dazu finden [[!UICONTROL &#x200B; in der Widget]Dokumentation ](../guides/audiences.md#profiles-by-identity)Profile nach Identität).
 
 Der SQL-Code, der das Widget [!UICONTROL Profile nach Identität] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 

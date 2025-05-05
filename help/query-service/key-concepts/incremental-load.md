@@ -52,7 +52,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1.  Als Nächstes initialisieren Sie `DIM_TABLE_ABC_Incremental`, um verarbeitete Ausgaben von `DIM_TABLE_ABC` zu enthalten. Der anonyme Block im **erforderlichen** Ausführungsabschnitt des folgenden SQL-Beispiels wird, wie in den Schritten 1 bis 4 beschrieben, sequenziell ausgeführt, um Daten inkrementell zu verarbeiten.
+1. Als Nächstes initialisieren Sie `DIM_TABLE_ABC_Incremental`, um verarbeitete Ausgaben von `DIM_TABLE_ABC` zu enthalten. Der anonyme Block im **erforderlichen** Ausführungsabschnitt des folgenden SQL-Beispiels wird, wie in den Schritten 1 bis 4 beschrieben, sequenziell ausgeführt, um Daten inkrementell zu verarbeiten.
 
    1. Legen Sie die `from_snapshot_id` fest, die angibt, wo die Verarbeitung beginnt. Die `from_snapshot_id` im Beispiel wird aus der `checkpoint_log`-Tabelle zur Verwendung mit `DIM_TABLE_ABC` abgefragt. Beim ersten Ausführen ist die Momentaufnahme-ID `null`, was bedeutet, dass der gesamte Datensatz verarbeitet wird.
    1. Legen Sie die `to_snapshot_id` als aktuelle Momentaufnahme-ID der Quellentabelle fest (`DIM_TABLE_ABC`). Im Beispiel wird dies aus der Metadatentabelle der Quelltabelle abgefragt.

@@ -71,7 +71,7 @@ Das vollständige Schema für Ereignis-Benachrichtigungen finden Sie im [öffent
 
 ## Nächste Schritte
 
-Nachdem Sie [!DNL Experience Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie die empfangenen Ereignisse in der [!UICONTROL Projektübersicht“ ]. Ausführliche Anweisungen zum Nachverfolgen [ Ereignisse finden Sie im Handbuch ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)Nachverfolgen von Adobe I/O Events&quot;.
+Nachdem Sie [!DNL Experience Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie die empfangenen Ereignisse in der [!UICONTROL Projektübersicht“ &#x200B;]. Ausführliche Anweisungen zum Nachverfolgen [ Ereignisse finden Sie im Handbuch ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)Nachverfolgen von Adobe I/O Events&quot;.
 
 ## Anhang
 

@@ -107,7 +107,7 @@ Wenn sich Client- und Server-Ereignisse nicht überschneiden, ist keine Dedupliz
 
 Eine ordnungsgemäße Deduplizierung verhindert überhöhte Konversionszahlen und stellt sicher, dass Ihre Optimierungsdaten korrekt bleiben.
 
-Weitere Informationen finden Sie im Handbuch zur Deduplizierung von Amazon](https://advertising.amazon.com/)Ereignissen [.
+Weitere Informationen finden Sie im Handbuch zur Deduplizierung von Amazon[&#128279;](https://advertising.amazon.com/)Ereignissen .
 
 ## Nächste Schritte
 

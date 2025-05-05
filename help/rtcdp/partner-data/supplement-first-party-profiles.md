@@ -41,7 +41,7 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 >[!WARNING]
 >
->Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtdatenvolumen finden Sie in ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) [Real-time Customer Data Platform-Produktbeschreibung.
+>Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtdatenvolumen finden Sie in [&#128279;](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) Real-time Customer Data Platform-Produktbeschreibung.
 
 ## Videoanleitung {#video-walkthrough}
 

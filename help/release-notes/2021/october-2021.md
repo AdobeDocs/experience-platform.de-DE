@@ -27,7 +27,7 @@ An der Benutzeroberfläche wurden folgende Änderungen vorgenommen:
 | Ein- und Ausblenden der linken Navigationsleiste | Verwenden Sie den verbesserten Umschalter für die Navigation oben in der Kopfzeile des Programms, um das Menü mit den Funktionen von Experience Platform ein- oder auszublenden. Das System speichert Ihre letzte Auswahl und zeigt nur die Funktionen an, auf die Sie Zugriff haben. |
 | Sichtbarkeit des Zugriffs | In der linken Navigationsleiste werden nur die Funktionen angezeigt, auf die Sie zugreifen können. In früheren Versionen von Adobe Experience Platform waren nicht verfügbare Elemente sichtbar, selbst wenn Sie nicht darauf zugreifen konnten. |
 
-Weitere Informationen finden Sie im Handbuch zur Experience Platform](../../landing/ui-guide.md)Benutzeroberfläche von [.
+Weitere Informationen finden Sie im Handbuch zur Experience Platform[&#128279;](../../landing/ui-guide.md)Benutzeroberfläche von .
 
 ## Aktualisierungen vorhandener Funktionen
 

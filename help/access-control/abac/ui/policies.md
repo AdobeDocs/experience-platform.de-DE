@@ -178,7 +178,7 @@ Um eine Sandbox zu entfernen, klicken Sie auf das Symbol **X** neben dem Sandbox
 
 Das **[!UICONTROL Entfernen]** wird angezeigt und Sie werden aufgefordert, Ihre Auswahl zu bestätigen. Wählen **[!UICONTROL Bestätigen]**, um das Entfernen abzuschließen.
 
-![Das Dialogfeld [!UICONTROL Entfernen] mit hervorgehobener [!UICONTROL  „Bestätigen].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![Das Dialogfeld [!UICONTROL Entfernen] mit hervorgehobener [!UICONTROL &#x200B; „Bestätigen].](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >

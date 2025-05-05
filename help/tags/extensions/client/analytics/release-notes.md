@@ -15,7 +15,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 >[!NOTE]
 >
->Die Analytics-Tag-Erweiterung wird oft als Reaktion auf Aktualisierungen der [AppMeasurement JavaScript Library aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Einzelheiten zu den unten genannten spezifischen Versionen finden ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) in den [AppMeasurement-Versionshinweisen.
+>Die Analytics-Tag-Erweiterung wird oft als Reaktion auf Aktualisierungen der [AppMeasurement JavaScript Library aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Einzelheiten zu den unten genannten spezifischen Versionen finden [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) in den AppMeasurement-Versionshinweisen.
 
 ## 28. Oktober 2024
 

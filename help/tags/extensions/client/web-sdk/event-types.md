@@ -46,9 +46,9 @@ Die Web SDK-Tag-Erweiterung unterstützt die folgenden Überwachungs-Hooks:
 
 Normalerweise verfügt Ihre Eigenschaft über eine oder mehrere Regeln, die die Aktion [[!UICONTROL Ereignis senden] verwenden, ](action-types.md#send-event) Ereignisse an das Adobe Experience Platform-Edge Network zu senden. Jedes Mal, wenn ein Ereignis an Edge Network gesendet wird, wird eine Antwort mit nützlichen Daten an den Browser zurückgegeben. Ohne den Ereignistyp [!UICONTROL Ereignis senden abgeschlossen] hätten Sie keinen Zugriff auf diese zurückgegebenen Daten.
 
-Um auf die zurückgegebenen Daten zuzugreifen, erstellen Sie eine separate Regel und fügen Sie dann der Regel [!UICONTROL  Ereignis ]Ereignis „Ereignis senden abgeschlossen“ hinzu. Diese Regel wird jedes Mal ausgelöst, wenn als Ergebnis der Aktion „Ereignis senden[!UICONTROL  eine erfolgreiche Antwort vom Server ] wird.
+Um auf die zurückgegebenen Daten zuzugreifen, erstellen Sie eine separate Regel und fügen Sie dann der Regel [!UICONTROL &#x200B; Ereignis &#x200B;]Ereignis „Ereignis senden abgeschlossen“ hinzu. Diese Regel wird jedes Mal ausgelöst, wenn als Ergebnis der Aktion „Ereignis senden[!UICONTROL &#x200B; eine erfolgreiche Antwort vom Server &#x200B;] wird.
 
-Wenn ein [!UICONTROL Sendeereignis abgeschlossen] eine Regel erstellt, stellt sie vom Server zurückgegebene Daten bereit, die für die Ausführung bestimmter Trigger nützlich sein können. In der Regel fügen Sie derselben Regel[!UICONTROL  die ] „Benutzerdefinierter Code“ (aus der Erweiterung [!UICONTROL Core]) hinzu, die das Ereignis [!UICONTROL send event complete] enthält. In der [!UICONTROL Benutzerspezifischer Code]-Aktion hat Ihr benutzerdefinierter Code Zugriff auf eine Variable namens `event`. Diese `event` enthält die vom Server zurückgegebenen Daten.
+Wenn ein [!UICONTROL Sendeereignis abgeschlossen] eine Regel erstellt, stellt sie vom Server zurückgegebene Daten bereit, die für die Ausführung bestimmter Trigger nützlich sein können. In der Regel fügen Sie derselben Regel[!UICONTROL &#x200B; die &#x200B;] „Benutzerdefinierter Code“ (aus der Erweiterung [!UICONTROL Core]) hinzu, die das Ereignis [!UICONTROL send event complete] enthält. In der [!UICONTROL Benutzerspezifischer Code]-Aktion hat Ihr benutzerdefinierter Code Zugriff auf eine Variable namens `event`. Diese `event` enthält die vom Server zurückgegebenen Daten.
 
 Ihre Regel für die Verarbeitung der vom Edge Network zurückgegebenen Daten könnte in etwa wie folgt aussehen:
 
@@ -289,7 +289,7 @@ if (propositions) {
 }
 ```
 
-## [!UICONTROL Regelsatzelemente ] {#subscribe-ruleset-items}
+## [!UICONTROL Regelsatzelemente &#x200B;] {#subscribe-ruleset-items}
 
 Mit **[!UICONTROL Ereignistyp „Regelsatzelemente]**&quot; können Sie Adobe Journey Optimizer-Inhaltskarten für eine Oberfläche abonnieren. Bei jeder Auswertung der Regelsätze erhält der für diesen Befehl bereitgestellte Callback ein Ergebnisobjekt mit Vorschlägen, die die Inhaltskartendaten enthalten.
 

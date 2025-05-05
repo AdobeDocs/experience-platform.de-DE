@@ -54,7 +54,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Advertising Wählen Sie unter der ** Pinterest Ads ]**und dann**[!UICONTROL  Daten hinzufügen ]**.**[!UICONTROL 
+Advertising Wählen Sie unter der **&#x200B; Pinterest Ads &#x200B;** und dann&#x200B;**[!UICONTROL &#x200B; Daten hinzufügen &#x200B;]**.**
 
 ![Der Quellkatalog auf Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 

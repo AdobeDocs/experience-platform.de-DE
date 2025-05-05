@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # Verbessern der Datenerfassung mit Wetterdaten aus [!DNL The Weather Channel]
 
-Adobe ist eine Partnerschaft mit [!DNL [The Weather Company]](https://www.ibm.com/weather) eingegangen, um die über Datenströme gesammelten Daten um den zusätzlichen Kontext des Wetters in den Vereinigten Staaten zu ergänzen. Sie können diese Daten für Analysen, Targeting und die Erstellung von Zielgruppen in Experience Platform verwenden.
+Adobe ist eine Partnerschaft mit [[!DNL [The Weather Company]]](https://www.ibm.com/weather) eingegangen, um die über Datenströme gesammelten Daten um den zusätzlichen Kontext des Wetters in den Vereinigten Staaten zu ergänzen. Sie können diese Daten für Analysen, Targeting und die Erstellung von Zielgruppen in Experience Platform verwenden.
 
 Es gibt drei Arten von Daten, die von [!DNL The Weather Channel] verfügbar sind:
 

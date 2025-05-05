@@ -95,7 +95,7 @@ Wählen Sie in der oberen Navigation das Symbol **Programmumschalter** aus, darg
 
 ![Bild mit der Auswahl von Experience Platform aus dem Dropdown-Menü des Programmumschalters](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
-Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Schemata“ und dann in ]**Liste der angezeigten Schemata die Option**[!UICONTROL  ACME Healthcare aus.
+Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Schemata“ und dann in **Liste der angezeigten Schemata die Option** ACME Healthcare aus.
 
 ![Bild, das das ausgewählte ACME-Gesundheitsschema auf der Registerkarte Schemata zeigt](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
@@ -140,13 +140,13 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
 >[!NOTE]
 >
-> Weisen Sie verschiedenen Objekten in Adobe Journey Optimizer mithilfe der [!UICONTROL Zugriffssteuerung auf Objektebene] im Arbeitsbereich „Berechtigungen“ erstellte Kennzeichnungen (wie z](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) B. die Segmentkennzeichnungen oben) zu[.
+> Weisen Sie verschiedenen Objekten in Adobe Journey Optimizer mithilfe der [!UICONTROL Zugriffssteuerung auf Objektebene] im Arbeitsbereich „Berechtigungen“ erstellte Kennzeichnungen (wie z[&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) B. die Segmentkennzeichnungen oben) zu.
 
 ## Aktivieren der Zugriffssteuerungsrichtlinie {#policy}
 
 Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Kennzeichnungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Experience Platform-Ressourcen haben. In diesem Beispiel wird Benutzenden, die sich nicht in einer Rolle mit den entsprechenden Kennzeichnungen im Schemafeld befinden, der Zugriff auf Schemafelder und Zielgruppen in allen Sandboxes verweigert.
 
-Um die Zugriffssteuerungsrichtlinie zu aktivieren, wählen Sie in der linken ] die Option [!UICONTROL Berechtigungen und dann **[!UICONTROL Richtlinien]** aus.
+Um die Zugriffssteuerungsrichtlinie zu aktivieren, wählen Sie in der linken  die Option Berechtigungen und dann **[!UICONTROL Richtlinien]** aus.
 
 ![Liste der angezeigten Richtlinien](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 

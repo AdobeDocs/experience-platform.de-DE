@@ -28,7 +28,7 @@ Wählen Sie **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigat
 
 ![Die Registerkarte „Kontoprofile - Übersicht“ mit hervorgehobenen Profilen im linken Navigationsbereich und hervorgehobener Übersicht.](images/b2b-account-profile-overview.png)
 
-Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL  Dashboard ]](../../dashboards/guides/account-profiles.md)Kontoprofile“. Weitere Informationen dazu, wie Ihre Insights[Datenmodelle zum Erstellen benutzerdefinierter Diagramme für Ihre Dashboards verwendet werden können, finden Sie in der Dokumentation unter Real-time Customer Data Platform Insights-Datenmodell B2B edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) .
+Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL &#x200B; Dashboard &#x200B;]](../../dashboards/guides/account-profiles.md)Kontoprofile“. Weitere Informationen dazu, wie Ihre Insights[Datenmodelle zum Erstellen benutzerdefinierter Diagramme für Ihre Dashboards verwendet werden können, finden Sie in der Dokumentation unter Real-time Customer Data Platform Insights-Datenmodell B2B edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) .
 
 ## Lead-Konto-Zuordnung konfigurieren {#configure-lead-to-account-matching}
 
@@ -36,7 +36,7 @@ Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL  Dashboard ]]
 >
 > Nur B2B-KI-Administratoren können den Lead-Konto-Abgleichdienst aktivieren, deaktivieren und konfigurieren. Nach der Deaktivierung des Service werden übereinstimmende Ergebnisse innerhalb von 24 Stunden gelöscht.
 
-Um die Lead-Konto-Zuordnung zu konfigurieren, wählen **[!UICONTROL im linken Navigationsbereich]** Profile[!UICONTROL  unter ]Konten aus. Wählen Sie auf **[!UICONTROL Registerkarte]** oben **[!UICONTROL rechts]** Einstellungen“ aus.
+Um die Lead-Konto-Zuordnung zu konfigurieren, wählen **[!UICONTROL im linken Navigationsbereich]** Profile[!UICONTROL &#x200B; unter &#x200B;]Konten aus. Wählen Sie auf **[!UICONTROL Registerkarte]** oben **[!UICONTROL rechts]** Einstellungen“ aus.
 
 ![Die Registerkarte „Kontoprofile - Übersicht“ mit hervorgehobener Einstellung.](images/b2b-configuring-accounts-profile.png)
 

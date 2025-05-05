@@ -27,7 +27,7 @@ Um die Abfrageprotokolle zu überprüfen, wählen Sie [!UICONTROL Abfragen] aus,
 
 ## Anpassen und Suchen {#customize-and-search}
 
-Abfrage-Service-Protokolle werden in einem anpassbaren Tabellenformat angezeigt. Um die Tabellenspalten anzupassen, klicken Sie auf das Einstellungssymbol (![A Einstellungssymbol).](/help/images/icons/column-settings.png)) auf der rechten Seite des Bildschirms. Es [!UICONTROL  ein Dialogfeld „Tabelle anpassen] angezeigt, in dem jede Spalte deaktiviert werden kann.
+Abfrage-Service-Protokolle werden in einem anpassbaren Tabellenformat angezeigt. Um die Tabellenspalten anzupassen, klicken Sie auf das Einstellungssymbol (![A Einstellungssymbol).](/help/images/icons/column-settings.png)) auf der rechten Seite des Bildschirms. Es [!UICONTROL &#x200B; ein Dialogfeld „Tabelle anpassen] angezeigt, in dem jede Spalte deaktiviert werden kann.
 
 Sie können auch nach Protokollen suchen, die sich auf bestimmte Abfragevorlagen beziehen, indem Sie den Vorlagennamen in das Suchfeld eingeben.
 
@@ -81,7 +81,7 @@ Die folgende Tabelle enthält eine Beschreibung jedes Filters.
 | [!UICONTROL Systemabfragen ausschließen] | Dieses Kontrollkästchen ist standardmäßig aktiviert und schließt vom System generierte Protokolle aus. Systemgenerierte Abfragen umfassen häufig Hintergrundaufgaben oder Wartungsvorgänge, die für die Benutzerüberwachung, -verwaltung oder Fehlerbehebung möglicherweise nicht relevant sind. Wenn Sie systemgenerierte Protokolle überprüfen müssen, deaktivieren Sie dieses Kontrollkästchen, um sie in Ihre Protokollansicht aufzunehmen. |
 | [!UICONTROL Startdatum] | Um die Protokolle nach Abfragen zu filtern, die während eines bestimmten Zeitraums erstellt wurden, legen Sie die [!UICONTROL Start] und [!UICONTROL Ende] im Abschnitt [!UICONTROL Startdatum] fest. |
 | [!UICONTROL Abschlussdatum] | Um die Protokolle nach Abfragen zu filtern, die während eines bestimmten Zeitraums abgeschlossen wurden, legen Sie die [!UICONTROL Start] und [!UICONTROL Ende] im Abschnitt [!UICONTROL Abschlussdatum] fest. |
-| [!UICONTROL Status] | Um Protokolle nach dem [!UICONTROL Status] der Abfrage zu filtern, wählen Sie das entsprechende Optionsfeld aus. Zu den verfügbaren Optionen gehören [!UICONTROL Gesendet], [!UICONTROL In ], [!UICONTROL Erfolg] und [!UICONTROL Fehlgeschlagen]. Sie können Protokolle nur jeweils nach einer Statusbedingung filtern. |
+| [!UICONTROL Status] | Um Protokolle nach dem [!UICONTROL Status] der Abfrage zu filtern, wählen Sie das entsprechende Optionsfeld aus. Zu den verfügbaren Optionen gehören [!UICONTROL Gesendet], [!UICONTROL In &#x200B;], [!UICONTROL Erfolg] und [!UICONTROL Fehlgeschlagen]. Sie können Protokolle nur jeweils nach einer Statusbedingung filtern. |
 | [!UICONTROL Client] | Um Protokolle nach dem verwendeten Abfrage-Client zu filtern, geben Sie einen der folgenden akzeptierten Werte in das freie Textfeld ein: `API`, `Adobe Query Service UI` oder `QsAccel`. |
 | [!UICONTROL Meine Abfragen] | Verwenden Sie den Umschalter [!UICONTROL Meine Abfragen], um die Protokolle nach von Ihnen ausgeführten Abfragen zu filtern. |
 | [!UICONTROL ID des Abfrageprotokolls] | Um nach der eindeutigen Protokoll-ID einer Abfrage zu filtern, geben Sie die Protokoll-ID in das freie Textfeld ein. Diese Informationen finden Sie im Abschnitt [!UICONTROL Protokolldetails]. |

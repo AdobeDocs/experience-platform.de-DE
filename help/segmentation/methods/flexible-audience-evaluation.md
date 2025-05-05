@@ -29,7 +29,7 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segme
 
 Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgenden Bedingungen:
 
-- Sie können nur eine flexible Zielgruppenauswertung (zweimal **** pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
+- Sie können nur eine flexible Zielgruppenauswertung (zweimal **&#x200B;**&#x200B;pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
 - Sie haben **maximal** 50 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Produktions-/**.
 - Sie haben **maximal** 100 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Entwicklungs**-Sandbox.
 - Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.

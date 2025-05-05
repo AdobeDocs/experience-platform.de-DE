@@ -112,7 +112,7 @@ Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie di
 
 ![Der Widget-Composer mit hervorgehobenem Dropdown-Menü „Marken“.](./images/standard-dashboards/marks-dropdown.png)
 
-Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Werte in das Widget ein- oder ausgeschlossen werden sollen. Nachdem Sie einen Filter aus der Attributliste hinzugefügt haben, wird [!UICONTROL  Dialogfeld „Filter] angezeigt, in dem Sie Werte mithilfe ihres Kontrollkästchens auswählen oder die Auswahl aufheben können.
+Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Werte in das Widget ein- oder ausgeschlossen werden sollen. Nachdem Sie einen Filter aus der Attributliste hinzugefügt haben, wird [!UICONTROL &#x200B; Dialogfeld „Filter] angezeigt, in dem Sie Werte mithilfe ihres Kontrollkästchens auswählen oder die Auswahl aufheben können.
 
 ![Das Filterdialogfeld zum Filtern von Werten aus Ihrem Widget.](./images/standard-dashboards/filter-dialog.png)
 
@@ -132,11 +132,11 @@ Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ih
 
 ### Widget-Eigenschaften
 
-Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL  Bedienfeld ]Eigenschaften“ einen Namen für das Widget in das Textfeld [!UICONTROL Widget-Titel] ein.
+Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL &#x200B; Bedienfeld &#x200B;]Eigenschaften“ einen Namen für das Widget in das Textfeld [!UICONTROL Widget-Titel] ein.
 
 ![Das Eigenschaftenbedienfeld mit dem Symbol „Eigenschaften“ und dem hervorgehobenen Feld „Widget-Titel“.](./images/standard-dashboards/properties-panel.png)
 
-Im Bedienfeld Widget-Eigenschaften können Sie verschiedene Aspekte Ihres Widgets bearbeiten. Sie haben die vollständige Kontrolle, um den Speicherort der Widget-Legende zu bearbeiten. Um die Legende zu verschieben, wählen Sie [!UICONTROL  Dropdown-Liste ]Legendenplatzierung“ aus und wählen Sie Ihre gewünschte Position aus der Liste der verfügbaren Optionen aus. Sie können die Beschriftung, die der Legende zugeordnet ist, sowie die X- oder Y-Achse auch umbenennen, indem Sie einen neuen Namen in das Textfeld [!UICONTROL Legendentitel] bzw. [!UICONTROL Achsenbeschriftung] eingeben.
+Im Bedienfeld Widget-Eigenschaften können Sie verschiedene Aspekte Ihres Widgets bearbeiten. Sie haben die vollständige Kontrolle, um den Speicherort der Widget-Legende zu bearbeiten. Um die Legende zu verschieben, wählen Sie [!UICONTROL &#x200B; Dropdown-Liste &#x200B;]Legendenplatzierung“ aus und wählen Sie Ihre gewünschte Position aus der Liste der verfügbaren Optionen aus. Sie können die Beschriftung, die der Legende zugeordnet ist, sowie die X- oder Y-Achse auch umbenennen, indem Sie einen neuen Namen in das Textfeld [!UICONTROL Legendentitel] bzw. [!UICONTROL Achsenbeschriftung] eingeben.
 
 #### Widget speichern {#save-widget}
 

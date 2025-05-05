@@ -95,7 +95,7 @@ In diesem Beispiel für ein Ringdiagramm sind die Optionen Größe und Farbe. Fa
 
 ![Der Widget-Composer mit hervorgehobener Dropdown-Liste mit dem Add-Symbol und hervorgehobenen Umschalt-Pfeilen.](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
 
-Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie aus den verfügbaren Optionen der Dropdown-Liste [!UICONTROL Markierungen] aus. Die Optionen umfassen [!UICONTROL Linie], [!UICONTROL Ringdiagramm], [!UICONTROL Große ] und [!UICONTROL Balken]. Nach der Auswahl wird eine Vorschauvisualisierung der aktuellen Einstellungen Ihres Widgets generiert.
+Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie aus den verfügbaren Optionen der Dropdown-Liste [!UICONTROL Markierungen] aus. Die Optionen umfassen [!UICONTROL Linie], [!UICONTROL Ringdiagramm], [!UICONTROL Große &#x200B;] und [!UICONTROL Balken]. Nach der Auswahl wird eine Vorschauvisualisierung der aktuellen Einstellungen Ihres Widgets generiert.
 
 ![Der Widget-Composer mit der hervorgehobenen Widget-Vorschau.](../images/sql-insights-query-pro-mode/widget-preview.png)
 
@@ -121,7 +121,7 @@ Weitere Informationen zur Verwendung der Funktionen zum Sortieren, Ändern der S
 
 ## Widget-Eigenschaften {#properties}
 
-Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL  Bedienfeld ]Eigenschaften“ einen Namen für das Widget in das Textfeld **[!UICONTROL Widget-Titel]** ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
+Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL &#x200B; Bedienfeld &#x200B;]Eigenschaften“ einen Namen für das Widget in das Textfeld **[!UICONTROL Widget-Titel]** ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
 
 >[!NOTE]
 >

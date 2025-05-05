@@ -30,8 +30,8 @@ Das Anwenden von Vorschlägen wird als Aktion innerhalb einer Regel in der Benut
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen [!UICONTROL  unter &quot;]&quot; eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie [!UICONTROL  Dropdown-Feld ]Erweiterung“ auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und [!UICONTROL Aktionstyp] auf **[!UICONTROL Vorschläge anwenden]**.
+1. Wählen [!UICONTROL &#x200B; unter &quot;]&quot; eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Legen Sie [!UICONTROL &#x200B; Dropdown-Feld &#x200B;]Erweiterung“ auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und [!UICONTROL Aktionstyp] auf **[!UICONTROL Vorschläge anwenden]**.
 1. Legen Sie die gewünschten Felder auf der rechten Seite fest.
 1. Klicken Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 

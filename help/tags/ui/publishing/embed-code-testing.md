@@ -57,4 +57,4 @@ Der Tab **[!UICONTROL Konfiguration]** wird wieder angezeigt und zeigt an, dass 
 
 ## Nächste Schritte
 
-In diesem Tutorial wurde beschrieben, wie Sie mit Experience Platform Debugger zu Testzwecken lokal zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen von finden ](../../../debugger/home.md) in der Dokumentation zum Experience Platform-Debugger [.
+In diesem Tutorial wurde beschrieben, wie Sie mit Experience Platform Debugger zu Testzwecken lokal zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen von finden [&#128279;](../../../debugger/home.md) in der Dokumentation zum Experience Platform-Debugger .

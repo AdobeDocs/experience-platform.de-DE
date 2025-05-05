@@ -110,7 +110,7 @@ Nach Anwendung der Aggregationsfunktion müssen Sie den Lookback-Zeitraum des be
 
 Bei Anwendung der Aggregationsfunktion können Sie eine schnelle Aktualisierung aktivieren, wenn der Lookback-Zeitraum länger als eine Woche ist.
 
-![Das Kontrollkästchen [!UICONTROL Schnelle ]&quot; ist hervorgehoben.](./images/ui/enable-fast-refresh.png)
+![Das Kontrollkästchen [!UICONTROL Schnelle &#x200B;]&quot; ist hervorgehoben.](./images/ui/enable-fast-refresh.png)
 
 Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch für längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
 
@@ -142,7 +142,7 @@ Auf dieser Seite wird eine Zusammenfassung der Details des berechneten Attributs
 
 ### Berechnetes Entwurfsattribut {#draft}
 
-Bei Auswahl eines Entwurfs für ein berechnetes Attribut wird die **[!UICONTROL Berechnete Attribute bearbeiten]** angezeigt. Auf dieser Seite können Sie, ähnlich wie auf [!UICONTROL  Seite „Berechnete Attribute erstellen] die grundlegenden Informationen sowie die Definition des berechneten Attributs bearbeiten, bevor Sie den Entwurf aktualisieren oder veröffentlichen.
+Bei Auswahl eines Entwurfs für ein berechnetes Attribut wird die **[!UICONTROL Berechnete Attribute bearbeiten]** angezeigt. Auf dieser Seite können Sie, ähnlich wie auf [!UICONTROL &#x200B; Seite „Berechnete Attribute erstellen] die grundlegenden Informationen sowie die Definition des berechneten Attributs bearbeiten, bevor Sie den Entwurf aktualisieren oder veröffentlichen.
 
 ![Die [!UICONTROL Berechnete Attribute bearbeiten] wird angezeigt.](./images/ui/edit.png)
 
@@ -150,9 +150,9 @@ Bei Auswahl eines Entwurfs für ein berechnetes Attribut wird die **[!UICONTROL 
 
 >[!IMPORTANT]
 >
->Wenn Sie ein berechnetes Attribut mit der Funktion **Zuletzt verwendet** in einer Segmentdefinition verwenden, **müssen** sowohl **** Wert als auch den Zeitstempelwert im berechneten Attributobjekt einbeziehen.
+>Wenn Sie ein berechnetes Attribut mit der Funktion **Zuletzt verwendet** in einer Segmentdefinition verwenden, **müssen** sowohl **&#x200B;**&#x200B;Wert als auch den Zeitstempelwert im berechneten Attributobjekt einbeziehen.
 >
->Wenn Sie beispielsweise eine Segmentdefinition erstellen, die nach „Alle Profile mit einer gültigen E-Mail-Adresse“ sucht, in der das Feld „E-Mail-Adresse“ mit einem berechneten Attribut mit der neuesten Funktion gefüllt ist, **Sie** sowohl den Wert der E-Mail-Adresse als auch **** Zeitstempel der E-Mail-Adresse“ einbeziehen.
+>Wenn Sie beispielsweise eine Segmentdefinition erstellen, die nach „Alle Profile mit einer gültigen E-Mail-Adresse“ sucht, in der das Feld „E-Mail-Adresse“ mit einem berechneten Attribut mit der neuesten Funktion gefüllt ist, **Sie** sowohl den Wert der E-Mail-Adresse als auch **&#x200B;**&#x200B;Zeitstempel der E-Mail-Adresse“ einbeziehen.
 
 Nachdem Sie ein berechnetes Attribut erstellt haben, können Sie **veröffentlichte** berechneten Attribute in anderen nachgelagerten -Services verwenden. Da berechnete Attribute Profilattributfelder sind, die für Ihr Profilvereinigungsschema erstellt wurden, können Sie berechnete Attributwerte für ein Echtzeit-Kundenprofil nachschlagen, sie in einer Zielgruppe verwenden, für ein Ziel aktivieren oder sie für die Personalisierung in Journey in Adobe Journey Optimizer verwenden.
 

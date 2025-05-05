@@ -92,7 +92,7 @@ Wählen Sie die Warnmeldung aus, um spezifische Informationen zu Ihrem Datenflus
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-Die [!UICONTROL  „Übersicht über die Datenflussausführung] wird angezeigt. In der oberen Hälfte des Bildschirms wird ein Überblick über Ihren Datenfluss angezeigt, einschließlich Informationen zu den Attributen, der entsprechenden Datenflussausführungs-ID und der allgemeinen Fehlerzusammenfassung.
+Die [!UICONTROL &#x200B; „Übersicht über die Datenflussausführung] wird angezeigt. In der oberen Hälfte des Bildschirms wird ein Überblick über Ihren Datenfluss angezeigt, einschließlich Informationen zu den Attributen, der entsprechenden Datenflussausführungs-ID und der allgemeinen Fehlerzusammenfassung.
 
 ![Datenfluss-Übersicht](../../images/tutorials/alerts/dataflow-overview.png)
 
@@ -114,7 +114,7 @@ Warnhinweise für Ihre Datenflüsse werden Ihnen auch per E-Mail zugestellt. Wä
 
 ## Warnungen abonnieren und abmelden
 
-Sie können auf der Seite „Datenflüsse“ weitere Warnhinweise abonnieren oder sich von eingerichteten Warnhinweisen für [!UICONTROL  vorhandenen Datenfluss ]. Suchen Sie den von Ihnen erstellten Datenfluss aus der Liste und wählen Sie dann die Auslassungszeichen (`...`) aus, um ein Dropdown-Menü mit Optionen anzuzeigen. Wählen Sie als Nächstes **[!UICONTROL Warnhinweise abonnieren]**, um die Warnhinweiseinstellungen Ihres Datenflusses zu ändern.
+Sie können auf der Seite „Datenflüsse“ weitere Warnhinweise abonnieren oder sich von eingerichteten Warnhinweisen für [!UICONTROL &#x200B; vorhandenen Datenfluss &#x200B;]. Suchen Sie den von Ihnen erstellten Datenfluss aus der Liste und wählen Sie dann die Auslassungszeichen (`...`) aus, um ein Dropdown-Menü mit Optionen anzuzeigen. Wählen Sie als Nächstes **[!UICONTROL Warnhinweise abonnieren]**, um die Warnhinweiseinstellungen Ihres Datenflusses zu ändern.
 
 ![options](../../images/tutorials/alerts/options.png)
 

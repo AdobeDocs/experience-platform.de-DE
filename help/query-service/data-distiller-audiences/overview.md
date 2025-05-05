@@ -23,7 +23,7 @@ In diesem Dokument wird die Verwendung der SQL-Zielgruppenerweiterung in Adobe E
 
 Führen Sie diese Schritte aus, um Ihre Zielgruppen zu erstellen, zu verwalten und zu aktivieren. Erstellte Zielgruppen lassen sich nahtlos in den Zielgruppenfluss integrieren, sodass Sie Segmente aus Basiszielgruppen und dateibasierten Zielen (z. B. CSV-Uploads oder Cloud-Speicherorte) für die Kundenkontakte erstellen können. „Zielgruppenfluss“ bezieht sich auf den vollständigen Prozess der Erstellung, Verwaltung und Aktivierung von Zielgruppen, um eine nahtlose Integration über Ziele hinweg sicherzustellen.
 
-Adobe Experience Platform Verwenden Sie im Rahmen Ihres „Zielgruppen-Flusses“ die folgenden SQL-Befehle[ um Zielgruppen in zu erstellen](#create-audience) zu [](#add-profiles-to-audience) und [löschen](#delete-audience).
+Adobe Experience Platform Verwenden Sie im Rahmen Ihres „Zielgruppen-Flusses“ die folgenden SQL-Befehle[ um Zielgruppen in zu erstellen](#create-audience) zu [&#128279;](#add-profiles-to-audience) und [löschen](#delete-audience).
 
 ### Erstellen einer Zielgruppe {#create-audience}
 

@@ -92,7 +92,7 @@ Standardmäßig werden alle Ereignisse in Adobe Analytics als Seitenansichten be
 * **Datenobjekt**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType` und `data.__adobe.analytics.linkURL`
 * **Kontextdaten**: Nicht unterstützt
 
-Weitere Informationen finden Sie ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) der [`tl()` Methode im Adobe Analytics-Implementierungshandbuch .
+Weitere Informationen finden Sie [&#128279;](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) der `tl()` Methode im Adobe Analytics-Implementierungshandbuch .
 
 Wenn Sie [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) im `configure`-Befehl aktivieren, werden diese Felder für Sie ausgefüllt.
 

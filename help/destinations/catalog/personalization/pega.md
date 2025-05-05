@@ -41,7 +41,7 @@ Ein Marketing-Experte möchte die Angebote für Kunden optimieren, die sich für
 
 Bevor Sie dieses Ziel zum Exportieren von Daten aus Adobe Experience Platform verwenden können, müssen Sie die folgenden Voraussetzungen in [!DNL Pega Customer Decision Hub] erfüllen:
 
-* Konfigurieren Sie die Komponente für die Integration von Adobe Experience Platform-Profil und Zielgruppenmitgliedschaft ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) Ihrer [!DNL Pega Customer Decision Hub].[
+* Konfigurieren Sie die Komponente für die Integration von Adobe Experience Platform-Profil und Zielgruppenmitgliedschaft [&#128279;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) Ihrer [!DNL Pega Customer Decision Hub].
 * Konfigurieren Sie OAuth 2[0 (Client-Registrierung mit Client](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)Anmeldeinformationen) und gewähren Sie den Typ in Ihrer [!DNL Pega Customer Decision Hub].
 * Konfigurieren Sie [ Datenfluss ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) Echtzeit-Ausführung für den Datenfluss der Adobe-Zielgruppenzugehörigkeit in Ihrer [!DNL Pega Customer Decision Hub].
 
@@ -98,7 +98,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.

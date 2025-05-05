@@ -43,7 +43,7 @@ Adobe empfiehlt, die folgenden IP-Bereiche zu einer -Zulassungsliste hinzuzufüg
 
 ## US-Kunden, die mit AWS arbeiten {#aws}
 
-Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht ](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .[
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [&#128279;](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .
 
 >[!NOTE]
 >

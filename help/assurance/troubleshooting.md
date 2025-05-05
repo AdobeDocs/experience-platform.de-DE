@@ -40,7 +40,7 @@ Sie können die SDK-Protokollebenen mithilfe der [`setLogLevel`](https://develop
 ### Authentifizierungsüberlagerung wird angezeigt, aber App kann keine Verbindung herstellen
 
 * Stellen Sie die Internetverbindung des Geräts über den Geräte-Webbrowser sicher.
-* Wenn die App noch nie erfolgreich eine Verbindung zum Assurance-Service hergestellt hat, stellen Sie sicher, dass sie ordnungsgemäß für Assurance eingerichtet ist. Siehe Anweisungen zum Installieren der SDK-Bibliothek {](./tutorials/implement-assurance.md)}Adobe Experience Platform Assurance.[
+* Wenn die App noch nie erfolgreich eine Verbindung zum Assurance-Service hergestellt hat, stellen Sie sicher, dass sie ordnungsgemäß für Assurance eingerichtet ist. Siehe Anweisungen zum Installieren der SDK-Bibliothek {[&#128279;](./tutorials/implement-assurance.md)}Adobe Experience Platform Assurance.
 * Stellen Sie sicher, dass die Sitzung mit dem Link übereinstimmt und korrekt für die erwartete Sitzung eingegeben wird. Siehe [Protokollmeldung „OrgID-Informationen sind nicht verfügbar“](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) (dies ist ungewöhnlich und nur relevant, wenn Sie Zugriff auf mehr als eine ORG-Instanz haben).
 
 ### Adobe Analytics-Debugging

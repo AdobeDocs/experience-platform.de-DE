@@ -42,7 +42,7 @@ Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zur Registerkarte [!UICO
 
 ## Erkunden von Ad-hoc-Schemata im Schemabestand der Experience Platform-Benutzeroberfläche {#discover-ad-hoc-schemas}
 
-Um die Anzeige von Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![.](/help/images/icons/filter.png)) links neben dem Suchfeld aus und wählen Sie dann in der ] Leiste, die angezeigt wird, die Option **[!UICONTROL Ad-hoc-Schemata anzeigen aus.
+Um die Anzeige von Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![.](/help/images/icons/filter.png)) links neben dem Suchfeld aus und wählen Sie dann in der  Leiste, die angezeigt wird, die Option **Ad-hoc-Schemata anzeigen aus.
 
 ![Die Filteroptionen für das Schema-Dashboard in der linken Leiste mit aktiviertem Umschalter „Ad-hoc-Schema anzeigen“](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -60,7 +60,7 @@ Um die Beschriftungen für das gesamte Schema zu bearbeiten, klicken Sie auf das
 
 ![Die Beschriftungsansicht im Arbeitsbereich „Schemata“ mit hervorgehobenem Stiftsymbol.](../images/data-governance/edit-entire-schema-labels.png)
 
-Um eine Kennzeichnung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder mehrere Felder aus der Liste aus und [!UICONTROL  Sie in ] rechten Seitenleiste „Governance-Kennzeichnungen bearbeiten“.
+Um eine Kennzeichnung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder mehrere Felder aus der Liste aus und [!UICONTROL &#x200B; Sie in &#x200B;] rechten Seitenleiste „Governance-Kennzeichnungen bearbeiten“.
 
 ![Die Ansicht „Kennzeichnungen“ im Arbeitsbereich „Schemata“ mit hervorgehobener Option „Governance-Kennzeichnungen bearbeiten“ in der rechten Seitenleiste.](../images/data-governance/edit-governance-labels.png)
 

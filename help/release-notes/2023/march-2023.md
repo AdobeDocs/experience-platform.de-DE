@@ -133,14 +133,14 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Inhaltskomponentendetails“ ] |
+| Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Inhaltskomponentendetails“ &#x200B;] |
 | Feldergruppe | [[!UICONTROL AJO-Entitäts-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO-Entitäts-Tags zu [!UICONTROL AJO-Entitätsfeldern] hinzugefügt, die einer Journey oder Kampagne entsprechen |
 | Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die gemeinsamen Felder für [[!UICONTROL Journey Orchestration-Schrittereignisse hinzugefügt]](https://github.com/adobe/xdm/pull/1671/files) |
-| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte“ ]](https://github.com/adobe/xdm/pull/1670/files). |
+| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte“ &#x200B;]](https://github.com/adobe/xdm/pull/1670/files). |
 | Feldergruppe | [!UICONTROL Workfront-Änderungsereignis] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
 | Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Der [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den für den Artikel erstatteten Betrag anzugeben, falls vorhanden. |
-| Datentyp | [](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde der Liste der Erstattungen für diese Bestellung hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
+| Datentyp | [&#128279;](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde der Liste der Erstattungen für diese Bestellung hinzugefügt. |
+| Datentyp | [[!UICONTROL Produktlistenelement &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
 | Datentyp | [!UICONTROL Informationen zu Sitzungsdetails] | Das `pev3` Zeichenfolgenfeld wurde hinzugefügt, das [den Typ des für das Reporting verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Die `pccr` Eigenschaft gibt an, ob eine Umleitung stattgefunden hat. |
 | Datentyp | [!UICONTROL Anforderungsliste] | Stellt [ Eigenschaften der Anforderungsliste ](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
 | Datentyp | [!UICONTROL Commerce] | Der Datentyp [Commerce wurde aktualisiert](https://github.com/adobe/xdm/pull/1675/files) um `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` und `requisitionList` einzuschließen. |

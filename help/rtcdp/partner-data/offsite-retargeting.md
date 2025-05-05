@@ -87,7 +87,7 @@ Um eine Zielgruppe zu erstellen, wählen Sie **[!UICONTROL Zielgruppen]** und da
 
 ![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] ist hervorgehoben.](../assets/offsite-retargeting/create-audience.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie zwischen „Zielgruppe [!UICONTROL &quot; ] „Regel [!UICONTROL &quot; ] können. Wählen **[!UICONTROL Regel erstellen]** gefolgt von **[!UICONTROL Erstellen]** aus.
+Es wird ein Dialogfeld angezeigt, in dem Sie zwischen „Zielgruppe [!UICONTROL &quot; &#x200B;] „Regel [!UICONTROL &quot; &#x200B;] können. Wählen **[!UICONTROL Regel erstellen]** gefolgt von **[!UICONTROL Erstellen]** aus.
 
 ![Die Schaltfläche [!UICONTROL Regel erstellen] ist hervorgehoben.](../assets/offsite-retargeting/select-build-rule.png)
 

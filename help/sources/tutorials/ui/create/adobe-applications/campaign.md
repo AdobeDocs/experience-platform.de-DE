@@ -70,7 +70,7 @@ Nachdem Sie Werte für Ihre Campaign-Instanz, das Zielgruppen-Mapping und den Sc
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Auf [!UICONTROL  Seite „Datenflussdetails] können Sie auswählen, ob Sie einen vorhandenen Datensatz verwenden oder einen neuen Datensatz für Ihren Datenfluss konfigurieren möchten.
+Auf [!UICONTROL &#x200B; Seite „Datenflussdetails] können Sie auswählen, ob Sie einen vorhandenen Datensatz verwenden oder einen neuen Datensatz für Ihren Datenfluss konfigurieren möchten.
 
 Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
 

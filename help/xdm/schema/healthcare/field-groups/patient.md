@@ -33,7 +33,7 @@ ht-degree: 8%
 | [!UICONTROL Ist aktiv] | `active` | Boolesch | Zeigt an, ob die Patientenakte aktiv verwendet wird. |
 | [!UICONTROL Geburtsdatum] | `birthDate` | Datum | Das Geburtsdatum des Patienten. |
 | [!UICONTROL Indikator für Verstorben] | `deceasedBoolean` | Boolesch | Zeigt an, ob der Patient verstorben ist oder nicht. |
-| [!UICONTROL Datum/Uhrzeit des ] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Patienten. |
+| [!UICONTROL Datum/Uhrzeit des &#x200B;] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Patienten. |
 | [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 | [!UICONTROL Ist Teil einer Mehrfachgeburt] | `multipleBirthBoolean` | Boolesch | Zeigt an, ob der Patient Teil einer Mehrfachgeburt ist. |
 | [!UICONTROL Geburtsnummer] | `multipleBirthInteger` | Ganzzahl | Die Geburtsnummer in der Sequenz. |

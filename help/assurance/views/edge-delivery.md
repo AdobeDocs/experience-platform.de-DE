@@ -94,7 +94,7 @@ In diesem Abschnitt finden Sie die Rohspuren der ausgewählten Anfrage. Sie enth
 
 #### Anfrage
 
-Die Anfrageverfolgung enthält die vollständige Anfrage so, wie sie zuvor vom Upstream **[!UICONTROL Inbound Delivery Service]****[!UICONTROL Konductor]** empfangen wurde. Sie enthält die Anfragekopfzeilen, den Hauptteil und andere Metadaten. Beispielsweise kann die XDM-Payload der Anfrage im Feld `event.body.xdm` überprüft werden.
+Die Anfrageverfolgung enthält die vollständige Anfrage so, wie sie zuvor vom Upstream **[!UICONTROL Inbound Delivery Service]**&#x200B;**[!UICONTROL Konductor]** empfangen wurde. Sie enthält die Anfragekopfzeilen, den Hauptteil und andere Metadaten. Beispielsweise kann die XDM-Payload der Anfrage im Feld `event.body.xdm` überprüft werden.
 
 ![Detaillierte Anfrageinformationen einschließlich Kopfzeilen und Hauptteil finden Sie im Anfrageprotokoll](./images/edge-delivery/request.png)
 

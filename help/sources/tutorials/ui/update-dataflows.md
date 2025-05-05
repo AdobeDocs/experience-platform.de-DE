@@ -35,7 +35,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Que
 >
 >Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [ Handbuch unter „Filtern von Quellobjekten in ](./filter.md) Benutzeroberfläche“.
 
-Auf [!UICONTROL  Seite ]Datenflüsse“ wird eine Liste aller in Ihrem Unternehmen vorhandenen Datenflüsse angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
+Auf [!UICONTROL &#x200B; Seite &#x200B;]Datenflüsse“ wird eine Liste aller in Ihrem Unternehmen vorhandenen Datenflüsse angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
 
 Um Ihren Datenfluss zu aktualisieren, wählen Sie **[!UICONTROL Datenfluss aktualisieren]** aus.
 
@@ -75,7 +75,7 @@ Sie können Ihren Datenfluss mithilfe desselben Dropdown-Menüs deaktivieren. Um
 
 ![Das Dropdown-Menü mit der Option zum Deaktivieren des Datenflusses.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-Wählen Sie anschließend [!UICONTROL  Popup]Fenster aus, das angezeigt wird.
+Wählen Sie anschließend [!UICONTROL &#x200B; Popup]Fenster aus, das angezeigt wird.
 
 ![Das Popup-Fenster, in dem Sie bestätigen müssen, dass Sie Ihren Datenfluss deaktivieren möchten.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 

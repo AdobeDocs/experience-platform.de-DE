@@ -28,7 +28,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie über ein gültiges [!DNL
 
 Um die Microsoft [!DNL Azure]-Erweiterung zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder zur Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL linken Navigationsbereich]** Ereignisweiterleitung“ aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Microsoft Azure] und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Microsoft Azure] und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![Die ausgewählte Schaltfläche [!UICONTROL Installieren] für die Erweiterung [!UICONTROL Microsoft Azure] in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/server/azure/install.png)
 

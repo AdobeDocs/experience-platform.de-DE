@@ -50,7 +50,7 @@ Um Ihren [!DNL Event Hubs]-Quell-Connector zu authentifizieren, müssen Sie Wert
 | SAS-Schlüsselname | Der Name der Autorisierungsregel, die auch als SAS-Schlüsselname bezeichnet wird. |
 | SAS-Schlüssel | Der Primärschlüssel des [!DNL Event Hub] Namespace. Für die `sasPolicy`, der die `sasKey` entspricht, müssen `manage` konfiguriert sein, damit die [!DNL Event Hubs] ausgefüllt werden kann. |
 | Namespace | Der Namespace der [!DNL Event Hub], auf die Sie zugreifen. Ein [!DNL Event Hub] Namespace bietet einen eindeutigen Container für die Berechnung des Umfangs, in dem Sie einen oder mehrere [!DNL Event Hubs] erstellen können. |
-| Name des Ereignis-Hubs | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [[!DNL Event Hub]. |
+| Name des Ereignis-Hubs | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [!DNL Event Hub]. |
 
 >[!TAB Event Hub Azure Active Directory-Authentifizierung]
 
@@ -71,7 +71,7 @@ Weitere Informationen zu [!DNL Azure Active Directory] finden Sie im [Azure-Hand
 | Client-ID | Die Ihrer App zugewiesene Anwendungs-ID. Sie können diese ID vom [!DNL Microsoft Entra ID] abrufen, in dem Sie Ihre [!DNL Azure Active Directory] registriert haben. |
 | Wert des Client-Geheimnisses | Das Client-Geheimnis, das zusammen mit der Client-ID zur Authentifizierung Ihrer App verwendet wird. Sie können Ihr Client-Geheimnis über das [!DNL Microsoft Entra ID]-Portal abrufen, in dem Sie Ihre [!DNL Azure Active Directory] registriert haben. |
 | Namespace | Der Namespace der [!DNL Event Hub], auf die Sie zugreifen. Ein [!DNL Event Hub] Namespace bietet einen eindeutigen Container für die Berechnung des Umfangs, in dem Sie einen oder mehrere [!DNL Event Hubs] erstellen können. |
-| Name des Ereignis-Hubs | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [[!DNL Event Hub]. |
+| Name des Ereignis-Hubs | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [!DNL Event Hub]. |
 
 Weitere Informationen zu [!DNL Azure Active Directory] finden Sie im [Azure-Handbuch zur Verwendung der Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 

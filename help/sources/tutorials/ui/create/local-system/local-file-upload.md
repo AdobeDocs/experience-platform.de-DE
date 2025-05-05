@@ -31,13 +31,13 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter [!UICONTROL  Kategorie „Lokales ]&quot; die Option **[!UICONTROL Lokaler Datei-Upload]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter [!UICONTROL &#x200B; Kategorie „Lokales &#x200B;]&quot; die Option **[!UICONTROL Lokaler Datei-Upload]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/local/catalog.png)
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Auf [!UICONTROL  Seite „Datenflussdetails] können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder einen neuen Datensatz aufnehmen möchten.
+Auf [!UICONTROL &#x200B; Seite „Datenflussdetails] können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder einen neuen Datensatz aufnehmen möchten.
 
 Um Ihre CSV-Daten in einen vorhandenen Datensatz einzufügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
 

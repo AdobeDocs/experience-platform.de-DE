@@ -16,7 +16,7 @@ ht-degree: 42%
 >
 >Die [!DNL Shopify] Streaming-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Das folgende Tutorial enthält Schritte zum Erstellen einer Streaming-Quellverbindung und eines Datenflusses, um Daten mithilfe der (API[[!DNL Flow Service]  von [[!DNL Shopify]](https://www.shopify.com/) an Adobe Experience Platform zu ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial enthält Schritte zum Erstellen einer Streaming-Quellverbindung und eines Datenflusses, um Daten mithilfe der (API[&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/) [!DNL Flow Service]  von [[!DNL Shopify]](https://www.shopify.com/) an Adobe Experience Platform zu .
 
 ## Erste Schritte {#getting-started}
 

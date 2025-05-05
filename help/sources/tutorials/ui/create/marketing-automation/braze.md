@@ -51,7 +51,7 @@ Verwenden Sie in der Benutzeroberfläche von Experience Platform den linken Navi
 
 ![Ein abgeschlossenes Schema.](../../../../images/tutorials/create/braze/schema.png)
 
-Geben Sie einen Namen und eine Beschreibung für Ihr Schema an. Verwenden Sie dann das Bedienfeld [!UICONTROL Komposition], um Ihre Schemaattribute zu konfigurieren. Wählen [!UICONTROL  unter ]Feldergruppen“ die Option **[!UICONTROL Hinzufügen]** aus und fügen Sie die Feldergruppe [!UICONTROL Benutzerereignis „Braze-]&quot; hinzu. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Geben Sie einen Namen und eine Beschreibung für Ihr Schema an. Verwenden Sie dann das Bedienfeld [!UICONTROL Komposition], um Ihre Schemaattribute zu konfigurieren. Wählen [!UICONTROL &#x200B; unter &#x200B;]Feldergruppen“ die Option **[!UICONTROL Hinzufügen]** aus und fügen Sie die Feldergruppe [!UICONTROL Benutzerereignis „Braze-]&quot; hinzu. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 Weitere Informationen zu Schemata finden Sie im Handbuch zu [Erstellen von Schemata in der Benutzeroberfläche](../../../../../xdm/tutorials/create-schema-ui.md).
 

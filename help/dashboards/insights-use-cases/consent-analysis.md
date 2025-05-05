@@ -24,7 +24,7 @@ Die in diesem Handbuch behandelten Anwendungsfälle sind Einverständnistrends u
 
 ## Erstellen von einverstandenen Zielgruppen {#create-consent-audiences}
 
-Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-Time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts ]**der Ansicht**[!UICONTROL  Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
+Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgruppe aus allen Profilen erstellen, die dem Kontakt zugestimmt haben. Um zum Segment Builder von Real-Time Customer Data Platform zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus. Wählen Sie auf der [!UICONTROL Kunde] Registerkarte des [!UICONTROL Zielgruppen]-Dashboards oben rechts **der Ansicht** Zielgruppe erstellen und dann **[!UICONTROL Regeln erstellen]**.
 
 ![Das [!UICONTROL Zielgruppen]-Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen] und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobe hat verschiedene Einblicke erstellt, die automatisch für Sie in den Dashb
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
-Um die Überschneidung zwischen zwei Einverständnis-Zielgruppen zu überprüfen, fügen Sie [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“ zu ] Profile-Dashboard hinzu und wählen Sie die gewünschten Zielgruppen in den Dropdown-Menüs aus. Weitere Informationen zur insight finden Sie in der Dokumentation zu Anweisungen zum Hinzufügen eines Widgets zu Ihrem Dashboard [*Zielgruppenüberschneidung nach Zusammenführungsrichtlinie*](../guides/profiles.md#audience-overlap-by-merge-policy) .
+Um die Überschneidung zwischen zwei Einverständnis-Zielgruppen zu überprüfen, fügen Sie [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie“ zu &#x200B;] Profile-Dashboard hinzu und wählen Sie die gewünschten Zielgruppen in den Dropdown-Menüs aus. Weitere Informationen zur insight finden Sie in der Dokumentation zu Anweisungen zum Hinzufügen eines Widgets zu Ihrem Dashboard [*Zielgruppenüberschneidung nach Zusammenführungsrichtlinie*](../guides/profiles.md#audience-overlap-by-merge-policy) .
 
 <!-- Image needs updating to night mode -->
 
@@ -104,7 +104,7 @@ Wenn Sie eine auf Einverständnis basierende Zielgruppe erstellen, wird sie auto
 
 ## Dashboard für Zielgruppenübersicht {#audiences-overview-dashboard}
 
-Nachdem Sie eine einverständnisbezogene Zielgruppe erstellt haben, z. B. „Einverständnisbenutzer zu SMS“, können Sie wichtige personalisierte Einverständnisinformationen zu Ihrer Zielgruppe anzeigen, indem Sie die entsprechenden Widgets zu Ihrem Zielgruppen-Übersichts-Dashboard hinzufügen. Navigieren Sie zu [!UICONTROL Zielgruppen] [!UICONTROL Übersicht] und fügen Sie Ihre ausgewählten Widgets aus der Widget-Bibliothek hinzu. Jedes Widget, das zu Ihrer Ansicht des Dashboards hinzugefügt wird, kann mit der Funktion [!UICONTROL Dashboard ändern“ in der Größe angepasst ] verschoben werden. Ihre personalisierte Ansicht kann Einblicke enthalten, z. B. den Trend im Zeitverlauf (bis zu 12 Monate), die Überschneidungen mit anderen Zielgruppen und die Identitätszusammensetzung der Zielgruppe. Nachfolgend finden Sie eine Beispielansicht.
+Nachdem Sie eine einverständnisbezogene Zielgruppe erstellt haben, z. B. „Einverständnisbenutzer zu SMS“, können Sie wichtige personalisierte Einverständnisinformationen zu Ihrer Zielgruppe anzeigen, indem Sie die entsprechenden Widgets zu Ihrem Zielgruppen-Übersichts-Dashboard hinzufügen. Navigieren Sie zu [!UICONTROL Zielgruppen] [!UICONTROL Übersicht] und fügen Sie Ihre ausgewählten Widgets aus der Widget-Bibliothek hinzu. Jedes Widget, das zu Ihrer Ansicht des Dashboards hinzugefügt wird, kann mit der Funktion [!UICONTROL Dashboard ändern“ in der Größe angepasst &#x200B;] verschoben werden. Ihre personalisierte Ansicht kann Einblicke enthalten, z. B. den Trend im Zeitverlauf (bis zu 12 Monate), die Überschneidungen mit anderen Zielgruppen und die Identitätszusammensetzung der Zielgruppe. Nachfolgend finden Sie eine Beispielansicht.
 
 ![Das Zielgruppen-Dashboard mit Hervorhebung der Benutzer, die in die SMS-Zielgruppe eingewilligt haben , im Dropdown-Menü „Globale Zielgruppe“.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -131,7 +131,7 @@ Nachdem der Widget-Composer mit Daten aus der ausgewählten Tabelle gefüllt wur
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL count_of_profiles]` und verwenden Sie dann das Symbol + , um der Y-Achse aus dem Dropdown-Menü das Attribut `[!UICONTROL count_of_profiles]` hinzuzufügen.
 - Wählen Sie das Symbol `...` (Ellipsen) im Feld [!UICONTROL Y-Achse] und dann die Aggregatfunktion [!UICONTROL SUMME] aus dem Dropdown-Menü aus.
   ![Das Widget „Einverständnistrends des Widget-Composers“ mit Hervorhebung des Datenmodells, der Tabelle und des Dropdown-Menüs der Y-Achse und der Summenfunktion. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Wählen Sie [!UICONTROL  Dropdown]Menü „Markierungen“ aus und ändern Sie den Diagrammtyp in [!UICONTROL Linie].
+- Wählen Sie [!UICONTROL &#x200B; Dropdown]Menü „Markierungen“ aus und ändern Sie den Diagrammtyp in [!UICONTROL Linie].
 - Suchen Sie [!UICONTROL Attribute] nach dem `[!UICONTROL segment_name]` und verwenden Sie dann das Symbol + , um die `segment_name` als [!UICONTROL Filter] aus dem Dropdown-Menü hinzuzufügen. Das [!UICONTROL Filter: Segment_name] wird angezeigt. Wählen Sie die zuvor erstellten Zielgruppen aus, die sich auf das Einverständnis beziehen. Wählen Sie für dieses Beispiel **[!UICONTROL Benutzer, die Anrufen zugestimmt haben]**, **[!UICONTROL Benutzer, die zu]** zugestimmt haben und **[!UICONTROL Benutzer, die zu E-Mails zugestimmt haben]** aus, gefolgt von **[!UICONTROL Apply]**.
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL segment_name]` und wählen Sie dann aus dem Dropdown-Menü das Symbol + aus, um `segment_name` als [!UICONTROL Color] hinzuzufügen.
 - Öffnen Sie [Bedienfeld [!UICONTROL Eigenschaften] ](../standard-dashboards.md#widget-properties) und geben Sie einen geeigneten [!UICONTROL Widget-Titel] und [!UICONTROL Achsenbeschriftung].

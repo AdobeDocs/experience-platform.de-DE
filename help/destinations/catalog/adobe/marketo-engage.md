@@ -16,7 +16,7 @@ ht-degree: 24%
 >[!IMPORTANT]
 >
 >Mit der Veröffentlichung des [erweiterten Marketo V2-Ziel](/help/release-notes/2022/july-2022.md#destinations)Connectors werden jetzt zwei Marketo-Karten im Zielkatalog angezeigt.
->* Wenn Sie bereits Daten für das Ziel **[!UICONTROL Marketo V1]** aktivieren: Erstellen Sie neue Datenflüsse für das Ziel **[!UICONTROL Marketo V2]** und löschen Sie bestehende Datenflüsse für das Ziel **[!UICONTROL Marketo V1]** bis Februar 2023. Ab diesem Datum wird die Zielkarte **[!UICONTROL Marketo]** 1} entfernt.
+>* Wenn Sie bereits Daten für das Ziel **[!UICONTROL Marketo V1]** aktivieren: Erstellen Sie neue Datenflüsse für das Ziel **[!UICONTROL Marketo V2]** und löschen Sie bestehende Datenflüsse für das Ziel **[!UICONTROL Marketo V1]** bis Februar 2023. Ab diesem Datum wird die Zielkarte **[!UICONTROL Marketo]** 1&rbrace; entfernt.
 >* Wenn Sie noch keine Datenflüsse zum Ziel **[!UICONTROL Marketo V1]** erstellt haben, verwenden Sie die neue Karte **[!UICONTROL Marketo V2]**, um eine Verbindung mit Marketo herzustellen und Daten dorthin zu exportieren.
 
 ![Abbildung der beiden Marketo-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
@@ -78,7 +78,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >[!IMPORTANT]
 > 
 >* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Zielgruppen finden Sie unter [Pushen einer Adobe Experience Platform-Zielgruppe in eine statische Marketo-Liste](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) in der Dokumentation zu Marketo.
 

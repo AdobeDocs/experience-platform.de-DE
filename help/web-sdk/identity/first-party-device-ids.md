@@ -133,7 +133,7 @@ Erstanbieter-Geräte-IDs ([!DNL FPIDs]) verfolgen Besucher mithilfe von Erstanbi
 >
 >[!DNL A]- oder [!DNL AAAA] werden nur für das Setzen und Tracking von Cookies unterstützt. Die primäre Methode zur Datenerfassung ist die über eine [!DNL DNS CNAME]. [!DNL FPIDs] werden mit einem [!DNL A]- oder [!DNL AAAA]-Datensatz festgelegt und mit einem [!DNL CNAME] an Adobe gesendet.
 >
->Das Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) von [ wird auch für die Erstanbieter-Datenerfassung unterstützt.
+>Das Adobe-Managed Certificate Program[&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) von  wird auch für die Erstanbieter-Datenerfassung unterstützt.
 
 Sobald ein [!DNL FPID] Cookie gesetzt wurde, kann sein Wert abgerufen und bei der Erfassung von Ereignisdaten an Adobe gesendet werden. Die erfassten [!DNL FPIDs] werden zur Generierung von [!DNL ECIDs] verwendet, bei denen es sich um die primären Kennungen in Adobe Experience Cloud-Programmen handelt.
 
@@ -166,7 +166,7 @@ Um diese Funktion verwenden zu können, müssen Sie das [!DNL FPID]-Cookie auf d
 >
 >Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
 
-**Schritt 2. Aktivieren**[!UICONTROL  First-Party-ID ]**Cookie-Funktion für Ihren Datenstrom**
+**Schritt 2. Aktivieren**&#x200B;[!UICONTROL &#x200B; First-Party-ID &#x200B;]&#x200B;**Cookie-Funktion für Ihren Datenstrom**
 
 Nachdem Sie Ihren CNAME konfiguriert haben, müssen Sie die Option **[!UICONTROL Erstanbieter-ID-Cookie]** für Ihren Datenstrom aktivieren. Diese Einstellung weist Edge Network an, bei der Suche nach einer First-Party-Geräte-ID ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der [Identitätszuordnung](#identityMap) zu suchen.
 

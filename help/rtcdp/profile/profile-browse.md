@@ -22,7 +22,7 @@ Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und
 
 ## Profilverbesserungen für Real-Time CDP, B2B Edition
 
-Zusätzlich zu den von Adobe Experience Platform, Real-Time CDP unterstützten Funktionen zum Durchsuchen von Profilen können B2B edition-Benutzende auf den Registerkarten „Attribute[!UICONTROL  und „Ereignisse] auf B2B]-Attribute und -Ereignisse innerhalb [!UICONTROL  Kundenprofils zugreifen. B2B-Daten können auch für die Segmentierung verwendet werden, wobei diese Zielgruppen neben Nicht-B2B-Zielgruppen auf der Registerkarte [!UICONTROL Zielgruppenzugehörigkeit] des Kunden angezeigt werden.
+Zusätzlich zu den von Adobe Experience Platform, Real-Time CDP unterstützten Funktionen zum Durchsuchen von Profilen können B2B edition-Benutzende auf den Registerkarten „Attribute[!UICONTROL &#x200B; und „Ereignisse] auf B2B-Attribute und -Ereignisse innerhalb  Kundenprofils zugreifen. B2B-Daten können auch für die Segmentierung verwendet werden, wobei diese Zielgruppen neben Nicht-B2B-Zielgruppen auf der Registerkarte [!UICONTROL Zielgruppenzugehörigkeit] des Kunden angezeigt werden.
 
 Mit Real-Time CDP, B2B edition können Sie auch [!UICONTROL Konten], [!UICONTROL Opportunities] und [!UICONTROL Source-] aus allen Unternehmensquellen durchsuchen, die mit einem einzelnen Kunden verknüpft sind.
 

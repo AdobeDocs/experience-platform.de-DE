@@ -31,7 +31,7 @@ Vor der Verwendung des Analytics Classifications Source Connectors müssen Ihre 
 
 Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Adobe* Programme} **[!UICONTROL Adobe Analytics]** und dann **[!UICONTROL Einrichten]** aus.
+Wählen Sie unter der Kategorie *Adobe* Programme&rbrace; **[!UICONTROL Adobe Analytics]** und dann **[!UICONTROL Einrichten]** aus.
 
 >[!TIP]
 >

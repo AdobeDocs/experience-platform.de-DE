@@ -49,10 +49,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL-Nummer]</td>
+      <td>[!UICONTROL -Nummer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{type}: „number“}</pre>
+{type}: „number“&rbrace;</pre>
       </td>
       <td><code>12925.49</code></td>
     </tr>
@@ -60,11 +60,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „integer“,
   „maximum“: 9007199254740991,
   „minimum“: -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Ganzzahl]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „integer“,
   „maximum“: 2147483648,
   „minimum“: -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „integer“,
   „maximum“: 32768,
   „minimum“: -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „integer“,
   „Maximum“: 128,
   „minimum“: -128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Datum]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „string“,
   „format“: „date“
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   „type“: „string“,
   „format“: „date-time“
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -149,7 +149,7 @@ In den folgenden Abschnitten wird beschrieben, wie jeder XDM-Typ anderen gängig
 
 >[!NOTE]
 >
->Unter den in den folgenden Tabellen aufgelisteten Standard-XDM-Typen ist auch [!UICONTROL  Typ ]Map“ enthalten. Zuordnungen werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel nicht sinnvoll in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
+>Unter den in den folgenden Tabellen aufgelisteten Standard-XDM-Typen ist auch [!UICONTROL &#x200B; Typ &#x200B;]Map“ enthalten. Zuordnungen werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel nicht sinnvoll in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
 >Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen und Sie können bei [ auch benutzerdefinierte Zuordnungsfelder ](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen, zu bestimmen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
 

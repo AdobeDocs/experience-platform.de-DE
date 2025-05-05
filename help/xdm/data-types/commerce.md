@@ -11,7 +11,7 @@ ht-degree: 11%
 
 ---
 
-# Datentyp {0]Commerce}[!UICONTROL 
+# Datentyp &lbrace;0Commerce&rbrace;
 
 [!UICONTROL Commerce] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Datensätze im Zusammenhang mit Kauf und Verkauf beschreibt.
 

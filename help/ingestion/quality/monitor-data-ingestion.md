@@ -30,7 +30,7 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 >
 >Um die Gesamtzahl der Ereignisse an einem bestimmten Datum zu berechnen, verwenden Sie den Ausdruck von `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Wählen Sie in der ](https://platform.adobe.com) von {0 **[!UICONTROL Experience Platform]** im linken Navigationsmenü die Option „Monitoring“ und dann **[!UICONTROL Streaming End-to-End]** aus.[
+Wählen Sie in der [&#128279;](https://platform.adobe.com) von &lbrace;0 **[!UICONTROL Experience Platform]** im linken Navigationsmenü die Option „Monitoring“ und dann **[!UICONTROL Streaming End-to-End]** aus.
 
 Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der von [!DNL Experience Platform] empfangenen Streaming-Ereignisse, ein Diagramm, das die Rate der von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfolgreich verarbeiteten Streaming-Ereignisse sowie eine detaillierte Liste der eingehenden Daten anzeigt.
 

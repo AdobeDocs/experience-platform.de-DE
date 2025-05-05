@@ -29,7 +29,7 @@ ht-degree: 8%
 | [!UICONTROL aktiv] | `active` | Boolesch | Gibt an, ob der Datensatz der medizinischen Fachkräfte aktiv verwendet wird. |
 | [!UICONTROL Geburtsdatum] | `birthDate` | Datum | Das Geburtsdatum des Praktizierenden. |
 | [!UICONTROL Indikator für Verstorben] | `deceasedBoolean` | Boolesch | Zeigt an, ob der Arzt verstorben ist. |
-| [!UICONTROL Datum/Uhrzeit des ] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Praktizierenden. |
+| [!UICONTROL Datum/Uhrzeit des &#x200B;] | `deceasedDateTime` | DateTime | Datum und Uhrzeit des Todes des Praktizierenden. |
 | [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:

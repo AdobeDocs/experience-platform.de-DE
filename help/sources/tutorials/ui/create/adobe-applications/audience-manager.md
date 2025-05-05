@@ -30,7 +30,7 @@ Wählen Sie unter [!UICONTROL Adobe] die Option **[!UICONTROL Adobe Audience Man
 >
 >Sie können keine regionalen Daten aus der Audience Manager-Quelle in Experience Platform aufnehmen. Wenn Sie Analytics-Anwendungsfälle haben, für die regionale Daten erforderlich sind, verwenden Sie bitte den [Analytics-Quell-Connector](../adobe-applications/analytics.md).
 
-Der Schritt [!UICONTROL Auswählen von Eigenschaften und ]&quot; wird angezeigt und bietet Ihnen eine interaktive Oberfläche zum Durchsuchen und Auswählen Ihrer Eigenschaften, Segmente und Daten.
+Der Schritt [!UICONTROL Auswählen von Eigenschaften und &#x200B;]&quot; wird angezeigt und bietet Ihnen eine interaktive Oberfläche zum Durchsuchen und Auswählen Ihrer Eigenschaften, Segmente und Daten.
 
 * Das linke Bedienfeld der Benutzeroberfläche enthält die Optionen [!UICONTROL Merkmale und Segmente auswählen] sowie ein hierarchisches Verzeichnis aller verfügbaren Segmente.
 * Die rechte Hälfte der Benutzeroberfläche ermöglicht es Ihnen, mit ausgewählten Segmenten zu interagieren und bestimmte Daten auszuwählen, die Sie verwenden möchten.

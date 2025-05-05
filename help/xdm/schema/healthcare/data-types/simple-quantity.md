@@ -12,7 +12,7 @@ ht-degree: 12%
 
 ---
 
-# [!UICONTROL Einfache ]) Datentyp
+# [!UICONTROL Einfache &#x200B;]) Datentyp
 
 [!UICONTROL Einfache Menge] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen gemessenen oder messbaren Betrag bereitstellt. Dieser Datentyp wird gemäß den HL7 FHIR Release 5-Spezifikationen erstellt.
 

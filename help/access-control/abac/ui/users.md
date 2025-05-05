@@ -26,7 +26,7 @@ Eine Liste mit Benutzern wird angezeigt. Wählen Sie in der Liste den Benutzer a
 
 Die Registerkarte Details bietet einen Überblick über den Benutzer. In der Übersicht werden der Benutzername, der Kontotyp, die E-Mail-Adresse, die Authentifizierungs-ID, Kontaktinformationen und Standortdetails angezeigt.
 
-![Benutzerdetailseite mit [!UICONTROL  Registerkarte „Details] und dem hervorgehobenen Benutzerprofil.](../../images/flac-ui/flac-users-details.png)
+![Benutzerdetailseite mit [!UICONTROL &#x200B; Registerkarte „Details] und dem hervorgehobenen Benutzerprofil.](../../images/flac-ui/flac-users-details.png)
 
 Wählen Sie die Registerkarte **[!UICONTROL Rollen]** aus, um die Rollen anzuzeigen, denen der Benutzer zugewiesen ist.
 

@@ -135,7 +135,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
@@ -144,7 +144,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Outreach]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Um Ihre XDM-Felder den [!DNL Outreach]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie [!UICONTROL  Schritt ]Zuordnung“ auf **[!UICONTROL Neue Zuordnung hinzufügen]**. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
+1. Klicken Sie [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ auf **[!UICONTROL Neue Zuordnung hinzufügen]**. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
    Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Hinzufügen einer neuen Zuordnung](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. Wählen Sie im Fenster [!UICONTROL Quellfeld auswählen] die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und fügen Sie die gewünschten Zuordnungen hinzu.
@@ -152,6 +152,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
 1. Wählen Sie im Fenster [!UICONTROL Zielfeld auswählen] den Typ des Zielfelds aus, dem Sie Ihr Quellfeld zuordnen möchten.
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
+
      Screenshot der ![Experience Platform-Benutzeroberfläche mit Ziel-Zuordnung unter Verwendung der OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach]-Instanz hinzu:
@@ -161,7 +162,8 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      | `Oid` | `OutreachId` | Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld [!UICONTROL Attributname] definieren. Eine umfassende Liste [[!DNL Outreach]  unterstützten Attribute finden ](https://api.outreach.io/api/v2/docs#prospect) in der Dokumentation zum Interessenten .
-     Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnung unter Verwendung von LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)![
+
+     Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnung unter Verwendung von LastName.![&#128279;](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach]-Instanz hinzu:
 
@@ -171,7 +173,8 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      | `person.name.lastName` | `lastName` |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
-     Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/outreach/mappings.png)![
+
+     Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnungen.![&#128279;](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Planen des Zielgruppenexports und Beispiel {#schedule-segment-export-example}
 

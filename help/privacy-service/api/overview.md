@@ -16,7 +16,7 @@ Die Privacy Service-API bietet mehrere Endpunkte, mit denen Sie Datenschutzauftr
 
 >[!NOTE]
 >
->In diesem Handbuch wird die Verwendung der [!DNL Privacy Service]-API beschrieben. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der Übersicht über die Privacy Service-Benutzeroberfläche von [](../ui/overview.md).
+>In diesem Handbuch wird die Verwendung der [!DNL Privacy Service]-API beschrieben. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der Übersicht über die Privacy Service-Benutzeroberfläche von [&#128279;](../ui/overview.md).
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Privacy Service-API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 

@@ -108,7 +108,7 @@ Um die Erweiterung zu konfigurieren, müssen Sie die beiden erforderlichen Felde
 
 Klicken Sie abschließend auf **[!UICONTROL Speichern]**, um die Erweiterung zu installieren.
 
-### Hinzufügen [!UICONTROL  Aktion „Konvertierung senden] zu einer Regel {#conversion-action-event-forwarding}
+### Hinzufügen [!UICONTROL &#x200B; Aktion „Konvertierung senden] zu einer Regel {#conversion-action-event-forwarding}
 
 Nachdem die Erweiterung installiert wurde, können Sie damit beginnen, [!UICONTROL Konversionsaktion senden] in Ihre Ereignisweiterleitungsregeln einzuschließen. Wählen Sie beim Erstellen oder Bearbeiten einer Regel, die auf die Konversion wartet, die Sie verbessern möchten, **[!UICONTROL Hinzufügen]** unter [!UICONTROL Aktionen]. Wählen Sie im nächsten Dialogfeld **[!UICONTROL Erweiterte Konvertierungen für Google Ads]** aus der Dropdown-Liste [!UICONTROL Erweiterung] und wählen Sie dann **[!UICONTROL Konversion senden]** unter [!UICONTROL Aktionstyp].
 

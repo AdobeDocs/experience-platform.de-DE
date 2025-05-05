@@ -47,7 +47,7 @@ Mit dem [!UICONTROL Recipe Builder]-Notebook können Sie Trainings- und Bewertun
 
 Wenn Sie das Notebook [!UICONTROL Recipe Builder] aus dem Starter auswählen, wird das Notebook in einer neuen Registerkarte geöffnet.
 
-Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: ****, **[!UICONTROL Ergebnis]** und **[!UICONTROL Rezept erstellen]**. Diese Symbole erscheinen nur im [!UICONTROL Recipe Builder]-Notebook. Weitere Informationen zu diesen Aktionen finden Sie [ Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: **&#x200B;**, **[!UICONTROL Ergebnis]** und **[!UICONTROL Rezept erstellen]**. Diese Symbole erscheinen nur im [!UICONTROL Recipe Builder]-Notebook. Weitere Informationen zu diesen Aktionen finden Sie [ Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 

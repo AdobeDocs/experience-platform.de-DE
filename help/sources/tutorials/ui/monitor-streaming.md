@@ -47,7 +47,7 @@ Die folgende Tabelle enthält weitere Informationen zum Ausführungsstatus von D
 | Fehler | Der `Error` zeigt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
 | Keine Ausführungen | Der `No runs` gibt an, dass der Datenfluss erstellt, aber keine Datenflussausführungen gestartet wurden. |
 
-Auf [!UICONTROL  Seite „Datenflussaktivität] werden spezifische Informationen zu Ihrem Streaming-Datenfluss angezeigt. Das obere Banner enthält die kumulative Anzahl der aufgenommenen und fehlgeschlagenen Datensätze für alle Streaming-Datenflussausführungen in Ihrem ausgewählten Datumsbereich.
+Auf [!UICONTROL &#x200B; Seite „Datenflussaktivität] werden spezifische Informationen zu Ihrem Streaming-Datenfluss angezeigt. Das obere Banner enthält die kumulative Anzahl der aufgenommenen und fehlgeschlagenen Datensätze für alle Streaming-Datenflussausführungen in Ihrem ausgewählten Datumsbereich.
 
 ![dataflow-activity](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 

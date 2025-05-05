@@ -128,7 +128,7 @@ Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer 
 
 >[!IMPORTANT]
 >
-> Um API-Anmeldeinformationen in „Berechtigungen[!UICONTROL  verwenden ] verwalten zu können, müssen Benutzerinnen und Benutzer über Systemadministratorrechte verfügen.
+> Um API-Anmeldeinformationen in „Berechtigungen[!UICONTROL &#x200B; verwenden &#x200B;] verwalten zu können, müssen Benutzerinnen und Benutzer über Systemadministratorrechte verfügen.
 
 Um Experience Platform-APIs als Benutzer oder Entwickler verwenden zu können, muss ein Systemadministrator zusätzlich zu den einer Rolle zugewiesenen Berechtigungen API-Anmeldeinformationen hinzufügen. Eine vollständige Anleitung zum Erstellen und Zuweisen von API-Anmeldeinformationen sowie die erforderlichen Berechtigungen finden Sie im schrittweisen Tutorial unter [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md#generate-credentials).
 

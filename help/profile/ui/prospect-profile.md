@@ -26,7 +26,7 @@ Die **[!UICONTROL Durchsuchen]** wird angezeigt. Eine Liste aller Interessentenp
 
 >[!IMPORTANT]
 >
->Während die meisten Suchfunktionen zwischen Kundenprofilen und Interessentenprofilen identisch sind, können Sie **** Interessentenprofile nach Zusammenführungsrichtlinien durchsuchen. Dies liegt daran, dass die Profile potenzieller Kundinnen und Kunden automatisch durch eine vom System entworfene zeitbasierte Zusammenführungsrichtlinie gesteuert werden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+>Während die meisten Suchfunktionen zwischen Kundenprofilen und Interessentenprofilen identisch sind, können Sie **&#x200B;**&#x200B;Interessentenprofile nach Zusammenführungsrichtlinien durchsuchen. Dies liegt daran, dass die Profile potenzieller Kundinnen und Kunden automatisch durch eine vom System entworfene zeitbasierte Zusammenführungsrichtlinie gesteuert werden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 Weiterführende Informationen zum Durchsuchen von Profilen finden Sie [ Abschnitt „Durchsuchen“ im Benutzerhandbuch für Profile](./user-guide.md#browse-identity).
 

@@ -75,7 +75,7 @@ Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![Einstellungssymb
 
 ![Das Einstellungssymbol ist im Abschnitt Felder hervorgehoben.](../images/types/account/select-settings.png)
 
-Wählen Sie auf [!UICONTROL  Registerkarte ]Einstellungen **[!UICONTROL im Abschnitt**[!UICONTROL  Beziehung der Felder ]**die Option]** Beziehungsselektoren anzeigen“ aus.
+Wählen Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Einstellungen **[!UICONTROL im Abschnitt**&#x200B;[!UICONTROL &#x200B; Beziehung der Felder &#x200B;]&#x200B;**die Option]** Beziehungsselektoren anzeigen“ aus.
 
 ![Der Umschalter Beziehungsselektoren anzeigen ist im Abschnitt Beziehung von Feldern auf der Registerkarte Einstellungen ausgewählt.](../images/types/account/show-relation-selectors.png)
 

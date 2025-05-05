@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie die neue Tabelle mit einem vorhandenen XDM-Schema verknüpfen möchten. |
 | `rowvalidation` | (Optional) Aktiviert die Validierung auf Zeilenebene für jeden Batch, der in den Datensatz aufgenommen wird. Der Standardwert ist „true“. |
 | `label` | (Optional) Verwenden Sie den Wert `PROFILE` , um den Datensatz als für die Profilaufnahme aktiviert zu kennzeichnen. |
-| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der ](#transform) zur [`TRANSFORM`-Klausel . |
-| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie ](#select-queries) Abschnitt [`SELECT` . |
+| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [&#128279;](#transform) zur `TRANSFORM`-Klausel . |
+| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [&#128279;](#select-queries) Abschnitt `SELECT` . |
 
 >[!NOTE]
 >

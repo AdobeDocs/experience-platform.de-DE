@@ -19,7 +19,7 @@ Um den KI-Assistenten zu starten, wählen **[!UICONTROL das Symbol „KI]** Assi
 
 ![Die Experience Platform-Startseite mit dem ausgewählten Symbol für den KI-Assistenten und der geöffneten Benutzeroberfläche des KI-Assistenten.](./images/ai-assistant-full-icon.png)
 
-Die Benutzeroberfläche des KI-Assistenten wird angezeigt und stellt Ihnen sofort Informationen zum Einstieg bereit. Sie können die unter „Ideen[!UICONTROL  bereitgestellten Optionen verwenden, um ] und Befehle wie die folgenden zu beantworten:
+Die Benutzeroberfläche des KI-Assistenten wird angezeigt und stellt Ihnen sofort Informationen zum Einstieg bereit. Sie können die unter „Ideen[!UICONTROL &#x200B; bereitgestellten Optionen verwenden, um &#x200B;] und Befehle wie die folgenden zu beantworten:
 
 * [!UICONTROL Welche meiner Zielgruppen sind aktiviert?]
 * [!UICONTROL Was ist ein Schema?]

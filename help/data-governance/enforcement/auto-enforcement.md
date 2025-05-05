@@ -118,11 +118,11 @@ Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschri
 
 Verwenden Sie das Datenherkunftsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie den Titel zu Ihrem Schemafeld hinzufügen können.
 
-![Dialogfeld „Richtlinienverletzung“ mit hervorgehobener [!UICONTROL  „Kennzeichnungen erfolgreich angewendet]&quot;](../images/enforcement/labels-successfully-applied.png)
+![Dialogfeld „Richtlinienverletzung“ mit hervorgehobener [!UICONTROL &#x200B; „Kennzeichnungen erfolgreich angewendet]&quot;](../images/enforcement/labels-successfully-applied.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Beim Aktivieren einer Zielgruppe für ein Ziel können Sie während der Überprüfungsphase [ Workflows ](../policies/user-guide.md)Ziele aktivieren] sehen, wie sich Ihre [Einverständnisrichtlinien[!UICONTROL  auf die Reichweite Ihrer Zielgruppe auswirken](#pre-activation-evaluation).
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie während der Überprüfungsphase [ Workflows ](../policies/user-guide.md)Ziele aktivieren&rbrack; sehen, wie sich Ihre &lbrack;Einverständnisrichtlinien[[!UICONTROL &#x200B; auf die Reichweite Ihrer Zielgruppe auswirken]](#pre-activation-evaluation).
 
 >[!NOTE]
 >

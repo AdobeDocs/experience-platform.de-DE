@@ -141,8 +141,8 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung der Aktualisierung |
 | --- | --- | --- |
-| Erweiterung ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Kontextdaten]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Kontextdaten: ] wurde zur vollständigen Erweiterung [!UICONTROL Adobe Analytics ExperienceEvent hinzugefügt] um Kontextdaten für Adobe Analytics bereitzustellen. |
-| Feldergruppe | Mehrfach | Mehrere Felder wurden zu &quot;[[!UICONTROL  Ereignissegmentdetails“ ]](https://github.com/adobe/xdm/pull/1760/files). |
+| Erweiterung ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Kontextdaten]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Kontextdaten: &#x200B;] wurde zur vollständigen Erweiterung [!UICONTROL Adobe Analytics ExperienceEvent hinzugefügt] um Kontextdaten für Adobe Analytics bereitzustellen. |
+| Feldergruppe | Mehrfach | Mehrere Felder wurden zu &quot;[[!UICONTROL &#x200B; Ereignissegmentdetails“ &#x200B;]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 

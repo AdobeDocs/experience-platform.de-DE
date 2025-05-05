@@ -25,7 +25,7 @@ Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit dem -[!DNL Meta
 
 Um die [!DNL Meta Pixel]-Erweiterung zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder zur Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Tags]** in der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Pixel] und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Pixel] und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![Die ausgewählte Schaltfläche [!UICONTROL Installieren] für die Erweiterung [!UICONTROL Meta Pixel] in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/client/meta/install.png)
 
@@ -53,7 +53,7 @@ Beginnen Sie mit der Erstellung einer neuen Tag-Regel und konfigurieren Sie die 
 
 ![Der [!UICONTROL Seitenansicht senden] Aktionstyp, der für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt wird.](../../../images/extensions/client/meta/select-action.png)
 
-Für die Aktion „Seitenansicht senden[!UICONTROL  ist keine weitere Konfiguration ]. Wählen **[!UICONTROL Änderungen beibehalten]**, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
+Für die Aktion „Seitenansicht senden[!UICONTROL &#x200B; ist keine weitere Konfiguration &#x200B;]. Wählen **[!UICONTROL Änderungen beibehalten]**, um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]** aus.
 
 Veröffentlichen Sie abschließend ein neues Tag [Build](../../../ui/publishing/builds.md), um die Änderungen an der Bibliothek zu aktivieren.
 

@@ -35,4 +35,4 @@ Der **[!UICONTROL Modell als Service veröffentlichen]** ermöglicht das Veröff
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den [!UICONTROL Workflows] vertraut gemacht, die in der Benutzeroberfläche von Experience Platform verfügbar sind. Weitere Informationen zu den Funktionen und Leistungsmerkmalen der Experience Platform-Benutzeroberfläche finden Sie im Handbuch zur Adobe Experience Platform-Benutzeroberfläche [](ui-guide.md).
+Durch das Lesen dieses Handbuchs haben Sie sich mit den [!UICONTROL Workflows] vertraut gemacht, die in der Benutzeroberfläche von Experience Platform verfügbar sind. Weitere Informationen zu den Funktionen und Leistungsmerkmalen der Experience Platform-Benutzeroberfläche finden Sie im Handbuch zur Adobe Experience Platform-Benutzeroberfläche [&#128279;](ui-guide.md).

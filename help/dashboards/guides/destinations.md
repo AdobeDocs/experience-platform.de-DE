@@ -66,7 +66,7 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 >[!NOTE]
 >
 >Seit dem 26. Juli 2023 wurden die Dashboards [!UICONTROL Profile], [!UICONTROL Audiences] und [!UICONTROL Ziele]-Übersicht für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf einen neuen Standard-Widget-Ladevorgang zurückgesetzt.
->Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget-Ladevorgänge enthalten sind, finden Sie in der Dokumentation ](./audiences.md#default-widgets) den Abschnitten „Profile](./profiles.md#default-widgets) und [Zielgruppen der Standard-Widgets“. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
+>Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget-Ladevorgänge enthalten sind, finden Sie in der Dokumentation ](./audiences.md#default-widgets) den Abschnitten „Profile[&#128279;](./profiles.md#default-widgets) und Zielgruppen der Standard-Widgets“. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -234,7 +234,7 @@ Die Spalte [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtprofilanzahl jeder auf
 
 Das Widget [!UICONTROL Zugeordnete Zielgruppen] zeigt die Gesamtanzahl der zugeordneten Zielgruppen an, die für das am oberen Seitenrand ausgewählte Ziel aktiviert werden können.
 
-Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zum Zielgruppen-Dashboard ([!UICONTROL ) ] navigieren. Dieser Arbeitsbereich enthält eine Liste aller Segmentdefinitionen für Ihre Organisation.
+Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zum Zielgruppen-Dashboard ([!UICONTROL ) &#x200B;] navigieren. Dieser Arbeitsbereich enthält eine Liste aller Segmentdefinitionen für Ihre Organisation.
 
 ![Das Widget „Zugeordnete Zielgruppen“.](../images/destinations/mapped-audiences.png)
 

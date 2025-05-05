@@ -9,7 +9,7 @@ ht-degree: 6%
 
 ---
 
-# Schemafeldgruppe [!UICONTROL Details ] Angebotsanfrage“
+# Schemafeldgruppe [!UICONTROL Details &#x200B;] Angebotsanfrage“
 
 [!UICONTROL Details zur Angebotsanfrage] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Die Feldergruppe stellt ein einzelnes `quotes` für ein Schema bereit, das die Anfrageprozessdetails für verschiedene Angebotstypen erfasst, einschließlich Versicherungspolicen, Gesundheitswesen, Fertigungsaufträge und High-Tech-Bestellungen.
 

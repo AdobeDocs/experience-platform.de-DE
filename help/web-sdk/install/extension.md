@@ -31,7 +31,7 @@ Weitere Informationen finden Sie in der Dokumentation [ Konfigurieren der Tag](.
 Für dieses Tag ist jetzt die Web SDK-Erweiterung installiert. Sie können den Tag-Code jetzt veröffentlichen, um ihn in einer Entwicklungsumgebung zu verwenden.
 
 1. Navigieren Sie zu **[!UICONTROL Veröffentlichungsfluss]** und wählen Sie dann **[!UICONTROL Bibliothek hinzufügen]** aus.
-1. Geben Sie dieser Bibliothek einen beliebigen Namen, z. B. „Web SDK Library hinzufügen“. Legen Sie [!UICONTROL  Dropdown]Menü „Umgebung“ auf „Entwicklung“ fest.
+1. Geben Sie dieser Bibliothek einen beliebigen Namen, z. B. „Web SDK Library hinzufügen“. Legen Sie [!UICONTROL &#x200B; Dropdown]Menü „Umgebung“ auf „Entwicklung“ fest.
 1. Wählen Sie **[!UICONTROL Alle geänderten Ressourcen hinzufügen]** aus und klicken Sie dann auf **[!UICONTROL Speichern und für Entwicklung erstellen]**.
 
 ## Installieren des Ladercodes auf Ihrer Site

@@ -84,7 +84,7 @@ Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizie
 
 >[!NOTE]
 >
->Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von betroffenen Personen. Weitere Informationen zu den erforderlichen Kennungen für Ihre Anwendungen finden ](../experience-cloud-apps.md) im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen. Allgemeine Anleitungen dazu, wie Sie festlegen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument zu [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
+>Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von betroffenen Personen. Weitere Informationen zu den erforderlichen Kennungen für Ihre Anwendungen finden [&#128279;](../experience-cloud-apps.md) im Handbuch zu Privacy Service- und Experience Cloud-Anwendungen. Allgemeine Anleitungen dazu, wie Sie festlegen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument zu [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
 
 Die [!DNL Privacy Service]-API unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten:
 

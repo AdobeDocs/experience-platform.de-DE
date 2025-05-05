@@ -104,7 +104,7 @@ Nachdem Sie die [!DNL Key vault URI] erhalten haben, kehren Sie zur Ansicht [!UI
 
 ![Die [!UICONTROL Konfiguration für kundenseitig verwaltete Schlüssel] mit den hervorgehobenen Abschnitten [!UICONTROL Konfigurationsname] und [!UICONTROL Schlüsseltresorschlüsselkennung].](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 
-Sie gelangen zurück zum [!UICONTROL Dashboard der Verschlüsselungskonfigurationen]. Der Status der Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] wird als &quot;[!UICONTROL &quot; ].
+Sie gelangen zurück zum [!UICONTROL Dashboard der Verschlüsselungskonfigurationen]. Der Status der Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] wird als &quot;[!UICONTROL &quot; &#x200B;].
 
 ![Das Dashboard [!UICONTROL Verschlüsselungskonfigurationen] mit hervorgehobener [!UICONTROL Verarbeitung] auf der Karte [!UICONTROL Kundenseitig verwaltete Schlüssel].](../../../images/governance-privacy-security/customer-managed-keys/processing.png)
 

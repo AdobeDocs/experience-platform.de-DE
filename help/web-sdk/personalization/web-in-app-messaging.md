@@ -184,5 +184,5 @@ Sie können festlegen, dass In-App-Nachrichten Benutzern für eine bestimmte Anz
 
 Legen [ in der Konfiguration ](../commands/configure/overview.md)Web-SDK&quot; die Option &quot;`personalizationStorageEnabled`&quot; entsprechend Ihren Anforderungen fest:
 
-* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne} definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne&rbrace; definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` Trigger die In-App-Nachricht bei jedem Laden der Seite.

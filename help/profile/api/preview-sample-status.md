@@ -445,7 +445,7 @@ Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) und der Bericht zu
 | Eigenschaft | Beschreibung |
 |---|---|
 | `data` | Das `data`-Objekt enthält kommagetrennte Listen mit eindeutigen Kombinationen von Identitäts-Namespace-Codes und der jeweiligen Profilanzahl. |
-| Namespace-Codes | Die `code` ist eine Kurzform für jeden Identity-Namespace-Namen. Eine Zuordnung jeder `code` zu ihrer `name` finden Sie mithilfe der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Experience Platform Die `code` wird in der Benutzeroberfläche von [!UICONTROL  auch als ]Identitätssymbol“ bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
+| Namespace-Codes | Die `code` ist eine Kurzform für jeden Identity-Namespace-Namen. Eine Zuordnung jeder `code` zu ihrer `name` finden Sie mithilfe der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Experience Platform Die `code` wird in der Benutzeroberfläche von [!UICONTROL &#x200B; auch als &#x200B;]Identitätssymbol“ bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ### Interpretieren des Identity-Namespace-Überschneidungsberichts

@@ -181,7 +181,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 | [!BADGE Nur Ziele]{type=Informative} array_to_string | Verbindet die Zeichenfolgendarstellungen der Elemente in einem Array mit dem angegebenen Trennzeichen. Wenn das Array mehrdimensional ist, wird es reduziert, bevor es verbunden wird. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATOR: **Erforderlich** Das Trennzeichen, das zum Verbinden der Elemente im Array verwendet wird.</li><li>ARRAY: **Erforderlich** Das Array, das verbunden werden soll (nach dem Reduzieren).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | „Hallo;Welt“ |
 | [!BADGE Nur Ziele]{type=Informative} filterArray* | Filtert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu filternde Array</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7 ] |
 | [!BADGE Nur Ziele]{type=Informative} transformArray* | Transformiert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu transformierende Array.</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8 ] |
-| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -387,9 +387,9 @@ In der folgenden Tabelle finden Sie eine Liste der reservierten Zeichen und der 
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5b |
+| &lbrack; | %5b |
 | | | %5C |
-| ] | %5d |
+| &rbrack; | %5d |
 | ^ | %5E |
 | &quot; | %60 |
 | ~ | %7E |

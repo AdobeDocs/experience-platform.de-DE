@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und stellt dazu eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung bereit. Weitere Informationen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) Adobe Campaign v8 .[
+Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und stellt dazu eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung bereit. Weitere Informationen finden Sie in der Dokumentation [&#128279;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) Adobe Campaign v8 .
 
 Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Adobe Campaign v8-Versandlogs und -Trackinglog-Daten an Adobe Experience Platform übertragen.
 

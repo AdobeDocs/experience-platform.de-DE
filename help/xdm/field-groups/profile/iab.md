@@ -56,7 +56,7 @@ Wie das Beispiel zeigt, entspricht jeder Schlüssel auf Stammebene von `xdm:iden
 >
 >Während im obigen Beispiel ein einzelnes Namespace/Wert-Paar verwendet wird, um die Identität des Kunden darzustellen, können Sie zusätzliche Schlüssel für andere Namespaces hinzufügen, und jeder Namespace kann mehrere Identitätswerte mit jeweils einem eigenen Satz von TCF-Einverständnisvoreinstellungen aufweisen.
 
-Für jeden Identitätswert muss eine `identityIABConsent`-Eigenschaft angegeben werden, die den TCF-Einverständniswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem [[!UICONTROL Einverständniszeichenfolge“ ] Datentyp ](../../data-types/consent-string.md).
+Für jeden Identitätswert muss eine `identityIABConsent`-Eigenschaft angegeben werden, die den TCF-Einverständniswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem [[!UICONTROL Einverständniszeichenfolge“ &#x200B;] Datentyp ](../../data-types/consent-string.md).
 
 Weitere Informationen zum Anwendungsfall [ Feldergruppe finden Sie im Handbuch ](../../../landing/governance-privacy-security/consent/iab/overview.md) IAB TCF 2.0-Unterstützung in Experience Platform . Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
 

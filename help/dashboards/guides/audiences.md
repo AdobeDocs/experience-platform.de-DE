@@ -105,7 +105,7 @@ Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte
 >title="Verteilung der Scores"
 >abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
 
-Das Widget [!UICONTROL Kunden-KI-Verteilung der ]&quot; kategorisiert die Gesamtzahl der Profile anhand ihrer Neigungs-Scores. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in 5-prozentigen Inkrementen visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse und die Tendenz-Scores entlang der X-Achse angegeben.
+Das Widget [!UICONTROL Kunden-KI-Verteilung der &#x200B;]&quot; kategorisiert die Gesamtzahl der Profile anhand ihrer Neigungs-Scores. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in 5-prozentigen Inkrementen visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse und die Tendenz-Scores entlang der X-Achse angegeben.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl u
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus.
 
-![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der ]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der &#x200B;]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
 
 Die detaillierte Seite mit Modelleinblicken wird angezeigt.
 
@@ -227,7 +227,7 @@ Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie
 
 ### [!UICONTROL Bericht zur Zielgruppenüberschneidung] {#audience-overlap-report}
 
-Dieses Widget enthält eine tabellarische Darstellung der Profilüberschneidungsdaten für eine bestimmte Zielgruppe. Für die Zielgruppe, die oben im Bildschirm im Dropdown-Menü ausgewählt wird, wird eine Liste mit fünf Zielgruppen, sortiert vom höchsten bis zum niedrigsten Überschneidungsprozentsatz, bereitgestellt. Aus Gründen der Übersichtlichkeit wird die ausgewählte Zielgruppe in der Spalte [!UICONTROL NAME DER ZIELGRUPPE A] aufgeführt. Die Analyse der Zielgruppenüberschneidung wird für die zweite Zielgruppe bereitgestellt, die in der Spalte [!UICONTROL NAME VON ZIELGRUPPE B“ ] ist. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
+Dieses Widget enthält eine tabellarische Darstellung der Profilüberschneidungsdaten für eine bestimmte Zielgruppe. Für die Zielgruppe, die oben im Bildschirm im Dropdown-Menü ausgewählt wird, wird eine Liste mit fünf Zielgruppen, sortiert vom höchsten bis zum niedrigsten Überschneidungsprozentsatz, bereitgestellt. Aus Gründen der Übersichtlichkeit wird die ausgewählte Zielgruppe in der Spalte [!UICONTROL NAME DER ZIELGRUPPE A] aufgeführt. Die Analyse der Zielgruppenüberschneidung wird für die zweite Zielgruppe bereitgestellt, die in der Spalte [!UICONTROL NAME VON ZIELGRUPPE B“ &#x200B;] ist. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
 
 Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer, hochleistungsfähiger Zielgruppen. Durch die Beachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Diese Daten helfen Ihnen auch dabei, verborgene Insights zu entdecken, die bei einer besseren Segmentierung hilfreich sein können. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, deren Kontaktierung Sie fortsetzen sollten.
 

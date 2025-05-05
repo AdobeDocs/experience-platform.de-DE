@@ -17,7 +17,7 @@ Verstehen Sie Ihre Profileinblicke, indem Sie auf die SQL zugreifen, die sie unt
 
 Weitere Informationen [ Anpassen der SQL-Insights ](../view-sql.md) Sie direkt über die Experience Platform-Benutzeroberfläche in der Dokumentation zu SQL anzeigen .
 
-Die folgenden Einblicke stehen Ihnen als Teil des (Profile[Dashboards ](../guides/profiles.md) benutzerdefinierten (benutzerdefinierten) [ zur ](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des (Profile[Dashboards ](../guides/profiles.md) benutzerdefinierten (benutzerdefinierten) [ zur ](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#128279;](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Zielgruppenüberschneidung durch Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
 

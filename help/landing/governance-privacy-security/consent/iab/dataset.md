@@ -108,7 +108,7 @@ Damit Experience Platform die erhaltenen Einverständnisdaten mit bestimmten Kun
 >
 >Das in diesem Abschnitt dargestellte Beispielschema verwendet sein `identityMap` Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie eine indirekte Kennung wie eine Cookie-ID und kein direkt identifizierbares Feld verwenden, das in interessenbasierter Werbung wie einer E-Mail-Adresse nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
 >
->Anweisungen zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im [[!UICONTROL  zur Benutzeroberfläche ]Schemas](../../../../xdm/ui/fields/identity.md).
+>Anweisungen zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im [[!UICONTROL &#x200B; zur Benutzeroberfläche &#x200B;]Schemas](../../../../xdm/ui/fields/identity.md).
 
 Um das Schema für die [!DNL Profile] zu aktivieren, wählen Sie den Namen des Schemas in der linken Leiste aus, um den Abschnitt **[!UICONTROL Schemaeigenschaften]** zu öffnen. Wählen Sie von hier aus den **[!UICONTROL Profil]** aus.
 
@@ -179,7 +179,7 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie e
 
 Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt des Prozesses darin, den Datensatz für die Verwendung in [!DNL Real-Time Customer Profile] zu aktivieren.
 
-Wählen Sie in der rechten Leiste den Umschalter **[!UICONTROL Profil]** und wählen Sie dann im Bestätigungs-]**die Option**[!UICONTROL  Aktivieren, um das Schema für die [!DNL Profile] zu aktivieren.
+Wählen Sie in der rechten Leiste den Umschalter **[!UICONTROL Profil]** und wählen Sie dann im Bestätigungs-**die Option** Aktivieren, um das Schema für die [!DNL Profile] zu aktivieren.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 

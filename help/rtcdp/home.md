@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Dokumentation zu Adobe [!DNL Real-Time CDP] {#rtcdp-documentation}
 
-Verwenden Sie Adobe Real-Time Customer Data Platform (Real-Time CDP), um bekannte und anonyme Daten aus verschiedenen Unternehmensquellen zusammenzuführen, um Kundenprofile zu erstellen, mit denen in Echtzeit personalisierte Kundenerlebnisse auf allen Kanälen und Geräten bereitgestellt werden können. Weitere Informationen finden Sie in der Übersicht ](/help/rtcdp/overview.md) [Real-Time CDP .
+Verwenden Sie Adobe Real-Time Customer Data Platform (Real-Time CDP), um bekannte und anonyme Daten aus verschiedenen Unternehmensquellen zusammenzuführen, um Kundenprofile zu erstellen, mit denen in Echtzeit personalisierte Kundenerlebnisse auf allen Kanälen und Geräten bereitgestellt werden können. Weitere Informationen finden Sie in der Übersicht [&#128279;](/help/rtcdp/overview.md) Real-Time CDP .
 
 ## Neue Funktionen {#whats-new}
 

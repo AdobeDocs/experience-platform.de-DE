@@ -23,9 +23,9 @@ So verwenden Sie die [!DNL Snapchat] Conversions-API:
 
 Erstellen Sie [Datenstrom](/help/tags/ui/event-forwarding/getting-started.md) und fügen Sie ihm [Ereignisweiterleitungs-Service](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) hinzu.
 
-Für die Verwendung ](https://business.snapchat.com/) Konversions-API ist ein **[!DNL Snapchat]** [Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
+Für die Verwendung [&#128279;](https://business.snapchat.com/) Konversions-API ist ein **[!DNL Snapchat]** Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
 
-Im Snapchat Ads Manager muss ein [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzuzeigen. Die `Pixel ID` finden Sie im Abschnitt [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Im Snapchat Ads Manager muss ein [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzuzeigen. Die `Pixel ID` finden Sie im Abschnitt [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Sie benötigen ein statisches, langlebiges API-Token. Informationen zum Abrufen [[!DNL Snapchat]  Tokens finden Sie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) der Dokumentation zur Konversions-API .
 
@@ -55,7 +55,7 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 Um Daten an die [!DNL Snapchat] Conversions-API-Erweiterung zu senden, erstellen Sie [Datenelemente](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) für jeden Datenparameter. Führen Sie folgende Schritte aus:
 
-1. Navigieren Sie **[!UICONTROL Bildschirm****Eigenschafteninformationen]** > **[!UICONTROL Datenelemente]** und wählen Sie dann **[!UICONTROL Datenelement hinzufügen]**.
+1. Navigieren Sie **[!UICONTROL Bildschirm**&#x200B;**Eigenschafteninformationen]** > **[!UICONTROL Datenelemente]** und wählen Sie dann **[!UICONTROL Datenelement hinzufügen]**.
 
    ![Bild mit der Schaltfläche „Datenelement hinzufügen“](../../../images/extensions/server/snap/add_data_element.png)
 
@@ -93,9 +93,9 @@ Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forw
 
 3. Fügen Sie nach dem Speichern der Bedingung eine Aktion hinzu, um die Snap Conversion API mit einem Trigger zu versehen. Im linken Bedienfeld:
 
-   * Legen Sie im Dropdown[!UICONTROL Menü ]Erweiterung“ die Option [!UICONTROL API-Erweiterung für Snap-Konversionen] fest.
+   * Legen Sie im Dropdown[!UICONTROL Menü &#x200B;]Erweiterung“ die Option [!UICONTROL API-Erweiterung für Snap-Konversionen] fest.
 
-   * Legen Sie das Dropdown[!UICONTROL Menü „Aktionstyp] auf &quot;[!UICONTROL  Web-Konversionen melden“ ].
+   * Legen Sie das Dropdown[!UICONTROL Menü „Aktionstyp] auf &quot;[!UICONTROL &#x200B; Web-Konversionen melden“ &#x200B;].
 
    * Benennen Sie die Regel entsprechend.
 

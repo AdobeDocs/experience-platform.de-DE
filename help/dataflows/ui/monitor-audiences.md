@@ -54,7 +54,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | Metrik | Beschreibung |
 | ------ | ----------- |
 | **[!UICONTROL Zielgruppenname]** | Der Name der Zielgruppe. |
-| **[!UICONTROL Datentyp]** | Der Datentyp der Zielgruppe. Mögliche Werte sind **[!UICONTROL Kunde]**, **[!UICONTROL Konto]** und **[!UICONTROL Interessent]**. Sie können mit dem Filter [!UICONTROL Datentyp“ über dem Kartenband Zielgruppen eines bestimmten ] anzeigen. |
+| **[!UICONTROL Datentyp]** | Der Datentyp der Zielgruppe. Mögliche Werte sind **[!UICONTROL Kunde]**, **[!UICONTROL Konto]** und **[!UICONTROL Interessent]**. Sie können mit dem Filter [!UICONTROL Datentyp“ über dem Kartenband Zielgruppen eines bestimmten &#x200B;] anzeigen. |
 | **[!UICONTROL Zeitstempel der letzten Auswertung]** | Datum und Uhrzeit der letzten Ausführung des Auswertungsauftrags für die Zielgruppe. |
 | **[!UICONTROL Letzter Auswertungsstatus]** | Der Status des letzten Auswertungsauftrags der Zielgruppe. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine]** und **[!UICONTROL Fehlgeschlagen]**. |
 | **[!UICONTROL Letzte Auswertungsmethode]** | Die Auswertungsmethode der Zielgruppe. Da nur die Batch-Segmentierung unterstützt wird, ist der einzige mögliche Wert **[!UICONTROL Batch]**. |

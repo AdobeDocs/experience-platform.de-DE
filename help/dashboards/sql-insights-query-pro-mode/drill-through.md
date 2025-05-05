@@ -59,7 +59,7 @@ Klicken Sie auf die Auslassungszeichen im Diagramm, durch die Sie einen Drill-do
 
 Wählen Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter zum Deaktivieren von **[!UICONTROL Drill-Through aktivieren]** aus und klicken Sie dann auf **[!UICONTROL Speichern und schließen]**.
 
-![Bedienfeld „Diagrammeigenschaften“ mit deaktiviertem Umschalter für &quot;[!UICONTROL  aktivieren] hervorgehoben.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![Bedienfeld „Diagrammeigenschaften“ mit deaktiviertem Umschalter für &quot;[!UICONTROL &#x200B; aktivieren] hervorgehoben.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Nächste Schritte
 

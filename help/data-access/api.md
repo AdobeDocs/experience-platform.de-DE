@@ -243,4 +243,4 @@ Weitere Beispiele finden Sie im [Tutorial zum Datenzugriff](tutorials/dataset-da
 
 ## Abonnieren von Datenerfassungsereignissen {#subscribe-to-data-ingestion-events}
 
-Sie können bestimmte hochwertige Ereignisse über die [Adobe Developer Console} ](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial [Abonnieren von Adobe](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
+Sie können bestimmte hochwertige Ereignisse über die [Adobe Developer Console&rbrace; ](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial [Abonnieren von Adobe](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.

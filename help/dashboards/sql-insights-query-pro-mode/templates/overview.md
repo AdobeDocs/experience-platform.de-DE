@@ -33,7 +33,7 @@ Verwenden Sie das Dashboard [!UICONTROL Erweiterte Zielgruppenüberschneidungen]
 
 ### Zielgruppenvergleich {#audience-comparison}
 
-Mit [!UICONTROL  Dashboard ]Zielgruppenvergleich“ können Sie Schlüsselmetriken zwischen zwei Zielgruppengruppen nebeneinander vergleichen. Verwenden Sie dieses Dashboard, um wichtige KPIs wie die Zielgruppengröße, die Aufschlüsselung der Identität und Änderungen der Zielgruppengröße im Laufe der Zeit zu analysieren. Diese Erkenntnisse helfen Ihnen, fundierte Entscheidungen zur Zielgruppensegmentierung zu treffen und Zielgruppenbestimmungsstrategien zu verbessern.
+Mit [!UICONTROL &#x200B; Dashboard &#x200B;]Zielgruppenvergleich“ können Sie Schlüsselmetriken zwischen zwei Zielgruppengruppen nebeneinander vergleichen. Verwenden Sie dieses Dashboard, um wichtige KPIs wie die Zielgruppengröße, die Aufschlüsselung der Identität und Änderungen der Zielgruppengröße im Laufe der Zeit zu analysieren. Diese Erkenntnisse helfen Ihnen, fundierte Entscheidungen zur Zielgruppensegmentierung zu treffen und Zielgruppenbestimmungsstrategien zu verbessern.
 
 ### Zielgruppen-Trends {#audience-trends}
 

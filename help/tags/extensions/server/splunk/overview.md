@@ -75,7 +75,7 @@ Der nächste Schritt besteht darin, die Eigenschaften des Splunk-Ereignisses Dat
 
 | Feldname | Beschreibung |
 | --- | --- |
-| [!UICONTROL Ereignis ]<br><br>**(ERFORDERLICH)** | Geben Sie an, wie Sie die Ereignisdaten bereitstellen möchten. Ereignisdaten können dem `event`-Schlüssel im JSON-Objekt in der HTTP-Anfrage zugewiesen sein oder es kann sich um rohen Text handeln. Der `event`-Schlüssel befindet sich im JSON-Ereignis-Paket auf derselben Ebene wie die Metadatenschlüssel. Innerhalb der geschweiften Klammern des `event`-Schlüsselwerts können die Daten in jeder gewünschten Form vorliegen (z. B. Zeichenfolge, Zahl, ein anderes JSON-Objekt usw.). |
+| [!UICONTROL Ereignis &#x200B;]<br><br>**(ERFORDERLICH)** | Geben Sie an, wie Sie die Ereignisdaten bereitstellen möchten. Ereignisdaten können dem `event`-Schlüssel im JSON-Objekt in der HTTP-Anfrage zugewiesen sein oder es kann sich um rohen Text handeln. Der `event`-Schlüssel befindet sich im JSON-Ereignis-Paket auf derselben Ebene wie die Metadatenschlüssel. Innerhalb der geschweiften Klammern des `event`-Schlüsselwerts können die Daten in jeder gewünschten Form vorliegen (z. B. Zeichenfolge, Zahl, ein anderes JSON-Objekt usw.). |
 | [!UICONTROL Host] | Der Host-Name des Clients, von dem Sie Daten senden. |
 | [!UICONTROL Quellentyp] | Der Quelltyp, der den Ereignisdaten zugewiesen werden soll. |
 | [!UICONTROL Quelle] | Der Quellwert, der den Ereignisdaten zugewiesen werden soll. Wenn Sie beispielsweise Daten von einer App senden, die Sie entwickeln, legen Sie diesen Schlüssel auf den Namen der App fest. |

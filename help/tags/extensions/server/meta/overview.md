@@ -39,7 +39,7 @@ Um die [!DNL Conversions API]-Erweiterung verwenden zu können, müssen Sie Zugr
 
 Um die [!DNL Meta Conversions API] zu installieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder zur Experience Platform-Benutzeroberfläche und wählen **[!UICONTROL in der linken Navigationsleiste]** Ereignisweiterleitung“ aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Conversions API] und wählen Sie dann **[!UICONTROL Installieren]**.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!UICONTROL Meta Conversions API] und wählen Sie dann **[!UICONTROL Installieren]**.
 
 ![Die [!UICONTROL Installieren]-Option, die für die Erweiterung [!UICONTROL Meta Conversions API] in der Datenerfassungs-Benutzeroberfläche ausgewählt wird.](../../../images/extensions/server/meta/install.png)
 
@@ -57,9 +57,9 @@ Die Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren E
 
 Durch die Integration mit der Facebook- und Instagram-Erweiterung können Sie sich schnell bei Ihrem Meta Business-Konto authentifizieren. Dadurch werden Ihre [!UICONTROL Pixel-ID] und die Meta Conversions-API [!UICONTROL Zugriffstoken] automatisch ausgefüllt, was die Installation und Konfiguration der Meta Conversions-API erleichtert.
 
-Bei der Installation der Erweiterung „Meta Conversions API“ wird [!UICONTROL  Dialogfeld-Aufforderung zur Authentifizierung in Facebook und Instagram ].
+Bei der Installation der Erweiterung „Meta Conversions API“ wird [!UICONTROL &#x200B; Dialogfeld-Aufforderung zur Authentifizierung in Facebook und Instagram &#x200B;].
 
-![Die [!UICONTROL Meta Conversions API-Erweiterung] Installationsseite mit hervorgehobener [!UICONTROL  „Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![Die [!UICONTROL Meta Conversions API-Erweiterung] Installationsseite mit hervorgehobener [!UICONTROL &#x200B; „Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 Eine Dialogaufforderung zur Authentifizierung in Facebook und Instagram wird auch in der Benutzeroberfläche des Schnellstart-Workflows bei der Ereignisweiterleitung angezeigt.
 
@@ -69,7 +69,7 @@ Eine Dialogaufforderung zur Authentifizierung in Facebook und Instagram wird auc
 
 Die Integration mit dem Event Quality Match Score (EMQ) ermöglicht es Ihnen, die Effektivität Ihrer Implementierung einfach durch die Anzeige von EMQ-Bewertungen zu überprüfen. Diese Integration minimiert den Wechsel des Kontexts und hilft Ihnen, den Erfolg Ihrer Meta Conversions-API-Implementierungen zu verbessern. Diese Ereigniswerte werden im Konfigurationsbildschirm der [!UICONTROL Meta Conversions API-Erweiterung] angezeigt.
 
-![Die Konfigurationsseite [!UICONTROL Erweiterung der Meta Conversions-API] mit hervorgehobener [!UICONTROL  „EMQ Score anzeigen].](../../../images/extensions/server/meta/emq-score.png)
+![Die Konfigurationsseite [!UICONTROL Erweiterung der Meta Conversions-API] mit hervorgehobener [!UICONTROL &#x200B; „EMQ Score anzeigen].](../../../images/extensions/server/meta/emq-score.png)
 
 ## Integration mit LiveRamp (Alpha) {#alpha}
 

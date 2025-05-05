@@ -28,13 +28,13 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 Das [!DNL Pinterest Customer List]-Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
-Ordnen Sie [ Schritt ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Zielaktivierung die gewünschten Identitäten dem Zielfeld *pinterest_Audience}*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst.
+Ordnen Sie [ Schritt ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Zielaktivierung die gewünschten Identitäten dem Zielfeld *pinterest_Audience&rbrace;*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Ordnen Sie *Quell-Identity* Namespace „GAID“ dem Zielidentitätsfeld *pinterest_Audience}*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst. |
-| IDFA | [!DNL Apple ID for Advertisers] | Ordnen Sie *Quell-Identity* Namespace IDFA dem Ziel-Identitätsfeld *pinterest_Audience}*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst. |
-| E-MAIL | E-Mail-Adressen (Klartext oder Hash mit dem SHA256-Algorithmus) | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. <br> Ordnen Sie den Quellidentitäts *Namespace E* Mail oder *Email_LC_SHA256* dem Zielidentitätsfeld *pinterest_Audience}*. |
+| GAID | [!DNL Google Advertising ID] | Ordnen Sie *Quell-Identity* Namespace „GAID“ dem Zielidentitätsfeld *pinterest_Audience&rbrace;*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst. |
+| IDFA | [!DNL Apple ID for Advertisers] | Ordnen Sie *Quell-Identity* Namespace IDFA dem Ziel-Identitätsfeld *pinterest_Audience&rbrace;*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst. |
+| E-MAIL | E-Mail-Adressen (Klartext oder Hash mit dem SHA256-Algorithmus) | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. <br> Ordnen Sie den Quellidentitäts *Namespace E* Mail oder *Email_LC_SHA256* dem Zielidentitätsfeld *pinterest_Audience&rbrace;*. |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).

@@ -217,7 +217,7 @@ Um das Profil und alle Identitätszuordnungen für einen bestimmten Kunden zu en
 
 ### Einschränkungen bei Zusammenführungsrichtlinien {#merge-policy-limitations}
 
-Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Wenn Sie die Benutzeroberfläche verwenden, um zu bestätigen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit **[!DNL None]** als Typ „ID[!UICONTROL Zuordnung] verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf &quot;[!UICONTROL  Diagramm“ ] ist.
+Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Wenn Sie die Benutzeroberfläche verwenden, um zu bestätigen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit **[!DNL None]** als Typ „ID[!UICONTROL Zuordnung] verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf &quot;[!UICONTROL &#x200B; Diagramm“ &#x200B;] ist.
 
 >![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf „Keine“ festgelegt](./images/privacy/no-id-stitch.png)
 

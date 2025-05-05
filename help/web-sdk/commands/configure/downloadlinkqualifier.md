@@ -17,7 +17,7 @@ Diese Eigenschaft ist eine Regex-Zeichenfolge. Wenn die angeklickte URL mit dies
 
 ## Herunterladen des Link-Qualifizierers mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Aktivieren Sie das Kontrollkästchen **[!UICONTROL Click-Datenerfassung aktivieren]** und geben Sie dann beim Konfigurieren der Tag **[!UICONTROL Erweiterung den gewünschten Text unter]** Link-Qualifizierer [](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Aktivieren Sie das Kontrollkästchen **[!UICONTROL Click-Datenerfassung aktivieren]** und geben Sie dann beim Konfigurieren der Tag **[!UICONTROL Erweiterung den gewünschten Text unter]** Link-Qualifizierer [&#128279;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.

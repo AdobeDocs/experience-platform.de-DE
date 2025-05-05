@@ -23,7 +23,7 @@ Das **[!UICONTROL Filter]** wird angezeigt. Wählen Sie in dieser Ansicht die gl
 
 1. Wählen Sie eine **[!UICONTROL Zielgruppe]** aus: Wählen Sie das Zielgruppensegment aus, das Sie analysieren möchten (z. B **„Kanada - Alberta**).
 2. Geben Sie eine **[!UICONTROL Zusammenführungsrichtlinie]** an: Definieren Sie die Zusammenführungsrichtlinie, die bestimmt, wie Identitäten über die ausgewählte Zielgruppe hinweg kombiniert werden (im Beispiel-Screenshot ist die **Standardzeitbasierte** Richtlinie ausgewählt).
-3. Wählen Sie eine **[!UICONTROL Identität A]** und **[!UICONTROL Identität B]** zum Vergleich aus**: Wählen Sie die beiden Identitätstypen aus, die Sie vergleichen möchten. Im Beispiel wird **Identität A** als „crmId“ und **Identität B** als „E-Mail“ ausgewählt.
+3. Wählen Sie eine **[!UICONTROL Identität A]** und **[!UICONTROL Identität B]** zum Vergleich aus&#x200B;**: Wählen Sie die beiden Identitätstypen aus, die Sie vergleichen möchten. Im Beispiel wird &#x200B;** Identität A **&#x200B; als „crmId“ und &#x200B;** Identität B** als „E-Mail“ ausgewählt.
 4. **Datumsbereich festlegen**: Wählen Sie einen vordefinierten Bereich wie „Heute“ oder legen Sie das Start- und Enddatum manuell mithilfe der Kalenderfelder fest.
 
 ![Das Dialogfeld „Filter“ im Dashboard „Zielgruppenidentitätsüberschneidungen“.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
@@ -83,4 +83,4 @@ Das Dashboard **Zielgruppenidentitätsüberschneidungen** bietet wichtige Einbli
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe des Dashboards **Zielgruppen-Identitätsüberschneidungen“ wertvolle Einblicke in** Identitätsüberschneidungen für ausgewählte Zielgruppen erhalten. Um Ihr Verständnis von Zielgruppensegmentierung und Identitätsverwaltung weiter zu verbessern, sollten Sie andere Data Distiller-Vorlagen erkunden, die umfassende Einblicke bieten. Weitere Informationen zur weiteren Verbesserung Ihrer Zielgruppenbestimmungs[ und Interaktionsstrategien finden Sie in ](./trends.md) Handbüchern ](./comparison.md)Zielgruppentrends“, [Zielgruppenvergleich und [Erweiterte Zielgruppenüberschneidungen](./overlaps.md).
+Nach dem Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe des Dashboards **Zielgruppen-Identitätsüberschneidungen“ wertvolle Einblicke in** Identitätsüberschneidungen für ausgewählte Zielgruppen erhalten. Um Ihr Verständnis von Zielgruppensegmentierung und Identitätsverwaltung weiter zu verbessern, sollten Sie andere Data Distiller-Vorlagen erkunden, die umfassende Einblicke bieten. Weitere Informationen zur weiteren Verbesserung Ihrer Zielgruppenbestimmungs[ und Interaktionsstrategien finden Sie in ](./trends.md) Handbüchern [&#128279;](./comparison.md)Zielgruppentrends“, Zielgruppenvergleich und [Erweiterte Zielgruppenüberschneidungen](./overlaps.md).

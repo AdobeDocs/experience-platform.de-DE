@@ -11,7 +11,7 @@ ht-degree: 7%
 
 # [!UICONTROL Anforderungsliste] Datentyp
 
-[!UICONTROL Anforderungsliste] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine kuratierte Sammlung von Artikeln für die Beschaffung oder den Kauf beschreibt. Verwenden Sie [!UICONTROL  Datentyp „Anforderungsliste] zur Identifizierung und Beschreibung von Anforderungslisten.
+[!UICONTROL Anforderungsliste] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine kuratierte Sammlung von Artikeln für die Beschaffung oder den Kauf beschreibt. Verwenden Sie [!UICONTROL &#x200B; Datentyp „Anforderungsliste] zur Identifizierung und Beschreibung von Anforderungslisten.
 
 ![Diagramm des Datentyps [!UICONTROL Anforderungsliste].](../images/data-types/requisition-list.png)
 

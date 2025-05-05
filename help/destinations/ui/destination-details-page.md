@@ -18,7 +18,7 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute u
 
 >[!NOTE]
 >
->Die Seite mit den Zieldetails ist Teil des Arbeitsbereichs [!UICONTROL Ziele] im [!DNL Experience Platform] [!DNL UI]. Weitere Informationen dazu finden [[!UICONTROL  in ] Übersicht zum ](./destinations-workspace.md) .
+>Die Seite mit den Zieldetails ist Teil des Arbeitsbereichs [!UICONTROL Ziele] im [!DNL Experience Platform] [!DNL UI]. Weitere Informationen dazu finden [[!UICONTROL &#x200B; in &#x200B;] Übersicht zum ](./destinations-workspace.md) .
 
 ## Anzeigen von Zieldetails {#view-details}
 

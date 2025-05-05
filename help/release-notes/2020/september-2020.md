@@ -72,7 +72,7 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 | ------- | ----------- |
 | Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können jetzt im Rahmen der [!DNL Lei Geral de Proteção de Dados] (LGPD)-Verordnung erstellt werden. Diese Aufträge werden unter dem Regulierungs-Code `lgpd_bra` verfolgt. |
 
-Weitere Informationen zu dem Service finden Sie in ](../../privacy-service/home.md) [Übersicht über Privacy Service .
+Weitere Informationen zu dem Service finden Sie in [&#128279;](../../privacy-service/home.md) Übersicht über Privacy Service .
 
 ## Echtzeit-Kundenprofil {#profile}
 

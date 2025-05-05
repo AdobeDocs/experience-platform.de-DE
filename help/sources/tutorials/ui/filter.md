@@ -70,7 +70,7 @@ Wählen Sie **[!UICONTROL Hat alle Tags]** und wählen Sie dann mithilfe des Dro
 
 ### Filtern von Datenflüssen nach Status {#filter-dataflows-by-status}
 
-Sie können mithilfe des Bedienfelds [!UICONTROL Status“ nach ] filtern.
+Sie können mithilfe des Bedienfelds [!UICONTROL Status“ nach &#x200B;] filtern.
 
 | Status | Beschreibung |
 | --- | --- |

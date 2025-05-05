@@ -17,7 +17,7 @@ Verstehen Sie Ihre Zieleinblicke, indem Sie auf die SQL zugreifen, die sie unter
 
 In der [SQL-Dokumentation anzeigen](../view-sql.md) finden Sie weitere Informationen darüber, wie Sie die SQL Ihrer Insights direkt über die Platform-Benutzeroberfläche anpassen können.
 
-Die folgenden Einblicke stehen Ihnen als Teil des [Ziele-Dashboards](../guides/destinations.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des [Ziele-Dashboards](../guides/destinations.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#128279;](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Aktivierte Zielgruppen {#activated-audiences}
 

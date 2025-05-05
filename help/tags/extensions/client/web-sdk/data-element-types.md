@@ -55,7 +55,7 @@ Beachten Sie, dass beim Öffnen bestimmter Felder Ihres Schemas, z. B. `web.webP
 Sie können Payload-Objekte mit dem Datenelement **[!UICONTROL Variable]** erstellen. Sowohl [!UICONTROL XDM]- als [!UICONTROL Data]-Objekte werden unterstützt.
 
 * Wenn Sie [!UICONTROL XDM] auswählen, wählen Sie die gewünschte [!UICONTROL Sandbox] und [!UICONTROL Schema] aus.
-* Wählen Sie bei [!UICONTROL  Option ] die gewünschten Lösungen aus. Zu den verfügbaren Lösungen gehören [!UICONTROL Adobe Analytics] und [!UICONTROL Adobe Target].
+* Wählen Sie bei [!UICONTROL &#x200B; Option &#x200B;] die gewünschten Lösungen aus. Zu den verfügbaren Lösungen gehören [!UICONTROL Adobe Analytics] und [!UICONTROL Adobe Target].
 
 ![Bild der Tags-Benutzeroberfläche mit den Datenelementoptionen.](assets/variable-data-element.png)
 

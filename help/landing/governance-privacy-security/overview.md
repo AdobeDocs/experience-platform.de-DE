@@ -52,7 +52,7 @@ Rechtliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) d
 
 Adobe Experience Platform Privacy Service bietet eine RESTful-API und eine Benutzeroberfläche, die Sie bei der Verwaltung dieser Anfragen unterstützen. Mit Privacy Service können Sie Anfragen für den Zugriff auf oder die Löschung von personenbezogenen oder privaten Kundendaten aus Adobe Experience Cloud-Programmen stellen, was die automatische Einhaltung gesetzlicher und unternehmensinterner Datenschutzbestimmungen erleichtert.
 
-Weitere Informationen finden Sie in der Übersicht ](../../privacy-service/home.md) [Privacy Service .
+Weitere Informationen finden Sie in der Übersicht [&#128279;](../../privacy-service/home.md) Privacy Service .
 
 ### Einverständnisverarbeitung {#consent}
 

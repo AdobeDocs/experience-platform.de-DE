@@ -38,8 +38,8 @@ Wenn Sie Client-seitig auf die [!DNL ECID] zugreifen müssen, verwenden Sie den 
 
 1. Stellen Sie sicher, dass die Eigenschaft mit [Regelkomponentensequenzierung](../../../ui/managing-resources/rules.md#sequencing) konfiguriert ist.
 1. Erstellen Sie eine neue Regel. Diese Regel sollte ausschließlich zur Erfassung der [!DNL ECID] ohne andere wichtige Aktionen verwendet werden.
-1. Fügen Sie [!UICONTROL  Regel ein Ereignis ]Bibliothek geladen“ hinzu.
-1. Fügen Sie [!UICONTROL  Regel eine Aktion ]Benutzerdefinierter Code“ mit dem folgenden Code hinzu (vorausgesetzt, der für die SDK-Instanz konfigurierte Name ist `alloy` und es gibt noch kein Datenelement mit demselben Namen):
+1. Fügen Sie [!UICONTROL &#x200B; Regel ein Ereignis &#x200B;]Bibliothek geladen“ hinzu.
+1. Fügen Sie [!UICONTROL &#x200B; Regel eine Aktion &#x200B;]Benutzerdefinierter Code“ mit dem folgenden Code hinzu (vorausgesetzt, der für die SDK-Instanz konfigurierte Name ist `alloy` und es gibt noch kein Datenelement mit demselben Namen):
 
    ```js
     return alloy("getIdentity")

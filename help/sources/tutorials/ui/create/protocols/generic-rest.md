@@ -57,7 +57,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Wählen Sie unter [!UICONTROL  Kategorie ] die Option **[!UICONTROL Generische REST-]**) und dann **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter [!UICONTROL &#x200B; Kategorie &#x200B;] die Option **[!UICONTROL Generische REST-]**) und dann **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/generic-rest/catalog.png)
 

@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-Kennungen
 
-Verwenden Sie die Adobe Real-Time CDP-Integration mit [!DNL LiveRamp], um Zielgruppen für eine kuratierte Liste von Zielen zu aktivieren, die [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) zur Aktivierung verwenden, einschließlich verbundener TV- und Audio-Ziele, wie die unten aufgeführten.
+Verwenden Sie die Adobe Real-Time CDP-Integration mit [!DNL LiveRamp], um Zielgruppen für eine kuratierte Liste von Zielen zu aktivieren, die [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) zur Aktivierung verwenden, einschließlich verbundener TV- und Audio-Ziele, wie die unten aufgeführten.
 
 >[!IMPORTANT]
 >

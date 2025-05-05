@@ -60,7 +60,7 @@ Adobe auf die Zulassungsliste setzen empfiehlt, die folgenden IP-Bereiche zu ein
 
 ## VA6: Kunden aus den USA und Amerika, die mit AWS arbeiten {#aws}
 
-Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht ](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .[
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [&#128279;](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .
 
 `66.117.18.0/24`
 

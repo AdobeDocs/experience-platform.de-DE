@@ -9,7 +9,7 @@ ht-degree: 8%
 
 ---
 
-# Datentyp {0] Commerce Scope[!UICONTROL 
+# Datentyp &lbrace;0 Commerce Scope
 
 [!UICONTROL Commerce-Umfang] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Kennungen für den Ort definiert, an dem ein Ereignis in einem Commerce-Ökosystem aufgetreten ist. Es unterscheidet Umgebungen, Websites, Stores und Store-Ansichten.
 

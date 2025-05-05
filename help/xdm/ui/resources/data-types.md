@@ -97,7 +97,7 @@ Fügen Sie dem Datentyp nach Bedarf weitere Felder hinzu. Der Datentyp „Beispi
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Zusätzlich zu den grundlegenden Feldern können Sie auch zusätzliche Datentypen in Ihrem benutzerdefinierten Datentyp verschachteln. Der Datentyp Restaurant erfordert beispielsweise ein Feld, das die physische Adresse der Eigenschaft darstellt. In diesem Szenario können Sie ein neues Feld „Adresse“ hinzufügen, dem der Standarddatentyp &quot;[!UICONTROL Postanschrift“ ] ist.
+Zusätzlich zu den grundlegenden Feldern können Sie auch zusätzliche Datentypen in Ihrem benutzerdefinierten Datentyp verschachteln. Der Datentyp Restaurant erfordert beispielsweise ein Feld, das die physische Adresse der Eigenschaft darstellt. In diesem Szenario können Sie ein neues Feld „Adresse“ hinzufügen, dem der Standarddatentyp &quot;[!UICONTROL Postanschrift“ &#x200B;] ist.
 
 ![](../../images/ui/resources/data-types/address-field.png)
 

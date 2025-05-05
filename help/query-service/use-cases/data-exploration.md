@@ -114,7 +114,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Das Keyword `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch-ID“ ].
+Das Keyword `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch-ID“ &#x200B;].
 
 >[!TIP]
 >

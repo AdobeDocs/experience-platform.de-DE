@@ -43,11 +43,11 @@ Um Ihren AWS-Schlüssel mit Experience Platform zu integrieren, müssen Sie die 
 
 Im obigen Beispiel können alle Ressourcen (`"Resource": "*"`) innerhalb desselben Kontos (`Principal.AWS`) auf den Schlüssel zugreifen. Diese Richtlinie ermöglicht es den Diensten im Konto, Verschlüsselungs- und Entschlüsselungsvorgänge durchzuführen, die auf das angegebene Konto beschränkt sind. Um Ihrem Experience Platform-Einzelmandantenkonto Zugriff auf diesen Schlüssel zu gewähren, fügen Sie der standardmäßigen AWS-Richtlinie neue Anweisungen hinzu. Sie können die erforderliche JSON-Richtlinie über die Experience Platform-Benutzeroberfläche abrufen und auf Ihren AWS-KMS-Schlüssel anwenden, um eine sichere Verbindung mit Adobe Experience Platform herzustellen.
 
-Wechseln Sie in der Experience Platform-Benutzeroberfläche zum Abschnitt **[!UICONTROL Administration]** in der linken Navigationsleiste und wählen Sie **[!UICONTROL Verschlüsselung]**. Wählen [!UICONTROL  Arbeitsbereich „Verschlüsselungskonfiguration] auf der Karte **[!UICONTROL Kundenseitig [!UICONTROL  Schlüssel] die Option]** Konfigurieren“ aus.
+Wechseln Sie in der Experience Platform-Benutzeroberfläche zum Abschnitt **[!UICONTROL Administration]** in der linken Navigationsleiste und wählen Sie **[!UICONTROL Verschlüsselung]**. Wählen [!UICONTROL &#x200B; Arbeitsbereich „Verschlüsselungskonfiguration] auf der Karte **[!UICONTROL Kundenseitig [!UICONTROL &#x200B; Schlüssel] die Option]** Konfigurieren“ aus.
 
 ![Der Arbeitsbereich &quot;Experience Platform-Verschlüsselungskonfiguration“ mit hervorgehobener Option „Konfigurieren“ auf der Karte „Kundenseitig verwaltete Schlüssel“.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-Die [!UICONTROL Konfiguration Kundenseitig verwalteter Schlüssel] wird angezeigt. Kopieren Sie das `statement`-Objekt aus der CMK-KMS-Richtlinie, die in der Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] [!UICONTROL  angezeigt ].
+Die [!UICONTROL Konfiguration Kundenseitig verwalteter Schlüssel] wird angezeigt. Kopieren Sie das `statement`-Objekt aus der CMK-KMS-Richtlinie, die in der Konfiguration [!UICONTROL Kundenseitig verwaltete Schlüssel] [!UICONTROL &#x200B; angezeigt &#x200B;].
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 

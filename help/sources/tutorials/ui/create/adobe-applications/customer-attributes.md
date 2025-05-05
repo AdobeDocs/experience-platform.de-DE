@@ -30,7 +30,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Wählen Sie unter der ] [!UICONTROL Adobe-Programme **[!UICONTROL die Option „Kundenattribute]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der  Adobe-Programme **[!UICONTROL die Option „Kundenattribute]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/customer-attributes/catalog.png)
 

@@ -17,7 +17,7 @@ Weitere Informationen zur Benutzeroberfläche für Auditprotokolle finden Sie im
 
 ## Voraussetzungen
 
-Die Berechtigung [!DNL Data Governance]Benutzeraktivitätsprotokoll anzeigen[!UICONTROL  muss aktiviert ], damit das Administratorprotokoll-Dashboard in der Experience Platform-Benutzeroberfläche angezeigt werden kann. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Die Berechtigung [!DNL Data Governance]Benutzeraktivitätsprotokoll anzeigen[!UICONTROL &#x200B; muss aktiviert &#x200B;], damit das Administratorprotokoll-Dashboard in der Experience Platform-Benutzeroberfläche angezeigt werden kann. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] Auditprotokollkategorien {#audit-log-categories}
 

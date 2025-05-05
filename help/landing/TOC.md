@@ -41,7 +41,7 @@ ht-degree: 60%
 * Dokumentation zu Experience Platform {#documentation}
    * [Übersicht](documentation/overview.md)
    * [Sprachunterstützung](documentation/language-support.md)
-* Auf Experience Platform {#ecosystem} aufbauende Programme
+* Auf Experience Platform aufbauende Programme {#ecosystem}
    * [Überblick](application-services.md)
    * [Adobe Real-Time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)

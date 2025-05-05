@@ -58,7 +58,7 @@ Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Sche
 
 Der [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie als Nächstes eine Basisklasse für das Schema. Sie können zwischen den Kernklassen von [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] oder [!UICONTROL Other] wählen, wenn diese Klassen nicht für Ihre Zwecke geeignet sind. Die Option [!UICONTROL Sonstige]-Klassen ermöglicht es Ihnen, entweder [eine neue Klasse zu erstellen](#create-new-class) oder aus anderen bereits vorhandenen Klassen auszuwählen.
 
-Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL  Dokumentation ]](../classes/individual-profile.md)XDM Individual Profile]](../classes/experienceevent.md) und [[!UICONTROL XDM ExperienceEvent . Wählen Sie für die Zwecke dieses Tutorials die Option **[!UICONTROL Individuelles XDM-Profil]** gefolgt von **[!UICONTROL Weiter]** aus.
+Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL &#x200B; Dokumentation &#x200B;]](../classes/individual-profile.md)XDM Individual Profile[&#128279;](../classes/experienceevent.md) und XDM ExperienceEvent . Wählen Sie für die Zwecke dieses Tutorials die Option **[!UICONTROL Individuelles XDM-Profil]** gefolgt von **[!UICONTROL Weiter]** aus.
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit den [!UICONTROL XDM Individual Profile]-Optionen und [!UICONTROL Weiter] hervorgehoben.](../images/tutorials/create-schema/individual-profile-base-class.png)
 
@@ -74,7 +74,7 @@ In diesem Tutorial wird ein Schema zur Aufnahme von Daten über die Mitglieder e
 
 &#x200B;Die Basisstruktur des Schemas (bereitgestellt von der Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klasse und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen &#x200B;] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../images/ui/resources/schemas/name-and-review.png)
 
@@ -264,7 +264,7 @@ Aktivieren Sie das Kontrollkästchen **[!UICONTROL Aufzählung und empfohlene We
 
 Wählen Sie nach Festlegung aller Feldeigenschaften **[!UICONTROL Anwenden]** aus, um das Feld `tierClass` zum `loyaltyTier`-Objekt hinzuzufügen.
 
-![Die Feldeigenschaften „Aufzählung“ und „Werte vorschlagen“, die mit &quot;[!UICONTROL &quot; ] wurden.](../images/tutorials/create-schema/tier-class-enum.png)
+![Die Feldeigenschaften „Aufzählung“ und „Werte vorschlagen“, die mit &quot;[!UICONTROL &quot; &#x200B;] wurden.](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 

@@ -72,7 +72,7 @@ In der folgenden Tabelle finden Sie weitere Informationen zu Status:
 >title="Fehlgeschlagene Identitäten"
 >abstract="Die Anzahl individueller Profilidentitäten, deren Aktivierung für das ausgewählte Ziel fehlgeschlagen ist. Genauere Informationen dazu finden Sie in der Fehlerdiagnose."
 
-Für Streaming-Ziele bietet [!UICONTROL  Registerkarte ]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
+Für Streaming-Ziele bietet [!UICONTROL &#x200B; Registerkarte &#x200B;]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
 
 Identitäten stellen die verschiedenen Facetten eines Profils dar. Wenn beispielsweise ein Profil sowohl eine Telefonnummer als auch eine E-Mail-Adresse enthält, hat dieses Profil zwei Identitäten.
 
@@ -157,7 +157,7 @@ Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für 
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl individueller Profildatensätze, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
-Für Batch-Ziele [!UICONTROL  die Registerkarte ]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
+Für Batch-Ziele [!UICONTROL &#x200B; die Registerkarte &#x200B;]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
 
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der für das ausgewählte Ziel erfolgreich aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Identitäten ausgeschlossen]**: Die Anzahl individueller Profilidentitäten, die von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind, basierend auf fehlenden Attributen und einer Einverständnisverletzung.

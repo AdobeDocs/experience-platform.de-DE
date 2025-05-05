@@ -49,7 +49,7 @@ Erstellen Sie ein Modell für maschinelles Lernen in Echtzeit, indem Sie es von 
 
 ### Bereitstellung
 
-Stellen Sie Ihr Modell für die [!DNL Edge Network] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service-Galerie“ ] dem Prognose-API-Endpunkt zu erstellen.
+Stellen Sie Ihr Modell für die [!DNL Edge Network] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service-Galerie“ &#x200B;] dem Prognose-API-Endpunkt zu erstellen.
 
 ### Folgerung   
 

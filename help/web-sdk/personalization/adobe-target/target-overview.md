@@ -62,7 +62,7 @@ Anschließend können Sie optional auch die folgenden Optionen hinzufügen:
 
 ## Verwenden des Adobe Target VEC
 
-Um VEC mit einer [!DNL Web SDK] Implementierung zu verwenden, installieren und aktivieren Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die VEC Helper-Erweiterung {3](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)Chrome).[
+Um VEC mit einer [!DNL Web SDK] Implementierung zu verwenden, installieren und aktivieren Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die VEC Helper-Erweiterung &lbrace;3[&#128279;](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)Chrome).
 
 Weitere Informationen finden Sie unter [Visual Experience Composer Helper](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) im *Adobe Target-Handbuch*.
 

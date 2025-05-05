@@ -26,7 +26,7 @@ Sie können Ihre Suche einschränken, indem Sie bestimmte Ressourcen, Aktionen u
 
 Um auf [!UICONTROL Berechtigungs-Manager] für [!DNL Experience Platform] zugreifen zu können, müssen Sie Administrator einer Organisation sein, die Zugriff auf Experience Platform hat. Adobe ermöglicht zwar anpassbare Administratorhierarchien innerhalb Ihrer Organisation, Sie müssen jedoch ein Produktadministrator für das [!DNL Adobe Experience Platform] sein. Weitere Informationen finden Sie im Adobe Help Center-Artikel zu [Administrationsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html).
 
-Melden Sie sich mit Ihren [!DNL Adobe] Anmeldeinformationen bei ](https://experience.adobe.com/)0}Adobe Experience Platform an.  [  Nach der Anmeldung sehen Sie die Seite **[!UICONTROL Übersicht]** für Ihre Organisation. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat. Um den Arbeitsbereich für die attributbasierte Zugriffssteuerung für die Platform-Integration zu starten, wählen Sie **[!UICONTROL Berechtigungen]** aus.
+Melden Sie sich mit Ihren [!DNL Adobe] Anmeldeinformationen bei [&#128279;](https://experience.adobe.com/)0&rbrace;Adobe Experience Platform an.    Nach der Anmeldung sehen Sie die Seite **[!UICONTROL Übersicht]** für Ihre Organisation. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat. Um den Arbeitsbereich für die attributbasierte Zugriffssteuerung für die Platform-Integration zu starten, wählen Sie **[!UICONTROL Berechtigungen]** aus.
 
 ![Übersicht über Adobe Experience Platform mit hervorgehobenen Berechtigungen.](../../images/flac-ui/flac-select-product.png)
 

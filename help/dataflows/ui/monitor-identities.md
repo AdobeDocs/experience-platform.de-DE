@@ -91,7 +91,7 @@ Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der 
 
 ![Das Filtersymbol ist hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-identities/dataflows-filter.png)
 
-Auf [!UICONTROL  Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Identity]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Identity Service] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
+Auf [!UICONTROL &#x200B; Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Identity]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Identity Service] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
 
 ![Ein Dashboard mit detaillierten Informationen zum ausgewählten Datenfluss wird angezeigt.](../assets/ui/monitor-identities/dataflow-run-details.png)
 

@@ -67,7 +67,7 @@ Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in ein
 
 >[!INFO]
 >
->[!UICONTROL Ressource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Für [!UICONTROL  Bericht kann nur ] Ressource ausgewählt werden. Eine Aktion oder Sandbox kann entfernt werden, sobald sie hinzugefügt wurde, indem **neben der Auswahl, die Sie entfernen möchten,** x ausgewählt wird.
+>[!UICONTROL Ressource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Für [!UICONTROL &#x200B; Bericht kann nur &#x200B;] Ressource ausgewählt werden. Eine Aktion oder Sandbox kann entfernt werden, sobald sie hinzugefügt wurde, indem **neben der Auswahl, die Sie entfernen möchten,** x ausgewählt wird.
 
 ![Die Dropdown-Listen „Ressource“, „Aktionen“, „Sandboxes“ und „Ergebnisse anzeigen“ sind hervorgehoben](../../images/permission-manager/roles-additional-attributes-select.png)
 

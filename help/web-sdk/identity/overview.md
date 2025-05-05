@@ -56,7 +56,7 @@ Bei der Verwendung der Datenerfassung von Drittanbietern beschränken einige Anz
 
 ### Auswirkungen der Cookie-Lebensdauer auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
-Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe TargetOffer decisioning ](https://experienceleague.adobe.com/en/docs/target) oder [](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
+Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe TargetOffer decisioning ](https://experienceleague.adobe.com/en/docs/target) oder [&#128279;](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
 
 Stellen Sie sich beispielsweise eine Situation vor, in der Sie ein Personalisierungserlebnis erstellt haben, das jedes Element auf die Startseite höher stuft, wenn ein Benutzer es in den letzten sieben Tagen dreimal angesehen hat.
 
@@ -151,7 +151,7 @@ alloy("sendEvent", {
 >Adobe empfiehlt, Namespaces zu senden, die eine Person darstellen, z. B. `CRMID`, als primäre Identität.
 
 
-Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) ](../../identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter „Identitäten[!UICONTROL  aufgeführt ]. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
+Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) ](../../identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter „Identitäten[!UICONTROL &#x200B; aufgeführt &#x200B;]. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
 
 >[!IMPORTANT]
 >

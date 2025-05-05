@@ -15,7 +15,7 @@ ht-degree: 11%
 
 Diese Feldergruppe erweitert die Klasse [Individuelles Interessentenprofil](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) im Kontext eines Partners.
 
-![Abbildung der Feldergruppe &quot;[!UICONTROL  Interessentendetails (Beispiel)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
+![Abbildung der Feldergruppe &quot;[!UICONTROL &#x200B; Interessentendetails (Beispiel)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |---------------------------------------|-----------------------------|-----------|--------------------------------------------------|

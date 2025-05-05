@@ -25,7 +25,7 @@ Mit dieser API können Sie IP-Einschränkungen für den Zugriff auf Daten über 
 Mit den folgenden Funktionen können Sie IP-basierte Zugriffsbeschränkungen definieren, Zugriffsversuche überwachen und die Netzwerksicherheitseinstellungen für den Abfrage-Service anpassen:
 
 - **Netzwerkbasierte Datenzugriffssteuerungen definieren**: Geben Sie zulässige IP-Bereiche für den Zugriff auf den Abfrage-Service an. Diese Einschränkung gilt speziell für SQL-Datenbankverbindungen, einschließlich solcher, die über Business Intelligence (BI)-Tools, Datenbank-Clients oder Programmierschnittstellen wie JDBC hergestellt werden.
-- **Umfassende Überwachung und Warnhinweise aktivieren**: Alle Zugriffsversuche, einschließlich verweigerter Verbindungen, werden protokolliert und zur Echtzeit-](../../landing/governance-privacy-security/audit-logs/overview.md) an die [Adobe Experience Platform-Auditprotokolle gesendet. Verwenden Sie diese Funktion, um Zugriffsmuster zu überwachen und potenzielle Sicherheitsverletzungen zu erkennen.
+- **Umfassende Überwachung und Warnhinweise aktivieren**: Alle Zugriffsversuche, einschließlich verweigerter Verbindungen, werden protokolliert und zur Echtzeit-[&#128279;](../../landing/governance-privacy-security/audit-logs/overview.md) an die Adobe Experience Platform-Auditprotokolle gesendet. Verwenden Sie diese Funktion, um Zugriffsmuster zu überwachen und potenzielle Sicherheitsverletzungen zu erkennen.
 - **Flexible IP-Einschränkungen konfigurieren**: Geben Sie die zulässigen IPs sowohl im individuellen IP- als auch im CIDR-Blockformat an. Diese Einstellungen gelten pro Sandbox, sodass Sie Netzwerkbeschränkungen an Ihre spezifischen Sicherheitsanforderungen anpassen können.
 
 ## Audit- und Überwachungsfunktionen

@@ -110,7 +110,7 @@ Wählen Sie auf dem **[!UICONTROL API konfigurieren]** die Option **[!UICONTROL 
 
 >[!IMPORTANT]
 >
-Um Zugriff auf bestimmte Funktionen in Experience Platform zu erhalten, benötigen Sie außerdem einen Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen gewährt. Weitere Informationen finden Sie im Abschnitt [Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen](#get-abac-permissions).
+>Um Zugriff auf bestimmte Funktionen in Experience Platform zu erhalten, benötigen Sie außerdem einen Systemadministrator, der Ihnen die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen gewährt. Weitere Informationen finden Sie im Abschnitt [Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen](#get-abac-permissions).
 
 ![Produktprofile für Ihre Integration auswählen.](./images/api-authentication/select-product-profiles.png)
 
@@ -149,11 +149,11 @@ Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in
 
 >[!TIP]
 >
-Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwenden von Postman zum Authentifizieren und Testen von API-Aufrufen](#use-postman).
+>Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwenden von Postman zum Authentifizieren und Testen von API-Aufrufen](#use-postman).
 
 ## Authentifizierungsdaten direkt in der API-Referenzdokumentation erstellen und abrufen {#get-credentials-functionality}
 
-Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten aus erhalten, ohne zu [!UICONTROL Developer Console wechseln zu ]. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten aus erhalten, ohne zu [!UICONTROL Developer Console wechseln zu &#x200B;]. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
 ![Funktion „Anmeldeinformationen abrufen“ oben auf einer API-Referenzseite hervorgehoben.](././images/api-authentication/get-credentials-highlighted.png)
 
@@ -169,17 +169,17 @@ Verwenden Sie als Nächstes die Dropdown-Auswahl, um das Fenster mit den Anmelde
 
 >[!TIP]
 >
-Der Anmeldedaten-Block „Seitenanfang“ wird weiterhin angezeigt, wenn Sie zwischen verschiedenen Endpunktseiten in der Experience Platform-API-Referenzdokumentation navigieren.
+>Der Anmeldedaten-Block „Seitenanfang“ wird weiterhin angezeigt, wenn Sie zwischen verschiedenen Endpunktseiten in der Experience Platform-API-Referenzdokumentation navigieren.
 
 ## [!BADGE Veraltet]{type=negativ} Generieren eines JSON Web Token (JWT) {#jwt}
 
 >[!WARNING]
 >
-Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Adobe erfordert außerdem, dass Sie Ihre vorhandenen Integrationen bis zum 30. Juni 2025 zur OAuth-Methode migrieren, damit Ihre Integrationen weiterhin funktionieren. Lesen Sie die folgende wichtige Dokumentation:
+>Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Adobe erfordert außerdem, dass Sie Ihre vorhandenen Integrationen bis zum 30. Juni 2025 zur OAuth-Methode migrieren, damit Ihre Integrationen weiterhin funktionieren. Lesen Sie die folgende wichtige Dokumentation:
 > 
-* [Migrationshandbuch für Ihre Programme von JWT zu OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [Implementierungshandbuch für neue und alte Programme mit OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [Vorteile der Verwendung der OAuth Server-zu-Server-Anmeldedaten-Methode](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+>* [Migrationshandbuch für Ihre Programme von JWT zu OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+>* [Implementierungshandbuch für neue und alte Programme mit OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+>* [Vorteile der Verwendung der OAuth Server-zu-Server-Anmeldedaten-Methode](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Anzeigen veralteter Informationen
 
@@ -187,9 +187,9 @@ Der nächste Schritt besteht darin, ein JSON Web Token (JWT) basierend auf Ihren
 
 >[!IMPORTANT]
 >
-In diesem Tutorial wird in den folgenden Schritten beschrieben, wie Sie ein JWT in Developer Console generieren. Diese Erzeugungsmethode sollte jedoch nur zu Test- und Auswertungszwecken verwendet werden.
+>In diesem Tutorial wird in den folgenden Schritten beschrieben, wie Sie ein JWT in Developer Console generieren. Diese Erzeugungsmethode sollte jedoch nur zu Test- und Auswertungszwecken verwendet werden.
 >
-Für die reguläre Verwendung muss der JWT automatisch generiert werden. Weitere Informationen zum programmgesteuerten Generieren von JWTs finden Sie im [Service Account Authentication Guide](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) auf Adobe Developer.
+>Für die reguläre Verwendung muss der JWT automatisch generiert werden. Weitere Informationen zum programmgesteuerten Generieren von JWTs finden Sie im [Service Account Authentication Guide](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) auf Adobe Developer.
 
 Wählen Sie **[!UICONTROL linken Navigationsbereich Dienstkonto (]**) und dann **[!UICONTROL JWT generieren]** aus.
 
@@ -227,7 +227,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
-Sie können denselben API-Schlüssel, denselben geheimen Client-Schlüssel und denselben JWT verwenden, um für jede Sitzung ein neues Zugriffs-Token zu generieren. Auf diese Weise können Sie die Erstellung von Zugriffstoken in Ihren Programmen automatisieren.
+>Sie können denselben API-Schlüssel, denselben geheimen Client-Schlüssel und denselben JWT verwenden, um für jede Sitzung ein neues Zugriffs-Token zu generieren. Auf diese Weise können Sie die Erstellung von Zugriffstoken in Ihren Programmen automatisieren.
 
 **Antwort**
 
@@ -290,7 +290,7 @@ Wenn Ihre Antwort der unten gezeigten ähnelt, sind Ihre Anmeldedaten gültig un
 
 >[!IMPORTANT]
 >
-Der obige Aufruf reicht zwar aus, um Ihre Zugriffsberechtigungen zu testen, doch beachten Sie, dass Sie ohne die richtigen attributbasierten Zugriffssteuerungsberechtigungen nicht auf mehrere Ressourcen zugreifen oder diese ändern können. Weitere Informationen finden Sie **folgenden Abschnitt Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen**.
+>Der obige Aufruf reicht zwar aus, um Ihre Zugriffsberechtigungen zu testen, doch beachten Sie, dass Sie ohne die richtigen attributbasierten Zugriffssteuerungsberechtigungen nicht auf mehrere Ressourcen zugreifen oder diese ändern können. Weitere Informationen finden Sie **folgenden Abschnitt Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen**.
 
 ## Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen {#get-abac-permissions}
 
@@ -330,7 +330,7 @@ Bevor Sie Integrationen in Adobe Developer Console erstellen können, muss Ihr K
 
 >[!NOTE]
 >
-Nur Systemadministratoren können API-Anmeldeinformationen in Berechtigungen anzeigen und verwalten.
+>Nur Systemadministratoren können API-Anmeldeinformationen in Berechtigungen anzeigen und verwalten.
 
 ### Hinzufügen von Entwicklern zum Produktprofil {#add-developers-to-product-profile}
 
@@ -360,7 +360,7 @@ Der Entwickler wurde erfolgreich hinzugefügt und wird auf der Registerkarte **[
 
 >[!NOTE]
 >
-Nur ein Systemadministrator kann in der Experience Platform-Benutzeroberfläche APIs zu Rollen zuweisen.
+>Nur ein Systemadministrator kann in der Experience Platform-Benutzeroberfläche APIs zu Rollen zuweisen.
 
 Um Experience Platform-APIs verwenden und Vorgänge damit durchführen zu können, muss ein Systemadministrator die API-Anmeldeinformationen zusätzlich zu den jeweiligen Berechtigungen einer Rolle hinzufügen. Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 

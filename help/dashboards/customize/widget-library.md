@@ -44,7 +44,7 @@ Wählen Sie in [!UICONTROL Widget-]) ein beliebiges Widget aus der Liste der ver
 
 ### Kennzeichnung „In Verwendung“ {#in-use-label}
 
-Widgets, die bereits zu einem Dashboard hinzugefügt wurden[!UICONTROL  verfügen über eine Beschriftung ]In Verwendung“, wenn sie in der Widget-Bibliothek angezeigt werden. Mit dieser Beschriftung werden Widgets hervorgehoben, die Ihrem Dashboard bereits hinzugefügt wurden, um Duplizierungen zu vermeiden. Sie können dasselbe Widget jedoch auch mehrmals hinzufügen, wenn Sie möchten.
+Widgets, die bereits zu einem Dashboard hinzugefügt wurden[!UICONTROL &#x200B; verfügen über eine Beschriftung &#x200B;]In Verwendung“, wenn sie in der Widget-Bibliothek angezeigt werden. Mit dieser Beschriftung werden Widgets hervorgehoben, die Ihrem Dashboard bereits hinzugefügt wurden, um Duplizierungen zu vermeiden. Sie können dasselbe Widget jedoch auch mehrmals hinzufügen, wenn Sie möchten.
 
 ![Die Widget-Bibliothek mit der hervorgehobenen Bezeichnung „In Verwendung“.](../images/customization/in-use-label.png)
 

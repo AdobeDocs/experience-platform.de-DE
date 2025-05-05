@@ -55,7 +55,7 @@ Gehen Sie wie folgt vor, um Inhaltskarten über die Benutzeroberfläche für Tag
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen [!UICONTROL  unter &quot;]&quot; ein vorhandenes Ereignis aus oder erstellen Sie ein neues.
+1. Wählen [!UICONTROL &#x200B; unter &quot;]&quot; ein vorhandenes Ereignis aus oder erstellen Sie ein neues.
 1. Legen Sie das [!UICONTROL Erweiterung] Dropdown-Feld auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und setzen Sie den **[!UICONTROL Ereignistyp]** auf **[!UICONTROL Regelsatzelemente abonnieren]**.
 1. Wählen Sie rechts im Bildschirm die Schemata und Oberflächen aus, für die Sie Inhaltskarten abonnieren möchten.
 1. Wählen **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.

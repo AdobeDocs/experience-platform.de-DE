@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Beim Definieren eines Experience-Datenmodell (XDM)-Felds in der Adobe Experience Platform-Benutzeroberfläche können Sie dieses Feld als Array festlegen.
 
-Der Inhalt des Arrays hängt von dem für [!UICONTROL  Feld ]Typ“ ab. Wenn beispielsweise der „Typ eines Felds auf &quot;[!UICONTROL Zeichenfolge]&quot; festgelegt ist, wird das Feld durch Festlegen dieses Felds als Array als Array von Zeichenfolgen gekennzeichnet. Wenn der [!UICONTROL Typ] des Felds auf einen Mehrfeld-Datentyp wie &quot;[!UICONTROL Postanschrift]&quot; festgelegt ist, wird es zu einem Array von Postanschrift-Objekten, die dem Datentyp entsprechen.
+Der Inhalt des Arrays hängt von dem für [!UICONTROL &#x200B; Feld &#x200B;]Typ“ ab. Wenn beispielsweise der „Typ eines Felds auf &quot;[!UICONTROL Zeichenfolge]&quot; festgelegt ist, wird das Feld durch Festlegen dieses Felds als Array als Array von Zeichenfolgen gekennzeichnet. Wenn der [!UICONTROL Typ] des Felds auf einen Mehrfeld-Datentyp wie &quot;[!UICONTROL Postanschrift]&quot; festgelegt ist, wird es zu einem Array von Postanschrift-Objekten, die dem Datentyp entsprechen.
 
 Nachdem Sie [ neues Feld in der Benutzeroberfläche definiert haben](./overview.md#define) können Sie es als Array-Feld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Array]** in der rechten Leiste aktivieren.
 

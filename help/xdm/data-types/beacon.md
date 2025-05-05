@@ -33,7 +33,7 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen [!UICONTROL  Datentyp ]Beacon“.
+Der folgende Abschnitt enthält zusätzliche Informationen [!UICONTROL &#x200B; Datentyp &#x200B;]Beacon“.
 
 ## Akzeptierte Werte für die Nähe {#proximity}
 

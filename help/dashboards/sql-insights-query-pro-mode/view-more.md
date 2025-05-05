@@ -59,7 +59,7 @@ Wählen Sie den Schieberegler aus und ziehen Sie nach links oder rechts, um die 
 
 Die Tabellen werden automatisch mit der Funktion [!UICONTROL Mehr anzeigen] paginiert, sodass Sie Ihre SQL-Abfragen nicht mehr manuell ändern müssen. Mit dieser Funktion wird sichergestellt, dass Ihre Daten in einem besser verwaltbaren Format angezeigt werden, was die Navigation durch große Datensätze erleichtert.
 
-Pro Seite können bis zu 500 Datensätze angezeigt werden. Um durch die Datensätze zu navigieren, verwenden Sie die ]****[!UICONTROL >am unteren Rand der Seite.
+Pro Seite können bis zu 500 Datensätze angezeigt werden. Um durch die Datensätze zu navigieren, verwenden Sie die **&#x200B;**>am unteren Rand der Seite.
 
 ![Tabellenergebnisse mit hervorgehobenen Ergebnissen und hervorgehobener Paginierung.](../images/sql-insights-query-pro-mode/advanced-table-pagination.png)
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Feldgruppenstruktur {#structure}
 
-Die [!UICONTROL Einverständnis und Voreinstellungen] bietet `consents` ein einzelnes Feld vom Typ „Objekt“, um Einverständnis- und Voreinstellungsinformationen zu erfassen. Dieses Feld erweitert den Datentyp [[!UICONTROL Einverständnis für Datenschutz, Personalization- und ]](../../data-types/consents.md), entfernt das `adID` und fügt ein `idSpecific` hinzu.
+Die [!UICONTROL Einverständnis und Voreinstellungen] bietet `consents` ein einzelnes Feld vom Typ „Objekt“, um Einverständnis- und Voreinstellungsinformationen zu erfassen. Dieses Feld erweitert den Datentyp [[!UICONTROL Einverständnis für Datenschutz, Personalization- und &#x200B;]](../../data-types/consents.md), entfernt das `adID` und fügt ein `idSpecific` hinzu.
 
 ![](../../images/field-groups/consent.png)
 

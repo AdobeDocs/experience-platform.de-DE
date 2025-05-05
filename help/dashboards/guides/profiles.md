@@ -33,7 +33,7 @@ Um in der Benutzeroberfläche von Experience Platform zum Profile-Dashboard zu n
 
 >[!NOTE]
 >
->Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Profile-Dashboard nicht angezeigt. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Profile-Dashboard nicht angezeigt. Stattdessen werden auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ![Das Dashboard &quot;Experience Platform-Profile“ mit hervorgehobenen Optionen „Profile“ und „Übersicht“.](../images/profiles/dashboard-overview.png)
 
@@ -127,7 +127,7 @@ Kundenzustimmung und Kontaktvoreinstellungen sind komplexe Themen. Um zu erfahre
 
 Um benutzerdefinierte Widgets zu Ihrem Arbeitsbereich [!UICONTROL Profile] [!UICONTROL Detail] hinzuzufügen, wählen Sie **[!UICONTROL Profildetails anpassen]**.
 
-![Der Arbeitsbereich „Profildetails“ mit [!UICONTROL  hervorgehobenen ] „Profildetails anpassen“](../images/profiles/customize-profile-details.png)
+![Der Arbeitsbereich „Profildetails“ mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;] „Profildetails anpassen“](../images/profiles/customize-profile-details.png)
 
 Sie können jetzt den Arbeitsbereich bearbeiten, indem Sie die Größe der Widgets ändern oder sie verschieben. Wählen Sie **[!UICONTROL Widget hinzufügen]**, um ein Widget mit benutzerdefinierten Attributen zu erstellen.
 
@@ -191,7 +191,7 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 
 >[!NOTE]
 >
->Seit dem 26. Juli 2023 wurden die Dashboards [!UICONTROL Profile], [!UICONTROL Audiences] und [!UICONTROL Ziele]-Übersicht für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf einen neuen Standard-Widget-Ladevorgang zurückgesetzt. Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget](./destinations.md#default-widgets)Ladevorgänge enthalten sind, finden Sie in der Dokumentation ](./audiences.md#default-widgets) den Abschnitten „Ziele“ und &quot;[Zielgruppen der Standard-Widgets. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
+>Seit dem 26. Juli 2023 wurden die Dashboards [!UICONTROL Profile], [!UICONTROL Audiences] und [!UICONTROL Ziele]-Übersicht für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf einen neuen Standard-Widget-Ladevorgang zurückgesetzt. Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget](./destinations.md#default-widgets)Ladevorgänge enthalten sind, finden Sie in der Dokumentation [&#128279;](./audiences.md#default-widgets) den Abschnitten „Ziele“ und &quot;Zielgruppen der Standard-Widgets. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
 
 ## Kunden-KI-Widgets {#customer-ai-profiles-widgets}
 
@@ -207,7 +207,7 @@ Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte
 >title="Verteilung der Scores"
 >abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
 
-Das Widget [!UICONTROL Kunden-KI-Verteilung der ]&quot; kategorisiert die Gesamtzahl der Profile anhand ihrer Neigungs-Scores. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in 5-prozentigen Inkrementen visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse und die Tendenz-Scores entlang der X-Achse angegeben.
+Das Widget [!UICONTROL Kunden-KI-Verteilung der &#x200B;]&quot; kategorisiert die Gesamtzahl der Profile anhand ihrer Neigungs-Scores. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in 5-prozentigen Inkrementen visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse und die Tendenz-Scores entlang der X-Achse angegeben.
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl u
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus.
 
-![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der ]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
+![Das Experience Platform-Zielgruppen-Dashboard mit [!UICONTROL Kunden-KI-Verteilung der &#x200B;]-Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
 
 Die detaillierte Seite mit Modelleinblicken wird angezeigt.
 

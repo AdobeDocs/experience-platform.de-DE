@@ -86,7 +86,7 @@ Wenn Sie das Hochladen Ihrer Erweiterung direkt über die API verwalten möchten
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
-Nachdem Sie sich bei der Benutzeroberfläche angemeldet und im linken ]**&quot;**[!UICONTROL &quot; ausgewählt haben, ] der Bildschirm [!UICONTROL Eigenschaften“ angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
+Nachdem Sie sich bei der Benutzeroberfläche angemeldet und im linken **&quot;**&#x200B;[!UICONTROL &quot; ausgewählt haben, &#x200B;] der Bildschirm Eigenschaften“ angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
 
 ![](../images/getting-started/properties-screen.png)
 

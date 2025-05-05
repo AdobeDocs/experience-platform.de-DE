@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die wichtigsten Berechtigungen für den Abfrage-Se
 
 Die Zugriffssteuerung für Experience Platform wird über die [Adobe Admin Console verwaltet](https://adminconsole.adobe.com/) wobei Produktprofile Benutzende mit Berechtigungen und Sandboxes verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../access-control/home.md).
 
-Detaillierte Anweisungen [ Anfordern des Zugriffs auf die Produktprofilberechtigungen finden Sie in den Dokumenten ](../access-control/ui/permissions.md)Berechtigungen für ein Produktprofil verwalten](../access-control/ui/users.md) und [Benutzer für ein Produktprofil verwalten
+Detaillierte Anweisungen [ Anfordern des Zugriffs auf die Produktprofilberechtigungen finden Sie in den Dokumenten ](../access-control/ui/permissions.md)Berechtigungen für ein Produktprofil verwalten[&#128279;](../access-control/ui/users.md) und Benutzer für ein Produktprofil verwalten
 
 ### Relevante Query Service-Berechtigungen {#query-service-permissions}
 

@@ -47,7 +47,7 @@ Um eine Anfrage zu erstellen, wählen **[!UICONTROL auf der Hauptseite]** Arbeit
 >
 >Für Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer stehen 20 Arbeitsaufträge zur Gültigkeit von Datensätzen aus. Benutzende von Healthcare Shield und Privacy and Security Shield haben 50 geplante Arbeitsaufträge zur Gültigkeit von Datensätzen. Das bedeutet, dass Sie 20 oder 50 Datensätze gleichzeitig löschen können.<br>Wenn Sie beispielsweise 20 geplante Datensatzgültigkeiten haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Gültigkeiten festlegen, bis dieser Datensatz gelöscht wurde.
 
-![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] mit [!UICONTROL  hervorgehobenen ]Anfrage erstellen“](../images/ui/ttl/create-request-button.png)
+![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;]Anfrage erstellen“](../images/ui/ttl/create-request-button.png)
 
 Der Workflow zur Anfrageerstellung wird angezeigt. Wählen Sie im Abschnitt [!UICONTROL Angeforderte Aktion] die Option **[!UICONTROL Datensatz löschen]** aus, um die Steuerelemente für die Planung der Datensatzgültigkeit zu aktualisieren.
 

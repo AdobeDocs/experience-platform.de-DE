@@ -71,7 +71,7 @@ Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der [!DNL XDM Ind
 
 ### Schema [!DNL Hotels]
 
-Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einer benutzerdefinierten Klasse &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilzunehmen, muss für das Referenzschema auch eine primäre Identität definiert und für „Profil[!UICONTROL  aktiviert ]. In diesem Fall fungiert `_tenantId.hotelId`als primäre Identität für das Schema, wobei ein benutzerdefinierter Identity-Namespace &quot;[!DNL Hotel ID]&quot; verwendet wird.
+Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einer benutzerdefinierten Klasse &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilzunehmen, muss für das Referenzschema auch eine primäre Identität definiert und für „Profil[!UICONTROL &#x200B; aktiviert &#x200B;]. In diesem Fall fungiert `_tenantId.hotelId`als primäre Identität für das Schema, wobei ein benutzerdefinierter Identity-Namespace &quot;[!DNL Hotel ID]&quot; verwendet wird.
 
 ![Für Profil aktivieren](../images/tutorials/relationship/hotels.png)
 
@@ -91,7 +91,7 @@ Im Falle des [!DNL Loyalty Members] Schemas wird ein neues `preferredHotel` hinz
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Ein Platzhalter für ein neues Feld wird auf der Arbeitsfläche angezeigt. Geben **[!UICONTROL unter „Feldeigenschaften]** einen Feldnamen und einen Anzeigenamen für das Feld an und legen Sie seinen Typ auf &quot;[!UICONTROL &quot; ]. Wählen **[!UICONTROL unter „Zuweisen zu]** eine vorhandene Feldergruppe aus, die erweitert werden soll, oder geben Sie einen eindeutigen Namen ein, um eine neue Feldergruppe zu erstellen. In diesem Fall wird eine neue Feldergruppe &quot;[!DNL Preferred Hotel]&quot; erstellt.
+Ein Platzhalter für ein neues Feld wird auf der Arbeitsfläche angezeigt. Geben **[!UICONTROL unter „Feldeigenschaften]** einen Feldnamen und einen Anzeigenamen für das Feld an und legen Sie seinen Typ auf &quot;[!UICONTROL &quot; &#x200B;]. Wählen **[!UICONTROL unter „Zuweisen zu]** eine vorhandene Feldergruppe aus, die erweitert werden soll, oder geben Sie einen eindeutigen Namen ein, um eine neue Feldergruppe zu erstellen. In diesem Fall wird eine neue Feldergruppe &quot;[!DNL Preferred Hotel]&quot; erstellt.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -149,7 +149,7 @@ Das [!UICONTROL Beziehung bearbeiten] wird angezeigt. Von hier aus können Sie d
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL  innerhalb Ihrer Schemata ] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
+Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL &#x200B; innerhalb Ihrer Schemata &#x200B;] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
 
 ![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 

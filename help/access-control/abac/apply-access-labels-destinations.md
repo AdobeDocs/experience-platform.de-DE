@@ -20,7 +20,7 @@ Lesen Sie diese Seite, um Beispielanwendungsfälle, Voraussetzungen und andere w
 
 ## Voraussetzungen {#prerequisites}
 
-Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie mit der Verwendung dieser Funktion beginnen. Um sich mit der [!UICONTROL attributbasierten Zugriffssteuerung“ vertraut ] machen, empfiehlt Adobe außerdem, die folgenden Artikel zu lesen:
+Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie mit der Verwendung dieser Funktion beginnen. Um sich mit der [!UICONTROL attributbasierten Zugriffssteuerung“ vertraut &#x200B;] machen, empfiehlt Adobe außerdem, die folgenden Artikel zu lesen:
 
 * [Attributbasierte Zugriffssteuerung – Übersicht](/help/access-control/abac/overview.md)
 * [End-to-End-Handbuch zur attributbasierten Zugriffssteuerung](/help/access-control/abac/end-to-end-guide.md)
@@ -89,4 +89,4 @@ Beim Hinzufügen mehrerer Beschriftungen zu einem Ziel-Datenfluss müssen Benutz
 
 Wenn Sie die Schritte in diesem Dokument befolgen, wissen Sie jetzt, wie Sie Zugriffsbeschriftungen auf Ziel-Datenflüsse anwenden, damit nur eine Untergruppe von Benutzern in Ihrer Organisation Zugriff auf bestimmte Ziel-Datenflüsse erhält.
 
-Als Nächstes können Sie mehr über andere Funktionen lesen, die von der [!UICONTROL attributbasierten Zugriffssteuerung) ] Aktivieren von Daten für Ziele unterstützt werden. Sie können beispielsweise den Zugriff von Benutzern auf (nur [ bestimmte Felder anzeigen und aktivieren](/help/access-control/abac/overview.md#destinations) einschränken.
+Als Nächstes können Sie mehr über andere Funktionen lesen, die von der [!UICONTROL attributbasierten Zugriffssteuerung) &#x200B;] Aktivieren von Daten für Ziele unterstützt werden. Sie können beispielsweise den Zugriff von Benutzern auf (nur [ bestimmte Felder anzeigen und aktivieren](/help/access-control/abac/overview.md#destinations) einschränken.

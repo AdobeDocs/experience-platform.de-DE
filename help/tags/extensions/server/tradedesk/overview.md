@@ -93,7 +93,7 @@ Ein JSON-Objekt, das weitere Informationen enthält. Sie haben die Möglichkeit,
 
 ![Der [!DNL Object Request Parameters] Abschnitt mit den verfügbaren Feldern.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Weitere Informationen zu den [Objektanforderungsparametern](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) und deren Eigenschaften finden [!UICONTROL  in der Dokumentation zu ]Echtzeit-Konversionen“.
+Weitere Informationen zu den [Objektanforderungsparametern](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) und deren Eigenschaften finden [!UICONTROL &#x200B; in der Dokumentation zu &#x200B;]Echtzeit-Konversionen“.
 
 **[!UICONTROL Konfigurationsüberschreibungen]**
 

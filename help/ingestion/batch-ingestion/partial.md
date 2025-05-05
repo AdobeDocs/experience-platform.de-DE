@@ -107,7 +107,7 @@ Mit dem **[!UICONTROL Fehlerschwellenwert]** können Sie den Prozentsatz der zul
 
 Jetzt können Sie Daten mit der Schaltfläche **Daten hinzufügen** hochladen und sie werden mit der partiellen Aufnahme aufgenommen.
 
-### Verwenden des Flusses &quot;[!UICONTROL CSV zu XDM-Schema ]&quot; {#map-flow}
+### Verwenden des Flusses &quot;[!UICONTROL CSV zu XDM-Schema &#x200B;]&quot; {#map-flow}
 
 Um den Fluss &quot;[!UICONTROL CSV zu XDM-Schema zuordnen] zu verwenden, führen Sie die im Tutorial [Zuordnen einer CSV-Datei“ ](../tutorials/map-csv/overview.md) Schritte aus. Nachdem Sie den Schritt **[!UICONTROL Daten hinzufügen]** erreicht haben, notieren Sie sich die Felder **[!UICONTROL Partielle Aufnahme]** und **[!UICONTROL Fehlerdiagnose]**.
 
