@@ -39,11 +39,11 @@ Einen kurzen Überblick über die Konfiguration der Adobe Target-Verbindung für
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie in den Konfigurationsschritten, die in den folgenden Abschnitten beschrieben werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449802/?quality=12&learn=on&captions=ger)
 
 Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Adobe Target und benutzerdefinierte Personalisierungsziele freigeben können, erhalten Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447364/?quality=12&learn=on&captions=ger)
 
 ## Anwendungsfälle {#use-cases}
 

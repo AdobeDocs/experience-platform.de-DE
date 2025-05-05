@@ -33,4 +33,4 @@ Für die ersten Schritte mit Kunden-KI müssen Sie dem [Tutorial zur Datenvorber
 
 Weitere Informationen zu Kunden-KI finden Sie in der [Kunden-KI-Übersicht](../../intelligent-services/customer-ai/overview.md). In diesem Video wird zudem gezeigt, wie Kunden-KI Kundenprofile mit KI-basierten Tendenzen anreichert sowie bei der Kundensegmentierung und Zielgruppenbestimmung hilft.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328476/?quality=12&learn=on&captions=ger)

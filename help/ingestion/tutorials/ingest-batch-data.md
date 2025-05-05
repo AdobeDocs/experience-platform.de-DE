@@ -152,4 +152,4 @@ Weitere Informationen zur Batch-Aufnahme finden Sie im Abschnitt [Übersicht üb
 >
 >Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34310?quality=12&learn=on&captions=ger)

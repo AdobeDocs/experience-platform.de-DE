@@ -47,7 +47,7 @@ Mit einem konsolidierten Edge-System können Sie Werbe-, Marketing- und Personal
 
 Sehen Sie sich das folgende Video an, um einen Überblick über die Adobe Experience Platform-[!DNL Web SDK] und die [!DNL Edge Network] zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37260?quality=12&learn=on&captions=ger)
 
 ## Durch Web SDK ersetzte Bibliotheken {#sdks}
 

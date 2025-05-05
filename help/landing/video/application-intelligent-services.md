@@ -26,4 +26,4 @@ Weitere Informationen finden Sie unter den Links in der Dokumentation zu den ein
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)
 
->[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428515?quality=12&learn=on&captions=ger)

@@ -18,4 +18,4 @@ ht-degree: 17%
 
 Sehen Sie sich an, wie Experience Platform Kunden ein ansprechendes, relevantes Echtzeit-Erlebnis bietet, indem Sie sich dieses Video ansehen. Es folgt einem hypothetischen Erlebnis, das mit Experience Platform aus der Perspektive eines Kunden erstellt wurde.
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35313?quality=12&learn=on&captions=ger)

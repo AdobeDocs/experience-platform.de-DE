@@ -29,7 +29,7 @@ Attribution AI unterstützt zwei Kategorien von Scores: algorithmische und regel
 
 Das folgende Video soll Ihnen dabei helfen, Attribution AI besser zu verstehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36551?learn=on&quality=12&captions=ger)
 
 ## Beispiele für geschäftliche Anwendungsfälle
 

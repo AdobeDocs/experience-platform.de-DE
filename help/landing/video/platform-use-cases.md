@@ -23,4 +23,4 @@ Dieses Video bietet einen Überblick über vier wichtige Anwendungsfälle von Ex
 * Versand und kanalübergreifendes Erlebnis
 * Anwendungsentwicklung für das Kundenerlebnis
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430464?quality=12&learn=on&captions=ger)

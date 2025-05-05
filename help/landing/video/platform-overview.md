@@ -20,4 +20,4 @@ In diesem Video erhalten Sie eine kurze Einführung in das Experience Platform u
 
 Um mehr darüber zu erfahren, lesen Sie zunächst die Übersicht über die [Experience Platform](../home.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428492?quality=12&learn=on&captions=ger)

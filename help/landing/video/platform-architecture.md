@@ -18,4 +18,4 @@ ht-degree: 0%
 
 In diesem Video wird ein allgemeines Architekturdiagramm vorgestellt, in dem die Hauptkomponenten des Experience Platform erläutert werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422781?quality=12&learn=on&captions=ger)

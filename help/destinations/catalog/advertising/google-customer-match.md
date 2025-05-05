@@ -152,7 +152,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Sehen Sie sich das folgende Video an, um eine Erläuterung der Vorteile und der Aktivierung von Daten für den Google-Kundenabgleich zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/38180/)
+>[!VIDEO](https://video.tv.adobe.com/v/326485?captions=ger)
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

@@ -59,5 +59,5 @@ Um Zugriff auf den KI-Assistenten für den Kunden-Support zu erhalten, wenden Si
 
 Weitere Informationen finden Sie im folgenden Video, um zu erfahren, wie Sie mit dem KI-Assistenten für den Kunden-Support eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows verlassen zu müssen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443192?learn=on&captions=ger)
 

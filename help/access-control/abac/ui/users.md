@@ -42,7 +42,7 @@ Die Umstellung auf Adobe Experience Platform-Berechtigungen umfasst zusätzliche
 
 Das folgende Video soll Ihnen dabei helfen, Entwickler- und API-Anmeldeinformationen zu verstehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446407/?learn=on&captions=ger)
 
 ## Nächste Schritte
 

@@ -25,4 +25,4 @@ In diesem Video erhalten Sie ein grundlegendes Verständnis von Vereinigungssche
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch [UI für Vereinigungsschemata](../ui/union-schema.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/343540?quality=12&learn=on&captions=ger)

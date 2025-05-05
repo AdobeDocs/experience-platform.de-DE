@@ -259,6 +259,6 @@ Das folgende Video soll Ihnen dabei helfen, den Konfigurations-Workflow für Kun
 >
 > Das folgende Video ist veraltet. Die aktuellsten Informationen finden Sie in der Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36559?learn=on&quality=12&captions=ger)
 
 <!-- comment -->

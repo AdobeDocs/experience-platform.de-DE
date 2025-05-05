@@ -254,7 +254,7 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 >
 >Die im Video dargestellte Benutzeroberfläche ist veraltet, aber die im Workflow verwendete Logik bleibt gleich.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33392?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

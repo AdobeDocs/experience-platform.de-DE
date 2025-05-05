@@ -153,4 +153,4 @@ In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus
 >
 > Die im folgenden Video angezeigte Experience Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33159?quality=12&learn=on&captions=ger)

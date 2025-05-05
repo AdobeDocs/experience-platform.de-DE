@@ -273,4 +273,4 @@ In diesem Tutorial haben Sie erfolgreich eine Service-Instanz in Attributions-KI
 
 Im folgenden Video wird ein End-to-End-Workflow zum Erstellen einer neuen Instanz in Attributions-KI beschrieben.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36557?learn=on&quality=12&captions=ger)

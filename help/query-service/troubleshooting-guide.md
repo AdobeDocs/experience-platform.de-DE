@@ -65,7 +65,7 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
 +++Antwort
-Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/31575?captions=ger) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?

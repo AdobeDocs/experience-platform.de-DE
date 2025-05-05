@@ -24,7 +24,7 @@ Durch attributbasierte Zugriffssteuerung können Admins Ihres Unternehmens den Z
 
 Das folgende Video soll Ihnen dabei helfen, die attributbasierte Zugriffssteuerung zu verstehen, und beschreibt, wie Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451847?learn=on&captions=ger)
 
 ## Attributbasierte Zugriffssteuerung – Terminologie
 

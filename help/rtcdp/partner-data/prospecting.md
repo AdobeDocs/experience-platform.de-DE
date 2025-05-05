@@ -55,7 +55,7 @@ Bevor Sie Real-Time CDP erweitern, um neue Kundinnen und Kunden anzusprechen und
 
 Im folgenden Video-Tutorial finden Sie eine exemplarische Vorgehensweise, wie Sie potenzielle Zielgruppen erreichen und ansprechen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452867/?learn=on&captions=ger)
 
 ## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
 

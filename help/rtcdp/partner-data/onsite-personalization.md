@@ -64,7 +64,7 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
 
 Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise zur Personalisierung von Onsite-Erlebnissen für unbekannte Besucher zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449261/?learn=on&captions=ger)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 

@@ -16,12 +16,12 @@ Erfahren Sie, wie Adobe den Anwendungsfall „Intelligente Rückgewinnung“ fü
 
 ## Implementierung
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454282/?quality=12&learn=on&captions=ger)
 
 ## Journey-Konfiguration
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453971/?quality=12&learn=on&captions=ger)
 
 ## Zielgruppen- und Zielkonfiguration
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452921/?quality=12&learn=on&captions=ger)

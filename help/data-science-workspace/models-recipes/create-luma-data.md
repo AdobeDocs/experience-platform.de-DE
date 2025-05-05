@@ -51,13 +51,13 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447163?captions=ger)
 
 ### Erstellen der Datensätze für Schulungs-, Scoring- und Scoring-Ergebnisse
 
 Um das Rezept-Builder-Notebook auszuführen oder die API zum Trainieren und Bewerten eines Modells zu verwenden, müssen Sie den/die Datensatz/Datensätze und Schema(s) angeben, die für das Training/die Bewertung verwendet werden. Das folgende Video-Tutorial führt Sie durch die Einrichtung der Datensätze für Schulungs-, Scoring- und Scoring-Ergebnisse sowie des Schemas für Scoring-Ergebnisse, das im Kaufneigungsmodell Luma verwendet wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447430?captions=ger)
 
 ## Nächste Schritte
 

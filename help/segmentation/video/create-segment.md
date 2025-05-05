@@ -27,4 +27,4 @@ Wenn Sie daran interessiert sind, ein Segment mithilfe der Segmentierungs-API zu
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31580?quality=12&learn=on&captions=ger)

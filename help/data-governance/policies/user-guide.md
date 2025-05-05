@@ -223,4 +223,4 @@ Dieses Dokument hat Ihnen einen Überblick darüber verschafft, wie Datennutzung
 
 Das folgende Video zeigt, wie Sie in der [!DNL Experience Platform]-Benutzeroberfläche mit Nutzungsrichtlinien arbeiten:
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37126?quality=12&learn=on&captions=ger)

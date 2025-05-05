@@ -64,4 +64,4 @@ Das folgende Video soll Ihnen das Verständnis für Identity Service erleichtern
 >
 >Die im folgenden Video angezeigte Experience Platform-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31579?quality=12&learn=on&captions=ger)

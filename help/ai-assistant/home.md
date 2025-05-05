@@ -90,7 +90,7 @@ Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444041?learn=on&enablevpops&captions=ger)
 
 ### Funktionsumfang {#feature-scope}
 

@@ -29,7 +29,7 @@ ht-degree: 3%
 
 Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung der [!DNL Graph Simulation] im Arbeitsbereich der Identity Service-Benutzeroberfläche zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444052/?learn=on&enablevpops&captions=ger)
 
 Lesen Sie dieses Dokument, um zu erfahren, wie Sie [!DNL Graph Simulation] verwenden können, um das Verhalten von Identitätsdiagrammen und die Funktionsweise des Diagrammalgorithmus besser zu verstehen.
 

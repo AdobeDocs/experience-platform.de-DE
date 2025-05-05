@@ -93,7 +93,7 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 >* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Zusätzlich zu den Informationen zur Zielgruppenzugehörigkeit, die zum Zeitpunkt der Videoaufzeichnung unterstützt wurden, können Sie jetzt viele weitere Profilattributfelder zuordnen. Sie können auch Zielgruppenmitglieder, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind, nach Marketo exportieren. Diese werden dann den Listen hinzugefügt.
 >* Im Schritt **[!UICONTROL Zielgruppe planen]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Zuordnungs-ID“ hinzufügen]** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440167?quality=12&captions=ger)
 
 ## Ziel überwachen {#monitor-destination}
 

@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Nachdem Sie sich das Video mit [einem von Experience Platform unterstützten Kundenerlebnis](customer-experience.md) angesehen haben, werfen Sie einen Blick hinter die Kulissen, um zu sehen, wie Adobe Experience Platform zur Bereitstellung dieses Erlebnisses verwendet wurde.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35470?quality=12&learn=on&captions=ger)

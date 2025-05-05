@@ -23,4 +23,4 @@ In diesem Video erhalten Sie einen kurzen Überblick über die Benutzeroberfläc
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch zur Benutzeroberfläche von [Adobe Experience Platform](../ui-guide.md).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430440?quality=12&learn=on&captions=ger)

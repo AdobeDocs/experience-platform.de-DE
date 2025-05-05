@@ -26,7 +26,7 @@ Um auf eine umfangreiche Sammlung von Anwendungsfall-Playbooks in der Experience
 
 In diesem Video erfahren Sie, wie Sie Ihre Sandbox erstellen, Berechtigungen konfigurieren und Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen in Journey Optimizer konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449835?learn=on&captions=ger)
 
 ## Erstellen einer Entwicklungs-Sandbox {#create-development-sandbox}
 

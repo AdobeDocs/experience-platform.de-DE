@@ -45,7 +45,7 @@ Adobe hat mehrere Programme auf Experience Platform aufgebaut. Die Dokumentation
 
 Im folgenden Video werden die Anwendungsfälle der einzelnen Programme beschrieben, die auf Experience Platform aufbauen.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428515/?learn=on&captions=ger)
 
 ## Tutorials zu [!DNL Experience Platform]
 

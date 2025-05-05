@@ -15,4 +15,4 @@ ht-degree: 22%
 
 In diesem Video erhalten Sie eine kurze Einführung in [!DNL Experience Platform] und einen Überblick über einige der geschäftlichen Herausforderungen, die damit gelöst werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428492?quality=12&learn=on&captions=ger)

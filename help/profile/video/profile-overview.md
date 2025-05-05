@@ -24,4 +24,4 @@ In diesem Video erhalten Sie einen Überblick über das Echtzeit-Kundenprofil in
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch zur [-Benutzeroberfläche](../ui/user-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/31581?quality=12&learn=on&captions=ger)

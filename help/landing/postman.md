@@ -21,7 +21,7 @@ Postman ist eine Kollaborationsplattform für die API-Entwicklung, mit der Sie U
 
 Im folgenden Video-Handbuch wird das Erstellen und Einrichten Ihrer Postman-Umgebung beschrieben. Eine Postman-Umgebung enthält alle erforderlichen Kopfzeilen, die Sie für API-Aufrufe an die verschiedenen unten bereitgestellten Sammlungen benötigen. Sobald eingerichtet, können Sie bei jedem Ablauf eines Werts (z. B. eines `ACCESS_TOKEN`) den aktuellen Wert in der Umgebung aktualisieren. Dieser neue Wert wird dann für alle Sammlungen verwendet.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832)
+>[!VIDEO](https://video.tv.adobe.com/v/31575?captions=ger)
 
 ## Postman-Sammlungen {#collections}
 
@@ -57,7 +57,7 @@ Weitere Informationen zur Postman-Benutzeroberfläche und ihren verfügbaren Fun
 
 Im folgenden Video wird die Postman-Sammlung des [Identity Management-Services (IMS](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) verwendet, die aus dem öffentlichen GitHub-Repository heruntergeladen werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32919/?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

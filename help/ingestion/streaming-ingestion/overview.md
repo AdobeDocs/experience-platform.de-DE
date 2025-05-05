@@ -21,7 +21,7 @@ Adobe Experience Platform ermöglicht es Ihnen, koordinierte, konsistente und re
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen, und umreißt die oben genannten Konzepte.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31577?quality=12&learn=on&captions=ger)
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 

@@ -28,7 +28,7 @@ In diesem Handbuch wird davon ausgegangen, dass Sie die Ereignisweiterleitung er
 
 Sehen Sie sich das folgende Video an, um einen allgemeinen Überblick über die Überwachungsfunktion zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412565?quality=12&learn=on&captions=ger)
 
 ## Auswählen von Eigenschaften und Umgebungen
 
