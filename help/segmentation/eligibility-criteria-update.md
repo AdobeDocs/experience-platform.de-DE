@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Aktualisierungen der Segmentierungs-Eig
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Aktualisierung der Segmentierungseignungskriterien
 
-Ab dem 24. September 2024 werden zwei Aktualisierungen vorgenommen, die sich auf die Segmentierungseignung auswirken.
+Ab dem 23. Mai 2025 werden zwei Aktualisierungen vorgenommen, die sich auf die Segmentierungseignung auswirken.
 
 1. Abfragetypen für Streaming- und Edge-Segmentierung
 2. Zusammenführungsrichtlinien für Streaming und Edge-Segmentierung
