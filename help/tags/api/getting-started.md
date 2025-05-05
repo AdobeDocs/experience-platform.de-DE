@@ -2,7 +2,7 @@
 title: Authentifizieren von und Zugreifen auf die Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsanmeldedaten.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 54%
@@ -16,6 +16,8 @@ Um mithilfe der [Reactor-API](https://developer.adobe.com/experience-platform-ap
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 In diesem Handbuch wird beschrieben, wie Sie die Adobe-Entwicklerkonsole verwenden, um die Werte für die einzelnen Header zu erfassen, damit Sie Aufrufe an die Reactor-API durchführen können.
 
@@ -51,7 +53,7 @@ Wählen Sie als Nächstes den Authentifizierungstyp aus, um Zugriffstoken zu gen
 
 >[!IMPORTANT]
 >
->Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]**-Methode aus, da dies in Zukunft die einzige unterstützte Methode ist. Die Methode **[!UICONTROL Service-Konto (JWT]** ist veraltet. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen OAuth-Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) im Tutorial zur Experience Platform-API-Authentifizierung.
+>Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]**-Methode aus, da dies in Zukunft die einzige unterstützte Methode ist. Die Methode **[!UICONTROL Service-Konto (JWT]** ist veraltet. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen OAuth-Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative} [Generieren eines JSON-Web-Tokens (JWT)](/help/landing/api-authentication.md#jwt) im Tutorial zur Authentifizierung über die Experience Platform-API.
 
 Klicken Sie auf **Weiter**, um fortzufahren.
 
