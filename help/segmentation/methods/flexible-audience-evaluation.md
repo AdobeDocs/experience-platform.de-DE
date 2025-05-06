@@ -3,9 +3,9 @@ title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
+source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1084'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segme
 
 Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgenden Bedingungen:
 
-- Sie können nur eine flexible Zielgruppenauswertung (zweimal **&#x200B;**&#x200B;pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
+- Sie können nur eine flexible Zielgruppenauswertung (zweimal **** pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
 - Sie haben **maximal** 50 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Produktions-/**.
 - Sie haben **maximal** 100 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Entwicklungs**-Sandbox.
 - Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.
@@ -326,7 +326,7 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielgruppenbewertung zugreifen und diese verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453649?&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Häufig gestellte Fragen {#faq}
 
@@ -337,6 +337,14 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur flexiblen Zielgru
 +++ Antwort
 
 Sie können eine Zielgruppe sofort nach ihrer Erstellung mit einer flexiblen Zielgruppenauswertung aktivieren.
+
++++
+
+### Wie lange dauert die flexible Auswertung von Zielgruppen?
+
++++ Antwort
+
+Es kann bis zu vier Stunden dauern, bis ein flexibler Auftrag zur Zielgruppenauswertung abgeschlossen ist.
 
 +++
 
