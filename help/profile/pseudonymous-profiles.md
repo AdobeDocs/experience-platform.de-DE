@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 51%
+source-wordcount: '1264'
+ht-degree: 50%
 
 ---
 
@@ -43,8 +43,9 @@ Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folg
 >
 >- Profileinstellungen verwalten
 >- Anzeigen von Profilen
+>- Anzeigen von Identitäts-Namensräumen
 >
->Mit **Berechtigung** Profileinstellungen verwalten“ können Sie die Datenabläufe festlegen, während Sie mit der Berechtigung **Profile anzeigen** die Datenabläufe anzeigen können.
+>Mit der Berechtigung **Profileinstellungen verwalten** können Sie die Gültigkeitsdauern von Daten festlegen, mit der Berechtigung **Profile anzeigen** können Sie die Gültigkeitsdauern von Daten anzeigen und mit der Berechtigung **Identity-Namespaces anzeigen** können Sie die verfügbaren Identity-Namespaces anzeigen, die Sie verwenden können.
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](../access-control/home.md#permissions).
 
