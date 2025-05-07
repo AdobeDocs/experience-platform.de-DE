@@ -48,6 +48,7 @@ Führen Sie die folgenden Schritte aus, um die [!DNL Reddit] Conversions-API-Erw
 3. Geben Sie die folgenden Konfigurationsdetails an:
    - **Pixel-ID**: Geben Sie Ihre [!DNL Reddit Ads] Pixel-ID ein.
    - **Konversionszugriffs-Token**: Geben Sie das in Ihrem [!DNL Reddit Ads]-Konto generierte Token ein und wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
+
      ![Konfigurationsdetails für die API-Erweiterung „Reddit Conversions“, einschließlich Feldern für Pixel-ID und Konversionszugriffs-Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#config-rule}
