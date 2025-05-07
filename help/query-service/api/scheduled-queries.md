@@ -5,10 +5,10 @@ title: Zeitpläne-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie für geplante Abfragen mit der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 31%
+source-wordcount: '1224'
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit b
 
 ### Abrufen einer Liste geplanter Abfragen
 
-Sie können eine Liste aller geplanten Abfragen für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an den `/schedules`-Endpunkt senden.
+Sie können eine Liste aller geplanten Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/schedules`-Endpunkt senden.
 
 **API-Format**
 
@@ -158,10 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `query.dbName` | Der Name der Datenbank, für die Sie eine geplante Abfrage erstellen. |
-| `query.sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
+| `query.dbName` | Der Name der Datenbank, in der die geplante Abfrage ausgeführt wird. |
+| `query.sql` | Die SQL-Abfrage, die nach dem definierten Zeitplan ausgeführt werden soll. |
 | `query.name` | Der Name der geplanten Abfrage. |
-| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet „30 * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden kurzen Ausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal monatlich am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `1 0 0 1 1 *`. |
+| `query.description` | Eine optionale Beschreibung für die geplante Abfrage. |
+| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Unter [Crontab.guru](https://crontab.guru/) finden Sie eine interaktive Möglichkeit, Cron-Ausdrücke zu erstellen, zu validieren und zu verstehen. In diesem Beispiel bedeutet „30 * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden kurzen Ausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal monatlich am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 1 *`. |
 | `schedule.startDate` | Das Startdatum für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
 
 **Antwort**
@@ -306,7 +307,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur angegebe
 
 ### Aktualisieren der Details einer angegebenen geplanten Abfrage
 
-Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, indem Sie eine PATCH-Anfrage an den `/schedules`-Endpunkt senden und im Anfragepfad dessen ID angeben.
+Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, indem Sie eine PATCH-Anfrage an den `/schedules`-Endpunkt stellen und im Anfragepfad dessen ID angeben.
 
 Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/schedule`.
 
@@ -322,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie PATCH möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie an PATCH senden möchten. |
 
 
 **Anfrage**
@@ -375,7 +376,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie PATCH möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie an PATCH senden möchten. |
 
 **Anfrage**
 
@@ -431,7 +432,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie DELETE erstellen möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie an DELETE senden möchten. |
 
 **Anfrage**
 
