@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1886'
 ht-degree: 6%
 
 ---
@@ -113,7 +113,7 @@ Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die
 
 Wenn Ihr System zwei Personen-IDs sendet, kann die Implementierung die Anforderung an einen Ein-Personen-Namespace nicht erfüllen. Wenn beispielsweise die identityMap in Ihrer WebSDK-Implementierung eine CRMID, eine customerID und einen ECID-Namespace enthält, gibt es keine Garantie, dass jedes einzelne Ereignis sowohl CRMID als auch customerID enthält.
 
-Idealerweise sollten Sie eine Payload ähnlich der folgenden senden:
+Sie sollten **nicht** eine Payload wie die folgende senden:
 
 ```json
 {
