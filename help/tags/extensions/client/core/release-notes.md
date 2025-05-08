@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 88%
+source-wordcount: '1693'
+ht-degree: 86%
 
 ---
 
@@ -14,6 +14,14 @@ ht-degree: 88%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 8. Mai 2025
+
+v3.4.3
+
+* Es wurde ein Problem behoben, bei dem **Datenelemente** > **JavaScript-Tools** > **Einfache Ersetzung** ein Kontrollkästchen **Alle ersetzen** anzeigte, jedoch einen Fehler verursachte, wenn versucht wurde, die Regel mit aktiviertem Kontrollkästchen zu speichern.
+* Aktualisierungen @adobe/react-spectrum auf Version 3.41.0.
+* Aktualisierungen @adobe/reactor-sandbox Version 13.2.1.
 
 ## 23. Oktober 2024
 
@@ -29,7 +37,7 @@ v3.4.1
    * Keydown
    * KeyUp
 * Fügt die Möglichkeit hinzu, Tests für viele Werte („Weitere hinzufügen“-Optionen) mit den folgenden Delegaten durchzuführen:
-   * Events
+   * Ereignisse
       * Änderung
    * Bedingungen
       * Cookie
@@ -123,7 +131,7 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=de) für Adobe Experience Platform
+* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
 
 ## 6. Januar 2021
 
