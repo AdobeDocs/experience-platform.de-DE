@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -160,6 +160,8 @@ In der Diagrammsimulation kann diese Aufnahme wie folgt aussehen:
 ![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png)
 
 >[!TAB Authentifizierte Ereignisse ohne Personenkennungen]
+
+In diesem Beispiel können Sie davon ausgehen, dass das folgende Ereignis an Experience Platform gesendet wurde, während John (der Endbenutzer) während der Authentifizierung Ihre Website durchsuchte. Trotz der Authentifizierung kann Experience Platform John jedoch nicht identifizieren, da in dem Ereignis keine Personenkennungen vorhanden sind. Daher wird dieses Ereignis als anonymer Benutzer interpretiert, der die Adobe Business-Website durchsucht, anstatt es als eine speziell mit John verknüpfte Online-Aktivität zu erkennen.
 
 ```json
 {
