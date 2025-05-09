@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
+keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
 solution: Experience Platform
 title: Datennutzungskennzeichnungen – Übersicht
 description: Erfahren Sie, wie Datennutzungskennzeichnungen verwendet werden, um die Einhaltung von Data-Governance-Richtlinien in Adobe Experience Platform durchzusetzen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 90%
 
 ---
 
@@ -28,7 +28,7 @@ Mit Datennutzungskennzeichnungen können Sie Datensätze anhand der für diese D
 
 Datennutzungsbeschriftungen, die auf Datensatzebene angewendet werden, werden für alle Felder des Datensatzes übernommen. Außerdem können Beschriftungen direkt auf einzelne Felder (Spaltenüberschriften) in einem Datensatz angewendet werden, ohne dass eine Übernahme erfolgt.
 
-[!DNL Experience Platform] bietet mehrere standardmäßige „Kern“-Datennutzungsbeschriftungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Kennzeichnungen und zu den Governance-Richtlinien, für die sie stehen, finden Sie im Handbuch zu den [grundlegenden Datennutzungskennzeichnungen](reference.md).
+[!DNL Experience Platform] bietet mehrere standardmäßige „Kern“-Datennutzungsbeschriftungen, die eine Vielzahl von allgemeinen Einschränkungen für die Data Governance abdecken. Weitere Informationen zu diesen Kennzeichnungen und zu den Governance-Richtlinien, für die sie stehen, finden Sie im Handbuch zu den [grundlegenden Datennutzungskennzeichnungen](reference.md).
 
 Zusätzlich zu den von Adobe bereitgestellten Beschriftungen können Sie auch eigene benutzerdefinierte Beschriftungen für Ihr Unternehmen definieren. Weitere Informationen finden Sie im Abschnitt [Verwalten von Beschriftungen](#manage-labels).
 
@@ -57,7 +57,7 @@ Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder
 
 ### Verwenden der Benutzeroberfläche
 
-Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können den Arbeitsbereich **[!UICONTROL Schemata]** verwenden, um [Kennzeichnungen auf Ihre Experience-Datenmodell(XDM)-Schemata anzuwenden](../../xdm/tutorials/labels.md), oder stattdessen über das Benutzerhandbuch zu Datennutzungskennzeichnungen erfahren, wie Sie [benutzerdefinierte Kennzeichnungen in der Benutzeroberfläche für **[!UICONTROL Richtlinien] erstellen und verwalten](./user-guide.md).
+Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können den Arbeitsbereich **[!UICONTROL Schemata]** verwenden, [ Kennzeichnungen auf Ihre Experience-Datenmodell(XDM)-](../../xdm/tutorials/labels.md) anzuwenden oder zu erfahren, wie Sie [benutzerdefinierte Kennzeichnungen in der **[!UICONTROL Richtlinien]**-Benutzeroberfläche erstellen und verwalten](./user-guide.md), indem Sie stattdessen das Benutzerhandbuch zu Datennutzungskennzeichnungen lesen.
 
 >[!IMPORTANT]
 >

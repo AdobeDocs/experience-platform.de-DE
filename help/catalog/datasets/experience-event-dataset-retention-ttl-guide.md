@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 1%
 
 ---
@@ -301,11 +301,11 @@ Diese häufig gestellten Fragen befassen sich mit praktischen Fragen zu Aufträg
 ### Auf welche Arten von Datensätzen kann ich Regeln für Aufbewahrungsrichtlinien anwenden?
 
 +++Antwort
-Sie können TTL-basierte Aufbewahrungsrichtlinien auf jeden Datensatz anwenden, der ein Zeitreihenschema verwendet. Dazu gehören Datensätze, die auf der standardmäßigen XDM ExperienceEvent-Klasse basieren, sowie benutzerdefinierte Schemata, die die XDM Time Series-Klasse erweitern.
+Sie können TTL-basierte Aufbewahrungsrichtlinien auf jeden Datensatz anwenden, der Zeitreihenverhalten verwendet. Dazu gehören Datensätze, die auf der standardmäßigen XDM ExperienceEvent-Klasse basieren, sowie benutzerdefinierte Schemata, die zur Erfassung von Zeitreihendaten entwickelt wurden.
 
 Für den Ablauf auf Zeilenebene sind die folgenden technischen Bedingungen erforderlich:
 
-- Das Schema muss die Basisklasse der XDM-Zeitreihe erweitern.
+- Das Schema muss so konzipiert sein, dass es Zeitreihendaten erfasst.
 - Das Schema muss ein Zeitstempelfeld enthalten, das zum Auswerten des Ablaufs verwendet wird.
 - Der Datensatz sollte Daten auf Ereignisebene speichern, normalerweise unter Verwendung oder Erweiterung der XDM ExperienceEvent-Klasse.
 - Der Datensatz muss im Katalog-Service registriert sein, da TTL-Einstellungen über `extensions.adobe_lakeHouse.rowExpiration` angewendet werden.
