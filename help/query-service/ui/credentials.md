@@ -46,7 +46,7 @@ Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Info
 >
 >![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/de/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
 ### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
@@ -68,7 +68,7 @@ Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten z
 
 Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
 
@@ -104,7 +104,7 @@ Alle erforderlichen Berechtigungen sind jetzt in Adobe Developer Console konfigu
 
 ### Anmeldedaten erstellen {#generate-credentials}
 
-Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im **Navigationsbereich** Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
+Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im ]**Navigationsbereich**[!UICONTROL  Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
 
 ![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“ und hervorgehobener Option „Anmeldeinformationen generieren“.](../images/ui/credentials/generate-credentials.png)
 
