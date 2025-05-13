@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zu Query Service-Anmeldeinformationen
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1885'
 ht-degree: 3%
 
 ---
@@ -46,7 +46,7 @@ Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Info
 >
 >![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/de/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
 ### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
@@ -68,9 +68,14 @@ Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten z
 
 Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="Migrieren zu OAuth-Server-zu-Server-Anmeldedaten"
+>abstract="Diese Migration ist erforderlich, da die JWT-Anmeldeinformationen nach dem 30. Juni 2025 nicht mehr funktionieren. Es dauert etwa 30-40 Sekunden und kann nach dem Start nicht mehr abgebrochen werden. Alle vorhandenen Vorgänge und Integrationen funktionieren nach der Migration weiterhin mit OAuth. Sie können diesen Bildschirm verlassen und jederzeit zurückkehren, um den Status zu überprüfen."
 
 Sie können nicht ablaufende Anmeldeinformationen verwenden, um eine permanentere Verbindung zu einem externen Client herzustellen.
 
@@ -99,7 +104,7 @@ Alle erforderlichen Berechtigungen sind jetzt in Adobe Developer Console konfigu
 
 ### Anmeldedaten erstellen {#generate-credentials}
 
-Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im **Navigationsbereich** Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
+Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im ]**Navigationsbereich**[!UICONTROL  Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
 
 ![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“ und hervorgehobener Option „Anmeldeinformationen generieren“.](../images/ui/credentials/generate-credentials.png)
 
