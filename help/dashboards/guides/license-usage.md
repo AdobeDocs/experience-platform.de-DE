@@ -6,7 +6,7 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3455'
 ht-degree: 39%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 39%
 # Lizenznutzungs-Dashboard {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
->
+>id="testy-mctestface"
+>title="Testdialogfeld, das nicht sichtbar sein sollte"
+>abstract="Das Objekt {name} wird auf {date} angezeigt."
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="Hauptprodukttabelle"
@@ -135,7 +138,7 @@ Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metri
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
 ## [!UICONTROL Lizenznutzung] Dashboard-Daten
 
@@ -227,7 +230,7 @@ Auf **[!UICONTROL Registerkarte]** Produkte“ werden Lizenznutzungsdaten nach g
 
 >[!NOTE]
 >
->Der [!UICONTROL Lizenzbetrag] für Add-ons ist im Gesamtlizenzbetrag des Kernprodukts enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle „Add-ons[!UICONTROL &#x200B; zeigt einen für das Add]on spezifischen „Lizenzbetrag“ an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
+>Der [!UICONTROL Lizenzbetrag] für Add-ons ist im Gesamtlizenzbetrag des Kernprodukts enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle „Add-ons[!UICONTROL  zeigt einen für das Add]on spezifischen „Lizenzbetrag“ an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
 
 ![Die Registerkarte „Produkte“ im Lizenznutzungs-Dashboard mit Tabellen zu Kernprodukten und Add-ons.](../images/license-usage/products-tab.png)
 
@@ -253,7 +256,7 @@ Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen mit präzisen
 >
 >Die Prognosen werden wöchentlich jeden Freitag aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol enthalten (![Dieses Infosymbol.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
 
-Zeigen Sie auf der Registerkarte „Produkt“ unter der Tabelle [!UICONTROL Kernprodukte] eine Zusammenfassung der Nutzung [!UICONTROL &#x200B; Produktberechtigungen &#x200B;].
+Zeigen Sie auf der Registerkarte „Produkt“ unter der Tabelle [!UICONTROL Kernprodukte] eine Zusammenfassung der Nutzung [!UICONTROL  Produktberechtigungen ].
 
 ![Die Registerkarte [!UICONTROL Lizenznutzung] [!UICONTROL Produkt] mit einem hervorgehobenen Produkt und der Spalte „Prognostizierte Nutzung“.](../images/license-usage/product-predicted-usage.png)
 
@@ -320,11 +323,11 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD-STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD-STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 10M</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD-PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -335,4 +338,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
