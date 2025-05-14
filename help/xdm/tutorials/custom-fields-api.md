@@ -2,7 +2,7 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren können.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 2%
@@ -188,7 +188,7 @@ Das Äquivalent eines [!UICONTROL Long]-Felds, das über die Schema Builder-Benu
 
 ## [!UICONTROL kurz] {#short}
 
-Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-32768` bzw. `32768`).
+Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-32768` bzw. `32767`).
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Ben
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Byte] {#byte}
 
-Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-128` bzw. `128`).
+Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-128` bzw. `127`).
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benu
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
