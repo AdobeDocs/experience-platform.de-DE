@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform Klassen erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 7%
 
 ---
@@ -56,7 +56,7 @@ Wählen Sie **[!UICONTROL Klasse erstellen]** auf der Registerkarte [!UICONTROL 
 
 ![Die Registerkarte [!UICONTROL Klassen] des Arbeitsbereichs [!UICONTROL Schemata] mit [!UICONTROL Klasse erstellen] hervorgehoben](../../images/ui/resources/classes/create-class.png)
 
-Das [!UICONTROL Klasse erstellen] wird angezeigt. Geben Sie einen [!UICONTROL Anzeigenamen] und [!UICONTROL Beschreibung] für Ihre Klasse ein und wählen Sie das beabsichtigte Verhalten Ihrer Klasse mit den Optionsfeldern aus. Klassen können vom Typ &quot;[!UICONTROL &quot; &#x200B;] &quot;[!UICONTROL &quot; &#x200B;]. Wählen Sie **[!UICONTROL Erstellen]** aus, um Ihre Auswahl zu bestätigen und zur Registerkarte [!UICONTROL Klassen] zurückzukehren.
+Das [!UICONTROL Klasse erstellen] wird angezeigt. Geben Sie einen [!UICONTROL Anzeigenamen] und [!UICONTROL Beschreibung] für Ihre Klasse ein und wählen Sie das beabsichtigte Verhalten Ihrer Klasse mit den Optionsfeldern aus. Klassen können vom Typ &quot;[!UICONTROL &quot; ] &quot;[!UICONTROL &quot; ]. Wählen Sie **[!UICONTROL Erstellen]** aus, um Ihre Auswahl zu bestätigen und zur Registerkarte [!UICONTROL Klassen] zurückzukehren.
 
 ![Das Dialogfeld [!UICONTROL Klasse erstellen] mit hervorgehobenem [!UICONTROL Erstellen].](../../images/ui/resources/classes/create-class-dialog.png)
 
@@ -70,7 +70,7 @@ Alternativ können Sie eine Klasse erstellen, indem Sie ein Schema manuell erste
 
 ![Die Registerkarte [!UICONTROL Klassen] des Arbeitsbereichs [!UICONTROL Schemata] mit [!UICONTROL Schema erstellen] hervorgehoben](../../images/ui/resources/classes/create-schema.png)
 
-Wählen Sie **&#x200B;**&#x200B;Dialogfeld [!UICONTROL Schema erstellen] die Option „Manuell“ aus.
+Wählen Sie **** Dialogfeld [!UICONTROL Schema erstellen] die Option „Manuell“ aus.
 
 >[!NOTE]
 >
@@ -78,11 +78,11 @@ Wählen Sie **&#x200B;**&#x200B;Dialogfeld [!UICONTROL Schema erstellen] die Opt
 
 ![Das Dialogfeld „Schema erstellen“ mit den Workflow-Optionen und hervorgehobener Auswahl.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-Der Workflow zur Schemaerstellung wird angezeigt. Wählen Sie [!UICONTROL &#x200B; Abschnitt &quot;]&quot; **[!UICONTROL Sonstige]** aus. Eine Liste der verfügbaren Klassen wird angezeigt. Wählen Sie **[!UICONTROL Klasse erstellen]** aus.
+Der Workflow zur Schemaerstellung wird angezeigt. Wählen Sie [!UICONTROL  Abschnitt &quot;]&quot; **[!UICONTROL Sonstige]** aus. Eine Liste der verfügbaren Klassen wird angezeigt. Wählen Sie **[!UICONTROL Klasse erstellen]** aus.
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit [!UICONTROL Sonstige] hervorgehoben im Abschnitt [!UICONTROL Schemadetails].](../../images/ui/resources/classes/other-schema-details.png)
 
-Das [!UICONTROL Klasse erstellen] wird angezeigt. Geben Sie einen [!UICONTROL Anzeigenamen] und [!UICONTROL Beschreibung] für Ihre Klasse ein und wählen Sie das beabsichtigte Verhalten Ihrer Klasse mit den Optionsfeldern aus. Klassen können vom Typ &quot;[!UICONTROL &quot; &#x200B;] &quot;[!UICONTROL &quot; &#x200B;]. Wählen Sie **[!UICONTROL Erstellen]** aus, um Ihre Auswahl zu bestätigen und zur Registerkarte [!UICONTROL Klassen] zurückzukehren.
+Das [!UICONTROL Klasse erstellen] wird angezeigt. Geben Sie einen [!UICONTROL Anzeigenamen] und [!UICONTROL Beschreibung] für Ihre Klasse ein und wählen Sie das beabsichtigte Verhalten Ihrer Klasse mit den Optionsfeldern aus. Klassen können vom Typ &quot;[!UICONTROL &quot; ] &quot;[!UICONTROL &quot; ]. Wählen Sie **[!UICONTROL Erstellen]** aus, um Ihre Auswahl zu bestätigen und zur Registerkarte [!UICONTROL Klassen] zurückzukehren.
 
 ![Das Dialogfeld [!UICONTROL Klasse erstellen] mit hervorgehobenem [!UICONTROL Erstellen].](../../images/ui/resources/classes/create-class-from-schema.png)
 
@@ -92,7 +92,7 @@ Die Klassenliste wird im Abschnitt [!UICONTROL Schemadetails] aktualisiert, und 
 
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. &#x200B;Die Basisstruktur des Schemas (bereitgestellt von der -Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klassen- und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen &#x200B;] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../../images/ui/resources/classes/schema-details.png)
 
@@ -112,7 +112,7 @@ Sobald Sie über ein Schema verfügen, das eine benutzerdefinierte Klasse verwen
 
 Ein Platzhalter **[!UICONTROL Nicht benanntes Feld]** wird auf der Arbeitsfläche angezeigt, und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Wählen **[!UICONTROL unter „Zuweisen zu]** die Option **[!UICONTROL Klasse]** aus.
 
-![Ein nicht benanntes Feld auf der Arbeitsfläche des Schema-Editors mit der ausgewählten und hervorgehobenen [!UICONTROL &#x200B; &quot;]&quot;.](../../images/ui/resources/classes/assign-to-class.png)
+![Ein nicht benanntes Feld auf der Arbeitsfläche des Schema-Editors mit der ausgewählten und hervorgehobenen [!UICONTROL  &quot;]&quot;.](../../images/ui/resources/classes/assign-to-class.png)
 
 Spezifische Schritte zum Konfigurieren [ Hinzufügen des Felds zur Klasse finden ](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“. Fügen Sie der Klasse weiterhin so viele Felder wie nötig hinzu. Wenn Sie fertig sind, wählen **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Klasse zu speichern.
 
@@ -120,7 +120,7 @@ Spezifische Schritte zum Konfigurieren [ Hinzufügen des Felds zur Klasse finden
 
 Wenn Sie zuvor Schemata erstellt haben, die diese Klasse verwenden, werden die neu hinzugefügten Felder automatisch in diesen Schemata angezeigt.
 
-## Bearbeiten einer Klasse (#edit-a-class)
+## Bearbeiten einer Klasse {#edit-a-class}
 
 >[!NOTE]
 >
@@ -132,10 +132,10 @@ Sie können eine Klasse über den Schema-Workflow bearbeiten, indem Sie ein vorh
 
 ![Der Schema-Editor mit einer vorhandenen Klasse und der [!UICONTROL Schema erstellen] wurde hervorgehoben.](../../images/ui/resources/classes/edit-class-options.png)
 
-Wenn Sie sich für die Erstellung eines neuen Schemas entscheiden, finden Sie weitere Details im Abschnitt [Erstellen eines ](#create-schema)&quot;. Nachdem Sie das Erstellen des Schemas abgeschlossen haben (oder nachdem Sie ein vorhandenes Schema ausgewählt haben), wird der Schema-Editor angezeigt. Um ein vorhandenes Klassenfeld zu aktualisieren, wählen Sie das Feld aus der Schemastruktur aus. Die Feldinformationen werden in der rechten Leiste angezeigt. Stellen Sie sicher[!UICONTROL &#x200B; dass „Zuweisen zu]
+Wenn Sie sich für die Erstellung eines neuen Schemas entscheiden, finden Sie weitere Details im Abschnitt [Erstellen eines ](#create-schema)&quot;. Nachdem Sie das Erstellen des Schemas abgeschlossen haben (oder nachdem Sie ein vorhandenes Schema ausgewählt haben), wird der Schema-Editor angezeigt. Um ein vorhandenes Klassenfeld zu aktualisieren, wählen Sie das Feld aus der Schemastruktur aus. Die Feldinformationen werden in der rechten Leiste angezeigt. Stellen Sie sicher[!UICONTROL  dass „Zuweisen zu]
 die Option **[!UICONTROL Klasse]** ausgewählt ist, da andernfalls Ihre Aktualisierungen keine Auswirkungen auf die Klasse haben.
 
-![Der Schema-Editor mit einem ausgewählten und hervorgehobenen Feld und der angezeigten rechten Leiste, wobei [!UICONTROL &#x200B; „Zuweisen zu“ hervorgehoben &#x200B;].](../../images/ui/resources/classes/edit-existing-field.png)
+![Der Schema-Editor mit einem ausgewählten und hervorgehobenen Feld und der angezeigten rechten Leiste, wobei [!UICONTROL  „Zuweisen zu“ hervorgehoben ].](../../images/ui/resources/classes/edit-existing-field.png)
 
 Nehmen Sie die gewünschten Änderungen am Feld vor, indem Sie in der rechten Leiste nach unten scrollen, um **[!UICONTROL Übernehmen]** zum Speichern der Änderungen auszuwählen.
 
@@ -143,7 +143,7 @@ Nehmen Sie die gewünschten Änderungen am Feld vor, indem Sie in der rechten Le
 >
 > Alle Aktualisierungen, die Sie an Feldern vornehmen, werden gemäß den [Regeln der Schemaentwicklung“ auf alle Schemata angewendet, die diese Klasse ](../../schema/composition.md#evolution).
 
-![Der Schema-Editor mit einem ausgewählten Feld und der rechten Leiste, die angezeigt wird, wobei &quot;[!UICONTROL &quot; hervorgehoben &#x200B;].](../../images/ui/resources/classes/save-changes.png)
+![Der Schema-Editor mit einem ausgewählten Feld und der rechten Leiste, die angezeigt wird, wobei &quot;[!UICONTROL &quot; hervorgehoben ].](../../images/ui/resources/classes/save-changes.png)
 
 Um neue Felder hinzuzufügen, folgen Sie der Anleitung [Felder zu einer Klasse hinzufügen](#add-fields-to-a-class). Wenn Sie fertig sind, wählen **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Klasse zu speichern.
 
