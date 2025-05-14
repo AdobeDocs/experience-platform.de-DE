@@ -3,20 +3,24 @@ title: Endpunkt des öffentlichen Zertifikats
 description: Erfahren Sie, wie Sie Ihre öffentlichen Zertifikate mit dem Endpunkt /public-certificate der MTLS-Service-API abrufen.
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
-source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
+source-git-commit: d74353e70e992150c031397009d0c8add3df5e7b
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 3%
+source-wordcount: '471'
+ht-degree: 2%
 
 ---
 
 # Endpunkt des öffentlichen Zertifikats
 
+>[!NOTE]
+>
+>Adobe unterstützt nicht mehr das statische Herunterladen öffentlicher mTLS-Zertifikate. Verwenden Sie diese API, um gültige Zertifikate für Ihre Integrationen abzurufen. Um Service-Unterbrechungen zu vermeiden, ist jetzt ein automatisierter Abruf erforderlich.
+
 In diesem Handbuch wird erläutert, wie Sie mit dem öffentlichen Zertifikatendpunkt öffentliche Zertifikate für die Adobe-Programme Ihres Unternehmens sicher abrufen können. Er enthält einen Beispiel-API-Aufruf und detaillierte Anweisungen, die Entwicklern bei der Authentifizierung und Überprüfung des Datenaustauschs helfen.
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
+Bevor Sie fortfahren, lesen Sie [Erste Schritte](./getting-started.md) um wichtige Details zu erforderlichen Kopfzeilen und zur Interpretation von Beispiel-API-Aufrufen zu erhalten.
 
 ## API-Pfade {#paths}
 
@@ -28,7 +32,7 @@ Im Folgenden finden Sie die wesentlichen API-Pfade, die Sie für die Verwendung 
 
 ## Abrufen Ihrer öffentlichen Zertifikate {#list}
 
-Sie können die öffentlichen Zertifikate für alle Adobe-Programme Ihres Unternehmens abrufen, indem Sie eine GET-Anfrage an den `/v1/certificate/public-certificate`-Endpunkt stellen.
+Stellen Sie eine GET-Anfrage an den `/v1/certificate/public-certificate`-Endpunkt, um die öffentlichen Zertifikate für eines der Adobe-Programme Ihres Unternehmens abzurufen.
 
 **API-Format**
 
@@ -105,10 +109,19 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zurückgegeben und die 
 
 +++
 
+## Automatisierung des Zertifikatlebenszyklus {#certificate-lifecycle-automation}
+
+Adobe automatisiert den Lebenszyklus öffentlicher mTLS-Zertifikate, um Kontinuität zu gewährleisten und Service-Unterbrechungen zu reduzieren.
+
+- Zertifikate werden 60 Tage vor ihrem Ablauf erneut ausgestellt.
+- Zertifikate werden 30 Tage vor ihrem Ablauf widerrufen.
+
+>[!NOTE]
+>
+>Diese Zeitpläne werden im Laufe der Zeit in Übereinstimmung mit den [CA/B-Forum-Richtlinien](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) verkürzt, die darauf abzielen, die Zertifikatlebensdauer auf maximal 47 Tage zu reduzieren.
+
+Sie müssen Ihre Integrationen aktualisieren, um den automatisierten Abruf über die API zu unterstützen. Verlassen Sie sich nicht auf manuelle Zertifikat-Downloads oder statische Kopien, da diese zu abgelaufenen oder widerrufenen Zertifikaten führen können.
+
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Ihre öffentlichen Zertifikate mit der Adobe Experience Platform-API abrufen können. Weitere Informationen zur Verwaltung von Kundendaten, um die Einhaltung von Vorschriften und organisatorischen Richtlinien sicherzustellen, finden Sie unter [Data Governance - Übersicht](../home.md).
-
-<!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
-
-<!-- Add link after developer page is live -->
+Nachdem Sie Ihre öffentlichen Zertifikate mit der API abgerufen haben, aktualisieren Sie Ihre Integrationen, damit dieser Endpunkt regelmäßig aufgerufen wird, bevor die Zertifikate ablaufen. Um diesen Aufruf interaktiv zu testen, besuchen Sie die [MTLS-API-Referenzseite](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Weitere Anleitungen zu zertifikatbasierten Integrationen finden Sie unter [Datenverschlüsselung in Adobe Experience Platform - Übersicht](../../landing/governance-privacy-security/encryption.md) oder [Data Governance - Übersicht](../home.md).

@@ -2,10 +2,10 @@
 title: Datenverschlüsselung in Adobe Experience Platform
 description: Erfahren Sie, wie Daten bei der Übertragung und im Ruhezustand in Adobe Experience Platform verschlüsselt werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 7%
+source-wordcount: '849'
+ht-degree: 6%
 
 ---
 
@@ -34,7 +34,7 @@ Nachdem Daten in das System eingebracht und [im Ruhezustand verschlüsselt](#at-
 
 ### mTLS-Protokoll-Unterstützung {#mtls-protocol-support}
 
-Sie können jetzt Mutual Transport Layer Security (mTLS) verwenden, um erweiterte Sicherheit bei ausgehenden Verbindungen zum [HTTP-API-Ziel](../../destinations/catalog/streaming/http-destination.md) und Adobe Journey Optimizer [benutzerdefinierte Aktionen](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) zu gewährleisten. mTLS ist eine End-to-End-Sicherheitsmethode zur gegenseitigen Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen austauschen, auch die sind, die sie vorgeben zu sein, bevor die Daten ausgetauscht werden. mTLS umfasst einen zusätzlichen Schritt im Vergleich zu TLS, bei dem der Server auch das Zertifikat der Kundin bzw. des Kunden anfordert und überprüft, ob es gültig ist.
+Sie können jetzt Mutual Transport Layer Security (mTLS) verwenden, um erweiterte Sicherheit bei ausgehenden Verbindungen zum [HTTP-API-Ziel](../../destinations/catalog/streaming/http-destination.md) und Adobe Journey Optimizer [benutzerdefinierte Aktionen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) zu gewährleisten. mTLS ist eine End-to-End-Sicherheitsmethode zur gegenseitigen Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen austauschen, auch die sind, die sie vorgeben zu sein, bevor die Daten ausgetauscht werden. mTLS umfasst einen zusätzlichen Schritt im Vergleich zu TLS, bei dem der Server auch das Zertifikat der Kundin bzw. des Kunden anfordert und überprüft, ob es gültig ist.
 
 Wenn Sie Workflows für [Verwendung von mTLS mit benutzerdefinierten Aktionen von Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) und Experience Platform-HTTP-API-Zielen verwenden möchten, müssen für die Serveradresse, die Sie in die Benutzeroberfläche für Kundenaktionen von Adobe Journey Optimizer oder die Benutzeroberfläche für Ziele einfügen, TLS-Protokolle deaktiviert und nur mTLS aktiviert sein. Wenn das TLS 1.2-Protokoll für diesen Endpunkt noch aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt bei der Verwendung von mTLS mit diesen Workflows ein mTLS-**Verbindungsendpunkt** muss.
 
@@ -48,14 +48,22 @@ Wenn Sie Workflows für [Verwendung von mTLS mit benutzerdefinierten Aktionen vo
 
 >[!NOTE]
 >
->Es liegt in Ihrer Verantwortung, das öffentliche Zertifikat auf dem neuesten Stand zu halten. Stellen Sie sicher, dass Sie das Zertifikat regelmäßig überprüfen, insbesondere wenn sein Ablaufdatum näher rückt. Sie sollten diese Seite mit einem Lesezeichen versehen, um in Ihrer Umgebung die neueste Kopie zu erhalten.
+>Sie sind dafür verantwortlich sicherzustellen, dass Ihre Systeme ein gültiges öffentliches Zertifikat verwenden. Überprüfen Sie Ihre Zertifikate regelmäßig, insbesondere wenn das Ablaufdatum näher rückt. Verwenden Sie die API, um Zertifikate abzurufen und zu aktualisieren, bevor sie ablaufen.
 
-Wenn Sie das CDN oder SAN überprüfen möchten, um eine zusätzliche Validierung durch Dritte durchzuführen, können Sie die entsprechenden Zertifikate hier herunterladen:
+Direkte Download-Links für öffentliche mTLS-Zertifikate werden nicht mehr bereitgestellt. Verwenden Sie stattdessen den [Endpunkt für öffentliche Zertifikate](../../data-governance/mtls-api/public-certificate-endpoint.md) um Zertifikate abzurufen. Dies ist die einzige unterstützte Methode für den Zugriff auf aktuelle öffentliche Zertifikate. Dadurch wird sichergestellt, dass Sie immer gültige, aktuelle Zertifikate für Ihre Integrationen erhalten.
 
-- [Das öffentliche Adobe Journey Optimizer-Zertifikat](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
-- [Das öffentliche Zertifikat des Destinations Service](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+Integrationen, die auf zertifikatbasierter Verschlüsselung basieren, müssen ihre Workflows aktualisieren, um den automatischen Zertifikatabruf mithilfe der API zu unterstützen. Wenn Sie statische Links oder manuelle Aktualisierungen verwenden, können abgelaufene oder widerrufene Zertifikate verwendet werden, was zu fehlgeschlagenen Integrationen führen kann.
 
-Sie können öffentliche Zertifikate auch sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt stellen. Weitere Informationen finden [ in der ](../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+#### Automatisierung des Zertifikatlebenszyklus {#certificate-lifecycle-automation}
+
+Adobe automatisiert jetzt den Zertifikatlebenszyklus für mTLS-Integrationen, um die Zuverlässigkeit zu verbessern und Service-Unterbrechungen zu vermeiden. Öffentliche Zertifikate sind:
+
+- Erneut veröffentlicht 60 Tage vor Ablauf der Gültigkeit.
+- 30 Tage vor Ablauf widerrufen.
+
+Diese Intervalle werden entsprechend den [ Richtlinien des CA/B-Forums weiter verkürzt](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) mit dem Ziel, die Zertifikatlebensdauer auf maximal 47 Tage zu reduzieren.
+
+Wenn Sie zuvor über Links auf dieser Seite Zertifikate heruntergeladen haben, aktualisieren Sie Ihren Prozess, um diese ausschließlich über die API abzurufen.
 
 ## Ruhende Daten {#at-rest}
 

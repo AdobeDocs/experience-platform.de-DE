@@ -4,9 +4,9 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 71%
 
 ---
@@ -71,13 +71,11 @@ Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) verwenden, um e
 
 Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für die Server-Adresse, die Sie auf der Seite [Zieldetails](#destination-details) eingeben, [!DNL TLS] Protokolle deaktiviert und nur aktiviert [!DNL mTLS]. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL mTLS] mit Ihrem [!DNL HTTP API]-Ziel verwenden zu können.
 
-### Zertifikat herunterladen {#certificate}
+### Abrufen und Überprüfen von Zertifikatdetails {#certificate}
 
-Wenn Sie die [!DNL Common Name] (CN) und das [!DNL Subject Alternative Names] (SAN) überprüfen möchten, um eine zusätzliche Validierung durch Dritte durchzuführen, können Sie das folgende Zertifikat herunterladen:
+Wenn Sie Zertifikatdetails wie die [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) auf zusätzliche Validierungen durch Dritte überprüfen möchten, verwenden Sie die API, um das Zertifikat abzurufen und diese Felder aus der Antwort zu extrahieren.
 
-* [Öffentliches HTTP-API-mTLS-Zertifikat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-Sie können öffentliche Zertifikate auch sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt stellen. Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -219,7 +217,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
