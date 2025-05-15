@@ -2,9 +2,9 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '693'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,7 @@ Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schrit
 >
 >* Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorhandene Diagramme nur vom Diagrammalgorithmus betroffen sind **nur wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird.
 >
->* Darüber hinaus erhalten Sie eine Benachrichtigung, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
+>* Es kann bis zu **24 Stunden** dauern, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
 
 ![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
 
