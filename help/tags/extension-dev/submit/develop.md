@@ -2,9 +2,9 @@
 title: Entwickeln einer Erweiterung
 description: Dieses Dokument bietet einen allgemeinen Überblick über den Entwicklungsprozess von Tag-Erweiterungen mit Links zu weiterführender Dokumentation für detailliertere Prozesse.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '462'
 ht-degree: 97%
 
 ---
@@ -24,7 +24,7 @@ Mit diesem Wissen können Sie planen, welche Komponenten in Ihrer Erweiterung be
 Wenn ein Plan vorhanden ist, können diese Anleitungen Ihnen helfen, den Entwicklungsprozess einer Erweiterung besser zu verstehen:
 
 * Das [Erste-Schritte-Handbuch](../getting-started.md) und andere Dokumente unter **Erweiterungsentwicklung** im linken Navigationsbereich sind großartige Referenzmaterialien zum Verständnis von Erweiterungen. Sie enthalten Details dazu, was Erweiterungen tun können, wie Benutzerinformationen zwischen Ihrer Erweiterung und Adobe Experience Platform gespeichert und weitergegeben werden, wie Ihr Code in Bibliotheken gebündelt wird und wie Ihr Erweiterungs-Code zur Laufzeit im Browser interpretiert und verwendet wird.
-* Das [Tutorial-Video zu Erweiterungen](https://youtu.be/rxjtC9o4rl0) ist ein guter Anfang.
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * Die YouTube-Wiedergabeliste [Einführung in Erweiterungen](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) führt durch den Prozess der Erstellung von Erweiterungspaketen.
 * Artikel [JSON-Schema verstehen](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON-Link/Validator](https://jsonlint.com/).
