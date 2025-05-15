@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Hinzufügen von berechneten Feldern"
 >abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um verschiedene Datenumwandlungen an Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden. Sie können beispielsweise Hashing auf Daten anwenden, Arrays zu Zeichenfolgen verketten und vieles mehr."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=de#examples" text="Beispiele"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Beispiele"
 
 >[!AVAILABILITY]
 >
