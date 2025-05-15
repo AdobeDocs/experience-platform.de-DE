@@ -2,9 +2,9 @@
 description: Erfahren Sie mehr über die IP-Adressen, die Sie Ihrer Zulassungsliste hinzufügen müssen, um Adobe Experience Platform-Quellen erfolgreich verwenden zu können.
 title: AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse der Quellen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 11%
 
 ---
@@ -290,6 +290,10 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um d
 
 ## IP-Adressen, an die eine Quellverbindung zu Experience Platform auf [!DNL Amazon Web Services] (AWS) auf die Zulassungsliste gesetzt werden soll {#aws}
 
-Sie müssen die folgende IP-Adresse zu Ihrer Zulassungsliste hinzufügen, um Ihre Quelle mit Experience Platform in AWS zu verbinden:
+Sie müssen die folgende IP-Adresse zu Ihrer Zulassungsliste hinzufügen, um Ihre Quelle mit Experience Platform in AWS zu verbinden:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
