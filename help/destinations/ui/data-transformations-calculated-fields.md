@@ -3,9 +3,9 @@ title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder i
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1625'
 ht-degree: 8%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Hinzufügen von berechneten Feldern"
 >abstract="<p>Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um verschiedene Datenumwandlungen an Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden. Sie können beispielsweise Hashing auf Daten anwenden, Arrays zu Zeichenfolgen verketten und vieles mehr."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=de#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=de#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Beispiele"
 
 >[!AVAILABILITY]
 >
@@ -53,6 +45,10 @@ So verwenden Sie berechnete Felder für Datenumwandlungen:
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="„Berechnete Felder hinzufügen“ ist deaktiviert"
 >abstract="Dieses Steuerelement ist deaktiviert, weil Sie beim Einrichten dieser Zielverbindung den Umschalter zum **Exportieren von Arrays, Zuordnungen und Objekten** auf *ein* geschaltet haben. Um berechnete Felder und die darin verfügbaren Funktionen zu verwenden, richten Sie eine neue Zielverbindung ein, bei der der Umschalter zum **Exportieren von Arrays, Zuordnungen und Objekten** auf *aus* geschaltet ist."
+
+>[!IMPORTANT]
+>
+>Wenn Sie mit berechneten Feldern arbeiten, müssen Sie zusätzlich zu den von Ihnen angewendeten Datenumwandlungsfunktionen auch die `array_to_string` verwenden, um Felder zu einer Zeichenfolge zu verketten.
 
 Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
