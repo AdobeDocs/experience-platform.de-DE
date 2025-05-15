@@ -450,7 +450,7 @@ Adobe empfiehlt das Auswählen eines Identitäts-Namespace, z. B. einer [!DNL CR
 
 ### Deduplizierungsverhalten für Profile mit demselben Zeitstempel {#deduplication-same-timestamp}
 
-Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Wichtige Aspekte
 
