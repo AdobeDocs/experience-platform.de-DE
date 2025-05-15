@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die Ereignisweiterleitung
-description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, mit der Sie mit der Experience Platform-Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
+description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, durch die Sie mit dem Experience Platform Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 51%
+ht-degree: 54%
 
 ---
 

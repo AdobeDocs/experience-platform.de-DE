@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -26,7 +26,7 @@ In Adobe Experience Platform können Sie Datenablaufzeiten für pseudonyme Profi
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Ablaufen pseudonymer Profildaten"
->abstract="Ablauf von Daten pseudonymer Profile gibt die Anzahl der Tage an, die ein pseudonymes Profil in Adobe Experience Platform verbleibt, bevor es entfernt wird. Dieser Wert muss auf mindestens 1 gesetzt werden. Beachten Sie, dass es bis zu drei Tage dauern kann, bis das pseudonyme Profil entfernt wird."
+>abstract="Der Ablauf pseudonymer Profildaten entspricht der Anzahl der Tage, für die ein pseudonymes Profil in Adobe Experience Platform verbleibt, bevor es entfernt wird. Dieser Wert muss auf mindestens 1 gesetzt werden. Beachten Sie, dass es bis zu drei Tage dauern kann, bis das pseudonyme Profil entfernt wird."
 
 Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folgenden Bedingungen erfüllt:
 

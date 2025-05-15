@@ -2,12 +2,12 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showfullxdmschema"
->title="Vollständiges XDM-Schema anzeigen"
+>title="Gesamtes XDM-Schema anzeigen"
 >abstract="Standardmäßig werden nur Felder angezeigt, die Daten enthalten. Aktivieren Sie diese Option, um alle Felder im XDM-Schema anzuzeigen."
 
 >[!CONTEXTUALHELP]
@@ -32,7 +32,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
 >title="Eingeschränkte Felder anzeigen"
->abstract="Standardmäßig werden nur Felder angezeigt, die über keine Einschränkungen verfügen. Aktivieren Sie diese Option, um Felder mit Einschränkungen anzuzeigen."
+>abstract="Standardmäßig werden nur Felder ohne Einschränkungen angezeigt. Aktivieren Sie diese Option, um Felder mit Einschränkungen anzuzeigen."
 
 Bei Verwendung von Audience Builder für -Konten können Sie Kontoattribute oder vorhandene Zielgruppen als Felder Ihrer Zielgruppe verwenden.
 
@@ -54,7 +54,7 @@ Für die **[!UICONTROL Beziehung von Feldern]** können Sie entweder die Standar
 
 ### Attribute {#attributes}
 
-Auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Attribute“ können Sie Account-Attribute, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute durchsuchen. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf [!UICONTROL  Registerkarte ]Attribute“ können Sie Account-Attribute, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute durchsuchen. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
 

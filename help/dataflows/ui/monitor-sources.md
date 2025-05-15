@@ -28,7 +28,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-## Verwenden des Überwachungs-Dashboards für die Data-Lake-Aufnahme
+## Verwenden des Dashboards „Monitoring“ zur Data-Lake-Aufnahme
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -120,7 +120,7 @@ Auf der Seite mit den Datenflussausführungs-Details können Sie Metriken und In
 
 {style="table-layout:auto"}
 
-Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL &#x200B; einen Bildlauf nach unten &#x200B;].
+Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL  einen Bildlauf nach unten ].
 
 Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
 

@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
@@ -50,16 +50,16 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=de#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
 
 Sehen Sie sich das folgende Video an, um eine End-to-End-Erklärung des auf dieser Seite beschriebenen Workflows, die Vorteile der Verwendung der Funktion „Datensatz exportieren“ und einige vorgeschlagene Anwendungsfälle zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448827?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -158,7 +158,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
->abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat das standardmäßige Enddatum auf den 1. September 2025 festgelegt. Bitte auf das gewünschte Enddatum aktualisieren, da die Datenexporte andernfalls am Standarddatum beendet werden."
+>abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat als standardmäßiges Enddatum den 1. September 2025 festgelegt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
 
 Verwenden Sie den **[!UICONTROL Zeitplan]**-Schritt, um:
 
@@ -193,11 +193,11 @@ Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist standardmäßi
 > 
 >Bei Datensatzexporten haben die Dateinamen ein vordefiniertes Standardformat, das nicht geändert werden kann. Siehe Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](#verify), um weitere Informationen und Beispiele für exportierte Dateien zu erhalten.
 
-## Ordnerpfad bearbeiten {#edit-folder-path}
+## Bearbeiten des Ordnerpfads {#edit-folder-path}
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
->title="Ordnerpfad bearbeiten"
+>title="Bearbeiten des Ordnerpfads"
 >abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den Datensätze exportiert werden."
 
 >[!CONTEXTUALHELP]

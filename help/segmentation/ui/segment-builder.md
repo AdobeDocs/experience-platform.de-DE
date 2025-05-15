@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 64%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showfullxdmschema"
->title="Vollständiges XDM-Schema anzeigen"
+>title="Gesamtes XDM-Schema anzeigen"
 >abstract="Standardmäßig werden nur Felder angezeigt, die Daten enthalten. Aktivieren Sie diese Option, um alle Felder im XDM-Schema anzuzeigen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="Anzeigen verworfener Felder"
->abstract="Standardmäßig werden verworfene XDM-Felder nicht angezeigt. Aktivieren Sie diese Option, um veraltete XDM-Felder anzuzeigen."
+>abstract="Veraltete XDM-Felder werden standardmäßig nicht angezeigt. Aktivieren Sie diese Option, um veraltete XDM-Felder anzuzeigen."
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
 
