@@ -65,7 +65,7 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 ## Komposition föderierter Zielgruppen {#federated-audience-composition}
 
-Informationen zu den neuesten Aktualisierungen für die Federated-Audience-Komposition finden Sie [ den ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) Versionshinweisen hier.
+Informationen zu den neuesten Aktualisierungen für die Federated-Audience-Komposition finden Sie [ den ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes) Versionshinweisen hier.
 
 ## Segmentierungs-Service {#segmentation-service}
 
