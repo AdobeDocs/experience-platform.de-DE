@@ -3,9 +3,9 @@ title: Exportieren von Arrays, Zuordnungen und Objekten aus Real-Time CDP
 type: Tutorial
 description: Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud-Speicher-Ziele exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >Die Funktion zum Exportieren von Arrays und anderen komplexen Objekten in Cloud-Speicher-Ziele ist allgemein für die folgenden Ziele verfügbar: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->Darüber hinaus können Sie Felder vom Typ Zuordnung an die folgenden Ziele exportieren: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>Darüber hinaus können Sie Felder vom Typ Zuordnung an die folgenden Ziele exportieren: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele ](/help/destinations/catalog/cloud-storage/overview.md). Darüber hinaus können Sie Felder vom Typ „Zuordnung“ in [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) und eingeschränkte [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen. In der folgenden Tabelle finden Sie die verfügbaren Funktionen pro Zieltyp.
@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud
 | Bestehende benutzerdefinierte, von Partnern erstellte Cloud-Speicher-Ziele (benutzerdefinierte dateibasierte Ziele, die über Destination SDK erstellt wurden) | Nein |
 | Unternehmensziele (Amazon Kinesis, Azure Event Hubs, HTTP-API) | Teilweise. Im Zuordnungsschritt des Aktivierungs-Workflows können Sie Objekte vom Typ Zuordnung auswählen und exportieren. |
 | Streaming-Ziele (z. B. Facebook, Braze, Google Customer Match und mehr) | Nein |
-| Edge-Personalisierungsziele (Adobe Target) | Teilweise. Im Zuordnungsschritt des Aktivierungs-Workflows können Sie Objekte vom Typ Zuordnung auswählen und exportieren. |
+| Edge-Personalisierungsziele | Nein |
 
 {style="table-layout:auto"}
 

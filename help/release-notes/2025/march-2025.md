@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise März 2025
 description: Versionshinweise März 2025 für Adobe Experience Platform.
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: ca2793f6e498f63bffb0f30ebc9797ea5ed52a70
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1248'
 ht-degree: 21%
 
 ---
@@ -42,7 +42,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+**Neue oder aktualisierte Funktionen** {#new-updated-destinations}
 
 | Ziel | Beschreibung |
 | --- | --- |
@@ -57,7 +57,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 | Funktion | Beschreibung |
 | --- | --- |
 | [Verbesserungen der Berichtsgenauigkeit für Streaming-Ziele](../../dataflows/ui/monitor-destinations.md) | Ab März 2025 führt Adobe eine Aktualisierung ein, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Durch diese Verbesserung wird eine bessere Abstimmung zwischen den Berichten in Experience Platform und den Zielplattformen sichergestellt. <br> Vor diesem Update wurden bei **[!UICONTROL Identitäten fehlgeschlagen]** alle Aktivierungsversuche einbezogen. Nach diesem Update wird nur der letzte Aktivierungsversuch in die Gesamtanzahl einbezogen. <br> Diese Verbesserung gilt für alle Streaming-Ziele. <br> Nach dieser Verbesserung kann bei Benutzenden von Streaming-Zielen ein erwarteter Rückgang der Anzahl **[!UICONTROL Identitäten fehlgeschlagen]** auftreten. |
-| [Unterstützung für den Export von Feldern vom Typ Zuordnung für Unternehmens- und Edge-Ziele](/help/destinations/ui/export-arrays-maps-objects.md) | Beim Exportieren von Daten an die Ziele [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP ](/help/destinations/catalog/streaming/http-destination.md)API[, Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) und [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) können Sie jetzt im Zuordnungsschritt des Aktivierungs-Workflows Felder vom Typ Zuordnung zum Export auswählen. <br> ![Exportieren Sie ein Feld vom Typ „Zuordnung“ zum Unternehmensziel.](../2025/assets/march/export-map.png "Exportieren eines Felds vom Typ „Zuordnung“ in ein Unternehmensziel."){width="250" align="center" zoomable="yes"} |
+| [Unterstützung für den Export von Feldern vom Typ Zuordnung für Unternehmens- und Edge-Ziele](/help/destinations/ui/export-arrays-maps-objects.md) | Beim Exportieren von Daten an die [Ziele von Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md) und [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) können Sie jetzt im Zuordnungsschritt des Aktivierungs-Workflows Felder vom Typ Zuordnung für den Export auswählen. <br> ![Exportieren Sie ein Feld vom Typ „Zuordnung“ zum Unternehmensziel.](../2025/assets/march/export-map.png "Exportieren eines Felds vom Typ „Zuordnung“ in ein Unternehmensziel."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 ## Komposition föderierter Zielgruppen {#federated-audience-composition}
 
-Informationen zu den neuesten Aktualisierungen für die Federated-Audience-Komposition finden Sie [ den ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes) Versionshinweisen hier.
+Informationen zu den neuesten Aktualisierungen für die Federated-Audience-Komposition finden Sie [ den ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) Versionshinweisen hier.
 
 ## Segmentierungs-Service {#segmentation-service}
 
