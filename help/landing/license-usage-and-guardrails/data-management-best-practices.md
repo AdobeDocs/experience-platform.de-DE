@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 65%
+source-wordcount: '2338'
+ht-degree: 54%
 
 ---
 
@@ -15,13 +15,34 @@ Adobe Experience Platform ist ein offenes System, das Ihre Daten in Kundenprofil
 
 Experience Platform bietet Lizenzen an, die die Anzahl der Profile, die Sie erstellen können, und die Menge der Daten, die Sie einbringen können, festlegen. Da Sie Daten aus beliebigen Quellen, mit beliebigem Volumen und beliebiger Historie einbringen können, kann es vorkommen, dass Sie das Limit Ihrer Lizenzberechtigungen überschreiten, wenn Ihr Datenvolumen wächst.
 
-In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
+Lesen Sie dieses Handbuch, um zu erfahren, welche Best Practices Sie befolgen sollten, und welche Tools Sie verwenden können, um Ihre Lizenzberechtigungen mit Experience Platform besser zu verwalten.
 
-## Grundlagen zur Datenspeicherung in Adobe Experience Platform
+## Zusammenfassung der Funktionen {#summary-of-features}
 
-Experience Platform besteht im Wesentlichen aus zwei Datenspeichern: dem [!DNL data lake] und dem Profilspeicher.
+Verwenden Sie die in diesem Dokument beschriebenen Best Practices und Tools, um die Nutzung Ihrer Lizenzberechtigungen in Experience Platform besser zu verwalten. Dieses Dokument wird aktualisiert, sobald zusätzliche Funktionen veröffentlicht werden, um allen Experience Platform-Kunden Transparenz und Kontrolle zu bieten.
 
-Der **[!DNL data lake]** dient hauptsächlich folgenden Zwecken:
+In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktionen, mit denen Sie Ihre Lizenznutzungsberechtigung besser verwalten können.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignisdaten](../../catalog/datasets/user-guide.md#data-retention-policy) | Konfigurieren Sie eine feste Aufbewahrungsfrist für Daten im Data Lake und Profilspeicher. Datensätze werden gelöscht, wenn die konfigurierte Aufbewahrungsfrist endet. |
+| [Aktivieren/Deaktivieren von Datensätzen für das Echtzeit-Kundenprofil](../../catalog/datasets/user-guide.md) | Aktivieren oder Deaktivieren der Datensatzaufnahme in das Echtzeit-Kundenprofil. |
+| [Gültigkeitsdauern von Erlebnisereignissen im Profilspeicher](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit auf alle Ereignisse an, die in einen profilaktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Adobe-Accountteam oder die Kundenunterstützung, um diese Funktion zu aktivieren. |
+| [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Wenden Sie [!DNL Kafka] Filter an, um unnötige Daten von der Aufnahme auszuschließen. |
+| [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Wenden Sie Audience Manager-Quellverbindungsfilter an, um unnötige Daten von der Aufnahme auszuschließen. |
+| [Datenfilter für die Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) | Anwenden von Server-seitigen [!DNL Kafka]-Filtern, um unnötige Daten von der Aufnahme auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Tag-Regeln](../../tags/ui/managing-resources/rules.md). |
+| [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Überwachen Sie die Nutzung von Experience Platform-Produkten durch Ihr Unternehmen im Hinblick auf lizenzierte Berechtigungen. Greifen Sie auf Momentaufnahmen der täglichen Nutzung, Prognosetrends und detaillierte Daten auf Sandbox-Ebene zu, um die proaktive Lizenzverwaltung zu unterstützen. |
+| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Gibt die Datensätze aus, die am meisten zu Ihrer Addressable Audience beitragen. |
+| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Gibt die Identity-Namespaces an, die am meisten zu Ihrer Addressable Audience beitragen. |
+| [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) | Konfigurieren Sie Datenablaufzeiten für pseudonyme Profile und entfernen Sie automatisch Daten aus dem Profilspeicher. |
+
+{style="table-layout:auto"}
+
+## Grundlagen zur Datenspeicherung in Experience Platform
+
+Experience Platform besteht im Wesentlichen aus zwei Datenspeichern: dem Data Lake und dem Profilspeicher.
+
+Data Lake dient hauptsächlich folgenden Zwecken:
 
 * Fungiert als Staging-Bereich für das Onboarding von Daten in Experience Platform;
 * Fungiert als langfristiger Datenspeicher für alle Daten in Experience Platform;
@@ -40,9 +61,9 @@ Der **Profilspeicher** ist der Ort, an dem Kundenprofile erstellt werden. Er hat
 
 Wenn Sie eine Lizenz für Experience Platform erwerben, erhalten Sie Lizenznutzungsberechtigungen, die je nach SKU variieren:
 
-**[!DNL Addressable Audience]** – die Gesamtzahl der Kundenprofile, die vertraglich für Experience Platform zugelassen sind, einschließlich bekannter und pseudonymer Profile.
+**[!DNL Addressable Audience]**: Die Gesamtzahl der Kundenprofile, die vertraglich für Experience Platform zugelassen sind, einschließlich bekannter und pseudonymer Profile.
 
-**[!DNL Total Data Volume]** : Die Gesamtmenge der für den Adobe Experience Platform-Profil-Service verfügbaren Daten, die in Interaktions-Workflows verwendet werden können.
+**[!DNL Total Data Volume]**: Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können.
 
 Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab.
 
@@ -123,7 +144,7 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 
 {style="table-layout:auto"}
 
-#### Berichte zur Zusammensetzung des Profilspeichers
+### Berichte zur Zusammensetzung des Profilspeichers
 
 Es stehen eine Reihe von Berichten zur Verfügung, die Ihnen dabei helfen, die Zusammensetzung des Profilspeichers zu verstehen. Diese Berichte helfen Ihnen dabei, fundierte Entscheidungen darüber zu treffen, wie und wo Sie Ihren Ablauf von Erlebnisereignissen festlegen können, um Ihre Lizenznutzung zu optimieren:
 
@@ -132,13 +153,17 @@ Es stehen eine Reihe von Berichten zur Verfügung, die Ihnen dabei helfen, die Z
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Ablauf von Daten pseudonymer Profile {#pseudonymous-profile-expirations}
+### Ablauf von Daten pseudonymer Profile {#pseudonymous-profile-expirations}
 
-Mit dieser Funktion können Sie veraltete pseudonyme Profile automatisch aus dem Profilspeicher entfernen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Ablauf von Daten pseudonymer Profile - Übersicht](../../profile/pseudonymous-profiles.md).
+Verwenden Sie die Datenablauffunktion für pseudonyme Profile, um automatisch Daten aus zu entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind, und zwar aus dem Profilspeicher. Ablauf von Daten pseudonymer Profile entfernt Ereignis- und Profildatensätze. Daher reduziert diese Einstellung die Anzahl der adressierbaren Zielgruppen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Ablauf von Daten pseudonymer Profile - Übersicht](../../profile/pseudonymous-profiles.md).
 
-#### Gültigkeitsdauern von Erlebnisereignissen {#event-expirations}
+### Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignis-Datensätzen {#data-retention}
 
-Mit dieser Funktion können Sie Verhaltensdaten automatisch aus einem profilaktivierten Datensatz entfernen, der für Ihre Anwendungsfälle nicht mehr nützlich ist. In der Übersicht zu [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) finden Sie Details dazu, wie dieser Prozess funktioniert, sobald er für einen Datensatz aktiviert ist.
+Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) ](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Gültigkeitsdauern von Profilerlebnisereignissen {#event-expirations}
+
+Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [ Gültigkeitsdauern ](../../profile/event-expirations.md) Erlebnisereignissen .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 
@@ -147,24 +172,6 @@ Im Folgenden finden Sie eine Liste empfohlener Best Practices, die Sie befolgen 
 * Verwenden Sie das [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md), um die Nutzung durch Kunden zu verfolgen und zu überwachen. Dadurch können Sie potenziellen Überschreitungen rechtzeitig gegensteuern.
 * Konfigurieren Sie [Aufnahmefilter](#ingestion-filters), indem Sie die Ereignisse bestimmen, die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind. Dies ermöglicht Ihnen, nur wichtige Ereignisse zu senden, die für Ihre Anwendungsfälle nötig sind.
 * Stellen Sie sicher, dass Sie nur [Datensätze für Profile aktiviert haben](#ingestion-filters), die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind.
-* Konfigurieren Sie [Ablauf von Erlebnisereignissen](#event-expirations) und [Ablauf von Daten pseudonymer Profile](#pseudonymous-profile-expirations) für sehr häufige Daten wie Web-Daten.
+* Konfigurieren Sie [Ablauf von Erlebnisereignissen](../../catalog/datasets/user-guide.md#data-retention-policy) und [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) für sehr häufige Daten wie Web-Daten.
+* Konfigurieren Sie [Time-to-Live (TTL)-Aufbewahrungsrichtlinien für Erlebnisereignis](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)Datensätze im Data Lake, um veraltete Datensätze automatisch zu entfernen und die Speichernutzung entsprechend Ihren Lizenzberechtigungen zu optimieren.
 * Überprüfen Sie regelmäßig die [Berichte zur Profilzusammensetzung](#profile-store-composition-reports), um sich ein Bild über die Zusammensetzung des Profilspeichers zu machen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
-
-## Funktionsüberblick und -verfügbarkeit {#feature-summary}
-
-Die in diesem Dokument beschriebenen Best Practices und Tools helfen Ihnen bei der besseren Nutzung Ihrer Lizenzberechtigungen in Adobe Experience Platform. Dieses Dokument wird aktualisiert, sobald zusätzliche Funktionen veröffentlicht werden, um allen Experience Platform-Kunden Transparenz und Kontrolle zu bieten.
-
-In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktionen, mit denen Sie Ihre Lizenznutzungsberechtigung besser verwalten können.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| [Datensätze für ein Profil aktivieren/deaktivieren](../../catalog/datasets/user-guide.md) | Aktivieren oder Deaktivieren der Datensatzaufnahme in das Echtzeit-Kundenprofil. |
-| [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit auf alle Ereignisse an, die in einen profilaktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Adobe-Accountteam oder die Kundenunterstützung, um diese Funktion zu aktivieren. |
-| [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden von [!DNL Kafka]-Filtern zum Ausschließen unnötiger Daten von der Aufnahme |
-| [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Aufnahme auszuschließen |
-| [Datenfilter für die Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) | Anwenden von Server-seitigen [!DNL Kafka]-Filtern, um unnötige Daten von der Aufnahme auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Tag-Regeln](../../tags/ui/managing-resources/rules.md). |
-| [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Ansicht eines Snapshots der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform. |
-| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Gibt die Datensätze an, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. |
-| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Gibt die Identity-Namespaces an, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen |
-
-{style="table-layout:auto"}
