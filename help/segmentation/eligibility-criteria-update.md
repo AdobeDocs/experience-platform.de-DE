@@ -4,53 +4,87 @@ description: Erfahren Sie mehr über die Aktualisierungen der Segmentierungs-Eig
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
+source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 0%
+source-wordcount: '582'
+ht-degree: 4%
 
 ---
 
 # Aktualisierung der Segmentierungseignungskriterien
 
-Ab dem 23. Mai 2025 werden zwei Aktualisierungen vorgenommen, die sich auf die Segmentierungseignung auswirken.
+>[!IMPORTANT]
+>
+>Alle vorhandenen Segmentdefinitionen, die derzeit mithilfe von Streaming oder Edge-Segmentierung ausgewertet werden, funktionieren weiterhin wie bisher, es sei denn, sie werden bearbeitet oder aktualisiert.
 
-1. Abfragetypen für Streaming- und Edge-Segmentierung
-2. Zusammenführungsrichtlinien für Streaming und Edge-Segmentierung
+Ab dem 20. Mai 2025 werden drei Aktualisierungen vorgenommen, die sich auf die Segmentierungseignung auswirken.
 
-## Abfragetypen
+1. Berechtigter Regelsatz
+2. Zeitfenster-Eignung
+3. Einschließen von Batch-Daten in Streaming-Zielgruppen
+4. Aktive Zusammenführungsrichtlinien
 
-Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Abfragetypen entsprechen **werden nicht mehr** Streaming- oder Edge-Segmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung ausgewertet.
+## Regelsatz {#ruleset}
+
+Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Regelsätzen entsprechen **werden nicht mehr** Streaming- oder Edge-Segmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung ausgewertet.
 
 - Ein einzelnes Ereignis mit einem Zeitfenster von mehr als 24 Stunden
    - Aktivieren Sie eine Zielgruppe mit allen Profilen, die sich eine Web-Seite in den letzten 3 Tagen angesehen haben.
 - Ein einzelnes Ereignis ohne Zeitfenster
    - Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Web-Seite angesehen haben.
 
-Wenn Sie eine Segmentdefinition mit Streaming- oder Edge-Segmentierung auswerten müssen, die dem aktualisierten Abfragetyp entspricht, können Sie explizit eine Batch- und Streaming-Abfrage erstellen und sie mithilfe von Segmenten kombinieren.
+## Zeitfenster {#time-window}
 
-Wenn Sie beispielsweise eine Zielgruppe mit allen Profilen aktivieren müssen, die in den letzten 3 Tagen eine Web-Seite mithilfe der Streaming-Segmentierung aufgerufen haben, können Sie die folgenden Abfragen erstellen:
+Um eine Zielgruppe mit Streaming-Segmentierung auszuwerten **muss sie** einem Zeitfenster von 24 Stunden eingeschränkt sein.
 
-- Q1 (Streaming): Alle Profile, die sich eine Web-Seite in den letzten 24 Stunden angesehen haben
-- Q2 (Batch): Alle Profile, die in den letzten 3 Tagen eine Web-Seite angesehen haben
+## Einschließen von Batch-Daten in Streaming-Zielgruppen {#include-batch-data}
 
-Sie können sie dann kombinieren, indem Sie sich auf Q1 oder Q2 beziehen.
+Vor diesem Update konnten Sie eine Definition für Streaming-Zielgruppen erstellen, die sowohl Batch- als auch Streaming-Datenquellen kombinierte. Mit der neuesten Aktualisierung wird jedoch die Erstellung einer Zielgruppe mit sowohl Batch- als auch Streaming-Datenquellen mithilfe der Batch-Segmentierung ausgewertet.
 
-Wenn Sie eine Zielgruppe mit allen Profilen aktivieren müssen, die eine Web-Seite angesehen haben, können Sie die folgenden Abfragen erstellen:
+Wenn Sie eine Segmentdefinition mit Streaming- oder Edge-Segmentierung auswerten müssen, die dem aktualisierten Regelsatz entspricht, müssen Sie explizit einen Batch und einen Streaming-Regelsatz erstellen und sie mithilfe von Segmenten kombinieren. Dieser Batch **Regelsatz** auf einem Profilschema basieren.
 
-- Q3 (Streaming): Alle Profile, die sich eine Web-Seite in den letzten 24 Stunden angesehen haben
-- Q4 (Batch): Alle Profile, die eine Web-Seite angesehen haben.
+Angenommen, Sie haben zwei Zielgruppen, von denen eine die Profilschemadaten und die andere die Ereignisschemadaten enthält:
 
-Sie können sie dann kombinieren, indem Sie sich auf Q3 oder Q4 beziehen.
+| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Einwohner Kaliforniens | Profil | Batch | Wohnsitz ist in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Wenn Sie die Batch-Komponente in Ihrer Streaming-Zielgruppe verwenden möchten, müssen Sie einen Verweis auf die Batch-Zielgruppe anhand des Segments von Segmenten erstellen.
+
+Ein Beispielregelsatz, der die beiden Zielgruppen kombiniert, würde also wie folgt aussehen:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Die resultierende Zielgruppe *wird* mithilfe der Streaming-Segmentierung ausgewertet, da sie die Zugehörigkeit der Batch-Zielgruppe durch Verweis auf die Komponente für die Batch-Zielgruppe nutzt.
+
+Wenn Sie jedoch zwei Zielgruppen mit Ereignisdaten kombinieren möchten, **Sie die beiden Ereignisse nicht** kombinieren. Sie müssen beide Zielgruppen erstellen und dann eine weitere Zielgruppe erstellen, die `inSegment` verwendet, um auf diese beiden Zielgruppen zu verweisen.
+
+Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis-Schemadaten enthalten:
+
+| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In diesem Fall müssten Sie wie folgt eine dritte Zielgruppe erstellen:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
 
 >[!IMPORTANT]
 >
->Alle vorhandenen Segmentdefinitionen, die mit den Abfragetypen übereinstimmen, bleiben mithilfe von Streaming oder Edge-Segmentierung ausgewertet, bis sie bearbeitet werden.
+>Alle vorhandenen Segmentdefinitionen, die mit den Regelsätzen übereinstimmen, bleiben mithilfe von Streaming oder Edge-Segmentierung ausgewertet, bis sie bearbeitet werden.
 >
 >Darüber hinaus bleiben alle vorhandenen Segmentdefinitionen, die derzeit die anderen Bewertungskriterien für Streaming oder Edge-Segmentierung erfüllen, mit Streaming- oder Edge-Segmentierung bewertet.
 
-## Zusammenführungsrichtlinie
+## Zusammenführungsrichtlinie {#merge-policy}
 
 Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming oder Edge-Segmentierung qualifiziert **müssen** in der Zusammenführungsrichtlinie „Active on Edge&quot; festgelegt sein.
 
-Alle vorhandenen Segmentdefinitionen, die mithilfe von Streaming oder Edge-Segmentierung ausgewertet werden, funktionieren weiterhin wie bisher.
+Wenn kein aktiver Zusammenführungsrichtliniensatz festgelegt ist, müssen Sie [Zusammenführungsrichtlinie konfigurieren](../profile/merge-policies/ui-guide.md#configure) und sie so einstellen, dass sie im Randbereich aktiv ist.
