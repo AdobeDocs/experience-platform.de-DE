@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 25%
+source-wordcount: '3360'
+ht-degree: 20%
 
 ---
 
@@ -77,7 +77,7 @@ Verwenden Sie den erweiterten Abfrage-Editor, um mehr als eine Abfrage zu schrei
 ### Ausgewählte Abfrage ausführen {#execute-selected-query}
 
 Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen müssen, können Sie die ausgewählte Abfrage markieren und auswählen.
-[!UICONTROL &#x200B; Symbol „Ausgewählte Abfrage ausführen]. Dieses Symbol ist standardmäßig deaktiviert, bis Sie im Editor Abfragesyntax auswählen.
+[!UICONTROL  Symbol „Ausgewählte Abfrage ausführen]. Dieses Symbol ist standardmäßig deaktiviert, bis Sie im Editor Abfragesyntax auswählen.
 
 ![Der Abfrage-Editor mit dem hervorgehobenen Symbol [!UICONTROL Ausgewählte Abfrage ausführen].](../images/ui/query-editor/run-selected-query.png)
 
@@ -85,7 +85,7 @@ Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen m�
 
 Übernehmen Sie die Kontrolle über die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Diese Aktion löscht den Abfrage-Editor während einer Abfrageausführung. Beachten Sie, dass die Abfrage weiterhin im Hintergrund ausgeführt wird. Wenn es sich um eine CTAS-Abfrage handelt, wird dennoch ein Ausgabedatensatz generiert. Um die Ausführung im Editor abzubrechen und mit dem Erstellen einer SQL-Anweisung fortzufahren, wählen Sie **[!UICONTROL Abfrage abbrechen]** nach dem Ausführen einer Abfrage aus.
 
-![Der Abfrage-Editor mit [!UICONTROL &#x200B; hervorgehobenen Option „Abfrage &#x200B;]&quot;.](../images/ui/query-editor/cancel-query-run.png)
+![Der Abfrage-Editor mit [!UICONTROL  hervorgehobenen Option „Abfrage ]&quot;.](../images/ui/query-editor/cancel-query-run.png)
 
 Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Bestätigen]**, um die Ausführung der Abfrage abzubrechen.
 
@@ -234,11 +234,69 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von Query Service. D
 >
 >Die Konsole zeigt nur Fehler an, die bei der Ausführung einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Abfragevalidierung angezeigt, die vor der Ausführung einer Abfrage auftreten.
 
-### Abfrageergebnisse {#query-results}
+## Abfrageergebnisse {#query-results}
 
 Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage an, wobei je nach ausgewählter ([) Ergebnisanzahl zwischen 50 und 1000 Ergebniszeilen angezeigt ](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
 
 ![Auf der Registerkarte „Ergebnisse“ der Abfrage-Editor-Konsole werden die Ergebnisse einer Abfrageausführung angezeigt.](../images/ui/query-editor/query-results.png)
+
+### Abfrageergebnisse herunterladen {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Download-Funktionen stehen nur Kunden mit dem Add-on Data Distiller zur Verfügung. Weitere Informationen zu Data Distiller erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
+
+Laden Sie nach dem Ausführen einer erfolgreichen Abfrage die Ergebnisse im CSV-, XLSX- oder JSON-Format herunter, um sie in Offline-Analysen, Berichten oder Tabellen-Workflows zu verwenden. Diese Funktion optimiert die Workflows für Marketing- und Analyse-Teams, indem sie den sofortigen Zugriff auf Abfrageergebnisse für Offline-Analysen, Berichte und Excel-basierte Prozesse ermöglicht.
+
+Um Ihre Abfrageergebnisse herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** in der rechten oberen Ecke der Registerkarte Abfrage-Editor **[!UICONTROL Ergebnis]** aus. Wählen Sie dann **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** oder **[!UICONTROL JSON]** aus dem Dropdown-Menü aus. Die Datei wird automatisch auf Ihren lokalen Computer heruntergeladen. Wählen Sie das Format aus, das zu Ihrem Anwendungsfall passt, CSV für einfache Exporte, XLSX für formatierte Kalkulationstabellen oder JSON für die strukturierte Datenverarbeitung.
+
+>[!NOTE]
+>
+>Wenn die Schaltfläche **[!UICONTROL Herunterladen]** fehlt, überprüfen Sie die Abfrageergebnisse. Die Schaltfläche wird nur angezeigt, wenn Datensätze zurückgegeben werden. Wenn keine Datensätze zurückgegeben werden, wird auf der **[!UICONTROL Ergebnis]**-Registerkarte die Meldung „Keine Ergebnisse“ angezeigt und die Download-Option ist deaktiviert.
+
+![Die Registerkarte „Ergebnisse“ des Abfrage-Editors mit Hervorhebung der Option „Herunterladen“ und des Dropdown-Menüs.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Beim Öffnen einer CSV-Datei in Excel wird möglicherweise der folgende Warnhinweis angezeigt: <br>Möglicher Datenverlust. Einige Funktionen gehen möglicherweise verloren, wenn Sie diese Arbeitsmappe im kommagetrennten CSV-Format speichern. Um diese Funktionen beizubehalten, speichern Sie sie in einem Excel-Dateiformat.“<br>Beachten Sie außerdem, dass die Formatierung von Datum und Uhrzeit je nach Dateityp variieren kann. CSV-Dateien behalten das in den Abfrageergebnissen angezeigte Format bei, während XLSX-Dateien in Excel möglicherweise automatisch lokalisierte Formatierungen anwenden. Wenn diese Warnung angezeigt wird, können Sie sicher fortfahren. Um die Excel-spezifische Formatierung beizubehalten, speichern Sie die Datei stattdessen als XLSX.
+
+### Ergebnisse im Vollbildmodus anzeigen {#view-results}
+
+Wählen Sie nach dem Ausführen einer erfolgreichen Abfrage **[!UICONTROL Ergebnisse anzeigen]** auf der Registerkarte **[!UICONTROL Ergebnis]** aus, um eine tabellarische Vollbildansicht Ihrer Ergebnisse zu öffnen.
+
+Verwenden Sie die Vollbildvorschau, um große Tabellen einfach zu scannen und Details auf Zeilenebene ohne horizontales Scrollen zu überprüfen. Die Vollbildansicht zeigt die Ausgabe in einem in der Größe veränderbaren Raster an, was die Überprüfung großer Datensätze und das spaltenübergreifende Scannen erleichtert.
+
+>[!NOTE]
+>
+>Die Vorschau ist schreibgeschützt und ändert weder Ihre Abfrage noch Ihren Datensatz.
+
+![Das Dialogfeld für die Vollbildvorschau mit ausgewählter Option „Ergebnisse anzeigen“](../images/ui/overview/view-results-fullscreen.png)
+
+### Ergebnisse kopieren {#copy-results}
+
+Verwenden Sie die erweiterte Kopierfunktion im Abfrage-Editor, um Abfrageergebnisse als kommagetrennte Werte (CSV) zu kopieren und in Tabellenwerkzeuge wie Excel zur sofortigen Validierung oder Berichterstellung einzufügen. Diese Funktion verbessert die Lesbarkeit, behält die Formatierung bei und optimiert Workflows, ohne auf Tools von Drittanbietern angewiesen zu sein.
+
+Sie können Abfrageergebnisse entweder über die Registerkarte [!UICONTROL Ergebnis] oder über die Vollbildergebnisvorschau kopieren. Wählen Sie auf der **[!UICONTROL Ergebnis]**-Registerkarte das Kopiersymbol (![Kopiersymbol) aus.](../../images/icons/copy.png)), um alle Abfrageergebnisse in die Zwischenablage zu kopieren. Um das Kopiersymbol zu aktivieren, wählen Sie zunächst eine Zeile aus. Sie können einzelne Zeilen auswählen oder das Kontrollkästchen oben verwenden, um alle Zeilen gleichzeitig auszuwählen.
+
+![Die Registerkarte „Ergebnisse“ des Abfrage-Editors mit hervorgehobenem Kopiersymbol.](../images/ui/overview/query-editor-copy-icon.png)
+
+Wählen Sie alternativ **[!UICONTROL Ergebnisse anzeigen]** aus, um die Vollbildvorschau zu öffnen. Wählen Sie in diesem Dialogfeld einzelne Zeilen aus oder verwenden Sie das Kontrollkästchen in der oberen linken Ecke, um alle Zeilen auszuwählen, und klicken Sie dann auf das Symbol „Kopieren“ (![A copy icon).](../../images/icons/copy.png)), um die ausgewählten Daten zu kopieren.
+
+![Das Dialogfeld für die Vollbildvorschau mit ausgewählten Ergebniszeilen und hervorgehobenem Kopiersymbol.](../images/ui/overview/results-copy.png)
+
+### Alte Ergebnistabelle (begrenzte Verfügbarkeit) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>Die veraltete Ergebnistabelle ist nur für ausgewählte Benutzer über eine Feature Flag verfügbar und wird möglicherweise nicht in Ihrem aktuellen Abfrage-Editor angezeigt. Wenn Ihr Team Drag-to-Select-Workflows verwendet, wenden Sie sich an den Adobe-Support, um den Zugriff zu beantragen.
+
+Die alte Version des Abfrage-Editors ist für Benutzer gedacht, die auf flexible, manuelle Daten-Workflows wie QS oder tabellenbasierte Überprüfung angewiesen sind.
+
+Es unterstützt native Browser-basierte Drag-Auswahl, sodass Sie jeden Teil der Ausgabe - einschließlich einzelner Zellen oder Blöcke - mithilfe des standardmäßigen Auswahlverhaltens markieren und kopieren können. Dies steht im Gegensatz zur erweiterten Tabelle, die die strukturierte Zeilenauswahl und dedizierte Kopieraktionen verwendet.
+
+Kopierte Daten sind tabulatorgetrennt. Wenn Sie sie also in Tools wie Excel einfügen, bleiben die Spalten ausgerichtet und lesbar. Spaltenüberschriften sind auch enthalten, wenn Sie sie per Drag-and-Drop über die Kopfzeile ziehen.
+
+![Die Anzeige der Ergebnisse im alten Editor mit hervorgehobenen einfachen Ergebnissen per Drag-and-Select.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Beispiele {#examples}
 
@@ -254,7 +312,7 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 >
 >Die im Video dargestellte Benutzeroberfläche ist veraltet, aber die im Workflow verwendete Logik bleibt gleich.
 
->[!VIDEO](https://video.tv.adobe.com/v/33392?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Nächste Schritte
 
