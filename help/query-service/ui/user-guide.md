@@ -77,7 +77,7 @@ Verwenden Sie den erweiterten Abfrage-Editor, um mehr als eine Abfrage zu schrei
 ### Ausgewählte Abfrage ausführen {#execute-selected-query}
 
 Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen müssen, können Sie die ausgewählte Abfrage markieren und auswählen.
-[!UICONTROL  Symbol „Ausgewählte Abfrage ausführen]. Dieses Symbol ist standardmäßig deaktiviert, bis Sie im Editor Abfragesyntax auswählen.
+[!UICONTROL &#x200B; Symbol „Ausgewählte Abfrage ausführen]. Dieses Symbol ist standardmäßig deaktiviert, bis Sie im Editor Abfragesyntax auswählen.
 
 ![Der Abfrage-Editor mit dem hervorgehobenen Symbol [!UICONTROL Ausgewählte Abfrage ausführen].](../images/ui/query-editor/run-selected-query.png)
 
@@ -85,7 +85,7 @@ Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen m�
 
 Übernehmen Sie die Kontrolle über die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Diese Aktion löscht den Abfrage-Editor während einer Abfrageausführung. Beachten Sie, dass die Abfrage weiterhin im Hintergrund ausgeführt wird. Wenn es sich um eine CTAS-Abfrage handelt, wird dennoch ein Ausgabedatensatz generiert. Um die Ausführung im Editor abzubrechen und mit dem Erstellen einer SQL-Anweisung fortzufahren, wählen Sie **[!UICONTROL Abfrage abbrechen]** nach dem Ausführen einer Abfrage aus.
 
-![Der Abfrage-Editor mit [!UICONTROL  hervorgehobenen Option „Abfrage ]&quot;.](../images/ui/query-editor/cancel-query-run.png)
+![Der Abfrage-Editor mit [!UICONTROL &#x200B; hervorgehobenen Option „Abfrage &#x200B;]&quot;.](../images/ui/query-editor/cancel-query-run.png)
 
 Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Bestätigen]**, um die Ausführung der Abfrage abzubrechen.
 
