@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 70%
+source-wordcount: '409'
+ht-degree: 69%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 70%
    - [Abfrageprotokolle](ui/query-logs.md)
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
+   - [Migrieren von JWT zu OAuth-Anmeldeinformationen](ui/migrate-jwt-to-oauth.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - Abfrage-Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
