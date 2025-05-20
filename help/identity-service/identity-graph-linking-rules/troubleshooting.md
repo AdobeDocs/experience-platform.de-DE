@@ -403,4 +403,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
