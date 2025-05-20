@@ -78,7 +78,7 @@ Nein. Sie müssen die einzelnen Anmeldeinformationen mithilfe der Schaltfläche 
 
 Ja. Ablaufende Anmeldeinformationen sind von dieser Änderung nicht betroffen. Nur nicht ablaufende JWT-Anmeldeinformationen müssen migriert werden.
 
-### Ich sehe eine Meldung, die lautet[!UICONTROL  „Keine unbefristeten Anmeldedaten gefunden.]&quot; Was bedeutet das? Muss ich etwas unternehmen?
+### Ich sehe eine Meldung, die lautet[!UICONTROL &#x200B; „Keine unbefristeten Anmeldedaten gefunden.]&quot; Was bedeutet das? Muss ich etwas unternehmen?
 
 Diese Nachricht bedeutet, dass Sie noch keine nicht ablaufenden Zugangsdaten erstellt haben, sodass Sie nichts tun müssen.
 

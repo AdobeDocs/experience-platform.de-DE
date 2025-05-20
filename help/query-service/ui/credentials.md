@@ -104,7 +104,7 @@ Alle erforderlichen Berechtigungen sind jetzt in Adobe Developer Console konfigu
 
 ### Anmeldedaten erstellen {#generate-credentials}
 
-Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im ]**Navigationsbereich**[!UICONTROL  Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
+Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im **Navigationsbereich** Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
 
 ![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“ und hervorgehobener Option „Anmeldeinformationen generieren“.](../images/ui/credentials/generate-credentials.png)
 
