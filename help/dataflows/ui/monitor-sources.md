@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard die in den Data Lake aufgenommenen Daten überwachen können.
 title: Überwachen der Data Lake-Aufnahme
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 16%
+source-wordcount: '1458'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 16%
 >
 >Streaming-Quellen wie die [HTTP-API-Quelle](../../sources/connectors/streaming/http.md) werden derzeit nicht vom Überwachungs-Dashboard unterstützt. Derzeit können Sie das Dashboard nur zur Überwachung von Batch-Quellen verwenden.
 
-Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Überwachungs-Dashboard die Data-Lake-Aufnahme in der Experience Platform-Benutzeroberfläche überwachen können.
+Sie können das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden, um Metriken rund um Ihre Datenaufnahme und Datenaufbewahrungsprozesse im Data Lake abzurufen. Verwenden Sie die Diagramme in der -Benutzeroberfläche, um Aufnahme- und Aufbewahrungstrends im Laufe der Zeit zu überwachen und die Leistung über alle Quellen und Datenflüsse hinweg zusammenzufassen.
+
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie mit dem Monitoring-Dashboard die gesamte Datenverarbeitung im Data Lake überwachen können, einschließlich Aufnahme und Aufbewahrung.
 
 ## Erste Schritte {#get-started}
 
@@ -60,6 +62,7 @@ Im unteren Teil des Dashboards wird eine Tabelle angezeigt, die den aktuellen Me
 | --- | --- |
 | Empfangene Einträge | Die Gesamtzahl der von einer bestimmten Quelle empfangenen Datensätze. |
 | Aufgenommene Einträge | Die Gesamtzahl der in den Data Lake aufgenommenen Datensätze. |
+| Gelöschte Einträge | Die Gesamtzahl der gelöschten Datensätze aufgrund von Data-Lake-Aufbewahrungseinstellungen oder geänderten Datenerfassungsvorgängen. |
 | Übersprungene Einträge | Die Gesamtzahl der übersprungenen Datensätze. Ein übersprungener Datensatz bezieht sich auf Felder, die übersprungen wurden, weil sie für die Aufnahme nicht erforderlich waren. Wenn Sie beispielsweise einen Quelldatenfluss mit aktivierter partieller Aufnahme erstellen, können Sie einen akzeptablen Schwellenwert für die Fehlerrate konfigurieren. Während des Aufnahmevorgangs überspringt die Aufnahme Datensätze von Feldern, die nicht erforderlich sind, z. B. Identitätsfelder, solange sie sich innerhalb des Fehlerschwellenwerts befinden. |
 | Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht aufgenommen werden konnten. |
 | Aufgenommene Rate | Der Prozentsatz der aufgenommenen Datensätze auf der Basis der Gesamtzahl der empfangenen Datensätze. |
@@ -79,7 +82,19 @@ Sie können Ihre Daten mithilfe der Optionen weiter filtern, die oben in der Tab
 
 {style="table-layout:auto"}
 
+Um die Anzeige der Spalten anzupassen, wählen Sie das Symbol für die Spalteneinstellungen ![Spalten-Symbol](/help/images/icons/column-settings.png).
+
+![Das Monitoring-Dashboard mit ausgewähltem Symbol für die Spalteneinstellungen.](../assets/ui/monitor-sources/edit-columns.png)
+
+Wählen Sie anschließend im Fenster *[!UICONTROL Tabelle anpassen]* die Spalten aus, die Ihr Dashboard anzeigen soll. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
+
+![Das Popup-Fenster „Spalte anpassen“ im Monitoring-Dashboard.](../assets/ui/monitor-sources/customize-table.png)
+
 Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einer Quelle aus.
+
+>[!TIP]
+>
+>Sie können das Überwachungs-Dashboard verwenden, um Datenlöschmetriken für gelöschte Datensätze mithilfe von Datenspeicherungsrichtlinien zu überwachen. Weitere Informationen zur Datenaufbewahrung finden Sie im Handbuch unter [ von Richtlinien zur Datenaufbewahrung](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Überwachen Sie einen bestimmten Datenfluss, indem Sie das Filtersymbol neben einer bestimmten Quelle auswählen.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
@@ -120,7 +135,7 @@ Auf der Seite mit den Datenflussausführungs-Details können Sie Metriken und In
 
 {style="table-layout:auto"}
 
-Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL &#x200B; einen Bildlauf nach unten &#x200B;].
+Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL  einen Bildlauf nach unten ].
 
 Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
 
