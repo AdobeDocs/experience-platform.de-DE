@@ -2,10 +2,10 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 5%
+source-wordcount: '1527'
+ht-degree: 4%
 
 ---
 
@@ -15,14 +15,6 @@ ht-degree: 5%
 >id="platform_identities_uniquenamespace"
 >title="Eindeutiger Namespace"
 >abstract="Ein Diagramm darf nicht zwei Identitäten mit einem eindeutigen Namespace aufweisen. Wenn ein Diagramm versucht, dieses Limit zu überschreiten, werden die neuesten Links beibehalten und die ältesten Links entfernt."
-
->[!AVAILABILITY]
->
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
->
->* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
->* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
->* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus in Identity Service, der sicherstellt, dass ein Identitätsdiagramm für eine einzelne Person repräsentativ ist, und daher das unerwünschte Zusammenführen von Identitäten im Echtzeit-Kundenprofil verhindert.
 
@@ -61,7 +53,7 @@ Einen detaillierten Überblick über die Namespace-Priorität und ihre vollstän
 
 ## Prozess {#process}
 
-Bei der Aufnahme neuer Identitäten prüft Identity Service, ob die neuen Identitäten und die entsprechenden Namespaces den eindeutigen Namespace-Konfigurationen entsprechen. Wenn die Konfigurationen befolgt werden, wird die Aufnahme fortgesetzt und die neuen Identitäten werden mit dem Diagramm verknüpft. Wenn die Konfigurationen jedoch nicht befolgt werden, wird der Algorithmus zur Identitätsoptimierung:
+Bei der Aufnahme neuer Identitäten prüft Identity Service, ob die neuen Identitäten und die entsprechenden Namespaces den eindeutigen Namespace-Konfigurationen entsprechen. Wenn die Konfigurationen befolgt werden, wird die Aufnahme fortgesetzt und die neuen Identitäten werden mit dem Diagramm verknüpft. Wenn die Konfigurationen jedoch nicht befolgt werden, wird der Algorithmus für die Identitätsoptimierung:
 
 * Nehmen Sie unter Berücksichtigung der Namespace-Priorität das neueste Ereignis auf.
 * Entfernen Sie die Relation, die zwei Personenentitäten aus der entsprechenden Diagrammschicht zusammenführen würde.
@@ -100,7 +92,7 @@ In diesem Beispiel werden sowohl CRMID als auch E-Mail als eindeutige Namespaces
 
 * `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Jane wird durch ihre CRMID und E-Mail dargestellt, während der Webbrowser auf ihrem Laptop, den sie verwendet, durch eine ECID dargestellt wird.
 * `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. John wird durch seine CRMID und E-Mail dargestellt, während der von ihm verwendete Webbrowser bereits durch eine ECID dargestellt wird. Da dieselbe ECID mit zwei verschiedenen Diagrammen verknüpft ist, kann Identity Service erkennen, dass dieses Gerät (Laptop) ein gemeinsam genutztes Gerät ist.
-* Aufgrund der eindeutigen Namespace-Konfiguration, die pro Diagramm maximal einen CRMID-Namespace und einen E-Mail-Namespace festlegt, teilt der Identitätsoptimierungsalgorithmus das Diagramm jedoch in zwei Teile auf.
+* Aufgrund der eindeutigen Namespace-Konfiguration, die pro Diagramm maximal einen CRMID-Namespace und einen E-Mail-Namespace festlegt, teilt der Identitätsoptimierungs-Algorithmus das Diagramm jedoch in zwei Teile auf.
    * Da John der letzte authentifizierte Benutzer ist, bleibt die ECID für den Laptop mit seinem Diagramm verknüpft statt mit dem von Jane.
 
 ![Freigegebener Gerätefall eins](../images/identity-settings/shared-device-case-one.png)
@@ -117,7 +109,7 @@ In diesem Beispiel wird der CRMID-Namespace als eindeutiger Namespace bezeichnet
 * `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Sie wird durch ihre CRMID und der Webbrowser auf dem Laptop durch die ECID dargestellt.
 * `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. Er wird durch seine CRMID und den von ihm verwendeten Webbrowser durch dieselbe ECID dargestellt.
    * Dieses Ereignis verknüpft zwei unabhängige CRMIDs mit derselben ECID, wodurch das konfigurierte Limit von einer CRMID überschritten wird.
-   * Infolgedessen entfernt der Identitätsoptimierungsalgorithmus den älteren Link, in diesem Fall die CRMID von Jane, die unter `timestamp=1` verknüpft war.
+   * Infolgedessen entfernt der Identitätsoptimierungsalgorithmus den älteren Link, in diesem Fall die CRMID von Jane, die unter `timestamp=1` verknüpft wurde.
    * Während Janes CRMID jedoch nicht mehr als Diagramm auf Identity Service vorhanden ist, bleibt sie weiterhin als Profil im Echtzeit-Kundenprofil bestehen. Dies liegt daran, dass ein Identitätsdiagramm mindestens zwei verknüpfte Identitäten enthalten muss und dass infolge des Entfernens der Links Janes CRMID keine andere Identität mehr hat, mit der sie eine Verknüpfung herstellen kann.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
@@ -141,9 +133,9 @@ In diesem Beispiel werden die Namespaces CRM und E-Mail als eindeutig gekennzeic
 * `timestamp=3`: Ihr Datentechniker nimmt Janes CRM-Datensatz auf, was dazu führt, dass ihre CRMID mit der fehlerhaften E-Mail verknüpft wird.
 * `timestamp=4`: Ihr Dateningenieur nimmt Johns CRM-Datensatz auf, was dazu führt, dass seine CRMID mit der fehlerhaften E-Mail verknüpft wird.
    * Dies wird dann zu einem Verstoß gegen die Konfiguration eindeutiger Namespaces, da ein einzelnes Diagramm mit zwei CRMID-Namespaces erstellt wird.
-   * Daher löscht der Identitätsoptimierungsalgorithmus die ältere Verknüpfung, in diesem Fall die Verknüpfung zwischen der Identität von Jane mit dem CRMID-Namespace und der Identität mit dem Test<span>@test.
+   * Daher löscht der Algorithmus für die Identitätsoptimierung den älteren Link, in diesem Fall die Verknüpfung zwischen der Identität von Jane mit dem CRMID-Namespace und der Identität mit dem Test<span>@test.
 
-Bei einem Algorithmus zur Identitätsoptimierung werden fehlerhafte Identitätswerte wie falsche E-Mails oder Telefonnummern nicht auf mehrere verschiedene Identitätsdiagramme übertragen.
+Mit dem Algorithmus zur Identitätsoptimierung werden fehlerhafte Identitätswerte wie falsche E-Mails oder Telefonnummern nicht auf mehrere verschiedene Identitätsdiagramme übertragen.
 
 ![bad-email](../images/identity-settings/bad-email.png)
 

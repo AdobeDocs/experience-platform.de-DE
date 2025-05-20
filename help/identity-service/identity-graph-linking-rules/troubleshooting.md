@@ -1,23 +1,15 @@
 ---
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
-description: Erfahren Sie, wie Sie häufige Probleme bei Verknüpfungsregeln für Identitätsdiagramme beheben können.
+description: Erfahren Sie, wie Sie häufige Probleme in den Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 # Handbuch zur Fehlerbehebung für [!DNL Identity Graph Linking Rules]
-
->[!AVAILABILITY]
->
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
->
->* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
->* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
->* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
 
 Beim Testen und Validieren von [!DNL Identity Graph Linking Rules] können Probleme im Zusammenhang mit der Datenaufnahme und dem Diagrammverhalten auftreten. In diesem Dokument erfahren Sie, wie Sie einige häufige Probleme bei der Arbeit mit [!DNL Identity Graph Linking Rules] beheben können.
 
@@ -190,7 +182,7 @@ In diesem Abschnitt werden häufige Probleme im Zusammenhang mit dem Verhalten d
 
 ### Nicht authentifizierte ExperienceEvents werden an das falsche authentifizierte Profil angehängt
 
-Der Algorithmus zur Identitätsoptimierung berücksichtigt [die zuletzt eingerichteten Links und entfernt die ältesten Links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Daher ist es möglich, dass ECIDs von einer Person zur anderen neu zugewiesen (neu verknüpft) werden, sobald diese Funktion aktiviert ist. Gehen Sie wie folgt vor, um den Verlauf der Verknüpfung einer Identität im Laufe der Zeit zu verstehen:
+Der Identitätsoptimierungsalgorithmus berücksichtigt [die zuletzt eingerichteten Links und entfernt die ältesten Links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Daher ist es möglich, dass ECIDs von einer Person zur anderen neu zugewiesen (neu verknüpft) werden, sobald diese Funktion aktiviert ist. Gehen Sie wie folgt vor, um den Verlauf der Verknüpfung einer Identität im Laufe der Zeit zu verstehen:
 
 **Schritte zur Fehlerbehebung**
 
@@ -266,7 +258,7 @@ ORDER BY timestamp desc
 
 **Schritte zur Fehlerbehebung**
 
-Weitere Informationen finden Sie in [ Dokumentation zum ](./identity-optimization-algorithm.md) Identitätsoptimierungsalgorithmus sowie zu den unterstützten Diagrammstrukturtypen.
+Weitere Informationen finden Sie in [ Dokumentation unter ](./identity-optimization-algorithm.md) zur Identitätsoptimierung sowie zu den unterstützten Diagrammstrukturen.
 
 * Beispiele für unterstützte Diagrammstrukturen [ Sie im ](./example-configurations.md) zur Diagrammkonfiguration .
 * Beispiele für nicht unterstützte Diagrammstrukturen [ Sie auch im ](./implementation-guide.md#appendix)Implementierungshandbuch“. Es gibt zwei mögliche Szenarien:
@@ -411,4 +403,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.

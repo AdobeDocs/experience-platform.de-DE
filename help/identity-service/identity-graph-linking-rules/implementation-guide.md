@@ -1,23 +1,15 @@
 ---
-title: Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
-description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Regeln zur Identitätsdiagrammverknüpfung.
+title: Implementierungshandbuch für Verknüpfungsregeln für Identitätsdiagramme
+description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Verknüpfungsregeln für Identitätsdiagramme.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
 
-# Implementierungshandbuch für Regeln zur Identitätsdiagramm-Verknüpfung
-
->[!AVAILABILITY]
->
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
->
->* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
->* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
->* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
+# Implementierungshandbuch für [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -29,7 +21,7 @@ Schrittweise Anleitung:
 
 1. [Vollständige Voraussetzungen für die Implementierung](#prerequisites-for-implementation)
 2. [Erstellen der erforderlichen Identity-Namespaces](#namespace)
-3. [Verwenden des Diagrammsimulations-Tools, um sich mit dem Identitätsoptimierungsalgorithmus vertraut zu machen](#graph-simulation)
+3. [Verwenden Sie das Tool zur Diagrammsimulation, um sich mit dem Identitätsoptimierungs-Algorithmus vertraut zu machen.](#graph-simulation)
 4. [Verwenden Sie die Benutzeroberfläche „Identitätseinstellungen“, um Ihre eindeutigen Namespaces festzulegen und Prioritätsreihenfolgen für Ihre Namespaces zu konfigurieren](#identity-settings)
 5. [Erstellen eines Experience-Datenmodell (XDM)-Schemas](#schema)
 6. [Erstellen eines Datensatzes](#dataset)

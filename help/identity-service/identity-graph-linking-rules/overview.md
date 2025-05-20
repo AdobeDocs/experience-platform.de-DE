@@ -2,10 +2,10 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1547'
+ht-degree: 5%
 
 ---
 
@@ -14,21 +14,13 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Verknüpfungsregeln für Identitätsdiagramme"
->abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und präzisere Personalisierung für Ihre Benutzenden ermöglichen."
+>abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Regeln zur Identitätsdiagramm-Verknüpfung sind derzeit nur eingeschränkt verfügbar und können von allen Kunden in Entwicklungs-Sandboxes aufgerufen werden.
->
->* **Aktivierungsanforderungen**: Die Funktion bleibt inaktiv, bis Sie Ihre [!DNL Identity Settings] konfigurieren und speichern. Ohne diese Konfiguration funktioniert das System weiterhin normal, ohne dass sich das Verhalten ändert.
->* **Wichtige Hinweise**: Während dieser eingeschränkten Verfügbarkeitsphase kann die Segmentierung nach Edge zu unerwarteten Segmentzugehörigkeitsergebnissen führen. Streaming und Batch-Segmentierung funktionieren jedoch erwartungsgemäß.
->* **Nächste Schritte**: Informationen zum Aktivieren dieser Funktion in Produktions-Sandboxes erhalten Sie von Ihrem Adobe-Account-Team.
+>Wenden Sie sich an Ihr Adobe-Konto-Team, wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
 
 Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über [!DNL Identity Graph Linking Rules] bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzerinnen und Benutzer ermöglichen.
-
-Sehen Sie sich das folgende Video an, um weitere Informationen zur Verwendung von [!DNL Identity Graph Linking Rules] zu erhalten:
-
->[!VIDEO](https://video.tv.adobe.com/v/3448281/?learn=on&enablevpops&captions=ger)
 
 ## Erste Schritte
 
@@ -41,6 +33,70 @@ Die folgenden Dokumente sind für das Verständnis von [!DNL Identity Graph Link
 * [Namespace-Priorität](./namespace-priority.md)
 * [Benutzeroberfläche für die Diagrammsimulation](./graph-simulation.md)
 * [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)
+
+## Videobibliothek
+
+Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden Aspekte der Regeln für die Verknüpfung von Identitätsdiagrammen zu erfahren.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Verknüpfungsregeln für Identitätsdiagramme: Übersicht"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht">Verknüpfungsregeln für Identitätsdiagramme: Übersicht</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um einen Überblick über die Verknüpfungsregeln für Identitätsdiagramme zu erhalten und zu erfahren, wie Sie diese Funktion verwenden können, um das Ausblenden von Diagrammen zu verhindern.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen</a>
+                    </p>
+                    <p class="is-size-6">Sehen Sie sich dieses Video an, um zu erfahren, wie Sie Ihre Identitätseinstellungen konfigurieren und hochwertige Identitätsdiagramme und Kundenprofile für Adobe Experience Platform-Programme wie Real-Time CDP, Adobe Journey Optimizer und Customer Journey Analytics erstellen.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Szenarien zum Zusammenführen von Diagrammen {#graph-collapse-scenarios}
 
@@ -112,7 +168,7 @@ Mit [!DNL Identity Graph Linking Rules] können Sie:
 
 ### Eindeutiger Namespace {#unique-namespace}
 
-Sie können einen Namespace mithilfe des Arbeitsbereichs der Benutzeroberfläche für Identitätseinstellungen so konfigurieren, dass er eindeutig ist. Dadurch wird dem Identitätsoptimierungsalgorithmus mitgeteilt, dass ein bestimmtes Diagramm möglicherweise nur eine Identität hat, die diesen eindeutigen Namespace enthält. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen innerhalb desselben Diagramms zusammengeführt werden.
+Sie können einen Namespace mithilfe des Arbeitsbereichs der Benutzeroberfläche für Identitätseinstellungen so konfigurieren, dass er eindeutig ist. Dadurch wird dem Identitätsoptimierungsalgorithmus mitgeteilt, dass ein bestimmtes Diagramm nur eine Identität haben kann, die diesen eindeutigen Namespace enthält. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen innerhalb desselben Diagramms zusammengeführt werden.
 
 Betrachten Sie das folgende Szenario:
 
@@ -141,7 +197,7 @@ Eindeutige Namespaces und Namespace-Prioritäten können beide im Arbeitsbereich
 
 | | Identity Service | Echtzeit-Kundenprofil |
 | --- | --- | --- |
-| Eindeutiger Namespace | In Identity Service bezieht sich der Identitätsoptimierungsalgorithmus auf eindeutige Namespaces, um die Identitätsdaten zu bestimmen, die in ein bestimmtes Identitätsdiagramm aufgenommen werden. | Eindeutige Namespaces wirken sich nicht auf das Echtzeit-Kundenprofil aus. |
+| Eindeutiger Namespace | In Identity Service bezieht sich der Algorithmus zur Identitätsoptimierung auf eindeutige Namespaces, um die Identitätsdaten zu bestimmen, die in ein bestimmtes Identitätsdiagramm aufgenommen werden. | Eindeutige Namespaces wirken sich nicht auf das Echtzeit-Kundenprofil aus. |
 | Namespace-Priorität | Bei Diagrammen mit mehreren Ebenen bestimmt die Namespace-Priorität im Identity Service, dass die entsprechenden Links entfernt werden. | Wenn ein Erlebnisereignis in Profile aufgenommen wird, wird der Namespace mit der höchsten Priorität zur primären Identität des Profilfragments. |
 
 * Die Namespace-Priorität beeinflusst das Diagrammverhalten nicht, wenn die Beschränkung von 50 Identitäten pro Diagramm erreicht wird.
