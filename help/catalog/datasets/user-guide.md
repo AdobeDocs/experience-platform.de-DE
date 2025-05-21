@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Datensatz-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform beim Arbeiten mit Datensätzen häufig durchgeführte Aktionen ausführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '4143'
+source-wordcount: '4237'
 ht-degree: 12%
 
 ---
@@ -100,7 +100,7 @@ Die Benutzeroberfläche „Datensätze“ bietet jetzt eine Sammlung von Inline-
 * [[!UICONTROL Verwalten von Daten und Zugreifen auf Kennzeichnungen]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Einheitliches Profil aktivieren]](#enable-profile)
 * [[!UICONTROL Tags verwalten]](#manage-tags)
-* [(Beta) [!UICONTROL Festlegen einer Datenspeicherungsrichtlinie]](#data-retention-policy)
+* [[!UICONTROL Festlegen einer Richtlinie zur Datenaufbewahrung]](#data-retention-policy)
 * [[!UICONTROL In Ordner verschieben]](#move-to-folders)
 * [[!UICONTROL Löschen]](#delete).
 
@@ -108,7 +108,7 @@ Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweilig
 
 ### Vorschau für Datensatz anzeigen {#preview}
 
-Sie können eine Vorschau der Datensatzbeispieldaten sowohl über die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] als auch über die Ansicht [!UICONTROL Datensatzaktivität] anzeigen. Klicken Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus der Liste der verfügbaren Optionen aus. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
+Sie können eine Vorschau der Datensatzbeispieldaten sowohl über die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] als auch über die Ansicht [!UICONTROL Datensatzaktivität] anzeigen. Klicken Sie auf [!UICONTROL  Registerkarte ]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes]** aus der Liste der verfügbaren Optionen aus. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit hervorgehobenen Auslassungszeichen und der Option „Datensatz in der Vorschau“ für den ausgewählten Datensatz.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -120,7 +120,7 @@ Dadurch wird das Vorschaufenster geöffnet, in dem rechts die hierarchische Ansi
 
 ![Das Dialogfeld für die Datensatzvorschau mit Informationen zur Struktur sowie Beispielwerten für den Datensatz wird angezeigt.](../images/datasets/user-guide/preview-dataset.png)
 
-Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts **Bildschirm die Option** Datensatz in der Vorschau anzeigen auswählen, um eine Vorschau von bis zu 100 Datenzeilen anzuzeigen.
+Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts ]**Bildschirm die Option**[!UICONTROL  Datensatz in der Vorschau anzeigen auswählen, um eine Vorschau von bis zu 100 Datenzeilen anzuzeigen.
 
 ![Die Schaltfläche „Datensatz in der Vorschau anzeigen“ ist hervorgehoben.](../images/datasets/user-guide/select-preview.png)
 
@@ -160,7 +160,7 @@ Datensätze, die für Profil aktiviert wurden, können auch nach diesen Kriterie
 
 ### Datensatz-Tags verwalten {#manage-tags}
 
-Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL &#x200B; der Registerkarte &#x200B;] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
+Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL  der Registerkarte ] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit Hervorhebung der Optionen „Auslassungszeichen“ und „Tags verwalten“ für den ausgewählten Datensatz.](../images/datasets/user-guide/manage-tags.png)
 
@@ -174,13 +174,15 @@ Nachdem ein Tag zu einem Datensatz hinzugefügt wurde, können die Datensätze a
 
 Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird erläutert, wie Benutzende mit den entsprechenden Berechtigungen vordefinierte Tags erstellen, Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge in der Benutzeroberfläche von Experience Platform verwalten können.
 
-### (Beta) Festlegen der Richtlinie zur Datenaufbewahrung {#data-retention-policy}
-
->[!AVAILABILITY]
-> 
->Die Einstellungen zur Datenaufbewahrung befinden sich derzeit in der Beta-Phase und stehen nur in einer **Version** ausgewählten Organisationen zur Verfügung. Ihre Benutzeroberfläche entspricht möglicherweise nicht der unten beschriebenen Funktion.
+### Richtlinie zur Datenspeicherung festlegen {#data-retention-policy}
 
 Verwalten Sie die Einstellungen für die Datensatzgültigkeit und -beibehaltung mithilfe des Inline-Aktionsmenüs auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Datensätze]. Mit dieser Funktion können Sie konfigurieren, wie lange Daten im Data Lake und Profilspeicher aufbewahrt werden. Das Ablaufdatum basiert auf dem Zeitpunkt der Datenaufnahme in Experience Platform und Ihrer konfigurierten Aufbewahrungsfrist.
+
+>[!IMPORTANT]
+>
+>Um Aufbewahrungsregeln für einen ExperienceEvent-Datensatz anzuwenden oder zu aktualisieren, muss Ihre Benutzerrolle die Berechtigung **Datensätze verwalten** enthalten. Diese rollenbasierte Zugriffssteuerung stellt sicher, dass nur autorisierte Benutzer die Einstellungen für die Datensatzaufbewahrung ändern können.
+>
+>Weitere Informationen [ Zuweisen von Berechtigungen in Adobe Experience Platform finden ](../../access-control/home.md#platform-permissions) unter „Zugriffssteuerung - Übersicht“.
 
 >[!TIP]
 >
@@ -216,7 +218,7 @@ Sie können die visuelle Prognose verwenden, um die Auswirkungen verschiedener A
 
 >[!NOTE]
 >
->Das Verteilungsdiagramm für Erlebnisereignisse ist datensatzspezifisch und spiegelt nur die Daten des ausgewählten Datensatzes wider.
+>Das Verteilungsdiagramm für Erlebnisereignisse ist spezifisch für den ausgewählten Datensatz und spiegelt nur dessen Daten wider. Sie gilt ausschließlich für Daten, die im Data Lake gespeichert sind.
 
 ![Das Dialogfeld Datenaufbewahrung festlegen mit dem Diagramm zur Verteilung von Erlebnisereignissen wird angezeigt.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -226,7 +228,9 @@ Wenn Sie mit der Konfiguration zufrieden sind, klicken Sie auf **[!UICONTROL Spe
 >
 >Sobald die Datenspeicherungsregeln angewendet werden, werden alle Daten, die älter als die durch den Gültigkeitswert definierte Anzahl von Tagen sind, dauerhaft gelöscht und können nicht wiederhergestellt werden.
 
-Nachdem Sie Ihre Aufbewahrungseinstellungen konfiguriert haben, verwenden Sie die Monitoring-Benutzeroberfläche, um zu bestätigen, dass Ihre Änderungen vom System ausgeführt wurden. Die Monitoring-Benutzeroberfläche bietet eine zentralisierte Ansicht der Datenaufbewahrungsaktivität für alle Datensätze. Dort können Sie die Ausführung von Aufträgen verfolgen, überprüfen, wie viele Daten gelöscht wurden, und sicherstellen, dass Ihre Aufbewahrungsrichtlinien erwartungsgemäß funktionieren. Diese Sichtbarkeit unterstützt Governance, Compliance und effizientes Data Lifecycle Management.
+Nachdem Sie Ihre Aufbewahrungseinstellungen konfiguriert haben, verwenden Sie die Monitoring-Benutzeroberfläche, um zu bestätigen, dass Ihre Änderungen vom System ausgeführt wurden. Die Monitoring-Benutzeroberfläche bietet eine zentralisierte Ansicht der Datenaufbewahrungsaktivität für alle Datensätze. Dort können Sie die Ausführung von Aufträgen verfolgen, überprüfen, wie viele Daten gelöscht wurden, und sicherstellen, dass Ihre Aufbewahrungsrichtlinien erwartungsgemäß funktionieren.
+
+Informationen dazu, wie Aufbewahrungsrichtlinien auf verschiedene Services angewendet werden, finden Sie in den entsprechenden Handbüchern [Aufbewahrung von Erlebnisereignis-Datensätzen im ](../../profile/event-expirations.md) und [Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake](./experience-event-dataset-retention-ttl-guide.md). Diese Sichtbarkeit unterstützt Governance, Compliance und effizientes Data Lifecycle Management.
 
 Informationen dazu, wie Sie mit dem Überwachungs-Dashboard Quelldatenflüsse in der Experience Platform-Benutzeroberfläche verfolgen können, finden Sie in der Dokumentation [Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md) .
 
@@ -234,15 +238,15 @@ Informationen dazu, wie Sie mit dem Überwachungs-Dashboard Quelldatenflüsse in
 
 Weitere Informationen zu den Regeln, die Datumsbereiche für Datensatzgültigkeiten definieren, und Best Practices für die Konfiguration Ihrer Datenspeicherungsrichtlinie finden Sie auf der Seite [Häufig gestellte Fragen](../catalog-faq.md).
 
-#### (Beta) Verbesserte Sichtbarkeit von Aufbewahrungsfristen und Speichermetriken {#retention-and-storage-metrics}
+#### Verbesserte Sichtbarkeit von Aufbewahrungsfristen und Speichermetriken {#retention-and-storage-metrics}
 
-Für Beta-Benutzer stehen vier neue Spalten zur Verfügung, um einen besseren Einblick in Ihr Daten-Management zu **[!UICONTROL :]** Data Lake Storage **[!UICONTROL , Data Lake Retention]**, **[!UICONTROL Profile Storage]** und **[!UICONTROL Profile Retention]**. Diese Metriken zeigen, wie viel Speicher Ihre Daten verbrauchen und wie lange sie aufbewahrt werden, sowohl im Data Lake als auch im Profil-Service.
+Vier neue Spalten bieten eine bessere Sichtbarkeit Ihres Daten-Managements: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** und **[!UICONTROL Profile Retention]**. Diese Metriken zeigen, wie viel Speicher Ihre Daten verbrauchen und wie lange sie aufbewahrt werden, sowohl im Data Lake als auch im Profil-Service.
 
-Diese erhöhte Transparenz ermöglicht fundierte Entscheidungen und ein effektiveres Management der Speicherkosten. Sortieren Sie Datensätze nach Speichergröße, um die größten Datensätze in Ihrer aktuellen Sandbox zu identifizieren. Diese Einblicke unterstützen auch eine bessere Governance und helfen Ihnen, den Lebenszyklus Ihrer Daten und die Nutzung Ihrer Berechtigungen zu verstehen.
+Diese erhöhte Transparenz ermöglicht fundierte Entscheidungen und ein effektiveres Management der Speicherkosten. Sortieren Sie Datensätze nach Speichergröße, um die größten Datensätze in Ihrer aktuellen Sandbox zu identifizieren. Diese Einblicke unterstützen Best Practices für das Daten-Management und helfen bei der Sicherstellung der Einhaltung Ihrer lizenzierten Berechtigungen.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit hervorgehobenen vier neuen Spalten für Speicherung und Aufbewahrung.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-Die folgende Tabelle bietet einen Überblick über die neuen Aufbewahrungs- und Speichermetriken, die in der Beta-Version verfügbar sind. Darin wird der Zweck jeder Spalte und die Unterstützung für die Verwaltung der Datenaufbewahrung und -speicherung beschrieben.
+Die folgende Tabelle bietet einen Überblick über die neuen Metriken zur Datenspeicherung und Datenspeicherung. Darin wird der Zweck jeder Spalte und die Unterstützung für die Verwaltung der Datenaufbewahrung und -speicherung beschrieben.
 
 | Spaltentitel | Beschreibung |
 |---|---|
@@ -252,6 +256,8 @@ Die folgende Tabelle bietet einen Überblick über die neuen Aufbewahrungs- und 
 | [!UICONTROL Profilaufbewahrung] | Die aktuelle Aufbewahrungsfrist für Profildatensätze. Sie können diesen Wert aktualisieren, um zu steuern, wie lange Profildaten aufbewahrt werden. |
 
 {style="table-layout:auto"}
+
+Informationen zu Einblicken aus Speicher- und Aufbewahrungsmetriken finden Sie im [Handbuch zu Best Practices für Data Management-Lizenzberechtigungen](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Verwenden Sie sie, um zu verwalten, welche Daten Sie aufnehmen und speichern, Filter und Ablaufregeln anzuwenden und das Datenwachstum zu kontrollieren, um innerhalb Ihrer lizenzierten Nutzungsbeschränkungen zu bleiben.
 
 ### In Ordner verschieben {#move-to-folders}
 
@@ -275,7 +281,7 @@ Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass 
 
 ### Datensatz löschen {#delete}
 
-Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL &#x200B; in der Ansicht &#x200B;]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
+Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL  in der Ansicht ]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit Auslassungszeichen und der hervorgehobenen Option „Löschen“ für den ausgewählten Datensatz.](../images/datasets/user-guide/inline-delete-dataset.png)
 
@@ -311,21 +317,21 @@ Die Liste der angewendeten Filter wird über den gefilterten Ergebnissen angezei
 
 Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie das Kontrollkästchen **[!UICONTROL Ja]** im Abschnitt [!UICONTROL Systemdatensätze anzeigen]. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexportdatensatz zur Verarbeitung des Profil-Dashboards verwendet.
 
-![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL &#x200B; „Systemdatensätze &#x200B;].](../images/datasets/user-guide/show-system-datasets.png)
+![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL  „Systemdatensätze ].](../images/datasets/user-guide/show-system-datasets.png)
 
 ### Filtern von profilaktivierten Datensätzen {#filter-profile-enabled-datasets}
 
 Die Datensätze, die für Profildaten aktiviert wurden, werden nach der Aufnahme von Daten zum Ausfüllen von Kundenprofilen verwendet. Weitere Informationen finden Sie im Abschnitt [Aktivieren von Datensätzen ](#enable-profile) Profil“.
 
-Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL &#x200B; in den Filteroptionen das &#x200B;] „Ja“.
+Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL  in den Filteroptionen das ] „Ja“.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; „Im Profil &#x200B;]&quot;.](../images/datasets/user-guide/included-in-profile.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  „Im Profil ]&quot;.](../images/datasets/user-guide/included-in-profile.png)
 
 ### Datensätze nach Tag filtern {#filter-by-tag}
 
 Geben Sie Ihren benutzerdefinierten Tag-Namen in die Eingabe [!UICONTROL Tags] ein und wählen Sie dann Ihr Tag aus der Liste der verfügbaren Optionen aus, um Datensätze zu suchen und zu filtern, die diesem Tag entsprechen.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
 
 ### Datensätze nach Erstellungsdatum filtern {#filter-by-creation-date}
 
