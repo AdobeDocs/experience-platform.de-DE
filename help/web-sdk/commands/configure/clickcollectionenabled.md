@@ -2,9 +2,9 @@
 title: clickCollectionEnabled
 description: Erfahren Sie, wie Sie Web SDK so konfigurieren, dass festgestellt wird, ob Link-Klickdaten automatisch erfasst werden.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
+source-git-commit: fdb809ea86e91a98b45877c99c3e64d7c49d1cd5
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,20 @@ Wenn `clickCollectionEnabled` aktiviert ist, werden die folgenden XDM-Elemente a
 * `xdm.web.webInteraction.type`
 * `xdm.web.webInteraction.URL`
 
-Interne Links, Downloadlinks und Exitlinks werden standardmäßig alle automatisch verfolgt, wenn dieser boolesche Wert aktiviert ist. Wenn Sie mehr Kontrolle über das automatische Linktracking erhalten möchten, empfiehlt Adobe die Verwendung des [`clickCollection`](clickcollection.md).
+Interne Links, Downloadlinks und Exitlinks werden standardmäßig alle automatisch verfolgt, wenn dieser boolesche Wert aktiviert ist. Wenn Sie mehr Kontrolle über die automatische Linkverfolgung erhalten möchten, empfiehlt Adobe die Verwendung des [`clickCollection`](clickcollection.md).
+
+## Unterstützung für offene [!DNL Shadow DOM]
+
+Web SDK unterstützt das automatische Klick-Tracking für Links in **Open Shadow-DOM**-Elementen.
+
+Viele moderne Websites verwenden [Web-Komponenten](https://developer.mozilla.org/en-US/docs/Web/Web_Components) um wiederverwendbare und verkapselte Benutzeroberflächenelemente zu erstellen. Diese Komponenten verwenden häufig eine Technologie namens [**Shadow-DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), um ihre interne Struktur und ihre Stile vom Rest der Seite getrennt zu halten.
+
+Es gibt zwei Arten von Shadow-DOM:
+
+* **Open Shadow DOM:** Die interne Struktur ist für JavaScript verfügbar, das auf der Seite ausgeführt wird. Dies bedeutet, dass andere Skripte mit den Inhalten der Komponente interagieren oder diese überprüfen können.
+* **Geschlossenes Shadow-DOM**: Die interne Struktur ist außerhalb der Komponente vor JavaScript verborgen, sodass sie für Tracking oder Manipulation nicht zugänglich ist.
+
+Web SDK verfolgt Klicks auf `<a>` und `<area>` automatisch in **Open Shadow-DOMs**, genau wie bei Links im Hauptdokument. Dadurch wird sichergestellt, dass Link-Klicks innerhalb von Web-Komponenten, die offene [!DNL Shadow DOM] verwenden, in Ihren Analytics-Daten enthalten sind. Klicks in **geschlossenen Shadow-DOMs** werden nicht verfolgt, da ihre interne Struktur vor JavaScript-Code verborgen ist, der außerhalb der Komponente ausgeführt wird.
 
 ## Automatische Linktracking-Logik
 
