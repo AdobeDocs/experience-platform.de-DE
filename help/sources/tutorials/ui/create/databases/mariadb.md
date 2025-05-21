@@ -2,10 +2,10 @@
 title: Verbinden von MariaDB mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihr MariaDB-Konto mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform mit Experience Platform verbinden.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 16%
+source-wordcount: '492'
+ht-degree: 19%
 
 ---
 
@@ -54,9 +54,9 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und ge
 
 ![Die neue Kontoschnittstelle im Quell-Workflow mit einem Kontonamen und einer optionalen Beschreibung.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Verbindung zu Experience Platform auf Azure herstellen {#azure}
+### Verbindung mit Experience Platform herstellen
 
-Sie können Ihr [!DNL MariaDB]-Konto mit Experience Platform auf Azure verbinden, indem Sie entweder den Kontoschlüssel oder die Standardauthentifizierung verwenden.
+Sie können Ihr [!DNL MariaDB]-Konto entweder mit dem Kontoschlüssel oder mit der Standardauthentifizierung mit Experience Platform verbinden.
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Um die Standardauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Standar
 ![Die neue Kontoschnittstelle im Quell-Workflow mit ausgewählter „Standardauthentifizierung“.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Verbinden mit Experience Platform auf Amazon Web Services (AWS) {#aws}
-
->[!AVAILABILITY]
->
->Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
-
-Um ein neues [!DNL MariaDB]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [ (Anmeldeinformationen für die Authentifizierung) ](../../../../connectors/databases/mariadb.md#aws).
-
-![Die neue Kontoschnittstelle im Quell-Workflow zum Herstellen einer Verbindung mit AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## Nächste Schritte
 
 Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL MariaDB]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](../../dataflow/databases.md).

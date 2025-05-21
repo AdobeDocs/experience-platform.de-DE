@@ -1,11 +1,11 @@
 ---
 title: Übersicht über den MySQL Source Connector
 description: Erfahren Sie, wie Sie MySQL mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
-last-substantial-update: 2025-05-17T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '625'
 ht-degree: 5%
 
 ---
@@ -69,7 +69,7 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um [!DNL MySQ
 | `username` | Der Name Ihrer Datenbank. |
 | `password` | Der Benutzername, der Ihrer Datenbank entspricht. |
 | `database` | Das Passwort, das Ihrer Datenbank entspricht. |
-| `sslMode` | Die [!DNL Secure Sockets Layer] (SSL)-Methode, die auf Ihre Verbindung angewendet werden soll. Folgende Werte sind verfügbar: <ul><li>`DISABLED`: Verwenden Sie diese Option, um SSL zu deaktivieren. Wenn Ihr Server eine SSL-Konfiguration erfordert, schlägt die Verbindung fehl</li><li>`PREFERRED`: Verwenden Sie diese Option, um SSL-Verbindungen zu bevorzugen, da der Server sie unterstützt. Diese Option ermöglicht auch Nicht-SSL-Verbindungen.</li><li>`REQUIRED`: Verwenden Sie diese Option, um SSL-Verbindungen als obligatorisch festzulegen. Wenn der Server SSL nicht unterstützt, schlagen die Verbindungen fehl.</li><li>`Verify-Ca`: Verwenden Sie diese Option, um Serverzertifikate zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li><li>`Verify Identity`: Verwenden Sie diese Option, um Serverzertifikate mit dem Host-Namen zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li></ul> |
+| `sslMode` | Ein boolescher Wert, der steuert, ob SSL je nach Server-Unterstützung erzwungen wird oder nicht. Die Standardeinstellung für diese Konfiguration ist `false`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL MySQL] ist `26d738e0-8963-47ea-aadf-c60de735468a`. **Hinweis**: Diese Berechtigung ist nur erforderlich, wenn eine Verbindung über die [!DNL Flow Service]-API hergestellt wird. |
 
 ## Verbinden von [!DNL MySQL] mit Experience Platform mithilfe von APIs

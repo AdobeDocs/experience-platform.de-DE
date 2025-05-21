@@ -2,9 +2,9 @@
 title: Verbinden von MySQL mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihre MySQL-Datenbank mithilfe von APIs mit Experience Platform verbinden.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 7%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | Der Name Ihrer Datenbank. |
 | `auth.params.username` | Der Benutzername, der Ihrer Datenbank entspricht. |
 | `auth.params.password` | Das Passwort, das Ihrer Datenbank entspricht. |
-| `auth.params.sslMode` | Die Methode, mit der Daten während der Datenübertragung verschlüsselt werden. |
+| `auth.params.sslMode` | Ein boolescher Wert, der steuert, ob SSL je nach Server-Unterstützung erzwungen wird oder nicht. Die Standardeinstellung für diese Konfiguration ist `false`. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL MySQL]-Verbindung lautet: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 +++

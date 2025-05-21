@@ -1,12 +1,12 @@
 ---
 title: Übersicht über den PostgreSQL Source-Connector
 description: Erfahren Sie mehr über die PostgreSQL-Quelle in Adobe Experience Platform.
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 7%
+source-wordcount: '667'
+ht-degree: 13%
 
 ---
 
@@ -35,7 +35,7 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um Ihre [!DNL Postgr
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | `connectionString` | Die mit Ihrem [!DNL PostgreSQL]-Konto verknüpfte Verbindungszeichenfolge. Das [!DNL PostgreSQL]-Verbindungszeichenfolgenmuster ist: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PostgreSQL] ist `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PostgreSQL] ist `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Diese Berechtigung ist nur erforderlich, wenn eine Verbindung über die [!DNL Flow Service]-API hergestellt wird. |
 
 Weitere Informationen finden [[!DNL PostgreSQL]  in der ](https://www.postgresql.org/docs/current/).
 
@@ -51,6 +51,7 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um Ihre [!DNL Postgr
 | `password` | Das Passwort, das mit Ihrer [!DNL PostgreSQL]-Datenbankauthentifizierung verknüpft ist. |
 | `database` | Der Name der [!DNL PostgreSQL] Datenbank, mit der Sie eine Verbindung herstellen möchten. |
 | `sslMode` | Die [!DNL Secure Sockets Layer] (SSL)-Methode, die auf Ihre Verbindung angewendet werden soll. Folgende Werte sind verfügbar: <ul><li>`Disable`: Verwenden Sie diese Option, um SSL zu deaktivieren. Wenn Ihr Server eine SSL-Konfiguration erfordert, schlägt die Verbindung fehl.</li><li>`Allow`: Verwenden Sie diese Option, um SSL-Verbindungen zuzulassen. Nicht-SSL-Verbindungen können weiterhin verwendet werden, wenn der Server sie unterstützt.</li><li>`Prefer`: Verwenden Sie diese Option, um SSL-Verbindungen zu bevorzugen, da der Server sie unterstützt. Diese Option ermöglicht auch Nicht-SSL-Verbindungen.</li><li>`Require`: Verwenden Sie diese Option, um SSL-Verbindungen als obligatorisch festzulegen. Wenn der Server SSL nicht unterstützt, schlagen die Verbindungen fehl.</li><li>`Verify-Ca`: Verwenden Sie diese Option, um Serverzertifikate zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li><li>`Verify-Full`: Verwenden Sie diese Option, um Serverzertifikate mit dem Host-Namen zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li></ul> |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PostgreSQL] ist `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Diese Berechtigung ist nur erforderlich, wenn eine Verbindung über die [!DNL Flow Service]-API hergestellt wird. |
 
 Weitere Informationen finden [[!DNL PostgreSQL]  in der ](https://www.postgresql.org/docs/current/).
 
@@ -71,7 +72,8 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um Ihre [!DNL Postgr
 | `username` | Der Benutzername, der Ihrer [!DNL PostgreSQL]-Datenbankauthentifizierung zugeordnet ist. |
 | `password` | Das Passwort, das mit Ihrer [!DNL PostgreSQL]-Datenbankauthentifizierung verknüpft ist. |
 | `database` | Der Name der [!DNL PostgreSQL] Datenbank, mit der Sie eine Verbindung herstellen möchten. |
-| `sslMode` | Die [!DNL Secure Sockets Layer] (SSL)-Methode, die auf Ihre Verbindung angewendet werden soll. Folgende Werte sind verfügbar: <ul><li>`Disable`: Verwenden Sie diese Option, um SSL zu deaktivieren. Wenn Ihr Server eine SSL-Konfiguration erfordert, schlägt die Verbindung fehl.</li><li>`Allow`: Verwenden Sie diese Option, um SSL-Verbindungen zuzulassen. Nicht-SSL-Verbindungen können weiterhin verwendet werden, wenn der Server sie unterstützt.</li><li>`Prefer`: Verwenden Sie diese Option, um SSL-Verbindungen zu bevorzugen, da der Server sie unterstützt. Diese Option ermöglicht auch Nicht-SSL-Verbindungen.</li><li>`Require`: Verwenden Sie diese Option, um SSL-Verbindungen als obligatorisch festzulegen. Wenn der Server SSL nicht unterstützt, schlagen die Verbindungen fehl.</li><li>`Verify-Ca`: Verwenden Sie diese Option, um Serverzertifikate zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li><li>`Verify-Full`: Verwenden Sie diese Option, um Serverzertifikate mit dem Host-Namen zu überprüfen, während Verbindungen fehlschlagen, wenn der Server SSL nicht unterstützt.</li></ul> |
+| `sslMode` | Ein boolescher Wert, der steuert, ob SSL je nach Server-Unterstützung erzwungen wird oder nicht. Die Standardeinstellung für diese Konfiguration ist `false`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL PostgreSQL] ist `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Diese Berechtigung ist nur erforderlich, wenn eine Verbindung über die [!DNL Flow Service]-API hergestellt wird. |
 
 Weitere Informationen finden [[!DNL PostgreSQL]  in der ](https://www.postgresql.org/docs/current/).
 
