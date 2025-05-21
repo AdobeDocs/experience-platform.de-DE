@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 45%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,6 +69,18 @@ Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einri
 Beim Exportieren *Zielgruppendaten* erstellt Experience Platform eine `.csv`-, `parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Zielgruppenaktivierung.
 
 Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- oder `.json`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie im Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen.
+
+## Verbindungsanforderungen für SFTP-Server {#sftp-connection-requirements}
+
+Um einen erfolgreichen Datenexport sicherzustellen, müssen Sie Ihren Ziel-SFTP-Server so konfigurieren, dass er eine ausreichende Anzahl gleichzeitiger Verbindungen zulässt. Wenn Ihr SFTP-Server die Anzahl der gleichzeitigen Verbindungen begrenzt, kann es zu Fehlern bei Exportvorgängen kommen, insbesondere wenn mehrere Zielgruppen oder Datensätze gleichzeitig exportiert werden.
+
+**Empfehlung**
+Um eine optimale Leistung zu erzielen, sollte Ihr SFTP-Server für jede exportierte Zielgruppe oder jeden exportierten Datensatz mindestens eine gleichzeitige Verbindung zulassen. Der Server sollte mindestens 30 % der Gesamtzahl der Zielgruppen oder Datensätze unterstützen, die gleichzeitig für den Export geplant sind.
+
+**Beispiel**\
+Wenn Sie Exporte für 100 Zielgruppen oder Datensätze gleichzeitig planen, sollte Ihr SFTP-Server mindestens 30 gleichzeitige Verbindungen zulassen.
+
+Die ordnungsgemäße Konfiguration der Verbindungsbeschränkungen Ihres SFTP-Servers verhindert fehlgeschlagene Exporte und stellt eine zuverlässige Datenbereitstellung von Adobe Experience Platform sicher.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -137,7 +149,7 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
