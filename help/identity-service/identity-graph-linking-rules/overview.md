@@ -44,7 +44,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448281/?learn=on&enablevpops&captions=ger" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht" target="_blank" rel="referrer">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Verknüpfungsregeln für Identitätsdiagramme: Übersicht"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -53,12 +53,12 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448281/?learn=on&enablevpops&captions=ger" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht">Verknüpfungsregeln für Identitätsdiagramme: Übersicht</a>
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme: Übersicht">Verknüpfungsregeln für Identitätsdiagramme: Übersicht</a>
                     </p>
                     <p class="is-size-6">Sehen Sie sich dieses Video an, um einen Überblick über die Verknüpfungsregeln für Identitätsdiagramme zu erhalten und zu erfahren, wie Sie diese Funktion verwenden können, um das Ausblenden von Diagrammen zu verhindern.</p>
                 </div>
                 <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448281/?learn=on&enablevpops&captions=ger" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
                   </a>
                   <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -73,7 +73,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441089/?format=jpeg&nocache=1732633205785&captions=ger" alt="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Verknüpfungsregeln für Identitätsdiagramme: Identitätseinstellungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
