@@ -231,4 +231,4 @@ In diesem Dokument werden die Einblicke beschrieben, die von einer Kunden-KI-Ser
 
 Im folgenden Video wird erläutert, wie Sie mit Kunden-KI die Ausgabe der Modelle und Einflussfaktoren anzeigen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36558?learn=on&quality=12&captions=ger)
