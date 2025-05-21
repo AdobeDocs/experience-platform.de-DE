@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden Experience-Datenmodell(XDM)-Schemata, um dies zu erreichen.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Wie alle XDM ExperienceEvent-Schemata erfasst auch das CEE-Schema den zeitreihen
 
 [!DNL Intelligent Services] verwenden mehrere Schlüsselfelder in diesem Schema, um Einblicke aus Ihren Marketing-Ereignisdaten zu generieren, die alle auf der Stammebene gefunden und erweitert werden können, um die erforderlichen Unterfelder anzuzeigen.
 
-![](./images/data-preparation/schema-expansion.gif)
+![Demo zur Schemaerweiterung in der Adobe Experience Platform-Benutzeroberfläche mit Details zur Navigation und zu Unterfeldern.](./images/data-preparation/schema-expansion.gif)
 
 Wie alle XDM-Schemata ist die Schemafeldgruppe CEE erweiterbar. Mit anderen Worten können der CEE-Feldergruppe zusätzliche Felder hinzugefügt werden und verschiedene Varianten können bei Bedarf in mehrere Schemata aufgenommen werden.
 
@@ -134,19 +134,19 @@ Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwen
 
 Um eine primäre Identität festzulegen, navigieren Sie von der Registerkarte **[!UICONTROL Schemata]** zu Ihrem Schema und wählen Sie den Hyperlink für den Schemanamen aus, um das **[!DNL Schema Editor]** zu öffnen.
 
-![Zu Schema navigieren](./images/data-preparation/navigate_schema.png)
+![Navigation zum Schema in der Adobe Experience Platform-Benutzeroberfläche.](./images/data-preparation/navigate_schema.png)
 
 Navigieren Sie dann zu dem Feld, das Sie als primäre Identität verwenden möchten, und wählen Sie es aus. Das **[!UICONTROL Feldeigenschaften]** Menü wird für dieses Feld geöffnet.
 
-![Feld auswählen](./images/data-preparation/find_field.png)
+![Der Prozess der Auswahl des gewünschten Felds in der Adobe Experience Platform-Benutzeroberfläche.](./images/data-preparation/find_field.png)
 
 Scrollen Sie im Menü **[!UICONTROL Feldeigenschaften]** nach unten, bis Sie das Kontrollkästchen **[!UICONTROL Identität]** finden. Nach dem Aktivieren des Kontrollkästchens wird die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primäre Identität]** angezeigt. Aktivieren Sie dieses Kontrollkästchen ebenfalls.
 
-![Kontrollkästchen aktivieren](./images/data-preparation/set_primary_identity.png)
+![Kontrollkästchen zum Festlegen der Primäridentität in der Adobe Experience Platform-Benutzeroberfläche.](./images/data-preparation/set_primary_identity.png)
 
 Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü angeben. In diesem Beispiel wird der ECID-Namespace ausgewählt, da ein Adobe Audience Manager-ID-`mcid.id` verwendet wird. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Aktualisierungen zu bestätigen, und wählen Sie dann **[!UICONTROL Speichern]** in der oberen rechten Ecke, um die Änderungen an Ihrem Schema zu speichern.
 
-![Speichern Sie die Änderungen](./images/data-preparation/select_namespace.png)
+![Dropdown-Menü, das die Auswahl des ECID-Namespace in der Adobe Experience Platform-Benutzeroberfläche anzeigt.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ Dieses Feld stellt den Zeitpunkt dar, zu dem das Ereignis aufgetreten ist. Diese
 
 Dieses Feld stellt den Marketing-Kanal für das ExperienceEvent dar. Das Feld enthält Informationen zum Kanaltyp, Medientyp und Standorttyp.
 
-![](./images/data-preparation/channel.png)
+![Diagramm, das die Struktur des Felds xdm:channel zeigt, einschließlich Unterfeldern wie type, mediaType und mediaAction.](./images/data-preparation/channel.png)
 
 **Beispielschema**
 
@@ -198,7 +198,7 @@ Die übrigen Schlüsselfelder sind in diesem Abschnitt beschrieben. Diese Felder
 
 Dieses Feld ist ein Array von Elementen, die von einem Kunden ausgewählte Produkte darstellen, einschließlich der Produkt-SKU, des Namens, des Preises und der Menge.
 
-![](./images/data-preparation/productListItems.png)
+![Das Feld xdm:productListItems einschließlich Unterfeldern wie SKU, Name, currencyCode, Menge und priceTotal.](./images/data-preparation/productListItems.png)
 
 **Beispielschema**
 
@@ -227,7 +227,7 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für di
 
 Dieses Feld enthält Commerce-spezifische Informationen zum ExperienceEvent, einschließlich der Bestellnummer und Zahlungsinformationen.
 
-![](./images/data-preparation/commerce.png)
+![Die Struktur des Felds xdm:commerce mit Unterfeldern wie Bestellung, Käufe und Zahlungen.](./images/data-preparation/commerce.png)
 
 **Beispielschema**
 
@@ -265,7 +265,7 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für di
 
 Dieses Feld stellt Web-Details dar, die sich auf das ExperienceEvent beziehen, z. B. die Interaktion, Seitendetails und den Referrer.
 
-![](./images/data-preparation/web.png)
+![Das Feld xdm:web einschließlich Unterfeldern wie webPageDetails und webReferrer.](./images/data-preparation/web.png)
 
 **Beispielschema**
 
@@ -295,7 +295,7 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für di
 
 Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchpoint aktiv sind.
 
-![](./images/data-preparation/marketing.png)
+![Die Struktur des Felds xdm:marketing, einschließlich Unterfeldern wie trackingCode, campaignGroup und campaignName.](./images/data-preparation/marketing.png)
 
 **Beispielschema**
 

@@ -5,10 +5,10 @@ feature: Customer AI
 title: Erstellen von Kundensegmenten mit prognostizierten Scores
 description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt finden Sie Schritte zum Erstellen von Segmenten mit Segment Builder.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 70%
+source-wordcount: '337'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,7 @@ Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profi
 
 Klicken Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Segmente]** im linken Navigationsbereich und klicken Sie dann auf **[!UICONTROL Segment erstellen]**.
 
-![](../images/user-guide/segments_new.png)
+![Screenshot der Seite „Segmente“ in der Experience Platform-Benutzeroberfläche mit der Option zum Erstellen eines neuen Segments.](../images/user-guide/segments_new.png)
 
 **Segment Builder** wird angezeigt. Klicken Sie in der linken Spalte **[!UICONTROL Felder]** und auf der Registerkarte **[!UICONTROL Attribute]** auf den Ordner **[!UICONTROL XDM Individual Profile]** und dann auf den Ordner mit dem Namespace Ihres Unternehmens. Der Ordner **[!UICONTROL Customer AI]** enthält die Ergebnisse von Prognoseausführungen und wird nach der Instanz benannt, zu der die Werte gehören. Klicken Sie auf einen Instanzordner, um auf die Ergebnisse der gewünschten Instanz zuzugreifen.
 

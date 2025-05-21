@@ -6,9 +6,9 @@ title: Fehlerbehebung bei der Kunden-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 31%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 31%
 
 Die Kunden-KI zeigt Fehler an, wenn Modell-Training, -bewertung und -konfiguration fehlschlagen. Im Abschnitt **[!UICONTROL Service-Instanzen]** wird in einer Spalte für **[!UICONTROL STATUS DES LETZTEN DURCHGANGS]** eine der folgenden Meldungen angezeigt: **[!UICONTROL Erfolg]**, **[!UICONTROL Problem mit Training]** und **[!UICONTROL Fehlgeschlagen]**.
 
-![Status des letzten Durchgangs](./images/errors/last-run-status.png)
+![Status des letzten Durchgangs, der „Erfolg“, „Problem mit Training“ oder „Fehlgeschlagen“ anzeigt.](./images/errors/last-run-status.png)
 
 Falls **[!UICONTROL Fehlgeschlagen]** oder **[!UICONTROL Problem mit Training]** angezeigt wird, können Sie den Status des Durchgangs auswählen, um einen Seitenbereich zu öffnen. Im Seitenbereich sind der **[!UICONTROL Status des letzten Durchgangs]** und **[!UICONTROL Details des letzten Durchgangs]** einsehbar. Der Abschnitt **[!UICONTROL Details des letzten Durchgangs]** enthält Informationen darüber, warum der Durchgang fehlgeschlagen ist. Falls die Kunden-KI keine Details zu Ihrem Fehler bereitstellen kann, wenden Sie sich an den Support unter Angabe des angegebenen Fehler-Codes.
 
@@ -27,13 +27,13 @@ Falls **[!UICONTROL Fehlgeschlagen]** oder **[!UICONTROL Problem mit Training]**
 
 Ladefehler im Inkognito-Modus von Google Chrome sind auf Aktualisierungen in den Sicherheitseinstellungen des Inkognito-Modus von Google Chrome zurückzuführen. An dem Problem wird aktiv mit Chrome gearbeitet, um experience.adobe.com als vertrauenswürdige Domain einzustufen.
 
-![Fehlerbild](./images/errors/error.PNG){width=500}
+![Fehlerbild, das ein Beispiel für eine Kunden-KI-Fehlermeldung zeigt.](./images/errors/error.PNG){width=500}
 
 ### Empfohlene Fehlerbehebung
 
 Um dieses Problem zu umgehen, müssen Sie experience.adobe.com als Website hinzufügen, die immer Cookies verwenden darf. Navigieren Sie zunächst zu **chrome://settings/cookies**. Scrollen Sie dann nach unten zum Abschnitt **Benutzerdefinierte Einstellungen** und wählen Sie die Schaltfläche **Hinzufügen** neben „Websites, die immer Cookies verwenden dürfen“ aus. Kopieren Sie `[*.]experience.adobe.com` und fügen Sie dies in das angezeigte Popup ein. Aktivieren Sie dann das Kontrollkästchen **Einschließlich Cookies von Drittanbietern auf dieser Website**. Wählen Sie anschließend die Option **Hinzufügen** aus und laden Sie die Kunden-KI im Inkognito-Modus neu.
 
-![Empfohlene Fehlerbehebung](./images/errors/cookies2.gif)
+![Animation, die die Schritte zum Hinzufügen von experience.adobe.com als Site zeigt, die in den Chrome-Einstellungen immer Cookies verwenden kann.](./images/errors/cookies2.gif)
 
 ## Modellqualität ist schlecht
 

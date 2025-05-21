@@ -6,10 +6,10 @@ title: Datenanforderungen in Kunden-KI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
-ht-degree: 92%
+source-wordcount: '2552'
+ht-degree: 91%
 
 ---
 
@@ -213,7 +213,7 @@ Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet 
 
 Den Ausgabedatensatz finden Sie im Experience Platform-Arbeitsbereich **Datensätze** . Alle Kunden-KI-Ausgabedatensätze beginnen mit dem Namen **Kunden-KI-Bewertungen – NAME_DER_APP**. Ebenso beginnen alle Kunden-KI-Ausgabeschemata mit dem Namen **Kunden-KI-Schema – Name_der_App**.
 
-![Name der Ausgabedatensätze in Kunden-KI](./images/user-guide/cai-schema-name-of-app.png)
+![Die Namenskonvention für Ausgabedatensätze in Kunden-KI.](./images/user-guide/cai-schema-name-of-app.png)
 
 Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe der Customer AI gefunden wurden:
 

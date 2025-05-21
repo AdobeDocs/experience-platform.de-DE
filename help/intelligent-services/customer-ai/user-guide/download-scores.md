@@ -5,10 +5,10 @@ feature: Customer AI
 title: Scores in Kunden-KI herunterladen
 description: Mit Kunden-KI können Sie Scores im Parquet-Dateiformat herunterladen.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 72%
+source-wordcount: '987'
+ht-degree: 70%
 
 ---
 
@@ -31,11 +31,11 @@ Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
 Klicken Sie in Ihrer Dienstinstanz für Customer AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* und wählen Sie **[!UICONTROL Auf Bewertungen zugreifen]** aus.
 
-![Mehr Aktionen](../images/insights/more-actions.png)
+![Dropdown-Menü mit der Option „Auf Scores zugreifen“.](../images/insights/more-actions.png)
 
 Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen von Bewertungen und der Datensatz-ID Ihrer aktuellen Instanz angezeigt. Kopieren Sie die Datensatz-ID in die Zwischenablage und fahren Sie mit dem nächsten Schritt fort.
 
-![Datensatz-ID](../images/download-scores/access-scores.png)
+![Dialogfeld „Auf Scores zugreifen“, das die Datensatz-ID für die aktuelle Instanz anzeigt.](../images/download-scores/access-scores.png)
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
@@ -236,7 +236,6 @@ Die Antwort enthält ein Daten-Array, das einen einzelnen Eintrag oder eine List
 | --------- | ----------- |
 | `_links.self.href` | Die URL der GET-Anfrage, mit der eine Datei in Ihr Verzeichnis heruntergeladen wird. |
 
-
 Kopieren Sie den `href`-Wert für ein beliebiges Dateiobjekt im `data`-Array und fahren Sie dann mit dem nächsten Schritt fort.
 
 ## Herunterladen Ihrer Dateidaten
@@ -277,7 +276,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. In diesem Beispiel lautet der Dateiname „filename.parquet“.
 
-![Endgerät](../images/download-scores/response.png)
+![Beispiel einer Terminal-Antwort, die einen erfolgreichen API-Aufruf anzeigt.](../images/download-scores/response.png)
 
 ## Herunterladen eines mit Kunden-KI konfigurierten Segments {#segment}
 
