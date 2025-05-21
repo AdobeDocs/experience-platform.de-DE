@@ -2,16 +2,34 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2583'
-ht-degree: 68%
+source-wordcount: '2652'
+ht-degree: 67%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.30.0 – Donnerstag, 21. Mai 2025
+
+**Neue Funktionen**
+
+- Sie können jetzt ein Datenelement angeben, wenn Sie Drittanbieter-Cookies aktivieren.
+- Es wurden Clear-Schaltflächen zu Code-Feldern hinzugefügt.
+- Enthält [Version 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) des Adobe Experience Platform Web SDK.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde eine Validierung hinzugefügt, um zu verhindern, dass die Einstellung `onBeforeLinkClickSend` wird, wenn die Ereignisgruppierung aktiviert ist.
+
+## Version 2.29.1 – Freitag, 8. Mai 2025
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem Einstellungen nicht gespeichert wurden, wenn nach der Bearbeitung sofort auf „Speichern“ geklickt wurde.
 
 ## Version 2.29.0 – Donnerstag, 5. März 2025
 

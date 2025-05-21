@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 64%
+source-wordcount: '2355'
+ht-degree: 62%
 
 ---
 
@@ -15,6 +15,15 @@ ht-degree: 64%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.27.0 – Mittwoch, 20. Mai 2025
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem mit In-App-Nachrichten behoben, bei dem der benutzerdefinierte Stil nicht korrekt angewendet wurde.
+- hat das Format des Ereignisverlaufs geändert. Dadurch werden In-App-Nachrichten und Inhaltskarten erneut angezeigt, wenn die alten Verlaufsdaten gelöscht werden.
+- Es wurde ein Problem behoben, bei dem Vorschläge in SPA-Anwendungsfällen erneut angewendet wurden.
+- Es wurde ein Problem beim Klick-Tracking für Shadow-DOM-Elemente behoben.
 
 ## Version 2.26.0 – Donnerstag, 5. März 2025
 
