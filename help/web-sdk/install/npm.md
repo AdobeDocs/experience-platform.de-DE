@@ -2,7 +2,7 @@
 title: Installieren von Web SDK mithilfe des NPM-Pakets
 description: Verwenden Sie ein NPM-Paket, um die Web-SDK-Bibliothek zu installieren und zu referenzieren.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8b6c958613923127880263679ce00ce359151300
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Das NPM-Paket der Adobe Experience Platform Web SDK stellt eine `createInstance`
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -37,6 +37,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
