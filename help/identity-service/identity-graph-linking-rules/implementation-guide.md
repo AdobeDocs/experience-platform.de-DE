@@ -2,10 +2,10 @@
 title: Implementierungshandbuch für Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Verknüpfungsregeln für Identitätsdiagramme.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1955'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Sie müssen sicherstellen, dass in jedem Profil immer der eindeutige Namespace m
 
 Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personenkennungen erhalten Sie möglicherweise ein Diagramm, das mit verschiedenen Personenkennungen mit derselben ECID verknüpft ist. In diesem Beispiel sind B2BCRM und B2CCRM gleichzeitig mit derselben ECID verknüpft. Dieses Diagramm zeigt, dass Tom über sein B2C-Anmeldekonto ein Gerät mit Summer über ihr B2B-Anmeldekonto geteilt hat. Das System erkennt jedoch, dass es sich um ein Profil handelt (Diagrammausblendung).
 
-![Ein Diagrammszenario, in dem zwei Personenkennungen mit derselben ECID verknüpft sind.](../images/graph-examples/multi_namespaces.png)
+![Ein Diagrammszenario, in dem zwei Personenkennungen mit derselben ECID verknüpft sind.](../images/graph-examples/multi_namespaces.png "Ein Diagrammszenario, in dem zwei Personenkennungen mit derselben ECID verknüpft sind."){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personenkennungen erhalte
 
 Bei einem eindeutigen Namespace (in diesem Fall eine CRMID anstelle von zwei unterschiedlichen Namespaces) kann Identity Service die Personenkennung erkennen, die zuletzt mit der ECID verknüpft war. Da in diesem Beispiel eine eindeutige CRM-ID vorhanden ist, kann Identity Service ein Szenario mit einem „gemeinsamen Gerät“ erkennen, in dem zwei Entitäten dasselbe Gerät gemeinsam nutzen.
 
-![Ein Szenario mit einem freigegebenen Gerätediagramm, bei dem zwei Personenkennungen mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird.](../images/graph-examples/crmid_only_multi.png)
+![Ein Szenario mit einem freigegebenen Gerätediagramm, bei dem zwei Personenkennungen mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird.](../images/graph-examples/crmid_only_multi.png "Ein Szenario mit einem freigegebenen Gerätediagramm, bei dem zwei Personenkennungen mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird."){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ Daher empfiehlt es sich, mit Ihren authentifizierten Ereignissen nur eine Person
 
 In der Diagrammsimulation kann diese Aufnahme wie folgt aussehen:
 
-![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png)
+![Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm.](../images/implementation/example-graph.png "Die Benutzeroberfläche für die Diagrammsimulation mit einem gerenderten Beispieldiagramm."){zoomable="yes"}
 
 >[!TAB Authentifizierte Ereignisse ohne Personenkennungen]
 
@@ -201,7 +201,7 @@ Durch das Erstellen verschiedener Konfigurationen können Sie das Tool zur Diagr
 
 Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten soll, navigieren Sie zur [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md) im Arbeitsbereich der Benutzeroberfläche von Identity Service. Um auf die Benutzeroberfläche für Identitätseinstellungen zuzugreifen, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Identitäten“ und dann **[!UICONTROL Einstellungen]** aus.
 
-![Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“.](../images/implementation/settings.png)
+![Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“.](../images/implementation/settings.png "Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“."){zoomable="yes"}
 
 Verwenden Sie die Benutzeroberfläche für Identitätseinstellungen, um Ihre eindeutigen Namespaces festzulegen und Ihre Namespaces nach Priorität zu konfigurieren. Nachdem Sie die Einstellungen angewendet haben, müssen Sie mindestens sechs Stunden warten, bevor Sie mit der Datenaufnahme fortfahren können, da es mindestens sechs Stunden dauert, bis neue Einstellungen in Identity Service übernommen werden.
 
@@ -249,11 +249,11 @@ Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Status Ihrer Identi
 
 Klicken Sie auf die Auslassungszeichen (`...`) und dann auf **[!UICONTROL Weitere anzeigen]** um weitere Informationen anzuzeigen und zu überprüfen, ob es keine reduzierten Diagramme gibt.
 
-![Das Identitäts-Dashboard im Arbeitsbereich der Identity Service-Benutzeroberfläche.](../images/implementation/identity_dashboard.png)
+![Das Identity Dashboard im Arbeitsbereich der Identity Service-Benutzeroberfläche.](../images/implementation/identity_dashboard.png "Das Identitäts-Dashboard im Arbeitsbereich der Identity Service-Benutzeroberfläche."){zoomable="yes"}
 
 Verwenden Sie das angezeigte Fenster, um Informationen zu Ihren reduzierten Diagrammen anzuzeigen. In diesem Beispiel werden E-Mail und Telefon als eindeutiger Namespace markiert, sodass es keine reduzierten Diagramme in Ihrer Sandbox gibt.
 
-![Das Popup-Fenster für Diagramme mit mehreren Identitäten.](../images/implementation/graphs.png)
+![Das Popup-Fenster für Diagramme mit mehreren Identitäten.](../images/implementation/graphs.png "Das Popup-Fenster für Diagramme mit mehreren Identitäten."){zoomable="yes"}
 
 ## Anhang {#appendix}
 
@@ -269,13 +269,13 @@ Das folgende Diagramm simuliert ein „verwaistes“ Anmelde-ID-Szenario. In die
 
 In diesem Beispiel bleibt `{loginID: ID_C}` hängen und ist nicht mit einer CRMID verknüpft. Daher ist die Entität der Person, mit der diese Anmelde-ID verknüpft werden soll, nicht eindeutig.
 
-![Beispiel eines Diagramms mit einem „herabhängenden“ loginID-Szenario.](../images/graph-examples/dangling_example.png)
+![Beispiel eines Diagramms mit einem „baumelnden“ loginID-Szenario.](../images/graph-examples/dangling_example.png "Beispiel eines Diagramms mit einem verwinkelten „loginID“-Szenario."){zoomable="yes"}
 
 >[!TAB loginID ist mit einer CRMID verknüpft]
 
 In diesem Beispiel ist `{loginID: ID_C}` mit `{CRMID: Tom}` verknüpft. Daher kann das System erkennen, dass diese Anmelde-ID mit Tom verbunden ist.
 
-![LoginID ist mit einer CRMID verknüpft.](../images/graph-examples/id_c_tom.png)
+![LoginID ist mit einer CRMID verknüpft.](../images/graph-examples/id_c_tom.png "LoginID ist mit einer CRMID verknüpft."){zoomable="yes"}
 
 >[!TAB loginID ist mit einer anderen CRMID verknüpft]
 
@@ -283,7 +283,7 @@ In diesem Beispiel ist `{loginID: ID_C}` mit `{CRMID: Summer}` verknüpft. Daher
 
 Dieses Beispiel zeigt auch, dass Tom und Summer sich in verschiedenen Personenentitäten befinden, die ein Gerät teilen, das durch `{ECID: 111}` dargestellt wird.
 
-![LoginID ist mit einer anderen CRMID verknüpft.](../images/graph-examples/id_c_summer.png)
+![LoginID ist mit einer anderen CRMID verknüpft.](../images/graph-examples/id_c_summer.png "LoginID ist mit einer anderen CRMID verknüpft."){zoomable="yes"}
 
 >[!ENDTABS]
 

@@ -2,10 +2,10 @@
 title: Beispiele für Diagrammkonfigurationen
 description: Erfahren Sie mehr über gängige Diagrammszenarien, die bei der Arbeit mit Regeln zur Identitätsdiagramm-Verknüpfung und Identitätsdaten auftreten können.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
 workflow-type: tm+mt
-source-wordcount: '2759'
-ht-degree: 7%
+source-wordcount: '3316'
+ht-degree: 6%
 
 ---
 
@@ -67,13 +67,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie ein Beispiel für ein ideales Einzelpersonen-Diagramm, bei dem CRMID eindeutig ist und die höchste Priorität hat.
 
-![Ein simuliertes Beispiel für ein ideales Einzelpersonen-Diagramm, bei dem CRMID eindeutig ist und die höchste Priorität hat.](../images/graph-examples/crmid_only_single.png)
+![Ein simuliertes Beispiel für ein ideales Einzelpersonen-Diagramm, bei dem CRMID eindeutig ist und die höchste Priorität hat.](../images/graph-examples/crmid_only_single.png "Ein simuliertes Beispiel für ein ideales Einzelpersonen-Diagramm, bei dem CRMID eindeutig ist und die höchste Priorität hat."){zoomable="yes"}
 
 >[!TAB Mehrpersonendiagramm]
 
 Im Folgenden finden Sie ein Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem „gemeinsam genutzten Gerät“ angezeigt, in dem zwei CRMIDs vorhanden sind und die mit der älteren eingerichteten Relation entfernt wird.
 
-![Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird.](../images/graph-examples/crmid_only_multi.png)
+![Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem gemeinsam genutzten Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird.](../images/graph-examples/crmid_only_multi.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -136,13 +136,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie Beispiele für ein Paar idealer Einzelpersonen-Diagramme, bei denen jede CRMID mit ihrem jeweiligen gehashten E-Mail-Namespace und ihrer ECID verknüpft ist.
 
-![In diesem Beispiel werden zwei separate Diagramme generiert, die jeweils eine Entität für eine einzelne Person darstellen.](../images/graph-examples/crmid_hashed_single.png)
+![In diesem Beispiel werden zwei separate Diagramme generiert, die jeweils eine Entität für eine einzelne Person darstellen.](../images/graph-examples/crmid_hashed_single.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 >[!TAB Mehrpersonendiagramm: gemeinsam genutztes Gerät]
 
 Im Folgenden finden Sie ein Beispiel für ein mehrpersoniges Diagrammszenario, in dem ein Gerät von zwei Personen gemeinsam genutzt wird.
 
-![In diesem Beispiel zeigt das simulierte Diagramm ein Szenario mit einem „gemeinsam genutzten Gerät“ an, da sowohl Tom als auch Summer mit derselben ECID verknüpft sind.](../images/graph-examples/crmid_hashed_shared_device.png)
+![In diesem Beispiel zeigt das simulierte Diagramm ein Szenario mit einem „gemeinsam genutzten Gerät“ an, da sowohl Tom als auch Summer mit derselben ECID verknüpft sind.](../images/graph-examples/crmid_hashed_shared_device.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -158,7 +158,7 @@ CRMID: Summer, ECID: 111
 
 Im Folgenden finden Sie ein Beispiel für ein mehrpersonales Diagrammszenario, in dem die E-Mail nicht eindeutig ist und mit zwei verschiedenen CRM-IDs verknüpft wird.
 
-![Dieses Szenario ähnelt einem Szenario mit einem „freigegebenen Gerät“. Anstatt dass Personenentitäten die ECID gemeinsam nutzen, werden sie stattdessen mit demselben E-Mail-Konto verknüpft.](../images/graph-examples/crmid_hashed_nonunique_email.png)
+![Dieses Szenario ähnelt einem Szenario mit einem „freigegebenen Gerät“. Anstatt dass Personenentitäten die ECID gemeinsam nutzen, werden sie stattdessen mit demselben E-Mail-Konto verknüpft. „Ein simuliertes Beispiel für ein Mehrpersonendiagramm. In diesem Beispiel wird ein Szenario mit einem gemeinsam genutzten Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird.“](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -233,13 +233,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie ein ideales Einzelpersonen-Diagrammszenario, in dem Hash-E-Mails und Hash-Telefonnummern als Identitäten für die Verwendung in [!DNL Segment Match] gekennzeichnet werden. In diesem Szenario werden die Diagramme in zwei Teile aufgeteilt, um unterschiedliche Personenentitäten darzustellen.
 
-![Ein ideales Einzelpersonen-Diagrammszenario.](../images/graph-examples/crmid_hashed_single_seg_match.png)
+![Ein ideales Einzelpersonen-Diagrammszenario.](../images/graph-examples/crmid_hashed_single_seg_match.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 >[!TAB Mehrpersonendiagramm: Freigegebenes Gerät, freigegebener Computer]
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem ein Gerät (Computer) von zwei Personen gemeinsam genutzt wird. In diesem Szenario wird der freigegebene Computer durch `{ECID: 111}` dargestellt und ist mit `{CRMID: Summer}` verknüpft, da diese Verknüpfung die zuletzt eingerichtete Verknüpfung ist. `{CRMID: Tom}` wird entfernt, da die Verknüpfung zwischen `{CRMID: Tom}` und `{ECID: 111}` älter ist und CRMID der designierte eindeutige Namespace in dieser Konfiguration ist.
 
-![Ein mehrpersonenbasiertes Diagrammszenario, in dem sich zwei Benutzer einen Computer teilen.](../images/graph-examples/shared_device_shared_computer.png)
+![Ein mehrpersonenbasiertes Diagrammszenario, in dem sich zwei Benutzer einen Computer teilen.](../images/graph-examples/shared_device_shared_computer.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -257,7 +257,7 @@ CRMID: Summer, ECID: 111
 
 Im Folgenden finden Sie ein Multi-Person-Diagramm-Szenario, in dem ein Android-Gerät von zwei Personen gemeinsam genutzt wird. In diesem Szenario wird CRMID als eindeutiger Namespace konfiguriert, weshalb der neuere Link von `{CRMID: Tom, GAID: B-B-B, ECID:444}` den älteren `{CRMID: Summer, GAID: B-B-B, ECID:444}` ersetzt.
 
-![Ein Mehrpersonendiagramm-Szenario, in dem zwei Benutzer ein Android-Mobilgerät gemeinsam nutzen.](../images/graph-examples/shared_device_android.png)
+![Ein Mehrpersonendiagramm-Szenario, in dem zwei Benutzer ein Android-Mobilgerät gemeinsam nutzen.](../images/graph-examples/shared_device_android.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -275,7 +275,7 @@ CRMID: Tom, ECID: 444, GAID: B-B-B
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem ein Apple-Gerät von zwei Personen gemeinsam genutzt wird. In diesem Szenario wird der IDFA freigegeben, aber die ECID wird nicht zurückgesetzt.
 
-![Ein Mehrpersonendiagramm-Szenario, in dem zwei Benutzende ein Apple-Mobilgerät gemeinsam nutzen.](../images/graph-examples/shared_device_apple_no_reset.png)
+![Ein Mehrpersonen-Diagrammszenario, in dem zwei Benutzende ein Apple-Mobilgerät gemeinsam nutzen.](../images/graph-examples/shared_device_apple_no_reset.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -293,7 +293,7 @@ CRMID: Summer, ECID: 222, IDFA: A-A-A
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem ein Apple-Gerät von zwei Personen gemeinsam genutzt wird. In diesem Szenario wird die ECID zurückgesetzt, aber der IDFA bleibt gleich.
 
-![Ein mehrpersonales Diagrammszenario, in dem zwei Benutzende ein Apple-Mobilgerät gemeinsam nutzen, die ECID jedoch zurückgesetzt wird.](../images/graph-examples/shared_device_apple_with_reset.png)
+![Ein mehrpersonales Diagrammszenario, in dem zwei Benutzende ein Apple-Mobilgerät gemeinsam nutzen, die ECID jedoch zurückgesetzt wird.](../images/graph-examples/shared_device_apple_with_reset.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -311,7 +311,7 @@ CRMID: Summer, ECID: 555, IDFA: A-A-A
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem dieselbe Telefonnummer von zwei Personen gemeinsam genutzt wird.
 
-![Ein Mehrpersonendiagramm-Szenario, in dem der Telefon-Namespace nicht eindeutig ist.](../images/graph-examples/non_unique_phone.png)
+![Ein Mehrpersonen-Diagrammszenario, in dem der Telefon-Namespace nicht eindeutig ist.](../images/graph-examples/non_unique_phone.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -327,13 +327,13 @@ CRMID: Summer, Phone_SHA256: 123-4567
 
 In diesem Beispiel wird `{Phone_SHA256}` auch als eindeutiger Namespace markiert. Daher kann ein Diagramm nicht mehr als eine Identität mit dem `{Phone_SHA256}` Namespace haben. In diesem Szenario wird die Verknüpfung von `{Phone_SHA256: 765-4321}` mit `{CRMID: Summer}` und `{Email_LC_SHA256: ddeeff}` aufgehoben, da es sich um den älteren Link handelt.
 
-![Ein Mehrpersonen-Diagrammszenario, in dem Phone_SHA256 eindeutig ist.](../images/graph-examples/unique_phone.png)
+![Ein Mehrpersonen-Diagrammszenario, in dem Phone_SHA256 eindeutig ist.](../images/graph-examples/unique_phone.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 >[!TAB Mehrpersonendiagramm: Nicht eindeutige E-Mail]
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem E-Mails von zwei Personen gemeinsam genutzt werden.
 
-![Ein mehrpersonales Diagrammszenario, in dem E-Mail nicht eindeutig ist](../images/graph-examples/non_unique_email.png)
+![Ein Mehrpersonen-Diagramm, in dem E-Mail nicht eindeutig ist](../images/graph-examples/non_unique_email.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -409,13 +409,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie ein Einzelpersonen-Diagrammszenario mit einer einzelnen CRMID und mehreren Anmelde-IDs.
 
-![Ein Diagrammszenario, das eine einzelne CRMID und mehrere Anmelde-IDs enthält.](../images/graph-examples/single_crmid.png)
+![Ein Diagrammszenario, das eine einzelne CRMID und mehrere Anmelde-IDs enthält.](../images/graph-examples/single_crmid.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 >[!TAB Multi-Person-Diagramm-Szenario: Freigegebenes Gerät]
 
 Im Folgenden finden Sie ein mehrpersonales Diagrammszenario, in dem ein Gerät von zwei Personen gemeinsam genutzt wird. In diesem Szenario ist `{ECID:111}` sowohl mit `{loginID:ID_A}` als auch mit `{loginID:ID_C}` verknüpft, und die ältere etablierte Verknüpfung von `{ECID:111, loginID:ID_A}` wird entfernt.
 
-![Ein Szenario mit einem gemeinsam genutzten Gerät für mehrere Personen.](../images/graph-examples/single_crmid_shared_device.png)
+![Ein Szenario mit einem gemeinsam genutzten Gerät für mehrere Personen.](../images/graph-examples/single_crmid_shared_device.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -433,7 +433,7 @@ loginID: ID_C, ECID: 111
 
 Im Folgenden finden Sie ein Mehrpersonen-Diagrammszenario, das fehlerhafte Daten enthält. In diesem Szenario wird `{loginID:ID_D}` fälschlicherweise mit zwei unterschiedlichen Benutzenden verknüpft und die Relation mit dem älteren Zeitstempel wird zugunsten der kürzlich eingerichteten Relation gelöscht.
 
-![Ein Mehrpersonen-Diagrammszenario mit ungültigen Daten.](../images/graph-examples/single_crmid_bad_data.png)
+![Ein Mehrpersonen-Diagrammszenario mit fehlerhaften Daten.](../images/graph-examples/single_crmid_bad_data.png "Ein simuliertes Beispiel für ein Mehrpersonen-Diagramm. In diesem Beispiel wird ein Szenario mit einem freigegebenen Gerät angezeigt, in dem zwei CRMIDs vorhanden sind und die ältere eingerichtete Verknüpfung entfernt wird."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -451,7 +451,7 @@ CRMID: Tom, loginID: ID_D
 
 Das folgende Diagramm simuliert ein „verwaistes“ Anmelde-ID-Szenario. In diesem Beispiel sind zwei verschiedene Anmelde-IDs an dieselbe ECID gebunden. `{loginID:ID_C}` ist jedoch nicht mit der CRMID verknüpft. Daher kann Identity Service nicht erkennen, dass diese beiden Anmelde-IDs zwei verschiedene Entitäten darstellen.
 
-![Szenario mit verwaister Anmelde-ID.](../images/graph-examples/dangling_example.png)
+![Szenario mit verwaister Anmelde-ID.](../images/graph-examples/dangling_example.png "Szenario mit verwaister Anmelde-ID."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -529,13 +529,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie ein Beispiel für zwei Einzelpersonen-Diagramme, die jeweils eine CRMID und mehrere Anmelde-IDs haben.
 
-![Ein Einzelpersonen-Diagramm, das eine CRMID und mehrere Anmelde-IDs enthält](../images/graph-examples/complex_single_person.png)
+![Ein Einzelpersonen-Diagramm, das eine CRMID und mehrere Anmelde-IDs enthält.](../images/graph-examples/complex_single_person.png "Ein Einzelpersonen-Diagramm, das eine CRMID und mehrere Anmelde-IDs enthält."){zoomable="yes"}
 
 >[!TAB Mehrpersonendiagramm: gemeinsam genutztes Gerät 1]
 
 Im Folgenden finden Sie ein Szenario mit einem gemeinsam genutzten Gerät für mehrere Personen, bei dem `{ECID:111}` sowohl mit `{loginID:ID_A}` als auch mit `{loginID:ID_C}` verknüpft ist. In diesem Fall werden die älteren etablierten Links zugunsten der neueren Links entfernt.
 
-![Ein Szenario mit einem Diagramm, in dem mehrere Personen gemeinsam Geräte verwenden.](../images/graph-examples/complex_shared_device_one.png)
+![Ein Szenario mit einem freigegebenen Gerätediagramm für mehrere Personen.](../images/graph-examples/complex_shared_device_one.png "Ein Szenario mit einem Diagramm, in dem mehrere Personen gemeinsam Geräte verwenden."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -555,7 +555,7 @@ loginID: ID_C, ECID: 111
 
 In diesem Szenario werden nicht nur die Anmelde-ID, sondern auch die Anmelde-ID und die CRMID als Erlebnisereignisse gesendet.
 
-![Ein Szenario mit einem Diagramm, in dem sowohl die Anmelde-ID als auch die CRMID als Erlebnisereignisse gesendet werden.](../images/graph-examples/complex_shared_device_two.png)
+![Ein Szenario mit einem Diagramm, in dem sowohl die Anmelde-ID als auch die CRMID als Erlebnisereignisse gesendet werden.](../images/graph-examples/complex_shared_device_two.png "Ein Szenario mit einem Diagramm, in dem sowohl die Anmelde-ID als auch die CRMID als Erlebnisereignisse gesendet werden."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -576,7 +576,7 @@ loginID: ID_A, ECID: 111
 
 In diesem Szenario ist `{loginID:ID_C}` sowohl mit `{CRMID:Tom}` als auch mit `{CRMID:Summer}` verknüpft und gilt daher als fehlerhafte Daten, da ideale Diagrammszenarien nicht dieselben Login-IDs mit zwei unterschiedlichen Benutzern verknüpfen sollten. In diesem Fall werden die älteren etablierten Links zugunsten der neueren Links entfernt.
 
-![Ein Mehrpersonen-Diagrammszenario, das fehlerhafte Anmeldedaten enthält.](../images/graph-examples/complex_bad_data.png)
+![Ein Mehrpersonen-Diagrammszenario, das fehlerhafte Anmeldedaten enthält.](../images/graph-examples/complex_bad_data.png "Ein Mehrpersonen-Diagrammszenario, das fehlerhafte Anmeldedaten enthält."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -596,7 +596,7 @@ CRMID: Tom, loginID: ID_C
 
 In diesem Szenario wird eine nicht eindeutige E-Mail mit zwei verschiedenen CRM-IDs verknüpft. Daher werden die älteren etablierten Links zugunsten der kürzlich eingerichteten Links entfernt.
 
-![Ein Mehrpersonen-Diagrammszenario, das eine nicht eindeutige E-Mail beinhaltet.](../images/graph-examples/complex_non_unique_email.png)
+![Ein Mehrpersonen-Diagrammszenario, das eine nicht eindeutige E-Mail beinhaltet.](../images/graph-examples/complex_non_unique_email.png "Ein Mehrpersonen-Diagrammszenario, das eine nicht eindeutige E-Mail beinhaltet."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -616,7 +616,7 @@ CRMID: Summer, Email_LC_SHA256: aabbcc
 
 In diesem Szenario wird eine nicht eindeutige Telefonnummer mit zwei verschiedenen CRM-IDs verknüpft. Die älteren etablierten Links werden zugunsten der kürzlich eingerichteten Links entfernt.
 
-![Ein Mehrpersonendiagramm-Szenario, das eine nicht eindeutige Telefonnummer beinhaltet.](../images/graph-examples/complex_non_unique_phone.png)
+![Ein Mehrpersonen-Diagrammszenario, das eine nicht eindeutige Telefonnummer beinhaltet.](../images/graph-examples/complex_non_unique_phone.png "Ein Mehrpersonendiagramm-Szenario, das eine nicht eindeutige Telefonnummer beinhaltet."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -693,13 +693,13 @@ Im Kontext dieser Konfiguration wird die primäre Identität wie folgt definiert
 
 Im Folgenden finden Sie ein Beispiel für ein ideales Einzelpersonen-Diagramm.
 
-![Beispiel für ein ideales Einzelpersonen-Diagramm mit einem E-Mail-Namespace.](../images/graph-examples/single_person_email.png)
+![Beispiel für ein ideales Einzelpersonen-Diagramm mit einem E-Mail-Namespace.](../images/graph-examples/single_person_email.png "Beispiel für ein ideales Einzelpersonen-Diagramm mit einem E-Mail-Namespace."){zoomable="yes"}
 
 >[!TAB Diagramme für mehrere Personen]
 
 Im Folgenden finden Sie ein Beispiel für ein Diagramm mit mehreren Personen, in dem zwei registrierte Benutzer mit demselben Gerät navigieren.
 
-![Ein mehrpersonenbasiertes Diagrammszenario, in dem zwei registrierte Benutzer mit demselben Gerät browsen.](../images/graph-examples/two_registered_users.png)
+![Ein mehrpersonenbasiertes Diagrammszenario, in dem zwei registrierte Benutzer mit demselben Gerät browsen.](../images/graph-examples/two_registered_users.png "Ein mehrpersonenbasiertes Diagrammszenario, in dem zwei registrierte Benutzer mit demselben Gerät browsen."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -712,7 +712,7 @@ CRMID: Summer, ECID: 111
 
 In diesem Szenario teilen sich ein registrierter Benutzer und ein Gastbenutzer dasselbe Gerät.
 
-![Ein Beispiel für ein Mehrpersonendiagramm, bei dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam verwenden.](../images/graph-examples/one_guest.png)
+![Beispiel eines Diagramms mit mehreren Personen, in dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam verwenden.](../images/graph-examples/one_guest.png "Ein Beispiel für ein Mehrpersonendiagramm, bei dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam verwenden."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -724,7 +724,7 @@ Email: summer@acme.com, ECID: 111
 
 In diesem Szenario teilen ein registrierter Benutzer und ein Gastbenutzer ein Gerät. Ein Implementierungsfehler tritt jedoch auf, da die CRMID keinen entsprechenden E-Mail-Namespace enthält. In diesem Szenario ist Tom der registrierte Benutzer und Summer der Gastbenutzer. Im Gegensatz zum vorherigen Szenario werden die beiden Entitäten zusammengeführt, da es keine gemeinsamen E-Mail-Namespaces zwischen den beiden Personenentitäten gibt.
 
-![Ein Beispiel für ein Diagramm mit mehreren Personen, bei dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam nutzen. Es tritt jedoch ein Implementierungsfehler auf, da die CRMID keinen E-Mail-Namespace enthält.](../images/graph-examples/no_email_namespace_in_crmid.png)
+![Ein Beispiel für ein mehrpersonenbasiertes Diagramm, bei dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam nutzen. Es tritt jedoch ein Implementierungsfehler auf, da die CRMID keinen E-Mail-Namespace enthält.](../images/graph-examples/no_email_namespace_in_crmid.png "Ein Beispiel für ein Diagramm mit mehreren Personen, bei dem ein registrierter Benutzer und ein Gast dasselbe Gerät gemeinsam nutzen. Es tritt jedoch ein Implementierungsfehler auf, da die CRMID keinen E-Mail-Namespace enthält."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -735,7 +735,7 @@ Email: summer@acme.com, ECID: 111
 
 In diesem Szenario verwenden zwei Gastbenutzer dasselbe Gerät.
 
-![Ein mehrpersonales Diagrammszenario, in dem zwei Gastbenutzer dasselbe Gerät gemeinsam verwenden.](../images/graph-examples/two_guests.png)
+![Ein mehrpersonales Diagrammszenario, in dem zwei Gastbenutzer dasselbe Gerät gemeinsam verwenden.](../images/graph-examples/two_guests.png){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 
@@ -746,7 +746,7 @@ Email: summer@acme.com, ECID: 111
 
 In diesem Szenario checkt ein Gastbenutzer ein Element aus und registriert es dann mit demselben Gerät.
 
-![Ein Diagrammszenario, in dem ein Gastbenutzer ein - und -Element kauft und sich dann für ein Konto registriert.](../images/graph-examples/guest_purchase.png)
+![Ein Diagrammszenario, in dem ein Gastbenutzer ein - und -Element kauft und sich dann für ein Konto registriert.](../images/graph-examples/guest_purchase.png "Ein Diagrammszenario, in dem ein Gastbenutzer ein - und -Element kauft und sich dann für ein Konto registriert."){zoomable="yes"}
 
 **Eingabe von Diagrammsimulationsereignissen**
 

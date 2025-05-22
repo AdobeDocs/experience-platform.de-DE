@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2120'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ Wenn die Diagrammstruktur Ihres Unternehmens mehrschichtig ist, sollte die Names
 >
 >* Ein geschichtetes Diagramm bezieht sich auf Identitätsdiagramme, die mehrere Ebenen von Links aufweisen. Im folgenden Bild sehen Sie ein Beispiel für ein Diagramm mit drei Ebenen.
 
-![Ein Diagramm von Diagrammschichten](../images/namespace-priority/graph-layers.png)
+![Diagramm von Diagrammschichten](../images/namespace-priority/graph-layers.png "Diagramm von Diagrammschichten"){zoomable="yes"}
 
 ### Semantische Bedeutung des Namespace
 
@@ -65,9 +65,9 @@ Die Namespace-Priorität kann mithilfe der [Benutzeroberfläche für Identitäts
 
 ## Verwendung der Namespace-Priorität
 
-Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm veranschaulicht dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen für Adobe Experience Platform und Programme](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm veranschaulicht dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen für Adobe Experience Platform und Programme](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität](../images/namespace-priority/application-scope.png)
+![Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität.](../images/namespace-priority/application-scope.png "Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität."){zoomable="yes"}
 
 ## Identity Service: Algorithmus zur Identitätsoptimierung
 
@@ -120,7 +120,7 @@ Angesichts der oben beschriebenen Konfigurationen werden Benutzeraktionen und di
 
 ## Segmentierungs-Service: Speichern von Metadaten für die Segmentzugehörigkeit
 
-![Ein Diagramm zum Speicher der Segmentzugehörigkeit](../images/namespace-priority/segment-membership-storage.png)
+![Ein Diagramm zur Speicherung der Segmentzugehörigkeit.](../images/namespace-priority/segment-membership-storage.png "Ein Diagramm zum Speicher der Segmentzugehörigkeit."){zoomable="yes"}
 
 Für ein bestimmtes zusammengeführtes Profil werden Segmentzugehörigkeiten für die Identität mit der höchsten Namespace-Priorität gespeichert.
 
@@ -208,13 +208,13 @@ Stellen Sie bei einem bestimmten Ereignis sicher, dass alle Ihre Namespaces, die
 
 * **Ereignisanwendbarkeit**: Dieses Verhalten gilt nur für Ereignisse, die direkt an die Edge Network gesendet werden (z. B. WebSDK und Mobile SDK). Ereignisse, die vom [Experience Platform-Hub](../../landing/edge-and-hub-comparison.md) aufgenommen werden, z. B. Ereignisse, die mit der HTTP-API-Quelle, anderen Streaming-Quellen und Batch-Quellen aufgenommen werden, unterliegen nicht dieser Einschränkung.
 * **Spezifität der Edge**-Segmentierung: Dieses Verhalten ist spezifisch für die Edge-Segmentierung. Batch- und Streaming-Segmentierung sind separate Services, die am Hub ausgewertet werden und nicht demselben Prozess folgen. Weitere Informationen finden [ im ](../../segmentation/methods/edge-segmentation.md) zur Edge-Segmentierung .
-* Weitere Informationen finden Sie in den [Architekturdiagrammen für Adobe Experience Platform ](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) Anwendungen und auf den [Vergleichsseiten ](../../landing/edge-and-hub-comparison.md) Edge Network und Hub .
+* Weitere Informationen finden Sie in den [Architekturdiagrammen für Adobe Experience Platform ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) Anwendungen und auf den [Vergleichsseiten ](../../landing/edge-and-hub-comparison.md) Edge Network und Hub .
 
 #### Edge Network-Programme
 
 Um sicherzustellen, dass Programme auf der Edge Network ohne Verzögerung Zugriff auf das Edge-Profil haben, stellen Sie sicher, dass Ihre Ereignisse `primary=true` auf der CRMID enthalten. Dadurch wird eine sofortige Verfügbarkeit sichergestellt, ohne auf Aktualisierungen des Identitätsdiagramms vom Hub zu warten.
 
 * Programme auf Edge Network wie Adobe Target, Offer Decisioning und benutzerdefinierte Personalization-Ziele hängen auch weiterhin von der Primäridentität in den Ereignissen ab, um auf Profile über das Edge-Profil zuzugreifen.
-* Lesen Sie das Architekturdiagramm für [Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment), um weitere Informationen zum Verhalten von Edge Network zu erhalten.
+* Lesen Sie das Architekturdiagramm für [Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment), um weitere Informationen zum Verhalten von Edge Network zu erhalten.
 * SDK Weitere Informationen zum Konfigurieren [ Primäridentität in Web finden Sie in der Dokumentation ](../../tags/extensions/client/web-sdk/data-element-types.md)Datenelementtypen und [Identitätsdaten in Web ](../../web-sdk/identity/overview.md)SDK).
 * Stellen Sie sicher, dass die ECID im Erlebnisereignis enthalten ist. Wenn die ECID fehlt, wird sie der Ereignis-Payload mit `primary=true` hinzugefügt, was zu unerwarteten Ergebnissen führen kann.

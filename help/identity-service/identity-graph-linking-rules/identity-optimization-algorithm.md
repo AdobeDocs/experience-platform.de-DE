@@ -2,9 +2,9 @@
 title: Algorithmus zur Identitätsoptimierung
 description: Erfahren Sie mehr über den Algorithmus zur Identitätsoptimierung in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ Namespaces in Identity Service haben eine implizite relative Wichtigkeitsreihenf
 
 Einen detaillierten Überblick über die Namespace-Priorität und ihre vollständigen Funktionen und Verwendungen finden Sie im [Handbuch zur Namespace-Priorität](./namespace-priority.md).
 
-![Diagrammebenen und Namespace-Priorität](../images/namespace-priority/graph-layers.png)
+![Die Diagrammebenen und die Namespace-Priorität.](../images/namespace-priority/graph-layers.png "Die Diagrammebenen und die Namespace-Priorität."){zoomable="yes"}
 
 ## Prozess {#process}
 
@@ -68,7 +68,7 @@ Wenn die Eindeutigkeits-Namespace-Beschränkung verletzt wird, gibt der Algorith
 * Das Diagramm wird basierend auf der obigen Reihenfolge wiederhergestellt. Wenn das Hinzufügen des Links gegen die Beschränkung verstößt (z. B. wenn das Diagramm zwei oder mehr Identitäten mit einem eindeutigen Namespace enthält), werden die Links entfernt.
 * Das resultierende Diagramm ist dann mit der konfigurierten Beschränkung für eindeutige Namespaces konform.
 
-![Ein Diagramm, das den Algorithmus zur Identitätsoptimierung visualisiert.](../images/ido_algorithm.png)
+![Ein Diagramm, das den Algorithmus zur Identitätsoptimierung visualisiert.](../images/ido_algorithm.png "Ein Diagramm, das den Algorithmus zur Identitätsoptimierung visualisiert."){zoomable="yes"}
 
 ## Beispielszenarien für den Algorithmus zur Identitätsoptimierung
 
@@ -95,7 +95,7 @@ In diesem Beispiel werden sowohl CRMID als auch E-Mail als eindeutige Namespaces
 * Aufgrund der eindeutigen Namespace-Konfiguration, die pro Diagramm maximal einen CRMID-Namespace und einen E-Mail-Namespace festlegt, teilt der Identitätsoptimierungs-Algorithmus das Diagramm jedoch in zwei Teile auf.
    * Da John der letzte authentifizierte Benutzer ist, bleibt die ECID für den Laptop mit seinem Diagramm verknüpft statt mit dem von Jane.
 
-![Freigegebener Gerätefall eins](../images/identity-settings/shared-device-case-one.png)
+![Fall eines gemeinsamen Geräts.](../images/identity-settings/shared-device-case-one.png "Fall eines gemeinsam genutzten Geräts."){zoomable="yes"}
 
 >[!TAB Beispiel 2]
 
@@ -112,7 +112,7 @@ In diesem Beispiel wird der CRMID-Namespace als eindeutiger Namespace bezeichnet
    * Infolgedessen entfernt der Identitätsoptimierungsalgorithmus den älteren Link, in diesem Fall die CRMID von Jane, die unter `timestamp=1` verknüpft wurde.
    * Während Janes CRMID jedoch nicht mehr als Diagramm auf Identity Service vorhanden ist, bleibt sie weiterhin als Profil im Echtzeit-Kundenprofil bestehen. Dies liegt daran, dass ein Identitätsdiagramm mindestens zwei verknüpfte Identitäten enthalten muss und dass infolge des Entfernens der Links Janes CRMID keine andere Identität mehr hat, mit der sie eine Verknüpfung herstellen kann.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Fall 2 des gemeinsam genutzten Geräts.](../images/identity-settings/shared-device-case-two.png "Fall 2 des gemeinsam genutzten Geräts."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ In diesem Beispiel werden die Namespaces CRM und E-Mail als eindeutig gekennzeic
 
 Mit dem Algorithmus zur Identitätsoptimierung werden fehlerhafte Identitätswerte wie falsche E-Mails oder Telefonnummern nicht auf mehrere verschiedene Identitätsdiagramme übertragen.
 
-![bad-email](../images/identity-settings/bad-email.png)
+![Diagramm einer fehlerhaften E-Mail-Aufnahme.](../images/identity-settings/bad-email.png "Ein Diagramm einer fehlerhaften E-Mail-Aufnahme."){zoomable="yes"}
 
 ## Anonyme Ereignisverknüpfung
 
@@ -154,7 +154,7 @@ Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme
       * vor seiner ersten Anmeldung vor dem `timestamp=1` und
       * Alle Aktivitäten, die er oder Nora beim anonymen Durchsuchen zwischen Kevins ersten und zweiten Anmeldedaten ausgeführt haben.
 
-![anon-event-associated](../images/identity-settings/anon-event-association.png)
+![Ein Diagramm zur anonymen Ereigniszuordnung.](../images/identity-settings/anon-event-association.png "Ein Diagramm zur anonymen Ereignisverknüpfung."){zoomable="yes"}
 
 
 ## Nächste Schritte

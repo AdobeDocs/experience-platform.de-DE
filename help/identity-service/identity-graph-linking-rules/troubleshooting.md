@@ -2,9 +2,9 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme in den Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Beim Testen und Validieren von [!DNL Identity Graph Linking Rules] können Probl
 
 Die folgende Abbildung zeigt eine vereinfachte Darstellung des Datenflusses in Adobe Experience Platform und Programme. Verwenden Sie dieses Diagramm als Referenz, um ein besseres Verständnis des Inhalts dieser Seite zu erhalten.
 
-![Ein Diagramm dazu, wie die Datenaufnahme im Identity Service abläuft.](../images/troubleshooting/dataflow_in_identity.png)
+![Ein Diagramm zum Datenaufnahmefluss in Identity Service.](../images/troubleshooting/dataflow_in_identity.png "Ein Diagramm dazu, wie die Datenaufnahme im Identity Service abläuft."){zoomable="yes"}
 
 Beachten Sie die folgenden Faktoren:
 
@@ -403,4 +403,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.

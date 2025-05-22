@@ -2,9 +2,9 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Verknüpfungsregeln für Identitätsdiagramme in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1600'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Wenden Sie sich an Ihr Adobe-Konto-Team, wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
+>[!DNL Identity Graph Linking Rules] ist jetzt allgemein verfügbar. Wenden Sie sich an den Adobe-Support , wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
 
 Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist es einfach anzunehmen, dass Ihre Daten perfekt aufgenommen werden und dass alle zusammengeführten Profile über eine Personenkennung, wie z. B. eine CRMID, eine einzelne Person darstellen. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen („Diagrammausblendung„). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über [!DNL Identity Graph Linking Rules] bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzerinnen und Benutzer ermöglichen.
 
@@ -40,12 +40,12 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Überblick über die Verknüpfungsregeln für Identitätsdiagramme" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448281/?format=jpeg&nocache=1747851655227&captions=ger" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444052/?format=jpeg&nocache=1747851655237&captions=ger" alt="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,7 +100,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie, wie Sie Regeln zur Identitätsdiagramm-Verknüpfung aktivieren und konfigurieren, um genaue Kundenprofile zu erstellen</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
                 </a>
             </div>
@@ -142,7 +142,7 @@ Es gibt Fälle, in denen sich ein Gerät mehrmals anmelden kann:
 | Öffentlicher Kiosk | Reisende an einem Flughafen, die sich mit ihrem Treueprogramm-Ausweis einloggen, um ihre Gepäckstücke einzuchecken und Bordkarten auszudrucken. |
 | Callcenter | Callcenter-Mitarbeiter melden sich auf einem einzelnen Gerät im Namen von Kunden an, die den Support anrufen, um Probleme zu lösen. |
 
-![Abbildung einiger gemeinsam genutzter Geräte.](../images/identity-settings/shared-devices.png)
+![Abbildung einiger gemeinsam genutzter Geräte.](../images/identity-settings/shared-devices.png "Abbildung einiger gemeinsam genutzter Geräte."){zoomable="yes"}
 
 In diesen Fällen wird eine einzelne ECID aus Diagrammsicht und ohne aktivierte Beschränkungen mit mehreren CRMIDs verknüpft.
 
@@ -155,7 +155,7 @@ Mit [!DNL Identity Graph Linking Rules] können Sie:
 
 Es gibt auch Instanzen von Benutzern, die bei der Registrierung gefälschte Werte als Telefonnummern und/oder E-Mail-Adressen angeben. Wenn keine Beschränkungen aktiviert sind, werden in diesen Fällen Identitäten, die mit Telefon/E-Mail in Verbindung stehen, mit mehreren verschiedenen CRM-IDs verknüpft.
 
-![Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt.](../images/identity-settings/invalid-email-phone.png)
+![Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt.](../images/identity-settings/invalid-email-phone.png "Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt."){zoomable="yes"}
 
 Mit [!DNL Identity Graph Linking Rules] können Sie:
 
@@ -172,7 +172,7 @@ Es gibt Fälle, in denen nicht eindeutige, fehlerhafte Identitätswerte unabhän
 
 Diese Identitäten können zu folgenden Diagrammen führen, bei denen mehrere CRMIDs mit der „fehlerhaften“ Identität zusammengeführt werden:
 
-![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten.](../images/identity-settings/bad-data.png)
+![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten.](../images/identity-settings/bad-data.png "Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten."){zoomable="yes"}
 
 Mit [!DNL Identity Graph Linking Rules] können Sie die CRMID als eindeutige Kennung konfigurieren, um das Reduzieren unerwünschter Profile aufgrund dieses Datentyps zu verhindern.
 

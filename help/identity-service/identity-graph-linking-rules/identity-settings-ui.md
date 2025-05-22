@@ -2,9 +2,9 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Wenden Sie sich an Ihr Adobe-Konto-Team, wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
+>[!DNL Identity Graph Linking Rules] ist jetzt allgemein verfügbar. Wenden Sie sich an den Adobe-Support , wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 
