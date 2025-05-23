@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Definieren von Identitätsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 15%
 
 ---
 
 # Definieren von Identitätsfeldern in der Benutzeroberfläche
 
-Im Experience-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zum Identifizieren einer einzelnen Person im Zusammenhang mit einem Datensatz- oder Zeitreihenereignis verwendet werden kann. In diesem Dokument wird beschrieben, wie Sie ein Identitätsfeld in der Adobe Experience Platform-Benutzeroberfläche definieren.
+Im Experience-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zur Identifizierung einer einzelnen Person verwendet werden kann, die mit einem Datensatz- oder Zeitreihenereignis in Verbindung steht. In diesem Dokument wird beschrieben, wie Sie ein Identitätsfeld in der Adobe Experience Platform-Benutzeroberfläche definieren.
 
 ## Voraussetzungen
 
@@ -46,7 +46,7 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Übernehmen]** aus, um die Änderung
 
 >[!IMPORTANT]
 >
->Wenn bereits ein primäres Identitätsfeld festgelegt ist, können Sie das primäre Identitätsfeld in Ihrem Schema ändern, indem Sie die oben genannten Schritte ausführen. Sie müssen jedoch alle zugehörigen Datensätze im Profil deaktivieren und erneut aktivieren, damit die Änderung wirksam wird.
+>Sobald ein Schema für die Verwendung im Echtzeit-Kundenprofil aktiviert ist und Daten aufgenommen wurden, **Sie das primäre Identitätsfeld nicht mehr ändern**. Der Versuch, dies zu tun, führt zu einem Validierungsfehler. Wenn Sie eine andere primäre Identität verwenden müssen, müssen Sie ein neues Schema und einen neuen Datensatz mit der aktualisierten Identitätskonfiguration erstellen.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Wenn Sie eine primäre Identität für das Schema definiert haben, können Sie j
 In diesem Handbuch wurde beschrieben, wie Sie ein Identitätsfeld in der Benutzeroberfläche definieren. Bei der Aufnahme von Daten mit diesem Schema werden Ihre Kundenidentitätsdiagramme aktualisiert, um die Identitätsfelder des Schemas widerzuspiegeln. Im Handbuch zum [Identitätsdiagramm-Viewer](../../../identity-service/features/identity-graph-viewer.md) erfahren Sie, wie Sie das private Diagramm Ihres Unternehmens in der Benutzeroberfläche untersuchen können.
 
 In der Übersicht über [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) erfahren Sie, wie Sie andere XDM-Feldtypen in der [!DNL Schema Editor] definieren.
-

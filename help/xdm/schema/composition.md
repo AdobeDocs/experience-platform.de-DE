@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Erfahren Sie mehr über Experience-Datenmodell-Schemas (XDM) und die Bausteine, Prinzipien und Best Practices zum Erstellen von Schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
-ht-degree: 26%
+source-wordcount: '4350'
+ht-degree: 25%
 
 ---
 
@@ -55,24 +55,24 @@ Sowohl Schemata der Datensätze als auch der Zeitreihen enthalten eine Zuordnung
 >title="Identitäten in Schemata"
 >abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Objekt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um für jede Person ein Identitätsdiagramm sowie Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemata finden Sie in der Dokumentation."
 
-Schemata werden für die Aufnahme von Daten in Experience Platform verwendet. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, beim Entwerfen von Schemas für Kundenidentitäten zu berücksichtigen, welche Felder verwendet werden können, um ein Subjekt zu identifizieren, unabhängig davon, woher die Daten stammen.
+Schemata definieren die Datenstruktur, die in Experience Platform aufgenommen werden. Diese Daten ermöglichen mehrere Services innerhalb der Plattform und tragen dazu bei, eine einheitliche Ansicht jedes Einzelnen zu erstellen. Überlegen Sie daher beim Entwerfen von Schemata sorgfältig, welche Felder als Identitäten markiert werden sollen. Diese steuern, wie Profile über Datensätze hinweg zugeordnet werden.
 
 Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemata als Identitäten markiert werden. Bei der Datenaufnahme werden die Daten in diesen Feldern für diese Person in das [!UICONTROL Identitätsdiagramm] eingefügt. Auf die Diagrammdaten können dann [[!DNL Real-Time Customer Profile]](../../profile/home.md) und andere Experience Platform-Services zugreifen, um eine zusammengefügte Ansicht jedes einzelnen Kunden zu erhalten.
 
 Zu den Feldern, die häufig als &quot;[!UICONTROL Identität] gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Erwägen Sie alle eindeutigen Kennungen, die für Ihr Unternehmen spezifisch sind, da sie auch gute &quot;[!UICONTROL &quot;-] sein können.
 
-Es ist wichtig, während der Schemaplanung über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [ Schemas finden Sie im Dokument Best Practices für die Datenmodellierung ](./best-practices.md#data-validation-fields).
+Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [ Schemas finden Sie im Dokument Best Practices für die Datenmodellierung ](./best-practices.md#data-validation-fields).
 
 Es gibt zwei Möglichkeiten, Identitätsdaten an Experience Platform zu senden:
 
 1. Hinzufügen von Identitätsdeskriptoren zu einzelnen Feldern, entweder über die [Benutzeroberfläche des Schema-Editors](../ui/fields/identity.md) oder mithilfe der [Schema Registry-API](../api/descriptors.md#create)
-1. Verwenden eines [`identityMap` Felds](#identityMap)
+2. Verwenden eines [`identityMap` Felds](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` ist ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Dieses Feld kann verwendet werden, um Identitätsinformationen für Ihre Schemata bereitzustellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
 
-Der Hauptnachteil der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet werden und infolgedessen weniger sichtbar werden. Wenn Sie Rohdaten erfassen, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der tatsächlichen Schemastruktur definieren.
+Der Hauptnachteil der Verwendung von `identityMap` besteht darin, dass Identitätswerte verschachtelt sind und es schwieriger sein kann, mit ihnen in Tools zu arbeiten, die Identitätsfelder der obersten Ebene erwarten, z. B. Segment Builder oder einige Integrationen von Drittanbietern.
 
 >[!NOTE]
 >
@@ -129,13 +129,13 @@ In der folgenden Tabelle ist aufgeführt, welche Änderungen beim Bearbeiten von
 
 | Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
 | --- | --- |
-| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Optionales Festlegen eines erforderlichen Felds</li><li>Einführung neuer Pflichtfelder*</li><li>Anzeigename und Beschreibung der Ressource ändern</li><li>Aktivieren des Schemas für die Profilteilnahme</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben vorhandener Felder an eine andere Position im Baum</li><li>Löschen des Schemas</li><li>Deaktivieren des Schemas aus der Profilteilnahme</li></ul> |
+| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Optionales Festlegen eines erforderlichen Felds</li><li>Einführung neuer Pflichtfelder*</li><li>Anzeigename und Beschreibung der Ressource ändern</li><li>Aktivieren des Schemas für die Profilteilnahme</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben vorhandener Felder an eine andere Position im Baum</li><li>Löschen des Schemas</li><li>Deaktivieren des Schemas aus der Profilteilnahme</li><li>Ändern des Felds für die primäre Identität in einem Schema, das für das Profil aktiviert ist und Daten aufgenommen hat</li></ul> |
 
 \**Im folgenden Abschnitt finden Sie wichtige Überlegungen zum [Festlegen neuer Pflichtfelder](#post-ingestion-required-fields).*
 
 ### Erforderliche Felder
 
-Einzelne Schemafelder können [als erforderlich markiert) werden](../ui/fields/required.md) was bedeutet, dass alle aufgenommenen Datensätze Daten in diesen Feldern enthalten müssen, damit die Validierung erfolgreich ist. Wenn Sie beispielsweise das Feld für die primäre Identität eines Schemas nach Bedarf festlegen, kann sichergestellt werden, dass alle aufgenommenen Datensätze beim Echtzeit-Kundenprofil berücksichtigt werden. Gleichermaßen wird durch die Festlegung eines Zeitstempelfelds nach Bedarf sichergestellt, dass alle Zeitreihenereignisse chronologisch beibehalten werden.
+Einzelne Schemafelder können [als erforderlich markiert) werden](../ui/fields/required.md) was bedeutet, dass alle aufgenommenen Datensätze Daten in diesen Feldern enthalten müssen, damit die Validierung erfolgreich ist. Wenn Sie beispielsweise das Feld für die primäre Identität eines Schemas nach Bedarf festlegen, kann sichergestellt werden, dass alle aufgenommenen Datensätze beim Echtzeit-Kundenprofil berücksichtigt werden. Ebenso wird durch die Festlegung eines Zeitstempelfelds nach Bedarf sichergestellt, dass alle Zeitreihenereignisse chronologisch beibehalten werden.
 
 >[!IMPORTANT]
 >
@@ -161,9 +161,9 @@ Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbaus
 
 Schemata werden nach folgender Formel zusammengestellt:
 
-**Klasse + Schemafeldgruppe&ast; = XDM-Schema**
+**Klasse + Schemafeldgruppe&amp;ast; = XDM-Schema**
 
-&map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
+&amp;map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
 
 ### Klasse {#class}
 
@@ -280,9 +280,9 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 Schemata werden mithilfe eines Kompositionsmodells erstellt und stellen das Format und die Struktur von Daten dar, die in [!DNL Experience Platform] aufgenommen werden sollen. Wie bereits erwähnt, bestehen diese Schemata aus einer Klasse und keiner oder mehreren Feldergruppen, die mit dieser Klasse kompatibel sind.
 
-Ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, kann beispielsweise „Store[!UICONTROL Transaktionen“ &#x200B;]. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit der standardmäßigen [!UICONTROL Commerce]-Feldergruppe und einer benutzerdefinierten Feldergruppe [!UICONTROL Produktinfo].
+Ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, kann beispielsweise „Store[!UICONTROL Transaktionen“ ]. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit der standardmäßigen [!UICONTROL Commerce]-Feldergruppe und einer benutzerdefinierten Feldergruppe [!UICONTROL Produktinfo].
 
-Ein weiteres Schema, das den Website-Traffic verfolgt, wird möglicherweise als &quot;[!UICONTROL &quot; &#x200B;]. Sie implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert aber dieses Mal die standardmäßige [!UICONTROL Web]-Feldergruppe.
+Ein weiteres Schema, das den Website-Traffic verfolgt, wird möglicherweise als &quot;[!UICONTROL &quot; ]. Sie implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert aber dieses Mal die standardmäßige [!UICONTROL Web]-Feldergruppe.
 
 Das folgende Diagramm zeigt diese Schemata und die von den einzelnen Feldergruppen bereitgestellten Felder. Sie enthält außerdem zwei Schemata, die auf der [!DNL XDM Individual Profile]-Klasse basieren, einschließlich des Schemas [!UICONTROL Mitglieder des Treueprogramms], das zuvor in diesem Handbuch erwähnt wurde.
 
