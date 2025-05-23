@@ -3,16 +3,24 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 28%
+source-wordcount: '2843'
+ht-degree: 21%
 
 ---
 
 # [!DNL Facebook]-Verbindung
 
 ## Übersicht {#overview}
+
+>[!IMPORTANT]
+>
+>* Ab dem 23. Mai 2025 und im Verlauf des Monats Juni 2025 werden im Zielkatalog möglicherweise vorübergehend zwei **[!DNL Facebook Custom Audience]** Zielkarten angezeigt, und zwar für bis zu einige Stunden. Dies liegt an einer internen Aktualisierung des Ziel-Services und an der Unterstützung neuer Felder für eine verbesserte Zielgruppenbestimmung und den Abgleich mit Profilen in den Facebook-Eigenschaften. Weitere Informationen zu den neuen Adressfeldern finden Sie im Abschnitt [Unterstützte Identitäten](#supported-identities) .
+>* Wenn eine Karte mit der Bezeichnung **[!UICONTROL (Neue) benutzerdefinierte Facebook-Zielgruppe]** angezeigt wird, verwenden Sie diese Karte für neue Aktivierungsdatenflüsse. Ihre vorhandenen Datenflüsse werden automatisch aktualisiert, sodass keine Aktion erforderlich ist. Alle Änderungen, die Sie während dieses Zeitraums an vorhandenen Datenflüssen vornehmen, bleiben nach dem Upgrade erhalten. Nach Abschluss des Upgrades wird die Zielkarte **[!UICONTROL (neue) benutzerdefinierte Facebook-]** in **[!DNL Facebook Custom Audience]** umbenannt.
+>* Wenn Sie Datenflüsse mit der [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
+>   * Flussspezifikations-ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * Verbindungsspezifikations-ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Aktivieren Sie Profile für Ihre [!DNL Facebook] Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 
@@ -42,11 +50,20 @@ Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
-| extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
+| `GAID` | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| `IDFA` | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| `phone_sha256` | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| `email_lc_sha256` | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| `extern_id` | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
+| `gender` | Geschlecht | Akzeptierte Werte: <ul><li>`m`für männlich</li><li>`f`für weiblich</li></ul> Experience Platform **hasht** diesen Wert automatisch, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `date_of_birth` | Date of birth | Akzeptiertes Format: `yyyy-MM-DD`. <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `last_name` | Last name | Akzeptiertes Format: Kleinbuchstaben, nur `a-z` Zeichen, keine Satzzeichen. Verwenden Sie UTF-8-Codierung für Sonderzeichen.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `first_name` | Vorname | Akzeptiertes Format: Kleinbuchstaben, nur `a-z` Zeichen, keine Satzzeichen, keine Leerzeichen. Verwenden Sie UTF-8-Codierung für Sonderzeichen.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `first_name_initial` | Vorname (anfänglich) | Akzeptiertes Format: Kleinbuchstaben, nur `a-z` Zeichen. Verwenden Sie UTF-8-Codierung für Sonderzeichen.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `state` | Land | Verwenden Sie den [2-stelligen ANSI-Abkürzungscode](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in Kleinbuchstaben. Verwenden Sie für Nicht-US-Bundesstaaten Kleinbuchstaben, keine Satzzeichen, keine Sonderzeichen und keine Leerzeichen.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `city` | Stadt | Akzeptiertes Format: Kleinbuchstaben, nur `a-z` Zeichen, keine Satzzeichen, keine Sonderzeichen, keine Leerzeichen.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `zip` | Postleitzahl | Akzeptiertes Format: Kleinbuchstaben, keine Leerzeichen. Verwenden Sie für US-Postleitzahlen nur die ersten 5 Ziffern. Für Großbritannien verwenden Sie das `Area/District/Sector`.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
+| `country` | Land | Akzeptiertes Format: Kleinbuchstaben, 2-Buchstaben-Ländercodes im [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)-Format.  <br>Experience Platform **hasht** diesen Wert, bevor er an Facebook gesendet wird. Dieser automatische Hashing ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Facebook zu erfüllen. Geben **nicht** vorab gehashte Werte für dieses Feld an, da dies dazu führt, dass der Abgleichsprozess fehlschlägt. |
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -76,7 +93,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 
 * Ihr [!DNL Facebook]-Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, der das von Ihnen verwendete Werbekonto gehört.
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -93,6 +110,12 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 [!DNL Facebook] erfordert, dass keine personenbezogenen Daten (PII) in klarer Form gesendet werden. Daher können die für [!DNL Facebook] aktivierten Zielgruppen als Hash-*(*) verschlüsselt werden, z. B. E-Mail-Adressen oder Telefonnummern.
 
 Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen.
+
+## Übereinstimmungsraten der Zielgruppen maximieren {#match-rates}
+
+Um die höchsten Übereinstimmungsraten für die Zielgruppe in [!DNL Facebook] zu erzielen, wird dringend empfohlen, die `phone_sha256` und `email_lc_sha256` Zielidentitäten zu verwenden.
+
+Diese Kennungen werden von [!DNL Facebook] hauptsächlich zum Abgleichen von Zielgruppen über ihre Plattformen hinweg verwendet. Stellen Sie sicher, dass Ihre Quelldaten ordnungsgemäß diesen Zielidentitäten zugeordnet sind und [!DNL Facebook's] Hash-Anforderungen einhalten.
 
 ## Hashing-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
@@ -222,7 +245,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
