@@ -161,9 +161,9 @@ Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbaus
 
 Schemata werden nach folgender Formel zusammengestellt:
 
-**Klasse + Schemafeldgruppe&amp;ast; = XDM-Schema**
+**Klasse + Schemafeldgruppe&ast; = XDM-Schema**
 
-&amp;map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
+&map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
 
 ### Klasse {#class}
 
@@ -280,9 +280,9 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 Schemata werden mithilfe eines Kompositionsmodells erstellt und stellen das Format und die Struktur von Daten dar, die in [!DNL Experience Platform] aufgenommen werden sollen. Wie bereits erwähnt, bestehen diese Schemata aus einer Klasse und keiner oder mehreren Feldergruppen, die mit dieser Klasse kompatibel sind.
 
-Ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, kann beispielsweise „Store[!UICONTROL Transaktionen“ ]. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit der standardmäßigen [!UICONTROL Commerce]-Feldergruppe und einer benutzerdefinierten Feldergruppe [!UICONTROL Produktinfo].
+Ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, kann beispielsweise „Store[!UICONTROL Transaktionen“ &#x200B;]. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit der standardmäßigen [!UICONTROL Commerce]-Feldergruppe und einer benutzerdefinierten Feldergruppe [!UICONTROL Produktinfo].
 
-Ein weiteres Schema, das den Website-Traffic verfolgt, wird möglicherweise als &quot;[!UICONTROL &quot; ]. Sie implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert aber dieses Mal die standardmäßige [!UICONTROL Web]-Feldergruppe.
+Ein weiteres Schema, das den Website-Traffic verfolgt, wird möglicherweise als &quot;[!UICONTROL &quot; &#x200B;]. Sie implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert aber dieses Mal die standardmäßige [!UICONTROL Web]-Feldergruppe.
 
 Das folgende Diagramm zeigt diese Schemata und die von den einzelnen Feldergruppen bereitgestellten Felder. Sie enthält außerdem zwei Schemata, die auf der [!DNL XDM Individual Profile]-Klasse basieren, einschließlich des Schemas [!UICONTROL Mitglieder des Treueprogramms], das zuvor in diesem Handbuch erwähnt wurde.
 
