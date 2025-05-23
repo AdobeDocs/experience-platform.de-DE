@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 19%
 
 ---
@@ -140,6 +140,8 @@ Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die
 
 Um Daten aus Batch- und Streaming-Quellen zu kombinieren, müssen Sie die Batch- und Streaming-Komponenten in separate Zielgruppen aufteilen.
 
+### Profilattribut und Erlebnisereignis {#profile-and-event}
+
 Berücksichtigen wir beispielsweise die beiden folgenden Beispielzielgruppen:
 
 | Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 Die resultierende Zielgruppe *wird* mithilfe der Streaming-Segmentierung ausgewertet, da sie die Zugehörigkeit der Batch-Zielgruppe durch Verweis auf die Komponente für die Batch-Zielgruppe nutzt.
 
-Wenn Sie jedoch zwei Zielgruppen mit Ereignisdaten kombinieren möchten, **Sie die beiden Ereignisse nicht** kombinieren. Sie müssen beide Zielgruppen erstellen und dann eine weitere Zielgruppe erstellen, die `inSegment` verwendet, um auf diese beiden Zielgruppen zu verweisen.
+### Mehrere Erlebnisereignisse {#two-events}
+
+Wenn Sie mehrere Zielgruppen mit Ereignisdaten kombinieren möchten, **Sie die Ereignisse nicht** kombinieren. Sie müssen für jedes Ereignis eine Zielgruppe erstellen und dann eine andere Zielgruppe erstellen, die `inSegment` verwendet, um auf alle Zielgruppen zu verweisen.
 
 Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis-Schemadaten enthalten:
 
