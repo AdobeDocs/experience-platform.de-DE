@@ -32,7 +32,7 @@ Um Experience Platform mit [!DNL Amazon] zu verbinden, geben Sie die folgenden D
 | --- | --- |
 | Konto-ID | Die eindeutige Kontokennung Ihres [!DNL Amazon] Kontos. |
 | Entitäts-ID | Die Kennung eines mit dem Advertiser-Konto verknüpften Profils. Diese finden Sie in der URL des Campaign Manager-Portals mit dem Präfix `entity`. |
-| Zugriffs-Token | Das nicht ablaufende Zugriffstoken Ihrer App, das für die Authentifizierung bei der [!DNL Amazon]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der Dokumentation zur Amazon-API ](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) [ unter Authentifizierung. |
+| Zugriffs-Token | Das nicht ablaufende Zugriffstoken Ihrer App, das für die Authentifizierung bei der [!DNL Amazon]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der Dokumentation zur Amazon-API [&#128279;](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html)  unter Authentifizierung. |
 
 ## Installieren und Konfigurieren der [!DNL Amazon] {#install-configure}
 

@@ -109,7 +109,7 @@ Nach der Auswahl erscheinen zusätzliche Steuerelemente, um das Ereignis weiter 
 
 Überprüfen Sie nach der Erstellung und Ausführung der Ereignisweiterleitungsregel, ob das an die [!DNL Twitter]-API gesendete Ereignis wie erwartet in der [!DNL Twitter]-Benutzeroberfläche angezeigt wird.
 
-Wenn die Ereignissammlung und [!DNL Experience Platform] Integration erfolgreich waren, werden Ereignisse im [!DNL Twitter]Ereignis-Manager[!UICONTROL  angezeigt].
+Wenn die Ereignissammlung und [!DNL Experience Platform] Integration erfolgreich waren, werden Ereignisse im [!DNL Twitter]Ereignis-Manager[!UICONTROL &#x200B; angezeigt].
 
 ![Der [!DNL Twitter] Event Manager](../../../images/extensions/server/twitter/event-manager.png)
 
