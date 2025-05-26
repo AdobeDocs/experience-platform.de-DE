@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 75%
+source-wordcount: '2577'
+ht-degree: 70%
 
 ---
 
@@ -17,6 +17,7 @@ Die folgenden Typen von geheimen Daten werden derzeit unterstützt:
 
 | Typ von geheimen Daten | Beschreibung |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Aktiviert die sichere Authentifizierung mit [!DNL Amazon] Services. Das System speichert das Token sicher und verarbeitet seine Verlängerung in bestimmten Intervallen. |
 | [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL HTTP] | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
@@ -78,6 +79,7 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -186,7 +188,7 @@ Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldedaten für Ihr Google-Ko
 
 Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL LinkedIn] autorisiert werden müssen. Wählen Sie **[!UICONTROL Geheimnis mit[!DNL LinkedIn]]** erstellen und autorisieren“ aus, um fortzufahren.
 
-![[!DNL LinkedIn]-Autorisierungs-Popup mit hervorgehobener [!UICONTROL &#x200B; „Geheime Daten mit [!DNL LinkedIn]] erstellen und autorisieren“](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![ Popover „LinkedIn-Autorisierung“ mit hervorgehobener Schaltfläche „Geheimnis mit LinkedIn erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
 
@@ -194,7 +196,7 @@ Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte
 
 ![Die Registerkarte [!UICONTROL Geheime Daten] auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Erneutes Autorisieren [!UICONTROL [!DNL LinkedIn] geheimen Daten &#x200B;] OAuth 2
+#### Erneutes Autorisieren [!UICONTROL [!DNL LinkedIn] geheimen Daten ] OAuth 2
 
 >WICHTIG
 >
@@ -209,6 +211,22 @@ Sie werden zur Registerkarte [!UICONTROL Geheimnisse] weitergeleitet. Die auf di
 ![Die Registerkarte [!UICONTROL Geheime Daten] auf der [!UICONTROL Auth erforderlich] für das [!DNL LinkedIn] Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn]-Anmeldeinformationen aufgefordert werden. Befolgen Sie die Anweisungen, um Ihre geheimen Daten erneut zu autorisieren.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+Um geheime Daten vom Typ „OAuth 2“ [!DNL Amazon], wählen Sie **[!UICONTROL [!DNL Amazon]Dropdown-Liste]** Typ **[!UICONTROL die Option OAuth 2]** aus. Wählen Sie anschließend **[!UICONTROL Geheimnis erstellen]** aus.
+
+![Die Registerkarte [!UICONTROL Geheimnis erstellen] mit dem hervorgehobenen Feld [!UICONTROL Typ].](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL Amazon] autorisiert werden müssen. Wählen Sie **[!UICONTROL Geheimnis mit[!DNL Amazon]]** erstellen und autorisieren“ aus, um fortzufahren.
+
+![Popup für die Amazon-Autorisierung mit hervorgehobener Schaltfläche „Geheime Daten mit Amazon erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL Amazon] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
+
+Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte **[!UICONTROL Geheimnisse]** zurückgeleitet, auf der Sie die neu erstellten geheimen Daten sehen können. Hier können Sie den Status der geheimen Daten und das Ablaufdatum sehen.
+
+![Die Registerkarte [!UICONTROL Geheime Daten] auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Geheime Daten bearbeiten
 
