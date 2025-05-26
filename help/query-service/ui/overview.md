@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
+source-git-commit: 0553b8bc62d54c3ab98c60b16840ce730d9ed5c0
 workflow-type: tm+mt
 source-wordcount: '2467'
 ht-degree: 22%
@@ -44,7 +44,7 @@ Der [!UICONTROL Data Distiller-Funktionen] enthält Dokumentations-Links zu erwe
 
 ### Empfohlene Data Distiller-Beschleuniger {#recommended-accelerators}
 
-Klicken Sie auf einen Schnelllink, um zu den entsprechenden Data Distiller-Dashboards (Vorlagen[!UICONTROL &#x200B; zu &#x200B;]. Jeder Accelerator bietet leistungsstarke Tools und Visualisierungen, mit denen Sie Zielgruppendaten analysieren, die Segmentierung optimieren und Zielgruppenbestimmungsstrategien verbessern können.
+Klicken Sie auf einen Schnelllink, um zu den entsprechenden Data Distiller-Dashboards (Vorlagen[!UICONTROL  zu ]. Jeder Accelerator bietet leistungsstarke Tools und Visualisierungen, mit denen Sie Zielgruppendaten analysieren, die Segmentierung optimieren und Zielgruppenbestimmungsstrategien verbessern können.
 
 - **[[!UICONTROL Erweiterte Zielgruppenüberschneidungen]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Über dieses Dashboard können Sie Zielgruppenüberschneidungen zwischen mehreren Zielgruppensegmenten analysieren, um wertvolle Einblicke zu gewinnen und Segmentierungsstrategien zu optimieren. Sie können Ihre Insights auch für weitere Offline-Analyse- oder Berichtszwecke exportieren.
 - **[[!UICONTROL Zielgruppenvergleich]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: In diesem Dashboard können Sie wichtige Zielgruppenmetriken nebeneinander vergleichen und gegenüberstellen, um zwei Zielgruppengruppen im Detail zu analysieren. Diese Einblicke helfen Ihnen, die Zielgruppengröße, das Wachstum und andere wichtige Leistungsindikatoren zu verstehen, und ermöglichen es Ihnen, die Segmentierung zu verfeinern und Targeting-Strategien mit datengesteuerten Entscheidungen zu optimieren.
@@ -106,7 +106,7 @@ Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatis
 
 ### Registerkarte „Ergebnisse“ {#results-tab}
 
-Auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Ergebnis“ wird die tabellarische Ausgabe Ihrer Abfrage nach der Ausführung angezeigt. Verwenden Sie diese Registerkarte, um Ergebnisse zu überprüfen, Ausgaben zu validieren und Folgeaktionen direkt in der Benutzeroberfläche durchzuführen. In dieser Ansicht haben Sie folgende Möglichkeiten:
+Auf [!UICONTROL  Registerkarte ]Ergebnis“ wird die tabellarische Ausgabe Ihrer Abfrage nach der Ausführung angezeigt. Verwenden Sie diese Registerkarte, um Ergebnisse zu überprüfen, Ausgaben zu validieren und Folgeaktionen direkt in der Benutzeroberfläche durchzuführen. In dieser Ansicht haben Sie folgende Möglichkeiten:
 
 - Ergebnisse für Offline-Analysen im CSV-, XLSX- oder JSON-Format herunterladen. Siehe [Abfrageergebnisse herunterladen](./user-guide.md#download-query-results).
 - Zeigen Sie die Ergebnisse im Vollbildmodus an, um große Tabellen oder breite Datensätze in einem in der Größe veränderbaren Rasterlayout zu untersuchen. Siehe [Ergebnisse im Vollbildmodus ](./user-guide.md#view-results).
@@ -176,7 +176,7 @@ Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, d
 | **[!UICONTROL Client]** | Der für die Abfrage verwendete Client. |
 | **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
 
->
+>[!NOTE]
 >
 >Wählen Sie das Stiftsymbol (![Bleistiftsymbol) aus.](/help/images/icons/edit.png)) aus einer beliebigen Zeile des Abfrageprotokolls zum Abfrage-Editor navigieren. Die Abfrage ist vorausgefüllt, um die Bearbeitung zu erleichtern.
 
