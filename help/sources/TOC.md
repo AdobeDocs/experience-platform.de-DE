@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 92%
+source-wordcount: '1078'
+ht-degree: 91%
 
 ---
 
@@ -242,6 +242,7 @@ ht-degree: 92%
    - [Aufnehmen verschlüsselter Daten](tutorials/api/encrypt-data.md)
    - [Speichern eines Datenflusses als Entwurf](tutorials/api/draft.md)
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/api/labels.md)
+   - [Verwenden privater Endpunkte](tutorials/api/private-link.md)
 - Tutorials zur Benutzeroberfläche {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
       - Adobe-Anwendungen {#adobe-applications}
