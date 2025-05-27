@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 85%
 
 ---
@@ -216,7 +216,8 @@ ht-degree: 85%
    * Erweiterungen für die Ereignisweiterleitung (Server-seitig) {#server}
       * [Überblick](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [Übersicht](./extensions/server/cloud-connector/overview.md)
+         * [Überblick](./extensions/server/cloud-connector/overview.md)
+         * [TLS-Zertifikate](./extensions/server/cloud-connector/mtls.md)
          * [Versionshinweise](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Übersicht](./extensions/server/adform/overview.md)
