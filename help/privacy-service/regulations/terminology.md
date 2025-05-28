@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologie von Datenschutzbestimmungen
 description: In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenhang mit den von Adobe Experience Cloud unterstützten Datenschutzbestimmungen.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
+source-git-commit: ccde37961bd98275030db98440800925d3a6703e
 workflow-type: tm+mt
-source-wordcount: '2404'
-ht-degree: 1%
+source-wordcount: '2630'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 
 **CCPA**: Der [!DNL California Consumer Privacy Act] (CCPA) gibt Einwohnern Kaliforniens mehr Kontrolle über die personenbezogenen Daten, die Unternehmen von dort erfassen. Das Gesetz sieht eine Reihe neuer Rechte für Verbraucher vor, darunter das Recht auf Zugang zu den von ihnen erfassten personenbezogenen Daten und das Recht, den Verkauf ihrer personenbezogenen Daten an Dritte zu untersagen.
 
-**CPA**: Der [!DNL Colorado Privacy Act] (CPA) bietet Verbrauchern in Colorado zusätzliche Einblicke, was Datenverantwortliche erfassen, freigeben und verkaufen und wie diese Daten verwendet werden. Der CPA schützt die personenbezogenen Daten von Einwohnern Colorados, wenn sie in einem individuellen oder privaten Kontext handeln. In diesen Regeln sind die technischen Spezifikationen für einen oder mehrere universelle Opt-out-Mechanismen im Einzelnen festgelegt. Diese Mechanismen geben eindeutig die bestätigende, freiwillige und unzweideutige Entscheidung des Verbrauchers bekannt, sich gegen die Verarbeitung personenbezogener Daten zum Zwecke gezielter Werbung oder des Verkaufs personenbezogener Daten zu entscheiden.
+**CPA**: Der [!DNL Colorado Privacy Act] (CPA) bietet Verbrauchern in Colorado zusätzliche insight darüber, was Datenverantwortliche erfassen, freigeben und verkaufen und wie diese Daten verwendet werden. Der CPA schützt die personenbezogenen Daten von Einwohnern Colorados, wenn sie in einem individuellen oder privaten Kontext handeln. In diesen Regeln sind die technischen Spezifikationen für einen oder mehrere universelle Opt-out-Mechanismen im Einzelnen festgelegt. Diese Mechanismen geben eindeutig die bestätigende, freiwillige und unzweideutige Entscheidung des Verbrauchers bekannt, sich gegen die Verarbeitung personenbezogener Daten zum Zwecke gezielter Werbung oder des Verkaufs personenbezogener Daten zu entscheiden.
 
 **CTDPA**: Die [!DNL Connecticut Data Privacy Act] (CTDPA) gewährt Einwohnern von Connecticut bestimmte Rechte an ihren personenbezogenen Daten und legt Verantwortlichkeiten und Datenschutzstandards für Datenverantwortliche fest, die ihre personenbezogenen Daten verarbeiten. Das CTDPA gewährt ihnen die folgenden Rechte: Zugang, Berichtigung, Löschung, Erhalt einer Kopie oder Ausstieg aus dem Verkauf, Verarbeitung oder Profiling ihrer personenbezogenen Daten. Die CTDPA schützt einen Bewohner Connecticuts, der als Einzelperson oder im Haushalt agiert.
 
@@ -87,7 +87,7 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 
 ## I
 
-**Identity Management Services (IMS)**: Die Adobe-Implementierung von Federated ID und OAuth 2.0 zur Authentifizierung von Adobe ID-Benutzern und Autorisierung für Adobe-Ressourcen. Integrieren Sie IMS in Ihre Adobe-Anwendung oder Ihren Service, damit sich Ihre Benutzerinnen und Benutzer anmelden und auf Adobe-Services zugreifen können. Benutzer können sich direkt bei Renga (dem Adobe Identity Service Provider) anmelden oder sich über eine vertrauenswürdige Drittanbieter-Authentifizierungsdomäne (z. B. [!DNL Google], [!DNL Facebook] oder eine Unternehmens-/Organisations-LDAP) anmelden.
+**Identity Management Services (IMS)**: Die Adobe-Implementierung von Federated ID und OAuth 2.0 zur Authentifizierung von Adobe ID-Benutzern und Autorisierung für Adobe-Ressourcen. Integrieren Sie IMS in Ihre Adobe-Anwendung oder Ihren Service, damit sich Ihre Benutzerinnen und Benutzer anmelden und auf Adobe-Services zugreifen können. Benutzer können sich direkt bei Renga (dem Adobe Identity Service Provider) anmelden oder sich über eine vertrauenswürdige Authentifizierungs-Domain eines Drittanbieters (z. B. [!DNL Google], [!DNL Facebook] oder eine Unternehmens-/Organisations-LDAP) anmelden.
 
 **Implizites Einverständnis** Auch als eindeutiges Einverständnis bezeichnet. Die implizite Einwilligung bezieht sich auf Einwilligungen, die nicht explizit von der betroffenen Person erteilt wurden, aber dennoch eindeutig sind. Beispielsweise erfolgt während des Anmeldevorgangs für eine Unternehmens-Website eine Benachrichtigung, dass die betroffene Person durch die Angabe einer E-Mail-Adresse dem Erhalt von E-Mails zu Sonderangeboten zustimmt. Liest die betroffene Person die Mitteilung, reicht die positive Handlung der Eingabe ihrer E-Mail aus, um als implizites Einverständnis zu gelten.
 
@@ -108,6 +108,8 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 **Hauptniederlassung** Der Ort innerhalb der Union, an dem die wichtigsten Entscheidungen im Zusammenhang mit der Datenverarbeitung getroffen werden; in Bezug auf den Auftragsverarbeiter.
 
 **MHMDA**: Der [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) erweitert die Datenschutzrechte für Verbraucher in Bezug auf ihre Gesundheitsdaten. Sie schreibt Offenlegungen, Verbraucherzustimmung und Löschungsrechte für Gesundheitsdaten vor und verbietet den Verkauf von Gesundheitsdaten ohne Genehmigung. Darüber hinaus macht das Gesetz die Verwendung von Geofencing in Gesundheitseinrichtungen rechtswidrig.
+
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Ab dem 31. Juli 2025 gibt die MCDPA Einwohnern von Minnesota das Recht, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und zu erhalten sowie Datenverkäufe, gezielte Werbung und bestimmte Profiling-Aktionen abzuwählen. Sie gilt für Unternehmen, die in Minnesota tätig sind oder es zum Ziel haben, Daten von über 100.000 Verbrauchern jährlich zu verarbeiten (ohne reine Zahlungsdaten) oder von über 25.000 Verbrauchern, wenn mehr als 25 % des Umsatzes aus Datenverkäufen erzielt werden. Die abgedeckten Stellen müssen angemessene Datensicherheitsmaßnahmen umsetzen und Risikobewertungen durchführen. Der Attorney General von Minnesota setzt das Gesetz durch und kann Geldbußen von bis zu 7.500 US-Dollar pro Verstoß verhängen. Unternehmen haben jedoch bis zum 31. Januar 2026 Zeit, Verstöße zu beheben, bevor Sanktionen verhängt werden.
 
 **[!DNL Montana Consumer Data Privacy Act]**: Dieses Gesetz gibt Einwohnern von Montana das Recht, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und Kopien anzufordern. Das MCDPA gilt für Unternehmen, die Daten für über 50.000 Verbraucher in Montana verarbeiten, und betont den Schutz sensibler personenbezogener Daten wie biometrischer und genetischer Informationen. Sie erzwingt Transparenz in Bezug auf die Datenerfassung, -freigabe und -verkaufspraktiken.
 
@@ -169,6 +171,8 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 ## T
 
 **TDPSA**: Der Texas Data Privacy and Security Act (TDPSA) ist ein umfassendes Gesetz zum Schutz personenbezogener Daten von Einwohnern Texas. Sie gewährt Einzelpersonen das Recht, auf ihre Daten zuzugreifen, sie zu korrigieren, zu löschen und Kopien davon zu erhalten sowie Datenverkäufe und zielgruppengerechte Werbung zu deaktivieren. Unternehmen, die gegen diese Rechtsvorschriften verstoßen, können mit Geldstrafen belegt werden.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: Mit Wirkung zum 1. Juli 2025 gibt TIPA Einwohnern das Recht, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und zu erhalten. Sie ermöglicht es ihnen auch, Datenverkäufe, zielgruppengerechte Werbung und Profiling abzuwählen, die für Entscheidungen verwendet werden, die rechtliche oder ähnlich bedeutende Auswirkungen haben. Es gilt für Unternehmen mit einem Jahresumsatz von über 25 Millionen US-Dollar, die Daten von 175.000 oder mehr Verbrauchern verarbeiten, oder 25.000, wenn mehr als die Hälfte des Umsatzes aus dem Verkauf personenbezogener Daten stammt. Betroffene Unternehmen müssen angemessene Sicherheitsmaßnahmen ergreifen und Datenschutzbewertungen für bestimmte Verarbeitungsaktivitäten mit hohem Risiko durchführen. Der Tennessee Attorney General setzt das Gesetz durch, mit Geldstrafen von bis zu 7.500 US-Dollar pro Verstoß. Unternehmen haben 60 Tage Zeit, Verstöße zu beheben, bevor sie mit Strafen rechnen müssen, aber vorsätzliche oder wissentliche Verstöße können zu dreifachen Schäden führen.
 
 **Triloge**: Triloge sind informelle Verhandlungen zwischen der Europäischen Kommission, dem Europäischen Parlament und dem Rat der Europäischen Union. Diese Verhandlungen werden in der Regel im Anschluss an die erste Lesung von Legislativvorschlägen geführt, damit rascher eine Einigung auf einen zu verabschiedenden Kompromisstext erzielt werden kann.
 sich rascher auf die Annahme eines Kompromisstextes zu einigen.
