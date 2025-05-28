@@ -2,9 +2,9 @@
 title: Cloud Connector-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungserweiterung in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1716'
 ht-degree: 79%
 
 ---
@@ -126,7 +126,7 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
 
-## Verwenden der gegenseitigen Transport-Layer-[!DNL mTLS] in Regeln zur Ereignisweiterleitung {#mtls-rules}
+## Fügen Sie Ihrer Ereignisweiterleitungsbibliothek eine Regel für die gegenseitige [!DNL mTLS] (Transport Layer Security) hinzu {#mtls-rules}
 
 Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität eines Servers oder Clients in sicherer Kommunikation nachweist. Wenn Sie die [!DNL mTLS] Service-API verwenden, helfen Ihnen diese Zertifikate bei der Verifizierung und Verschlüsselung Ihrer Interaktionen mit der Adobe Experience Platform-Ereignisweiterleitung. Dieser Prozess schützt nicht nur Ihre Daten, sondern stellt auch sicher, dass jede Verbindung von einem vertrauenswürdigen Partner stammt.
 
@@ -134,7 +134,7 @@ Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität ei
 
 Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
-Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf **[!UICONTROL Registerkarte]** die API-Karte **[!UICONTROL Adobe Cloud Connector]** Echtzeit-Konversionen und dann **[!UICONTROL Installieren]** aus.
+Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf der **[!UICONTROL Katalog]** die Karte **[!UICONTROL Adobe Cloud Connector]** und dann **[!UICONTROL Installieren]** aus.
 
 ![Der Erweiterungskatalog mit der [!DNL Adobe Cloud Connector] Erweiterungskarte, in der install hervorgehoben ist.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -142,7 +142,7 @@ Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf
 
 >[!NOTE]
 >
->Um eine Regel für die Verwendung von [!DNL mTLS] zu konfigurieren, benötigen Sie Adobe Cloud Connector Version 1.2.4 oder höher.
+>Um eine Regel für die Verwendung von [!DNL mTLS] zu konfigurieren, muss Adobe Cloud Connector Version 1.2.4 oder höher installiert sein.
 
 Nach der Installation der Erweiterung können Sie eine Ereignisweiterleitungsregel erstellen, die [!DNL mTLS] verwendet, und sie zu Ihrer Bibliothek hinzufügen.
 
@@ -150,7 +150,7 @@ Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ih
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Nachdem Sie Ihre Auswahl getroffen haben, werden zusätzliche Steuerelemente angezeigt, um die Methode und das Ziel für die [!DNL mTLS] zu konfigurieren. Um die Verwendung aktiver Zertifikate in den Umgebungen zu aktivieren, wählen Sie **[!UICONTROL Aktivieren in[!DNL mTLS]]** und dann **[!UICONTROL Änderungen beibehalten]** aus, um die Regel zu speichern.
+Nachdem Sie Ihre Auswahl getroffen haben, werden zusätzliche Steuerelemente angezeigt, um die Methode und das Ziel für die [!DNL mTLS]-Anfrage zu konfigurieren. Um die Verwendung aktiver Zertifikate in den Umgebungen zu aktivieren, wählen Sie **[!UICONTROL Aktivieren in[!DNL mTLS]]** und dann **[!UICONTROL Änderungen beibehalten]** aus, um die Regel zu speichern.
 
 ![Die Ansicht mit den Eigenschaftenregeln für die Ereignisweiterleitung mit den zusätzlichen Steuerelementfeldern und hervorgehobenen Änderungen.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
@@ -160,6 +160,6 @@ Ihre neue Regel ist jetzt bereit. Wählen Sie **[!UICONTROL In Bibliothek speich
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie MTLS-Regeln für die Ereignisweiterleitung einrichten. Weitere Informationen zum Einrichten von mTLS für eine Umgebung finden Sie im [Mutual Transport Layer Security [!DNL mTLS] Guide](../cloud-connector/mtls.md).
+In diesem Handbuch wurde beschrieben, wie Sie MTLS-Regeln für die Ereignisweiterleitung einrichten. Weitere Informationen zum Einrichten von mTLS für eine Umgebung finden Sie im [Handbuch zu Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Weitere Informationen zu den Funktionen für die Ereignisweiterleitung in Experience Platform finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).

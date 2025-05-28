@@ -1,14 +1,15 @@
 ---
 title: Übersicht über Mutual Transport Layer Security (TLS)
 description: Erfahren Sie, wie Sie mit mTLS öffentliche Zertifikate, die von Adobe für die Ereignisweiterleitung ausgestellt wurden, sicher abrufen können.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# Übersicht über die gegenseitige Transport Layer Security [!DNL mTLS]
+# Übersicht über die gegenseitige Transport Layer Security ([!DNL mTLS])
 
 Binden Sie in der [!UICONTROL Umgebungen-Benutzeroberfläche) gegenseitige Transport Layer Security ([!DNL mTLS])-], um die Sicherheit Ihrer Erweiterung zu steuern. Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität eines Servers oder Clients in sicherer Kommunikation nachweist. Wenn Sie die [!DNL mTLS] Service-API verwenden, helfen Ihnen diese Zertifikate bei der Verifizierung und Verschlüsselung Ihrer Interaktionen mit der Adobe Experience Platform-Ereignisweiterleitung. Dieser Prozess schützt nicht nur Ihre Daten, sondern stellt auch sicher, dass jede Verbindung von einem vertrauenswürdigen Partner stammt.
 
@@ -48,14 +49,14 @@ Um die Zertifikatdetails für eine Umgebung anzuzeigen, wählen Sie **[!UICONTRO
 
 Die folgenden Zertifikatdetails werden angezeigt:
 
-| Umgebung | Beschreibung |
+| Feldname | Beschreibung |
 | --- | --- |
 | Zertifikat | Einzelheiten der Bescheinigung, darunter:<ul><li>**Name**: Der Name des Zertifikats.</li><li>**Erstellungsdatum**: Das Datum, an dem das Zertifikat erstellt wurde.</li><li>**Status**: Der aktuelle Status des Zertifikats:<ul><li>**Aktuell**: Das Zertifikat wird aktiv verwendet.</li><li>**Veraltet**: Das Zertifikat wird nicht verwendet, ist aber noch nicht abgelaufen. Es kann weiterhin zur Verwendung ausgewählt werden.</li><li>**Abgelaufen**: Das Zertifikat ist abgelaufen, ausgegraut und nicht mehr verfügbar.</li></ul></ul> |
 | Expires | Datum, an dem das Zertifikat abläuft. |
 | Variable Name | Der Variablenname des Zertifikats. |
 | Status | Der aktuelle Status des Zertifikats:<ul><li>**bereitgestellt**: Das Zertifikat wurde erfolgreich bereitgestellt und ist aktiv.</li><li>**Wird**: Das Zertifikat wird gerade bereitgestellt.</li><li>**Bereitstellung erforderlich**: Dieser Status wird angezeigt, wenn ein veraltetes Zertifikat ausgewählt wurde.</li></ul> |
 
-![Die Seite „Entwicklungsumgebung bearbeiten“, auf der [!UICONTROL Zertifikat] Details hervorgehoben sind.](../../../images/extensions/server/cloud-connector/create-environment.png)
+![Die Seite „Entwicklungsumgebung bearbeiten“, auf der [!UICONTROL Zertifikat] Details hervorgehoben sind.](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Auswählen und Bereitstellen eines veralteten Zertifikats {#deploy-obsolete-certificate}
 
