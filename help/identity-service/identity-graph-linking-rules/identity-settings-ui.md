@@ -2,9 +2,9 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '665'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] ist jetzt allgemein verfügbar. Wenden Sie sich an den Adobe-Support , wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen nicht mehr reduziert („korrigiert„) werden müssen.
+>[!DNL Identity Graph Linking Rules] ist jetzt allgemein verfügbar. Wenden Sie sich an Ihr Adobe-Konto-Team oder den Adobe-Support, wenn Sie eine bestehende Sandbox haben, in der reduzierte Diagramme nach dem Aktivieren der Identitätseinstellungen wieder reduziert („korrigiert„) werden müssen.
 
 Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Identity Service-Benutzeroberfläche, mit der Sie eindeutige Namespaces festlegen und die Namespace-Priorität konfigurieren können.
 
@@ -82,6 +82,8 @@ Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schrit
 >* Der letzte Schritt ist eine weitere Bestätigungsmeldung, die angibt, dass vorhandene Diagramme nur vom Diagrammalgorithmus betroffen sind **nur wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden** und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil auch nach Änderungen der Namespace-Priorität nicht aktualisiert wird.
 >
 >* Es kann bis zu **24 Stunden** dauern, bis Ihre neuen oder aktualisierten Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie **[!UICONTROL Bestätigen]**.
+>
+>* Ihre Daten werden erst geändert, wenn Sie Ihre Identitätseinstellungen speichern.
 
 ![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
 
