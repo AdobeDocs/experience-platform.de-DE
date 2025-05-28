@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Mai 2025
 description: Versionshinweise Mai 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 24%
+source-wordcount: '1530'
+ht-degree: 22%
 
 ---
 
@@ -18,13 +18,14 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 20. Mai 2025**
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
+- [KI-Assistent](#ai-assistant)
 - [Katalog-Service](#catalog-service)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
@@ -33,6 +34,18 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience 
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
+
+## KI-Assistent {#ai-assistant}
+
+Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und betriebliche Erkenntnisse zu gewinnen. Der KI-Assistent unterstützt Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Allgemeine Verfügbarkeit des Produktsupport-Agenten | Sie können jetzt den Produktsupport-Agenten im KI-Assistenten verwenden, um eine nahtlose Fehlerbehebung durchzuführen, ohne Ihre Workflows verlassen zu müssen. Support-Administratoren in Ihrer Organisation können jetzt den Produktsupport-Agenten verwenden, um Support-Tickets für Kunden zu erstellen, einschließlich Kontext- und Sitzungsdetails aus Ihren Interaktionen mit dem KI-Assistenten. <br><br>Der Zugriff auf den Product Support Agent ist bis zum 30. November 2025 verfügbar. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um den Produktsupport-Agent zu lizenzieren, und verwenden Sie die Funktion nach diesem Datum weiter. Weitere Informationen finden Sie in der [Dokumentation zum Product Support Agent](../../ai-assistant/new-features/customer-support.md). |
+
+Weitere Informationen finden Sie unter [KI-Assistent - Übersicht](../../ai-assistant/landing.md).
 
 ## Katalog-Service {#catalog-service}
 

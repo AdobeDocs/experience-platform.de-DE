@@ -4,10 +4,10 @@ user-guide-title: Handbuch zum KI-Assistenten in Adobe Experience Platform
 user-guide-description: Erfahren Sie, wie Sie mit dem KI-Assistenten Ihren Workflow mit Adobe Experience Platform und Real-Time Customer Data Platform beschleunigen können.
 description: In diesem Dokument wird das Inhaltsverzeichnis für den KI-Assistenten in Adobe Experience Platform aufgeführt.
 role: Admin,User,Developer,Leader
-source-git-commit: 79a6076a509f15b32ce07e5e4a5fb5d7a2eee3ef
+source-git-commit: fd62a30f7227bf8a7a988fdd25b27a098caec016
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '121'
+ht-degree: 28%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 0%
 * [Häufig gestellte Fragen](faq.md)
 * Neue Funktionen {#new-features}
    * [KI-Assistentenfunktionen in Alpha und Beta](./new-features/alpha-beta.md)
-   * [KI-Assistent für Kunden-Support](./new-features/customer-support.md)
    * [Überwachung signifikanter Änderungen und Prognose von Audiences](./new-features/audience-forecasting.md)
    * [Schätzung natürlicher Sprache](./new-features/natural-language.md)
+   * [Produktsupport-Agent](./new-features/customer-support.md)
    * [XDM-Felderkennung für die Zielgruppenerstellung](./new-features/xdm-field-discovery.md)
 * Modellkarten {#model-cards}
    * [Übersicht über Modellkarten](./model-cards/overview.md)
