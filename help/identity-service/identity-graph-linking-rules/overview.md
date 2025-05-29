@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
 source-wordcount: '1605'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Verknüpfungsregeln für Identitätsdiagramme"
->abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen."
+>abstract="Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über die Verknüpfungsregeln für Identitätsdiagramme bereitgestellt werden, und präzisere Personalisierung für Ihre Benutzenden ermöglichen."
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Mit Adobe Experience Platform Identity Service und dem Echtzeit-Kundenprofil ist
 
 Die folgenden Dokumente sind für das Verständnis von [!DNL Identity Graph Linking Rules] unerlässlich.
 
-* [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
+* [Algorithmus der Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
@@ -40,12 +40,12 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Überblick über die Verknüpfungsregeln für Identitätsdiagramme" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448281/?format=jpeg&nocache=1747851655227&captions=ger" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444052/?format=jpeg&nocache=1747851655237&captions=ger" alt="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,7 +100,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie, wie Sie Regeln zur Identitätsdiagramm-Verknüpfung aktivieren und konfigurieren, um genaue Kundenprofile zu erstellen</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
                 </a>
             </div>
@@ -189,7 +189,7 @@ Mit [!DNL Identity Graph Linking Rules] können Sie:
 | --- | --- |
 | Eindeutiger Namespace | Ein eindeutiger Namespace ist ein Identity-Namespace, der im Kontext eines Identitätsdiagramms als eigenständig eingerichtet wurde. Sie können einen Namespace mithilfe der Benutzeroberfläche so konfigurieren, dass er eindeutig ist. Nachdem ein Namespace als eindeutig definiert wurde, kann ein Diagramm nur eine Identität haben, die diesen Namespace enthält. |
 | Namespace-Priorität | Die Namespace-Priorität bezieht sich auf die relative Bedeutung von Namespaces untereinander. Die Namespace-Priorität kann über die Benutzeroberfläche konfiguriert werden. Sie können Namespaces in einem bestimmten Identitätsdiagramm nach Rang ordnen. Nach der Aktivierung werden Prioritätsnamen in verschiedenen Szenarien verwendet, z. B. als Eingabe für den Identitätsoptimierungsalgorithmus und zur Bestimmung der primären Identität für Erlebnisereignisfragmente. |
-| Algorithmus zur Identitätsoptimierung | Der Algorithmus zur Identitätsoptimierung stellt sicher, dass Richtlinien, die durch die Konfiguration eines eindeutigen Namespace und von Namespace-Prioritäten erstellt wurden, in einem bestimmten Identitätsdiagramm durchgesetzt werden. |
+| Algorithmus der Identitätsoptimierung | Der Algorithmus zur Identitätsoptimierung stellt sicher, dass Richtlinien, die durch die Konfiguration eines eindeutigen Namespace und von Namespace-Prioritäten erstellt wurden, in einem bestimmten Identitätsdiagramm durchgesetzt werden. |
 
 ### Eindeutiger Namespace {#unique-namespace}
 
@@ -238,7 +238,7 @@ Weitere Informationen finden Sie im Handbuch unter [Namespace-Priorität](./name
 
 Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
-* [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
+* [Algorithmus der Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
