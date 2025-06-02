@@ -33,7 +33,7 @@ Um [!DNL Algolia] mit Adobe Experience Platform zu verbinden, benötigen Sie die
 
 Um die [!DNL Algolia] Insights-Erweiterung zu installieren, navigieren Sie zur [!UICONTROL Datenerfassungs-Benutzeroberfläche] und wählen Sie **[!UICONTROL Tags]** aus der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
