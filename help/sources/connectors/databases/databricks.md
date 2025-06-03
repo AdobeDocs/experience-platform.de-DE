@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 3%
@@ -95,7 +95,7 @@ Um Ihre Anmeldeinformationen zu aktualisieren, stellen Sie eine POST-Anfrage und
 **API-Format**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
 ```
 
 **Anfrage**
@@ -105,7 +105,7 @@ Die folgende Anfrage aktualisiert die Anmeldeinformationen für Ihr [!DNL Azure 
 +++Beispiel für eine Anfrage anzeigen
 
 ```shell
-curl -X GET \
+curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
