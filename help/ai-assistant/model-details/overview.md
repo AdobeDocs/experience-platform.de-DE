@@ -1,29 +1,29 @@
 ---
-title: Modellkarten für KI-Modelltransparenz in Adobe Experience Platform
-description: Erfahren Sie mehr über Modellkarten in Adobe Experience Platform.
+title: Modelldetails für KI-Modelltransparenz in Adobe Experience Platform
+description: Erfahren Sie mehr über Modelldetails in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Modellkarten für KI-Modelltransparenz in Adobe Experience Platform
+# Modelldetails für KI-Modelltransparenz in Adobe Experience Platform
 
-Eine KI-Modellkarte ist das Standardformat, mit dem die Transparenz eines KI-Modells kommuniziert wird. Modellkarten bieten umfassende Informationen über das zugrunde liegende Modell, auf dem ein bestimmtes KI-Tool basiert. Modellkarten enthalten Informationen wie den Zweck eines KI-Tools, Schulungsdaten, Leistungsmetriken, Einschränkungen und ethische Überlegungen. Sie können die Transparenz, die Modellkarten bieten, nutzen, um die Funktionen und Einschränkungen des Modells besser zu verstehen und eine verantwortungsvolle und faire Verwendung von KI besser zu fördern.
+Ein KI-Modelldetail ist das Standardformat, mit dem die Transparenz eines KI-Modells kommuniziert wird. Modelldetails bieten umfassende Informationen über das zugrunde liegende Modell, auf dem ein bestimmtes KI-Tool basiert. Zu den Modelldetails gehören Informationen wie der Zweck eines KI-Tools, Schulungsdaten, Leistungsmetriken, Einschränkungen und ethische Überlegungen. Sie können die Transparenz nutzen, die Modelldetails bieten, um die Funktionen und Einschränkungen des Modells besser zu verstehen und eine verantwortungsvolle und faire Verwendung von KI besser zu fördern.
 
-Modellkarten sind öffentlich und sollen das Verständnis sowohl bestehender als auch künftiger Kunden für die von Adobe verwendeten KI-Modelle verbessern. Modellkarten sind im Allgemeinen statisch. Es gibt jedoch mehrere Aspekte von KI-Modellen, die sich im Laufe der Zeit ändern können, einschließlich Herkunft, Verzerrung und andere Transparenzattribute.
+Modelldetails sind öffentlich und sollen sowohl bestehenden als auch potenziellen Kunden das Verständnis der von Adobe verwendeten KI-Modelle erleichtern. Modelldetails sind im Allgemeinen statisch. Es gibt jedoch mehrere Aspekte von KI-Modellen, die sich im Laufe der Zeit ändern können, einschließlich Herkunft, Verzerrung und andere Transparenzattribute.
 
-Lesen Sie dieses Dokument, um mehr über Modellkarten in Adobe Experience Platform zu erfahren.
+Lesen Sie dieses Dokument, um mehr über Modelldetails in Adobe Experience Platform zu erfahren.
 
-## Kartenmodellabschnitte {#model-card-sections}
+## Modelldetailabschnitte {#model-detail-sections}
 
-Eine Modellkarte besteht aus einer Vielzahl verschiedener Abschnitte, die sich jeweils auf einen bestimmten Aspekt des KI-Modells konzentrieren.
+Ein Modelldetail besteht aus einer Vielzahl verschiedener Abschnitte, die sich jeweils auf einen bestimmten Aspekt des KI-Modells konzentrieren.
 
-Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten einer Modellkarte, einschließlich Informationen zu den von ihnen behandelten Fragen.
+Im Folgenden finden Sie eine Anleitung zu den verschiedenen Abschnitten eines Modelldetails, einschließlich Informationen zu den von ihnen behandelten Fragen.
 
 ### Modellübersicht {#model-overview}
 
