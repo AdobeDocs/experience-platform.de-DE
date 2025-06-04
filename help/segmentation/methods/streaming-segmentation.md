@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
+source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 19%
@@ -169,13 +169,13 @@ Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis
 
 | Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In diesem Fall müssten Sie wie folgt eine dritte Zielgruppe erstellen:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 ## Zielgruppe erstellen {#create-audience}
