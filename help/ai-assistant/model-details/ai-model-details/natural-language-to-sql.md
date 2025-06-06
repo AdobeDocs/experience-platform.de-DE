@@ -4,9 +4,9 @@ description: Erfahren Sie mehr über das KI-Modell des KI-Assistenten für die n
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Modellauswertung {#model-evaluation}
 
-* **Evaluierungsmetriken und -verfahren**: Das Modell wird mit Genauigkeit ausgewertet. Beispielsweise gibt die Anzahl der [!DNL NL2SQL]-Anfragen die richtigen SQL-Ergebnisse zurück. Der Bewertungsprozess ist eine Kombination aus regelbasiertem Matching (SQL-Standardisierung und dann direkter SQL-Zeichenfolgenabgleich), LLM-basiertem SQL-Solver und menschlicher Auswertung.
+* **Auswertungsmetriken und -**: Das Modell wird bewertet, indem die [!DNL NL2SQL] Anforderungen betrachtet und bewertet werden, wie viele Anforderungen die richtigen SQL-Ergebnisse liefern. Der Bewertungsprozess ist eine Kombination aus regelbasiertem Matching (SQL-Standardisierung und dann direkter SQL-Zeichenfolgenabgleich), LLM-basiertem SQL-Solver und menschlicher Auswertung.
 * **Auswertungsdaten und Vorverarbeitung**: Wir verwenden offene Sets für Regressionstests und wir haben auch wöchentliche Anmerkungsprojekte, um die Leistung des Modells durch erfassten realen Kunden-Traffic zu überwachen.
 
 ## Modellbereitstellung {#model-deployment}
 
 * **Modellüberwachung**: Das Basismodell wird von [!DNL Azure] gehostet.
-* **Modellaktualisierung**: Das Modell wird regelmäßig wöchentlich durch die Erweiterung der Fragenbank aktualisiert. Das Modell wird bei Bedarf auch durch neue Aufforderungsstrategien und Anweisungen aktualisiert.
+* **Modellaktualisierung**: Das Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL-Modell wird regelmäßig (wöchentlich) durch die Erweiterung der Fragenbank aktualisiert. Das Modell wird bei Bedarf auch durch neue Aufforderungsstrategien und Anweisungen aktualisiert.
 
 ## Fairness und Voreingenommenheit {#fairness-and-bias}
 

@@ -4,9 +4,9 @@ description: Erfahren Sie mehr über das KI-Modell, das für Kunden-KI verwendet
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Modellschulung {#model-training}
 
-* **Schulungsdaten und Vorverarbeitung**: Der Schulungsdatensatz für jede Kundin und jeden Kunden wird direkt aus den eigenen Daten in Adobe Experience Platform bezogen. Dazu gehören historische Kundeninteraktionen, Transaktionsdatensätze, Verhaltensinteraktionslogs und demografische Informationen, die in der Adobe Experience Platform-Instanz erfasst und gespeichert werden. Der Datensatz nutzt kundenspezifische Daten über den ausgewählten Zeitraum und erfasst deren einzigartige saisonale Trends und Interaktionsmuster. Vor der Verwendung wird der Datensatz jedes Kunden einer auf seine Datenmerkmale zugeschnittenen Vorverarbeitung unterzogen, einschließlich der Handhabung fehlender Werte, der Kategoriekodierung, der Funktionsskalierung, der Ausreißererkennung und der Funktionsentwicklung, um eine optimale Qualität und Nutzbarkeit für seinen spezifischen Anwendungsfall sicherzustellen
+* **Schulungsdaten und Vorverarbeitung**: Der Schulungsdatensatz für jede Kundin und jeden Kunden wird direkt aus den eigenen Daten in Adobe Experience Platform bezogen. Dazu gehören historische Kundeninteraktionen, Transaktionsdatensätze, Verhaltensinteraktionslogs und demografische Informationen, die in der Adobe Experience Platform-Instanz erfasst und gespeichert werden. Der Datensatz nutzt kundenspezifische Daten über den ausgewählten Zeitraum und erfasst deren einzigartige saisonale Trends und Interaktionsmuster. Vor der Verwendung wird der Datensatz jedes Kunden einer auf seine Datenmerkmale zugeschnittenen Vorverarbeitung unterzogen, einschließlich der Handhabung fehlender Werte, der Kategoriekodierung, der Funktionsskalierung, der Ausreißererkennung und der Funktionsentwicklung, um eine optimale Qualität und Nutzbarkeit für seinen spezifischen Anwendungsfall sicherzustellen.
+   * Für Schulungen verwendete Verbraucherdaten werden nicht kundenübergreifend verwendet.
 * **Schulungsspezifikationen**: Das Modell nutzt [!DNL LightGBM] mithilfe von [!DNL GBM], die für strukturierte Daten optimiert sind. Es wird auf historischen Kundenereignissequenzen trainiert, um prädiktive Verhaltensmuster zu identifizieren.
 * **Trainings-Frameworks**: Das Modell wurde mithilfe von [!DNL LightGBM] und [!DNL scikit-learn] entwickelt und basiert auf der Adobe AI-Cloud-Infrastruktur.
 * **Schulungsinfrastruktur**: [!DNL Databricks].
