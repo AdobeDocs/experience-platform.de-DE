@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2025
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2025.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1677'
 ht-degree: 16%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->Diese Version enthält Verbesserungen am Add-on Federated Audience Composition . Weitere Informationen finden Sie in den [Versionshinweisen zur Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes).
+>Diese Version enthält Verbesserungen am Add-on Federated Audience Composition . Weitere Informationen finden Sie in den [Versionshinweisen zur Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
 
 **Versionsdatum: Mittwoch, 18. Februar 2025**
 
@@ -78,7 +78,7 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+**Neue oder aktualisierte Funktionen** {#new-updated-destinations}
 
 | Ziel | Beschreibung |
 | --- | --- |
@@ -96,12 +96,12 @@ Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../da
 | --- | --- |
 | Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse | Im Rahmen der [[!UICONTROL attributbasierten Zugriffssteuerung]](/help/access-control/abac/overview.md) in Real-Time CDP können Sie jetzt Zugriffsbeschriftungen auf [Ziel-Datenflüsse“ ](/help/dataflows/ui/monitor-destinations.md). Auf diese Weise können Sie sicherstellen, dass nur eine Teilmenge der Benutzenden in Ihrer Organisation Zugriff auf bestimmte Zieldatenflüsse erhält. <br> **Wichtig**: Bei der Suche nach Ziel-Datenflüssen mithilfe des Suchfelds oben in der Experience Platform-Benutzeroberfläche können die Ergebnisse Ziel-Datenflüsse enthalten, die aufgrund Ihrer Benutzerzugriffsbeschriftungen nicht angezeigt werden können. Dieses Verhalten wird in einer zukünftigen Aktualisierung korrigiert. |
 | [Reporting auf Zielgruppenebene](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) für die [Marketo Engage-Verbindung](/help/destinations/catalog/adobe/marketo-engage.md) | Sie können jetzt [Informationen anzeigen](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) über die aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene für jede Zielgruppe aufgeschlüsselt sind, die Teil der Datenflüsse für dieses Ziel ist. |
-| Unterstützung externer Zielgruppen für die [TikTok](/help/destinations/catalog/social/tiktok.md)- und [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)-Verbindungen | Sie können externe Zielgruppen für diese Ziele über [benutzerdefinierte Uploads](../../segmentation/ui/audience-portal.md#import-audience) und [Federated Audience Composition](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences) aktivieren. |
+| Unterstützung externer Zielgruppen für die [TikTok](/help/destinations/catalog/social/tiktok.md)- und [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)-Verbindungen | Sie können externe Zielgruppen für diese Ziele über [benutzerdefinierte Uploads](../../segmentation/ui/audience-portal.md#import-audience) und [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) aktivieren. |
 | Exportieren von Arrays, Zuordnungen und Objekten in Cloud-Speicher-Ziele | Durch Verwendung des neuen Umschalters **[!UICONTROL Exportieren von Arrays, Zuordnungen, Objekten]** beim Herstellen einer Verbindung zu einem Cloud-Speicher-Ziel können Sie neue komplexe Objekte in ausgewählte Ziele exportieren. [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
-**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+**Fehlerbehebungen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
 - Ein Problem in den Destination SDK-Test-Tools wurde behoben. Bei einigen Kunden oder Partnern traten Probleme mit dem [Tool zur Profilerstellung](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) auf, da das Format nicht unterstützt wird, wenn das für die Profilerstellung verwendete Schema Datentypen mit einem `No format`-Selektor enthielt.
 - Ein Problem bei der Aktualisierung der `targetConnection` von Zielen mithilfe der Flow Service-API wurde behoben. In einigen Fällen verhält sich der PATCH-Vorgang ähnlich wie ein POST-Vorgang, wodurch vorhandene Datenflüsse beschädigt werden. Dieses Problem wurde jetzt behoben, und alle -Kunden können die Flow Service-API verwenden, um ihre `targetConnection` zu aktualisieren. [Weitere Informationen](/help/destinations/api/edit-destination.md#patch-target-connection).
@@ -117,7 +117,7 @@ Lesen Sie für Weitere Informationen den [Überblick über die Ziele](../../dest
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Persistente Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
+| Dauerhafte Aufspaltung | Die Zielgruppenkomposition unterstützt jetzt persistente Aufspaltungen. Durch Hinzufügen eines Identitäts-Namespace zu Ihrem Block Aufspaltung können Sie sicherstellen, dass Ihre aufgeteilten Zielgruppen bei der Aufspaltung nach Profil konstant bleiben. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zur Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
@@ -132,6 +132,7 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 | Funktion | Beschreibung |
 | --- | --- |
 | Unterstützung für Ansichten in [!DNL Microsoft Dynamics] | Sie können jetzt `"entityType": "view"` aufnehmen, wenn Sie die [!DNL Microsoft Dynamics] verwenden. Weitere Informationen finden Sie im Handbuch unter [Verbinden einer - [!DNL Microsoft Dynamics]  mit Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Neue IP-Adressen zur Zulassungsliste | Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um Experience Platform-Quellen erfolgreich verwenden zu können.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> auf die Zulassungsliste setzen <br></br>Weitere Informationen finden Sie im [Handbuch zur Quell-IP-Adresse](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
