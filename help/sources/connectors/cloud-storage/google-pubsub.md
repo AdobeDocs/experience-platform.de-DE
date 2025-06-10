@@ -3,10 +3,10 @@ title: Übersicht über Google PubSub Source
 description: Erfahren Sie, wie Sie Google PubSub über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 10%
+source-wordcount: '857'
+ht-degree: 9%
 
 ---
 
@@ -82,6 +82,10 @@ Sie müssen **die Aufbewahrungsdauer Ihrer Abonnementnachricht auf 24 Stunden od
 >Pro [!DNL Google PubSub]-Abonnement kann nur ein Quelldatenfluss erstellt werden. Die Wiederverwendung eines Abonnements führt selbst über Sandboxes hinweg zu Datenverlust.
 
 ## Verbinden von [!DNL Google PubSub] mit Experience Platform
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Google PubSub] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 

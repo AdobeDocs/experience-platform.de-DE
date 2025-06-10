@@ -5,10 +5,10 @@ title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 36%
+source-wordcount: '1208'
+ht-degree: 35%
 
 ---
 
@@ -414,6 +414,10 @@ Eine erfolgreiche Antwort gibt eine Liste von Datenflussspezifikationen zurück.
 ```
 
 ## Erstellen eines Datenflusses
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 Der letzte Schritt bei der Erfassung von Streaming-Daten besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 

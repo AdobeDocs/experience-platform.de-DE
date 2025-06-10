@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 12%
+source-wordcount: '841'
+ht-degree: 11%
 
 ---
 
@@ -86,6 +86,10 @@ Weitere Informationen zur Rollen- und Berechtigungsverwaltung finden Sie in der 
       * `TIMESTAMP_TZ` kann weder in einer Zeitstempelspalte noch in einer Zuordnung verwendet werden.
 
 ## Nächste Schritte
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake]-Streaming-Quelle mithilfe der -API mit Experience Platform verbinden:
 

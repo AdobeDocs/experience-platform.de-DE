@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Streaming-Verbindung;St
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten mithilfe der Flow Service-API erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
-ht-degree: 29%
+source-wordcount: '1684'
+ht-degree: 28%
 
 ---
 
@@ -457,6 +457,10 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 ```
 
 ## Erstellen eines Datenflusses
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 Nachdem Sie Ihre Quell- und Zielverbindungen erstellt haben, können Sie jetzt einen Datenfluss erstellen. Der Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage an den `/flows`-Endpunkt senden.
 

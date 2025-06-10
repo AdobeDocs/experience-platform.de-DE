@@ -3,10 +3,10 @@ title: Erstellen einer Source-Verbindung mit Azure Event Hubs mithilfe der Flow 
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Azure Event Hubs-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 30%
+source-wordcount: '1524'
+ht-degree: 29%
 
 ---
 
@@ -49,7 +49,7 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Event Hubs]-Konto hers
 | `sasKeyName` | Der Name der Autorisierungsregel, die auch als SAS-Schlüsselname bezeichnet wird. |
 | `sasKey` | Der Primärschlüssel des [!DNL Event Hubs] Namespace. Für die `sasPolicy`, der die `sasKey` entspricht, müssen `manage` konfiguriert sein, damit die [!DNL Event Hubs] ausgefüllt werden kann. |
 | `namespace` | Der Namespace der [!DNL Event Hub], auf die Sie zugreifen. Ein [!DNL Event Hub] Namespace bietet einen eindeutigen Container für die Berechnung des Umfangs, in dem Sie einen oder mehrere [!DNL Event Hubs] erstellen können. |
-| `eventHubName` | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [!DNL Event Hub]. |
+| `eventHubName` | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [[!DNL Event Hub]. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Spezifikations-ID der [!DNL Event Hubs]-Verbindung lautet: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 Weitere Informationen zur SAS-Authentifizierung (Shared Access Signatures) für [!DNL Event Hubs] finden Sie im [[!DNL Azure] Handbuch zur Verwendung von SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -73,7 +73,7 @@ Weitere Informationen zu [!DNL Azure Active Directory] finden Sie im [Azure-Hand
 | `clientId` | Die Ihrer App zugewiesene Anwendungs-ID. Sie können diese ID vom [!DNL Microsoft Entra ID] abrufen, in dem Sie Ihre [!DNL Azure Active Directory] registriert haben. |
 | `clientSecretValue` | Das Client-Geheimnis, das zusammen mit der Client-ID zur Authentifizierung Ihrer App verwendet wird. Sie können Ihr Client-Geheimnis über das [!DNL Microsoft Entra ID]-Portal abrufen, in dem Sie Ihre [!DNL Azure Active Directory] registriert haben. |
 | `namespace` | Der Namespace der [!DNL Event Hub], auf die Sie zugreifen. Ein [!DNL Event Hub] Namespace bietet einen eindeutigen Container für die Berechnung des Umfangs, in dem Sie einen oder mehrere [!DNL Event Hubs] erstellen können. |
-| `eventHubName` | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [!DNL Event Hub]. |
+| `eventHubName` | Geben Sie Ihren [!DNL Azure Event Hub] ein. Microsoft Weitere Informationen zu ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) finden Sie in der Dokumentation zu [[!DNL Event Hub]. |
 
 >[!ENDTABS]
 
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | Dieser Parameter definiert den Typ der aufgenommenen Daten. Zu den unterstützten Datentypen gehören: `raw` und `xdm`. |
 | `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwenden Sie `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und `earliest` , um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. Dieser Parameter ist optional und auf `earliest` gesetzt, wenn er nicht angegeben wurde. |
 | `params.consumerGroup` | Der Veröffentlichungs- oder Abonnementmechanismus, der für die [!DNL Event Hubs] verwendet werden soll. Dieser Parameter ist optional und auf `$Default` gesetzt, wenn er nicht angegeben wurde. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Handbuch ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) Event-Verbraucher . **Hinweis**: Eine [!DNL Event Hubs] Verbrauchergruppe kann jeweils nur für einen einzigen Fluss verwendet werden. |
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 ## Nächste Schritte
 

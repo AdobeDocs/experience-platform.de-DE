@@ -3,10 +3,10 @@ title: Verbinden Ihres Snowflake-Streaming-Kontos mit Adobe Experience Platform
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake Streaming verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 21%
+source-wordcount: '880'
+ht-degree: 20%
 
 ---
 
@@ -212,6 +212,10 @@ Bei einer erfolgreichen Antwort werden Ihre Quellverbindungs-ID und das entsprec
 ```
 
 ## Erstellen eines Datenflusses
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 Um einen Datenfluss zum Streamen von Daten aus Ihrem [!DNL Snowflake]-Konto an Experience Platform zu erstellen, müssen Sie eine POST-Anfrage an den `/flows`-Endpunkt senden und dabei die folgenden Werte angeben:
 

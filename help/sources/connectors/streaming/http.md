@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den HTTP-API-Source-Connector
 description: Erfahren Sie, wie Sie Streaming-Connectoren erstellen, um eine Verbindung mit Adobe Experience Platform über APIs oder die Benutzeroberfläche herzustellen.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 21%
+source-wordcount: '239'
+ht-degree: 19%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 21%
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Sie können den [!DNL HTTP API]-Quell-Connector verwenden, um Ihre Daten an Experience Platform zu streamen. Die [!DNL HTTP API] wird von [!DNL Data Prep] unterstützt, sodass Sie alle nicht XDM-kompatiblen Daten einem XDM-kompatiblen Datensatz zuordnen können.
+
+>[!NOTE]
+>
+>Nachdem Sie einen Streaming-Datenfluss erstellt oder aktualisiert haben, ist eine kurze 5-minütige Pause bei der Datenaufnahme erforderlich, um potenzielle Instanzen von Datenverlust oder Datenverlust zu verhindern.
 
 Die folgende Dokumentation enthält Informationen zum Erstellen eines HTTP-API-Streaming-Connectors für die Verbindung mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
