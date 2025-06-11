@@ -1,23 +1,27 @@
 ---
 title: Export PDF
-description: Erfahren Sie, wie Sie die verarbeiteten Daten aus Ihrem benutzerdefinierten Dashboard Insights im PDF-Format herunterladen.
+description: Erfahren Sie, wie Sie die verarbeiteten Daten aus Ihren benutzerdefinierten Dashboard-Einblicken im PDF-Format herunterladen.
 exl-id: b8878198-1f69-4cef-9819-886a309a9c70
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+source-git-commit: 5ad15e557feb4e7cf0b1b2029cfad1545d78ea56
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
 # Export PDF {#export-pdf}
 
-Nachdem Sie mit [Query Pro-Modus](./overview.md) einen [Custom Insight](./overview.md#query-pro-mode) erstellt haben, können Sie Ihre Diagrammdaten im PDF-Format exportieren. Diese Aktion wird über die benutzerdefinierte Dashboard-Übersicht ausgeführt.
+Nachdem Sie eine [benutzerdefinierte insight](./overview.md) mit [Query Pro-Modus](./overview.md#query-pro-mode) erstellt haben, können Sie Ihre Diagrammdaten im PDF-Format exportieren. Diese Aktion wird über die benutzerdefinierte Dashboard-Übersicht ausgeführt.
 
 Wählen Sie im Arbeitsbereich Dashboards ein benutzerdefiniertes Dashboard aus dem Inventar, das auf der Registerkarte [!UICONTROL Durchsuchen] aufgeführt ist.
 
 ![Das Dashboard-Inventar mit einem hervorgehobenen benutzerdefinierten Dashboard-Eintrag.](../images/sql-insights-query-pro-mode/dashboard-inventory-audience.png)
 
 Ihr benutzerdefiniertes Dashboard wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Exportieren]** oben rechts in der Benutzeroberfläche aus.
+
+>[!NOTE]
+>
+>Exporte, die nur Visualisierungen enthalten, erfordern nicht die Berechtigung [!UICONTROL Exportieren von Dashboard-]). Weitere Informationen finden [[!UICONTROL  in der ]Weitere Informationen](./view-more.md#export).
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Export“.](../images/sql-insights-query-pro-mode/export.png)
 

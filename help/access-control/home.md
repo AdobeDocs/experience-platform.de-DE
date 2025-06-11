@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
-ht-degree: 33%
+source-wordcount: '3851'
+ht-degree: 32%
 
 ---
 
@@ -131,7 +131,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Anzeigen von Adobe Mix Modeler-Modellkonfigurationen] | Schreibgeschützter Zugriff auf Modellkonfigurationen. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Verwalten von Konfigurationen für Adobe Mix Modeler-Modellpläne] | Die Möglichkeit, Pläne und Konfigurationen anzuzeigen und zu ändern. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Anzeigen der Konfigurationen für Adobe Mix Modeler-Modellpläne] | Schreibgeschützter Zugriff auf Plankonfigurationen. |
-| [!DNL AI Assistant] | [!UICONTROL KI-Assistenten aktivieren] | Möglichkeit, die [[!DNL [AI assistant]]](../ai-assistant/access.md) Fragen zu stellen. |
+| [!DNL AI Assistant] | [!UICONTROL KI-Assistenten aktivieren] | Möglichkeit, die [!DNL [AI assistant]](../ai-assistant/access.md) Fragen zu stellen. |
 | [!DNL AI Assistant] | [!UICONTROL Anzeigen operativer Einblicke] | Zugriff auf den Abruf von Antworten [ Abfragen ](../ai-assistant/home.md##operational-insights)operative Insights). |
 | [!DNL AI Assistant] | [!UICONTROL Inhalt generieren] | Benutzern ermöglichen, Inhalte mithilfe der [!DNL AI Assistant] zu generieren. |
 | [!DNL AI Assistant] | [!UICONTROL Verwalten des Brand Kit] | Ermöglichen Sie Benutzern, Markenrichtlinien mithilfe der [!DNL AI Assistant] zu erstellen. |
@@ -193,10 +193,11 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Customer Managed Keys] | [!UICONTROL Verwalten von kundenverwalteten Schlüsseln] | Zugriff zum Anzeigen und Konfigurieren kundenverwalteter Schlüssel. |
 | [!DNL Dashboards] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
 | [!DNL Dashboards] | [!UICONTROL Standard-Dashboards verwalten] | Fügen Sie benutzerdefinierte Attribute hinzu, die sich noch nicht im Data Warehouse befinden. |
-| [!DNL Dashboards] | [!UICONTROL Standard-Dashboards anzeigen] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
+| [!DNL Dashboards] | [!UICONTROL Standard-Dashboards anzeigen] | Schreibgeschützter Zugriff auf die Dashboards Profile, Ziele und Segmente . Ermöglicht auch den Zugriff auf Dashboards im linken Navigationsbereich und auf der Registerkarte Dashboards - Inventar und Integrationen . |
 | [!DNL Dashboards] | [!UICONTROL Benutzerdefinierte Dashboards verwalten] | Zugriff zum Erstellen oder Bearbeiten eines Dashboards. |
 | [!DNL Dashboards] | [!UICONTROL Benutzerdefinierte Dashboards anzeigen] | Schreibgeschützter Zugriff auf benutzerdefinierte Dashboards. |
 | [!DNL Dashboards] | [!UICONTROL Berichtspläne verwalten] | Möglichkeit zum Erstellen von Zeitplänen. |
+| [!DNL Dashboards] | [!UICONTROL Exportieren von Dashboard-Daten] | Steuert die Fähigkeit eines Benutzers, tabellarische Daten aus Dashboards im Abfragemodus zu exportieren. |
 | [!DNL Data Collection] | [!UICONTROL Datenströme verwalten] | Zugriff auf das Lesen, Erstellen und Bearbeiten von Datenströmen. |
 | [!DNL Data Collection] | [!UICONTROL Anzeigen von Datenströmen] | Schreibgeschützter Zugriff auf Datenströme. |
 | [!DNL Data Governance] | [!UICONTROL Verwalten von Nutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
@@ -226,7 +227,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Decsion Management] | [!UICONTROL Rangfolgestrategien verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen benutzerdefinierter Berichte und auf die Verwendung von Aktionsfunktionen. |
 | [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff zum Anzeigen verfügbarer Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierter Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen und Löschen von Zielverbindungen und Zielkonten. |
-| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Berechtigung ist es außerdem erforderlich[!UICONTROL &#x200B; dass Benutzenden, die Ziele aktivieren] entweder [!UICONTROL Ziele anzeigen] oder Ziele verwalten gewährt wird. |
+| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Berechtigung ist es außerdem erforderlich[!UICONTROL  dass Benutzenden, die Ziele aktivieren] entweder [!UICONTROL Ziele anzeigen] oder Ziele verwalten gewährt wird. |
 | [!DNL Destinations] | [!UICONTROL Segment ohne Zuordnung aktivieren] | Die Möglichkeit, Zielgruppen für vorhandene Ziele zu aktivieren, ohne den [Zuordnungsschritt“ ](../destinations/ui/activate-batch-profile-destinations.md#mapping). Benutzende können Zielgruppen in Aktivierungs-Workflows hinzufügen und entfernen, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. Diese Berechtigung erfordert auch, dass [!UICONTROL Ziele anzeigen] der Person gewährt wird, die Daten für Ziele aktiviert. |
 | [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Fähigkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Außerdem die Möglichkeit, Daten für aktive Datensätze zu aktivieren, die erstellt wurden. Diese Berechtigung erfordert auch, dass [!UICONTROL Ziele anzeigen] der Person gewährt wird, die Daten für Ziele aktiviert. |
 | [!DNL Destinations] | [!UICONTROL Ziel-Authoring] | Möglichkeit, Ziele mithilfe des [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |

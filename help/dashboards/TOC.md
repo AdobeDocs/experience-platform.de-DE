@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 65%
+ht-degree: 64%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 65%
 * [Dashboards-Inventar](inventory.md)
 * [Standard-Dashboards](standard-dashboards.md)
 * [Herunterladen von Dashboards als PDF](download.md)
-* SQL Insights: Abfrage pro Modus {#sql-insights-query-pro-mode}
+* SQL Insights: Abfragemodus {#sql-insights-query-pro-mode}
    * [Überblick](sql-insights-query-pro-mode/overview.md)
    * Data Distiller-Vorlagen {#templates}
       * [Überblick](sql-insights-query-pro-mode/templates/overview.md)
@@ -34,7 +34,7 @@ ht-degree: 65%
    * [Drill-Through](sql-insights-query-pro-mode/drill-through.md)
    * [Mehr anzeigen](sql-insights-query-pro-mode/view-more.md)
    * [SQL anzeigen](sql-insights-query-pro-mode/view-sql.md)
-   * [Als CSV herunterladen](sql-insights-query-pro-mode/download-csv.md)
+   * [Als CSV exportieren](sql-insights-query-pro-mode/download-csv.md)
    * [Als PDF exportieren](sql-insights-query-pro-mode/export-pdf.md)
 * Verfügbare Dashboards {#guides}
    * [Profile](guides/profiles.md)
@@ -42,7 +42,7 @@ ht-degree: 65%
    * [Zielgruppen](guides/audiences.md)
    * [Ziele](guides/destinations.md)
    * [Lizenznutzung](guides/license-usage.md)
-* Verfügbare Insights {#insights}
+* Verfügbare Erkenntnisse {#insights}
    * [Profile](insights/profiles.md)
    * [Zielgruppen](insights/audiences.md)
    * [Ziele](insights/destinations.md)
