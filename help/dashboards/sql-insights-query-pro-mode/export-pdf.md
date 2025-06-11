@@ -21,7 +21,7 @@ Ihr benutzerdefiniertes Dashboard wird angezeigt. Wählen Sie als Nächstes **[!
 
 >[!NOTE]
 >
->Exporte, die nur Visualisierungen enthalten, erfordern nicht die Berechtigung [!UICONTROL Exportieren von Dashboard-]). Weitere Informationen finden [[!UICONTROL  in der ]Weitere Informationen](./view-more.md#export).
+>Exporte, die nur Visualisierungen enthalten, erfordern nicht die Berechtigung [!UICONTROL Exportieren von Dashboard-]). Weitere Informationen finden [[!UICONTROL &#x200B; in der &#x200B;]Weitere Informationen](./view-more.md#export).
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobener Option „Export“.](../images/sql-insights-query-pro-mode/export.png)
 
