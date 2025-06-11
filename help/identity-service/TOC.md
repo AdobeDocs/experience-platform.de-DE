@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 71%
+source-wordcount: '144'
+ht-degree: 73%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 71%
    - [Löschungen in Identity Service](./features/deletion.md)
    - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
       - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
-      - [Algorithmus zur Identitätsoptimierung](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Algorithmus der Identitätsoptimierung](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Implementierungshandbuch für Identitätsdiagramm-Verknüpfungsregeln](./identity-graph-linking-rules/implementation-guide.md)
-      - [Beispielhafte Diagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
+      - [Konfigurationshandbuch](./identity-graph-linking-rules/example-configurations.md)
       - [Fehlerbehebung für Regeln zur Verknüpfung von Identitätsdiagrammen](./identity-graph-linking-rules/troubleshooting.md)
       - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
       - [Benutzeroberfläche für die Diagrammsimulation](./identity-graph-linking-rules/graph-simulation.md)
