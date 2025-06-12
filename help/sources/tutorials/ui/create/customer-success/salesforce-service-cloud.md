@@ -2,10 +2,10 @@
 title: Verbinden Ihres Salesforce Service Cloud-Kontos über die Benutzeroberfläche von Experience Platform
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche eine Verbindung mit Ihrem Salesforce Service Cloud-Konto herstellen und Ihre Kundenerfolgsdaten zu Experience Platform übertragen.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 19%
+source-wordcount: '880'
+ht-degree: 18%
 
 ---
 
@@ -25,6 +25,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Wenn Sie bereits über eine gültige [!DNL Salesforce Service Cloud]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses für einen Customer Success fortfahren](../../dataflow/customer-success.md)
 
 ### Sammeln erforderlicher Anmeldedaten
+
+>[!WARNING]
+>
+>Die Standardauthentifizierung für die [!DNL Salesforce Service Cloud] wird im Januar 2026 eingestellt. Sie müssen zur Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 wechseln, um weiterhin die -Quelle verwenden und Daten von Ihrem [!DNL Salesforce Service Cloud]-Konto in Experience Platform aufnehmen zu können.
 
 Die [!DNL Salesforce Service Cloud]-Quelle unterstützt die Standardauthentifizierung sowie OAuth2-Client-Anmeldeinformationen.
 
@@ -55,7 +59,7 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihr [!DNL 
 | Client-Geheimnis | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre Anwendung für die [!DNL Salesforce Service Cloud] identifizieren. |
 | API-Version | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce Service Cloud]. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 
-Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce Service Cloud] finden Sie im [[!DNL Salesforce Service Cloud] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce Service Cloud] finden Sie im [[!DNL Salesforce Service Cloud] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

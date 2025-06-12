@@ -3,10 +3,10 @@ title: Verbinden von Snowflake mit Experience Platform mithilfe der Flow Service
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 16%
+source-wordcount: '1251'
+ht-degree: 15%
 
 ---
 
@@ -36,6 +36,10 @@ Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, 
 Lesen Sie die folgenden Schritte, um Informationen zum Verbinden Ihrer [!DNL Snowflake] mit Experience Platform auf Azure zu erhalten.
 
 ### Sammeln erforderlicher Anmeldedaten
+
+>[!WARNING]
+>
+>Die Standardauthentifizierung (oder Kontoschlüsselauthentifizierung) für die [!DNL Snowflake] wird ab November 2025 eingestellt. Sie müssen zur schlüsselpaarbasierten Authentifizierung wechseln, um weiterhin die -Quelle verwenden und Daten aus Ihrer -Datenbank in Experience Platform aufnehmen zu können. Weitere Informationen zur Einstellung finden Sie im [[!DNL Snowflake] Handbuch mit Best Practices zum Minimieren der Risiken durch das Kompromittieren von Anmeldeinformationen](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL Snowflake] zu authentifizieren.
 

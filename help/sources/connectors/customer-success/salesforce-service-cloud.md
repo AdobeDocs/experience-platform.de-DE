@@ -1,25 +1,27 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Salesforce Service Cloud;Salesforce Service Cloud
-solution: Experience Platform
 title: Übersicht über den Salesforce Service Cloud Source Connector
 description: Erfahren Sie, wie Sie Salesforce Service Cloud mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 59%
+source-wordcount: '248'
+ht-degree: 34%
 
 ---
 
-# [!DNL Salesforce Service Cloud]-Connector
+# [!DNL Salesforce Service Cloud]
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+>[!WARNING]
+>
+>Die Standardauthentifizierung für die [!DNL Salesforce Service Cloud] wird im Januar 2026 eingestellt. Sie müssen zur Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 wechseln, um weiterhin die -Quelle verwenden und Daten von Ihrem [!DNL Salesforce Service Cloud]-Konto in Experience Platform aufnehmen zu können.
+
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 [!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Customer-Success-System. Zu den Anbietern, die Customer Success unterstützen, gehören [!DNL Salesforce Service Cloud].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Salesforce Service Cloud] mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
