@@ -3,10 +3,10 @@ title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: c34c41d384fbc4f309dffa8bba97a0f6f3468efc
+source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 23%
+source-wordcount: '1299'
+ht-degree: 24%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Donnerstag, 18. Juni 2025**
 
@@ -38,7 +38,6 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Ziele](#destinations)
 - [Komposition föderierter Zielgruppen](#fac)
 - [Privacy Service](#privacy-service)
-- [Abfrage-Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Quellen](#sources)
 
@@ -120,7 +119,7 @@ Die föderierte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für ei
 
 | Neue Funktion | Beschreibung |
 | ----------- | ----------- |
-| HIPAA-Bereitschaft | Die Federated Audience-Komposition ist jetzt HIPAA-kompatibel. Weitere Informationen zu den Datenschutz- und Sicherheitsmaßnahmen der Federated Audience Composition finden Sie unter [Datenschutz und Sicherheit in der Übersicht über die Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/privacy-security). Weitere Informationen zur HIPAA-Konformität für Experience Platform-Produkte im Allgemeinen finden Sie in der [Übersicht über HIPAA und Adobe-Produkte und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| HIPAA-Bereitschaft | Die Federated Audience-Komposition ist jetzt HIPAA-kompatibel. Weitere Informationen zu den Datenschutz- und Sicherheitsmaßnahmen der Federated Audience Composition finden Sie unter [Datenschutz und Sicherheit in der Übersicht über die Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Weitere Informationen zur HIPAA-Konformität für Experience Platform-Produkte im Allgemeinen finden Sie in der [Übersicht über HIPAA und Adobe-Produkte und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Weitere Informationen finden Sie in der [Dokumentation zur Federated Audience-Komposition](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
@@ -132,30 +131,9 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Unterstützung der Datenschutzgesetze von Tennessee und Minnesota | Privacy Service unterstützt jetzt den Tennessee Information Protection Act (`tipa_tn_usa`) und den Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Sie können Zugriffs- und Löschanfragen in Übereinstimmung mit diesen neuen Vorschriften auf Statusebene verarbeiten. Weitere Einzelheiten finden Sie [ &quot;](https://experienceleague.adobe.com/de/docs/experience-platform/privacy/regulations/overview)&quot;. |
+| Unterstützung der Datenschutzgesetze von Tennessee und Minnesota | Privacy Service unterstützt jetzt den Tennessee Information Protection Act (`tipa_tn_usa`) und den Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Sie können Zugriffs- und Löschanfragen in Übereinstimmung mit diesen neuen Vorschriften auf Statusebene verarbeiten. Weitere Einzelheiten finden Sie [ &quot;](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)&quot;. |
 
-Weitere Informationen zu dem Service finden Sie in [&#128279;](../privacy-service/home.md) Übersicht über Privacy Service .
-
-## Abfrage-Service {#query-service}
-
-Abfragen von Daten im Data Lake von Adobe Experience Platform unter Verwendung von Standard-SQL mit dem Abfrage-Service. Nahtlose Kombination von Datensätzen und Generierung neuer Datensätze aus Ihren Abfrageergebnissen, um das Reporting zu optimieren, datenwissenschaftliche Workflows zu ermöglichen oder die Aufnahme in das Echtzeit-Kundenprofil zu erleichtern.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Erweiterte statistische Funktionen | **Theta-Skizzen-Schnittmenge**: Neue Funktion zur Berechnung von Schnittmengen von Sets unter Verwendung von Theta-Skizzen für ungefähre, unterschiedliche Zählungs- und Set-Vorgänge. **KLL-Histogramme**: Verbesserte Histogrammfunktionen mithilfe von KLL-Skizzen (Kth Smallest, L Largest, Large Items) für die quantitative Schätzung und Verteilungsanalyse. Diese Funktionen stehen Data Distiller-Kunden zur Verfügung. |
-| SQL-Vorlagenbibliothek | Eine umfassende Bibliothek mit SQL-Vorlagen für gängige Anwendungsfälle ist jetzt verfügbar. Diese Funktion beschleunigt die Abfrageentwicklung, indem sie Best-Practice-Vorlagen für häufige Analysemuster bereitstellt, was Kunden von Data Distiller dabei hilft, komplexe Analysen effizienter zu implementieren. |
-
-**Aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Beispiel für RFM-Modellierung | Es wurde ein umfassendes Beispiel für die Modellierung von Aktualität, Häufigkeit, Geld (RFM) für Kunden von Data Distiller hinzugefügt. Dazu gehören detaillierte Dokumentationen und Implementierungshandbücher für die Kundensegmentierung und Wertanalyse mithilfe von RFM-Techniken. |
-
-{style="table-layout:auto"}
-
-Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../query-service/home.md).
+Weitere Informationen zu dem Service finden Sie in ](../privacy-service/home.md) [Übersicht über Privacy Service .
 
 ## Sandboxes {#sandboxes}
 
