@@ -4,9 +4,9 @@ description: Erfahren Sie mehr über die Aktualisierungen der Segmentierungs-Eig
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '586'
 ht-degree: 4%
 
 ---
@@ -47,8 +47,8 @@ Angenommen, Sie haben zwei Zielgruppen, von denen eine die Profilschemadaten und
 
 | Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Einwohner Kaliforniens | Profil | Batch | Wohnsitz ist in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Einwohner Kaliforniens | Profil | Batch-Quelle | Wohnsitz ist in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming-Quelle | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Wenn Sie die Batch-Komponente in Ihrer Streaming-Zielgruppe verwenden möchten, müssen Sie einen Verweis auf die Batch-Zielgruppe anhand des Segments von Segmenten erstellen.
 
@@ -68,8 +68,8 @@ Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis
 
 | Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `7deb246a-49b4-4687-95f9-6316df049948` |
-| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Letzte Abbrüche | Erlebnisereignis | Batch-Quelle | Hat mindestens ein Abbruchereignis in den letzten 48 Stunden | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming-Quelle | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In diesem Fall müssten Sie wie folgt eine dritte Zielgruppe erstellen:
 
