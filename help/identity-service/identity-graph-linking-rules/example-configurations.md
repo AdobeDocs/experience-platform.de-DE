@@ -4,10 +4,10 @@ description: Erfahren Sie mehr über die verschiedenen Implementierungstypen, di
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 8%
+source-wordcount: '1999'
+ht-degree: 7%
 
 ---
 
@@ -43,6 +43,10 @@ Bevor Sie sich mit dem folgenden Dokument befassen, sollten Sie sich mit verschi
 
 ## Grundlegende Implementierungen {#basic-implementations}
 
+>[!TIP]
+>
+>Sie müssen einen benutzerdefinierten geräteübergreifenden Namespace für „CRMID“ erstellen, um die unten stehenden grundlegenden Implementierungsübungen abzuschließen.
+
 In diesem Abschnitt finden Sie grundlegende Implementierungen von [!DNL Identity Graph Linking Rules].
 
 ### Anwendungsfall: einfache Implementierung, die einen geräteübergreifenden Namespace verwendet
@@ -72,15 +76,11 @@ Konfigurieren Sie die folgenden Einstellungen in der Benutzeroberfläche zur Dia
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
-In diesem Diagramm wird John (der Endbenutzer) durch die CRMID dargestellt. {ECID: 123} stellt den Webbrowser dar, den John auf seinem PC verwendet hat, um Ihre E-Commerce-Plattform zu besuchen. {ECID: 999} stellt den Browser dar, den er auf seiner [!DNL iPhone] verwendet hat, und {IDFA: a-b-c} stellt seine [!DNL iPhone] dar.
+In diesem Diagramm wird John (der Endbenutzer) durch die CRMID dargestellt. `{ECID: 123}` stellt den Webbrowser dar, den John auf seinem PC verwendet hat, um Ihre E-Commerce-Plattform zu besuchen. `{ECID: 999}` stellt den Browser dar, den er auf seiner [!DNL iPhone] verwendet hat, und `{IDFA: a-b-c}` stellt seine [!DNL iPhone] dar.
 
 ![Eine einfache Implementierung mit einem geräteübergreifenden Namespace..](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### Übung
+**Übung**
 
 Simulieren Sie die folgende Konfiguration in der Diagrammsimulation. Sie können entweder eigene Ereignisse erstellen oder im Textmodus kopieren und einfügen.
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
 In diesem Diagramm werden John und Jane durch ihre eigenen CRM-IDs dargestellt:
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-Der Browser auf dem Desktop-Computer, den beide zum Besuch Ihrer E-Commerce-Plattform verwenden, wird durch {ECID: 111} dargestellt. In diesem Diagrammszenario ist Jane der letzte authentifizierte Endbenutzer. Daher wird die Verknüpfung zwischen {ECID: 111} und {CRMID: John} entfernt.
+Der Browser auf dem Desktop-Computer, den beide zum Besuch Ihrer E-Commerce-Plattform verwenden, wird durch `{ECID: 111}` dargestellt. In diesem Diagrammszenario ist Jane der letzte authentifizierte Endbenutzer, und daher wird die Verknüpfung zwischen `{ECID: 111}` und `{CRMID: John}` entfernt.
 
 ![Ein simuliertes Diagramm für ein gemeinsam genutztes Gerät (PC).](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB Freigegebenes Gerät (mobil)]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
-In diesem Diagramm werden John und Jane beide durch ihre eigenen CRM-IDs dargestellt. Der von ihnen verwendete Browser wird durch {ECID: 111} dargestellt, und die [!DNL iPad], die sie freigeben, wird durch {IDFA: a-b-c} dargestellt. In diesem Diagrammszenario ist Jane der letzte authentifizierte Endbenutzer. Daher werden die Links von {ECID: 111} und {IDFA: a-b-c} zu {CRMID: John} entfernt.
+In diesem Diagramm werden John und Jane beide durch ihre eigenen CRM-IDs dargestellt. Der von ihnen verwendete Browser wird durch `{ECID: 111}` und die von ihnen freigegebenen [!DNL iPad] durch `{IDFA: a-b-c}` dargestellt. In diesem Diagrammszenario ist Jane der letzte authentifizierte Endbenutzer. Daher werden die Links von `{ECID: 111}` und `{IDFA: a-b-c}` zu `{CRMID: John}` entfernt.
 
 ![Ein simuliertes Diagramm für ein gemeinsam genutztes Gerät (Mobiltelefon).](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ Lesen Sie diesen Abschnitt für Zwischenimplementierungen von [!DNL Identity Gra
 >
 >* Eine **nicht eindeutige Identität** ist eine Identität, die mit einem nicht eindeutigen Namespace verknüpft ist.
 >
->* In den folgenden Beispielen ist `CChash` ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.
+>* Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „Chash“ erstellen, um die unten stehenden Zwischenimplementierungsübungen abzuschließen. „CCHash“ ist ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.
 
-Sie sind ein Datenarchitekt und arbeiten für eine Geschäftsbank, die Kreditkarten ausgibt. Ihr Marketing-Team hat mitgeteilt, dass es den Verlauf früherer Kreditkartentransaktionen in ein Profil aufnehmen möchte. Dieses Identitätsdiagramm könnte wie folgt aussehen.
+Stellen Sie sich vor, Sie arbeiten als Datenarchitekt für eine Geschäftsbank, die Kreditkarten ausgibt. Ihr Marketing-Team hat mitgeteilt, dass es den Verlauf früherer Kreditkartentransaktionen in ein Profil aufnehmen möchte. Dieses Identitätsdiagramm könnte wie folgt aussehen.
 
 **Textmodus:**
 
@@ -171,21 +163,32 @@ Konfigurieren Sie die folgenden Einstellungen in der Benutzeroberfläche zur Dia
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
 ![Bild des simulierten Diagramms](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 Es gibt keine Garantien, dass diese Kreditkartennummern oder andere nicht eindeutige Namespaces immer einem einzelnen Endbenutzer zugeordnet werden. Zwei Endbenutzer können sich mit derselben Kreditkarte registrieren, es kann jedoch zu nicht eindeutigen Platzhalterwerten kommen, die fälschlicherweise aufgenommen wurden. Einfach ausgedrückt: Es gibt keine Garantie, dass nicht eindeutige Namespaces nicht zu einem Diagrammausfall führen.
 
 Zur Lösung dieses Problems entfernt Identity Service die ältesten Links und behält die neuesten Links bei. Dadurch wird sichergestellt, dass nur eine CRMID in einem Diagramm vorhanden ist, wodurch das Ausblenden des Diagramms verhindert wird.
 
-### Übung
+**Übung**
 
 Simulieren Sie die folgenden Konfigurationen in der Diagrammsimulation. Sie können entweder eigene Ereignisse erstellen oder im Textmodus kopieren und einfügen.
 
 >[!BEGINTABS]
+
+>[!TAB Freigegebenes Gerät]
+
+**Textmodus:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**Simulierter Graph**
+
+![Ein zwischengeschaltetes, gemeinsam genutztes Gerätediagramm mit CChash.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB Zwei Endbenutzer mit derselben Kreditkarte]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
 ![Ein Diagramm, in dem sich zwei Endbenutzer mit derselben Kreditkarte anmelden.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB Ungültige Kreditkartennummer]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
 ![Ein Diagramm, bei dem Hashing-Probleme zu einer ungültigen Kreditkarte führen.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### Anwendungsfall: Ihre Daten enthalten sowohl gehashte als auch ungehashte CRMIDs
 
-Sie erfassen sowohl eine ungehashte (offline) CRMID als auch eine gehashte (online) CRMID. Sie erwarten eine direkte Beziehung zwischen ungehashten und gehashten CRMIDs. Wenn ein Endbenutzer mit einem authentifizierten Konto surft, wird die Hash-CRMID zusammen mit der Geräte-ID gesendet (dargestellt in Identity Service als ECID).
+>[!TIP]
+>
+>Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „CRMIDhash“ erstellen, um die folgenden Zwischenimplementierungsübungen abzuschließen.
+
+Sie nehmen sowohl eine ungehashte (offline) CRMID als auch eine gehashte (online) CRMID auf. Es wird erwartet, dass eine direkte Beziehung zwischen ungehashten und gehashten CRMIDs besteht. Wenn ein Endbenutzer mit einem authentifizierten Konto surft, wird die Hash-CRMID zusammen mit der Geräte-ID gesendet (dargestellt in Identity Service als ECID).
 
 **Algorithmuskonfiguration (Identitätseinstellungen)**
 
@@ -252,7 +251,7 @@ Simulieren Sie die folgenden Konfigurationen in der Diagrammsimulation. Sie kön
 
 >[!BEGINTABS]
 
->[!TAB Szenario 1: Freigegebenes Gerät]
+>[!TAB Freigegebenes Gerät]
 
 John und Jane teilen sich ein Gerät.
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![Platzhalter](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![Ein freigegebenes Gerätediagramm mit gehashter CRMID](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB Szenario 2: Ungültige Daten]
+>[!TAB Ungültige Daten]
 
 Aufgrund von Fehlern im Hash-Prozess wird eine nicht eindeutige Hash-CRMID generiert und an Identity Service gesendet.
 
@@ -360,7 +359,7 @@ Simulieren Sie die folgenden Konfigurationen im Tool zur Diagrammsimulation. Sie
 
 >[!BEGINTABS]
 
->[!TAB Zwei Endbenutzer melden sich an]
+>[!TAB Freigegebenes Gerät]
 
 In diesem Szenario melden sich John und Jane beide auf einer E-Commerce-Website an.
 
@@ -399,6 +398,10 @@ Die Namespace-Priorität spielt in komplexen Diagrammszenarien eine wichtige Rol
 Lesen Sie diesen Abschnitt für erweiterte Implementierungen von [!DNL Identity Graph Linking Rules].
 
 ### Anwendungsfall: Sie benötigen Unterstützung für mehrere Geschäftszweige
+
+>[!TIP]
+>
+>Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „loginID“ erstellen, um die unten stehenden erweiterten Implementierungsübungen abzuschließen.
 
 Ihre Endbenutzer haben zwei verschiedene Konten, ein persönliches Konto und ein Geschäftskonto. Jedes Konto wird durch eine andere ID identifiziert. In diesem Szenario würde ein typisches Diagramm wie folgt aussehen:
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### Anwendungsfall: Sie verfügen über komplexe Implementierungen, für die mehrere Namespaces erforderlich sind
 
+>[!TIP]
+>
+>Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“, „LoyaltyID“, „ThirdPartyID“ und „orderID“ erstellen, um die unten aufgeführten erweiterten Implementierungsübungen abzuschließen.
+
 Sie sind ein Medien- und Unterhaltungsunternehmen und Ihre Endbenutzer haben Folgendes:
+
 * EINE CRMID
 * Eine Treuekennung
+
 Darüber hinaus können Ihre Endbenutzer auf der E-Commerce-Website einen Kauf tätigen, und diese Daten sind an ihre E-Mail-Adresse gebunden. Benutzerdaten werden auch von einem Datenbankanbieter eines Drittanbieters angereichert und in Batches an Experience Platform gesendet.
 
 **Textmodus**
