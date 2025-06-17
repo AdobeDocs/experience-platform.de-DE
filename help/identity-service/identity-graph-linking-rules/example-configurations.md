@@ -4,10 +4,10 @@ description: Erfahren Sie mehr über die verschiedenen Implementierungstypen, di
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 7%
+source-wordcount: '1951'
+ht-degree: 8%
 
 ---
 
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="Algorithmuskonfiguration"
 >abstract="Konfigurieren Sie den eindeutigen Namespace und die Namespace-Priorität für die aufgenommenen Identitäten."
-
->[!NOTE]
->
->* „CRMID“ und „loginID“ sind benutzerdefinierte Namespaces. In diesem Dokument ist „CRMID“ eine Personenkennung und „loginID“ eine mit einer bestimmten Person verknüpfte Anmeldekennung.
->* Um die in diesem Dokument beschriebenen Beispieldiagrammszenarien zu simulieren, müssen Sie zunächst zwei benutzerdefinierte Namespaces erstellen, einen mit dem Identitätssymbol „CRMID“ und einen weiteren mit dem Identitätssymbol „loginID“. Bei Identitätssymbolen wird zwischen Groß- und Kleinschreibung unterschieden.
 
 Lesen Sie dieses Dokument, um mehr über die verschiedenen Implementierungstypen zu erfahren, die Sie mit [!DNL Identity Graph Linking Rules] konfigurieren können.
 
@@ -43,9 +38,9 @@ Bevor Sie sich mit dem folgenden Dokument befassen, sollten Sie sich mit verschi
 
 ## Grundlegende Implementierungen {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->Sie müssen einen benutzerdefinierten geräteübergreifenden Namespace für „CRMID“ erstellen, um die unten stehenden grundlegenden Implementierungsübungen abzuschließen.
+>Um die folgenden Implementierungen durchzuführen, müssen Sie einen benutzerdefinierten Namespace mit dem Identitätssymbol (unter Berücksichtigung der Groß-/Kleinschreibung) erstellen: `CRMID`.
 
 In diesem Abschnitt finden Sie grundlegende Implementierungen von [!DNL Identity Graph Linking Rules].
 
@@ -90,7 +85,7 @@ Simulieren Sie die folgende Konfiguration in der Diagrammsimulation. Sie können
 
 **Freigegebenes Gerät (PC)**
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ Der Browser auf dem Desktop-Computer, den beide zum Besuch Ihrer E-Commerce-Plat
 
 **Freigegebenes Gerät (mobil)**
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ In diesem Diagramm werden John und Jane beide durch ihre eigenen CRM-IDs dargest
 
 ## Zwischenlösungen {#intermediate-implementations}
 
+>[!TIP]
+>
+>Eine **nicht eindeutige Identität** ist eine Identität, die mit einem nicht eindeutigen Namespace verknüpft ist.
+
 Lesen Sie diesen Abschnitt für Zwischenimplementierungen von [!DNL Identity Graph Linking Rules].
 
 ### Anwendungsfall: Ihre Daten enthalten nicht eindeutige Identitäten
 
->[!TIP]
+>[!NOTE]
 >
->* Eine **nicht eindeutige Identität** ist eine Identität, die mit einem nicht eindeutigen Namespace verknüpft ist.
->
->* Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „Chash“ erstellen, um die unten stehenden Zwischenimplementierungsübungen abzuschließen. „CCHash“ ist ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.
+>Um die folgenden Implementierungen durchzuführen, müssen Sie die folgenden benutzerdefinierten Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
+>* `CRMID`
+>* `CCHash` (Dies ist ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.)
 
 Stellen Sie sich vor, Sie arbeiten als Datenarchitekt für eine Geschäftsbank, die Kreditkarten ausgibt. Ihr Marketing-Team hat mitgeteilt, dass es den Verlauf früherer Kreditkartentransaktionen in ein Profil aufnehmen möchte. Dieses Identitätsdiagramm könnte wie folgt aussehen.
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ Simulieren Sie die folgenden Konfigurationen in der Diagrammsimulation. Sie kön
 
 >[!TAB Freigegebenes Gerät]
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 Zwei verschiedene Endbenutzer melden sich mit derselben Kreditkarte für Ihre E-Commerce-Website an. Ihr Marketing-Team möchte das Ausblenden von Diagrammen verhindern, indem es sicherstellt, dass die Kreditkarte nur mit einem einzigen Profil verknüpft ist.
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 Aufgrund unsauberer Daten wird eine ungültige Kreditkartennummer in Experience Platform aufgenommen.
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### Anwendungsfall: Ihre Daten enthalten sowohl gehashte als auch ungehashte CRMIDs
 
->[!TIP]
+>[!NOTE]
 >
->Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „CRMIDhash“ erstellen, um die folgenden Zwischenimplementierungsübungen abzuschließen.
+>Um die folgenden Implementierungen durchzuführen, müssen Sie benutzerdefinierte Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
+>* `CRMID`
+>* `CRMIDhash`
 
 Sie nehmen sowohl eine ungehashte (offline) CRMID als auch eine gehashte (online) CRMID auf. Es wird erwartet, dass eine direkte Beziehung zwischen ungehashten und gehashten CRMIDs besteht. Wenn ein Endbenutzer mit einem authentifizierten Konto surft, wird die Hash-CRMID zusammen mit der Geräte-ID gesendet (dargestellt in Identity Service als ECID).
 
@@ -255,7 +256,7 @@ Simulieren Sie die folgenden Konfigurationen in der Diagrammsimulation. Sie kön
 
 John und Jane teilen sich ein Gerät.
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 Aufgrund von Fehlern im Hash-Prozess wird eine nicht eindeutige Hash-CRMID generiert und an Identity Service gesendet.
 
-**Textmodus:**
+**Textmodus**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### Anwendungsfall: Ihre Daten enthalten drei eindeutige Namespaces
 
+>[!NOTE]
+>
+>Um die folgenden Implementierungen durchzuführen, müssen Sie einen benutzerdefinierten Namespace mit dem Identitätssymbol (unter Berücksichtigung der Groß-/Kleinschreibung) erstellen: `CRMID`.
+
 Ihr Kunde definiert eine Einzelpersonen-Entität wie folgt:
 
 * Ein Endbenutzer mit einer zugewiesenen CRMID.
@@ -399,13 +404,15 @@ Lesen Sie diesen Abschnitt für erweiterte Implementierungen von [!DNL Identity 
 
 ### Anwendungsfall: Sie benötigen Unterstützung für mehrere Geschäftszweige
 
->[!TIP]
+>[!NOTE]
 >
->Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“ und „loginID“ erstellen, um die unten stehenden erweiterten Implementierungsübungen abzuschließen.
+>Um die folgenden Implementierungen durchzuführen, müssen Sie benutzerdefinierte Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
+>* `CRMID`
+>* `loginID`
 
 Ihre Endbenutzer haben zwei verschiedene Konten, ein persönliches Konto und ein Geschäftskonto. Jedes Konto wird durch eine andere ID identifiziert. In diesem Szenario würde ein typisches Diagramm wie folgt aussehen:
 
-**Textmodus***
+**Textmodus**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ Konfigurieren Sie die folgenden Einstellungen in der Benutzeroberfläche zur Dia
 
 **Simulierter Graph**
 
-+++Auswählen, um das simulierte Diagramm anzuzeigen
-
 ![Ein Identitätsdiagramm für einen Endbenutzer mit einer geschäftlichen und einer persönlichen E-Mail.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Übung**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB Ungültige Daten werden an Real-Time CDP gesendet]
 
+**Textmodus**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Anwendungsfall: Sie verfügen über komplexe Implementierungen, für die mehrere Namespaces erforderlich sind
 
->[!TIP]
+>[!NOTE]
 >
->Sie müssen benutzerdefinierte geräteübergreifende Namespaces für „CRMID“, „LoyaltyID“, „ThirdPartyID“ und „orderID“ erstellen, um die unten aufgeführten erweiterten Implementierungsübungen abzuschließen.
+>Um die folgenden Implementierungen durchzuführen, müssen Sie benutzerdefinierte Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 Sie sind ein Medien- und Unterhaltungsunternehmen und Ihre Endbenutzer haben Folgendes:
 
@@ -499,8 +506,8 @@ Konfigurieren Sie die folgenden Einstellungen in der Benutzeroberfläche zur Dia
 | Anzeigename | Identitätssymbol | Identitätstyp | Nur einmal im Diagramm | Namespace-Priorität |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| LoyaltyID | LoyaltyID | CROSS_DEVICE | | 2 |
-| E-Mail | E-Mail | E-Mail | | 3 |
+| LoyaltyID | LoyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| E-Mail | E-Mail | E-Mail | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |

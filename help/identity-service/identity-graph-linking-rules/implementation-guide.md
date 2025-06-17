@@ -2,10 +2,10 @@
 title: Implementierungshandbuch für Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Verknüpfungsregeln für Identitätsdiagramme.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die Sie vor 
 
 #### Namespace-Anforderung für einzelne Person {#single-person-namespace-requirement}
 
-Sie müssen sicherstellen, dass in jedem Profil immer der eindeutige Namespace mit der höchsten Priorität vorhanden ist. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
+Sie müssen sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem bekannten Profil vorhanden ist. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
 
 +++Auswählen, um ein Beispiel für ein Diagramm ohne Namespace für eine einzelne Personenkennung anzuzeigen
 
@@ -292,7 +292,7 @@ Dieses Beispiel zeigt auch, dass Tom und Summer sich in verschiedenen Personenen
 Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
 * [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
-* [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
+* [Algorithmus der Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
 * [Namespace-Priorität](./namespace-priority.md)
