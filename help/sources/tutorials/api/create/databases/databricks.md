@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Azure Databricks mithilfe von APIs mit Experi
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 16%
+source-wordcount: '534'
+ht-degree: 17%
 
 ---
 
@@ -47,6 +47,8 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um [!DNL Databricks]
 | `accessToken` | Das Zugriffstoken, das Ihr [!DNL Databricks]-Konto authentifiziert. Sie können Ihr Zugriffs-Token mit dem [!DNL Databricks] Workspace generieren. |
 | `database` | Der Name Ihrer Datenbank im Delta Lake. |
 | `connectionSpec.Id` | Die Verbindungsspezifikations-ID gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Databricks] ist `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
+
+Weitere Informationen finden Sie in der [[!DNL Azure Databricks] Übersicht](../../../../connectors/databases/databricks.md).
 
 ## Erstellen einer Basisverbindung
 
