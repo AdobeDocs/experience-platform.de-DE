@@ -2,10 +2,10 @@
 title: Sandbox-Tools
 description: Nahtloser Export und Import von Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 6%
 
 ---
 
@@ -54,12 +54,12 @@ In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt
 | [!DNL Adobe Journey Optimizer] | Zielgruppe | | Eine Zielgruppe kann als abhängiges Objekt des Journey-Objekts kopiert werden. Sie können eine neue Zielgruppe erstellen oder eine vorhandene in der Ziel-Sandbox wiederverwenden. |
 | [!DNL Adobe Journey Optimizer] | Schema | | Die auf der Journey verwendeten Schemata können als abhängige Objekte kopiert werden. Sie können ein neues Schema erstellen oder ein vorhandenes in der Ziel-Sandbox wiederverwenden. |
 | [!DNL Adobe Journey Optimizer] | Zusammenführungsrichtlinie | | Die auf der Journey verwendeten Zusammenführungsrichtlinien können als abhängige Objekte kopiert werden. In der Ziel-Sandbox **Sie (**) keine neue Zusammenführungsrichtlinie erstellen, sondern nur eine vorhandene verwenden. |
-| [!DNL Adobe Journey Optimizer] | Journey | Die folgenden Objekte, die auf der Journey verwendet werden, werden als abhängige Objekte kopiert. Während des Import-Workflows können Sie für jeden **[!UICONTROL Neu erstellen]** oder **[!UICONTROL Vorhandenes verwenden]** auswählen: <ul><li>Zielgruppen</li><li>Schemata</li><li>Benutzerdefinierte Aktionen</li><li>Ereignisse</li><li>Fragmente</li><li>Inhaltsvorlagen</li><li>Canvas-Details</li></ul> | <ul><li>**[!UICONTROL Benutzerdefinierte Aktionen]**: Wenn Sie **[!UICONTROL Vorhandene verwenden]** während des Importvorgangs auswählen, wenn Sie eine Journey in eine andere Sandbox kopieren, müssen die von Ihnen ausgewählten benutzerdefinierten Aktionen **&#x200B;**&#x200B;mit der benutzerdefinierten Quellaktion übereinstimmen. Wenn sie nicht identisch sind, weist die neue Journey unlösbare Fehler auf.</li><li>Die auf der Journey verwendeten Ereignisse und Ereignisdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Journey | Die folgenden Objekte, die auf der Journey verwendet werden, werden als abhängige Objekte kopiert. Während des Import-Workflows können Sie für jeden **[!UICONTROL Neu erstellen]** oder **[!UICONTROL Vorhandenes verwenden]** auswählen: <ul><li>Zielgruppen</li><li>Schemata</li><li>Benutzerdefinierte Aktionen</li><li>Ereignisse</li><li>Fragmente</li><li>Inhaltsvorlagen</li><li>Canvas-Details</li></ul> | <ul><li>**[!UICONTROL Benutzerdefinierte Aktionen]**: Wenn Sie **[!UICONTROL Vorhandene verwenden]** während des Importvorgangs auswählen, wenn Sie eine Journey in eine andere Sandbox kopieren, müssen die von Ihnen ausgewählten benutzerdefinierten Aktionen **** mit der benutzerdefinierten Quellaktion übereinstimmen. Wenn sie nicht identisch sind, weist die neue Journey unlösbare Fehler auf.</li><li>Die auf der Journey verwendeten Ereignisse und Ereignisdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt.</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Aktion | | Auf der Journey verwendete E-Mail- und Push-Nachrichten können als abhängige Objekte kopiert werden. Die in den Journey-Feldern verwendeten Kanalaktionsaktivitäten, die in der Nachricht zur Personalisierung verwendet werden, werden nicht auf Vollständigkeit überprüft. Inhaltsbausteine werden nicht kopiert.<br><br>Die auf der Journey verwendete Aktion Profil aktualisieren kann kopiert werden. Benutzerdefinierte Aktionen können einem Paket unabhängig hinzugefügt werden. Auf der Journey verwendete Aktionsdetails werden ebenfalls kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
 | [!DNL Adobe Journey Optimizer] | Benutzerdefinierte Aktionen |  | Benutzerdefinierte Aktionen können einem Paket unabhängig hinzugefügt werden. Nachdem eine benutzerdefinierte Aktion einer Journey zugewiesen wurde, kann sie nicht mehr bearbeitet werden. Um Aktualisierungen an benutzerdefinierten Aktionen vorzunehmen, sollten Sie: <ul><li>Verschieben benutzerdefinierter Aktionen vor dem Migrieren einer Journey</li><li>Aktualisieren Sie Konfigurationen (z. B. Anfragekopfzeilen, Abfrageparameter und Authentifizierung) für benutzerdefinierte Aktionen nach der Migration</li><li>Migrieren von Journey-Objekten mit den benutzerdefinierten Aktionen, die Sie im ersten Schritt hinzugefügt haben</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen ermöglichen die einfache Wiederverwendung benutzerdefinierter Inhalte in Journey Optimizer-Kampagnen und -Journey. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle verschachtelten Fragmente. | Ein Fragment kann als abhängiges Objekt des Journey-Objekts kopiert werden. Fragmente sind wiederverwendbare Komponenten, die in einer oder mehreren Journey Optimizer-Kampagnen und -Journey-Umgebungen referenziert werden können. |
-| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
 
 Oberflächen (z. B. Voreinstellungen) werden nicht kopiert. Das System wählt basierend auf dem Nachrichtentyp und dem Namen der Oberfläche automatisch die bestmögliche Übereinstimmung für die Ziel-Sandbox aus. Wenn keine Oberflächen in der Ziel-Sandbox gefunden werden, schlägt die Kopie der Oberfläche fehl, wodurch die Nachrichtenkopie fehlschlägt, da für eine Nachricht eine Oberfläche zur Einrichtung verfügbar sein muss. In diesem Fall muss mindestens eine Oberfläche für den richtigen Kanal der Nachricht erstellt werden, damit die Kopie funktioniert.
 
@@ -144,9 +144,9 @@ Wählen Sie über das Dropdown-Menü den **[!UICONTROL Paketnamen]** den Sie in 
 
 ![Die Seite mit den Importdetails, auf der die Dropdown[!UICONTROL Auswahl „Paketname] angezeigt wird](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind. Alle fehlenden Attribute werden oben auf der Seite angezeigt. Wählen Sie **[!UICONTROL Details anzeigen]**, um eine detailliertere Aufschlüsselung zu erhalten.
+Die Seite [!UICONTROL Paketobjekt und ]&quot; enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind. Alle fehlenden Attribute werden oben auf der Seite angezeigt. Wählen Sie **[!UICONTROL Details anzeigen]**, um eine detailliertere Aufschlüsselung zu erhalten.
 
-![Auf [!UICONTROL &#x200B; Seite „Paketobjekt und &#x200B;]&quot; fehlen Attribute.](../images/ui/sandbox-tooling/missing-attributes.png)
+![Auf [!UICONTROL  Seite „Paketobjekt und ]&quot; fehlen Attribute.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
@@ -166,9 +166,9 @@ Das **[!UICONTROL Feldgruppe]** zeigt eine Liste der für das Objekt verfügbare
 
 ![Eine Liste der Felder, die im Dialogfeld [!UICONTROL Feldergruppe] angezeigt wird, wobei die Auswahl [!UICONTROL Speichern] hervorgehoben wird. ](../images/ui/sandbox-tooling/field-group-list.png)
 
-Sie kehren zur Seite &quot;[!UICONTROL &#x200B; und Abhängigkeiten“ &#x200B;]. Wählen Sie von hier aus **[!UICONTROL Beenden]**, um den Package-Import abzuschließen.
+Sie kehren zur Seite &quot;[!UICONTROL  und Abhängigkeiten“ ]. Wählen Sie von hier aus **[!UICONTROL Beenden]**, um den Package-Import abzuschließen.
 
-![Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; zeigt eine Liste der im Paket enthaltenen Assets an und markiert [!UICONTROL Beenden].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![Die Seite [!UICONTROL Paketobjekt und ]&quot; zeigt eine Liste der im Paket enthaltenen Assets an und markiert [!UICONTROL Beenden].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## Gesamte Sandbox exportieren und importieren
 
@@ -217,7 +217,7 @@ Wählen Sie im Dropdown-Menü mithilfe der Dropdown-Liste **[!UICONTROL Paketnam
 
 Sie gelangen auf die Seite [!UICONTROL Paketobjekt und Abhängigkeiten], auf der Sie die Anzahl der Objekte und Abhängigkeiten sehen können, die importierte und ausgeschlossene Objekte sind. Wählen Sie von hier **[!UICONTROL Importieren]**, um den Package-Import abzuschließen.
 
-![Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; zeigt die Inline-Meldung von nicht unterstützten Objekttypen und markiert [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![Die Seite [!UICONTROL Paketobjekt und ]&quot; zeigt die Inline-Meldung von nicht unterstützten Objekttypen und markiert [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 Warten Sie etwas, bis der Import abgeschlossen ist. Die Dauer des Vorgangs kann von der Anzahl der Objekte im Paket abhängen. Sie können den Importauftrag über die Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Aufträge]** überwachen.
 
@@ -253,11 +253,99 @@ Das **[!UICONTROL Importzusammenfassung]** zeigt eine Aufschlüsselung der Impor
 
 Nach Abschluss des Imports erhalten Sie eine Benachrichtigung über den Import in der Experience Platform-Benutzeroberfläche. Sie können auf diese Benachrichtigungen über das Warnhinweissymbol zugreifen. Wenn ein Vorgang nicht erfolgreich war, können Sie von hier aus zur Fehlerbehebung navigieren.
 
+## Übertragen von Aktualisierungen der iterativen Objektkonfigurationen über Sandbox-Tools hinweg {#move-configs}
+
+Sie können Sandbox-Tools verwenden, um Objektkonfigurationen zwischen verschiedenen Sandboxes zu übertragen. Zuvor mussten Konfigurationsaktualisierungen an Ihren Objekten (z. B. Schemata, Feldergruppen und Datentypen) manuell neu erstellt oder neu importiert werden, um in andere Sandboxes übertragen zu werden. Mit dieser Funktion können Sie Sandbox-Tools verwenden, um Ihre Workflows zu beschleunigen und potenzielle Fehler zu reduzieren, indem Sie Ihre Konfigurationsaktualisierungen nahtlos über verschiedene Sandboxes hinweg übertragen.
+
+![Ein Diagramm, das anzeigt, wie Aktualisierungen über Sandboxes hinweg verschoben werden.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Stellen Sie sicher, dass Sie die folgenden Voraussetzungen haben, bevor Sie versuchen, Ihre Objektkonfigurationen über verschiedene Sandboxes hinweg zu übertragen.
+>
+>- Die entsprechenden Berechtigungen für den Zugriff auf Sandbox-Tools.
+>- Ein neu erstelltes oder aktualisiertes Objekt (z. B. ein Schema) in Ihrer Quell-Sandbox.
+
+>[!BEGINSHADEBOX]
+
+### Unterstützte Objekttypen für den Aktualisierungsvorgang
+
+Die folgenden Objekttypen werden für die Aktualisierung unterstützt:
+
+- Schemata
+- Feldergruppen
+- Datentypen
+
+| Unterstützte Updates | Nicht unterstützte Aktualisierungen |
+| --- | --- |
+| <ul><li>Hinzufügen neuer Felder/Feldergruppen zur Ressource.</li><li>Festlegen eines erforderlichen Felds als optional.</li><li>Einführung neuer Pflichtfelder.</li><li>Ein neues Beziehungsfeld wird eingeführt.</li><li>Ein neues Identitätsfeld wird eingeführt.</li><li>Anzeigename und Beschreibung der Ressource ändern.</li></ul> | <ul><li>Entfernen zuvor definierter Felder.</li><li>Umdefinieren vorhandener Felder, wenn das Schema für das Echtzeit-Kundenprofil aktiviert ist.</li><li>Entfernen oder Einschränken zuvor unterstützter Feldwerte.</li><li>Verschieben vorhandener Felder an eine andere Position in der Schemastruktur - Dadurch wird ein neues Feld in der Ziel-Sandbox erstellt, das vorherige Feld wird jedoch nicht entfernt.</li><li>Aktivieren oder Deaktivieren des Schemas für die Teilnahme am Profil : Dieser Vorgang wird beim Vergleichsvorgang übersprungen.</li><li>Zugriffssteuerungsbeschriftungen.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Gehen Sie wie folgt vor, um zu erfahren, wie Sie mit den Sandbox-Tools Ihre Objektkonfigurationen über verschiedene Sandboxes hinweg übertragen können.
+
+### Zuvor importierte Objekte
+
+Führen Sie diese Schritte aus, wenn Ihr Anwendungsfall vorhandene Objekte in Ihrer Quell-Sandbox betrifft, die Konfigurationsaktualisierungen erfordern, nachdem sie bereits in andere Sandboxes gepackt und in diese importiert wurden.
+
+Aktualisieren Sie zunächst das -Objekt in Ihrer Quell-Sandbox. Navigieren Sie beispielsweise zum Arbeitsbereich **[!UICONTROL Schemata]**, wählen Sie Ihr Schema aus und fügen Sie eine neue Feldergruppe hinzu.
+
+![Der Schema-Arbeitsbereich mit einem aktualisierten Schema.](../images/ui/sandbox-tooling/update-schema.png)
+
+Navigieren Sie nach der Aktualisierung Ihres Schemas zu **[!UICONTROL Sandboxes]** wählen Sie **[!UICONTROL Pakete]** aus und suchen Sie nach dem vorhandenen Paket.
+
+![Die Sandbox-Tooling-Oberfläche mit ausgewähltem Paket](../images/ui/sandbox-tooling/select-package.png)
+
+Überprüfen Sie Ihre Änderungen über die Package-Oberfläche. Wählen Sie **[!UICONTROL Nach Updates suchen]** aus, um Änderungen an den Artefakten in Ihrem Paket anzuzeigen. Wählen Sie als Nächstes **[!UICONTROL Unterschied anzeigen]**, um eine detaillierte Zusammenfassung aller Änderungen zu erhalten, die an Ihren Artefakten vorgenommen wurden.
+
+![Die Paketschnittstelle mit der ausgewählten Schaltfläche „Differenz anzeigen“](../images/ui/sandbox-tooling/view-diff.png)
+
+Die [!UICONTROL View diff]-Schnittstelle wird angezeigt. Weitere Informationen zu Ihren Quell- und Zielartefakten sowie die darauf anzuwendenden Änderungen finden Sie unter diesem Tool .
+
+![Die Zusammenfassung der Änderungen.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+In diesem Schritt können Sie auch [!UICONTROL Mit KI zusammenfassen] auswählen, um eine schrittweise Zusammenfassung aller Änderungen zu erhalten.
+
+![Die Zusammenfassung mit aktivierter KI.](../images/ui/sandbox-tooling/ai-summary.png)
+
+Wenn Sie bereit sind, wählen **[!UICONTROL Paket aktualisieren]** und wählen Sie dann **[!UICONTROL Bestätigen]** in dem Popup-Fenster, das angezeigt wird. Sobald der Auftrag abgeschlossen ist, können Sie die Seite aktualisieren und **[!UICONTROL Verlauf anzeigen]** auswählen, um die Version Ihres Pakets zu überprüfen.
+
+![Das Bestätigungsfenster.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+Um Ihre Änderungen zu importieren, gehen Sie zurück zum Verzeichnis [!UICONTROL Pakete] und wählen Sie die Auslassungszeichen (`...`) neben Ihrem Paket aus und klicken Sie auf **[!UICONTROL Paket importieren]**. Experience Platform wählt [!UICONTROL vorhandene Objekte aktualisieren] automatisch aus. Überprüfen Sie die Änderungen und klicken Sie dann auf **[!UICONTROL Beenden]**.
+
+>[!NOTE]
+>
+>Alle abhängigen Objekte werden im Rahmen dieses Workflows automatisch in der Ziel-Sandbox aktualisiert.
+
+![Die Zielimport-Schnittstelle.](../images/ui/sandbox-tooling/import-objective.png)
+
+Um Ihren Importprozess weiter zu überprüfen, navigieren Sie zu Ihrer Ziel-Sandbox und zeigen Sie das aktualisierte Objekt manuell aus dieser Sandbox an.
+
+### Manuell in der Ziel-Sandbox erstellte Objekte
+
+Führen Sie diese Schritte aus, wenn Ihr Anwendungsfall das Anwenden von Konfigurationsänderungen auf Objekte umfasst, die manuell in separaten Sandboxes erstellt wurden.
+
+Erstellen und veröffentlichen Sie zunächst ein neues Paket mit Ihrem aktualisierten Objekt.
+
+Importieren Sie anschließend Ihr Paket in die Ziel-Sandbox, die die Objekte enthält, die Sie auch aktualisieren möchten. Wählen Sie während des Importvorgangs **[!UICONTROL Vorhandene Objekte aktualisieren]** und verwenden Sie dann den Objektnavigator, um die Zielobjekte, auf die die Aktualisierungen angewendet werden sollen, manuell auszuwählen.
+
+>[!NOTE]
+>
+>- Es ist optional, für abhängige Objekte ein Zielgruppen-Mapping in einer anderen Sandbox auszuwählen. Wenn keine ausgewählt ist, wird eine neue erstellt.
+>- Bei Identity-Namespaces erkennt das System automatisch, ob eine neue Identität erstellt werden muss, wenn eine vorhandene in der Ziel-Sandbox wiederverwendet werden muss.
+
+![Die Import-Ziel-Schnittstelle mit Platzhaltern für die zu aktualisierenden Zielobjekte.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Nachdem Sie die Zielobjekte identifiziert haben, die Sie aktualisieren möchten, klicken Sie auf **[!UICONTROL Beenden]**.
+
+![Die ausgewählten Zielobjekte.](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## Video-Tutorial
 
 Das folgende Video soll Ihnen dabei helfen, die Sandbox-Tools besser zu verstehen, und beschreibt, wie Sie ein neues Paket erstellen, ein Paket veröffentlichen und ein Paket importieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446097/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Nächste Schritte
 
