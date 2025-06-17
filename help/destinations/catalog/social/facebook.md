@@ -3,24 +3,16 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Basis von gehashten E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 21%
+source-wordcount: '2690'
+ht-degree: 22%
 
 ---
 
 # [!DNL Facebook]-Verbindung
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->* Ab dem 23. Mai 2025 und im Verlauf des Monats Juni 2025 werden im Zielkatalog möglicherweise vorübergehend zwei **[!DNL Facebook Custom Audience]** Zielkarten angezeigt, und zwar für bis zu einige Stunden. Dies liegt an einer internen Aktualisierung des Ziel-Services und an der Unterstützung neuer Felder für eine verbesserte Zielgruppenbestimmung und den Abgleich mit Profilen in den Facebook-Eigenschaften. Weitere Informationen zu den neuen Adressfeldern finden Sie im Abschnitt [Unterstützte Identitäten](#supported-identities) .
->* Wenn eine Karte mit der Bezeichnung **[!UICONTROL (Neue) benutzerdefinierte Facebook-Zielgruppe]** angezeigt wird, verwenden Sie diese Karte für neue Aktivierungsdatenflüsse. Ihre vorhandenen Datenflüsse werden automatisch aktualisiert, sodass keine Aktion erforderlich ist. Alle Änderungen, die Sie während dieses Zeitraums an vorhandenen Datenflüssen vornehmen, bleiben nach dem Upgrade erhalten. Nach Abschluss des Upgrades wird die Zielkarte **[!UICONTROL (neue) benutzerdefinierte Facebook-]** in **[!DNL Facebook Custom Audience]** umbenannt.
->* Wenn Sie Datenflüsse mit der [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * Verbindungsspezifikations-ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Aktivieren Sie Profile für Ihre [!DNL Facebook] Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 
@@ -93,7 +85,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 
 * Ihr [!DNL Facebook]-Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, der das von Ihnen verwendete Werbekonto gehört.
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -146,8 +138,8 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 >[!NOTE]
 >
 >Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
-> Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
-> Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
+>> Attributquelldaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
+>> Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
 
 ![Im Zuordnungsschritt hervorgehobenes Steuerelement „Umwandlung anwenden“.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -245,7 +237,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
