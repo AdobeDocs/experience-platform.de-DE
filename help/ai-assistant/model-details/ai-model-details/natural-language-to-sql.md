@@ -1,17 +1,19 @@
 ---
 title: Details zum KI-Assistenten für SQL-Modell in natürlicher Sprache
 description: Erfahren Sie mehr über das KI-Modell des KI-Assistenten für die natürliche Sprache in SQL.
-hide: true
-hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 3d870c367317d73bba8b75b38f7b2a93ab6b5bbd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
 # KI-Assistent Betriebskenntnisse Natürliche Sprache zu SQL-Modell Details
+
+>[!IMPORTANT]
+>
+>Adobe veröffentlicht aktiv weitere Modelldetails. Sobald Experience League verfügbar ist, wird zusätzliche Dokumentation hinzugefügt.
 
 ## Modellübersicht {#model-overview}
 
