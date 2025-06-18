@@ -18,9 +18,9 @@ ht-degree: 24%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Donnerstag, 18. Juni 2025**
 
@@ -130,7 +130,7 @@ Die föderierte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für ei
 
 | Neue Funktion | Beschreibung |
 | ----------- | ----------- |
-| Allgemeine Verfügbarkeit für Kunden von Adobe Healthcare Shield | Die Federated Audience-Komposition steht Adobe Healthcare Shield-Kunden bis Ende Juni für Anwendungsfälle zur Zielgruppenerstellung, -anreicherung und -Profilanreicherung zur Verfügung. Weitere Informationen zu den Datenschutz- und Sicherheitsmaßnahmen der Federated Audience Composition finden Sie unter [Datenschutz und Sicherheit in der Übersicht über die Federated Audience ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Weitere Informationen zur HIPAA-Konformität für Experience Platform-Produkte im Allgemeinen finden Sie in der [Übersicht über HIPAA und Adobe-Produkte und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Allgemeine Verfügbarkeit für Kunden von Adobe Healthcare Shield | Die Federated Audience-Komposition steht Adobe Healthcare Shield-Kunden bis Ende Juni für Anwendungsfälle zur Zielgruppenerstellung, -anreicherung und -Profilanreicherung zur Verfügung. Weitere Informationen zu den Datenschutz- und Sicherheitsmaßnahmen der Federated Audience Composition finden Sie unter [Datenschutz und Sicherheit in der Übersicht über die Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/privacy-security). Weitere Informationen zur HIPAA-Konformität für Experience Platform-Produkte im Allgemeinen finden Sie in der [Übersicht über HIPAA und Adobe-Produkte und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Weitere Informationen finden Sie in der [Dokumentation zur Federated Audience-Komposition](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
@@ -142,7 +142,7 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 
 | Funktion | Beschreibung |
 | --- | ---|
-| Unterstützung der Datenschutzgesetze von Tennessee und Minnesota | Privacy Service unterstützt jetzt den Tennessee Information Protection Act (`tipa_tn_usa`) und den Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Sie können Zugriffs- und Löschanfragen in Übereinstimmung mit diesen neuen Vorschriften auf Statusebene verarbeiten. Weitere Einzelheiten finden Sie [ &quot;](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)&quot;. |
+| Unterstützung der Datenschutzgesetze von Tennessee und Minnesota | Privacy Service unterstützt jetzt den Tennessee Information Protection Act (`tipa_tn_usa`) und den Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Sie können Zugriffs- und Löschanfragen in Übereinstimmung mit diesen neuen Vorschriften auf Statusebene verarbeiten. Weitere Einzelheiten finden Sie [ &quot;](https://experienceleague.adobe.com/de/docs/experience-platform/privacy/regulations/overview)&quot;. |
 
 Weitere Informationen zu dem Service finden Sie in [&#128279;](../../privacy-service/home.md) Übersicht über Privacy Service .
 
