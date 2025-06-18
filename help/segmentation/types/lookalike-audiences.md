@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Lookalike-Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von Lookalike-Zielgruppen neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
-ht-degree: 10%
+source-wordcount: '2299'
+ht-degree: 9%
 
 ---
 
 # Handbuch zu Lookalike-Zielgruppen
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Lookalike-Einblicke und Lookalike-Zielgruppen sind nur in der B2C **Edition**.
+
+>[!IMPORTANT]
+>
+>Lookalike-Einblicke und Lookalike-Zielgruppen werden für Umgebungen mit geringer Auslastung automatisch deaktiviert. Geringe Nutzung bedeutet, dass in den letzten drei Monaten keine Lookalike-Einblicke angezeigt wurden oder in den letzten sechs Monaten keine neue Lookalike-Zielgruppe erstellt wurde.
+>
+>Wenn Lookalike-Einblicke für Ihre Umgebung deaktiviert sind, können Sie den Zugriff anfordern, indem Sie eine E-Mail an das Team der Adobe-Kundenunterstützung senden, einschließlich Ihrer Organisations-ID und der Umgebungsdetails in Ihrer Nachricht.
+>
+>Nach Erhalt der Bestätigung von der Adobe-Kundenunterstützung werden Lookalike-Einblicke und Zielgruppen in allen Sandboxes in Ihrer Umgebung aktiviert.
 
 Lookalike-Zielgruppen in Adobe Experience Platform bieten intelligente Einblicke in jede Ihrer Zielgruppen und nutzen auf maschinellem Lernen basierende Einblicke, um mit Ihren Marketing-Kampagnen hochwertige Kunden zu identifizieren und anzusprechen.
 
@@ -75,7 +83,9 @@ Die folgenden Berechtigungen gelten für die Verwendung von Lookalike-Zielgruppe
 
 Mit Add-on-Paketen, die zu einem späteren Zeitpunkt verfügbar sein werden, erhöhen sich die Berechtigungen für Produktions-Sandboxes um 20 Lookalike-Zielgruppen pro Paket.
 
-Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um zu bestätigen, ob Sie Zugriff auf Lookalike-Zielgruppen haben.
+## Zugriff {#access}
+
+Um zu bestätigen, ob Sie Zugriff auf Lookalike-Zielgruppen haben, wählen Sie eine beliebige Zielgruppe im Zielgruppen-Portal aus und überprüfen Sie, ob die Registerkarte **[!UICONTROL Lookalike]** Einblicke“ sichtbar ist.
 
 ## Lookalike-Einblicke anzeigen {#view}
 
@@ -94,7 +104,7 @@ Die Seite mit den Details zur Zielgruppe wird angezeigt. Wählen Sie **[!UICONTR
 >title="Ähnlichkeit und Reichweite"
 >abstract="Das Ähnlichkeits- und Reichweitendiagramm zeichnet die erwartete Reichweite einer Look-alike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
 
-Im Abschnitt Ähnlichkeit und Reichweite wird ein Diagramm angezeigt, das die erwartete Reichweite einer Lookalike-Zielgruppe darstellt, die aus Profilen oberhalb eines bestimmten Ähnlichkeitswerts besteht. Der Ähnlichkeitswert stellt die **Entfernung** der Ähnlichkeit zwischen dem Profil der Basis-Zielgruppe und dem Profil der Lookalike-Einsicht dar.
+Im Abschnitt Ähnlichkeit und Reichweite wird ein Diagramm angezeigt, das die erwartete Reichweite einer Lookalike-Zielgruppe darstellt, die aus Profilen oberhalb eines bestimmten Ähnlichkeitswerts besteht. Der Ähnlichkeitswert stellt die **Entfernung** der Ähnlichkeit zwischen dem Profil der Basis-Zielgruppe und dem Profil der Lookalike-insight dar.
 
 ![Das Diagramm Ähnlichkeit und Reichweite ist hervorgehoben.](../images/types/lookalike/similarity-and-reach.png)
 
