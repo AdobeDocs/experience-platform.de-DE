@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
+source-git-commit: 5f23cb06a4c0bcd988bfcf981e473094ef7b0064
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1294'
 ht-degree: 75%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -196,6 +196,7 @@ ht-degree: 75%
       * [Adobe Target-Verbindung](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2-Erweiterung](./catalog/personalization/adobe-target-v2.md)
+      * [Algolia-Verbindung](./catalog/personalization/algolia.md)
       * [Beemray-Erweiterung](./catalog/personalization/beemray.md)
       * [Benutzerdefinierte Personalisierungsverbindung](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence-Erweiterung](./catalog/personalization/dnb.md)

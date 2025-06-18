@@ -1,7 +1,7 @@
 ---
 title: Algolie
 description: Verwenden Sie diesen Connector, um Zielgruppen für die Personalisierung in Algolia zu aktivieren und für Suchen und Empfehlungen zu verwenden. Anschließend können Sie den Quell-Connector für Algolia-Benutzerprofile verwenden, um die Profile in Real-Time CDP zu importieren und so umfangreiche Zielgruppen zu erstellen.
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 36%
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->Der [!DNL Algolia]-Ziel-Connector und die Dokumentationsseite werden vom Algolia Integration Services-Team erstellt und gepflegt. Bei Anfragen oder Aktualisierungsanfragen wenden Sie sich unter [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com) an sie.
+>Der [!DNL Algolia]-Ziel-Connector und die Dokumentationsseite werden vom Algolia Integration Services-Team erstellt und gepflegt. Bei Anfragen oder Aktualisierungsanfragen wenden Sie sich unter [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com) an sie.
 
 Verwenden Sie die [!DNL Algolia] Zielverbindung, um Adobe Experience Platform-Zielgruppen für personalisierte Suche und Empfehlungen an Algolia zu senden. Bevor Sie den [!DNL Algolia]-Ziel-Connector verwenden können, müssen Sie zunächst den [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)-Quell-Connector einrichten. Während des Tutorials zur Einrichtung des Quell-Connectors erstellen Sie die Identität des Algolia-Benutzer-Tokens. Diese Identität ist für die Zuordnung erforderlich, wenn Sie den Ziel-Connector konfigurieren.
 
@@ -118,10 +118,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren von Identitäten benötigen Sie das Identitätsdiagramm anzeigen [Zugriffssteuerungsberechtigung](https://experienceleague.adobe.com/de/docs/experience-platform/access-control/home#permissions).
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren von Identitäten benötigen Sie das Identitätsdiagramm anzeigen [Zugriffssteuerungsberechtigung](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations).
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations).
 
 ### Zuordnen von Attributen und Identitäten {#mapping-attributes-identities}
 
