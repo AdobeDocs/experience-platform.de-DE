@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform – Versionshinweise
 breadcrumb-title: Versionshinweise zu Experience Platform
 user-guide-description: Erhalten Sie monatliche Versionshinweise für Adobe Experience Platform.
-source-git-commit: 96e7ecb2f712e678c0e62fa8d32c2b2d0d444f07
+source-git-commit: e073f40b31c388dc9afaab730ea660459abe5a32
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '170'
 ht-degree: 94%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 94%
 * [Aktuelle Versionshinweise zu Experience Platform](latest/latest.md)
 * [Hinweise zu Vorabversionen von Experience Platform](./pre-release-notes.md)
 * 2025 {#2025}
+   * [Juni 2025](2025/june-2025.md)
    * [Mai 2025](2025/may-2025.md)
    * [April 2025](2025/april-2025.md)
    * [März 2025](2025/march-2025.md)
