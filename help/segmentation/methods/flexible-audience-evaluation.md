@@ -326,7 +326,7 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielgruppenbewertung zugreifen und diese verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453649?&captions=ger)
 
 ## Häufig gestellte Fragen {#faq}
 
