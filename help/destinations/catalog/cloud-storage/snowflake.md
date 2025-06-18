@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 51%
+source-wordcount: '1054'
+ht-degree: 32%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 51%
 
 ## Überblick {#overview}
 
-Exportieren Sie Daten mithilfe privater Listeneinträge in Ihr Snowflake-Konto.
+Verwenden Sie den Snowflake-Ziel-Connector, um Daten in die Snowflake-Instanz von Adobe zu exportieren und dann über &quot;[ Listen“ für Ihre Instanz ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+
+In den folgenden Abschnitten erfahren Sie, wie das Snowflake-Ziel funktioniert und wie Daten zwischen Adobe und Snowflake übertragen werden.
+
+### Funktionsweise der Datenfreigabe in Snowflake {#data-sharing}
+
+Dieses Ziel verwendet eine [!DNL Snowflake] Datenfreigabe, d. h. es werden keine Daten physisch exportiert oder an Ihre eigene Snowflake-Instanz übertragen. Stattdessen gewährt Ihnen Adobe schreibgeschützten Zugriff auf eine Live-Tabelle, die in der Snowflake-Umgebung von Adobe gehostet wird. Sie können diese freigegebene Tabelle direkt aus Ihrem Snowflake-Konto abfragen, aber Sie sind nicht der Eigentümer der Tabelle und können sie nicht über die angegebene Aufbewahrungsfrist hinaus ändern oder beibehalten. Adobe verwaltet den Lebenszyklus und die Struktur der freigegebenen Tabelle vollständig.
+
+Wenn Sie zum ersten Mal Daten aus Adobes Snowflake-Instanz für Ihre freigeben, werden Sie aufgefordert, den privaten Eintrag aus Adobe zu akzeptieren.
+
+### Datenaufbewahrung und Time-to-Live (TTL) {#ttl}
+
+Alle über diese Integration freigegebenen Daten haben eine feste Time-to-Live (TTL) von sieben Tagen. Sieben Tage nach dem letzten Export läuft die freigegebene Tabelle automatisch ab und wird unzugänglich, unabhängig davon, ob der Datenfluss noch aktiv ist. Wenn Sie die Daten länger als sieben Tage aufbewahren müssen, müssen Sie den Inhalt in eine Tabelle kopieren, deren Eigentümer Sie in Ihrer eigenen Snowflake-Instanz sind, bevor die TTL abläuft.
+
+### Verhalten bei der Zielgruppenaktualisierung {#audience-update-behavior}
+
+Wenn Ihre Zielgruppe im [Batch-Modus](../../../segmentation/methods/batch-segmentation.md) ausgewertet wird, werden die Daten in der freigegebenen Tabelle alle 24 Stunden aktualisiert. Das bedeutet, dass es zwischen den Änderungen der Zielgruppenzugehörigkeit und dem Zeitpunkt, zu dem diese Änderungen in der freigegebenen Tabelle angezeigt werden, zu einer Verzögerung von bis zu 24 Stunden kommen kann.
+
+### Inkrementelle Exportlogik {#incremental-export}
+
+Wenn ein Datenfluss zum ersten Mal für eine Zielgruppe ausgeführt wird, wird eine Aufstockung durchgeführt und alle derzeit qualifizierten Profile werden freigegeben. Nach dieser anfänglichen Aufstockung werden nur inkrementelle Aktualisierungen in der freigegebenen Tabelle angezeigt. Dies bedeutet, dass Profile der Zielgruppe hinzugefügt oder daraus entfernt werden. Dieser Ansatz gewährleistet effiziente Aktualisierungen und hält die freigegebene Tabelle auf dem neuesten Stand.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -67,13 +87,20 @@ Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbin
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Geben Sie Ihre Snowflake-Konto-ID ein"
+>abstract="Wenn Ihr Konto mit einer Organisation verknüpft ist, verwenden Sie dieses Format: `OrganizationName.AccountName`<br><br> Wenn Ihr Konto nicht mit einer Organisation verknüpft ist, verwenden Sie dieses Format:`AccountName`"
+
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 ![Beispiel-Screenshot, der zeigt, wie Details für Ihr Ziel ausgefüllt werden](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Snowflake-Konto-]**: Ihre Snowflake-Konto-ID. Beispiel: `adobe-123456`.
+* **[!UICONTROL Snowflake-Konto-]**: Ihre Snowflake-Konto-ID. Verwenden Sie das folgende Konto-ID-Format, je nachdem, ob Ihr Konto mit einer Organisation verknüpft ist:
+   * Wenn Ihr Konto mit einer Organisation verknüpft ist: `OrganizationName.AccountName`.
+   * Wenn Ihr Konto nicht mit einer Organisation verknüpft ist: `AccountName`.
 * **[!UICONTROL Kontobestätigung]**: Schalten Sie die Snowflake-Konto-ID-Bestätigung um, um zu bestätigen, dass Ihre Konto-ID korrekt ist und zu Ihnen gehört.
 
 >[!IMPORTANT]
@@ -90,7 +117,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
