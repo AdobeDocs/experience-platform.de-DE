@@ -5,7 +5,7 @@ title: API-Endpunkt für Datenschutzaufträge
 description: Erfahren Sie, wie Sie Datenschutzaufträge für Experience Cloud-Programme mithilfe der Privacy Service-API verwalten.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
+source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 44%
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den akzeptierten Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [ die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten ](../regulations/overview.md)&quot;. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den akzeptierten Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [ die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten ](../regulations/overview.md)&quot;. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `100` und der Maximalwert ist `1000`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 | `{status}` | Das Standardverhalten besteht darin, alle Status einzuschließen. Wenn Sie einen Statustyp angeben, gibt die Anfrage nur Datenschutzaufträge zurück, die diesem Statustyp entsprechen. Zu den akzeptierten Werten gehören: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -90,7 +90,7 @@ Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizie
 
 >[!NOTE]
 >
->Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von betroffenen Personen. Weitere Informationen zu den erforderlichen Kennungen für Ihre Anwendungen finden Sie [&#128279;](../experience-cloud-apps.md) Handbuch zu Privacy Service- und Experience Cloud-Anwendungen . Allgemeine Anleitungen dazu, wie Sie festlegen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument zu [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
+>Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von betroffenen Personen. Weitere Informationen zu den erforderlichen Kennungen für Ihre Anwendungen finden Sie ](../experience-cloud-apps.md) Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen . Allgemeine Anleitungen dazu, wie Sie festlegen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument zu [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
 
 Die [!DNL Privacy Service]-API unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten:
 

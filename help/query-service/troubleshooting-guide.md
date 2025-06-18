@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Query Service und Data Distiller
 description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 81%
 
 ---
@@ -65,7 +65,7 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
 +++Antwort
-Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/31575?captions=ger) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -134,7 +134,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) [auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select)[auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 Das MERGE INTO SQL-Konstrukt wird von Data Distiller oder Query Service nicht unterstützt.
 +++
 
-## ITAS-Abfragen
+## ITAS-Abfragen {#itas-queries}
 
 ### Was sind ITAS-Abfragen?
 
 +++Antwort
 INSERT INTO-Abfragen werden als ITAS-Abfragen bezeichnet. Beachten Sie, dass CREATE TABLE-Abfragen als CTAS-Abfragen bezeichnet werden.
++++
+
+### Unterstützt Query Service Aktualisierungs- und Löschvorgänge?
+
++++Antwort
+Nein, der Abfrage-Service unterstützt keine Aktualisierungs- oder Löschvorgänge. Es werden nur reine Append-Vorgänge mit ITAS unterstützt.
 +++
 
 ## Drittanbieter-Tools {#third-party-tools}
