@@ -3,10 +3,10 @@ title: Erstellen einer Azure Synapse Analytics Source-Verbindung über die Benut
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Azure Synapse Analytics-Quellverbindung (im Folgenden als „Synapse“ bezeichnet) erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f8eb8640360205e8ae9579d4b664d4880bf8a368
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 48%
+source-wordcount: '469'
+ht-degree: 21%
 
 ---
 
@@ -16,55 +16,67 @@ ht-degree: 48%
 >
 >Die [!DNL Azure Synapse Analytics] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Azure Synapse Analytics]-Quell-Connectors (im Folgenden als &quot;[!DNL Synapse]&quot; bezeichnet) über die [!DNL Experience Platform]-Benutzeroberfläche.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Azure Synapse Analytics]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Synapse]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/databases.md) fortfahren.
+Wenn Sie bereits über eine gültige [!DNL Azure Synapse Analytics]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/databases.md) fortfahren.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Um auf Ihr [!DNL Synapse]-Konto in [!DNL Experience Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Informationen zur Authentifizierung [[!DNL Azure Synapse Analytics]  Sie in ](../../../../connectors/databases/synapse-analytics.md#prerequisites)Übersicht“.
 
-| Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
-| `connectionString` | Die mit Ihrer [!DNL Synapse] verknüpfte Verbindungszeichenfolge. Das [!DNL Synapse]-Verbindungszeichenfolgenmuster ist `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+## Navigieren im Quellkatalog
 
-Weitere Informationen zu diesem Wert finden Sie [this [!DNL Synapse] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
 
-## Verbinden Ihres [!DNL Synapse]-Kontos
+Um eine Verbindung zu [!DNL Azure Synapse Analytics] herzustellen, wechseln Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Azure Synapse Analytics]** aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Synapse]-Konto mit [!DNL Experience Platform] zu verknüpfen.
+>[!TIP]
+>
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+![Der Quellkatalog, in dem &quot;Azure Synapse Analytics“ ausgewählt ist.](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+## Vorhandenes Konto verwenden {#existing}
 
-Wählen Sie unter der **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Azure Synapse Analytics]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Wählen Sie andernfalls **[!UICONTROL Daten hinzufügen]** aus, um einen neuen [!DNL Synapse]-Connector zu erstellen.
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das [!DNL Azure Synapse Analytics] Konto aus, das Sie verwenden möchten.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+![Die vorhandene Kontoschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
-Die **[!UICONTROL Verbindung zu Azure Synapse Analytics herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+## Neues Konto erstellen {#new}
 
-### Neues Konto
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen an und fügen Sie optional eine Beschreibung für Ihr Konto hinzu.
 
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Eingabeformular einen Namen, eine optionale Beschreibung und Ihre [!DNL Synapse] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen **[!UICONTROL Verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
+![Die neue Kontoschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
+### Verbindung mit Experience Platform herstellen
 
-### Vorhandenes Konto
+Sie können Ihr [!DNL Azure Synapse Analytics] mit Experience Platform verbinden, indem Sie entweder die Authentifizierung mit dem Kontoschlüssel oder die Authentifizierung mit dem Service-Prinzipal und dem Schlüssel verwenden.
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Synapse] Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+>[!BEGINTABS]
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
+>[!TAB Authentifizierung mit Kontoschlüssel]
 
-## Nächste Schritte
+Um die Kontoschlüsselauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Kontoschlüsselauthentifizierung]**, geben Sie Ihre [Verbindungszeichenfolge](../../../../connectors/databases/synapse-analytics.md#prerequisites) an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Synapse]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in zu importieren [!DNL Experience Platform]](../../dataflow/databases.md).
+![ Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Authentifizierung des Kontoschlüssels ausgewählt.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
+
+>[!TAB Authentifizierung von Service-Prinzipalen und -Schlüsseln]
+
+Wählen Sie alternativ **[!UICONTROL Service-Prinzipal- und Schlüsselauthentifizierung]**, geben Sie Werte für Ihre [Authentifizierungsberechtigungen](../../../../connectors/databases/synapse-analytics.md#prerequisites) ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
+
+![ Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Service-Prinzipal- und Schlüsselauthentifizierung“.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+
+>[!ENDTABS]
+
+## Erstellen eines Datenflusses für [!DNL Azure Synapse Analytics] Daten
+
+Nachdem Sie Ihre [!DNL Azure Synapse Analytics] erfolgreich verbunden haben, können Sie jetzt [einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen](../../dataflow/databases.md).
