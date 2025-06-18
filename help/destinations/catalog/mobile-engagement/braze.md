@@ -108,7 +108,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
@@ -121,7 +121,7 @@ Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres 
 
 Um Ihre XDM-Felder den [!DNL Braze]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-Klicken Sie [!UICONTROL  Schritt ]Zuordnung“ auf **[!UICONTROL Neue Zuordnung hinzufügen]**.
+Klicken Sie [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ auf **[!UICONTROL Neue Zuordnung hinzufügen]**.
 
 ![Braze-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -140,7 +140,7 @@ Im Fenster [!UICONTROL Quellfeld auswählen] können Sie zwischen zwei Kategorie
 
 Wählen Sie Ihr Quellfeld aus und klicken Sie dann auf **[!UICONTROL Auswählen]**.
 
-Klicken [!UICONTROL  im Abschnitt ]Zielfeld“ auf das Zuordnungssymbol rechts neben dem Feld.
+Klicken [!UICONTROL &#x200B; im Abschnitt &#x200B;]Zielfeld“ auf das Zuordnungssymbol rechts neben dem Feld.
 
 ![Braze-Ziel-Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
