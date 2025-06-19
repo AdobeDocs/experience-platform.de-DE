@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mit Azure ein neues Unternehmenskonto erstell
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 22%
+source-wordcount: '675'
+ht-degree: 19%
 
 ---
 
@@ -56,6 +56,14 @@ Aktivieren Sie als Nächstes die rollenbasierte Zugriffssteuerung für Azure fü
 Wenn Ihr Schlüsseltresor so konfiguriert ist, dass der öffentliche Zugriff auf bestimmte virtuelle Netzwerke eingeschränkt oder der öffentliche Zugriff vollständig deaktiviert wird, müssen Sie [!DNL Microsoft] eine Firewall-Ausnahme gewähren.
 
 Wählen Sie **[!DNL Networking]** in der linken Navigation aus. Markieren Sie unter **[!DNL Firewalls and virtual networks]** das Kontrollkästchen **[!DNL Allow trusted Microsoft services to bypass this firewall]** und klicken Sie dann auf **[!DNL Apply]**.
+
+>[!NOTE]
+>
+>Wenn Ihr Schlüsseltresor eingeschränkten Netzwerkzugriff verwendet, empfiehlt Adobe, die folgende statische IP-Adresse hinzuzufügen: `20.88.123.53`. Durch Hinzufügen dieser IP-Adresse können Adobe-Services die Konnektivität effektiver überwachen und plattforminterne Warnhinweise bereitstellen, wenn Zugriffsprobleme erkannt werden.
+>
+>Weitere Informationen dazu, wann die IP-Adresse von Adobe auf die Zulassungsliste gesetzt wird, wie Warnhinweise funktionieren und wie auf Benachrichtigungen zu wichtigen Zugriffsfehlern reagiert werden kann, finden Sie unter [Konfigurieren von Warnhinweisen und IP-Zugriff für Azure CMK](./alerts-and-ip-access.md).
+>
+>Wenn Ihr Schlüsseltresor bereits so konfiguriert ist, dass er den Zugriff auf ein öffentliches Netzwerk zulässt, sind keine weiteren Maßnahmen erforderlich.
 
 ![Die Registerkarte &quot;[!DNL Networking]&quot; von [!DNL Microsoft Azure] mit Hervorhebung von [!DNL Networking] und [!DNL Allow trusted Microsoft surfaces to bypass this firewall] Ausnahme.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
