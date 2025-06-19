@@ -1,38 +1,80 @@
 ---
-title: Arbeitsauftrags-API-Endpunkt
+title: Löschanfragen für Datensätze (Arbeitsauftrags-Endpunkt)
 description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 56%
+source-wordcount: '1505'
+ht-degree: 48%
 
 ---
 
-# Arbeitsauftrags-Endpunkt {#work-order-endpoint}
+# Löschanfragen für Datensätze (Arbeitsauftrags-Endpunkt) {#work-order-endpoint}
 
 Mit dem `/workorder`-Endpunkt in der Data Hygiene API können Sie Anfragen zum Löschen von Datensätzen in Adobe Experience Platform programmgesteuert verwalten.
 
 >[!IMPORTANT]
 > 
->Die Funktion zum Löschen von Datensätzen befindet sich derzeit in Beta und ist nur in einer **Version**. Sie steht nicht allen Kunden zur Verfügung. Löschanfragen für Datensätze sind nur für Organisationen in der eingeschränkten Version verfügbar.
->
 >Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
+## Kontingente und Verarbeitungszeitpläne {#quotas}
+
+Anfragen zum Löschen von Datensätzen unterliegen täglichen und monatlichen Obergrenzen für die Übermittlung von Identifikatoren, die durch die Lizenzberechtigung Ihres Unternehmens bestimmt werden. Diese Einschränkungen gelten sowohl für benutzeroberflächen- als auch für API-basierte Löschanfragen.
+
+>[!NOTE]
+>
+>Sie können bis zu **1.000.000 Kennungen pro Tag**, jedoch nur, wenn Ihr restliches monatliches Kontingent dies zulässt. Wenn Ihre monatliche Obergrenze weniger als 1 Million beträgt, können Ihre täglichen Einreichungen diese Obergrenze nicht überschreiten.
+
+### Berechtigung zur monatlichen Übermittlung nach Produkt {#quota-limits}
+
+In der folgenden Tabelle sind die Beschränkungen für die Übermittlung von Kennungen nach Produkt und Berechtigungsebene aufgeführt. Für jedes Produkt ist die monatliche Obergrenze der niedrigere von zwei Werten: eine feste Kennungsobergrenze oder ein prozentualer Schwellenwert, der an Ihr lizenziertes Datenvolumen gebunden ist.
+
+| Produkt | Beschreibung der Berechtigung | Monatliche Obergrenze (je nachdem, welcher Wert niedriger ist) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP oder Adobe Journey Optimizer | Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | 2.000.000 Kennungen oder 5 % der adressierbaren Zielgruppe |
+| Real-Time CDP oder Adobe Journey Optimizer | Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | 15.000.000 Kennungen oder 10 % der adressierbaren Zielgruppe |
+| Customer Journey Analytics | Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | 2.000.000 Kennungen oder 100 Kennungen pro Million CJA-Berechtigungszeilen |
+| Customer Journey Analytics | Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | 15.000.000 Kennungen oder 200 Kennungen pro Million CJA-Berechtigungszeilen |
+
+>[!NOTE]
+>
+> Die meisten Unternehmen verfügen über niedrigere monatliche Limits, die auf ihren tatsächlichen adressierbaren Zielgruppen- oder CJA-Zeilenberechtigungen basieren.
+
+Die Kontingente werden am ersten Tag jedes Kalendermonats zurückgesetzt. Nicht verwendetes Kontingent wird **nicht** übertragen.
+
+>[!NOTE]
+>
+>Kontingente basieren auf der lizenzierten monatlichen Berechtigung Ihres Unternehmens für **übermittelte Kennungen**. Diese werden von den Systemschutzmechanismen nicht durchgesetzt, können jedoch überwacht und überprüft werden.
+>
+>Löschen eines Datensatzes ist ein **freigegebener Dienst**. Die monatliche Obergrenze spiegelt die höchsten Berechtigungen für Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics und alle anwendbaren Shield-Add-ons wider.
+
+### Zeitleisten für die Übermittlung von Identifikatoren {#sla-processing-timelines}
+
+Nach der Übermittlung werden Anfragen zum Löschen von Datensätzen basierend auf Ihrer Berechtigungsstufe in die Warteschlange gestellt und verarbeitet.
+
+| Produkt- und Berechtigungsbeschreibung | Warteschlangendauer | Maximale Verarbeitungszeit (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | Bis zu 15 Tage | 30 Tage |
+| Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | In der Regel 24 Stunden | 15 Tage |
+
+Wenn für Ihr Unternehmen höhere Limits erforderlich sind, wenden Sie sich zur Überprüfung der Berechtigungen an den Adobe-Support.
+
+>[!TIP]
+>
+>Informationen zur aktuellen Kontingentnutzung oder Berechtigungsstufe finden Sie im [Kontingentreferenzhandbuch](../api/quota.md).
+
 ## Erstellen einer Anfrage zum Löschen eines Datensatzes {#create}
 
-Sie können eine oder mehrere Identitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt stellen.
+Sie können eine oder mehrere Identitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt senden.
 
->[!IMPORTANT]
-> 
->Es gibt verschiedene Beschränkungen für die Gesamtzahl der Löschvorgänge von eindeutigen Identitätsdatensätzen, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrer Lizenzvereinbarung. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können monatlich bis zu 100.000 Identitätseintragslöschungen übermitteln. Organisationen, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben, können monatlich bis zu 600.000 Identitätseinträge löschen.<br>Mit einer einzigen [Löschanfrage für Datensätze über die Benutzeroberfläche](../ui/record-delete.md) können Sie 10.000 IDs gleichzeitig senden. Die API-Methode zum Löschen von Datensätzen ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, so viele IDs wie möglich pro Anfrage bis zu Ihrem ID-Limit zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollten Sie die Übermittlung einer geringen Anzahl oder einer einzelnen ID pro Löschanfrage für den Datensatz vermeiden.
+>[!TIP]
+>
+>Jede über die API gesendete Anfrage zum Löschen von Datensätzen kann bis zu **100.000 Identitäten**. Um die Effizienz zu maximieren, sollten Sie so viele Identitäten wie möglich pro Anfrage einreichen und volumenarme Übermittlungen wie Arbeitsaufträge mit einer einzelnen ID vermeiden.
 
 **API-Format**
 

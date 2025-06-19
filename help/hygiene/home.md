@@ -2,10 +2,10 @@
 title: Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus
 description: Mit dem erweiterten Daten-Lifecycle-Management können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9ffd2db5555a4c157171d488deb9641aadbb08b4
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 34%
+source-wordcount: '865'
+ht-degree: 33%
 
 ---
 
@@ -42,6 +42,11 @@ Die [!UICONTROL Datenlebenszyklus]-Benutzeroberfläche basiert auf der Data Hygi
 
 Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensatzgültigkeit haben jeweils ihre eigenen Verarbeitungszeitpläne und bieten Transparenzaktualisierungen an wichtigen Punkten in ihren jeweiligen Workflows.
 
+>[!TIP]
+>
+>Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [ „Kontingentreferenzhandbuch](./api/quota.md).\
+>Berechtigungsregeln, monatliche Begrenzungen, SLA-Zeitleisten und Richtlinien zur Ausnahmebehandlung finden Sie in der Dokumentation [Löschen von Datensätzen (](./ui/record-delete.md#quotas)) und [Arbeitsauftrag (API)](./api/workorder.md#quotas).
+
 [Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
 
 | Staging | Zeit nach planmäßiger Gültigkeit | Beschreibung |
@@ -72,7 +77,7 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 | Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
 | Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
 | Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 

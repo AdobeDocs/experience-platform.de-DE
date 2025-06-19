@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zur erweiterten Verwaltung des Datenlebenszyklus
 user-guide-description: Löschen Sie einzelne Datensätze und planen Sie die Ablauffristen von Datensätzen in Experience Platform für die Datenbereinigung, das Entfernen anonymer Daten und die Datenminimierung.
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: 9885c0d75ac28cfd73179b63b3d54da9b0ccf967
+source-git-commit: c1abfc0848e82ee6f6faeb8eef5d28f4b1fdb47d
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 73%
+source-wordcount: '71'
+ht-degree: 66%
 
 ---
 
@@ -16,15 +16,15 @@ ht-degree: 73%
 # Erweitertes Data Lifecycle Management {#data-lifecycle}
 
 * [Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus](./home.md)
-* der Datenlebenszyklus-Benutzeroberfläche{#ui}
-   * [Übersicht](./ui/overview.md)
-   * [Automatisierte Datensatzablauffristen](./ui/dataset-expiration.md)
-   * [(Beta) Löschen von Datensätzen](./ui/record-delete.md)
+* Datenlebenszyklus-Benutzeroberfläche {#ui}
+   * [Überblick](./ui/overview.md)
+   * [Automatisierte Ablauffristen für Datensätze](./ui/dataset-expiration.md)
+   * [Löschanfragen für Datensätze](./ui/record-delete.md)
    * [Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen](./ui/browse.md)
 * Data Hygiene API {#api}
-   * [Übersicht](./api/overview.md)
-   * [Datensatzgültigkeiten](./api/dataset-expiration.md)
+   * [Überblick](./api/overview.md)
+   * [Datensatzgültigkeiten (TTL-Endpunkt)](./api/dataset-expiration.md)
    * [Löschen von Datensätzen](./api/jobs.md)
-   * [(Beta) Löschen von Datensätzen](./api/workorder.md)
+   * [Löschanfragen für Datensätze (Arbeitsauftrags-Endpunkt)](./api/workorder.md)
    * [Kontingent](./api/quota.md)
 * [Best Practices](./best-practices.md)
