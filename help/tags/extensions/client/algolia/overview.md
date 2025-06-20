@@ -1,9 +1,10 @@
 ---
 title: Algolia Tags-Erweiterung - Übersicht
 description: Erfahren Sie mehr über die Algolia Tags-Erweiterung in Adobe Experience Platform.
-source-git-commit: 5b488a596472fe61b487f75ad62d741237caa820
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -33,7 +34,7 @@ Um [!DNL Algolia] mit Adobe Experience Platform zu verbinden, benötigen Sie die
 
 Um die [!DNL Algolia] Insights-Erweiterung zu installieren, navigieren Sie zur [!UICONTROL Datenerfassungs-Benutzeroberfläche] und wählen Sie **[!UICONTROL Tags]** aus der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -79,9 +80,18 @@ Fügen Sie die Aktion **[!UICONTROL Klicken]** zu Ihrer Tag-Regel hinzu, um ange
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet werden kann, um dieses Klickereignis weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement, das die Ereignisdetails abruft, einschließlich `indexName`, `objectIDs` und optional `queryID`, `position`. Wenn sowohl `queryID` als auch `position` enthalten sind, wird das Ereignis als *angeklickte Objekt-IDs nach der Suche* kategorisiert, andernfalls wird es als *angeklickte Objekt-IDs*-Ereignis behandelt. Wenn das Datenelement keinen Indexnamen bereitstellt, wird der standardmäßige Indexname beim Senden des Ereignisses verwendet. |
+| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`position` (optional)</li></ul> |
+
+>[!NOTE]
+>
+>Wenn sowohl `queryID` als auch `position` enthalten sind, wird das Ereignis als (**Objekt-IDs nach der Suche)**. Andernfalls wird es als Ereignis **angeklickte Objekt-IDs** klassifiziert.
+>><br><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
+
+Weitere Informationen zu den Ereigniskategorien finden Sie unter [Angeklickte Objekt-IDs nach der Suche](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+und [angeklickte Objekt-IDs](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) Handbücher.
 
 ### Konvertiert {#converted}
 
@@ -90,9 +100,17 @@ Fügen Sie die Aktion **[!UICONTROL Konvertiert]** zu Ihrer Tag-Regel hinzu, um 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | Ereignisname | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement, das die Ereignisdetails abruft, einschließlich `indexName`, `objectId` und optional `queryId`. Wenn das Datenelement `queryId` enthält, wird das Ereignis als *Nach Suche konvertiert“ klassifiziert* andernfalls wird es als *Konvertiert*-Ereignisklasse betrachtet. Wenn das Datenelement keinen Indexnamen bereitstellt, wird der standardmäßige Indexname beim Senden des Ereignisses verwendet. |
+| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li></ul> |
+
+>[!NOTE]
+>
+>Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Nach **Suche konvertiert“**. Andernfalls wird es als &quot;**&quot;-** klassifiziert.
+>><br><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/converted.png)
+
+Weitere Informationen zu den Ereigniskategorien finden Sie in den Handbüchern [Konvertierte Objekt-IDs nach ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) und [Konvertierte Objekt-IDs](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) .
 
 ### Zum Warenkorb hinzufügen {#added-to-cart}
 
@@ -101,32 +119,60 @@ Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-R
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | Ereignisname | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement, das die Ereignisdetails abruft, einschließlich `indexName`, `objectId` und optional `queryId`, `objectData`. Wenn das Datenelement `queryId` enthält, wird das Ereignis als *Zu Warenkorb-Objekt-IDs hinzugefügt nach der Suche* klassifiziert, andernfalls wird es als Ereignisklasse *Zu Warenkorb-Objekt-IDs hinzugefügt* betrachtet. Wenn das Datenelement keinen Indexnamen bereitstellt, wird der standardmäßige Indexname beim Senden des Ereignisses verwendet. |
-| Währung | Gibt den Währungstyp an, z. B. `USD`. |
+| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
+| Währung | Gibt den Typ der Währung an, z. B. `USD`. |
+
+>[!NOTE]
+>
+>Wenn das Datenelement `queryId` enthält, wird das Ereignis als &quot;**zu Warenkorb-Objekt-IDs nach der Suche hinzugefügt“**. Andernfalls wird es als Ereignis **Zu Warenkorb-Objekt-IDs hinzugefügt** klassifiziert.
+>><br><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
+Weitere Informationen zu den Ereigniskategorien finden Sie in den Handbüchern [Zu Warenkorb-Objekt-IDs nach der Suche hinzugefügt](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) und [Zu Warenkorb-Objekt-IDs hinzugefügt](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/).
+
 ### Purchased {#purchased}
 
-Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-Regel hinzu, um gekaufte Ereignisse an [!DNL Algolia] zu senden. Erstellen Sie eine neue Tag-Regel oder öffnen Sie eine vorhandene. Definieren Sie die Bedingungen entsprechend Ihren Anforderungen, wählen Sie dann **[!UICONTROL Algolia]** als [!UICONTROL Erweiterung] und wählen Sie **[!UICONTROL Erworben]** als [!UICONTROL Aktionstyp].
+Fügen Sie die **[!UICONTROL Purchased]**-Aktion zu Ihrer Tag-Regel hinzu, um gekaufte Ereignisse an [!DNL Algolia] zu senden. Erstellen Sie eine neue Tag-Regel oder öffnen Sie eine vorhandene. Definieren Sie die Bedingungen entsprechend Ihren Anforderungen, wählen Sie dann **[!UICONTROL Algolia]** als [!UICONTROL Erweiterung] und wählen Sie **[!UICONTROL Erworben]** als [!UICONTROL Aktionstyp].
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | Ereignisname | Der Ereignisname, der verwendet wird, um dieses „Kauf“-**weiter** verfeinern. |
-| Datenelement für Ereignisdetails | Das Datenelement, das die Ereignisdetails abruft, einschließlich `indexName`, `objectId` und optional `queryId`. Wenn das Datenelement `queryId` enthält, wird das Ereignis nach der Suche als *Erworbene Objekt-IDs* klassifiziert, andernfalls wird es als Ereignisklasse *Erworbene Objekt-IDs* betrachtet. Wenn das Datenelement keinen Indexnamen bereitstellt, wird der standardmäßige Indexname beim Senden des Ereignisses verwendet. |
+| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
+| Währung | Gibt den Typ der Währung an, z. B. `USD`. |
+
+>[!NOTE]
+>
+>Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Erworbene Objekt **IDs nach der Suche“**. Andernfalls wird es als Ereignis &quot;**Objektkennungen“**.
+>><br><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
+Weitere Informationen zu den Ereigniskategorien finden Sie unter [Erworbene Objekt-IDs nach der Suche](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
+und [Kennungen für gekaufte Objekte](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) Anleitungen.
+
 ### Angesehen {#viewed}
 
-Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-Regel hinzu, um gekaufte Ereignisse an [!DNL Algolia] zu senden. Erstellen Sie eine neue Tag-Regel oder öffnen Sie eine vorhandene. Definieren Sie die Bedingungen entsprechend Ihren Anforderungen und wählen Sie dann **[!UICONTROL Algolia]** als [!UICONTROL Erweiterung] und **[!UICONTROL Angezeigt]** als [!UICONTROL Aktionstyp].
-
-![](../../../images/extensions/client/algolia/viewed.png)
+Fügen Sie die Aktion **[!UICONTROL Angezeigt]** zu Ihrer Tag-Regel hinzu, um gekaufte Ereignisse an [!DNL Algolia] zu senden. Erstellen Sie eine neue Tag-Regel oder öffnen Sie eine vorhandene. Definieren Sie die Bedingungen entsprechend Ihren Anforderungen und wählen Sie dann **[!UICONTROL Algolia]** als [!UICONTROL Erweiterung] und **[!UICONTROL Angezeigt]** als [!UICONTROL Aktionstyp].
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | Ereignisname | Der Ereignisname, der verwendet wird, um dieses Ereignis **Ansicht** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement, das die Ereignisdetails abruft, einschließlich `indexName` und `objectId`. Wenn `indexName` nicht verfügbar ist, wird der standardmäßige Indexname beim Senden der Ereignisse verwendet. |
+| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+
+>[!NOTE]
+>
+>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+
+![](../../../images/extensions/client/algolia/viewed.png)
+
+Weitere Informationen zum Ansichtsereignis finden Sie im Handbuch [Angezeigte Objekt-IDs](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/) .
 
 ## [!DNL Algolia] Insights-Erweiterung - Datenelemente {#data-elements}
 
@@ -148,10 +194,10 @@ Dieses Datenelement gibt zurück:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs,
-    positions
+  queryID,
+  indexName,
+  objectIDs,
+  positions
 }
 ```
 
@@ -186,9 +232,9 @@ Dieses Datenelement gibt zurück:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -211,9 +257,9 @@ Dieses Datenelement gibt zurück, was im Sitzungsspeicher gespeichert ist.
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -228,6 +274,7 @@ Die Ereignisse *Nach Suche geklickt* oder *Nach Suche konvertiert* erfordern ein
 * [[!DNL Algolia] Launch-Erweiterung - GitHub-Repository](https://github.com/algolia/algolia-launch-extension)
 * [Dokumentation zu InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] Insights-API-Dokumentation](https://www.algolia.com/doc/rest-api/insights/)
+* [Algolia Launch-Erweiterung - Code-Repository](https://github.com/algolia/algolia-launch-extension)
 
 ## Nächste Schritte {#next-steps}
 
