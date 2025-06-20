@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: e53616a183cc8fe834782c82c56f8483d7b43eb1
+source-git-commit: 82ed3867d18153ac422a639338180865c984b614
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 53%
+source-wordcount: '336'
+ht-degree: 52%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 53%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=de)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrationen von Experience Platform mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Verwaltung, Datenschutz und Sicherheit {#governance-privacy-security}
    * [Überblick](./governance-privacy-security/overview.md)
@@ -78,13 +78,14 @@ ht-degree: 53%
       * Amazon Web Services {#aws}
          * [Konfigurieren von AWS KMS für CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [Verwenden der Benutzeroberfläche zum Einrichten von CMK in AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
+      * [CMK-Referenz zur Warnhinweisauflösung](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Gesamtes Datenvolumen](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=de)
-   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=de)
-   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=de)
+   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
