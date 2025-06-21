@@ -2,7 +2,7 @@
 title: Algolia Tags-Erweiterung - Übersicht
 description: Erfahren Sie mehr über die Algolia Tags-Erweiterung in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
+source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -34,7 +34,7 @@ Um [!DNL Algolia] mit Adobe Experience Platform zu verbinden, benötigen Sie die
 
 Um die [!DNL Algolia] Insights-Erweiterung zu installieren, navigieren Sie zur [!UICONTROL Datenerfassungs-Benutzeroberfläche] und wählen Sie **[!UICONTROL Tags]** aus der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken ]**auf**[!UICONTROL  Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -85,8 +85,8 @@ Fügen Sie die Aktion **[!UICONTROL Klicken]** zu Ihrer Tag-Regel hinzu, um ange
 >[!NOTE]
 >
 >Wenn sowohl `queryID` als auch `position` enthalten sind, wird das Ereignis als (**Objekt-IDs nach der Suche)**. Andernfalls wird es als Ereignis **angeklickte Objekt-IDs** klassifiziert.
->&#x200B;><br><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -105,8 +105,8 @@ Fügen Sie die Aktion **[!UICONTROL Konvertiert]** zu Ihrer Tag-Regel hinzu, um 
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Nach **Suche konvertiert“**. Andernfalls wird es als &quot;**&quot;-** klassifiziert.
->&#x200B;><br><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +125,10 @@ Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-R
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als &quot;**zu Warenkorb-Objekt-IDs nach der Suche hinzugefügt“**. Andernfalls wird es als Ereignis **Zu Warenkorb-Objekt-IDs hinzugefügt** klassifiziert.
->&#x200B;><br><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->&#x200B;><br><br>
->&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -147,10 +147,10 @@ Fügen Sie die **[!UICONTROL Purchased]**-Aktion zu Ihrer Tag-Regel hinzu, um ge
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Erworbene Objekt **IDs nach der Suche“**. Andernfalls wird es als Ereignis &quot;**Objektkennungen“**.
->&#x200B;><br><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->&#x200B;><br><br>
->&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
