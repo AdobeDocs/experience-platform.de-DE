@@ -2,12 +2,12 @@
 title: Demandbase Intent
 description: Erfahren Sie mehr über die Demandbase Intent-Quelle in Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 11%
 
 ---
@@ -71,6 +71,7 @@ Das [!DNL Demandbase]-Schema heißt **Company Intent Weekly**. Es handelt sich d
 | `duration_type` | ZEICHENFOLGE | WAHR | JA | Der Typ der Dauer. Im Allgemeinen kann dieser Wert täglich, wöchentlich oder monatlich sein, je nach der ausgewählten Rollout-Dauer. Für dieses Datenbeispiel wird dieser Wert `week`. |
 | `keyword_set_id` | ZEICHENFOLGE | WAHR | JA | Die Schlüsselwortsatz-ID. Dies ist pro Kunde eindeutig. |
 | `keyword_set` | ZEICHENFOLGE | WAHR | JA | Der Name des Schlüsselwortsatzes. |
+| `keyword` | ZEICHENFOLGE | WAHR | | Das Intent-Schlüsselwort. |
 | `is_trending` | ZEICHENFOLGE | WAHR | | Der aktuelle Status eines bestimmten Trends. Der Trend-Status wird als Burst der Absichtsaktivität in der letzten Woche im Verhältnis zu den Durchschnittswerten der vorherigen sieben Wochen gemessen. |
 | `intent_strength` | ENUM[STRING] | WAHR | | Ein quantifiziertes Maß für die Absichtsstärke. Zu den akzeptierten Werten gehören: `HIGH`, `MED` und `LOW`. |
 | `num_people_researching` | GANZZAHL | WAHR | | Die Anzahl der Personen, die der `company_id` angehören, die in den letzten sieben Tagen das Keyword recherchiert haben. |
