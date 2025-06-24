@@ -2,9 +2,9 @@
 title: Erstellen einer SFTP-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 14%
 
 ---
@@ -50,7 +50,7 @@ Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `
 
 >[!IMPORTANT]
 >
->Der [!DNL SFTP]-Connector unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass Ihr Schlüsseldateiinhalt mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` beginnt und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine Datei im PPK-Format handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
+>Der [!DNL SFTP]-Connector unterstützt OpenSSH-Schlüssel vom Typ `ed25519`, `RSA` oder `DSA`. Stellen Sie sicher, dass Ihr Schlüsseldateiinhalt mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` beginnt und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine Datei im PPK-Format handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
 
 **API-Format**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | Der Hostname Ihres [!DNL SFTP]. |
 | `auth.params.port` | Der Port des SFTP-Servers Der Standardwert für diese Ganzzahl ist 22. |
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL SFTP]-Server zugeordnet ist. |
-| `auth.params.privateKeyContent` | Der mit Base64 kodierte Inhalt des privaten SSH-Schlüssels. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
+| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt des privaten SSH-Schlüssels. Die unterstützten OpenSSH-Schlüsseltypen sind `ed25519`, `RSA` und `DSA`. |
 | `auth.params.passPhrase` | Die Passphrase oder das Passwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Passphrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 | `auth.params.maxConcurrentConnections` | Die maximale Anzahl gleichzeitiger Verbindungen, die beim Verbinden von Experience Platform mit SFTP angegeben wird. Wenn dieser Wert aktiviert ist, muss er auf mindestens 1 gesetzt werden. |
 | `auth.params.folderPath` | Der Pfad zum Ordner, auf den Sie Zugriff gewähren möchten. |
