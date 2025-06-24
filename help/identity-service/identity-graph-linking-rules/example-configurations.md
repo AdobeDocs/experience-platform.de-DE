@@ -1,10 +1,8 @@
 ---
 title: Konfigurationshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie mehr über die verschiedenen Implementierungstypen, die Sie mit Regeln für die Verknüpfung von Identitätsdiagrammen konfigurieren können.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -136,7 +134,7 @@ Lesen Sie diesen Abschnitt für Zwischenimplementierungen von [!DNL Identity Gra
 >
 >Um die folgenden Implementierungen durchzuführen, müssen Sie die folgenden benutzerdefinierten Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
 >* `CRMID`
->* `CCHash` (Dies ist ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.)
+>* `CChash` (Dies ist ein benutzerdefinierter Namespace, der eine gehashte Kreditkartennummer darstellt.)
 
 Stellen Sie sich vor, Sie arbeiten als Datenarchitekt für eine Geschäftsbank, die Kreditkarten ausgibt. Ihr Marketing-Team hat mitgeteilt, dass es den Verlauf früherer Kreditkartentransaktionen in ein Profil aufnehmen möchte. Dieses Identitätsdiagramm könnte wie folgt aussehen.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 Sie sind ein Medien- und Unterhaltungsunternehmen und Ihre Endbenutzer haben Folgendes:
 
