@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 4%
 
 ---
@@ -38,6 +38,7 @@ Dynamische Datenstromkonfigurationen weisen bestimmte Beschränkungen und Leistu
 | Leitplanke | Limit | Art des Limits |
 |---------|------------|------|
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Experience Platform-Services | 5 | Leistungs-Schutzmaßnahme |
+| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für die Ereignisweiterleitung | 5 | Leistungs-Schutzmaßnahme |
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Analytics | 5 | Leistungs-Schutzmaßnahme |
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Target | 5 | Leistungs-Schutzmaßnahme |
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Audience Manager | 5 | Leistungs-Schutzmaßnahme |
