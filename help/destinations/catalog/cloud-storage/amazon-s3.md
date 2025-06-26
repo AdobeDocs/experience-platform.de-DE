@@ -2,10 +2,10 @@
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speicher in Amazon Web Services (AWS), um in regelmäßigen Abständen CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 48%
+source-wordcount: '1818'
+ht-degree: 39%
 
 ---
 
@@ -87,7 +87,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 * Authentifizierung mit Zugriffsschlüssel und Geheimschlüssel
 * Authentifizierung der übernommenen Rolle
 
-#### Authentifizierung mit Zugriffsschlüssel und Geheimschlüssel
+#### Authentifizierung mit S3-Zugriffsschlüssel und geheimen Schlüssel
 
 Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffsschlüssel und geheimen Schlüssel eingeben möchten, damit Experience Platform Daten in Ihre Amazon S3-Eigenschaften exportieren kann.
 
@@ -98,21 +98,103 @@ Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffs
 
   ![Abbildung mit einem Beispiel für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Übernommene Rolle {#assumed-role-authentication}
+#### Authentifizierung mit der übernommenen Rolle S3 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Authentifizierung der übernommenen Rolle"
 >abstract="Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel nicht mit Adobe teilen möchten. Stattdessen stellt Experience Platform über einen rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Speicherort her. Fügen Sie den ARN der Rolle ein, die Sie in AWS für die Adobe-Benutzerin bzw. den -Benutzer erstellt haben. Das Muster ist vergleichbar mit `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![Bild der erforderlichen Felder bei der Auswahl der angenommenen Rollenauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel nicht mit Adobe teilen möchten. Stattdessen stellt Experience Platform mithilfe des rollenbasierten Zugriffs eine Verbindung zu Ihrem Amazon S3-Speicherort her.
 
-Dazu müssen Sie in der AWS-Konsole einen angenommenen Benutzer für Adobe mit den [erforderlichen Berechtigungen) erstellen, ](#minimum-permissions-iam-user) in Ihre Amazon S3-Buckets zu schreiben. Erstellen Sie **[!UICONTROL vertrauenswürdige Entität]** in AWS mit dem Adobe-**[!UICONTROL 670664943635]**. Weitere Informationen finden Sie in der [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+![Bild der erforderlichen Felder bei der Auswahl der angenommenen Rollenauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]**: Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt `arn:aws:iam::800873819705:role/destinations-role-customer`. Detaillierte Anleitungen zum korrekten Konfigurieren des S3-Zugriffs finden Sie in den folgenden Schritten.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
+
+Dazu müssen Sie in der AWS-Konsole eine zugewiesene Rolle für Adobe mit den [erforderlichen Berechtigungen) erstellen, ](#minimum-permissions-iam-user) in Ihre Amazon S3-Buckets zu schreiben.
+
+**Erstellen Sie eine Richtlinie mit den erforderlichen Berechtigungen**
+
+1. Öffnen Sie die AWS-Konsole und navigieren Sie zu IAM > Richtlinien > Richtlinie erstellen .
+2. Wählen Sie Richtlinien-Editor > JSON aus und fügen Sie unten die Berechtigungen hinzu.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. Geben Sie auf der nächsten Seite einen Namen für Ihre Richtlinie ein und speichern Sie sie als Referenz. Sie benötigen diesen Richtliniennamen, wenn Sie im nächsten Schritt die Rolle erstellen.
+
+**Benutzerrolle in Ihrem S3-Kundenkonto erstellen**
+
+1. Öffnen Sie die AWS-Konsole und gehen Sie zu IAM > Rollen > Neue Rolle erstellen .
+2. Wählen Sie **Vertrauenswürdiger Entitätstyp** > **AWS-Konto**
+3. Wählen Sie **Ein AWS-Konto** > **Ein anderes AWS-** aus und geben Sie die Adobe-Konto-ID ein: `670664943635`
+4. Hinzufügen von Berechtigungen mithilfe der zuvor erstellten Richtlinie
+5. Geben Sie einen Rollennamen ein (z. B. `destinations-role-customer`). Der Rollenname sollte wie ein Kennwort vertraulich behandelt werden. Er kann bis zu 64 Zeichen lang sein und alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: `+=,.@-_`. Überprüfen Sie dann, ob:
+   * Die Adobe-Konto-ID `670664943635` ist im Abschnitt **[!UICONTROL Vertrauenswürdige Entitäten auswählen]** vorhanden
+   * Die zuvor erstellte Richtlinie ist in der **[!UICONTROL Zusammenfassung der Berechtigungsrichtlinie“]**
+
+**Geben Sie die Rolle an, die Adobe übernehmen soll**
+
+Nachdem Sie die Rolle in AWS erstellt haben, müssen Sie Adobe die Rolle ARN zuweisen. Der ARN folgt diesem Muster: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+Den ARN finden Sie auf der Hauptseite, nachdem Sie die Rolle in der AWS-Konsole erstellt haben. Sie werden dieses ARN beim Erstellen des Ziels verwenden.
+
+**Überprüfen von Rollenberechtigungen und Vertrauensbeziehungen**
+
+Stellen Sie sicher, dass Ihre Rolle über die folgende Konfiguration verfügt:
+
+* **Berechtigungen**: Die Rolle sollte über Berechtigungen für den Zugriff auf S3 verfügen (entweder Vollzugriff oder die minimalen Berechtigungen, die im Schritt **Erstellen einer Richtlinie mit den erforderlichen Berechtigungen“** oben bereitgestellt wurden)
+* **Vertrauensbeziehungen**: Die Rolle sollte in ihren Vertrauensbeziehungen das Adobe-Stammkonto (`670664943635`) haben
+
+**Alternative: Auf bestimmte Adobe-Benutzende beschränken (optional)**
+
+Wenn Sie es vorziehen, nicht das gesamte Adobe-Konto zuzulassen, können Sie den Zugriff nur auf bestimmte Adobe-Benutzende beschränken. Bearbeiten Sie dazu die Vertrauensrichtlinie mit der folgenden Konfiguration:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+Weitere Informationen finden Sie in der [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -209,7 +291,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
