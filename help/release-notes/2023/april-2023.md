@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2010'
 ht-degree: 96%
 
 ---
@@ -95,7 +95,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 {style="table-layout:auto"}
 
-**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+**Fehlerbehebungen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
 - Es wurde ein Problem bei der Berichtsmetrik **Ausgeschlossene Identitäten** für dateibasierte Zielexporte behoben. Kundinnen und Kunden erhielten wie erwartet alle exportierten IDs aus dem aktivierten Export. Die Berichtsmetrik **Ausgeschlossene Identitäten** in der Benutzeroberfläche zeigte jedoch fälschlicherweise eine hohe Anzahl ausgeschlossener Identitäten an, da fälschlicherweise Identitäten gezählt wurden, die nie exportiert werden sollten. (PLAT-149774)
 - Es wurde ein Problem im Schritt **Planung** des Aktivierungs-Workflows behoben. Für Ziele, für die eine Zuordnungs-ID erforderlich ist, konnten Kundinnen und Kunden keine Zuordnungs-ID für Segmente hinzufügen, die zu vorhandenen Zielverbindungen hinzugefügt wurden. (PLAT-148808)
@@ -193,7 +193,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | API-Unterstützung zum Filtern von Daten auf Zeilenebene für die Salesforce CRM-Quelle. | Verwenden Sie zum Filtern von Daten auf Zeilenebene, die aus der Salesforce CRM-Quelle stammen, logische Operatoren und Vergleichsoperatoren. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
 | Beta-Verfügbarkeit von Shopify Streaming | Die [Quelle Shopify Streaming](../../sources/connectors/ecommerce/shopify-streaming.md) ist jetzt in der Beta-Version verfügbar. Verwenden Sie die Quelle Shopify Streaming, um Daten von Ihrem Shopify-Partnerkonto zu Experience Platform zu streamen. |
 | Allgemeine Verfügbarkeit von OneTrust Integration | Die [Quelle OneTrust Integration](../../sources/connectors/consent-and-preferences/onetrust.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle OneTrust Integration, um Einverständnis- und Voreinstellungsdaten aus Ihrem OneTrust Integration-Konto zu Experience Platform zu übertragen. |
-| Allgemeine Verfügbarkeit von Oracle Service Cloud | Die [Quelle Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle Oracle Service Cloud, um Daten aus Ihrem Oracle Service Cloud-Konto in Experience Platform aufzunehmen. |
 
 {style="table-layout:auto"}
 

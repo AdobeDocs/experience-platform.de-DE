@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2021
 description: Versionshinweise von Oktober 2021 für Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 76%
+source-wordcount: '433'
+ht-degree: 79%
 
 ---
 
@@ -27,7 +27,7 @@ An der Benutzeroberfläche wurden folgende Änderungen vorgenommen:
 | Ein- und Ausblenden der linken Navigationsleiste | Verwenden Sie den verbesserten Umschalter für die Navigation oben in der Kopfzeile des Programms, um das Menü mit den Funktionen von Experience Platform ein- oder auszublenden. Das System speichert Ihre letzte Auswahl und zeigt nur die Funktionen an, auf die Sie Zugriff haben. |
 | Sichtbarkeit des Zugriffs | In der linken Navigationsleiste werden nur die Funktionen angezeigt, auf die Sie zugreifen können. In früheren Versionen von Adobe Experience Platform waren nicht verfügbare Elemente sichtbar, selbst wenn Sie nicht darauf zugreifen konnten. |
 
-Weitere Informationen finden Sie im Handbuch zur Experience Platform[&#128279;](../../landing/ui-guide.md)Benutzeroberfläche von .
+Weitere Informationen finden Sie im Handbuch zur Experience Platform](../../landing/ui-guide.md)Benutzeroberfläche von [.
 
 ## Aktualisierungen vorhandener Funktionen
 
@@ -58,7 +58,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Verbesserungen der [!DNL Amazon S3]-Quelle | Sie können jetzt den `s3SessionToken`-Parameter verwenden, um Ihr [!DNL Amazon S3]-Konto mithilfe temporärer Sicherheitsberechtigungen mit Experience Platform zu verbinden. Mit diesem Token können Sie Benutzern in nicht vertrauenswürdigen Umgebungen einen kurzfristigen, temporären Zugriff auf Ihre [!DNL Amazon S3]-Ressourcen bereitstellen. Weitere Informationen finden Sie in der [[!DNL Amazon S3] Dokumentation](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
-| [!DNL Generic REST API] (Betaversion) | Sie können jetzt eine [!DNL Generic REST API]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) erstellen, um Daten von einer generischen REST-Anwendung an Experience Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Generic REST API] Übersicht](../../sources/connectors/protocols/generic-rest.md). |
-| [!DNL Zoho CRM] (Betaversion) | Sie können jetzt eine [!DNL Zoho CRM]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) oder der [Benutzeroberfläche) ](../../sources/tutorials/ui/create/crm/zoho.md), um Daten von Ihrem [!DNL Zoho CRM]-Konto in Experience Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Zoho CRM] Übersicht über](../../sources/connectors/crm/zoho.md). |
+| [!DNL Generic REST API] (Betaversion) | Sie können jetzt eine [!DNL Generic REST API]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) erstellen, um Daten von einer generischen REST-Anwendung an Experience Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Generic REST API] Übersicht über](../../sources/connectors/protocols/generic-rest.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

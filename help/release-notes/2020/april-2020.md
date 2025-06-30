@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 58%
 
 ---
@@ -130,8 +130,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| API- und UI-Unterstützung für Datenbanken | Neue Quell-Connectoren für [!DNL Apache Spark] (in HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (in HDInsights) und [!DNL Phoenix]. |
-| API- und UI-Unterstützung für zahlungsbasierte Anwendungen | Neue Quell-Connectoren für [!DNL PayPal]. |
+| API- und UI-Unterstützung für Datenbanken | Neue Quell-Connectoren für [!DNL Apache Spark] (in HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage] und [!DNL Hive]. |
 | API- und UI-Unterstützung für protokollbasierte Anwendungen | Neue Quell-Connectoren für [!DNL Generic OData]. |
 
 **Bekannte Probleme**
