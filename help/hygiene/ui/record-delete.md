@@ -2,10 +2,10 @@
 title: Anfragen zum Löschen von Datensätzen (UI-Workflow)
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
+source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 22%
+source-wordcount: '1848'
+ht-degree: 19%
 
 ---
 
@@ -41,23 +41,32 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Optio
 > 
 >Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von ](#provide-identities)&quot; des Handbuchs fort.
 
-![Der Workflow für die Anfrageerstellung mit [!UICONTROL &#x200B; ausgewählten und hervorgehobenen Option &quot;] löschen“](../images/ui/record-delete/delete-record.png)
+![Der Workflow für die Anfrageerstellung mit [!UICONTROL  ausgewählten und hervorgehobenen Option &quot;] löschen“](../images/ui/record-delete/delete-record.png)
 
 ## Auswählen von Datensätzen {#select-dataset}
 
-Der nächste Schritt besteht darin festzustellen, ob Sie Datensätze aus einem einzelnen Datensatz oder allen Datensätzen löschen möchten. Wenn Ihnen diese Option nicht zur Verfügung steht, fahren Sie mit dem Abschnitt [Identitäten angeben](#provide-identities) des Handbuchs fort.
+Der nächste Schritt besteht darin festzustellen, ob Sie Datensätze aus einem einzelnen Datensatz oder allen Datensätzen löschen möchten. Abhängig von der Konfiguration Ihres Unternehmens ist die Option zur Datensatzauswahl möglicherweise nicht verfügbar. Wenn diese Option nicht angezeigt wird, fahren Sie mit dem Abschnitt [Identitäten angeben](#provide-identities) des Handbuchs fort.
 
-Verwenden **[!UICONTROL im Abschnitt Datensatzdetails]** Optionsschaltfläche, um zwischen einem bestimmten Datensatz und allen Datensätzen auszuwählen. Wenn Sie **[!UICONTROL Datensatz auswählen]** wählen Sie anschließend das Datenbanksymbol (![Datenbanksymbol) aus, um ](/help/images/icons/database.png) Dialogfeld mit einer Liste der verfügbaren Datensätze zu öffnen. Wählen Sie den gewünschten Datensatz aus der Liste aus und klicken Sie dann auf **[!UICONTROL Fertig]**.
+Wählen Sie **[!UICONTROL Abschnitt Datensatzdetails]** Optionsfeld aus, um entweder einen bestimmten Datensatz oder alle Datensätze auszuwählen.
+
+Um aus einem bestimmten Datensatz zu löschen, klicken Sie auf **[!UICONTROL Datensatz auswählen]** und wählen dann das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) aus. Wählen Sie im angezeigten Dialogfeld einen Datensatz aus und klicken Sie zur Bestätigung **[!UICONTROL Fertig]**.
 
 ![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit einem ausgewählten Datensatz und [!UICONTROL Fertig] hervorgehoben.](../images/ui/record-delete/select-dataset.png)
 
-Wenn Sie Datensätze aus allen Datensätzen löschen möchten, wählen Sie **[!UICONTROL Alle Datensätze]** aus.
+Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL Alle Datensätze]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert die Angabe aller relevanten Identitätstypen.
 
-![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit der ausgewählten Option [!UICONTROL Alle &#x200B;]Datensätze)](../images/ui/record-delete/all-datasets.png)
+![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit der ausgewählten Option [!UICONTROL Alle ]Datensätze)](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Wenn Sie die Option **[!UICONTROL Alle Datensätze]** auswählen, kann es sein, dass der Löschvorgang länger dauert und möglicherweise nicht zu einer korrekten Löschung der Datensätze führt.
+>Wenn Sie **[!UICONTROL Alle Datensätze]** auswählen, wird der Vorgang auf alle Datensätze in Ihrer Organisation erweitert. Jeder Datensatz kann einen anderen primären Identitätstyp verwenden. Sie müssen (**erforderlichen Identitätstypen) angeben** um eine genaue Übereinstimmung sicherzustellen.
+>
+>Wenn ein Identitätstyp fehlt, werden beim Löschen möglicherweise einige Datensätze übersprungen. Dies kann die Verarbeitung verlangsamen und zu (**Ergebnissen)**.
+
+Jeder Datensatz in Experience Platform unterstützt nur einen primären Identitätstyp.
+
+* Beim Löschen aus einem **einzelnen Datensatz** müssen alle Identitäten in Ihrer Anfrage den **gleichen Typ** verwenden.
+* Beim Löschen aus **allen Datensätzen** können Sie **mehrere Identitätstypen** einbeziehen, da verschiedene Datensätze möglicherweise auf verschiedenen primären Identitäten basieren.“
 
 ## Angeben von Identitäten {#provide-identities}
 
@@ -80,8 +89,6 @@ Wie alle Identitätsfelder in Experience Platform besteht ein Identity-Namespace
 >Wenn Sie den Identity-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Experience Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identity-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
 >
 >![Das Dashboard „Datensätze“, in dem ein Datensatz ausgewählt und ein Schemadialogfeld im Bedienfeld „Datensatzdetails“ geöffnet wurde. Die primäre ID des Datensatzes ist hervorgehoben.](../images/ui/record-delete/dataset-primary-identity.png)
-
-Wenn Sie Datensätze aus einem einzelnen Datensatz löschen, müssen alle von Ihnen angegebenen Identitäten denselben Typ haben, da ein Datensatz nur einen Identity-Namespace haben kann. Wenn Sie sie aus allen Datensätzen löschen, können Sie mehrere Identitätstypen einbeziehen, da verschiedene Datensätze unterschiedliche primäre Identitäten haben können.
 
 Es gibt zwei Möglichkeiten, beim Löschen von Datensätzen Identitäten bereitzustellen:
 
@@ -190,7 +197,7 @@ Ein Dialogfeld [!UICONTROL Anfrage bestätigen] zeigt an, dass die Identitäten 
 
 ![Dialogfeld [!UICONTROL Anforderung bestätigen].](../images/ui/record-delete/confirm-request.png)
 
-Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte &quot;[!UICONTROL &quot; &#x200B;] Arbeitsbereichs [!UICONTROL Datenlebenszyklus] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte &quot;[!UICONTROL &quot; ] Arbeitsbereichs [!UICONTROL Datenlebenszyklus] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 >[!NOTE]
 >
