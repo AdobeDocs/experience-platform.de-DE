@@ -142,7 +142,7 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 | --- | ---|
 | Unterstützung der Datenschutzgesetze von Tennessee und Minnesota | Privacy Service unterstützt jetzt den Tennessee Information Protection Act (`tipa_tn_usa`) und den Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Sie können Zugriffs- und Löschanfragen in Übereinstimmung mit diesen neuen Vorschriften auf Statusebene verarbeiten. Weitere Einzelheiten finden Sie [ &quot;](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)&quot;. |
 
-Weitere Informationen zu dem Service finden Sie in [ ](../../privacy-service/home.md)Übersicht über Privacy Service .
+Weitere Informationen zu dem Service finden Sie in [&#128279;](../../privacy-service/home.md)Übersicht über Privacy Service .
 
 ## Sandboxes {#sandboxes}
 
