@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Verwenden Sie den Data Hygiene API `/ttl/{DATASET_ID}`-Endpunkt, um TTL-Konfigur
 
 Weitere Informationen finden Sie in der [ zur Adobe Developer ](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl)Datenhygiene-API).
 
-Um [ derzeit auf einen Datensatz angewendete TTL zu überprüfen](#check-applied-ttl-values) stellen Sie stattdessen eine GET-Anfrage an `/dataSets/{DATASET_ID}` Endpunkt [Catalog Service ](https://developer.adobe.com/experience-platform-apis/references/catalog/)).
+Um [ derzeit auf einen Datensatz angewendete TTL zu überprüfen](#check-applied-ttl-values) stellen Sie stattdessen eine GET-Anfrage an [ Endpunkt ](https://developer.adobe.com/experience-platform-apis/references/catalog/)Catalog Service `/dataSets/{DATASET_ID}`).
 
 >[!TIP]
 >
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Kann ich unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Profil-Services festlegen?
 
 +++Antwort
-Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Profil-Services festlegen. Die Aufbewahrungsfrist für Profile darf jedoch nicht kürzer sein als die für Data Lake festgelegte.
+Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Profil-Services festlegen. Je nach Bedarf Ihres Unternehmens kann die Aufbewahrungsfrist für den Profilspeicher kürzer oder länger als die Data-Lake-Aufbewahrungsfrist sein.
 +++
 
 ### Wie kann ich meine aktuelle Datensatznutzung überprüfen?
