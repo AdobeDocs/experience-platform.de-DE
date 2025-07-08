@@ -1,9 +1,10 @@
 ---
 title: CMK-Referenz zur Warnhinweisauflösung
 description: Identifizieren, beheben und beheben Sie häufige Warnhinweise, die durch Fehlkonfigurationen von kundenverwalteten Schlüsseln (CMK) in Adobe Experience Platform ausgelöst werden. Verwenden Sie dieses Handbuch, um klare, schrittweise Anweisungen zu befolgen und den sicheren Schlüsselzugriff wiederherzustellen.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
@@ -22,11 +23,7 @@ In den folgenden Abschnitten werden die Arten von Warnhinweisen beschrieben, die
 
 ## Schlüsselzugriff deaktiviert {#key-access-disabled}
 
-Dieser Warnhinweis zeigt an, dass Adobe Experience Platform nicht auf den konfigurierten CMK zugreifen kann, da der Schlüssel deaktiviert ist oder aufgrund von Problemen mit der Schlüsselkonfiguration nicht zugänglich ist.
-
->[!IMPORTANT]
->
->In diesem Fall behandelt Adobe CMK den Zugriffsfehler als zielgerichtetes Entfernen und löscht basierend auf Ihrer SLA alle mit Ihrer Organisation verknüpften Daten.
+Dieser Warnhinweis zeigt an, dass Adobe Experience Platform nicht auf das konfigurierte CMK zugreifen kann, da der Schlüssel aufgrund der Konfiguration deaktiviert ist oder nicht zugänglich ist. In solchen Fällen behandelt das System die Bedingung als eine absichtliche Entfernung des Schlüsselzugriffs.
 
 ### Wenn er auftritt
 
