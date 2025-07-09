@@ -104,11 +104,11 @@ Durchsuchen Sie als Nächstes entweder die vorhandenen Datensätze oder verwende
 
 Bei der Erstellung eines Zeitplans können Sie Ihre Abfrage in der Quarantänefunktion registrieren, um Systemressourcen zu schützen und potenzielle Unterbrechungen zu vermeiden. Die Quarantänefunktion identifiziert und isoliert Abfragen, die wiederholt fehlschlagen, automatisch, indem sie in einen [!UICONTROL Quarantänestatus] versetzt wird. Indem Sie Abfragen nach zehn aufeinander folgenden Fehlern unter Quarantäne stellen, können Sie eingreifen, Probleme überprüfen und korrigieren, bevor Sie weitere Ausführungen zulassen. Dies hilft, Ihre betriebliche Effizienz und Datenintegrität zu erhalten.
 
-![Der Arbeitsbereich „Zeitpläne für Abfragen“ mit [!UICONTROL  hervorgehobenen ] „Quarantäne für Abfragen“ und der ausgewählten Option „Ja“.](../images/ui/query-schedules/quarantine-enroll.png)
+![Der Arbeitsbereich „Zeitpläne für Abfragen“ mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;] „Quarantäne für Abfragen“ und der ausgewählten Option „Ja“.](../images/ui/query-schedules/quarantine-enroll.png)
 
 Sobald eine Abfrage für die Quarantänefunktion registriert ist, können Sie Warnhinweise für diese Änderung des Abfragestatus abonnieren. Wenn eine geplante Abfrage nicht unter Quarantäne gestellt wird, wird sie nicht als Option im [Dialogfeld Warnhinweise“ ](./monitor-queries.md#alert-subscription).
 
-Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für ] Quarantänefunktion registrieren. Weitere Informationen finden [ in der ](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
+Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für &#x200B;] Quarantänefunktion registrieren. Weitere Informationen finden [ in der ](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
 
 ### Festlegen von Warnhinweisen für den Status geplanter Abfragen {#alerts-for-query-status}
 
@@ -187,7 +187,7 @@ Informationen zum Überwachen geplanter Abfragen mithilfe der Abfrage-Service-AP
 
 ## Zeitplan aktivieren, deaktivieren oder löschen {#delete-schedule}
 
-Sie können einen Zeitplan im Arbeitsbereich für Zeitpläne einer bestimmten Abfrage oder im Arbeitsbereich „Geplante Abfragen“, der alle geplanten Abfragen auflistet[!UICONTROL  aktivieren, deaktivieren ] löschen.
+Sie können einen Zeitplan im Arbeitsbereich für Zeitpläne einer bestimmten Abfrage oder im Arbeitsbereich „Geplante Abfragen“, der alle geplanten Abfragen auflistet[!UICONTROL &#x200B; aktivieren, deaktivieren &#x200B;] löschen.
 
 Um auf die Registerkarte [!UICONTROL Zeitpläne] der ausgewählten Abfrage zuzugreifen, müssen Sie den Namen einer Abfragevorlage entweder auf der Registerkarte [!UICONTROL Vorlagen] oder der Registerkarte [!UICONTROL Geplante Abfragen] auswählen. Dadurch wird zum Abfrage-Editor für diese Abfrage navigiert. Wählen Sie im Abfrage-Editor die Option **[!UICONTROL Zeitpläne]**, um auf den Arbeitsbereich für Zeitpläne zuzugreifen.
 
@@ -209,4 +209,4 @@ Wählen Sie **[!UICONTROL Zeitplan löschen]** aus, um den deaktivierten Zeitpla
 
 ![Der Arbeitsbereich für Zeitpläne mit hervorgehobener Option „Zeitplan löschen“.](../images/ui/query-schedules/delete-schedule.png)
 
-Alternativ dazu bietet [!UICONTROL  Registerkarte „Geplante Abfragen] eine Sammlung von Inline-Aktionen für jede geplante Abfrage. Zu den verfügbaren Inline-Aktionen gehören [!UICONTROL Zeitplan deaktivieren] oder [!UICONTROL Zeitplan aktivieren], [!UICONTROL Zeitplan löschen] und [!UICONTROL Abonnieren] Warnhinweise für die geplante Abfrage. Vollständige Anweisungen zum Löschen oder Deaktivieren einer geplanten Abfrage über die Registerkarte Geplante Abfragen finden Sie im [Handbuch zu geplanten Abfragen überwachen](./monitor-queries.md#inline-actions).
+Alternativ dazu bietet [!UICONTROL &#x200B; Registerkarte „Geplante Abfragen] eine Sammlung von Inline-Aktionen für jede geplante Abfrage. Zu den verfügbaren Inline-Aktionen gehören [!UICONTROL Zeitplan deaktivieren] oder [!UICONTROL Zeitplan aktivieren], [!UICONTROL Zeitplan löschen] und [!UICONTROL Abonnieren] Warnhinweise für die geplante Abfrage. Vollständige Anweisungen zum Löschen oder Deaktivieren einer geplanten Abfrage über die Registerkarte Geplante Abfragen finden Sie im [Handbuch zu geplanten Abfragen überwachen](./monitor-queries.md#inline-actions).
