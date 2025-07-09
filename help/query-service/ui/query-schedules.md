@@ -2,10 +2,10 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
-ht-degree: 14%
+source-wordcount: '2181'
+ht-degree: 12%
 
 ---
 
@@ -17,9 +17,24 @@ Sie können die Ausführung von Abfragen automatisieren, indem Sie Abfragezeitpl
 >
 >Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt und gespeichert wurde.
 
-Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Geplante Abfragen] hinzugefügt. Von diesem Arbeitsbereich aus können Sie den Status aller geplanten Abfrageaufträge über die Benutzeroberfläche überwachen. Auf der Registerkarte [!UICONTROL Geplante Abfragen] finden Sie wichtige Informationen zur Ausführung Ihrer Abfragen und können Warnhinweise abonnieren. Zu den verfügbaren Informationen gehören der Status, Zeitplandetails und Fehlermeldungen/-codes, falls eine Ausführung fehlschlägt. Weitere Informationen finden [ im Dokument ](./monitor-queries.md) Abfragen überwachen .
+## Kontoanforderungen für geplante Abfragen {#technical-account-user-requirements}
 
-Dieser Workflow behandelt den Zeitplanungsprozess in der Benutzeroberfläche des Abfrage-Service. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
+Damit geplante Abfragen zuverlässig ausgeführt werden können, empfiehlt Adobe, dass Admins ein technisches Konto (mit OAuth-Server-zu-Server-Anmeldeinformationen) zum Erstellen geplanter Abfragen bereitstellen. Geplante Abfragen können auch mit einem persönlichen Benutzerkonto erstellt werden. Auf diese Weise erstellte Abfragen werden jedoch nicht mehr ausgeführt, wenn der Zugriff dieses Benutzers entfernt oder deaktiviert wird.
+
+Weitere Informationen zum Einrichten technischer Konten und zum Zuweisen der erforderlichen Berechtigungen finden Sie unter [Voraussetzungen für das Anmeldeinformationshandbuch](./credentials.md#prerequisites) und [API-Authentifizierung](../../landing/api-authentication.md).
+
+Weitere Anleitungen zum Erstellen und Konfigurieren eines technischen Kontos finden Sie unter:
+
+- [Developer Console-Setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Schrittweise Anweisungen zum Konfigurieren der Adobe Developer Console und zum Abrufen von OAuth-Anmeldeinformationen.
+- [Einrichtung eines technischen Endkontos](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) Eine umfassende Anleitung zum Erstellen und Konfigurieren eines technischen Kontos in Adobe Experience Platform.
+
+Wenn Sie nur die Benutzeroberfläche des Abfrage-Service verwenden, stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen verfügen, oder stimmen Sie sich mit einem Administrator ab, der technische Konten verwaltet. Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Geplante Abfragen] hinzugefügt, auf der Sie den Status, Zeitplandetails und Fehlermeldungen für alle geplanten Abfrageaufträge überwachen sowie Warnhinweise abonnieren können. Weitere Informationen zur Überwachung und Verwaltung Ihrer Abfragen finden Sie im Dokument [Überwachen geplanter Abfragen](./monitor-queries.md).
+
+Dieser Workflow behandelt den Zeitplanungsprozess in der Benutzeroberfläche des Abfrage-Service. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie [ Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Verwenden Sie ein technisches Konto, um sicherzustellen, dass geplante Abfragen weiterhin ausgeführt werden, selbst wenn Benutzende das Unternehmen verlassen oder sich ihre Rollen ändern. Wählen Sie, wann immer möglich, ein technisches Konto für eine unterbrechungsfreie Abfrageautomatisierung.
 
 ## Abfragezeitplan erstellen {#create-schedule}
 
@@ -89,11 +104,11 @@ Durchsuchen Sie als Nächstes entweder die vorhandenen Datensätze oder verwende
 
 Bei der Erstellung eines Zeitplans können Sie Ihre Abfrage in der Quarantänefunktion registrieren, um Systemressourcen zu schützen und potenzielle Unterbrechungen zu vermeiden. Die Quarantänefunktion identifiziert und isoliert Abfragen, die wiederholt fehlschlagen, automatisch, indem sie in einen [!UICONTROL Quarantänestatus] versetzt wird. Indem Sie Abfragen nach zehn aufeinander folgenden Fehlern unter Quarantäne stellen, können Sie eingreifen, Probleme überprüfen und korrigieren, bevor Sie weitere Ausführungen zulassen. Dies hilft, Ihre betriebliche Effizienz und Datenintegrität zu erhalten.
 
-![Der Arbeitsbereich „Zeitpläne für Abfragen“ mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;] „Quarantäne für Abfragen“ und der ausgewählten Option „Ja“.](../images/ui/query-schedules/quarantine-enroll.png)
+![Der Arbeitsbereich „Zeitpläne für Abfragen“ mit [!UICONTROL  hervorgehobenen ] „Quarantäne für Abfragen“ und der ausgewählten Option „Ja“.](../images/ui/query-schedules/quarantine-enroll.png)
 
 Sobald eine Abfrage für die Quarantänefunktion registriert ist, können Sie Warnhinweise für diese Änderung des Abfragestatus abonnieren. Wenn eine geplante Abfrage nicht unter Quarantäne gestellt wird, wird sie nicht als Option im [Dialogfeld Warnhinweise“ ](./monitor-queries.md#alert-subscription).
 
-Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für &#x200B;] Quarantänefunktion registrieren. Weitere Informationen finden [ in der ](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
+Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für ] Quarantänefunktion registrieren. Weitere Informationen finden [ in der ](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
 
 ### Festlegen von Warnhinweisen für den Status geplanter Abfragen {#alerts-for-query-status}
 
@@ -164,7 +179,6 @@ Die folgende Tabelle enthält Beschreibungen der einzelnen Spalten, die im Detai
 >
 >Die Daten zur Stundenberechnung sind ab 08/15/2024 verfügbar. Daten vor diesem Datum werden als „Nicht verfügbar“ angezeigt.
 
-
 Vollständige Informationen [ Überwachen des Status aller Abfrageaufträge über die Benutzeroberfläche finden ](./monitor-queries.md#inline-actions) im Handbuch zur Überwachung geplanter Abfragen .
 
 Wählen Sie eine **[!UICONTROL ID der Abfrageausführung]** aus der Liste aus, um zur Übersicht der Abfrageausführung zu navigieren. Eine vollständige Aufschlüsselung der in der (Übersicht über die [) verfügbaren Informationen ](./monitor-queries.md#query-run-overview) Sie in der Dokumentation Überwachen geplanter Abfragen .
@@ -173,7 +187,7 @@ Informationen zum Überwachen geplanter Abfragen mithilfe der Abfrage-Service-AP
 
 ## Zeitplan aktivieren, deaktivieren oder löschen {#delete-schedule}
 
-Sie können einen Zeitplan im Arbeitsbereich für Zeitpläne einer bestimmten Abfrage oder im Arbeitsbereich „Geplante Abfragen“, der alle geplanten Abfragen auflistet[!UICONTROL &#x200B; aktivieren, deaktivieren &#x200B;] löschen.
+Sie können einen Zeitplan im Arbeitsbereich für Zeitpläne einer bestimmten Abfrage oder im Arbeitsbereich „Geplante Abfragen“, der alle geplanten Abfragen auflistet[!UICONTROL  aktivieren, deaktivieren ] löschen.
 
 Um auf die Registerkarte [!UICONTROL Zeitpläne] der ausgewählten Abfrage zuzugreifen, müssen Sie den Namen einer Abfragevorlage entweder auf der Registerkarte [!UICONTROL Vorlagen] oder der Registerkarte [!UICONTROL Geplante Abfragen] auswählen. Dadurch wird zum Abfrage-Editor für diese Abfrage navigiert. Wählen Sie im Abfrage-Editor die Option **[!UICONTROL Zeitpläne]**, um auf den Arbeitsbereich für Zeitpläne zuzugreifen.
 
@@ -195,4 +209,4 @@ Wählen Sie **[!UICONTROL Zeitplan löschen]** aus, um den deaktivierten Zeitpla
 
 ![Der Arbeitsbereich für Zeitpläne mit hervorgehobener Option „Zeitplan löschen“.](../images/ui/query-schedules/delete-schedule.png)
 
-Alternativ dazu bietet [!UICONTROL &#x200B; Registerkarte „Geplante Abfragen] eine Sammlung von Inline-Aktionen für jede geplante Abfrage. Zu den verfügbaren Inline-Aktionen gehören [!UICONTROL Zeitplan deaktivieren] oder [!UICONTROL Zeitplan aktivieren], [!UICONTROL Zeitplan löschen] und [!UICONTROL Abonnieren] Warnhinweise für die geplante Abfrage. Vollständige Anweisungen zum Löschen oder Deaktivieren einer geplanten Abfrage über die Registerkarte Geplante Abfragen finden Sie im [Handbuch zu geplanten Abfragen überwachen](./monitor-queries.md#inline-actions).
+Alternativ dazu bietet [!UICONTROL  Registerkarte „Geplante Abfragen] eine Sammlung von Inline-Aktionen für jede geplante Abfrage. Zu den verfügbaren Inline-Aktionen gehören [!UICONTROL Zeitplan deaktivieren] oder [!UICONTROL Zeitplan aktivieren], [!UICONTROL Zeitplan löschen] und [!UICONTROL Abonnieren] Warnhinweise für die geplante Abfrage. Vollständige Anweisungen zum Löschen oder Deaktivieren einer geplanten Abfrage über die Registerkarte Geplante Abfragen finden Sie im [Handbuch zu geplanten Abfragen überwachen](./monitor-queries.md#inline-actions).

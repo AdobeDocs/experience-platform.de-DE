@@ -5,18 +5,32 @@ title: Zeitpläne-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie für geplante Abfragen mit der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 29%
+source-wordcount: '1410'
+ht-degree: 23%
 
 ---
 
 # Zeitpläne-Endpunkt
 
+Erfahren Sie mit detaillierten Informationen und Beispielen, wie Sie geplante Abfragen programmgesteuert mithilfe der Abfrage-Service-Zeitpläne-API erstellen, verwalten und überwachen.
+
+## Anforderungen und Voraussetzungen
+
+Sie können geplante Abfragen entweder mit einem technischen Konto (authentifiziert über OAuth Server-zu-Server-Anmeldeinformationen) oder einem persönlichen Benutzerkonto (Benutzer-Token) erstellen. Adobe empfiehlt jedoch dringend die Verwendung eines technischen Kontos, um die unterbrechungsfreie, sichere Ausführung geplanter Abfragen sicherzustellen - insbesondere für Langzeit- oder Produktionsarbeitslasten.
+
+Mit einem persönlichen Benutzerkonto erstellte Abfragen schlagen fehl, wenn der Zugriff dieses Benutzers widerrufen oder sein Konto deaktiviert wird. Technische Konten bieten mehr Stabilität, da sie nicht an den Beschäftigungsstatus oder die Zugriffsrechte eines einzelnen Benutzers gebunden sind.
+
+>[!IMPORTANT]
+>
+>Wichtige Überlegungen beim Verwalten geplanter Abfragen:<ul><li>Geplante Abfragen schlagen fehl, wenn das Konto (technisch oder benutzerseitig), mit dem sie erstellt wurden, Zugriff oder Berechtigungen verliert.</li><li>Geplante Abfragen müssen vor dem Löschen über die API oder die Benutzeroberfläche deaktiviert werden.</li><li>Eine Planung auf unbestimmte Zeit ohne Enddatum wird nicht unterstützt; ein Enddatum muss immer angegeben werden.</li></ul>
+
+Ausführliche Anleitungen zu Kontoanforderungen, zur Einrichtung von Berechtigungen und zur Verwaltung geplanter Abfragen finden Sie in der [Dokumentation zu Abfragezeitplänen](../ui/query-schedules.md#technical-account-user-requirements). Schrittweise Anweisungen zum Erstellen und Konfigurieren eines technischen Kontos finden Sie unter [Developer Console-Setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) und [End-to-End-Einrichtung eines technischen Kontos](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie die erforderlichen Authentifizierungskopfzeilen konfiguriert haben (siehe [API-Authentifizierungshandbuch](../../landing/api-authentication.md)), können Sie mit Aufrufen an die [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden verschiedene API-Aufrufe mit allgemeinen Formaten, Beispielanfragen einschließlich erforderlicher Kopfzeilen und Beispielantworten veranschaulicht.
 
 ### Abrufen einer Liste geplanter Abfragen
 
