@@ -156,4 +156,4 @@ Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewend
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3422789?quality=12&enable10seconds=on&speedcontrol=on&captions=ger) -->
