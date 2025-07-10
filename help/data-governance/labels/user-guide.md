@@ -112,8 +112,8 @@ Der Umschalter **[!UICONTROL Übernommene Kennzeichnung anzeigen]** ist standard
 >[!NOTE]
 >
 >Labels, die angewendet wurden, bevor die Funktion zur Kennzeichnung von Datensätzen eingestellt wurde, können aus dem Datensatz entfernt werden, indem Sie den relevanten Datensatz suchen und das Symbol „Abbrechen“ auf der Kennzeichnung auswählen.
->>![Die Registerkarte „Data Governance“ im Arbeitsbereich „Datensätze“ mit hervorgehobener löschbarer Kennzeichnung.](../images/labels/remove-governance-labels.png)
->>In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Labels von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
+>&#x200B;>![Die Registerkarte „Data Governance“ im Arbeitsbereich „Datensätze“ mit hervorgehobener löschbarer Kennzeichnung.](../images/labels/remove-governance-labels.png)
+>&#x200B;>In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Labels von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
 
 ## Verwalten von benutzerdefinierten Labels {#manage-custom-labels}
 
