@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
+source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
 workflow-type: tm+mt
-source-wordcount: '5195'
-ht-degree: 66%
+source-wordcount: '5128'
+ht-degree: 65%
 
 ---
 
@@ -324,7 +324,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
@@ -390,7 +390,7 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Geschätzte Profile"
->abstract="„Geschätzte Profile“ gibt eine ungefähre Anzahl von Profilen auf Grundlage des Beispielauftrags an, die für die Regeln der Segmentdefinition qualifiziert wären. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf. <br><br>Diese Zahl wird aktualisiert, wenn der Beispielauftrag aktualisiert wird. Dies ist der Fall, wenn die Kundendaten um mehr als 5 % geändert werden oder der letzte Beispielauftrag älter als 7 Tage ist."
+>abstract="Geschätzte Profile geben auf der Grundlage des Beispielvorgangs eine ungefähre Anzahl von Profilen an, die für die Regeln der Segmentdefinition qualifiziert wären."
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
@@ -400,7 +400,10 @@ Der Zeitstempel für qualifizierte Profile gibt den neuesten Segmentauswertungsa
 
 **[!UICONTROL Geschätzte Profile]** gibt **(**) Anzahl von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
 
-Diese Zahl wird aktualisiert, wenn der Beispielvorgang aktualisiert wird, was auftritt, wenn die Kundendaten um mehr als 5 % geändert werden oder der letzte Beispielvorgang älter als 7 Tage ist.“
+Diese Zahl wird in zwei Szenarien aktualisiert:
+
+1. Die Kundendaten ändern sich um mehr als 5 %, oder der letzte Beispielvorgang ist älter als sieben Tage.
+2. Die Regeln der Zielgruppe wurden geändert oder entfernt.
 
 Durch Auswahl der Informationsblase erhalten Sie den Fehlerschwellenwert und die aktuelle Zeit des Beispielauftrags.
 
