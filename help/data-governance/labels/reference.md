@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungskennzeichnungs- API;Policy Service-API;Unterstützte Datennutzungskennzeichnungen;Vertragskennzeichnungen;Identitätskennzeichnungen;sensible Kennzeichnungen
+keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Datennutzungskennzeichnungs- API;Policy Service-API;Unterstützte Datennutzungskennzeichnungen;Vertragskennzeichnungen;Identitätskennzeichnungen;sensible Kennzeichnungen
 solution: Experience Platform
-title: Glossar der Datennutzungskennzeichnungen
-description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
+title: Glossar der Datennutzungs-Labels
+description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungs-Labels beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 93%
 
 ---
 
-# Glossar der Datennutzungskennzeichnungen {#data-usage-labels-glossary}
+# Glossar der Datennutzungs-Labels {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
->title="Kennzeichnungstypen"
->abstract="Es gibt mehrere Kategorien von Datennutzungskennzeichnungen. Zu den von Adobe definierten Kennzeichnungen gehören Vertragskennzeichnungen, Identitätskennzeichnungen und vertrauliche Kennzeichnungen. Von Ihrem Unternehmen definierte Kennzeichnungen werden als benutzerdefinierte Kennzeichnungen kategorisiert."
+>title="Label-Typen"
+>abstract="Es gibt mehrere Kategorien von Datennutzungs-Labels. Zu den von Adobe definierten Kennzeichnungen gehören Vertragskennzeichnungen, Identitätskennzeichnungen und vertrauliche Kennzeichnungen. Von Ihrem Unternehmen definierte Labels werden als benutzerdefinierte Labels kategorisiert."
 >text="See the data usage labels glossary for more information on these label types."
 
-Mit Datennutzungskennzeichnungen können Sie Datensätze und -felder anhand der für diese Daten geltenden [Governance-Richtlinien](../policies/overview.md) und [Richtlinien für die Zugriffssteuerung](../../access-control/abac/overview.md) kategorisieren. Adobe Experience Platform bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
+Mit Datennutzungs-Labels können Sie Datensätze und -felder anhand der für diese Daten geltenden [Governance-Richtlinien](../policies/overview.md) und [Richtlinien für die Zugriffssteuerung](../../access-control/abac/overview.md) kategorisieren. Adobe Experience Platform bietet mehrere gebrauchsfertige, grundlegende Datennutzungs-Labels, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
-In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert.
+In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungs-Labels erläutert.
 
 ## Vertragsbezeichnungen {#contract}
 
-Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
+Vertragliche „C“-Labels dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
 
-| Kennzeichnung | Definition |
+| Label | Definition |
 | --- | --- |
 | [C1](#c1) | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. |
 | [C2](#c2) | Daten können nicht zu einem Drittanbieter exportiert werden. |
@@ -42,35 +42,35 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | [C11](#c11) | Daten können nicht mit Segment Match-Partnern freigegeben werden. |
 | [C12](#c12) | Daten können in keiner Weise exportiert werden. |
 
-## Identitätsbezeichnungen {#identity}
+## Identitäts-Labels {#identity}
 
-Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
+Identitätsbezogene „I“-Labels dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
 
-| Kennzeichnung | Definition |
+| Label | Definition |
 | --- | --- |
 | **I1** | Direkt identifizierbare Daten, mit denen eine bestimmte Person anstatt eines Geräts identifiziert oder kontaktiert werden kann. |
 | **I2** | Indirekt identifizierbare Daten, die in Verbindung mit anderen Daten zur Identifizierung oder zum Kontakt mit einer bestimmten Person verwendet werden können. |
 
-## Kennzeichnungen für sensible Daten {#sensitive}
+## Labels für sensible Daten {#sensitive}
 
-Sensible „S“-Kennzeichnungen dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als sensibel betrachten.
+Sensible „S“-Labels dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als sensibel betrachten.
 
 Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten von geografischen Daten handeln; diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
 
-| Kennzeichnung | Definition |
+| Label | Definition |
 | --- | --- |
 | **S1** | Daten zur Angabe von Breiten- und Längengrad, die zur Bestimmung der genauen Position eines Geräts verwendet werden können. |
 | **S2** | Daten, die zur Bestimmung eines allgemein definierten Geofence-Bereichs verwendet werden können. |
 | **PSPD** | Zulässige sensible und personenbezogene Daten (Permitted Sensitive Personal Data, PSPD) sind Daten, die von Adobe vertraglich zum Hochladen zugelassen werden und die vom geltenden Recht als „sensibel“, „besondere Datenkategorie“ oder Ähnliches erachtet werden. Hiervon ausgenommen sind insbesondere geschützte Gesundheitsinformationen (PHI) und andere regulierte Gesundheitsdaten. |
 | **RHD** | Daten, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen, oder Patienteninformationen, die von Adobe vertraglich zum Hochladen zugelassen sind. |
 
-## Partner-Ökosystem-Kennzeichnungen {#partner}
+## Partner-Ökosystem-Labels {#partner}
 
-Mit Partner-Ökosystem-Kennzeichnungen werden Daten kategorisiert, die aus externen Quellen in Bezug auf Ihr Unternehmen stammen.
+Mit Partner-Ökosystem-Labels werden Daten kategorisiert, die aus externen Quellen in Bezug auf Ihr Unternehmen stammen.
 
-Diese Kennzeichnung wird verwendet, um die Verwendung von Interessentendaten zu steuern.
+Dieses Label wird verwendet, um die Verwendung von Interessentendaten zu steuern.
 
-| Kennzeichnung | Definition |
+| Label | Definition |
 | --- | --- |
 | **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung getroffen hat, die Sie zum Zugriff auf, zur Verwendung, zur Anzeige und zur Übermittlung der Daten des Drittanbieters in Verbindung mit Experience Platform autorisiert. |
 | **Anreicherung durch Dritte** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
@@ -78,11 +78,11 @@ Diese Kennzeichnung wird verwendet, um die Verwendung von Interessentendaten zu 
 
 ## Anhang
 
-Die folgenden Abschnitte enthalten weitere Informationen zu den verfügbaren Datennutzungskennzeichnungen.
+Die folgenden Abschnitte enthalten weitere Informationen zu den verfügbaren Datennutzungs-Labels.
 
 ### Details zur Kennzeichnung von Verträgen
 
-Die folgenden Abschnitte enthalten detaillierte Informationen zur Implementierung spezifischer „C“-Kennzeichnungen.
+Die folgenden Abschnitte enthalten detaillierte Informationen zur Implementierung spezifischer „C“-Labels.
 
 #### C1 {#c1}
 
@@ -90,7 +90,7 @@ Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exporti
 
 #### C2 {#c2}
 
-Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. Die C2-Kennzeichnung ist restriktiver als [C1](#c1), die nur eine Aggregation und anonyme Daten erfordert, jedoch weniger restriktiv als [C12](#c12), die Datenexporte unabhängig vom Ziel vollständig verbietet.
+Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. Das C2-Label ist restriktiver als [C1](#c1), die nur eine Aggregation und anonyme Daten erfordert, jedoch weniger restriktiv als [C12](#c12), die Datenexporte unabhängig vom Ziel vollständig verbietet.
 
 #### C3 {#c3}
 
@@ -98,7 +98,7 @@ Einige Datenanbieter haben Vertragsklauseln, die die Kombination oder Verwendung
 
 #### C4 {#c4}
 
-C4 umfasst die Kennzeichnungen [C5](#c5), [C6](#c6) und [C7](#c7). Hierbei handelt es sich um eine der restriktivsten Kennzeichnungen, nur [C12](#c12) ist noch restriktiver.
+C4 umfasst die Labels [C5](#c5), [C6](#c6) und [C7](#c7). Hierbei handelt es sich um eine der restriktivsten Labels, nur [C12](#c12) ist noch restriktiver.
 
 #### C5 {#c5}
 
@@ -108,9 +108,9 @@ Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombina
 
 Die Verwendung von Offsite-Daten allein für das Targeting würde wahrscheinlich ebenfalls als interessenbasiertes Targeting gelten, da Offsite-Daten in der Regel gesammelt und verarbeitet werden, um Rückschlüsse auf die Interessen der Benutzenden zu ziehen.
 
-Beim Targeting von Inhalten oder Anzeigen, die ausschließlich Onsite-Daten verwenden, wird das Targeting jedoch in der Regel nicht als interessenbasiertes Targeting eingestuft. Ein Onsite-Targeting, das ansonsten nicht als interessenbasiertes Targeting gilt, wird als zwei unterschiedliche Kennzeichnungen gehandhabt. Die Kennzeichnung C6 befasst sich insbesondere mit dem Onsite-Targeting von Anzeigen und dem Reporting und bezieht sich speziell auf die Auswahl von Anzeigen, deren Bereitstellung und das Reporting, während sich die Kennzeichnung C7 auf die Inhaltsauswahl, die Bereitstellung und das Reporting jeweils auf der Site bezieht (Targeting von Inhalten auf der Site selbst).
+Beim Targeting von Inhalten oder Anzeigen, die ausschließlich Onsite-Daten verwenden, wird das Targeting jedoch in der Regel nicht als interessenbasiertes Targeting eingestuft. Ein Onsite-Targeting, das ansonsten nicht als interessenbasiertes Targeting gilt, wird als zwei unterschiedliche Labels gehandhabt. Das Label C6 befasst sich insbesondere mit dem Onsite-Targeting von Anzeigen und dem Reporting und bezieht sich speziell auf die Auswahl von Anzeigen, deren Bereitstellung und das Reporting, während sich das Label C7 auf die Inhaltsauswahl, die Bereitstellung und das Reporting jeweils auf der Site bezieht (Targeting von Inhalten auf der Site selbst).
 
-Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
+Letztendlich liegt die Interpretation des Labels und die Art und Weise, wie die Nutzung der Daten mit diesem Label erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
 IAB: Personalisierung. Die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service zur späteren Personalisierung von Werbung und/oder Inhalten für Sie in anderen Kontexten, z. B. auf anderen Websites oder in Programmen, im Laufe der Zeit. Normalerweise wird der Inhalt der Site oder des Programms verwendet, um Rückschlüsse auf Ihre Interessen zu ziehen, die die zukünftige Auswahl von Werbung und/oder Inhalten beeinflussen.
 
@@ -118,9 +118,9 @@ DAA: auf dem Online-Verhalten basierende Werbung. Das Sammeln von Daten von eine
 
 #### C6 {#c6}
 
-Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bildern, die auf einer Website oder in einem Programm erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind von Inhalten auf der Site getrennt, welche durch die Kennzeichnung [C7](#c7) abgedeckt werden. Daten mit einer C6-Kennzeichnung können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und der Bereitstellung von Anzeigen auf den unternehmenseigenen Websites oder Apps oder zur Messung der Bereitstellung und der Effektivität solcher Anzeigen. Dazu gehört die Verwendung von zuvor erfassten Onsite-Daten über die Benutzerinteressen, um Anzeigen auszuwählen, Daten darüber zu verarbeiten, welche Anzeigen wann und wo angezeigt wurden, und um festzustellen, ob die Benutzenden irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, wie z. B. das Klicken auf eine Anzeige oder das Tätigen eines Kaufs. In der Regel würden Rückschlüsse auf die Benutzerpräferenzen auf der Basis der Onsite-Aktivitäten der Benutzenden und die Verwendung dieser Präferenzen beim Targeting von Anzeigen auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter der Kennzeichnung C5.](#c5)*
+Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bildern, die auf einer Website oder in einem Programm erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind von Inhalten auf der Site getrennt, welche durch das Labnel [C7](#c7) abgedeckt werden. Daten mit einem C6-Label können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und der Bereitstellung von Anzeigen auf den unternehmenseigenen Websites oder Apps oder zur Messung der Bereitstellung und der Effektivität solcher Anzeigen. Dazu gehört die Verwendung von zuvor erfassten Onsite-Daten über die Benutzerinteressen, um Anzeigen auszuwählen, Daten darüber zu verarbeiten, welche Anzeigen wann und wo angezeigt wurden, und um festzustellen, ob die Benutzenden irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, wie z. B. das Klicken auf eine Anzeige oder das Tätigen eines Kaufs. In der Regel würden Rückschlüsse auf die Benutzerpräferenzen auf der Basis der Onsite-Aktivitäten der Benutzenden und die Verwendung dieser Präferenzen beim Targeting von Anzeigen auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter dem Label C5.](#c5)*
 
-Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
+Letztendlich liegt die Interpretation des Labels und die Art und Weise, wie die Nutzung der Daten mit diesem Label erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
 IAB: 3. Anzeigenauswahl, Bereitstellung, Reporting: Die Erfassung von Informationen und die Kombination mit zuvor gesammelten Informationen, um Anzeigen für Sie auszuwählen und zu übermitteln und die Bereitstellung sowie die Effektivität solcher Anzeigen zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen über Ihre Interessen zur Auswahl von Anzeigen, die Verarbeitung von Daten darüber, welche Anzeigen angezeigt wurden, wie oft sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie irgendwelche Aktionen im Zusammenhang mit der Werbung unternommen haben, wie z. B. das Klicken auf eine Anzeige oder das Tätigen eines Kaufs. Dies umfasst nicht die Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service, um später Werbung und/oder Inhalte in anderen Kontexten, wie Websites oder Programmen, für Sie personalisieren zu können.
 
@@ -128,9 +128,9 @@ DAA: Die auf dem Online-Verhalten basierende Werbung umfasst keine First-Party-A
 
 #### C7 {#c7}
 
-Onsite-Inhalte sind Texte und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck der Inhalte zu bestimmen, einschließlich der Frage, ob ein Inhalt als native Werbung gelten könnte. Die Kennzeichnung C7 ist nicht für Onsite-Anzeigen vorgesehen, da diese mit der Kennzeichnung [C6](#c6) versehen sind. Daten mit einer C7-Kennzeichnung können nicht für das Content-Targeting auf der Site verwendet werden, einschließlich der Auswahl und Bereitstellung von Inhalten auf den unternehmenseigenen Websites oder Apps oder zur Messung der Bereitstellung und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Benutzerinteressen an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte, wie oft, wie lange, wann und wo angezeigt wurden und ob die Benutzenden irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, beispielsweise Inhalte ausgewählt haben. In der Regel würden Rückschlüsse auf die Benutzerpräferenzen auf der Basis der Onsite-Aktivitäten der Benutzenden und die Verwendung dieser Präferenzen beim Content-Targeting auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter der Kennzeichnung C5.](#c5)*
+Onsite-Inhalte sind Texte und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck der Inhalte zu bestimmen, einschließlich der Frage, ob ein Inhalt als native Werbung gelten könnte. Das Label C7 ist nicht für Onsite-Anzeigen vorgesehen, da diese mit dem Label [C6](#c6) versehen sind. Daten mit einem C7-Label können nicht für das Content-Targeting auf der Site verwendet werden, einschließlich der Auswahl und Bereitstellung von Inhalten auf den unternehmenseigenen Websites oder Apps oder zur Messung der Bereitstellung und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Benutzerinteressen an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte, wie oft, wie lange, wann und wo angezeigt wurden und ob die Benutzenden irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, beispielsweise Inhalte ausgewählt haben. In der Regel würden Rückschlüsse auf die Benutzerpräferenzen auf der Basis der Onsite-Aktivitäten der Benutzenden und die Verwendung dieser Präferenzen beim Content-Targeting auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter dem Label C5.](#c5)*
 
-Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
+Letztendlich liegt die Interpretation des Labels und die Art und Weise, wie die Nutzung der Daten mit diesem Label erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
 IAB: 4. Inhaltsauswahl, Bereitstellung, Reporting: Die Erfassung von Informationen und deren Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und die Bereitstellung und Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, einschließlich beispielsweise des Klickens auf Inhalte. Dies umfasst nicht die Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service zur späteren Personalisierung von Inhalten und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Programmen, im Laufe der Zeit.
 
@@ -146,11 +146,11 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 
 #### C10 {#c10}
 
-Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Zielgruppen angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
+Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Das Label C10 wird automatisch auf Zielgruppen angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
 
 #### C11 {#c11}
 
-Mit Adobe Experience Platform Segment Match können Sie aus Experience Platform generierte Zielgruppen mit Datenschutz- und Einverständnisvoreinstellungen abgleichen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke ermöglicht. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
+Mit Adobe Experience Platform Segment Match können Sie aus Experience Platform generierte Zielgruppen mit Datenschutz- und Einverständnisvoreinstellungen abgleichen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke ermöglicht. Das Label „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und das C11-Label entsprechend hinzugefügt haben, wird das Label automatisch vom Segment Match-Arbeitsablauf erzwungen.
 
 #### C12 {#c12}
 
