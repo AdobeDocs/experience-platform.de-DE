@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 77%
+source-wordcount: '208'
+ht-degree: 75%
 
 ---
 
@@ -17,12 +17,14 @@ ht-degree: 77%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
+   - [Erstellen von Zielgruppen-Metadaten](api/create-audience.md)
    - [Zielgruppen](api/audiences.md)
    - [Exportaufträge](api/export-jobs.md)
+   - [Externe Zielgruppen](api/external-audiences.md)
    - [Vorschau und Schätzungen](api/previews-and-estimates.md)
    - [Zeitpläne](api/schedules.md)
    - [Segmentdefinitionen](api/segment-definitions.md)
