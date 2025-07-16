@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 71%
+source-wordcount: '2746'
+ht-degree: 69%
 
 ---
 
@@ -45,7 +45,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
+| ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (wie etwa E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Zuordnung“ im [Zielaktivierungs-Workflow](../../ui/activate-segment-streaming-destinations.md#mapping) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -58,6 +58,7 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 * Sie müssen über einen HTTP-Endpunkt verfügen, der die REST-API unterstützt.
 * Ihr HTTP-Endpunkt muss das Profilschema von Experience Platform unterstützen. Im HTTP-API-Ziel wird keine Umwandlung in ein Payload-Schema von Drittanbietern unterstützt. Im Abschnitt [exportierte Daten](#exported-data) finden Sie ein Beispiel für das Ausgabeschema von Experience Platform.
 * Ihr HTTP-Endpunkt muss Kopfzeilen unterstützen.
+* Ihr HTTP-Endpunkt muss innerhalb von 2 Sekunden antworten, um eine ordnungsgemäße Datenverarbeitung sicherzustellen und Zeitüberschreitungsfehler zu vermeiden.
 
 >[!TIP]
 >
@@ -69,7 +70,7 @@ Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) verwenden, um e
 
 [!DNL mTLS] ist eine End-to-End-Sicherheitsmethode für die gegenseitige Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen austauschen, vor der Datenfreigabe diejenigen sind, für die sie sich ausgeben. [!DNL mTLS] umfasst einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], bei dem der Server auch nach dem Zertifikat des Clients fragt und es an seinem Ende überprüft.
 
-Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für die Server-Adresse, die Sie auf der Seite [Zieldetails](#destination-details) eingeben, [!DNL TLS] Protokolle deaktiviert und nur aktiviert [!DNL mTLS]. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL mTLS] mit Ihrem [!DNL HTTP API]-Ziel verwenden zu können.
+Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für die Server-Adresse, die Sie auf der Seite [Zieldetails](#destination-details) eingeben, [!DNL TLS] Protokolle deaktiviert und nur aktiviert [!DNL mTLS]. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL HTTP API] mit Ihrem [!DNL mTLS]-Ziel verwenden zu können.
 
 ### Abrufen und Überprüfen von Zertifikatdetails {#certificate}
 
@@ -217,7 +218,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
@@ -363,3 +364,7 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
 Experience Platform versucht, in 95 Prozent der Fälle eine Durchsatzlatenz von weniger als 10 Minuten für erfolgreich gesendete Nachrichten mit einer Rate von weniger als 10.000 Anfragen pro Sekunde für jeden Datenfluss an ein HTTP-Ziel zu bieten.
 
 Bei fehlgeschlagenen Anfragen an Ihr HTTP-API-Ziel speichert Experience Platform die fehlgeschlagenen Anfragen und versucht es zweimal erneut, die Anfragen an Ihren Endpunkt zu senden.
+
+## Fehlerbehebung {#troubleshooting}
+
+Um eine zuverlässige Datenbereitstellung zu gewährleisten und Zeitüberschreitungsprobleme zu vermeiden, stellen Sie sicher, dass Ihr HTTP-Endpunkt innerhalb von 2 Sekunden auf Experience Platform-Anfragen reagiert, wie im Abschnitt [Voraussetzungen](#prerequisites) angegeben. Antworten, die länger dauern, führen zu Zeitüberschreitungsfehlern.
