@@ -1,15 +1,20 @@
 ---
 title: Google Customer Match + Display & Video 360-Verbindung
 description: Mit dem Ziel-Connector für Google Customer Match + Display & Video 360 können Sie Ihre Online- und Offline-Daten aus Experience Platform verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Objekten wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
+badge: Eingeschränkte Verfügbarkeit
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
+source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
 workflow-type: tm+mt
-source-wordcount: '2252'
+source-wordcount: '2348'
 ht-degree: 18%
 
 ---
 
 # [!DNL Google Customer Match + Display & Video 360]-Verbindung
+
+>[!NOTE]
+>
+>**Eingeschränkte Verfügbarkeit des Google Customer Match + DV360-Connectors**<br> Während wir den gesamten Lebenszyklus der Reife dieser Integration mit Google durchlaufen, sehen wir Daten, die auf Schwächen in der Implementierung hinweisen, die korrigiert werden müssen, bevor sie in größerem Umfang angewendet werden können. Angesichts dieser Bedenken hat Adobe die Sichtbarkeit dieses Ziels auf eine begrenzte Anzahl von Kunden reduziert. Wir führen intensive Gespräche mit Google, um das Produkterlebnis zu verbessern. Wir verstehen, dass dies enttäuschende Nachrichten sein können, aber wir glauben, dass es der verantwortliche Ansatz ist, unseren Kunden ein qualitativ hochwertiges, zuverlässiges Erlebnis zu gewährleisten.</br>
 
 Verwenden Sie dieses Ziel, um Ihre PII-basierten [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)-Listen von Erstanbietern direkt für [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail] und [!DNL Google Display Network] zu aktivieren.
 
@@ -24,12 +29,12 @@ Mit der neu eingeführten Funktion, [!DNL Customer Matched] Zielgruppen [!DNL Di
 >[!IMPORTANT]
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
-> &#x200B;><br/>
-> &#x200B;>Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
-> &#x200B;><br/>
-> &#x200B;>Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
-> &#x200B;><br/>
-> &#x200B;>Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions)-Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiter verwendet werden können.
+> ><br/>
+> >Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+> ><br/>
+> >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
+> ><br/>
+> >Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions)-Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiter verwendet werden können.
 
 ## Verwendung dieses Ziels
 
@@ -207,7 +212,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* an Ziele benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions) <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](../../assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
