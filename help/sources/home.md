@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 67%
+source-wordcount: '1640'
+ht-degree: 53%
 
 ---
 
@@ -26,19 +26,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Erweiterte Unternehmensquellen {#advanced-enterprise-sources}
-
-Die folgenden Quellen stehen nur [Kunden von Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) zur Verfügung.
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE batch]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE batch]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE batch]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Von Adobe und Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
@@ -46,157 +34,239 @@ Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erst
 
 Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
-## Quellen-Kategorien
+>[!ENDSHADEBOX]
 
-Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in folgende Kategorien unterteilt:
+## Quellkatalog
+
+In den folgenden Abschnitten finden Sie eine Liste aller im Quellkatalog verfügbaren Quellen.
 
 ### Adobe-Anwendungen {#adobe-applications}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Programmen wie Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Programmen wie Adobe Analytics und Adobe Audience Manager. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-- [Übersicht über Adobe Audience Manager-Quellen](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Übersicht über Adobe Analytics Classifications-Datenquellen](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics-Klassifizierungsdaten](connectors/adobe-applications/classifications.md)
    - [Erstellen einer Adobe Analytics Classifications-Datenquellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Übersicht über Adobe Analytics-Report Suite-Datenquellen](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics Report Suite-Daten](connectors/adobe-applications/analytics.md)
    - [Adobe Analytics-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Übersicht über Adobe Campaign Managed Cloud Services-Quellen](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Erstellen einer Quellverbindung zu Adobe Campaign Managed Cloud Services in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Übersicht über Adobe Commerce-Quellen](connectors/adobe-applications/commerce.md)
-- [Übersicht über die Quellen der Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
    - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung und eines Datenflusses für benutzerdefinierte Aktivitätsdaten](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### Erweiterte Unternehmensquellen {#advanced-enterprise-sources}
+
+Die folgenden Quellen stehen nur [Kunden von Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) zur Verfügung.
+
+| Quelle | Kategorie | Aufnahmetyp | Cloud |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Cloud-Speicherplatz | Streaming | Azure, AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Datenbank | Batch | Azure, AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Datenbank | Batch | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Cloud-Speicherplatz | Streaming | Azure, AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Datenbank | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Datenbank | Batch | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Cloud-Speicherplatz | Streaming | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Datenbank | Streaming | Azure, AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | Datenbank | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
+
 ### Werbung {#advertising}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Werbedaten in Experience Platform aufzunehmen.
 
-- [Google Ads](connectors/advertising/ads.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [Google Ads](connectors/advertising/ads.md) | Batch | Azure |
 
-### Analysen {#analytics}
+{style="table-layout:auto"}
 
-Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einer Analyseplattform eines Drittanbieters. Weitere Informationen finden Sie in den folgenden Dokumenten:
+### Analytics {#analytics}
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE batch]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE Streaming]{type=Positive}
+Sie können die folgenden Quellen verwenden, um Analysedaten in Experience Platform aufzunehmen.
+
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Batch | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Streaming | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Cloud-Speicherplatz {#cloud-storage}
 
 Cloud-Speicherquellen können Ihre eigenen Daten in Experience Platform übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden mit der Benutzeroberfläche in den Quellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE batch]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE batch]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE batch]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE batch]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE batch]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE batch]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE batch]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE batch]{type=Informative}
+Sie können die folgenden Quellen verwenden, um Cloud-Speicherdaten in Experience Platform aufzunehmen.
+
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | Batch | Azure, AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | Batch | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | Batch | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | Batch | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Einverständnis und Voreinstellungen {#consent}
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Einverständnis- und Voreinstellungsdaten in Experience Platform aufzunehmen.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### CRM (Customer Relationship Management) {#customer-relationship-management}
 
 CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden können, um die Kundentreue und -bindung zu fördern. Experience Platform unterstützt die Aufnahme von CRM-Daten aus [!DNL Microsoft Dynamics 365] und [!DNL Salesforce]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE batch]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE batch]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE batch]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE batch]{type=Informative}
+Sie können die folgenden Quellen verwenden, um CRM-Daten in Experience Platform aufzunehmen.
+
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Batch | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | Batch | Azure, AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | Batch | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Customer Success {#customer-success}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Kundenerfolgsdaten in Experience Platform aufzunehmen.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE batch]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE batch]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Batch | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Batch | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Datenbank {#database}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE batch]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE batch]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE batch]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE batch]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE batch]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE batch]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE batch]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE batch]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE batch]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE batch]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE batch]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE batch]{type=Informative}
+Sie können die folgenden Quellen verwenden, um Daten aus Ihrer Datenbank in Experience Platform aufzunehmen.
+
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Batch | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Batch | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | Batch | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | Batch | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | Batch | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | Batch | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | Batch | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Daten- und Identitätspartner {#data-partner}
 
-Experience Platform unterstützt die Aufnahme von Daten aus einem Daten- und Identitätspartner. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Daten und Identitätspartnerdaten in Experience Platform aufzunehmen.
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE batch]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE batch]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE batch]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE batch]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE batch]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Batch | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | Batch | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | Batch | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | Batch | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### E-Commerce {#ecommerce}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus E-Commerce-Systemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um E-Commerce-Daten in Experience Platform aufzunehmen.
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE batch]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE batch]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE Streaming]{type=Positive}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Lokales System {#local-system}
 
-Experience Platform unterstützt die Erfassung von Daten aus Ihrem lokalen System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Daten aus Ihrem lokalen System in Experience Platform aufzunehmen.
 
-- [Lokaler Datei-Upload](connectors/local-system/local-file-upload.md)
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [Lokaler Datei-Upload](connectors/local-system/local-file-upload.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Marketing-Automatisierung {#marketing-automation}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Daten zur Marketing-Automatisierung in Experience Platform aufzunehmen.
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE batch]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE batch]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE batch]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE batch]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE batch]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | Streaming | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Streaming | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Zahlungen {#payments}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Zahlungssystemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Zahlungsdaten in Experience Platform aufzunehmen.
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE batch]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | Batch | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Streaming {#streaming}
 
-Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Quellen. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Daten an Experience Platform zu streamen.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE Streaming]{type=Positive}
+| Quelle | Aufnahmetyp | Cloud-Support |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | Streaming | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Protokolle {#protocols}
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Protokollsystemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+Sie können die folgenden Quellen verwenden, um Protokolldaten in Experience Platform aufzunehmen.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE batch]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE batch]{type=Informative}
+| Quelle | Aufnahmetyp | Cloud-Support |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | Batch | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ## Zugriffskontrolle für Quellen zur Datenaufnahme
 
