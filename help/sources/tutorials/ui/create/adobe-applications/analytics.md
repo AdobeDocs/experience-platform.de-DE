@@ -311,5 +311,5 @@ Das folgende Video soll Ihnen helfen, das Aufnehmen von Daten mithilfe des Adobe
 >
 > Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432289?quality=12&learn=on&captions=ger)
 
