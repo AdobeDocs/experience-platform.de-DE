@@ -3,13 +3,13 @@ title: API-Endpunkt für externe Zielgruppen
 description: Erfahren Sie, wie Sie mit der API für externe Zielgruppen Ihre externen Zielgruppen aus Adobe Experience Platform erstellen, aktualisieren, aktivieren und löschen können.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 9%
 
 ---
-
 
 # Endpunkt für externe Zielgruppen
 
@@ -381,7 +381,7 @@ Sie können eine Zielgruppenaufnahme starten, indem Sie eine POST-Anfrage an den
 **API-Format**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Anfrage**
@@ -391,7 +391,7 @@ Mit der folgenden Anfrage wird ein Aufnahmevorgang für die externe Zielgruppe T
 +++ Eine Beispielanfrage zum Starten einer Zielgruppen-Aufnahme.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur Aufnahme
 +++
 
 ## Abrufen eines bestimmten Status der Zielgruppenaufnahme {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Um den folgenden Endpunkt verwenden zu können, müssen Sie sowohl die `audienceId` Ihrer externen Zielgruppe als auch die `runId` Ihrer Aufnahme-Ausführungs-ID haben. Sie können Ihre `audienceId` von einem erfolgreichen Aufruf an den `GET /external-audiences/operations/{OPERATION_ID}`-Endpunkt und Ihre `runId` von einem vorherigen erfolgreichen Aufruf des `POST /external-audience/{AUDIENCE_ID}/runs`-Endpunkts abrufen.
 
 Sie können den Status einer Zielgruppenaufnahme abrufen, indem Sie eine GET-Anfrage an den folgenden Endpunkt senden und dabei sowohl die Zielgruppen- als auch die Ausführungs-IDs angeben.
 
@@ -514,9 +518,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur Aufnahme
 
 +++
 
-## Auflisten der Status der Zielgruppenaufnahme {#list-ingestion-statuses}
+## Auflisten der Aufnahmedurchgänge von Zielgruppen {#list-ingestion-runs}
 
-Sie können alle Aufnahmestatus für die ausgewählte externe Zielgruppe abrufen, indem Sie eine GET-Anfrage an den folgenden Endpunkt senden und dabei die Zielgruppen-ID angeben. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+>[!NOTE]
+>
+>Um den folgenden Endpunkt verwenden zu können, benötigen Sie die `audienceId` Ihrer externen Zielgruppe. Sie können Ihre `audienceId` von einem erfolgreichen Aufruf an den `GET /external-audiences/operations/{OPERATION_ID}`-Endpunkt abrufen.
+
+Sie können alle Aufnahmedurchgänge für die ausgewählte externe Zielgruppe abrufen, indem Sie eine GET-Anfrage an den folgenden Endpunkt senden und dabei die Zielgruppen-ID angeben. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 **API-Format**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
 | `limit` | Die maximale Anzahl der in der Antwort zurückgegebenen Elemente. Dieser Wert kann zwischen 1 und 40 liegen. Standardmäßig ist der Grenzwert auf 20 festgelegt. | `limit=30` |
-| `sortBy` | Die Reihenfolge, in der die zurückgegebenen Elemente sortiert werden. Sie können nach `name` oder nach `ingestionTime` sortieren. Darüber hinaus können Sie ein `-` hinzufügen, um nach **absteigender** Reihenfolge anstelle von **aufsteigender** Reihenfolge zu sortieren. Standardmäßig werden die Elemente nach `ingestionTime` in absteigender Reihenfolge sortiert. | `sortBy=name` |
-| `property` | Ein Filter, um zu bestimmen, welche Zielgruppen-Erfassungsdurchgänge angezeigt werden. Sie können nach den folgenden Eigenschaften filtern: <ul><li>`name`: Hiermit können Sie nach dem Zielgruppennamen filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li><li>`ingestionTime`: Hiermit können Sie nach der Aufnahmezeit filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `>=` oder `<=` vergleichen.</li><li>`status`: Hiermit können Sie nach dem Status des Aufnahmedurchgangs filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | Die Reihenfolge, in der die zurückgegebenen Elemente sortiert werden. Sie können nach `name` oder nach `createdAt` sortieren. Darüber hinaus können Sie ein `-` hinzufügen, um nach **absteigender** Reihenfolge anstelle von **aufsteigender** Reihenfolge zu sortieren. Standardmäßig werden die Elemente nach `createdAt` in absteigender Reihenfolge sortiert. | `sortBy=name` |
+| `property` | Ein Filter, um zu bestimmen, welche Zielgruppen-Erfassungsdurchgänge angezeigt werden. Sie können nach den folgenden Eigenschaften filtern: <ul><li>`name`: Hiermit können Sie nach dem Zielgruppennamen filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li><li>`createdAt`: Hiermit können Sie nach der Aufnahmezeit filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `>=` oder `<=` vergleichen.</li><li>`status`: Hiermit können Sie nach dem Status des Aufnahmedurchgangs filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Anfrage**
 
-Die folgende Anfrage ruft alle Aufnahmestatus für die externe Zielgruppe ab.
+Die folgende Anfrage ruft alle Aufnahmedurchgänge für die externe Zielgruppe ab.
 
-+++ Eine Beispielanfrage, um eine Liste der Status der Zielgruppen-Aufnahme zu erhalten.
++++ Eine Beispielanfrage zum Abrufen einer Liste von Zielgruppen-Erfassungsdurchgängen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Aufnahmestatus für die angegebene externe Zielgruppe zurückgegeben.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Aufnahmedurchgängen für die angegebene externe Zielgruppe zurückgegeben.
 
-+++ Eine Beispielantwort, wenn Sie eine Liste der Status der Zielgruppen-Aufnahme abrufen.
++++ Eine Beispielantwort, wenn Sie eine Liste der Audience-Aufnahmedurchgänge abrufen.
 
 ```json
 {
@@ -573,19 +581,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
 +++
 
 ## Löschen einer externen Zielgruppe {#delete-audience}
+
+>[!NOTE]
+>
+>Um den folgenden Endpunkt verwenden zu können, benötigen Sie die `audienceId` Ihrer externen Zielgruppe. Sie können Ihre `audienceId` von einem erfolgreichen Aufruf an den `GET /external-audiences/operations/{OPERATION_ID}`-Endpunkt abrufen.
 
 Sie können eine externe Zielgruppe löschen, indem Sie eine DELETE-Anfrage an den folgenden Endpunkt stellen und dabei die Zielgruppen-ID angeben.
 
