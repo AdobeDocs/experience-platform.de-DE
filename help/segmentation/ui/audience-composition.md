@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 79%
+source-wordcount: '2362'
+ht-degree: 78%
 
 ---
 
@@ -129,7 +129,7 @@ Um einen Block **[!UICONTROL Ausschließen]** hinzuzufügen, wählen Sie das Sym
 
 ![Die Option „Ausschließen“ ist ausgewählt.](../images/ui/audience-composition/add-exclude-block.png)
 
-Der Block **[!UICONTROL Ausschließen]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zum Ausschluss in der rechten Leiste angezeigt. Dazu gehören die Kennzeichnung und der Ausschlusstyp des Blocks. Sie können [nach Zielgruppe](#exclude-audience) oder [nach Attribut](#exclude-attribute) ausschließen.
+Der Block **[!UICONTROL Ausschließen]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zum Ausschluss in der rechten Leiste angezeigt. Dazu gehören das Label und der Ausschlusstyp des Blocks. Sie können [nach Zielgruppe](#exclude-audience) oder [nach Attribut](#exclude-attribute) ausschließen.
 
 ![Der Block „Ausschließen“, in dem die beiden verfügbaren Ausschlusstypen hervorgehoben sind.](../images/ui/audience-composition/exclude.png)
 
@@ -198,7 +198,7 @@ Um einen Block des Typs **[!UICONTROL Anreichern]** hinzuzufügen, wählen Sie d
 
 ![Die Option [!UICONTROL Anreichern] ist ausgewählt.](../images/ui/audience-composition/add-enrich-block.png)
 
-Der Block **[!UICONTROL Anreichern]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören der Titel des Blocks und der Anreicherungsdatensatz.
+Der Block **[!UICONTROL Anreichern]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören das Label des Blocks und der Anreicherungsdatensatz.
 
 Um den Datensatz auszuwählen, mit dem die Zielgruppe angereichert werden soll, wählen Sie das Symbol ![Filter](/help/images/icons/project-edit.png) aus.
 
@@ -276,7 +276,7 @@ Um einen Block **[!UICONTROL Rang]** hinzuzufügen, wählen Sie das Symbol **+**
 
 ![Die Option „Rang“ ist ausgewählt.](../images/ui/audience-composition/add-rank-block.png)
 
-Bei der Auswahl des Blocks werden Details zum Rang in der rechten Leiste angezeigt, einschließlich der Kennzeichnung des Blocks, des nach Rang zu ordnenden Attributs, der Rangreihenfolge und eines Umschalters zur Begrenzung der Anzahl der nach Rang zu ordnenden Profile.
+Bei der Auswahl des Blocks werden Details zum Rang in der rechten Leiste angezeigt, einschließlich des Labels des Blocks, des nach Rang zu ordnenden Attributs, der Rangreihenfolge und eines Umschalters zur Begrenzung der Anzahl der nach Rang zu ordnenden Profile.
 
 ![Der Block „Rang“ ist mit zugehörigen Details hervorgehoben.](../images/ui/audience-composition/rank.png)
 
@@ -310,6 +310,10 @@ Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränke
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Andere Profile"
 >abstract="Die Option „Sonstige Profile“ ermöglicht Ihnen, einen zusätzlichen Pfad mit den verbleibenden Profilen zu erstellen, die keiner der in den anderen Pfaden angegebenen Bedingungen entsprechen."
+
+>[!NOTE]
+>
+>Um den Block **[!UICONTROL Aufspaltung]** verwenden zu können, **Sie** 10 Profile in Ihrer Zielgruppe haben.
 
 Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen.
 
