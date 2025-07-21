@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
+source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
 workflow-type: tm+mt
-source-wordcount: '4644'
+source-wordcount: '4678'
 ht-degree: 50%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 > 
-> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[ erforderlich](/help/access-control/home.md#permissions).
+> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **** Segmente anzeigen[ erforderlich](/help/access-control/home.md#permissions).
 > * Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
@@ -285,6 +285,10 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 
 1. Das für den Export ausgewählte Feld wird jetzt in der Zuordnungsansicht angezeigt. Bei Bedarf können Sie den Namen des Headers in der exportierten Datei bearbeiten. Wählen Sie dazu das Symbol im Zielfeld aus.
 
+   >[!NOTE]
+   >
+   >Punkte (`.`) werden in Feldnamen in exportierten Dateien nicht unterstützt. Wenn ein Feldname Punkte enthält (z. B. `person.name.firstName`), wird jeder Punkt durch einen Unterstrich (`_`) im Namen der exportierten Spalte ersetzt. `person.name.firstName` wird beispielsweise in der exportierten Datei `person_name_firstName`.
+
    ![Modales Fenster mit Profilattributen, die an das Ziel exportiert werden können](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
 1. Geben Sie auf der Seite **[!UICONTROL Zielfeld auswählen]** den gewünschten Namen für den Header in der exportierten Datei ein und wählen Sie **[!UICONTROL Auswählen]**.
@@ -462,7 +466,7 @@ Adobe empfiehlt das Auswählen eines Identitäts-Namespace, z. B. einer [!DNL CR
 
 ### Deduplizierungsverhalten für Profile mit demselben Zeitstempel {#deduplication-same-timestamp}
 
-Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Wichtige Aspekte
 
@@ -474,9 +478,9 @@ Betrachten Sie die folgenden Daten, wobei der Deduplizierungsschlüssel die `Ema
 
 | E-Mail* | first_name | last_name | Zeitstempel |
 |---|---|---|---|  
-| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | freimütig | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Morris | 12.10.2024:50 |
+| `test1@test.com` | John | Doe | 12.10.2024:50 |
+| `test2@test.com` | freimütig | Smith | 12.10.2024:50 |
 
 {style="table-layout:auto"}
 
@@ -484,8 +488,8 @@ Nach der Deduplizierung enthält die Exportdatei Folgendes:
 
 | E-Mail* | first_name | last_name | Zeitstempel |
 |---|---|---|---|  
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | freimütig | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 12.10.2024:50 |
+| `test2@test.com` | freimütig | Smith | 12.10.2024:50 |
 
 {style="table-layout:auto"}
 
