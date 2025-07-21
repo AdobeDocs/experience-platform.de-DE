@@ -61,7 +61,7 @@ Wenn Sie die Adobe Target-Verbindung ohne Verwendung eines Datenstroms konfiguri
 Vergewissern Sie sich in Adobe Target, dass Ihre Benutzerin bzw. Ihr Benutzer über Folgendes verfügt:
 
 * Zugriff auf den [Standardarbeitsbereich](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
-* Die **genehmigende**[rolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
+* Die **genehmigende**&#x200B;[rolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
 Weitere Informationen zum Gewähren von Berechtigungen für [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) und für [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
@@ -72,8 +72,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 >[!IMPORTANT]
 >
 >Beim Aktivieren *Edge-Zielgruppen für Anwendungsfälle mit Personalisierung der gleichen Seite und der nächsten Seite* müssen die Zielgruppen ** eine [Active-On-Edge-Zusammenführungsrichtlinie) ](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge](../../../segmentation/methods/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar sind.  Lesen Sie mehr über [alle verfügbaren Anwendungsfälle](#parameter) basierend auf dem Implementierungstyp.
->>Wenn Sie Edge-Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Adobe Target-Zielen zuordnen, werden diese Zielgruppen nicht für Anwendungsfälle in Echtzeit und auf der nächsten Seite ausgewertet.
->>Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
+>&#x200B;>Wenn Sie Edge-Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Adobe Target-Zielen zuordnen, werden diese Zielgruppen nicht für Anwendungsfälle in Echtzeit und auf der nächsten Seite ausgewertet.
+>&#x200B;>Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
@@ -140,8 +140,8 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 >[!NOTE]
 >
 >Bei Verwendung eines benutzerdefinierten Target-Arbeitsbereichs für [Personalisierung der gleichen Seite und der nächsten Seite mit ](../../ui/activate-edge-personalization-destinations.md)) werden nur [ausgewählten Zielgruppen](../../ui/activate-edge-personalization-destinations.md#select-audiences) an den ausgewählten Target-Arbeitsbereich gesendet. Die [zugeordneten Attribute](../../ui/activate-edge-personalization-destinations.md#mapping) werden an den standardmäßigen Target-Arbeitsbereich gesendet.
->><br>
->>Dieses Verhalten wird sich in einer zukünftigen Aktualisierung ändern.
+>&#x200B;><br>
+>&#x200B;>Dieses Verhalten wird sich in einer zukünftigen Aktualisierung ändern.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -153,7 +153,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](../../ui/activate-edge-personalization-destinations.md) unter Aktivieren von Zielgruppen für Edge-Personalisierungsziele .
 
