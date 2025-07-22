@@ -3,10 +3,10 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 70%
+source-wordcount: '1176'
+ht-degree: 69%
 
 ---
 
@@ -50,6 +50,11 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der eine Liste der verfügbaren Ziele und das hervorgehobene Steuerelement „Neues Ziel konfigurieren“ dargestellt sind.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Beim Ziel authentifizieren {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Kontoname"
+>abstract="Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie mehrere Verbindungen mit demselben Zieltyp haben."
 
 Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin, sich bei der Zielplattform zu authentifizieren.
 
