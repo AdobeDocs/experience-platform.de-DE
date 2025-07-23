@@ -4,9 +4,9 @@ title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
 description: Gehen Sie wie in diesem Artikel beschrieben vor, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 10%
 
 ---
@@ -19,10 +19,9 @@ In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Ak
 * [Hinzufügen zusätzlicher Zielgruppen](#add-audiences) zu Aktivierungsdatenflüssen
 * [Zugeordnete Attribute und Identitäten bearbeiten](#edit-mapped-attributes)
 * [Bearbeiten des Aktivierungsplans und der Exporthäufigkeit](#edit-schedule-frequency)
-* [Hinzufügen zusätzlicher Datensätze](#add-datasets) zu Aktivierungs-Workflows
+* [Hinzufügen zusätzlicher Datensätze](#add-datasets) zum Aktivierungs-Workflow
+* [Zugriffskennzeichnungen anwenden](#apply-access-labels) auf exportierte Daten
 * [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Durchsuchen von Aktivierungsdatenflüssen {#browse-activation-dataflows}
 
@@ -100,8 +99,6 @@ Der Aktivierungs-Workflow unterscheidet sich je nach Zieltyp geringfügig. Weite
 * [Aktivieren von Zielgruppen für Batch-Profil-](./activate-batch-profile-destinations.md) (z. B. Amazon S3 oder Oracle Eloqua);
 * [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
 
-
-
 ## Hinzufügen von Datensätzen zu einem Aktivierungsdatenfluss {#add-datasets}
 
 Wählen **[!UICONTROL Datensätze exportieren]** in der rechten Leiste aus, um zusätzliche Datensätze auszuwählen, die an Ihr Ziel exportiert werden sollen. Diese Option führt Sie zum [Workflow für den Datensatzexport](export-datasets.md).
@@ -112,13 +109,11 @@ Wählen **[!UICONTROL Datensätze exportieren]** in der rechten Leiste aus, um z
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
 
+## Anwenden von Zugriffs-Labels {#apply-access-labels}
 
+Wählen Sie **[!UICONTROL Zugriffskennzeichnungen anwenden]** aus, um die Datennutzungskennzeichnungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [ in der Dokumentation ](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Namen und Beschreibungen von Aktivierungsdatenflüssen bearbeiten {#edit-names-descriptions}
 
