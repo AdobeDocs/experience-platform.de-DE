@@ -4,9 +4,9 @@ description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience P
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1358'
 ht-degree: 17%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 29. Juli 2025**
 
@@ -53,10 +53,9 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung der Data Landing Zone (DLZ)-Zielverschlüsselung | Es wurde Verschlüsselungsunterstützung für das Data Landing Zone-Ziel hinzugefügt. Sie können jetzt RSA-formatierte öffentliche Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen, was die Sicherheit für den Export sensibler Daten verbessert. |
-| Erweiterte Datenstrominformationen für Edge-Ziele | Verbesserte Informationen in der rechten Leiste für Adobe Target- und benutzerdefinierte Personalization-Ziele zeigen jetzt sowohl Datenstromnamen als auch Datenstrom-ID-Felder an, bieten eine klarere Sichtbarkeit der zugehörigen Datenstromkonfigurationen und reduzieren die Verwirrung bei der Überprüfung vorhandener Datenflüsse. Der **[!UICONTROL Datenstrom-ID]**-Selektor im Zielkonfigurationsbildschirm wurde zu **[!UICONTROL Datenstrom]** aktualisiert, um die Klarheit in der Benutzeroberfläche zu verbessern. |
-| Sichtbarkeit von Marketing-Aktionen bei der Zielauswahl | Marketing-Aktionen werden jetzt bei der Konfiguration eines Datenflusses in der rechten Leiste des Schritts [!UICONTROL Ziel auswählen] angezeigt, sodass Änderungen an Marketing-Aktionen sofort sichtbar sind, ohne dass eine Navigation zur Ansichtsseite erforderlich ist. Diese Verbesserung verbessert das Benutzererlebnis, da die Konfiguration von Marketing-Aktionen während der Zieleinrichtung einfacher überprüft werden kann. |
-| Bearbeiten von Marketing-Aktionen für Ziele | Sie können jetzt Marketing-Aktionen für vorhandene Ziele bearbeiten. |
+| Erweiterte Datenstrominformationen für Edge-Ziele | Verbesserte Informationen in der rechten Leiste für Adobe Target- und benutzerdefinierte Personalization-Ziele zeigen jetzt den Datenstromnamen an, bieten eine klarere Sichtbarkeit der zugehörigen Datenstromkonfigurationen und reduzieren die Verwirrung bei der Überprüfung vorhandener Datenflüsse. Der **[!UICONTROL Datenstrom-ID]**-Selektor im Zielkonfigurationsbildschirm wurde zu **[!UICONTROL Datenstrom]** aktualisiert, um die Klarheit in der Benutzeroberfläche zu verbessern. |
+| Sichtbarkeit von Marketing-Aktionen bei der Zielauswahl | Marketing-Aktionen werden jetzt in der rechten Leiste der Registerkarte **[!UICONTROL Durchsuchen]** und auf der Seite **[!UICONTROL Datenflussausführungen]** angezeigt, sodass Sie Änderungen an Marketing-Aktionen sofort sehen können, ohne dass eine Navigation zur Ansichtsseite erforderlich ist. Diese Verbesserung verbessert das Benutzererlebnis, da die Konfiguration von Marketing-Aktionen während der Zieleinrichtung einfacher überprüft werden kann. |
+| (Eingeschränkte Beta-Version) Bearbeiten von Marketing-Aktionen für Ziele | Sie können jetzt Marketing-Aktionen für vorhandene Ziele bearbeiten. Diese Funktion befindet sich in einer begrenzten Beta-Phase. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff zu erhalten. |
 | Kontonamen und Beschreibungen für Zielverbindungen | Sie können jetzt beim Herstellen einer Verbindung zu Zielen Kontonamen und Beschreibungen hinzufügen, um eine bessere Verwaltung von Zielen mit mehreren Konten zu ermöglichen. |
 
 **Fehlerbehebungen**
