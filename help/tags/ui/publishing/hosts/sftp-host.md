@@ -2,10 +2,10 @@
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 34%
+source-wordcount: '815'
+ht-degree: 37%
 
 ---
 
@@ -37,27 +37,11 @@ Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels ver
 
 ### Auf die Zulassungsliste setzen Experience Platforms-IP-Adressen
 
->[!IMPORTANT]
->
-> Am 23. Juni 2025 aktualisiert Adobe Launch externe IP-Adressen, die zur Unterstützung der SFTP-Host-Typ- und Callback-API-Funktionen verwendet werden. Um eine dieser Funktionen weiterhin zu verwenden, stellen Sie sicher, dass Ihre Firewall-Regeln Traffic von den neuen IP-Adressen zulassen.
->
-> Um den unterbrechungsfreien Zugriff aufrechtzuerhalten, empfehlen wir, die neuen IP-Adressen jetzt hinzuzufügen und die alten nach dem 23. Juni 2025 zu entfernen.
->
->**Alte IP-Adressen:**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Neue IP-Adressen:**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die innerhalb Ihrer Unternehmens-Firewall verwendet werden, damit Experience Platform Ihren SFTP-Server erreichen und eine Verbindung zu ihm herstellen kann. Diese IP-Adressen lauten:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
