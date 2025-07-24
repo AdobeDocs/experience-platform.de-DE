@@ -2,17 +2,29 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
-ht-degree: 66%
+source-wordcount: '2733'
+ht-degree: 65%
 
 ---
 
-# Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
+
+# Versionshinweise zur Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Version 2.31.0 – Freitag, 24. Juli 2025
+
+**Neue Funktionen**
+
+- Enthält [Version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) des Adobe Experience Platform Web SDK.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem ein Fehler ausgegeben wird, wenn eine Datenstrom-Überschreibung über ein Datenelement aktiviert wird.
+- Es wurde ein Problem behoben, bei dem leere `idSyncContainerId`-Überschreibungen einen Fehler auslösten.
+- Beim Auflösen von Mediendatenelementen ist jetzt das Ereignisobjekt eingeschlossen.
 
 ## Version 2.30.1 – Mittwoch, 27. Mai 2025
 
@@ -326,7 +338,7 @@ Enthält Version 2.6.1 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.6.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Kennzeichnungen, Beschreibungen und Fehlermeldungen mit dem Begriff „Edge-Konfiguration“ wurden gemäß der neuesten Adobe Experience Platform-Terminologie so geändert, dass stattdessen der Begriff „Datenstrom“ verwendet wird.
+- Labels, Beschreibungen und Fehlermeldungen mit dem Begriff „Edge-Konfiguration“ wurden gemäß der neuesten Adobe Experience Platform-Terminologie so geändert, dass stattdessen der Begriff „Datenstrom“ verwendet wird.
 - In der Erweiterungskonfigurationsansicht wurde Unterstützung für die Verarbeitung einer großen Anzahl von Datenströmen und Datenstromumgebungen hinzugefügt.
 - In der XDM-Objekt-Datenelementansicht wurde Unterstützung für die Verarbeitung einer großen Anzahl von Schemata hinzugefügt.
 - Es wurde der Ereignistyp „Versandereignis abgeschlossen“ hinzugefügt, mit dem eine Regel ausgeführt werden kann, nachdem ein Ereignis an den Server gesendet und eine Antwort empfangen wurde. Zusätzliche Dokumentation wird in Kürze verfügbar sein.

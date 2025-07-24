@@ -3,18 +3,31 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
-ht-degree: 62%
+source-wordcount: '2438'
+ht-degree: 61%
 
 ---
 
 
-# Versionshinweise
+# Versionshinweise zu Web SDK
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.28.0 – Freitag, 24. Juli 2025
+
+**Neue Funktionen**
+
+- Es wurde Unterstützung für Adobe Journey Optimizer-Disqualifikationsregeln hinzugefügt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Fehlerkorrektur - Im [Media Analytics-Tracker](commands/getmediaanalyticstracker.md) akzeptiert die `length`-Eigenschaft des Medienobjekts jetzt korrekt ungültige Datentypen.
+- Verbesserte [Identitätsverwaltung](identity/overview.md) Fehlerbehandlung, um die Versprechensablehnung ordnungsgemäß zu verarbeiten, wenn die Identitätssuche fehlschlägt.
+- Es wurde ein Problem behoben[ bei dem ](personalization/rendering-personalization-content.md)Personalisierungsinhalt) mit HTML-Inhaltselementen nicht gerendert werden konnten und ein Fehler im Zusammenhang mit einer fehlenden `renderStatusHandler` auftrat.
+- Activity Map (URL[Sammlung) wurde korrigiert](commands/configure/clickcollectionenabled.md) um Nicht-HTTP-URLs ordnungsgemäß zu verarbeiten.
 
 ## Version 2.27.0 – Mittwoch, 20. Mai 2025
 
@@ -143,7 +156,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Unterstützung für das Rendern von In-App-Nachrichten von Adobe Journey Optimizer wurde hinzugefügt.
 - Es wurde Unterstützung für [Ereignisse oben und unten auf der Seite](use-cases/top-bottom-page-events.md) hinzugefügt.
-- Dem `sendEvent`-Befehl wurde [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) Option hinzugefügt, um das Anfordern des seitenweiten Bereichs und der Standardoberfläche zu steuern.
+- Dem [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md)-Befehl wurde `sendEvent` Option hinzugefügt, um das Anfordern des seitenweiten Bereichs und der Standardoberfläche zu steuern.
 
 **Fehlerbehebungen und Verbesserungen**
 
