@@ -18,7 +18,7 @@ Lesen Sie das folgende Handbuch, um zu erfahren, wie Sie mit dem Monitoring-Dash
 
 ## Das Dashboard zur Aufnahme von Streaming-Profilen
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL &#x200B; „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
+Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL  „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
 
 * **Durchsatz**: Wählen Sie **[!UICONTROL Durchsatz]** aus, um Informationen zur Datenmenge anzuzeigen, die Experience Platform in einem konfigurierten Zeitraum verarbeitet. Beziehen Sie sich auf diese Metrik, um die Effizienz und Kapazität Ihres Systems zu bewerten.
    * **Kapazität**: Die maximale Datenmenge, die Ihre Sandbox unter definierten Bedingungen verarbeiten kann.
