@@ -76,7 +76,7 @@ Im Rahmen des neuen Architekturupgrades können Erlebnisereignisfilter nicht meh
 Verwenden Sie zum Erreichen derselben Zielgruppenlogik den Ansatz nach Segmenten:
 
 1. Zielgruppe für Erlebnisereignisse erstellen: Definieren Sie die Verhaltensbedingung separat. Beispiel: „Personen, die die Seite „Preise“ in den letzten drei Tagen besucht haben.“
-2. Erstellen einer Zielgruppe mit mehreren Entitäten mit B2B-Attributen: Verweisen Sie auf die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **** ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
+2. Erstellen einer Zielgruppe mit mehreren Entitäten mit B2B-Attributen: Verweisen Sie auf die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **&#x200B;**&#x200B;ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
 
 Nach Abschluss des Upgrades müssen alle neuen Zielgruppen mit mehreren Entitäten mit B2B-Attributen und Erlebnisereignissen mithilfe des Segmentansatzes erstellt werden. Darüber hinaus müssen Sie die Zielgruppenzugehörigkeit überprüfen, um das erwartete Verhalten sicherzustellen.
 
