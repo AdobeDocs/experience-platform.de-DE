@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 91%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 91%
       - [SFTP-Connector](connectors/cloud-storage/sftp.md)
       - [Amazon S3- und Azure Blob-Connector](connectors/cloud-storage/blob-s3.md)
    - Consent &amp; Preferences {#consent}
+      - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [OneTrust-Integration](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 91%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 und Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Consent &amp; Preferences {#consent}
+         - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [OneTrust-Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
