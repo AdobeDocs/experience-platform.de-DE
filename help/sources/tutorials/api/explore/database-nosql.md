@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Drittanbieterdatenbank;Datenbankfluss-Service
-solution: Experience Platform
 title: Erkunden einer Datenbank mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um den Inhalt und die Dateistruktur einer Drittanbieterdatenbank zu untersuchen.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 46e1a62e558a209ffed4a693cfd71ad5e76d7d98
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 38%
+source-wordcount: '386'
+ht-degree: 9%
 
 ---
 
@@ -19,38 +17,18 @@ In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um den Inhalt und
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit einer Drittanbieterdatenbank verbinden zu können.
 
-### Sammeln erforderlicher Anmeldedaten
+### Verwenden von Experience Platform-APIs
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindung mit der Drittanbieterdatenbank, aus der Sie Daten aufnehmen möchten. Eine gültige Verbindung umfasst die Verbindungsspezifikations-ID und die Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und zum Abrufen dieser Werte finden Sie in der [Übersicht über Quell-Connectoren](./../../../home.md#database).
-
-### Lesen von Beispiel-API-Aufrufen
-
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
-
-### Sammeln von Werten für erforderliche Kopfzeilen
-
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen E[!DNL xperience Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {ORG_ID}`
-
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Experience Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Experience Platform] aufnehmen möchten.
+Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen untersuchen, indem Sie GET-Anfragen ausführen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in Experience Platform aufnehmen möchten.
 
 **API-Format**
 
@@ -75,7 +53,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Datenbank zurück. Suchen Sie die Tabelle, die Sie in [!DNL Experience Platform] importieren möchten, und notieren Sie sich ihre `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Array von Tabellen aus Ihrer Datenbank zurück. Suchen Sie die Tabelle, die Sie in Experience Platform importieren möchten, und notieren Sie sich die `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
 
 ```json
 [
@@ -146,10 +124,14 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
                 }
             }
         ]
+    },
+    "data": [],
+    "cdcMetadata": {
+      "columnDetected": true
     }
 }
 ```
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Datenbank erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrer Datenbank zu erfassen und in Experience Platform zu ](../collect/database-nosql.md).
+In diesem Tutorial haben Sie Ihre Datenbank untersucht, den Pfad der Tabelle gefunden, die Sie in Experience Platform aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrer Datenbank zu erfassen und in Experience Platform zu ](../collect/database-nosql.md).

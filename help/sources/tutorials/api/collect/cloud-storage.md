@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Cloud-Speicherquellen mithilfe der Flow
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Einbringen dieser Daten in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 59%
+source-wordcount: '1792'
+ht-degree: 57%
 
 ---
 
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Aufnahme definiert. Die unterstützten komprimierten Dateitypen sind: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die `compressionType`-Eigenschaft kann nur verwendet werden, wenn durch Trennzeichen getrennte oder JSON-Dateien aufgenommen werden. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen gesamten Ordner.  **Hinweis**: Sie können ein Sternchen anstelle des Dateinamens verwenden, um die Aufnahme eines gesamten Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten `/acme/summerCampaign/` auf. |
 | `params.type` | Der Dateityp der aufgenommenen Quelldatendatei. Verwenden Sie den Typ `file`, um eine einzelne Datei aufzunehmen, und den Typ `folder`, um einen ganzen Ordner aufzunehmen. |
+| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist oder nicht. Diese Eigenschaft wird von den folgenden Cloud-Speicherquellen unterstützt: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Weitere Informationen finden Sie im Handbuch unter Verwenden von [Datenerfassung in Quellen ändern](../change-data-capture.md). |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrer spezifischen Cloud-Speicherquelle verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
