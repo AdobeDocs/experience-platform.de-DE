@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2438'
-ht-degree: 61%
+source-wordcount: '2486'
+ht-degree: 60%
 
 ---
 
@@ -28,6 +28,10 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 - Verbesserte [Identitätsverwaltung](identity/overview.md) Fehlerbehandlung, um die Versprechensablehnung ordnungsgemäß zu verarbeiten, wenn die Identitätssuche fehlschlägt.
 - Es wurde ein Problem behoben[ bei dem ](personalization/rendering-personalization-content.md)Personalisierungsinhalt) mit HTML-Inhaltselementen nicht gerendert werden konnten und ein Fehler im Zusammenhang mit einer fehlenden `renderStatusHandler` auftrat.
 - Activity Map (URL[Sammlung) wurde korrigiert](commands/configure/clickcollectionenabled.md) um Nicht-HTTP-URLs ordnungsgemäß zu verarbeiten.
+
+**Bekannte Probleme**
+
+- Der [benutzerdefinierte Build](/help/web-sdk/install/create-custom-build.md)-Prozess mit `npx @adobe/alloy` funktioniert derzeit nicht wie erwartet in Version 2.28.0. Alle Komponenten sind unabhängig von den ausgewählten Modulen im generierten Build enthalten. Dieses Problem hat keine Auswirkungen auf die standardmäßige JavaScript-Datei, die im CDN verfügbar ist. Es wird eine Fehlerbehebung durchgeführt.
 
 ## Version 2.27.0 – Mittwoch, 20. Mai 2025
 

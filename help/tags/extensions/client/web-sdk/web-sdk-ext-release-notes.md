@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 65%
+source-wordcount: '2801'
+ht-degree: 64%
 
 ---
 
@@ -25,6 +25,11 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 - Es wurde ein Problem behoben, bei dem ein Fehler ausgegeben wird, wenn eine Datenstrom-Überschreibung über ein Datenelement aktiviert wird.
 - Es wurde ein Problem behoben, bei dem leere `idSyncContainerId`-Überschreibungen einen Fehler auslösten.
 - Beim Auflösen von Mediendatenelementen ist jetzt das Ereignisobjekt eingeschlossen.
+
+**Bekannte Probleme**
+
+- Nach der Veröffentlichung der Version 2.31.0 wurde ein Problem mit dem Build-Prozess [Benutzerdefinierte Komponenten](/help/web-sdk/install/create-custom-build.md) festgestellt. Während benutzerdefinierte Builds weiterhin funktionieren, sind alle Komponenten derzeit im Build enthalten, was unabhängig von der Komponentenauswahl zu einem Paket in voller Größe führt. Eine Lösung für dieses Problem wird derzeit entwickelt. Wenn Sie sich zur Minimierung der Build-Größe auf die Auswahl benutzerdefinierter Komponenten verlassen, wird empfohlen, auf eine zukünftige Version zu warten.
+
 
 ## Version 2.30.1 – Mittwoch, 27. Mai 2025
 
