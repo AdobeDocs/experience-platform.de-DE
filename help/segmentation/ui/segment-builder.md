@@ -131,7 +131,7 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Externe Zielgruppen"
 >abstract="Zielgruppen, die über die Registerkarte Zielgruppen importiert wurden, werden jetzt automatisch über das Zielgruppenportal angezeigt. Zielgruppen, die von Audience Manager, Customer Journey Analytics, Segment Match und anderen benutzerdefinierten Integrationen aufgenommen werden, sind ohne weiteres verfügbar, ohne dass zuerst Segment Builder konfiguriert werden muss. Seit dem 1. September 2025 werden alle Zielgruppen ausschließlich über die einheitliche Suche abgerufen, und der vorherige Workflow wird nicht mehr unterstützt."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Zielgruppen-Portal"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/audience-portal#list" text="Zielgruppen-Portal"
 
 >[!NOTE]
 >
