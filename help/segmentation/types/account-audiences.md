@@ -53,7 +53,7 @@ Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimm
 >
 >Account-Zielgruppen werden mithilfe der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
 
-Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite]** Durchsuchen[!UICONTROL  die Option ]Zielgruppe erstellen“ aus.
+Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite]** Durchsuchen[!UICONTROL &#x200B; die Option &#x200B;]Zielgruppe erstellen“ aus.
 
 ![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] auf der Seite zum Durchsuchen von Kontozielgruppen ist hervorgehoben.](../images/types/account/select-create-audience.png)
 
@@ -79,7 +79,7 @@ Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![Einstellungssymb
 
 ![Das Einstellungssymbol ist im Abschnitt Felder hervorgehoben.](../images/types/account/select-settings.png)
 
-Wählen Sie auf [!UICONTROL  Registerkarte ]Einstellungen **[!UICONTROL im Abschnitt]** Beziehung der Felder **[!UICONTROL die Option]** Beziehungsselektoren anzeigen“ aus.
+Wählen Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Einstellungen **[!UICONTROL im Abschnitt]** Beziehung der Felder **[!UICONTROL die Option]** Beziehungsselektoren anzeigen“ aus.
 
 ![Der Umschalter Beziehungsselektoren anzeigen ist im Abschnitt Beziehung von Feldern auf der Registerkarte Einstellungen ausgewählt.](../images/types/account/show-relation-selectors.png)
 
