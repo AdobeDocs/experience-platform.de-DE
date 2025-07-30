@@ -2,16 +2,16 @@
 title: Verbinden Ihres Salesforce-Kontos über die Benutzeroberfläche von Experience Platform
 description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche in Experience Platform übertragen.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 17%
+source-wordcount: '1003'
+ht-degree: 13%
 
 ---
 
 # Verbinden Ihres [!DNL Salesforce]-Kontos mit Experience Platform über die Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Salesforce]-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche von Experience Platform in Adobe Experience Platform übertragen.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Konto verbinden und Ihre CRM-Daten über die Benutzeroberfläche von Experience Platform in Adobe Experience Platform importieren.
 
 ## Erste Schritte
 
@@ -58,6 +58,7 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihr [!DNL 
 | Client-ID | Die Client-ID wird im Rahmen der OAuth2-Authentifizierung zusammen mit dem Client-Geheimnis verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre Anwendung für die [!DNL Salesforce] identifizieren. |
 | Client-Geheimnis | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre Anwendung für die [!DNL Salesforce] identifizieren. |
 | API-Version | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
+| Gelöschte Objekte einschließen | Ein boolescher Wert, der bestimmt, ob vorläufig gelöschte Datensätze einbezogen werden sollen. Wenn dieser Wert auf „true“ festgelegt ist, können vorläufig gelöschte Datensätze in die [!DNL Salesforce]-Abfrage aufgenommen und aus Ihrem -Konto in Experience Platform aufgenommen werden. Wenn Sie Ihre Konfiguration nicht angeben, wird dieser Wert standardmäßig auf `false` festgelegt. |
 
 Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie im [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -67,13 +68,13 @@ Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie 
 
 ## Verbinden Ihres [!DNL Salesforce]-Kontos
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Navigieren Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Menü zu]** Quellen“, um den Arbeitsbereich [!UICONTROL Quellen] zu öffnen. Verwenden Sie den Katalog auf der linken Seite, um Kategorien zu durchsuchen, oder verwenden Sie die Suchleiste, um schnell die Quelle zu finden, die Sie verbinden möchten.
 
 Wählen Sie **[!DNL Salesforce]** unter der Kategorie *[!UICONTROL CRM]* und dann **[!UICONTROL Daten hinzufügen]**.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Im Quellkatalog wird &quot;**[!UICONTROL &quot; angezeigt]** wenn kein Konto verbunden ist, oder &quot;**[!UICONTROL hinzufügen]** wenn ein Konto bereits authentifiziert ist.
 
 ![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Salesforce-Quellkarte.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Wählen Sie für Client-Anmeldeinformationen für OAuth 2 die Option **[!UICONTR
 * Client-ID
 * Client-Geheimnis
 * API-Version
+* Objekte einschließen/löschen
 
 Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]**.
 
-![Die OAuth-Schnittstelle zur Erstellung von Salesforce-Konten.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Die OAuth-Schnittstelle zur Erstellung von Salesforce-Konten.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

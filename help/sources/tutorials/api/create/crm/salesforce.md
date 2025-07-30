@@ -2,10 +2,10 @@
 title: Verbinden von Salesforce mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 18%
+source-wordcount: '1175'
+ht-degree: 17%
 
 ---
 
@@ -63,6 +63,7 @@ Um Ihr [!DNL Salesforce]-Konto mit [!DNL Flow Service] über Anmeldeinformatione
 | `clientId` | Die Client-ID wird im Rahmen der OAuth2-Authentifizierung zusammen mit dem Client-Geheimnis verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre Anwendung für die [!DNL Salesforce] identifizieren. |
 | `clientSecret` | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre Anwendung für die [!DNL Salesforce] identifizieren. |
 | `apiVersion` | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. Dieser Wert ist für die Authentifizierung mit Client-Anmeldeinformationen für OAuth2 obligatorisch. |
+| `includeDeletedObjects` | Ein boolescher Wert, der bestimmt, ob vorläufig gelöschte Datensätze einbezogen werden sollen. Wenn auf „true“ gesetzt, können vorläufig gelöschte Datensätze in Ihre [!DNL Salesforce]-Abfrage aufgenommen und von Ihrem -Konto in Experience Platform aufgenommen werden. Wenn Sie Ihre Konfiguration nicht angeben, ist dieser Wert standardmäßig auf `false` festgelegt. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce] ist: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie im [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | Die mit Ihrem [!DNL Salesforce]-Konto verknüpfte Client-ID. |
 | `auth.params.clientSecret` | Das mit Ihrem [!DNL Salesforce]-Konto verknüpfte Client-Geheimnis. |
 | `auth.params.apiVersion` | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]. |
+| `auth.params.includeDeletedObjects` | Ein boolescher Wert, der bestimmt, ob vorläufig gelöschte Datensätze einbezogen werden sollen. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce]-Verbindung: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++
