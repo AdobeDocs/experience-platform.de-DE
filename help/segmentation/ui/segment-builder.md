@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
+source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
-source-wordcount: '5128'
-ht-degree: 66%
+source-wordcount: '5188'
+ht-degree: 65%
 
 ---
 
@@ -126,6 +126,12 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Komplexe Auswertung"
 >abstract="Der folgende Ausdruck ist zu komplex, um als einzelne Zielgruppe ausgedrückt zu werden. Führen Sie die folgenden Schritte aus, um sowohl B2B-Regeln als auch benutzerbasierte Ereignisse in derselben Segmentdefinition zu verwenden.<ol><li>Erstellen Sie eine Segmentdefinition, die nur auf die benutzerbasierten Ereignisse verweist, und speichern Sie sie als eigene Segmentdefinition.</li><li>Importieren Sie in einer neuen Segmentdefinition die zuvor erstellte Segmentdefinition, während Sie auf die B2B-Regeln verweisen.</li></ol>"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="Externe Zielgruppen"
+>abstract="Zielgruppen, die über die Registerkarte Zielgruppen importiert wurden, werden jetzt automatisch über das Zielgruppenportal angezeigt. Zielgruppen, die von Audience Manager, Customer Journey Analytics, Segment Match und anderen benutzerdefinierten Integrationen aufgenommen werden, sind ohne weiteres verfügbar, ohne dass zuerst Segment Builder konfiguriert werden muss. Seit dem 1. September 2025 werden alle Zielgruppen ausschließlich über die einheitliche Suche abgerufen, und der vorherige Workflow wird nicht mehr unterstützt."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Zielgruppen-Portal"
 
 >[!NOTE]
 >
@@ -324,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
