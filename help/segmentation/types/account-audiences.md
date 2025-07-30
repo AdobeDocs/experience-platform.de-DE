@@ -1,13 +1,13 @@
 ---
 title: Konto-Zielgruppen
 description: Erfahren Sie, wie Sie Konto-Zielgruppen erstellen und verwenden, um Account-Profile in nachgelagerten Zielen auszuwählen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 23%
+source-wordcount: '1528'
+ht-degree: 21%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 23%
 Mit der Segmentierung von Accounts ermöglicht Ihnen Adobe Experience Platform, die volle Einfachheit und Raffinesse des Marketing-Segmentierungs-Erlebnisses von personenbasierten Zielgruppen zu Account-basierten Zielgruppen zu bringen.
 
 Account-Zielgruppen können als Eingabe für Account-basierte Ziele verwendet werden, sodass Sie die Personen in diesen Konten in nachgelagerten Services ansprechen können. Beispielsweise können Sie Account-basierte Zielgruppen verwenden, um Datensätze für alle Konten abzurufen, die **keine** Kontaktinformationen für Personen mit dem Titel Chief Operating Officer (COO) oder Chief Marketing Officer (CMO) haben.
+
+>[!NOTE]
+>
+>Im Rahmen des B2B-Architekturupgrades werden Zielgruppengrößenschätzungen für Zielgruppen mit B2B-Entitäten jetzt mit exakter Genauigkeit berechnet. Diese Schätzungen stehen während der Vorschau zur Verfügung und bieten genauere und zuverlässigere Einblicke für Zielgruppen, bei denen komplexe B2B-Beziehungen eine Rolle spielen. <br>Weitere Informationen finden Sie in der Übersicht über die [Real-Time CDP B2B edition-Architekturupgrades](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -49,7 +53,7 @@ Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimm
 >
 >Account-Zielgruppen werden mithilfe der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
 
-Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite [!UICONTROL Durchsuchen] die Option]** Zielgruppe erstellen“ aus.
+Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite]** Durchsuchen[!UICONTROL  die Option ]Zielgruppe erstellen“ aus.
 
 ![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] auf der Seite zum Durchsuchen von Kontozielgruppen ist hervorgehoben.](../images/types/account/select-create-audience.png)
 
@@ -75,7 +79,7 @@ Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![Einstellungssymb
 
 ![Das Einstellungssymbol ist im Abschnitt Felder hervorgehoben.](../images/types/account/select-settings.png)
 
-Wählen Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Einstellungen **[!UICONTROL im Abschnitt**&#x200B;[!UICONTROL &#x200B; Beziehung der Felder &#x200B;]&#x200B;**die Option]** Beziehungsselektoren anzeigen“ aus.
+Wählen Sie auf [!UICONTROL  Registerkarte ]Einstellungen **[!UICONTROL im Abschnitt]** Beziehung der Felder **[!UICONTROL die Option]** Beziehungsselektoren anzeigen“ aus.
 
 ![Der Umschalter Beziehungsselektoren anzeigen ist im Abschnitt Beziehung von Feldern auf der Registerkarte Einstellungen ausgewählt.](../images/types/account/show-relation-selectors.png)
 
@@ -126,8 +130,8 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Konto-Zielgruppen.
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Fehler beim maximalen Lookback-Fenster"
->abstract="Das maximale Lookback-Fenster für Erlebnisereignisse beträgt 30 Tage."
+>title="Lookback-Fenster"
+>abstract="Verwenden Sie das Lookback-Fenster, um den vollständigen Verlauf von Ereignissen auf Personenebene anzuzeigen."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Konto-Zielgruppen.
 
 Bei Verwendung von Konto-Zielgruppen muss **Zielgruppe** folgenden Einschränkungen einhalten:
 
-- Das maximale Lookback-Fenster für Erlebnisereignisse beträgt **30**.
 - Die maximale Tiefe verschachtelter Container beträgt **5**.
    - Das bedeutet, dass Sie beim Erstellen Ihrer Zielgruppe **nicht** mehr als fünf verschachtelte Container haben dürfen.
 - Die maximale Anzahl von Regeln innerhalb eines einzelnen Containers beträgt **5**.
    - Das bedeutet, dass Ihre Zielgruppe **kann** mehr als fünf Regeln haben kann, aus denen Ihre Zielgruppe besteht.
 - Die maximale Anzahl von Cross-Entities, die verwendet werden können, beträgt **5**.
    - Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln.
-- Benutzerdefinierte Entitäten **können** nicht verwendet werden.
 - Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**.
    - Wenn Sie beispielsweise das Feld „Stadtname“ haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
-- Konto-Zielgruppen **können** Ereignisse `inSegment` verwenden.
 - Konto-Zielgruppen **können** sequenzielle Ereignisse verwenden.
 - Konto-Zielgruppen **können** Zuordnungen verwenden.
 - Die maximale Tiefe von verschachtelten Arrays beträgt **5**.
 - Die maximale Anzahl verschachtelter Objekte beträgt **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
