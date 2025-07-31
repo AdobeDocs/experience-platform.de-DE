@@ -1,14 +1,12 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Juli 2025
 description: Versionshinweise Juli 2025 für Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1457'
-ht-degree: 17%
+source-wordcount: '1573'
+ht-degree: 16%
 
 ---
-
 
 # Adobe Experience Platform – Versionshinweise
 
@@ -18,9 +16,9 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 29. Juli 2025**
 
@@ -33,6 +31,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
+
 
 ## Kapazität {#capacity}
 
@@ -53,6 +52,7 @@ Weitere Informationen finden Sie im Abschnitt [Kapazitätsübersicht](../../land
 | Ziel | Beschreibung |
 | --- | --- |
 | Eingeschränkte Verfügbarkeit der Verbindung [Google Customer Match + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Nachdem Adobe im Juni kurz für alle Kunden verfügbar war, hat es diese Integration wieder in begrenztem Umfang verfügbar gemacht. Derzeit ist der Zugriff auf dieses Ziel auf Kunden beschränkt, die bereits aktiviert sind, während Adobe und Google daran arbeiten, Implementierungsprobleme zu beheben. Wenn Sie daran interessiert sind, diese Integration zu verwenden, sobald der Rollout fortgesetzt wird, wenden Sie sich an den Adobe-Support, um Ihre Absicht zu äußern. |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) internes Upgrade | Ab dem 31. Juli 2025 können Sie im Zielkatalog zwei [!DNL The Trade Desk] nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. <br><br>Der vorhandene [!DNL The Trade Desk]-Ziel-Connector wurde in **[!UICONTROL (Veraltet) The Trade Desk]** umbenannt, und eine neue Karte mit dem Namen **[!UICONTROL The Trade Desk]** ist jetzt verfügbar. Verwenden Sie die neue **[!UICONTROL The Trade Desk]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. <br><br>Wenn Sie aktive Datenflüsse zum Ziel &quot;**[!UICONTROL (nicht mehr unterstützt) The Trade Desk]** haben, werden diese automatisch aktualisiert, sodass keine Aktion von Ihnen erforderlich ist. <br><br>Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:<ul><li>Flussspezifikations-ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>Verbindungsspezifikations-ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Neue oder aktualisierte Funktionen**
 
@@ -144,3 +144,4 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Unterstützung für das weiche Löschen von Datensätzen in [!DNL Salesforce] | Die [!DNL Salesforce]-Quelle unterstützt jetzt die Einbeziehung von vorläufig gelöschten Datensätzen über einen optionalen `includeDeletedObjects`. Bei der Einstellung „true“ können Kunden vorläufig gelöschte Datensätze in ihre [!DNL Salesforce] einbeziehen und in Experience Platform importieren. Weitere Informationen finden Sie in der [[!DNL Salesforce] Quelldokumentation](../../sources/connectors/crm/salesforce.md). |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
+
