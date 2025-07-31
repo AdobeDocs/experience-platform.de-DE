@@ -119,11 +119,11 @@ Wenn Sie in Ihrer Umgebung keine Client-Hinweise mit hoher Entropie aktivieren, 
 
 ### Adobe Analytics-Berichte, die auf Client-Hinweisen mit hoher Entropie basieren {#analytics}
 
-Die Dimension [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) enthält die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
+Die Dimension [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=de) enthält die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
 
 ### Audience Manager-Eigenschaften basierend auf Client-Hinweisen mit hoher Entropie {#aam}
 
-[!DNL Google] hat die Funktion „Browser [!DNL Chrome]&quot; aktualisiert, um die über den `User-Agent`-Header erfassten Informationen zu minimieren. Daher erhalten Audience Manager-Kunden, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) verwenden, keine zuverlässigen Informationen mehr über Eigenschaften, die auf [Plattformschlüsseln“ basieren](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] hat die Funktion „Browser [!DNL Chrome]&quot; aktualisiert, um die über den `User-Agent`-Header erfassten Informationen zu minimieren. Daher erhalten Audience Manager-Kunden, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) verwenden, keine zuverlässigen Informationen mehr über Eigenschaften, die auf [Plattformschlüsseln“ basieren](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=de).
 
 Audience Manager-Kunden, die Schlüssel auf Plattformebene für das Targeting verwenden, müssen zu [Experience Platform Web SDK](/help/web-sdk/home.md) anstelle von [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) wechseln und [Client Hints mit hoher Entropie](#enabling-high-entropy-client-hints) aktivieren, um weiterhin zuverlässige Eigenschaftsdaten zu erhalten.
 
