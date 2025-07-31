@@ -1,12 +1,10 @@
 ---
 title: API-Endpunkt für externe Zielgruppen
 description: Erfahren Sie, wie Sie mit der API für externe Zielgruppen Ihre externen Zielgruppen aus Adobe Experience Platform erstellen, aktualisieren, aktivieren und löschen können.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2219'
 ht-degree: 9%
 
 ---
@@ -528,24 +526,23 @@ Sie können alle Aufnahmedurchgänge für die ausgewählte externe Zielgruppe ab
 
 **API-Format**
 
-Der folgende Endpunkt unterstützt mehrere Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Obwohl diese Parameter optional sind, wird ihre Verwendung dringend empfohlen, um Ihre Ergebnisse zu fokussieren.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Abfrageparameter**
+<!-- **Query parameters**
 
-+++ Eine Liste der verfügbaren Abfrageparameter.
++++ A list of available query parameters. 
 
-| Parameter | Beschreibung | Beispiel |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | Die maximale Anzahl der in der Antwort zurückgegebenen Elemente. Dieser Wert kann zwischen 1 und 40 liegen. Standardmäßig ist der Grenzwert auf 20 festgelegt. | `limit=30` |
-| `sortBy` | Die Reihenfolge, in der die zurückgegebenen Elemente sortiert werden. Sie können nach `name` oder nach `createdAt` sortieren. Darüber hinaus können Sie ein `-` hinzufügen, um nach **absteigender** Reihenfolge anstelle von **aufsteigender** Reihenfolge zu sortieren. Standardmäßig werden die Elemente nach `createdAt` in absteigender Reihenfolge sortiert. | `sortBy=name` |
-| `property` | Ein Filter, um zu bestimmen, welche Zielgruppen-Erfassungsdurchgänge angezeigt werden. Sie können nach den folgenden Eigenschaften filtern: <ul><li>`name`: Hiermit können Sie nach dem Zielgruppennamen filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li><li>`createdAt`: Hiermit können Sie nach der Aufnahmezeit filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `>=` oder `<=` vergleichen.</li><li>`status`: Hiermit können Sie nach dem Status des Aufnahmedurchgangs filtern. Wenn Sie diese Eigenschaft verwenden, können Sie sie mithilfe von `=`, `!=`, `=contains` oder `!=contains` vergleichen. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Anfrage**
 
@@ -594,19 +591,23 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ---- | ----------- |
 | `runs` | Objekt | Ein -Objekt, das die Liste der Aufnahmedurchgänge enthält, die zur Audience gehören. Weitere Informationen zu diesem Objekt finden Sie im Abschnitt [Abrufen des ](#retrieve-ingestion-status)&quot;. |
-| `_page` | Objekt | Ein -Objekt, das die Paginierungsinformationen zur Ergebnisliste enthält. |
 
 +++
 
