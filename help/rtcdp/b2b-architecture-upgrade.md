@@ -66,7 +66,7 @@ Beispiel:
 * Erstellen einer Zielgruppe für Erlebnisereignisse
    * Definieren Sie die Verhaltensbedingung separat. Beispiel: „Personen, die die Seite „Preise“ in den letzten drei Tagen besucht haben.“
 * Erstellen Sie eine Zielgruppe mit mehreren Entitäten mit B2B-Attributen.
-   * Von hier aus können Sie die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe referenzieren. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **** ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
+   * Von hier aus können Sie die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe referenzieren. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **&#x200B;**&#x200B;ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
 
 Nach Abschluss des Upgrades müssen alle neuen Zielgruppen mit mehreren Entitäten mit B2B-Attributen und Erlebnisereignissen mithilfe des [Segment-of-Segment](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types)-Ansatzes erstellt werden.
 
