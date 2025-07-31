@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Datensatz-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform beim Arbeiten mit Datensätzen häufig durchgeführte Aktionen ausführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 12%
 
 ---
@@ -108,9 +108,9 @@ Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweilig
 
 ### Vorschau für Datensatz anzeigen {#preview}
 
-Sie können eine Vorschau der Datensatzbeispieldaten sowohl über die Inline-Optionen der Registerkarte [!UICONTROL Durchsuchen] als auch über die Ansicht [!UICONTROL Datensatzaktivität] anzeigen. Ein neues Fenster für die Datensatzvorschau mit zusätzlichen Navigations- und Kontextverbesserungen ist verfügbar.
+Sie können eine Vorschau von bis zu 100 Zeilen mit Beispieldaten für jeden Datensatz anzeigen, entweder über die Inline-Optionen auf der Registerkarte [!UICONTROL Durchsuchen] oder über die Ansicht [!UICONTROL Datensatzaktivität].
 
-Klicken Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Liste von Optionen wird angezeigt. Wählen Sie als Nächstes [!UICONTROL Vorschau des &#x200B;]) aus den verfügbaren Optionen aus. Wenn der Datensatz leer ist, ist der Vorschau-Link deaktiviert und zeigt an, dass die Vorschau nicht verfügbar ist.
+Klicken Sie auf [!UICONTROL  Registerkarte ]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen und wählen Sie [!UICONTROL Datensatz in der Vorschau anzeigen]. Wenn der Datensatz leer ist, ist die Vorschauoption deaktiviert. Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts auf **[!UICONTROL Datensatz]** Vorschau anzeigen) klicken.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit hervorgehobenen Auslassungszeichen und der Option „Datensatz in der Vorschau“ für den ausgewählten Datensatz.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -118,15 +118,16 @@ Dadurch wird das Vorschaufenster geöffnet, in dem links die hierarchische Schem
 
 >[!NOTE]
 >
->Das Schemadiagramm auf der linken Seite der Ansicht zeigt nur Felder an, die Daten enthalten. Felder ohne Daten werden automatisch ausgeblendet, um die Benutzeroberfläche zu optimieren und den Fokus auf relevante Informationen zu legen.
+>Das Schemadiagramm auf der linken Seite zeigt nur Felder an, die Daten enthalten. Felder ohne Daten werden automatisch ausgeblendet, um die Benutzeroberfläche zu optimieren und den Fokus auf relevante Informationen zu legen.
 
 ![Das Dialogfeld für die Datensatzvorschau mit Informationen zur Struktur sowie Beispielwerten für den Datensatz wird angezeigt.](../images/datasets/user-guide/preview-dataset.png)
 
-Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts **[!UICONTROL Bildschirm die Option]** Datensatz in der Vorschau anzeigen auswählen, um eine Vorschau von bis zu 100 Datenzeilen anzuzeigen.
+Wählen Sie alternativ auf dem Bildschirm **[!UICONTROL Datensatzaktivität]** die Option **[!UICONTROL Vorschau des Datensatzes]** aus, um das Vorschaufenster zu öffnen und ein Beispiel für die Struktur und Werte Ihres Datensatzes zu überprüfen.
 
 ![Die Schaltfläche „Datensatz in der Vorschau anzeigen“ ist hervorgehoben.](../images/datasets/user-guide/select-preview.png)
 
-Das Fenster „Datensatzvorschau“ bietet eine optimierte Benutzeroberfläche zum Untersuchen und Validieren von Datensätzen.
+Das Fenster „Datensatzvorschau“ bietet eine schnelle Möglichkeit, die Struktur und die Daten Ihres Datensatzes zu untersuchen und zu validieren.
+
 
 #### Vorschaufenster des Datensatzes {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ Die folgende Animation zeigt das Datensatzvorschaufenster mit seinen Navigations
 Das Vorschaufenster des Datensatzes enthält folgende Elemente:
 
 * Eine Seitenleiste im Objektbrowser auf der linken Seite zum Navigieren und Filtern von Datensatzfeldern.
-* Datentypindikatoren werden neben jedem Spaltennamen angezeigt, damit insight schnell in die Datensatzstruktur eingefügt werden kann.
+* Datentypindikatoren neben jedem Spaltennamen für insight in der Datensatzstruktur.
 * Oben im Fenster wird eine SQL-Abfrage angezeigt, die die Abfrage anzeigt, die zum Generieren des Datensatzes verwendet wird.
-* Eine formatierte Tabellenansicht mit bis zu 100 Zeilen im unteren rechten Bereich für eine effiziente Datenüberprüfung.
-* Direkte Navigation zum Abfrage-Editor für Data Distiller-Benutzer, wobei die SQL-Abfrage für die weitere Untersuchung oder Änderung vorausgefüllt ist.
+* Eine formatierte Tabellenansicht mit bis zu 100 Zeilen für eine effiziente Datenüberprüfung.
 
-Diese Funktionen unterstützen die schnelle Navigation, das Schemaverständnis und die transparente Validierung von Datensätzen.
-
-Wählen Sie **[!UICONTROL Vorschau des Datensatzes]** aus den Inline-Aktionen oder aus dem Bildschirm [!UICONTROL Datensatzaktivität] aus, um das Vorschaufenster zu öffnen.
-
->[!NOTE]
->
->Im Vorschaufenster wird ein Beispiel mit bis zu 100 Zeilen angezeigt. Felder ohne Daten werden aus der Ansicht ausgeschlossen.
+Diese Funktionen helfen Ihnen beim Navigieren, Verstehen von Schemadetails und effizienten Validieren von Beispieldaten.
 
 #### Verknüpfung mit dem erweiterten Abfrage-Editor {#query-editor-shortcut}
 
-Wenn Ihr Unternehmen über eine Data Distiller-Lizenz verfügt, können Sie direkt über das Datensatzvorschaufenster auf den erweiterten Abfrage-Editor zugreifen.
+Wenn Ihr Unternehmen über eine Data Distiller-Lizenz verfügt, können Sie direkt über [!UICONTROL  Datensatzvorschau auf ] erweiterten Abfrage-Editor zugreifen. Verwenden Sie diesen Tastaturbefehl, um im Abfrage-Service nahtlos von der Vorschau von Beispieldaten zur Ausführung und Verfeinerung von Abfragen zu wechseln.
 
 >[!AVAILABILITY]
 >
->Nur Benutzer mit der erforderlichen Data Distiller-Lizenz können auf diese Funktion zugreifen. Wenn Ihr Unternehmen nicht über Data Distiller verfügt, ist [!UICONTROL &#x200B; Option „Erweiterter Abfrage]Editor“ nicht sichtbar.
+>Der Zugriff auf [!UICONTROL erweiterten Abfrage-Editor] ist auf Organisationen mit einer Data Distiller SKU-Lizenz beschränkt. Wenn Ihr Unternehmen nicht über die erforderliche Lizenz verfügt, wird diese Option nicht im Fenster Datensatzvorschau angezeigt.
 
-Wählen Sie **[!UICONTROL Erweiterter Abfrage]** Editor) oben rechts im Vorschaufenster aus, um den Abfrage-Editor zu öffnen. Die aktuelle Vorschauabfrage ist bereits geladen und kann ausgeführt oder weiter analysiert werden.
+Wählen Sie [!UICONTROL Erweiterter Abfrage]Editor oben rechts im Vorschaufenster aus, um Query Service mit der aktuellen SQL-Abfrage zu öffnen, die vorgeladen und ausgeführt wurde. Sie können mit der Analyse oder Änderung der SQL fortfahren, ohne die Abfrage erneut eingeben zu müssen.
 
-![Datensatzvorschau-Fenster mit der Schaltfläche Erweiterter Abfrage-Editor oben rechts.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![Datensatzvorschau-Fenster mit der Schaltfläche „Erweiterter Abfrage-Editor“ oben rechts.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Mit diesem Tastaturbefehl können Sie nahtlos von der Vorschau von Beispieldaten zur Ausführung und Verfeinerung von Abfragen im Abfrage-Service wechseln, ohne den SQL-Code oder den Kontext erneut eingeben zu müssen.
-
-Verwenden Sie für zusätzlichen Datenzugriff und eine zusätzliche Analyse nachgelagerte Services wie [!DNL Query Service] und [!DNL JupyterLab]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Verwenden Sie für zusätzliche Analysen nachgelagerte Services wie [!DNL Query Service] und [!DNL JupyterLab]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Query Service – Übersicht](../../query-service/home.md)
 * [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
@@ -200,7 +192,7 @@ Datensätze, die für Profil aktiviert wurden, können auch nach diesen Kriterie
 
 ### Datensatz-Tags verwalten {#manage-tags}
 
-Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL &#x200B; der Registerkarte &#x200B;] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
+Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL  der Registerkarte ] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit Hervorhebung der Optionen „Auslassungszeichen“ und „Tags verwalten“ für den ausgewählten Datensatz.](../images/datasets/user-guide/manage-tags.png)
 
@@ -321,7 +313,7 @@ Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass 
 
 ### Datensatz löschen {#delete}
 
-Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL &#x200B; in der Ansicht &#x200B;]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
+Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL  in der Ansicht ]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit Auslassungszeichen und der hervorgehobenen Option „Löschen“ für den ausgewählten Datensatz.](../images/datasets/user-guide/inline-delete-dataset.png)
 
@@ -357,21 +349,21 @@ Die Liste der angewendeten Filter wird über den gefilterten Ergebnissen angezei
 
 Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie das Kontrollkästchen **[!UICONTROL Ja]** im Abschnitt [!UICONTROL Systemdatensätze anzeigen]. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexportdatensatz zur Verarbeitung des Profil-Dashboards verwendet.
 
-![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL &#x200B; „Systemdatensätze &#x200B;].](../images/datasets/user-guide/show-system-datasets.png)
+![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL  „Systemdatensätze ].](../images/datasets/user-guide/show-system-datasets.png)
 
 ### Filtern von profilaktivierten Datensätzen {#filter-profile-enabled-datasets}
 
 Die Datensätze, die für Profildaten aktiviert wurden, werden nach der Aufnahme von Daten zum Ausfüllen von Kundenprofilen verwendet. Weitere Informationen finden Sie im Abschnitt [Aktivieren von Datensätzen ](#enable-profile) Profil“.
 
-Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL &#x200B; in den Filteroptionen das &#x200B;] „Ja“.
+Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL  in den Filteroptionen das ] „Ja“.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; „Im Profil &#x200B;]&quot;.](../images/datasets/user-guide/included-in-profile.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  „Im Profil ]&quot;.](../images/datasets/user-guide/included-in-profile.png)
 
 ### Datensätze nach Tag filtern {#filter-by-tag}
 
 Geben Sie Ihren benutzerdefinierten Tag-Namen in die Eingabe [!UICONTROL Tags] ein und wählen Sie dann Ihr Tag aus der Liste der verfügbaren Optionen aus, um Datensätze zu suchen und zu filtern, die diesem Tag entsprechen.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
 
 ### Datensätze nach Erstellungsdatum filtern {#filter-by-creation-date}
 

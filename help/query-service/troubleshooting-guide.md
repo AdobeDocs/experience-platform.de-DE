@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Query Service und Data Distiller
 description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
-ht-degree: 81%
+source-wordcount: '5186'
+ht-degree: 78%
 
 ---
 
@@ -65,7 +65,7 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
 +++Antwort
-Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/31575?captions=ger) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -134,7 +134,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) [auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select)[auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -406,7 +406,7 @@ Die Konsolenausgabe in der Benutzeroberfläche des Abfrage-Service ist ein besse
 
 #### Konvertieren aus dem UTC-Zeitstempel
 
-Die Methode `from_utc_timestamp()` interpretiert die angegebenen Parameter **aus dem Zeitstempel Ihrer lokalen Zeitzone** und liefert den entsprechenden Zeitstempel der gewünschten Region im UTC-Format. Im folgenden Beispiel ist es 14:40 Uhr in der lokalen Zeitzone der Benutzenden. Die als Variable übergebene Zeitzone Seoul ist der lokalen Zeitzone neun Stunden voraus.
+Die Methode `from_utc_timestamp()` interpretiert die angegebenen Parameter **aus dem Zeitstempel Ihrer lokalen Zeitzone** und liefert den entsprechenden Zeitstempel der gewünschten Region im UTC-Format. Im folgenden Beispiel ist die Stunde 2:40PM in der lokalen Zeitzone des Benutzers. Die als Variable übergebene Zeitzone Seoul ist der lokalen Zeitzone neun Stunden voraus.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ Die Berechnung der Stunden für eine Abfrage kann aufgrund mehrerer Faktoren sch
 Die Backend-Infrastruktur wird ständig verbessert, um die Auslastung und Verarbeitungszeit der Rechenstunden zu optimieren. Daher kann es vorkommen, dass sich die Leistung im Laufe der Zeit verbessert.
 +++
 
+### Unterscheidet sich die Leistung von Data Distiller zwischen Entwicklungs- und Produktions-Sandboxes?
+
++++Antwort
+Sie können ähnliche Leistung erwarten, wenn Sie Abfragen sowohl in Entwicklungs- als auch in Produktions-Sandboxes ausführen. Beide Umgebungen sind so konzipiert, dass sie denselben Verarbeitungsgrad bieten. Je nach der Menge der verarbeiteten Daten und der gesamten Systemaktivität zum Zeitpunkt der Ausführung der Abfrage können jedoch Unterschiede in den Berechnungsstunden auftreten.
+
+Verfolgen Sie die Nutzung Ihrer Compute Hour im [Lizenznutzungs-Dashboard](../dashboards/guides/license-usage.md) der Experience Platform-Benutzeroberfläche.
++++
+
 ## Benutzeroberfläche für Abfragen
 
 ### Die Meldung „Abfrage erstellen“ bleibt beim Versuch, eine Verbindung zum Abfrage-Service herzustellen, hängen „Verbindung wird initialisiert…“. Wie behebe ich das Problem?
@@ -752,6 +760,12 @@ Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung 
 +++Antwort
 Der Wert für nicht ablaufende Anmeldedaten sind die verketteten Argumente aus der `technicalAccountID` und dem `credential` aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
 In der Dokumentation finden Sie weitere Informationen zur [Verbindung mit externen Clients mit Anmeldedaten](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
++++
+
+### Gibt es Einschränkungen für Sonderzeichen für nicht ablaufende Zugangsdaten und Kennwörter?
+
++++Antwort
+Ja. Wenn Sie ein Kennwort für nicht ablaufende Anmeldeinformationen festlegen, müssen Sie mindestens eine Zahl, einen Kleinbuchstaben, einen Großbuchstaben und ein Sonderzeichen angeben. Das Dollarzeichen ($) wird nicht unterstützt. Verwenden Sie stattdessen Sonderzeichen wie !, @, #, ^ oder &amp;.
 +++
 
 ### Welche Art von SQL-Editoren von Drittanbietern kann ich mit dem Abfrage-Service-Editor verbinden?

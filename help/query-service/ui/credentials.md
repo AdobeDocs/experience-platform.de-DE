@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zu Query Service-Anmeldeinformationen
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 60b9fd250ba1a3e2da374681b78f0375f75dc87e
+source-git-commit: 58018684a5f042bd4e121f4162e7c1663597c19a
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '2023'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Info
 >
 >![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/de/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
 ### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
@@ -68,7 +68,7 @@ Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten z
 
 Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
 
@@ -78,6 +78,10 @@ Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](ht
 >abstract="Diese Migration ist erforderlich, da die JWT-Anmeldedaten nach dem 30. Juni 2025 nicht mehr funktionieren. Der Vorgang dauert etwa 30–40 Sekunden und kann nach dem Start nicht mehr abgebrochen werden. Alle vorhandenen Vorgänge und Integrationen funktionieren nach der Migration weiterhin mit OAuth. Sie können diesen Bildschirm verlassen und jederzeit zurückkehren, um den Status zu überprüfen."
 
 Sie können nicht ablaufende Anmeldeinformationen verwenden, um eine permanentere Verbindung zu einem externen Client herzustellen.
+
+>[!IMPORTANT]
+>
+>Wenn Sie zum ersten Mal eine nicht ablaufende Berechtigung für OAuth Server-zu-Server erstellen oder migrieren, müssen Sie ein Systemadministratorkonto verwenden. Nur ein Systemadministrator kann diese Aktion für Ihre Organisation ausführen. Wenn ein Nicht-Systemadministrator bzw. eine Nicht-Systemadministratorin diesen Schritt versucht, schlägt der Prozess mit einem Autorisierungsfehler fehl. Nach der Ersteinrichtung können nachfolgende, nicht ablaufende Anmeldedaten von Benutzern mit den erforderlichen Berechtigungen erstellt oder migriert werden.
 
 >[!NOTE]
 >
@@ -172,7 +176,7 @@ In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für 
 >[!NOTE]
 >
 >Wenn Sie eine Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen herstellen, müssen Sie weiterhin alle Parameter verwenden, die im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN] aufgeführt sind, mit Ausnahme des Kennworts und des Benutzernamens.
->&#x200B;>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
+>>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
 
 | Parameter | Beschreibung | Beispiel |
 |---|---|---|

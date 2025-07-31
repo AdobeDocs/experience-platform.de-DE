@@ -2,9 +2,9 @@
 title: Erstellen eines globalen Filters
 description: Erfahren Sie, wie Sie Ihre Dateneinblicke mit einem benutzerdefinierten, global angewendeten Filter filtern können.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Um einen globalen Filter zu erstellen, wählen Sie zunächst **[!UICONTROL Filte
 
 Mit benutzerdefinierten globalen Filtern können Sie die von Ihrer SQL bereitgestellten Einblicke schnell ändern.
 
-Das [!UICONTROL Erstellen eines globalen Filters] wird geöffnet. Das Erstellen eines globalen Filters folgt dem gleichen Prozess wie das Erstellen eines Insights mit SQL. Wählen Sie zunächst eine abzufragende Datenbank (Insights-Datenmodell) aus, geben Sie dann Ihre benutzerdefinierte SQL im Abfrage-Editor ein und wählen Sie schließlich das Symbol „Ausführen“ (![A-Symbol „Ausführen“](/help/images/icons/play.png)).
+Das [!UICONTROL Erstellen eines globalen Filters] wird geöffnet. Das Erstellen eines globalen Filters folgt dem gleichen Prozess wie das Erstellen eines insight mit SQL. Wählen Sie zunächst eine abzufragende Datenbank (Insights-Datenmodell) aus, geben Sie dann Ihre benutzerdefinierte SQL im Abfrage-Editor ein und wählen Sie schließlich das Symbol „Ausführen“ (![A-Symbol „Ausführen“](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -29,19 +29,23 @@ Das [!UICONTROL Erstellen eines globalen Filters] wird geöffnet. Das Erstellen 
 
 Nach erfolgreichem Ausführen der Abfrage zeigt die Registerkarte Ergebnisse die Ergebnisse an. Klicken Sie auf **[!UICONTROL Weiter]**.
 
+>[!NOTE]
+>
+>Die Abfrageergebnisse sind standardmäßig auf 100 Zeilen beschränkt. Um weitere Zeilen zurückzugeben, fügen Sie Ihrer SQL-Abfrage eine LIMIT-Klausel mit der gewünschten Zeilenanzahl hinzu. Um alle Zeilen abzurufen und das standardmäßige Limit zu entfernen, verwenden Sie LIMIT 0 in Ihrer Abfrage.
+
 ![Das [!UICONTROL Dialogfeld „Globalen Filter erstellen] mit dem Dropdown-Menü „Datensatz“, dem Symbol „Ausführen“ und der hervorgehobenen Option „Weiter“.](../../images/sql-insights-query-pro-mode/global-filter.png)
 
 Im letzten Schritt des Workflows für die Erstellung globaler Filter müssen Sie einen Titel für Ihren Filter hinzufügen. Fügen Sie dem Textfeld **[!UICONTROL Filterbezeichnung]** eine Bezeichnung hinzu und wählen Sie einen Filtertyp aus dem Dropdown-Feld aus.
 
 >[!NOTE]
 >
->Derzeit wird nur [!UICONTROL &#x200B; Filtertyp &#x200B;]Kombinationsfeld) unterstützt.
+>Derzeit wird nur [!UICONTROL  Filtertyp ]Kombinationsfeld) unterstützt.
 
 Wählen Sie abschließend **[!UICONTROL Auswählen]** aus, um zur Dashboard-Ansicht zurückzukehren.
 
 ![Das [!UICONTROL Dialogfeld „Globalen Filter erstellen] mit hervorgehobener Texteingabe „Auswählen“ und „Filterbezeichnung“.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
-## Globalen Filter für jede Einsicht aktivieren {#enable-global-filter}
+## Aktivieren des globalen Filters für jede insight {#enable-global-filter}
 
 >[!TIP]
 >
@@ -53,7 +57,7 @@ Nachdem Sie Ihren globalen Filter für Ihr Dashboard erstellt haben, wird der Um
 
 >[!IMPORTANT]
 >
->Stellen Sie sicher, dass der globale Filterparameter in der SQL der einzelnen Einblicke enthalten ist.
+>Stellen Sie sicher, dass der globale Filterparameter in der SQL der einzelnen insight enthalten ist.
 
 ## Globalen Filter auswählen {#select-global-filter}
 
