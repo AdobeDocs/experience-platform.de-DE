@@ -27,7 +27,7 @@ So bearbeiten Sie verschiedene Komponenten einer vorhandenen Zielverbindung:
 
 1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**.
 2. Wählen Sie das gewünschte Ziel aus, das Sie bearbeiten möchten.
-3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten ]**, um vorhandene Zielverbindungen zu bearbeiten.
+3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten &#x200B;]**, um vorhandene Zielverbindungen zu bearbeiten.
 4. Bearbeiten Sie im modalen Fenster die gewünschten Einstellungen. Klicken Sie **[!UICONTROL Speichern]** wenn Sie fertig sind.
 
 Im Fenster Ziel bearbeiten können Sie alle Einstellungen aktualisieren, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel konfiguriert haben. Diese Einstellungen unterscheiden sich je nach Zielplattform, die Sie aktualisieren.
