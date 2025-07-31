@@ -176,7 +176,7 @@ In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für 
 >[!NOTE]
 >
 >Wenn Sie eine Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen herstellen, müssen Sie weiterhin alle Parameter verwenden, die im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN] aufgeführt sind, mit Ausnahme des Kennworts und des Benutzernamens.
->>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
+>&#x200B;>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
 
 | Parameter | Beschreibung | Beispiel |
 |---|---|---|
