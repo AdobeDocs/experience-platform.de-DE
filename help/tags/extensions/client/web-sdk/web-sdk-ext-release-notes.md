@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
+source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
 workflow-type: tm+mt
-source-wordcount: '2801'
-ht-degree: 64%
+source-wordcount: '2825'
+ht-degree: 63%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 64%
 # Versionshinweise zur Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.31.1 – Freitag, 31. Juli 2025
+
+- Es wurde ein Problem behoben, das die Ausführung benutzerdefinierter Builds verhinderte.
+- Enthält [Version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) des Adobe Experience Platform Web SDK.
 
 ## Version 2.31.0 – Freitag, 24. Juli 2025
 
