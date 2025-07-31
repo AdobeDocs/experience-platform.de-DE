@@ -4,10 +4,10 @@ title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
 description: Gehen Sie wie in diesem Artikel beschrieben vor, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,7 @@ In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Ak
 * [Zugeordnete Attribute und Identitäten bearbeiten](#edit-mapped-attributes)
 * [Bearbeiten des Aktivierungsplans und der Exporthäufigkeit](#edit-schedule-frequency)
 * [Hinzufügen zusätzlicher Datensätze](#add-datasets) zum Aktivierungs-Workflow
+* [Marketing-Aktionen bearbeiten](#edit-marketing-actions) für Ihre Aktivierungsdatenflüsse
 * [Zugriffskennzeichnungen anwenden](#apply-access-labels) auf exportierte Daten
 * [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
 
@@ -108,6 +109,23 @@ Wählen **[!UICONTROL Datensätze exportieren]** in der rechten Leiste aus, um z
 >Diese Option ist nur für (Ziele[ die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta]{type=Informative} Marketing-Aktionen bearbeiten {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>Diese Funktion befindet sich derzeit in der **Betaversion**. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff zu erhalten.
+
+Sie können Marketing-Aktionen hinzufügen oder entfernen, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel eingerichtet haben.
+
+Wählen Sie **[!UICONTROL Marketing-Aktionen bearbeiten]** in der rechten Leiste aus, um den Auswahlbildschirm für Marketing-Aktionen zu öffnen.
+
+![Bild der Experience Platform-Benutzeroberfläche mit der Option „Marketing-Aktionen bearbeiten“.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Wählen Sie die entsprechenden Marketing-Aktionen aus und klicken Sie dann auf **[!UICONTROL Speichern]**, um die Änderungen anzuwenden.
+
+![Bild der Experience Platform-Benutzeroberfläche mit dem Bildschirm „Marketing-Aktionen bearbeiten“.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## Anwenden von Zugriffs-Labels {#apply-access-labels}
 
