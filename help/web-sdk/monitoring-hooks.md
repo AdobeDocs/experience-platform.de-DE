@@ -2,7 +2,7 @@
 title: Überwachungs-Hooks für Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit den von Adobe Experience Platform Web SDK bereitgestellten Überwachungs-Hooks Ihre Implementierung debuggen und Web SDK-Protokolle erfassen können.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
@@ -234,9 +234,9 @@ onContentHiding(data) {
 | `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
 | `data.status` | String | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status. Unterstützte Werte: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## Angeben von Überwachungs-Hooks bei Verwendung des NPM-Pakets {#specify-monitoris-npm}
+## Angeben von Überwachungs-Hooks bei Verwendung des NPM-Pakets {#specify-monitoring-npm}
 
-Wenn Sie Web SDK über das [NPM-Paket](install/npm.md) verwenden, können Sie Überwachungs-Hooks in der `createInstasnce` angeben, wie unten dargestellt.
+Wenn Sie Web SDK über das [NPM-Paket](install/npm.md) verwenden, können Sie Überwachungs-Hooks in der `createInstance` angeben, wie unten dargestellt.
 
 ```js
 var monitor = {

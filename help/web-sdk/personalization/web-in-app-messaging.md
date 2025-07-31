@@ -2,7 +2,7 @@
 title: Konfigurieren der Web-In-App-Messaging-Unterstützung in Web SDK
 description: Erfahren Sie, wie Sie die Tag-Erweiterung „Web SDK" konfigurieren, um Web-In-App-Nachrichten zu unterstützen.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Mithilfe von In-App-Nachrichten können Sie effektiv mit Ihrer Zielgruppe intera
 >
 >Web-In-App-Messaging ist eine Funktion von [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) die die Web-SDK verwendet, um die personalisierten Inhalte bereitzustellen.
 >
->Detaillierte Anweisungen zum Konfigurieren Ihrer Web-In-App-Messaging-Kampagne finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=de).
+>Detaillierte Anweisungen zum Konfigurieren Ihrer Web-In-App-Messaging-Kampagne finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Voraussetzungen {#prerequisites}
@@ -184,5 +184,5 @@ Sie können festlegen, dass In-App-Nachrichten Benutzern für eine bestimmte Anz
 
 Legen [ in der Konfiguration ](../commands/configure/overview.md)Web-SDK&quot; die Option &quot;`personalizationStorageEnabled`&quot; entsprechend Ihren Anforderungen fest:
 
-* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne&rbrace; definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=de#configure-inapp).
+* `personalizationStorageEnabled: true` Trigger vergleichen die In-App-Nachricht mit der Häufigkeit, die Sie in der [Adobe Journey Optimizer-Kampagne} definiert ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` Trigger die In-App-Nachricht bei jedem Laden der Seite.

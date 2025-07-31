@@ -3,7 +3,7 @@ title: Implementierung von Einzelseitenanwendungen für die Adobe Experience Pla
 description: Erfahren Sie, wie Sie mit Adobe Target eine Single Page Application (SPA)-Implementierung der Adobe Experience Platform Web SDK erstellen.
 keywords: Target;Adobe Target;XDM-Ansichten;Ansichten;Einzelseitenanwendungen;SPA;SPA-Lebenszyklus;Client-seitig;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 10%
@@ -37,7 +37,7 @@ Um näher zu erläutern, was Ansichten sind, wird im folgenden Beispiel eine hyp
 
 Nachdem Sie zur Startseite navigiert sind, fördert ein Hero-Bild einen Osterverkauf sowie die neuesten Produkte, die auf der Website verfügbar sind. In diesem Fall kann eine Ansicht für den gesamten Startbildschirm definiert werden. Diese Ansicht kann einfach als „Home“ bezeichnet werden.
 
-![Beispielbild einer Single Page Application in einem Browser-Fenster.](assets/example-views.png)
+![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster.](assets/example-views.png)
 
 Wenn der Kunde sich mehr für die Produkte interessiert, die das Unternehmen verkauft, entscheidet er sich, auf den Link **Produkte** zu klicken. Ähnlich wie bei der Startseite kann die gesamte Produkt-Site als Ansicht definiert werden. Diese Ansicht kann als „products-all“ bezeichnet werden.
 
@@ -45,11 +45,11 @@ Wenn der Kunde sich mehr für die Produkte interessiert, die das Unternehmen ver
 
 Da eine Ansicht als ganze Site oder als Gruppe visueller Elemente auf einer Site definiert werden kann, können die vier auf der Produkt-Site angezeigten Produkte gruppiert und als Ansicht betrachtet werden. Diese Ansicht kann als „Produkte“ bezeichnet werden.
 
-![Beispielbild einer Single Page Application in einem Browser-Fenster mit angezeigten Beispielprodukten.](assets/example-products.png)
+![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster mit angezeigten Beispielprodukten.](assets/example-products.png)
 
 Wenn der Kunde beschließt, auf die Schaltfläche **Mehr laden** zu klicken, um weitere Produkte auf der Website zu erkunden, ändert sich in diesem Fall die Website-URL nicht. Es kann jedoch hier eine Ansicht erstellt werden, die nur die zweite Zeile der angezeigten Produkte darstellt. Der Name der Ansicht kann „products-page-2“ lauten.
 
-![Beispielbild einer Single Page Application in einem Browser-Fenster mit Beispielprodukten, die auf einer zusätzlichen Seite angezeigt werden.](assets/example-load-more.png)
+![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster mit Beispielprodukten, die auf einer zusätzlichen Seite angezeigt werden.](assets/example-load-more.png)
 
 Die Kundin oder der Kunde möchte einige Produkte von der Seite kaufen und fährt mit dem Checkout-Bildschirm fort. Auf der Checkout-Website erhält der Kunde Optionen, um einen normalen Versand oder einen Expressversand auszuwählen. Eine Ansicht kann eine beliebige Gruppe visueller Elemente auf einer Website sein, sodass eine Ansicht für Versandvoreinstellungen erstellt und als „Versandvoreinstellungen“ bezeichnet werden kann.
 
@@ -90,7 +90,7 @@ In diesem Abschnitt werden drei Beispiele beschrieben, die zeigen, wie die `send
 
 Das Marketing-Team möchte A/B-Tests auf der gesamten Startseite durchführen.
 
-![Beispielbild einer Single Page Application in einem Browser-Fenster.](assets/use-case-1.png)
+![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster.](assets/use-case-1.png)
 
 So können A/B-Tests auf der gesamten Startseite durchgeführt werden: `sendEvent()` muss aufgerufen werden, während der XDM-`viewName` auf `home` eingestellt ist:
 

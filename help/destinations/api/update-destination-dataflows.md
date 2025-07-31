@@ -5,7 +5,7 @@ title: Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder mithilfe der Flow Service-API Zielgruppen und Attribute hinzufügen und entfernen.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 30%
@@ -646,7 +646,7 @@ In den folgenden Beispielen finden Sie weitere Beispiele für Zielgruppenkompone
 
 +++ Klicken Sie hier, um ein Beispiel zu sehen, bei dem ein Zielgruppenexport nicht mehr jeden Tag zum angegebenen Zeitpunkt aktiviert wird, sondern jeden Tag nach Abschluss des Experience Platform-Batch-Segmentierungsvorgangs.
 
-Die Zielgruppe wird täglich um 16:00 Uhr UTC exportiert.
+Die Zielgruppe wird täglich um 16:00 Uhr UTC :00.
 
 ```json
 {

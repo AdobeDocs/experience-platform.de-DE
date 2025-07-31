@@ -3,7 +3,7 @@ title: Rendern von personalisierten Inhalten mit der Adobe Experience Platform W
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Web SDK personalisierte Inhalte rendern können.
 keywords: Personalisierung;renderDecisions;sendEvent;decisionScopes;Vorschläge;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 2%
@@ -12,11 +12,11 @@ ht-degree: 2%
 
 # Rendern von personalisierten Inhalten
 
-Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Adobe-Personalisierungslösungen, einschließlich [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
+Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Adobe-Personalisierungslösungen, einschließlich [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
 
 Darüber hinaus ermöglicht der Web-SDK die Personalisierung derselben Seite und der nächsten Seite über Adobe Experience Platform-Personalisierungsziele wie [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und die [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren von Experience Platform für die Personalisierung der gleichen und der nächsten Seite finden Sie im [Handbuch zu diesem Thema](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Inhalte, die in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) und der [Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=de), können von SDK automatisch abgerufen und gerendert werden. Inhalte, die in Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-Based Experience Channel](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer decisioning erstellt wurden, können nicht automatisch von SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit der SDK anfordern und dann den Inhalt manuell selbst rendern.
+Inhalte, die in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und der [Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), können von SDK automatisch abgerufen und gerendert werden. Inhalte, die in Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-Based Experience Channel](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer Decisioning erstellt wurden, können nicht automatisch von SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit der SDK anfordern und dann den Inhalt manuell selbst rendern.
 
 ## Inhalt automatisch rendern {#automatic}
 
@@ -103,7 +103,7 @@ Das `propositions`-Array kann in etwa wie im folgenden Beispiel aussehen:
 ]
 ```
 
-In diesem Beispiel wurde die `renderDecisions`-Option bei Ausführung des `sendEvent`-Befehls nicht auf `true` gesetzt, weshalb die SDK nicht versuchte, automatisch Inhalte zu rendern. Die SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für die automatische Wiedergabe infrage kommen, und hat Ihnen diese zur manuellen Wiedergabe bereitgestellt, wenn Sie dies tun möchten. Beachten Sie, dass die `renderAttempted` jedes Vorschlagsobjekts auf `false` gesetzt ist.
+In diesem Beispiel wurde die `renderDecisions`-Option bei Ausführung des `true`-Befehls nicht auf `sendEvent` gesetzt, weshalb die SDK nicht versuchte, automatisch Inhalte zu rendern. Die SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für die automatische Wiedergabe infrage kommen, und hat Ihnen diese zur manuellen Wiedergabe bereitgestellt, wenn Sie dies tun möchten. Beachten Sie, dass die `renderAttempted` jedes Vorschlagsobjekts auf `false` gesetzt ist.
 
 Wenn Sie stattdessen beim Senden des Ereignisses die Option `renderDecisions` auf `true` gesetzt hätten, hätte die SDK versucht, alle Vorschläge zu rendern, die für das automatische Rendern infrage kommen (wie zuvor beschrieben). Infolgedessen würde die `renderAttempted`-Eigenschaft jedes Vorschlagsobjekts auf `true` gesetzt. In diesem Fall müssten diese Vorschläge nicht manuell gerendert werden.
 
@@ -224,8 +224,8 @@ An dieser Stelle können Sie den Vorschlagsinhalt nach Belieben rendern. In dies
 
 1. Extrahieren von Vorschlägen aus dem `result`.
 1. Durchsuchen Sie jeden Vorschlag auf der Suche nach dem Vorschlag mit einem Umfang von `discount`.
-1. Wenn Sie einen Vorschlag finden, durchsuchen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das Inhalt HTML ist. (Es ist besser zu überprüfen, als anzunehmen.)
-1. Wenn Sie ein Element finden, das HTML-Inhalte enthält, suchen Sie das `daily-special` auf der Seite und ersetzen Sie die HTML durch den personalisierten Inhalt.
+1. Wenn Sie einen Vorschlag finden, durchsuchen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen, als anzunehmen.)
+1. Wenn Sie ein Element finden, das HTML-Inhalte enthält, suchen Sie auf der Seite nach dem `daily-special`-Element und ersetzen Sie dessen HTML durch den personalisierten Inhalt.
 1. Nachdem der Inhalt gerendert wurde, senden Sie ein `display`.
 
 Ihr Code würde wie folgt aussehen:
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }

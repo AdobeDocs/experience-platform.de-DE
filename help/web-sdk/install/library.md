@@ -2,9 +2,9 @@
 title: Installieren von Web SDK mithilfe der JavaScript-Bibliothek
 description: Referenzieren Sie die Web-SDK-Bibliothek mithilfe einer eigenständigen CDN-Datei.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ In den [Versionshinweisen](../release-notes.md) finden Sie die neueste Version, 
 
 ## Hinzufügen des Codes
 
-Fügen Sie den folgenden Codeblock so hoch wie möglich in das `<head>`-Tag Ihres HTML ein:
+Fügen Sie den folgenden Codeblock so hoch wie möglich im `<head>`-Tag Ihrer HTML hinzu:
 
 ```html
 <script>
@@ -34,4 +34,4 @@ Fügen Sie den folgenden Codeblock so hoch wie möglich in das `<head>`-Tag Ihre
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
 ```
 
-Dieser Code erstellt asynchron ein `alloy`-Objekt, mit dem Sie einen beliebigen Web-SDK-Befehl aufrufen können. Wenn Sie die Web-SDK synchron laden möchten, können Sie das `async`-Attribut in der letzten Zeile des Codeblocks entfernen. Das Entfernen des `async` verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die Bibliothek geladen und ausgeführt wird. Von dieser zusätzlichen Verzögerung vor der Anzeige primärer Inhalte für Benutzer wird normalerweise abgeraten, sie kann jedoch je nach den Anforderungen Ihres Unternehmens sinnvoll sein.
+Dieser Code erstellt asynchron ein `alloy`-Objekt, mit dem Sie einen beliebigen Web-SDK-Befehl aufrufen können. Wenn Sie die Web-SDK synchron laden möchten, können Sie das `async`-Attribut in der letzten Zeile des Codeblocks entfernen. Durch Entfernen des `async`-Attributs wird verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die Bibliothek geladen und ausgeführt wird. Von dieser zusätzlichen Verzögerung vor der Anzeige primärer Inhalte für Benutzer wird normalerweise abgeraten, sie kann jedoch je nach den Anforderungen Ihres Unternehmens sinnvoll sein.

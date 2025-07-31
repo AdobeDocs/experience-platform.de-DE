@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Warnhinweise;Ziele
 description: Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 17%
@@ -83,7 +83,7 @@ Die [!UICONTROL Datenflussausführungs-Details] wird angezeigt. In der oberen H�
 
 ![UI-Bild, das die Seite mit den Datenflussausführungs-Details anzeigt.](../assets/ui/alerts/dataflow-overview.png)
 
-In der unteren Hälfte der Seite werden alle [!UICONTROL Datenflussausführungsfehler) angezeigt] die während der Datenflussausführungsstufe aufgetreten sind. Von hier aus können Sie eine Vorschau der Fehlerdiagnose anzeigen oder die [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um Fehlerdiagnosen oder das Dateimanifest herunterzuladen, das Ihrem Datenfluss entspricht.
+In der unteren Hälfte der Seite werden alle &quot;[!UICONTROL -Ausführungsfehler“ angezeigt] die während der Datenflussausführungsstufe aufgetreten sind. Von hier aus können Sie eine Vorschau der Fehlerdiagnose anzeigen oder die [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um Fehlerdiagnosen oder das Dateimanifest herunterzuladen, das Ihrem Datenfluss entspricht.
 
 ![UI-Bild, das die Seite mit den Datenflussausführungs-Details zeigt, mit einer Hervorhebung des Abschnitts „Fehler“.](../assets/ui/alerts/dataflow-run-error.png)
 

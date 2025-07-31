@@ -1,27 +1,27 @@
 ---
-description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktbezogenen Ziels übermitteln müssen.
-title: Einreichen eines in Destination SDK erstellten produktbezogenen Ziels zur Überprüfung
+description: Auf dieser Seite finden Sie alle Informationen, die Sie benötigen, um ein produktbezogenes Ziel zur Überprüfung zu übermitteln, wenn Sie es mit Destination SDK erstellen.
+title: Ein produktbezogenes Ziel zur Überprüfung einreichen
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1045'
 ht-degree: 35%
 
 ---
 
-# Einreichen eines in Destination SDK erstellten produktbezogenen Ziels zur Überprüfung
+# Ein produktbezogenes Ziel zur Überprüfung einreichen
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 >[!IMPORTANT]
 >
 >* Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktbezogene (öffentliche) Ziele einreichen. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie diese Materialien nicht erstellen und mit Adobe teilen.
 >
->* Die standardmäßige Antwortzeit für die Überprüfung von Zielveröffentlichungsanfragen für Adobe beträgt fünf Werktage.
+>* Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Zielveröffentlichungsanfragen beträgt fünf Werktage.
 >
 >* Wenn Sie vom Adobe-Team nach der ersten Übermittlung aufgefordert werden, Aktualisierungen an Ihren Konfigurationen vorzunehmen, müssen Sie nach den Aktualisierungen eine weitere Anfrage zum Ziel der Veröffentlichung senden.
 >
->* Wenn Sie Ihre Konfigurationen aktualisieren müssen, müssen Sie auch nach der Live-Schaltung Ihres Ziels im Experience Platform-Katalog eine neue Anfrage zum Ziel der Veröffentlichung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
+>* Wenn Sie Aktualisierungen an Ihren Konfigurationen vornehmen müssen, müssen Sie auch nach der Live-Schaltung Ihres Ziels im Experience Platform-Katalog eine neue Anfrage zum Ziel der Veröffentlichung senden, damit die Aktualisierungen in den Konfigurationen widergespiegelt werden.
 >
 >* Die Zeitleiste der Überprüfung und die erforderlichen Artefakte sind für neue Ziele und vorhandene Ziele, die Sie aktualisieren, identisch.
 
@@ -31,7 +31,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nur erforderlich, wenn Sie eine neue Zielkonfiguration senden.
 * Eine Beschreibung des Grundes für die Übermittlung Ihres Ziels. Dies ist nur erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
-* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie mit dem Adobe einen API-Aufruf an Ihren Ziel-Endpunkt und die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
+* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie Adobe einen API-Aufruf an Ihren Ziel-Endpunkt und die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
 * Eine Bildschirmaufzeichnung, die das Benutzererlebnis für jemanden zeigt, der eine Verbindung zu Ihrem Ziel herstellt und die Aktivierungsschritte durchläuft.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
    * Geben Sie eine Anfrage und ein Beispiel für eine Antwort frei, nachdem Sie die Test[API verwendet haben, um Ihr dateibasiertes Ziel mit Beispielprofilen zu ](../testing-api/batch-destinations/file-based-destination-testing-api.md).

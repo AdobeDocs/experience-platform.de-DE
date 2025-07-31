@@ -3,16 +3,16 @@ title: User Agent Client-Hinweise
 description: Erfahren Sie, wie User Agent Client-Hinweise in Web SDK funktionieren. Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der Benutzeragenten-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt.
 keywords: user-agent;Client hints;String;user-agent string;niedrige Entropie;hohe Entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 4%
 
 ---
 
 # User Agent Client-Hinweise
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Jedes Mal, wenn ein Webbrowser eine Anfrage an einen Webserver sendet, enthält der Header der Anfrage Informationen über den Browser und die Umgebung, in der der Browser ausgeführt wird. Alle diese Daten werden in einer Zeichenfolge zusammengefasst, der so genannten Benutzeragenten-Zeichenfolge.
 
@@ -115,15 +115,15 @@ Client-Hinweise mit hoher Entropie sind in Web SDK standardmäßig deaktiviert. 
 
 Einige Adobe Experience Cloud-Lösungen stützen sich bei der Berichterstellung auf Informationen in Client-Hinweisen mit hoher Entropie.
 
-Wenn Sie in Ihrer Umgebung keine Client-Hinweise mit hoher Entropie aktivieren, funktionieren die unten beschriebenen Adobe Analytics- und Audience Manager-Berichte und -Eigenschaften nicht.
+Wenn Sie in Ihrer Umgebung keine Client-Hinweise mit hoher Entropie aktivieren, funktionieren die unten beschriebenen Berichte und Eigenschaften von Adobe Analytics und Audience Manager nicht.
 
 ### Adobe Analytics-Berichte, die auf Client-Hinweisen mit hoher Entropie basieren {#analytics}
 
-Die Dimension [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=de) enthält die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
+Die Dimension [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) enthält die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
 
-### Audience Manager-Eigenschaften, die auf Client-Hinweisen mit hoher Entropie basieren {#aam}
+### Audience Manager-Eigenschaften basierend auf Client-Hinweisen mit hoher Entropie {#aam}
 
-[!DNL Google] hat die Funktion „Browser [!DNL Chrome]&quot; aktualisiert, um die über den `User-Agent`-Header erfassten Informationen zu minimieren. Daher erhalten Audience Manager-Kunden, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) verwenden, keine verlässlichen Informationen mehr über Eigenschaften, die auf [Plattformschlüsseln“ basieren](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=de).
+[!DNL Google] hat die Funktion „Browser [!DNL Chrome]&quot; aktualisiert, um die über den `User-Agent`-Header erfassten Informationen zu minimieren. Daher erhalten Audience Manager-Kunden, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) verwenden, keine zuverlässigen Informationen mehr über Eigenschaften, die auf [Plattformschlüsseln“ basieren](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
 Audience Manager-Kunden, die Schlüssel auf Plattformebene für das Targeting verwenden, müssen zu [Experience Platform Web SDK](/help/web-sdk/home.md) anstelle von [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) wechseln und [Client Hints mit hoher Entropie](#enabling-high-entropy-client-hints) aktivieren, um weiterhin zuverlässige Eigenschaftsdaten zu erhalten.
 

@@ -3,9 +3,9 @@ title: Verwenden des XDM-Attributs für die letzte Qualifikationszeit in den neu
 description: Erfahren Sie, wie Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen verwenden
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 7130ac46a7768ea6e71bf73eb970bf2890323d0f
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '289'
 ht-degree: 10%
 
 ---
@@ -23,7 +23,7 @@ Um das XDM-Attribut Letzte Qualifikationszeit (`lastQualificationTime`) verwende
 * [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
-* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Data Landing Zone]](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
 * [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 
