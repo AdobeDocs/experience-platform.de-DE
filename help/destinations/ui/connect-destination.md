@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -54,7 +54,7 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Kontoname"
->abstract="Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie über mehrere Verbindungen mit demselben Ziel verfügen."
+>abstract="Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft leicht zu identifizieren. Dies ist besonders nützlich, wenn Sie über mehrere Verbindungen mit demselben Ziel verfügen."
 
 Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin, sich bei der Zielplattform zu authentifizieren.
 
