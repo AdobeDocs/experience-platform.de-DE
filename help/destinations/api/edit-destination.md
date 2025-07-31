@@ -4,10 +4,10 @@ title: Bearbeiten von Zielverbindungen mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mithilfe der Flow Service-API bearbeiten können.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 25%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden derzeit nur über die Flow Service-API unterstützt.
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen ](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
 
 ## Erste Schritte {#get-started}
 
@@ -181,11 +181,11 @@ Um Komponenten einer Zielverbindung zu aktualisieren, führen Sie eine `PATCH`-A
 
 >[!IMPORTANT]
 >
->Bei einer `PATCH`-Anfrage ist die `If-Match`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
 >
 > Um die neueste Version des eTag-Werts abzurufen, führen Sie eine GET-Anfrage an den `/targetConnections/{TARGET_CONNECTION_ID}`-Endpunkt durch, wobei `{TARGET_CONNECTION_ID}` die Zielverbindungs-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie bei `PATCH` Anfragen den Wert des `If-Match`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Zielverbindungsspezifikation für verschiedene Zieltypen. Die allgemeine Regel zum Aktualisieren der Parameter für jedes Ziel lautet jedoch wie folgt:
 
@@ -340,11 +340,11 @@ Denken Sie daran, dass Sie Ihre Basisverbindungs-ID in einem [vorherigen Schritt
 
 >[!IMPORTANT]
 >
->Bei einer `PATCH`-Anfrage ist die `If-Match`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Fluss-Entität aktualisiert, z. B. Datenfluss, Basisverbindung und andere.
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Fluss-Entität aktualisiert, z. B. Datenfluss, Basisverbindung und andere.
 >
 > Um die neueste Version des Etag-Werts abzurufen, führen Sie eine GET-Anfrage an den `/connections/{BASE_CONNECTION_ID}`-Endpunkt durch, wobei `{BASE_CONNECTION_ID}` die Basisverbindungs-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie bei `PATCH` Anfragen den Wert des `If-Match`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Basisverbindungsspezifikation für verschiedene Zieltypen. Die allgemeine Regel zum Aktualisieren der Parameter für jedes Ziel lautet jedoch wie folgt:
 

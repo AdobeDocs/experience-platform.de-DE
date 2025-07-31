@@ -3,10 +3,10 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: a0326a6d616937552d7f8ff7001808bbfb69bd62
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 75%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,9 +69,9 @@ Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, 
 
 >[!TIP]
 >
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren](/help/images/icons/data-add.png)**[!UICONTROL Aktivieren &#x200B;]**/**[!UICONTROL &#x200B; Zielgruppen aktivieren &#x200B;]**/**[!UICONTROL &#x200B; Datensätze exportieren &#x200B;]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten“](/help/images/icons/edit.png)**[!UICONTROL Details bearbeiten &#x200B;]**, um die Details eines vorhandenen Zielkontos zu [aktualisieren](update-accounts.md).
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](/help/images/icons/delete.png)**[!UICONTROL Löschen &#x200B;]**, um ein vorhandenes Zielkonto zu [löschen](delete-destination-account.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren](/help/images/icons/data-add.png)**[!UICONTROL Aktivieren ]**/**[!UICONTROL  Zielgruppen aktivieren ]**/**[!UICONTROL  Datensätze exportieren ]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten“](/help/images/icons/edit.png)**[!UICONTROL Details bearbeiten ]**, um die Details eines vorhandenen Zielkontos zu [aktualisieren](update-accounts.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](/help/images/icons/delete.png)**[!UICONTROL Löschen ]**, um ein vorhandenes Zielkonto zu [löschen](delete-destination-account.md).
 
 ![Registerkarte „Konten“](../assets/ui/workspace/destination-account-options.png)
 
@@ -92,16 +92,18 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Zielgruppen aktivieren](/help/images/icons/data-add.png)**[!UICONTROL Aktivieren &#x200B;]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](/help/images/icons/delete.png)**[!UICONTROL Löschen &#x200B;]**, um eine bestehende Verbindung zu einem Ziel zu [löschen](delete-destinations.md).
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Im Monitoring anzeigen“](/help/images/icons/monitoring.png)**[!UICONTROL „Im Monitoring anzeigen“]**, um Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) anzuzeigen.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Warnhinweise abonnieren“](/help/images/icons/alert-add.png)**[!UICONTROL Warnhinweise abonnieren &#x200B;]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Ausführliche Informationen zu Ziel-Datenfluss-Warnhinweisen finden Sie unter [Abonnieren von kontextabhängigen Ziel-Warnhinweisen](alerts.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Zielgruppen aktivieren](/help/images/icons/data-add.png) **[!UICONTROL Zielgruppen aktivieren]** zum Exportieren von Zielgruppen oder Datensätzen an dieses Ziel.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten ]**, um vorhandene Zielverbindungen zu bearbeiten. Lesen Sie das Tutorial [Bearbeiten von Zielen](/help/destinations/ui/edit-destination.md) für weitere Informationen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Marketing-Aktionen bearbeiten](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Marketing-Aktionen bearbeiten]**, um die Marketing-Aktionen für [ ausgewählte Ziel ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) ändern.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]**, um eine vorhandene Verbindung zu einem Ziel [](delete-destinations.md) entfernen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Im Monitoring anzeigen](/help/images/icons/monitoring.png) **[!UICONTROL Im Monitoring anzeigen]** zum Anzeigen von Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Warnhinweise abonnieren ](/help/images/icons/alert-add.png) **[!UICONTROL Warnhinweise abonnieren]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Ausführliche Informationen zu Ziel-Datenfluss-Warnhinweisen finden Sie unter [Abonnieren von kontextabhängigen Ziel-Warnhinweisen](alerts.md).
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschreibung |
 |---------|----------|
-| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren] und [!UICONTROL Ziel löschen]. |
+| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. |
 | Datentyp | Der von der Zielverbindung unterstützte Datentyp. Unterstützte Datentypen: <ul><li>**[!UICONTROL Kunden]**</li><li>**[!UICONTROL Interessenten]**</li><li>**[!UICONTROL Konten]**</li><li>**[!UICONTROL Datensätze]**</li></ul> |
 | [!UICONTROL Letzter Ausführungsstatus für Datenfluss] | Der Status der letzten Datenflussausführung. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
 | [!UICONTROL Letztes Ausführungsdatum für Datenfluss] | Zeit und Datum, an dem der letzte Datenfluss ausgeführt wurde. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
@@ -112,6 +114,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 | [!UICONTROL Aktivierungsdaten] | Gibt die Anzahl der Zielgruppen an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Zielgruppen zu erfahren. Weitere Informationen zu [ aktivierten Zielgruppen finden ](/help/destinations/ui/destination-details-page.md#activation-data) auf der Zieldetailseite unter „Aktivierungsdaten“. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. Klicken Sie auf das Symbol mit dem Pfeil nach oben/unten, um nach den neuesten oder ältesten Aktivierungsflüssen zu sortieren. |
 | [!UICONTROL Status] | `Enabled` oder `Disabled`. Gibt an, ob für dieses Ziel Daten aktiviert sind. |
+| [!UICONTROL Zugriffs-Labels] | Zeigt alle Zugriffsbeschriftungen an, die diesem Ziel-Datenfluss hinzugefügt wurden. Weitere Informationen [Anwenden von Zugriffskennzeichnungen auf Ziel-Datenflüsse](/help/access-control/abac/apply-access-labels-destinations.md). |
 
 Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten Leiste aufzurufen, z. B. Ziel-ID, Beschreibung, Anzahl der aktivierten Zielgruppen und mehr.
 

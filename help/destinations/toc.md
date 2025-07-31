@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
+source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
 workflow-type: tm+mt
-source-wordcount: '1295'
-ht-degree: 75%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -52,6 +52,7 @@ ht-degree: 75%
       * [Exportieren von Arrays, Zuordnungen und Objekten](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Durchführen von Umwandlungen an Daten, die in Cloud-Speicher-Ziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
+   * [(Beta) Bearbeiten von Zielen](./ui/edit-destination.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
