@@ -1,15 +1,13 @@
 ---
 title: Lizenznutzung und -kapazität
 description: Erfahren Sie mehr über Ihre Lizenznutzung und Kapazitätsbeschränkungen in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 7%
 
 ---
-
 
 # Lizenznutzung und -kapazitäten
 
@@ -27,7 +25,7 @@ Weitere Informationen zu Leitplanken in Experience Platform finden Sie in der Ü
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Anzahl der Streaming-Zielgruppen"
->abstract="Die maximale Anzahl von Streaming-Zielgruppen pro Sandbox. Diese Zahl umfasst die Anzahl der Edge-Zielgruppen, die Sie in Ihrer Sandbox haben."
+>abstract="Die maximale Anzahl von Streaming-Zielgruppen pro Sandbox. Diese Zahl umfasst die Anzahl der Edge-Zielgruppen in der Sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
@@ -43,7 +41,7 @@ Innerhalb dieser Services werden die folgenden Leitplanken verfolgt:
 
 - Die maximale Anzahl von Streaming-Zielgruppen ist 500
    - Von diesen 500 Streaming-Zielgruppen sind maximal 150 Edge-Zielgruppen zulässig
-- Der maximale kombinierte Durchsatz für die Streaming-Segmentierung beträgt 1500 Datensätze pro Sekunde (RPS)
+- Der maximale kombinierte Durchsatz für die Streaming-Segmentierung beträgt 1500 Datensätze pro Sekunde (rps)
 
 Die Zielgruppenkapazität befindet sich auf **Sandbox**-Ebene. Das bedeutet, dass Sie für jede Sandbox in Ihrem Unternehmen 500 Streaming-Zielgruppen haben können, davon 150 Edge-Zielgruppen.
 
