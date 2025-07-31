@@ -2,9 +2,9 @@
 title: API-Endpunkt für externe Zielgruppen
 description: Erfahren Sie, wie Sie mit der API für externe Zielgruppen Ihre externen Zielgruppen aus Adobe Experience Platform erstellen, aktualisieren, aktivieren und löschen können.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 9%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | Zeichenfolge | Der Name für die externe Zielgruppe. |
 | `description` | String | Eine optionale Beschreibung für die externe Zielgruppe. |
 | `customAudienceId` | String | Eine optionale Kennung für Ihre externe Zielgruppe. |
-| `fields` | Array von Objekten | Liste der Felder und ihrer Datentypen Beim Erstellen der Feldliste können Sie die folgenden Elemente hinzufügen: <ul><li>`name`: **Erforderlich** Der Name des Felds, das Teil der Spezifikation der externen Zielgruppe ist.</li><li>`type`: **Erforderlich** Der Datentyp, der in das Feld aufgenommen wird. Unterstützte Werte sind `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) und `boolean`.</li>`identityNs`: **Erforderlich für Identitätsfeld** Der Namespace, der vom Identitätsfeld verwendet wird. Unterstützte Werte umfassen alle gültigen Namespaces, z. B. `ECID` oder `email`.li><li>`labels`: *Optional* Ein Array von Zugriffssteuerungsbeschriftungen für das Feld. Weitere Informationen zu den verfügbaren Zugriffssteuerungsbeschriftungen finden Sie im [Glossar zu Datennutzungsbeschriftungen](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält.</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: *Optional* Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Weitere Informationen finden Sie im Abschnitt [Übersicht über Quell-Connectoren](../../sources/home.md)li></ul> |
+| `fields` | Array von Objekten | Liste der Felder und ihrer Datentypen Beim Erstellen der Feldliste können Sie die folgenden Elemente hinzufügen: <ul><li>`name`: **Erforderlich** Der Name des Felds, das Teil der Spezifikation der externen Zielgruppe ist.</li><li>`type`: **Erforderlich** Der Datentyp, der in das Feld aufgenommen wird. Unterstützte Werte sind `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) und `boolean`.</li><li>`identityNs`: **Erforderlich für Identitätsfeld** Der Namespace, der vom Identitätsfeld verwendet wird. Unterstützte Werte umfassen alle gültigen Namespaces, z. B. `ECID` oder `email`.</li><li>`labels`: *Optional* Ein Array von Zugriffssteuerungsbeschriftungen für das Feld. Weitere Informationen zu den verfügbaren Zugriffssteuerungsbeschriftungen finden Sie im [Glossar zu Datennutzungsbeschriftungen](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält.</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: *Optional* Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Weitere Informationen finden Sie unter [Übersicht über Quell-Connectoren](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Ganzzahl | Die Datengültigkeit für die externe Zielgruppe in Tagen. Dieser Wert kann zwischen 1 und 90 eingestellt werden. Standardmäßig ist der Ablauf der Daten auf 30 Tage festgelegt. |
 | `audienceType` | String | Der Zielgruppentyp für die externe Zielgruppe. Derzeit wird nur `people` unterstützt. |
 | `originName` | String | **Erforderlich** Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Für externe Zielgruppen sollten Sie `CUSTOM_UPLOAD` verwenden. |
@@ -139,11 +141,13 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 202 mit Details zur neu ers
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum Aufgabe
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Bei Verwendung dieses Endpunkts können Sie die folgenden Felder aktualisieren:
 - Zielgruppen-Beschreibung
 - Kennzeichnungen für die Zugriffssteuerung auf Feldebene
 - Zugriffssteuerungsbeschriftungen auf Zielgruppenebene
+- Ablauf der Daten der Zielgruppe
 
 Durch Aktualisieren des Felds mit diesem Endpunkt **ersetzt** der Inhalt des angeforderten Felds.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Zeitstempel der Epoche | **Erforderlich** Der Bereich, der die Startzeit angibt, zu der der Fluss ausgeführt wird, um die zu verarbeitenden Dateien auszuwählen. |
 | `dataFilterEndTime` | Zeitstempel der Epoche | Der Bereich, der die Endzeit angibt, zu der der Fluss ausgeführt wird, um die zu verarbeitenden Dateien auszuwählen. |
-| `differentialIngestion` | Boolesch | Ein Feld, das bestimmt, ob es sich bei der Aufnahme um eine partielle Aufnahme handelt, basierend auf der Differenz seit der letzten Aufnahme oder einer vollständigen Zielgruppenaufnahme. Standardmäßig ist dieser Wert `true`. |
 
 +++
 
