@@ -3,10 +3,10 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 69%
+source-wordcount: '1280'
+ht-degree: 63%
 
 ---
 
@@ -54,15 +54,24 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Kontoname"
->abstract="Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie mehrere Verbindungen mit demselben Zieltyp haben."
+>abstract="Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie über mehrere Verbindungen mit demselben Ziel verfügen."
 
 Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin, sich bei der Zielplattform zu authentifizieren.
 
-Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Experience Platform-Workflow aufgefordert, Anmeldeinformationen zur Authentifizierung einzugeben. Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Experience Platform-Workflow aufgefordert, Anmeldeinformationen zur Authentifizierung einzugeben.
+
+Beim Einrichten einer neuen Zielverbindung müssen Sie einen **[!UICONTROL Kontonamen]** und optional eine &quot;**[!UICONTROL &quot;]**. Diese Felder sind für alle Ziele verfügbar.
+
+* **[!UICONTROL Kontoname]**: Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie über mehrere Verbindungen mit demselben Ziel verfügen.
+* **[!UICONTROL Beschreibung]** (optional): Fügen Sie zusätzliche Details hinzu, die Ihnen oder Ihrem Team helfen, zwischen Konten zu unterscheiden, z. B. den Zweck der Verbindung oder den relevanten Geschäftskontext.
+
+Wenn Sie klare und beschreibende Informationen in diesen Feldern bereitstellen, können Sie beim Aktivieren von Zielgruppen das richtige Zielkonto leichter verwalten und auswählen.
+
+Nachfolgend finden Sie ein Beispiel für die erforderliche Eingabe zur Authentifizierung bei einem [!DNL Amazon S3]-Ziel. Detaillierte Anweisungen zur erforderlichen Eingabe finden Sie auf jeder Zieldokumentationsseite (lesen Sie beispielsweise den Abschnitt zur Authentifizierung für [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) und für [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Für **[!DNL Amazon S3]erforderliche und optionale Authentifizierungsparameter**
 
-![Abbildung mit den erforderlichen und optionalen Eingabeparametern bei der Authentifizierung für ein Amazon S3-Ziel.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Abbildung mit den erforderlichen und optionalen Eingabeparametern bei der Authentifizierung für ein Amazon S3-Ziel.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Einrichten von Verbindungsparametern {#set-up-connection-parameters}
 
