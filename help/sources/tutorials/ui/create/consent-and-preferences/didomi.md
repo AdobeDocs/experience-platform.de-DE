@@ -2,15 +2,20 @@
 title: Verbinden von Didomi mit Experience Platform
 description: Erfahren Sie, wie Sie Ihr Didomi-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 13%
+source-wordcount: '1164'
+ht-degree: 14%
 
 ---
 
 # Verbinden von [!DNL Didomi] mit Experience Platform
+
+>[!AVAILABILITY]
+>
+>Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Didomi]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise Juli 2025
 description: Versionshinweise Juli 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1574'
 ht-degree: 16%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 29. Juli 2025**
 
@@ -135,7 +135,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| Unterstützung für [!DNL Didomi] (Streaming-SDK) | Verwenden Sie die [!DNL Didomi], um Einverständnis- und Präferenzverwaltungsdaten aus [!DNL Didomi] aufzunehmen und so die Einhaltung von Datenschutzbestimmungen und einverständnisbasierten Marketing-Strategien zu unterstützen. Informationen zur Einrichtung [[!DNL Didomi]  Sie ](../../sources/connectors/consent-and-preferences/didomi.md) „Übersicht über Quellen“. Anweisungen zum Erstellen einer Quellverbindung finden Sie im [[!DNL Didomi] Handbuch zur Quellverbindung](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
+| [!BADGE Beta]{type=Informative}-Unterstützung für [!DNL Didomi] (Streaming-SDK) | Verwenden Sie die [!DNL Didomi], um Einverständnis- und Präferenzverwaltungsdaten aus [!DNL Didomi] aufzunehmen und so die Einhaltung von Datenschutzbestimmungen und einverständnisbasierten Marketing-Strategien zu unterstützen. Informationen zur Einrichtung [[!DNL Didomi]  Sie ](../../sources/connectors/consent-and-preferences/didomi.md) „Übersicht über Quellen“. Anweisungen zum Erstellen einer Quellverbindung finden Sie im [[!DNL Didomi] Handbuch zur Quellverbindung](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
 
 **Neue oder aktualisierte Funktionen**
 
