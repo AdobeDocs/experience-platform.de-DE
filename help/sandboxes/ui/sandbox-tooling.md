@@ -356,7 +356,7 @@ Nachdem Sie die Zielobjekte identifiziert haben, die Sie aktualisieren möchten,
 
 Das folgende Video soll Ihnen dabei helfen, die Sandbox-Tools besser zu verstehen, und beschreibt, wie Sie ein neues Paket erstellen, ein Paket veröffentlichen und ein Paket importieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446097/?learn=on&captions=ger)
 
 ## Nächste Schritte
 
