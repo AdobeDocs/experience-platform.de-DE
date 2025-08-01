@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 79%
 
 ---
@@ -106,7 +106,7 @@ Um ein statisches Schema mit Profilattributen zu erstellen, definieren Sie die Z
 | `segmentRequired` | Boolesch | Erforderlich | Dieser Parameter ist für Destination SDK erforderlich und sollte immer auf `true` festgelegt werden. |
 | `identityRequired` | Boolesch | Erforderlich | Legen Sie ihn auf `true` fest, wenn Benutzerinnen und Benutzer in der Lage sein sollen, [Identitätstypen](identity-namespace-configuration.md) von Experience Platform den Attributen zuzuordnen, die Sie im Array `profileFields` definiert haben. |
 | `segmentNamespaceAllowList` | Array | Optional | Ermöglicht es Benutzenden, nur Zielgruppen aus den im Array definierten Zielgruppen-Namespaces dem Ziel zuzuordnen. <br><br> Verwendung dieses Parameters wird in den meisten Fällen nicht empfohlen. Verwenden Sie stattdessen `"segmentNamespaceDenyList":[]` , damit alle Arten von Zielgruppen an Ihr Ziel exportiert werden können. <br><br> Wenn in Ihrer Konfiguration sowohl `segmentNamespaceAllowList` als auch `segmentNamespaceDenyList` fehlen, können Benutzerinnen und Benutzer nur Zielgruppen exportieren, die aus dem [Segmentierungs-Service](../../../../segmentation/home.md) stammen. <br><br>`segmentNamespaceAllowList` und `segmentNamespaceDenyList` schließen sich gegenseitig aus. |
-| `segmentNamespaceDenyList` | Array | Optional | Schränkt Benutzerinnen und Benutzer beim Zuordnen von Zielgruppen aus den im Array definierten Zielgruppen-Namespaces auf das Ziel ein. <br><br>Adobe empfiehlt, den Export aller Zielgruppen unabhängig von ihrer Herkunft durch Festlegen von `"segmentNamespaceDenyList":[]` zuzulassen. <br><br>Wenn in Ihrer Konfiguration sowohl `segmentNamespaceAllowed` als auch `segmentNamespaceDenyList` fehlen, können Benutzerinnen und Benutzer nur Zielgruppen exportieren, die vom [Segmentierungs-Service](../../../../segmentation/home.md) stammen. <br><br>`segmentNamespaceAllowList` und `segmentNamespaceDenyList` schließen sich gegenseitig aus. |
+| `segmentNamespaceDenyList` | Array | Optional | Schränkt Benutzerinnen und Benutzer beim Zuordnen von Zielgruppen aus den im Array definierten Zielgruppen-Namespaces auf das Ziel ein. <br><br>Adobe empfiehlt, den Export aller Zielgruppen unabhängig von ihrer Herkunft durch Festlegen von `"segmentNamespaceDenyList":[]` zuzulassen. <br><br>**Wichtig:** Wenn Sie in Ihrer `segmentNamespaceDenyList` keine `schemaConfig` angeben und keine `segmentNamespaceAllowList` verwenden, setzt das System `segmentNamespaceDenyList` automatisch auf `[]`. Dadurch wird verhindert, dass in Zukunft benutzerdefinierte Zielgruppen verloren gehen. Aus Sicherheitsgründen empfiehlt Adobe, `"segmentNamespaceDenyList":[]` explizit in der Konfiguration festzulegen. <br><br>`segmentNamespaceAllowList` und `segmentNamespaceDenyList` schließen sich gegenseitig aus. |
 
 {style="table-layout:auto"}
 
@@ -250,7 +250,7 @@ Um Ihr Ziel so zu konfigurieren, dass es die Aktivierung [extern generierter Zie
 }
 ```
 
-Weitere Informationen zur `segmentNamespaceDenyList`-Funktion finden Sie [ den Eigenschaftsbeschreibungen in ](#attributes-schema)Tabelle) weiter oben auf dieser Seite.
+Weitere Informationen zur [-Funktion finden Sie ](#attributes-schema) den Eigenschaftsbeschreibungen in `segmentNamespaceDenyList`Tabelle) weiter oben auf dieser Seite.
 
 ## Nächste Schritte {#next-steps}
 
