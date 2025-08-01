@@ -60,7 +60,7 @@ Sobald Sie als Entwickler zugewiesen sind, können Sie mit der Erstellung von In
 
 Ihr Admin Console-Administrator muss Sie ebenfalls als Benutzende demselben Produktprofil hinzufügen. Beim Benutzerzugriff können Sie in der Benutzeroberfläche das Ergebnis der von Ihnen durchgeführten API-Vorgänge sehen.
 
-Weitere Informationen finden Sie [ Handbuch unter „Verwalten von Benutzergruppen ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) Admin Console&quot;.
+Weitere Informationen finden Sie [ Handbuch unter „Verwalten von Benutzergruppen ](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) Admin Console&quot;.
 
 ## API-Schlüssel (Client-ID) und Organisations-ID generieren {#generate-credentials}
 
