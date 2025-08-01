@@ -4,16 +4,20 @@ title: API-Endpunkt für Segmentdefinitionen
 description: Mit dem Endpunkt Segmentdefinitionen in der Segmentierungs-Service-API von Adobe Experience Platform können Sie Segmentdefinitionen für Ihr Unternehmen programmgesteuert verwalten.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 13%
+source-wordcount: '1558'
+ht-degree: 12%
 
 ---
 
 # Endpunkt für Segmentdefinitionen
 
-Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [&#128279;](../pql/overview.md) Sie im Handbuch zu PQL .
+>[!WARNING]
+>
+>Die Erstellung von Zielgruppen mithilfe von B2B-Entitäten mithilfe der Segmentierungs-Service-API ist veraltet. Sie können keine Zielgruppen mehr mit den folgenden B2B-Entitäten erstellen: Konto-, Konto-Personen-Beziehung, Kampagne, Kampagnenmitglied, Marketing-Liste, Marketing-Listenmitglied, Opportunity und Opportunity-Person-Beziehung.
+
+Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [ Sie im Handbuch zu PQL ](../pql/overview.md).
 
 Dieses Handbuch enthält Informationen, die Ihnen dabei helfen, Segmentdefinitionen besser zu verstehen, und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der -API.
 
@@ -570,7 +574,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 207 mit den angeforderten S
 
 ## Löschen einer bestimmten Segmentdefinition {#delete}
 
-DELETE Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie eine Segmentanfrage an den `/segment/definitions`-Endpunkt senden und im Anfragepfad die ID der Segmentdefinition angeben, die Sie löschen möchten.
+Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie eine DELETE-Anfrage an den `/segment/definitions`-Endpunkt senden und im Anfragepfad die ID der Segmentdefinition angeben, die Sie löschen möchten.
 
 >[!NOTE]
 >

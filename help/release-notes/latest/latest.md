@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Juli 2025
 description: Versionshinweise Juli 2025 für Adobe Experience Platform.
-source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 16%
@@ -16,9 +17,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 29. Juli 2025**
 
@@ -144,4 +145,3 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Unterstützung für das weiche Löschen von Datensätzen in [!DNL Salesforce] | Die [!DNL Salesforce]-Quelle unterstützt jetzt die Einbeziehung von vorläufig gelöschten Datensätzen über einen optionalen `includeDeletedObjects`. Bei der Einstellung „true“ können Kunden vorläufig gelöschte Datensätze in ihre [!DNL Salesforce] einbeziehen und in Experience Platform importieren. Weitere Informationen finden Sie in der [[!DNL Salesforce] Quelldokumentation](../../sources/connectors/crm/salesforce.md). |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
-

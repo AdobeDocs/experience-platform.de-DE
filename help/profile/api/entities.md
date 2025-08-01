@@ -5,10 +5,10 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 37%
+source-wordcount: '1933'
+ht-degree: 33%
 
 ---
 
@@ -23,6 +23,25 @@ Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer P
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, schauen Sie bitte im Handbuch in [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+
+>[!BEGINSHADEBOX]
+
+## Auflösung von Entitäten
+
+Im Rahmen des Architekturupgrades führt Adobe die Entitätsauflösung für Accounts und Opportunities ein. Dabei wird ein deterministischer ID-Abgleich auf der Grundlage der neuesten Daten verwendet. Der Vorgang zur Entitätsauflösung wird täglich während der Batch-Segmentierung ausgeführt, bevor Zielgruppen mit mehreren Entitäten mit B2B-Attributen bewertet werden.
+
+Diese Verbesserung ermöglicht es Experience Platform, mehrere Datensätze zu identifizieren und zu vereinheitlichen, die dieselbe Entität darstellen, wodurch die Datenkonsistenz verbessert und eine genauere Zielgruppensegmentierung ermöglicht wird.
+
+Zuvor nutzten Accounts und Opportunities eine auf Identitätsdiagrammen basierende Auflösung, die Identitäten verknüpfte, einschließlich aller historischen Aufnahmen. Beim neuen Ansatz zur Auflösung von Entitäten werden Identitäten nur anhand der neuesten Daten verknüpft
+
+### Wie funktioniert die Entitätsauflösung?
+
+- **Vor**: Wenn eine DUNS-Nummer (Data Universal Numbering System) als zusätzliche Identität verwendet wurde und die DUNS-Nummer des Kontos in einem Quellsystem wie CRM aktualisiert wurde, ist die Konto-ID mit alten und neuen DUNS-Nummern verknüpft.
+- **Nachher**: Wenn die DUNS-Nummer als zusätzliche Identität verwendet wurde und die DUNS-Nummer des Kontos in einem Quellsystem wie einem CRM aktualisiert wurde, ist die Konto-ID nur mit der neuen DUNS-Nummer verknüpft und spiegelt somit den aktuellen Kontostand genauer wider.
+
+Infolge dieser Aktualisierung spiegelt die [!DNL Profile Access]-API jetzt die neueste Ansicht des Zusammenführungsprofils wider, nachdem ein Entitätsauflösungsauftragszyklus abgeschlossen ist. Darüber hinaus bieten die konsistenten Daten Anwendungsfälle wie Segmentierung, Aktivierung und Analyse mit verbesserter Datengenauigkeit und -konsistenz.
+
+>[!ENDSHADEBOX]
 
 ## Abrufen einer Entität {#retrieve-entity}
 
@@ -1196,7 +1215,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie `schema.name=_xdm.context.profile` **nur** verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.
@@ -1240,7 +1259,7 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `entityId` | **(Erforderlich)** Die ID der Entität. Wenn der Wert dieses Parameters keine XID ist, muss auch ein Identity-Namespace-Parameter (`entityIdNS`) angegeben werden. | `entityId=janedoe@example.com` |
 | `entityIdNS` | Wenn `entityId` nicht als XID angegeben wird, muss **Feld** Identity-Namespace angeben. | `entityIdNS=email` |
 | `relatedEntityId` | Wenn `schema.name` `_xdm.context.experienceevent` ist, muss **Wert** ID der zugehörigen Profilentität angeben. Dieser Wert folgt denselben Regeln wie `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experience“ hat, muss dieser Wert den Identitäts-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
+| `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experienceevent“ hat, muss dieser Wert den Identitäts-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtert die in der Antwort zurückgegebenen Daten. Geben Sie hier an, welche Schemafeldwerte in abgerufene Daten einbezogen werden sollen. Trennen Sie Werte bei mehreren Feldern durch ein Komma ohne Leerzeichen dazwischen. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | Gibt die Zusammenführungsrichtlinie an, mit der die zurückgegebenen Daten gesteuert werden. Wenn im Aufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn keine standardmäßige Zusammenführungsrichtlinie konfiguriert wurde, ist der Standardwert keine Profilzusammenführung und keine Identitätszuordnung. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | Die Sortierreihenfolge der abgerufenen Entitäten nach Zeitstempel. Dies wird als `(+/-)timestamp` geschrieben, wobei der Standard `+timestamp` wird. | `orderby=-timestamp` |

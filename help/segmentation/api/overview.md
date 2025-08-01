@@ -3,10 +3,10 @@ title: Handbuch zur Segmentierungs-Service-API
 description: Mit der Segmentierungs-Service-API können Entwicklerinnen und Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 5%
+source-wordcount: '614'
+ht-degree: 4%
 
 ---
 
@@ -29,6 +29,12 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch f�
 Exportvorgänge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen persistiert werden. Sie können den `/export/jobs`-Endpunkt verwenden, um alle Exportvorgänge abzurufen, einen neuen Exportvorgang zu erstellen, Details zu einem bestimmten Exportvorgang abzurufen oder einen bestimmten Exportvorgang abzubrechen.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu Exportvorgängen](./export-jobs.md).
+
+## Externe Zielgruppen
+
+Sie können externe Zielgruppen in Experience Platform importieren, den Erstellungsstatus einer Zielgruppe abrufen, eine externe Zielgruppe aktualisieren, einen Aufnahmelauf für eine Zielgruppe starten, einen Aufnahmestatus für eine externe Zielgruppe abrufen, Aufnahmedurchgänge für Zielgruppen auflisten und eine externe Zielgruppe löschen, indem Sie den `/core/ais/external-audiences`-Endpunkt verwenden.
+
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch für Endpunkte externer Zielgruppen](./external-audiences.md).
 
 ## Vorschau und Schätzungen
 

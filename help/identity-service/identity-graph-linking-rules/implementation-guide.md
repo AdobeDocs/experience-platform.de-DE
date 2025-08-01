@@ -2,7 +2,7 @@
 title: Implementierungshandbuch für Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Konfigurationen für Verknüpfungsregeln für Identitätsdiagramme.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -203,7 +203,11 @@ Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten
 
 ![Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“.](../images/implementation/settings.png "Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“."){zoomable="yes"}
 
-Verwenden Sie die Benutzeroberfläche für Identitätseinstellungen, um Ihre eindeutigen Namespaces festzulegen und Ihre Namespaces nach Priorität zu konfigurieren. Nachdem Sie die Einstellungen angewendet haben, müssen Sie mindestens sechs Stunden warten, bevor Sie mit der Datenaufnahme fortfahren können, da es mindestens sechs Stunden dauert, bis neue Einstellungen in Identity Service übernommen werden.
+Verwenden Sie die Benutzeroberfläche für Identitätseinstellungen, um Ihre eindeutigen Namespaces festzulegen und Ihre Namespaces nach Priorität zu konfigurieren.
+
+>[!IMPORTANT]
+>
+>Nachdem Sie die Einstellungen angewendet haben, müssen Sie mindestens 24 Stunden warten, bevor Sie mit der Datenaufnahme fortfahren können, da es mindestens 24 Stunden dauert, bis neue Einstellungen in Identity Service übernommen werden.
 
 Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md).
 

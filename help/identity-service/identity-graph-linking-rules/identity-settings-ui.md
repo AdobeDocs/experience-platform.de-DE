@@ -2,10 +2,10 @@
 title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Identitätseinstellungen
 Lesen Sie die folgenden Dokumente, bevor Sie mit Identitätseinstellungen arbeiten:
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
+* [Algorithmus der Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Namespace-Priorität](./namespace-priority.md)
@@ -85,14 +85,14 @@ Von hier aus müssen Sie Folgendes bestätigen, bevor Sie mit dem letzten Schrit
 >
 >* Ihre Daten werden erst geändert, wenn Sie Ihre Identitätseinstellungen speichern.
 
-![Das Bestätigungsfenster, das eine Warnung zu einer sechsstündigen Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
+![Das Bestätigungsfenster, das eine Warnung zu einer 24-Stunden-Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/complete.png)
 
 ## Nächste Schritte
 
 Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der folgenden Dokumentation:
 
 * [[!DNL Identity Graph Linking Rules] – Übersicht](./overview.md)
-* [Algorithmus zur Identitätsoptimierung](./identity-optimization-algorithm.md)
+* [Algorithmus der Identitätsoptimierung](./identity-optimization-algorithm.md)
 * [Implementierungshandbuch](./implementation-guide.md)
 * [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
