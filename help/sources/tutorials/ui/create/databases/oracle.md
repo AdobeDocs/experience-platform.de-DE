@@ -32,7 +32,7 @@ Informationen zur Authentifizierung [[!DNL Oracle DB]  Sie in ](../../../../conn
 
 Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
 
-Um eine Verbindung zu [!DNL Oracle DB] herzustellen, wechseln Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Oracle]** DB} aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
+Um eine Verbindung zu [!DNL Oracle DB] herzustellen, wechseln Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Oracle]** DB&rbrace; aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
 
 >[!TIP]
 >
