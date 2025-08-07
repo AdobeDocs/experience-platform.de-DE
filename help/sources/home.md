@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1643'
 ht-degree: 56%
 
 ---
@@ -176,7 +176,7 @@ Sie können die folgenden Quellen verwenden, um Daten aus Ihrer Datenbank in Exp
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
