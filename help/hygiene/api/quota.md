@@ -3,34 +3,34 @@ title: Quoten-API-Endpunkt
 description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Nutzung des erweiterten Daten-Lifecycle-Managements in Bezug auf die in Ihrem Unternehmen gültigen monatlichen Quotenbegrenzungen für jeden Vorgangstyp überwachen.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
+source-git-commit: 2c2907c5ed38ce4c87b1b73f96e1a0e64586cb97
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 22%
+source-wordcount: '372'
+ht-degree: 23%
 
 ---
 
 # Quoten-Endpunkt
 
-Der `/quota`-Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung Ihres erweiterten Data Lifecycle Management in Bezug auf die Quotenbegrenzungen Ihres Unternehmens für jeden Vorgangstyp zu überwachen.
+Verwenden Sie den `/quota`-Endpunkt in der Datenhygiene-API, um die aktuelle Nutzung und die aktuellen Einschränkungen Ihres Unternehmens zu überprüfen. Die Quoten variieren je nach Berechtigungen, z. B. Privacy and Security Shield oder Healthcare Shield.
 
-Die Kontingentnutzung wird für jeden Data Lifecycle-Vorgangstyp verfolgt. Ihre tatsächlichen Quotenbegrenzungen hängen von den Berechtigungen Ihres Unternehmens ab und können regelmäßig überprüft werden. Datensatzgültigkeiten unterliegen einer festen Begrenzung der Anzahl gleichzeitig aktiver Aufträge.
+Überwachen Sie die aktuelle Kontingentnutzung, um die Einhaltung der organisatorischen Limits für jeden Vorgangstyp sicherzustellen.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie eine [Übersicht](./overview.md) zu folgenden Themen:
 
-* Links zur entsprechenden Dokumentation
-* Eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument
-* Wichtige Informationen zu den erforderlichen Kopfzeilen, die für Aufrufe an eine Experience Platform-API erforderlich sind
+* Links zur zugehörigen Dokumentation
+* Lesen von Beispiel-API-Aufrufen
+* Erforderliche Kopfzeilen für Experience Platform-API-Aufrufe
 
 ## Kontingente und Verarbeitungszeitpläne {#quotas}
 
 Löschanfragen für Datensätze unterliegen Kontingenten und Service-Level-Erwartungen, die auf Ihrer Lizenzberechtigung basieren. Diese Einschränkungen gelten sowohl für benutzeroberflächen- als auch für API-basierte Löschanfragen.
 
 >[!TIP]
-> 
->In diesem Dokument erfahren Sie, wie Sie Ihre Nutzung anhand von berechtigungsbasierten Beschränkungen abfragen können. Eine vollständige Beschreibung der Kontingentebenen, der Berechtigungen zum Löschen von Datensätzen und des SLA-Verhaltens finden Sie in den [UI-basiertes Löschen von Datensätzen](../ui/record-delete.md#quotas) oder [API-basiertes Löschen von Datensätzen](./workorder.md#quotas).
+>
+>In diesem Dokument erfahren Sie, wie Sie Ihre Nutzung anhand von berechtigungsbasierten Beschränkungen abfragen können. Eine vollständige Beschreibung der Kontingentebenen, der Berechtigungen zum Löschen von Datensätzen und des SLA-Verhaltens finden Sie unter [UI-basiertes Löschen von Datensätzen](../ui/record-delete.md#quotas) oder [API-basiertes Löschen von Datensätzen](./workorder.md#quotas).
 
 ## Aufrufen von Kontingenten {#list}
 
@@ -43,9 +43,15 @@ GET /quota
 GET /quota?quotaType={QUOTA_TYPE}
 ```
 
+>[!NOTE]
+>
+>Der Kontingentverbrauch wird täglich und monatlich am 1. eines jeden Monats um 0:00 :00 GMT zurückgesetzt.
+>
+>Nur akzeptierte Anfragen zählen für Ihr Kontingent. Abgelehnte Arbeitsaufträge reduzieren Ihr Kontingent nicht.
+
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn kein `quotaType`-Parameter angegeben ist, werden alle Kontingentwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Typwerten gehören:<ul><li>`datasetExpirationQuota`: Dieses Objekt zeigt die Anzahl der gleichzeitig aktiven Datensatzgültigkeiten für Ihre Organisation sowie Ihr Gesamtlimit an Gültigkeiten an. </li><li>`dailyConsumerDeleteIdentitiesQuota`: Dieses Objekt zeigt die Gesamtzahl der Löschanfragen für Datensätze an, die von Ihrer Organisation heute gestellt wurden, und das Tagegeld insgesamt.<br>Hinweis: Es werden nur akzeptierte Anfragen gezählt. Wenn ein Arbeitsauftrag abgelehnt wird, weil die Validierung fehlschlägt, werden diese Identitätslöschungen nicht auf Ihr Kontingent angerechnet.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: Dieses Objekt zeigt die Gesamtzahl der Löschanfragen für Datensätze an, die von Ihrer Organisation in diesem Monat gestellt wurden, und das gesamte monatliche Taschengeld.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: Dieses Objekt zeigt die Gesamtzahl der Anfragen zur Aktualisierung von Datensätzen an, die von Ihrer Organisation in diesem Monat gestellt wurden, und Ihre gesamte monatliche Vergütung.</li></ul> |
+| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn kein `quotaType`-Parameter angegeben ist, werden alle Kontingentwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Werten gehören:<ul><li>`datasetExpirationQuota`: Die Anzahl der aktiven Datensatzgültigkeiten und Ihr Gesamtlimit.</li><li>`dailyConsumerDeleteIdentitiesQuota`: Die Anzahl der heute gelöschten Datensätze und Ihr tägliches Kontingent.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: Die Anzahl der in diesem Monat gelöschten Datensätze und Ihr monatliches Kontingent.</li></ul> |
 
 **Anfrage**
 
@@ -67,27 +73,21 @@ Eine erfolgreiche Antwort gibt die Details Ihrer Datenlebenszykluskontingente zu
   "quotas": [
     {
       "name": "datasetExpirationQuota",
-      "description": "The number of concurrently active Expiration Dataset Delete in all workorder requests for the organization.",
-      "consumed": 12,
-      "quota": 50
+      "description": "The number of concurrently active dataset-expiration delete operations in all work order requests for the organization.",
+      "consumed": 11,
+      "quota": 75
     },
     {
       "name": "dailyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
-      "consumed": 0,
-      "quota": 1000000
+      "description": "The consumed number of deleted identities in all work order requests for the organization for today.",
+      "consumed": 314,
+      "quota": 700000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
-      "consumed": 841,
-      "quota": 2000000
-    },
-    {
-      "name": "monthlyUpdatedFieldIdentitiesQuota",
-      "description": "The consumed number of updated identities in all workorder requests for the organization for this month.",
-      "consumed": 0,
-      "quota": 0
+      "description": "The consumed number of deleted identities in all work order requests for the organization this month.",
+      "consumed": 2764,
+      "quota": 12000000
     }
   ]
 }
@@ -95,4 +95,8 @@ Eine erfolgreiche Antwort gibt die Details Ihrer Datenlebenszykluskontingente zu
 
 | Eigenschaft | Beschreibung |
 | -------- | ------- |
-| `quotas` | Listet die Kontingentinformationen für jeden Datenlebenszyklus-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Der Datenlebenszyklus-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li></ul></li><li>`description`: Eine Beschreibung des Datenlebenszyklus-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Zeitraum ausgeführt wird. Der Objektname gibt den Kontingentzeitraum an.</li><li>`quota`: Die Zuteilung für diesen Vorgangstyp für Ihre Organisation. Beim Löschen und Aktualisieren von Datensätzen stellt das Kontingent die Anzahl der Aufträge dar, die für jeden Monatszeitraum ausgeführt werden können. Bei Datensatzgültigkeiten stellt das Kontingent die Anzahl der Aufträge dar, die gleichzeitig aktiv sein können.</li></ul> |
+| `quotas` | Listet die Kontingentinformationen für jeden Datenlebenszyklus-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`</li><li>`description`</li><li>`consumed`</li><li>`quota`</li></ul> |
+| `name` | Die Kennung des Kontingenttyps. |
+| `description` | Eine Beschreibung dessen, was dieses Kontingent begrenzt. |
+| `consumed` | Die aktuell verbrauchte Kontingentmenge. Die verbrauchte Menge wird am 1. des Monats auf 00 % GMT :00 00 % GMT für :00 tägliche Kontingent zurückgesetzt. |
+| `quota` | Die maximale Zuteilung dieses Kontingenttyps für Ihre Organisation. |
