@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 56%
 
 ---
@@ -70,7 +70,7 @@ Die folgenden Quellen stehen nur [Kunden von Adobe Real-Time Customer Data Platf
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Datenbank | Batch | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Cloud-Speicherplatz | Streaming | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Datenbank | Batch | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Datenbank | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Datenbank | Batch | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Cloud-Speicherplatz | Streaming | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Datenbank | Streaming | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Datenbank | Batch | Azure, AWS |
