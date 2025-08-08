@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -25,7 +25,7 @@ Weitere Informationen zu Leitplanken in Experience Platform finden Sie in der Ü
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Anzahl der Streaming-Zielgruppen"
->abstract="Die maximale Anzahl von Streaming-Zielgruppen pro Sandbox. Diese Zahl umfasst die Anzahl der Edge-Zielgruppen in der Sandbox."
+>abstract="Die maximale Anzahl von Streaming-Zielgruppen pro Sandbox. Diese Anzahl enthält auch die Anzahl der Edge-Zielgruppen in Ihrer Sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"

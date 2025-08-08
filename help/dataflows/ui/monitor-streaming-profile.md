@@ -1,15 +1,15 @@
 ---
-title: Überwachen der Streaming-Profilaufnahme
+title: Überwachen der Aufnahme von Streaming-Profilen
 description: Erfahren Sie, wie Sie die Aufnahme von Streaming-Profilen mit dem Überwachungs-Dashboard überwachen können
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
 workflow-type: tm+mt
 source-wordcount: '1820'
-ht-degree: 2%
+ht-degree: 21%
 
 ---
 
-# Überwachen der Streaming-Profilaufnahme
+# Überwachen der Aufnahme von Streaming-Profilen
 
 Sie können das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden, um die Aufnahme von Streaming-Profilen in Echtzeit in Ihrem Unternehmen zu überwachen. Verwenden Sie diese Funktion, um auf eine größere Transparenz bei Metriken für Durchsatz, Latenz und Datenqualität im Zusammenhang mit Ihren Streaming-Daten zuzugreifen. Verwenden Sie diese Funktion außerdem für proaktive Warnhinweise und den Abruf umsetzbarer Einblicke, um potenzielle Kapazitätsverletzungen und Probleme bei der Datenaufnahme zu identifizieren.
 
@@ -32,50 +32,50 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
->title="Überwachen der Streaming-Profilaufnahme"
->abstract="Das Monitoring-Dashboard für Streaming-Profile zeigt Informationen über Durchsatz, Aufnahmeraten und Latenz an. Verwenden Sie dieses Dashboard, um die Datenverarbeitungsmetriken anzuzeigen, zu verstehen und zu analysieren. Ihrer Streaming-Profile in Experience Platform."
+>title="Überwachen der Aufnahme von Streaming-Profilen"
+>abstract="Das Dashboard „Monitoring“ für Streaming-Profile zeigt Informationen zu Durchsatz, Aufnahmeraten und Latenz an. Verwenden Sie dieses Dashboard, um die Datenverarbeitungsmetriken anzuzeigen, zu verstehen und zu analysieren. Ihrer Streaming-Profile in Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
 >title="Anfragedurchsatz"
->abstract="Diese Metrik stellt die Anzahl der Ereignisse pro Sekunde dar, die in das Aufnahmesystem eintreten."
+>abstract="Diese Metrik stellt die Anzahl der in das Aufnahmesystem eingehenden Ereignisse pro Sekunde dar."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_processing_throughput"
 >title="Verarbeitungsdurchsatz"
->abstract="Diese Metrik stellt die Anzahl der Ereignisse dar, die vom System jede Sekunde erfolgreich aufgenommen werden."
+>abstract="Diese Metrik stellt die Anzahl der erfolgreich vom System aufgenommenen Ereignisse pro Sekunde dar."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_p95_ingestion_latency"
->title="P95 Aufnahmelatenz"
->abstract="Diese Metrik misst die 95. Perzentil-Latenz von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wurde."
+>title="P95-Aufnahmelatenz"
+>abstract="Diese Metrik misst die Latenz im 95. Perzentil von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wird."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_max_throughput"
 >title="Maximaler Durchsatz"
->abstract="Diese Metrik stellt die maximale Anzahl eingehender Anfragen pro Sekunde dar, die in die Streaming-Profilaufnahme eintreten."
+>abstract="Diese Metrik stellt die maximale Anzahl der eingehenden Ereignisse pro Sekunde dar, die in die Streaming-Profile aufgenommen werden."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_ingested"
 >title="Aufgenommene Einträge"
->abstract="Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen wurden."
+>abstract="Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen werden."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_failed"
 >title="Fehlgeschlagene Einträge"
->abstract="Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden."
+>abstract="Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_skipped"
 >title="Übersprungene Einträge"
->abstract="Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Konfigurations- oder Kapazitätsverstößen verworfen wurden."
+>abstract="Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Konfigurations- oder Kapazitätsverstößen verworfen wurden."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -88,13 +88,13 @@ Verwenden Sie die Tabelle Metriken für spezifische Informationen zu Ihren Daten
 
 | Metrik | Beschreibung | Dimensionen | Messhäufigkeit |
 | --- | --- | --- | --- |
-| Anfragedurchsatz | Diese Metrik stellt die Anzahl der Ereignisse pro Sekunde dar, die in das Aufnahmesystem eintreten. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
-| Verarbeitungsdurchsatz | Diese Metrik stellt die Anzahl der Ereignisse dar, die vom System jede Sekunde erfolgreich aufgenommen werden. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
-| P95 Aufnahmelatenz | Diese Metrik misst die 95. Perzentil-Latenz von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wurde. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
+| Anfragedurchsatz | Diese Metrik stellt die Anzahl der in das Aufnahmesystem eingehenden Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
+| Verarbeitungsdurchsatz | Diese Metrik stellt die Anzahl der erfolgreich vom System aufgenommenen Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
+| P95-Aufnahmelatenz | Diese Metrik misst die Latenz im 95. Perzentil von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wird. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
 | Maximaler Durchsatz | Diese Metrik stellt die maximale Anzahl eingehender Anfragen pro Sekunde dar, die in die Streaming-Profilaufnahme eintreten | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> |
-| Aufgenommene Einträge | Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
-| Fehlgeschlagene Einträge | Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
-| Übersprungene Einträge | Diese Metrik stellt die Gesamtzahl der Datensätze dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Konfigurations- oder Kapazitätsverstößen verworfen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
+| Aufgenommene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen werden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
+| Fehlgeschlagene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
+| Übersprungene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Konfigurations- oder Kapazitätsverstößen verworfen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
 | Fehlerdetails | Diese Metrik stellt die Anzahl der aufgrund von Fehlern fehlgeschlagenen Ereignisse dar. | Datenflussausführung | In einem stündlichen Fenster gruppiert. |
 
 {style="table-layout:auto"}
@@ -119,7 +119,7 @@ Verwenden Sie als Nächstes die -Benutzeroberfläche, um detaillierte Informatio
 
 Alternativ können Sie Ihren eigenen Zeitrahmen manuell mithilfe des Kalenders konfigurieren.
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL &#x200B; „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
+Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL  „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
 
 >[!BEGINTABS]
 
