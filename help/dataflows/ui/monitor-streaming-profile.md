@@ -119,7 +119,7 @@ Verwenden Sie als Nächstes die -Benutzeroberfläche, um detaillierte Informatio
 
 Alternativ können Sie Ihren eigenen Zeitrahmen manuell mithilfe des Kalenders konfigurieren.
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL  „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
+Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL &#x200B; „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
 
 >[!BEGINTABS]
 
