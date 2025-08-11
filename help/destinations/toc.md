@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
+source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1300'
+ht-degree: 75%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -142,7 +142,7 @@ ht-degree: 0%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [Snowflake-Verbindung](./catalog/cloud-storage/snowflake.md)
+      * [(Beta) Snowflake Streaming-Verbindung](./catalog/cloud-storage/snowflake.md)
       * [AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse für dateibasierte Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
       * [Hubspot-Verbindung](./catalog/crm/hubspot.md)
