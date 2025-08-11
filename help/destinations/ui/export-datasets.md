@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen zu Cloud-Speicher-Zielen
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
+source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2721'
 ht-degree: 35%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wurde die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. September 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*.
+>**Aktionselement**: In der Version [September 2024 von Experience Platform](/help/release-notes/latest/latest.md#destinations) wurde die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem für alle Datensatzexport-Datenflüsse, die vor dem 1. November 2024 erstellt wurden *ein standardmäßiges Enddatum 1. September 2025*.
 >
 >Für jeden dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da Ihre Exporte sonst an diesem Datum anhalten. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. September 2025 beendet werden sollen.
 >
@@ -50,16 +50,16 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=de#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
 
 Sehen Sie sich das folgende Video an, um eine End-to-End-Erklärung des auf dieser Seite beschriebenen Workflows, die Vorteile der Verwendung der Funktion „Datensatz exportieren“ und einige vorgeschlagene Anwendungsfälle zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448827?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Unterstützte Ziele {#supported-destinations}
 
