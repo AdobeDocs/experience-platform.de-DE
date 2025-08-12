@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 77b542e98e1c58e1d6f63b15b4daa6129d92c94a
+source-git-commit: 9df876a730cc1568162f3353bc75258c5ce0e3dd
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 51%
@@ -48,7 +48,7 @@ ht-degree: 51%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=de)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrationen von Experience Platform mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Verwaltung, Datenschutz und Sicherheit {#governance-privacy-security}
    * [Überblick](./governance-privacy-security/overview.md)
@@ -84,9 +84,9 @@ ht-degree: 51%
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Lizenznutzung und -kapazität](./license-usage-and-guardrails/capacity.md)
    * [Gesamtes Datenvolumen](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=de)
-   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=de)
-   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=de)
+   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
