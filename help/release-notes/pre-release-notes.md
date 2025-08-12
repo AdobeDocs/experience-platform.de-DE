@@ -4,10 +4,10 @@ description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience P
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
+source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 17%
+source-wordcount: '1116'
+ht-degree: 18%
 
 ---
 
@@ -23,106 +23,73 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Versionsdatum: Mittwoch, 29. Juli 2025**
+**Veröffentlichungsdatum: August 2025**
 
 Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Warnhinweise](#alerts)
 - [Ziele](#destinations)
-- [Datenaufnahme](#ingestion)
-- [Abfrage-Service](#query-service)
-- [Real-Time CDP B2B Edition](#b2b)
-- [Sandboxes](#sandboxes)
-- [Segmentierungs-Service](#segmentation)
+- [Experience-Datenmodell (XDM)](#xdm)
+- [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
 
-## Ziele {#destinations}
+## Warnhinweise {#alerts}
 
-[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-
-**Aktualisierte Ziele**
-
-| Ziel | Beschreibung |
-| --- | --- |
-| Konsolidierung von Marketo-Zielkarten | Marketo V2- und Marketo Engage-Zielkarten für die Personensynchronisierung wurden in einer einzigen, einheitlichen Zielkarte zusammengefasst. Diese Konsolidierung vereinfacht den Zielauswahlprozess und bietet ein optimiertes Erlebnis für Marketo-Integrationen. |
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Erweiterte Datenstrominformationen für Edge-Ziele | Verbesserte Informationen in der rechten Leiste für Adobe Target- und benutzerdefinierte Personalization-Ziele zeigen jetzt den Datenstromnamen an, bieten eine klarere Sichtbarkeit der zugehörigen Datenstromkonfigurationen und reduzieren die Verwirrung bei der Überprüfung vorhandener Datenflüsse. Der **[!UICONTROL Datenstrom-ID]**-Selektor im Zielkonfigurationsbildschirm wurde zu **[!UICONTROL Datenstrom]** aktualisiert, um die Klarheit in der Benutzeroberfläche zu verbessern. |
-| Sichtbarkeit von Marketing-Aktionen bei der Zielauswahl | Marketing-Aktionen werden jetzt in der rechten Leiste der Registerkarte **[!UICONTROL Durchsuchen]** und auf der Seite **[!UICONTROL Datenflussausführungen]** angezeigt, sodass Sie Änderungen an Marketing-Aktionen sofort sehen können, ohne dass eine Navigation zur Ansichtsseite erforderlich ist. Diese Verbesserung verbessert das Benutzererlebnis, da die Konfiguration von Marketing-Aktionen während der Zieleinrichtung einfacher überprüft werden kann. |
-| (Eingeschränkte Beta-Version) Bearbeiten von Marketing-Aktionen für Ziele | Sie können jetzt Marketing-Aktionen für vorhandene Ziele bearbeiten. Diese Funktion befindet sich in einer begrenzten Beta-Phase. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff zu erhalten. |
-| (Eingeschränkte Beta-Version) Bearbeiten von Zielen | Sie können jetzt Ihre Zielkonfiguration bearbeiten, nachdem Sie sie erstellt haben. Diese Funktion befindet sich in einer begrenzten Beta-Phase. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff zu erhalten. |
-| Kontonamen und Beschreibungen für Zielverbindungen | Sie können jetzt beim Herstellen einer Verbindung zu Zielen Kontonamen und Beschreibungen hinzufügen, um eine bessere Verwaltung von Zielen mit mehreren Konten zu ermöglichen. |
-
-**Fehlerbehebungen**
-
-| Problem | Beschreibung |
-| --- | --- |
-| Bildlauffunktion für Kategorien | Es wurde ein Problem behoben, bei dem das seitliche Menü Kategorien im Ziel- und Quellkatalog beim Bewegen der Maus nicht ordnungsgemäß gescrollt wurde, was die Navigationsbenutzerfreundlichkeit für Benutzende, die Zielkategorien durchsuchen, verbessert hat. |
-
-Weitere Informationen finden Sie unter [Ziele - Übersicht](../destinations/home.md).
-
-## Datenaufnahme {#ingestion}
-
-Experience Platform bietet ein umfassendes Framework für die Datenaufnahme, das sowohl die Batch- als auch die Streaming-Datenaufnahme aus verschiedenen Quellen unterstützt.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für die Überwachung der Aufnahme von Streaming-Profilen | Die Echtzeit-Überwachung für die Aufnahme von Streaming-Profilen ist jetzt verfügbar und bietet Transparenz in Metriken zu Durchsatz, Latenz und Datenqualität. Dies unterstützt proaktive Warnhinweise und umsetzbare Einblicke, um Dateningenieuren dabei zu helfen, Kapazitätsverletzungen und Aufnahmeprobleme zu identifizieren. |
+| Warnhinweise zur Streaming-Durchsatzkapazität | Drei neue Warnhinweise ermöglichen es Benutzenden, Warnhinweise zu abonnieren und zu konfigurieren, um die Leistung der Streaming-Durchsatzkapazität proaktiv zu verwalten und zu überwachen. Zu den neuen Warnhinweisen gehören Fälle, in denen der Streaming-Durchsatz 80 % bzw. 90 % erreicht oder die Kapazitätsbeschränkungen überschreitet. Weitere Informationen finden Sie im Handbuch [Kapazitätswarnungsregeln](../observability/alerts/rules.md#capacity). |
 
-Weitere Informationen finden Sie unter [Übersicht über die Datenaufnahme](../ingestion/home.md).
+Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../observability/home.md).
 
-## Abfrage-Service {#query-service}
+## Ziele {#destinations}
 
-Adobe Experience Platform Query Service bietet eine robuste SQL-Schnittstelle für die Datenanalyse und -erkundung auf der gesamten Plattform.
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Funktionen**
+**Neue Ziele**
 
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Verbessertes Sitzungsmanagement | Data Distiller bietet jetzt erweiterte Sitzungsverwaltungsfunktionen, eine bessere Kontrolle über Benutzersitzungen und eine verbesserte Leistungsüberwachung in Entwicklungs- und Produktionsumgebungen. |
-| Unterstützung für nicht ablaufende Zugangsdaten und Passwortzeichenbeschränkungen | Data Distiller unterstützt jetzt nicht ablaufende Anmeldeinformationen mit bestimmten Zeichenbeschränkungen. Kennwörter erfordern mindestens eine Zahl, einen Kleinbuchstaben, einen Großbuchstaben und ein Sonderzeichen, das Dollarzeichen ($) wird jedoch nicht unterstützt. Zu den empfohlenen Sonderzeichen gehören `!, @, #, ^, or &`. |
-| Verbesserte Performance und Konsistenz in allen Umgebungen | Die Leistung von Data Distiller ist jetzt zwischen Entwicklungs- und Produktions-Sandboxes konsistent, wobei ähnliche Backend-Ressourcen in beiden Umgebungen verfügbar sind. Die Anzahl der verbrauchten Rechenstunden kann je nach Datenvolumen und den verfügbaren Backend-Rechenressourcen zur Verarbeitungszeit variieren. |
+| Ziel | Beschreibung |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] | Verwenden Sie das [!DNL Acxiom Real ID Audience Connection] Ziel, um Zielgruppen mit [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/)-Technologie zu erweitern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr. |
 
-Weitere Informationen finden Sie unter [Query Service - Übersicht](../query-service/home.md).
 
-## Real-Time CDP B2B Edition {#b2b}
+**Aktualisierte Ziele**
 
-Real-Time CDP B2B edition bietet umfassende Funktionen für das B2B-Kundendaten-Management, mit denen Unternehmen einheitliche Kundenprofile erstellen, anspruchsvolle B2B-Zielgruppen erstellen und Daten über verschiedene Marketing-Kanäle hinweg aktivieren können.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| B2B-Architekturaktualisierung | Experience Platform führt ein Upgrade auf eine neue B2B-Architektur durch, die erhebliche Verbesserungen für Zielgruppen mit mehreren Entitäten mit B2B-Attributen mit sich bringt. Dieses Upgrade konsolidiert die Unterstützung von Zusammenführungsrichtlinien, verbessert die Genauigkeit der Zielgruppenzählung und verbessert die Funktionen zur Entitätsauflösung. |
-| Zusammenführungsrichtlinien-Konsolidierung für Audiences mit mehreren Entitäten | Zielgruppen mit mehreren Entitäten mit B2B-Attributen unterstützen jetzt nur noch eine einzige Zusammenführungsrichtlinie, die standardmäßige Zusammenführungsrichtlinie, anstatt mehrere Zusammenführungsrichtlinien zu unterstützen. Diese Änderung sorgt für eine konsistente Zielgruppenkomposition und vereinfacht die Verwaltung der Zusammenführungslogik. |
-| Aktualisierungen der Begrenzungen für Konto-Zielgruppen | Konto-Zielgruppen verfügen nicht mehr über die vorherigen Einschränkungen eines 30-tägigen Lookback-Fensters für Erlebnisereignisse, benutzerdefinierte Entitätsbeschränkungen oder Einschränkungen bei der Verwendung `inSegment` Ereignisse. Diese Aktualisierungen bieten mehr Flexibilität bei der Erstellung komplexer B2B-Zielgruppendefinitionen. |
-| Verbesserte Anzahl der Zielgruppen für B2B-Entitäten | Schätzungen der Zielgruppengröße für Zielgruppen mit B2B-Entitäten wie Konten und Opportunities sind jetzt exakt, basierend auf den Ergebnissen der Echtzeit-Segmentierung. Diese Verbesserung bietet genauere und zuverlässigere Schätzungen für Zielgruppen mit komplexen B2B-Beziehungen. |
-| Konto-Momentaufnahmen für die Zielgruppenzugehörigkeit | Details zur Zielgruppenzugehörigkeit sind jetzt für Kontoentitäten in Schnappschuss-Exporten enthalten, was den Zugriff auf den Zielgruppenstatus, Zeitstempel und Mitgliedschaftsindikatoren auf Kontoebene ermöglicht. Dies führt zu Funktionsgleichheit zwischen Profil- (Person) und Konto-Segmentierungsmodellen. |
-| Sandbox-Tooling-Änderungen für Audiences mit mehreren Entitäten | Der Import von Audiences mit mehreren Entitäten mit B2B-Entitäten und Erlebnisereignissen, die vor der Migration exportiert wurden, wird nicht mehr unterstützt. Diese Zielgruppen schlagen bei der Importvalidierung fehl und können nicht automatisch in die neue Architektur konvertiert werden. Zielgruppen müssen nach der Migration erneut exportiert werden, bevor sie in Ziel-Sandboxes importiert werden. |
-| Einstellung von B2B-Entitäts-APIs | Die Erstellung einer Zielgruppe über die API für B2B-Entitäten (Konto, Opportunity, Konto-Personen-Beziehung, Opportunity-Personen-Beziehung, Kampagne, Kampagnenmitglied, Marketing-Liste und Marketing-Listenmitglied) wird jetzt nicht mehr unterstützt. Darüber hinaus werden Vorgänge zum Suchen und Löschen von Profilzugriffs-APIs für diese B2B-Entitäten ebenfalls nicht mehr unterstützt. |
-| Aktualisierungen des Identity-Namespace für die Entitätsauflösung | Konto- und Opportunity-Entitäten verwenden jetzt die zeitprioritätsbasierte Zusammenführung mit bestimmten Identity-Namespaces (`b2b_account` für Konto, `b2b_opportunity` für Opportunity). Alle anderen Entitäten werden mit primären Identitätsüberschneidungen vereinheitlicht, die durch zeitprioritätsbasiertes Zusammenführen zusammengeführt werden. |
-
-Weitere Informationen finden Sie im Abschnitt [Übersicht über Real-Time CDP B2B edition](../rtcdp/b2b-overview.md).
-
-## Sandboxes {#sandboxes}
-
-Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
+| Ziel | Beschreibung |
+| --- | --- |
+| Details zum Authentifizierungsablauf für [!DNL LinkedIn] Ziele | Machen Sie sich keine Gedanken mehr über abgelaufene Anmeldedaten. Informationen zum Kontoablauf sind jetzt direkt in der Experience Platform-Benutzeroberfläche sichtbar, sodass Sie sehen können, wann Ihre [!DNL LinkedIn]-Authentifizierung abläuft und erneuert wird, bevor sie zu Unterbrechungen Ihrer Datenflüsse führt. |
+| Verschlüsselungsunterstützung für [!DNL Data Landing Zone] Ziele | Schützen Sie Ihre exportierten Daten mit Verschlüsselung. Sie können jetzt RSA-formatierte öffentliche Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln, sodass Sie dasselbe Sicherheitsniveau erhalten, das andere Cloud-Speicherziele für Ihre vertraulichen Informationen bieten. |
+| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) internes Upgrade | Ab dem 11. August 2025 können Sie im Zielkatalog zwei **[!DNL Microsoft Bing]** nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der bestehende **[!DNL Microsoft Bing]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Microsoft Bing]** umbenannt, und es **[!UICONTROL jetzt eine neue Karte mit dem Namen]** Microsoft Bing verfügbar. Verwenden Sie die neue **[!UICONTROL Microsoft Bing]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum **[!UICONTROL (veraltet) Microsoft Bing]**-Ziel haben, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist. <br><br>Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:<ul><li>Flussspezifikations-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindungsspezifikations-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Nach diesem Upgrade kann es zu einem **Rückgang der Anzahl aktivierter Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen. Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. |
+| Zusätzliche Kennungen für [!DNL Amazon Ads] Ziele | Das Amazon Ads-Ziel unterstützt jetzt neue Identitäten (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Diese Felder sollen die Übereinstimmungsraten der Zielgruppen verbessern und werden im Klartext mit optionalem SHA256-Hashing übergeben. |
+| Konsolidierung [!DNL Marketo] Zielkarten | Vereinfachen Sie die Einrichtung Ihres [!DNL Marketo] Ziels mit unserer einheitlichen Zielkarte. Wir haben [!DNL Marketo] V2- und V3-Karten in einer optimierten Option zusammengefasst, sodass Sie leichter das richtige Ziel auswählen und schnell loslegen können. |
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Änderungen an Audience-Importen mit mehreren Entitäten | Die Sandbox-Tools wurden aktualisiert, um das neue Upgrade der B2B-Architektur zu unterstützen. Audiences mit mehreren Entitäten, die B2B-Entitäten und Erlebnisereignisse enthalten, müssen nach dem Architekturupgrade erneut exportiert werden, bevor sie über Sandbox-Tools in Ziel-Sandboxes importiert werden. Der Import von Versionen vor einem Upgrade schlägt die Validierung fehl. |
+| Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die vor November 2024 erstellt wurden | Wenn in Ihrem Unternehmen Datenflüsse für den Datensatzexport vor November 2024 erstellt wurden, funktionieren diese Datenflüsse ab dem 1. September 2025 nicht mehr. Wenn Sie die Datenflüsse benötigen, um nach dem 1. September 2025 weiterhin Daten zu exportieren, müssen Sie ihre Zeitpläne für jedes Ziel erweitern, an das Sie Datensätze exportieren, indem Sie die Schritte in [diesem Handbuch](../destinations/ui/dataset-expiration-update.md) befolgen. |
+| Verbesserte Such-, Filter- und Tagging-Funktionen für Ziele | Verbessern Sie Ihren Zielverwaltungs-Workflow mit erweiterten Such-, Filter- und Tagging-Funktionen auf den Registerkarten Durchsuchen und Konten . Sie können jetzt nach bestimmten Datenflüssen und Konten nach Namen suchen, nach verschiedenen Kriterien wie Zielplattform, Status und Datum filtern und benutzerdefinierte Tags erstellen, um Ihre Ziele zu organisieren. Die Spaltensortierung ist auch für Schlüsselfelder wie die letzte Datenflusslaufzeit verfügbar, was die Identifizierung und Verwaltung Ihrer Zielverbindungen erleichtert. |
 
-Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../sandboxes/home.md).
+Weitere Informationen finden Sie unter [Ziele - Übersicht](../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Modellbasierte Schemata | Vereinfachen Sie Ihre Datenmodellierung mit modellbasierten Schemata. Sie können jetzt Schemas einfacher mit umfassenden Beispielen und Anleitungen erstellen. Diese Funktion steht derzeit Lizenzinhabern von Campaign Orchestration zur Verfügung und wird auf Kunden von Data Distiller bei GA ausgeweitet, was die Datenmodellierung zugänglicher und effizienter macht. |
+
+Weitere Informationen finden Sie in der [XDM-Übersicht](../xdm/home.md).
 
 ## Segmentierungs-Service {#segmentation-service}
 
@@ -132,23 +99,49 @@ Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../sand
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Externe Zielgruppen-API | Sie können die API für externe Zielgruppen verwenden, um extern generierte Zielgruppen programmgesteuert in Adobe Experience Platform zu importieren. |
+| Zielgruppenschätzungen | Zielgruppenschätzungen werden jetzt automatisch in Segment Builder generiert. Dieser Wert wird bei jeder Änderung der Zielgruppe aktualisiert und entspricht immer den neuesten Zielgruppenregeln. |
+
+Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../segmentation/home.md).
 
 ## Quellen {#sources}
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
-**Neue Quellen**
-
-| Quelle | Beschreibung |
-| --- | --- |
-| Unterstützung für [!DNL Didomi] (Streaming-SDK) | Der [!DNL Didomi]-Quell-Connector ermöglicht es Ihnen, Einverständnisverwaltungs-Daten aus der Plattform von [!DNL Didomi] aufzunehmen, wodurch die Einhaltung von Datenschutzbestimmungen und einverständnisbasierte Marketing-Strategien unterstützt wird. |
-
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für die Änderungsdatenerfassung in ausgewählten Quellen | Sie können jetzt Datenflüsse erstellen, die die Änderungsdatenerfassung für die inkrementelle Aufnahme mithilfe von Quell-Connectoren ermöglichen. Mit dieser Funktion können Kunden den Datentyp für die inkrementelle Aufnahme ändern, die Datenfrische verbessern und den Verarbeitungsaufwand reduzieren. |
-| Unterstützung für das weiche Löschen von Datensätzen in [!DNL Salesforce] | Die [!DNL Salesforce]-Quelle unterstützt jetzt die Einbeziehung von vorläufig gelöschten Datensätzen über einen optionalen `includeDeletedObjects`. Bei der Einstellung „true“ können Kunden vorläufig gelöschte Datensätze in ihre [!DNL Salesforce] einbeziehen und in Experience Platform importieren. |
+| Unterstützung für [!BADGE Beta]{type=Informative} Azure Private Link in der Benutzeroberfläche | Schützen Sie Ihre Daten mit privaten Netzwerkverbindungen. Sie können jetzt private Endpunkte erstellen und Datenflüsse einrichten, die das öffentliche Internet umgehen, sodass die Sicherheit und Netzwerkisolierung für Ihre sensiblen Daten verbessert wird. |
+| Aktualisierungen der [!DNL Marketo]-Dokumentation | Verschaffen Sie sich einen vollständigen Überblick darüber, wie Ihre [!DNL Marketo] transformiert werden, wenn sie in Experience Platform eintreten. Alle Feldzuordnungen enthalten jetzt detaillierte Erläuterungen zu Datenumwandlungen, sodass Sie genau verstehen können, wie Ihre `PersonID` `leadID` wird und `eventType` `activityType` wird. |
+| Unterstützung für die Authentifizierung des Service-Prinzipals für [!DNL Azure Blob Storage] | Sie können jetzt Ihr [!DNL Azure Blob Storage]-Konto mit Experience Platform verbinden, indem Sie die Authentifizierung als Service-Prinzipal durchführen. |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../sources/home.md).
+
+<!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## B2B CDP {#b2b-cdp}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
+| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
+
+-->
