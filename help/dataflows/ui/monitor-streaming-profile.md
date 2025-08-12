@@ -2,10 +2,10 @@
 title: Überwachen der Aufnahme von Streaming-Profilen
 description: Erfahren Sie, wie Sie die Aufnahme von Streaming-Profilen mit dem Überwachungs-Dashboard überwachen können
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 21%
+source-wordcount: '1967'
+ht-degree: 20%
 
 ---
 
@@ -119,7 +119,7 @@ Verwenden Sie als Nächstes die -Benutzeroberfläche, um detaillierte Informatio
 
 Alternativ können Sie Ihren eigenen Zeitrahmen manuell mithilfe des Kalenders konfigurieren.
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL &#x200B; „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
+Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL  „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
 
 >[!BEGINTABS]
 
@@ -197,6 +197,28 @@ Wenn Ihr aktuelles Limit von **1.500 Ereignissen pro Sekunde** nicht ausreicht, 
 | Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](../../sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische ](../../datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
 
 {style="table-layout:auto"}
+
+### Häufig gestellte Fragen {#faq}
+
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Überwachung der Aufnahme von Streaming-Profilen.
+
+#### Warum sehen meine Metriken zwischen den Dashboards „Kapazität“ und „Überwachung“ für den Anforderungsdurchsatz unterschiedlich aus?
+
++++Antwort
+
+Das [!UICONTROL Monitoring]-Dashboard zeigt Echtzeitmetriken für die Aufnahme und Verarbeitung an. Diese Zahlen sind exakte Metriken, die zum Zeitpunkt der Aktivität erfasst wurden. Umgekehrt verwendet [!UICONTROL  Dashboard ]Kapazität“ einen Glättungsmechanismus für die Berechnung der Durchsatzkapazität. Dieser Mechanismus trägt dazu bei, kurzlebige Spitzen zu reduzieren, die davon ausgehen, dass sie sofort als Verstöße eingestuft werden, und stellt sicher, dass sich Kapazitätswarnungen auf nachhaltige Trends und nicht auf vorübergehende Bursts konzentrieren.
+
+Aufgrund des Glättungsmechanismus kann Folgendes auftreten:
+
+* Kleine Spitzen in [!UICONTROL Überwachung] die nicht in [!UICONTROL Kapazität] angezeigt werden.
+* Etwas niedrigere Werte in [!UICONTROL Kapazität] im Vergleich zu [!UICONTROL Monitoring] zum gleichen Zeitstempel.
+
+Die beiden Dashboards sind präzise, jedoch für verschiedene Zwecke konzipiert.
+
+* [!UICONTROL Überwachung]: Detaillierte, operative Transparenz für jeden Augenblick.
+* [!UICONTROL Kapazität]: Strategische Ansicht zur Ermittlung von Nutzungs- und Verletzungsmustern.
+
++++
 
 ## Nächste Schritte {#next-steps}
 
