@@ -19,7 +19,7 @@ ht-degree: 7%
 >- **Anzeigen des Dashboards zur Lizenznutzung**
 >   - Mit dieser Berechtigung können **die Startseite** Kapazität anzeigen.
 >- **Verwalten von Sandboxes**
->   - Mit dieser Berechtigung können **** Kapazitätszuweisungen „bearbeiten“.
+>   - Mit dieser Berechtigung können **&#x200B;**&#x200B;Kapazitätszuweisungen „bearbeiten“.
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](/help/access-control/home.md#permissions)
 >

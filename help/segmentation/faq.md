@@ -186,7 +186,7 @@ Audiences, die extern erstellt werden, werden automatisch auf „Veröffentlicht
 
 ### Wie versetze ich eine Zielgruppe in den inaktiven Status?
 
-Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL &quot; ].
+Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL &quot; &#x200B;].
 
 ### Wie veröffentliche ich eine Zielgruppe erneut?
 
@@ -226,9 +226,9 @@ Wenn Sie eine Zielgruppe kopieren, befindet sich die neue Zielgruppe im Entwurfs
 
 Ja, die Verwendung einer Zielgruppe als untergeordnete Zielgruppe hat Auswirkungen darauf, welche Lebenszykluszustandsübergänge die untergeordnete und die übergeordnete Zielgruppe durchführen kann.
 
-Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe ****) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
+Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe **&#x200B;**) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
 
-Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **** deaktiviert oder gelöscht werden.
+Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **&#x200B;**&#x200B;deaktiviert oder gelöscht werden.
 
 ### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
 
@@ -306,7 +306,7 @@ Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folg
 
 1. Begonnen wird **immer** mit dem Block [!UICONTROL Zielgruppe], um die Startaktivität auszuwählen. Es kann maximal **ein** Block [!UICONTROL Zielgruppe] ausgewählt werden.
 2. Es kann optional ein Block [!UICONTROL Ausschließen], der auf den Block [!UICONTROL Zielgruppe] folgt, hinzugefügt werden.
-3. Sie können optional einen Block [!UICONTROL Anreichern] hinzufügen, der auf den Block [!UICONTROL Ausschließen] folgt. Pro Komposition kann nur **Block**[!UICONTROL Anreichern] verwendet werden.
+3. Sie können optional einen Block [!UICONTROL Anreichern] hinzufügen, der auf den Block [!UICONTROL Ausschließen] folgt. Pro Komposition kann nur **Block**&#x200B;[!UICONTROL Anreichern] verwendet werden.
 4. Es kann optional ein Block für den [!UICONTROL Rang] oder die [!UICONTROL Aufspaltung] hinzugefügt werden. Es kann **nur** einer dieser Blöcke pro Komposition ausgewählt werden.
 5. Es sollte **immer** mit einem Block zum [!UICONTROL Speichern] abgeschlossen werden, um die Zielgruppe zu speichern.
 
