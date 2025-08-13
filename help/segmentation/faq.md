@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4849'
 ht-degree: 27%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie anhand von Segmentdefinitionen oder anderen Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Zielgruppen werden zentral in Experience Platform konfiguriert und gepflegt und stehen jeder Adobe-Lösung zur Verfügung. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu Zielgruppen und Segmentierung.
 
-## Zielgruppen-Portal
+## Zielgruppenportal
 
 Im folgenden Abschnitt finden Sie Fragen zu Audience Portal.
 
@@ -186,7 +186,7 @@ Audiences, die extern erstellt werden, werden automatisch auf „Veröffentlicht
 
 ### Wie versetze ich eine Zielgruppe in den inaktiven Status?
 
-Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL &quot; &#x200B;].
+Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL &quot; ].
 
 ### Wie veröffentliche ich eine Zielgruppe erneut?
 
@@ -226,9 +226,9 @@ Wenn Sie eine Zielgruppe kopieren, befindet sich die neue Zielgruppe im Entwurfs
 
 Ja, die Verwendung einer Zielgruppe als untergeordnete Zielgruppe hat Auswirkungen darauf, welche Lebenszykluszustandsübergänge die untergeordnete und die übergeordnete Zielgruppe durchführen kann.
 
-Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe **&#x200B;**) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
+Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe ****) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
 
-Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **&#x200B;**&#x200B;deaktiviert oder gelöscht werden.
+Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **** deaktiviert oder gelöscht werden.
 
 ### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
 
@@ -288,11 +288,15 @@ Weitere Informationen zum Segment Builder finden Sie im [Segment Builder-Handbuc
 
 Zu diesem Zeitpunkt nicht. Diese Funktion sollte jedoch demnächst verfügbar sein.
 
-### Kann ich Zielgruppen von der Zielgruppenzusammensetzung an alle nachgelagerten Ziele und Kanäle senden?
+### Kann ich Zielgruppen von der Zielgruppenkomposition an alle nachgelagerten Ziele und Kanäle senden?
 
 Ja! Sie können Zielgruppen aus der Zielgruppenkomposition in Adobe Journey Optimizer-Kampagnen, Real-Time CDP-Zielen und Adobe Journey Optimizer-Journey verwenden.
 
 ### Gibt es Leitlinien in Bezug auf die Anzahl der Kompositionen?
+
+>[!IMPORTANT]
+>
+>Diese Leitplanke gilt nur für Kompositionen, die mit Zielgruppenkomposition erstellt wurden, und gilt **nicht** für Kompositionen, die mit Federated Zielgruppenkomposition erstellt wurden.
 
 Zu diesem Zeitpunkt können Sie nur **10** veröffentlichte Kompositionen pro Sandbox haben. Diese Grenze soll in einer zukünftigen Version erhöht werden.
 
@@ -302,7 +306,7 @@ Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folg
 
 1. Begonnen wird **immer** mit dem Block [!UICONTROL Zielgruppe], um die Startaktivität auszuwählen. Es kann maximal **ein** Block [!UICONTROL Zielgruppe] ausgewählt werden.
 2. Es kann optional ein Block [!UICONTROL Ausschließen], der auf den Block [!UICONTROL Zielgruppe] folgt, hinzugefügt werden.
-3. Sie können optional einen Block [!UICONTROL Anreichern] hinzufügen, der auf den Block [!UICONTROL Ausschließen] folgt. Pro Komposition kann nur **Block**&#x200B;[!UICONTROL Anreichern] verwendet werden.
+3. Sie können optional einen Block [!UICONTROL Anreichern] hinzufügen, der auf den Block [!UICONTROL Ausschließen] folgt. Pro Komposition kann nur **Block**[!UICONTROL Anreichern] verwendet werden.
 4. Es kann optional ein Block für den [!UICONTROL Rang] oder die [!UICONTROL Aufspaltung] hinzugefügt werden. Es kann **nur** einer dieser Blöcke pro Komposition ausgewählt werden.
 5. Es sollte **immer** mit einem Block zum [!UICONTROL Speichern] abgeschlossen werden, um die Zielgruppe zu speichern.
 
@@ -332,11 +336,11 @@ Die in Zielgruppenkomposition erstellte Zielgruppe wird **sofort** im Zielgruppe
 
 Derzeit werden Auswertungsaufträge in der Monitoring **Benutzeroberfläche** angezeigt.
 
-### Kann ich eine Zielgruppen-Komposition in einer anderen Komposition verwenden?
+### Kann ich eine Zielgruppenkomposition in einer anderen Komposition verwenden?
 
-Nein, Zielgruppen, die mithilfe der Zielgruppen-Komposition erstellt wurden, können **nicht** als Eingabe in einer anderen Zielgruppen-Komposition verwendet werden.
+Nein, Zielgruppen, die mithilfe der Zielgruppenkomposition erstellt wurden, können **nicht** als Eingabe in einer anderen Zielgruppenkomposition verwendet werden.
 
-### Wie funktioniert die Aufteilung in Zielgruppen-Kompositionen?
+### Wie funktioniert die Aufteilung in Zielgruppenkompositionen?
 
 Durch die Zielgruppenteilung können Sie Ihre Zielgruppe in kleinere Gruppen unterteilen.
 

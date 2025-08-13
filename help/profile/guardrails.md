@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
-ht-degree: 52%
+source-wordcount: '2649'
+ht-degree: 51%
 
 ---
 
@@ -125,7 +125,7 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 | Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungs-Schutzmaßnahme | Die Streaming-Segmentierung unterstützt einen kombinierten Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde in Ihren Produktions- und Entwicklungs-Sandboxes. Es kann bis zu 5 Minuten dauern, bis ein Profil für die Segmentzugehörigkeit qualifiziert ist. Weitere Informationen über [Streaming-Zielgruppen](/help/segmentation/methods/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungs-Schutzmaßnahme | Pro Sandbox können bis zu 4000 **aktive** Batch-Zielgruppen verwendet werden. Pro Organisation können mehr als 4.000 Batch-Zielgruppen verwendet werden, sofern in jeder (individuellen) Sandbox **4.000 Batch** Zielgruppen vorhanden sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich negativ auf die Systemleistung auswirken. |
 | Konto-Zielgruppen pro Sandbox | 50 | Vom System erzwungene Leitplanken | Sie können in einer Sandbox maximal 50 Konto-Zielgruppen erstellen. Nachdem Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird das Steuerelement **[!UICONTROL Zielgruppe erstellen]** beim Erstellen einer neuen Konto-Zielgruppe deaktiviert. Lesen Sie mehr über [Account-Zielgruppen](/help/segmentation/types/account-audiences.md). |
-| Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungs-Schutzmaßnahme | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Weitere Informationen zur [Audience-Komposition“ finden Sie im Handbuch zur Benutzeroberfläche](/help/segmentation/ui/audience-composition.md). |
+| Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungs-Schutzmaßnahme | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Weitere Informationen zur [Audience-Komposition“ finden Sie im Handbuch zur Benutzeroberfläche](/help/segmentation/ui/audience-composition.md). **Hinweis**: Mit Federated Audience Komposition erstellte Kompositionen werden **nicht** mit dieser Leitplanke gezählt. |
 | Maximale Zielgruppengröße | 30 Prozent | Leistungs-Schutzmaßnahme | Die empfohlene maximale Mitgliedschaft einer Zielgruppe beträgt 30 % der Gesamtzahl der Profile im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mit mehreren großen Zielgruppen ist möglich, wirkt sich jedoch auf die Systemleistung aus. |
 | Flexible Auswertungsdurchgänge für Zielgruppen | 50 pro Jahr (Produktions-Sandbox)<br/>100 pro Jahr (Entwicklungs-Sandbox) | Vom System erzwungene Leitplanken | Sie haben pro Jahr maximal 50 flexible Zielgruppenauswertungsdurchgänge pro (Produktions-)**Sandbox**. Sie haben pro Jahr maximal 100 flexible Zielgruppenauswertungsdurchgänge pro Sandbox **Entwicklung**. |
 | Flexible Auswertungsdurchgänge für Zielgruppen | 2 pro Tag | Vom System erzwungene Leitplanken | Sie haben maximal 2 Ausführungen pro Tag pro Sandbox. |
@@ -188,7 +188,7 @@ Für Profil können mehrere Report Suites aktiviert werden, solange alle Datenko
 In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
