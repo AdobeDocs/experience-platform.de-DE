@@ -3,10 +3,10 @@ keywords: Werbung; Bing;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting- und zielgruppenorientierte digitale Kampagnen für das gesamte Microsoft Advertising-Netzwerk ausführen, einschließlich Display-Werbung, Suche und nativer Kampagnen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
+source-git-commit: 34520b42554a4ff72b05e9254bd923173629d611
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 35%
+source-wordcount: '877'
+ht-degree: 39%
 
 ---
 
@@ -17,14 +17,9 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->* Ab dem 11. August 2025 können Sie im Zielkatalog zwei **[!DNL Microsoft Bing]** nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der bestehende **[!DNL Microsoft Bing]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Microsoft Bing]** umbenannt, und es **[!UICONTROL jetzt eine neue Karte mit dem Namen]** Microsoft Bing verfügbar.
->* Verwenden Sie die neue **[!UICONTROL Microsoft Bing]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum **[!UICONTROL (veraltet) Microsoft Bing]**-Ziel haben, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist.
->* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
->   * Verbindungsspezifikations-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>Nach einem internen Upgrade des Ziel-Service vom August 2025 kann es **zu einem „Rückgang der Anzahl der aktivierten Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen.
 >
-> Nach diesem Upgrade kann es zu einem **Rückgang der Anzahl aktivierter Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen.
-> &#x200B;> Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. Detaillierte Informationen finden Sie [ Abschnitt ](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
+> Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. Detaillierte Informationen finden Sie [ Abschnitt ](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
 >
 >**Änderungen:**
 >
@@ -122,7 +117,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
