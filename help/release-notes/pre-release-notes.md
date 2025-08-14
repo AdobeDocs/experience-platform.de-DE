@@ -4,10 +4,10 @@ description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience P
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 18%
+source-wordcount: '1074'
+ht-degree: 19%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 18%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: August 2025**
 
@@ -53,28 +53,31 @@ Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observabil
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
+>[!IMPORTANT]
+>
+>**Erweiterung des Datensatzexport-Zeitplans**
+>
+>Wenn in Ihrem Unternehmen Datenflüsse für den Datensatzexport vor November 2024 erstellt wurden, funktionieren diese Datenflüsse ab **1. September 2025**. Wenn Sie die Datenflüsse benötigen, um nach dem 1. September 2025 weiterhin Daten zu exportieren, müssen Sie ihre Zeitpläne für jedes Ziel erweitern, an das Sie Datensätze exportieren, indem Sie die Schritte in [diesem Handbuch](../destinations/ui/dataset-expiration-update.md) befolgen.
+
 **Neue Ziele**
 
 | Ziel | Beschreibung |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] | Verwenden Sie das [!DNL Acxiom Real ID Audience Connection] Ziel, um Zielgruppen mit [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/)-Technologie zu erweitern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr. |
 
-
 **Aktualisierte Ziele**
 
 | Ziel | Beschreibung |
 | --- | --- |
-| Details zum Authentifizierungsablauf für [!DNL LinkedIn] Ziele | Machen Sie sich keine Gedanken mehr über abgelaufene Anmeldedaten. Informationen zum Kontoablauf sind jetzt direkt in der Experience Platform-Benutzeroberfläche sichtbar, sodass Sie sehen können, wann Ihre [!DNL LinkedIn]-Authentifizierung abläuft und erneuert wird, bevor sie zu Unterbrechungen Ihrer Datenflüsse führt. |
+| Details zum Authentifizierungsablauf für [!DNL LinkedIn]- und [!DNL Pinterest] | Informationen zum Kontoablauf sind jetzt direkt in der Experience Platform-Benutzeroberfläche sichtbar, sodass Sie sehen können, wann Ihre [!DNL LinkedIn]- und [!DNL Pinterest]-Authentifizierung abläuft und verlängert wird, bevor sie zu Störungen Ihrer Datenflüsse führt. |
 | Verschlüsselungsunterstützung für [!DNL Data Landing Zone] Ziele | Schützen Sie Ihre exportierten Daten mit Verschlüsselung. Sie können jetzt RSA-formatierte öffentliche Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln, sodass Sie dasselbe Sicherheitsniveau erhalten, das andere Cloud-Speicherziele für Ihre vertraulichen Informationen bieten. |
 | [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) internes Upgrade | Ab dem 11. August 2025 können Sie im Zielkatalog zwei **[!DNL Microsoft Bing]** nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der bestehende **[!DNL Microsoft Bing]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Microsoft Bing]** umbenannt, und es **[!UICONTROL jetzt eine neue Karte mit dem Namen]** Microsoft Bing verfügbar. Verwenden Sie die neue **[!UICONTROL Microsoft Bing]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum **[!UICONTROL (veraltet) Microsoft Bing]**-Ziel haben, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist. <br><br>Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:<ul><li>Flussspezifikations-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindungsspezifikations-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Nach diesem Upgrade kann es zu einem **Rückgang der Anzahl aktivierter Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen. Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. |
-| Zusätzliche Kennungen für [!DNL Amazon Ads] Ziele | Das Amazon Ads-Ziel unterstützt jetzt neue Identitäten (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Diese Felder sollen die Übereinstimmungsraten der Zielgruppen verbessern und werden im Klartext mit optionalem SHA256-Hashing übergeben. |
 | Konsolidierung [!DNL Marketo] Zielkarten | Vereinfachen Sie die Einrichtung Ihres [!DNL Marketo] Ziels mit unserer einheitlichen Zielkarte. Wir haben [!DNL Marketo] V2- und V3-Karten in einer optimierten Option zusammengefasst, sodass Sie leichter das richtige Ziel auswählen und schnell loslegen können. |
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die vor November 2024 erstellt wurden | Wenn in Ihrem Unternehmen Datenflüsse für den Datensatzexport vor November 2024 erstellt wurden, funktionieren diese Datenflüsse ab dem 1. September 2025 nicht mehr. Wenn Sie die Datenflüsse benötigen, um nach dem 1. September 2025 weiterhin Daten zu exportieren, müssen Sie ihre Zeitpläne für jedes Ziel erweitern, an das Sie Datensätze exportieren, indem Sie die Schritte in [diesem Handbuch](../destinations/ui/dataset-expiration-update.md) befolgen. |
 | Verbesserte Such-, Filter- und Tagging-Funktionen für Ziele | Verbessern Sie Ihren Zielverwaltungs-Workflow mit erweiterten Such-, Filter- und Tagging-Funktionen auf den Registerkarten Durchsuchen und Konten . Sie können jetzt nach bestimmten Datenflüssen und Konten nach Namen suchen, nach verschiedenen Kriterien wie Zielplattform, Status und Datum filtern und benutzerdefinierte Tags erstellen, um Ihre Ziele zu organisieren. Die Spaltensortierung ist auch für Schlüsselfelder wie die letzte Datenflusslaufzeit verfügbar, was die Identifizierung und Verwaltung Ihrer Zielverbindungen erleichtert. |
 
 Weitere Informationen finden Sie unter [Ziele - Übersicht](../destinations/home.md).
