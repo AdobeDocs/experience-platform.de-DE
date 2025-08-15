@@ -2,9 +2,9 @@
 title: Algolia Tags-Erweiterung - Übersicht
 description: Erfahren Sie mehr über die Algolia Tags-Erweiterung in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
+source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1977'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Um [!DNL Algolia] mit Adobe Experience Platform zu verbinden, benötigen Sie die
 
 Um die [!DNL Algolia] Insights-Erweiterung zu installieren, navigieren Sie zur [!UICONTROL Datenerfassungs-Benutzeroberfläche] und wählen Sie **[!UICONTROL Tags]** aus der linken Navigationsleiste aus. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **auf** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **[!UICONTROL auf]** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie nach der Karte [!DNL Algolia] Insights und wählen Sie dann **[!UICONTROL Installieren]** aus.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -42,12 +42,12 @@ In der Konfigurationsansicht, die angezeigt wird, müssen Sie die folgenden Deta
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Anwendungs-ID | Geben Sie die [!UICONTROL Anwendungs-ID] ein, die Sie zuvor im Abschnitt [Konfigurationsdetails](#configuration-details) erfasst haben. |
-| API-Schlüssel suchen | Geben Sie den [!UICONTROL Such-API-Schlüssel] ein, den Sie zuvor im Abschnitt [Konfigurationsdetails](#configuration-details) erfasst haben. |
-| Indexname | Der [!UICONTROL Indexname] enthält die Produkte oder Inhalte.  Dieser Index wird als Standard verwendet. |
-| Benutzer-Token-Datenelement | Das Datenelement, das das Benutzer-Token zurückgibt. |
-| Authentifiziertes Benutzer-Token-Datenelement | Legen Sie das Datenelement fest, das das Token für authentifizierte Benutzer zurückgibt. |
-| Währung | Wählen Sie einen Währungstyp.  Der Standardwert ist auf `USD` festgelegt. |
+| [!UICONTROL Anwendungs-ID] | Geben Sie die [!UICONTROL Anwendungs-ID] ein, die Sie zuvor im Abschnitt [Konfigurationsdetails](#configuration-details) erfasst haben. |
+| [!UICONTROL API-Schlüssel suchen] | Geben Sie den [!UICONTROL Such-API-Schlüssel] ein, den Sie zuvor im Abschnitt [Konfigurationsdetails](#configuration-details) erfasst haben. |
+| [!UICONTROL Indexname] | Der [!UICONTROL Indexname] enthält die Produkte oder Inhalte.  Dieser Index wird als Standard verwendet. |
+| [!UICONTROL Benutzer-Token-Datenelement] | Das Datenelement, das das Benutzer-Token zurückgibt. |
+| [!UICONTROL Authentifiziertes Benutzer-Token-Datenelement] | Legen Sie das Datenelement fest, das das Token für authentifizierte Benutzer zurückgibt. |
+| [!UICONTROL Währung] | Wählen Sie einen Währungstyp. Der Standardwert ist auf `USD` festgelegt. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -80,13 +80,14 @@ Fügen Sie die Aktion **[!UICONTROL Klicken]** zu Ihrer Tag-Regel hinzu, um ange
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet werden kann, um dieses Klickereignis weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`position` (optional)</li></ul> |
+| [!UICONTROL Datenelement „Ereignisdetails“] | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`position` (optional)</li></ul> |
+| [!UICONTROL Datensatz-ID-Datenelement] | Die Datensatz-ID wird als Schlüssel für die Ereignisdaten verwendet, die während eines `click` im Speicher des Browsers gespeichert werden. Standardmäßig dient die Seiten-URL als Datensatz-ID. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Datensatz-ID als Zeichenfolge zurückgibt. |
 
 >[!NOTE]
 >
 >Wenn sowohl `queryID` als auch `position` enthalten sind, wird das Ereignis als (**Objekt-IDs nach der Suche)**. Andernfalls wird es als Ereignis **angeklickte Objekt-IDs** klassifiziert.
->&#x200B;><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -99,14 +100,16 @@ Fügen Sie die Aktion **[!UICONTROL Konvertiert]** zu Ihrer Tag-Regel hinzu, um 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Ereignisname | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li></ul> |
+| [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
+| [!UICONTROL Datenelement „Ereignisdetails“] | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li></ul> |
+| [!UICONTROL Entfernen von Ereignisdaten deaktivieren] | Bei einem Konversionsereignis werden die Ereignisdaten aus dem Speicher entfernt. Wenn diese Daten für nachfolgende Konversionsereignisse benötigt werden, deaktivieren Sie den Entfernungsprozess, um sicherzustellen, dass die Ereignisdaten verfügbar bleiben. |
+| [!UICONTROL Datensatz-ID-Datenelement] | Die Datensatz-ID wird als Schlüssel zum Nachschlagen der Ereignisdaten verwendet, die im Browser-Speicher gespeichert sind. Die Seiten-URL ist die standardmäßige Datensatz-ID. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Datensatz-ID als Zeichenfolge zurückgibt. |
 
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Nach **Suche konvertiert“**. Andernfalls wird es als &quot;**&quot;-** klassifiziert.
->&#x200B;><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -118,17 +121,17 @@ Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-R
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Ereignisname | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
-| Währung | Gibt den Typ der Währung an, z. B. `USD`. |
+| [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet wird, um dieses &quot;**&quot;-** weiter einzuengen. |
+| [!UICONTROL Datenelement „Ereignisdetails“] | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
+| [!UICONTROL Währung] | Wählen Sie einen Währungstyp. Der Standardwert ist auf `USD` festgelegt. |
 
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als &quot;**zu Warenkorb-Objekt-IDs nach der Suche hinzugefügt“**. Andernfalls wird es als Ereignis **Zu Warenkorb-Objekt-IDs hinzugefügt** klassifiziert.
->&#x200B;><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->&#x200B;><br>
->&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -140,17 +143,17 @@ Fügen Sie die **[!UICONTROL Purchased]**-Aktion zu Ihrer Tag-Regel hinzu, um ge
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Ereignisname | Der Ereignisname, der verwendet wird, um dieses „Kauf“-**weiter** verfeinern. |
-| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
-| Währung | Gibt den Typ der Währung an, z. B. `USD`. |
+| [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet wird, um dieses „Kauf“-**weiter** verfeinern. |
+| [!UICONTROL Datenelement „Ereignisdetails“] | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
+| [!UICONTROL Währung] | Wählen Sie einen Währungstyp. Der Standardwert ist auf `USD` festgelegt. |
 
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Erworbene Objekt **IDs nach der Suche“**. Andernfalls wird es als Ereignis &quot;**Objektkennungen“**.
->&#x200B;><br>
->&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->&#x200B;><br>
->&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>><br>
+>>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>><br>
+>>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -163,8 +166,8 @@ Fügen Sie die Aktion **[!UICONTROL Angezeigt]** zu Ihrer Tag-Regel hinzu, um ge
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Ereignisname | Der Ereignisname, der verwendet wird, um dieses Ereignis **Ansicht** weiter einzuengen. |
-| Datenelement für Ereignisdetails | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Ereignisname] | Der Ereignisname, der verwendet wird, um dieses Ereignis **Ansicht** weiter einzuengen. |
+| [!UICONTROL Datenelement „Ereignisdetails“] | Das Datenelement gibt Ereignisdetails zurück, darunter: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -184,8 +187,12 @@ Das DataSet-Datenelement ruft Daten ab, die mit HTML-Elementen verknüpft sind. 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Treffer-Element/div-Klassenname | Der HTML-Elementname und/oder CSS-Klassenname, der die Datensatzattribute einschließlich `data-insights-object-id` und optional `data-insights-query-id` und `data-insights-position` auf dem HTML-Element enthält. |
-| Indexname Element div/Klassenname | Der HTML-Elementname und/oder CSS-Klassenname mit den Datensatzattributen (`data-indexname`) im HTML-Element. |
+| [!UICONTROL Treffer-Element/div-Klassenname] | Der HTML-Elementname und/oder CSS-Klassenname, der die Datensatzattribute einschließlich `data-insights-object-id` und optional `data-insights-query-id` und `data-insights-position` auf dem HTML-Element enthält. |
+| [!UICONTROL Indexname Element div/class name] | Der HTML-Elementname und/oder CSS-Klassenname mit den Datensatzattributen (`data-indexname`) im HTML-Element. |
+| [!UICONTROL Datenelement der Abfrage-ID] | Die Abfrage-ID wird aus dem Datensatz im HTML-Element abgerufen. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Abfrage-ID als Zeichenfolge zurückgibt. |
+| [!UICONTROL Objekt-IDs-Datenelement] | Die Objekt-IDs werden aus dem Datensatz im HTML-Element abgerufen. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Objekt-IDs als Array zurückgibt. |
+| [!UICONTROL Positioniert das Datenelement] | Die Positionen werden aus dem Datensatz im HTML-Element abgerufen. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Positionen als Array zurückgibt. |
+| [!UICONTROL Datenelement „Indexname] | Der Indexname wird aus dem Datensatz im HTML-Element abgerufen. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das den Indexnamen als Zeichenfolge zurückgibt. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -220,10 +227,10 @@ Das Datenelement Abfragezeichenfolge extrahiert Daten aus der URL-Abfragezeichen
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Objektname des ID-Parameters | Der Abfrageparametername, der die Objekt-ID enthält. |
-| Indexname Parametername (optional) | Der Abfrageparametername, der den Indexnamen enthält. |
-| Parametername der Abfrage-ID (optional) | Der Name des Abfrageparameters, der die Abfrage-ID enthält. |
-| Name des Positionsparameters (optional) | Der Name des Abfrageparameters, der die Position enthält. |
+| [!UICONTROL Objekt-ID-Parametername] | Der Abfrageparametername, der die Objekt-ID enthält. |
+| [!UICONTROL Indexname Parametername] | Der Abfrageparametername, der den Indexnamen enthält. |
+| [!UICONTROL Abfrage-ID-Parametername] | Der Name des Abfrageparameters, der die Abfrage-ID enthält. |
+| [!UICONTROL Position Parametername] | Der Name des Abfrageparameters, der die Position enthält. |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -249,6 +256,10 @@ Ein Beispiel für HTML mit Abfrageparametern.
 Das Datenspeicherelement ruft Daten aus dem Sitzungsspeicher ab, um sie in [!DNL Algolia] Aktionen zu verwenden.
 
 Dieses Datenelement ruft Ereignisdetails aus dem Sitzungsspeicher ab. Es ist keine Konfiguration erforderlich. Die Daten werden während der *-*-Ereignisaktion automatisch hinzugefügt und während der *Konvertieren*-Ereignisaktion entfernt.
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| [!UICONTROL Datensatz-ID-Datenelement] | Die Datensatz-ID wird als Schlüssel zum Nachschlagen der Ereignisdaten verwendet, die im Browser-Speicher gespeichert sind. Die Seiten-URL ist die standardmäßige Datensatz-ID. Um dieses Verhalten zu überschreiben, verwenden Sie diese Eigenschaft, um ein Datenelement bereitzustellen, das die Datensatz-ID als Zeichenfolge zurückgibt. |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 
@@ -278,6 +289,6 @@ Die Ereignisse *Nach Suche geklickt* oder *Nach Suche konvertiert* erfordern ein
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia Insights]-Tag-Erweiterung an [!DNL Algolia] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Algolia] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ ](../../server/algolia/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia]-Tag-Erweiterung an [!DNL Algolia Insights] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Algolia] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ ](../../server/algolia/overview.md).
 
 Weiterführende Informationen zu Tags in Experience Platform finden Sie in der [Übersicht zu Tags](../../../home.md).
