@@ -86,8 +86,8 @@ Fügen Sie die Aktion **[!UICONTROL Klicken]** zu Ihrer Tag-Regel hinzu, um ange
 >[!NOTE]
 >
 >Wenn sowohl `queryID` als auch `position` enthalten sind, wird das Ereignis als (**Objekt-IDs nach der Suche)**. Andernfalls wird es als Ereignis **angeklickte Objekt-IDs** klassifiziert.
->><br>
->>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>&#x200B;><br>
+>&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -108,8 +108,8 @@ Fügen Sie die Aktion **[!UICONTROL Konvertiert]** zu Ihrer Tag-Regel hinzu, um 
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Nach **Suche konvertiert“**. Andernfalls wird es als &quot;**&quot;-** klassifiziert.
->><br>
->>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>&#x200B;><br>
+>&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -128,10 +128,10 @@ Fügen Sie die Aktion **[!UICONTROL Zum Warenkorb hinzugefügt]** zu Ihrer Tag-R
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als &quot;**zu Warenkorb-Objekt-IDs nach der Suche hinzugefügt“**. Andernfalls wird es als Ereignis **Zu Warenkorb-Objekt-IDs hinzugefügt** klassifiziert.
->><br>
->>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->><br>
->>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>&#x200B;><br>
+>&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>&#x200B;><br>
+>&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -150,10 +150,10 @@ Fügen Sie die **[!UICONTROL Purchased]**-Aktion zu Ihrer Tag-Regel hinzu, um ge
 >[!NOTE]
 >
 >Wenn das Datenelement `queryId` enthält, wird das Ereignis als „Erworbene Objekt **IDs nach der Suche“**. Andernfalls wird es als Ereignis &quot;**Objektkennungen“**.
->><br>
->>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
->><br>
->>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
+>&#x200B;><br>
+>&#x200B;>Wenn das Datenelement keinen `indexName` bereitstellt, wird der **Standardindexname** beim Senden des Ereignisses verwendet.
+>&#x200B;><br>
+>&#x200B;>Wenn die standardmäßigen Datenelemente Ihre Anforderungen nicht erfüllen, kann ein benutzerdefiniertes Datenelement erstellt werden, das die gewünschten Ereignisdetails zurückgibt.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
