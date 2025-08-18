@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;OneTrust;onetrust;Einverständnis;Einverständnis und Voreinstellungen;Compliance
-solution: Experience Platform
 title: Übersicht über den OneTrust Integration Source Connector
 description: Erfahren Sie, wie Sie die OneTrust-Integration mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
-last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b3053e23f5b13fd7ebf0cf41a64c1bc5b71f2db
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 21%
+source-wordcount: '169'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +13,15 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration]-Quelle unterstützt nur die Aufnahme von Einverständnis- und Voreinstellungsdaten und nicht Cookies. Bei Problemen mit dem Quell-Connector wenden Sie sich bitte an den OneTrust-Support unter https://support.onetrust.com
+>Die [!DNL OneTrust Integration]-Quelle unterstützt nur die Aufnahme von Einverständnis- und Voreinstellungsdaten und nicht Cookies. Bei Problemen mit dem Quell-Connector wenden Sie sich an [[!DNL OneTrust] Support](https://support.onetrust.com).
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+[!DNL OneTrust] ist eine Plattform für Datenschutz, Sicherheit und Vertrauensmanagement, die Unternehmen bei der verantwortungsvollen Verwaltung von Daten, der Einhaltung von Vorschriften und dem Aufbau von Vertrauen gegenüber Kunden und Stakeholdern unterstützt. Es bietet eine einheitliche Suite an Tools für Data Governance, Risikomanagement und Compliance-Automatisierung.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Der Support für Anbieter von Einverständniserklärungen und Voreinstellungen umfasst [!DNL OneTrust Integration].
+Verwenden Sie die [!DNL OneTrust Integration], um Ihr Konto zu verbinden und Einverständnis- und Voreinstellungsdaten in Experience Platform aufzunehmen.
 
-Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL OneTrust Integration] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
+>[!IMPORTANT]
+>
+>Bei der [!DNL OneTrust Integration] nimmt jede Ausführung nur neue Daten auf, die nach der vorherigen Ausführung erstellt wurden, auch wenn die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.
 
 ## Verbinden von [!DNL OneTrust Integration] mit Experience Platform mithilfe von APIs
 
