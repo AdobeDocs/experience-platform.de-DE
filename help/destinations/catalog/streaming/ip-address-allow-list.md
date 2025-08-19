@@ -4,35 +4,51 @@ title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Ihren HTTP-REST-API-Endpunkt, Amazon Kinesis oder Ihre Azure Event Hubs-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 8%
+source-wordcount: '407'
+ht-degree: 4%
 
 ---
 
-# IP-Adressen-Zulassungsliste für Streaming-Ziele {#ip-address-allowlist}
+
+# AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse für Streaming-API-basierte Ziele {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe empfiehlt, ein Lesezeichen für diese Seite zu erstellen und sie alle drei Monate erneut aufzurufen, um nach den neuesten IP-Adressen zu suchen. Adobe bietet keine Benachrichtigung über neue IP-Bereiche.
-> * Die Liste der hier dokumentierten IPs *gilt nicht* für Ziele, die Sie mit [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) erstellen.
 
 ## Überblick {#overview}
 
-Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
+Die auf dieser Seite dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 
-* [HTTP-API-Ziel](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Erweiterte Unternehmensziele](../../destination-types.md#advanced-enterprise-destinations): [HTTP-API-Ziel](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Exportziele für Streaming-Zielgruppen](../../destination-types.md#streaming-destinations) wie [Pega CDH RealTime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-basierte Integrationen mit [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) und [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Öffentliche oder private Ziele, die über [Destination SDK erstellt ](../../destination-sdk/getting-started.md)
 
 Der von Experience Platform an diese Ziele ausgehende Traffic durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
-Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis] oder Ihre [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Sicherheits- und Compliance-Standards des Unternehmens eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
+Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in die oben aufgeführten Ziele zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Sicherheits- und Compliance-Standards des Unternehmens eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen.
 
-Adobe auf die Zulassungsliste setzen empfiehlt, die folgenden IP-Bereiche zu einer -Seite hinzuzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies zu Fehlern oder Leistungseinbußen bei der Verwendung dieser Streaming-Ziele führen.
+## Wann die IPs auf dieser Seite auf die Zulassungsliste gesetzt werden sollen {#when-to-allowlist}
+
+Wenn Ihre Unternehmensrichtlinie erfordert, dass Sie IPs für eingehenden Traffic ändern, müssen Sie die IP-Bereiche aus den folgenden Kategorien zu Ihrer Zulassungsliste auf die Zulassungsliste setzte hinzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten:
+
+1. Alle [globalen IP-Adressen](#global)
+2. Fügen Sie zusätzlich zu den globalen IP-Adressen die IP-Adressen der Region hinzu, in der Sie bereitgestellt haben, und zwar aus der Liste weiter unten auf der Seite. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies zu Fehlern oder Leistungseinbußen bei der Verwendung dieser Streaming-Ziele führen.
+
+## Globale IP-Adressen {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+Auf die Zulassungsliste setzen Zusätzlich zu diesen globalen IP-Adressen müssen Sie in der folgenden Liste die IP-Adressen der Region angeben, in der Ihr Unternehmen bereitgestellt wird.
 
 ## VA7: Kunden aus den USA und Amerika {#us-americas}
 
@@ -209,3 +225,4 @@ Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
