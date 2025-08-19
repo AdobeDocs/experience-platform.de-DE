@@ -6,12 +6,12 @@ description: Erfahren Sie, wie Sie Aufzählungen und empfohlene Werte für Zeich
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Definieren von Auflistungen und vorgeschlagenen Werten in der Benutzeroberfläche {#enums-and-suggested-values}
+# Definieren von Aufzählungen und vorgeschlagenen Werten in der Benutzeroberfläche {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
@@ -93,7 +93,7 @@ Bei Auflistungen und empfohlenen Werten gelten nach der Aufnahme die folgenden R
 * Sie **vorgeschlagene** für standardmäßige und benutzerdefinierte Felder mit vorhandenen vorgeschlagenen Werten hinzufügen (KÖNNEN).
 * Sie **vorgeschlagene** aus benutzerdefinierten Feldern mit vorhandenen vorgeschlagenen Werten entfernen (KANN).
 * Sie **KÖNNEN** neue Aufzählungswerte für ein vorhandenes benutzerdefiniertes Aufzählungsfeld hinzufügen.
-* Sie **&#x200B;**&#x200B;die Aufzählungswerte eines benutzerdefinierten Felds nur auf vorgeschlagene Werte umschalten oder es in eine Zeichenfolge ohne Aufzählung oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nach der Anwendung nicht mehr rückgängig gemacht werden.**
+* Sie **** die Aufzählungswerte eines benutzerdefinierten Felds nur auf vorgeschlagene Werte umschalten oder es in eine Zeichenfolge ohne Aufzählung oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nach der Anwendung nicht mehr rückgängig gemacht werden.**
 * Aufzählungen **empfohlene Werte können** aus Standardfeldern entfernt werden.
 * Sie **AUFZÄHLUNGSWERTE NICHT** einem Feld ohne vorhandene AUFZÄHLUNG hinzufügen.
 * Sie **KÖNNEN** weniger als alle vorhandenen Aufzählungswerte für ein benutzerdefiniertes Feld entfernen.
