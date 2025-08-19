@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: d410471658d27e84453fabaebba698ef0530afe4
+source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1316'
 ht-degree: 74%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 74%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -72,7 +72,8 @@ ht-degree: 74%
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
       * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
-      * [(Beta) Acxiom-Zielgruppenverteilung](./catalog/advertising/acxiom-audience-distribution.md)
+      * [(Beta) Acxiom-Zielgruppenverteilung](./catalog/advertising/acxiom-audience-connection.md)
+      * [(Beta) Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
