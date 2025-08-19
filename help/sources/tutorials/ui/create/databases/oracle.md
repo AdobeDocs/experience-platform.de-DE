@@ -2,14 +2,14 @@
 title: Verbinden von Oracle DB mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre Oracle DB-Instanz über die Benutzeroberfläche mit Experience Platform verbinden.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 17%
 
 ---
 
-# Erstellen einer [!DNL Oracle DB]-Quellverbindung über die Benutzeroberfläche
+# Verbinden von [!DNL Oracle DB] mit Experience Platform über die Benutzeroberfläche
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre [!DNL Oracle DB]-Instanz mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform mit Adobe Experience Platform verbinden.
 
@@ -32,7 +32,7 @@ Informationen zur Authentifizierung [[!DNL Oracle DB]  Sie in ](../../../../conn
 
 Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
 
-Um eine Verbindung zu [!DNL Oracle DB] herzustellen, wechseln Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Oracle]** DB&rbrace; aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
+Um eine Verbindung zu [!DNL Oracle DB] herzustellen, wechseln Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Oracle]** DB} aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
 
 >[!TIP]
 >

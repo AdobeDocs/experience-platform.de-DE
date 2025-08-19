@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: 785ddd4ed3a5b8ba2c515ee6390e78b601367814
 workflow-type: tm+mt
 source-wordcount: '1644'
 ht-degree: 56%
@@ -108,7 +108,7 @@ Sie können die folgenden Quellen verwenden, um Cloud-Speicherdaten in Experienc
 | Quelle | Aufnahmetyp | Cloud |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
-| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | Batch | Azure |
 | [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
