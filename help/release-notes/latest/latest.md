@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 22%
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -41,7 +41,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
-| ------- | ----------- |
+| --- | --- |
 | Warnhinweise zur Streaming-Durchsatzkapazität | Drei neue Warnhinweise ermöglichen es Benutzenden, Warnhinweise zu abonnieren und zu konfigurieren, um die Leistung der Streaming-Durchsatzkapazität proaktiv zu verwalten und zu überwachen. Zu den neuen Warnhinweisen gehören Fälle, in denen der Streaming-Durchsatz 80 % bzw. 90 % erreicht oder die Kapazitätsbeschränkungen überschreitet. Weitere Informationen finden Sie im Handbuch [Kapazitätswarnungsregeln](../../observability/alerts/rules.md#capacity). |
 
 Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../../observability/home.md).
