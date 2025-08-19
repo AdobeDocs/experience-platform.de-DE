@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 66%
+source-wordcount: '5174'
+ht-degree: 63%
 
 ---
 
@@ -330,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
@@ -375,12 +375,12 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 
 ![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben. Auf diese Weise können Sie auswählen, welche Zusammenführungsrichtlinie für Ihre Segmentdefinition ausgewählt werden soll.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Eigenschaften der Segmentdefinition {#segment-properties}
+## Zielgruppen-Eigenschaften {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Eigenschaften der Segmentdefinition"
->abstract="Im Abschnitt Eigenschaften der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, die die Anzahl der qualifizierten Profile im Vergleich zur Gesamtanzahl der Profile anzeigt. Auf diese Weise kann die Segmentdefinition nach Bedarf angepasst werden, bevor die Zielgruppe selbst erstellt wird."
+>title="Zielgruppen-Eigenschaften"
+>abstract="Im Abschnitt mit den Zielgruppeneigenschaften wird eine Schätzung der Größe der resultierenden Zielgruppe angezeigt. Darin wird die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt. Auf diese Weise können Sie Ihre Zielgruppe nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Qualifizierte Profile"
->abstract="„Qualifizierte Profile“ gibt die tatsächliche Anzahl von Profilen an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert."
+>abstract="Qualifizierte Profile gibt die tatsächliche Anzahl von Profilen an, die den Regeln der Zielgruppe entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Geschätzte Profile"
->abstract="„Geschätzte Profile“ gibt auf Grundlage des Beispielauftrags eine ungefähre Anzahl von Profilen an, die für die Regeln der Segmentdefinition qualifiziert wären."
+>abstract="Geschätzte Profile geben auf der Grundlage des Beispielvorgangs eine ungefähre Anzahl von Profilen an, die für die Regeln der Zielgruppe qualifiziert wären."
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
@@ -404,22 +404,22 @@ Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgru
 
 Der Zeitstempel für qualifizierte Profile gibt den neuesten Segmentauswertungsauftrag **Batch** an und wird **für Segmentdefinitionen angezeigt,** mithilfe von Streaming oder Edge-Segmentierung ausgewertet wurden. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentauswertungsauftrag ausgeführt wird.
 
-**[!UICONTROL Geschätzte Profile]** gibt **(**) Anzahl von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
+**[!UICONTROL Geschätzte Profile]** gibt einen **ungefähren Bereich** von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
 
 Diese Zahl wird in zwei Szenarien aktualisiert:
 
-1. Die Kundendaten ändern sich um mehr als 5 %, oder der letzte Beispielvorgang ist älter als sieben Tage.
+1. Die Kundendaten ändern sich um mehr als 3 %, oder der letzte Beispielvorgang ist älter als drei Tage.
 2. Die Regeln der Zielgruppe wurden geändert oder entfernt.
 
-Durch Auswahl der Informationsblase erhalten Sie den Fehlerschwellenwert und die aktuelle Zeit des Beispielauftrags.
+Bei Auswahl der Informationsblase werden Datum und Uhrzeit der letzten Ausführung des Beispielauftrags angezeigt.
 
 ![Qualifizierte Profile und „Geschätzte Profile“ werden im Abschnitt mit den Zielgruppeneigenschaften hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
 
-Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zu Ihrer Zielgruppe angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen werden verwendet, um Ihre Segmentdefinition unter den von Ihrer Organisation definierten zu identifizieren. Sie sollten daher beschreibend, prägnant und eindeutig sein.
 
-Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
+Wenn Sie mit der Erstellung Ihrer Audience fortfahren, können Sie eine paginierte Vorschau der Audience anzeigen, indem Sie **[!UICONTROL Profile anzeigen]** auswählen.
 
-![Der Eigenschaftenabschnitt der Segmentdefinition ist hervorgehoben. Zu den Segmentdefinitionseigenschaften gehören u. a. der Segmentdefinitionsname, die Beschreibung und die Auswertungsmethode.](../images/ui/segment-builder/segment-properties.png)
+![Der Abschnitt mit den Zielgruppeneigenschaften ist hervorgehoben. Zu den Zielgruppeneigenschaften gehören u. a. der Name, die Beschreibung und die Auswertungsmethode.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ Segment Builder bietet einen umfangreichen Workflow, der es Ihnen ermöglicht, v
 - Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 - Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Wenn Sie mehr über [!DNL Segmentation Service] erfahren möchten, lesen Sie bitte die Dokumentation weiter und sehen Sie sich die entsprechenden Videos an. Weitere Informationen zu den anderen Teilen der [!DNL Segmentation Service]-Benutzeroberfläche finden Sie im [[!DNL Segmentation Service] Benutzerhandbuch](./overview.md)
+Wenn Sie mehr über [!DNL Segmentation Service] erfahren möchten, lesen Sie bitte die Dokumentation weiter und sehen Sie sich die entsprechenden Videos an. Weitere Informationen zu den anderen Teilen der [!DNL Segmentation Service]-Benutzeroberfläche finden Sie im [[!DNL Segmentation Service] Benutzerhandbuch](./overview.md).
