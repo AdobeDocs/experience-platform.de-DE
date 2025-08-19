@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 4%
 
 ---
@@ -62,7 +62,7 @@ curl -X GET \
 
 Bei einer erfolgreichen Antwort werden Ihre Anmeldeinformationen (`containerName`, `SASToken`, `storageAccountName`) zur späteren Verwendung in [!DNL Apache Spark] Konfiguration für [!DNL Databricks] bereitgestellt.
 
-+++Beispiel für eine Antwort anzeigen
++++Beispiel für eine Anfrageantwort
 
 ```json
 {
@@ -120,7 +120,7 @@ curl -X POST \
 
 Eine erfolgreiche Antwort gibt Ihre neuen Anmeldeinformationen zurück.
 
-+++Beispiel für eine Antwort anzeigen
++++Beispiel für eine Anfrageantwort
 
 ```json
 {
@@ -145,7 +145,7 @@ Eine erfolgreiche Antwort gibt Ihre neuen Anmeldeinformationen zurück.
 
 Als Nächstes müssen Sie sicherstellen, dass Ihr [!DNL Databricks]-Cluster Zugriff auf das Experience Platform-[!DNL Azure Blob Storage] hat. Dabei können Sie [!DNL Azure Blob Storage] als Zwischenspeicherort zum Schreiben [!DNL delta lake] Tabellendaten verwenden.
 
-Um Zugriff zu gewähren, müssen Sie im Rahmen Ihrer [!DNL Apache Spark]-Konfiguration ein SAS-Token auf dem [!DNL Databricks]-Cluster konfigurieren.
+Um Zugriff zu gewähren, müssen Sie im Rahmen Ihrer [!DNL Databricks]-Konfiguration ein SAS-Token auf dem [!DNL Apache Spark]-Cluster konfigurieren.
 
 Wählen Sie in Ihrer [!DNL Databricks] die Option **[!DNL Advanced options]** aus und geben Sie dann Folgendes in das [!DNL Spark config] Eingabefeld ein.
 
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | SAS-Token | Das Shared Access Signature Token für Ihre [!DNL Azure Blob Storage]. Sie können diesen Wert abrufen, indem Sie Ihre [!DNL Azure Blob Storage] Anmeldeinformationen abrufen. |
 
 ![Die Databricks-Benutzeroberfläche auf Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+Wenn keine Informationen bereitgestellt werden, schlägt die Kopieraktivität im Flusslauf fehl und gibt den folgenden Fehler zurück:
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## Verbinden von [!DNL Databricks] mit Experience Platform
 
