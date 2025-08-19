@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Datensatz-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform beim Arbeiten mit Datensätzen häufig durchgeführte Aktionen ausführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4497'
 ht-degree: 12%
 
 ---
@@ -110,7 +110,7 @@ Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweilig
 
 Sie können eine Vorschau von bis zu 100 Zeilen mit Beispieldaten für jeden Datensatz anzeigen, entweder über die Inline-Optionen auf der Registerkarte [!UICONTROL Durchsuchen] oder über die Ansicht [!UICONTROL Datensatzaktivität].
 
-Klicken Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen und wählen Sie [!UICONTROL Datensatz in der Vorschau anzeigen]. Wenn der Datensatz leer ist, ist die Vorschauoption deaktiviert. Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts auf **[!UICONTROL Datensatz]** Vorschau anzeigen) klicken.
+Klicken Sie auf [!UICONTROL  Registerkarte ]Durchsuchen“ auf die Auslassungspunkte (…) neben dem Datensatznamen und wählen Sie [!UICONTROL Datensatz in der Vorschau anzeigen]. Wenn der Datensatz leer ist, ist die Vorschauoption deaktiviert. Alternativ können Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts auf **[!UICONTROL Datensatz]** Vorschau anzeigen) klicken.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit hervorgehobenen Auslassungszeichen und der Option „Datensatz in der Vorschau“ für den ausgewählten Datensatz.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -146,7 +146,7 @@ Diese Funktionen helfen Ihnen beim Navigieren, Verstehen von Schemadetails und e
 
 #### Verknüpfung mit dem erweiterten Abfrage-Editor {#query-editor-shortcut}
 
-Wenn Ihr Unternehmen über eine Data Distiller-Lizenz verfügt, können Sie direkt über [!UICONTROL &#x200B; Datensatzvorschau auf &#x200B;] erweiterten Abfrage-Editor zugreifen. Verwenden Sie diesen Tastaturbefehl, um im Abfrage-Service nahtlos von der Vorschau von Beispieldaten zur Ausführung und Verfeinerung von Abfragen zu wechseln.
+Wenn Ihr Unternehmen über eine Data Distiller-Lizenz verfügt, können Sie direkt über [!UICONTROL  Datensatzvorschau auf ] erweiterten Abfrage-Editor zugreifen. Verwenden Sie diesen Tastaturbefehl, um im Abfrage-Service nahtlos von der Vorschau von Beispieldaten zur Ausführung und Verfeinerung von Abfragen zu wechseln.
 
 >[!AVAILABILITY]
 >
@@ -192,7 +192,7 @@ Datensätze, die für Profil aktiviert wurden, können auch nach diesen Kriterie
 
 ### Datensatz-Tags verwalten {#manage-tags}
 
-Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL &#x200B; der Registerkarte &#x200B;] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
+Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Wählen [!UICONTROL  der Registerkarte ] des Arbeitsbereichs [!UICONTROL Datensätze] die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Datensätze“ mit Hervorhebung der Optionen „Auslassungszeichen“ und „Tags verwalten“ für den ausgewählten Datensatz.](../images/datasets/user-guide/manage-tags.png)
 
@@ -237,6 +237,8 @@ Konfigurieren Sie Ihre bevorzugte Aufbewahrungsfrist im Dialogfeld Datenaufbewah
 >[!NOTE]
 > 
 >Die Mindestaufbewahrungsdauer für den Data Lake beträgt 30 Tage. Die Mindestaufbewahrungsdauer für den Profil-Service beträgt einen Tag.
+>
+>Darüber hinaus können Sie den Aufbewahrungszeitraum für den Profil-Service nur einmal alle 30 Tage aktualisieren.
 
 Um die Transparenz und Überwachung zu unterstützen, werden Zeitstempel für die Ausführungen des **letzten** und **nächsten** Datenaufbewahrungsauftrags bereitgestellt. Die Zeitstempel helfen zu verstehen, wann die letzte Datenbereinigung stattgefunden hat und wann die nächste geplant ist.
 
@@ -313,7 +315,7 @@ Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass 
 
 ### Datensatz löschen {#delete}
 
-Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL &#x200B; in der Ansicht &#x200B;]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
+Sie können einen Datensatz entweder aus den Datensatz-Inline-Aktionen auf der Registerkarte [!UICONTROL Durchsuchen] oder oben rechts in der Ansicht [!UICONTROL Datensatzaktivität] löschen. Wählen [!UICONTROL  in der Ansicht ]Durchsuchen“ die Auslassungspunkte (…) neben dem Datensatznamen aus, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie anschließend **[!UICONTROL Dropdown]** Menü „Löschen“ aus.
 
 ![Die Registerkarte „Durchsuchen“ im Arbeitsbereich „Datensätze“ mit Auslassungszeichen und der hervorgehobenen Option „Löschen“ für den ausgewählten Datensatz.](../images/datasets/user-guide/inline-delete-dataset.png)
 
@@ -349,21 +351,21 @@ Die Liste der angewendeten Filter wird über den gefilterten Ergebnissen angezei
 
 Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie das Kontrollkästchen **[!UICONTROL Ja]** im Abschnitt [!UICONTROL Systemdatensätze anzeigen]. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexportdatensatz zur Verarbeitung des Profil-Dashboards verwendet.
 
-![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL &#x200B; „Systemdatensätze &#x200B;].](../images/datasets/user-guide/show-system-datasets.png)
+![Die Filteroptionen des Arbeitsbereichs Datensätze mit hervorgehobenem [!UICONTROL  „Systemdatensätze ].](../images/datasets/user-guide/show-system-datasets.png)
 
 ### Filtern von profilaktivierten Datensätzen {#filter-profile-enabled-datasets}
 
 Die Datensätze, die für Profildaten aktiviert wurden, werden nach der Aufnahme von Daten zum Ausfüllen von Kundenprofilen verwendet. Weitere Informationen finden Sie im Abschnitt [Aktivieren von Datensätzen ](#enable-profile) Profil“.
 
-Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL &#x200B; in den Filteroptionen das &#x200B;] „Ja“.
+Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren [!UICONTROL  in den Filteroptionen das ] „Ja“.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; „Im Profil &#x200B;]&quot;.](../images/datasets/user-guide/included-in-profile.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  „Im Profil ]&quot;.](../images/datasets/user-guide/included-in-profile.png)
 
 ### Datensätze nach Tag filtern {#filter-by-tag}
 
 Geben Sie Ihren benutzerdefinierten Tag-Namen in die Eingabe [!UICONTROL Tags] ein und wählen Sie dann Ihr Tag aus der Liste der verfügbaren Optionen aus, um Datensätze zu suchen und zu filtern, die diesem Tag entsprechen.
 
-![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL &#x200B; &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
+![Die Filteroptionen des Arbeitsbereichs „Datensätze“ mit hervorgehobenem [!UICONTROL  &quot;]&quot; und Filtersymbol.](../images/datasets/user-guide/filter-tags.png)
 
 ### Datensätze nach Erstellungsdatum filtern {#filter-by-creation-date}
 

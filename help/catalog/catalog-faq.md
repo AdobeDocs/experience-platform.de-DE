@@ -3,9 +3,9 @@ keywords: Katalog-Service; Fragen; häufig gestellte Fragen; FAQ; Datensätze FA
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform Catalog Service und Datensätzen.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ Sie können Aufbewahrungsrichtlinien für Datensätze einrichten, die mithilfe d
 ### Kann ich unterschiedliche Aufbewahrungsrichtlinien für den Data Lake und den Profil-Service festlegen?
 
 +++Antwort
+
+>[!NOTE]
+>
+>Die Aufbewahrungsfrist für den Profil-Service kann nur einmal alle 30 Tage aktualisiert werden.
 
 Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für den Data Lake und den Profil-Service anwenden.
 

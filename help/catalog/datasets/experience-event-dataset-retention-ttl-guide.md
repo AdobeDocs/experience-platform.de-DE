@@ -2,9 +2,9 @@
 title: Verwalten der Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL
 description: Erfahren Sie, wie Sie die Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake mithilfe von TTL-Konfigurationen (Time-to-Live) mit Adobe Experience Platform-APIs bewerten, festlegen und verwalten können. In diesem Handbuch wird erläutert, wie die TTL-Gültigkeit auf Zeilenebene die Richtlinien zur Datenaufbewahrung unterstützt, die Speichereffizienz optimiert und ein effektives Daten-Lifecycle-Management sicherstellt. Darüber hinaus bietet sie Anwendungsfälle und Best Practices, die Sie bei der effektiven Anwendung von TTL unterstützen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Kann ich unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Profil-Services festlegen?
 
 +++Antwort
+
+>[!NOTE]
+>
+>Die Aufbewahrungsfrist für den Profil-Service kann nur einmal alle 30 Tage aktualisiert werden.
+
 Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Profil-Services festlegen. Je nach Bedarf Ihres Unternehmens kann die Aufbewahrungsfrist für den Profilspeicher kürzer oder länger als die Data-Lake-Aufbewahrungsfrist sein.
+
 +++
 
 ### Wie kann ich meine aktuelle Datensatznutzung überprüfen?
@@ -366,13 +372,13 @@ Nein, nach Anwendung einer Aufbewahrungsrichtlinie werden alle Daten, die älter
 
 ### Was ist das Minimum an TTL, das ich für einen Data-Lake-Erlebnisereignis-Datensatz konfigurieren kann?
 
-+++Antwort
++++Antwort 
 Die TTL für einen Data-Lake-Erlebnisereignis-Datensatz beträgt mindestens 30 Tage. Der Data Lake dient während der ersten Aufnahme und Verarbeitung als Verarbeitungs-Backup- und Wiederherstellungssystem. Daher müssen Daten mindestens 30 Tage nach der Aufnahme im Data Lake verbleiben, bevor sie abgelaufen sein können.
 +++
 
 ### Was passiert, wenn ich einige Data-Lake-Felder länger aufbewahren muss, als meine TTL-Richtlinie es zulässt?
 
-+++Antwort
++++Antwort 
 Verwenden Sie Data Distiller, um bestimmte Felder über die TTL Ihres Datensatzes hinaus beizubehalten und gleichzeitig Ihre Nutzungsbeschränkungen zu einzuhalten. Erstellen Sie einen Auftrag, der regelmäßig nur die erforderlichen Felder in einen abgeleiteten Datensatz schreibt. Dieser Workflow gewährleistet die Einhaltung einer kürzeren TTL bei gleichzeitiger Beibehaltung kritischer Daten für die erweiterte Verwendung.
 
 Weitere Informationen finden Sie im Handbuch [Erstellen abgeleiteter Datensätze mit SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).
