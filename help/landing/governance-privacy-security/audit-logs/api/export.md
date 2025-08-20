@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Audit-Ereignisse in Experience Platform mithi
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '168'
 ht-degree: 4%
 
 ---
@@ -43,4 +43,4 @@ curl -X POST \
 
 **Antwort**
 
-Die Ergebnisse werden in eine CSV-Datei für den Export generiert. Eine erfolgreiche Antwort gibt HTTP 307 ohne Antworttext zurück. Ein Link zur Exportdatei wird im `Location` Antwort-Header bereitgestellt.
+Die Ergebnisse werden in eine CSV-Datei für den Export generiert, wobei jeder Eintrag ein Kern- oder erweitertes Prüfereignis darstellt. Eine erfolgreiche Antwort gibt HTTP 307 ohne Antworttext zurück. Ein Link zur Exportdatei wird im `Location` Antwort-Header bereitgestellt.

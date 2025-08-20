@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können,
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 36%
+source-wordcount: '1624'
+ht-degree: 33%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 36%
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Services und Funktionen in Form von „Audit-Protokollen“ zu überprüfen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung in Experience Platform helfen kann und Ihrem Unternehmen dabei hilft, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
 In einem Auditprotokoll wird festgehalten **wer** welche **ausgeführt** und **wann**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute angeben, die für den Aktionstyp relevant sind.
+
+Wenn ein(e) Benutzende(r) eine Aktion ausführt, werden zwei Arten von Audit-Ereignissen aufgezeichnet. Ein Hauptereignis erfasst das Autorisierungsergebnis der Aktion ([!UICONTROL allow] oder [!UICONTROL deny] während ein erweitertes Ereignis das Ausführungsergebnis, [!UICONTROL success] oder [!UICONTROL failure] erfasst. Mehrere erweiterte Ereignisse können mit demselben Hauptereignis verknüpft werden. Beispiel: Beim Aktivieren eines Ziels zeichnet das Kernereignis die Autorisierung der Aktion [!UICONTROL Ziel-Update] auf, während die erweiterten Ereignisse mehrere Aktionen [!UICONTROL Segment aktivieren] aufzeichnen.
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im
 
 Auditprotokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
 
-Die Methode zum Anfordern von Auditprotokollen ändert den zulässigen Zeitraum und die Anzahl der Datensätze, auf die Sie Zugriff haben. [Protokolle exportieren](#export-audit-logs) ermöglicht es Ihnen, 365 Tage (in 90-tägigen Intervallen) auf maximal 10.000 Datensätze zurückzugehen, wobei in der [Aktivitätsprotokoll-Benutzeroberfläche](#filter-audit-logs) in Experience Platform die letzten 90 Tage bis zu maximal 1.000 Datensätze angezeigt werden.
+Die Methode zum Anfordern von Auditprotokollen ändert den zulässigen Zeitraum und die Anzahl der Datensätze, auf die Sie Zugriff haben. Mit [Protokolle exportieren](#export-audit-logs) können Sie 365 Tage (in 90-tägigen Intervallen) auf maximal 10.000 Auditprotokolle (entweder Core oder Enhanced) zurückgehen, wobei in der [Aktivitätsprotokoll-](#filter-audit-logs) in Experience Platform die letzten 90 Tage auf maximal 1.000 Hauptereignisse angezeigt werden, von denen jedes mit den entsprechenden erweiterten Ereignissen versehen ist.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
@@ -101,7 +103,7 @@ Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) 
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform zeigt nur die letzten 90 Tage bis zu maximal 1.000 Datensätze an, unabhängig von den angewendeten Filtern. Wenn Sie Protokolle benötigen, die darüber hinausgehen (bis zu einem Maximum von 365 Tagen), müssen Sie [Ihre Auditprotokolle exportieren](#export-audit-logs).
+>Die Benutzeroberfläche von Experience Platform zeigt nur die letzten 90 Tage bis zu maximal 1.000 Hauptereignisse mit den entsprechenden erweiterten Ereignissen an, unabhängig von den angewendeten Filtern. Wenn Sie Protokolle benötigen, die darüber hinausgehen (bis zu einem Maximum von 365 Tagen), müssen Sie [Ihre Auditprotokolle exportieren](#export-audit-logs).
 
 ![Das Audits-Dashboard mit hervorgehobenem gefiltertem Aktivitätsprotokoll.](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ Die folgenden Filter sind für Audit-Ereignisse in der Benutzeroberfläche verf�
 | [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) ](#category) filtern. |
 | [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
 | [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
-| [!UICONTROL Status] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, da keine Zugriffssteuerungsberechtigungen [ wurden](../../../access-control/home.md). |
+| [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Zulassen] oder [!UICONTROL Ablehnen]. Wenn das Hauptereignis &quot;[!UICONTROL &quot; ], wurden möglicherweise ein oder mehrere erweiterte Ereignisse mit &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. Beispielsweise wird bei einer erfolgreichen Aktion &quot;[!UICONTROL &quot; ] Hauptereignis und &quot;[!UICONTROL &quot; ] angehängten erweiterten Ereignis angezeigt. |
 | [!UICONTROL Datum] | Wählen Sie ein Start- und/oder Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können über einen 90-tägigen Lookback-Zeitraum exportiert werden (z. B. vom 15.12.2021 bis zum 15.03.2022). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
 Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
@@ -137,7 +139,7 @@ Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!
 
 >[!NOTE]
 >
->Protokolle können in Intervallen von 90 Tagen bis zu 365 Tagen in der Vergangenheit angefordert werden. Die maximale Anzahl von Protokollen, die während eines einzelnen Exports zurückgegeben werden können, beträgt jedoch 10.000.
+>Protokolle können in Intervallen von 90 Tagen bis zu 365 Tagen in der Vergangenheit angefordert werden. Die maximale Anzahl von Protokollen, die während eines einzelnen Exports zurückgegeben werden kann, beträgt jedoch 10.000 Audit-Ereignisse (entweder Core oder Enhanced).
 
 ![Das Audits-Dashboard mit hervorgehobenem [!UICONTROL Protokoll herunterladen].](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können au
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/de/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -175,4 +177,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Pla
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409524?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
