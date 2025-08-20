@@ -2,9 +2,9 @@
 title: Sandbox-Tools
 description: Nahtloser Export und Import von Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
+source-git-commit: 76e1edf7ed78cffdb8f858d5685836c452dd6dd3
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3728'
 ht-degree: 6%
 
 ---
@@ -40,10 +40,10 @@ In der folgenden Tabelle sind [!DNL Adobe Real-Time Customer Data Platform] Obje
 
 | Plattform | Objekt | Details |
 | --- | --- | --- |
-| Customer Data Platform | Quellen | Die Anmeldeinformationen für das Quellkonto werden aus Sicherheitsgründen nicht in der Ziel-Sandbox repliziert und müssen manuell aktualisiert werden. Der Quelldatenfluss wird standardmäßig in den Entwurfsstatus kopiert. |
-| Customer Data Platform | Zielgruppen | Es wird nur **[!UICONTROL Typ]** Kundenzielgruppe **[!UICONTROL (]**) unterstützt. Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert. Das System wählt beim Überprüfen der Abhängigkeiten von Zusammenführungsrichtlinien automatisch die standardmäßige Zusammenführungsrichtlinie in der Ziel-Sandbox mit derselben XDM-Klasse aus. |
-| Customer Data Platform | Identitäten | Das System dedupliziert beim Erstellen von Identitäts-Namespaces für Adobe Standard automatisch in der Ziel-Sandbox. Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für das einheitliche Profil aktiviert werden. |
-| Customer Data Platform | Schemata | Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert. Der Benutzer hat die Flexibilität, Schemas zu importieren, ohne die Option Einheitliches Profil aktiviert zu haben. Die Edge-Fall-Schemabeziehungen sind nicht im Paket enthalten. |
+| Customer Data Platform | Quellen | <ul><li>Die Anmeldeinformationen für das Quellkonto werden aus Sicherheitsgründen nicht in der Ziel-Sandbox repliziert und müssen manuell aktualisiert werden.</li><li>Der Quelldatenfluss wird standardmäßig in den Entwurfsstatus kopiert.</li></ul> |
+| Customer Data Platform | Zielgruppen | <ul><li>Es wird nur **[!UICONTROL Typ]** Kundenzielgruppe **[!UICONTROL (]**) unterstützt.</li><li>Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert.</li><li> Das System wählt beim Überprüfen der Abhängigkeiten von Zusammenführungsrichtlinien automatisch die standardmäßige Zusammenführungsrichtlinie in der Ziel-Sandbox mit derselben XDM-Klasse aus.</li><li>Wenn beim Importieren von Zielgruppen ein vorhandenes Objekt mit demselben Namen erkannt wird, verwenden die Sandbox-Tools das vorhandene Objekt immer wieder, um die Vermehrung von Objekten zu vermeiden.</li></ul> |
+| Customer Data Platform | Identitäten | <ul><li>Das System dedupliziert beim Erstellen von Identitäts-Namespaces für Adobe Standard automatisch in der Ziel-Sandbox.</li><li>Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für das einheitliche Profil aktiviert werden.</li></ul> |
+| Customer Data Platform | Schemata/Feldergruppen/Datentypen | <ul><li>Vorhandene Kennzeichnungen für Einverständnis und Governance werden im selben Importvorgang kopiert.</li><li>Sie haben die Flexibilität, Schemas zu importieren, ohne die Option Einheitliches Profil zu aktivieren. Die Edge-Fall-Schemabeziehungen sind nicht im Paket enthalten.</li><li>Wenn beim Importieren von Schemata/Feldergruppen ein vorhandenes Objekt mit demselben Namen erkannt wird, verwenden die Sandbox-Tools das vorhandene Objekt immer wieder, um eine Objektproliferation zu vermeiden.</li></ul> |
 | Customer Data Platform | Datensätze | Datensätze werden kopiert, wobei die Einstellung „Einheitliches Profil“ standardmäßig deaktiviert ist. |
 | Customer Data Platform | Einverständnis- und Governance-Richtlinien | Hinzufügen benutzerdefinierter Richtlinien, die von einem Benutzer erstellt wurden, zu einem Paket und Verschieben der Richtlinien über Sandboxes hinweg. |
 
@@ -70,7 +70,12 @@ In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt
 | [!DNL Adobe Journey Optimizer] | Benutzerdefinierte Aktionen |  | Benutzerdefinierte Aktionen können einem Paket unabhängig hinzugefügt werden. Nachdem eine benutzerdefinierte Aktion einer Journey zugewiesen wurde, kann sie nicht mehr bearbeitet werden. Um Aktualisierungen an benutzerdefinierten Aktionen vorzunehmen, sollten Sie: <ul><li>Verschieben benutzerdefinierter Aktionen vor dem Migrieren einer Journey</li><li>Aktualisieren Sie Konfigurationen (z. B. Anfragekopfzeilen, Abfrageparameter und Authentifizierung) für benutzerdefinierte Aktionen nach der Migration</li><li>Migrieren von Journey-Objekten mit den benutzerdefinierten Aktionen, die Sie im ersten Schritt hinzugefügt haben</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen ermöglichen die einfache Wiederverwendung benutzerdefinierter Inhalte in Journey Optimizer-Kampagnen und -Journey. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle verschachtelten Fragmente. | Ein Fragment kann als abhängiges Objekt des Journey-Objekts kopiert werden. Fragmente sind wiederverwendbare Komponenten, die in einer oder mehreren Journey Optimizer-Kampagnen und -Journey-Umgebungen referenziert werden können. |
-| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Entscheidungsfindung | Vor dem Kopieren von Decisioning-Objekten müssen die folgenden Objekte in der Ziel-Sandbox vorhanden sein: <ul><li>In allen Decisioning-Objekten verwendete Profilattribute</li><li>Die Feldergruppe der benutzerdefinierten Angebotsattribute</li><li>die Schemata von Datenströmen, die für Kontextattribute in Regeln, Rangfolgen oder Begrenzungen verwendet werden.</li></ul> | <ul><li>Das Kopieren von Rangfolgeformeln, die KI-Modelle verwenden, wird derzeit nicht unterstützt.</li><li>Entscheidungselemente (Angebotselemente) werden nicht automatisch einbezogen. Um sicherzustellen, dass sie übertragen werden, fügen Sie sie manuell mit der Option **Zum Paket hinzufügen** hinzu.</li><li>Richtlinien, die eine Auswahlstrategie verwenden, erfordern, dass die zugehörigen Entscheidungselemente während des Kopiervorgangs manuell hinzugefügt werden. Bei Richtlinien, die manuelle oder Fallback-Entscheidungselemente verwenden, werden diese Elemente automatisch als direkte Abhängigkeiten einbezogen.</li><li>Entscheidungselemente müssen zuerst und vor allen anderen zugehörigen Objekten kopiert werden.</li></ul> |
+
+In allen Decisioning-Objekten verwendete Profilattribute,
+Die Feldergruppe der benutzerdefinierten Angebotsattribute,
+Die Schemata von Datenströmen, die für Kontextattribute in Regeln, Rangfolge oder Begrenzung verwendet werden.
 
 Oberflächen (z. B. Voreinstellungen) werden nicht kopiert. Das System wählt basierend auf dem Nachrichtentyp und dem Namen der Oberfläche automatisch die bestmögliche Übereinstimmung für die Ziel-Sandbox aus. Wenn keine Oberflächen in der Ziel-Sandbox gefunden werden, schlägt die Kopie der Oberfläche fehl, wodurch die Nachrichtenkopie fehlschlägt, da für eine Nachricht eine Oberfläche zur Einrichtung verfügbar sein muss. In diesem Fall muss mindestens eine Oberfläche für den richtigen Kanal der Nachricht erstellt werden, damit die Kopie funktioniert.
 
@@ -155,15 +160,15 @@ Wählen Sie über das Dropdown-Menü den **[!UICONTROL Paketnamen]** den Sie in 
 
 ![Die Seite mit den Importdetails, auf der die Dropdown[!UICONTROL Auswahl „Paketname] angezeigt wird](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind. Alle fehlenden Attribute werden oben auf der Seite angezeigt. Wählen Sie **[!UICONTROL Details anzeigen]**, um eine detailliertere Aufschlüsselung zu erhalten.
+Die Seite [!UICONTROL Paketobjekt und ]&quot; enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind. Alle fehlenden Attribute werden oben auf der Seite angezeigt. Wählen Sie **[!UICONTROL Details anzeigen]**, um eine detailliertere Aufschlüsselung zu erhalten.
 
-![Auf [!UICONTROL &#x200B; Seite „Paketobjekt und &#x200B;]&quot; fehlen Attribute.](../images/ui/sandbox-tooling/missing-attributes.png)
+![Auf [!UICONTROL  Seite „Paketobjekt und ]&quot; fehlen Attribute.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Abhängige Objekte können durch vorhandene in der Ziel-Sandbox ersetzt werden, sodass Sie vorhandene Objekte wiederverwenden können, anstatt eine neue Version zu erstellen. Wenn Sie beispielsweise ein Paket importieren, das Schemata enthält, können Sie vorhandene benutzerdefinierte Feldergruppen und Identitäts-Namespaces in der Ziel-Sandbox wiederverwenden. Alternativ können Sie beim Importieren eines Pakets, das Journey enthält, vorhandene Segmente in der Ziel-Sandbox wiederverwenden.
 >
->Sandbox-Tools unterstützen derzeit nicht das Aktualisieren oder Überschreiben vorhandener Objekte. Sie können ein neues Objekt erstellen oder das vorhandene Objekt ohne Änderungen weiter verwenden.
+>Sandbox-Tools unterstützen derzeit nicht das Aktualisieren oder Überschreiben vorhandener Objekte. Sie können ein neues Objekt erstellen oder das vorhandene Objekt ohne Änderungen weiter verwenden. Wenn ein vorhandenes Objekt mit demselben Namen erkannt wird, verwenden die Sandbox-Tools das vorhandene Objekt immer wieder, auch wenn Sie die Option [!UICONTROL Neu erstellen] auswählen, um eine Objektproliferation zu vermeiden.
 
 Um ein vorhandenes Objekt zu verwenden, wählen Sie das Stiftsymbol neben dem abhängigen Objekt aus.
 
@@ -177,9 +182,9 @@ Das **[!UICONTROL Feldgruppe]** zeigt eine Liste der für das Objekt verfügbare
 
 ![Eine Liste der Felder, die im Dialogfeld [!UICONTROL Feldergruppe] angezeigt wird, wobei die Auswahl [!UICONTROL Speichern] hervorgehoben wird. ](../images/ui/sandbox-tooling/field-group-list.png)
 
-Sie kehren zur Seite &quot;[!UICONTROL &#x200B; und Abhängigkeiten“ &#x200B;]. Wählen Sie von hier aus **[!UICONTROL Beenden]**, um den Package-Import abzuschließen.
+Sie kehren zur Seite &quot;[!UICONTROL  und Abhängigkeiten“ ]. Wählen Sie von hier aus **[!UICONTROL Beenden]**, um den Package-Import abzuschließen.
 
-![Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; zeigt eine Liste der im Paket enthaltenen Assets an und markiert [!UICONTROL Beenden].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![Die Seite [!UICONTROL Paketobjekt und ]&quot; zeigt eine Liste der im Paket enthaltenen Assets an und markiert [!UICONTROL Beenden].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## Gesamte Sandbox exportieren und importieren
 
@@ -228,7 +233,7 @@ Wählen Sie im Dropdown-Menü mithilfe der Dropdown-Liste **[!UICONTROL Paketnam
 
 Sie gelangen auf die Seite [!UICONTROL Paketobjekt und Abhängigkeiten], auf der Sie die Anzahl der Objekte und Abhängigkeiten sehen können, die importierte und ausgeschlossene Objekte sind. Wählen Sie von hier **[!UICONTROL Importieren]**, um den Package-Import abzuschließen.
 
-![Die Seite [!UICONTROL Paketobjekt und &#x200B;]&quot; zeigt die Inline-Meldung von nicht unterstützten Objekttypen und markiert [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![Die Seite [!UICONTROL Paketobjekt und ]&quot; zeigt die Inline-Meldung von nicht unterstützten Objekttypen und markiert [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 Warten Sie etwas, bis der Import abgeschlossen ist. Die Dauer des Vorgangs kann von der Anzahl der Objekte im Paket abhängen. Sie können den Importauftrag über die Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Aufträge]** überwachen.
 
@@ -356,7 +361,7 @@ Nachdem Sie die Zielobjekte identifiziert haben, die Sie aktualisieren möchten,
 
 Das folgende Video soll Ihnen dabei helfen, die Sandbox-Tools besser zu verstehen, und beschreibt, wie Sie ein neues Paket erstellen, ein Paket veröffentlichen und ein Paket importieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446097/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Nächste Schritte
 

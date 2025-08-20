@@ -2,9 +2,9 @@
 title: Freigeben von Paketen innerhalb einer Organisation mithilfe von Sandbox-Tools
 description: Erfahren Sie, wie Sie in Adobe Experience Platform Sandbox-Tools verwenden, um Pakete unternehmensübergreifend freizugeben.
 exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
-source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -73,17 +73,34 @@ Verwenden Sie diesen Workflow/Prozess, um Pakete zwischen Ihrer Organisation und
 >
 >Nur Pakete mit dem Status **Veröffentlicht** können freigegeben werden.
 
-Um ein Paket für eine genehmigte Partnerorganisation freizugeben, navigieren Sie zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Pakete]**. Klicken Sie als Nächstes auf das Auslassungszeichen (`...`) neben dem Paket und wählen Sie dann **[!UICONTROL Paket freigeben]** aus dem Dropdown-Menü.
+#### Pakete mit mehreren Objekten freigeben {#multi-object-packages}
+
+Um ein Paket mit mehreren Objekten für eine genehmigte Partnerorganisation freizugeben, navigieren Sie zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Pakete]**. Klicken Sie als Nächstes auf das Auslassungszeichen (`...`) neben dem Paket und wählen Sie dann **[!UICONTROL Paket freigeben]** aus dem Dropdown-Menü.
 
 ![Liste der Pakete, die das Dropdown-Menü mit hervorgehobener Option „Paket freigeben“ anzeigen.](../images/ui/sandbox-tooling/private-share-package.png)
 
-Wählen **[!UICONTROL Dialogfeld Paket freigeben]** aus dem Dropdown-Menü **[!UICONTROL Freigabeeinstellungen]** das freizugebende Paket aus und klicken Sie auf **[!UICONTROL Bestätigen]**.
+Wählen **[!UICONTROL Dialogfeld Paket freigeben]** aus dem Dropdown-Menü **[!UICONTROL Freigabeeinstellungen“ die Organisationen aus, für die das Paket freigegeben werden soll,]** klicken Sie auf **[!UICONTROL Bestätigen]**.
 
 >[!TIP]
 >
 >Es ist möglich, mehr als eine Organisation auszuwählen. Ausgewählte Organisationen werden unterhalb der Dropdown-Liste [!UICONTROL Freigabeeinstellungen] angezeigt.
 
 ![Dialogfeld „Paket freigeben“ mit hervorgehobenen Optionen „Freigeben“ und „Bestätigen“.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### Freigeben ganzer Sandbox-Pakete {#entire-sandbox-packages}
+
+Um ein ganzes Sandbox-Paket für eine genehmigte Partnerorganisation freizugeben, navigieren Sie zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Pakete]**. Klicken Sie als Nächstes auf das Auslassungszeichen (`...`) neben dem Paket und wählen Sie dann **[!UICONTROL Paket freigeben]** aus dem Dropdown-Menü.
+
+![Registerkarte „Pakete“ mit einer Liste von Paketen und dem Dropdown-Menü.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+Wählen **[!UICONTROL Dialogfeld Paket freigeben]** aus dem Dropdown-Menü **[!UICONTROL Freigabeeinstellungen“ die Organisationen aus, für die das Paket freigegeben werden soll,]** klicken Sie auf **[!UICONTROL Bestätigen]**.
+
+>[!TIP]
+>
+>Es ist möglich, mehr als eine Organisation auszuwählen. Ausgewählte Organisationen werden unterhalb der Dropdown-Liste [!UICONTROL Freigabeeinstellungen] angezeigt.
+
+![Dialogfeld „Paket freigeben“ mit hervorgehobenen Optionen „Freigeben“ und „Bestätigen“.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## Öffentliche Pakete {#public-packages}
 
