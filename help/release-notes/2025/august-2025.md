@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
-source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
+exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1448'
 ht-degree: 22%
 
 ---
@@ -16,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -109,7 +110,7 @@ Weitere Informationen zum Katalog-Service finden Sie im Abschnitt [Übersicht ü
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserte Such-, Filter- und Tagging-Funktionen für Ziele | Verbessern Sie Ihren Zielverwaltungs-Workflow mit erweiterten Such-, Filter- und Tagging-Funktionen auf den Registerkarten [Durchsuchen](../../destinations/ui/destinations-workspace.md#browse) und [Konten](../../destinations/ui/destinations-workspace.md#accounts). Sie können jetzt nach bestimmten Datenflüssen und Konten nach Namen suchen, nach verschiedenen Kriterien wie Zielplattform, Status und Datum filtern und benutzerdefinierte Tags erstellen, um Ihre Ziele zu organisieren. Die Spaltensortierung ist auch für Schlüsselfelder wie die letzte Datenflusslaufzeit verfügbar, was die Identifizierung und Verwaltung Ihrer Zielverbindungen erleichtert. |
+| Verbesserte Such-, Filter- und Tagging-Funktionen für Ziele | Verbessern Sie Ihren Zielverwaltungs-Workflow mit erweiterten Such-, Filter- und Tagging-Funktionen auf den Registerkarten [Durchsuchen](../../destinations/ui/destinations-workspace.md#browse) und [Konten](../../destinations/ui/destinations-workspace.md#accounts). <br> Sie können jetzt nach bestimmten Datenflüssen und Konten nach Namen suchen, nach verschiedenen Kriterien wie Zielplattform, Status und Datum filtern und benutzerdefinierte Tags erstellen, um Ihre Ziele zu organisieren. Die Spaltensortierung ist auch für Schlüsselfelder wie die letzte Datenflusslaufzeit verfügbar, was die Identifizierung und Verwaltung Ihrer Zielverbindungen erleichtert. <br> ![Animierte Demonstration der Suche nach einem Ziel-Datenfluss auf der Registerkarte Durchsuchen](../../destinations/assets/ui/workspace/search.gif) |
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
