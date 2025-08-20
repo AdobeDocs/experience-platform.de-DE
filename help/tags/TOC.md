@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
+source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '787'
 ht-degree: 85%
 
 ---
@@ -91,7 +91,8 @@ ht-degree: 85%
          * [Übersicht](./extensions/client/client-data-layer/overview.md)
          * [Versionshinweise](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
-         * [Überblick](./extensions/client/content-analytics/overview.md)
+         * [Übersicht](./extensions/client/content-analytics/overview.md)
+         * [Versionshinweise](./extensions/client/content-analytics/release-notes.md)
       * Adobe ContextHub {#contexthub}
          * [Überblick](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)

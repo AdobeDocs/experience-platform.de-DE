@@ -2,7 +2,7 @@
 title: Adobe Content Analytics-Erweiterung - Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung "Adobe Content Analytics" in Adobe Experience Platform vertraut.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 45ce2b0ff57155dccef2f7c94390a6ddff5c17cd
+source-git-commit: 34f50c6e92cb1bde4e5f27a4378058615fb0cdff
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -19,14 +19,14 @@ In diesem Dokument wird erläutert, wie Sie die Tag-Erweiterung in der Tags-Benu
 
 ## Installieren der Adobe Content Analytics-Tag-Erweiterung {#install}
 
-Die Adobe Content Analytics-Tag-Erweiterung wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des Konfigurationsassistenten für Content Analytics [automatisch erstellt ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided).
+Die Adobe Content Analytics-Tag-Erweiterung wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des Konfigurationsassistenten für Content Analytics [automatisch erstellt ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided).
 
 <!--
 ### Manual installation
 
-In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/de/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
 Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
@@ -38,7 +38,7 @@ After selecting **[!UICONTROL Install]**, you must configure the Adobe Content A
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -50,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Konfigurieren von Datenströmen
 
-Der Assistent für die geführte Konfiguration von &lbrace;0[ Content Analytics wählt automatisch den richtigen Wert für den ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
+Der Assistent für die geführte Konfiguration von {0[ Content Analytics wählt automatisch den richtigen Wert für den ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
 
 ![Bild, das die Konfiguration der Datenströme der Tag-Erweiterung &quot;Adobe Content Analytics&quot; in der Tags-Benutzeroberfläche anzeigt](assets/aca-tag-datastreams.png)
 
@@ -81,7 +81,7 @@ Verwenden Sie ![Schließen](./assets/CrossSize300.svg), um einzelne Parameter zu
 
 ## Konfigurieren der Ereignisfilterung
 
-Im Abschnitt **[!UICONTROL Ereignisfilterung]** können Sie die regulären Ausdrücke ändern, um **[!UICONTROL Seiten-URLs]** und **[!UICONTROL Assets-URLs]** beim Erfassen von Daten für Content Analytics zu filtern. Die regulären Ausdrücke, die Sie im Konfigurationsassistenten für Content Analytics [definiert haben](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided) werden automatisch ausgefüllt.
+Im Abschnitt **[!UICONTROL Ereignisfilterung]** können Sie die regulären Ausdrücke ändern, um **[!UICONTROL Seiten-URLs]** und **[!UICONTROL Assets-URLs]** beim Erfassen von Daten für Content Analytics zu filtern. Die regulären Ausdrücke, die Sie im Konfigurationsassistenten für Content Analytics [definiert haben](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) werden automatisch ausgefüllt.
 
 ![Bild mit den Ereignisfiltereinstellungen der Adobe Content Analytics-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/aca-tag-eventfiltering.png)
 
@@ -89,7 +89,7 @@ Im Abschnitt **[!UICONTROL Ereignisfilterung]** können Sie die regulären Ausdr
 ### Beispiele
 
 * Sie möchten alle Dokumentationsseiten aus Content Analytics ausschließen.<br/>Verwenden Sie folgenden regulären Ausdruck: `^(?!.*documentation).*`
-* Sie möchten alle JPEG- und SVG-Logo-Bilder von Content Analytics ausschließen.<br/>Verwenden Sie folgenden regulären Ausdruck: `^(?!.*(logo\.jpg|\.svg)).*$`
+* Sie möchten alle JPEG- und SVG-Logo-Bilder von Content Analytics ausschließen.<br/>Verwenden Sie folgenden regulären Ausdruck: `^(?!.*(logo\.jpg|)).*$`
 
 Sie können **[!UICONTROL Regex testen]** verwenden, um Ihren regulären Ausdruck im **[!UICONTROL Regular Expression Tester]** zu testen.
 
