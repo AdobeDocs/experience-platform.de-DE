@@ -169,7 +169,7 @@ Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können au
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/de/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
