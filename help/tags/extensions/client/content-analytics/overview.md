@@ -50,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Konfigurieren von Datenströmen
 
-Der Assistent für die geführte Konfiguration von {0[ Content Analytics wählt automatisch den richtigen Wert für den ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
+Der Assistent für die geführte Konfiguration von &lbrace;0[ Content Analytics wählt automatisch den richtigen Wert für den ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
 
 ![Bild, das die Konfiguration der Datenströme der Tag-Erweiterung &quot;Adobe Content Analytics&quot; in der Tags-Benutzeroberfläche anzeigt](assets/aca-tag-datastreams.png)
 
