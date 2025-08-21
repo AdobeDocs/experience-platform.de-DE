@@ -2,9 +2,9 @@
 title: Verbinden von Azure Blob Storage mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Azure Blob verbinden.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 9%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | Die Endpunkt-URL Ihres [!DNL Azure Blob Storage]. Normalerweise im Format: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
 | `servicePrincipalId` | Die Client-/Anwendungs-ID des für die Authentifizierung verwendeten Azure Active Directory (AAD)-Service-Prinzipals. |
 | `servicePrincipalKey` | Das mit dem Azure-Service-Prinzipal verknüpfte Client-Geheimnis oder Kennwort. |
-| `accountKind` | Der Typ Ihres [!DNL Azure Blob Storage]. Häufige Werte sind `StorageV2`, `BlobStorage` oder `Storage`. |
+| `accountKind` | Der Typ Ihres [!DNL Azure Blob Storage]. Häufige Werte sind `Storage` (Allgemeiner Zweck V1), `StorageV2` (Allgemeiner Zweck V2), `BlobStorage` und `BlockBlobStorage`. |
 | `tenant` | Die Azure Active Directory (AAD)-Mandanten-ID, in der der Service-Prinzipal registriert ist. |
 | `container` | Der Name des [!DNL Azure Blob Storage]-Containers, in dem Ihre Datendateien gespeichert werden. |
 | `folderPath` | Der Pfad innerhalb des angegebenen Containers, in dem sich Ihre Dateien befinden. |

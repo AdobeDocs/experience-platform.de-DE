@@ -1,17 +1,16 @@
 ---
-title: Unterstützung privater Links in Quellen
+title: Azure Private Link für Quellen in der API verwenden
 description: Erfahren Sie, wie Sie private Links für Adobe Experience Platform-Quellen erstellen und verwenden
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1380'
 ht-degree: 8%
 
 ---
 
-# Unterstützung privater Links in Quellen
+# Verwenden von [!DNL Azure Private Link] für Quellen in der API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 8%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie über einen privaten Link eine private Endpunktverbindung zu Azure-basierten Quellen herstellen und einen sichereren Übertragungsmechanismus für Ihre Daten ermöglichen können.
+Sie können die [!DNL Azure Private Link]-Funktion verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen sicher mit einem virtuellen Netzwerk, indem Sie private IP-Adressen verwenden. Dadurch entfallen öffentliche IP-Adressen, und die Angriffsfläche wird reduziert.Vereinfachen Sie die Netzwerkeinrichtung, indem Sie komplexe Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen überflüssig machen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
+
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mit APIs einen privaten Endpunkt erstellen und verwenden können.
 
 ## Erste Schritte
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
