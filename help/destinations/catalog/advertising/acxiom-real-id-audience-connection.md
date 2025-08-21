@@ -35,7 +35,7 @@ So ist beispielsweise die Marketing Operations-Abteilung einer globalen Finanzdi
 
 * **Nutzungsbedingungen bestätigen:** Bevor Sie ein neues [!DNL Acxiom Real ID Audience Connection] konfigurieren können, müssen Sie [!DNL Acxiom's] Nutzungsbedingungen lesen und unterzeichnen. Sie erhalten den Link zur Vereinbarung, sobald Ihr ausgeführter Auftrag abgeschlossen ist. Solange Sie die Vereinbarung nicht unterzeichnet haben, wird die [!DNL Acxiom Real ID Audience Connection] Zielkarte im Experience Platform-Zielkatalog nicht angezeigt. Nachdem Sie den Vertrag akzeptiert und unterzeichnet haben, schließen [!DNL Adobe] Ihren Onboarding-Prozess ab und Sie sehen die [!DNL Acxiom Real ID Audience Connection] Zielkarte.
 * **Kennen Sie Ihre Adobe-Organisations-ID**: Zum Ausfüllen Ihrer Nutzungsbedingungen ist Ihre [!DNL Adobe] Organisations-ID erforderlich. Weitere Informationen zum Anzeigen [!DNL Adobe's] Organisations *ID finden Sie unter* Organisationen in [Experience Cloud](https://experienceleague.adobe.com/de/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Lizenz für [!DNL Acxiom's Real ID] Produkt erwerben:** Sobald eine Lizenz erworben wurde, stellen Sie die Real ID von Acxiom in Real-Time CDP zur Verfügung. Siehe [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) für weitere Informationen.
+* **Lizenz für [!DNL Acxiom's Real ID] Produkt erwerben:** Sobald eine Lizenz erworben wurde, stellen Sie die Real ID von Acxiom in Real-Time CDP zur Verfügung. Siehe [Acxiom Data Enhancement](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) für weitere Informationen.
 
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -95,7 +95,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Wenn Sie mit den Ergebnissen zufrieden sind, klicken Sie auf **[!UICONTROL Beend
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/de/docs/experience-platform/data-governance/home).
 
 ## Fehlerbehebung {#troubleshooting}
 
