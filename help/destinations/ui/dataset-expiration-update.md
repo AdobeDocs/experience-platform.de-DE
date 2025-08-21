@@ -2,15 +2,13 @@
 title: Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die vor November 2024 erstellt wurden
 description: Erfahren Sie, wie Sie den Exportzeitplan für Datensatzexport-Datenflüsse verlängern, die vor November 2024 erstellt wurden und am 1. September 2025 nicht mehr funktionieren.
 type: Tutorial
-hide: true
-hidefromtoc: true
-source-git-commit: 08a1c6a1830ace4661ab6aa5b547c4473301ce84
+exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
+source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
 
 ---
-
 
 # Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die vor November 2024 erstellt wurden
 
@@ -57,7 +55,7 @@ Bevor Sie den Exportzeitplan für Ihre Datensatzexport-Datenflüsse verlängern,
    >
    >Verwenden Sie den **[!UICONTROL Datentypen]** Filter auf der linken Seite des Katalogs, um verfügbare Ziele nach **[!UICONTROL Datensätzen]** zu filtern.
 
-3. Wählen Sie **[!UICONTROL Datentyp]**&#x200B;Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
+3. Wählen Sie **[!UICONTROL Datentyp]**Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse nach Datentyp gefiltert werden.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
 4. Wählen Sie die Spaltenüberschrift **[!UICONTROL Erstellt]** und dann **[!UICONTROL Aufsteigend sortieren]**, um ältere Datenflüsse anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse in aufsteigender Reihenfolge sortiert werden.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
