@@ -2,7 +2,7 @@
 title: Lizenznutzung und -kapazität
 description: Erfahren Sie mehr über Ihre Lizenznutzung und Kapazitätsbeschränkungen in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 7%
@@ -19,7 +19,7 @@ ht-degree: 7%
 >- **Anzeigen des Dashboards zur Lizenznutzung**
 >   - Mit dieser Berechtigung können **die Startseite** Kapazität anzeigen.
 >- **Verwalten von Sandboxes**
->   - Mit dieser Berechtigung können **&#x200B;**&#x200B;Kapazitätszuweisungen „bearbeiten“.
+>   - Mit dieser Berechtigung können **** Kapazitätszuweisungen „bearbeiten“.
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](/help/access-control/home.md#permissions)
 >
@@ -103,7 +103,7 @@ Derzeit werden hier Kapazitätsinformationen zu Streaming-Durchsatz, Streaming-Z
 
 #### Streaming-Durchsatz {#streaming-throughput}
 
-Im Abschnitt Streaming-Durchsatz werden Informationen zum Streaming-Durchsatz in den Sandboxes Ihres Unternehmens angezeigt. Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in den Profil-Service.
+Im Abschnitt Streaming-Durchsatz werden Informationen zum Streaming-Durchsatz in den Sandboxes Ihrer Organisation angezeigt. Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in den Profil-Service.
 
 ![Der Abschnitt Streaming-Durchsatz auf der Seite mit den Kapazitätsdetails wird angezeigt.](/help/landing/images/capacity/streaming-throughput-section.png)
 

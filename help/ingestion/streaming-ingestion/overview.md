@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
 description: Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 14%
+source-wordcount: '419'
+ht-degree: 15%
 
 ---
 
@@ -21,11 +21,11 @@ Adobe Experience Platform ermöglicht es Ihnen, koordinierte, konsistente und re
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen, und umreißt die oben genannten Konzepte.
 
->[!VIDEO](https://video.tv.adobe.com/v/31577?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 
-Mit der Streaming-Aufnahme können Benutzer Profildatensätze streamen und in Sekunden in [!DNL Experience Platform] [!DNL ExperienceEvents], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, bleiben automatisch im [!DNL Data Lake] erhalten.
+Mit der Streaming-Aufnahme können Benutzer Profildatensätze streamen und in Sekunden in [!DNL ExperienceEvents] [!DNL Experience Platform], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, bleiben automatisch im [!DNL Data Lake] erhalten.
 
 Weiterführende Informationen finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
 
@@ -39,7 +39,7 @@ Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [
 
 >[!IMPORTANT]
 >
->Leitplanken für die Streaming-Aufnahme werden auf Organisationsebene und nicht auf Sandbox-Ebene berechnet. Das bedeutet, dass Ihre Datennutzung pro Sandbox an die gesamte Lizenznutzungsberechtigung gebunden ist, die Ihrer gesamten Organisation entspricht. Darüber hinaus ist die Datennutzung in Entwicklungs-Sandboxes auf 10 % Ihrer gesamten Profile beschränkt. Weitere Informationen zu Lizenznutzungsberechtigungen finden Sie im [Handbuch zu Best Practices für die Datenverwaltung](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Leitplanken für die Streaming-Aufnahme sind an die gesamte Lizenznutzungsberechtigung gebunden, die Ihrer gesamten Organisation entspricht. Darüber hinaus ist die Datennutzung in Entwicklungs-Sandboxes auf 10 % Ihrer gesamten Profile beschränkt. Weitere Informationen zu Lizenznutzungsberechtigungen finden Sie im [Handbuch zu Best Practices für die Datenverwaltung](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Informationen zum Festlegen von Beschränkungen für Ihren Streaming-Durchsatz finden Sie unter [Kapazitätsübersicht](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Ziel | Erwartete Latenz |
 | --------- | ---------------- |
