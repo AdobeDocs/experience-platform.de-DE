@@ -3,9 +3,9 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2235'
+source-wordcount: '2240'
 ht-degree: 36%
 
 ---
@@ -79,9 +79,9 @@ Bei Zielen, für die der Umschalter **[!UICONTROL Aktiviert/Deaktiviert]** aktiv
 > ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 > 
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Zielgruppen aktivieren](/help/images/icons/data-add.png) **[!UICONTROL Zielgruppen aktivieren]** zum Exportieren von Zielgruppen oder Datensätzen an dieses Ziel.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten &#x200B;]**, um vorhandene Zielverbindungen zu bearbeiten. Lesen Sie das Tutorial [Bearbeiten von Zielen](/help/destinations/ui/edit-destination.md) für weitere Informationen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten ]**, um vorhandene Zielverbindungen zu bearbeiten. Lesen Sie das Tutorial [Bearbeiten von Zielen](/help/destinations/ui/edit-destination.md) für weitere Informationen.
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Marketing-Aktionen bearbeiten](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Marketing-Aktionen bearbeiten]**, um die Marketing-Aktionen für [ ausgewählte Ziel ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) ändern.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]**, um eine vorhandene Verbindung zu einem Ziel [&#128279;](delete-destinations.md) entfernen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]**, um eine vorhandene Verbindung zu einem Ziel [](delete-destinations.md) entfernen.
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Im Monitoring anzeigen](/help/images/icons/monitoring.png) **[!UICONTROL Im Monitoring anzeigen]** zum Anzeigen von Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Warnhinweise abonnieren ](/help/images/icons/alert-add.png) **[!UICONTROL Warnhinweise abonnieren]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Detaillierte [ zu Ziel-Datenfluss-Warnhinweisen finden ](alerts.md) unter Abonnieren von kontextabhängigen Ziel-Warnhinweisen .
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Tags verwalten](/help/images/icons/manage-tags.png) **[!UICONTROL Tags verwalten]**, um Tags einem Ziel hinzuzufügen oder daraus zu entfernen. Ausführliche Informationen zur Verwendung von Tags finden [ im Abschnitt ](#manage-tags)Verwalten von Ziel-Tags“.
@@ -128,7 +128,6 @@ Verwenden Sie die Suchleiste oben in der Tabelle, um Datenflüsse schnell nach N
 Verwenden Sie die Filter in der linken Seitenleiste, um die Suche einzugrenzen.
 
 ![Zielfilter auf der Registerkarte Durchsuchen](../assets/ui/workspace/destination-filters.png)
-
 
 * **[!UICONTROL Zielplattform]**: Filtern von Datenflüssen nach bestimmten Zielplattformen (z. B. [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience] usw.). Sie können mehrere Plattformen gleichzeitig auswählen.
 * **[!UICONTROL Hat beliebige Tags]**: Filtern Sie Datenflüsse, denen bestimmte Tags zugewiesen sind. Auf diese Weise können Sie Datenflüsse basierend auf Ihren benutzerdefinierten Tags organisieren und finden.
@@ -183,9 +182,9 @@ Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, 
 
 >[!TIP]
 >
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren](/help/images/icons/data-add.png)**[!UICONTROL Aktivieren &#x200B;]**/**[!UICONTROL &#x200B; Zielgruppen aktivieren &#x200B;]**/**[!UICONTROL &#x200B; Datensätze exportieren &#x200B;]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten“](/help/images/icons/edit.png)**[!UICONTROL Details bearbeiten &#x200B;]**, um die Details eines vorhandenen Zielkontos zu [aktualisieren](update-accounts.md).
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](/help/images/icons/delete.png)**[!UICONTROL Löschen &#x200B;]**, um ein vorhandenes Zielkonto zu [löschen](delete-destination-account.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren](/help/images/icons/data-add.png)**[!UICONTROL Aktivieren ]**/**[!UICONTROL  Zielgruppen aktivieren ]**/**[!UICONTROL  Datensätze exportieren ]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten“](/help/images/icons/edit.png)**[!UICONTROL Details bearbeiten ]**, um die Details eines vorhandenen Zielkontos zu [aktualisieren](update-accounts.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](/help/images/icons/delete.png)**[!UICONTROL Löschen ]**, um ein vorhandenes Zielkonto zu [löschen](delete-destination-account.md).
 
 ![Registerkarte „Konten“](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, 
 | [!UICONTROL Benutzername] | Der Benutzername, den Sie im Workflow [Ziel verbinden“ ausgewählt ](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Verbindungen] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
 | [!UICONTROL Autorisierungsdatum] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
-| [!UICONTROL Ablaufdatum] | Das Datum, an dem die Verbindungsautorisierung zu diesem Ziel abläuft. <br>**Wichtig**: Diese Spalte ist derzeit nur für die [Facebook“ ](../catalog/social/facebook.md). |
+| [!UICONTROL Ablaufdatum] | Das Datum, an dem die Verbindungsautorisierung zu diesem Ziel abläuft. <br>**Wichtig**: Diese Spalte ist derzeit nur für die Verbindungen [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) und [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) verfügbar. |
 
 {style="table-layout:auto"}
 
