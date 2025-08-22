@@ -1,23 +1,33 @@
 ---
 title: Marketo Engage Person Sync
-description: Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktualisierungen von einer Personen-Audience zu den entsprechenden Datensätzen auf Ihrer Marketo Engage zu streamen.
+description: Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktualisierungen von einer Personen-Audience zu den entsprechenden Datensätzen in Ihrer Marketo Engage zu streamen.
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
+source-git-commit: 88864353d4872d62258914d6490b90331692fa96
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 15%
+source-wordcount: '1124'
+ht-degree: 14%
 
 ---
 
-
-# Marketo Engage-Personen-Synchronisationsverbindung {#marketo-engage-person-sync}
+# Marketo Engage Person Sync connection {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
->Dieser Ziel-Connector befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff zu erhalten.
+>Dieser Ziel-Connector befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff anzufordern.
 
-## Übersicht {#overview}
+>[!IMPORTANT]
+>
+>Die Zielkarte **[!UICONTROL Marketo Engage Person Sync]** wird ab **März 2026** nicht mehr unterstützt.
+>
+>Um einen reibungslosen Übergang zum neuen **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**-Ziel sicherzustellen, überprüfen Sie die folgenden Kernpunkte und erforderlichen Aktionen:
+>
+>* Alle Benutzerinnen und Benutzer von **[!UICONTROL Zielen der Marketo Engage-]** müssen bis März 2026 zum neuen Ziel **[](marketo-engage-connection.md)** Marketo Engage} migrieren.
+>* **Bestehende Datenflüsse werden nicht automatisch migriert.** Sie müssen [eine neue Verbindung einrichten](marketo-engage-connection.md#connect-to-the-destination) zum neuen **[!UICONTROL Marketo Engage]**-Ziel einrichten und Ihre Zielgruppen dort aktivieren.
+
+
+## Überblick {#overview}
 
 Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktualisierungen von Personen-Zielgruppen zu den entsprechenden Datensätzen in Ihrer Marketo Engage-Instanz zu streamen.
 
@@ -37,7 +47,7 @@ Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktualisierungen von
 
 ### Unterstützte Attribute {#supported-attributes}
 
-Sie können Attribute vom Experience Platform einem beliebigen Attribut zuordnen, auf das Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die Anfrage [API beschreiben](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) verwenden, um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
+Sie können Attribute aus Experience Platform jedem der Attribute zuordnen, auf die Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die Anfrage [API beschreiben](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) verwenden, um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -45,8 +55,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform importiert wurden. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
+| Benutzerdefinierte Uploads | ✓ | Audiences, die aus CSV-Dateien in Experience Platform importiert wurden. |
 
 ## Exporttyp und -frequenz {#export-type-and-frequency}
 
@@ -64,11 +74,11 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >
 >* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 
-Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher, dass Sie dieselbe Organisation sowohl auf Marketo Engage als auch in Real-Time CDP verwenden, wo Sie den Ziel-Connector für Marketo einrichten.  Wenn Sie bereits ein Ziel konfiguriert haben, können Sie ein vorhandenes Marketo-Konto auswählen, das mit Ihrer neuen Konfiguration verwendet werden soll.  Wenn nicht, klicken Sie auf die Eingabeaufforderung Connector to Destination , über die Sie den Namen, die Beschreibung und die Marketo Munchkin-ID des gewünschten Ziels festlegen können.  Die Munchkin-ID Ihrer Marketo-Instanz finden Sie im Menü Admin->Munchkin .
+Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher, dass Sie dieselbe Organisation sowohl in Marketo Engage als auch in Real-Time CDP verwenden, wo Sie den Ziel-Connector für Marketo einrichten.  Wenn Sie bereits ein Ziel konfiguriert haben, können Sie ein vorhandenes Marketo-Konto auswählen, das mit Ihrer neuen Konfiguration verwendet werden soll.  Wenn nicht, klicken Sie auf die Eingabeaufforderung Connector to Destination , über die Sie den Namen, die Beschreibung und die Marketo Munchkin-ID des gewünschten Ziels festlegen können.  Die Munchkin-ID Ihrer Marketo-Instanz finden Sie im Menü Admin->Munchkin .
 
 >[!IMPORTANT]
 >
->Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[ muss in der Marketo](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
+>Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[ muss in der Marketo](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
 
 ![Mit Ziel verbinden](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -79,7 +89,7 @@ Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher,
 * **[!UICONTROL Erstes durchsuchbares Feld]**: Feld, in dem dedupliziert werden soll. Das Feld muss in jedem Lead-Datensatz der Eingabe vorhanden sein. Standardwert ist E-Mail
 * **[!UICONTROL Erstes durchsuchbares Feld]**: Ein sekundäres Feld zur Deduplizierung. Das Feld muss in jedem Lead-Datensatz der Eingabe vorhanden sein. Optional
 
-Nachdem Sie Ihre Instanz ausgewählt haben, müssen Sie auch die Lead-Partition auswählen, in die die Konfiguration integriert werden soll. Eine [Lead-Partition](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) ist ein Marketo Engage-Konzept, mit dem Lead-Datensätze nach Geschäftsbereichen wie Marken oder Vertriebsregionen getrennt werden. Wenn Ihr Marketo-Abonnement nicht über die Funktion „Arbeitsbereiche und Partitionen“ verfügt oder wenn in Ihrem Abonnement keine zusätzlichen Partitionen erstellt wurden, ist nur die Standardpartition verfügbar. Eine einzelne Konfiguration kann nur Lead-Einträge aktualisieren, die in ihrer konfigurierten Partition vorhanden sind.
+Nachdem Sie Ihre Instanz ausgewählt haben, müssen Sie auch die Lead-Partition auswählen, in die die Konfiguration integriert werden soll. Eine [Lead-Partition](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) ist ein Konzept in Marketo Engage, mit dem Lead-Datensätze nach Geschäftsbereichen wie Marken oder Vertriebsregionen getrennt werden. Wenn Ihr Marketo-Abonnement nicht über die Funktion „Arbeitsbereiche und Partitionen“ verfügt oder wenn in Ihrem Abonnement keine zusätzlichen Partitionen erstellt wurden, ist nur die Standardpartition verfügbar. Eine einzelne Konfiguration kann nur Lead-Einträge aktualisieren, die in ihrer konfigurierten Partition vorhanden sind.
 
 >[!IMPORTANT]
 > 
@@ -87,7 +97,7 @@ Nachdem Sie Ihre Instanz ausgewählt haben, müssen Sie auch die Lead-Partition 
 
 ### Deduplizierungsfelder {#deduplication-fields}
 
-Beim Senden von Aktualisierungen an Marketo Engage werden Datensätze anhand der ausgewählten Partition und eines oder zweier benutzerausgewählter Felder ausgewählt. Wenn Ihr Ziel mit der Nordamerika-Partition konfiguriert ist und E-Mail-Adresse und Firmenname als Deduplizierungsfelder konfiguriert sind, müssen alle drei Felder übereinstimmen, um Änderungen auf einen vorhandenen Datensatz anzuwenden. z. B.:
+Beim Senden von Aktualisierungen an Marketo Engage werden Datensätze anhand der ausgewählten Partition und eines oder zweier benutzerausgewählter Felder ausgewählt. Wenn Ihr Ziel mit der Nordamerika-Partition konfiguriert ist und E-Mail-Adresse und Firmenname als Deduplizierungsfelder konfiguriert sind, müssen alle drei Felder übereinstimmen, um Änderungen auf einen vorhandenen Datensatz anzuwenden. Beispiel:
 
 * Das Ziel ist mit der Nordamerika-Partition konfiguriert
 * Person mit E-Mail-<test@example.com> und Firmenname Example Inc. in Experience Platform stimmt mit der Zielgruppe überein
@@ -101,7 +111,7 @@ Wenn kein übereinstimmender Lead-Datensatz gefunden wird, wird ein neuer Datens
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -111,7 +121,7 @@ Im Schritt Zielgruppen aktivieren können Sie aus allen Personen-Zielgruppen aus
 
 ## Feldzuordnung {#field-mapping}
 
-Damit Änderungen an einem bestimmten Personenattribut an Marketo Engage gesendet werden können, muss das Feld von einem Real-Time CDP-Feld an das Marketo-Feld zugeordnet werden.
+Damit Änderungen an einem bestimmten Personenattribut an Marketo Engage gesendet werden können, muss das Feld von einem Real-Time CDP-Feld einem Marketo-Feld zugeordnet werden.
 
 ![Feldzuordnung](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
@@ -120,7 +130,7 @@ Experience Platform-Datentypen und Marketo-Datentypen können wie folgt zugeordn
 | Experience Platform-Datentyp | Marketo-Datentyp |
 | ----------------------------- | ------------------------------------ |
 | String | Zeichenfolge, Textbereich, URL, Telefon, E-Mail |
-| Enum | String |
+| Aufzählung | String |
 | Datum | Datum |
 | Datum-Uhrzeit | Datum/Uhrzeit |
 | Ganzzahl | Ganzzahl |

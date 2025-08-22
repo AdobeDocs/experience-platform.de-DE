@@ -1,23 +1,25 @@
 ---
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
-exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
+source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '949'
 ht-degree: 24%
 
 ---
 
-# Marketo Engage-Ziel {#beta-marketo-engage-destination}
+# (Legacy) (v2) Marketo Engage-Ziel {#beta-marketo-engage-destination}
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
 >[!IMPORTANT]
 >
->Mit der Veröffentlichung des [erweiterten Marketo V2-Ziel](/help/release-notes/2022/july-2022.md#destinations)Connectors werden jetzt zwei Marketo-Karten im Zielkatalog angezeigt.
->* Wenn Sie bereits Daten für das Ziel **[!UICONTROL Marketo V1]** aktivieren: Erstellen Sie neue Datenflüsse für das Ziel **[!UICONTROL Marketo V2]** und löschen Sie bestehende Datenflüsse für das Ziel **[!UICONTROL Marketo V1]** bis Februar 2023. Ab diesem Datum wird die Zielkarte **[!UICONTROL Marketo]** 1&rbrace; entfernt.
->* Wenn Sie noch keine Datenflüsse zum Ziel **[!UICONTROL Marketo V1]** erstellt haben, verwenden Sie die neue Karte **[!UICONTROL Marketo V2]**, um eine Verbindung mit Marketo herzustellen und Daten dorthin zu exportieren.
+>Die **[!UICONTROL (Legacy) (v2) Marketo Engage]** wird im **März 2026)**.
+>
+>Um einen reibungslosen Übergang zum neuen **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**-Ziel sicherzustellen, überprüfen Sie die folgenden Kernpunkte und erforderlichen Aktionen:
+>
+>* Alle Benutzenden der bestehenden **[!UICONTROL (Legacy) (V2) Marketo Engage]** müssen bis März 2026 zum neuen **[!UICONTROL Marketo Engage]**-Ziel migrieren.
+>* **Bestehende Datenflüsse werden nicht automatisch migriert.** Sie müssen [eine neue Verbindung einrichten](../../ui/connect-destination.md) zum neuen **[!UICONTROL Marketo Engage]**-Ziel einrichten und Ihre Zielgruppen dort aktivieren.
 
 ![Abbildung der beiden Marketo-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -26,7 +28,7 @@ Zu den Verbesserungen am Marketo V2-Ziel gehören:
 * In Marketo V1 mussten Sie im Schritt **[!UICONTROL Segment planen]** des Aktivierungs-Workflows manuell eine **Zuordnungs-ID** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 * Im Schritt **[!UICONTROL Zuordnung]** des Aktivierungs-Workflows konnten Sie XDM-Felder in Marketo V1 nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName` und `companyName`. Mit der Version Marketo V2 können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie im Abschnitt [Unterstützte Attribute](#supported-attributes) weiter unten.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 [!DNL Marketo Engage] ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
 
@@ -78,7 +80,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >[!IMPORTANT]
 > 
 >* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Zielgruppen finden Sie unter [Pushen einer Adobe Experience Platform-Zielgruppe in eine statische Marketo-Liste](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) in der Dokumentation zu Marketo.
 
@@ -93,7 +95,7 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 >* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Zusätzlich zu den Informationen zur Zielgruppenzugehörigkeit, die zum Zeitpunkt der Videoaufzeichnung unterstützt wurden, können Sie jetzt viele weitere Profilattributfelder zuordnen. Sie können auch Zielgruppenmitglieder, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind, nach Marketo exportieren. Diese werden dann den Listen hinzugefügt.
 >* Im Schritt **[!UICONTROL Zielgruppe planen]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Zuordnungs-ID“ hinzufügen]** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440167?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Ziel überwachen {#monitor-destination}
 
@@ -104,4 +106,3 @@ Die Überwachungsinformationen für die [!DNL Marketo Engage]-Verbindung enthalt
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de).
-

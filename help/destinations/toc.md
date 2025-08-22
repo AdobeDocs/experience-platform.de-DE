@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 74%
+source-wordcount: '1321'
+ht-degree: 73%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 74%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -66,7 +66,8 @@ ht-degree: 74%
    * Adobe-Ziele{#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
       * [Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage-connection.md)
+      * [(Legacy) (V2) Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage Person Sync-Verbindung](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
