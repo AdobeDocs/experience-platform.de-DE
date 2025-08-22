@@ -23,7 +23,7 @@ ht-degree: 14%
 >
 >Um einen reibungslosen Übergang zum neuen **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**-Ziel sicherzustellen, überprüfen Sie die folgenden Kernpunkte und erforderlichen Aktionen:
 >
->* Alle Benutzerinnen und Benutzer von **[!UICONTROL Zielen der Marketo Engage-]** müssen bis März 2026 zum neuen Ziel **[](marketo-engage-connection.md)** Marketo Engage} migrieren.
+>* Alle Benutzerinnen und Benutzer von **[!UICONTROL Zielen der Marketo Engage-]** müssen bis März 2026 zum neuen Ziel **[&#128279;](marketo-engage-connection.md)** Marketo Engage&rbrace; migrieren.
 >* **Bestehende Datenflüsse werden nicht automatisch migriert.** Sie müssen [eine neue Verbindung einrichten](marketo-engage-connection.md#connect-to-the-destination) zum neuen **[!UICONTROL Marketo Engage]**-Ziel einrichten und Ihre Zielgruppen dort aktivieren.
 
 
@@ -111,7 +111,7 @@ Wenn kein übereinstimmender Lead-Datensatz gefunden wird, wird ein neuer Datens
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
