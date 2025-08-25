@@ -4,9 +4,9 @@ title: API-Endpunkt für Segmentdefinitionen
 description: Mit dem Endpunkt Segmentdefinitionen in der Segmentierungs-Service-API von Adobe Experience Platform können Sie Segmentdefinitionen für Ihr Unternehmen programmgesteuert verwalten.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 >[!WARNING]
 >
->Die Erstellung von Zielgruppen mithilfe von B2B-Entitäten mithilfe der Segmentierungs-Service-API ist veraltet. Sie können keine Zielgruppen mehr mit den folgenden B2B-Entitäten erstellen: Konto-, Konto-Personen-Beziehung, Kampagne, Kampagnenmitglied, Marketing-Liste, Marketing-Listenmitglied, Opportunity und Opportunity-Person-Beziehung.
+>Die Erstellung von Zielgruppen mithilfe von B2B-Entitäten mithilfe der Segmentierungs-Service-API ist veraltet. Sie können keine Zielgruppen mehr mit den folgenden B2B-Entitäten erstellen: Konto-, Konto-Personen-Beziehung, Kampagne, Kampagnenmitglied, Marketing-Liste, Marketing-Listenmitglied, Opportunity und Opportunity-Person-Beziehung. Weitere Informationen finden Sie im Handbuch zu [Architekturaktualisierungen für Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [ Sie im Handbuch zu PQL ](../pql/overview.md).
 
