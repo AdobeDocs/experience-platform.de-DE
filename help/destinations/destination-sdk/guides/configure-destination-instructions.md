@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 58%
+source-wordcount: '879'
+ht-degree: 57%
 
 ---
 
@@ -275,7 +275,7 @@ Je nachdem, ob Sie In der obigen Zielkonfiguration `"authenticationRule": "CUSTO
 
 Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben und Ihr Ziel die OAuth 2-Authentifizierungsmethode unterstützt, lesen Sie [OAuth 2-Authentifizierung](../functionality/destination-configuration/oauth2-authorization.md).
 
-Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, müssen Sie eine [Zugangsdaten-Konfiguration“ ](../credentials-api/create-credential-configuration.md).
+Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, müssen Sie eine [Zugangsdaten-Konfiguration](../credentials-api/create-credential-configuration.md) erstellen und die ID des Zugangsdaten-Objekts im Parameter `authenticationId` in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben.
 
 ## Schritt 6: Testen des Ziels {#test-destination}
 
@@ -284,7 +284,7 @@ Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritte
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden folgenden Ressourcen:
 
 * [Erstellen einer Dokumentationsseite für Zielgruppen](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Videoanleitung zum Erstellen einer Zielgruppe](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de)
+* [Videoanleitung zum Erstellen einer Zielgruppe](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 7: Veröffentlichen des Ziels {#publish-destination}
 

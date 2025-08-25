@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 55%
+source-wordcount: '745'
+ht-degree: 54%
 
 ---
 
@@ -413,8 +413,7 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
    * [SFTP-Authentifizierung mit SSH-Schlüssel](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [SFTP-Authentifizierung mit Passwort](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, lesen Sie die [Dokumentation zur Berechtigungskonfigurations-API](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, müssen Sie eine [Zugangsdaten-Konfiguration](../credentials-api/create-credential-configuration.md) erstellen und die ID des Zugangsdaten-Objekts im Parameter `authenticationId` in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben.
 
 ## Schritt 5: Testen des Ziels {#test-destination}
 
@@ -423,7 +422,7 @@ Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritte
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden folgenden Ressourcen:
 
 * [Erstellen einer Audience - Dokumentationsseite](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Erstellen einer Zielgruppe - Videoanleitung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de)
+* [Erstellen einer Zielgruppe - Videoanleitung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 6: Veröffentlichen des Ziels {#publish-destination}
 

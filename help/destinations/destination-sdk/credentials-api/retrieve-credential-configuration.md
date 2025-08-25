@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Anmeldedaten-Konfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Anmeldedaten-Konfiguration
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 96%
+source-wordcount: '499'
+ht-degree: 88%
 
 ---
 
@@ -27,7 +27,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verw
 
 Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Experience Platform]-Kundinnen und -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Anmeldedaten-Konfiguration erstellen.
 
-Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
+Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration [Zielversand](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md). Anschließend müssen Sie eine [Anmeldedaten-Konfiguration](../credentials-api/create-credential-configuration.md) erstellen und die ID des Anmeldedaten-Objekts im `authenticationId` Parameter in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben.
 
 >[!IMPORTANT]
 >

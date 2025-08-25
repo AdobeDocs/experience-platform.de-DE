@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Zielbereitstellungseinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden, um anzugeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 title: Zielbereitstellung
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 96%
+source-wordcount: '641'
+ht-degree: 82%
 
 ---
 
@@ -48,7 +48,8 @@ Bei der Konfiguration Ihrer Zielversandeinstellungen können Sie mithilfe der in
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Experience Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Experience Platform-Kundinnen und -Kunden über eine der hier beschriebenen Authentifizierungsmethoden bei [ System ](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Experience Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldedaten-Objekt mithilfe der Konfiguration der [Anmeldedaten-API](../../credentials-api/create-credential-configuration.md) erstellen. </li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Experience Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Experience Platform-Kundinnen und -Kunden über eine der hier beschriebenen Authentifizierungsmethoden bei [ System ](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Experience Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldeinformationen-Objekt mithilfe der Konfiguration [Anmeldeinformationen-API](../../credentials-api/create-credential-configuration.md) erstellen und den `authenticationId`-Parameter auf den Wert der Anmeldeinformationsobjekt-ID festlegen.</li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `authenticationId` | Zeichenfolge | Die `instanceId` der Konfigurations-ID des Berechtigungsobjekts, die für die Authentifizierung verwendet werden soll. Dieser Parameter ist nur erforderlich, wenn Sie eine bestimmte Zugangsdaten-Konfiguration angeben müssen. |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` des [Ziel-Servers](../../authoring-api/destination-server/create-destination-server.md), an die Sie Daten exportieren möchten. |
 | `deliveryMatchers.type` | Zeichenfolge | <ul><li>Legen Sie diese bei der Konfiguration des Zielversands für dateibasierte Ziele immer auf `SOURCE` fest.</li><li>Beim Konfigurieren des Zielversands für ein Streaming-Ziel ist der Abschnitt `deliveryMatchers` nicht erforderlich.</li></ul> |
 | `deliveryMatchers.value` | Zeichenfolge | <ul><li>Legen Sie diese bei der Konfiguration des Zielversands für dateibasierte Ziele immer auf `batch` fest.</li><li>Beim Konfigurieren des Zielversands für ein Streaming-Ziel ist der Abschnitt `deliveryMatchers` nicht erforderlich.</li></ul> |
@@ -94,6 +95,32 @@ Das folgende Beispiel zeigt, wie die Zielversandeinstellungen für ein dateibasi
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## Konfiguration der Platform-Authentifizierung {#platform-authentication}
+
+Bei Verwendung von `PLATFORM_AUTHENTICATION` müssen Sie den `authenticationId` angeben, um Ihre Zielkonfiguration mit der Anmeldedaten-Konfiguration zu verknüpfen.
+
+1. Legen Sie in Ihrer Zielkonfiguration `destinationDelivery.authenticationRule` auf `"PLATFORM_AUTHENTICATION"` fest.
+2. [Erstellen des Berechtigungsobjekts](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md).
+3. Setzen Sie den `authenticationId` auf den `instanceId` des Berechtigungsobjekts.
+
+**Beispielkonfiguration mit PLATFORM_AUTHENTICATION:**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
       }
    ]
 }
