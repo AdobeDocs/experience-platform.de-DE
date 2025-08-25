@@ -2,10 +2,10 @@
 title: Ansichten in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 97%
+source-wordcount: '2148'
+ht-degree: 92%
 
 ---
 
@@ -68,15 +68,22 @@ Der Inhalt der einzelnen Methoden muss an Ihre jeweiligen Ansichtsanforderungen 
 Die Methode `init` wird von Tags aufgerufen, sobald die Ansicht in den iframe geladen wurde. Es wird ein einzelnes Argument (`info`) übergeben, bei dem es sich um ein Objekt mit den folgenden Eigenschaften handeln muss:
 
 | Eigenschaft | Beschreibung |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Ein Objekt mit Einstellungen, die zuvor in dieser Ansicht gespeichert wurden. Wenn `settings` den Wert `null` hat, zeigt dies an, dass der Benutzer die anfänglichen Einstellungen erstellt, anstatt eine gespeicherte Version zu laden. Wenn `settings` ein Objekt ist, sollten Sie es in Ihre Ansicht laden, da der Benutzer die zuvor gespeicherten Einstellungen bearbeiten möchte. |
 | `extensionSettings` | In der Erweiterungskonfigurationsansicht gespeicherte Einstellungen. Dies kann nützlich sein, um in Ansichten, bei denen es sich nicht um die Erweiterungskonfigurationsansicht handelt, auf Erweiterungseinstellungen zuzugreifen. Wenn es sich bei der aktuellen Ansicht um die Erweiterungskonfigurationsansicht handelt, verwenden Sie `settings`. |
 | `propertySettings` | Ein Objekt, das Einstellungen für die Eigenschaft enthält. Weitere Informationen zu den in diesem Objekt enthaltenen Elementen finden Sie in der [Anleitung zum turbine-Objekt](../turbine.md#property-settings). |
 | `tokens` | Ein Objekt, das API-Token enthält. Für den Zugriff auf Adobe-APIs aus der Ansicht heraus müssen Sie normalerweise ein IMS-Token unter `tokens.imsAccess` verwenden. Dieses Token steht nur für Erweiterungen zur Verfügung, die von Adobe entwickelt wurden. Wenn Sie Mitarbeiter von Adobe sind und eine von Adobe erstellte Erweiterung bearbeiten, [senden Sie eine E-Mail an das Entwicklungs-Team für die Datenerfassung](mailto:reactor@adobe.com) und geben Sie den Namen der Erweiterung an, damit wir sie der Zulassungsliste hinzufügen können. |
-| `company` | Ein Objekt, das als einzige Eigenschaft `orgId` enthält, die Ihre Adobe Experience Cloud ID darstellt (eine 24-stellige alphanumerische Zeichenfolge). |
+| `company` | Ein Objekt, das die `orgId` (Ihre 24-stellige Adobe Experience Cloud-ID), `id` (die eindeutige Kennung Ihres Unternehmens innerhalb der Reactor-API) und `tenantId` (die eindeutige Kennung für ein Unternehmen innerhalb des Identity Management-Systems von Adobe) enthält. |
 | `schema` | Ein Objekt im [JSON-Schema](https://json-schema.org/)-Format. Dieses Objekt stammt aus dem [Erweiterungsmanifest](../manifest.md) und kann bei der Validierung Ihres Formulars hilfreich sein. |
+| `apiEndpoints` | Ein Objekt, das `reactor` enthält, das einen Verweis auf die Web-Adresse der Reactor-API enthält. |
+| `userConsentPermissions` | Ein Objekt, das Einverständniskennzeichnungen aus den [Produktnutzungsdaten](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) von Adobe enthält. Verwenden Sie das in `globalDataCollectionAndUsage` Flag gespeicherte , um zu verstehen, ob Ihre Erweiterung (beliebige *Kundendaten* darf. |
+| `preferredLanguages` | Ein Array von Sprachzeichenfolgen. |
 
 Ihre Ansicht sollte diese Informationen zum Rendern und Verwalten des Formulars verwenden. Wahrscheinlich müssen Sie sich nur mit `info.settings` befassen, die anderen Informationen werden jedoch für den Fall bereitgestellt, dass sie erforderlich sind.
+
+>[!IMPORTANT]
+>
+>Um die DSGVO-Konformität Ihrer Erweiterung sicherzustellen, stellen Sie sicher, dass Sie das `userConsentPermissions.globalDataCollectionAndUsage`-Flag verwenden, um zu bestimmen, ob Ihre Erweiterung berechtigt ist, Daten über den Benutzer zu erfassen.
 
 ### [!DNL validate]
 
