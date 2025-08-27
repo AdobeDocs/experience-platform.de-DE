@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2051'
 ht-degree: 19%
 
 ---
@@ -38,6 +38,10 @@ Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Regelsä
 Um eine Zielgruppe mit Streaming-Segmentierung auszuwerten **muss sie** einem Zeitfenster von 24 Stunden eingeschränkt sein.
 
 ## Einschließen von Batch-Daten in Streaming-Zielgruppen {#include-batch-data}
+
+>[!NOTE]
+>
+>Um bei der Verwendung von Batch-Daten die Genauigkeit der Streaming-Segmentierung sicherzustellen, stellen Sie sicher, dass die Batch-Daten **nur** in der Batch-Zielgruppe gespeichert und in der Streaming-Zielgruppe referenziert werden.
 
 Vor diesem Update konnten Sie eine Definition für Streaming-Zielgruppen erstellen, die sowohl Batch- als auch Streaming-Datenquellen kombinierte. Mit der neuesten Aktualisierung wird jedoch die Erstellung einer Zielgruppe mit sowohl Batch- als auch Streaming-Datenquellen mithilfe der Batch-Segmentierung ausgewertet.
 
@@ -102,7 +106,7 @@ Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Zielgruppen-Qualifizier
 
 >[!IMPORTANT]
 >
->Um die Streaming-Segmentierung zu verwenden, **müssen** eine Zusammenführungsrichtlinie verwenden, die „In Edge aktiv“ ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
+>Um die Streaming-Segmentierung zu verwenden, **müssen** eine Zusammenführungsrichtlinie verwenden, die „In Edge aktiv“ ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Überblick über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
 
 Ein Regelsatz ist für die Streaming-Segmentierung geeignet, wenn er eines der in der folgenden Tabelle aufgeführten Kriterien erfüllt.
 

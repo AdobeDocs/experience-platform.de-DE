@@ -2,10 +2,10 @@
 title: Edge-Segmentierungshandbuch
 description: Erfahren Sie, wie Sie mit der Edge-Segmentierung Zielgruppen in Experience Platform sofort am Edge auswerten können, um Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 23%
+source-wordcount: '1148'
+ht-degree: 22%
 
 ---
 
@@ -26,6 +26,8 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 >[!NOTE]
 >
 >Wenn die Abfrage einem der Abfragetypen in der folgenden Tabelle entspricht, wird sie automatisch mithilfe der Edge-Segmentierung ausgewertet. Das System bestimmt diese Fähigkeit automatisch anhand des Abfrageausdrucks.
+>
+>Wenn die Zielgruppe **nur** Profilattribute enthält, wird sie außerdem täglich ausgewertet. Wenn Ihre Zielgruppe in Echtzeit ausgewertet werden soll, müssen Sie Ihrer Zielgruppe Ereignisdaten hinzufügen.
 
 | Abfragetyp | Details | Abfrage | Beispiel |
 | ---------- | ------- | ----- | ------- |
