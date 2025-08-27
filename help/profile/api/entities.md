@@ -5,18 +5,14 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 33%
 
 ---
 
 # Entitäten-Endpunkt (Profilzugriff)
-
->[!IMPORTANT]
->
->Die ExperienceEvent-Suche mit der Profilzugriffs-API wird nicht mehr unterstützt. Verwenden Sie Funktionen wie berechnete Attribute für Anwendungsfälle, in denen ExperienceEvents nachgeschlagen werden muss. Weitere Informationen zu dieser Änderung erhalten Sie bei der Adobe-Kundenunterstützung.
 
 Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer Profile] mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weiterführende Informationen zum Zugriff auf Profile über die [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
 
@@ -44,6 +40,12 @@ Infolge dieser Aktualisierung spiegelt die [!DNL Profile Access]-API jetzt die n
 >[!ENDSHADEBOX]
 
 ## Abrufen einer Entität {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>Die folgenden B2B-Entitäten werden für Suchanfragen über die API nicht mehr unterstützt: **Konto-Personen-Beziehung, Opportunity-Personen-Beziehung, Kampagne, Kampagnenmitglied, Marketing-Liste und Marketing-**.
+>
+>Die Unterstützung für diese Entitäten wird nicht mehr unterstützt. Wenn Sie über vorhandene Integrationen oder Workflows verfügen, die auf den Zugriff auf diese Entitäten angewiesen sind, aktualisieren Sie diese bitte, um die Verwendung unterstützter Entitätstypen sicherzustellen, dass sie weiterhin funktionieren.
 
 Sie können eine Profilentität abrufen, indem Sie eine GET-Anfrage zusammen mit den erforderlichen Abfrageparametern an den `/access/entities`-Endpunkt stellen.
 
@@ -1203,6 +1205,19 @@ Eine erfolgreiche Antwort gibt die nächste Ergebnisseite zurück. Diese Antwort
 
 ## Löschen einer Entität {#delete-entity}
 
+>[!IMPORTANT]
+>
+>Löschanfragen für die folgenden B2B-Entitäten werden nicht mehr unterstützt:
+>
+>- Konto
+>- Konto-Personen-Beziehung
+>- Opportunity
+>- Opportunity-Person-Beziehung
+>- Campaign
+>- Kampagnenmitglied
+>- Marketing-Liste
+>- Mitglieder der Marketing-Liste
+
 Sie können eine Entität aus dem Profilspeicher löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/access/entities` zusammen mit den erforderlichen Abfrageparametern stellen.
 
 **API-Format**
@@ -1215,7 +1230,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **&#x200B;**&#x200B;nur`schema.name=_xdm.context.profile` verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.
