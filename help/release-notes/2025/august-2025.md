@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 20%
+source-wordcount: '1448'
+ht-degree: 21%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 20%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -30,7 +30,6 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Katalog-Service](#catalog-service)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
-- [Echtzeit-Kundenprofil](#profile)
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
@@ -125,17 +124,20 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 Weitere Informationen finden Sie in der [XDM-Übersicht](../../xdm/home.md).
 
-## Echtzeit-Kundenprofil {#profile}
+<!--
+## Real-Time Customer Profile {#profile}
 
-Das Echtzeit-Kundenprofil bietet eine einheitliche, umsetzbare Ansicht jedes Kunden, indem Daten aus allen Kanälen in einem einzigen Profil zusammengefasst werden.
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-**Neue oder aktualisierte Funktionen**
+**New or updated features**
 
-| Funktion | Beschreibung |
+| Feature | Description |
 | --- | --- |
-| Verbesserte Suchfunktion in der Entitäten-API | Die Entitäten-API unterstützt jetzt Folgendes: <ul><li>Person (Profil)</li><li>Erlebnisereignisse</li><li>Konto</li><li>Opportunity</li></ul> Diese Aktualisierung vereinfacht die API-Nutzung und sorgt für optimale Leistung und Zuverlässigkeit. Wenn Sie zuvor nach anderen Entitätstypen gesucht haben, einschließlich Verknüpfungstabellen und benutzerdefinierten Typen für mehrere Entitäten, ist jetzt eine hervorragende Gelegenheit, Ihre API-Nutzung zu überprüfen und das verbesserte Erlebnis zu nutzen. Weitere Informationen finden Sie im [Handbuch zur Aktualisierung der Real-Time CDB B2B edition-Architektur](../../rtcdp/b2b-architecture-upgrade.md). |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Weitere Informationen zum Echtzeit-Kundenprofil finden Sie unter [Profilübersicht](../../profile/home.md).
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Sandboxes {#sandboxes}
 
