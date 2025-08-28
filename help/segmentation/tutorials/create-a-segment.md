@@ -4,7 +4,7 @@ title: Erstellen einer Segmentdefinition mit der Segmentierungs-Service-API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Segmentierungs-Service-API von Adobe Experience Platform eine Segmentdefinition entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 24%
@@ -53,7 +53,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [&#128279;](../pql/overview.md) Sie im Handbuch zu PQL .
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [ Sie im Handbuch zu PQL ](../pql/overview.md).
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt in der [!DNL Segmentation]-API stellen. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die für die erfolgreiche Definition einer Segmentdefinition erforderlich sind.
 
@@ -76,8 +76,8 @@ Wenn für das Echtzeit-Kundenprofil aktivierte Daten in Experience Platform aufg
 
 Die Art und Weise, wie die Stichprobe ausgelöst wird, hängt von der Art der Aufnahme ab, die verwendet wird:
 
-- Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Anstieg- oder Absenkungsschwellenwert von 5 % erreicht wurde. Wenn dieser Schwellenwert erreicht wurde, wird automatisch ein Beispielvorgang ausgelöst, um die Anzahl zu aktualisieren.
-- Bei der Batch-Aufnahme wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht ist. Mit der Profil-API können Sie den neuesten erfolgreichen Beispielvorgang in der Vorschau anzeigen sowie die Profilverteilung nach Datensatz und Identity-Namespace auflisten.
+- Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Anstieg- oder Abnahmeschwellenwert von 3 % erreicht wurde. Wenn dieser Schwellenwert erreicht wurde, wird automatisch ein Beispielvorgang ausgelöst, um die Anzahl zu aktualisieren.
+- Bei der Batch-Aufnahme wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 3 % für die Erhöhung oder Verringerung erreicht ist. Mit der Profil-API können Sie den neuesten erfolgreichen Beispielvorgang in der Vorschau anzeigen sowie die Profilverteilung nach Datensatz und Identity-Namespace auflisten.
 
 Die Stichprobengröße hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 

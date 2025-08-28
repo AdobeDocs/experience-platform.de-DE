@@ -3,7 +3,7 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 9%
@@ -28,7 +28,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Pro
 
 >[!NOTE]
 >
->Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -60,7 +60,7 @@ Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Prof
 
 #### Profilzählungs-Metrik aktualisieren
 
-Wenn die Aufnahme von Datensätzen in den [!DNL Profile] die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag ausgelöst, um die Anzahl zu aktualisieren. Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Anstieg- oder Absenkungsschwellenwert von 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Vorgang ausgelöst, um die Profilanzahl zu aktualisieren. Bei der Batch-Aufnahme wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Profilanzahl zu aktualisieren, wenn der Schwellenwert von 5 % für Erhöhung oder Verringerung erreicht ist.
+Wenn die Aufnahme von Datensätzen in den [!DNL Profile] die Anzahl um mehr als 3 % erhöht oder verringert, wird ein Auftrag ausgelöst, um die Anzahl zu aktualisieren. Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Anstieg- oder Abnahmeschwellenwert von 3 % erreicht wurde. Ist dies der Fall, wird automatisch ein Vorgang ausgelöst, um die Profilanzahl zu aktualisieren. Bei der Batch-Aufnahme wird innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Profilanzahl zu aktualisieren, wenn der Schwellenwert von 3 % für Erhöhung oder Verringerung erreicht ist.
 
 ### [!UICONTROL Profile nach Namespace] {#profiles-by-namespace}
 

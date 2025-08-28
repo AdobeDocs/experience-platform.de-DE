@@ -4,7 +4,7 @@ title: API-Endpunkte für Vorschauen und Schätzungen
 description: Bei der Entwicklung der Segmentdefinition können Sie die Tools Schätzung und Vorschau in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 11%
@@ -31,8 +31,8 @@ Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experienc
 
 Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Daten-Sampling ausgelöst wird, hängt von der Methode der Aufnahme ab:
 
-* **Batch-Aufnahme:** Bei der Batch-Aufnahme innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht wird.
-* **Streaming-Aufnahme:** Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Schwellenwert von 5 % für die Erhöhung oder Verringerung erreicht wurde. Ist dies der Fall, wird automatisch ein Vorgang ausgelöst, um die Anzahl zu aktualisieren.
+* **Batch-Aufnahme:** Bei der Batch-Aufnahme innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 3 % für die Erhöhung oder Verringerung erreicht wird.
+* **Streaming-Aufnahme:** Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Schwellenwert von 3 % für die Erhöhung oder Verringerung erreicht wurde. Ist dies der Fall, wird automatisch ein Vorgang ausgelöst, um die Anzahl zu aktualisieren.
 
 Die Stichprobengröße der Überprüfung hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
