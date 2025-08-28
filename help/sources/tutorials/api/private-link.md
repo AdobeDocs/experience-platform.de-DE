@@ -1,16 +1,18 @@
 ---
-title: Azure Private Link für Quellen in der API verwenden
+title: Unterstützung privater Links für Quellen in der API
 description: Erfahren Sie, wie Sie private Links für Adobe Experience Platform-Quellen erstellen und verwenden
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 7%
 
 ---
 
-# Verwenden von [!DNL Azure Private Link] für Quellen in der API
+# Unterstützung privater Links für Quellen in der API
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 7%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Sie können die [!DNL Azure Private Link]-Funktion verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen sicher mit einem virtuellen Netzwerk, indem Sie private IP-Adressen verwenden. Dadurch entfallen öffentliche IP-Adressen, und die Angriffsfläche wird reduziert.Vereinfachen Sie die Netzwerkeinrichtung, indem Sie komplexe Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen überflüssig machen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
+Sie können die Funktion für private Links verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen mithilfe privater IP-Adressen sicher mit einem virtuellen Netzwerk, sodass keine öffentlichen IPs mehr benötigt werden und Sie Ihre Angriffsfläche reduzieren können. Vereinfachen Sie die Einrichtung Ihres Netzwerks, indem Sie die Notwendigkeit komplexer Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen beseitigen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mit APIs einen privaten Endpunkt erstellen und verwenden können.
 

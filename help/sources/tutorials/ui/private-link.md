@@ -1,16 +1,18 @@
 ---
-title: Azure Private Link für Quellen in der Benutzeroberfläche verwenden
+title: Unterstützung privater Links für Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche private Azure-Links für Quellen verwenden.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
 
-# Verwenden von [!DNL Azure Private Link] für Quellen in der Benutzeroberfläche
+# Unterstützung privater Links für Quellen in der Benutzeroberfläche
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 1%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Sie können die [!DNL Azure Private Link]-Funktion verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen sicher mit einem virtuellen Netzwerk, indem Sie private IP-Adressen verwenden. Dadurch entfallen öffentliche IP-Adressen, und die Angriffsfläche wird reduziert.Vereinfachen Sie die Netzwerkeinrichtung, indem Sie komplexe Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen überflüssig machen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
+Sie können die Funktion für private Links verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen mithilfe privater IP-Adressen sicher mit einem virtuellen Netzwerk, sodass keine öffentlichen IPs mehr benötigt werden und Sie Ihre Angriffsfläche reduzieren können. Vereinfachen Sie die Einrichtung Ihres Netzwerks, indem Sie die Notwendigkeit komplexer Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen beseitigen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie den Quellarbeitsbereich in der Experience Platform-Benutzeroberfläche verwenden können, um einen privaten Endpunkt zu erstellen und zu verwenden.
 
 ## Erstellen eines privaten Endpunkts
 
-Um mit [!DNL Azure Private Link] zu beginnen, navigieren Sie zum Katalog *[!UICONTROL Quellen]* der Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Private Endpunkte]** aus dem Menü der Registerkarten im Arbeitsbereich „Quellen“ aus.
+Um mit privaten Links zu beginnen, navigieren Sie zum Katalog *[!UICONTROL Quellen]* der Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Private Endpunkte]** aus dem Menü der Registerkarten im Arbeitsbereich „Quellen“ aus.
 
 ![Der Quellkatalog mit „privaten Endpunkten“.](../../images/tutorials/private-links/catalog.png)
 
