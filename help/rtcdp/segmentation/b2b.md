@@ -2,16 +2,20 @@
 title: Anwendungsfälle für die Segmentierung für Real-Time Customer Data Platform B2B edition
 description: Ein Überblick über die verschiedenen verfügbaren Anwendungsfälle für Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
 
 # Anwendungsfälle für die Segmentierung für Real-Time Customer Data Platform B2B edition
+
+>[!IMPORTANT]
+>
+>Zielgruppen, die Erlebnisereignisse enthalten, die auf B2B-Entitäten verweisen (z. B. Kampagnen und Marketing-Listen), werden nicht mehr unterstützt. Weitere Informationen finden Sie im Überblick über die [Architekturaktualisierungen für Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 Dieses Dokument enthält Beispiele für Segmentdefinitionen in Adobe Real-Time Customer Data Platform B2B edition und dafür, wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
