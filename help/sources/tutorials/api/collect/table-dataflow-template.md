@@ -1,15 +1,16 @@
 ---
-title: Erstellen eines Datenflusses, um Daten aus einem CRM in Experience Platform aufzunehmen
+title: Erstellen eines Datenflusses zur Aufnahme von Source-Daten in Experience Platform
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Quelldaten in Experience Platform aufnehmen.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 12%
+source-wordcount: '2137'
+ht-degree: 13%
 
 ---
 
-# Erstellen eines Datenflusses, um Daten aus einem CRM in Experience Platform aufzunehmen
+# Erstellen eines Datenflusses, um Daten aus einer Quelle aufzunehmen
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten in [[!DNL Flow Service]  Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -29,9 +30,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
-### Basisverbindung erstellen {#base}
+### Basisverbindung erstellen
 
-Um erfolgreich einen Datenfluss für Ihre Quelle zu erstellen, benötigen Sie ein vollständig authentifiziertes Quellkonto und die entsprechende Basisverbindungs-ID. Wenn Sie diese ID nicht haben, suchen Sie im [Quellkatalog](../../../home.md) nach einer Liste von Quellen, für die Sie eine Basisverbindung erstellen können.
+Sie müssen über ein vollständig authentifiziertes Quellkonto und die entsprechende Basisverbindungs-ID verfügen, um erfolgreich einen Datenfluss für Ihre Quelle erstellen zu können. Wenn Sie diese ID nicht haben, finden Sie im [Quellkatalog](../../../home.md) eine Liste von Quellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
@@ -106,7 +107,7 @@ Eine erfolgreiche Antwort gibt Ihre Zieldatensatz-ID zurück. Diese ID ist spät
 
 +++
 
-## Erstellen einer Quellverbindung {#source}
+## Erstellen einer Quellverbindung
 
 Eine Quellverbindung definiert, wie Daten von einer externen Quelle in Experience Platform importiert werden. Sie gibt sowohl das Quellsystem als auch das Format der eingehenden Daten an und verweist auf eine Basisverbindung, die Authentifizierungsdetails enthält. Jede Quellverbindung ist für Ihre Organisation eindeutig.
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | Das Format Ihrer Daten. Legen Sie diesen Wert für tabellenbasierte Quellen (z. B. Datenbanken, CRMs und Anbieter von Marketing-Automatisierung) auf `tabular` fest. |
 | `params.tableName` | Der Name der Tabelle in Ihrem Quellkonto, die Sie in Experience Platform aufnehmen möchten. |
 | `params.columns` | Die spezifischen Tabellenspalten der Daten, die Sie in Experience Platform aufnehmen möchten. |
+| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist oder nicht. Diese Eigenschaft wird von den folgenden Datenbankquellen unterstützt: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Weitere Informationen finden Sie im Handbuch unter Verwenden von [Datenerfassung in Quellen ändern](../change-data-capture.md). |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID der Quelle, die Sie verwenden. |
 
 **Antwort**
@@ -194,9 +197,9 @@ Bei einer erfolgreichen Antwort wird die ID Ihrer Quellverbindung zurückgegeben
 }
 ```
 
-## Erstellen einer Zielverbindung {#target}
+## Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die mit dem Data Lake verknüpft ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, müssen Sie die festgelegte Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-Format**
 
@@ -314,7 +317,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 }
 ```
 
-## Abrufen von Datenflussspezifikationen {#flow-specs}
+## Abrufen von Datenflussspezifikationen
 
 Bevor Sie einen Datenfluss erstellen können, müssen Sie zunächst die Datenflussspezifikationen abrufen, die Ihrer Quelle entsprechen. Um diese Informationen abzurufen, stellen Sie eine GET-Anfrage an den `/flowSpecs` der [!DNL Flow Service]-API.
 
@@ -631,16 +634,16 @@ Um sicherzustellen, dass Sie die richtige Datenflussspezifikation verwenden, üb
 
 +++
 
-## Erstellen eines Datenflusses {#dataflow}
+## Erstellen eines Datenflusses
 
 Ein Datenfluss ist eine konfigurierte Pipeline, die Daten über Experience Platform-Services hinweg überträgt. Sie definiert, wie Daten aus externen Quellen (z. B. Datenbanken, Cloud-Speicher oder APIs) aufgenommen, verarbeitet und an Zieldatensätze weitergeleitet werden. Diese Datensätze werden dann von Services wie Identity Service, Echtzeit-Kundenprofil und Zielen für die Aktivierung und Analyse verwendet.
 
 Um einen Datenfluss zu erstellen, müssen Sie Werte für die folgenden Elemente haben:
 
-* [Quellverbindungs-ID](#source)
-* [Zielverbindungs-ID](#target)
-* [Zuordnungs-ID](#mapping)
-* [Datenflussspezifikations-ID](#flow-specs)
+* Quellverbindungs-ID
+* Zielverbindungs-ID
+* Zuordnungs-ID
+* Datenflussspezifikations-ID
 
 In diesem Schritt können Sie die folgenden Parameter in `scheduleParams` verwenden, um einen Aufnahmezeitplan für Ihren Datenfluss zu konfigurieren:
 
@@ -739,7 +742,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 }
 ```
 
-### Validieren des API-Workflows über die Benutzeroberfläche {#validate-in-ui}
+### Validieren des API-Workflows über die Benutzeroberfläche
 
 Sie können die Experience Platform-Benutzeroberfläche verwenden, um die Erstellung Ihres Datenflusses zu überprüfen. Navigieren Sie zum *[!UICONTROL Quellen]*-Katalog in der Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Datenflüsse]** in der Kopfzeile aus. Verwenden Sie anschließend die Spalte [!UICONTROL Datenflussname] und suchen Sie den Datenfluss, den Sie mithilfe der [!DNL Flow Service]-API erstellt haben.
 

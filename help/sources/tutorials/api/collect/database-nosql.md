@@ -1,22 +1,22 @@
 ---
 title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank und deren Aufnahme in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 73%
 
 ---
 
 # Erstellen eines Datenflusses für Datenbankquellen mithilfe der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbankquelle und zum Übertragen dieser Daten in Experience Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer -Datenbank [[!DNL Flow Service]  Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in der [Quellenübersicht](../../../home.md#database) eine Liste der Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie im [Quellkatalog](../../../home.md#database) eine Liste der Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
 >* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen als UTC konfiguriert werden. Der einzige Zeitstempel, der für die [[!DNL Snowflake] Quelle](../../../connectors/databases/snowflake.md) unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 ## Erste Schritte
