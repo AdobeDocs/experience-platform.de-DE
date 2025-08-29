@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
+source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 21%
+source-wordcount: '1339'
+ht-degree: 23%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 21%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -96,7 +96,6 @@ Weitere Informationen zum Katalog-Service finden Sie im Abschnitt [Übersicht ü
 | Ziel | Beschreibung |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Verwenden Sie das [!DNL Acxiom Real ID Audience Connection]-Ziel, um Zielgruppen mit [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/)-Technologie zu erweitern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr. |
-| Verbessertes [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) | Das erweiterte [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) ist eine aktualisierte Version des vorhandenen [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)-Connectors. Dieser neue Connector bietet Profilsynchronisierungsfunktionen zusätzlich zu den bestehenden Zielgruppensynchronisierungsfunktionen des alten Connectors und bietet eine engere Integration mit [!DNL Marketo Engage]. <br> Der [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)-Connector wird ab **März 2026)**. Um einen reibungslosen Übergang zum neuen **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**-Ziel sicherzustellen, überprüfen Sie die folgenden Kernpunkte und erforderlichen Aktionen: <ul><li>Alle Benutzenden der bestehenden **[!UICONTROL (Legacy) (V2) Marketo Engage]** müssen bis März 2026 zum neuen **[!UICONTROL Marketo Engage]**-Ziel migrieren.</li><li> **Bestehende Datenflüsse werden nicht automatisch migriert.** Sie müssen [eine neue Verbindung einrichten](../../destinations/ui/connect-destination.md) zum neuen **[!UICONTROL Marketo Engage]**-Ziel einrichten und Ihre Zielgruppen dort aktivieren.</li></ul> |
 
 **Aktualisierte Ziele**
 
@@ -180,6 +179,8 @@ Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/hom
 <!---
 
 | [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+
+| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination  | The enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination is an upgraded version of the existing [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector. This new connector brings profile sync capabilities in addition to the existing audience sync capabilities from the legacy connector, providing a tighter integration with [!DNL Marketo Engage]. <br> The [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector will be deprecated in **March 2026**. To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** destination, review the following key points and required actions: <ul><li>All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.</li><li> **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../destinations/ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.</li></ul>|
 
 -->
 

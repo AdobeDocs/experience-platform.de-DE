@@ -1,10 +1,11 @@
 ---
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
-source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 24%
+source-wordcount: '874'
+ht-degree: 27%
 
 ---
 
@@ -12,14 +13,17 @@ ht-degree: 24%
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
->Die **[!UICONTROL (Legacy) (v2) Marketo Engage]** wird im **März 2026)**.
+>The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
 >
->Um einen reibungslosen Übergang zum neuen **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**-Ziel sicherzustellen, überprüfen Sie die folgenden Kernpunkte und erforderlichen Aktionen:
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* Alle Benutzenden der bestehenden **[!UICONTROL (Legacy) (V2) Marketo Engage]** müssen bis März 2026 zum neuen **[!UICONTROL Marketo Engage]**-Ziel migrieren.
->* **Bestehende Datenflüsse werden nicht automatisch migriert.** Sie müssen [eine neue Verbindung einrichten](../../ui/connect-destination.md) zum neuen **[!UICONTROL Marketo Engage]**-Ziel einrichten und Ihre Zielgruppen dort aktivieren.
+>* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![Abbildung der beiden Marketo-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -80,7 +84,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >[!IMPORTANT]
 > 
 >* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Zielgruppen finden Sie unter [Pushen einer Adobe Experience Platform-Zielgruppe in eine statische Marketo-Liste](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) in der Dokumentation zu Marketo.
 
@@ -95,7 +99,7 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 >* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Zusätzlich zu den Informationen zur Zielgruppenzugehörigkeit, die zum Zeitpunkt der Videoaufzeichnung unterstützt wurden, können Sie jetzt viele weitere Profilattributfelder zuordnen. Sie können auch Zielgruppenmitglieder, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind, nach Marketo exportieren. Diese werden dann den Listen hinzugefügt.
 >* Im Schritt **[!UICONTROL Zielgruppe planen]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Zuordnungs-ID“ hinzufügen]** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440167?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Ziel überwachen {#monitor-destination}
 
