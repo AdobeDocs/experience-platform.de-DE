@@ -2,22 +2,22 @@
 title: Erstellen eines Datenflusses, um Daten aus einem CRM in Experience Platform aufzunehmen
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Quelldaten in Experience Platform aufnehmen.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 12%
+source-wordcount: '2112'
+ht-degree: 10%
 
 ---
 
 # Erstellen eines Datenflusses, um Daten aus einem CRM in Experience Platform aufzunehmen
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten in [[!DNL Flow Service]  Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen [[!DNL Flow Service]  Daten in Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Batch-Aufnahme](../../../../ingestion/batch-ingestion/overview.md): So können Sie große Datenmengen effizient in Batches hochladen.
+* [Batch-Aufnahme](../../../../ingestion/batch-ingestion/overview.md): So können Sie schnell und effizient große Datenmengen in Batches hochladen.
 * [Katalog-Service](../../../../catalog/datasets/overview.md): Datensätze in Experience Platform organisieren und verfolgen.
 * [Datenvorbereitung](../../../../data-prep/home.md): Transformieren und Zuordnen Ihrer eingehenden Daten entsprechend Ihren Schemaanforderungen.
 * [Datenflüsse](../../../../dataflows/home.md): Richten Sie die Pipelines ein und verwalten Sie sie, die Ihre Daten von Quellen zu Zielen verschieben.
@@ -31,13 +31,13 @@ Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie
 
 ### Basisverbindung erstellen {#base}
 
-Um erfolgreich einen Datenfluss für Ihre Quelle zu erstellen, benötigen Sie ein vollständig authentifiziertes Quellkonto und die entsprechende Basisverbindungs-ID. Wenn Sie diese ID nicht haben, suchen Sie im [Quellkatalog](../../../home.md) nach einer Liste von Quellen, für die Sie eine Basisverbindung erstellen können.
+Um einen Datenfluss für Ihre Quelle zu erstellen, benötigen Sie ein vollständig authentifiziertes Quellkonto und die entsprechende Basisverbindungs-ID. Wenn Sie diese ID nicht haben, suchen Sie im [Quellkatalog](../../../home.md) nach einer Liste von Quellen, für die Sie eine Basisverbindung erstellen können.
 
 ### Erstellen eines XDM-Zielschemas {#target-schema}
 
 Ein Experience-Datenmodell (XDM)-Schema bietet eine standardisierte Möglichkeit, Kundenerlebnisdaten in Experience Platform zu organisieren und zu beschreiben. Um Ihre Quelldaten in Experience Platform aufzunehmen, müssen Sie zunächst ein Ziel-XDM-Schema erstellen, das die Struktur und die Datentypen definiert, die Sie aufnehmen möchten. Dieses Schema dient als Blueprint für den Experience Platform-Datensatz, in dem sich Ihre aufgenommenen Daten befinden.
 
-Sie können ein Ziel-XDM-Schema erstellen, indem Sie eine POST-Anfrage an die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) senden. Lesen Sie die folgenden Handbücher für detaillierte Schritte zum Erstellen eines XDM-Zielschemas:
+Sie können ein Ziel-XDM-Schema erstellen, indem Sie eine POST-Anfrage an die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) senden. Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie in den folgenden Handbüchern:
 
 * [Erstellen eines Schemas mithilfe der API](../../../../xdm/api/schemas.md).
 * [Erstellen eines Schemas über die Benutzeroberfläche](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Nach der Erstellung ist das Ziel-XDM-Schema `$id` später für Ihren Zieldatensa
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
+Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, das typischerweise wie eine Tabelle mit Spalten (Schema) und Zeilen (Feldern) strukturiert ist. Daten, die erfolgreich in Experience Platform aufgenommen werden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie entweder einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
 Sie können einen Zieldatensatz erstellen, indem Sie eine POST-Anfrage an die [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) senden und dabei die ID des Zielschemas in der Payload angeben. Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Handbuch unter [Erstellen eines Datensatzes mithilfe der API](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Anfrage**
 
-Das folgende Beispiel zeigt, wie ein Zieldatensatz erstellt wird, der für die Aufnahme von Echtzeit-Kundenprofilen aktiviert ist. In dieser Anfrage wird die `unifiedProfile`-Eigenschaft auf `true` (unter dem `tags`-Objekt) festgelegt, wodurch Experience Platform angewiesen wird, diesen Datensatz in das Echtzeit-Kundenprofil aufzunehmen.
+Das folgende Beispiel zeigt, wie ein Zieldatensatz erstellt wird, der für die Aufnahme von Echtzeit-Kundenprofilen aktiviert ist. In dieser Anfrage wird die `unifiedProfile`-Eigenschaft auf `true` (unter dem `tags`-Objekt) festgelegt, wodurch Experience Platform angewiesen wird, den Datensatz in das Echtzeit-Kundenprofil aufzunehmen.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ihre Zieldatensatz-ID zurück. Diese ID ist später erforderlich, um eine Zielverbindung zu erstellen.
+Eine erfolgreiche Antwort gibt die ID Ihres Zieldatensatzes zurück. Diese ID ist später erforderlich, um eine Zielverbindung zu erstellen.
 
 ```json
 [
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Zuordnung {#mapping}
 
-Als Nächstes müssen Sie Ihre Quelldaten dem Zielschema zuordnen, dem Ihr Zieldatensatz entspricht. Um eine Zuordnung zu erstellen, stellen Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), geben Sie Ihre Ziel-XDM-Schema-ID und die Details der Zuordnungssätze an, die Sie erstellen möchten.
+Ordnen Sie anschließend Ihre Quelldaten dem Zielschema zu, dem Ihr Zieldatensatz entspricht. Um eine Zuordnung zu erstellen, stellen Sie eine POST-Anfrage an den `mappingSets` der [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Geben Sie Ihre Ziel-XDM-Schema-ID und die Details der Zuordnungssätze an, die Sie erstellen möchten.
 
 **API-Format**
 
@@ -635,7 +635,7 @@ Um sicherzustellen, dass Sie die richtige Datenflussspezifikation verwenden, üb
 
 Ein Datenfluss ist eine konfigurierte Pipeline, die Daten über Experience Platform-Services hinweg überträgt. Sie definiert, wie Daten aus externen Quellen (z. B. Datenbanken, Cloud-Speicher oder APIs) aufgenommen, verarbeitet und an Zieldatensätze weitergeleitet werden. Diese Datensätze werden dann von Services wie Identity Service, Echtzeit-Kundenprofil und Zielen für die Aktivierung und Analyse verwendet.
 
-Um einen Datenfluss zu erstellen, müssen Sie Werte für die folgenden Elemente haben:
+Um einen Datenfluss zu erstellen, müssen Sie Werte für die folgenden Elemente angeben:
 
 * [Quellverbindungs-ID](#source)
 * [Zielverbindungs-ID](#target)
@@ -647,8 +647,8 @@ In diesem Schritt können Sie die folgenden Parameter in `scheduleParams` verwen
 | Zeitplanparameter | Beschreibung |
 | --- | --- |
 | `startTime` | Die Epochenzeit (in Sekunden), zu der der Datenfluss starten soll. |
-| `frequency` | Die Häufigkeit der Aufnahme. Konfigurieren Sie die Häufigkeit , um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihre Häufigkeit auf Folgendes festlegen: <ul><li>`once`: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Aufnahme-Datenflusses nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>`minute`: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>`hour`: Legen Sie für die Häufigkeit `hour` fest, um Ihren Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>`day`: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss zu planen und Daten täglich aufzunehmen.</li><li>`week`: Legen Sie für die Häufigkeit `week` fest, um Ihren Datenfluss so zu planen, dass Daten wöchentlich aufgenommen werden.</li></ul> |
-| `interval` | Das Intervall zwischen aufeinander folgenden Aufnahmen (erforderlich für alle Häufigkeiten außer `once`). Konfigurieren Sie die Intervalleinstellung, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Sie beispielsweise Ihre Häufigkeit auf „Tag“ festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Das Intervall kann nicht auf null festgelegt werden. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>`once`: Nicht zutreffend</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | Die Häufigkeit der Aufnahme. Konfigurieren Sie die Häufigkeit , um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihre Häufigkeit auf Folgendes festlegen: <ul><li>`once`: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Die Einstellungen für Intervall und Aufstockung sind für einmalige Aufnahmeaufträge nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>`minute`: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>`hour`: Legen Sie für die Häufigkeit `hour` fest, um Ihren Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>`day`: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss zu planen und Daten täglich aufzunehmen.</li><li>`week`: Legen Sie für die Häufigkeit `week` fest, um Ihren Datenfluss so zu planen, dass Daten wöchentlich aufgenommen werden.</li></ul> |
+| `interval` | Das Intervall zwischen aufeinander folgenden Aufnahmen (erforderlich für alle Häufigkeiten außer `once`). Konfigurieren Sie die Intervalleinstellung, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Ihre Häufigkeit beispielsweise auf „Tag“ und das Intervall auf 15 eingestellt ist, wird der Datenfluss alle 15 Tage ausgeführt. Das Intervall kann nicht auf null festgelegt werden. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>`once`: Nicht zutreffend</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Gibt an, ob historische Daten vor dem `startTime` aufgenommen werden sollen. |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Die Zuordnungs-ID , die in einem früheren Schritt generiert wurde. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit (Sekunden seit Unix-Epoche). Bestimmt, wann der Datenfluss seine erste Ausführung startet. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss ausgeführt wird. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
-| `scheduleParams.interval` | Das Intervall zwischen aufeinander folgenden Datenflussausführungen, basierend auf der ausgewählten Häufigkeit. Muss eine Ganzzahl ungleich null sein. Ein Intervall von `15` mit der Häufigkeit &quot;`minute`&quot; bedeutet beispielsweise, dass der Datenfluss alle 15 Minuten ausgeführt wird. |
+| `scheduleParams.interval` | Das Intervall zwischen aufeinander folgenden Datenflussausführungen, basierend auf der ausgewählten Häufigkeit. Muss eine Ganzzahl ungleich null sein. Wenn Ihre Häufigkeit beispielsweise auf Minute und das Intervall 15 beträgt, wird der Datenfluss alle 15 Minuten ausgeführt. |
 | `scheduleParams.backfill` | Ein boolescher Wert (`true` oder `false`), der bestimmt, ob historische Daten (Aufstockung) aufgenommen werden, wenn der Datenfluss zum ersten Mal erstellt wird. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Dieses Tutorial führte Sie durch den Prozess zum Erstellen eines Datenflusses i
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Konten und Datenflüssen](../../../../dataflows/ui/monitor-sources.md).
+Nachdem Ihr Datenfluss erstellt wurde, können Sie dessen Leistung direkt in der Experience Platform-Benutzeroberfläche überwachen. Dazu gehören das Tracking von Aufnahmeraten, Erfolgsmetriken und eventuell auftretenden Fehlern. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Konten und Datenflüssen](../../../../dataflows/ui/monitor-sources.md).
 
 ### Aktualisieren des Datenflusses
 
-Um Konfigurationen für die Planung, Zuordnung und allgemeine Informationen Ihrer Datenflüsse zu aktualisieren, besuchen Sie das Tutorial [Aktualisieren von Quelldatenflüssen](../../api/update-dataflows.md).
+Um Konfigurationen für die Planung, Zuordnung oder allgemeine Informationen Ihrer Datenflüsse zu aktualisieren, besuchen Sie das Tutorial [Aktualisieren von Quelldatenflüssen](../../api/update-dataflows.md).
 
 ## Löschen des Datenflusses
 

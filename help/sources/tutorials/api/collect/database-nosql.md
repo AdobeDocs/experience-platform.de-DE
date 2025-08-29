@@ -3,20 +3,20 @@ title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-A
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 73%
 
 ---
 
 # Erstellen eines Datenflusses für Datenbankquellen mithilfe der [!DNL Flow Service]-API
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer -Datenbank [[!DNL Flow Service]  Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer [[!DNL Flow Service]  in Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, finden Sie im [Quellkatalog](../../../home.md#database) eine Liste der Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, besuchen Sie den [Quellkatalog](../../../home.md#database), um eine Liste der Datenbankquellen anzuzeigen, mit denen Sie eine Basisverbindung erstellen können.
 >* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen als UTC konfiguriert werden. Der einzige Zeitstempel, der für die [[!DNL Snowflake] Quelle](../../../connectors/databases/snowflake.md) unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 ## Erste Schritte
