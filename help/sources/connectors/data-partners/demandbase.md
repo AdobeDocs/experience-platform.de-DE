@@ -2,13 +2,13 @@
 title: Demandbase Intent
 description: Erfahren Sie mehr über die Demandbase Intent-Quelle in Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 11%
+source-wordcount: '1478'
+ht-degree: 12%
 
 ---
 
@@ -60,25 +60,33 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie im [[!DNL Google
 
 In diesem Abschnitt finden Sie Informationen zum [!DNL Demandbase] und zur Datenstruktur.
 
-Das [!DNL Demandbase]-Schema heißt **Company Intent Weekly**. Es handelt sich dabei um die wöchentlichen Intent-Informationen (anonyme B2B-Käuferforschung und Inhaltsnutzung) zu bestimmten Konten und Schlüsselwörtern. Die Daten sind im Parquet-Format.
+Das [!DNL Demandbase]-Schema heißt &quot;**B2B Demandbase Account Intent**. Es handelt sich dabei um die wöchentlichen Intent-Informationen (anonyme B2B-Käuferforschung und Inhaltsnutzung) zu bestimmten Konten und Schlüsselwörtern. Die Daten sind im Parquet-Format.
 
-| Feldname | Datentyp | Erforderlich | Geschäftsschlüssel | Anmerkungen |
-| --- | --- | --- | --- | --- |
-| `company_id` | ZEICHENFOLGE | WAHR | JA | Die kanonische Unternehmens-ID. |
-| `domain` | ZEICHENFOLGE | WAHR | JA | Die identifizierte Domain des Kontos, die die Absicht anzeigt. |
-| `start_date` | DATUM | WAHR | JA | Das Startdatum, an dem die Absichtsaktivität im Zeitraum aufgetreten ist. |
-| `end_date` | DATUM | WAHR | JA | Das Enddatum, an dem die Absichtsaktivität im Zeitraum aufgetreten ist. |
-| `duration_type` | ZEICHENFOLGE | WAHR | JA | Der Typ der Dauer. Im Allgemeinen kann dieser Wert täglich, wöchentlich oder monatlich sein, je nach der ausgewählten Rollout-Dauer. Für dieses Datenbeispiel wird dieser Wert `week`. |
-| `keyword_set_id` | ZEICHENFOLGE | WAHR | JA | Die Schlüsselwortsatz-ID. Dies ist pro Kunde eindeutig. |
-| `keyword_set` | ZEICHENFOLGE | WAHR | JA | Der Name des Schlüsselwortsatzes. |
-| `keyword` | ZEICHENFOLGE | WAHR | | Das Intent-Schlüsselwort. |
-| `is_trending` | ZEICHENFOLGE | WAHR | | Der aktuelle Status eines bestimmten Trends. Der Trend-Status wird als Burst der Absichtsaktivität in der letzten Woche im Verhältnis zu den Durchschnittswerten der vorherigen sieben Wochen gemessen. |
-| `intent_strength` | ENUM[STRING] | WAHR | | Ein quantifiziertes Maß für die Absichtsstärke. Zu den akzeptierten Werten gehören: `HIGH`, `MED` und `LOW`. |
-| `num_people_researching` | GANZZAHL | WAHR | | Die Anzahl der Personen, die der `company_id` angehören, die in den letzten sieben Tagen das Keyword recherchiert haben. |
-| `num_trending_days` | GANZZAHL | WAHR | | Die Anzahl der Tage, an denen das Keyword in einer bestimmten Dauer einen Trend aufwies. |
-| `trending_score` | GANZZAHL | WAHR | | Der Trend-Score |
-| `record_id` | ZEICHENFOLGE | WAHR | | Die eindeutige ID des primären Datensatzes. |
-| `partition_date` | DATUM | WAHR | | Das Kalenderdatum der Momentaufnahme. Dies erfolgt wöchentlich am Ende der Woche. |
+* Klasse - XDM-[!DNL Demandbase Account Intent]
+* Namespace - B2B-[!DNL Demandbase Account Intent]
+* Primäre Identität - `intentID`
+* Beziehungen - B2B-Konto
+
+| Feldname | Datentyp | Beschreibung |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJEKT | Dieses Feld enthält Systemüberwachungsinformationen aus der externen Quelle. |
+| `_id` | STRING | Dies ist die eindeutige Systemkennung für den Datensatz. |
+| `accountDomain` | STRING | Dieses Feld enthält die Konto-Domain. |
+| `accountID` | STRING | Dies ist die B2B-Konto-ID, mit der dieser Absichtsdatensatz verknüpft ist. |
+| `demandbaseAccountID` | STRING | Dies ist die Unternehmens-ID in [!DNL Demandbase]. |
+| `durationType` | STRING | Dieses Feld gibt den Typ des Gültigkeitszeitraums für die Absicht an, z. B. „Woche“. |
+| `endDate` | DATE | Dies ist das Enddatum des Gültigkeitszeitraums der Absicht. |
+| `intentID` | STRING | Dies ist ein vom System generierter eindeutiger Wert für den Absichtsdatensatz. |
+| `intentStrength` | STRING | Dieses Feld gibt den Typ des Gültigkeitszeitraums für die Absicht an, z. B. „TAG“, „WOCHE“ oder „MONAT“. |
+| `isTrending` | BOOLEAN | Dieses Feld gibt an, ob das Keyword im Trend liegt, wobei die möglichen Werte Niedrig, Medium oder Hoch sind. |
+| `keyword` | STRING | Dieses Feld enthält das Keyword oder die Phrase, die eine Absicht von [!DNL Demandbase] angibt. |
+| `keywordSetID` | STRING | Dies ist die Kennung für den Schlüsselwortsatz. |
+| `keywordSetName` | STRING | Dies ist der Name des Schlüsselwortsatzes. |
+| `numTrendingDays` | INTEGER | Dieses Feld gibt die Anzahl der Tage an, nach denen das Keyword einen Trend aufweist. |
+| `partitionDate` | DATE | Dies ist das Partitionsdatum für den Datensatz. |
+| `peopleResearchingCount` | INTEGER | Dieses Feld gibt die Anzahl der Personen an, die das Keyword durchsuchen. |
+| `startDate` | DATE | Dies ist das Startdatum des Gültigkeitszeitraums der Absicht. |
+| `trendingScore` | INTEGER | Dieses Feld enthält den Trendwert für das Keyword. |
 
 {style="table-layout:auto"}
 

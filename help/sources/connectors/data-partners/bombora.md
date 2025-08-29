@@ -2,12 +2,12 @@
 title: Bombora Intent
 description: Erfahren Sie mehr über die Bombora Intent-Quelle auf Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 10%
 
 ---
@@ -77,18 +77,27 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie im [[!DNL Google
 
 In diesem Abschnitt finden Sie Informationen zum [!DNL Bombora] und zur Datenstruktur.
 
-Das [!DNL Bombora]-Schema heißt **Account Intent Weekly**. Es handelt sich dabei um die wöchentlichen Intent-Informationen (anonyme B2B-Käuferforschung und Inhaltsnutzung) zu bestimmten Accounts und Themen. Die Daten sind im Parquet-Format.
+Das [!DNL Bombora]-Schema heißt **B2B Bombora Account Intent**. Es handelt sich dabei um die wöchentlichen Intent-Informationen (anonyme B2B-Käuferforschung und Inhaltsnutzung) zu bestimmten Accounts und Themen. Die Daten sind im Parquet-Format.
 
-| Feldname | Datentyp | Erforderlich | Geschäftsschlüssel | Anmerkungen |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | ZEICHENFOLGE | WAHR | JA | Der kanonische Name der Firma. |
-| `Domain` | ZEICHENFOLGE | WAHR | JA | Die Domain des identifizierten Kontos, das die Absicht anzeigt. |
-| `Topic_Id` | ZEICHENFOLGE | WAHR | JA | Die ID des [!DNL Bombora]. |
-| `Topic_Name` | ZEICHENFOLGE | WAHR | | Der [!DNL Bombora] Themenname. |
-| `Cluster_Name` | ZEICHENFOLGE | WAHR | | Der Cluster-Name auf [!DNL Bombora] für ein bestimmtes Thema. |
-| `Cluster_Id` | ZEICHENFOLGE | WAHR | | Die Cluster-ID, die einem bestimmten Thema zugeordnet ist. |
-| `Composite_Score` | GANZZAHL | WAHR | | Der zusammengesetzte Score stellt das Konsummuster einer Domain für ein bestimmtes Thema über einen bestimmten Zeitraum dar. Der zusammengesetzte Score wird zwischen 0 und 100 gemessen, wobei 100 den höchstmöglichen Score und 0 den niedrigstmöglichen Score darstellt. Ein zusammengesetzter Wert von über 60 stellt einen Anstieg des Interesses an einem bestimmten Thema durch eine Domain dar. Dies wird auch als „Surge“ bezeichnet. |
-| `Partition_Date` | DATUM | WAHR | | Das Kalenderdatum eines Snapshots. Dies erfolgt wöchentlich am Ende der Woche in `mm/dd/yyyy` Format. |
+* Klasse - XDM-[!DNL Bombora Account Intent]
+* Namespace - B2B-[!DNL Bombora Account Intent]
+* Primäre Identität - `intentID`
+* Beziehungen - B2B-Konto
+
+| Feldname | Datentyp | Beschreibung |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJEKT | Dieses Feld wird vom System für das Auditing des Quellsystems verwendet. |
+| `_id` | STRING | Dieses Feld wird vom System als eindeutige Kennung verwendet. |
+| `accountDomain` | STRING | Dieses Feld enthält die Konto-Domain. |
+| `accountID` | STRING | Dieses Feld enthält die B2B-Konto-ID, mit der dieser Intent-Datensatz verknüpft ist. |
+| `bomboraAccountName` | STRING | Dieses Feld enthält die Firmenkennung von Bombora. |
+| `clusterID` | STRING | Dieses Feld enthält die Cluster-ID. |
+| `clusterName` | STRING | Dieses Feld enthält den Cluster-Namen. |
+| `compositeScore` | INTEGER | Dieses Feld enthält die zusammengesetzte Bewertung der Absicht. |
+| `intentID` | STRING | Dieses Feld enthält einen vom System generierten eindeutigen Wert. |
+| `partitionDate` | DATE | Dieses Feld enthält das Partitionsdatum. Dies erfolgt wöchentlich am Ende der Woche in `mm/dd/yyyy` Format. |
+| `topicID` | STRING | Dieses Feld enthält die Absichtsthema-ID aus Bombora. |
+| `topicName` | STRING | Dieses Feld enthält den Namen des Intent-Themas aus Bombora. |
 
 {style="table-layout:auto"}
 
