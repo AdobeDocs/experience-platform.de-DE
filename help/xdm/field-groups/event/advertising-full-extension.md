@@ -103,8 +103,8 @@ Das ConversionDetails-Objekt erfasst Tracking-Informationen für Anzeigenkonvert
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `trackingCode` | Zeichenfolge | Der Konversions-Trackingcode für das Ereignis. Eine Liste der möglichen Formate finden Sie unter [AMO-ID-Formate](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | String | Die EF-ID oder Tracking-Identitätsdetails für ein Ereignis. Eine Liste der möglichen Formate finden Sie unter [EF ID Formats](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | Zeichenfolge | Der Konversions-Trackingcode für das Ereignis. Eine Liste der möglichen Formate finden Sie unter [AMO-ID-Formate](https://experienceleague.adobe.com/de/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | String | Die EF-ID oder Tracking-Identitätsdetails für ein Ereignis. Eine Liste der möglichen Formate finden Sie unter [EF ID Formats](https://experienceleague.adobe.com/de/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objekt | Eine Zuordnung von Konvertierungseigenschaften, dargestellt als ein Array von Zeichenfolgen mit Schlüssel-Wert-Paaren (z. B. `subscriptions=253`). |
 
 ## `fees` {#fees}
