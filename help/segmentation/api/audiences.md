@@ -3,7 +3,7 @@ title: API-Endpunkt für Zielgruppen
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 6%
@@ -67,7 +67,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Zielgruppen zurückgegeben, die in Ihrer Organisation als JSON erstellt wurden.
 
-+++Eine Beispielantwort, die die letzten beiden erstellten Zielgruppen Ihrer Organisation enthält
++++Eine Beispielantwort, die die letzten beiden erstellten Zielgruppen enthält, die zu Ihrer Organisation gehören
 
 ```json
 {
@@ -166,7 +166,12 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Zie
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -339,7 +344,7 @@ GET /audiences/{AUDIENCE_ID}
 
 **Anfrage**
 
-+++Eine Beispielanfrage zum Abrufen einer Zielgruppe
++++Beispielanfrage zum Abrufen einer Zielgruppe
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -484,7 +489,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu aktualisierten Zielgruppe zurückgegeben. Beachten Sie, dass die Details Ihrer Zielgruppe unterschiedlich sein können, je nachdem, ob es sich um eine von Experience Platform generierte Zielgruppe oder eine extern generierte Zielgruppe handelt.
 
-+++Beispielantwort beim Aktualisieren einer gesamten Zielgruppe.
++++Eine Beispielantwort beim Aktualisieren einer gesamten Zielgruppe.
 
 ```json
 {
@@ -559,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der aktualisierten Zielgruppe zurückgegeben.
 
-+++Beispielantwort beim Patchen eines Felds in einer Zielgruppe.
++++Beispielantwort zum Patchen eines Felds in einer Zielgruppe.
 
 ```json
 {
