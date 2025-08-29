@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
 source-wordcount: '5174'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -330,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
@@ -365,7 +365,7 @@ Wenn Sie **[!UICONTROL Container entpacken]** auswählen, wird der untergeordnet
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Zusammenführungsrichtlinien"
->abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um das Profil zu bilden. Experience Platform bietet eine standardmäßige Zusammenführungsrichtlinie. Alternativ können Sie eine neue standardmäßige Zusammenführungsrichtlinie in „Profile“ erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die dem Marketing-Zweck für diese Zielgruppe entspricht."
+>abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um das Profil zu bilden. Experience Platform bietet eine standardmäßige Zusammenführungsrichtlinie. Alternativ können Sie eine neue standardmäßige Zusammenführungsrichtlinie in „Profile“ erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die Ihrem Marketing-Zweck für diese Zielgruppe entspricht."
 
 Mit [!DNL Experience Platform] können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kundinnen und Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Experience Platform] bestimmt, wie Daten priorisiert und welche Daten kombiniert werden sollen, um ein Profil zu erstellen.
 
@@ -380,7 +380,7 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Zielgruppen-Eigenschaften"
->abstract="Im Abschnitt mit den Zielgruppeneigenschaften wird eine Schätzung der Größe der resultierenden Zielgruppe angezeigt. Darin wird die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt. Auf diese Weise können Sie Ihre Zielgruppe nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
+>abstract="Im Bereich „Zielgruppeneigenschaften“ wird eine Schätzung der Größe der resultierenden Zielgruppe angezeigt, wobei die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt wird. Auf diese Weise kann die Zielgruppe nach Bedarf angepasst werden, bevor die Zielgruppe selbst erstellt wird."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Qualifizierte Profile"
->abstract="Qualifizierte Profile gibt die tatsächliche Anzahl von Profilen an, die den Regeln der Zielgruppe entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert."
+>abstract="„Qualifizierte Profile“ gibt die tatsächliche Anzahl der Profile an, die den Regeln der Zielgruppe entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Geschätzte Profile"
->abstract="Geschätzte Profile geben auf der Grundlage des Beispielvorgangs eine ungefähre Anzahl von Profilen an, die für die Regeln der Zielgruppe qualifiziert wären."
+>abstract="„Geschätzte Profile“ gibt eine ungefähre Anzahl von Profilen auf Grundlage des Beispielauftrags an, die für die Regeln der Zielgruppe qualifiziert wären."
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
